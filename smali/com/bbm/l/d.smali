@@ -4,14 +4,5 @@
 
 
 # virtual methods
-.method public abstract a(Ljava/util/List;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/l/d/b/x;",
-            ">;)V"
-        }
-    .end annotation
+.method public abstract a()V
 .end method

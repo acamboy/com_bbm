@@ -3,20 +3,24 @@
 .source "EmoticonStickerPager.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/ui/hc;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/cg;
+.field final synthetic a:Lcom/bbm/ui/hc;
+
+.field final synthetic b:Lcom/bbm/ui/EmoticonStickerPager;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/cg;)V
+.method constructor <init>(Lcom/bbm/ui/EmoticonStickerPager;Lcom/bbm/ui/hc;)V
     .locals 0
 
     .prologue
-    .line 466
-    iput-object p1, p0, Lcom/bbm/ui/cj;->a:Lcom/bbm/ui/cg;
+    .line 231
+    iput-object p1, p0, Lcom/bbm/ui/cj;->b:Lcom/bbm/ui/EmoticonStickerPager;
+
+    iput-object p2, p0, Lcom/bbm/ui/cj;->a:Lcom/bbm/ui/hc;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,33 +29,21 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final a(Lcom/bbm/d/ht;I)V
     .locals 1
 
     .prologue
-    .line 469
-    iget-object v0, p0, Lcom/bbm/ui/cj;->a:Lcom/bbm/ui/cg;
-
-    iget-object v0, v0, Lcom/bbm/ui/cg;->b:Lcom/bbm/ui/EmoticonStickerPager;
-
-    invoke-static {v0}, Lcom/bbm/ui/EmoticonStickerPager;->a(Lcom/bbm/ui/EmoticonStickerPager;)Landroid/view/View$OnClickListener;
-
-    move-result-object v0
+    .line 234
+    iget-object v0, p0, Lcom/bbm/ui/cj;->a:Lcom/bbm/ui/hc;
 
     if-eqz v0, :cond_0
 
-    .line 470
-    iget-object v0, p0, Lcom/bbm/ui/cj;->a:Lcom/bbm/ui/cg;
+    .line 235
+    iget-object v0, p0, Lcom/bbm/ui/cj;->a:Lcom/bbm/ui/hc;
 
-    iget-object v0, v0, Lcom/bbm/ui/cg;->b:Lcom/bbm/ui/EmoticonStickerPager;
+    invoke-interface {v0, p1, p2}, Lcom/bbm/ui/hc;->a(Lcom/bbm/d/ht;I)V
 
-    invoke-static {v0}, Lcom/bbm/ui/EmoticonStickerPager;->a(Lcom/bbm/ui/EmoticonStickerPager;)Landroid/view/View$OnClickListener;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
-
-    .line 472
+    .line 237
     :cond_0
     return-void
 .end method

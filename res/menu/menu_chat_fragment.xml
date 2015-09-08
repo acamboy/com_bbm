@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_menu_add_contact" android:id="@id/menu_invite" android:title="@string/invite_to_bbm" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_menu_mpc" android:id="@id/menu_bbm_mpc" android:title="@string/start_multiperson_chat" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_menu_bbm_meetings" android:id="@id/menu_bbm_meetings" android:title="@string/start_meeting" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_menu_broadcast_msg" android:id="@id/menu_broadcast_message" android:title="@string/broadcast_message" app:showAsAction="never" />
+</menu>

@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/yy;
 .super Ljava/lang/Object;
-.source "NewChannelCategoryActivity.java"
+.source "PrivateConversationActivity.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Lcom/bbm/ui/cb;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/PrivateConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 94
-    iput-object p1, p0, Lcom/bbm/ui/activities/yy;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+    .line 938
+    iput-object p1, p0, Lcom/bbm/ui/activities/yy;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,77 +25,99 @@
 
 
 # virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+.method public final a(Z)V
     .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
 
     .prologue
-    .line 99
-    const-string v0, "mCategoryListOnItemClickListener onItemClick"
+    const/4 v1, 0x2
 
-    const-class v1, Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+    .line 941
+    if-eqz p1, :cond_1
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    .line 943
+    iget-object v0, p0, Lcom/bbm/ui/activities/yy;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    .line 100
-    iget-object v0, p0, Lcom/bbm/ui/activities/yy;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->a(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)Landroid/widget/RelativeLayout;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setActivated(Z)V
-
-    .line 101
-    iget-object v0, p0, Lcom/bbm/ui/activities/yy;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->b(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)Landroid/widget/ListView;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v0
 
-    const/16 v1, 0x8
+    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
 
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setVisibility(I)V
+    if-ne v0, v1, :cond_0
 
-    .line 102
-    iget-object v0, p0, Lcom/bbm/ui/activities/yy;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+    iget-object v0, p0, Lcom/bbm/ui/activities/yy;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->f(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)Lcom/bbm/ui/activities/ze;
+    invoke-static {v0}, Lcom/bbm/util/eu;->c(Landroid/app/Activity;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 944
+    iget-object v0, p0, Lcom/bbm/ui/activities/yy;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->x(Lcom/bbm/ui/activities/PrivateConversationActivity;)Landroid/os/Handler;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ze;->notifyDataSetChanged()V
+    new-instance v1, Lcom/bbm/ui/activities/yz;
 
-    .line 103
-    iget-object v0, p0, Lcom/bbm/ui/activities/yy;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/yz;-><init>(Lcom/bbm/ui/activities/yy;)V
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->d(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)Landroid/widget/ImageView;
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 962
+    :cond_0
+    :goto_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/yy;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->i(Lcom/bbm/ui/activities/PrivateConversationActivity;)Lcom/bbm/d/a;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/yy;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+    iget-object v1, p0, Lcom/bbm/ui/activities/yy;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->c(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)Landroid/view/animation/AnimationSet;
+    invoke-static {v1}, Lcom/bbm/ui/activities/PrivateConversationActivity;->j(Lcom/bbm/ui/activities/PrivateConversationActivity;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->m(Ljava/lang/String;)V
 
-    .line 104
-    iget-object v0, p0, Lcom/bbm/ui/activities/yy;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
-
-    invoke-static {v0, p3}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->a(Lcom/bbm/ui/activities/NewChannelCategoryActivity;I)V
-
-    .line 105
+    .line 963
     return-void
+
+    .line 953
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/yy;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
+
+    if-ne v0, v1, :cond_0
+
+    .line 954
+    iget-object v0, p0, Lcom/bbm/ui/activities/yy;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->x(Lcom/bbm/ui/activities/PrivateConversationActivity;)Landroid/os/Handler;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/bbm/ui/activities/za;
+
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/za;-><init>(Lcom/bbm/ui/activities/yy;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    goto :goto_0
 .end method

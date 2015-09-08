@@ -448,7 +448,7 @@
     div-float v9, v2, v4
 
     .line 221
-    const/high16 v2, 0x3f000000
+    const/high16 v2, 0x3f000000    # 0.5f
 
     add-float/2addr v2, v9
 
@@ -1457,7 +1457,7 @@
 
     int-to-float v1, v1
 
-    const/high16 v3, 0x40000000
+    const/high16 v3, 0x40000000    # 2.0f
 
     div-float/2addr v1, v3
 
@@ -1722,14 +1722,6 @@
     if-le v2, v6, :cond_1
 
     .line 78
-    iget-object v2, v1, Lcom/google/zxing/e/a/d;->c:Lcom/google/zxing/e/a/c;
-
-    iget v2, v2, Lcom/google/zxing/e/a/c;->a:I
-
-    iget-object v2, v0, Lcom/google/zxing/e/a/d;->c:Lcom/google/zxing/e/a/c;
-
-    iget v2, v2, Lcom/google/zxing/e/a/c;->a:I
-
     iget v2, v1, Lcom/google/zxing/e/a/b;->b:I
 
     iget v7, v0, Lcom/google/zxing/e/a/b;->b:I

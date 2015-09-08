@@ -19,7 +19,7 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;Landroid/view/View;)Landroid/support/v4/view/a/i;
+.method public a(Ljava/lang/Object;Landroid/view/View;)Landroid/support/v4/view/a/p;
     .locals 1
 
     .prologue
@@ -57,7 +57,7 @@
     return-void
 .end method
 
-.method public a(Ljava/lang/Object;Landroid/view/View;Landroid/support/v4/view/a/a;)V
+.method public a(Ljava/lang/Object;Landroid/view/View;Landroid/support/v4/view/a/e;)V
     .locals 0
 
     .prologue

@@ -1,70 +1,74 @@
-.class public Lcom/glympse/android/lib/eh;
+.class Lcom/glympse/android/lib/eh;
 .super Ljava/lang/Object;
-.source "InternalStructs.java"
+.source "HistoryManager.java"
 
 # interfaces
-.implements Lcom/glympse/android/core/GCommon;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public nR:J
-
-.field public nS:Ljava/util/Hashtable;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Hashtable",
-            "<",
-            "Ljava/lang/String;",
-            "Lcom/glympse/android/lib/GTicketPrivate;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public ne:Lcom/glympse/android/hal/GVector;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/glympse/android/hal/GVector",
-            "<",
-            "Lcom/glympse/android/lib/GTicketPrivate;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public nh:J
+.field private _glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 4
+.method public constructor <init>(Lcom/glympse/android/lib/GGlympsePrivate;)V
+    .locals 0
 
     .prologue
-    const-wide/16 v2, 0x0
-
-    .line 52
+    .line 742
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
-    iput-wide v2, p0, Lcom/glympse/android/lib/eh;->nR:J
+    .line 743
+    iput-object p1, p0, Lcom/glympse/android/lib/eh;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-    .line 54
-    new-instance v0, Lcom/glympse/android/hal/GVector;
-
-    invoke-direct {v0}, Lcom/glympse/android/hal/GVector;-><init>()V
-
-    iput-object v0, p0, Lcom/glympse/android/lib/eh;->ne:Lcom/glympse/android/hal/GVector;
-
-    .line 55
-    new-instance v0, Ljava/util/Hashtable;
-
-    invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
-
-    iput-object v0, p0, Lcom/glympse/android/lib/eh;->nS:Ljava/util/Hashtable;
-
-    .line 56
-    iput-wide v2, p0, Lcom/glympse/android/lib/eh;->nh:J
-
-    .line 57
+    .line 744
     return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .locals 2
+
+    .prologue
+    .line 748
+    iget-object v0, p0, Lcom/glympse/android/lib/eh;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->isStarted()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 759
+    :goto_0
+    return-void
+
+    .line 754
+    :cond_0
+    iget-object v0, p0, Lcom/glympse/android/lib/eh;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->getHistoryManager()Lcom/glympse/android/api/GHistoryManager;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/glympse/android/lib/GHistoryManagerPrivate;
+
+    .line 755
+    new-instance v1, Lcom/glympse/android/lib/eu;
+
+    invoke-direct {v1}, Lcom/glympse/android/lib/eu;-><init>()V
+
+    invoke-interface {v0, v1}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->syncedWithServer(Lcom/glympse/android/lib/eu;)V
+
+    .line 758
+    iget-object v0, p0, Lcom/glympse/android/lib/eh;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->getServerPost()Lcom/glympse/android/lib/GServerPost;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GServerPost;->sendEvents()V
+
+    goto :goto_0
 .end method

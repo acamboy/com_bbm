@@ -17,6 +17,10 @@
         <item quantity="few">Участников: %1$d</item>
         <item quantity="many">Участников: %1$d</item>
     </plurals>
+    <plurals name="common_days_1d">
+        <item quantity="other">%1$d дня(-ей)</item>
+        <item quantity="one">%1$d день</item>
+    </plurals>
     <plurals name="ephemeral_picker_seconds">
         <item quantity="other">сек.</item>
         <item quantity="one">секунда</item>
@@ -40,27 +44,27 @@
     </plurals>
     <plurals name="slide_menu_active_chats">
         <item quantity="other">Активных чатов: %1$s</item>
-        <item quantity="one">1 активный чат</item>
+        <item quantity="one">Активных чатов: %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_channelupdates">
-        <item quantity="other">Новых уведомлений: %1$s</item>
-        <item quantity="one">1 новое уведомление</item>
+        <item quantity="other">Новых элементов каналов: %1$s</item>
+        <item quantity="one">Новых элементов каналов: %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_invites">
         <item quantity="other">Новых приглашений: %1$s</item>
-        <item quantity="one">Новых приглашений: 1</item>
+        <item quantity="one">Новых приглашений: %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_updates">
-        <item quantity="other">Новых элементов: %1$s</item>
-        <item quantity="one">Новых элементов: 1</item>
+        <item quantity="other">Новых лент: %1$s</item>
+        <item quantity="one">Новых лент: %1$s</item>
     </plurals>
     <plurals name="slide_menu_total_contacts">
         <item quantity="other">Контактов: %1$s</item>
-        <item quantity="one">1 контакт</item>
+        <item quantity="one">Контактов: %1$s</item>
     </plurals>
     <plurals name="slide_menu_total_groups">
         <item quantity="other">Групп: %1$s</item>
-        <item quantity="one">1 группа</item>
+        <item quantity="one">Групп: %1$s</item>
     </plurals>
     <plurals name="update_channel_stats_comments">
         <item quantity="other">Комментарии: %1$s</item>

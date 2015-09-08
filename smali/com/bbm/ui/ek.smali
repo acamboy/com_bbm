@@ -1,24 +1,23 @@
 .class final Lcom/bbm/ui/ek;
-.super Ljava/lang/Object;
-.source "ObservableValueAdapter.java"
-
-# interfaces
-.implements Lcom/bbm/j/h;
+.super Lcom/bbm/j/k;
+.source "ObservingImageView.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/ej;
+.field final synthetic a:Lcom/bbm/ui/ObservingImageView;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/ej;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/ObservingImageView;)V
+    .locals 1
 
     .prologue
-    .line 24
-    iput-object p1, p0, Lcom/bbm/ui/ek;->a:Lcom/bbm/ui/ej;
+    .line 25
+    iput-object p1, p0, Lcom/bbm/ui/ek;->a:Lcom/bbm/ui/ObservingImageView;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
@@ -29,41 +28,49 @@
     .locals 2
 
     .prologue
-    .line 27
-    iget-object v0, p0, Lcom/bbm/ui/ek;->a:Lcom/bbm/ui/ej;
+    .line 28
+    iget-object v0, p0, Lcom/bbm/ui/ek;->a:Lcom/bbm/ui/ObservingImageView;
 
-    invoke-static {v0}, Lcom/bbm/ui/ej;->a(Lcom/bbm/ui/ej;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 32
-    :goto_0
-    return-void
-
-    .line 30
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/ek;->a:Lcom/bbm/ui/ej;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/ej;->a(Lcom/bbm/ui/ej;Z)Z
-
-    .line 31
-    iget-object v0, p0, Lcom/bbm/ui/ek;->a:Lcom/bbm/ui/ej;
-
-    invoke-static {v0}, Lcom/bbm/ui/ej;->c(Lcom/bbm/ui/ej;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/bbm/ui/ObservingImageView;->a(Lcom/bbm/ui/ObservingImageView;)Lcom/bbm/j/r;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/ek;->a:Lcom/bbm/ui/ej;
+    if-eqz v0, :cond_0
 
-    invoke-static {v1}, Lcom/bbm/ui/ej;->b(Lcom/bbm/ui/ej;)Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/bbm/ui/ek;->a:Lcom/bbm/ui/ObservingImageView;
 
-    move-result-object v1
+    invoke-static {v0}, Lcom/bbm/ui/ObservingImageView;->a(Lcom/bbm/ui/ObservingImageView;)Lcom/bbm/j/r;
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    move-result-object v0
 
-    goto :goto_0
+    invoke-interface {v0}, Lcom/bbm/j/r;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 29
+    iget-object v0, p0, Lcom/bbm/ui/ek;->a:Lcom/bbm/ui/ObservingImageView;
+
+    invoke-static {v0}, Lcom/bbm/ui/ObservingImageView;->a(Lcom/bbm/ui/ObservingImageView;)Lcom/bbm/j/r;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/bbm/j/r;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/gh;
+
+    .line 30
+    iget-object v0, v0, Lcom/bbm/d/gh;->b:Landroid/graphics/drawable/Drawable;
+
+    .line 31
+    iget-object v1, p0, Lcom/bbm/ui/ek;->a:Lcom/bbm/ui/ObservingImageView;
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/ObservingImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 33
+    :cond_0
+    return-void
 .end method

@@ -8,7 +8,7 @@
     value = {
         "Lcom/mapquest/android/maps/y",
         "<",
-        "Lcom/mapquest/android/maps/bp;",
+        "Lcom/mapquest/android/maps/bo;",
         ">;"
     }
 .end annotation
@@ -20,7 +20,7 @@
         value = {
             "Ljava/util/List",
             "<",
-            "Lcom/mapquest/android/maps/bp;",
+            "Lcom/mapquest/android/maps/bo;",
             ">;"
         }
     .end annotation
@@ -73,7 +73,7 @@
     return v0
 .end method
 
-.method protected final a(I)Lcom/mapquest/android/maps/bp;
+.method protected final a(I)Lcom/mapquest/android/maps/bo;
     .locals 1
 
     .prologue
@@ -84,19 +84,19 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/mapquest/android/maps/bp;
+    check-cast v0, Lcom/mapquest/android/maps/bo;
 
     return-object v0
 .end method
 
-.method public final a(Lcom/mapquest/android/maps/bp;)V
+.method public final a(Lcom/mapquest/android/maps/bo;)V
     .locals 1
 
     .prologue
     .line 52
-    iget v0, p1, Lcom/mapquest/android/maps/bp;->f:I
+    iget v0, p1, Lcom/mapquest/android/maps/bo;->f:I
 
-    invoke-virtual {p1, v0}, Lcom/mapquest/android/maps/bp;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p1, v0}, Lcom/mapquest/android/maps/bo;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -105,7 +105,7 @@
     .line 55
     iget-object v0, p0, Lcom/mapquest/android/maps/d;->e:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p1, v0}, Lcom/mapquest/android/maps/bp;->a(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1, v0}, Lcom/mapquest/android/maps/bo;->a(Landroid/graphics/drawable/Drawable;)V
 
     .line 57
     :cond_0

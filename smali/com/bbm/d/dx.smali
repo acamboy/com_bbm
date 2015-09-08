@@ -1,141 +1,66 @@
-.class public final enum Lcom/bbm/d/dx;
-.super Ljava/lang/Enum;
+.class public final Lcom/bbm/d/dx;
+.super Lcom/bbm/d/ez;
 .source "BbmdsProtocol.java"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum",
-        "<",
-        "Lcom/bbm/d/dx;",
-        ">;"
-    }
-.end annotation
-
-
-# static fields
-.field public static final enum a:Lcom/bbm/d/dx;
-
-.field public static final enum b:Lcom/bbm/d/dx;
-
-.field private static final synthetic d:[Lcom/bbm/d/dx;
-
-
-# instance fields
-.field private final c:Ljava/lang/String;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    .prologue
-    const/4 v4, 0x1
-
-    const/4 v3, 0x0
-
-    .line 5820
-    new-instance v0, Lcom/bbm/d/dx;
-
-    const-string v1, "Visible"
-
-    const-string v2, "Visible"
-
-    invoke-direct {v0, v1, v3, v2}, Lcom/bbm/d/dx;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/d/dx;->a:Lcom/bbm/d/dx;
-
-    .line 5821
-    new-instance v0, Lcom/bbm/d/dx;
-
-    const-string v1, "Unspecified"
-
-    const-string v2, ""
-
-    invoke-direct {v0, v1, v4, v2}, Lcom/bbm/d/dx;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/d/dx;->b:Lcom/bbm/d/dx;
-
-    .line 5819
-    const/4 v0, 0x2
-
-    new-array v0, v0, [Lcom/bbm/d/dx;
-
-    sget-object v1, Lcom/bbm/d/dx;->a:Lcom/bbm/d/dx;
-
-    aput-object v1, v0, v3
-
-    sget-object v1, Lcom/bbm/d/dx;->b:Lcom/bbm/d/dx;
-
-    aput-object v1, v0, v4
-
-    sput-object v0, Lcom/bbm/d/dx;->d:[Lcom/bbm/d/dx;
-
-    return-void
-.end method
-
-.method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
+.method constructor <init>(Ljava/util/List;Ljava/lang/String;)V
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
+            "Ljava/util/List",
+            "<",
+            "Lorg/json/JSONObject;",
+            ">;",
             "Ljava/lang/String;",
             ")V"
         }
     .end annotation
 
     .prologue
-    .line 5825
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 4888
+    const-string v0, "requestListElements"
 
-    .line 5826
-    iput-object p3, p0, Lcom/bbm/d/dx;->c:Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/bbm/d/ez;-><init>(Ljava/lang/String;)V
 
-    .line 5827
+    .line 4890
+    const-string v0, "elements"
+
+    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/dx;->a(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 4891
+    const-string v0, "type"
+
+    invoke-virtual {p0, v0, p2}, Lcom/bbm/d/dx;->a(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 4892
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lcom/bbm/d/dx;
-    .locals 1
-
-    .prologue
-    .line 5819
-    const-class v0, Lcom/bbm/d/dx;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/dx;
-
-    return-object v0
-.end method
-
-.method public static values()[Lcom/bbm/d/dx;
-    .locals 1
-
-    .prologue
-    .line 5819
-    sget-object v0, Lcom/bbm/d/dx;->d:[Lcom/bbm/d/dx;
-
-    invoke-virtual {v0}, [Lcom/bbm/d/dx;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lcom/bbm/d/dx;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
+.method public final a(Ljava/lang/String;)Lcom/bbm/d/dx;
     .locals 1
 
     .prologue
-    .line 5836
-    iget-object v0, p0, Lcom/bbm/d/dx;->c:Ljava/lang/String;
+    .line 4902
+    const-string v0, "cookie"
+
+    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/dx;->a(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 4903
+    return-object p0
+.end method
+
+.method public final bridge synthetic a()Lcom/bbm/f/ab;
+    .locals 1
+
+    .prologue
+    .line 4886
+    invoke-super {p0}, Lcom/bbm/d/ez;->a()Lcom/bbm/f/ab;
+
+    move-result-object v0
 
     return-object v0
 .end method

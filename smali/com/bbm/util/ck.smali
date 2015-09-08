@@ -1,87 +1,48 @@
-.class public final Lcom/bbm/util/ck;
+.class final Lcom/bbm/util/ck;
 .super Ljava/lang/Object;
-.source "ListUtils.java"
+.source "JSONUtil.java"
+
+# interfaces
+.implements Ljava/util/Comparator;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "<T:",
         "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;"
+        "Ljava/util/Comparator",
+        "<",
+        "Ljava/lang/String;",
+        ">;"
     }
 .end annotation
 
 
-# instance fields
-.field public a:Ljava/util/Collection;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Collection",
-            "<TT;>;"
-        }
-    .end annotation
-.end field
-
-.field public b:Ljava/util/Collection;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Collection",
-            "<TT;>;"
-        }
-    .end annotation
-.end field
-
-.field public c:Ljava/util/Collection;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Collection",
-            "<TT;>;"
-        }
-    .end annotation
-.end field
-
-
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 48
+    .line 336
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/Collection;Ljava/util/Collection;)V
+
+# virtual methods
+.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Collection",
-            "<TT;>;",
-            "Ljava/util/Collection",
-            "<TT;>;)V"
-        }
-    .end annotation
 
     .prologue
-    .line 51
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 336
+    check-cast p1, Ljava/lang/String;
 
-    .line 52
-    const/4 v0, 0x0
+    check-cast p2, Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/bbm/util/ck;->a:Ljava/util/Collection;
+    invoke-virtual {p1, p2}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
-    .line 53
-    iput-object p1, p0, Lcom/bbm/util/ck;->b:Ljava/util/Collection;
+    move-result v0
 
-    .line 54
-    iput-object p2, p0, Lcom/bbm/util/ck;->c:Ljava/util/Collection;
-
-    .line 55
-    return-void
+    return v0
 .end method

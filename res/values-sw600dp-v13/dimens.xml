@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="abc_action_bar_default_height_material">64.0dip</dimen>
+    <dimen name="abc_action_bar_default_padding_material">4.0dip</dimen>
+    <dimen name="abc_config_prefDialogWidth">580.0dip</dimen>
+    <dimen name="abc_text_size_subtitle_material_toolbar">16.0dip</dimen>
+    <dimen name="abc_text_size_title_material_toolbar">20.0dip</dimen>
+    <dimen name="dbx_action_bar_default_height">56.0dip</dimen>
+    <dimen name="dbx_action_bar_icon_vertical_padding">4.0dip</dimen>
+    <dimen name="dbx_action_bar_subtitle_bottom_margin">9.0dip</dimen>
+    <dimen name="dbx_action_bar_subtitle_text_size">14.0dip</dimen>
+    <dimen name="dbx_action_bar_subtitle_top_margin">-3.0dip</dimen>
+    <dimen name="dbx_action_bar_title_text_size">18.0dip</dimen>
+    <dimen name="dbx_action_button_min_width">64.0dip</dimen>
+    <dimen name="lobby_chat_bubble_overlap_neg">-18.0dip</dimen>
+    <dimen name="lobby_chat_bubble_overlap_pos">18.0dip</dimen>
+    <dimen name="snackbar_horizontal_margin">24.0dip</dimen>
+    <dimen name="snackbar_vertical_margin_bottom">16.0dip</dimen>
+    <dimen name="snackbar_vertical_margin_top">16.0dip</dimen>
+</resources>

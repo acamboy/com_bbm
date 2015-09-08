@@ -8,7 +8,7 @@
 
 .field private a:Landroid/content/Context;
 
-.field private b:Lcom/mapquest/android/maps/bp;
+.field private b:Lcom/mapquest/android/maps/bo;
 
 .field private c:I
 
@@ -68,7 +68,7 @@
 
     const/4 v9, -0x2
 
-    const/high16 v6, 0x3f000000
+    const/high16 v6, 0x3f000000    # 0.5f
 
     const/4 v5, 0x1
 
@@ -356,7 +356,7 @@
 
     iget-object v2, p0, Lcom/mapquest/android/maps/AnnotationView;->i:Landroid/widget/TextView;
 
-    const/high16 v3, 0x41600000
+    const/high16 v3, 0x41600000    # 14.0f
 
     iget v4, p0, Lcom/mapquest/android/maps/AnnotationView;->l:F
 
@@ -432,7 +432,7 @@
 
     iget-object v2, p0, Lcom/mapquest/android/maps/AnnotationView;->j:Landroid/widget/TextView;
 
-    const/high16 v3, 0x41200000
+    const/high16 v3, 0x41200000    # 10.0f
 
     iget v4, p0, Lcom/mapquest/android/maps/AnnotationView;->l:F
 
@@ -516,9 +516,9 @@
 
     invoke-virtual {v1, v5}, Landroid/graphics/drawable/GradientDrawable;->setDither(Z)V
 
-    const v0, -0x42333333
+    const v0, -0x42333333    # -0.1f
 
-    const v2, -0x42333333
+    const v2, -0x42333333    # -0.1f
 
     invoke-virtual {v1, v0, v2}, Landroid/graphics/drawable/GradientDrawable;->setGradientCenter(FF)V
 
@@ -563,13 +563,13 @@
 
     int-to-float v1, v1
 
-    const/high16 v2, 0x3f800000
+    const/high16 v2, 0x3f800000    # 1.0f
 
     const/4 v3, 0x0
 
-    const/high16 v4, 0x3f800000
+    const/high16 v4, 0x3f800000    # 1.0f
 
-    const/high16 v8, 0x3f800000
+    const/high16 v8, 0x3f800000    # 1.0f
 
     move v7, v5
 
@@ -690,7 +690,7 @@
     goto :goto_0
 .end method
 
-.method private setLayoutParams(Lcom/mapquest/android/maps/bp;)V
+.method private setLayoutParams(Lcom/mapquest/android/maps/bo;)V
     .locals 3
 
     .prologue
@@ -736,29 +736,29 @@
     return-void
 .end method
 
-.method public final a(Lcom/mapquest/android/maps/bp;)V
+.method public final a(Lcom/mapquest/android/maps/bo;)V
     .locals 3
 
     .prologue
     const/4 v2, 0x0
 
     .line 211
-    iput-object p1, p0, Lcom/mapquest/android/maps/AnnotationView;->b:Lcom/mapquest/android/maps/bp;
+    iput-object p1, p0, Lcom/mapquest/android/maps/AnnotationView;->b:Lcom/mapquest/android/maps/bo;
 
     .line 212
-    invoke-virtual {p1}, Lcom/mapquest/android/maps/bp;->a()Lcom/mapquest/android/maps/s;
+    invoke-virtual {p1}, Lcom/mapquest/android/maps/bo;->a()Lcom/mapquest/android/maps/s;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/mapquest/android/maps/AnnotationView;->d:Lcom/mapquest/android/maps/s;
 
     .line 213
-    invoke-direct {p0, p1}, Lcom/mapquest/android/maps/AnnotationView;->setLayoutParams(Lcom/mapquest/android/maps/bp;)V
+    invoke-direct {p0, p1}, Lcom/mapquest/android/maps/AnnotationView;->setLayoutParams(Lcom/mapquest/android/maps/bo;)V
 
     .line 214
     iget-object v0, p0, Lcom/mapquest/android/maps/AnnotationView;->i:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/mapquest/android/maps/bp;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/mapquest/android/maps/bo;->c()Ljava/lang/String;
 
     move-result-object v1
 
@@ -767,20 +767,20 @@
     .line 215
     iget-object v0, p0, Lcom/mapquest/android/maps/AnnotationView;->j:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/mapquest/android/maps/bp;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/mapquest/android/maps/bo;->b()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 216
-    iget-object v0, p0, Lcom/mapquest/android/maps/AnnotationView;->b:Lcom/mapquest/android/maps/bp;
+    iget-object v0, p0, Lcom/mapquest/android/maps/AnnotationView;->b:Lcom/mapquest/android/maps/bo;
 
-    iget-object v1, p0, Lcom/mapquest/android/maps/AnnotationView;->b:Lcom/mapquest/android/maps/bp;
+    iget-object v1, p0, Lcom/mapquest/android/maps/AnnotationView;->b:Lcom/mapquest/android/maps/bo;
 
-    iget v1, v1, Lcom/mapquest/android/maps/bp;->f:I
+    iget v1, v1, Lcom/mapquest/android/maps/bo;->f:I
 
-    invoke-virtual {v0, v1}, Lcom/mapquest/android/maps/bp;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0, v1}, Lcom/mapquest/android/maps/bo;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -1001,12 +1001,12 @@
     return-object v0
 .end method
 
-.method public getOverlayItem()Lcom/mapquest/android/maps/bp;
+.method public getOverlayItem()Lcom/mapquest/android/maps/bo;
     .locals 1
 
     .prologue
     .line 505
-    iget-object v0, p0, Lcom/mapquest/android/maps/AnnotationView;->b:Lcom/mapquest/android/maps/bp;
+    iget-object v0, p0, Lcom/mapquest/android/maps/AnnotationView;->b:Lcom/mapquest/android/maps/bo;
 
     return-object v0
 .end method
@@ -1112,7 +1112,7 @@
     .locals 3
 
     .prologue
-    const/high16 v2, 0x3f000000
+    const/high16 v2, 0x3f000000    # 0.5f
 
     .line 515
     iput p1, p0, Lcom/mapquest/android/maps/AnnotationView;->t:I

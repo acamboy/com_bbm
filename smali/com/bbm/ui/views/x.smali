@@ -1,96 +1,41 @@
 .class public final Lcom/bbm/ui/views/x;
 .super Ljava/lang/Object;
-.source "QuickActionAttachmentsView.java"
+.source "RecyclerContextMenuInfoWrapperView.java"
+
+# interfaces
+.implements Landroid/view/ContextMenu$ContextMenuInfo;
 
 
 # instance fields
-.field final a:I
+.field public final a:I
 
-.field final b:I
+.field public final b:J
 
-.field final c:Lcom/bbm/j/r;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/bbm/j/r",
-            "<",
-            "Lcom/bbm/d/ff;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public final c:I
 
-.field final d:Ljava/lang/String;
-
-.field final e:Landroid/view/View$OnClickListener;
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>(IILandroid/view/View$OnClickListener;)V
-    .locals 1
+.method public constructor <init>(IJII)V
+    .locals 0
 
     .prologue
-    const/4 v0, 0x0
-
-    .line 63
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
+    .line 37
     iput p1, p0, Lcom/bbm/ui/views/x;->a:I
 
-    .line 65
-    iput p2, p0, Lcom/bbm/ui/views/x;->b:I
+    .line 38
+    iput-wide p2, p0, Lcom/bbm/ui/views/x;->b:J
 
-    .line 66
-    iput-object p3, p0, Lcom/bbm/ui/views/x;->e:Landroid/view/View$OnClickListener;
+    .line 39
+    iput p4, p0, Lcom/bbm/ui/views/x;->c:I
 
-    .line 67
-    iput-object v0, p0, Lcom/bbm/ui/views/x;->c:Lcom/bbm/j/r;
+    .line 40
+    iput p5, p0, Lcom/bbm/ui/views/x;->d:I
 
-    .line 68
-    iput-object v0, p0, Lcom/bbm/ui/views/x;->d:Ljava/lang/String;
-
-    .line 69
-    return-void
-.end method
-
-.method public constructor <init>(Lcom/bbm/j/r;Ljava/lang/String;Landroid/view/View$OnClickListener;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/bbm/j/r",
-            "<",
-            "Lcom/bbm/d/ff;",
-            ">;",
-            "Ljava/lang/String;",
-            "Landroid/view/View$OnClickListener;",
-            ")V"
-        }
-    .end annotation
-
-    .prologue
-    .line 71
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 72
-    iput-object p1, p0, Lcom/bbm/ui/views/x;->c:Lcom/bbm/j/r;
-
-    .line 73
-    iput-object p2, p0, Lcom/bbm/ui/views/x;->d:Ljava/lang/String;
-
-    .line 74
-    const v0, 0x7f020389
-
-    iput v0, p0, Lcom/bbm/ui/views/x;->a:I
-
-    .line 75
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/bbm/ui/views/x;->b:I
-
-    .line 76
-    iput-object p3, p0, Lcom/bbm/ui/views/x;->e:Landroid/view/View$OnClickListener;
-
-    .line 77
+    .line 41
     return-void
 .end method

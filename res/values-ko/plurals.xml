@@ -40,27 +40,27 @@
     </plurals>
     <plurals name="slide_menu_active_chats">
         <item quantity="other">진행 중인 채팅 %1$s개</item>
-        <item quantity="one">진행 중인 채팅 1개</item>
+        <item quantity="one">진행 중인 채팅 %1$s개</item>
     </plurals>
     <plurals name="slide_menu_new_channelupdates">
-        <item quantity="other">새 알림 %1$s개</item>
-        <item quantity="one">새 알림 1개</item>
+        <item quantity="other">새 채널 항목 %1$s개</item>
+        <item quantity="one">새 채널 항목 %1$s개</item>
     </plurals>
     <plurals name="slide_menu_new_invites">
         <item quantity="other">새 초대 %1$s개</item>
-        <item quantity="one">새 초대 1개</item>
+        <item quantity="one">새 초대 %1$s개</item>
     </plurals>
     <plurals name="slide_menu_new_updates">
-        <item quantity="other">새 항목 %1$s개</item>
-        <item quantity="one">새 항목 1개</item>
+        <item quantity="other">새 피드 %1$s개</item>
+        <item quantity="one">새 피드 %1$s개</item>
     </plurals>
     <plurals name="slide_menu_total_contacts">
         <item quantity="other">대화 상대 %1$s명</item>
-        <item quantity="one">대화 상대 1명</item>
+        <item quantity="one">대화 상대 %1$s명</item>
     </plurals>
     <plurals name="slide_menu_total_groups">
         <item quantity="other">그룹 %1$s개</item>
-        <item quantity="one">그룹 1개</item>
+        <item quantity="one">그룹 %1$s개</item>
     </plurals>
     <plurals name="update_channel_stats_comments">
         <item quantity="other">댓글 %1$s개</item>

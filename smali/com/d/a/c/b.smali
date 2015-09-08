@@ -1,10 +1,10 @@
-.class public final synthetic Lcom/d/a/c/b;
+.class final synthetic Lcom/d/a/c/b;
 .super Ljava/lang/Object;
 .source "ImageSizeUtils.java"
 
 
 # static fields
-.field public static final synthetic a:[I
+.field static final synthetic a:[I
 
 
 # direct methods
@@ -12,8 +12,8 @@
     .locals 3
 
     .prologue
-    .line 122
-    invoke-static {}, Lcom/d/a/b/a/l;->values()[Lcom/d/a/b/a/l;
+    .line 99
+    invoke-static {}, Lcom/d/a/b/a/i;->a()[I
 
     move-result-object v0
 
@@ -26,11 +26,9 @@
     :try_start_0
     sget-object v0, Lcom/d/a/c/b;->a:[I
 
-    sget-object v1, Lcom/d/a/b/a/l;->a:Lcom/d/a/b/a/l;
+    sget v1, Lcom/d/a/b/a/i;->a:I
 
-    invoke-virtual {v1}, Lcom/d/a/b/a/l;->ordinal()I
-
-    move-result v1
+    add-int/lit8 v1, v1, -0x1
 
     const/4 v2, 0x1
 
@@ -42,11 +40,9 @@
     :try_start_1
     sget-object v0, Lcom/d/a/c/b;->a:[I
 
-    sget-object v1, Lcom/d/a/b/a/l;->b:Lcom/d/a/b/a/l;
+    sget v1, Lcom/d/a/b/a/i;->b:I
 
-    invoke-virtual {v1}, Lcom/d/a/b/a/l;->ordinal()I
-
-    move-result v1
+    add-int/lit8 v1, v1, -0x1
 
     const/4 v2, 0x2
 

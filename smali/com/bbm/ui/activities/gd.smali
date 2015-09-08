@@ -3,20 +3,24 @@
 .source "ConversationActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/e/bo;
+.implements Lcom/bbm/util/e/c;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Lcom/bbm/ui/activities/gc;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/gc;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 1215
-    iput-object p1, p0, Lcom/bbm/ui/activities/gd;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 2846
+    iput-object p1, p0, Lcom/bbm/ui/activities/gd;->b:Lcom/bbm/ui/activities/gc;
+
+    iput-object p2, p0, Lcom/bbm/ui/activities/gd;->a:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,52 +29,24 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/d/fi;)V
-    .locals 1
-
-    .prologue
-    .line 1275
-    iget-object v0, p1, Lcom/bbm/d/fi;->c:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 1276
-    new-instance v0, Lcom/bbm/ui/activities/gh;
-
-    invoke-direct {v0, p0, p1}, Lcom/bbm/ui/activities/gh;-><init>(Lcom/bbm/ui/activities/gd;Lcom/bbm/d/fi;)V
-
-    invoke-static {v0}, Lcom/bbm/j/u;->a(Lcom/bbm/j/s;)V
-
-    .line 1292
-    :cond_0
-    return-void
-.end method
-
-.method public final a(Lcom/bbm/d/fi;J)V
+.method public final a(Ljava/lang/String;J)V
     .locals 2
 
     .prologue
-    .line 1220
-    iget-object v0, p1, Lcom/bbm/d/fi;->c:Ljava/lang/String;
+    .line 2849
+    iget-object v0, p0, Lcom/bbm/ui/activities/gd;->a:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+    invoke-static {v0, p1, p2, p3}, Lcom/bbm/invite/o;->a(Ljava/lang/String;Ljava/lang/String;J)V
 
-    move-result v0
+    .line 2850
+    iget-object v0, p0, Lcom/bbm/ui/activities/gd;->b:Lcom/bbm/ui/activities/gc;
 
-    if-nez v0, :cond_0
+    iget-object v0, v0, Lcom/bbm/ui/activities/gc;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    .line 1221
-    new-instance v0, Lcom/bbm/ui/activities/ge;
+    const/4 v1, 0x0
 
-    invoke-direct {v0, p0, p1, p2, p3}, Lcom/bbm/ui/activities/ge;-><init>(Lcom/bbm/ui/activities/gd;Lcom/bbm/d/fi;J)V
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ConversationActivity;->b(Lcom/bbm/ui/activities/ConversationActivity;Z)V
 
-    invoke-static {v0}, Lcom/bbm/j/u;->a(Lcom/bbm/j/s;)V
-
-    .line 1271
-    :cond_0
+    .line 2851
     return-void
 .end method

@@ -1,97 +1,60 @@
 .class final Lcom/d/a/b/n;
 .super Ljava/lang/Object;
-.source "LoadAndDisplayImageTask.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.source "ImageLoadingInfo.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/d/a/b/a/b;
+.field final a:Ljava/lang/String;
 
-.field final synthetic b:Ljava/lang/Throwable;
+.field final b:Ljava/lang/String;
 
-.field final synthetic c:Lcom/d/a/b/l;
+.field final c:Lcom/d/a/b/e/a;
+
+.field final d:Lcom/d/a/b/a/f;
+
+.field final e:Lcom/d/a/b/d;
+
+.field final f:Lcom/d/a/b/f/a;
+
+.field final g:Lcom/d/a/b/f/b;
+
+.field final h:Ljava/util/concurrent/locks/ReentrantLock;
 
 
 # direct methods
-.method constructor <init>(Lcom/d/a/b/l;Lcom/d/a/b/a/b;Ljava/lang/Throwable;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Lcom/d/a/b/e/a;Lcom/d/a/b/a/f;Ljava/lang/String;Lcom/d/a/b/d;Lcom/d/a/b/f/a;Ljava/util/concurrent/locks/ReentrantLock;)V
+    .locals 1
 
     .prologue
-    .line 354
-    iput-object p1, p0, Lcom/d/a/b/n;->c:Lcom/d/a/b/l;
-
-    iput-object p2, p0, Lcom/d/a/b/n;->a:Lcom/d/a/b/a/b;
-
-    iput-object p3, p0, Lcom/d/a/b/n;->b:Ljava/lang/Throwable;
-
+    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    .line 49
+    iput-object p1, p0, Lcom/d/a/b/n;->a:Ljava/lang/String;
 
+    .line 50
+    iput-object p2, p0, Lcom/d/a/b/n;->c:Lcom/d/a/b/e/a;
 
-# virtual methods
-.method public final run()V
-    .locals 3
+    .line 51
+    iput-object p3, p0, Lcom/d/a/b/n;->d:Lcom/d/a/b/a/f;
 
-    .prologue
-    .line 357
-    iget-object v0, p0, Lcom/d/a/b/n;->c:Lcom/d/a/b/l;
+    .line 52
+    iput-object p5, p0, Lcom/d/a/b/n;->e:Lcom/d/a/b/d;
 
-    iget-object v0, v0, Lcom/d/a/b/l;->c:Lcom/d/a/b/d;
+    .line 53
+    iput-object p6, p0, Lcom/d/a/b/n;->f:Lcom/d/a/b/f/a;
 
-    iget v0, v0, Lcom/d/a/b/d;->c:I
-
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x1
-
-    :goto_0
-    if-eqz v0, :cond_0
-
-    .line 358
-    iget-object v0, p0, Lcom/d/a/b/n;->c:Lcom/d/a/b/l;
-
-    iget-object v0, v0, Lcom/d/a/b/l;->b:Landroid/widget/ImageView;
-
-    iget-object v1, p0, Lcom/d/a/b/n;->c:Lcom/d/a/b/l;
-
-    iget-object v1, v1, Lcom/d/a/b/l;->c:Lcom/d/a/b/d;
-
-    iget v1, v1, Lcom/d/a/b/d;->c:I
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    .line 360
-    :cond_0
-    iget-object v0, p0, Lcom/d/a/b/n;->c:Lcom/d/a/b/l;
-
-    iget-object v0, v0, Lcom/d/a/b/l;->d:Lcom/d/a/b/a/d;
-
-    iget-object v0, p0, Lcom/d/a/b/n;->c:Lcom/d/a/b/l;
-
-    iget-object v0, v0, Lcom/d/a/b/l;->a:Ljava/lang/String;
-
-    iget-object v0, p0, Lcom/d/a/b/n;->c:Lcom/d/a/b/l;
-
-    iget-object v0, v0, Lcom/d/a/b/l;->b:Landroid/widget/ImageView;
-
-    new-instance v0, Lcom/d/a/b/a/a;
-
-    iget-object v1, p0, Lcom/d/a/b/n;->a:Lcom/d/a/b/a/b;
-
-    iget-object v2, p0, Lcom/d/a/b/n;->b:Ljava/lang/Throwable;
-
-    invoke-direct {v0, v1, v2}, Lcom/d/a/b/a/a;-><init>(Lcom/d/a/b/a/b;Ljava/lang/Throwable;)V
-
-    .line 361
-    return-void
-
-    .line 357
-    :cond_1
+    .line 54
     const/4 v0, 0x0
 
-    goto :goto_0
+    iput-object v0, p0, Lcom/d/a/b/n;->g:Lcom/d/a/b/f/b;
+
+    .line 55
+    iput-object p7, p0, Lcom/d/a/b/n;->h:Ljava/util/concurrent/locks/ReentrantLock;
+
+    .line 56
+    iput-object p4, p0, Lcom/d/a/b/n;->b:Ljava/lang/String;
+
+    .line 57
+    return-void
 .end method

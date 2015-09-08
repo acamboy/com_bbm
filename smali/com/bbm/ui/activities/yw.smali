@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/yw;
 .super Ljava/lang/Object;
-.source "NewChannelActivity.java"
+.source "PrivateConversationActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/ui/hc;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/NewChannelActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/NewChannelActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/PrivateConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 392
-    iput-object p1, p0, Lcom/bbm/ui/activities/yw;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+    .line 913
+    iput-object p1, p0, Lcom/bbm/ui/activities/yw;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,48 +25,116 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final a(Lcom/bbm/d/ht;I)V
+    .locals 6
 
     .prologue
-    .line 395
-    new-instance v0, Landroid/content/Intent;
+    .line 916
+    const-string v0, "Sticker clicked"
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/yw;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+    const-class v1, Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    const-class v2, Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    .line 917
+    iget-object v0, p0, Lcom/bbm/ui/activities/yw;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    .line 397
-    const-string v1, "subcategory"
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->i(Lcom/bbm/ui/activities/PrivateConversationActivity;)Lcom/bbm/d/a;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/yw;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+    move-result-object v0
 
-    invoke-static {v2}, Lcom/bbm/ui/activities/NewChannelActivity;->g(Lcom/bbm/ui/activities/NewChannelActivity;)I
+    iget-object v1, p0, Lcom/bbm/ui/activities/yw;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    move-result v2
+    const v2, 0x7f0e030f
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/PrivateConversationActivity;->getString(I)Ljava/lang/String;
 
-    .line 399
-    const-string v1, "category"
+    move-result-object v1
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/yw;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+    iget-object v2, p1, Lcom/bbm/d/ht;->f:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/bbm/ui/activities/NewChannelActivity;->f(Lcom/bbm/ui/activities/NewChannelActivity;)I
+    const/4 v3, 0x1
 
-    move-result v2
+    new-array v3, v3, [Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    const/4 v4, 0x0
 
-    .line 400
-    iget-object v1, p0, Lcom/bbm/ui/activities/yw;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+    iget-object v5, p0, Lcom/bbm/ui/activities/yw;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    const/4 v2, 0x2
+    invoke-static {v5}, Lcom/bbm/ui/activities/PrivateConversationActivity;->j(Lcom/bbm/ui/activities/PrivateConversationActivity;)Ljava/lang/String;
 
-    invoke-virtual {v1, v0, v2}, Lcom/bbm/ui/activities/NewChannelActivity;->startActivityForResult(Landroid/content/Intent;I)V
+    move-result-object v5
 
-    .line 401
+    aput-object v5, v3, v4
+
+    invoke-static {v3}, Lcom/google/b/c/p;->a([Ljava/lang/Object;)Ljava/util/ArrayList;
+
+    move-result-object v3
+
+    invoke-static {v1, v2, v3}, Lcom/bbm/d/aj;->b(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Lcom/bbm/d/em;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ez;)V
+
+    .line 919
+    iget-object v0, p0, Lcom/bbm/ui/activities/yw;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->m(Lcom/bbm/ui/activities/PrivateConversationActivity;)Lcom/bbm/j/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/fv;
+
+    iget-boolean v0, v0, Lcom/bbm/d/fv;->j:Z
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/bbm/c/o;->b:Lcom/bbm/c/o;
+
+    move-object v1, v0
+
+    .line 920
+    :goto_0
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
+
+    move-result-object v2
+
+    iget-object v3, p1, Lcom/bbm/d/ht;->f:Ljava/lang/String;
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/yw;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->m(Lcom/bbm/ui/activities/PrivateConversationActivity;)Lcom/bbm/j/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/fv;
+
+    iget-object v0, v0, Lcom/bbm/d/fv;->q:Ljava/util/List;
+
+    invoke-virtual {v2, v3, p2, v0, v1}, Lcom/bbm/c/c;->a(Ljava/lang/String;ILjava/util/List;Lcom/bbm/c/o;)V
+
+    .line 921
+    iget-object v0, p0, Lcom/bbm/ui/activities/yw;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->s(Lcom/bbm/ui/activities/PrivateConversationActivity;)V
+
+    .line 922
     return-void
+
+    .line 919
+    :cond_0
+    sget-object v0, Lcom/bbm/c/o;->a:Lcom/bbm/c/o;
+
+    move-object v1, v0
+
+    goto :goto_0
 .end method

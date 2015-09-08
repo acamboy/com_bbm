@@ -1,67 +1,103 @@
-.class final Lcom/bbm/ui/activities/abd;
+.class final synthetic Lcom/bbm/ui/activities/abd;
 .super Ljava/lang/Object;
-.source "OwnProfileActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "ReportProblemActivity.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/OwnProfileActivity;
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/OwnProfileActivity;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 390
-    iput-object p1, p0, Lcom/bbm/ui/activities/abd;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
-
-    .prologue
-    .line 393
-    const-string v0, "mRootView Clicked"
-
-    const-class v1, Lcom/bbm/ui/activities/OwnProfileActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 395
-    iget-object v0, p0, Lcom/bbm/ui/activities/abd;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
-
-    invoke-static {v0}, Lcom/bbm/util/fh;->b(Landroid/app/Activity;)V
-
-    .line 396
-    iget-object v0, p0, Lcom/bbm/ui/activities/abd;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/OwnProfileActivity;->b()V
-
-    .line 397
-    iget-object v0, p0, Lcom/bbm/ui/activities/abd;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/OwnProfileActivity;->b(Lcom/bbm/ui/activities/OwnProfileActivity;)Landroid/widget/LinearLayout;
+    .line 302
+    invoke-static {}, Lcom/bbm/ui/activities/abj;->a()[I
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->requestFocus()Z
+    array-length v0, v0
 
-    .line 398
-    iget-object v0, p0, Lcom/bbm/ui/activities/abd;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
+    new-array v0, v0, [I
 
-    const/4 v1, 0x1
+    sput-object v0, Lcom/bbm/ui/activities/abd;->a:[I
 
-    invoke-static {v0, v1}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;Z)V
+    :try_start_0
+    sget-object v0, Lcom/bbm/ui/activities/abd;->a:[I
 
-    .line 399
+    sget v1, Lcom/bbm/ui/activities/abj;->a:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_3
+
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/ui/activities/abd;->a:[I
+
+    sget v1, Lcom/bbm/ui/activities/abj;->b:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
+
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/bbm/ui/activities/abd;->a:[I
+
+    sget v1, Lcom/bbm/ui/activities/abj;->c:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_1
+
+    :goto_2
+    :try_start_3
+    sget-object v0, Lcom/bbm/ui/activities/abd;->a:[I
+
+    sget v1, Lcom/bbm/ui/activities/abj;->d:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_0
+
+    :goto_3
     return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_3
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_2
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_1
+
+    :catch_3
+    move-exception v0
+
+    goto :goto_0
 .end method

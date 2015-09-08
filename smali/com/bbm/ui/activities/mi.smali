@@ -1,170 +1,155 @@
 .class final Lcom/bbm/ui/activities/mi;
-.super Ljava/lang/Object;
-.source "GroupChatListActivity.java"
+.super Lcom/bbm/d/b/o;
+.source "GroupEventsActivity.java"
 
-# interfaces
-.implements Lcom/bbm/f/ac;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/d/b/o",
+        "<",
+        "Lcom/bbm/g/u;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field private final a:Landroid/app/Activity;
-
-.field private final b:Ljava/lang/String;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupEventsActivity;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Activity;Ljava/lang/String;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupEventsActivity;)V
     .locals 0
 
     .prologue
-    .line 84
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 205
+    iput-object p1, p0, Lcom/bbm/ui/activities/mi;->a:Lcom/bbm/ui/activities/GroupEventsActivity;
 
-    .line 85
-    iput-object p1, p0, Lcom/bbm/ui/activities/mi;->a:Landroid/app/Activity;
+    invoke-direct {p0}, Lcom/bbm/d/b/o;-><init>()V
 
-    .line 86
-    iput-object p2, p0, Lcom/bbm/ui/activities/mi;->b:Ljava/lang/String;
-
-    .line 87
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 0
-
-    .prologue
-    .line 121
-    return-void
-.end method
-
-.method public final a(Lcom/bbm/f/ab;)V
+.method protected final a()Ljava/util/List;
     .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/bbm/g/u;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 91
-    const-string v0, "listAdd"
+    const/4 v0, 0x0
 
-    iget-object v1, p1, Lcom/bbm/f/ab;->b:Ljava/lang/String;
+    .line 209
+    new-instance v1, Ljava/util/ArrayList;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    move-result v0
+    .line 210
+    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/g/an;
 
-    if-eqz v0, :cond_0
+    move-result-object v2
 
-    .line 92
-    iget-object v0, p1, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
+    iget-object v3, p0, Lcom/bbm/ui/activities/mi;->a:Lcom/bbm/ui/activities/GroupEventsActivity;
 
-    .line 95
-    :try_start_0
-    const-string v1, "cookie"
+    invoke-static {v3}, Lcom/bbm/ui/activities/GroupEventsActivity;->e(Lcom/bbm/ui/activities/GroupEventsActivity;)Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+    move-result-object v3
 
-    move-result v1
+    invoke-virtual {v2, v3}, Lcom/bbm/g/an;->o(Ljava/lang/String;)Lcom/bbm/j/w;
 
-    if-eqz v1, :cond_0
+    move-result-object v2
 
-    .line 96
-    const-string v1, "cookie"
+    .line 212
+    invoke-interface {v2}, Lcom/bbm/j/w;->b()Z
 
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;
+    move-result v3
 
-    move-result-object v1
+    if-eqz v3, :cond_0
 
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    move-object v0, v1
 
-    move-result-object v1
-
-    .line 98
-    iget-object v2, p0, Lcom/bbm/ui/activities/mi;->b:Ljava/lang/String;
-
-    invoke-static {v1, v2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 99
-    invoke-static {}, Lcom/bbm/ui/activities/GroupChatListActivity;->f()Lcom/bbm/g/al;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lcom/bbm/g/an;->a:Lcom/bbm/d/a/f;
-
-    iget-object v1, v1, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
-
-    invoke-interface {v1, p0}, Lcom/bbm/f/a;->b(Lcom/bbm/f/ac;)V
-
-    .line 101
-    const-string v1, "elements"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
-
-    move-result-object v0
-
-    .line 102
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lorg/json/JSONObject;
-
-    .line 104
-    const-string v1, "uri"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 105
-    const-string v2, "groupUri"
-
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 107
-    new-instance v2, Landroid/content/Intent;
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/mi;->a:Landroid/app/Activity;
-
-    const-class v4, Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-direct {v2, v3, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 108
-    const-string v3, "groupConversationUri"
-
-    invoke-virtual {v2, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 109
-    const-string v1, "groupUri"
-
-    invoke-virtual {v2, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 110
-    iget-object v0, p0, Lcom/bbm/ui/activities/mi;->a:Landroid/app/Activity;
-
-    invoke-virtual {v0, v2}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 117
-    :cond_0
+    .line 240
     :goto_0
-    return-void
+    return-object v0
 
-    .line 113
-    :catch_0
-    move-exception v0
+    .line 215
+    :cond_0
+    iget-object v3, p0, Lcom/bbm/ui/activities/mi;->a:Lcom/bbm/ui/activities/GroupEventsActivity;
 
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+    invoke-static {v3}, Lcom/bbm/ui/activities/GroupEventsActivity;->f(Lcom/bbm/ui/activities/GroupEventsActivity;)Landroid/widget/ListView;
 
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/widget/ListView;->getEmptyView()Landroid/view/View;
+
+    move-result-object v3
+
+    if-nez v3, :cond_1
+
+    .line 216
+    iget-object v3, p0, Lcom/bbm/ui/activities/mi;->a:Lcom/bbm/ui/activities/GroupEventsActivity;
+
+    invoke-static {v3}, Lcom/bbm/ui/activities/GroupEventsActivity;->g(Lcom/bbm/ui/activities/GroupEventsActivity;)Landroid/view/View;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v0}, Landroid/view/View;->setVisibility(I)V
+
+    .line 217
+    iget-object v3, p0, Lcom/bbm/ui/activities/mi;->a:Lcom/bbm/ui/activities/GroupEventsActivity;
+
+    invoke-static {v3}, Lcom/bbm/ui/activities/GroupEventsActivity;->f(Lcom/bbm/ui/activities/GroupEventsActivity;)Landroid/widget/ListView;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/bbm/ui/activities/mi;->a:Lcom/bbm/ui/activities/GroupEventsActivity;
+
+    invoke-static {v4}, Lcom/bbm/ui/activities/GroupEventsActivity;->g(Lcom/bbm/ui/activities/GroupEventsActivity;)Landroid/view/View;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Landroid/widget/ListView;->setEmptyView(Landroid/view/View;)V
+
+    .line 221
+    :cond_1
+    :goto_1
+    invoke-interface {v2}, Lcom/bbm/j/w;->d()I
+
+    move-result v3
+
+    if-ge v0, v3, :cond_2
+
+    .line 222
+    invoke-interface {v2, v0}, Lcom/bbm/j/w;->b(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 221
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    .line 225
+    :cond_2
+    new-instance v0, Lcom/bbm/ui/activities/mj;
+
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/mj;-><init>(Lcom/bbm/ui/activities/mi;)V
+
+    invoke-static {v1, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
+
+    move-object v0, v1
+
+    .line 240
     goto :goto_0
 .end method

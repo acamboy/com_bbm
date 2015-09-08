@@ -1,40 +1,38 @@
 .class public final Lcom/bbm/d/db;
-.super Lcom/bbm/d/dy;
+.super Lcom/bbm/d/ez;
 .source "BbmdsProtocol.java"
 
 
 # direct methods
-.method constructor <init>(Ljava/util/List;Ljava/lang/String;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lorg/json/JSONObject;",
-            ">;",
-            "Ljava/lang/String;",
-            ")V"
-        }
-    .end annotation
+.method constructor <init>(Ljava/lang/String;JLjava/lang/String;)V
+    .locals 2
 
     .prologue
-    .line 4247
-    const-string v0, "requestListChange"
+    .line 3329
+    const-string v0, "nowPlayingUpdate"
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/d/ez;-><init>(Ljava/lang/String;)V
 
-    .line 4249
-    const-string v0, "elements"
+    .line 3331
+    const-string v0, "artist"
 
     invoke-virtual {p0, v0, p1}, Lcom/bbm/d/db;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 4250
-    const-string v0, "type"
+    .line 3332
+    const-string v0, "duration"
 
-    invoke-virtual {p0, v0, p2}, Lcom/bbm/d/db;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    .line 4251
+    move-result-object v1
+
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/d/db;->a(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 3333
+    const-string v0, "track"
+
+    invoke-virtual {p0, v0, p4}, Lcom/bbm/d/db;->a(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 3334
     return-void
 .end method
 
@@ -44,8 +42,8 @@
     .locals 1
 
     .prologue
-    .line 4245
-    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
+    .line 3327
+    invoke-super {p0}, Lcom/bbm/d/ez;->a()Lcom/bbm/f/ab;
 
     move-result-object v0
 

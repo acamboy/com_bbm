@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 285
+    .line 312
     iput-object p1, p0, Lcom/bbm/f/n;->a:Lcom/bbm/f/l;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -31,27 +31,27 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 288
+    .line 315
     iget-object v0, p0, Lcom/bbm/f/n;->a:Lcom/bbm/f/l;
 
     iget-object v0, v0, Lcom/bbm/f/l;->a:Lcom/bbm/f/j;
 
-    invoke-static {v0}, Lcom/bbm/f/j;->a(Lcom/bbm/f/j;)Lcom/bbm/util/ct;
+    invoke-static {v0}, Lcom/bbm/f/j;->a(Lcom/bbm/f/j;)Lcom/bbm/util/dc;
 
     move-result-object v0
 
     sget-object v1, Lcom/bbm/f/b;->b:Lcom/bbm/f/b;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
 
-    .line 289
+    .line 316
     const-string v0, "Service layer status: connected"
 
     new-array v1, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 290
+    .line 317
     iget-object v0, p0, Lcom/bbm/f/n;->a:Lcom/bbm/f/l;
 
     iget-object v0, v0, Lcom/bbm/f/l;->a:Lcom/bbm/f/j;
@@ -62,21 +62,21 @@
 
     if-eqz v0, :cond_0
 
-    .line 291
+    .line 318
     const-string v0, "Resynch with bbmcore"
 
     new-array v1, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 292
+    .line 319
     iget-object v0, p0, Lcom/bbm/f/n;->a:Lcom/bbm/f/l;
 
     iget-object v0, v0, Lcom/bbm/f/l;->a:Lcom/bbm/f/j;
 
     invoke-static {v0}, Lcom/bbm/f/j;->j(Lcom/bbm/f/j;)V
 
-    .line 294
+    .line 321
     :cond_0
     iget-object v0, p0, Lcom/bbm/f/n;->a:Lcom/bbm/f/l;
 
@@ -84,6 +84,6 @@
 
     invoke-static {v0}, Lcom/bbm/f/j;->k(Lcom/bbm/f/j;)Z
 
-    .line 295
+    .line 322
     return-void
 .end method

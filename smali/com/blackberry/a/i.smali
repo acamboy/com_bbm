@@ -594,3 +594,18 @@
     .line 185
     return-void
 .end method
+
+.method public static varargs d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    .locals 2
+
+    .prologue
+    .line 197
+    const/4 v0, 0x3
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1, p0, p1}, Lcom/blackberry/a/i;->a(ILjava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 198
+    return-void
+.end method

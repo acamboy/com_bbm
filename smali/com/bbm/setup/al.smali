@@ -1,58 +1,78 @@
 .class final Lcom/bbm/setup/al;
 .super Ljava/lang/Object;
-.source "WhatsNewActivity.java"
+.source "SetupManager.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/f/ac;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/setup/WhatsNewActivity;
+.field final synthetic a:Lcom/bbm/setup/z;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/setup/WhatsNewActivity;)V
+.method private constructor <init>(Lcom/bbm/setup/z;)V
     .locals 0
 
     .prologue
-    .line 38
-    iput-object p1, p0, Lcom/bbm/setup/al;->a:Lcom/bbm/setup/WhatsNewActivity;
+    .line 696
+    iput-object p1, p0, Lcom/bbm/setup/al;->a:Lcom/bbm/setup/z;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method synthetic constructor <init>(Lcom/bbm/setup/z;B)V
+    .locals 0
 
     .prologue
-    .line 41
-    invoke-static {}, Lcom/bbm/Alaska;->h()Landroid/content/SharedPreferences;
+    .line 696
+    invoke-direct {p0, p1}, Lcom/bbm/setup/al;-><init>(Lcom/bbm/setup/z;)V
 
-    move-result-object v0
+    return-void
+.end method
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-result-object v0
+# virtual methods
+.method public final a(Lcom/bbm/f/ab;)V
+    .locals 2
 
-    const-string v1, "whats_new_version"
+    .prologue
+    .line 700
+    iget-object v0, p1, Lcom/bbm/f/ab;->b:Ljava/lang/String;
 
-    const/4 v2, 0x1
+    const-string v1, "goAway"
 
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result v0
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    if-eqz v0, :cond_0
 
-    .line 44
-    iget-object v0, p0, Lcom/bbm/setup/al;->a:Lcom/bbm/setup/WhatsNewActivity;
+    .line 701
+    const-string v0, "SetupManager goAway received from Bbmcore"
 
-    invoke-virtual {v0}, Lcom/bbm/setup/WhatsNewActivity;->a()V
+    const/4 v1, 0x0
 
-    .line 45
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 704
+    iget-object v0, p0, Lcom/bbm/setup/al;->a:Lcom/bbm/setup/z;
+
+    invoke-virtual {v0}, Lcom/bbm/setup/z;->b()V
+
+    .line 706
+    :cond_0
+    return-void
+.end method
+
+.method public final a_()V
+    .locals 0
+
+    .prologue
+    .line 711
     return-void
 .end method

@@ -1,9 +1,6 @@
 .class final Landroid/support/v4/app/cm;
-.super Ljava/lang/Object;
-.source "RemoteInput.java"
-
-# interfaces
-.implements Landroid/support/v4/app/cu;
+.super Landroid/support/v4/app/cl;
+.source "NotificationManagerCompat.java"
 
 
 # direct methods
@@ -11,8 +8,20 @@
     .locals 0
 
     .prologue
-    .line 263
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 157
+    invoke-direct {p0}, Landroid/support/v4/app/cl;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a()I
+    .locals 1
+
+    .prologue
+    .line 160
+    const/16 v0, 0x21
+
+    return v0
 .end method

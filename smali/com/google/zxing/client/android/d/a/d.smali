@@ -60,11 +60,11 @@
     :try_start_0
     iget-object v0, p0, Lcom/google/zxing/client/android/d/a/d;->b:Ljava/lang/String;
 
-    sget-object v1, Lcom/google/zxing/client/android/m;->a:Lcom/google/zxing/client/android/m;
+    sget v1, Lcom/google/zxing/client/android/m;->a:I
 
     const/16 v2, 0x1000
 
-    invoke-static {v0, v1, v2}, Lcom/google/zxing/client/android/k;->a(Ljava/lang/String;Lcom/google/zxing/client/android/m;I)Ljava/lang/CharSequence;
+    invoke-static {v0, v1, v2}, Lcom/google/zxing/client/android/k;->a(Ljava/lang/String;II)Ljava/lang/CharSequence;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 

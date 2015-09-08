@@ -244,173 +244,7 @@
     goto :goto_0
 .end method
 
-.method static a([B)Lcom/google/zxing/b/e;
-    .locals 7
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 83
-    new-instance v3, Lcom/google/zxing/b/c;
-
-    invoke-direct {v3, p0}, Lcom/google/zxing/b/c;-><init>([B)V
-
-    .line 84
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const/16 v0, 0x64
-
-    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    .line 85
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const/4 v0, 0x0
-
-    invoke-direct {v5, v0}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    .line 86
-    new-instance v2, Ljava/util/ArrayList;
-
-    const/4 v0, 0x1
-
-    invoke-direct {v2, v0}, Ljava/util/ArrayList;-><init>(I)V
-
-    .line 87
-    sget-object v0, Lcom/google/zxing/c/a/e;->b:Lcom/google/zxing/c/a/e;
-
-    .line 89
-    :cond_0
-    sget-object v6, Lcom/google/zxing/c/a/e;->b:Lcom/google/zxing/c/a/e;
-
-    if-ne v0, v6, :cond_3
-
-    .line 90
-    invoke-static {v3, v4, v5}, Lcom/google/zxing/c/a/c;->a(Lcom/google/zxing/b/c;Ljava/lang/StringBuilder;Ljava/lang/StringBuilder;)Lcom/google/zxing/c/a/e;
-
-    move-result-object v0
-
-    .line 113
-    :goto_0
-    sget-object v6, Lcom/google/zxing/c/a/e;->a:Lcom/google/zxing/c/a/e;
-
-    if-eq v0, v6, :cond_1
-
-    invoke-virtual {v3}, Lcom/google/zxing/b/c;->a()I
-
-    move-result v6
-
-    if-gtz v6, :cond_0
-
-    .line 114
-    :cond_1
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->length()I
-
-    move-result v0
-
-    if-lez v0, :cond_2
-
-    .line 115
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 117
-    :cond_2
-    new-instance v3, Lcom/google/zxing/b/e;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    move-object v0, v1
-
-    :goto_1
-    invoke-direct {v3, p0, v4, v0, v1}, Lcom/google/zxing/b/e;-><init>([BLjava/lang/String;Ljava/util/List;Ljava/lang/String;)V
-
-    return-object v3
-
-    .line 92
-    :cond_3
-    sget-object v6, Lcom/google/zxing/c/a/d;->a:[I
-
-    invoke-virtual {v0}, Lcom/google/zxing/c/a/e;->ordinal()I
-
-    move-result v0
-
-    aget v0, v6, v0
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 109
-    invoke-static {}, Lcom/google/zxing/f;->a()Lcom/google/zxing/f;
-
-    move-result-object v0
-
-    throw v0
-
-    .line 94
-    :pswitch_0
-    invoke-static {v3, v4}, Lcom/google/zxing/c/a/c;->a(Lcom/google/zxing/b/c;Ljava/lang/StringBuilder;)V
-
-    .line 111
-    :goto_2
-    sget-object v0, Lcom/google/zxing/c/a/e;->b:Lcom/google/zxing/c/a/e;
-
-    goto :goto_0
-
-    .line 97
-    :pswitch_1
-    invoke-static {v3, v4}, Lcom/google/zxing/c/a/c;->b(Lcom/google/zxing/b/c;Ljava/lang/StringBuilder;)V
-
-    goto :goto_2
-
-    .line 100
-    :pswitch_2
-    invoke-static {v3, v4}, Lcom/google/zxing/c/a/c;->c(Lcom/google/zxing/b/c;Ljava/lang/StringBuilder;)V
-
-    goto :goto_2
-
-    .line 103
-    :pswitch_3
-    invoke-static {v3, v4}, Lcom/google/zxing/c/a/c;->d(Lcom/google/zxing/b/c;Ljava/lang/StringBuilder;)V
-
-    goto :goto_2
-
-    .line 106
-    :pswitch_4
-    invoke-static {v3, v4, v2}, Lcom/google/zxing/c/a/c;->a(Lcom/google/zxing/b/c;Ljava/lang/StringBuilder;Ljava/util/Collection;)V
-
-    goto :goto_2
-
-    :cond_4
-    move-object v0, v2
-
-    .line 117
-    goto :goto_1
-
-    .line 92
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-    .end packed-switch
-.end method
-
-.method private static a(Lcom/google/zxing/b/c;Ljava/lang/StringBuilder;Ljava/lang/StringBuilder;)Lcom/google/zxing/c/a/e;
+.method private static a(Lcom/google/zxing/b/c;Ljava/lang/StringBuilder;Ljava/lang/StringBuilder;)I
     .locals 4
 
     .prologue
@@ -458,11 +292,11 @@
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 137
-    sget-object v0, Lcom/google/zxing/c/a/e;->b:Lcom/google/zxing/c/a/e;
+    sget v0, Lcom/google/zxing/c/a/e;->b:I
 
     .line 182
     :goto_1
-    return-object v0
+    return v0
 
     .line 138
     :cond_2
@@ -471,7 +305,7 @@
     if-ne v2, v3, :cond_3
 
     .line 139
-    sget-object v0, Lcom/google/zxing/c/a/e;->a:Lcom/google/zxing/c/a/e;
+    sget v0, Lcom/google/zxing/c/a/e;->a:I
 
     goto :goto_1
 
@@ -508,7 +342,7 @@
     if-gtz v2, :cond_0
 
     .line 182
-    sget-object v0, Lcom/google/zxing/c/a/e;->b:Lcom/google/zxing/c/a/e;
+    sget v0, Lcom/google/zxing/c/a/e;->b:I
 
     goto :goto_1
 
@@ -519,7 +353,7 @@
     if-ne v2, v3, :cond_7
 
     .line 147
-    sget-object v0, Lcom/google/zxing/c/a/e;->c:Lcom/google/zxing/c/a/e;
+    sget v0, Lcom/google/zxing/c/a/e;->c:I
 
     goto :goto_1
 
@@ -530,7 +364,7 @@
     if-ne v2, v3, :cond_8
 
     .line 149
-    sget-object v0, Lcom/google/zxing/c/a/e;->g:Lcom/google/zxing/c/a/e;
+    sget v0, Lcom/google/zxing/c/a/e;->g:I
 
     goto :goto_1
 
@@ -610,7 +444,7 @@
     if-ne v2, v3, :cond_d
 
     .line 166
-    sget-object v0, Lcom/google/zxing/c/a/e;->e:Lcom/google/zxing/c/a/e;
+    sget v0, Lcom/google/zxing/c/a/e;->e:I
 
     goto :goto_1
 
@@ -621,7 +455,7 @@
     if-ne v2, v3, :cond_e
 
     .line 168
-    sget-object v0, Lcom/google/zxing/c/a/e;->d:Lcom/google/zxing/c/a/e;
+    sget v0, Lcom/google/zxing/c/a/e;->d:I
 
     goto :goto_1
 
@@ -632,7 +466,7 @@
     if-ne v2, v3, :cond_f
 
     .line 170
-    sget-object v0, Lcom/google/zxing/c/a/e;->f:Lcom/google/zxing/c/a/e;
+    sget v0, Lcom/google/zxing/c/a/e;->f:I
 
     goto :goto_1
 
@@ -670,6 +504,170 @@
     move v0, v2
 
     goto/16 :goto_0
+.end method
+
+.method static a([B)Lcom/google/zxing/b/e;
+    .locals 7
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 83
+    new-instance v3, Lcom/google/zxing/b/c;
+
+    invoke-direct {v3, p0}, Lcom/google/zxing/b/c;-><init>([B)V
+
+    .line 84
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const/16 v0, 0x64
+
+    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    .line 85
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const/4 v0, 0x0
+
+    invoke-direct {v5, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    .line 86
+    new-instance v2, Ljava/util/ArrayList;
+
+    const/4 v0, 0x1
+
+    invoke-direct {v2, v0}, Ljava/util/ArrayList;-><init>(I)V
+
+    .line 87
+    sget v0, Lcom/google/zxing/c/a/e;->b:I
+
+    .line 89
+    :cond_0
+    sget v6, Lcom/google/zxing/c/a/e;->b:I
+
+    if-ne v0, v6, :cond_3
+
+    .line 90
+    invoke-static {v3, v4, v5}, Lcom/google/zxing/c/a/c;->a(Lcom/google/zxing/b/c;Ljava/lang/StringBuilder;Ljava/lang/StringBuilder;)I
+
+    move-result v0
+
+    .line 113
+    :goto_0
+    sget v6, Lcom/google/zxing/c/a/e;->a:I
+
+    if-eq v0, v6, :cond_1
+
+    invoke-virtual {v3}, Lcom/google/zxing/b/c;->a()I
+
+    move-result v6
+
+    if-gtz v6, :cond_0
+
+    .line 114
+    :cond_1
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v0
+
+    if-lez v0, :cond_2
+
+    .line 115
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 117
+    :cond_2
+    new-instance v3, Lcom/google/zxing/b/e;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    move-object v0, v1
+
+    :goto_1
+    invoke-direct {v3, p0, v4, v0, v1}, Lcom/google/zxing/b/e;-><init>([BLjava/lang/String;Ljava/util/List;Ljava/lang/String;)V
+
+    return-object v3
+
+    .line 92
+    :cond_3
+    sget-object v6, Lcom/google/zxing/c/a/d;->a:[I
+
+    add-int/lit8 v0, v0, -0x1
+
+    aget v0, v6, v0
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 109
+    invoke-static {}, Lcom/google/zxing/f;->a()Lcom/google/zxing/f;
+
+    move-result-object v0
+
+    throw v0
+
+    .line 94
+    :pswitch_0
+    invoke-static {v3, v4}, Lcom/google/zxing/c/a/c;->a(Lcom/google/zxing/b/c;Ljava/lang/StringBuilder;)V
+
+    .line 111
+    :goto_2
+    sget v0, Lcom/google/zxing/c/a/e;->b:I
+
+    goto :goto_0
+
+    .line 97
+    :pswitch_1
+    invoke-static {v3, v4}, Lcom/google/zxing/c/a/c;->b(Lcom/google/zxing/b/c;Ljava/lang/StringBuilder;)V
+
+    goto :goto_2
+
+    .line 100
+    :pswitch_2
+    invoke-static {v3, v4}, Lcom/google/zxing/c/a/c;->c(Lcom/google/zxing/b/c;Ljava/lang/StringBuilder;)V
+
+    goto :goto_2
+
+    .line 103
+    :pswitch_3
+    invoke-static {v3, v4}, Lcom/google/zxing/c/a/c;->d(Lcom/google/zxing/b/c;Ljava/lang/StringBuilder;)V
+
+    goto :goto_2
+
+    .line 106
+    :pswitch_4
+    invoke-static {v3, v4, v2}, Lcom/google/zxing/c/a/c;->a(Lcom/google/zxing/b/c;Ljava/lang/StringBuilder;Ljava/util/Collection;)V
+
+    goto :goto_2
+
+    :cond_4
+    move-object v0, v2
+
+    .line 117
+    goto :goto_1
+
+    .line 92
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+        :pswitch_4
+    .end packed-switch
 .end method
 
 .method private static a(II[I)V

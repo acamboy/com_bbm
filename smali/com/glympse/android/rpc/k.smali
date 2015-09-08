@@ -28,7 +28,7 @@
     return-void
 .end method
 
-.method public static l(Lcom/glympse/android/lib/GGlympsePrivate;)V
+.method public static k(Lcom/glympse/android/lib/GGlympsePrivate;)V
     .locals 5
 
     .prologue
@@ -372,7 +372,7 @@
 
     .line 99
     :cond_3
-    invoke-static {v1}, Lcom/glympse/android/rpc/k;->l(Lcom/glympse/android/lib/GGlympsePrivate;)V
+    invoke-static {v1}, Lcom/glympse/android/rpc/k;->k(Lcom/glympse/android/lib/GGlympsePrivate;)V
 
     goto :goto_0
 .end method

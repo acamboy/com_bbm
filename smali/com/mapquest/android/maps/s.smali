@@ -14,7 +14,7 @@
     .locals 7
 
     .prologue
-    const-wide v4, 0x412e848000000000L
+    const-wide v4, 0x412e848000000000L    # 1000000.0
 
     .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -127,7 +127,7 @@
     .locals 8
 
     .prologue
-    const-wide v6, 0x41b5752a00000000L
+    const-wide v6, 0x41b5752a00000000L    # 3.6E8
 
     .line 94
     move v0, p1
@@ -135,7 +135,7 @@
     :goto_0
     int-to-double v2, v0
 
-    const-wide v4, 0x41a5752a00000000L
+    const-wide v4, 0x41a5752a00000000L    # 1.8E8
 
     cmpl-double v1, v2, v4
 
@@ -155,7 +155,7 @@
     :goto_1
     int-to-double v2, v0
 
-    const-wide v4, -0x3e5a8ad600000000L
+    const-wide v4, -0x3e5a8ad600000000L    # -1.8E8
 
     cmpg-double v1, v2, v4
 
@@ -189,7 +189,7 @@
 
     int-to-double v0, v0
 
-    const-wide v2, 0x3eb0c6f7a0b5ed8dL
+    const-wide v2, 0x3eb0c6f7a0b5ed8dL    # 1.0E-6
 
     mul-double/2addr v0, v2
 
@@ -205,7 +205,7 @@
 
     int-to-double v0, v0
 
-    const-wide v2, 0x3eb0c6f7a0b5ed8dL
+    const-wide v2, 0x3eb0c6f7a0b5ed8dL    # 1.0E-6
 
     mul-double/2addr v0, v2
 

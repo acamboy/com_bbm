@@ -14,7 +14,7 @@
     .locals 0
 
     .prologue
-    .line 92
+    .line 98
     iput-object p1, p0, Lcom/bbm/l/b;->b:Lcom/bbm/l/a;
 
     iput-object p2, p0, Lcom/bbm/l/b;->a:Lcom/bbm/l/d/b/c;
@@ -30,17 +30,19 @@
     .locals 3
 
     .prologue
-    .line 96
-    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/f/ae;
+    .line 102
+    invoke-static {}, Lcom/bbm/Alaska;->n()Lcom/bbm/f/ae;
 
     move-result-object v0
 
-    .line 97
-    iget-boolean v1, v0, Lcom/bbm/f/ae;->i:Z
+    .line 103
+    invoke-virtual {v0}, Lcom/bbm/f/ae;->a()Z
+
+    move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 98
+    .line 104
     iget-object v1, p0, Lcom/bbm/l/b;->a:Lcom/bbm/l/d/b/c;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -69,10 +71,10 @@
 
     iput-object v0, v1, Lcom/bbm/l/d/b/c;->c:Ljava/lang/String;
 
-    .line 99
+    .line 105
     const/4 v0, 0x1
 
-    .line 101
+    .line 107
     :goto_0
     return v0
 

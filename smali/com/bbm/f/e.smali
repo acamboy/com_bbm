@@ -25,21 +25,6 @@
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
-
-    .prologue
-    .line 35
-    iget-object v0, p0, Lcom/bbm/f/e;->a:Lcom/bbm/f/c;
-
-    iget-object v0, v0, Lcom/bbm/f/c;->b:Lcom/bbm/f/aa;
-
-    invoke-virtual {v0}, Lcom/bbm/f/aa;->a()V
-
-    .line 36
-    return-void
-.end method
-
 .method public final a(Lcom/bbm/f/ab;)V
     .locals 1
 
@@ -52,5 +37,20 @@
     invoke-virtual {v0, p1}, Lcom/bbm/f/aa;->a(Lcom/bbm/f/ab;)V
 
     .line 31
+    return-void
+.end method
+
+.method public final a_()V
+    .locals 1
+
+    .prologue
+    .line 35
+    iget-object v0, p0, Lcom/bbm/f/e;->a:Lcom/bbm/f/c;
+
+    iget-object v0, v0, Lcom/bbm/f/c;->b:Lcom/bbm/f/aa;
+
+    invoke-virtual {v0}, Lcom/bbm/f/aa;->a()V
+
+    .line 36
     return-void
 .end method

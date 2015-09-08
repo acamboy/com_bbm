@@ -1,83 +1,68 @@
 .class final Lcom/bbm/ui/c/fo;
-.super Lcom/bbm/j/k;
-.source "OwnProfileDetailsFragment.java"
+.super Lcom/bbm/ui/e/a;
+.source "MyChannelsFragment.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/fg;
+.field final synthetic a:Lcom/bbm/d/bb;
+
+.field final synthetic b:Ljava/lang/String;
+
+.field final synthetic c:Lcom/bbm/ui/c/fd;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/fg;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/c/fd;Lcom/bbm/d/bb;Ljava/lang/String;)V
+    .locals 0
 
     .prologue
-    .line 224
-    iput-object p1, p0, Lcom/bbm/ui/c/fo;->a:Lcom/bbm/ui/c/fg;
+    .line 591
+    iput-object p1, p0, Lcom/bbm/ui/c/fo;->c:Lcom/bbm/ui/c/fd;
 
-    const/4 v0, 0x0
+    iput-object p2, p0, Lcom/bbm/ui/c/fo;->a:Lcom/bbm/d/bb;
 
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    iput-object p3, p0, Lcom/bbm/ui/c/fo;->b:Ljava/lang/String;
+
+    invoke-direct {p0}, Lcom/bbm/ui/e/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 4
+.method public final a()V
+    .locals 2
 
     .prologue
-    .line 228
-    iget-object v0, p0, Lcom/bbm/ui/c/fo;->a:Lcom/bbm/ui/c/fg;
-
-    iget-object v1, p0, Lcom/bbm/ui/c/fo;->a:Lcom/bbm/ui/c/fg;
-
-    invoke-static {v1}, Lcom/bbm/ui/c/fg;->g(Lcom/bbm/ui/c/fg;)Lcom/bbm/d/a;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/bbm/d/a;->i()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/c/fg;->a(Lcom/bbm/ui/c/fg;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 229
-    iget-object v0, p0, Lcom/bbm/ui/c/fo;->a:Lcom/bbm/ui/c/fg;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/fg;->n(Lcom/bbm/ui/c/fg;)Landroid/widget/TextView;
+    .line 594
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/f;
 
     move-result-object v0
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object v0, v0, Lcom/bbm/f;->b:Lcom/bbm/d/a;
 
-    const-string v2, "PIN:"
+    iget-object v1, p0, Lcom/bbm/ui/c/fo;->a:Lcom/bbm/d/bb;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ez;)V
 
-    iget-object v2, p0, Lcom/bbm/ui/c/fo;->a:Lcom/bbm/ui/c/fg;
+    .line 595
+    return-void
+.end method
 
-    invoke-static {v2}, Lcom/bbm/ui/c/fg;->m(Lcom/bbm/ui/c/fg;)Ljava/lang/String;
+.method public final a(I)V
+    .locals 2
 
-    move-result-object v2
+    .prologue
+    .line 600
+    new-instance v0, Ljava/io/File;
 
-    sget-object v3, Ljava/util/Locale;->US:Ljava/util/Locale;
+    iget-object v1, p0, Lcom/bbm/ui/c/fo;->b:Ljava/lang/String;
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
+    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    move-result-object v2
+    .line 601
+    invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 230
+    .line 602
     return-void
 .end method

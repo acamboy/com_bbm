@@ -225,6 +225,21 @@
     <string name="a_newer_version_of_bbm_is_required">최신 버전의 BBM이 필요합니다.</string>
     <string name="a_problem_has_occurred_in_bbm">BBM에 문제가 발생했습니다. 나중에 다시 시도하십시오.</string>
     <string name="a_temporary_server_error_has_occurred">일시적인 서버 오류가 발생했습니다. 다시 시도하십시오.</string>
+    <string name="abc_action_bar_home_description">홈 탐색</string>
+    <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
+    <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
+    <string name="abc_action_bar_up_description">위로 탐색</string>
+    <string name="abc_action_menu_overflow_description">옵션 더보기</string>
+    <string name="abc_action_mode_done">완료</string>
+    <string name="abc_activity_chooser_view_see_all">전체 보기</string>
+    <string name="abc_activitychooserview_choose_application">앱 선택</string>
+    <string name="abc_searchview_description_clear">검색어 삭제</string>
+    <string name="abc_searchview_description_query">검색어</string>
+    <string name="abc_searchview_description_search">검색</string>
+    <string name="abc_searchview_description_submit">검색어 보내기</string>
+    <string name="abc_searchview_description_voice">음성 검색</string>
+    <string name="abc_shareactionprovider_share_with">공유 대상</string>
+    <string name="abc_shareactionprovider_share_with_application">%s와(과) 공유</string>
     <string name="about">정보</string>
     <string name="about_bbm_pins_message">PIN은 BBM에서 회원님을 고유하게 식별합니다. BBM PIN 또는 바코드를 공유하면 사람들이 회원님을 초대하여 BBM 대화 상대가 될 수 있습니다.</string>
     <string name="about_bbm_pins_title">BBM PIN 정보</string>
@@ -235,9 +250,9 @@
     <string name="activity_select_new_admin_title">새 관리자 선택</string>
     <string name="activity_select_new_admin_title_selection">+%1$d명의 관리자</string>
     <string name="activity_tap_to_invite_dialog_info">NFC를 켜시겠습니까?</string>
-    <string name="activity_tap_to_invite_dialog_no">아니요</string>
+    <string name="activity_tap_to_invite_dialog_no">@string/no</string>
     <string name="activity_tap_to_invite_dialog_title">NFC 무선이 꺼져 있음</string>
-    <string name="activity_tap_to_invite_dialog_yes">예</string>
+    <string name="activity_tap_to_invite_dialog_yes">@string/yes</string>
     <string name="activity_tap_to_invite_info">현재 단말기의 뒷면을 서로 맞추십시오. 두 단말기에 모두 NFC가 켜져 있어야 합니다.</string>
     <string name="ad_block_channel">채널을 차단하면 채널 \"%1$s\"의 스폰서 컨텐츠를 볼 수 없습니다. 이 작업은 취소할 수 없습니다.</string>
     <string name="ad_block_sponsor">\"%1$s\"의 스폰서 컨텐츠를 볼 수 없습니다. 이 작업은 취소할 수 없습니다.</string>
@@ -263,13 +278,26 @@
     <string name="allow_comments_on_posts">게시물 댓글 달기 허용</string>
     <string name="app_name">BBM</string>
     <string name="app_picker_name">어플리케이션</string>
+    <string name="app_store_app_subscribe_notification_dialog_line">BBM 구독 패키지 %1$s 사용자가 된 것을 대화 상대에게 알릴 수 있습니다.</string>
+    <string name="app_store_app_subscribe_notification_message">이제부터 BBM 구독 패키지 %1$s 사용자입니다! 지금 가입하십시오!</string>
+    <string name="app_store_confirmation_screen_feature_offered_line">구독으로 제공하는 기능:</string>
     <string name="app_store_details_screen_install_button">설치</string>
     <string name="app_store_details_screen_inventory_not_found">"애플리케이션을 열 수 없습니다.
  나중에 다시 시도하십시오."</string>
     <string name="app_store_details_screen_open_button">열기</string>
+    <string name="app_store_details_screen_renew_button">갱신</string>
+    <string name="app_store_details_screen_subscribe_button">구독</string>
+    <string name="app_store_details_screen_subscribed_button">구독됨</string>
     <string name="app_store_invalid_app_id">이 항목은 사용할 수 없습니다</string>
+    <string name="app_store_subscribed_app_no_ads_description">이 구독에 가입하면 BBM에 후원 광고가 표시되지 않고 후원 초대도 받지 않습니다.</string>
+    <string name="app_store_subscribed_app_vanity_pin_description">사용자 지정 PIN은 다른 사용자를 초대하고 프로필을 볼 때 사용됩니다. 사용자 지정 PIN을 정하면 정해진 시간 동안만 수정 편집할 수 있습니다. PIN 변경</string>
+    <string name="app_subscription_thank_you">감사합니다. 이제부터 귀하는 BBM 구독 가입자입니다.</string>
     <string name="approve_comments">댓글 승인</string>
     <string name="approve_comments_description">채널 웹사이트에서 이 옵션을 변경할 수 있습니다.</string>
+    <string name="archiving_disabled_message">관리자가 보관 기능을 껐습니다. 채팅이 단말기에 더 이상 저장되지 않으며, 이전에 저장된 채팅도 단말기에 저장되지 않습니다. 자세한 내용은 관리자에게 문의하십시오.</string>
+    <string name="archiving_disabled_title">보관 꺼짐</string>
+    <string name="archiving_enabled_message">관리자가 보관 기능을 켰습니다. 채팅이 단말기에 저장됩니다. 자세한 내용은 관리자에게 문의하십시오.</string>
+    <string name="archiving_enabled_title">보관 켜짐</string>
     <string name="arrived_at_destination">Glympse: 목적지에 도착</string>
     <string name="asterisk">*</string>
     <string name="attach">첨부</string>
@@ -286,15 +314,15 @@
     <string name="attach_list_voicenote">음성 메모</string>
     <string name="audio_player_pause">일시 중지</string>
     <string name="audio_player_play">재생</string>
-    <string name="auth_client_needs_enabling_title">Google Play 서비스를 사용하도록 설정해야 하는 애플리케이션입니다.</string>
-    <string name="auth_client_needs_installation_title">Google Play 서비스를 설치해야 하는 애플리케이션입니다.</string>
-    <string name="auth_client_needs_update_title">Google Play 서비스를 업데이트해야 하는 애플리케이션입니다.</string>
-    <string name="auth_client_play_services_err_notification_msg">Google Play 서비스 오류</string>
-    <string name="auth_client_requested_by_msg">%1$s에서 요청</string>
-    <string name="auth_client_using_bad_version_title">애플리케이션에서 잘못된 버전의 Google Play 서비스를 사용하려고 했습니다.</string>
+    <string name="autopassphrase_completed">이 채팅은 이제 BBM Protected입니다.</string>
+    <string name="autopassphrase_failed">BBM Protected를 설정할 수 없음</string>
+    <string name="autopassphrase_initiated">BBM Protected 채팅 만들기</string>
+    <string name="autopassphrase_retry">재시도</string>
     <string name="avatar_file_not_support">지원되지 않는 파일입니다.</string>
     <string name="back">뒤로</string>
     <string name="backup_file_is_not_valid">백업 파일이 유효하지 않습니다. BBM 설정을 종료하고 BlackBerry Desktop Software에서 단말기 전환 유틸리티를 사용해야 합니다.</string>
+    <string name="badge_on_your_avatar">사용자 아바타 배지</string>
+    <string name="badge_on_your_avatar_description">BBM 구독이 활성화되면 사용자 아바타에 배지가 표시됩니다.</string>
     <string name="barcode_info">대화 상대가 바코드를 스캔하여 귀하를 BBM에 추가할 수 있습니다.</string>
     <string name="bbm_account_name">BBM</string>
     <string name="bbm_account_user_name">BBM Groups</string>
@@ -310,7 +338,9 @@
     <string name="bbm_service_running">연결됨</string>
     <string name="bbm_setup">BBM 설정</string>
     <string name="bbm_share_with_pin_uri">http://www.bbm.com/share/?BBMID=%1$s</string>
-    <string name="bbm_voice_ongoing_call">통화 중</string>
+    <string name="bbm_voice_ongoing_call">BBM 통화 중</string>
+    <string name="billing_google_error_message_body">이 항목은 회원님의 스토어 계정으로 다른 BlackBerry ID에 대해 이미 구입되었습니다. 다른 스토어 계정을 사용하여 다시 시도하십시오.</string>
+    <string name="billing_google_error_message_title">구입할 수 없음</string>
     <string name="blackberry_channels"><b>BBM Channels</b></string>
     <string name="blackberry_id">BBID</string>
     <string name="blackberry_id_is_not_responding">BlackBerry ID가 응답하지 않습니다.</string>
@@ -562,7 +592,7 @@
     <string name="chat_history_canceled_video_chat">화상 통화 취소됨</string>
     <string name="chat_history_canceled_voice_chat">음성 통화 취소됨</string>
     <string name="chat_history_connection_error">네트워크 연결을 확인하고 다시 시도하십시오.</string>
-    <string name="chat_history_contact_busy">&lt;b>%1$s&lt;/b> 님이 현재 다른 용무 중입니다. 나중에 다시 시도하십시오.</string>
+    <string name="chat_history_contact_busy">&lt;b>%1$s&lt;/b>님이 현재 다른 용무 중입니다. 나중에 다시 시도하십시오.</string>
     <string name="chat_history_contact_unavailable">&lt;b>%1$s&lt;/b> 님이 현재 대화를 할 수 없습니다. 나중에 다시 시도하십시오.</string>
     <string name="chat_history_declined_video_chat">&lt;b>%1$s&lt;/b> 님의 화상 통화를 거절했습니다.</string>
     <string name="chat_history_declined_voice_chat">&lt;b>%1$s&lt;/b> 님의 음성 통화를 거절했습니다.</string>
@@ -573,6 +603,7 @@
     <string name="chat_history_missed_video_chat">부재중 화상 통화: &lt;b>%1$s&lt;/b></string>
     <string name="chat_history_missed_voice_chat">부재중 음성 통화: &lt;b>%1$s&lt;/b></string>
     <string name="chats">채팅</string>
+    <string name="chats_block_chat">이 채팅 차단</string>
     <string name="chats_empty_chat">빈 채팅</string>
     <string name="chats_end_chat">채팅 종료</string>
     <string name="chats_end_discussion">토론 종료</string>
@@ -581,35 +612,56 @@
     <string name="chats_open_group">그룹 열기</string>
     <string name="chats_select_more">추가 선택</string>
     <string name="chats_start_video">화상 채팅 시작</string>
-    <string name="chats_status_no_chats">채팅을 시작하려면 상단 모서리를 누르세요.</string>
+    <string name="chats_status_no_chats">채팅을 시작하려면 화면 하단의 채팅 버튼을 누르세요.</string>
+    <string name="chats_status_no_chats_widget">채팅을 시작하려면 상단 모서리를 누르세요.</string>
     <string name="chats_view_bbm_profile">BBM 프로필 보기</string>
     <string name="click_to_expire">현재 Glympse를 마치려면 여기를 클릭하세요</string>
     <string name="click_to_reply">여기를 클릭하여 답장하기...</string>
     <string name="click_to_view">여기를 클릭하여 보기...</string>
     <string name="close">닫기</string>
+    <string name="cloud_directory_contact_add_coworkers">동료 찾기</string>
+    <string name="cloud_directory_contact_chat_failed">이 동료와 BBM 채팅을 시작할 수 없습니다. 나중에 다시 시도하십시오.</string>
+    <string name="cloud_directory_fields_info">동료가 BBM에서 사람들을 검색할 때 표시되는 이름입니다.</string>
+    <string name="cloud_directory_pin_lookup">연락처 정보 요청 중</string>
+    <string name="cloud_directory_search_failed">동료를 검색할 수 없습니다. 나중에 다시 시도하십시오.</string>
+    <string name="cloud_directory_search_more_results">검색 결과가 너무 많습니다. 검색 범위를 좁히십시오.</string>
+    <string name="cloud_directory_search_text_min_length">동료 검색 시 검색어는 최소 2자 이상이어야 합니다.</string>
+    <string name="cloud_directory_service_hint">필수 입력 사항 실명을 입력하십시오. 동료가 이름으로 사용자를 검색하고 사용자와 BBM 채팅을 시작할 수 있습니다.</string>
     <string name="coming_soon">"이 기능은 현재 사용할 수 없습니다.
 곧 서비스 예정"</string>
     <string name="coming_soon_title">곧 서비스 예정!</string>
     <string name="comment_copied">댓글 복사됨</string>
     <string name="comments_disabled_label">댓글 사용 안 함</string>
+    <string name="common_android_wear_notification_needs_update_text">%1$s에서 Android Wear 앱을 업데이트해야 합니다.</string>
+    <string name="common_android_wear_update_text">%1$s은(는) Android Wear 앱을 업데이트하지 않으면 실행되지 않습니다.</string>
+    <string name="common_android_wear_update_title">Android Wear 업데이트</string>
+    <string name="common_google_play_services_api_unavailable_text">%1$s에 필요한 하나 이상의 Google Play 서비스를 현재 사용할 수 없습니다. 개발자에게 문의하여 도움을 받으시기 바랍니다.</string>
     <string name="common_google_play_services_enable_button">Google Play 서비스 사용</string>
-    <string name="common_google_play_services_enable_text">Google Play 서비스를 사용하도록 설정해야 이 앱이 작동합니다.</string>
+    <string name="common_google_play_services_enable_text">Google Play 서비스를 사용하도록 설정해야 %1$s이(가) 작동합니다.</string>
     <string name="common_google_play_services_enable_title">Google Play 서비스 사용</string>
+    <string name="common_google_play_services_error_notification_requested_by_msg">%1$s에서 요청</string>
     <string name="common_google_play_services_install_button">Google Play 서비스 설치</string>
-    <string name="common_google_play_services_install_text_phone">휴대전화에 Google Play 서비스가 설치되어 있어야 이 앱이 실행됩니다.</string>
-    <string name="common_google_play_services_install_text_tablet">태블릿에 Google Play 서비스가 설치되어 있어야 이 앱이 실행됩니다.</string>
+    <string name="common_google_play_services_install_text_phone">휴대전화에 Google Play 서비스가 설치되어 있어야 %1$s이(가) 실행됩니다.</string>
+    <string name="common_google_play_services_install_text_tablet">태블릿에 Google Play 서비스가 설치되어 있어야 %1$s이(가) 실행됩니다.</string>
     <string name="common_google_play_services_install_title">Google Play 서비스 설치</string>
     <string name="common_google_play_services_invalid_account_text">지정한 계정이 이 기기에 존재하지 않습니다. 다른 계정을 선택하세요.</string>
     <string name="common_google_play_services_invalid_account_title">올바르지 않은 계정</string>
+    <string name="common_google_play_services_needs_enabling_title">Google Play 서비스를 사용 설정해야 하는 애플리케이션입니다.</string>
     <string name="common_google_play_services_network_error_text">Google Play 서비스에 연결하려면 데이터 연결이 필요합니다.</string>
     <string name="common_google_play_services_network_error_title">네트워크 오류</string>
+    <string name="common_google_play_services_notification_needs_update_title">Google Play 서비스를 업데이트해야 하는 애플리케이션입니다.</string>
+    <string name="common_google_play_services_notification_ticker">Google Play 서비스 오류</string>
+    <string name="common_google_play_services_sign_in_failed_text">지정한 계정에 로그인하는 중에 오류가 발생했습니다. 다른 계정을 선택해 주세요.</string>
+    <string name="common_google_play_services_sign_in_failed_title">로그인 실패</string>
     <string name="common_google_play_services_unknown_issue">Google Play 서비스에 알 수 없는 문제가 발생했습니다.</string>
-    <string name="common_google_play_services_unsupported_date_text">기기의 날짜가 잘못된 것 같습니다. 기기의 날짜를 확인해 주세요.</string>
-    <string name="common_google_play_services_unsupported_text">일부 사용자 애플리케이션에 필요한 Google Play 서비스가 사용자 기기에서 지원되지 않습니다. 기기 제조업체에 문의하시기 바랍니다.</string>
+    <string name="common_google_play_services_unsupported_text">%1$s에 필요한 Google Play 서비스가 사용자 기기에서 지원되지 않습니다. 기기 제조업체에 문의하시기 바랍니다.</string>
     <string name="common_google_play_services_unsupported_title">Google Play 서비스</string>
     <string name="common_google_play_services_update_button">업데이트</string>
-    <string name="common_google_play_services_update_text">Google Play 서비스를 업데이트해야만 이 앱이 실행됩니다.</string>
+    <string name="common_google_play_services_update_text">Google Play 서비스를 업데이트해야 %1$s이(가) 실행됩니다.</string>
     <string name="common_google_play_services_update_title">Google Play 서비스 업데이트</string>
+    <string name="common_google_play_services_updating_text">현재 업데이트 중인 Google Play 서비스가 있어야 %1$s이(가) 실행됩니다.</string>
+    <string name="common_google_play_services_updating_title">Google Play 서비스 업데이트 중</string>
+    <string name="common_open_on_phone">휴대전화에서 열기</string>
     <string name="common_signin_button_text">로그인</string>
     <string name="common_signin_button_text_long">Google 계정으로 로그인</string>
     <string name="complete">완료</string>
@@ -618,8 +670,10 @@
     <string name="contact_add_category">카테고리 추가</string>
     <string name="contact_add_category_already_exists">카테고리가 이미 있습니다.</string>
     <string name="contact_add_category_hint">카테고리 제목을 입력하십시오</string>
-    <string name="contact_add_notification">사용자 추가됨</string>
+    <string name="contact_add_notification">대화 상대 추가됨</string>
     <string name="contact_delete_category">카테고리 삭제</string>
+    <string name="contact_delete_notification">대화 상대 삭제됨</string>
+    <string name="contact_delete_notification_multiple">대화 상대 %1$d명 삭제됨</string>
     <string name="contact_details">대화 상대 세부 정보</string>
     <string name="contact_details_description">전화 번호, 이메일 주소 또는 웹 사이트를 포함합니다.</string>
     <string name="contact_is_blocked">대화 상대 차단됨</string>
@@ -631,6 +685,8 @@
     <string name="contacts_are_blocked">대화 상대 차단됨</string>
     <string name="contacts_count">0</string>
     <string name="contacts_delete_contact">%1$s님 삭제</string>
+    <string name="contacts_dialog_delete_and_block_info">앞으로 %1$s님의 모든 초대 및 채팅이 차단됩니다. %1$s님을 삭제 및 차단하시겠습니까?</string>
+    <string name="contacts_dialog_delete_and_block_title">%1$s님 삭제 및 차단</string>
     <string name="contacts_dialog_delete_block_info">%1$s님이 차단된 목록에 추가됩니다.</string>
     <string name="contacts_dialog_delete_block_label">이후 초대 차단</string>
     <string name="contacts_dialog_delete_multi_block_info">대화 상대가 차단된 목록에 추가됩니다.</string>
@@ -655,15 +711,20 @@
     <string name="contents_sms">전화번호</string>
     <string name="contents_text">단문</string>
     <string name="context_menu_copy_message">메시지 복사</string>
-    <string name="context_menu_recall_message">메시지 제거</string>
+    <string name="context_menu_quote_message">메시지 인용</string>
+    <string name="context_menu_recall_message">메시지 회수</string>
     <string name="context_menu_resend_message">메시지 다시 보내기</string>
+    <string name="conversation_activity_block_chat_warning_message">이 채팅을 차단하면 이 채팅으로 전송된 새 메시지를 받을 수 없게 됩니다.</string>
+    <string name="conversation_activity_block_chat_warning_title">채팅을 차단하시겠습니까?</string>
     <string name="conversation_activity_end_chat_on_voice_warning_message">통화가 종료되고 모든 채팅 메시지가 삭제됩니다.</string>
     <string name="conversation_activity_end_chat_warning_message">채팅을 종료하면 모든 메시지가 삭제됩니다.</string>
     <string name="conversation_activity_end_chat_warning_title">채팅을 종료하시겠습니까?</string>
+    <string name="conversation_activity_leave_chat_warning_message">채팅에서 나가면 모든 메시지가 삭제됩니다.</string>
+    <string name="conversation_activity_leave_chat_warning_title">채팅에서 나가시겠습니까?</string>
     <string name="conversation_activity_reinvite_accepted">초대 수락됨</string>
     <string name="conversation_activity_reinvite_sent">초대 보냄</string>
-    <string name="conversation_are_already_in_the_chat">&lt;b>%1$s&lt;/b>님은 이미 채팅 중입니다.</string>
-    <string name="conversation_bubble_dropbox_caption">제 Dropbox의 에 대한 링크입니다</string>
+    <string name="conversation_are_already_in_the_chat">%1$s님은 이미 채팅 중입니다.</string>
+    <string name="conversation_bubble_dropbox_caption">%1$s 제 Dropbox의 에 대한 링크입니다</string>
     <string name="conversation_button_dropbox_download">다운로드</string>
     <string name="conversation_button_toast_attachment_deleted">첨부 파일 삭제됨</string>
     <string name="conversation_button_toast_ref_content_deleted">참조된 컨텐츠 삭제됨</string>
@@ -678,30 +739,36 @@
     <string name="conversation_file_transfert">파일 받음</string>
     <string name="conversation_file_transfert_canceled_dialog_title">파일 전송 취소됨</string>
     <string name="conversation_file_transfert_canceled_dialog_too_large">%1$s이(가) 너무 큽니다. 최대 파일 크기는 16MB입니다.</string>
-    <string name="conversation_incoming_invite_req">&lt;b>%1$s&lt;/b> 님이 &lt;b>%2$s&lt;/b>님을 채팅에 초대하고자 합니다.</string>
+    <string name="conversation_groups_alt_picture_sent">사진 공유됨</string>
+    <string name="conversation_groups_alt_sticker_sent">스티커 공유됨</string>
+    <string name="conversation_incoming_invite_req">%1$s님이 %2$s님을 채팅에 초대하려고 합니다.</string>
     <string name="conversation_incoming_invite_req_accepted"><b>%1$s</b>님을 추가했습니다.</string>
-    <string name="conversation_incoming_invite_req_denied">귀하는 &lt;b>%1$s&lt;/b>님의 &lt;b>%2$s&lt;/b>님 초대 요청을 거절했습니다.</string>
+    <string name="conversation_incoming_invite_req_denied">%1$s님의 %2$s님 초대 요청을 거절했습니다.</string>
     <string name="conversation_invite_accept_button">허용</string>
     <string name="conversation_invite_reject_button">거부</string>
-    <string name="conversation_invited">&lt;b>%1$s&lt;/b>님이 &lt;b>%2$s&lt;/b>님을 초대하는 요청을 수락했습니다.</string>
-    <string name="conversation_is_already_in_the_chat">&lt;b>%1$s&lt;/b>님은 이미 채팅 중입니다.</string>
+    <string name="conversation_invited">%1$s님이 %2$s님을 초대하는 요청을 수락했습니다.</string>
+    <string name="conversation_is_already_in_the_chat">%1$s님은 이미 채팅 중입니다.</string>
     <string name="conversation_is_writing_a_message">님이 메시지를 작성하는 중...</string>
-    <string name="conversation_joined_the_chat">&lt;b>%1$s&lt;/b>님이 채팅에 참여했습니다.</string>
-    <string name="conversation_left_the_chat">&lt;b>%1$s&lt;/b>님이 채팅에서 나갔습니다.</string>
+    <string name="conversation_joined_the_chat">%1$s님이 채팅에 참여했습니다.</string>
+    <string name="conversation_left_the_chat">%1$s님이 채팅에서 나갔습니다.</string>
     <string name="conversation_location_message_accurace_within">%1$sm 내로 정확함</string>
     <string name="conversation_location_received">위치 받음</string>
     <string name="conversation_location_sent">위치 보냄</string>
+    <string name="conversation_message_edit_title">메시지 편집</string>
+    <string name="conversation_message_editing">편집 중: %1$s</string>
+    <string name="conversation_message_editing_removed">삭제된 메시지 편집</string>
     <string name="conversation_message_recall_failed">메시지를 제거할 수 없습니다.</string>
     <string name="conversation_message_recall_pending">메시지 제거하기</string>
-    <string name="conversation_message_recalled">제거된 메시지</string>
+    <string name="conversation_message_recalled">회수된 메시지</string>
+    <string name="conversation_mpc_header">채팅</string>
     <string name="conversation_must_reinvite">%1$s님의 대화 상대 목록에 회원님이 속해 있지 않습니다. %1$s님을 다시 초대하시겠습니까?</string>
     <string name="conversation_notification_calendar_received">약속 받음</string>
     <string name="conversation_notification_calendar_sent">약속 보냄</string>
-    <string name="conversation_notification_conf_incoming_invite_req">&lt;b>%1$s&lt;/b>님이 채팅에 다른 사람을 초대하도록 요청했습니다</string>
-    <string name="conversation_notification_conf_invited">&lt;b>%1$s&lt;/b>님이 채팅에 초대되었습니다</string>
-    <string name="conversation_notification_conf_outgoing_invite_req">&lt;b>%1$s&lt;/b>님을 채팅에 초대했습니다</string>
-    <string name="conversation_notification_conf_outgoing_invite_req_denied">&lt;b>%1$s&lt;/b>님 초대 요청이 거절되었습니다</string>
-    <string name="conversation_notification_conf_we_joined">&lt;b>%1$s&lt;/b>님이 회원님을 채팅에 초대했습니다</string>
+    <string name="conversation_notification_conf_incoming_invite_req">%1$s님이 채팅에 다른 사람을 초대하도록 요청했습니다</string>
+    <string name="conversation_notification_conf_invited">%1$s님이 채팅에 초대되었습니다</string>
+    <string name="conversation_notification_conf_outgoing_invite_req">%1$s님을 채팅에 초대했습니다</string>
+    <string name="conversation_notification_conf_outgoing_invite_req_denied">%1$s님 초대 요청이 거절되었습니다</string>
+    <string name="conversation_notification_conf_we_joined">%1$s님이 회원님을 채팅에 초대했습니다</string>
     <string name="conversation_notification_contact_card_received">명함 받음</string>
     <string name="conversation_notification_contact_card_sent">명함 보냄</string>
     <string name="conversation_notification_default_incomming">메시지 받음</string>
@@ -719,8 +786,8 @@
     <string name="conversation_notification_sticker_sent">스티커 보냄</string>
     <string name="conversation_notification_voice_note_received">음성 메모 받음</string>
     <string name="conversation_notification_voice_note_sent">음성 메모 보냄</string>
-    <string name="conversation_outgoing_invite_req">&lt;b>%1$s&lt;/b>님을 초대하는 요청이 &lt;b>%2$s&lt;/b>님에게 전송되었습니다.</string>
-    <string name="conversation_outgoing_invite_req_denied">&lt;b>%1$s&lt;/b>님이 귀하의 &lt;b>%2$s&lt;/b>님 초대 요청을 거절했습니다.</string>
+    <string name="conversation_outgoing_invite_req">%1$s님을 초대하는 요청이 %2$s님에게 전송되었습니다.</string>
+    <string name="conversation_outgoing_invite_req_denied">%1$s님이 귀하의 %2$s님 초대 요청을 거절했습니다.</string>
     <string name="conversation_picture">사진 받음</string>
     <string name="conversation_ping">PING!!!</string>
     <string name="conversation_reinvite_accept_button">다시 초대</string>
@@ -729,6 +796,7 @@
     <string name="conversation_share_max_participants">채팅 참가자가 너무 많습니다(최대 %1$s명).</string>
     <string name="conversation_successfully_saved_picture">사진이 성공적으로 저장되었습니다.</string>
     <string name="conversation_successfully_saved_voice_note">음성 메모가 성공적으로 저장되었습니다.</string>
+    <string name="conversation_toast_blocked_chat">채팅을 차단했습니다. 모든 메시지가 삭제되었습니다.</string>
     <string name="conversation_toast_ended_chat">채팅 종료됨</string>
     <string name="conversation_toast_ended_chat_no_history">채팅이 종료되었습니다. 모든 메시지가 삭제되었습니다.</string>
     <string name="conversation_toast_left_chat">채팅에서 나왔습니다.</string>
@@ -736,7 +804,7 @@
     <string name="conversation_unable_to_save_picture">사진을 저장할 수 없습니다.</string>
     <string name="conversation_unable_to_save_voice_note">음성 메모를 저장할 수 없습니다.</string>
     <string name="conversation_voice_note_transfert">음성 메모 받음</string>
-    <string name="conversation_you_invited">&lt;b>%1$s&lt;/b>님을 채팅에 초대했습니다.</string>
+    <string name="conversation_you_invited">%1$s님을 채팅에 초대했습니다.</string>
     <string name="conversation_you_joined_the_chat">채팅에 참여했습니다.</string>
     <string name="copied_group_passphrase">복사된 암호문</string>
     <string name="copied_group_passphrase_toast">클립 보드로 복사됨</string>
@@ -751,6 +819,26 @@
     <string name="creating_channel_toast_string">채널 만드는 중</string>
     <string name="creating_private_channel_confirmation">이 작업은 취소할 수 없습니다. 이 채널을 비공개로 설정하시겠습니까?</string>
     <string name="current">최신</string>
+    <string name="custom_pin_activity_title">사용자 지정 PIN</string>
+    <string name="custom_pin_already_set">이전에 만든 사용자 지정 PIN이 있습니다.</string>
+    <string name="custom_pin_confirm_postivie_text">정확합니다.</string>
+    <string name="custom_pin_confirm_text">이 텍스트가 회원님의 BBM용 사용자 지정 PIN이 됩니다. 정확합니까?</string>
+    <string name="custom_pin_friends_ad_link">BBM 상점 방문</string>
+    <string name="custom_pin_friends_ad_text">지금 BBM에서 사용자 지정 PIN 받기:</string>
+    <string name="custom_pin_get_your_custom_pin">지금 BBM에서 사용자 지정 PIN 받기: BBM 상점 방문</string>
+    <string name="custom_pin_hint_text">사용자 지정 PIN 입력</string>
+    <string name="custom_pin_legal">"사용자 지정 PIN을 만드십시오. 신중하게 만드십시오. 추후 변경이 불가능합니다. 사용자의 구독이 활성화되면 사용자 지정 PIN은 BBM과 연동됩니다.
+
+가이드라인:
+* 6~8자로 지정해야 함
+* 숫자, 문자, 밑줄, 대시 포함 가능
+* 한 개 밑줄, 대시 또는 로마자 G에서 Z 사이에 문자가 반드시 포함되어야 함"</string>
+    <string name="custom_pin_not_subscribed">내 PIN 사용자 지정</string>
+    <string name="custom_pin_share_to_feed_body">사용자 지정 PIN: %1$s을(를) 받았다고 대화 상대에게 알릴 수 있습니다.</string>
+    <string name="custom_pin_shared_feed_item">BBM에서 새 사용자 지정 PIN: %1$s을(를) 받았습니다. PIN을 사용자 지정하려면 http://shop.bbm.com/item/custom_pin을 누르세요.</string>
+    <string name="custom_pin_terms_conditions">&lt;p>&lt;b>BBM 사용자 지정 PIN 가이드라인&lt;/b>&lt;/p> &lt;p>사용자 지정 PIN은 회원님의 BBM 계정을 재미있게 사용자화하는 방법입니다. 사용자 지정 PIN은 회원님의 현재 PIN을 대체하지 않습니다(일반 PIN에 대한 자세한 정보는 www.bbm.com에서 FAQ 섹션의 \"PIN이란?\" 참조). 두 번째 PIN으로써 회원님의 BBM 프로필에 표시되고 다른 사용자를 초대하거나 다른 BBM 사용자로부터 초대를 받을 때 사용할 수 있습니다.&lt;/p> &lt;p>사용자 지정 PIN을 만들 때 주의 사항:&lt;/p> &lt;p>&amp;#8226 다른 사람이 사용 중인 PIN을 사용자 지정 PIN으로 만들 수 없습니다.&lt;/p> &lt;p>&amp;#8226 구독이 만료되기 전에 갱신되지 않으면 사용자 지정 PIN을 사용할 수 없고 다른 구독자가 회원님의 사용자 지정 PIN을 사용할 수 있습니다.&lt;/p> &lt;p>&amp;#8226 신중하게 사용자 지정 PIN을 선택하십시오. 사용자 지정 PIN을 생성하면 구독 기간 동안 변경할 수 없습니다.&lt;/p> &lt;p>&amp;#8226 사용자 지정 PIN은 일반 BBM PIN과 뚜렷이 구별됩니다. 사용자 지정 PIN 필수 요구사항: &lt;/p> &lt;p> - 6~8자로 지정해야 함&lt;/p> &lt;p> - 숫자, 문자, 밑줄, 대시 포함 가능&lt;/p> &lt;p> - 한 개 밑줄, 대시 또는 G에서 Z 사이의 문자를 반드시 포함해야 함&lt;/p> &lt;p>&amp;#8226 사용자 지정 PIN은 비속어 및 욕설을 포함해서는 안 되고, 중상 모략, 명예 훼손, 욕설, 불법 또는 기만을 조장하는 언어를 사용해서는 안 됩니다.&lt;/p> &lt;p>&amp;#8226 사용자 지정 PIN은 개인, 브랜드, 조직/단체 또는 이벤트/행사를 가장하거나 이로 인해 사용자에게 혼동을 주거나 오해하게 만들거나 속여서는 안 됩니다.&lt;/p> &lt;p>&amp;#8226 사용자 지정 PIN은 개인, 브랜드, 조직/단체 또는 이벤트/행사의 지적 재산권을 포함하여 각종 권리를 침해하거나 위반해서는 안 됩니다. 예를 들어, 사용자 지정 PIN은 개인 또는 단체/조직의 상표권을 침해해서는 안 됩니다.&lt;/p> &lt;p>&amp;#8226 BlackBerry는 적용되는 구입 약관/환불 정책에 따라 언제든지 필요한 경우 사용자 지정 PIN을 거부하거나 제거하거나 그리고/또는 복원할 수 있는 권리가 있습니다.&lt;/p></string>
+    <string name="custom_pin_title">사용자 지정 PIN:</string>
+    <string name="custom_pin_warning_on_repurchase">현재 사용자 지정 PIN을 계속 사용하려면 새 구독을 구입한 다음 이전 구독을 취소해야 합니다. 자세한 내용은 %1$s 사이트를 참조하십시오.</string>
     <string name="date">날짜</string>
     <string name="date_of_birth"><b>생년월일</b></string>
     <string name="date_of_birth_fail_age_limit">BBM Channels를 사용할 수 있는 나이가 아닙니다.</string>
@@ -786,6 +874,7 @@
     <string name="dialog_invite_security_question_tip">팁: 답변은 대/소문자를 구분합니다.</string>
     <string name="dialog_invite_security_question_title">본인 확인 질문</string>
     <string name="did_you_know">알고 계셨나요?</string>
+    <string name="different_platform_string">다른 단말기에서 구입한 자동 갱신 구독이 있습니다. 이 단말기에서 구독하시겠습니까?</string>
     <string name="discard">무시</string>
     <string name="display_name"><i>표시 이름</i></string>
     <string name="do_you_want_to_switch_your_bbm_information_to_your_current_device">현재 단말기로 BBM 정보를 전환하시겠습니까?</string>
@@ -806,6 +895,15 @@
     <string name="enter_passphrase_hint"><i>암호문 입력</i></string>
     <string name="enter_text"><i>텍스트 입력</i></string>
     <string name="entered_passphrase_incorrect">입력한 암호문이 잘못되었습니다.</string>
+    <string name="entitlement_dialog_title">구독 필요</string>
+    <string name="entitlement_edit_dialogue">"메시지 편집을 사용해 볼 수 있는 평가 제한 개수에 도달했습니다.
+이 기능에 제한 없이 액세스하려면 구독을 구매하면 됩니다."</string>
+    <string name="entitlement_privateconv_dialogue">"비공개 채팅을 사용해 볼 수 있는 평가 제한 개수에 도달했습니다.
+이 기능에 제한 없이 액세스하려면 구독을 구매하면 됩니다."</string>
+    <string name="entitlement_retracted_dialogue">"메시지 회수를 사용해 볼 수 있는 평가 제한 개수에 도달했습니다.
+이 기능에 제한 없이 액세스하려면 구독을 구매하면 됩니다."</string>
+    <string name="entitlement_timed_dialogue">"타이머가 설정된 메시지를 사용해 볼 수 있는 평가 제한 개수에 도달했습니다.
+이 기능에 제한 없이 액세스하려면 구독을 구매하면 됩니다."</string>
     <string name="ephemeral_hint_received">타이머가 설정된 메시지를 받았습니다. 보려면 길게 누르십시오</string>
     <string name="ephemeral_hint_sent">타이머가 설정된 메시지입니다.</string>
     <string name="ephemeral_hint_viewed">타이머가 설정된 메시지를 받았습니다. 만료됨</string>
@@ -905,15 +1003,17 @@
     <string name="filter_by">필터 기준</string>
     <string name="find_friend_allow_upload_dialog_double_check_text">계속하시겠습니까? BBM이 연락처에 액세스하도록 허용하지 않은 경우 BBM 연락처를 수동으로 추가해야 합니다.</string>
     <string name="find_friend_allow_upload_dialog_double_check_title">추천 안 함</string>
-    <string name="find_friend_allow_upload_dialog_title">BBM에서 친구 찾기</string>
-    <string name="find_friend_allow_upload_text">BBM이 연락처에 액세스하여 친구들을 찾고 추가할 수 있도록 허용합니다.</string>
+    <string name="find_friend_allow_upload_dialog_title">친구 찾기</string>
+    <string name="find_friend_allow_upload_text">BBM이 연락처에 액세스하여 친구들을 찾을 수 있도록 허용합니다. BBM에 추가할 친구를 선택할 수 있습니다.</string>
     <string name="find_friend_category_get_bbm">다운로드 초대</string>
     <string name="find_friend_category_invite">눌러서 추가</string>
     <string name="find_friends">BBM에서 친구 찾기</string>
     <string name="find_more_friends">친구 찾기</string>
-    <string name="first_launch_after_upgrade_privacy_terms">&lt;b>&lt;a href=http://www.blackberry.com/legal/privacy>개인정보 취급방침&lt;/a>&lt;/b> 및 &lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>서비스 약관&lt;/a>&lt;/b>에 동의합니다.</string>
-    <string name="first_launch_after_upgrade_subtitle">스티커로 BBM 채팅의 재미를 더해 보세요. 지금 이용하실 수 있습니다.</string>
-    <string name="first_launch_after_upgrade_title">스티커를 보내세요!</string>
+    <string name="first_launch_after_upgrade_privacy_terms">&lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>이용 약관&lt;/a>&lt;/b>이 업데이트되었습니다. 계속을 클릭하면 &lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>이용 약관&lt;/a>&lt;/b> 및 &lt;b>&lt;a href=http://www.blackberry.com/legal/privacy>개인정보 취급방침&lt;/a>&lt;/b>에 동의하는 것입니다.</string>
+    <string name="first_launch_after_upgrade_subtitle">회원님 고유의 BBM PIN을 만들 수 있습니다! 지금 사용자 지정 PIN을 만드십시오.</string>
+    <string name="first_launch_after_upgrade_title">보다 고유하게</string>
+    <string name="first_name">이름</string>
+    <string name="first_name_hint">이름 입력</string>
     <string name="flagged_comments_header">댓글</string>
     <string name="flagged_posts_header">게시물</string>
     <string name="format_not_supported_for_cropping">이 형식은 자를 수 없습니다.</string>
@@ -921,6 +1021,7 @@
     <string name="general">일반</string>
     <string name="glympse">Glympse</string>
     <string name="glympse_attach">Glympse 첨부</string>
+    <string name="glympse_duration_hourminutes">%1$d:%2$02d 남음</string>
     <string name="glympse_duration_minutes">기간: %1$d분</string>
     <string name="glympse_expired">만료됨</string>
     <string name="glympse_expires_at">%1$s까지 공유</string>
@@ -955,6 +1056,7 @@
     <string name="glympse_update">Glympse 업데이트</string>
     <string name="glympse_user_selector_item_all_user_currently_sharing">현재 공유 중인 모든 사용자</string>
     <string name="glympse_user_selector_item_speed">속도(km/h): %1$s</string>
+    <string name="glympse_user_selector_item_speed_na">속도(km/h): N/A</string>
     <string name="glympse_user_selector_item_updated_d_ago">마지막 업데이트: %1$d일 전</string>
     <string name="glympse_user_selector_item_updated_h_m">마지막 업데이트: %1$d:%2$s 전</string>
     <string name="glympse_user_selector_item_updated_m_ago">마지막 업데이트: %1$d분 전</string>
@@ -988,9 +1090,11 @@
     <string name="group_add_list_title_hint"><i>목록 제목</i></string>
     <string name="group_admin_about">그룹 관리자 정보</string>
     <string name="group_admin_text">관리자는 다음 작업을 수행할 수 있습니다.</string>
+    <string name="group_autopassphrase_details">자동 암호문 사용</string>
     <string name="group_barcode_info">대화 상대는 이 바코드를 스캔하여 귀하의 그룹에 참여할 수 있습니다.</string>
     <string name="group_barcode_scan_rejected_user_not_protected">이 그룹에 참여할 권한이 없습니다.</string>
     <string name="group_cancel">취소</string>
+    <string name="group_cannot_delete_conversation">이 대화를 삭제할 수 없음</string>
     <string name="group_chat_exists">채팅 주제가 이미 있습니다</string>
     <string name="group_chat_general_discussion">일반 토론</string>
     <string name="group_chat_history_days_1">1일</string>
@@ -1009,6 +1113,8 @@
     <string name="group_conversation_email_chat_message_header">보내는 그룹: %1$s</string>
     <string name="group_conversation_email_chat_subject">%1$s님의 채팅: %2$s</string>
     <string name="group_conversation_is_writing_a_message">님이 입력 중...</string>
+    <string name="group_conversation_picture_loading">사진 로드 중...</string>
+    <string name="group_conversation_picture_not_available">사진 사용할 수 없음</string>
     <string name="group_conversation_slide_menu_chat_history">채팅 기록</string>
     <string name="group_conversation_slide_menu_clear_chat">채팅 지우기</string>
     <string name="group_conversation_slide_menu_copy_chat">채팅 복사</string>
@@ -1018,6 +1124,7 @@
     <string name="group_delete_picture">사진 삭제</string>
     <string name="group_delete_q">그룹을 삭제하시겠습니까?</string>
     <string name="group_done">완료</string>
+    <string name="group_edit_admin_cannot_remove_self">관리자 자격으로는 본인을 제거할 수 없음</string>
     <string name="group_edit_caption">설명 편집</string>
     <string name="group_edit_list_title">항목 세부정보</string>
     <string name="group_event_all_day">하루 종일</string>
@@ -1040,15 +1147,15 @@
     <string name="group_events_time_notice">종료 시간은 시작 시간 이후여야 합니다</string>
     <string name="group_invitation_was_received">Glympse 그룹에 초대되었습니다</string>
     <string name="group_invite_bbg_uri">%1$s</string>
-    <string name="group_invite_email_message">"-----\ufffc----
-제 %1$s 그룹으로 회원님을 초대합니다.
+    <string name="group_invite_email_message">"\"%1$s\" 그룹으로 회원님을 초대합니다. 모바일 단말기에서 그룹에 참여하려면 아래 링크를 클릭하세요.
+%2$s
 
-Android 또는 iPhone에서 %2$s을(를) 클릭하여 그룹에 참여하거나 BBM을 다운로드하세요.
 
 %3$s"</string>
-    <string name="group_invite_email_subject">제 BlackBerry 그룹에 가입하세요!</string>
+    <string name="group_invite_email_subject">%1$s의 BBM Group 초대</string>
     <string name="group_invite_enter_passphrase">이 그룹에 참여하려면 그룹 구성원이 제공한 암호문을 입력하십시오.</string>
     <string name="group_invite_enter_passphrase_multi_attempts">잘못된 암호문입니다. 이 그룹에 참여하려면 그룹 구성원이 제공한 암호문을 입력하십시오. (%1$d/%2$d)</string>
+    <string name="group_invite_expired">그룹 초대 만료됨</string>
     <string name="group_invite_message_default">제 %1$s 그룹으로 회원님을 초대합니다</string>
     <string name="group_invite_status_enter_passphrase_max_attempts_reached">잘못된 암호문입니다. 이 그룹에 참여하려면 다시 초대되어야 합니다.</string>
     <string name="group_invite_status_enter_passphrase_multi_attempts">잘못된 암호문입니다. 이 그룹에 참여하려면 그룹 구성원이 제공한 암호문을 입력하십시오.</string>
@@ -1091,6 +1198,11 @@ Android 또는 iPhone에서 %2$s을(를) 클릭하여 그룹에 참여하거나 
     <string name="group_passphrase_info">그룹에 초대된 사람이 참여할 때 입력해야 할 암호문을 공유할 수 있습니다.</string>
     <string name="group_passphrase_missing">암호문 N/A</string>
     <string name="group_picture_add">사진 추가</string>
+    <string name="group_picture_add_failed__wrong_picture_type">@string/avatar_file_not_support</string>
+    <string name="group_picture_add_failed_file_access_error">@string/filetransfer_abort_filenotfound</string>
+    <string name="group_picture_add_failed_file_does_not_exist">@string/filetransfer_abort_filenotfound</string>
+    <string name="group_picture_add_failed_picture_too_big">@string/conversation_file_image_transfer_canceled_dialog_too_large</string>
+    <string name="group_picture_add_failed_resize_error">@string/conversation_unable_to_save_picture</string>
     <string name="group_picture_added_days">%1$d일 전에 %2$s님이 추가</string>
     <string name="group_picture_added_today">오늘%1$s에 %2$s님이 추가</string>
     <string name="group_picture_added_yesterday">어제 %1$s님이 추가</string>
@@ -1165,7 +1277,7 @@ Android 또는 iPhone에서 %2$s을(를) 클릭하여 그룹에 참여하거나 
     <string name="hdimage_prompt_message">이후 HD 요청을 자동으로 수락하시겠습니까?</string>
     <string name="hdimage_prompt_title">항상 요청 수락</string>
     <string name="help">도움말</string>
-    <string name="help_url">http://docs.blackberry.com/bbm/25/android/ko</string>
+    <string name="help_url">http://help.blackberry.com/detectLang/bbm-for-android/current/</string>
     <string name="high_priority">우선 순위 높음</string>
     <string name="hint_protected_enabled_chat"><i>Protected. 메시지 입력</i></string>
     <string name="history_clear_one_history_text">삭제</string>
@@ -1194,6 +1306,7 @@ Android 또는 iPhone에서 %2$s을(를) 클릭하여 그룹에 참여하거나 
     <string name="introducing_channels_second_part">구독자는 BBM에서 최신 정보를 수신하고 생각을 공유할 수 있습니다.</string>
     <string name="introducing_channels_title">BBM Channels 소개</string>
     <string name="invalid_passphrase_toast">잘못된 암호문</string>
+    <string name="invitation_received">초대 받음</string>
     <string name="invitation_rejected_invitee_not_protected_message">%1$s님은 이 그룹에 참여할 수 없습니다. BBM Protected 대화 상대만 참여할 수 있습니다.</string>
     <string name="invitation_rejected_invitee_not_protected_title">사용자를 초대할 수 없습니다.</string>
     <string name="invitation_sent">초대 보냄</string>
@@ -1201,18 +1314,16 @@ Android 또는 iPhone에서 %2$s을(를) 클릭하여 그룹에 참여하거나 
     <string name="invite_activity_category">카테고리</string>
     <string name="invite_activity_lookup">조회...</string>
     <string name="invite_activity_mail">이메일: %1$s</string>
-    <string name="invite_activity_mail_body">"회원님을 BBM 채팅에 초대합니다.
-
-BBM에서 저를 찾으려면 
-%1s
-을(를) 클릭하세요."</string>
+    <string name="invite_activity_mail_body">"회원님을 BBM 채팅에 초대합니다. 모바일 단말기에서 BBM으로 저와 채팅하시려면 다음을 클릭하세요: 
+%1$s
+."</string>
     <string name="invite_activity_mail_subject">%1$s님이 보낸 BBM 초대</string>
     <string name="invite_activity_phone">전화: %1$s</string>
     <string name="invite_activity_pin">PIN %1$s</string>
     <string name="invite_activity_security_custom_question">질문을 입력하십시오.</string>
     <string name="invite_activity_security_custom_response">대답을 입력하십시오.</string>
     <string name="invite_activity_security_label">본인 확인 질문</string>
-    <string name="invite_activity_sms_body">저를 BBM에 추가하세요! BlackBerry에서 PIN:%1$s을(를) 클릭한 다음 \"BBM에 초대\"를 선택하세요. Android 또는 iPhone에서 www.pin.bbm.com/%1$s을 클릭하여 저를 대화 상대로 추가하거나 BBM을 다운로드하세요.</string>
+    <string name="invite_activity_sms_body">저를 BBM에 추가하세요! www.pin.bbm.com/%1$s 클릭</string>
     <string name="invite_activity_to">받는 사람:</string>
     <string name="invite_bbm_contact">BBM 대화 상대 추가</string>
     <string name="invite_bbm_invites">BBM 초대</string>
@@ -1281,6 +1392,8 @@ BBM에서 저를 찾으려면
     <string name="key_exchange_hint_waiting_to_enter_passphrase">참여하려면 암호문 입력</string>
     <string name="key_exchange_hint_waiting_to_join">%1$s님의 참여를 기다리는 중</string>
     <string name="key_exchange_status_accepted">암호문 수락됨</string>
+    <string name="last_name">성</string>
+    <string name="last_name_hint">성 입력</string>
     <string name="learn_more_about_bbm_pins">BBM PIN에 대해 자세히 알아보기</string>
     <string name="learn_more_about_restoring_bbm_data">BBM 데이터 복원에 관한 자세한 정보</string>
     <string name="leave_channel">채널 나가기</string>
@@ -1302,6 +1415,8 @@ BBM에서 저를 찾으려면
     <string name="location_service_failed">위치 정보를 얻을 수 없습니다</string>
     <string name="low_battey_warning">배터리 부족으로 정지되었습니다. 클릭하여 재개하세요.</string>
     <string name="low_priority">우선 순위 낮음</string>
+    <string name="main_drawer_close">서랍 닫기</string>
+    <string name="main_drawer_open">서랍 열기</string>
     <string name="main_mood_status_format">%1$s - %2$s</string>
     <string name="main_status_available">온라인</string>
     <string name="main_status_busy">다른 용무 중</string>
@@ -1313,8 +1428,10 @@ BBM에서 저를 찾으려면
     <string name="menu_end_chat">채팅 종료</string>
     <string name="menu_help">도움말</string>
     <string name="menu_history">기록</string>
+    <string name="menu_leave_chat">채팅 나가기</string>
     <string name="menu_settings">설정</string>
     <string name="menu_share">공유</string>
+    <string name="message">메시지</string>
     <string name="message_button_accept">수락</string>
     <string name="message_button_allow">허용</string>
     <string name="message_button_cancel">취소</string>
@@ -1331,6 +1448,7 @@ BBM에서 저를 찾으려면
     <string name="message_with_context_new_contact">새 대화 상대 정보:</string>
     <string name="message_with_context_now_playing">지금 재생 중 정보:</string>
     <string name="message_with_context_personal_message">내 개인 메시지 정보:</string>
+    <string name="message_with_context_quote">%1$s님이 작성함: \"%2$s\"</string>
     <string name="message_with_context_real_time_location">내 위치 정보:</string>
     <string name="more">더 보기</string>
     <string name="msg_bulk_mode_scanned">일괄 스캔 모드: 바코드가 읽히고 저장됩니다.</string>
@@ -1368,6 +1486,11 @@ BBM에서 저를 찾으려면
     <string name="my_channels_fragment_mark_favorite">즐겨찾기로 표시</string>
     <string name="my_channels_fragment_remove_favorite">즐겨찾기에서 제거</string>
     <string name="mybbmbarcode">내 BBM 바코드</string>
+    <string name="nav_chats">BBM 채팅</string>
+    <string name="nav_contacts">BBM 대화 상대</string>
+    <string name="nav_feeds">BBM 피드</string>
+    <string name="nav_feeds_all">모든 BBM 피드</string>
+    <string name="nav_groups">BBM Groups</string>
     <string name="network_settings_dialog_text">계속하려면 Wi-Fi 또는 모바일 네트워크에 연결하십시오.</string>
     <string name="network_settings_dialog_title">네트워크에 연결되지 않음</string>
     <string name="new_channel_email_addresss">이메일 주소</string>
@@ -1376,6 +1499,7 @@ BBM에서 저를 찾으려면
     <string name="new_chat_topic">새 채팅 주제</string>
     <string name="new_string">신규</string>
     <string name="next">다음</string>
+    <string name="no">아니요</string>
     <string name="no_active_glympses">활성화된 Glympse가 없음</string>
     <string name="no_blackberry_data">BlackBerry 데이터 없음</string>
     <string name="no_blocked_invites">초대를 무시하거나 대화 상대를 삭제하려는 경우 이 목록에 대화 상대를 추가하면 됩니다.</string>
@@ -1386,6 +1510,7 @@ BBM에서 저를 찾으려면
     <string name="no_connection_found">연결을 찾을 수 없음</string>
     <string name="no_current_chat">채팅 없음</string>
     <string name="no_network_connection">네트워크 연결이 없음.</string>
+    <string name="no_picture">사용 가능한 사진 없음</string>
     <string name="no_pictures">사진 없음</string>
     <string name="no_posts">모든 게시물을 표시할 수 없습니다.</string>
     <string name="no_updates">새 항목 없음.</string>
@@ -1436,6 +1561,19 @@ BBM에서 저를 찾으려면
 BlackBerry 단말기에서 PIN %2$s을(를) 입력하고 암호문을 입력하세요."</string>
     <string name="out_of_band_passphrase_message_sms">당신과 BBM Protected 채팅을 시작하려 합니다. BlackBerry 단말기에서 %1$s을(를) 누릅니다. 암호문 %2$s을(를) 입력합니다.</string>
     <string name="out_of_band_passphrase_subject">BBM Protected 채팅</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_dialog_body">이 기능은 BBM 대화 상대만이 사용할 수 있습니다. %1$s님을 BBM 대화 상대에 추가하시겠습니까?</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_dialog_title">BBM 대화 상대에 추가</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_toast">이 옵션을 사용하려면 이 사람을 BBM 대화 상대로 추가해야 합니다.</string>
+    <string name="outer_circle_category_bbm_contacts">BBM 대화 상대</string>
+    <string name="outer_circle_category_phone_contacts">@string/outer_circle_category_phone_contacts_v1</string>
+    <string name="outer_circle_category_phone_contacts_v1">대화 상대</string>
+    <string name="outer_circle_category_phone_contacts_v2">전화 연락처</string>
+    <string name="outer_circle_category_phone_contacts_v3">단말기 연락처</string>
+    <string name="outer_circle_contact_add_more_friends">더 많은 친구 추가</string>
+    <string name="outer_circle_contact_menu_add_as_contact">BBM 대화 상대에 추가</string>
+    <string name="outer_circle_contact_menu_delete_and_block">삭제 및 차단</string>
+    <string name="outer_circle_find_other_bbm_user_body">단말기 연락처에서 알 수도 있는 BBM 사용자를 자동으로 검색할 수 있습니다. BBM이 주소록 앱에 액세스하도록 허용하시겠습니까?</string>
+    <string name="outer_circle_find_other_bbm_user_title">다른 BBM 사용자 찾기</string>
     <string name="overlay_bbm_ongoing_notification_reason">"왜 화면 상단에 BBM 아이콘이 보입니까?
 
 BBM은 언제라도 연락할 수 있도록 항상 켜진 상태를 유지하므로 BBM 아이콘이 상태 표시줄에 표시됩니다."</string>
@@ -1469,13 +1607,13 @@ BBM은 언제라도 연락할 수 있도록 항상 켜진 상태를 유지하므
     <string name="partner_app_register_failed_dialog_outage_message">감지된 네트워크 연결이 없음</string>
     <string name="partner_app_register_failed_dialog_title">BBM 등록하기</string>
     <string name="passphrase">암호문</string>
-    <string name="passphrase_creation_details">BBM 대화 상대가 채팅에 참여할 수 있으려면 암호문을 공유해야 합니다. 최소 4자 이상의 대문자로 구성되어야 합니다.</string>
+    <string name="passphrase_creation_details">BBM 대화 상대가 채팅에 참여할 수 있으려면 암호문을 공유해야 합니다. 4자 이상이어야 합니다. 문자, 숫자 또는 둘 다 사용하십시오. 예: TGRS, 2905, TIG8</string>
     <string name="passphrase_incorrect">&lt;b>%1$s&lt;/b>님이 올바른 암호문을 입력하지 않았습니다.</string>
     <string name="passphrase_initiated">암호문 &lt;b>%1$s&lt;/b>을(를) &lt;b>%2$s&lt;/b>님과 공유했습니다.</string>
     <string name="passphrase_message_email">"당신과 BBM Protected 채팅을 시작하려 합니다.
 ---o---
-PIN: %2$s 또는 %3$s을(를) 클릭한 후 암호문 \"%1$s\"을(를) 입력하십시오."</string>
-    <string name="passphrase_message_sms">BBM Protected 채팅에 참여하십시오! PIN: %2$s 또는 %3$s을(를) 클릭한 후 암호문 \"%1$s\"을(를) 입력하십시오.</string>
+이 채팅에 참여하려면 PIN:%1$s 또는 %2$s을(를) 클릭하십시오. 암호문 팝업이 표시되면 \"%3$s\"을(를) 입력하십시오."</string>
+    <string name="passphrase_message_sms">BBM Protected 채팅에 참여하십시오! PIN:%1$s 또는 %2$s을(를) 클릭하십시오. 암호문 팝업이 표시되면 \"%3$s\"을(를) 입력하십시오.</string>
     <string name="passphrase_rules_details">공백으로 구분된 세 개의 문자 집합이어야 하며 각 집합은 4~7개의 대문자로 구성되어야 합니다. 예: DARK BROWN TIGERS</string>
     <string name="passphrase_share_details">%1$s님에게 암호문을 어떤 방식으로 공유하시겠습니까?</string>
     <string name="passphrase_wait_to_join">&lt;b>%1$s&lt;/b>님의 참여를 기다리는 중입니다.</string>
@@ -1499,12 +1637,38 @@ PIN: %2$s 또는 %3$s을(를) 클릭한 후 암호문 \"%1$s\"을(를) 입력하
     <string name="pending_invite_group_too_many_members">거절됨: 이 그룹은 이미 다 찼습니다.</string>
     <string name="pending_invite_pending">보류 중</string>
     <string name="pending_invite_protected_group_invites_you_to">%1$s님이 \"%2$s\" 그룹에 회원님을 초대했습니다. 이 BBM Protected 그룹에 참여하려면 그룹 구성원이 제공한 암호문을 입력해야 합니다.</string>
+    <string name="people">사용자</string>
     <string name="personalize_profile_dialog_message">배너를 누르면 자신의 BBM 프로필을 열 수 있습니다.</string>
     <string name="personalize_profile_dialog_title">프로필 사용자화</string>
+    <string name="phone_contact_add">@string/phone_contact_add_v1</string>
+    <string name="phone_contact_add_v1">BBM 대화 상대 추가</string>
+    <string name="phone_contact_add_v2">BBM에 추가</string>
+    <string name="phone_contact_add_v3">BBM 대화 상대에 추가</string>
+    <string name="phone_contact_block">차단</string>
+    <string name="phone_contact_block_from_conversation_description">앞으로 %1$s님의 모든 초대 및 채팅이 차단됩니다. %1$s님을 차단하시겠습니까?</string>
+    <string name="phone_contact_block_from_conversation_title">%1$s님 차단</string>
+    <string name="phone_contact_invitationsent">초대 보냄</string>
+    <string name="phone_contact_not_a_contact">전체 BBM 기능을 사용하려면 이 사람을 BBM 대화 상대에 추가해야 합니다.</string>
+    <string name="phone_contact_reinvite_message">@string/phone_contact_reinvite_message_v1</string>
+    <string name="phone_contact_reinvite_message_v1">%1$s님을 BBM 대화 상대에 추가하려면 %2$s을(를) 누르십시오.</string>
+    <string name="phone_contact_reinvite_message_v2">채팅을 시작하려면 %1$s님을 BBM 대화 상대에 추가해야 합니다. %1$s님을 BBM 대화 상대에 추가하려면 채팅 상단에 있는 %2$s을(를) 누르십시오.</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_1">&lt;b>&lt;i>대화 상대&lt;/i>&lt;/b>가 있고, &lt;b>&lt;i>BBM 대화 상대&lt;/i>&lt;/b>가 있습니다.</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_2">&lt;b>&lt;i>대화 상대&lt;/i>&lt;/b>는 단말기의 연락처에 저장되어 있는 사람 중 BBM을 사용 중인 사람입니다.&lt;br/>&lt;br/> * 대화 상대와 바로 채팅 가능&lt;br/> * 초대 필요 없음</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_3">&lt;b>&lt;i>BBM 대화 상대&lt;/i>&lt;/b>가 되려면 초대를 받아야 합니다. BBM 대화 상대만 다음 기능을 이용할 수 있습니다.&lt;br/>&lt;br/> * 사용자의 BBM 표시 사진 보기&lt;br/> * 사용자의 BBM 상태 업데이트 보기&lt;br/> * BBM Voice를 사용하여 전화를 걸거나 받기</string>
+    <string name="phone_contact_tutorial_conversation_section_1">&lt;b>&lt;i>대화 상대&lt;/i>&lt;/b>가 있고, &lt;b>&lt;i>BBM 대화 상대&lt;/i>&lt;/b>가 있습니다.</string>
+    <string name="phone_contact_tutorial_conversation_section_2">이 채팅은 &lt;b>&lt;i>대화 상대&lt;/i>&lt;/b>와의 채팅입니다. 이 사람은 다음을 볼 수 없습니다.&lt;br/>&lt;br/> * 사용자의 BBM 표시 사진&lt;br/> * 사용자의 BBM 상태 업데이트</string>
+    <string name="phone_contact_tutorial_conversation_section_3">이 사용자는 최신 버전의 BBM으로 채팅 중입니다. 이 사람을 언제든지 &lt;b>&lt;i>BBM 대화 상대&lt;/i>&lt;/b>에 추가하거나 차단할 수 있습니다.</string>
+    <string name="phone_contact_tutorial_profile_click_section_1">&lt;b>&lt;i>대화 상대&lt;/i>&lt;/b>가 있고, &lt;b>&lt;i>BBM 대화 상대&lt;/i>&lt;/b>가 있습니다.</string>
+    <string name="phone_contact_tutorial_profile_click_section_2">&lt;b>&lt;i>BBM 대화 상대&lt;/i>&lt;/b>가 되려면 초대를 받아야 하며, BBM 대화 상대가 되면 다음 기능을 이용할 수 있습니다.&lt;br/>&lt;br/> * 사용자의 BBM 표시 사진, 상태 업데이트 및 프로필 보기&lt;br/> * BBM Voice를 사용하여 통화하기&lt;br/> * 브로드캐스트 메시지 전송하기</string>
+    <string name="phone_contact_tutorial_profile_click_section_3">&lt;b>&lt;i>대화 상대&lt;/i>&lt;/b>는 단말기의 연락처에 저장되어 있는 사람 중 BBM을 사용 중인 사람입니다. 대화 상대가 최신 버전의 BBM을 사용하고 있다면 초대가 필요 없으며, 다음과 같은 BBM 채팅 기능을 이용할 수 있습니다. &lt;br/>&lt;br/> &amp;#8226; 메시지의 D 및 R 알림 표시&lt;br/> &amp;#8226; 사진 및 파일 전송&lt;br/> &amp;#8226; Glympse와 위치 공유</string>
     <string name="pic_caption_hint"><i>설명을 입력하십시오.</i></string>
+    <string name="picture">사진</string>
     <string name="picture_deleted">사진 삭제됨</string>
+    <string name="picture_selection_limit_toast">파일이 너무 많습니다(최대 10개).</string>
+    <string name="picture_selection_type_toast">이미지 유형만 여러 사용자와 공유할 수 있습니다.</string>
     <string name="pin_copied">PIN 복사됨</string>
     <string name="please_ensure_the_device_time_is_correctly_set">단말기 시간이 올바르게 설정되었는지 확인한 후 다시 시도하십시오.</string>
+    <string name="policy_change_title">정책 변경</string>
     <string name="post_removed">이 게시물은 삭제되었습니다.</string>
     <string name="posts_caption">게시물</string>
     <string name="pref_add_contact_on_tap">탭 시 대화 상대 추가</string>
@@ -1565,21 +1729,49 @@ PIN: %2$s 또는 %3$s을(를) 클릭한 후 암호문 \"%1$s\"을(를) 입력하
     <string name="preferences_vibrate_title">진동</string>
     <string name="private_channel">비공개 채널</string>
     <string name="private_channel_description">검색에서 채널을 숨기고 초대한 사람만 볼 수 있도록 설정합니다.</string>
+    <string name="private_chat">비공개 채팅</string>
+    <string name="private_chat_back_out_dialog_dont_ask_me_again">다시 묻지 않음</string>
+    <string name="private_chat_back_out_dialog_text">%1$d분 안에 채팅으로 돌아가지 않으면 비공개 채팅이 종료됩니다.</string>
+    <string name="private_chat_conversation_notification_title">%1$s님이 당신과 BBM 채팅을 시작하려 합니다.</string>
+    <string name="private_chat_end_menu">비공개 채팅 종료</string>
+    <string name="private_chat_entry_subtitle">돌아가려면 누르기</string>
+    <string name="private_chat_menu">비공개 채팅 시작</string>
+    <string name="private_chat_message_notification_title">새 비공개 채팅 메시지</string>
+    <string name="private_chat_other_party_not_support">이 대화 상대는 비공개 채팅을 지원하지 않는 이전 버전의 BBM을 사용하고 있습니다.</string>
+    <string name="private_chat_request_incoming_subtitle">비공개 채팅 요청</string>
+    <string name="private_chat_request_invite_bubble_message">"당신과 비공개 채팅을 시작하려 합니다. 비공개 채팅에 참여하려면 최신 버전의 BBM을 다운로드받아야 합니다.
+
+http://bbm.com/upgrade 에 방문하여 최신 버전의 BBM을 다운로드하십시오."</string>
+    <string name="private_chat_request_outgoing_subtitle">비공개 채팅 요청</string>
+    <string name="private_chat_stop_reason_busy">%1$s님은 지금 비공개 채팅을 사용할 수 없습니다.</string>
+    <string name="private_chat_stop_reason_cancelled">%1$s님이 비공개 채팅을 취소했습니다.</string>
+    <string name="private_chat_stop_reason_declined">%1$s님이 비공개 채팅을 취소했습니다.</string>
+    <string name="private_chat_stop_reason_inactivity">비공개 채팅이 비활성 상태이므로 자동으로 종료됩니다.</string>
+    <string name="private_chat_stop_reason_localended">비공개 채팅을 종료했습니다.</string>
+    <string name="private_chat_stop_reason_noresponse">%1$s님이 사용자의 비공개 채팅 요청에 응답하지 않았습니다.</string>
+    <string name="private_chat_stop_reason_remoteended">%1$s님이 비공개 채팅을 종료했습니다.</string>
+    <string name="private_chat_stop_reason_unknown">비공개 채팅 연결이 끊겼습니다. 비공개 채팅을 다시 시작하십시오.</string>
+    <string name="private_chat_tutorial_description">"이름 및 프로필 사진이 숨겨집니다.
+
+채팅이 종료되거나 비활성화되면 두 단말기의 채팅도 자동으로 삭제됩니다.
+
+새 비공개 메시지 알림은 비밀리에 전송됩니다."</string>
     <string name="profile_barcode">바코드</string>
+    <string name="profile_bbm_pin_label">BBM PIN</string>
     <string name="profile_copy_pin">PIN 복사</string>
     <string name="profile_copypin">PIN 복사</string>
     <string name="profile_default_pin">PIN: 00000000</string>
     <string name="profile_display_name_invalid">표시 이름에는 콜론이나 쉼표를 사용할 수 없습니다.</string>
+    <string name="profile_display_name_invalid_empty">표시 이름은 비워둘 수 없습니다.</string>
     <string name="profile_icon_source_camera">카메라</string>
     <string name="profile_icon_source_picture">사진</string>
     <string name="profile_icon_source_sample_picture">샘플 사진</string>
-    <string name="profile_location_label">위치/표준 시간대:</string>
+    <string name="profile_location_label">위치/표준 시간대</string>
     <string name="profile_mood_hint"><i>회원님의 생각을 자유롭게 말하세요.</i></string>
+    <string name="profile_name">프로필 이름</string>
     <string name="profile_no_status_message">상태 메시지 없음</string>
     <string name="profile_own_status_label">상태</string>
-    <string name="profile_pin">%1$s</string>
     <string name="profile_pin_copied">PIN 복사됨</string>
-    <string name="profile_pin_label">PIN:</string>
     <string name="profile_pinlabel">PIN:</string>
     <string name="profile_revert_display_name">표시 이름 되돌리기</string>
     <string name="profile_selector_apps">앱</string>
@@ -1587,27 +1779,40 @@ PIN: %2$s 또는 %3$s을(를) 클릭한 후 암호문 \"%1$s\"을(를) 입력하
     <string name="profile_selector_members">구성원</string>
     <string name="profile_selector_updates">피드</string>
     <string name="profile_share_pin">내 PIN 공유</string>
+    <string name="profile_status_delete">상태 삭제</string>
+    <string name="profile_status_delete_info">이 상태를 삭제하시겠습니까?</string>
     <string name="profile_status_edit">상태 메시지 편집</string>
-    <string name="profile_status_label">상태:</string>
+    <string name="profile_user_has_subscription">이 회원님은 구독자입니다.</string>
+    <string name="profile_user_view_all_sub">모든 BBM 구독 보기</string>
     <string name="prompt_change_bbm_picture">BBM 사진을 변경하시겠습니까?</string>
     <string name="prompted_after_rate_call">감사합니다.</string>
     <string name="prompted_before_rate_call">통화 품질을 평가해 주세요.</string>
     <string name="protected_group_invite_message_default">제 \"%1$s\" 그룹으로 회원님을 초대합니다. 이 BBM Protected 그룹에 참여하려면 그룹 구성원이 제공한 암호문을 입력해야 합니다.</string>
     <string name="protected_group_requires_join">보호된 그룹을 복원하기 위해 암호 확인을 기다리는 중</string>
     <string name="protected_mode_disabled_header">BBM Protected 꺼져 있음</string>
-    <string name="protected_mode_disabled_message">대화 상대와 채팅은 저장되었지만 회원님은 BBM Protected를 사용하는 멀티 채팅과 그룹에서 삭제되었습니다.</string>
+    <string name="protected_mode_disabled_message">대화 상대와 채팅은 저장되었지만 회원님은 BBM Protected를 사용하는 그룹에서 삭제되었습니다.</string>
     <string name="protected_mode_disabled_title">관리자가 BBM Protected를 껐습니다.</string>
     <string name="protected_mode_enabled_header">BBM Protected</string>
     <string name="protected_mode_enabled_message">"BBM Protected는 BBM 채팅, 파일 전송 및 그룹을 암호화하는 별도 레이어를 추가합니다. 이후 BBM Protected 대화 상대와 채팅을 시작하면 다른 대화 상대가 채팅에 참여할 경우 반드시 암호문을 입력하도록 지정됩니다. 각 BBM Protected 대화 상대에게 한 번만 암호문을 지정하면 됩니다. 
  
  BBM 그룹의 경우 BBM Protected 대화 상대로만 그룹 멤버십을 제한할 지 여부를 선택할 수 있습니다. BBM Protected 그룹을 생성할 경우 그룹에 참여하기 위해 필요한 암호문을 대화 상대에게 공유할 수 있습니다."</string>
     <string name="protected_mode_enabled_title">관리자가 사용자의 단말기에서 BBM Protected를 활성화했습니다.</string>
+    <string name="protected_preferred_details">대화 상대는 BBM Protected 채팅이 필요합니다.</string>
+    <string name="protected_preferred_dialog">이 대화 상대는 Protected Plus를 사용하고 있습니다. 회원님과 이 대화 상대 간의 채팅은 BBM Protected 채팅이 됩니다. <a href="http://blackberry.com/bbmprotected">자세히 알아보기</a></string>
+    <string name="protected_preferred_dialog_dismiss">다시 표시하지 않음</string>
+    <string name="protected_preferred_mode_disabled_message">관리자가 Protected Plus를 껐습니다.</string>
+    <string name="protected_preferred_mode_disabled_title">Protected Plus 꺼짐</string>
+    <string name="protected_preferred_mode_enabled_message">관리자가 BBM Protected 기능인 Protected Plus를 켰습니다. 회원님과 대화 상대 간의 채팅은 BBM Protected 채팅이 됩니다.</string>
+    <string name="protected_preferred_mode_enabled_title">Protected Plus 켜짐</string>
+    <string name="protected_rejected_message_body">이 BBM Protected 채팅을 재설정하려면 암호문을 공유해야 할 수 있습니다. 암호문을 공유하려면 화면 상단 오른쪽의 메뉴 아이콘을 누르십시오. &lt;b>%1$s&lt;/b>를 누르십시오.</string>
+    <string name="protected_rejected_message_status">암호문 다시 공유</string>
     <string name="purchase_failed_message">결제를 처리할 수 없습니다. 다른 결제 방법을 선택하시겠습니까?</string>
     <string name="purchase_options">결제 옵션</string>
     <string name="purchase_success_message">항목을 성공적으로 구매하였습니다.</string>
     <string name="purchase_unexpected_error_message">구매가 중단되었습니다. 다시 시도하십시오.</string>
     <string name="pyk_empty_invites_allow_upload_hint">이미 BBM을 사용 중인 친구 찾기</string>
     <string name="qr_description">UsersQR</string>
+    <string name="quick_reply">회신 및 종료</string>
     <string name="quick_share_glympse_first_experience_overlay_infos">Glympse를 보내 선택한 기간 동안 BBM 연락처가 지도에서 내 위치를 추적할 수 있게 허용합니다. 이 기능은 모임이 있을 때나 약속에 늦을 때 아주 유용하게 사용할 수 있습니다.</string>
     <string name="quick_share_glympse_first_experience_overlay_note"><i>참고: 이 기능을 사용할 때 회원님의 GPS 좌표가 Glympse Inc.와 공유되며 <a href="http://glympse.com/privacy">개인정보 보호 방침</a></i>이 적용됩니다.</string>
     <string name="quick_share_glympse_first_experience_overlay_title">내 위치를 공유합니다.</string>
@@ -1617,8 +1822,11 @@ PIN: %2$s 또는 %3$s을(를) 클릭한 후 암호문 \"%1$s\"을(를) 입력하
     <string name="quick_share_voice_note_label_busy">녹음할 수 없습니다. 미디어 플레이어 또는 미디어 서비스가 이미 사용 중입니다.</string>
     <string name="quick_share_voice_note_label_default">녹음하려면 길게 누르십시오</string>
     <string name="quick_share_voice_note_label_delete">삭제하려면 손을 놓으십시오</string>
+    <string name="quick_share_voice_note_label_rec">녹음</string>
     <string name="quick_share_voice_note_label_send">전송하려면 손을 놓고 취소하려면 손가락으로 미십시오</string>
     <string name="quick_share_voice_note_tost_message">즉석 음성 메모를 보내려면 녹음 버튼을 길게 누르십시오</string>
+    <string name="quote_at_user_name">\@%1$s</string>
+    <string name="quote_message_label">\"%1$s\"</string>
     <string name="rate_limited">Glympse 횟수 한도가 소진되었습니다.</string>
     <string name="rate_my_app_ignore">괜찮습니다.</string>
     <string name="rate_my_app_message">BBM을 사용해주셔서 감사합니다. 잠시 시간을 내어 앱을 평가해 주시기 바랍니다!</string>
@@ -1632,12 +1840,14 @@ PIN: %2$s 또는 %3$s을(를) 클릭한 후 암호문 \"%1$s\"을(를) 입력하
     <string name="received_pending_invite_pin">PIN %1$s</string>
     <string name="received_pending_invite_title">BBM에 초대</string>
     <string name="recent_pictures">최근 댓글</string>
-    <string name="remaining_details">본 사용자: 최근 %1$d명, 총 %2$d명</string>
+    <string name="remaining_details">%2$d 시청, %1$d 시청 중</string>
     <string name="remaining_title">Glympse: %1$s 남음</string>
     <string name="remaining_title_glympse">Glympse</string>
     <string name="remove">제거</string>
     <string name="replace_picture">사진 바꾸기</string>
+    <string name="reply">회신</string>
     <string name="reply_with_a_glympse">Glympse로 답하시겠습니까?</string>
+    <string name="reply_with_voice">음성으로 회신</string>
     <string name="report_channel">채널 신고</string>
     <string name="report_problem_activity_choose_email_client">이메일 선택</string>
     <string name="report_problem_activity_email_button">이메일로 보고서 보내기</string>
@@ -1668,6 +1878,8 @@ http://blackberry.com/support/bbm"</string>
     <string name="request_was_received">Glympse 요청을 받았습니다</string>
     <string name="required_fields">필수 입력 사항*</string>
     <string name="resend_passphrase">암호문 다시 보내기</string>
+    <string name="reset_protected_chat">이 채팅 재설정</string>
+    <string name="resolve_vanitypin_not_found">이 PIN은 사용할 수 없습니다.</string>
     <string name="restore_sticker_purchases">복원</string>
     <string name="restore_using_device_switch">단말기 전환을 통해 복원</string>
     <string name="restore_using_email">이메일을 통해 복원</string>
@@ -1720,6 +1932,8 @@ http://blackberry.com/support/bbm"</string>
     <string name="select_contacts_to_move">\"%1$s\"(으)로 이동할 대화 상대 선택:</string>
     <string name="select_group">그룹 선택</string>
     <string name="select_group_activity_title">{0,choice,0#그룹 선택|1#그룹 +1개|1&lt;그룹 +{0}개}</string>
+    <string name="select_group_discussion">토론 선택</string>
+    <string name="select_pictures">{0,choice,0#사진 선택|1#사진 +1개|1&lt;사진 +{0}개}</string>
     <string name="send">보내기</string>
     <string name="send_comment">댓글 보내기</string>
     <string name="send_decline_response">거절 응답 보내기</string>
@@ -1728,6 +1942,11 @@ http://blackberry.com/support/bbm"</string>
     <string name="sent_pending_invite_message_label">메시지:</string>
     <string name="sent_pending_invite_sent_label">보냄:</string>
     <string name="set_as">설정 대상</string>
+    <string name="set_vanitypin_result_invalid">이 PIN은 사용할 수 없습니다.</string>
+    <string name="set_vanitypin_result_refused">이 PIN은 사용할 수 없습니다.</string>
+    <string name="set_vanitypin_result_reserved">이 PIN은 사용할 수 없습니다.</string>
+    <string name="set_vanitypin_result_success">PIN이 생성되었습니다.</string>
+    <string name="set_vanitypin_result_used">이 PIN은 사용할 수 없습니다.</string>
     <string name="setas_activity_bbm_picture_updated">BBM 사진 업데이트됨</string>
     <string name="setas_activity_item_bbm_picture">BBM 사진</string>
     <string name="setas_activity_item_contact_picture">대화 상대 사진</string>
@@ -1737,6 +1956,7 @@ http://blackberry.com/support/bbm"</string>
     <string name="setas_activity_title">설정 대상</string>
     <string name="settings">설정</string>
     <string name="settings_activity_allow_hq_pictures">항상 HD 사진 요청 수락</string>
+    <string name="settings_activity_backup_chat_history_now">지금 백업</string>
     <string name="settings_activity_blackberry_id_edit">편집</string>
     <string name="settings_activity_blackberry_id_generic_error">지금은 BlackBerry ID를 편집할 수 없습니다. 나중에 다시 시도하십시오.</string>
     <string name="settings_activity_blocked_contacts">차단된 대화 상대 및 피드</string>
@@ -1750,6 +1970,7 @@ http://blackberry.com/support/bbm"</string>
     <string name="settings_activity_deleting_chat_history_info">모든 대화 상대와의 채팅 기록이 삭제됩니다. 이 작업은 취소할 수 없습니다.</string>
     <string name="settings_activity_deleting_chat_history_title">채팅 기록 삭제</string>
     <string name="settings_activity_hide_keyboard_on_enter_conversation">항상 키보드 표시</string>
+    <string name="settings_activity_keyboard_enter_as_new_line">키보드 입력으로 새 라인 삽입</string>
     <string name="settings_activity_legal">법적 정보</string>
     <string name="settings_activity_report_a_problem">문제 보고</string>
     <string name="settings_activity_save_chat_history">채팅 기록 저장</string>
@@ -1790,6 +2011,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="share_passphrase_other">직접 초대하겠습니다.</string>
     <string name="share_passphrase_sms">문자 메시지</string>
     <string name="share_passphrase_title">암호문 공유</string>
+    <string name="share_to_feed_title">피드를 업데이트하시겠습니까?</string>
     <string name="sharead_sponsored_invite">공유된 스폰서 초대</string>
     <string name="sharead_sponsored_post">공유된 스폰서 게시물</string>
     <string name="shared_channel_post_default_text">공유된 채널 게시물</string>
@@ -1797,6 +2019,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="shared_channel_post_sent">채널 게시물 보냄</string>
     <string name="shared_sponsored_content">공유된 스폰서 컨텐츠</string>
     <string name="shop">상점</string>
+    <string name="shop_subscriptions">구독</string>
     <string name="show">표시</string>
     <string name="show_channel_preview">미리 보기</string>
     <string name="show_map">지도 표시</string>
@@ -1805,6 +2028,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="sign_in_to_bbm">BBM에 로그인</string>
     <string name="slide_menu_add_event">약속 추가</string>
     <string name="slide_menu_add_list">목록 추가</string>
+    <string name="slide_menu_block_chat">채팅 차단</string>
     <string name="slide_menu_copy_chat">채팅 복사</string>
     <string name="slide_menu_delete_item">항목 삭제</string>
     <string name="slide_menu_edit">편집</string>
@@ -1820,6 +2044,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="slide_menu_new_chat">새 채팅 시작</string>
     <string name="slide_menu_open_bbm_chat">BBM 채팅 열기</string>
     <string name="slide_menu_ping">Ping</string>
+    <string name="slide_menu_play_in_media_player">미디어 플레이어에서 재생</string>
     <string name="slide_menu_remove_deleted_item">삭제된 항목 제거</string>
     <string name="slide_menu_remove_from_group">그룹에서 제거</string>
     <string name="slide_menu_reply_by_voice_note">음성 메모로 회신</string>
@@ -1828,7 +2053,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="slide_menu_save">저장</string>
     <string name="slide_menu_save_picture">사진 저장</string>
     <string name="slide_menu_send">보내기</string>
-    <string name="slide_menu_set_as_bbm_display">BBM 디스플레이로 설정</string>
+    <string name="slide_menu_set_as_bbm_display">BBM 표시 사진으로 설정</string>
     <string name="slide_menu_share">공유</string>
     <string name="slide_menu_suggest_contact">대화 상대 제안</string>
     <string name="slide_menu_view_group_profile">그룹 프로필 보기</string>
@@ -1838,19 +2063,23 @@ www.pin.bbm.com/%1$s"</string>
     <string name="sms_activity_title">작성</string>
     <string name="sort_by">정렬 기준</string>
     <string name="stacked_notification_format"><Data>&lt;b>%1$s&lt;/b>: %2$s</Data></string>
+    <string name="stale_user_reinvite_message">%1$s님은 %2$s 이후로 온라인 상태가 아닙니다.</string>
+    <string name="stale_user_reinvite_title">다시 초대</string>
     <string name="start_chat">채팅 시작</string>
     <string name="start_chat_failed">채팅을 만들 수 없습니다</string>
-    <string name="start_meeting">BBM Meeting 시작</string>
-    <string name="start_meeting_confirmation_dialog">통화를 종료하고 새 모임을 시작하시겠습니까?</string>
-    <string name="start_meeting_confirmation_title">BBM Meeting 시작하시겠습니까?</string>
+    <string name="start_meeting">BBM Meetings 시작</string>
+    <string name="start_meeting_confirmation_dialog">현재 BBM 통화 중입니다. 통화를 종료하고 BBM Meeting을 시작하시겠습니까?</string>
+    <string name="start_meeting_confirmation_title">BBM Meetings 시작</string>
     <string name="start_multiperson_chat">멀티유저 채팅 시작</string>
+    <string name="start_pin_chat">PIN을 입력하여 채팅 시작</string>
     <string name="starts">시작</string>
     <string name="stats_caption">통계</string>
     <string name="stay_in_touch_like_never_before_with_blackberry_messenger">BlackBerry Messenger로 어느 때보다 훨씬 쉽게 연락할 수 있습니다.</string>
     <string name="sticker_picker_no_stickers_purchased">구매한 스티커가 없습니다.</string>
-    <string name="sticker_picker_preview_hint">미리 보기하려면 스티커를 길게 누르십시오.</string>
-    <string name="sticker_store_collection_heading">스티커 컬렉션</string>
-    <string name="sticker_store_details_artist_channel">채널</string>
+    <string name="sticker_picker_preview_hint">미리 보려면 스티커를 길게 누릅니다.</string>
+    <string name="sticker_settings">스티커 설정</string>
+    <string name="sticker_store_collection_heading">스티커</string>
+    <string name="sticker_store_details_artist_channel">BBM Channel</string>
     <string name="sticker_store_details_artist_website">웹 사이트</string>
     <string name="sticker_store_details_promo_text">여기에서 보기</string>
     <string name="sticker_store_details_screen_about">정보</string>
@@ -1867,11 +2096,12 @@ www.pin.bbm.com/%1$s"</string>
 팁: 계속 진행되는 동안 이 화면에서 나갈 수 있습니다."</string>
     <string name="sticker_store_server_unavailable_message">BBM 상점을 열 수 없습니다.</string>
     <string name="sticker_store_server_unavailable_retry_message">네트워크 연결을 확인하고 다시 시도하십시오</string>
-    <string name="sticker_store_sticker_preview_artist">작가: %1$s</string>
+    <string name="sticker_store_sticker_preview_artist">제공: %1$s</string>
     <string name="sticker_store_sticker_purchase_notification_dialog_heading">피드를 추가하시겠습니까?</string>
     <string name="sticker_store_sticker_purchase_notification_dialog_line">새 스티커를 받았다고 대화 상대에게 알릴 수 있습니다.</string>
     <string name="sticker_store_sticker_purchase_notification_message">다음 사이트에서 새로운 내 스티커를 확인해 보세요! http://shop.bbm.com/stickers/%1$s</string>
     <string name="sticker_store_store_loading">로드 중...</string>
+    <string name="store_generic_billing_error">이 항목을 구입할 수 없었습니다.</string>
     <string name="store_title">BBM 상점</string>
     <string name="submit_button">제출</string>
     <string name="submit_passphrase">제출</string>
@@ -1881,6 +2111,44 @@ www.pin.bbm.com/%1$s"</string>
     <string name="subscribed_channel_invite_default_message">\"%1$s\" 채널로 회원님을 초대합니다.</string>
     <string name="subscribed_channels">구독 중인 채널</string>
     <string name="subscribers_caption">구독자</string>
+    <string name="subscriptino_pin_promo">회원님과 친구들을 쉽게 기억할 수 있는 BBM PIN을 만들 수 있습니다.</string>
+    <string name="subscription_already_exists_bb10">다른 단말기에서 구입한 자동 갱신 구독이 신청되었습니다.</string>
+    <string name="subscription_app_type_no_ads">no_ads</string>
+    <string name="subscription_app_type_vanity_pin">custom_pin</string>
+    <string name="subscription_auto_renewing">자동 갱신 구독이 신청되었습니다.</string>
+    <string name="subscription_bbid_conflict">이 항목은 회원님의 스토어 계정으로 다른 BlackBerry ID에 대해 구입되었습니다. 다른 스토어 계정을 사용하여 다시 시도하십시오.</string>
+    <string name="subscription_custom_pin_description">쉽게 회원님과 친구들을 기억할 수 있는 사용자 지정 PIN을 만드시겠습니까? 회원님 고유의 BBM PIN을 만들 수 있습니다. 지금 바로 사용자 지정 PIN을 만드십시오.</string>
+    <string name="subscription_dialog_duration_monthly">월간: %1$s</string>
+    <string name="subscription_dialog_duration_title">구독 선택</string>
+    <string name="subscription_dialog_duration_yearly">연간: %1$s</string>
+    <string name="subscription_edit_messages_description">메시지에 문제가 있는 경우 회수하거나, 오류를 수정한 후 메시지를 다시 전송할 수 있습니다.</string>
+    <string name="subscription_exclusive_badge">특별한 배지</string>
+    <string name="subscription_exclusive_descritpion_pin">BBM 상태에 특별한 배지가 표시됩니다. 이 배지는 구독이 활성화된 사용자의 표시 사진에 표시됩니다.</string>
+    <string name="subscription_expired">회원님의 구독이 만료되었습니다. 다시 구독하시겠습니까?</string>
+    <string name="subscription_exsits_ios_72hours">회원님의 구독이 만료되려고 합니다. 이 기능을 계속 사용하려면 %1$s 이전에 여기서 구독을 신청하십시오.</string>
+    <string name="subscription_exsits_on_ios">이 항목은 다른 단말기에서 구입되었습니다. 이 기능을 계속 사용하려면 %1$s 이전에 여기서 구독을 신청하십시오.</string>
+    <string name="subscription_generic_guidelines">BBM 사용자 지정 PIN 가이드라인</string>
+    <string name="subscription_generic_learn_more">자세히 알아보기</string>
+    <string name="subscription_learn_more">구독에 대한 자세한 정보를 보려면 <a href="http://bbm.com/FAQ">bbm.com/FAQ</a>를 참조하십시오.</string>
+    <string name="subscription_no_adds_share">BBM에 더 이상 광고가 표시되지 않는다고 대화 상대에게 알릴 수 있습니다.</string>
+    <string name="subscription_no_adds_status_message">BBM에 광고가 표시되지 않습니다. 단말기에서 광고를 숨기려면 http://shop.bbm.com/item/no_ads을 누르세요.</string>
+    <string name="subscription_no_ads">광고 제거</string>
+    <string name="subscription_no_ads_description">광고를 없애고 싶습니까? 이 구독에 가입하면 BBM에서 광고를 숨길 수 있습니다.</string>
+    <string name="subscription_no_ads_promo">"광고 제거
+이 구독에 가입하면 BBM 후원 광고가 표시되지 않고 후원 초대도 받지 않습니다."</string>
+    <string name="subscription_no_ads_title">광고 제거</string>
+    <string name="subscription_pin_before_share">BBM에서 사용자 지정 PIN을 만들었습니다. PIN을 사용자 지정하려면 http://shop.bbm.com/item/custom_pin을 누르세요.</string>
+    <string name="subscription_pin_before_share_prompt">사용자 지정 PIN을 만들었다고 대화 상대에게 알릴 수 있습니다.</string>
+    <string name="subscription_pin_feautres">제공하는 기능:</string>
+    <string name="subscription_private_chat_description">비공개 채팅에서는 대화 상대의 이름이 숨겨지고 새 메시지 알림이 꺼집니다. 잠시 후 또는 비공개 채팅을 종료하면 채팅이 자동으로 삭제됩니다.</string>
+    <string name="subscription_reactiviate">구독</string>
+    <string name="subscription_retracted_messages_description">메시지를 잘못 보낸 경우 채팅에 메시지가 표시되지 않도록 메시지를 회수할 수 있습니다.</string>
+    <string name="subscription_retracted_messages_title">메시지 회수</string>
+    <string name="subscription_status_active_subscription">자동 갱신 구독이 신청되었습니다.</string>
+    <string name="subscription_timed_messages_description">특정 시간 동안에만 볼 수 있는 메시지 및 사진을 보낼 수 있습니다. 해당 메시지는 채팅에서 숨겨지며, 수신자가 메시지를 길게 누르면 표시됩니다. 지정된 시간이 지나면 메시지를 볼 수 없습니다.</string>
+    <string name="subscription_timed_messages_title">타이머가 설정된 메시지</string>
+    <string name="subscriptions_not_entitled">이 기능을 사용하려면 반드시 구독을 신청해야 합니다.</string>
+    <string name="subscriptions_restoring">회원님의 구독을 확인하십시오.</string>
     <string name="suggestion_i_invite_you">%1$s님이 제가 회원님을 BBM에 초대할 것을 제안했습니다.</string>
     <string name="suggestion_sent">제안 보냄</string>
     <string name="suggestion_want_to_invite_bbm_contact">이 BBM 대화 상대를 초대하시겠습니까?</string>
@@ -1906,7 +2174,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="timestamp_format_today_at">오늘 %1$s</string>
     <string name="timestamp_format_yesterday_at">어제 %1$s</string>
     <string name="title_activity_category">카테고리</string>
-    <string name="title_activity_change_status">상태 변경</string>
+    <string name="title_activity_change_status">상태</string>
     <string name="title_activity_channels_lobby">내 채널 로비</string>
     <string name="title_activity_group_event_details">그룹 약속 세부 정보</string>
     <string name="title_activity_group_events">그룹 약속</string>
@@ -1939,6 +2207,9 @@ www.pin.bbm.com/%1$s"</string>
     <string name="update_fragment_hide_updates">숨기기</string>
     <string name="update_fragment_view_channel">채널 보기</string>
     <string name="update_fragment_view_post">게시물 보기</string>
+    <string name="update_list_archiving_disabled_message">관리자가 보관 기능을 껐습니다.</string>
+    <string name="update_list_archiving_enabled_message">관리자가 보관 기능을 켰습니다.</string>
+    <string name="update_list_archiving_title">BBM 채팅 보관</string>
     <string name="update_list_avatar">&lt;b>%1$s&lt;/b>님이 표시 사진을 변경했습니다.</string>
     <string name="update_list_changed_event_sub_title">변경된 약속</string>
     <string name="update_list_comment_sub_title">추가된 댓글</string>
@@ -1994,18 +2265,30 @@ www.pin.bbm.com/%1$s"</string>
     <string name="update_list_new_contact_sub_title">BBM 대화 상대</string>
     <string name="update_list_new_event_sub_title">새 약속</string>
     <string name="update_list_new_list_item_sub_title">새 목록 항목</string>
+    <string name="update_list_new_status_hint">상태 이름 입력</string>
     <string name="update_list_new_status_message">\"%1$s\"</string>
     <string name="update_list_new_status_sub_title">새 상태</string>
     <string name="update_list_newcontact">&lt;b>%1$s&lt;/b>님이 대화 상대 목록에 추가되었습니다.</string>
     <string name="update_list_now_playing_message">\"%1$s\"을(를) 청취하는 중</string>
     <string name="update_list_nowplayingmessage">&lt;b>%1$s&lt;/b>님이 \"%2$s\"을(를) 청취하는 중입니다.</string>
     <string name="update_list_personalmessage">&lt;b>%1$s&lt;/b>님의 말: \"%2$s\"</string>
+    <string name="update_list_protected_disabled_message">관리자가 BBM Protected를 껐습니다. 회원님은 BBM Protected를 사용하는 그룹에서 삭제되었습니다.</string>
+    <string name="update_list_protected_enabled_message">관리자가 BBM Protected 켰습니다. BBM 채팅, 파일 전송 및 BBM Protected 대화 상대 그룹을 암호화하는 별도 레이어를 추가합니다.</string>
+    <string name="update_list_protected_preferred_disabled_message">관리자가 Protected Plus를 껐습니다.</string>
+    <string name="update_list_protected_preferred_enabled_message">관리자가 Protected Plus를 켰습니다. 회원님과 대화 상대 간의 채팅은 BBM Protected 채팅이 됩니다.</string>
+    <string name="update_list_protected_status_sub_title">정책 변경</string>
+    <string name="update_list_protected_title">BBM Protected</string>
     <string name="update_list_you">회원님</string>
+    <string name="update_popular_channels_subtitle">눌러서 탐색하기</string>
+    <string name="update_popular_channels_title">인기 채널</string>
     <string name="update_removed_from_blocked_list">차단 목록에서 제거되었습니다.</string>
     <string name="update_sponsored_content">스폰서 컨텐츠</string>
     <string name="update_sponsored_post">스폰서 게시물</string>
+    <string name="update_your_subscription">구독 업데이트</string>
     <string name="updates">피드</string>
     <string name="upload">업로드</string>
+    <string name="user_status_stale">%1$s님이 마지막으로 보임</string>
+    <string name="vanity_pin">사용자 지정 PIN:</string>
     <string name="verify_date_of_birth">생일을 확인하는 중</string>
     <string name="verify_passphrase">암호문 확인 중입니다.</string>
     <string name="version">버전</string>
@@ -2013,6 +2296,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="view_channel_info">미리 보기</string>
     <string name="view_channel_profile">채널 프로필 보기</string>
     <string name="visits_caption">방문</string>
+    <string name="voice_note_duration">%1$02d:%2$02d</string>
     <string name="voice_rating_bad">매우 나쁨</string>
     <string name="voice_rating_excellent">매우 좋음</string>
     <string name="voice_rating_fair">보통</string>
@@ -2020,11 +2304,31 @@ www.pin.bbm.com/%1$s"</string>
     <string name="voice_rating_poor">나쁨</string>
     <string name="voice_rating_title">이 통화의 품질을 어떻게 평가하시겠습니까?</string>
     <string name="voicecall_already_in_call">이미 BBM 통화 중입니다. 이 대화 상대와 통화하려면 다른 통화를 종료하고 다시 시도하십시오.</string>
+    <string name="voicecall_must_add_as_contact">이 기능을 사용하려면 이 사람을 BBM 대화 상대로 추가해야 합니다.</string>
+    <string name="voicecall_must_add_as_contact_title">BBM 대화 상대에 추가</string>
     <string name="voicecall_status_calling">전화 거는 중</string>
     <string name="voicecall_status_connecting">연결 중</string>
     <string name="voicecall_status_duration">음성 통화 %1$s</string>
     <string name="voicecall_status_duration_while_mute">음소거 %1$s</string>
+    <string name="voicenote">음성 메모</string>
     <string name="wait_passphrase_confirmation">암호문 확인을 기다리는 중.</string>
+    <string name="warning_on_repurchase">해당 구독의 기능이 중단되지 않도록 하려면 새 구독을 구입한 다음 이전 구독을 취소해야 합니다. 자세한 내용은 %1$s 사이트를 참조하십시오.</string>
+    <string name="wear_quick_call_shortly">잠시 후 다시 전화하겠습니다.</string>
+    <string name="wear_quick_cant_take">지금 바빠서 전화를 받을 수 없습니다.</string>
+    <string name="wear_quick_im_on_my_way">가는 중입니다.</string>
+    <string name="wear_quick_response_1">확인</string>
+    <string name="wear_quick_response_2">알겠습니다!</string>
+    <string name="wear_quick_response_3">지금 다른 용무 중 입니다. 연락드리겠습니다.</string>
+    <string name="wear_quick_response_appreciation">감사해요</string>
+    <string name="wear_quick_response_confirmation">예</string>
+    <string name="wear_quick_response_disagree">아니요</string>
+    <string name="wear_quick_response_haha">하하</string>
+    <string name="wear_quick_response_lol">사랑해</string>
+    <string name="wear_quick_response_on_my_way">가는 중</string>
+    <string name="wear_quick_response_see_you_soon">또 만나요</string>
+    <string name="wear_quick_response_talk_later">지금은 말할 수 없어요</string>
+    <string name="wear_quick_response_understood">확인</string>
+    <string name="wearable_support">웨어러블 지원</string>
     <string name="widget_back_to_chat_previews">채팅 미리 보기로 돌아가기</string>
     <string name="widget_change_my_status_message">내 상태 메시지 변경</string>
     <string name="widget_edit_status">상태 편집</string>
@@ -2040,6 +2344,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="wifi_changing_network">네트워크에 연결을 요청…</string>
     <string name="wifi_ssid_label">네트워크 이름</string>
     <string name="wifi_type_label">종류</string>
+    <string name="yes">예</string>
     <string name="you_are_signed_in_with_the_following_blackberry_id">회원님은 다음 BlackBerry ID를 사용하여 로그인했습니다: %1$s</string>
     <string name="you_can_choose_another_restore_option_or_delete_your_device_data">다른 복원 옵션을 선택하거나 단말기 데이터를 삭제한 후 백업 파일에 연결된 BlackBerry ID를 사용하여 로그인하십시오.</string>
     <string name="you_can_now_start_video_and_voice_chats">이제 BBM에서 비디오 및 음성 채팅을 시작할 수 있습니다(지원되는 경우).</string>

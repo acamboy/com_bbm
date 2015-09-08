@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 132
+    .line 458
     iput-object p1, p0, Lcom/bbm/ui/bi;->a:Lcom/bbm/ui/EmoticonInputPanel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,38 +26,28 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 136
+    .line 461
     iget-object v0, p0, Lcom/bbm/ui/bi;->a:Lcom/bbm/ui/EmoticonInputPanel;
 
-    invoke-static {v0}, Lcom/bbm/ui/EmoticonInputPanel;->a(Lcom/bbm/ui/EmoticonInputPanel;)Lcom/bbm/ui/bp;
+    invoke-static {v0}, Lcom/bbm/ui/EmoticonInputPanel;->i(Lcom/bbm/ui/EmoticonInputPanel;)Landroid/view/View$OnClickListener;
 
     move-result-object v0
 
-    sget-object v1, Lcom/bbm/ui/bp;->a:Lcom/bbm/ui/bp;
+    if-eqz v0, :cond_0
 
-    if-ne v0, v1, :cond_0
-
-    .line 137
+    .line 462
     iget-object v0, p0, Lcom/bbm/ui/bi;->a:Lcom/bbm/ui/EmoticonInputPanel;
 
-    sget-object v1, Lcom/bbm/ui/bp;->b:Lcom/bbm/ui/bp;
+    invoke-static {v0}, Lcom/bbm/ui/EmoticonInputPanel;->i(Lcom/bbm/ui/EmoticonInputPanel;)Landroid/view/View$OnClickListener;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/EmoticonInputPanel;->setLowerPanel(Lcom/bbm/ui/bp;)V
+    move-result-object v0
 
-    .line 141
-    :goto_0
-    return-void
+    invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
-    .line 139
+    .line 464
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/bi;->a:Lcom/bbm/ui/EmoticonInputPanel;
-
-    sget-object v1, Lcom/bbm/ui/bp;->a:Lcom/bbm/ui/bp;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/EmoticonInputPanel;->setLowerPanel(Lcom/bbm/ui/bp;)V
-
-    goto :goto_0
+    return-void
 .end method

@@ -1,48 +1,90 @@
-.class final Lcom/bbm/ui/eu;
+.class final synthetic Lcom/bbm/ui/eu;
 .super Ljava/lang/Object;
-.source "ProfileIconHelper.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "PersonalStatusBar.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/b/o;
-
-.field final synthetic b:Landroid/app/Activity;
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/b/o;Landroid/app/Activity;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 63
-    iput-object p1, p0, Lcom/bbm/ui/eu;->a:Lcom/bbm/ui/b/o;
+    .line 239
+    invoke-static {}, Lcom/bbm/ui/bw;->values()[Lcom/bbm/ui/bw;
 
-    iput-object p2, p0, Lcom/bbm/ui/eu;->b:Landroid/app/Activity;
+    move-result-object v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    array-length v0, v0
 
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/eu;->a:[I
+
+    :try_start_0
+    sget-object v0, Lcom/bbm/ui/eu;->a:[I
+
+    sget-object v1, Lcom/bbm/ui/bw;->a:Lcom/bbm/ui/bw;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/bw;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_2
+
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/ui/eu;->a:[I
+
+    sget-object v1, Lcom/bbm/ui/bw;->b:Lcom/bbm/ui/bw;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/bw;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/bbm/ui/eu;->a:[I
+
+    sget-object v1, Lcom/bbm/ui/bw;->d:Lcom/bbm/ui/bw;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/bw;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_0
+
+    :goto_2
     return-void
-.end method
 
+    :catch_0
+    move-exception v0
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
+    goto :goto_2
 
-    .prologue
-    .line 66
-    iget-object v0, p0, Lcom/bbm/ui/eu;->a:Lcom/bbm/ui/b/o;
+    :catch_1
+    move-exception v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->cancel()V
+    goto :goto_1
 
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/eu;->b:Landroid/app/Activity;
+    :catch_2
+    move-exception v0
 
-    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
-
-    .line 68
-    return-void
+    goto :goto_0
 .end method

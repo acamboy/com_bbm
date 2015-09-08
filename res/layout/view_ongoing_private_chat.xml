@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/list_item_default_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:paddingRight="@dimen/contact_list_item_padding_right" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/private_icon" android:src="@drawable/ic_private_chat_list" android:scaleType="center" style="@style/ListItemAvatar" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/private_chat_title" android:focusableInTouchMode="false" android:duplicateParentState="false" android:text="@string/private_chat" style="@style/ListItemTitleField" />
+            <TextView android:id="@id/private_chat_subtitle" style="@style/ListItemSubtitleField" />
+        </LinearLayout>
+    </LinearLayout>
+    <include layout="@layout/view_list_divider" />
+</LinearLayout>

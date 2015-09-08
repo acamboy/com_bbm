@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/io;
 .super Ljava/lang/Object;
-.source "ConversationActivity.java"
+.source "FilePickerActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/ui/t;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/FilePickerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/FilePickerActivity;)V
     .locals 0
 
     .prologue
-    .line 3748
-    iput-object p1, p0, Lcom/bbm/ui/activities/io;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 202
+    iput-object p1, p0, Lcom/bbm/ui/activities/io;->a:Lcom/bbm/ui/activities/FilePickerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,15 +25,44 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final a(I)V
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)V"
+        }
+    .end annotation
 
     .prologue
-    .line 3752
-    iget-object v0, p0, Lcom/bbm/ui/activities/io;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 206
+    invoke-static {}, Lcom/bbm/ui/activities/jb;->a()[I
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ConversationActivity;->f()V
+    move-result-object v0
 
-    .line 3753
+    aget v0, v0, p1
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/FilePickerActivity;->a(I)I
+
+    .line 207
+    iget-object v0, p0, Lcom/bbm/ui/activities/io;->a:Lcom/bbm/ui/activities/FilePickerActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/FilePickerActivity;->a(Lcom/bbm/ui/activities/FilePickerActivity;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 208
+    iget-object v0, p0, Lcom/bbm/ui/activities/io;->a:Lcom/bbm/ui/activities/FilePickerActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/FilePickerActivity;->b(Lcom/bbm/ui/activities/FilePickerActivity;)V
+
+    .line 210
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/io;->a:Lcom/bbm/ui/activities/FilePickerActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/FilePickerActivity;->c(Lcom/bbm/ui/activities/FilePickerActivity;)Z
+
+    .line 211
     return-void
 .end method

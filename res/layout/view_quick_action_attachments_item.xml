@@ -2,5 +2,5 @@
 <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <com.bbm.ui.ObservingImageView android:id="@id/item_image" android:layout_width="@dimen/quick_action_attachments_grid_icon_width" android:layout_height="@dimen/quick_action_attachments_grid_icon_height" />
-    <TextView android:textSize="@dimen/quick_action_attachments_grid_label_font_size" android:textColor="@color/white" android:ellipsize="end" android:gravity="bottom" android:id="@id/item_label" android:paddingTop="@dimen/quick_action_attachments_grid_label_top_padding" android:paddingBottom="@dimen/quick_action_attachments_grid_label_bottom_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:textAlignment="center" />
+    <TextView android:textSize="@dimen/quick_action_attachments_grid_label_font_size" android:ellipsize="end" android:gravity="bottom" android:id="@id/item_label" android:paddingTop="@dimen/quick_action_attachments_grid_label_top_padding" android:paddingBottom="@dimen/quick_action_attachments_grid_label_bottom_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:textAlignment="center" />
 </LinearLayout>

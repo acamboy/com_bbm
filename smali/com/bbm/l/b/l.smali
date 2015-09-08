@@ -15,27 +15,27 @@
 .end method
 
 .method protected static a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
+    .locals 1
 
     .prologue
     .line 10
-    invoke-virtual {p0, p1, p2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    if-eqz p0, :cond_0
 
-    move-result-object v0
-
-    .line 11
     invoke-virtual {p0, p1}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_1
 
-    .line 14
+    .line 13
+    :cond_0
     :goto_0
     return-object p2
 
-    :cond_0
-    move-object p2, v0
+    :cond_1
+    invoke-virtual {p0, p1, p2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
 
     goto :goto_0
 .end method

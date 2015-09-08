@@ -1,72 +1,132 @@
-.class public final Lcom/bbm/o;
-.super Ljava/lang/Object;
-.source "DefaultExceptionHandler.java"
-
-# interfaces
-.implements Ljava/lang/Thread$UncaughtExceptionHandler;
+.class final Lcom/bbm/o;
+.super Lcom/bbm/j/k;
+.source "BbmService.java"
 
 
 # instance fields
-.field private final a:Ljava/lang/Thread$UncaughtExceptionHandler;
-
-.field private final b:Ljava/lang/String;
+.field final synthetic a:Lcom/bbm/BbmService;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcom/bbm/BbmService;)V
     .locals 1
 
     .prologue
-    .line 17
-    const-string v0, ""
+    .line 105
+    iput-object p1, p0, Lcom/bbm/o;->a:Lcom/bbm/BbmService;
 
-    invoke-direct {p0, v0}, Lcom/bbm/o;-><init>(Ljava/lang/String;)V
+    const/4 v0, 0x0
 
-    .line 18
-    return-void
-.end method
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
-
-    .prologue
-    .line 20
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 21
-    iput-object p1, p0, Lcom/bbm/o;->b:Ljava/lang/String;
-
-    .line 24
-    invoke-static {}, Ljava/lang/Thread;->getDefaultUncaughtExceptionHandler()Ljava/lang/Thread$UncaughtExceptionHandler;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/o;->a:Ljava/lang/Thread$UncaughtExceptionHandler;
-
-    .line 25
     return-void
 .end method
 
 
 # virtual methods
-.method public final uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
-    .locals 1
+.method protected final a()V
+    .locals 2
 
     .prologue
-    .line 30
-    invoke-static {p2}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+    .line 109
+    const-string v0, "BBMService mSettingsMontior run"
 
-    .line 46
-    iget-object v0, p0, Lcom/bbm/o;->a:Ljava/lang/Thread$UncaughtExceptionHandler;
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 110
+    iget-object v0, p0, Lcom/bbm/o;->a:Lcom/bbm/BbmService;
+
+    invoke-static {v0}, Lcom/bbm/BbmService;->b(Lcom/bbm/BbmService;)V
+
+    .line 111
+    iget-object v0, p0, Lcom/bbm/o;->a:Lcom/bbm/BbmService;
+
+    invoke-virtual {v0}, Lcom/bbm/BbmService;->a()V
+
+    .line 112
+    iget-object v0, p0, Lcom/bbm/o;->a:Lcom/bbm/BbmService;
+
+    invoke-static {v0}, Lcom/bbm/BbmService;->c(Lcom/bbm/BbmService;)Lcom/bbm/j/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/f/ae;
+
+    invoke-virtual {v0}, Lcom/bbm/f/ae;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 113
+    iget-object v0, p0, Lcom/bbm/o;->a:Lcom/bbm/BbmService;
+
+    invoke-static {v0}, Lcom/bbm/BbmService;->d(Lcom/bbm/BbmService;)V
+
+    .line 114
+    iget-object v0, p0, Lcom/bbm/o;->a:Lcom/bbm/BbmService;
+
+    invoke-static {v0}, Lcom/bbm/BbmService;->e(Lcom/bbm/BbmService;)V
+
+    .line 115
+    iget-object v0, p0, Lcom/bbm/o;->a:Lcom/bbm/BbmService;
+
+    invoke-static {v0}, Lcom/bbm/BbmService;->f(Lcom/bbm/BbmService;)Lcom/bbm/m/a;
+
+    move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 47
-    iget-object v0, p0, Lcom/bbm/o;->a:Ljava/lang/Thread$UncaughtExceptionHandler;
+    .line 116
+    iget-object v0, p0, Lcom/bbm/o;->a:Lcom/bbm/BbmService;
 
-    invoke-interface {v0, p1, p2}, Ljava/lang/Thread$UncaughtExceptionHandler;->uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/BbmService;->f(Lcom/bbm/BbmService;)Lcom/bbm/m/a;
 
-    .line 49
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/m/a;->a()V
+
+    .line 126
     :cond_0
+    :goto_0
     return-void
+
+    .line 119
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/o;->a:Lcom/bbm/BbmService;
+
+    invoke-static {v0}, Lcom/bbm/BbmService;->g(Lcom/bbm/BbmService;)V
+
+    .line 120
+    iget-object v0, p0, Lcom/bbm/o;->a:Lcom/bbm/BbmService;
+
+    invoke-static {v0}, Lcom/bbm/BbmService;->h(Lcom/bbm/BbmService;)V
+
+    .line 122
+    iget-object v0, p0, Lcom/bbm/o;->a:Lcom/bbm/BbmService;
+
+    invoke-static {v0}, Lcom/bbm/BbmService;->f(Lcom/bbm/BbmService;)Lcom/bbm/m/a;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 123
+    iget-object v0, p0, Lcom/bbm/o;->a:Lcom/bbm/BbmService;
+
+    invoke-static {v0}, Lcom/bbm/BbmService;->f(Lcom/bbm/BbmService;)Lcom/bbm/m/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/m/a;->b()V
+
+    goto :goto_0
 .end method

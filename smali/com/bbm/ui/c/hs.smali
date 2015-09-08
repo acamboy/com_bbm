@@ -1,26 +1,30 @@
 .class final Lcom/bbm/ui/c/hs;
 .super Ljava/lang/Object;
-.source "StickerDetailsFragment.java"
+.source "StoreHomeFragment.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
+.field final synthetic a:Lcom/bbm/ui/c/hn;
 
-.field final synthetic b:Lcom/bbm/ui/c/gr;
+.field private b:F
+
+.field private c:F
+
+.field private d:F
+
+.field private e:F
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/gr;Ljava/lang/String;)V
+.method constructor <init>(Lcom/bbm/ui/c/hn;)V
     .locals 0
 
     .prologue
-    .line 472
-    iput-object p1, p0, Lcom/bbm/ui/c/hs;->b:Lcom/bbm/ui/c/gr;
-
-    iput-object p2, p0, Lcom/bbm/ui/c/hs;->a:Ljava/lang/String;
+    .line 271
+    iput-object p1, p0, Lcom/bbm/ui/c/hs;->a:Lcom/bbm/ui/c/hn;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,38 +33,115 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 4
 
     .prologue
-    .line 476
-    const-string v0, "Artist Channel button clicked"
+    .line 279
+    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
-    const-class v1, Lcom/bbm/ui/c/gr;
+    move-result-object v0
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    const/4 v1, 0x1
 
-    .line 477
-    iget-object v0, p0, Lcom/bbm/ui/c/hs;->b:Lcom/bbm/ui/c/gr;
+    invoke-interface {v0, v1}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 280
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
-    const-string v2, "bbmi:///"
+    move-result v0
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v2, p0, Lcom/bbm/ui/c/hs;->a:Ljava/lang/String;
+    .line 304
+    :cond_0
+    :goto_0
+    :pswitch_0
+    const/4 v0, 0x0
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return v0
 
-    move-result-object v1
+    .line 286
+    :pswitch_1
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result v0
 
-    move-result-object v1
+    iput v0, p0, Lcom/bbm/ui/c/hs;->d:F
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/c/gr;->a(Lcom/bbm/ui/c/gr;Ljava/lang/String;)V
+    .line 287
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
-    .line 478
-    return-void
+    move-result v0
+
+    iput v0, p0, Lcom/bbm/ui/c/hs;->e:F
+
+    .line 288
+    iget-object v0, p0, Lcom/bbm/ui/c/hs;->a:Lcom/bbm/ui/c/hn;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/hn;->g(Lcom/bbm/ui/c/hn;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/bbm/ui/c/hs;->a:Lcom/bbm/ui/c/hn;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/hn;->g(Lcom/bbm/ui/c/hn;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 289
+    iget v0, p0, Lcom/bbm/ui/c/hs;->b:F
+
+    iget v1, p0, Lcom/bbm/ui/c/hs;->d:F
+
+    iget v2, p0, Lcom/bbm/ui/c/hs;->c:F
+
+    iget v3, p0, Lcom/bbm/ui/c/hs;->e:F
+
+    invoke-static {v0, v1, v2, v3}, Lcom/bbm/ui/c/hn;->a(FFFF)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 290
+    iget-object v0, p0, Lcom/bbm/ui/c/hs;->a:Lcom/bbm/ui/c/hn;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/hn;->h(Lcom/bbm/ui/c/hn;)V
+
+    goto :goto_0
+
+    .line 299
+    :pswitch_2
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v0
+
+    iput v0, p0, Lcom/bbm/ui/c/hs;->b:F
+
+    .line 300
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v0
+
+    iput v0, p0, Lcom/bbm/ui/c/hs;->c:F
+
+    goto :goto_0
+
+    .line 280
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
 .end method

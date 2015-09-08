@@ -1,76 +1,129 @@
-.class final Lcom/bbm/ui/eg;
-.super Ljava/lang/Object;
-.source "NFCInviteRequest.java"
+.class public abstract Lcom/bbm/ui/eg;
+.super Lcom/bbm/ui/ea;
+.source "ObservableListAdapter.java"
 
 # interfaces
-.implements Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
+.implements Landroid/widget/ListAdapter;
+.implements Lcom/bbm/j/h;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Lcom/bbm/ui/ea",
+        "<TT;>;",
+        "Landroid/widget/ListAdapter;",
+        "Lcom/bbm/j/h;"
+    }
+.end annotation
+
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/ef;
+.field private final b:Lcom/bbm/j/j;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/j/j",
+            "<TT;>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/ef;)V
-    .locals 0
+.method public constructor <init>(Lcom/bbm/j/j;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/bbm/j/j",
+            "<TT;>;)V"
+        }
+    .end annotation
 
     .prologue
-    .line 35
-    iput-object p1, p0, Lcom/bbm/ui/eg;->a:Lcom/bbm/ui/ef;
+    .line 19
+    invoke-direct {p0}, Lcom/bbm/ui/ea;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 20
+    iput-object p1, p0, Lcom/bbm/ui/eg;->b:Lcom/bbm/j/j;
 
+    .line 21
+    iget-object v0, p0, Lcom/bbm/ui/eg;->b:Lcom/bbm/j/j;
+
+    invoke-interface {v0, p0}, Lcom/bbm/j/j;->a(Lcom/bbm/j/h;)V
+
+    .line 22
     return-void
 .end method
 
 
 # virtual methods
-.method public final onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
+.method public final a()V
+    .locals 0
+
+    .prologue
+    .line 49
+    invoke-virtual {p0}, Lcom/bbm/ui/eg;->notifyDataSetChanged()V
+
+    .line 50
+    return-void
+.end method
+
+.method public getCount()I
+    .locals 1
+
+    .prologue
+    .line 27
+    iget-object v0, p0, Lcom/bbm/ui/eg;->b:Lcom/bbm/j/j;
+
+    invoke-interface {v0}, Lcom/bbm/j/j;->d()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getItem(I)Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)TT;"
+        }
+    .end annotation
+
+    .prologue
+    .line 33
+    iget-object v0, p0, Lcom/bbm/ui/eg;->b:Lcom/bbm/j/j;
+
+    invoke-interface {v0, p1}, Lcom/bbm/j/j;->b(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getItemId(I)J
     .locals 2
 
     .prologue
     .line 39
-    iget-object v0, p0, Lcom/bbm/ui/eg;->a:Lcom/bbm/ui/ef;
+    int-to-long v0, p1
 
-    invoke-static {v0}, Lcom/bbm/ui/ef;->a(Lcom/bbm/ui/ef;)Ljava/lang/ref/WeakReference;
+    return-wide v0
+.end method
 
-    move-result-object v0
+.method public hasStableIds()Z
+    .locals 1
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    .prologue
+    .line 44
+    const/4 v0, 0x0
 
-    move-result-object v0
-
-    check-cast v0, Landroid/app/Activity;
-
-    .line 40
-    if-nez v0, :cond_1
-
-    .line 41
-    invoke-static {}, Lcom/bbm/Alaska;->h()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    invoke-interface {v0, p0}, Landroid/content/SharedPreferences;->unregisterOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
-
-    .line 48
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 45
-    :cond_1
-    const-string v1, "add_contact_on_tap"
-
-    invoke-virtual {p2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 46
-    iget-object v1, p0, Lcom/bbm/ui/eg;->a:Lcom/bbm/ui/ef;
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/ef;->a(Landroid/app/Activity;)V
-
-    goto :goto_0
+    return v0
 .end method

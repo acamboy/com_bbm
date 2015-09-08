@@ -1,63 +1,91 @@
 .class final Lcom/bbm/ui/activities/jb;
-.super Ljava/lang/Object;
-.source "ConversationActivity.java"
-
-# interfaces
-.implements Lcom/bbm/ui/b/u;
+.super Ljava/lang/Enum;
+.source "FilePickerActivity.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/bbm/ui/activities/jb;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final enum a:I
+
+.field public static final enum b:I
+
+.field public static final enum c:I
+
+.field public static final enum d:I
+
+.field private static final synthetic e:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
     .prologue
-    .line 4587
-    iput-object p1, p0, Lcom/bbm/ui/activities/jb;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    const/4 v0, 0x4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v5, 0x3
+
+    const/4 v4, 0x2
+
+    const/4 v3, 0x1
+
+    .line 101
+    sput v3, Lcom/bbm/ui/activities/jb;->a:I
+
+    sput v4, Lcom/bbm/ui/activities/jb;->b:I
+
+    sput v5, Lcom/bbm/ui/activities/jb;->c:I
+
+    sput v0, Lcom/bbm/ui/activities/jb;->d:I
+
+    .line 100
+    new-array v0, v0, [I
+
+    const/4 v1, 0x0
+
+    sget v2, Lcom/bbm/ui/activities/jb;->a:I
+
+    aput v2, v0, v1
+
+    sget v1, Lcom/bbm/ui/activities/jb;->b:I
+
+    aput v1, v0, v3
+
+    sget v1, Lcom/bbm/ui/activities/jb;->c:I
+
+    aput v1, v0, v4
+
+    sget v1, Lcom/bbm/ui/activities/jb;->d:I
+
+    aput v1, v0, v5
+
+    sput-object v0, Lcom/bbm/ui/activities/jb;->e:[I
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(ZLcom/bbm/d/gw;Ljava/lang/String;)V
+.method public static a()[I
     .locals 1
 
     .prologue
-    .line 4589
-    if-nez p1, :cond_0
+    .line 100
+    sget-object v0, Lcom/bbm/ui/activities/jb;->e:[I
 
-    .line 4597
-    :goto_0
-    return-void
-
-    .line 4592
-    :cond_0
-    if-nez p2, :cond_1
-
-    .line 4593
-    iget-object v0, p0, Lcom/bbm/ui/activities/jb;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->z(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/gr;
+    invoke-virtual {v0}, [I->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/d/gr;->B:Ljava/lang/String;
+    check-cast v0, [I
 
-    invoke-static {v0, p3}, Lcom/bbm/util/db;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 4595
-    :cond_1
-    iget-object v0, p2, Lcom/bbm/d/gw;->d:Ljava/lang/String;
-
-    invoke-static {v0, p3}, Lcom/bbm/util/db;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
+    return-object v0
 .end method

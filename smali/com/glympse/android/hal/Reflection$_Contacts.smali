@@ -4,11 +4,11 @@
 
 
 # static fields
-.field private static cR:Z
+.field private static cU:Z
 
-.field private static dk:Landroid/net/Uri;
+.field private static dn:Landroid/net/Uri;
 
-.field private static dp:Ljava/lang/Class;
+.field private static ds:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class",
@@ -17,9 +17,9 @@
     .end annotation
 .end field
 
-.field private static dq:Ljava/lang/reflect/Method;
+.field private static dt:Ljava/lang/reflect/Method;
 
-.field private static dr:Ljava/lang/reflect/Method;
+.field private static du:Ljava/lang/reflect/Method;
 
 
 # direct methods
@@ -32,19 +32,19 @@
     .line 1055
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_Contacts;->cR:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_Contacts;->cU:Z
 
     .line 1056
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_Contacts;->dp:Ljava/lang/Class;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_Contacts;->ds:Ljava/lang/Class;
 
     .line 1057
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_Contacts;->dk:Landroid/net/Uri;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_Contacts;->dn:Landroid/net/Uri;
 
     .line 1058
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_Contacts;->dq:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_Contacts;->dt:Ljava/lang/reflect/Method;
 
     .line 1059
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_Contacts;->dr:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_Contacts;->du:Ljava/lang/reflect/Method;
 
     return-void
 .end method
@@ -67,7 +67,7 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_Contacts;->Load()V
 
     .line 1119
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->dk:Landroid/net/Uri;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->dn:Landroid/net/Uri;
 
     return-object v0
 .end method
@@ -79,12 +79,12 @@
     const/4 v1, 0x1
 
     .line 1064
-    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_Contacts;->cR:Z
+    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_Contacts;->cU:Z
 
     if-nez v0, :cond_0
 
     .line 1066
-    sput-boolean v1, Lcom/glympse/android/hal/Reflection$_Contacts;->cR:Z
+    sput-boolean v1, Lcom/glympse/android/hal/Reflection$_Contacts;->cU:Z
 
     .line 1071
     :try_start_0
@@ -94,19 +94,19 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->dp:Ljava/lang/Class;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->ds:Ljava/lang/Class;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_3
 
     .line 1078
     :goto_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->dp:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->ds:Ljava/lang/Class;
 
     if-eqz v0, :cond_0
 
     .line 1082
     :try_start_1
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->dp:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->ds:Ljava/lang/Class;
 
     const-string v1, "CONTENT_URI"
 
@@ -122,14 +122,14 @@
 
     check-cast v0, Landroid/net/Uri;
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->dk:Landroid/net/Uri;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->dn:Landroid/net/Uri;
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_2
 
     .line 1091
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->dp:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->ds:Ljava/lang/Class;
 
     const-string v1, "openContactPhotoInputStream"
 
@@ -159,19 +159,19 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->dr:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->du:Ljava/lang/reflect/Method;
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_1
 
     .line 1099
     :goto_2
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->dr:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->du:Ljava/lang/reflect/Method;
 
     if-nez v0, :cond_0
 
     .line 1104
     :try_start_3
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->dp:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->ds:Ljava/lang/Class;
 
     const-string v1, "openContactPhotoInputStream"
 
@@ -195,7 +195,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->dq:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->dt:Ljava/lang/reflect/Method;
     :try_end_3
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_0
 
@@ -237,13 +237,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_Contacts;->Load()V
 
     .line 1127
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->dr:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->du:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 1131
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->dr:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->du:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
 
@@ -287,13 +287,13 @@
 
     .line 1139
     :cond_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->dq:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->dt:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_1
 
     .line 1143
     :try_start_1
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->dq:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Contacts;->dt:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
 

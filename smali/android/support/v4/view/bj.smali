@@ -1,8 +1,29 @@
-.class interface abstract Landroid/support/v4/view/bj;
-.super Ljava/lang/Object;
-.source "ViewConfigurationCompat.java"
+.class Landroid/support/v4/view/bj;
+.super Landroid/support/v4/view/bi;
+.source "ViewCompat.java"
+
+
+# direct methods
+.method constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 764
+    invoke-direct {p0}, Landroid/support/v4/view/bi;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a(Landroid/view/ViewConfiguration;)I
+.method public final b(Landroid/view/View;)I
+    .locals 1
+
+    .prologue
+    .line 767
+    invoke-virtual {p1}, Landroid/view/View;->getOverScrollMode()I
+
+    move-result v0
+
+    return v0
 .end method

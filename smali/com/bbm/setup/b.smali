@@ -51,7 +51,7 @@
 
     .line 77
     :cond_0
-    invoke-static {}, Lcom/bbm/Alaska;->h()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcom/bbm/Alaska;->l()Landroid/content/SharedPreferences;
 
     move-result-object v0
 

@@ -12,3 +12,6 @@
 
 .method public abstract isNetworkError()Z
 .end method
+
+.method public abstract issueHttpRequest(Lcom/glympse/android/core/GPrimitive;)Z
+.end method

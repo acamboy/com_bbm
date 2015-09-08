@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/yj;
 .super Ljava/lang/Object;
-.source "NewChannelActivity.java"
+.source "PrivateChatRequestActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnFocusChangeListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/NewChannelActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/PrivateChatRequestActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/NewChannelActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/PrivateChatRequestActivity;)V
     .locals 0
 
     .prologue
-    .line 455
-    iput-object p1, p0, Lcom/bbm/ui/activities/yj;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+    .line 93
+    iput-object p1, p0, Lcom/bbm/ui/activities/yj;->a:Lcom/bbm/ui/activities/PrivateChatRequestActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,23 +25,29 @@
 
 
 # virtual methods
-.method public final onFocusChange(Landroid/view/View;Z)V
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
     .prologue
-    .line 458
-    if-eqz p2, :cond_0
-
-    .line 459
-    iget-object v0, p0, Lcom/bbm/ui/activities/yj;->a:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->n(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/Spinner;
+    .line 96
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/Spinner;->performClick()Z
+    sget-object v1, Lcom/bbm/d/eo;->a:Lcom/bbm/d/eo;
 
-    .line 461
-    :cond_0
+    iget-object v2, p0, Lcom/bbm/ui/activities/yj;->a:Lcom/bbm/ui/activities/PrivateChatRequestActivity;
+
+    invoke-static {v2}, Lcom/bbm/ui/activities/PrivateChatRequestActivity;->a(Lcom/bbm/ui/activities/PrivateChatRequestActivity;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/bbm/d/aj;->a(Lcom/bbm/d/eo;Ljava/lang/String;)Lcom/bbm/d/en;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ez;)V
+
+    .line 98
     return-void
 .end method

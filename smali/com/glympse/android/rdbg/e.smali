@@ -14,7 +14,7 @@
     return-void
 .end method
 
-.method public static N(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+.method public static R(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
     .locals 2
 
     .prologue
@@ -55,7 +55,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/glympse/android/rdbg/e;->N(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+    invoke-static {v3}, Lcom/glympse/android/rdbg/e;->R(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v6
 
@@ -112,7 +112,7 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/glympse/android/rdbg/e;->N(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+    invoke-static {v4}, Lcom/glympse/android/rdbg/e;->R(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v10
 
@@ -131,7 +131,7 @@
     invoke-static {v3, v4, v0, v11}, Lcom/glympse/android/rdbg/a;->a(Lcom/glympse/android/api/GTicket;Lcom/glympse/android/core/GPrimitive;ZZ)V
 
     .line 143
-    invoke-static {v10, v4}, Lcom/glympse/android/rdbg/e;->b(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
+    invoke-static {v10, v4}, Lcom/glympse/android/rdbg/e;->d(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
 
     .line 145
     const/4 v4, 0x1
@@ -155,7 +155,7 @@
 
     move-result-object v12
 
-    invoke-static {v12}, Lcom/glympse/android/rdbg/e;->N(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+    invoke-static {v12}, Lcom/glympse/android/rdbg/e;->R(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v12
 
@@ -172,7 +172,7 @@
     invoke-static {v4, v13, v14}, Lcom/glympse/android/rdbg/a;->a(Lcom/glympse/android/api/GPlace;Lcom/glympse/android/core/GPrimitive;Z)V
 
     .line 154
-    invoke-static {v12, v13}, Lcom/glympse/android/rdbg/e;->b(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
+    invoke-static {v12, v13}, Lcom/glympse/android/rdbg/e;->d(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
 
     .line 156
     invoke-interface {v11, v12}, Lcom/glympse/android/core/GPrimitive;->put(Lcom/glympse/android/core/GPrimitive;)V
@@ -198,7 +198,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/glympse/android/rdbg/e;->N(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+    invoke-static {v3}, Lcom/glympse/android/rdbg/e;->R(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v14
 
@@ -231,7 +231,7 @@
 
     move-result-object v16
 
-    invoke-static/range {v16 .. v16}, Lcom/glympse/android/rdbg/e;->N(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+    invoke-static/range {v16 .. v16}, Lcom/glympse/android/rdbg/e;->R(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v16
 
@@ -254,7 +254,7 @@
     invoke-static {v3, v0, v1, v2}, Lcom/glympse/android/rdbg/a;->a(Lcom/glympse/android/api/GInvite;Lcom/glympse/android/core/GPrimitive;ZZ)V
 
     .line 173
-    invoke-static/range {v16 .. v17}, Lcom/glympse/android/rdbg/e;->b(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
+    invoke-static/range {v16 .. v17}, Lcom/glympse/android/rdbg/e;->d(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
 
     .line 175
     invoke-interface/range {v15 .. v16}, Lcom/glympse/android/core/GPrimitive;->put(Lcom/glympse/android/core/GPrimitive;)V
@@ -268,14 +268,14 @@
 
     .line 177
     :cond_2
-    invoke-static {v14, v15}, Lcom/glympse/android/rdbg/e;->a(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
+    invoke-static {v14, v15}, Lcom/glympse/android/rdbg/e;->c(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
 
     .line 179
     invoke-interface {v11, v14}, Lcom/glympse/android/core/GPrimitive;->put(Lcom/glympse/android/core/GPrimitive;)V
 
     .line 182
     :cond_3
-    invoke-static {v10, v11}, Lcom/glympse/android/rdbg/e;->a(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
+    invoke-static {v10, v11}, Lcom/glympse/android/rdbg/e;->c(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
 
     .line 184
     invoke-interface {v7, v10}, Lcom/glympse/android/core/GPrimitive;->put(Lcom/glympse/android/core/GPrimitive;)V
@@ -290,7 +290,7 @@
 
     .line 187
     :cond_5
-    invoke-static {v6, v7}, Lcom/glympse/android/rdbg/e;->a(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
+    invoke-static {v6, v7}, Lcom/glympse/android/rdbg/e;->c(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
 
     .line 188
     return-object v6
@@ -312,38 +312,6 @@
     invoke-interface {p0, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;J)V
 
     .line 30
-    return-void
-.end method
-
-.method public static a(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
-    .locals 4
-
-    .prologue
-    .line 44
-    const-string v0, "children"
-
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {p0, v0, p1}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
-
-    .line 45
-    const-string v0, "childNodeCount"
-
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {p1}, Lcom/glympse/android/core/GPrimitive;->size()I
-
-    move-result v1
-
-    int-to-long v2, v1
-
-    invoke-interface {p0, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;J)V
-
-    .line 46
     return-void
 .end method
 
@@ -383,7 +351,39 @@
     return-void
 .end method
 
-.method public static b(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
+.method public static c(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
+    .locals 4
+
+    .prologue
+    .line 44
+    const-string v0, "children"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {p0, v0, p1}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
+
+    .line 45
+    const-string v0, "childNodeCount"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {p1}, Lcom/glympse/android/core/GPrimitive;->size()I
+
+    move-result v1
+
+    int-to-long v2, v1
+
+    invoke-interface {p0, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;J)V
+
+    .line 46
+    return-void
+.end method
+
+.method public static d(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
     .locals 1
 
     .prologue
@@ -400,7 +400,7 @@
     return-void
 .end method
 
-.method public static h(Lcom/glympse/android/lib/GGlympsePrivate;)Lcom/glympse/android/core/GPrimitive;
+.method public static g(Lcom/glympse/android/lib/GGlympsePrivate;)Lcom/glympse/android/core/GPrimitive;
     .locals 6
 
     .prologue
@@ -413,7 +413,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/glympse/android/rdbg/e;->N(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+    invoke-static {v0}, Lcom/glympse/android/rdbg/e;->R(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v0
 
@@ -462,7 +462,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/glympse/android/rdbg/e;->N(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+    invoke-static {v3}, Lcom/glympse/android/rdbg/e;->R(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v3
 
@@ -488,13 +488,13 @@
 
     .line 93
     :cond_0
-    invoke-static {v0, v1}, Lcom/glympse/android/rdbg/e;->a(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
+    invoke-static {v0, v1}, Lcom/glympse/android/rdbg/e;->c(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
 
     .line 95
     return-object v0
 .end method
 
-.method public static i(Lcom/glympse/android/lib/GGlympsePrivate;)Lcom/glympse/android/core/GPrimitive;
+.method public static h(Lcom/glympse/android/lib/GGlympsePrivate;)Lcom/glympse/android/core/GPrimitive;
     .locals 9
 
     .prologue
@@ -507,7 +507,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/glympse/android/rdbg/e;->N(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+    invoke-static {v0}, Lcom/glympse/android/rdbg/e;->R(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v2
 
@@ -552,7 +552,7 @@
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/glympse/android/rdbg/e;->N(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+    invoke-static {v6}, Lcom/glympse/android/rdbg/e;->R(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v6
 
@@ -585,7 +585,7 @@
 
     .line 119
     :cond_0
-    invoke-static {v2, v3}, Lcom/glympse/android/rdbg/e;->a(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
+    invoke-static {v2, v3}, Lcom/glympse/android/rdbg/e;->c(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
 
     .line 121
     return-object v2

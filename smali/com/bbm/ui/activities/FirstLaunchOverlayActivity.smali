@@ -28,12 +28,12 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 17
-    const v0, 0x7f030024
+    const v0, 0x7f03003c
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/FirstLaunchOverlayActivity;->setContentView(I)V
 
     .line 19
-    const v0, 0x7f0b0183
+    const v0, 0x7f0b01ef
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/FirstLaunchOverlayActivity;->findViewById(I)Landroid/view/View;
 
@@ -46,14 +46,14 @@
     .line 20
     iget-object v0, p0, Lcom/bbm/ui/activities/FirstLaunchOverlayActivity;->a:Landroid/widget/ViewFlipper;
 
-    const v1, 0x7f040009
+    const v1, 0x7f04000f
 
     invoke-virtual {v0, p0, v1}, Landroid/widget/ViewFlipper;->setInAnimation(Landroid/content/Context;I)V
 
     .line 21
     iget-object v0, p0, Lcom/bbm/ui/activities/FirstLaunchOverlayActivity;->a:Landroid/widget/ViewFlipper;
 
-    const v1, 0x7f04000b
+    const v1, 0x7f040011
 
     invoke-virtual {v0, p0, v1}, Landroid/widget/ViewFlipper;->setOutAnimation(Landroid/content/Context;I)V
 

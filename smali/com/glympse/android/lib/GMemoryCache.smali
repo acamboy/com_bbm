@@ -15,3 +15,6 @@
 
 .method public abstract onLowMemory()V
 .end method
+
+.method public abstract remove(Ljava/lang/String;)V
+.end method

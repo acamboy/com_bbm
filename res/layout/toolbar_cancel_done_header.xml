@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.bbm.bali.ui.toolbar.ButtonToolbar android:id="@id/button_toolbar" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:title="@string/app_name" local:contentInsetStart="0.0dip" local:contentInsetEnd="0.0dip" local:popupTheme="@style/ThemeOverlay.AppCompat.Light" local:titleTextAppearance="@style/BBMAppTheme.ToolbarTitle" local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:local="http://schemas.android.com/apk/res-auto">
+        <LinearLayout android:orientation="horizontal" android:id="@id/button_toolbar_root" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="?android:dividerVertical" android:showDividers="middle" android:dividerPadding="@dimen/toolbar_divider_padding_small"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <LinearLayout android:id="@id/cancel_button_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" style="?android:actionButtonStyle"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@drawable/selector_bali_button_text_color" android:gravity="center_vertical" android:layout_gravity="end|start|fill_horizontal" android:id="@id/toolbar_cancel_button" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="" android:drawablePadding="@dimen/toolbar_textview_drawable_only_padding" android:drawableStart="@drawable/toolbar_cancel_button_icon" style="?android:actionBarTabTextStyle" />
+            </LinearLayout>
+            <TextView android:textAppearance="@style/BBMAppTheme.ToolbarTitle" android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@id/toolbar_title_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="" android:singleLine="true" android:layout_weight="1.0" android:layout_marginStart="@dimen/activity_horizontal_margin" />
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="fill_parent" style="?android:actionButtonStyle"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@drawable/selector_bali_button_text_color" android:gravity="center_vertical" android:layout_gravity="end|start|fill_horizontal" android:id="@id/toolbar_done_button" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/done" android:drawablePadding="@dimen/toolbar_textview_drawable_padding" android:drawableStart="@drawable/toolbar_done_button_icon" style="?android:actionBarTabTextStyle" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.bbm.bali.ui.toolbar.ButtonToolbar>
+</LinearLayout>

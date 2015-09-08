@@ -8,7 +8,7 @@
 
 .field private b:Landroid/widget/LinearLayout;
 
-.field private c:Lcom/bbm/ui/gf;
+.field private c:Lcom/bbm/ui/gm;
 
 .field private final d:Landroid/view/View$OnClickListener;
 
@@ -24,12 +24,12 @@
     .line 23
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/bbm/ui/SmsActionBarView;->c:Lcom/bbm/ui/gf;
+    iput-object v0, p0, Lcom/bbm/ui/SmsActionBarView;->c:Lcom/bbm/ui/gm;
 
     .line 81
-    new-instance v0, Lcom/bbm/ui/ge;
+    new-instance v0, Lcom/bbm/ui/gl;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/ge;-><init>(Lcom/bbm/ui/SmsActionBarView;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/gl;-><init>(Lcom/bbm/ui/SmsActionBarView;)V
 
     iput-object v0, p0, Lcom/bbm/ui/SmsActionBarView;->d:Landroid/view/View$OnClickListener;
 
@@ -38,7 +38,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f03014f
+    const v1, 0x7f030169
 
     const/4 v2, 0x1
 
@@ -93,15 +93,6 @@
 
     .line 69
     :goto_0
-    iget-object v0, p0, Lcom/bbm/ui/SmsActionBarView;->c:Lcom/bbm/ui/gf;
-
-    if-eqz v0, :cond_0
-
-    .line 70
-    iget-object v0, p0, Lcom/bbm/ui/SmsActionBarView;->c:Lcom/bbm/ui/gf;
-
-    .line 72
-    :cond_0
     return-void
 
     .line 56
@@ -133,7 +124,7 @@
 
     .prologue
     .line 37
-    const v0, 0x7f0b068e
+    const v0, 0x7f0b0708
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/SmsActionBarView;->findViewById(I)Landroid/view/View;
 
@@ -151,7 +142,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 43
-    const v0, 0x7f0b0690
+    const v0, 0x7f0b070b
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/SmsActionBarView;->findViewById(I)Landroid/view/View;
 
@@ -177,12 +168,12 @@
     return-void
 .end method
 
-.method public setOnTabClickListener(Lcom/bbm/ui/gf;)V
+.method public setOnTabClickListener(Lcom/bbm/ui/gm;)V
     .locals 0
 
     .prologue
     .line 75
-    iput-object p1, p0, Lcom/bbm/ui/SmsActionBarView;->c:Lcom/bbm/ui/gf;
+    iput-object p1, p0, Lcom/bbm/ui/SmsActionBarView;->c:Lcom/bbm/ui/gm;
 
     .line 76
     return-void

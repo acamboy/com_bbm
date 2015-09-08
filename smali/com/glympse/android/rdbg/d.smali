@@ -91,12 +91,12 @@
     move-result-object v3
 
     .line 50
-    invoke-static {p1}, Lcom/glympse/android/rdbg/e;->h(Lcom/glympse/android/lib/GGlympsePrivate;)Lcom/glympse/android/core/GPrimitive;
+    invoke-static {p1}, Lcom/glympse/android/rdbg/e;->g(Lcom/glympse/android/lib/GGlympsePrivate;)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v4
 
     .line 52
-    invoke-static {p1}, Lcom/glympse/android/rdbg/e;->i(Lcom/glympse/android/lib/GGlympsePrivate;)Lcom/glympse/android/core/GPrimitive;
+    invoke-static {p1}, Lcom/glympse/android/rdbg/e;->h(Lcom/glympse/android/lib/GGlympsePrivate;)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v5
 
@@ -115,7 +115,7 @@
     invoke-interface {v3, v6}, Lcom/glympse/android/core/GPrimitive;->put(Lcom/glympse/android/core/GPrimitive;)V
 
     .line 61
-    invoke-static {v1, v3}, Lcom/glympse/android/rdbg/e;->a(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
+    invoke-static {v1, v3}, Lcom/glympse/android/rdbg/e;->c(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
 
     .line 63
     const-string v3, "root"
@@ -139,7 +139,7 @@
     return-object v2
 .end method
 
-.method public static dl()Lcom/glympse/android/core/GPrimitive;
+.method public static dp()Lcom/glympse/android/core/GPrimitive;
     .locals 3
 
     .prologue

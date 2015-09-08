@@ -1,220 +1,125 @@
-.class public final Lcom/mapquest/android/maps/co;
-.super Ljava/lang/Object;
+.class final Lcom/mapquest/android/maps/co;
+.super Landroid/os/Handler;
 .source "TrackballGestureDetector.java"
 
 
-# static fields
-.field static final a:I
-
-.field static final b:I
-
-.field static final c:I
-
-.field static final d:I
-
-
 # instance fields
-.field e:F
-
-.field f:F
-
-.field g:F
-
-.field h:F
-
-.field i:F
-
-.field j:F
-
-.field k:Lcom/mapquest/android/maps/cp;
-
-.field l:Z
-
-.field m:Z
-
-.field n:Z
-
-.field o:Z
-
-.field p:J
-
-.field q:J
-
-.field private r:Ljava/lang/Runnable;
-
-.field private s:Ljava/lang/Runnable;
+.field final synthetic a:Lcom/mapquest/android/maps/cn;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method private constructor <init>(Lcom/mapquest/android/maps/cn;)V
+    .locals 0
+
+    .prologue
+    .line 252
+    iput-object p1, p0, Lcom/mapquest/android/maps/co;->a:Lcom/mapquest/android/maps/cn;
+
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Lcom/mapquest/android/maps/cn;B)V
+    .locals 0
+
+    .prologue
+    .line 252
+    invoke-direct {p0, p1}, Lcom/mapquest/android/maps/co;-><init>(Lcom/mapquest/android/maps/cn;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final handleMessage(Landroid/os/Message;)V
     .locals 2
 
     .prologue
-    .line 16
-    invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
+    .line 256
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    move-result v0
+    packed-switch v0, :pswitch_data_0
 
-    sput v0, Lcom/mapquest/android/maps/co;->a:I
-
-    .line 17
-    invoke-static {}, Landroid/view/ViewConfiguration;->getDoubleTapTimeout()I
-
-    move-result v0
-
-    sput v0, Lcom/mapquest/android/maps/co;->b:I
-
-    .line 20
-    invoke-static {}, Landroid/view/ViewConfiguration;->getTapTimeout()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x2
-
-    sput v0, Lcom/mapquest/android/maps/co;->c:I
-
-    .line 23
-    sget v0, Lcom/mapquest/android/maps/co;->a:I
-
-    sget v1, Lcom/mapquest/android/maps/co;->b:I
-
-    add-int/2addr v0, v1
-
-    sget v1, Lcom/mapquest/android/maps/co;->c:I
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x2
-
-    sput v0, Lcom/mapquest/android/maps/co;->d:I
-
+    .line 276
+    :cond_0
+    :goto_0
     return-void
-.end method
 
-.method public constructor <init>()V
-    .locals 4
+    .line 258
+    :pswitch_0
+    iget-object v0, p0, Lcom/mapquest/android/maps/co;->a:Lcom/mapquest/android/maps/cn;
 
-    .prologue
-    const-wide/16 v2, 0x0
+    invoke-static {v0}, Lcom/mapquest/android/maps/cn;->a(Lcom/mapquest/android/maps/cn;)Z
 
-    const/4 v0, 0x0
+    .line 259
+    iget-object v0, p0, Lcom/mapquest/android/maps/co;->a:Lcom/mapquest/android/maps/cn;
 
-    const/4 v1, 0x0
+    invoke-static {v0}, Lcom/mapquest/android/maps/cn;->b(Lcom/mapquest/android/maps/cn;)Ljava/lang/Runnable;
 
-    .line 54
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    .line 35
-    iput-object v0, p0, Lcom/mapquest/android/maps/co;->r:Ljava/lang/Runnable;
+    if-eqz v0, :cond_0
 
-    .line 36
-    iput-object v0, p0, Lcom/mapquest/android/maps/co;->s:Ljava/lang/Runnable;
+    .line 260
+    iget-object v0, p0, Lcom/mapquest/android/maps/co;->a:Lcom/mapquest/android/maps/cn;
 
-    .line 41
-    iput-boolean v1, p0, Lcom/mapquest/android/maps/co;->l:Z
+    invoke-static {v0}, Lcom/mapquest/android/maps/cn;->b(Lcom/mapquest/android/maps/cn;)Ljava/lang/Runnable;
 
-    .line 42
-    iput-boolean v1, p0, Lcom/mapquest/android/maps/co;->m:Z
+    move-result-object v0
 
-    .line 43
-    iput-boolean v1, p0, Lcom/mapquest/android/maps/co;->n:Z
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 44
-    iput-boolean v1, p0, Lcom/mapquest/android/maps/co;->o:Z
+    goto :goto_0
 
-    .line 46
-    iput-wide v2, p0, Lcom/mapquest/android/maps/co;->p:J
+    .line 264
+    :pswitch_1
+    iget-object v0, p0, Lcom/mapquest/android/maps/co;->a:Lcom/mapquest/android/maps/cn;
 
-    .line 47
-    iput-wide v2, p0, Lcom/mapquest/android/maps/co;->q:J
+    invoke-static {v0}, Lcom/mapquest/android/maps/cn;->c(Lcom/mapquest/android/maps/cn;)Z
 
-    .line 55
-    new-instance v0, Lcom/mapquest/android/maps/cp;
+    .line 265
+    const-string v0, "TrackballGestureDetector"
 
-    invoke-direct {v0, p0, v1}, Lcom/mapquest/android/maps/cp;-><init>(Lcom/mapquest/android/maps/co;B)V
+    const-string v1, "recevied tap event"
 
-    iput-object v0, p0, Lcom/mapquest/android/maps/co;->k:Lcom/mapquest/android/maps/cp;
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 56
-    return-void
-.end method
+    .line 266
+    iget-object v0, p0, Lcom/mapquest/android/maps/co;->a:Lcom/mapquest/android/maps/cn;
 
-.method static synthetic a(Lcom/mapquest/android/maps/co;)Z
-    .locals 1
+    invoke-static {v0}, Lcom/mapquest/android/maps/cn;->d(Lcom/mapquest/android/maps/cn;)Ljava/lang/Runnable;
 
-    .prologue
-    .line 14
-    const/4 v0, 0x1
+    move-result-object v0
 
-    iput-boolean v0, p0, Lcom/mapquest/android/maps/co;->l:Z
+    if-eqz v0, :cond_0
 
-    return v0
-.end method
+    .line 267
+    iget-object v0, p0, Lcom/mapquest/android/maps/co;->a:Lcom/mapquest/android/maps/cn;
 
-.method static synthetic b(Lcom/mapquest/android/maps/co;)Ljava/lang/Runnable;
-    .locals 1
+    invoke-static {v0}, Lcom/mapquest/android/maps/cn;->d(Lcom/mapquest/android/maps/cn;)Ljava/lang/Runnable;
 
-    .prologue
-    .line 14
-    iget-object v0, p0, Lcom/mapquest/android/maps/co;->r:Ljava/lang/Runnable;
+    move-result-object v0
 
-    return-object v0
-.end method
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-.method static synthetic c(Lcom/mapquest/android/maps/co;)Z
-    .locals 1
+    goto :goto_0
 
-    .prologue
-    .line 14
-    const/4 v0, 0x0
+    .line 271
+    :pswitch_2
+    iget-object v0, p0, Lcom/mapquest/android/maps/co;->a:Lcom/mapquest/android/maps/cn;
 
-    iput-boolean v0, p0, Lcom/mapquest/android/maps/co;->m:Z
+    invoke-static {v0}, Lcom/mapquest/android/maps/cn;->e(Lcom/mapquest/android/maps/cn;)V
 
-    return v0
-.end method
+    goto :goto_0
 
-.method static synthetic d(Lcom/mapquest/android/maps/co;)Ljava/lang/Runnable;
-    .locals 1
+    .line 256
+    nop
 
-    .prologue
-    .line 14
-    iget-object v0, p0, Lcom/mapquest/android/maps/co;->s:Ljava/lang/Runnable;
-
-    return-object v0
-.end method
-
-.method static synthetic e(Lcom/mapquest/android/maps/co;)V
-    .locals 2
-
-    .prologue
-    const/4 v1, 0x0
-
-    const/4 v0, 0x0
-
-    .line 14
-    iput-boolean v1, p0, Lcom/mapquest/android/maps/co;->m:Z
-
-    iput-boolean v1, p0, Lcom/mapquest/android/maps/co;->n:Z
-
-    iput-boolean v1, p0, Lcom/mapquest/android/maps/co;->o:Z
-
-    iput-boolean v1, p0, Lcom/mapquest/android/maps/co;->l:Z
-
-    iput v0, p0, Lcom/mapquest/android/maps/co;->e:F
-
-    iput v0, p0, Lcom/mapquest/android/maps/co;->f:F
-
-    iput v0, p0, Lcom/mapquest/android/maps/co;->g:F
-
-    iput v0, p0, Lcom/mapquest/android/maps/co;->h:F
-
-    iput v0, p0, Lcom/mapquest/android/maps/co;->j:F
-
-    iput v0, p0, Lcom/mapquest/android/maps/co;->j:F
-
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lcom/mapquest/android/maps/co;->q:J
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+    .end packed-switch
 .end method

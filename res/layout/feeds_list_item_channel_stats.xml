@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/feeds_list_item_channel_post_stats_font" android:textColor="@color/brightstyle_secondaryTextColor" android:id="@id/feeds_list_item_channel_states" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/feeds_list_item_contact_title_avatar_margin" android:layout_marginRight="@dimen/feeds_list_item_contact_title_avatar_margin" />
+</merge>

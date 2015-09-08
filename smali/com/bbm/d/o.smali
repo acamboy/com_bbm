@@ -1,18 +1,15 @@
 .class final Lcom/bbm/d/o;
-.super Lcom/bbm/j/a;
+.super Lcom/bbm/d/b/ad;
 .source "BbmdsModel.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/bbm/j/a",
+        "Lcom/bbm/d/b/ad",
         "<",
-        "Ljava/util/Map",
-        "<",
-        "Ljava/lang/String;",
-        "Ljava/lang/String;",
-        ">;>;"
+        "Lcom/bbm/i/a;",
+        ">;"
     }
 .end annotation
 
@@ -26,89 +23,193 @@
     .locals 0
 
     .prologue
-    .line 109
+    .line 1560
     iput-object p1, p0, Lcom/bbm/d/o;->a:Lcom/bbm/d/a;
 
-    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/d/b/ad;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final synthetic a()Ljava/lang/Object;
-    .locals 7
+.method protected final a()Ljava/util/List;
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/bbm/i/a;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    const/4 v3, 0x0
+    .line 1568
+    new-instance v2, Ljava/util/ArrayList;
 
-    .line 109
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    .line 1569
     iget-object v0, p0, Lcom/bbm/d/o;->a:Lcom/bbm/d/a;
 
-    invoke-virtual {v0}, Lcom/bbm/d/a;->N()Lcom/bbm/j/w;
+    invoke-virtual {v0}, Lcom/bbm/d/a;->x()Lcom/bbm/j/w;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+    .line 1570
+    invoke-interface {v0}, Lcom/bbm/j/w;->b()Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    .line 1571
+    new-instance v3, Ljava/util/HashMap;
+
+    invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
+
+    .line 1572
+    invoke-interface {v0}, Lcom/bbm/j/w;->f()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/List;
 
-    new-instance v4, Ljava/util/HashMap;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
+    move-result-object v4
 
-    move v2, v3
-
+    :cond_0
     :goto_0
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/ii;
+
+    .line 1573
+    iget-object v1, v0, Lcom/bbm/d/ii;->a:Lcom/bbm/d/ij;
+
+    sget-object v5, Lcom/bbm/d/ij;->b:Lcom/bbm/d/ij;
+
+    if-eq v1, v5, :cond_1
+
+    iget-object v1, v0, Lcom/bbm/d/ii;->a:Lcom/bbm/d/ij;
+
+    sget-object v5, Lcom/bbm/d/ij;->d:Lcom/bbm/d/ij;
+
+    if-ne v1, v5, :cond_0
+
+    .line 1575
+    :cond_1
+    iget-object v5, v0, Lcom/bbm/d/ii;->c:Ljava/lang/String;
+
+    .line 1577
+    invoke-interface {v3, v5}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-ge v2, v1, :cond_1
+    if-eqz v1, :cond_2
 
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    .line 1578
+    invoke-interface {v3, v5}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/bbm/d/eu;
+    check-cast v1, Ljava/util/List;
 
-    iget-boolean v5, v1, Lcom/bbm/d/eu;->k:Z
+    .line 1582
+    :goto_1
+    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    if-nez v5, :cond_0
-
-    iget-boolean v5, v1, Lcom/bbm/d/eu;->i:Z
-
-    if-nez v5, :cond_0
-
-    iget-object v5, v1, Lcom/bbm/d/eu;->r:Ljava/util/List;
-
-    invoke-interface {v5}, Ljava/util/List;->size()I
-
-    move-result v5
-
-    const/4 v6, 0x1
-
-    if-ne v5, v6, :cond_0
-
-    iget-object v5, v1, Lcom/bbm/d/eu;->r:Ljava/util/List;
-
-    invoke-interface {v5, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    iget-object v1, v1, Lcom/bbm/d/eu;->b:Ljava/lang/String;
-
-    invoke-virtual {v4, v5, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    add-int/lit8 v1, v2, 0x1
-
-    move v2, v1
+    .line 1583
+    invoke-interface {v3, v5, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    :cond_1
-    return-object v4
+    .line 1580
+    :cond_2
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    goto :goto_1
+
+    .line 1586
+    :cond_3
+    invoke-interface {v3}, Ljava/util/Map;->keySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v4
+
+    .line 1587
+    :goto_2
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    .line 1588
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    .line 1589
+    invoke-interface {v3, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/List;
+
+    .line 1590
+    new-instance v5, Lcom/bbm/i/a;
+
+    invoke-direct {v5}, Lcom/bbm/i/a;-><init>()V
+
+    .line 1591
+    iput-object v0, v5, Lcom/bbm/i/a;->a:Ljava/lang/String;
+
+    .line 1592
+    iput-object v1, v5, Lcom/bbm/i/a;->b:Ljava/util/List;
+
+    .line 1593
+    invoke-interface {v2, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_2
+
+    .line 1596
+    :cond_4
+    return-object v2
+.end method
+
+.method public final b()Z
+    .locals 1
+
+    .prologue
+    .line 1563
+    iget-object v0, p0, Lcom/bbm/d/o;->a:Lcom/bbm/d/a;
+
+    invoke-virtual {v0}, Lcom/bbm/d/a;->x()Lcom/bbm/j/w;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/bbm/j/w;->b()Z
+
+    move-result v0
+
+    return v0
 .end method

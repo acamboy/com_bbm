@@ -1,99 +1,190 @@
-.class final Lcom/bbm/ui/c/ee;
+.class final synthetic Lcom/bbm/ui/c/ee;
 .super Ljava/lang/Object;
-.source "GroupsFragment.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "GroupMembersFragment.java"
 
 
-# instance fields
-.field final synthetic a:Ljava/lang/String;
+# static fields
+.field static final synthetic a:[I
 
-.field final synthetic b:Lcom/bbm/ui/b/o;
+.field static final synthetic b:[I
 
-.field final synthetic c:Lcom/bbm/ui/c/eb;
+.field static final synthetic c:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/eb;Ljava/lang/String;Lcom/bbm/ui/b/o;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 429
-    iput-object p1, p0, Lcom/bbm/ui/c/ee;->c:Lcom/bbm/ui/c/eb;
-
-    iput-object p2, p0, Lcom/bbm/ui/c/ee;->a:Ljava/lang/String;
-
-    iput-object p3, p0, Lcom/bbm/ui/c/ee;->b:Lcom/bbm/ui/b/o;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
-
-    .prologue
-    .line 433
-    const-string v0, "showGroupRestoreStatusDialog RightButton Clicked"
-
-    const-class v1, Lcom/bbm/ui/c/eb;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 435
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    .line 437
-    :try_start_0
-    new-instance v1, Lorg/json/JSONObject;
-
-    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
-
-    const-string v2, "restoreStatusId"
-
-    iget-object v3, p0, Lcom/bbm/ui/c/ee;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 438
-    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/g/al;
-
-    move-result-object v1
-
-    const-string v2, "groupRestoreStatus"
-
-    invoke-static {v0, v2}, Lcom/bbm/g/am;->b(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/g/cu;
+    .line 545
+    invoke-static {}, Lcom/bbm/ui/c/ef;->a()[I
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/c/ee;->c:[I
+
+    :try_start_0
+    sget-object v0, Lcom/bbm/ui/c/ee;->c:[I
+
+    sget v1, Lcom/bbm/ui/c/ef;->b:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
     :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_6
 
-    .line 442
     :goto_0
-    iget-object v0, p0, Lcom/bbm/ui/c/ee;->b:Lcom/bbm/ui/b/o;
+    :try_start_1
+    sget-object v0, Lcom/bbm/ui/c/ee;->c:[I
 
-    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->dismiss()V
+    sget v1, Lcom/bbm/ui/c/ef;->c:I
 
-    .line 443
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_5
+
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/bbm/ui/c/ee;->c:[I
+
+    sget v1, Lcom/bbm/ui/c/ef;->d:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_4
+
+    .line 404
+    :goto_2
+    invoke-static {}, Lcom/bbm/ui/c/ej;->a()[I
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/c/ee;->b:[I
+
+    :try_start_3
+    sget-object v0, Lcom/bbm/ui/c/ee;->b:[I
+
+    sget v1, Lcom/bbm/ui/c/ej;->a:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :goto_3
+    :try_start_4
+    sget-object v0, Lcom/bbm/ui/c/ee;->b:[I
+
+    sget v1, Lcom/bbm/ui/c/ej;->b:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_2
+
+    .line 96
+    :goto_4
+    invoke-static {}, Lcom/bbm/util/bo;->values()[Lcom/bbm/util/bo;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/c/ee;->a:[I
+
+    :try_start_5
+    sget-object v0, Lcom/bbm/ui/c/ee;->a:[I
+
+    sget-object v1, Lcom/bbm/util/bo;->b:Lcom/bbm/util/bo;
+
+    invoke-virtual {v1}, Lcom/bbm/util/bo;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_1
+
+    :goto_5
+    :try_start_6
+    sget-object v0, Lcom/bbm/ui/c/ee;->a:[I
+
+    sget-object v1, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
+
+    invoke-virtual {v1}, Lcom/bbm/util/bo;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_0
+
+    :goto_6
     return-void
 
-    .line 439
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+    goto :goto_6
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_5
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_4
+
+    :catch_3
+    move-exception v0
+
+    goto :goto_3
+
+    :catch_4
+    move-exception v0
+
+    goto :goto_2
+
+    :catch_5
+    move-exception v0
+
+    goto :goto_1
+
+    :catch_6
+    move-exception v0
 
     goto :goto_0
 .end method

@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field private a:Landroid/support/v4/app/cw;
+.field private a:Landroid/support/v4/app/de;
 
 
 # direct methods
-.method public constructor <init>(Landroid/support/v4/app/cw;)V
+.method public constructor <init>(Landroid/support/v4/app/de;)V
     .locals 0
 
     .prologue
@@ -16,7 +16,7 @@
     invoke-direct {p0}, Landroid/support/v4/app/d;-><init>()V
 
     .line 223
-    iput-object p1, p0, Landroid/support/v4/app/b;->a:Landroid/support/v4/app/cw;
+    iput-object p1, p0, Landroid/support/v4/app/b;->a:Landroid/support/v4/app/de;
 
     .line 224
     return-void
@@ -25,12 +25,88 @@
 
 # virtual methods
 .method public final a(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;)Landroid/os/Parcelable;
-    .locals 6
+    .locals 7
 
     .prologue
     .line 253
-    iget-object v1, p0, Landroid/support/v4/app/b;->a:Landroid/support/v4/app/cw;
+    iget-object v1, p0, Landroid/support/v4/app/b;->a:Landroid/support/v4/app/de;
 
+    instance-of v0, p1, Landroid/widget/ImageView;
+
+    if-eqz v0, :cond_2
+
+    move-object v0, p1
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v3
+
+    if-eqz v2, :cond_2
+
+    if-nez v3, :cond_2
+
+    invoke-static {v2}, Landroid/support/v4/app/de;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_2
+
+    new-instance v1, Landroid/os/Bundle;
+
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+
+    const-string v3, "sharedElement:snapshot:bitmap"
+
+    invoke-virtual {v1, v3, v2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    const-string v2, "sharedElement:snapshot:imageScaleType"
+
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getScaleType()Landroid/widget/ImageView$ScaleType;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/widget/ImageView$ScaleType;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getScaleType()Landroid/widget/ImageView$ScaleType;
+
+    move-result-object v2
+
+    sget-object v3, Landroid/widget/ImageView$ScaleType;->MATRIX:Landroid/widget/ImageView$ScaleType;
+
+    if-ne v2, v3, :cond_0
+
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getImageMatrix()Landroid/graphics/Matrix;
+
+    move-result-object v0
+
+    const/16 v2, 0x9
+
+    new-array v2, v2, [F
+
+    invoke-virtual {v0, v2}, Landroid/graphics/Matrix;->getValues([F)V
+
+    const-string v0, "sharedElement:snapshot:imageMatrix"
+
+    invoke-virtual {v1, v0, v2}, Landroid/os/Bundle;->putFloatArray(Ljava/lang/String;[F)V
+
+    :cond_0
+    move-object v0, v1
+
+    :cond_1
+    :goto_0
+    return-object v0
+
+    :cond_2
     invoke-virtual {p3}, Landroid/graphics/RectF;->width()F
 
     move-result v0
@@ -53,32 +129,64 @@
 
     if-lez v3, :cond_1
 
-    iget-object v0, v1, Landroid/support/v4/app/cw;->a:Landroid/graphics/Matrix;
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    if-nez v0, :cond_0
+    sget v4, Landroid/support/v4/app/de;->b:I
 
-    new-instance v0, Landroid/graphics/Matrix;
+    int-to-float v4, v4
 
-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+    mul-int v5, v2, v3
 
-    iput-object v0, v1, Landroid/support/v4/app/cw;->a:Landroid/graphics/Matrix;
+    int-to-float v5, v5
 
-    :cond_0
-    iget-object v0, v1, Landroid/support/v4/app/cw;->a:Landroid/graphics/Matrix;
+    div-float/2addr v4, v5
 
-    invoke-virtual {v0, p2}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
+    invoke-static {v0, v4}, Ljava/lang/Math;->min(FF)F
 
-    iget-object v0, v1, Landroid/support/v4/app/cw;->a:Landroid/graphics/Matrix;
+    move-result v0
 
-    iget v4, p3, Landroid/graphics/RectF;->left:F
+    int-to-float v2, v2
 
-    neg-float v4, v4
+    mul-float/2addr v2, v0
 
-    iget v5, p3, Landroid/graphics/RectF;->top:F
+    float-to-int v2, v2
+
+    int-to-float v3, v3
+
+    mul-float/2addr v3, v0
+
+    float-to-int v3, v3
+
+    iget-object v4, v1, Landroid/support/v4/app/de;->a:Landroid/graphics/Matrix;
+
+    if-nez v4, :cond_3
+
+    new-instance v4, Landroid/graphics/Matrix;
+
+    invoke-direct {v4}, Landroid/graphics/Matrix;-><init>()V
+
+    iput-object v4, v1, Landroid/support/v4/app/de;->a:Landroid/graphics/Matrix;
+
+    :cond_3
+    iget-object v4, v1, Landroid/support/v4/app/de;->a:Landroid/graphics/Matrix;
+
+    invoke-virtual {v4, p2}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
+
+    iget-object v4, v1, Landroid/support/v4/app/de;->a:Landroid/graphics/Matrix;
+
+    iget v5, p3, Landroid/graphics/RectF;->left:F
 
     neg-float v5, v5
 
-    invoke-virtual {v0, v4, v5}, Landroid/graphics/Matrix;->postTranslate(FF)Z
+    iget v6, p3, Landroid/graphics/RectF;->top:F
+
+    neg-float v6, v6
+
+    invoke-virtual {v4, v5, v6}, Landroid/graphics/Matrix;->postTranslate(FF)Z
+
+    iget-object v4, v1, Landroid/support/v4/app/de;->a:Landroid/graphics/Matrix;
+
+    invoke-virtual {v4, v0, v0}, Landroid/graphics/Matrix;->postScale(FF)Z
 
     sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
@@ -90,101 +198,23 @@
 
     invoke-direct {v2, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    iget-object v1, v1, Landroid/support/v4/app/cw;->a:Landroid/graphics/Matrix;
+    iget-object v1, v1, Landroid/support/v4/app/de;->a:Landroid/graphics/Matrix;
 
     invoke-virtual {v2, v1}, Landroid/graphics/Canvas;->concat(Landroid/graphics/Matrix;)V
 
     invoke-virtual {p1, v2}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
 
-    :cond_1
-    return-object v0
+    goto :goto_0
 .end method
 
 .method public final a(Landroid/content/Context;Landroid/os/Parcelable;)Landroid/view/View;
-    .locals 2
+    .locals 1
 
     .prologue
     .line 259
-    iget-object v0, p0, Landroid/support/v4/app/b;->a:Landroid/support/v4/app/cw;
+    invoke-static {p1, p2}, Landroid/support/v4/app/de;->a(Landroid/content/Context;Landroid/os/Parcelable;)Landroid/view/View;
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    instance-of v1, p2, Landroid/graphics/Bitmap;
-
-    if-eqz v1, :cond_0
-
-    check-cast p2, Landroid/graphics/Bitmap;
-
-    new-instance v0, Landroid/widget/ImageView;
-
-    invoke-direct {v0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {v0, p2}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
-
-    :cond_0
     return-object v0
-.end method
-
-.method public final a()V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
-
-    .prologue
-    .line 229
-    iget-object v0, p0, Landroid/support/v4/app/b;->a:Landroid/support/v4/app/cw;
-
-    .line 231
-    return-void
-.end method
-
-.method public final b()V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
-
-    .prologue
-    .line 236
-    iget-object v0, p0, Landroid/support/v4/app/b;->a:Landroid/support/v4/app/cw;
-
-    .line 238
-    return-void
-.end method
-
-.method public final c()V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
-
-    .prologue
-    .line 242
-    iget-object v0, p0, Landroid/support/v4/app/b;->a:Landroid/support/v4/app/cw;
-
-    .line 243
-    return-void
-.end method
-
-.method public final d()V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
-
-    .prologue
-    .line 247
-    iget-object v0, p0, Landroid/support/v4/app/b;->a:Landroid/support/v4/app/cw;
-
-    .line 248
-    return-void
 .end method

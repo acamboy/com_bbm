@@ -54,7 +54,7 @@
 
     aput-object v2, v1, v6
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     check-cast p4, Lcom/glympse/android/api/GUserTicket;
 
@@ -82,11 +82,11 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, v3, Lcom/bbm/util/a/d;->a:Lcom/bbm/p;
+    iget-object v0, v3, Lcom/bbm/util/a/d;->a:Lcom/bbm/w;
 
     iget-object v1, v3, Lcom/bbm/util/a/d;->e:Lcom/glympse/android/api/GEventListener;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/p;->b(Lcom/glympse/android/api/GEventListener;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/w;->b(Lcom/glympse/android/api/GEventListener;)V
 
     iput-boolean v6, v3, Lcom/bbm/util/a/d;->c:Z
 
@@ -122,7 +122,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/bbm/util/ct;
+    check-cast v1, Lcom/bbm/util/dc;
 
     if-eqz v1, :cond_3
 
@@ -132,14 +132,14 @@
 
     invoke-direct {v0}, Lcom/bbm/util/a/f;-><init>()V
 
-    sget-object v2, Lcom/bbm/util/bi;->b:Lcom/bbm/util/bi;
+    sget-object v2, Lcom/bbm/util/bo;->b:Lcom/bbm/util/bo;
 
-    iput-object v2, v0, Lcom/bbm/util/a/f;->a:Lcom/bbm/util/bi;
+    iput-object v2, v0, Lcom/bbm/util/a/f;->a:Lcom/bbm/util/bo;
 
     :goto_1
     iput-boolean v5, v0, Lcom/bbm/util/a/f;->b:Z
 
-    invoke-virtual {v1, v0}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
+    invoke-virtual {v1, v0}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
 
     :cond_3
     and-int/lit8 v0, p3, 0x10
@@ -189,7 +189,7 @@
 
     aput-object v2, v1, v6
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     check-cast p4, Ljava/lang/String;
 

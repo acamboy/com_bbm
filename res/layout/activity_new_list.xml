@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:background="@color/white" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingTop="@dimen/activity_vertical_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingBottom="@dimen/activity_vertical_margin" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <EditText android:id="@id/list_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/group_add_list_title_hint" android:singleLine="true" style="@style/BB10Edit">
-        <requestFocus />
-    </EditText>
+    <include android:id="@id/toolbar_cancel_done_header" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/toolbar_cancel_done_header" />
+    <LinearLayout android:background="@color/white" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingTop="@dimen/activity_vertical_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingBottom="@dimen/activity_vertical_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <EditText android:id="@id/list_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/group_add_list_title_hint" android:singleLine="true" style="@style/BB10Edit">
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
 </LinearLayout>

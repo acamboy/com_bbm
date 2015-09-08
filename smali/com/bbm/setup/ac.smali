@@ -1,81 +1,111 @@
-.class final Lcom/bbm/setup/ac;
-.super Lcom/bbm/j/k;
+.class final synthetic Lcom/bbm/setup/ac;
+.super Ljava/lang/Object;
 .source "SetupManager.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/setup/z;
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/setup/z;)V
-    .locals 1
-
-    .prologue
-    .line 133
-    iput-object p1, p0, Lcom/bbm/setup/ac;->a:Lcom/bbm/setup/z;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method protected final a()V
+.method static constructor <clinit>()V
     .locals 3
 
     .prologue
-    .line 136
-    iget-object v1, p0, Lcom/bbm/setup/ac;->a:Lcom/bbm/setup/z;
-
-    iget-object v0, v1, Lcom/bbm/setup/z;->a:Lcom/bbm/d/a;
-
-    const-string v2, "bbidState"
-
-    invoke-virtual {v0, v2}, Lcom/bbm/d/a;->E(Ljava/lang/String;)Lcom/bbm/util/bm;
+    .line 368
+    invoke-static {}, Lcom/bbm/f/af;->values()[Lcom/bbm/f/af;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/util/bm;->d()Lorg/json/JSONObject;
+    array-length v0, v0
 
-    move-result-object v0
+    new-array v0, v0, [I
 
-    const-string v2, "credentials"
+    sput-object v0, Lcom/bbm/setup/ac;->a:[I
 
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    :try_start_0
+    sget-object v0, Lcom/bbm/setup/ac;->a:[I
 
-    move-result-object v2
+    sget-object v1, Lcom/bbm/f/af;->b:Lcom/bbm/f/af;
 
-    iget-object v0, v1, Lcom/bbm/setup/z;->g:Lcom/bbm/util/ct;
+    invoke-virtual {v1}, Lcom/bbm/f/af;->ordinal()I
 
-    invoke-virtual {v0}, Lcom/bbm/util/ct;->e()Ljava/lang/Object;
+    move-result v1
 
-    move-result-object v0
+    const/4 v2, 0x1
 
-    check-cast v0, Ljava/lang/String;
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_3
 
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/setup/ac;->a:[I
 
-    move-result v0
+    sget-object v1, Lcom/bbm/f/af;->c:Lcom/bbm/f/af;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v1}, Lcom/bbm/f/af;->ordinal()I
 
-    const-string v0, "Unknown"
+    move-result v1
 
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const/4 v2, 0x2
 
-    move-result v0
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
 
-    if-nez v0, :cond_0
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/bbm/setup/ac;->a:[I
 
-    iget-object v0, v1, Lcom/bbm/setup/z;->g:Lcom/bbm/util/ct;
+    sget-object v1, Lcom/bbm/f/af;->e:Lcom/bbm/f/af;
 
-    invoke-virtual {v0, v2}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
+    invoke-virtual {v1}, Lcom/bbm/f/af;->ordinal()I
 
-    .line 137
-    :cond_0
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_1
+
+    :goto_2
+    :try_start_3
+    sget-object v0, Lcom/bbm/setup/ac;->a:[I
+
+    sget-object v1, Lcom/bbm/f/af;->d:Lcom/bbm/f/af;
+
+    invoke-virtual {v1}, Lcom/bbm/f/af;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_0
+
+    :goto_3
     return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_3
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_2
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_1
+
+    :catch_3
+    move-exception v0
+
+    goto :goto_0
 .end method

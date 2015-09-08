@@ -1,22 +1,34 @@
 .class final Lcom/bbm/ui/activities/ue;
 .super Ljava/lang/Object;
-.source "GroupSettingsActivity.java"
+.source "MainActivity.java"
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupSettingsActivity;
+.field final synthetic a:Lcom/google/b/f/a/p;
+
+.field final synthetic b:Ljava/lang/String;
+
+.field final synthetic c:Landroid/content/Context;
+
+.field final synthetic d:[Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupSettingsActivity;)V
+.method constructor <init>(Lcom/google/b/f/a/p;Ljava/lang/String;Landroid/content/Context;[Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 157
-    iput-object p1, p0, Lcom/bbm/ui/activities/ue;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
+    .line 1745
+    iput-object p1, p0, Lcom/bbm/ui/activities/ue;->a:Lcom/google/b/f/a/p;
+
+    iput-object p2, p0, Lcom/bbm/ui/activities/ue;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Lcom/bbm/ui/activities/ue;->c:Landroid/content/Context;
+
+    iput-object p4, p0, Lcom/bbm/ui/activities/ue;->d:[Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,84 +37,91 @@
 
 
 # virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 4
+.method public final run()V
+    .locals 5
 
     .prologue
-    .line 160
-    iget-object v0, p0, Lcom/bbm/ui/activities/ue;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupSettingsActivity;->c(Lcom/bbm/ui/activities/GroupSettingsActivity;)Lcom/bbm/g/a;
-
-    move-result-object v0
-
-    iget-boolean v0, v0, Lcom/bbm/g/a;->u:Z
-
-    .line 161
-    if-eq p2, v0, :cond_0
-
-    .line 162
-    new-instance v0, Lorg/json/JSONObject;
-
-    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
-
-    .line 163
-    new-instance v1, Ljava/util/LinkedList;
-
-    invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
-
-    .line 165
+    .line 1750
     :try_start_0
-    invoke-interface {v1}, Ljava/util/List;->clear()V
+    iget-object v0, p0, Lcom/bbm/ui/activities/ue;->a:Lcom/google/b/f/a/p;
 
-    .line 166
-    const-string v2, "uri"
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/ue;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
-
-    iget-object v3, v3, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-interface {v0}, Lcom/google/b/f/a/p;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v2, "showThisGroupsPicturesInTheMessageApp"
+    check-cast v0, Ljava/lang/String;
 
-    invoke-virtual {v0, v2, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+    .line 1751
+    const-string v1, "Starting chat with user pin %s -> %s"
 
-    move-result-object v0
+    const/4 v2, 0x2
 
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    new-array v2, v2, [Ljava/lang/Object;
 
-    .line 167
-    iget-object v0, p0, Lcom/bbm/ui/activities/ue;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
+    const/4 v3, 0x0
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupSettingsActivity;->f(Lcom/bbm/ui/activities/GroupSettingsActivity;)Lcom/bbm/e;
+    iget-object v4, p0, Lcom/bbm/ui/activities/ue;->b:Ljava/lang/String;
 
-    move-result-object v0
+    aput-object v4, v2, v3
 
-    iget-object v0, v0, Lcom/bbm/e;->c:Lcom/bbm/g/al;
+    const/4 v3, 0x1
 
-    const-string v2, "group"
+    aput-object v0, v2, v3
 
-    invoke-static {v1, v2}, Lcom/bbm/g/am;->a(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/g/ct;
+    invoke-static {v1, v2}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    move-result-object v1
+    .line 1753
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 1754
+    new-instance v1, Landroid/content/Intent;
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/ue;->c:Landroid/content/Context;
+
+    const-class v3, Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 1755
+    const-string v2, "conversation_uri"
+
+    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 1756
+    const-string v0, "image_path_upload_list"
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/ue;->d:[Ljava/lang/String;
+
+    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 1758
+    iget-object v0, p0, Lcom/bbm/ui/activities/ue;->c:Landroid/content/Context;
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    .line 1760
+    const-string v0, "open"
+
+    const-string v1, "Conversation"
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 172
+    .line 1765
     :cond_0
     :goto_0
     return-void
 
-    .line 168
+    .line 1762
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method

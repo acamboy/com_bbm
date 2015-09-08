@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:id="@id/ownProfileRoot" android:background="@color/whiteBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
-    <com.bbm.ui.SegmentedControl android:layout_gravity="center_horizontal" android:id="@id/channel_preview_fragment_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:leftOption="@string/channel_profile" custom:rightOption="@string/channel_preview" />
-    <FrameLayout android:id="@id/channel_preview_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/own_profile_fragment_container_margin_top" android:layout_above="@id/footer_action_bar" android:layout_below="@id/channel_preview_fragment_selector" />
-    <RelativeLayout android:id="@id/profile_overlay" android:background="@color/contacts_contact_name_overlay" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <include android:id="@id/channel_preview_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/view_bali_toolbar" />
+    <com.bbm.ui.SegmentedControl android:layout_gravity="center_horizontal" android:id="@id/channel_preview_fragment_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/channel_preview_toolbar" custom:leftOption="@string/channel_profile" custom:rightOption="@string/channel_preview" />
+    <FrameLayout android:id="@id/channel_preview_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/channel_preview_fragment_container_margin_top" android:layout_below="@id/channel_preview_fragment_selector" />
+    <LinearLayout android:id="@id/profile_overlay" android:background="@color/contacts_contact_name_overlay" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
         <TextView android:textSize="@dimen/channel_doesnt_exist_text_size" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@id/profile_overlay_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:textIsSelectable="false" />
-    </RelativeLayout>
-    <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
+    </LinearLayout>
 </RelativeLayout>

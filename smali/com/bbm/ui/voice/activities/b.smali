@@ -1,79 +1,45 @@
 .class final Lcom/bbm/ui/voice/activities/b;
-.super Lcom/bbm/j/k;
-.source "IncomingCallActivity.java"
+.super Ljava/lang/Object;
+.source "InCallActivity.java"
+
+# interfaces
+.implements Lcom/bbm/ui/b/ay;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/voice/activities/IncomingCallActivity;
+.field final synthetic a:Lcom/bbm/n/a;
+
+.field final synthetic b:Lcom/bbm/ui/voice/activities/InCallActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/voice/activities/InCallActivity;Lcom/bbm/n/a;)V
+    .locals 0
 
     .prologue
-    .line 114
-    iput-object p1, p0, Lcom/bbm/ui/voice/activities/b;->a:Lcom/bbm/ui/voice/activities/IncomingCallActivity;
+    .line 368
+    iput-object p1, p0, Lcom/bbm/ui/voice/activities/b;->b:Lcom/bbm/ui/voice/activities/InCallActivity;
 
-    const/4 v0, 0x0
+    iput-object p2, p0, Lcom/bbm/ui/voice/activities/b;->a:Lcom/bbm/n/a;
 
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 3
+.method public final a()V
+    .locals 2
 
     .prologue
-    const/4 v1, 0x1
+    .line 372
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/b;->a:Lcom/bbm/n/a;
 
-    const/4 v2, 0x0
+    const/4 v1, 0x4
 
-    .line 117
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/b;->a:Lcom/bbm/ui/voice/activities/IncomingCallActivity;
+    invoke-virtual {v0, v1}, Lcom/bbm/n/a;->a(I)V
 
-    invoke-static {v0}, Lcom/bbm/n/b;->a(Landroid/content/Context;)Lcom/bbm/n/b;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/bbm/n/b;->a:Lcom/bbm/j/t;
-
-    invoke-virtual {v0}, Lcom/bbm/j/t;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    if-ne v0, v1, :cond_1
-
-    move v0, v1
-
-    :goto_0
-    if-nez v0, :cond_0
-
-    .line 118
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/b;->a:Lcom/bbm/ui/voice/activities/IncomingCallActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->e(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Lcom/bbm/n/j;
-
-    move-result-object v0
-
-    invoke-interface {v0, v2}, Lcom/bbm/n/j;->a(Z)V
-
-    .line 120
-    :cond_0
+    .line 373
     return-void
-
-    :cond_1
-    move v0, v2
-
-    .line 117
-    goto :goto_0
 .end method

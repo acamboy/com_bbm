@@ -1,100 +1,75 @@
 .class final Lcom/bbm/ui/c/ce;
-.super Lcom/bbm/j/k;
+.super Ljava/lang/Object;
 .source "ChatsFragment.java"
+
+# interfaces
+.implements Landroid/widget/ExpandableListView$OnGroupExpandListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/bo;
+.field final synthetic a:Lcom/bbm/ui/c/ca;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/bo;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/c/ca;)V
+    .locals 0
 
     .prologue
-    .line 430
-    iput-object p1, p0, Lcom/bbm/ui/c/ce;->a:Lcom/bbm/ui/c/bo;
+    .line 903
+    iput-object p1, p0, Lcom/bbm/ui/c/ce;->a:Lcom/bbm/ui/c/ca;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
+.method public final onGroupExpand(I)V
     .locals 2
 
     .prologue
-    .line 433
-    iget-object v0, p0, Lcom/bbm/ui/c/ce;->a:Lcom/bbm/ui/c/bo;
+    .line 906
+    iget-object v0, p0, Lcom/bbm/ui/c/ce;->a:Lcom/bbm/ui/c/ca;
 
-    invoke-static {v0}, Lcom/bbm/ui/c/bo;->j(Lcom/bbm/ui/c/bo;)Lcom/bbm/j/a;
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/c/ca;->a(Lcom/bbm/ui/c/ca;Z)V
+
+    .line 908
+    iget-object v0, p0, Lcom/bbm/ui/c/ce;->a:Lcom/bbm/ui/c/ca;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/ca;->k(Lcom/bbm/ui/c/ca;)Lcom/bbm/ui/messages/cr;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v0, p1}, Lcom/bbm/ui/messages/cr;->getChildrenCount(I)I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    .line 434
-    iget-object v0, p0, Lcom/bbm/ui/c/ce;->a:Lcom/bbm/ui/c/bo;
+    .line 909
+    iget-object v0, p0, Lcom/bbm/ui/c/ce;->a:Lcom/bbm/ui/c/ca;
 
-    invoke-static {v0}, Lcom/bbm/ui/c/bo;->k(Lcom/bbm/ui/c/bo;)Landroid/view/View;
+    invoke-static {v0}, Lcom/bbm/ui/c/ca;->k(Lcom/bbm/ui/c/ca;)Lcom/bbm/ui/messages/cr;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    .line 435
-    iget-object v0, p0, Lcom/bbm/ui/c/ce;->a:Lcom/bbm/ui/c/bo;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/bo;->l(Lcom/bbm/ui/c/bo;)Landroid/widget/ImageView;
+    invoke-virtual {v0, p1, v1}, Lcom/bbm/ui/messages/cr;->getChild(II)Ljava/lang/Object;
 
     move-result-object v0
 
-    const v1, 0x7f020021
+    check-cast v0, Lcom/bbm/d/ia;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+    .line 910
+    iget-object v1, p0, Lcom/bbm/ui/c/ce;->a:Lcom/bbm/ui/c/ca;
 
-    .line 440
-    :goto_0
-    return-void
+    invoke-static {v1, v0}, Lcom/bbm/ui/c/ca;->a(Lcom/bbm/ui/c/ca;Lcom/bbm/d/ia;)V
 
-    .line 437
+    .line 913
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/c/ce;->a:Lcom/bbm/ui/c/bo;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/bo;->k(Lcom/bbm/ui/c/bo;)Landroid/view/View;
-
-    move-result-object v0
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    .line 438
-    iget-object v0, p0, Lcom/bbm/ui/c/ce;->a:Lcom/bbm/ui/c/bo;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/bo;->l(Lcom/bbm/ui/c/bo;)Landroid/widget/ImageView;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    goto :goto_0
+    return-void
 .end method

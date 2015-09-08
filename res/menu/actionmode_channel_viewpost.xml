@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_channels_reply" android:id="@id/actionmode_menu_channel_reply_comment" android:title="@string/channel_posts_reply" app:showAsAction="always" />
+    <item android:icon="@drawable/abc_ic_menu_copy_mtrl_am_alpha" android:id="@id/actionmode_menu_channel_copy_comment" android:title="@string/group_picture_copy_comment" app:showAsAction="always" />
+</menu>

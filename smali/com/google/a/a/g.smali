@@ -1,31 +1,25 @@
-.class public interface abstract annotation Lcom/google/a/a/g;
+.class public interface abstract Lcom/google/a/a/g;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/annotation/Annotation;
+.implements Lcom/google/a/a/e;
 
 
 # annotations
-.annotation system Ldalvik/annotation/AnnotationDefault;
-    value = .subannotation Lcom/google/a/a/g;
-        b = true
-    .end subannotation
-.end annotation
-
-.annotation runtime Ljava/lang/annotation/Retention;
-    value = .enum Ljava/lang/annotation/RetentionPolicy;->RUNTIME:Ljava/lang/annotation/RetentionPolicy;
-.end annotation
-
-.annotation runtime Ljava/lang/annotation/Target;
+.annotation system Ldalvik/annotation/Signature;
     value = {
-        .enum Ljava/lang/annotation/ElementType;->FIELD:Ljava/lang/annotation/ElementType;
+        "<ADDITIONA",
+        "L_PARAMETERS::Lcom/google/a/a/k;",
+        "SERVER_PARAMETERS:",
+        "Lcom/google/a/a/h;",
+        ">",
+        "Ljava/lang/Object;",
+        "Lcom/google/a/a/e",
+        "<TADDITIONA",
+        "L_PARAMETERS;",
+        "TSERVER_PARAMETERS;>;"
     }
 .end annotation
 
-
-# virtual methods
-.method public abstract a()Ljava/lang/String;
-.end method
-
-.method public abstract b()Z
-.end method
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation

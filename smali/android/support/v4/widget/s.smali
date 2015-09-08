@@ -1,86 +1,121 @@
-.class final Landroid/support/v4/widget/s;
-.super Ljava/lang/Object;
-.source "EdgeEffectCompat.java"
+.class public final Landroid/support/v4/widget/s;
+.super Landroid/view/ViewGroup$MarginLayoutParams;
+.source "DrawerLayout.java"
 
-# interfaces
-.implements Landroid/support/v4/widget/u;
+
+# instance fields
+.field public a:I
+
+.field b:F
+
+.field c:Z
+
+.field d:Z
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .prologue
-    .line 58
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, -0x1
 
+    .line 1803
+    invoke-direct {p0, v0, v0}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
+
+    .line 1789
+    const/4 v0, 0x0
+
+    iput v0, p0, Landroid/support/v4/widget/s;->a:I
+
+    .line 1804
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Landroid/content/Context;)Ljava/lang/Object;
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 2
 
     .prologue
-    .line 60
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    return-object v0
-.end method
+    .line 1795
+    invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-.method public final a(Ljava/lang/Object;II)V
-    .locals 0
+    .line 1789
+    iput v1, p0, Landroid/support/v4/widget/s;->a:I
 
-    .prologue
-    .line 64
+    .line 1797
+    invoke-static {}, Landroid/support/v4/widget/DrawerLayout;->d()[I
+
+    move-result-object v0
+
+    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+
+    move-result-object v0
+
+    .line 1798
+    invoke-virtual {v0, v1, v1}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result v1
+
+    iput v1, p0, Landroid/support/v4/widget/s;->a:I
+
+    .line 1799
+    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
+
+    .line 1800
     return-void
 .end method
 
-.method public final a(Ljava/lang/Object;)Z
+.method public constructor <init>(Landroid/support/v4/widget/s;)V
     .locals 1
 
     .prologue
-    .line 67
-    const/4 v0, 0x1
+    .line 1812
+    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
 
-    return v0
-.end method
-
-.method public final a(Ljava/lang/Object;F)Z
-    .locals 1
-
-    .prologue
-    .line 74
+    .line 1789
     const/4 v0, 0x0
 
-    return v0
-.end method
+    iput v0, p0, Landroid/support/v4/widget/s;->a:I
 
-.method public final a(Ljava/lang/Object;Landroid/graphics/Canvas;)Z
-    .locals 1
+    .line 1813
+    iget v0, p1, Landroid/support/v4/widget/s;->a:I
 
-    .prologue
-    .line 86
-    const/4 v0, 0x0
+    iput v0, p0, Landroid/support/v4/widget/s;->a:I
 
-    return v0
-.end method
-
-.method public final b(Ljava/lang/Object;)V
-    .locals 0
-
-    .prologue
-    .line 71
+    .line 1814
     return-void
 .end method
 
-.method public final c(Ljava/lang/Object;)Z
+.method public constructor <init>(Landroid/view/ViewGroup$LayoutParams;)V
     .locals 1
 
     .prologue
-    .line 78
+    .line 1817
+    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 1789
     const/4 v0, 0x0
 
-    return v0
+    iput v0, p0, Landroid/support/v4/widget/s;->a:I
+
+    .line 1818
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
+    .locals 1
+
+    .prologue
+    .line 1821
+    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
+
+    .line 1789
+    const/4 v0, 0x0
+
+    iput v0, p0, Landroid/support/v4/widget/s;->a:I
+
+    .line 1822
+    return-void
 .end method

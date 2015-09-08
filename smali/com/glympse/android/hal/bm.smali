@@ -7,13 +7,13 @@
 
 
 # instance fields
-.field private aV:Landroid/os/Handler;
+.field private aW:Landroid/os/Handler;
 
 .field private e:Landroid/content/Context;
 
-.field private eu:I
+.field private ex:I
 
-.field private ev:Ljava/util/Queue;
+.field private ey:Ljava/util/Queue;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Queue",
@@ -41,21 +41,21 @@
     .line 34
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/glympse/android/hal/bm;->eu:I
+    iput v0, p0, Lcom/glympse/android/hal/bm;->ex:I
 
     .line 35
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/bm;->ev:Ljava/util/Queue;
+    iput-object v0, p0, Lcom/glympse/android/hal/bm;->ey:Ljava/util/Queue;
 
     .line 37
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/bm;->aV:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/glympse/android/hal/bm;->aW:Landroid/os/Handler;
 
     .line 41
     iput-object p1, p0, Lcom/glympse/android/hal/bm;->e:Landroid/content/Context;
@@ -138,7 +138,7 @@
 
     .prologue
     .line 30
-    iget-object v0, p0, Lcom/glympse/android/hal/bm;->aV:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/glympse/android/hal/bm;->aW:Landroid/os/Handler;
 
     return-object v0
 .end method
@@ -167,7 +167,7 @@
     invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
     .line 172
-    iget-object v0, p0, Lcom/glympse/android/hal/bm;->ev:Ljava/util/Queue;
+    iget-object v0, p0, Lcom/glympse/android/hal/bm;->ey:Ljava/util/Queue;
 
     new-instance v1, Lcom/glympse/android/hal/bn;
 
@@ -194,11 +194,11 @@
 
     .prologue
     .line 30
-    iget v0, p0, Lcom/glympse/android/hal/bm;->eu:I
+    iget v0, p0, Lcom/glympse/android/hal/bm;->ex:I
 
     add-int/lit8 v1, v0, -0x1
 
-    iput v1, p0, Lcom/glympse/android/hal/bm;->eu:I
+    iput v1, p0, Lcom/glympse/android/hal/bm;->ex:I
 
     return v0
 .end method
@@ -208,7 +208,7 @@
 
     .prologue
     .line 30
-    iget v0, p0, Lcom/glympse/android/hal/bm;->eu:I
+    iget v0, p0, Lcom/glympse/android/hal/bm;->ex:I
 
     return v0
 .end method
@@ -220,7 +220,7 @@
 
     .prologue
     .line 177
-    iget-object v0, p0, Lcom/glympse/android/hal/bm;->ev:Ljava/util/Queue;
+    iget-object v0, p0, Lcom/glympse/android/hal/bm;->ey:Ljava/util/Queue;
 
     invoke-interface {v0}, Ljava/util/Queue;->poll()Ljava/lang/Object;
 
@@ -240,7 +240,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, v0, Lcom/glympse/android/hal/bn;->ew:Ljava/lang/String;
+    iget-object v3, v0, Lcom/glympse/android/hal/bn;->ez:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -253,11 +253,11 @@
     invoke-static {v1, v2}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
     .line 181
-    iget-object v1, v0, Lcom/glympse/android/hal/bn;->ew:Ljava/lang/String;
+    iget-object v1, v0, Lcom/glympse/android/hal/bn;->ez:Ljava/lang/String;
 
-    iget-object v2, v0, Lcom/glympse/android/hal/bn;->ex:Ljava/lang/String;
+    iget-object v2, v0, Lcom/glympse/android/hal/bn;->eA:Ljava/lang/String;
 
-    iget-object v0, v0, Lcom/glympse/android/hal/bn;->ey:Lcom/glympse/android/hal/GSmsListener;
+    iget-object v0, v0, Lcom/glympse/android/hal/bn;->eB:Lcom/glympse/android/hal/GSmsListener;
 
     invoke-virtual {p0, v1, v2, v0}, Lcom/glympse/android/hal/bm;->sendSms(Ljava/lang/String;Ljava/lang/String;Lcom/glympse/android/hal/GSmsListener;)Z
 
@@ -468,7 +468,7 @@
 
     .line 120
     :cond_0
-    iget v0, p0, Lcom/glympse/android/hal/bm;->eu:I
+    iget v0, p0, Lcom/glympse/android/hal/bm;->ex:I
 
     if-lez v0, :cond_1
 
@@ -506,7 +506,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/glympse/android/hal/bm;->eu:I
+    iput v0, p0, Lcom/glympse/android/hal/bm;->ex:I
 
     move v6, v7
 

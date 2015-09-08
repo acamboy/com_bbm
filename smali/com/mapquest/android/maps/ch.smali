@@ -1,244 +1,269 @@
-.class final Lcom/mapquest/android/maps/ch;
+.class public abstract Lcom/mapquest/android/maps/ch;
 .super Ljava/lang/Object;
 .source "TouchEventHandler.java"
 
-
-# static fields
-.field static final a:I
+# interfaces
+.implements Lcom/mapquest/android/maps/ck;
 
 
 # instance fields
-.field b:Lcom/mapquest/android/maps/ck;
-
-.field private c:Lcom/mapquest/android/maps/MapView;
-
-.field private d:Lcom/mapquest/android/maps/cn;
-
-.field private e:Landroid/view/GestureDetector;
-
-.field private f:Z
-
-.field private g:Z
+.field final synthetic a:Lcom/mapquest/android/maps/cg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lcom/mapquest/android/maps/cg;)V
+    .locals 0
 
     .prologue
-    .line 28
-    const/4 v0, 0x0
+    .line 196
+    iput-object p1, p0, Lcom/mapquest/android/maps/ch;->a:Lcom/mapquest/android/maps/cg;
 
-    sput v0, Lcom/mapquest/android/maps/ch;->a:I
-
-    .line 29
-    return-void
-.end method
-
-.method public constructor <init>(Lcom/mapquest/android/maps/MapView;)V
-    .locals 3
-
-    .prologue
-    const/4 v2, 0x0
-
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
-    iput-boolean v2, p0, Lcom/mapquest/android/maps/ch;->f:Z
-
-    .line 23
-    iput-boolean v2, p0, Lcom/mapquest/android/maps/ch;->g:Z
-
-    .line 25
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/mapquest/android/maps/ch;->b:Lcom/mapquest/android/maps/ck;
-
-    .line 32
-    iput-object p1, p0, Lcom/mapquest/android/maps/ch;->c:Lcom/mapquest/android/maps/MapView;
-
-    .line 33
-    new-instance v0, Lcom/mapquest/android/maps/cn;
-
-    invoke-direct {v0, p0}, Lcom/mapquest/android/maps/cn;-><init>(Lcom/mapquest/android/maps/ch;)V
-
-    iput-object v0, p0, Lcom/mapquest/android/maps/ch;->d:Lcom/mapquest/android/maps/cn;
-
-    .line 35
-    new-instance v0, Landroid/view/GestureDetector;
-
-    new-instance v1, Lcom/mapquest/android/maps/cj;
-
-    invoke-direct {v1, p0, v2}, Lcom/mapquest/android/maps/cj;-><init>(Lcom/mapquest/android/maps/ch;B)V
-
-    invoke-direct {v0, v1}, Landroid/view/GestureDetector;-><init>(Landroid/view/GestureDetector$OnGestureListener;)V
-
-    iput-object v0, p0, Lcom/mapquest/android/maps/ch;->e:Landroid/view/GestureDetector;
-
-    .line 36
-    new-instance v0, Lcom/mapquest/android/maps/ck;
-
-    invoke-direct {v0, p0, p1}, Lcom/mapquest/android/maps/ck;-><init>(Lcom/mapquest/android/maps/ch;Lcom/mapquest/android/maps/MapView;)V
-
-    iput-object v0, p0, Lcom/mapquest/android/maps/ch;->b:Lcom/mapquest/android/maps/ck;
-
-    .line 44
-    iget-object v0, p0, Lcom/mapquest/android/maps/ch;->d:Lcom/mapquest/android/maps/cn;
-
-    iget-object v0, v0, Lcom/mapquest/android/maps/cn;->f:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
-    iget-object v0, p0, Lcom/mapquest/android/maps/ch;->d:Lcom/mapquest/android/maps/cn;
-
-    iget-object v1, p0, Lcom/mapquest/android/maps/ch;->b:Lcom/mapquest/android/maps/ck;
-
-    invoke-virtual {v0, v1}, Lcom/mapquest/android/maps/cn;->a(Lcom/mapquest/android/maps/cl;)V
-
-    iget-object v0, p0, Lcom/mapquest/android/maps/ch;->d:Lcom/mapquest/android/maps/cn;
-
-    new-instance v1, Lcom/mapquest/android/maps/cm;
-
-    iget-object v2, p0, Lcom/mapquest/android/maps/ch;->c:Lcom/mapquest/android/maps/MapView;
-
-    invoke-direct {v1, p0, v2}, Lcom/mapquest/android/maps/cm;-><init>(Lcom/mapquest/android/maps/ch;Lcom/mapquest/android/maps/MapView;)V
-
-    invoke-virtual {v0, v1}, Lcom/mapquest/android/maps/cn;->a(Lcom/mapquest/android/maps/cl;)V
-
-    .line 46
+    .line 198
     return-void
 .end method
 
-.method static synthetic a(Lcom/mapquest/android/maps/ch;)Lcom/mapquest/android/maps/cn;
-    .locals 1
+.method public static a(Ljava/util/ArrayList;)Landroid/graphics/PointF;
+    .locals 9
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/graphics/PointF;",
+            ">;)",
+            "Landroid/graphics/PointF;"
+        }
+    .end annotation
 
     .prologue
-    .line 14
-    iget-object v0, p0, Lcom/mapquest/android/maps/ch;->d:Lcom/mapquest/android/maps/cn;
+    const/high16 v8, 0x40000000    # 2.0f
 
-    return-object v0
-.end method
+    const/4 v2, 0x0
 
-.method protected static a()V
-    .locals 1
+    .line 215
+    .line 216
+    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    .prologue
-    .line 101
-    const/16 v0, 0xb
+    move-result-object v6
 
-    invoke-static {v0}, Lcom/mapquest/android/maps/g;->a(I)V
+    move v1, v2
 
-    .line 102
-    return-void
-.end method
+    move v3, v2
 
-.method static synthetic b(Lcom/mapquest/android/maps/ch;)Lcom/mapquest/android/maps/MapView;
-    .locals 1
+    move v4, v2
 
-    .prologue
-    .line 14
-    iget-object v0, p0, Lcom/mapquest/android/maps/ch;->c:Lcom/mapquest/android/maps/MapView;
+    move v5, v2
 
-    return-object v0
-.end method
-
-.method static synthetic c(Lcom/mapquest/android/maps/ch;)Z
-    .locals 1
-
-    .prologue
-    .line 14
-    iget-boolean v0, p0, Lcom/mapquest/android/maps/ch;->f:Z
-
-    return v0
-.end method
-
-.method static synthetic d(Lcom/mapquest/android/maps/ch;)Z
-    .locals 1
-
-    .prologue
-    .line 14
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/mapquest/android/maps/ch;->f:Z
-
-    return v0
-.end method
-
-
-# virtual methods
-.method public final a(Landroid/view/MotionEvent;)Z
-    .locals 4
-
-    .prologue
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    .line 51
-    iget-object v2, p0, Lcom/mapquest/android/maps/ch;->d:Lcom/mapquest/android/maps/cn;
-
-    invoke-virtual {v2, p1}, Lcom/mapquest/android/maps/cn;->a(Landroid/view/MotionEvent;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 68
     :goto_0
-    return v0
-
-    .line 54
-    :cond_0
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v2
-
-    .line 55
-    iget-object v3, p0, Lcom/mapquest/android/maps/ch;->d:Lcom/mapquest/android/maps/cn;
-
-    iget v3, v3, Lcom/mapquest/android/maps/cn;->e:I
-
-    and-int/2addr v2, v3
-
-    .line 57
-    if-ne v2, v0, :cond_2
-
-    .line 58
-    iget-boolean v0, p0, Lcom/mapquest/android/maps/ch;->f:Z
-
-    if-eqz v0, :cond_1
-
-    .line 59
-    const/16 v0, 0x17
-
-    invoke-static {v0}, Lcom/mapquest/android/maps/g;->a(I)V
-
-    .line 60
-    iput-boolean v1, p0, Lcom/mapquest/android/maps/ch;->f:Z
-
-    .line 62
-    :cond_1
-    iput-boolean v1, p0, Lcom/mapquest/android/maps/ch;->g:Z
-
-    .line 65
-    :cond_2
-    iget-object v0, p0, Lcom/mapquest/android/maps/ch;->e:Landroid/view/GestureDetector;
-
-    if-eqz v0, :cond_3
-
-    .line 66
-    iget-object v0, p0, Lcom/mapquest/android/maps/ch;->e:Landroid/view/GestureDetector;
-
-    invoke-virtual {v0, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
+    if-eqz v0, :cond_7
+
+    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/PointF;
+
+    .line 217
+    iget v7, v0, Landroid/graphics/PointF;->x:F
+
+    cmpl-float v7, v5, v7
+
+    if-gtz v7, :cond_0
+
+    cmpl-float v7, v5, v2
+
+    if-nez v7, :cond_1
+
+    .line 218
+    :cond_0
+    iget v5, v0, Landroid/graphics/PointF;->x:F
+
+    .line 220
+    :cond_1
+    iget v7, v0, Landroid/graphics/PointF;->x:F
+
+    cmpg-float v7, v4, v7
+
+    if-ltz v7, :cond_2
+
+    cmpl-float v7, v4, v2
+
+    if-nez v7, :cond_3
+
+    .line 221
+    :cond_2
+    iget v4, v0, Landroid/graphics/PointF;->x:F
+
+    .line 223
+    :cond_3
+    iget v7, v0, Landroid/graphics/PointF;->y:F
+
+    cmpl-float v7, v3, v7
+
+    if-gtz v7, :cond_4
+
+    cmpl-float v7, v3, v2
+
+    if-nez v7, :cond_5
+
+    .line 224
+    :cond_4
+    iget v3, v0, Landroid/graphics/PointF;->y:F
+
+    .line 226
+    :cond_5
+    iget v7, v0, Landroid/graphics/PointF;->y:F
+
+    cmpg-float v7, v1, v7
+
+    if-ltz v7, :cond_6
+
+    cmpl-float v7, v1, v2
+
+    if-nez v7, :cond_8
+
+    .line 227
+    :cond_6
+    iget v0, v0, Landroid/graphics/PointF;->y:F
+
+    :goto_1
+    move v1, v0
+
     goto :goto_0
 
-    :cond_3
+    .line 230
+    :cond_7
+    add-float v0, v4, v5
+
+    div-float/2addr v0, v8
+
+    .line 231
+    add-float/2addr v1, v3
+
+    div-float/2addr v1, v8
+
+    .line 232
+    new-instance v2, Landroid/graphics/PointF;
+
+    invoke-direct {v2, v0, v1}, Landroid/graphics/PointF;-><init>(FF)V
+
+    return-object v2
+
+    :cond_8
     move v0, v1
 
-    .line 68
+    goto :goto_1
+.end method
+
+.method protected static a(Ljava/util/ArrayList;[Landroid/graphics/PointF;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/graphics/PointF;",
+            ">;[",
+            "Landroid/graphics/PointF;",
+            ")V"
+        }
+    .end annotation
+
+    .prologue
+    .line 201
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    :goto_0
+    array-length v1, p1
+
+    if-ge v0, v1, :cond_0
+
+    .line 202
+    new-instance v1, Landroid/graphics/PointF;
+
+    invoke-direct {v1}, Landroid/graphics/PointF;-><init>()V
+
+    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 201
+    add-int/lit8 v0, v0, 0x1
+
     goto :goto_0
+
+    .line 204
+    :cond_0
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_1
+    array-length v0, p1
+
+    if-ge v1, v0, :cond_1
+
+    .line 205
+    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/PointF;
+
+    aget-object v2, p1, v1
+
+    iget v2, v2, Landroid/graphics/PointF;->x:F
+
+    iput v2, v0, Landroid/graphics/PointF;->x:F
+
+    .line 206
+    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/PointF;
+
+    aget-object v2, p1, v1
+
+    iget v2, v2, Landroid/graphics/PointF;->y:F
+
+    iput v2, v0, Landroid/graphics/PointF;->y:F
+
+    .line 204
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_1
+
+    .line 208
+    :cond_1
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    :goto_2
+    array-length v1, p1
+
+    if-lt v0, v1, :cond_2
+
+    .line 209
+    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    .line 208
+    add-int/lit8 v0, v0, -0x1
+
+    goto :goto_2
+
+    .line 212
+    :cond_2
+    return-void
 .end method

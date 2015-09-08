@@ -1,36 +1,31 @@
 .class final Landroid/support/v4/widget/au;
-.super Landroid/view/animation/Animation;
-.source "SwipeRefreshLayout.java"
-
-
-# instance fields
-.field final synthetic a:Landroid/support/v4/widget/SwipeRefreshLayout;
+.super Landroid/support/v4/widget/at;
+.source "ScrollerCompat.java"
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/widget/SwipeRefreshLayout;)V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 365
-    iput-object p1, p0, Landroid/support/v4/widget/au;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
-
-    invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
+    .line 238
+    invoke-direct {p0}, Landroid/support/v4/widget/at;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final applyTransformation(FLandroid/view/animation/Transformation;)V
+.method public final d(Ljava/lang/Object;)F
     .locals 1
 
     .prologue
-    .line 368
-    iget-object v0, p0, Landroid/support/v4/widget/au;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
+    .line 241
+    check-cast p1, Landroid/widget/OverScroller;
 
-    invoke-static {v0, p1}, Landroid/support/v4/widget/SwipeRefreshLayout;->a(Landroid/support/v4/widget/SwipeRefreshLayout;F)V
+    invoke-virtual {p1}, Landroid/widget/OverScroller;->getCurrVelocity()F
 
-    .line 369
-    return-void
+    move-result v0
+
+    return v0
 .end method

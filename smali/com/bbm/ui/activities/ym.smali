@@ -1,127 +1,50 @@
 .class final Lcom/bbm/ui/activities/ym;
-.super Lcom/bbm/e/a;
-.source "NewChannelActivity.java"
+.super Ljava/lang/Object;
+.source "PrivateConversationActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnFocusChangeListener;
 
 
 # instance fields
-.field final synthetic c:Lcom/bbm/ui/activities/NewChannelActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/NewChannelActivity;Landroid/app/Activity;Lcom/bbm/ui/ObservingImageView;Ljava/lang/String;)V
+.method constructor <init>(Lcom/bbm/ui/activities/PrivateConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 569
-    iput-object p1, p0, Lcom/bbm/ui/activities/ym;->c:Lcom/bbm/ui/activities/NewChannelActivity;
+    .line 576
+    iput-object p1, p0, Lcom/bbm/ui/activities/ym;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    invoke-direct {p0, p2, p3, p4}, Lcom/bbm/e/a;-><init>(Landroid/app/Activity;Lcom/bbm/ui/ObservingImageView;Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a(Lcom/bbm/d/ff;)V
-    .locals 4
+.method public final onFocusChange(Landroid/view/View;Z)V
+    .locals 2
 
     .prologue
-    const/4 v3, 0x0
-
-    .line 572
-    iget-object v0, p0, Lcom/bbm/ui/activities/ym;->c:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->p(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/ProgressBar;
-
-    move-result-object v0
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
-
-    .line 573
-    iget-object v0, p0, Lcom/bbm/e/a;->b:Ljava/lang/String;
-
-    if-eqz v0, :cond_0
-
-    .line 574
-    iget-object v0, p0, Lcom/bbm/ui/activities/ym;->c:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    iget-boolean v1, p0, Lcom/bbm/e/a;->a:Z
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/NewChannelActivity;->b(Lcom/bbm/ui/activities/NewChannelActivity;Z)Z
-
-    .line 575
-    iget-object v0, p0, Lcom/bbm/ui/activities/ym;->c:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    iget-object v1, p0, Lcom/bbm/e/a;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/NewChannelActivity;->a(Lcom/bbm/ui/activities/NewChannelActivity;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 576
-    iget-object v0, p0, Lcom/bbm/ui/activities/ym;->c:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->q(Lcom/bbm/ui/activities/NewChannelActivity;)Z
-
-    .line 577
-    iget-object v0, p0, Lcom/bbm/ui/activities/ym;->c:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->r(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/ImageButton;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Landroid/widget/ImageButton;->setVisibility(I)V
+    .line 580
+    if-eqz p2, :cond_0
 
     .line 581
-    :goto_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ym;->c:Lcom/bbm/ui/activities/NewChannelActivity;
+    const-string v0, "mMessageInput OnFocusChange"
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->s(Lcom/bbm/ui/activities/NewChannelActivity;)Lcom/bbm/ui/ObservingImageView;
+    const-class v1, Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Lcom/bbm/ui/ObservingImageView;->setVisibility(I)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
     .line 582
-    invoke-super {p0, p1}, Lcom/bbm/e/a;->a(Lcom/bbm/d/ff;)V
+    iget-object v0, p0, Lcom/bbm/ui/activities/ym;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    .line 583
-    iget-object v0, p0, Lcom/bbm/ui/activities/ym;->c:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->a()V
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->s(Lcom/bbm/ui/activities/PrivateConversationActivity;)V
 
     .line 584
-    return-void
-
-    .line 579
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ym;->c:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/ym;->c:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/NewChannelActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x7f0e0123
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1, v3}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;I)V
-
-    goto :goto_0
-.end method
-
-.method protected final synthetic b(Ljava/lang/Object;)V
-    .locals 0
-
-    .prologue
-    .line 569
-    check-cast p1, Lcom/bbm/d/ff;
-
-    invoke-virtual {p0, p1}, Lcom/bbm/ui/activities/ym;->a(Lcom/bbm/d/ff;)V
-
     return-void
 .end method

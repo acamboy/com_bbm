@@ -1,63 +1,47 @@
 .class final Lcom/bbm/ui/activities/xy;
-.super Lcom/bbm/j/k;
-.source "MainActivity.java"
+.super Ljava/lang/Object;
+.source "PartnerWebViewActivity.java"
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/PartnerWebViewActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/activities/PartnerWebViewActivity;)V
+    .locals 0
 
     .prologue
-    .line 371
-    iput-object p1, p0, Lcom/bbm/ui/activities/xy;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 141
+    iput-object p1, p0, Lcom/bbm/ui/activities/xy;->a:Lcom/bbm/ui/activities/PartnerWebViewActivity;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 2
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 1
 
     .prologue
-    .line 374
-    invoke-static {}, Lcom/bbm/ui/activities/MainActivity;->k()Lcom/bbm/d/a;
+    .line 143
+    invoke-interface {p1}, Landroid/content/DialogInterface;->cancel()V
 
-    move-result-object v0
+    .line 144
+    iget-object v0, p0, Lcom/bbm/ui/activities/xy;->a:Lcom/bbm/ui/activities/PartnerWebViewActivity;
 
-    const-string v1, "rateBbmNotification"
+    invoke-static {v0}, Lcom/bbm/ui/activities/PartnerWebViewActivity;->a(Lcom/bbm/ui/activities/PartnerWebViewActivity;)V
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->E(Ljava/lang/String;)Lcom/bbm/util/bm;
+    .line 145
+    iget-object v0, p0, Lcom/bbm/ui/activities/xy;->a:Lcom/bbm/ui/activities/PartnerWebViewActivity;
 
-    move-result-object v0
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/PartnerWebViewActivity;->finish()V
 
-    invoke-virtual {v0}, Lcom/bbm/util/bm;->d()Lorg/json/JSONObject;
-
-    move-result-object v0
-
-    const-string v1, "enabled"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;)Z
-
-    move-result v0
-
-    .line 375
-    if-eqz v0, :cond_0
-
-    .line 376
-    iget-object v0, p0, Lcom/bbm/ui/activities/xy;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/MainActivity;->e(Lcom/bbm/ui/activities/MainActivity;)V
-
-    .line 378
-    :cond_0
+    .line 146
     return-void
 .end method

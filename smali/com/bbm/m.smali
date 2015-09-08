@@ -1,21 +1,58 @@
-.class public final Lcom/bbm/m;
-.super Ljava/lang/Object;
-.source "Config.java"
+.class final Lcom/bbm/m;
+.super Lcom/bbm/j/a;
+.source "BbmService.java"
 
 
-# static fields
-.field public static final a:Lcom/bbm/l;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/j/a",
+        "<",
+        "Lcom/bbm/f/ae;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/bbm/BbmService;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method constructor <init>(Lcom/bbm/BbmService;)V
+    .locals 0
+
+    .prologue
+    .line 80
+    iput-object p1, p0, Lcom/bbm/m;->a:Lcom/bbm/BbmService;
+
+    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected final synthetic a()Ljava/lang/Object;
     .locals 1
 
     .prologue
-    .line 24
-    sget-object v0, Lcom/bbm/l;->a:Lcom/bbm/l;
+    .line 80
+    iget-object v0, p0, Lcom/bbm/m;->a:Lcom/bbm/BbmService;
 
-    sput-object v0, Lcom/bbm/m;->a:Lcom/bbm/l;
+    invoke-static {v0}, Lcom/bbm/BbmService;->a(Lcom/bbm/BbmService;)Lcom/bbm/f/ad;
 
-    return-void
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/bbm/f/ad;->f()Lcom/bbm/j/r;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/bbm/j/r;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/f/ae;
+
+    return-object v0
 .end method

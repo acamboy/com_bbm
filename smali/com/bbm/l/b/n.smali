@@ -1,40 +1,48 @@
 .class public final Lcom/bbm/l/b/n;
 .super Lcom/bbm/l/b/l;
-.source "WebSticker.java"
+.source "WebSection.java"
 
 
 # instance fields
 .field public a:Ljava/lang/String;
 
-.field public b:Z
+.field public b:Ljava/lang/String;
 
-.field public c:Ljava/lang/String;
-
-.field public d:Ljava/lang/String;
-
-.field public e:Ljava/util/List;
+.field public c:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/List",
+            "Ljava/util/ArrayList",
             "<",
-            "Lcom/bbm/l/b/m;",
+            "Lcom/bbm/l/b/d;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private f:Ljava/lang/String;
-
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 18
+    .line 9
     invoke-direct {p0}, Lcom/bbm/l/b/l;-><init>()V
 
-    .line 19
+    .line 11
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/bbm/l/b/n;->a:Ljava/lang/String;
+
+    .line 12
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/bbm/l/b/n;->b:Ljava/lang/String;
+
+    .line 13
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/bbm/l/b/n;->c:Ljava/util/ArrayList;
+
     return-void
 .end method
 
@@ -44,10 +52,7 @@
     .locals 5
 
     .prologue
-    .line 22
-    if-eqz p1, :cond_1
-
-    .line 23
+    .line 16
     const-string v0, "id"
 
     const-string v1, ""
@@ -58,18 +63,7 @@
 
     iput-object v0, p0, Lcom/bbm/l/b/n;->a:Ljava/lang/String;
 
-    .line 24
-    const-string v0, "hidden"
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lcom/bbm/l/b/n;->b:Z
-
-    .line 25
+    .line 17
     const-string v0, "name"
 
     const-string v1, ""
@@ -78,49 +72,26 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/l/b/n;->f:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/l/b/n;->b:Ljava/lang/String;
 
-    .line 26
-    const-string v0, "thumbnailUrl"
+    .line 19
+    new-instance v0, Ljava/util/ArrayList;
 
-    const-string v1, ""
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-static {p1, v0, v1}, Lcom/bbm/l/b/n;->a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/l/b/n;->c:Ljava/util/ArrayList;
 
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/l/b/n;->c:Ljava/lang/String;
-
-    .line 27
-    const-string v0, "iconUrl"
-
-    const-string v1, ""
-
-    invoke-static {p1, v0, v1}, Lcom/bbm/l/b/n;->a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/l/b/n;->d:Ljava/lang/String;
-
-    .line 29
-    const-string v0, "images"
+    .line 20
+    const-string v0, "virtualGoods"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v1
 
-    .line 30
-    new-instance v0, Ljava/util/ArrayList;
+    .line 21
+    if-eqz v1, :cond_1
 
-    invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
-
-    move-result v2
-
-    invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v0, p0, Lcom/bbm/l/b/n;->e:Ljava/util/List;
-
-    .line 31
+    .line 22
     const/4 v0, 0x0
 
     :goto_0
@@ -130,34 +101,34 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 32
+    .line 23
     invoke-virtual {v1, v0}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v2
 
-    .line 33
+    .line 24
     if-eqz v2, :cond_0
 
-    .line 34
-    iget-object v3, p0, Lcom/bbm/l/b/n;->e:Ljava/util/List;
+    .line 25
+    iget-object v3, p0, Lcom/bbm/l/b/n;->c:Ljava/util/ArrayList;
 
-    new-instance v4, Lcom/bbm/l/b/m;
+    new-instance v4, Lcom/bbm/l/b/d;
 
-    invoke-direct {v4}, Lcom/bbm/l/b/m;-><init>()V
+    invoke-direct {v4}, Lcom/bbm/l/b/d;-><init>()V
 
-    invoke-virtual {v4, v2}, Lcom/bbm/l/b/m;->a(Lorg/json/JSONObject;)Lcom/bbm/l/b/m;
+    invoke-virtual {v4, v2}, Lcom/bbm/l/b/d;->b(Lorg/json/JSONObject;)Lcom/bbm/l/b/d;
 
     move-result-object v2
 
-    invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 31
+    .line 22
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 38
+    .line 30
     :cond_1
     return-object p0
 .end method

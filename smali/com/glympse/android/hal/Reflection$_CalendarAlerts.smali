@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static cR:Z
+.field private static cU:Z
 
-.field private static cS:Ljava/lang/Class;
+.field private static cV:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class",
@@ -15,7 +15,7 @@
     .end annotation
 .end field
 
-.field private static dk:Landroid/net/Uri;
+.field private static dn:Landroid/net/Uri;
 
 
 # direct methods
@@ -28,13 +28,13 @@
     .line 2441
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_CalendarAlerts;->cR:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_CalendarAlerts;->cU:Z
 
     .line 2442
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_CalendarAlerts;->cS:Ljava/lang/Class;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_CalendarAlerts;->cV:Ljava/lang/Class;
 
     .line 2443
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_CalendarAlerts;->dk:Landroid/net/Uri;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_CalendarAlerts;->dn:Landroid/net/Uri;
 
     return-void
 .end method
@@ -57,7 +57,7 @@
     invoke-static {p0}, Lcom/glympse/android/hal/Reflection$_CalendarAlerts;->a(Landroid/content/ContentResolver;)V
 
     .line 2483
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarAlerts;->dk:Landroid/net/Uri;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarAlerts;->dn:Landroid/net/Uri;
 
     return-object v0
 .end method
@@ -67,14 +67,14 @@
 
     .prologue
     .line 2448
-    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_CalendarAlerts;->cR:Z
+    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_CalendarAlerts;->cU:Z
 
     if-nez v0, :cond_0
 
     .line 2450
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_CalendarAlerts;->cR:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_CalendarAlerts;->cU:Z
 
     .line 2454
     :try_start_0
@@ -84,19 +84,19 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_CalendarAlerts;->cS:Ljava/lang/Class;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_CalendarAlerts;->cV:Ljava/lang/Class;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 2460
     :goto_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarAlerts;->cS:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarAlerts;->cV:Ljava/lang/Class;
 
     if-eqz v0, :cond_0
 
     .line 2464
     :try_start_1
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarAlerts;->cS:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarAlerts;->cV:Ljava/lang/Class;
 
     const-string v1, "CONTENT_URI"
 
@@ -112,14 +112,14 @@
 
     check-cast v0, Landroid/net/Uri;
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_CalendarAlerts;->dk:Landroid/net/Uri;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_CalendarAlerts;->dn:Landroid/net/Uri;
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
     .line 2473
     :cond_0
     :goto_1
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarAlerts;->dk:Landroid/net/Uri;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarAlerts;->dn:Landroid/net/Uri;
 
     if-nez v0, :cond_1
 
@@ -140,7 +140,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_CalendarAlerts;->dk:Landroid/net/Uri;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_CalendarAlerts;->dn:Landroid/net/Uri;
 
     .line 2477
     :cond_1

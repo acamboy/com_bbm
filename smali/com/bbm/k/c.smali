@@ -1,12 +1,12 @@
 .class final Lcom/bbm/k/c;
-.super Lcom/bbm/d/b/l;
+.super Lcom/bbm/d/b/u;
 .source "GroupsCalendarProvider.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/bbm/d/b/l",
+        "Lcom/bbm/d/b/u",
         "<",
         "Lcom/bbm/g/b;",
         "Lcom/bbm/k/g;",
@@ -31,7 +31,7 @@
 
     iput-object p3, p0, Lcom/bbm/k/c;->b:Ljava/lang/String;
 
-    invoke-direct {p0, p2}, Lcom/bbm/d/b/l;-><init>(Lcom/bbm/j/r;)V
+    invoke-direct {p0, p2}, Lcom/bbm/d/b/u;-><init>(Lcom/bbm/j/r;)V
 
     return-void
 .end method

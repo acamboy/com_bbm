@@ -235,9 +235,9 @@
     <string name="activity_select_new_admin_title">Pilih Admin Baru</string>
     <string name="activity_select_new_admin_title_selection">+%1$d Administrator</string>
     <string name="activity_tap_to_invite_dialog_info">Anda ingin menghidupkan NFC?</string>
-    <string name="activity_tap_to_invite_dialog_no">Tidak</string>
+    <string name="activity_tap_to_invite_dialog_no">@string/no</string>
     <string name="activity_tap_to_invite_dialog_title">Radio NFC Mati</string>
-    <string name="activity_tap_to_invite_dialog_yes">Ya</string>
+    <string name="activity_tap_to_invite_dialog_yes">@string/yes</string>
     <string name="activity_tap_to_invite_info">Sejajarkan bagian belakang perangkat Anda. NFC di kedua perangkat harus dihidupkan.</string>
     <string name="ad_block_channel">Jika Anda memblokir saluran, Anda tidak dapat melihat konten bersponsor dari saluran itu \"%1$s\". Tindakan ini tidak bisa diurungkan.</string>
     <string name="ad_block_sponsor">Anda tidak akan melihat konten bersponsor dari \"%1$s\". Tindakan ini tidak bisa diurungkan.</string>
@@ -263,13 +263,26 @@
     <string name="allow_comments_on_posts">Izinkan Komentar pada Posting</string>
     <string name="app_name">BBM</string>
     <string name="app_picker_name">Aplikasi</string>
+    <string name="app_store_app_subscribe_notification_dialog_line">Anda bisa memberi tahu kontak Anda bahwa Anda baru saja menjadi pengguna paket Langganan %1$s BBM</string>
+    <string name="app_store_app_subscribe_notification_message">Hei, aku sekarang pengguna paket Langganan %1$s BBM! Kamu juga bisa!!!</string>
+    <string name="app_store_confirmation_screen_feature_offered_line">Fitur yang ditawarkan oleh langganan itu:</string>
     <string name="app_store_details_screen_install_button">Pasang</string>
     <string name="app_store_details_screen_inventory_not_found">"Tidak dapat membuka aplikasi.
  Harap coba lagi nanti."</string>
     <string name="app_store_details_screen_open_button">Buka</string>
+    <string name="app_store_details_screen_renew_button">PERBARUI</string>
+    <string name="app_store_details_screen_subscribe_button">Berlangganan</string>
+    <string name="app_store_details_screen_subscribed_button">Sudah Berlangganan</string>
     <string name="app_store_invalid_app_id">Item ini tidak tersedia</string>
+    <string name="app_store_subscribed_app_no_ads_description">Sembunyikan iklan bersponsor dan undangan bersponsor di BBM dengan langganan ini.</string>
+    <string name="app_store_subscribed_app_vanity_pin_description">Vanity PIN digunakan untuk mengundang pengguna lain dan untuk tampilan profil. Setelah Vanity PIN ditentukan, pengguna dapat mengeditnya selama periode waktu yang ditentukan. Ganti PIN</string>
+    <string name="app_subscription_thank_you">Terima kasih. Sekarang Anda berlangganan BBM.</string>
     <string name="approve_comments">Setujui Komentar</string>
     <string name="approve_comments_description">Anda dapat mengubah opsi ini dari situs web saluran.</string>
+    <string name="archiving_disabled_message">Administrator Anda telah menonaktifkan fitur pengarsipan. Obrolan tidak lagi disimpan di perangkat Anda, dan obrolan yang sebelumnya disimpan tidak disimpan lagi di perangkat Anda. Hubungi administrator Anda untuk informasi selengkapnya.</string>
+    <string name="archiving_disabled_title">Pengarsipan Dinonaktifkan</string>
+    <string name="archiving_enabled_message">Administrator Anda telah mengaktifkan fitur pengarsipan. Obrolan disimpan di perangkat Anda. Hubungi administrator Anda untuk informasi selengkapnya.</string>
+    <string name="archiving_enabled_title">Pengarsipan Diaktifkan</string>
     <string name="arrived_at_destination">Glympse: Tiba di tujuan</string>
     <string name="asterisk">*</string>
     <string name="attach">Lampirkan</string>
@@ -286,9 +299,15 @@
     <string name="attach_list_voicenote">Catatan Suara</string>
     <string name="audio_player_pause">Jeda</string>
     <string name="audio_player_play">Putar</string>
+    <string name="autopassphrase_completed">Obrolan ini sekarang menjadi BBM Protected.</string>
+    <string name="autopassphrase_failed">Tidak dapat membuat BBM Protected.</string>
+    <string name="autopassphrase_initiated">Membuat obrolan BBM Protected.</string>
+    <string name="autopassphrase_retry">Coba Lagi</string>
     <string name="avatar_file_not_support">File tidak didukung.</string>
     <string name="back">Kembali</string>
     <string name="backup_file_is_not_valid">File cadangan tidak sah, Anda harus keluar dari penyetelan BBM dan menggunakan utilitas Pindah Perangkat dalam BlackBerry Desktop Software.</string>
+    <string name="badge_on_your_avatar">Lencana di avatar Anda</string>
+    <string name="badge_on_your_avatar_description">Segera setelah langganan BBM aktif, Anda akan mendapat lencana di avatar Anda...</string>
     <string name="barcode_info">Kontak dapat memindai kode batang untuk menambahkan Anda ke BBM</string>
     <string name="bbm_account_name">BBM</string>
     <string name="bbm_account_user_name">BBM Group</string>
@@ -304,7 +323,9 @@
     <string name="bbm_service_running">Terhubung</string>
     <string name="bbm_setup">Penyetelan BBM</string>
     <string name="bbm_share_with_pin_uri">http://www.bbm.com/share/?BBMID=%1$s</string>
-    <string name="bbm_voice_ongoing_call">Menerima panggilan</string>
+    <string name="bbm_voice_ongoing_call">Dalam panggilan BBM</string>
+    <string name="billing_google_error_message_body">Item ini sudah dibeli untuk BlackBerry ID lain dengan akun toko Anda. Coba gunakan akun toko yang lain.</string>
+    <string name="billing_google_error_message_title">Tidak Dapat Membeli</string>
     <string name="blackberry_channels"><b>BBM Channels</b></string>
     <string name="blackberry_id">BBID</string>
     <string name="blackberry_id_is_not_responding">BlackBerry ID tidak merespons.</string>
@@ -424,7 +445,7 @@
     <string name="channel_invite_join_failed">Tidak dapat bergabung dalam saluran. Coba lagi nanti.</string>
     <string name="channel_invite_received">Undangan saluran diterima</string>
     <string name="channel_invite_sent">Undangan saluran terkirim</string>
-    <string name="channel_invite_status_accepted">Undang diterima</string>
+    <string name="channel_invite_status_accepted">Undangan diterima</string>
     <string name="channel_invite_status_error">Kesalahan undangan</string>
     <string name="channel_invite_status_pending">Undangan terkirim</string>
     <string name="channel_join_already_subscribed">Anda sudah berlangganan</string>
@@ -534,7 +555,7 @@
     <string name="channel_stats_likes_label">Suka</string>
     <string name="channel_stats_no_join_label">Anda tidak memiliki pelanggan baru.</string>
     <string name="channel_stats_percent_format">%s%%</string>
-    <string name="channel_stats_time_period_spinner_label">Untuk Periode Waktu Itu</string>
+    <string name="channel_stats_time_period_spinner_label">Untuk Periode Waktu</string>
     <string name="channel_stats_visits_label">Kunjungan</string>
     <string name="channel_status_hint"><i>Apa yang Anda pikirkan?</i></string>
     <string name="channel_subscribe_age_verification_error">Usia Anda belum mencukupi untuk bergabung dengan saluran ini</string>
@@ -567,6 +588,7 @@
     <string name="chat_history_missed_video_chat">Panggilan video tak terjawab dari &lt;b>%1$s&lt;/b></string>
     <string name="chat_history_missed_voice_chat">Panggilan suara tak terjawab dari &lt;b>%1$s&lt;/b></string>
     <string name="chats">Obrolan</string>
+    <string name="chats_block_chat">Blokir Obrolan ini</string>
     <string name="chats_empty_chat">Obrolan Kosong</string>
     <string name="chats_end_chat">Akhiri Obrolan</string>
     <string name="chats_end_discussion">Akhiri Diskusi</string>
@@ -575,12 +597,21 @@
     <string name="chats_open_group">Buka Grup</string>
     <string name="chats_select_more">Pilih Lainnya</string>
     <string name="chats_start_video">Mulai Obrolan Video</string>
-    <string name="chats_status_no_chats">Ketuk sudut atas untuk memulai obrolan.</string>
+    <string name="chats_status_no_chats">Untuk memulai obrolan, ketuk tombol obrolan di bagian bawah layar.</string>
+    <string name="chats_status_no_chats_widget">Ketuk sudut atas untuk memulai obrolan.</string>
     <string name="chats_view_bbm_profile">Lihat Profil BBM</string>
     <string name="click_to_expire">Klik di sini untuk mengakhiri Glympse Anda</string>
     <string name="click_to_reply">Klik di sini untuk membalas...</string>
     <string name="click_to_view">Klik di sini untuk melihat...</string>
     <string name="close">Tutup</string>
+    <string name="cloud_directory_contact_add_coworkers">Cari Rekan Kerja</string>
+    <string name="cloud_directory_contact_chat_failed">Tidak dapat memulai obrolan BBM dengan rekan kerja ini. Harap coba lagi nanti.</string>
+    <string name="cloud_directory_fields_info">Rekan kerja dapat melihat nama ini saat mereka mencari orang di BBM.</string>
+    <string name="cloud_directory_pin_lookup">Meminta informasi kontak</string>
+    <string name="cloud_directory_search_failed">Tidak dapat mencari rekan kerja. Harap coba lagi nanti.</string>
+    <string name="cloud_directory_search_more_results">Pencarian Anda mengembalikan terlalu banyak hasil. Cobalah mempersempit pencarian Anda.</string>
+    <string name="cloud_directory_search_text_min_length">Pencarian rekan kerja sedikitnya harus sepanjang 2 karakter.</string>
+    <string name="cloud_directory_service_hint">Bidang wajib diisi. Pastikan Anda memasukkan nama asli. Rekan kerja dapat mencari Anda berdasarkan nama, dan memulai obrolan BBM dengan Anda.</string>
     <string name="coming_soon">"Fitur ini tidak tersedia di lokasi Anda saat ini.
 Segera hadir"</string>
     <string name="coming_soon_title">Segera Hadir!</string>
@@ -592,8 +623,10 @@ Segera hadir"</string>
     <string name="contact_add_category">Tambah Kategori</string>
     <string name="contact_add_category_already_exists">Kategori itu sudah ada.</string>
     <string name="contact_add_category_hint">Masukkan nama kategori</string>
-    <string name="contact_add_notification">Pengguna sudah ditambahkan</string>
+    <string name="contact_add_notification">Kontak telah ditambahkan</string>
     <string name="contact_delete_category">Hapus Kategori</string>
+    <string name="contact_delete_notification">Kontak telah dihapus</string>
+    <string name="contact_delete_notification_multiple">%1$d kontak telah ditambahkan</string>
     <string name="contact_details">Rincian Kontak</string>
     <string name="contact_details_description">Sertakan nomor telepon, alamat email, atau situs web.</string>
     <string name="contact_is_blocked">Kontak Diblokir</string>
@@ -605,6 +638,8 @@ Segera hadir"</string>
     <string name="contacts_are_blocked">Beberapa kontak Diblokir</string>
     <string name="contacts_count">0</string>
     <string name="contacts_delete_contact">Hapus %1$s</string>
+    <string name="contacts_dialog_delete_and_block_info">Semua undangan dan obrolan mendatang dari %1$s akan diblokir. Anda ingin menghapus dan memblokir %1$s?</string>
+    <string name="contacts_dialog_delete_and_block_title">Hapus dan Blokir %1$s</string>
     <string name="contacts_dialog_delete_block_info">%1$s akan ditambahkan ke daftar Blokir Anda</string>
     <string name="contacts_dialog_delete_block_label">Blokir Undangan Selanjutnya</string>
     <string name="contacts_dialog_delete_multi_block_info">Kontak akan ditambahkan ke Daftar blokir Anda</string>
@@ -629,20 +664,25 @@ Segera hadir"</string>
     <string name="contents_sms">Alamat SMS</string>
     <string name="contents_text">Teks biasa</string>
     <string name="context_menu_copy_message">Salin Pesan</string>
+    <string name="context_menu_quote_message">Pesan Kutipan</string>
     <string name="context_menu_recall_message">Tarik Pesan</string>
     <string name="context_menu_resend_message">Kirim Ulang Pesan</string>
+    <string name="conversation_activity_block_chat_warning_message">Jika Anda memblokir obrolan ini, Anda akan berhenti menerima pesan baru yang dikirimkan di obrolan ini.</string>
+    <string name="conversation_activity_block_chat_warning_title">Blokir obrolan?</string>
     <string name="conversation_activity_end_chat_on_voice_warning_message">Panggilan Anda akan berakhir, dan segala pesan obrolan dihapus.</string>
     <string name="conversation_activity_end_chat_warning_message">Jika Anda mengakhiri obrolan, semua pesan akan dihapus.</string>
     <string name="conversation_activity_end_chat_warning_title">Akhiri obrolan?</string>
+    <string name="conversation_activity_leave_chat_warning_message">Jika Anda meninggalkan obrolan, semua pesan akan dihapus.</string>
+    <string name="conversation_activity_leave_chat_warning_title">Tinggalkan obrolan?</string>
     <string name="conversation_activity_reinvite_accepted">Undangan Diterima</string>
     <string name="conversation_activity_reinvite_sent">Undangan Dikirim</string>
-    <string name="conversation_are_already_in_the_chat">&lt;b>%1$s&lt;/b> sudah ada dalam obrolan</string>
+    <string name="conversation_are_already_in_the_chat">%1$s sudah ada dalam obrolan</string>
     <string name="conversation_bubble_dropbox_caption">Berikut ini tautan ke %1$s di Dropbox saya</string>
     <string name="conversation_button_dropbox_download">Unduh</string>
     <string name="conversation_button_toast_attachment_deleted">Lampiran dihapus</string>
     <string name="conversation_button_toast_ref_content_deleted">Konten yang direferensikan dihapus</string>
     <string name="conversation_button_toast_undo">Urung</string>
-    <string name="conversation_button_view_glympse">Lihat Peta</string>
+    <string name="conversation_button_view_glympse">LIHAT PETA</string>
     <string name="conversation_email_chat_subject_multiple_participants">Mengobrol dengan %1$s,%2$s, dan lainnya di %3$s</string>
     <string name="conversation_email_chat_subject_three_participants">Mengobrol dengan %1$s dan %2$s di %3$s</string>
     <string name="conversation_email_chat_subject_two_participants">Mengobrol dengan %1$s di %2$s</string>
@@ -652,30 +692,36 @@ Segera hadir"</string>
     <string name="conversation_file_transfert">File Diterima</string>
     <string name="conversation_file_transfert_canceled_dialog_title">Transfer File Dibatalkan</string>
     <string name="conversation_file_transfert_canceled_dialog_too_large">%1$s terlalu besar. Ukuran file maksimum adalah 16MB.</string>
-    <string name="conversation_incoming_invite_req">&lt;b>%1$s&lt;/b> ingin mengundang &lt;b>%2$s&lt;/b> ke obrolan</string>
+    <string name="conversation_groups_alt_picture_sent">Gambar Dibagikan</string>
+    <string name="conversation_groups_alt_sticker_sent">Stiker Dibagikan</string>
+    <string name="conversation_incoming_invite_req">%1$s ingin mengundang %2$s ke obrolan</string>
     <string name="conversation_incoming_invite_req_accepted">Anda menambahkan <b>%1$s</b></string>
-    <string name="conversation_incoming_invite_req_denied">Anda menolak permintaan dari &lt;b>%1$s&lt;/b> untuk mengundang &lt;b>%2$s&lt;/b></string>
-    <string name="conversation_invite_accept_button">Izinkan</string>
-    <string name="conversation_invite_reject_button">Tolak</string>
-    <string name="conversation_invited">&lt;b>%1$s&lt;/b> menerima permintaan Anda untuk mengundang &lt;b>%2$s&lt;/b></string>
-    <string name="conversation_is_already_in_the_chat">&lt;b>%1$s&lt;/b> sudah ada dalam obrolan</string>
+    <string name="conversation_incoming_invite_req_denied">Anda menolak permintaan dari %1$s untuk mengundang %2$s</string>
+    <string name="conversation_invite_accept_button">IZINKAN</string>
+    <string name="conversation_invite_reject_button">TOLAK</string>
+    <string name="conversation_invited">%1$s menerima permintaan Anda untuk mengundang %2$s</string>
+    <string name="conversation_is_already_in_the_chat">%1$s sudah ada dalam obrolan</string>
     <string name="conversation_is_writing_a_message">sedang menulis pesan...</string>
-    <string name="conversation_joined_the_chat">&lt;b>%1$s&lt;/b> bergabung ke obrolan</string>
-    <string name="conversation_left_the_chat">&lt;b>%1$s&lt;/b> meninggalkan obrolan</string>
+    <string name="conversation_joined_the_chat">%1$s bergabung ke obrolan</string>
+    <string name="conversation_left_the_chat">%1$s meninggalkan obrolan</string>
     <string name="conversation_location_message_accurace_within">Akurat dalam %1$sm</string>
     <string name="conversation_location_received">Lokasi Diterima</string>
     <string name="conversation_location_sent">Lokasi Dikirim</string>
+    <string name="conversation_message_edit_title">Edit Pesan</string>
+    <string name="conversation_message_editing">Mengedit: %1$s</string>
+    <string name="conversation_message_editing_removed">Edit pesan dihapus</string>
     <string name="conversation_message_recall_failed">Tidak dapat menarik pesan</string>
     <string name="conversation_message_recall_pending">Menarik pesan</string>
     <string name="conversation_message_recalled">Pesan ditarik</string>
+    <string name="conversation_mpc_header">Obrolan</string>
     <string name="conversation_must_reinvite">%1$s belum menjadikan Anda sebagai kontak. Undang %1$s lagi?</string>
     <string name="conversation_notification_calendar_received">Janji Temu Diterima</string>
     <string name="conversation_notification_calendar_sent">Janji Temu Dikirim</string>
-    <string name="conversation_notification_conf_incoming_invite_req">&lt;b>%1$s&lt;/b> meminta mengundang seseorang ke obrolan</string>
-    <string name="conversation_notification_conf_invited">&lt;b>%1$s&lt;/b> diundang ke obrolan</string>
-    <string name="conversation_notification_conf_outgoing_invite_req">Anda telah mengundang &lt;b>%1$s&lt;/b> ke obrolan</string>
-    <string name="conversation_notification_conf_outgoing_invite_req_denied">Permintaan Anda untuk mengundang &lt;b>%1$s&lt;/b> telah ditolak</string>
-    <string name="conversation_notification_conf_we_joined">&lt;b>%1$s&lt;/b> mengundang Anda ke obrolan</string>
+    <string name="conversation_notification_conf_incoming_invite_req">%1$s meminta mengundang seseorang ke obrolan</string>
+    <string name="conversation_notification_conf_invited">%1$s diundang ke obrolan</string>
+    <string name="conversation_notification_conf_outgoing_invite_req">Anda telah mengundang %1$s ke obrolan</string>
+    <string name="conversation_notification_conf_outgoing_invite_req_denied">Permintaan Anda untuk mengundang %1$s telah ditolak</string>
+    <string name="conversation_notification_conf_we_joined">%1$s mengundang Anda ke obrolan</string>
     <string name="conversation_notification_contact_card_received">Kartu kontak Diterima</string>
     <string name="conversation_notification_contact_card_sent">Kartu Kontak Dikirim</string>
     <string name="conversation_notification_default_incomming">Pesan Diterima</string>
@@ -693,16 +739,17 @@ Segera hadir"</string>
     <string name="conversation_notification_sticker_sent">Stiker Dikirim</string>
     <string name="conversation_notification_voice_note_received">Catatan Suara Diterima</string>
     <string name="conversation_notification_voice_note_sent">Catatan Suara Dikirim</string>
-    <string name="conversation_outgoing_invite_req">Permintaan Anda untuk mengundang &lt;b>%1$s&lt;/b> sudah dikirim ke &lt;b>%2$s&lt;/b></string>
-    <string name="conversation_outgoing_invite_req_denied">&lt;b>%1$s&lt;/b> menolak permintaan Anda untuk mengundang &lt;b>%2$s&lt;/b></string>
+    <string name="conversation_outgoing_invite_req">Permintaan Anda untuk mengundang %1$s sudah dikirim ke %2$s</string>
+    <string name="conversation_outgoing_invite_req_denied">%1$s menolak permintaan Anda untuk mengundang %2$s</string>
     <string name="conversation_picture">Gambar Diterima</string>
     <string name="conversation_ping">PING!!!</string>
-    <string name="conversation_reinvite_accept_button">Undang lagi</string>
-    <string name="conversation_reinvite_reject_button">Hapus Kontak</string>
+    <string name="conversation_reinvite_accept_button">UNDANG LAGI</string>
+    <string name="conversation_reinvite_reject_button">HAPUS KONTAK</string>
     <string name="conversation_send_button">Kirim</string>
     <string name="conversation_share_max_participants">Peserta obrolan terlalu banyak (maksimum adalah %1$s).</string>
     <string name="conversation_successfully_saved_picture">Gambar berhasil disimpan</string>
     <string name="conversation_successfully_saved_voice_note">Catatan suara berhasil disimpan</string>
+    <string name="conversation_toast_blocked_chat">Anda memblokir obrolan. Semua pesan dihapus.</string>
     <string name="conversation_toast_ended_chat">Obrolan berakhir</string>
     <string name="conversation_toast_ended_chat_no_history">Obrolan berakhir. Semua pesan dihapus.</string>
     <string name="conversation_toast_left_chat">Anda keluar dari obrolan</string>
@@ -710,7 +757,7 @@ Segera hadir"</string>
     <string name="conversation_unable_to_save_picture">Tidak dapat menyimpan gambar</string>
     <string name="conversation_unable_to_save_voice_note">Tidak dapat menyimpan catatan suara</string>
     <string name="conversation_voice_note_transfert">Catatan Suara Diterima</string>
-    <string name="conversation_you_invited">Anda mengundang &lt;b>%1$s&lt;/b> untuk mengobrol</string>
+    <string name="conversation_you_invited">Anda mengundang %1$s untuk mengobrol</string>
     <string name="conversation_you_joined_the_chat">Anda bergabung ke obrolan</string>
     <string name="copied_group_passphrase">Frasa Sandi Disalin</string>
     <string name="copied_group_passphrase_toast">Disalin ke Clipboard</string>
@@ -725,6 +772,26 @@ Segera hadir"</string>
     <string name="creating_channel_toast_string">Membuat saluran</string>
     <string name="creating_private_channel_confirmation">Tindakan ini tidak dapat diurungkan. Apakah Anda yakin ingin membuat saluran ini menjadi pribadi?</string>
     <string name="current">Saat ini</string>
+    <string name="custom_pin_activity_title">PIN Khusus</string>
+    <string name="custom_pin_already_set">Anda sudah membuat PIN khusus.</string>
+    <string name="custom_pin_confirm_postivie_text">Sudah benar</string>
+    <string name="custom_pin_confirm_text">Teks ini akan menjadi PIN khusus Anda untuk BBM. Sudah benar?</string>
+    <string name="custom_pin_friends_ad_link">Kunjungi Toko BBM</string>
+    <string name="custom_pin_friends_ad_text">Dapatkan PIN khusus Anda di BBM sekarang:</string>
+    <string name="custom_pin_get_your_custom_pin">Dapatkan PIN khusus Anda di BBM sekarang: kunjungi Toko BBM</string>
+    <string name="custom_pin_hint_text">Masukkan PIN khusus</string>
+    <string name="custom_pin_legal">"Saatnya membuat PIN khusus. Jangan terburu-buru karena Anda tidak dapat mengubahnya nanti. PIN khusus Anda diasosiasikan dengan BBM selama langganan Anda aktif.
+
+Panduan:
+* Harus terdiri dari 6 hingga 8 karakter
+* Dapat menyertakan angka, huruf, garis bawah, tanda minus
+* Harus menyertakan satu garis bawah, tanda minus, atau huruf antara G dan Z"</string>
+    <string name="custom_pin_not_subscribed">Sesuaikan PIN Saya</string>
+    <string name="custom_pin_share_to_feed_body">Anda bisa memberi tahu kontak Anda bahwa Anda baru saja mendapat PIN khusus: %1$s</string>
+    <string name="custom_pin_shared_feed_item">Saya baru saja mendapat PIN khusus di BBM: %1$s. Untuk menyesuaikan PIN Anda, ketuk http://shop.bbm.com/item/custom_pin</string>
+    <string name="custom_pin_terms_conditions">&lt;p>&lt;b>Panduan PIN Pilihan BBM&lt;/b>&lt;/p> &lt;p>PIN khusus adalah cara mengasyikkan untuk mempersonalisasi akun BBM Anda. PIN khusus tidak mengganti PIN Anda saat ini (lihat \"Apa itu PIN?\" di bagian FAQ dari www.bbm.com untuk informasi lebih lanjut tentang (PIN reguler), tetapi ada PIN kedua yang ditampilkan di profil BBM Anda dan dapat digunakan untuk mengundang, dan menerima undangan dari, pengguna BBM lain.&lt;/p> &lt;p>Yang berikut ini adalah beberapa hal yang perlu diingat ketika membuat PIN khusus:&lt;/p> &lt;p>&amp;#8226 Anda tidak dapat mengklaim PIN khusus yang digunakan orang lain.&lt;/p> &lt;p>&amp;#8226 Jika langganan tidak diperbarui sebelum berakhir, Anda tidak akan lagi menggunakan PIN khusus itu dan PIN itu dapat diklaim oleh pelanggan lain.&lt;/p> &lt;p>&amp;#8226 Pilihlah PIN khusus Anda dengan saksama. Setelah PIN khusus dibuat, PIN itu tidak dapat diubah selama periode berlangganan.&lt;/p> &lt;p>&amp;#8226 Supaya PIN khusus dapat dibedakan dari PIN BBM standar, PIN khusus harus mematuhi ketentuan berikut: &lt;/p> &lt;p> - harus terdiri dari 6 hingga 8 karakter;&lt;/p> &lt;p> - dapat menyertakan angka, huruf, garis bawah, tanda minus;&lt;/p> &lt;p> - harus menyertakan satu garis bawah, tanda minus, atau huruf antara G dan Z;&lt;/p> &lt;p>&amp;#8226 PIN khusus tidak boleh menyertakan bahaya yang melecehkan, mencemarkan nama baik, memfitnah, vulgar, tidak sopan, ilegal, atau menipu, atau digunakan untuk tujuan ilegal apa pun.&lt;/p> &lt;p>&amp;#8226 PIN khusus tidak dapat digunakan untuk meniru orang lain, merek lain, organisasi atau acara lain, atau menyesatkan, membingungkan, atau menipu orang lain.&lt;/p> &lt;p>&amp;#8226 PIN khusus tidak boleh menyinggung atau melanggar hak, termasuk HAKI, atau segala individu, merek, organisasi, atau acara. Sebagai contoh, PIN khusus Anda tidak boleh melanggar hak merek dagang milik orang atau entitas lain.&lt;/p> &lt;p>&amp;#8226 BlackBerry berhak menolak, menghapus, dan/atau mengklaim ulang segala PIN khusus kapan saja untuk alasan apa saja, sesuai dengan kebijakan ketentuan pembelian/pengembalian dana yang berlaku.&lt;/p></string>
+    <string name="custom_pin_title">PIN Khusus:</string>
+    <string name="custom_pin_warning_on_repurchase">Untuk menjaga PIN Khusus Anda saat ini, Anda mungkin perlu membeli langganan baru, lalu membatalkan langganan lama. Untuk informasi selengkapnya, buka: %1$s</string>
     <string name="date">Tanggal</string>
     <string name="date_of_birth"><b>Tanggal Lahir</b></string>
     <string name="date_of_birth_fail_age_limit">Usia Anda belum mencukupi untuk menggunakan BBM Channels.</string>
@@ -760,6 +827,7 @@ Segera hadir"</string>
     <string name="dialog_invite_security_question_tip">Tip: Huruf besar kecil berpengaruh pd jwban.</string>
     <string name="dialog_invite_security_question_title">Pertanyaan Keamanan</string>
     <string name="did_you_know">Tahukah Anda?</string>
+    <string name="different_platform_string">Anda memiliki langganan dengan pembaruan otomatis, yang dibeli di perangkat lain. Berlangganan di perangkat ini?</string>
     <string name="discard">Buang</string>
     <string name="display_name"><i>Nama Tampilan</i></string>
     <string name="do_you_want_to_switch_your_bbm_information_to_your_current_device">Anda ingin memindah informasi BBM ke perangkat Anda yang sekarang?</string>
@@ -776,10 +844,19 @@ Segera hadir"</string>
     <string name="enter_an_address">Masukkan alamat</string>
     <string name="enter_comment"><i>Masukkan komentar</i></string>
     <string name="enter_date_of_birth">Masukkan tanggal lahir Anda untuk menggunakan BBM Channels.</string>
-    <string name="enter_passphrase">Masukkan frasa sandi</string>
+    <string name="enter_passphrase">MASUKKAN FRASA SANDI</string>
     <string name="enter_passphrase_hint"><i>Masukkan frasa sandi</i></string>
     <string name="enter_text"><i>Masukkan teks</i></string>
     <string name="entered_passphrase_incorrect">Frasa sandi yang dimasukkan salah.</string>
+    <string name="entitlement_dialog_title">Langganan Diperlukan</string>
+    <string name="entitlement_edit_dialogue">"Anda telah mencapai batas uji coba untuk mengedit pesan.
+Untuk mendapat akses tak terbatas ke fitur ini, Anda dapat membeli langganan."</string>
+    <string name="entitlement_privateconv_dialogue">"Anda telah mencapai batas uji coba pesan pribadi.
+Untuk mendapat akses tak terbatas ke fitur ini, Anda dapat membeli langganan."</string>
+    <string name="entitlement_retracted_dialogue">"Anda telah mencapai batas uji coba untuk pesan ditarik.
+Untuk mendapat akses tak terbatas ke fitur ini, Anda dapat membeli langganan."</string>
+    <string name="entitlement_timed_dialogue">"Anda telah mencapai batas uji coba pesan berwaktu.
+Untuk mendapat akses tak terbatas ke fitur ini, Anda dapat membeli langganan."</string>
     <string name="ephemeral_hint_received">Pesan berwaktu diterima. Sentuh dan tahan untuk melihat.</string>
     <string name="ephemeral_hint_sent">Pesan berwaktu.</string>
     <string name="ephemeral_hint_viewed">Pesan berwaktu diterima. Kedaluwarsa</string>
@@ -879,22 +956,25 @@ Segera hadir"</string>
     <string name="filter_by">Filter Menurut</string>
     <string name="find_friend_allow_upload_dialog_double_check_text">Anda yakin? Jika Anda tidak mengizinkan BBM untuk mengakses kontak, Anda harus menambah kontak BBM secara manual.</string>
     <string name="find_friend_allow_upload_dialog_double_check_title">Tidak Disarankan</string>
-    <string name="find_friend_allow_upload_dialog_title">Cari Teman di BBM</string>
-    <string name="find_friend_allow_upload_text">Memungkinkan BBM untuk mengakses kontak Anda untuk membantu Anda menemukan dan menambah teman.</string>
+    <string name="find_friend_allow_upload_dialog_title">Cari Teman</string>
+    <string name="find_friend_allow_upload_text">Izinkan BBM mengakses kontak Anda untuk membantu Anda menemukan teman. Anda dapat memutuskan teman mana yang akan ditambahkan ke BBM.</string>
     <string name="find_friend_category_get_bbm">Undang untuk Unduh</string>
     <string name="find_friend_category_invite">Ketuk untuk Menambah</string>
     <string name="find_friends">Cari Teman di BBM</string>
     <string name="find_more_friends">Cari Teman Lain</string>
-    <string name="first_launch_after_upgrade_privacy_terms">Saya menyetujui &lt;b>&lt;a href=http://www.blackberry.com/legal/privacy>Kebijakan Privasi&lt;/a>&lt;/b> dan &lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>Ketentuan Layanan&lt;/a>&lt;/b></string>
-    <string name="first_launch_after_upgrade_subtitle">Tambah keasyikan ke obrolan BBM dengan stiker. Tersedia sekarang.</string>
-    <string name="first_launch_after_upgrade_title">Kirim Stiker!</string>
+    <string name="first_launch_after_upgrade_privacy_terms">Kami telah memperbarui &lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>Ketentuan Layanan&lt;/a>&lt;/b> kami. Dengan mengeklik “Lanjutkan” Anda menyetujui &lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>Ketentuan Layanan&lt;/a>&lt;/b> dan &lt;b>&lt;a href=http://www.blackberry.com/legal/privacy>Kebijakan Privasi&lt;/a>&lt;/b></string>
+    <string name="first_launch_after_upgrade_subtitle">Buat PIN BBM eksklusif Anda! Klaim PIN khusus Anda hari ini.</string>
+    <string name="first_launch_after_upgrade_title">Seunik diri Anda</string>
+    <string name="first_name">Nama Depan</string>
+    <string name="first_name_hint">Masukkan nama depan</string>
     <string name="flagged_comments_header">Komentar</string>
     <string name="flagged_posts_header">Posting</string>
     <string name="format_not_supported_for_cropping">Format ini tidak didukung untuk pemotongan</string>
     <string name="friends_already_on_bbm">Tambah ke BBM</string>
     <string name="general">Umum</string>
     <string name="glympse">Glympse</string>
-    <string name="glympse_attach">Lampirkan Cuplikan</string>
+    <string name="glympse_attach">Lampirkan Glympse</string>
+    <string name="glympse_duration_hourminutes">%1$d:%2$02d tersisa</string>
     <string name="glympse_duration_minutes">Durasi: %1$d mnt</string>
     <string name="glympse_expired">Kedaluwarsa</string>
     <string name="glympse_expires_at">Bagi sampai %1$s</string>
@@ -908,12 +988,12 @@ Segera hadir"</string>
     <string name="glympse_invalid_invite_code">Kode undangan tidak valid</string>
     <string name="glympse_loading">Memuat...</string>
     <string name="glympse_minutes_remaining">%1$d men tersisa</string>
-    <string name="glympse_modify">Ubah Cuplikan</string>
+    <string name="glympse_modify">Ubah Glympse</string>
     <string name="glympse_received">Glympse diterima</string>
-    <string name="glympse_reply">Balas Cuplikan</string>
+    <string name="glympse_reply">Balas Glympse</string>
     <string name="glympse_sent">Glympse terkirim</string>
     <string name="glympse_sent_duration">Durasi Glympse terkirim %1$s</string>
-    <string name="glympse_share_stopped">Cuplikan tidak lagi tersedia</string>
+    <string name="glympse_share_stopped">Glympse tidak lagi tersedia</string>
     <string name="glympse_time_picker_button">konfirmasi</string>
     <string name="glympse_time_picker_expires_at">kedaluwarsa pada {0}</string>
     <string name="glympse_time_picker_no_expire_time">pilih durasi</string>
@@ -926,9 +1006,10 @@ Segera hadir"</string>
     <string name="glympse_timer_slide_to_set">geser untuk atur</string>
     <string name="glympse_toast">Membuat Glympse</string>
     <string name="glympse_under_minute">Berakhir dalam kurang dari satu menit</string>
-    <string name="glympse_update">Perbarui Cuplikan</string>
+    <string name="glympse_update">Perbarui Glympse</string>
     <string name="glympse_user_selector_item_all_user_currently_sharing">Semua pengguna yang sedang berbagi</string>
     <string name="glympse_user_selector_item_speed">Kecepatan (km/j): %1$s</string>
+    <string name="glympse_user_selector_item_speed_na">Kecepatan (km/j): Tidak Ada</string>
     <string name="glympse_user_selector_item_updated_d_ago">Terakhir Diperbarui : %1$d hari yang lalu</string>
     <string name="glympse_user_selector_item_updated_h_m">Terakhir Diperbarui : %1$d:%2$s yang lalu</string>
     <string name="glympse_user_selector_item_updated_m_ago">Terakhir Diperbarui : %1$d menit yang lalu</string>
@@ -962,9 +1043,11 @@ Segera hadir"</string>
     <string name="group_add_list_title_hint"><i>Nama Daftar</i></string>
     <string name="group_admin_about">Tentang Administrator Grup</string>
     <string name="group_admin_text">Administrator bisa melakukan tindakan berikut:</string>
+    <string name="group_autopassphrase_details">Frasa sandi otomatis diaktifkan.</string>
     <string name="group_barcode_info">Seorang kontak dapat memindai kode batang ini untuk bergabung dengan grup Anda</string>
     <string name="group_barcode_scan_rejected_user_not_protected">Anda tidak diizinkan bergabung dengan grup ini.</string>
     <string name="group_cancel">Batal</string>
+    <string name="group_cannot_delete_conversation">Tidak dapat menghapus percakapan ini</string>
     <string name="group_chat_exists">Topik obrolan sudah ada</string>
     <string name="group_chat_general_discussion">Diskusi Umum</string>
     <string name="group_chat_history_days_1">1 Hari</string>
@@ -983,6 +1066,8 @@ Segera hadir"</string>
     <string name="group_conversation_email_chat_message_header">Dari Grup: %1$s</string>
     <string name="group_conversation_email_chat_subject">Obrolan %1$s: %2$s</string>
     <string name="group_conversation_is_writing_a_message">" sedang mengetik…"</string>
+    <string name="group_conversation_picture_loading">Memuat Gambar...</string>
+    <string name="group_conversation_picture_not_available">Gambar tidak tersedia</string>
     <string name="group_conversation_slide_menu_chat_history">Riwayat Obrolan</string>
     <string name="group_conversation_slide_menu_clear_chat">Kosongkan Obrolan</string>
     <string name="group_conversation_slide_menu_copy_chat">Salin Obrolan</string>
@@ -992,6 +1077,7 @@ Segera hadir"</string>
     <string name="group_delete_picture">Hapus Gambar</string>
     <string name="group_delete_q">Hapus Grup?</string>
     <string name="group_done">Selesai</string>
+    <string name="group_edit_admin_cannot_remove_self">Tidak dapat menghapus diri Anda sendiri sebagai Administrator</string>
     <string name="group_edit_caption">Edit Keterangan</string>
     <string name="group_edit_list_title">Detail Item</string>
     <string name="group_event_all_day">Seharian</string>
@@ -1014,15 +1100,15 @@ Segera hadir"</string>
     <string name="group_events_time_notice">Waktu selesai harus setelah waktu mulai</string>
     <string name="group_invitation_was_received">Anda diundang ke suatu grup Glympse</string>
     <string name="group_invite_bbg_uri">%1$s</string>
-    <string name="group_invite_email_message">"-----\ufffc----
-Saya ingin mengundang Anda bergabung dengan grup saya yang bernama %1$s.
+    <string name="group_invite_email_message">"Saya ingin mengundang Anda bergabung di grup bernama: \"%1$s\". Untuk bergabung dengan grup di perangkat seluler, klik:
+%2$s
 
-Di Android atau iPhone, klik %2$s untuk bergabung dengan grup ini atau mengunduh BBM.
 
 %3$s"</string>
-    <string name="group_invite_email_subject">Bergabunglah dengan Grup BlackBerry Saya!</string>
+    <string name="group_invite_email_subject">Undangan BBM Group dari %1$s</string>
     <string name="group_invite_enter_passphrase">Untuk bergabung dengan grup ini, masukkan frasa sandi yang diberikan oleh anggota grup.</string>
     <string name="group_invite_enter_passphrase_multi_attempts">Frasa sandi salah. Untuk bergabung dengan grup ini, masukkan frasa sandi yang diberikan oleh anggota grup. (%1$d/%2$d)</string>
+    <string name="group_invite_expired">Undangan grup telah kedaluwarsa</string>
     <string name="group_invite_message_default">Saya ingin mengajak Anda bergabung dengan grup saya: %1$s</string>
     <string name="group_invite_status_enter_passphrase_max_attempts_reached">Frasa sandi salah. Untuk bergabung dengan grup ini, Anda harus diundang lagi.</string>
     <string name="group_invite_status_enter_passphrase_multi_attempts">Frasa sandi salah. Untuk bergabung dengan grup ini, masukkan frasa sandi yang diberikan oleh anggota grup.</string>
@@ -1065,6 +1151,11 @@ Di Android atau iPhone, klik %2$s untuk bergabung dengan grup ini atau mengunduh
     <string name="group_passphrase_info">Anda dapat membagikan frasa sandi yang harus dimasukkan oleh orang yang diundang ke grup ketika bergabung.</string>
     <string name="group_passphrase_missing">Frasa Sandi T/A</string>
     <string name="group_picture_add">Tambah Gambar</string>
+    <string name="group_picture_add_failed__wrong_picture_type">@string/avatar_file_not_support</string>
+    <string name="group_picture_add_failed_file_access_error">@string/filetransfer_abort_filenotfound</string>
+    <string name="group_picture_add_failed_file_does_not_exist">@string/filetransfer_abort_filenotfound</string>
+    <string name="group_picture_add_failed_picture_too_big">@string/conversation_file_image_transfer_canceled_dialog_too_large</string>
+    <string name="group_picture_add_failed_resize_error">@string/conversation_unable_to_save_picture</string>
     <string name="group_picture_added_days">Ditambahkan %1$d hari lalu oleh %2$s</string>
     <string name="group_picture_added_today">Ditambahkan hari ini pada %1$s oleh %2$s</string>
     <string name="group_picture_added_yesterday">Ditambahkan kemarin oleh %1$s</string>
@@ -1139,7 +1230,7 @@ Di Android atau iPhone, klik %2$s untuk bergabung dengan grup ini atau mengunduh
     <string name="hdimage_prompt_message">Apakah Anda ingin secara otomatis menerima permintaan gambar HD di masa mendatang?</string>
     <string name="hdimage_prompt_title">Selalu Terima Permintaan</string>
     <string name="help">Bantuan</string>
-    <string name="help_url">http://docs.blackberry.com/bbm/25/android/in-id</string>
+    <string name="help_url">http://help.blackberry.com/detectLang/bbm-for-android/current/</string>
     <string name="high_priority">Prioritas Tinggi</string>
     <string name="hint_protected_enabled_chat"><i>Protected. Masukkan pesan</i></string>
     <string name="history_clear_one_history_text">Hapus</string>
@@ -1168,6 +1259,7 @@ Di Android atau iPhone, klik %2$s untuk bergabung dengan grup ini atau mengunduh
     <string name="introducing_channels_second_part">Pelanggan Anda menerima informasi terkini di BBM dan dapat membagikan opininya.</string>
     <string name="introducing_channels_title">Memperkenalkan BBM Channels</string>
     <string name="invalid_passphrase_toast">Frasa sandi tidak valid</string>
+    <string name="invitation_received">Undangan Diterima</string>
     <string name="invitation_rejected_invitee_not_protected_message">%1$s tidak dapat bergabung dengan grup ini. Hanya kontak BBM Protected dapat bergabung.</string>
     <string name="invitation_rejected_invitee_not_protected_title">Pengguna tidak dapat diundang untuk bergabung</string>
     <string name="invitation_sent">Undangan Dikirim</string>
@@ -1175,10 +1267,8 @@ Di Android atau iPhone, klik %2$s untuk bergabung dengan grup ini atau mengunduh
     <string name="invite_activity_category">Kategori</string>
     <string name="invite_activity_lookup">Mencari...</string>
     <string name="invite_activity_mail">Email: %1$s</string>
-    <string name="invite_activity_mail_body">"Saya ingstringsin mengundang Anda mengobrol di BBM.
-
-Untuk bergabung bersama saya di BBM, klik
-%1s
+    <string name="invite_activity_mail_body">"Saya ingin mengajak Anda mengobrol di BBM. Untuk bergabung bersama saya di BBM, klik:
+%1$s
 "</string>
     <string name="invite_activity_mail_subject">Undangan BBM dari %1$s</string>
     <string name="invite_activity_phone">Telepon: %1$s</string>
@@ -1186,17 +1276,17 @@ Untuk bergabung bersama saya di BBM, klik
     <string name="invite_activity_security_custom_question">Masukkan pertanyaan</string>
     <string name="invite_activity_security_custom_response">Masukkan respons</string>
     <string name="invite_activity_security_label">Pertanyaan Keamanan</string>
-    <string name="invite_activity_sms_body">Tambahkan saya ke BBM! Pada BlackBerry, klik pin:%1$s dan pilih \"Undang ke BBM\". Pada Android atau iPhone, klikk www.pin.bbm.com/%1$s untuk menambahkan saya atau mengunduh BBM.</string>
+    <string name="invite_activity_sms_body">Tambahkan saya ke BBM! Klik www.pin.bbm.com/%1$s</string>
     <string name="invite_activity_to">Ke:</string>
     <string name="invite_bbm_contact">Tambah Kontak BBM</string>
     <string name="invite_bbm_invites">Undangan BBM</string>
-    <string name="invite_button_join">Gabung</string>
-    <string name="invite_button_preview">Pratinjau</string>
+    <string name="invite_button_join">GABUNG</string>
+    <string name="invite_button_preview">PRATINJAU</string>
     <string name="invite_by_barcode">Undang dengan Kode Batang</string>
     <string name="invite_by_email">Undang Melalui Email</string>
     <string name="invite_by_other">Undang Melalui SMS atau PIN</string>
     <string name="invite_by_pin">Undang dengan PIN</string>
-    <string name="invite_channel_joined">Saluran yang diikuti</string>
+    <string name="invite_channel_joined">Saluran diikuti</string>
     <string name="invite_dialog_accept">Terima</string>
     <string name="invite_dialog_decline">Tolak</string>
     <string name="invite_email_contacts">Undang Kontak Email</string>
@@ -1255,6 +1345,8 @@ Untuk bergabung bersama saya di BBM, klik
     <string name="key_exchange_hint_waiting_to_enter_passphrase">Masukkan frasa sandi untuk bergabung.</string>
     <string name="key_exchange_hint_waiting_to_join">Menunggu %1$s untuk bergabung</string>
     <string name="key_exchange_status_accepted">Frasa sandi diterima</string>
+    <string name="last_name">Nama Belakang</string>
+    <string name="last_name_hint">Masukkan nama belakang</string>
     <string name="learn_more_about_bbm_pins">Pelajari lebih lanjut tentang PIN BBM</string>
     <string name="learn_more_about_restoring_bbm_data">Pelajari hal lainnya tentang memulihkan data BBM.</string>
     <string name="leave_channel">Tinggalkan Saluran</string>
@@ -1276,6 +1368,8 @@ Untuk bergabung bersama saya di BBM, klik
     <string name="location_service_failed">Gagal mendapatkan lokasi</string>
     <string name="low_battey_warning">Dihentikan karena baterai rendah daya, klik untuk melanjutkan.</string>
     <string name="low_priority">Prioritas Rendah</string>
+    <string name="main_drawer_close">Tutup Drawer</string>
+    <string name="main_drawer_open">Buka Drawer</string>
     <string name="main_mood_status_format">%1$s - %2$s</string>
     <string name="main_status_available">Ada</string>
     <string name="main_status_busy">Sibuk</string>
@@ -1287,13 +1381,15 @@ Untuk bergabung bersama saya di BBM, klik
     <string name="menu_end_chat">Akhiri Obrolan</string>
     <string name="menu_help">Bantuan</string>
     <string name="menu_history">Riwayat</string>
+    <string name="menu_leave_chat">Tinggalkan Obrolan</string>
     <string name="menu_settings">Setelan</string>
     <string name="menu_share">Bagikan</string>
-    <string name="message_button_accept">Terima</string>
-    <string name="message_button_allow">Izinkan</string>
-    <string name="message_button_cancel">Batal</string>
-    <string name="message_button_decline">Tolak</string>
-    <string name="message_button_deny">Tolak</string>
+    <string name="message">Pesan</string>
+    <string name="message_button_accept">TERIMA</string>
+    <string name="message_button_allow">IZINKAN</string>
+    <string name="message_button_cancel">BATAL</string>
+    <string name="message_button_decline">TOLAK</string>
+    <string name="message_button_deny">TOLAK</string>
     <string name="message_copied">Pesan Disalin</string>
     <string name="message_recall_tech_tip_body">"Tidak bermaksud mengirim pesan itu?
 Sentuh dan tahan pesan untuk menariknya dari obrolan BBM orang lain."</string>
@@ -1306,6 +1402,7 @@ Sentuh dan tahan pesan untuk menariknya dari obrolan BBM orang lain."</string>
     <string name="message_with_context_new_contact">Tentang kontak baru Anda:</string>
     <string name="message_with_context_now_playing">Tentang sedang diputar:</string>
     <string name="message_with_context_personal_message">Tentang pesan pribadi Anda:</string>
+    <string name="message_with_context_quote">%1$s menulis: \"%2$s\"</string>
     <string name="message_with_context_real_time_location">Tentang lokasi Anda:</string>
     <string name="more">Lainnya</string>
     <string name="msg_bulk_mode_scanned">Bulk mode: barcode sudah dipindai dan disimpan</string>
@@ -1343,6 +1440,11 @@ Sentuh dan tahan pesan untuk menariknya dari obrolan BBM orang lain."</string>
     <string name="my_channels_fragment_mark_favorite">Tandai sebagai Favorit</string>
     <string name="my_channels_fragment_remove_favorite">Hapus sebagai Favorit</string>
     <string name="mybbmbarcode">Kode Batang BBM Saya</string>
+    <string name="nav_chats">Obrolan BBM</string>
+    <string name="nav_contacts">Kontak BBM</string>
+    <string name="nav_feeds">Umpan BBM</string>
+    <string name="nav_feeds_all">Umpan BBM Semua</string>
+    <string name="nav_groups">BBM Group</string>
     <string name="network_settings_dialog_text">Untuk melanjutkan, sambungkan ke jaringan Wi-Fi atau seluler.</string>
     <string name="network_settings_dialog_title">Tidak Ada Sambungan Jaringan</string>
     <string name="new_channel_email_addresss">Alamat Email</string>
@@ -1351,6 +1453,7 @@ Sentuh dan tahan pesan untuk menariknya dari obrolan BBM orang lain."</string>
     <string name="new_chat_topic">Topik Obrolan Baru</string>
     <string name="new_string">BARU</string>
     <string name="next">Selanjutnya</string>
+    <string name="no">Tidak</string>
     <string name="no_active_glympses">Tidak ada Glympse aktif</string>
     <string name="no_blackberry_data">Tidak Ada Data BlackBerry</string>
     <string name="no_blocked_invites">Kontak dapat ditambahkan ke daftar ini saat mengabaikan undangan atau menghapus kontak.</string>
@@ -1361,6 +1464,7 @@ Sentuh dan tahan pesan untuk menariknya dari obrolan BBM orang lain."</string>
     <string name="no_connection_found">Tidak Ditemukan Koneksi</string>
     <string name="no_current_chat">Tidak ada obrolan</string>
     <string name="no_network_connection">Tidak ada sambungan jaringan.</string>
+    <string name="no_picture">Gambar Tidak Tersedia</string>
     <string name="no_pictures">Tidak Ada Gambar</string>
     <string name="no_posts">Tidak dapat menampilkan semua posting.</string>
     <string name="no_updates">Tidak ada item baru.</string>
@@ -1411,6 +1515,19 @@ Sentuh dan tahan pesan untuk menariknya dari obrolan BBM orang lain."</string>
 Pada perangkat BlackBerry, ketuk pin:%2$s dan masukkan frasa sandi itu."</string>
     <string name="out_of_band_passphrase_message_sms">Saya ingin memulai obrolan BBM Protected dengan Anda. Pada perangkat BlackBerry, ketuk %1$s. Masukkan frasa sandi%2$s.</string>
     <string name="out_of_band_passphrase_subject">Obrolan BBM Protected</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_dialog_body">Fitur ini hanya tersedia pada Kontak BBM. Anda ingin tambahkan %1$s ke Kontak BBM Anda sekarang?</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_dialog_title">Tambahkan ke Kontak BBM</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_toast">Anda harus menambahkan orang ini sebagai kontak BBM untuk menggunakan opsi ini.</string>
+    <string name="outer_circle_category_bbm_contacts">Kontak BBM</string>
+    <string name="outer_circle_category_phone_contacts">@string/outer_circle_category_phone_contacts_v1</string>
+    <string name="outer_circle_category_phone_contacts_v1">Kontak</string>
+    <string name="outer_circle_category_phone_contacts_v2">Kontak Telepon</string>
+    <string name="outer_circle_category_phone_contacts_v3">Kontak Perangkat</string>
+    <string name="outer_circle_contact_add_more_friends">Tambahkan Teman Lainnya</string>
+    <string name="outer_circle_contact_menu_add_as_contact">Tambahkan ke Kontak BBM</string>
+    <string name="outer_circle_contact_menu_delete_and_block">Hapus dan Blokir</string>
+    <string name="outer_circle_find_other_bbm_user_body">Anda dapat otomatis cari pengguna BBM yang Anda kenal di kontak perangkat Anda. Anda ingin izinkan BBM akses aplikasi Kontak Anda?</string>
+    <string name="outer_circle_find_other_bbm_user_title">Temukan Pengguna BBM Lainnya</string>
     <string name="overlay_bbm_ongoing_notification_reason">"Kenapa saya melihat ikon BBM di bagian atas layar?
 
 Ikon BBM ditampilkan di bar status karena BBM selalu aktif sehingga Anda selalu tersambung."</string>
@@ -1444,13 +1561,13 @@ Ikon BBM ditampilkan di bar status karena BBM selalu aktif sehingga Anda selalu 
     <string name="partner_app_register_failed_dialog_outage_message">Tidak Terdeteksi Koneksi Jaringan</string>
     <string name="partner_app_register_failed_dialog_title">Daftar Dengan BBM</string>
     <string name="passphrase">Frasa sandi</string>
-    <string name="passphrase_creation_details">Frasa sandi harus dibagikan kepada kontak BBM Anda untuk dapat bergabung dalam obrolan. Harus berupa setidaknya empat huruf besar.</string>
+    <string name="passphrase_creation_details">Frasa sandi harus dibagikan kepada kontak BBM Anda untuk dapat bergabung dalam obrolan. Harus berisi sedikitnya empat karakter. Gunakan huruf, angka, atau kombinasi keduanya. Contoh: TGRS, 2905, TIG8.</string>
     <string name="passphrase_incorrect">&lt;b>%1$s&lt;/b> tidak memasukkan frasa sandi yang benar.</string>
     <string name="passphrase_initiated">Anda membagikan frasa sandi &lt;b>%1$s&lt;/b> kepada &lt;b>%2$s&lt;/b>.</string>
-    <string name="passphrase_message_email">"Saya ingin memulai obrolan BBM Protected dengan Anda.
+    <string name="passphrase_message_email">"Saya ingin memulai Obrolan BBM Protected dengan Anda.
 ---o---
-Masukkan frasa sandi \"%1$s\" setelah mengeklik pin:%2$s atau %3$s"</string>
-    <string name="passphrase_message_sms">Bergabunglah dengan Obrolan BBM Protected saya! Masukkan frasa sandi\"%1$s\" setelah mengeklik pin:%2$s atau %3$s</string>
+Untuk bergabung dalam obrolan ini, cukup klik pin:%1$s atau %2$s. Jika Anda diminta frasa sandi, masukkan \"%3$s\"."</string>
+    <string name="passphrase_message_sms">Bergabunglah dengan Obrolan BBM Protected saya! Cukup klik pin:%1$s atau %2$s. Jika Anda diminta frasa sandi, masukkan \"%3$s\".</string>
     <string name="passphrase_rules_details">Harus terdiri dari 3 set huruf, empat sampai tujuh huruf besar di setiap set, dipisahkan spasi. Contoh: MACAN COKELAT GELAP</string>
     <string name="passphrase_share_details">Bagaimana cara Anda ingin memberikan frasa sandi kepada %1$s?</string>
     <string name="passphrase_wait_to_join">Menunggu &lt;b>%1$s&lt;/b> untuk bergabung.</string>
@@ -1474,12 +1591,38 @@ Masukkan frasa sandi \"%1$s\" setelah mengeklik pin:%2$s atau %3$s"</string>
     <string name="pending_invite_group_too_many_members">Ditolak: Grup ini sudah penuh.</string>
     <string name="pending_invite_pending">Tertunda</string>
     <string name="pending_invite_protected_group_invites_you_to">%1$s ingin mengundang Anda ke grup bernama \"%2$s\". Untuk bergabung dengan grup BBM Protected ini, Anda harus memasukkan frasa sandi yang diberikan oleh anggota grup.</string>
+    <string name="people">Orang</string>
     <string name="personalize_profile_dialog_message">Anda dapat mengetuk spanduk untuk membuka profil BBM Anda.</string>
     <string name="personalize_profile_dialog_title">Personalisasikan Profil Anda</string>
+    <string name="phone_contact_add">@string/phone_contact_add_v1</string>
+    <string name="phone_contact_add_v1">Tambah Kontak BBM</string>
+    <string name="phone_contact_add_v2">Tambah ke BBM</string>
+    <string name="phone_contact_add_v3">Tambahkan ke Kontak BBM</string>
+    <string name="phone_contact_block">Blokir</string>
+    <string name="phone_contact_block_from_conversation_description">Semua undangan dan obrolan mendatang dari %1$s akan diblokir. Anda ingin memblokir %1$s?</string>
+    <string name="phone_contact_block_from_conversation_title">Blokir %1$s</string>
+    <string name="phone_contact_invitationsent">Undangan Dikirim</string>
+    <string name="phone_contact_not_a_contact">Untuk menikmati fitur lengkap BBM, tambahkan orang ini ke Kontak BBM Anda.</string>
+    <string name="phone_contact_reinvite_message">@string/phone_contact_reinvite_message_v1</string>
+    <string name="phone_contact_reinvite_message_v1">Untuk menambahkan %1$s ke Kontak BBM Anda, Ketuk %2$s.</string>
+    <string name="phone_contact_reinvite_message_v2">Anda harus tambahkan %1$s ke Kontak BBM Anda untuk memulai obrolan. Untuk menambahkan %1$s ke Kontak BBM Anda, ketuk %2$s di bagian atas obrolan Anda.</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_1">Ada &lt;b>&lt;i>Kontak&lt;/i>&lt;/b> lalu ada &lt;b>&lt;i>Kontak BBM&lt;/i>&lt;/b>.</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_2">&lt;b>&lt;i>Kontak&lt;/i>&lt;/b> adalah orang di kontak perangkat Anda yang menggunakan BBM.&lt;br/>&lt;br/> * Ngobrol langsung dengan Kontak&lt;br/> * Tidak perlu undangan</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_3">&lt;b>&lt;i>Kontak BBM&lt;/i>&lt;/b> membutuhkan undangan. Hanya Kontak BBM dapat melakukan berikut ini:&lt;br/>&lt;br/> * Melihat foto tampilan BBM Anda&lt;br/> * Melihat pembaruan status BBM Anda&lt;br/> * Melakukan atau menerima panggilan menggunakan BBM Voice.</string>
+    <string name="phone_contact_tutorial_conversation_section_1">Ada &lt;b>&lt;i>Kontak&lt;/i>&lt;/b> lalu ada &lt;b>&lt;i>Kontak BBM&lt;/i>&lt;/b>.</string>
+    <string name="phone_contact_tutorial_conversation_section_2">Ini obrolan dengan &lt;b>&lt;i>Kontak&lt;/i>&lt;/b>. Orang ini tidak dapat melihat berikut ini:&lt;br/>&lt;br/> * Foto tampilan BBM Anda&lt;br/> * Pembaruan status BBM Anda</string>
+    <string name="phone_contact_tutorial_conversation_section_3">Orang ini harus menggunakan versi BBM terbaru untuk mengobrol. Anda dapat menambahkan orang ini ke &lt;b>&lt;i>Kontak BBM&lt;/i>&lt;/b> Anda, atau memblokir mereka kapan saja.</string>
+    <string name="phone_contact_tutorial_profile_click_section_1">Ada &lt;b>&lt;i>Kontak&lt;/i>&lt;/b> lalu ada &lt;b>&lt;i>Kontak BBM&lt;/i>&lt;/b>.</string>
+    <string name="phone_contact_tutorial_profile_click_section_2">&lt;b>&lt;i>Kontak BBM&lt;/i>&lt;/b> membutuhkan undangan, dan dapat melakukan berikut ini: &lt;br/>&lt;br/> * Melihat foto Tampilan, pembaruan status, dan profil BBM Anda&lt;br/> * Memanggil Anda menggunakan BBM Voice&lt;br/> * Mengirim pesan siaran</string>
+    <string name="phone_contact_tutorial_profile_click_section_3">&lt;b>&lt;i>Kontak&lt;/i>&lt;/b> adalah orang di kontak perangkat Anda yang menggunakan BBM. Dengan Kontak, tidak perlu undangan jika mereka menggunakan versi BBM terbaru, dan Anda tetap dapat menikmati fitur obrolan BBM, termasuk: &lt;br/>&lt;br/> &amp;#8226; Pemberitahuan D dan R pada pesan&lt;br/> &amp;#8226; Mengirim gambar dan file&lt;br/> &amp;#8226; Berbagi lokasi Anda dengan Glympse</string>
     <string name="pic_caption_hint"><i>Masukkan keterangan</i></string>
+    <string name="picture">Gambar</string>
     <string name="picture_deleted">Gambar dihapus</string>
+    <string name="picture_selection_limit_toast">Terlalu banyak file (maksimum 10).</string>
+    <string name="picture_selection_type_toast">Hanya jenis gambar yang didukung dalam berbagi ganda.</string>
     <string name="pin_copied">Pin Disalin</string>
     <string name="please_ensure_the_device_time_is_correctly_set">Harap pastikan waktu perangkat telah disetel dengan benar dan coba lagi.</string>
+    <string name="policy_change_title">Perubahan Kebijakan</string>
     <string name="post_removed">Posting ini telah dihapus.</string>
     <string name="posts_caption">Posting</string>
     <string name="pref_add_contact_on_tap">Tambah Kontak Saat Ketukan</string>
@@ -1540,21 +1683,49 @@ Masukkan frasa sandi \"%1$s\" setelah mengeklik pin:%2$s atau %3$s"</string>
     <string name="preferences_vibrate_title">Bergetar</string>
     <string name="private_channel">Saluran Pribadi</string>
     <string name="private_channel_description">Sembunyikan saluran Anda dari pencarian dan jadikan sebagai eksklusif khusus untuk orang yang Anda undang.</string>
+    <string name="private_chat">Obrolan Pribadi</string>
+    <string name="private_chat_back_out_dialog_dont_ask_me_again">Jangan tanya saya lagi.</string>
+    <string name="private_chat_back_out_dialog_text">Obrolan pribadi Anda akan berakhir jika Anda tidak kembali ke obrolan dalam %1$d menit.</string>
+    <string name="private_chat_conversation_notification_title">%1$s ingin memulai obrolan BBM dengan Anda.</string>
+    <string name="private_chat_end_menu">Akhiri Obrolan Pribadi</string>
+    <string name="private_chat_entry_subtitle">Ketuk untuk kembali</string>
+    <string name="private_chat_menu">Mulai Obrolan Pribadi</string>
+    <string name="private_chat_message_notification_title">Pesan obrolan pribadi baru.</string>
+    <string name="private_chat_other_party_not_support">Kontak ini menggunakan BBM versi lama yang tidak mendukung obrolan pribadi.</string>
+    <string name="private_chat_request_incoming_subtitle">Permintaan obrolan pribadi</string>
+    <string name="private_chat_request_invite_bubble_message">"Saya ingin memulai obrolan pribadi dengan Anda. Untuk bergabung dengan obrolan pribadi, Anda harus mengunduh BBM versi terbaru.
+
+Kunjungi http://bbm.com/upgrade untuk mendapatkan BBM versi terbaru."</string>
+    <string name="private_chat_request_outgoing_subtitle">Permintaan obrolan pribadi</string>
+    <string name="private_chat_stop_reason_busy">%1$s tidak tersedia untuk obrolan pribadi pada saat ini.</string>
+    <string name="private_chat_stop_reason_cancelled">%1$s membatalkan obrolan pribadi.</string>
+    <string name="private_chat_stop_reason_declined">%1$s menolak obrolan pribadi.</string>
+    <string name="private_chat_stop_reason_inactivity">Obrolan pribadi Anda berakhir secara otomatis karena tidak aktif.</string>
+    <string name="private_chat_stop_reason_localended">Anda mengakhiri obrolan pribadi.</string>
+    <string name="private_chat_stop_reason_noresponse">%1$s tidak merespons permintaan obrolan pribadi Anda.</string>
+    <string name="private_chat_stop_reason_remoteended">%1$s mengakhiri obrolan pribadi.</string>
+    <string name="private_chat_stop_reason_unknown">Obrolan pribadi Anda sudah terputus. Harap mulai obrolan pribadi Anda lagi.</string>
+    <string name="private_chat_tutorial_description">"Nama dan foto profil disembunyikan.
+
+Obrolan secara otomatis dihapus di kedua perangkat saat obrolan berakhir atau tidak aktif.
+
+Pemberitahuan untuk pesan pribadi baru bersifat rahasia."</string>
     <string name="profile_barcode">Kode Batang</string>
+    <string name="profile_bbm_pin_label">PIN BBM</string>
     <string name="profile_copy_pin">Salin PIN</string>
     <string name="profile_copypin">Salin PIN</string>
     <string name="profile_default_pin">PIN: 00000000</string>
     <string name="profile_display_name_invalid">Titik dua atau koma tidak diperbolehkan dalam nama tampilan</string>
+    <string name="profile_display_name_invalid_empty">Nama tampilan tidak boleh kosong</string>
     <string name="profile_icon_source_camera">Kamera</string>
     <string name="profile_icon_source_picture">Gambar</string>
     <string name="profile_icon_source_sample_picture">Gambar Contoh</string>
-    <string name="profile_location_label">Lokasi/Zona Waktu:</string>
+    <string name="profile_location_label">Lokasi/Zona Waktu</string>
     <string name="profile_mood_hint"><i>Apa yang Anda pikirkan?</i></string>
+    <string name="profile_name">Nama Profil</string>
     <string name="profile_no_status_message">Tidak Ada Pesan Status</string>
     <string name="profile_own_status_label">Status</string>
-    <string name="profile_pin">%1$s</string>
     <string name="profile_pin_copied">Pin Disalin</string>
-    <string name="profile_pin_label">PIN:</string>
     <string name="profile_pinlabel">PIN:</string>
     <string name="profile_revert_display_name">Kembalikan Nama Tampilan</string>
     <string name="profile_selector_apps">Aplikasi</string>
@@ -1562,38 +1733,54 @@ Masukkan frasa sandi \"%1$s\" setelah mengeklik pin:%2$s atau %3$s"</string>
     <string name="profile_selector_members">Anggota</string>
     <string name="profile_selector_updates">Umpan</string>
     <string name="profile_share_pin">Bagikan PIN Saya</string>
+    <string name="profile_status_delete">Hapus Status</string>
+    <string name="profile_status_delete_info">Anda yakin ingin menghapus status ini?</string>
     <string name="profile_status_edit">Edit Pesan Status</string>
-    <string name="profile_status_label">Status:</string>
+    <string name="profile_user_has_subscription">Orang ini memiliki langganan.</string>
+    <string name="profile_user_view_all_sub">Lihat semua langganan BBM.</string>
     <string name="prompt_change_bbm_picture">Ganti Gambar BBM Anda?</string>
     <string name="prompted_after_rate_call">Terima kasih!</string>
     <string name="prompted_before_rate_call">Nilai kualitas panggilanmu</string>
     <string name="protected_group_invite_message_default">Saya ingin mengundang Anda bergabung di grup bernama: \"%1$s\". Untuk bergabung dengan grup BBM Protected ini, Anda harus memasukkan frasa sandi yang diberikan oleh anggota grup.</string>
     <string name="protected_group_requires_join">Menunggu konfirmasi frasa sandi untuk memulihkan grup yang dilindungi</string>
     <string name="protected_mode_disabled_header">BBM Protected Dimatikan</string>
-    <string name="protected_mode_disabled_message">Kontak dan obrolan Anda disimpan, tetapi Anda dikeluarkan dari obrolan dengan lebih dari satu orang dan grup yang menggunakan BBM Protected.</string>
+    <string name="protected_mode_disabled_message">Kontak dan obrolan Anda disimpan, tapi Anda dikeluarkan dari grup yang menggunakan BBM Protected.</string>
     <string name="protected_mode_disabled_title">Administrator Anda telah mematikan BBM Protected.</string>
     <string name="protected_mode_enabled_header">BBM Protected</string>
     <string name="protected_mode_enabled_message">"BBM Protected menambah lapisan enkripsi ekstra ke obrolan BbM, transfer file, dan grup. Saat berikutnya Anda memulai obrolan dengan seorang kontak BBM Protected, Anda menentukan suatu frasa sandi yang harus dimasukkan orang lain ketika bergabung. Anda hanya perlu memberikan frasa sandi satu kali untuk setiap kontak BBM Protected. 
  
  Untuk BBM Group, Anda dapat memilih apakah membatasi keanggotaan untuk kontak BBM Protected atau tidak. Jika Anda membuat grup BBM Protected, Anda dapat membagikan frasa sandi yang harus dimasukkan orang untuk bergabung."</string>
     <string name="protected_mode_enabled_title">Administrator Anda telah mengaktifkan BBM Protected di perangkat Anda.</string>
+    <string name="protected_preferred_details">Kontak Anda membutuhkan obrolan BBM Protected.</string>
+    <string name="protected_preferred_dialog">Kontak ini menggunakan Protected Plus. Obrolan antara Anda dan kontak ini akan menjadi obrolan BBM Protected. <a href="http://blackberry.com/bbmprotected">Pelajari lebih lanjut</a></string>
+    <string name="protected_preferred_dialog_dismiss">Jangan tampilkan lagi</string>
+    <string name="protected_preferred_mode_disabled_message">Administrator Anda mematikan Protected Plus.</string>
+    <string name="protected_preferred_mode_disabled_title">Protected Plus Mati</string>
+    <string name="protected_preferred_mode_enabled_message">Administrator Anda menghidupkan Protected Plus, fitur dari BBM Protected. Obrolan antara Anda dan kontak Anda akan menjadi obrolan BBM Protected.</string>
+    <string name="protected_preferred_mode_enabled_title">Protected Plus Aktif</string>
+    <string name="protected_rejected_message_body">Anda mungkin perlu berbagi frasa sandi lagi untuk menyetel ulang obrolan BBM Protected ini. Untuk berbagi frasa sandi, ketuk ikon menu di sudut kanan atas layar. Ketuk &lt;b>%1$s&lt;/b>.</string>
+    <string name="protected_rejected_message_status">Bagikan Frasa Sandi Lagi</string>
     <string name="purchase_failed_message">Pembayaran Anda tidak dapat diproses. Anda ingin memilih metode pembayaran lainnya?</string>
     <string name="purchase_options">Opsi Pembayaran</string>
     <string name="purchase_success_message">Item berhasil dibeli</string>
     <string name="purchase_unexpected_error_message">Pembayaran Anda terinterupsi. Harap coba lagi.</string>
     <string name="pyk_empty_invites_allow_upload_hint">Cari Teman Yang Sudah Menggunakan BBM</string>
     <string name="qr_description">QRPengguna</string>
+    <string name="quick_reply">Balas dan Akhiri</string>
     <string name="quick_share_glympse_first_experience_overlay_infos">Kirim Glympse untuk memungkinkan seorang kontak BBM Anda mengikuti lookasi Anda di peta selama jangka waktu yang Anda pilih. Sempurna untuk bertemu atau ketika Anda hampir terlambat.</string>
     <string name="quick_share_glympse_first_experience_overlay_note"><i>Catatan: Ketika menggunakan fitur ini, koordinat GPS Anda dibagikan dengan Glympse Inc. dan tunduk pada <a href="http://glympse.com/privacy">kebijakan privasinya</a></i></string>
     <string name="quick_share_glympse_first_experience_overlay_title">Bagikan lokasi Anda</string>
-    <string name="quick_share_glympse_location_services_overlay_infos">Untuk menghidupkan fitur Cuplikan, Anda harus menghidupkan layanan lokasi.</string>
+    <string name="quick_share_glympse_location_services_overlay_infos">Untuk menghidupkan fitur Glympse, Anda harus menghidupkan layanan lokasi.</string>
     <string name="quick_share_glympse_location_services_overlay_title">Hidupkan layanan lokasi.</string>
     <string name="quick_share_glympse_sending_glympse">Mengirim Glympse</string>
     <string name="quick_share_voice_note_label_busy">Tidak dapat merekam. Pemutar media atau layanan media sedang digunakan.</string>
     <string name="quick_share_voice_note_label_default">Sentuh dan tahan untuk merekam</string>
     <string name="quick_share_voice_note_label_delete">Lepas untuk menghapus</string>
+    <string name="quick_share_voice_note_label_rec">REK</string>
     <string name="quick_share_voice_note_label_send">Lepas untuk mengirim atau gesek untuk membatalkan</string>
     <string name="quick_share_voice_note_tost_message">Untuk mengirim pesan suara instan, tekan dan tahan tombol rekam</string>
+    <string name="quote_at_user_name">\@%1$s</string>
+    <string name="quote_message_label">\"%1$s\"</string>
     <string name="rate_limited">Batas tingkat Glympse tercapai.</string>
     <string name="rate_my_app_ignore">Tidak, Terima Kasih</string>
     <string name="rate_my_app_message">Jika Anda senang menggunakan BBM, mohon luangkan waktu memberi peringkat pada aplikasi ini. Terima kasih!</string>
@@ -1612,6 +1799,8 @@ Masukkan frasa sandi \"%1$s\" setelah mengeklik pin:%2$s atau %3$s"</string>
     <string name="remaining_title_glympse">Glympse</string>
     <string name="remove">Hapus</string>
     <string name="replace_picture">Ganti Foto</string>
+    <string name="reply">Balas</string>
+    <string name="reply_with_voice">Balas dengan suara</string>
     <string name="report_channel">Laporkan Saluran</string>
     <string name="report_problem_activity_choose_email_client">Pilih Email</string>
     <string name="report_problem_activity_email_button">Kirim Laporan melalui Email</string>
@@ -1641,7 +1830,9 @@ http://blackberry.com/support/bbm"</string>
     <string name="reports_caption_none">Dilaporkan</string>
     <string name="request_was_received">Anda menerima permintaan Glympse</string>
     <string name="required_fields">Harus Diisi*</string>
-    <string name="resend_passphrase">Kirim Ulang Frasa Sandi</string>
+    <string name="resend_passphrase">KIRIM ULANG FRASA SANDI</string>
+    <string name="reset_protected_chat">Setel Ulang Obrolan Ini</string>
+    <string name="resolve_vanitypin_not_found">PIN ini tidak tersedia.</string>
     <string name="restore_sticker_purchases">Pulihkan</string>
     <string name="restore_using_device_switch">Pulihkan dengan Pindah Perangkat</string>
     <string name="restore_using_email">Pulihkan dengan Email</string>
@@ -1694,6 +1885,8 @@ http://blackberry.com/support/bbm"</string>
     <string name="select_contacts_to_move">Pilih kontak untuk dipindah ke \"%1$s\":</string>
     <string name="select_group">Pilih Grup</string>
     <string name="select_group_activity_title">{0,choice,0#Pilih Grup|1#+1 Grup|1&lt;+{0} Grup}</string>
+    <string name="select_group_discussion">Pilih Diskusi</string>
+    <string name="select_pictures">{0,choice,0#Pilih Gambar|1#+1 Gambar|1&lt;+{0} Gambar}</string>
     <string name="send">Kirim</string>
     <string name="send_comment">Kirim Komentar</string>
     <string name="send_decline_response">Kirim Respons Penolakan</string>
@@ -1702,6 +1895,11 @@ http://blackberry.com/support/bbm"</string>
     <string name="sent_pending_invite_message_label">Pesan:</string>
     <string name="sent_pending_invite_sent_label">Terkirim:</string>
     <string name="set_as">Setel Sebagai</string>
+    <string name="set_vanitypin_result_invalid">PIN ini tidak tersedia.</string>
+    <string name="set_vanitypin_result_refused">PIN ini tidak tersedia.</string>
+    <string name="set_vanitypin_result_reserved">PIN ini tidak tersedia.</string>
+    <string name="set_vanitypin_result_success">PIN Anda sudah dibuat.</string>
+    <string name="set_vanitypin_result_used">PIN ini tidak tersedia.</string>
     <string name="setas_activity_bbm_picture_updated">Gambar BBM diperbarui</string>
     <string name="setas_activity_item_bbm_picture">Gambar BBM</string>
     <string name="setas_activity_item_contact_picture">Gambar Kontak</string>
@@ -1711,6 +1909,7 @@ http://blackberry.com/support/bbm"</string>
     <string name="setas_activity_title">Setel Sebagai</string>
     <string name="settings">Setelan</string>
     <string name="settings_activity_allow_hq_pictures">Selalu Terima Permintaan Gambar HD</string>
+    <string name="settings_activity_backup_chat_history_now">Cadangkan Sekarang</string>
     <string name="settings_activity_blackberry_id_edit">Edit</string>
     <string name="settings_activity_blackberry_id_generic_error">Kami tidak dapat mengedit BlackBerry ID Anda saat ini, harap coba lagi nanti</string>
     <string name="settings_activity_blocked_contacts">Kontak dan Umpan yang Diblokir</string>
@@ -1724,6 +1923,7 @@ http://blackberry.com/support/bbm"</string>
     <string name="settings_activity_deleting_chat_history_info">Riwayat obrolan dengan semua kontak akan dihapus. Tindakan ini tidak dapat diurungkan.</string>
     <string name="settings_activity_deleting_chat_history_title">Hapus Riwayat Obrolan</string>
     <string name="settings_activity_hide_keyboard_on_enter_conversation">Selalu Tampilkan Keyboard</string>
+    <string name="settings_activity_keyboard_enter_as_new_line">Enter Keyboard Memasukkan Baris Baru</string>
     <string name="settings_activity_legal">Hukum</string>
     <string name="settings_activity_report_a_problem">Laporkan Masalah</string>
     <string name="settings_activity_save_chat_history">Simpan Riwayat Obrolan</string>
@@ -1762,6 +1962,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="share_passphrase_other">Katakan langsung kepada orangnya</string>
     <string name="share_passphrase_sms">Pesan Teks</string>
     <string name="share_passphrase_title">Bagikan Frasa Sandi</string>
+    <string name="share_to_feed_title">Perbarui Umpan Anda?</string>
     <string name="sharead_sponsored_invite">Undangan Bersponsor yang Dibagikan</string>
     <string name="sharead_sponsored_post">Posting Bersponsor yang Dibagikan</string>
     <string name="shared_channel_post_default_text">Posting Saluran yang Dibagikan</string>
@@ -1769,6 +1970,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="shared_channel_post_sent">Posting saluran terkirim</string>
     <string name="shared_sponsored_content">Konten Bersponsor yang Dibagikan</string>
     <string name="shop">Toko</string>
+    <string name="shop_subscriptions">Langganan</string>
     <string name="show">Tampilkan</string>
     <string name="show_channel_preview">Pratinjau</string>
     <string name="show_map">Tampilkan Peta</string>
@@ -1777,6 +1979,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="sign_in_to_bbm">Sign in ke BBM</string>
     <string name="slide_menu_add_event">Tambah Acara</string>
     <string name="slide_menu_add_list">Tambah Daftar</string>
+    <string name="slide_menu_block_chat">Blokir Obrolan</string>
     <string name="slide_menu_copy_chat">Salin Obrolan</string>
     <string name="slide_menu_delete_item">Hapus Item</string>
     <string name="slide_menu_edit">Edit</string>
@@ -1792,6 +1995,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="slide_menu_new_chat">Mulai Obrolan Baru</string>
     <string name="slide_menu_open_bbm_chat">Buka Obrolan BBM</string>
     <string name="slide_menu_ping">Ping</string>
+    <string name="slide_menu_play_in_media_player">Putar di media player</string>
     <string name="slide_menu_remove_deleted_item">Buang Item yang Dihapus</string>
     <string name="slide_menu_remove_from_group">Hapus dari grup</string>
     <string name="slide_menu_reply_by_voice_note">Balas Dengan Catatan Suara</string>
@@ -1810,19 +2014,23 @@ www.pin.bbm.com/%1$s"</string>
     <string name="sms_activity_title">Tulis</string>
     <string name="sort_by">Urut Berdasar</string>
     <string name="stacked_notification_format"><Data>&lt;b>%1$s&lt;/b>: %2$s</Data></string>
+    <string name="stale_user_reinvite_message">%1$s belum dilihat online sejak %2$s</string>
+    <string name="stale_user_reinvite_title">Undang lagi</string>
     <string name="start_chat">Mulai Obrolan</string>
     <string name="start_chat_failed">Obrolan tidak dapat dibuat</string>
-    <string name="start_meeting">Mulai Rapat BBM</string>
-    <string name="start_meeting_confirmation_dialog">Akhiri panggilan dan mulai rapat baru?</string>
-    <string name="start_meeting_confirmation_title">Mulai Rapat BBM?</string>
+    <string name="start_meeting">Mulai BBM Meetings</string>
+    <string name="start_meeting_confirmation_dialog">Anda sedang melakukan BBM call. Anda ingin mengakhirinya dan memulai BBM meeting?</string>
+    <string name="start_meeting_confirmation_title">Mulai BBM Meetings</string>
     <string name="start_multiperson_chat">Mulai Obrln Bbrp Org</string>
+    <string name="start_pin_chat">Ketikkan PIN untuk memulai obrolan</string>
     <string name="starts">Mulai</string>
     <string name="stats_caption">Statistik</string>
     <string name="stay_in_touch_like_never_before_with_blackberry_messenger">Kini jauh lebih mudah untuk tetap terhubung dengan BlackBerry Messenger.</string>
     <string name="sticker_picker_no_stickers_purchased">Tidak ada pembelian stiker.</string>
     <string name="sticker_picker_preview_hint">Untuk mempratinjau, sentuh dan tahan sebuah stiker.</string>
-    <string name="sticker_store_collection_heading">Sticker Koleksi</string>
-    <string name="sticker_store_details_artist_channel">Saluran</string>
+    <string name="sticker_settings">Setelan Stiker</string>
+    <string name="sticker_store_collection_heading">Stiker</string>
+    <string name="sticker_store_details_artist_channel">BBM Channel</string>
     <string name="sticker_store_details_artist_website">Situs web</string>
     <string name="sticker_store_details_promo_text">LIHAT DI SINI</string>
     <string name="sticker_store_details_screen_about">Tentang</string>
@@ -1845,6 +2053,7 @@ Tip: Anda dapat meninggalkan layar ini sembari proses berjalan."</string>
     <string name="sticker_store_sticker_purchase_notification_dialog_line">Anda bisa memberi tahu kontak Anda bahwa Anda baru saja mendapat stiker baru.</string>
     <string name="sticker_store_sticker_purchase_notification_message">Lihatlah stiker baru saya! http://shop.bbm.com/stickers/%1$s</string>
     <string name="sticker_store_store_loading">Memuat...</string>
+    <string name="store_generic_billing_error">Tidak dapat membeli item ini.</string>
     <string name="store_title">Toko BBM</string>
     <string name="submit_button">Kirim</string>
     <string name="submit_passphrase">Kirim</string>
@@ -1854,6 +2063,44 @@ Tip: Anda dapat meninggalkan layar ini sembari proses berjalan."</string>
     <string name="subscribed_channel_invite_default_message">Saya ingin mengundang Anda bergabung dengan grup bernama \"%1$s\".</string>
     <string name="subscribed_channels">Saluran Langganan</string>
     <string name="subscribers_caption">Pelanggan</string>
+    <string name="subscriptino_pin_promo">Anda dapat membuat PIN BBM yang mudah diingat oleh Anda dan teman-teman.</string>
+    <string name="subscription_already_exists_bb10">Anda memiliki langganan pembaruan otomatis yang dibeli di perangkat lain.</string>
+    <string name="subscription_app_type_no_ads">tanpa_iklan</string>
+    <string name="subscription_app_type_vanity_pin">pin_khusus</string>
+    <string name="subscription_auto_renewing">Anda memiliki langganan pembaruan otomatis.</string>
+    <string name="subscription_bbid_conflict">Item ini dibeli untuk BlackBerry ID lain dengan akun toko Anda. Coba gunakan akun toko yang lain.</string>
+    <string name="subscription_custom_pin_description">Anda ingin PIN pilihan yang mudah diingat, baik oleh Anda mupun teman-teman Anda? Buat PIN BBM yang khusus untuk Anda. Jangan terlewatkan; dapatkan PIN pilihan Anda sekarang juga.</string>
+    <string name="subscription_dialog_duration_monthly">Bulanan: %1$s</string>
+    <string name="subscription_dialog_duration_title">Pilih Langganan</string>
+    <string name="subscription_dialog_duration_yearly">Tahunan: %1$s</string>
+    <string name="subscription_edit_messages_description">Jika Anda melakukan kesalahan dalam pesan, Anda dapat menariknya, membetulkan kesalahan, dan mengirimkan lagi pesan tersebut.</string>
+    <string name="subscription_exclusive_badge">Lencana Eksklusif</string>
+    <string name="subscription_exclusive_descritpion_pin">Pamerkan status BBM khusus baru dengan lencana. Lencana ini juga ditampilkan pada gambar tampilan yang memiliki langganan aktif.</string>
+    <string name="subscription_expired">Langganan Anda sudah berakhir. Berlangganan lagi?</string>
+    <string name="subscription_exsits_ios_72hours">Masa berlangganan Anda segera berakhir. Untuk melanjutkan menggunakan fitur ini, berlanggananlah di sini sebelum %1$s.</string>
+    <string name="subscription_exsits_on_ios">Item ini dibeli di perangkat lain. Untuk melanjutkan menggunakan fitur ini, berlanggananlah di sini sebelum %1$s.</string>
+    <string name="subscription_generic_guidelines">Panduan PIN Pilihan BBM</string>
+    <string name="subscription_generic_learn_more">Pelajari lebih lanjut</string>
+    <string name="subscription_learn_more">Untuk mempelajari langganan lebih lanjut, kunjungi <a href="http://bbm.com/FAQ">bbm.com/FAQ</a>.</string>
+    <string name="subscription_no_adds_share">Anda bisa memberi tahu kontak Anda bahwa Anda baru saja mematikaniklan di BBM.</string>
+    <string name="subscription_no_adds_status_message">Saya baru saja mematikan iklan di BBM. Untuk menyembunyikan iklan di perangkat Anda, ketuk http://shop.bbm.com/item/no_ads</string>
+    <string name="subscription_no_ads">Tanpa Iklan</string>
+    <string name="subscription_no_ads_description">Tidak ingin melihat iklan? Sembunyikan iklan di BBM dengan langganan ini.</string>
+    <string name="subscription_no_ads_promo">"Tanpa Iklan
+ Sembunyikan iklan dan undangan bersponsor di BBM dengan langganan ini."</string>
+    <string name="subscription_no_ads_title">Tanpa Iklan</string>
+    <string name="subscription_pin_before_share">Saya membuat PIN khusus di BBM. Untuk menyesuaikan PIN Anda, ketuk http://shop.bbm.com/item/custom_pin</string>
+    <string name="subscription_pin_before_share_prompt">Anda dapat memberi tahu kontak Anda bahwa Anda membuat PIN khusus.</string>
+    <string name="subscription_pin_feautres">Fitur yang disertakan:</string>
+    <string name="subscription_private_chat_description">Dalam pesan pribadi, nama kontak Anda disembunyikan, dan notifikasi pesan baru dinonaktifkan. Obrolan Anda dihapus secara otomatis setelah beberapa waktu, atau saat Anda mengakhiri obrolan pribadi.</string>
+    <string name="subscription_reactiviate">Berlangganan</string>
+    <string name="subscription_retracted_messages_description">Jika Anda tidak sengaja mengirim pesan, Anda dapat menarik kembali pesan sehingga tidak muncul di obrolan.</string>
+    <string name="subscription_retracted_messages_title">Pesan Ditarik Kembali</string>
+    <string name="subscription_status_active_subscription">Anda memiliki langganan pembaruan otomatis.</string>
+    <string name="subscription_timed_messages_description">Anda dapat mengirim pesan dan gambar yang dapat dilihat selama jumlah waktu yang ditetapkan. Pesan disembunyikan dalam obrolan, dan penerima dapat menyentuh dan menahan pesan untuk membukanya. Setelah waktu berakhir, pesan tidak dapat dilihat.</string>
+    <string name="subscription_timed_messages_title">Pesan Berwaktu</string>
+    <string name="subscriptions_not_entitled">Anda harus berlangganan untuk menggunakan fitur ini.</string>
+    <string name="subscriptions_restoring">Memeriksa langganan Anda</string>
     <string name="suggestion_i_invite_you">%1$s menyarankan saya mengajak Anda mengobrol di BBM.</string>
     <string name="suggestion_sent">Saran dikirim</string>
     <string name="suggestion_want_to_invite_bbm_contact">Apakah Anda ingin mengundang kontak BBM ini?</string>
@@ -1879,7 +2126,7 @@ Tip: Anda dapat meninggalkan layar ini sembari proses berjalan."</string>
     <string name="timestamp_format_today_at">Hari ini pada %1$s</string>
     <string name="timestamp_format_yesterday_at">Kemarin pada %1$s</string>
     <string name="title_activity_category">Kategori</string>
-    <string name="title_activity_change_status">Ubah Status</string>
+    <string name="title_activity_change_status">Status</string>
     <string name="title_activity_channels_lobby">Lobby Saluran Sendiri</string>
     <string name="title_activity_group_event_details">Rincian Acara Grup</string>
     <string name="title_activity_group_events">Acara Grup</string>
@@ -1912,6 +2159,9 @@ Tip: Anda dapat meninggalkan layar ini sembari proses berjalan."</string>
     <string name="update_fragment_hide_updates">Sembunyikan</string>
     <string name="update_fragment_view_channel">Lihat Saluran</string>
     <string name="update_fragment_view_post">Lihat Posting</string>
+    <string name="update_list_archiving_disabled_message">Administrator Anda telah menonaktifkan fitur pengarsipan.</string>
+    <string name="update_list_archiving_enabled_message">Administrator Anda telah mengaktifkan fitur pengarsipan.</string>
+    <string name="update_list_archiving_title">Mengarsipkan Obrolan BBM</string>
     <string name="update_list_avatar">&lt;b>%1$s&lt;/b> mengubah gambar tampilan.</string>
     <string name="update_list_changed_event_sub_title">Acara Berubah</string>
     <string name="update_list_comment_sub_title">Komentar Ditambahkan</string>
@@ -1967,18 +2217,30 @@ Tip: Anda dapat meninggalkan layar ini sembari proses berjalan."</string>
     <string name="update_list_new_contact_sub_title">Kontak BBM</string>
     <string name="update_list_new_event_sub_title">Acara Baru</string>
     <string name="update_list_new_list_item_sub_title">Butir Daftar Baru</string>
+    <string name="update_list_new_status_hint">Masukkan nama status</string>
     <string name="update_list_new_status_message">\"%1$s\"</string>
     <string name="update_list_new_status_sub_title">Status Baru</string>
     <string name="update_list_newcontact">&lt;b>%1$s&lt;/b> sekarang menjadi kontak.</string>
     <string name="update_list_now_playing_message">Mendengarkan \"%1$s\"</string>
     <string name="update_list_nowplayingmessage">&lt;b>%1$s&lt;/b> sedang mendengarkan \"%2$s\".</string>
     <string name="update_list_personalmessage">&lt;b>%1$s&lt;/b> mengatakan \"%2$s\"</string>
+    <string name="update_list_protected_disabled_message">Administrator Anda mematikan BBM Protected. Anda dikeluarkan dari grup yang menggunakan BBM Protected.</string>
+    <string name="update_list_protected_enabled_message">Administrator Anda menghidupkan BBM Protected. BBM Protected menambah lapisan enkripsi ekstra ke obrolan BBM, transfer file, dan grup.</string>
+    <string name="update_list_protected_preferred_disabled_message">Administrator Anda mematikan Protected Plus.</string>
+    <string name="update_list_protected_preferred_enabled_message">Administrator Anda menghidupkan Protected Plus. Obrolan antara Anda dan kontak Anda akan menjadi obrolan BBM Protected.</string>
+    <string name="update_list_protected_status_sub_title">Perubahan Kebijakan</string>
+    <string name="update_list_protected_title">BBM Protected</string>
     <string name="update_list_you">Anda</string>
+    <string name="update_popular_channels_subtitle">Ketuk untuk menjelajahi</string>
+    <string name="update_popular_channels_title">Saluran Populer</string>
     <string name="update_removed_from_blocked_list">Dihapus dari daftar blokir.</string>
     <string name="update_sponsored_content">Konten Bersponsor</string>
     <string name="update_sponsored_post">Posting Bersponsor</string>
+    <string name="update_your_subscription">Perbarui langganan Anda</string>
     <string name="updates">Umpan</string>
     <string name="upload">Unggah</string>
+    <string name="user_status_stale">Terakhir dilihat %1$s</string>
+    <string name="vanity_pin">Vanity PIN</string>
     <string name="verify_date_of_birth">Memverifikasi tanggal lahir Anda.</string>
     <string name="verify_passphrase">Memverifikasi frasa sandi.</string>
     <string name="version">Versi</string>
@@ -1986,6 +2248,7 @@ Tip: Anda dapat meninggalkan layar ini sembari proses berjalan."</string>
     <string name="view_channel_info">Pratinjau</string>
     <string name="view_channel_profile">Lihat Profil Saluran</string>
     <string name="visits_caption">Kunjungan</string>
+    <string name="voice_note_duration">%1$02d:%2$02d</string>
     <string name="voice_rating_bad">Sangat Buruk</string>
     <string name="voice_rating_excellent">Sangat Baik</string>
     <string name="voice_rating_fair">Sedang</string>
@@ -1993,11 +2256,31 @@ Tip: Anda dapat meninggalkan layar ini sembari proses berjalan."</string>
     <string name="voice_rating_poor">Buruk</string>
     <string name="voice_rating_title">Berapa nilai untuk kualitas panggilan ini?</string>
     <string name="voicecall_already_in_call">Anda sedang dalam panggilan BBM. Untuk memanggil kontak ini, akhir panggilan yang lain dan coba lagi.</string>
+    <string name="voicecall_must_add_as_contact">Untuk menggunakan fitur ini, Anda harus menambahkan orang ini ke Kontak BBM Anda.</string>
+    <string name="voicecall_must_add_as_contact_title">Tambahkan ke Kontak BBM</string>
     <string name="voicecall_status_calling">Memanggil</string>
     <string name="voicecall_status_connecting">Menyambungkan</string>
     <string name="voicecall_status_duration">Panggilan Suara %1$s</string>
     <string name="voicecall_status_duration_while_mute">Membungkam - %1$s</string>
+    <string name="voicenote">Catatan Suara</string>
     <string name="wait_passphrase_confirmation">Menunggu konfirmasi frasa sandi.</string>
+    <string name="warning_on_repurchase">Untuk memastikan fitur langganan ini tidak terganggu, Anda mungkin perlu membeli langganan baru, lalu membatalkan langganan lama. Untuk informasi selengkapnya, buka: %1$s</string>
+    <string name="wear_quick_call_shortly">Saya akan segera menghubungi Anda kembali.</string>
+    <string name="wear_quick_cant_take">Saya sibuk dan tidak dapat terima panggilan Anda.</string>
+    <string name="wear_quick_im_on_my_way">Saya dalam perjalanan.</string>
+    <string name="wear_quick_response_1">Ok.</string>
+    <string name="wear_quick_response_2">Siapi!</string>
+    <string name="wear_quick_response_3">Saya sedang sibuk, segera membalas ketika sempat.</string>
+    <string name="wear_quick_response_appreciation">Terima kasih</string>
+    <string name="wear_quick_response_confirmation">Ya</string>
+    <string name="wear_quick_response_disagree">Tidak</string>
+    <string name="wear_quick_response_haha">Haha</string>
+    <string name="wear_quick_response_lol">Wkwkwk</string>
+    <string name="wear_quick_response_on_my_way">Lagi di jalan</string>
+    <string name="wear_quick_response_see_you_soon">Sampai nanti</string>
+    <string name="wear_quick_response_talk_later">Maaf, tidak bisa berbincang sekarang</string>
+    <string name="wear_quick_response_understood">Oke</string>
+    <string name="wearable_support">Dukungan Perangkat Pasang</string>
     <string name="widget_back_to_chat_previews">Kembali ke Pratinjau Obrolan</string>
     <string name="widget_change_my_status_message">Ubah pesan status saya</string>
     <string name="widget_edit_status">Edit Status</string>
@@ -2013,6 +2296,7 @@ Tip: Anda dapat meninggalkan layar ini sembari proses berjalan."</string>
     <string name="wifi_changing_network">Meminta koneksi ke jaringan…</string>
     <string name="wifi_ssid_label">Nama Jaringan</string>
     <string name="wifi_type_label">Tipe</string>
+    <string name="yes">Ya</string>
     <string name="you_are_signed_in_with_the_following_blackberry_id">Anda sign-in dengan BlackBerry ID berikut: %1$s</string>
     <string name="you_can_choose_another_restore_option_or_delete_your_device_data">Anda dapat memilih opsi pemulihan lainnya, atau menghapus data perangkat dan sign-in dengan BlackBerry ID yang dikaitkan dengan file cadangan.</string>
     <string name="you_can_now_start_video_and_voice_chats">Sekarang Anda dapat memulai video dan obrolan suara dari BBM (jika didukung).</string>

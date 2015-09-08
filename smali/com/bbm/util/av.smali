@@ -3,192 +3,89 @@
 .source "ChannelUtil.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/Comparator;
 
 
-# instance fields
-.field final synthetic a:Lcom/google/b/f/a/l;
-
-.field final synthetic b:Ljava/util/ArrayList;
-
-.field final synthetic c:Landroid/app/Activity;
-
-.field final synthetic d:Ljava/lang/String;
-
-.field final synthetic e:Ljava/lang/String;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Lorg/json/JSONObject;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method constructor <init>(Lcom/google/b/f/a/l;Ljava/util/ArrayList;Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 638
-    iput-object p1, p0, Lcom/bbm/util/av;->a:Lcom/google/b/f/a/l;
-
-    iput-object p2, p0, Lcom/bbm/util/av;->b:Ljava/util/ArrayList;
-
-    iput-object p3, p0, Lcom/bbm/util/av;->c:Landroid/app/Activity;
-
-    iput-object p4, p0, Lcom/bbm/util/av;->d:Ljava/lang/String;
-
-    iput-object p5, p0, Lcom/bbm/util/av;->e:Ljava/lang/String;
-
+    .line 528
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final run()V
-    .locals 7
+.method private static a(Lorg/json/JSONObject;)I
+    .locals 2
 
     .prologue
-    const/4 v6, 0x1
+    .line 548
+    const-string v0, "dayOfWeek"
 
-    .line 643
-    :try_start_0
-    iget-object v0, p0, Lcom/bbm/util/av;->a:Lcom/google/b/f/a/l;
+    const/4 v1, 0x1
 
-    invoke-interface {v0}, Lcom/google/b/f/a/l;->get()Ljava/lang/Object;
+    invoke-virtual {p0, v0, v1}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
 
-    move-result-object v0
+    move-result v0
 
-    check-cast v0, Ljava/lang/String;
+    .line 550
+    if-nez v0, :cond_0
 
-    .line 644
-    const-string v1, "Starting chat with %s -> %s"
+    const/4 v0, 0x7
 
-    const/4 v2, 0x2
+    :cond_0
+    return v0
+.end method
 
-    new-array v2, v2, [Ljava/lang/Object;
 
-    const/4 v3, 0x0
+# virtual methods
+.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 2
 
-    iget-object v4, p0, Lcom/bbm/util/av;->b:Ljava/util/ArrayList;
+    .prologue
+    .line 528
+    check-cast p1, Lorg/json/JSONObject;
 
-    const/4 v5, 0x0
+    check-cast p2, Lorg/json/JSONObject;
 
-    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/bbm/util/av;->a(Lorg/json/JSONObject;)I
 
-    move-result-object v4
+    move-result v0
 
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x1
-
-    aput-object v0, v2, v3
-
-    invoke-static {v1, v2}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 645
-    new-instance v2, Landroid/content/Intent;
-
-    iget-object v1, p0, Lcom/bbm/util/av;->c:Landroid/app/Activity;
-
-    const-class v3, Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-direct {v2, v1, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 646
-    const-string v1, "conversation_uri"
-
-    invoke-virtual {v2, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 647
-    const-string v3, "contextUserUri"
-
-    iget-object v1, p0, Lcom/bbm/util/av;->b:Ljava/util/ArrayList;
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-virtual {v2, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 648
-    const-string v1, "contextContentType"
-
-    const-string v3, "contextContentType_sharePost"
-
-    invoke-virtual {v2, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 649
-    const-string v1, "contextContentId"
-
-    iget-object v3, p0, Lcom/bbm/util/av;->d:Ljava/lang/String;
-
-    iget-object v4, p0, Lcom/bbm/util/av;->e:Ljava/lang/String;
-
-    invoke-static {v3, v4}, Lcom/bbm/util/ac;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 650
-    iget-object v1, p0, Lcom/bbm/util/av;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+    invoke-static {p2}, Lcom/bbm/util/av;->a(Lorg/json/JSONObject;)I
 
     move-result v1
 
-    if-le v1, v6, :cond_0
+    if-ge v0, v1, :cond_0
 
-    .line 651
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    const/4 v0, -0x1
 
-    move-result-object v1
-
-    iget-object v3, p0, Lcom/bbm/util/av;->b:Ljava/util/ArrayList;
-
-    const/4 v4, 0x1
-
-    iget-object v5, p0, Lcom/bbm/util/av;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
-
-    move-result v5
-
-    invoke-virtual {v3, v4, v5}, Ljava/util/ArrayList;->subList(II)Ljava/util/List;
-
-    move-result-object v3
-
-    invoke-static {v0, v3}, Lcom/bbm/d/aa;->b(Ljava/lang/String;Ljava/util/List;)Lcom/bbm/d/bz;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
-
-    .line 653
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/util/av;->c:Landroid/app/Activity;
-
-    invoke-virtual {v0, v2}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
-
-    .line 654
-    const-string v0, "open"
-
-    const-string v1, "Conversation"
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->a(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 658
     :goto_0
-    return-void
+    return v0
 
-    .line 655
-    :catch_0
-    move-exception v0
+    :cond_0
+    if-ne v0, v1, :cond_1
 
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x1
 
     goto :goto_0
 .end method

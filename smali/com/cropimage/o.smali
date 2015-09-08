@@ -1,5 +1,5 @@
 .class final Lcom/cropimage/o;
-.super Lcom/bbm/ui/activities/ala;
+.super Lcom/bbm/ui/d/a;
 .source "Util.java"
 
 # interfaces
@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field final a:Lcom/bbm/ui/activities/akz;
+.field final a:Lcom/bbm/ui/d/c;
 
 .field final b:Landroid/app/ProgressDialog;
 
@@ -19,38 +19,38 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/ui/activities/akz;Ljava/lang/Runnable;Landroid/app/ProgressDialog;Landroid/os/Handler;)V
+.method public constructor <init>(Lcom/bbm/ui/d/c;Ljava/lang/Runnable;Landroid/app/ProgressDialog;Landroid/os/Handler;)V
     .locals 1
 
     .prologue
-    .line 179
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ala;-><init>()V
+    .line 180
+    invoke-direct {p0}, Lcom/bbm/ui/d/a;-><init>()V
 
-    .line 168
+    .line 169
     new-instance v0, Lcom/cropimage/p;
 
     invoke-direct {v0, p0}, Lcom/cropimage/p;-><init>(Lcom/cropimage/o;)V
 
     iput-object v0, p0, Lcom/cropimage/o;->e:Ljava/lang/Runnable;
 
-    .line 180
-    iput-object p1, p0, Lcom/cropimage/o;->a:Lcom/bbm/ui/activities/akz;
-
     .line 181
-    iput-object p3, p0, Lcom/cropimage/o;->b:Landroid/app/ProgressDialog;
+    iput-object p1, p0, Lcom/cropimage/o;->a:Lcom/bbm/ui/d/c;
 
     .line 182
-    iput-object p2, p0, Lcom/cropimage/o;->c:Ljava/lang/Runnable;
+    iput-object p3, p0, Lcom/cropimage/o;->b:Landroid/app/ProgressDialog;
 
     .line 183
-    iget-object v0, p0, Lcom/cropimage/o;->a:Lcom/bbm/ui/activities/akz;
-
-    invoke-virtual {v0, p0}, Lcom/bbm/ui/activities/akz;->a(Lcom/bbm/ui/activities/alb;)V
+    iput-object p2, p0, Lcom/cropimage/o;->c:Ljava/lang/Runnable;
 
     .line 184
-    iput-object p4, p0, Lcom/cropimage/o;->d:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/cropimage/o;->a:Lcom/bbm/ui/d/c;
+
+    invoke-interface {v0, p0}, Lcom/bbm/ui/d/c;->a(Lcom/bbm/ui/d/b;)V
 
     .line 185
+    iput-object p4, p0, Lcom/cropimage/o;->d:Landroid/os/Handler;
+
+    .line 186
     return-void
 .end method
 
@@ -89,7 +89,7 @@
     return-void
 .end method
 
-.method public final d(Lcom/bbm/ui/activities/akz;)V
+.method public final d(Landroid/app/Activity;)V
     .locals 1
 
     .prologue
@@ -106,7 +106,7 @@
     .locals 3
 
     .prologue
-    .line 190
+    .line 191
     :try_start_0
     iget-object v0, p0, Lcom/cropimage/o;->c:Ljava/lang/Runnable;
 
@@ -114,17 +114,17 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 192
+    .line 193
     iget-object v0, p0, Lcom/cropimage/o;->d:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/cropimage/o;->e:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 193
+    .line 194
     return-void
 
-    .line 192
+    .line 193
     :catchall_0
     move-exception v0
 

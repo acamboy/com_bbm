@@ -91,6 +91,9 @@
     move-result-object v1
 
     .line 22
+    if-eqz v1, :cond_1
+
+    .line 23
     const/4 v0, 0x0
 
     :goto_0
@@ -100,15 +103,15 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 23
+    .line 24
     invoke-virtual {v1, v0}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v2
 
-    .line 24
+    .line 25
     if-eqz v2, :cond_0
 
-    .line 25
+    .line 26
     iget-object v3, p0, Lcom/bbm/l/b/e;->b:Ljava/util/ArrayList;
 
     const-string v4, "type"
@@ -121,7 +124,7 @@
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 26
+    .line 27
     iget-object v3, p0, Lcom/bbm/l/b/e;->c:Ljava/util/ArrayList;
 
     const-string v4, "name"
@@ -134,13 +137,13 @@
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 22
+    .line 23
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 30
+    .line 32
     :cond_1
     return-object p0
 .end method

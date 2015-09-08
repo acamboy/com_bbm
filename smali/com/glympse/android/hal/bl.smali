@@ -7,11 +7,11 @@
 
 
 # static fields
-.field public static final bQ:Ljava/lang/String; = "com.glympse.android.v2.preferences"
+.field public static final bT:Ljava/lang/String; = "com.glympse.android.v2.preferences"
 
 
 # instance fields
-.field private bR:Landroid/content/SharedPreferences;
+.field private bU:Landroid/content/SharedPreferences;
 
 
 # direct methods
@@ -31,7 +31,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/bl;->bR:Landroid/content/SharedPreferences;
+    iput-object v0, p0, Lcom/glympse/android/hal/bl;->bU:Landroid/content/SharedPreferences;
 
     .line 20
     return-void
@@ -44,7 +44,7 @@
 
     .prologue
     .line 31
-    iget-object v0, p0, Lcom/glympse/android/hal/bl;->bR:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/glympse/android/hal/bl;->bU:Landroid/content/SharedPreferences;
 
     invoke-interface {v0, p1, p2, p3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
 
@@ -58,7 +58,7 @@
 
     .prologue
     .line 43
-    iget-object v0, p0, Lcom/glympse/android/hal/bl;->bR:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/glympse/android/hal/bl;->bU:Landroid/content/SharedPreferences;
 
     invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -72,7 +72,7 @@
 
     .prologue
     .line 24
-    iget-object v0, p0, Lcom/glympse/android/hal/bl;->bR:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/glympse/android/hal/bl;->bU:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -93,7 +93,7 @@
 
     .prologue
     .line 36
-    iget-object v0, p0, Lcom/glympse/android/hal/bl;->bR:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/glympse/android/hal/bl;->bU:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -114,7 +114,7 @@
 
     .prologue
     .line 48
-    iget-object v0, p0, Lcom/glympse/android/hal/bl;->bR:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/glympse/android/hal/bl;->bU:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 

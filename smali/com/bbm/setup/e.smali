@@ -35,13 +35,17 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/setup/z;->a()Lcom/bbm/setup/af;
+    iget-object v0, v0, Lcom/bbm/setup/z;->r:Lcom/bbm/j/a;
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/setup/af;->a:Lcom/bbm/setup/ag;
+    check-cast v0, Lcom/bbm/setup/am;
 
-    sget-object v1, Lcom/bbm/setup/ag;->d:Lcom/bbm/setup/ag;
+    iget-object v0, v0, Lcom/bbm/setup/am;->a:Lcom/bbm/setup/an;
+
+    sget-object v1, Lcom/bbm/setup/an;->d:Lcom/bbm/setup/an;
 
     if-eq v0, v1, :cond_0
 

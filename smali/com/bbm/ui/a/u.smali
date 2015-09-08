@@ -1,139 +1,295 @@
-.class final Lcom/bbm/ui/a/u;
+.class final synthetic Lcom/bbm/ui/a/u;
 .super Ljava/lang/Object;
-.source "ChannelPostCommentListAdapter.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "GroupChatRecyclerViewAdapter.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/a/v;
+# static fields
+.field static final synthetic a:[I
 
-.field final synthetic b:Lcom/bbm/ui/a/p;
+.field static final synthetic b:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/a/p;Lcom/bbm/ui/a/v;)V
-    .locals 0
-
-    .prologue
-    .line 247
-    iput-object p1, p0, Lcom/bbm/ui/a/u;->b:Lcom/bbm/ui/a/p;
-
-    iput-object p2, p0, Lcom/bbm/ui/a/u;->a:Lcom/bbm/ui/a/v;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method static constructor <clinit>()V
     .locals 3
 
     .prologue
+    .line 231
+    invoke-static {}, Lcom/bbm/ui/a/v;->a()[I
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/a/u;->b:[I
+
+    :try_start_0
+    sget-object v0, Lcom/bbm/ui/a/u;->b:[I
+
+    sget v1, Lcom/bbm/ui/a/v;->b:I
+
+    add-int/lit8 v1, v1, -0x1
+
     const/4 v2, 0x1
 
-    .line 250
-    const-string v0, "showHideReplyButtonListener Clicked"
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_c
 
-    const-class v1, Lcom/bbm/ui/a/p;
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/ui/a/u;->b:[I
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    sget v1, Lcom/bbm/ui/a/v;->a:I
 
-    .line 251
-    iget-object v0, p0, Lcom/bbm/ui/a/u;->b:Lcom/bbm/ui/a/p;
+    add-int/lit8 v1, v1, -0x1
 
-    invoke-static {v0}, Lcom/bbm/ui/a/p;->c(Lcom/bbm/ui/a/p;)Z
+    const/4 v2, 0x2
 
-    move-result v0
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_b
 
-    if-nez v0, :cond_0
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/bbm/ui/a/u;->b:[I
 
-    iget-object v0, p0, Lcom/bbm/ui/a/u;->b:Lcom/bbm/ui/a/p;
+    sget v1, Lcom/bbm/ui/a/v;->d:I
 
-    invoke-static {v0}, Lcom/bbm/ui/a/p;->d(Lcom/bbm/ui/a/p;)Z
+    add-int/lit8 v1, v1, -0x1
 
-    move-result v0
+    const/4 v2, 0x3
 
-    if-nez v0, :cond_0
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_a
 
-    .line 252
-    iget-object v0, p0, Lcom/bbm/ui/a/u;->b:Lcom/bbm/ui/a/p;
+    :goto_2
+    :try_start_3
+    sget-object v0, Lcom/bbm/ui/a/u;->b:[I
 
-    invoke-static {v0}, Lcom/bbm/ui/a/p;->a(Lcom/bbm/ui/a/p;)Landroid/content/Context;
+    sget v1, Lcom/bbm/ui/a/v;->c:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_9
+
+    :goto_3
+    :try_start_4
+    sget-object v0, Lcom/bbm/ui/a/u;->b:[I
+
+    sget v1, Lcom/bbm/ui/a/v;->f:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_8
+
+    :goto_4
+    :try_start_5
+    sget-object v0, Lcom/bbm/ui/a/u;->b:[I
+
+    sget v1, Lcom/bbm/ui/a/v;->e:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x6
+
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_7
+
+    :goto_5
+    :try_start_6
+    sget-object v0, Lcom/bbm/ui/a/u;->b:[I
+
+    sget v1, Lcom/bbm/ui/a/v;->h:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x7
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :goto_6
+    :try_start_7
+    sget-object v0, Lcom/bbm/ui/a/u;->b:[I
+
+    sget v1, Lcom/bbm/ui/a/v;->g:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/16 v2, 0x8
+
+    aput v2, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_5
+
+    :goto_7
+    :try_start_8
+    sget-object v0, Lcom/bbm/ui/a/u;->b:[I
+
+    sget v1, Lcom/bbm/ui/a/v;->i:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/16 v2, 0x9
+
+    aput v2, v0, v1
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_4
+
+    .line 188
+    :goto_8
+    invoke-static {}, Lcom/bbm/g/p;->values()[Lcom/bbm/g/p;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/activities/ViewChannelPostActivity;
+    array-length v0, v0
 
-    invoke-static {v0, v2}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;Z)V
+    new-array v0, v0, [I
 
-    .line 253
-    iget-object v0, p0, Lcom/bbm/ui/a/u;->a:Lcom/bbm/ui/a/v;
+    sput-object v0, Lcom/bbm/ui/a/u;->a:[I
 
-    iget-object v0, v0, Lcom/bbm/ui/a/v;->b:Landroid/widget/ImageView;
+    :try_start_9
+    sget-object v0, Lcom/bbm/ui/a/u;->a:[I
 
-    invoke-virtual {v0}, Landroid/widget/ImageView;->getVisibility()I
+    sget-object v1, Lcom/bbm/g/p;->c:Lcom/bbm/g/p;
 
-    move-result v0
+    invoke-virtual {v1}, Lcom/bbm/g/p;->ordinal()I
 
-    if-nez v0, :cond_1
+    move-result v1
 
-    .line 254
-    iget-object v0, p0, Lcom/bbm/ui/a/u;->a:Lcom/bbm/ui/a/v;
+    const/4 v2, 0x1
 
-    iget-object v0, v0, Lcom/bbm/ui/a/v;->b:Landroid/widget/ImageView;
+    aput v2, v0, v1
+    :try_end_9
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_3
 
-    const/16 v1, 0x8
+    :goto_9
+    :try_start_a
+    sget-object v0, Lcom/bbm/ui/a/u;->a:[I
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+    sget-object v1, Lcom/bbm/g/p;->d:Lcom/bbm/g/p;
 
-    .line 263
-    :cond_0
-    :goto_0
+    invoke-virtual {v1}, Lcom/bbm/g/p;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_a
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_2
+
+    :goto_a
+    :try_start_b
+    sget-object v0, Lcom/bbm/ui/a/u;->a:[I
+
+    sget-object v1, Lcom/bbm/g/p;->e:Lcom/bbm/g/p;
+
+    invoke-virtual {v1}, Lcom/bbm/g/p;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_b
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_1
+
+    :goto_b
+    :try_start_c
+    sget-object v0, Lcom/bbm/ui/a/u;->a:[I
+
+    sget-object v1, Lcom/bbm/g/p;->b:Lcom/bbm/g/p;
+
+    invoke-virtual {v1}, Lcom/bbm/g/p;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_c
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_c .. :try_end_c} :catch_0
+
+    :goto_c
     return-void
 
-    .line 256
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/a/u;->b:Lcom/bbm/ui/a/p;
+    :catch_0
+    move-exception v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/a/p;->e()V
+    goto :goto_c
 
-    .line 257
-    iget-object v0, p0, Lcom/bbm/ui/a/u;->b:Lcom/bbm/ui/a/p;
+    :catch_1
+    move-exception v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/a/p;->d()V
+    goto :goto_b
 
-    .line 258
-    iget-object v0, p0, Lcom/bbm/ui/a/u;->a:Lcom/bbm/ui/a/v;
+    :catch_2
+    move-exception v0
 
-    iget-object v0, v0, Lcom/bbm/ui/a/v;->b:Landroid/widget/ImageView;
+    goto :goto_a
 
-    const/4 v1, 0x0
+    :catch_3
+    move-exception v0
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+    goto :goto_9
 
-    .line 259
-    iget-object v0, p0, Lcom/bbm/ui/a/u;->b:Lcom/bbm/ui/a/p;
+    :catch_4
+    move-exception v0
 
-    iget-object v1, p0, Lcom/bbm/ui/a/u;->a:Lcom/bbm/ui/a/v;
+    goto :goto_8
 
-    iget-object v1, v1, Lcom/bbm/ui/a/v;->b:Landroid/widget/ImageView;
+    :catch_5
+    move-exception v0
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/a/p;->a(Lcom/bbm/ui/a/p;Landroid/widget/ImageView;)Landroid/widget/ImageView;
+    goto :goto_7
 
-    .line 260
-    iget-object v0, p0, Lcom/bbm/ui/a/u;->b:Lcom/bbm/ui/a/p;
+    :catch_6
+    move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/ui/a/p;->a(Lcom/bbm/ui/a/p;)Landroid/content/Context;
+    goto :goto_6
 
-    move-result-object v0
+    :catch_7
+    move-exception v0
 
-    check-cast v0, Lcom/bbm/ui/activities/ViewChannelPostActivity;
+    goto :goto_5
 
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a(Z)V
+    :catch_8
+    move-exception v0
 
-    goto :goto_0
+    goto :goto_4
+
+    :catch_9
+    move-exception v0
+
+    goto :goto_3
+
+    :catch_a
+    move-exception v0
+
+    goto/16 :goto_2
+
+    :catch_b
+    move-exception v0
+
+    goto/16 :goto_1
+
+    :catch_c
+    move-exception v0
+
+    goto/16 :goto_0
 .end method

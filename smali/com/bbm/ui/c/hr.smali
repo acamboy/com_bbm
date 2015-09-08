@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/c/hr;
 .super Ljava/lang/Object;
-.source "StickerDetailsFragment.java"
+.source "StoreHomeFragment.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/support/v4/view/cp;
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Lcom/bbm/ui/c/gr;
+.field final synthetic a:Lcom/bbm/ui/c/hn;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/gr;Ljava/lang/String;)V
+.method constructor <init>(Lcom/bbm/ui/c/hn;)V
     .locals 0
 
     .prologue
-    .line 459
-    iput-object p1, p0, Lcom/bbm/ui/c/hr;->b:Lcom/bbm/ui/c/gr;
-
-    iput-object p2, p0, Lcom/bbm/ui/c/hr;->a:Ljava/lang/String;
+    .line 264
+    iput-object p1, p0, Lcom/bbm/ui/c/hr;->a:Lcom/bbm/ui/c/hn;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,24 +25,22 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final a(Landroid/view/View;F)V
     .locals 2
 
     .prologue
-    .line 463
-    const-string v0, "Artist Web Site button clicked"
+    .line 267
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    const-class v1, Lcom/bbm/ui/c/gr;
+    invoke-static {p2}, Ljava/lang/Math;->abs(F)F
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    move-result v1
 
-    .line 464
-    iget-object v0, p0, Lcom/bbm/ui/c/hr;->b:Lcom/bbm/ui/c/gr;
+    sub-float/2addr v0, v1
 
-    iget-object v1, p0, Lcom/bbm/ui/c/hr;->a:Ljava/lang/String;
+    .line 268
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/c/gr;->a(Lcom/bbm/ui/c/gr;Ljava/lang/String;)V
-
-    .line 465
+    .line 269
     return-void
 .end method

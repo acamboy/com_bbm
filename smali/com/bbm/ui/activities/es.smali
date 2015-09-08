@@ -1,97 +1,75 @@
 .class final Lcom/bbm/ui/activities/es;
-.super Lcom/bbm/j/k;
-.source "ChannelSubscribersActivity.java"
+.super Lcom/bbm/ui/aq;
+.source "ConversationActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ChannelSubscribersActivity;
+.field final synthetic c:Lcom/bbm/ui/activities/eq;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ChannelSubscribersActivity;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/activities/eq;Lcom/bbm/ui/activities/ConversationActivity;Ljava/lang/String;)V
+    .locals 0
 
     .prologue
-    .line 49
-    iput-object p1, p0, Lcom/bbm/ui/activities/es;->a:Lcom/bbm/ui/activities/ChannelSubscribersActivity;
+    .line 1603
+    iput-object p1, p0, Lcom/bbm/ui/activities/es;->c:Lcom/bbm/ui/activities/eq;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0, p2, p3}, Lcom/bbm/ui/aq;-><init>(Lcom/bbm/ui/activities/ConversationActivity;Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 2
+.method public final a(Ljava/lang/String;)V
+    .locals 3
 
     .prologue
-    .line 52
-    iget-object v0, p0, Lcom/bbm/ui/activities/es;->a:Lcom/bbm/ui/activities/ChannelSubscribersActivity;
+    .line 1607
+    new-instance v0, Landroid/content/Intent;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->a(Lcom/bbm/ui/activities/ChannelSubscribersActivity;)Lcom/bbm/j/x;
+    iget-object v1, p0, Lcom/bbm/ui/activities/es;->c:Lcom/bbm/ui/activities/eq;
 
-    move-result-object v0
+    iget-object v1, v1, Lcom/bbm/ui/activities/eq;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-interface {v0}, Lcom/bbm/j/x;->b()Z
+    const-class v2, Lcom/bbm/ui/activities/MpcDetailsActivity;
 
-    move-result v0
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 53
-    iget-object v1, p0, Lcom/bbm/ui/activities/es;->a:Lcom/bbm/ui/activities/ChannelSubscribersActivity;
+    .line 1608
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->a(Lcom/bbm/ui/activities/ChannelSubscribersActivity;)Lcom/bbm/j/x;
+    const-string v2, "startMpcDetailsActivity: "
 
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v1}, Lcom/bbm/j/x;->d()Z
-
-    move-result v1
-
-    .line 54
-    if-eqz v1, :cond_0
-
-    .line 55
-    iget-object v0, p0, Lcom/bbm/ui/activities/es;->a:Lcom/bbm/ui/activities/ChannelSubscribersActivity;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/es;->a:Lcom/bbm/ui/activities/ChannelSubscribersActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->a(Lcom/bbm/ui/activities/ChannelSubscribersActivity;)Lcom/bbm/j/x;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/bbm/j/x;->e()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->a(Lcom/bbm/ui/activities/ChannelSubscribersActivity;Ljava/lang/String;)V
+    const/4 v2, 0x0
 
-    .line 61
-    :goto_0
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {v1, v2}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 1609
+    const-string v1, "MPCUri"
+
+    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 1610
+    iget-object v1, p0, Lcom/bbm/ui/activities/es;->c:Lcom/bbm/ui/activities/eq;
+
+    iget-object v1, v1, Lcom/bbm/ui/activities/eq;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/ConversationActivity;->startActivity(Landroid/content/Intent;)V
+
+    .line 1611
     return-void
-
-    .line 56
-    :cond_0
-    if-eqz v0, :cond_1
-
-    .line 57
-    iget-object v0, p0, Lcom/bbm/ui/activities/es;->a:Lcom/bbm/ui/activities/ChannelSubscribersActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->b(Lcom/bbm/ui/activities/ChannelSubscribersActivity;)V
-
-    goto :goto_0
-
-    .line 59
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/es;->a:Lcom/bbm/ui/activities/ChannelSubscribersActivity;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->a:Landroid/widget/RelativeLayout;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
-
-    goto :goto_0
 .end method

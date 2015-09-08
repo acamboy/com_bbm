@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
-    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/footer_action_bar">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/toolbar_container">
         <TextView android:textSize="@dimen/audio_player_header_text_size" android:textColor="@color/white" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/audio_player_title" android:background="@drawable/audio_player_header_background" android:paddingLeft="@dimen/audio_player_header_padding_left" android:layout_width="fill_parent" android:layout_height="@dimen/audio_player_header_height" android:text="Filename.amr" android:singleLine="true" android:layout_alignParentTop="true" />
-        <ImageView android:id="@id/audio_player_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/audio_backdrop" android:scaleType="centerInside" android:layout_above="@id/progress" android:layout_below="@id/audio_player_title" />
-        <com.bbm.ui.AudioProgressBar android:id="@id/progress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" custom:layoutType="playback" />
+        <ImageView android:id="@id/audio_player_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/audio_backdrop" android:scaleType="fitCenter" android:layout_above="@id/progress_container" android:layout_below="@id/audio_player_title" />
+        <FrameLayout android:id="@id/progress_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/audio_toggle">
+            <com.bbm.ui.AudioProgressBar android:id="@id/progress" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:layoutType="playback" />
+        </FrameLayout>
+        <ImageButton android:id="@id/audio_toggle" android:background="@color/primaryColor" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:src="@android:drawable/ic_media_pause" android:layout_alignParentBottom="true" android:contentDescription="@string/audio_player_pause" />
     </RelativeLayout>
-    <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
+    <LinearLayout android:orientation="vertical" android:id="@id/toolbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/view_bali_toolbar" />
+    </LinearLayout>
 </RelativeLayout>

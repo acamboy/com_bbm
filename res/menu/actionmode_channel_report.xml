@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_delete" android:id="@id/actionmode_menu_channel_report_delete" android:title="@string/delete_post" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_header_channel_report" android:id="@id/actionmode_menu_channel_report_ignore" android:title="@string/ignore_complaint" app:showAsAction="always" />
+</menu>

@@ -1,63 +1,58 @@
 .class final Lcom/bbm/ui/activities/qc;
-.super Lcom/bbm/j/k;
-.source "GroupLobbyActivity.java"
+.super Ljava/lang/Object;
+.source "GroupPictureCommentsActivity.java"
+
+# interfaces
+.implements Ljava/util/Comparator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Lcom/bbm/g/ah;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/qb;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupLobbyActivity;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/activities/qb;)V
+    .locals 0
 
     .prologue
-    .line 446
-    iput-object p1, p0, Lcom/bbm/ui/activities/qc;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    .line 177
+    iput-object p1, p0, Lcom/bbm/ui/activities/qc;->a:Lcom/bbm/ui/activities/qb;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 2
+.method public final bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 4
 
     .prologue
-    .line 449
-    iget-object v0, p0, Lcom/bbm/ui/activities/qc;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    .line 177
+    check-cast p1, Lcom/bbm/g/ah;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->a(Lcom/bbm/ui/activities/GroupLobbyActivity;)Lcom/bbm/g/al;
+    check-cast p2, Lcom/bbm/g/ah;
 
-    move-result-object v0
+    iget-wide v0, p2, Lcom/bbm/g/ah;->l:J
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/qc;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    iget-wide v2, p1, Lcom/bbm/g/ah;->l:J
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
+    sub-long/2addr v0, v2
 
-    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->e(Ljava/lang/String;)Lcom/bbm/j/w;
+    long-to-int v0, v0
 
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    .line 450
-    iget-object v1, p0, Lcom/bbm/ui/activities/qc;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
-
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->b(Lcom/bbm/ui/activities/GroupLobbyActivity;I)V
-
-    .line 451
-    return-void
+    return v0
 .end method

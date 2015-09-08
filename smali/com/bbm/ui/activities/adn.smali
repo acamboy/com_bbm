@@ -1,71 +1,67 @@
 .class final Lcom/bbm/ui/activities/adn;
-.super Lcom/bbm/ui/cn;
-.source "ReceivedPendingGroupInviteActivity.java"
+.super Ljava/lang/Object;
+.source "SettingsActivity.java"
+
+# interfaces
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
     .locals 0
 
     .prologue
-    .line 120
-    iput-object p1, p0, Lcom/bbm/ui/activities/adn;->a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
+    .line 416
+    iput-object p1, p0, Lcom/bbm/ui/activities/adn;->a:Lcom/bbm/ui/activities/SettingsActivity;
 
-    invoke-direct {p0}, Lcom/bbm/ui/cn;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 2
 
     .prologue
-    .line 124
-    iget-object v0, p0, Lcom/bbm/ui/activities/adn;->a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
+    .line 419
+    iget-object v0, p0, Lcom/bbm/ui/activities/adn;->a:Lcom/bbm/ui/activities/SettingsActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;->finish()V
+    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->c(Lcom/bbm/ui/activities/SettingsActivity;)Lcom/bbm/d/a;
 
-    .line 125
-    return-void
-.end method
+    move-result-object v0
 
-.method public final a(I)V
-    .locals 1
+    invoke-virtual {v0}, Lcom/bbm/d/a;->F()Z
 
-    .prologue
-    .line 129
-    packed-switch p1, :pswitch_data_0
+    move-result v0
 
-    .line 137
+    if-ne p2, v0, :cond_0
+
+    .line 424
     :goto_0
     return-void
 
-    .line 131
-    :pswitch_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/adn;->a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
+    .line 422
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/adn;->a:Lcom/bbm/ui/activities/SettingsActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;->b(Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;)V
+    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->r(Lcom/bbm/ui/activities/SettingsActivity;)Z
+
+    .line 423
+    iget-object v0, p0, Lcom/bbm/ui/activities/adn;->a:Lcom/bbm/ui/activities/SettingsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->c(Lcom/bbm/ui/activities/SettingsActivity;)Lcom/bbm/d/a;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/adn;->a:Lcom/bbm/ui/activities/SettingsActivity;
+
+    invoke-virtual {v0, p2, v1}, Lcom/bbm/d/a;->a(ZLandroid/content/Context;)V
 
     goto :goto_0
-
-    .line 134
-    :pswitch_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/adn;->a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;->c(Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;)V
-
-    goto :goto_0
-
-    .line 129
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
 .end method

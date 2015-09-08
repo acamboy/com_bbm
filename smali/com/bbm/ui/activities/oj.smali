@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/activities/oj;
 .super Ljava/lang/Object;
-.source "GroupListItemsActivity.java"
+.source "GroupLobbyActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/ui/b/ah;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/g/y;
-
-.field final synthetic b:Lcom/bbm/ui/activities/GroupListItemsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupListItemsActivity;Lcom/bbm/g/y;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupLobbyActivity;)V
     .locals 0
 
     .prologue
-    .line 357
-    iput-object p1, p0, Lcom/bbm/ui/activities/oj;->b:Lcom/bbm/ui/activities/GroupListItemsActivity;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/oj;->a:Lcom/bbm/g/y;
+    .line 844
+    iput-object p1, p0, Lcom/bbm/ui/activities/oj;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,53 +25,64 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final a()V
+    .locals 6
 
     .prologue
-    const/4 v3, 0x1
+    .line 848
+    iget-object v0, p0, Lcom/bbm/ui/activities/oj;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    .line 360
-    const-string v0, "ContextSlideMenu Bottom item Clicked"
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->r(Lcom/bbm/ui/activities/GroupLobbyActivity;)Lcom/bbm/j/a;
 
-    const-class v1, Lcom/bbm/ui/activities/GroupListItemsActivity;
+    move-result-object v0
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
-    .line 362
-    iget-object v0, p0, Lcom/bbm/ui/activities/oj;->b:Lcom/bbm/ui/activities/GroupListItemsActivity;
+    move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/GroupListItemsActivity;->a:Lcom/bbm/g/al;
+    move-object v5, v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/oj;->b:Lcom/bbm/ui/activities/GroupListItemsActivity;
+    check-cast v5, Lcom/bbm/g/a;
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/GroupListItemsActivity;->b(Lcom/bbm/ui/activities/GroupListItemsActivity;)Ljava/lang/String;
+    .line 849
+    iget-object v0, p0, Lcom/bbm/ui/activities/oj;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    move-result-object v1
+    iget-object v1, p0, Lcom/bbm/ui/activities/oj;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/oj;->a:Lcom/bbm/g/y;
-
-    iget-object v2, v2, Lcom/bbm/g/y;->k:Ljava/lang/String;
-
-    invoke-static {v1, v2}, Lcom/bbm/g/am;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/bw;
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupLobbyActivity;->E(Lcom/bbm/ui/activities/GroupLobbyActivity;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v1, v3}, Lcom/bbm/g/bw;->a(Z)Lcom/bbm/g/bw;
+    iget-object v2, v5, Lcom/bbm/g/a;->r:Ljava/lang/String;
 
-    move-result-object v1
+    iget-object v3, p0, Lcom/bbm/ui/activities/oj;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
+    invoke-static {v3}, Lcom/bbm/ui/activities/GroupLobbyActivity;->F(Lcom/bbm/ui/activities/GroupLobbyActivity;)Lcom/bbm/j/a;
 
-    .line 363
-    iget-object v0, p0, Lcom/bbm/ui/activities/oj;->b:Lcom/bbm/ui/activities/GroupListItemsActivity;
+    move-result-object v3
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+    invoke-virtual {v3}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+    move-result-object v3
 
-    invoke-virtual {v0, v3}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
+    check-cast v3, Ljava/lang/Integer;
 
-    .line 364
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    iget-object v4, p0, Lcom/bbm/ui/activities/oj;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+
+    invoke-static {v4}, Lcom/bbm/ui/activities/GroupLobbyActivity;->G(Lcom/bbm/ui/activities/GroupLobbyActivity;)I
+
+    move-result v4
+
+    invoke-static {v5}, Lcom/bbm/util/dk;->a(Lcom/bbm/g/a;)Z
+
+    move-result v5
+
+    invoke-static/range {v0 .. v5}, Lcom/bbm/invite/o;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;IIZ)V
+
+    .line 850
     return-void
 .end method

@@ -1,134 +1,188 @@
-.class public final Lcom/google/android/gms/internal/kh;
+.class final Lcom/google/android/gms/internal/kh;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Lcom/google/android/gms/internal/kf;
 
-# static fields
-.field public static final aaj:[I
 
-.field public static final aak:[J
-
-.field public static final aal:[F
-
-.field public static final aam:[D
-
-.field public static final aan:[Z
-
-.field public static final aao:[Ljava/lang/String;
-
-.field public static final aap:[[B
-
-.field public static final aaq:[B
+# instance fields
+.field private a:Landroid/os/IBinder;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method constructor <init>(Landroid/os/IBinder;)V
+    .locals 0
 
-    const/4 v1, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v0, v1, [I
-
-    sput-object v0, Lcom/google/android/gms/internal/kh;->aaj:[I
-
-    new-array v0, v1, [J
-
-    sput-object v0, Lcom/google/android/gms/internal/kh;->aak:[J
-
-    new-array v0, v1, [F
-
-    sput-object v0, Lcom/google/android/gms/internal/kh;->aal:[F
-
-    new-array v0, v1, [D
-
-    sput-object v0, Lcom/google/android/gms/internal/kh;->aam:[D
-
-    new-array v0, v1, [Z
-
-    sput-object v0, Lcom/google/android/gms/internal/kh;->aan:[Z
-
-    new-array v0, v1, [Ljava/lang/String;
-
-    sput-object v0, Lcom/google/android/gms/internal/kh;->aao:[Ljava/lang/String;
-
-    new-array v0, v1, [[B
-
-    sput-object v0, Lcom/google/android/gms/internal/kh;->aap:[[B
-
-    new-array v0, v1, [B
-
-    sput-object v0, Lcom/google/android/gms/internal/kh;->aaq:[B
+    iput-object p1, p0, Lcom/google/android/gms/internal/kh;->a:Landroid/os/IBinder;
 
     return-void
 .end method
 
-.method public static b(Lcom/google/android/gms/internal/jy;I)Z
-    .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/jy;->cv(I)Z
+# virtual methods
+.method public final a()V
+    .locals 5
 
-    move-result v0
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    return v0
+    move-result-object v1
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v2
+
+    :try_start_0
+    const-string v0, "com.google.android.gms.ads.internal.purchase.client.IInAppPurchaseManager"
+
+    invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/kh;->a:Landroid/os/IBinder;
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    throw v0
 .end method
 
-.method public static final c(Lcom/google/android/gms/internal/jy;I)I
-    .locals 3
+.method public final a(IILandroid/content/Intent;)V
+    .locals 5
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v2
+
+    :try_start_0
+    const-string v0, "com.google.android.gms.ads.internal.purchase.client.IInAppPurchaseManager"
+
+    invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-virtual {v1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    if-eqz p3, :cond_0
 
     const/4 v0, 0x1
 
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/jy;->getPosition()I
+    invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-result v1
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/jy;->cv(I)Z
+    invoke-virtual {p3, v1, v0}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
 
     :goto_0
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/jy;->kJ()I
+    iget-object v0, p0, Lcom/google/android/gms/internal/kh;->a:Landroid/os/IBinder;
 
-    move-result v2
+    const/4 v3, 0x3
 
-    if-lez v2, :cond_0
+    const/4 v4, 0x0
 
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/jy;->ky()I
+    invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    move-result v2
+    invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-ne v2, p1, :cond_0
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/jy;->cv(I)Z
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    add-int/lit8 v0, v0, 0x1
+    return-void
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :try_start_1
+    invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {p0, v1}, Lcom/google/android/gms/internal/jy;->cy(I)V
+    :catchall_0
+    move-exception v0
 
-    return v0
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    throw v0
 .end method
 
-.method static cJ(I)I
+.method public final asBinder()Landroid/os/IBinder;
     .locals 1
 
-    and-int/lit8 v0, p0, 0x7
+    iget-object v0, p0, Lcom/google/android/gms/internal/kh;->a:Landroid/os/IBinder;
 
-    return v0
+    return-object v0
 .end method
 
-.method public static cK(I)I
-    .locals 1
+.method public final b()V
+    .locals 5
 
-    ushr-int/lit8 v0, p0, 0x3
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    return v0
-.end method
+    move-result-object v1
 
-.method static i(II)I
-    .locals 1
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    shl-int/lit8 v0, p0, 0x3
+    move-result-object v2
 
-    or-int/2addr v0, p1
+    :try_start_0
+    const-string v0, "com.google.android.gms.ads.internal.purchase.client.IInAppPurchaseManager"
 
-    return v0
+    invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/kh;->a:Landroid/os/IBinder;
+
+    const/4 v3, 0x2
+
+    const/4 v4, 0x0
+
+    invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    throw v0
 .end method

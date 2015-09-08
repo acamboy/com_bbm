@@ -1,133 +1,223 @@
-.class final Lcom/bbm/ui/dv;
-.super Ljava/lang/Object;
-.source "ListItemTouchHandler.java"
-
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemLongClickListener;
+.class public final Lcom/bbm/ui/dv;
+.super Landroid/text/method/LinkMovementMethod;
+.source "LinkifyTextView.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/dr;
+# static fields
+.field private static a:Landroid/text/method/LinkMovementMethod;
 
 
 # direct methods
-.method private constructor <init>(Lcom/bbm/ui/dr;)V
+.method public constructor <init>()V
     .locals 0
 
     .prologue
-    .line 221
-    iput-object p1, p0, Lcom/bbm/ui/dv;->a:Lcom/bbm/ui/dr;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 228
+    invoke-direct {p0}, Landroid/text/method/LinkMovementMethod;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/bbm/ui/dr;B)V
-    .locals 0
+.method public static a()Landroid/text/method/LinkMovementMethod;
+    .locals 1
 
     .prologue
-    .line 221
-    invoke-direct {p0, p1}, Lcom/bbm/ui/dv;-><init>(Lcom/bbm/ui/dr;)V
+    .line 230
+    sget-object v0, Lcom/bbm/ui/dv;->a:Landroid/text/method/LinkMovementMethod;
 
-    return-void
+    if-nez v0, :cond_0
+
+    .line 231
+    new-instance v0, Lcom/bbm/ui/dv;
+
+    invoke-direct {v0}, Lcom/bbm/ui/dv;-><init>()V
+
+    sput-object v0, Lcom/bbm/ui/dv;->a:Landroid/text/method/LinkMovementMethod;
+
+    .line 233
+    :cond_0
+    sget-object v0, Lcom/bbm/ui/dv;->a:Landroid/text/method/LinkMovementMethod;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)Z"
-        }
-    .end annotation
+.method public final onTouchEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
+    .locals 7
 
     .prologue
-    const/4 v2, 0x1
+    const/4 v6, 0x0
 
-    .line 226
-    iget-object v0, p0, Lcom/bbm/ui/dv;->a:Lcom/bbm/ui/dr;
+    const/4 v1, 0x1
 
-    iget-boolean v0, v0, Lcom/bbm/ui/dr;->b:Z
+    .line 240
+    invoke-virtual {p3}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v2
+
+    .line 242
+    if-ne v2, v1, :cond_0
+
+    instance-of v0, p1, Lcom/bbm/ui/LinkifyTextView;
 
     if-eqz v0, :cond_0
 
-    .line 227
-    const/4 v0, 0x0
+    move-object v0, p1
 
-    .line 233
-    :goto_0
-    return v0
+    .line 243
+    check-cast v0, Lcom/bbm/ui/LinkifyTextView;
 
-    .line 230
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/dv;->a:Lcom/bbm/ui/dr;
+    invoke-static {v0}, Lcom/bbm/ui/LinkifyTextView;->e(Lcom/bbm/ui/LinkifyTextView;)Z
 
-    iget-object v1, v0, Lcom/bbm/ui/dr;->a:Lcom/bbm/ui/dw;
+    move-result v0
 
-    iget-object v0, p0, Lcom/bbm/ui/dv;->a:Lcom/bbm/ui/dr;
-
-    invoke-static {v0}, Lcom/bbm/ui/dr;->c(Lcom/bbm/ui/dr;)Ljava/lang/ref/WeakReference;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/AbsListView;
-
-    invoke-virtual {v0}, Landroid/widget/AbsListView;->getAdapter()Landroid/widget/Adapter;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ListAdapter;
-
-    invoke-interface {v0, p3}, Landroid/widget/ListAdapter;->getItem(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-interface {v1, v0}, Lcom/bbm/ui/dw;->b(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    .line 231
-    iget-object v0, p0, Lcom/bbm/ui/dv;->a:Lcom/bbm/ui/dr;
-
-    invoke-static {v0}, Lcom/bbm/ui/dr;->c(Lcom/bbm/ui/dr;)Ljava/lang/ref/WeakReference;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/AbsListView;
-
-    invoke-virtual {v0, v2}, Landroid/widget/AbsListView;->setChoiceMode(I)V
-
-    .line 232
-    iget-object v0, p0, Lcom/bbm/ui/dv;->a:Lcom/bbm/ui/dr;
-
-    invoke-static {v0}, Lcom/bbm/ui/dr;->c(Lcom/bbm/ui/dr;)Ljava/lang/ref/WeakReference;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/AbsListView;
-
-    invoke-virtual {v0, p3, v2}, Landroid/widget/AbsListView;->setItemChecked(IZ)V
+    if-eqz v0, :cond_0
 
     move v0, v1
 
-    .line 233
+    .line 271
+    :goto_0
+    return v0
+
+    .line 248
+    :cond_0
+    if-eq v2, v1, :cond_1
+
+    if-nez v2, :cond_6
+
+    .line 249
+    :cond_1
+    invoke-virtual {p3}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v0
+
+    float-to-int v0, v0
+
+    .line 250
+    invoke-virtual {p3}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v3
+
+    float-to-int v3, v3
+
+    .line 251
+    invoke-virtual {p1}, Landroid/widget/TextView;->getScrollX()I
+
+    move-result v4
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->getTotalPaddingLeft()I
+
+    move-result v5
+
+    sub-int/2addr v4, v5
+
+    add-int/2addr v0, v4
+
+    .line 252
+    invoke-virtual {p1}, Landroid/widget/TextView;->getScrollY()I
+
+    move-result v4
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->getTotalPaddingTop()I
+
+    move-result v5
+
+    sub-int/2addr v4, v5
+
+    add-int/2addr v3, v4
+
+    .line 253
+    invoke-virtual {p1}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
+
+    move-result-object v4
+
+    .line 254
+    invoke-virtual {v4, v3}, Landroid/text/Layout;->getLineForVertical(I)I
+
+    move-result v3
+
+    .line 255
+    int-to-float v0, v0
+
+    invoke-virtual {v4, v3, v0}, Landroid/text/Layout;->getOffsetForHorizontal(IF)I
+
+    move-result v0
+
+    .line 256
+    const-class v3, Landroid/text/style/ClickableSpan;
+
+    invoke-interface {p2, v0, v0, v3}, Landroid/text/Spannable;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Landroid/text/style/ClickableSpan;
+
+    .line 257
+    array-length v3, v0
+
+    if-eqz v3, :cond_5
+
+    .line 258
+    if-ne v2, v1, :cond_4
+
+    .line 259
+    aget-object v0, v0, v6
+
+    invoke-virtual {v0, p1}, Landroid/text/style/ClickableSpan;->onClick(Landroid/view/View;)V
+
+    .line 263
+    :cond_2
+    :goto_1
+    instance-of v0, p1, Lcom/bbm/ui/LinkifyTextView;
+
+    if-eqz v0, :cond_3
+
+    .line 264
+    check-cast p1, Lcom/bbm/ui/LinkifyTextView;
+
+    invoke-static {p1}, Lcom/bbm/ui/LinkifyTextView;->f(Lcom/bbm/ui/LinkifyTextView;)Z
+
+    :cond_3
+    move v0, v1
+
+    .line 266
+    goto :goto_0
+
+    .line 260
+    :cond_4
+    invoke-virtual {p1}, Landroid/widget/TextView;->isTextSelectable()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    .line 261
+    aget-object v2, v0, v6
+
+    invoke-interface {p2, v2}, Landroid/text/Spannable;->getSpanStart(Ljava/lang/Object;)I
+
+    move-result v2
+
+    aget-object v0, v0, v6
+
+    invoke-interface {p2, v0}, Landroid/text/Spannable;->getSpanEnd(Ljava/lang/Object;)I
+
+    move-result v0
+
+    invoke-static {p2, v2, v0}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
+
+    goto :goto_1
+
+    .line 268
+    :cond_5
+    invoke-static {p2}, Landroid/text/Selection;->removeSelection(Landroid/text/Spannable;)V
+
+    .line 271
+    :cond_6
+    invoke-static {p1, p2, p3}, Landroid/text/method/Touch;->onTouchEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
+
+    move-result v0
+
     goto :goto_0
 .end method

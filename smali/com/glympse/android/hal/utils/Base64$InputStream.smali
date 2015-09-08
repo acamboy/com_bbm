@@ -6,19 +6,19 @@
 # instance fields
 .field private buffer:[B
 
-.field private gr:Z
+.field private gA:[B
 
-.field private gs:I
+.field private gu:Z
 
-.field private gt:I
-
-.field private gu:I
-
-.field private gv:Z
+.field private gv:I
 
 .field private gw:I
 
-.field private gx:[B
+.field private gx:I
+
+.field private gy:Z
+
+.field private gz:I
 
 .field private position:I
 
@@ -49,7 +49,7 @@
     invoke-direct {p0, p1}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
 
     .line 1693
-    iput p2, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gw:I
+    iput p2, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gz:I
 
     .line 1694
     and-int/lit8 v0, p2, 0x8
@@ -59,7 +59,7 @@
     move v0, v1
 
     :goto_0
-    iput-boolean v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gv:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gy:Z
 
     .line 1695
     and-int/lit8 v0, p2, 0x1
@@ -67,20 +67,20 @@
     if-lez v0, :cond_1
 
     :goto_1
-    iput-boolean v1, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gr:Z
+    iput-boolean v1, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gu:Z
 
     .line 1696
-    iget-boolean v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gr:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gu:Z
 
     if-eqz v0, :cond_2
 
     const/4 v0, 0x4
 
     :goto_2
-    iput v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gs:I
+    iput v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gv:I
 
     .line 1697
-    iget v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gs:I
+    iget v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gv:I
 
     new-array v0, v0, [B
 
@@ -92,14 +92,14 @@
     iput v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->position:I
 
     .line 1699
-    iput v2, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gu:I
+    iput v2, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gx:I
 
     .line 1700
     invoke-static {p2}, Lcom/glympse/android/hal/utils/Base64;->h(I)[B
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gx:[B
+    iput-object v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gA:[B
 
     .line 1701
     return-void
@@ -143,7 +143,7 @@
     if-gez v0, :cond_1
 
     .line 1715
-    iget-boolean v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gr:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gu:Z
 
     if-eqz v0, :cond_3
 
@@ -192,7 +192,7 @@
     .line 1732
     iget-object v3, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->buffer:[B
 
-    iget v5, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gw:I
+    iget v5, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gz:I
 
     move v4, v1
 
@@ -202,7 +202,7 @@
     iput v1, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->position:I
 
     .line 1734
-    iput v7, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gt:I
+    iput v7, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gw:I
 
     .line 1774
     :cond_1
@@ -214,7 +214,7 @@
     .line 1776
     iget v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->position:I
 
-    iget v2, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gt:I
+    iget v2, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gw:I
 
     if-lt v0, v2, :cond_9
 
@@ -251,7 +251,7 @@
     .line 1749
     if-ltz v3, :cond_5
 
-    iget-object v4, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gx:[B
+    iget-object v4, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gA:[B
 
     and-int/lit8 v5, v3, 0x7f
 
@@ -282,13 +282,13 @@
     .line 1759
     iget-object v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->buffer:[B
 
-    iget v3, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gw:I
+    iget v3, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gz:I
 
     invoke-static {v2, v1, v0, v1, v3}, Lcom/glympse/android/hal/utils/Base64;->b([BI[BII)I
 
     move-result v0
 
-    iput v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gt:I
+    iput v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gw:I
 
     .line 1760
     iput v1, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->position:I
@@ -316,22 +316,22 @@
 
     .line 1780
     :cond_9
-    iget-boolean v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gr:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gu:Z
 
     if-eqz v0, :cond_a
 
-    iget-boolean v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gv:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gy:Z
 
     if-eqz v0, :cond_a
 
-    iget v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gu:I
+    iget v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gx:I
 
     const/16 v2, 0x4c
 
     if-lt v0, v2, :cond_a
 
     .line 1781
-    iput v1, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gu:I
+    iput v1, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gx:I
 
     .line 1782
     const/16 v0, 0xa
@@ -340,11 +340,11 @@
 
     .line 1785
     :cond_a
-    iget v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gu:I
+    iget v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gx:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gu:I
+    iput v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gx:I
 
     .line 1789
     iget-object v0, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->buffer:[B
@@ -360,7 +360,7 @@
     .line 1791
     iget v1, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->position:I
 
-    iget v2, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gs:I
+    iget v2, p0, Lcom/glympse/android/hal/utils/Base64$InputStream;->gv:I
 
     if-lt v1, v2, :cond_b
 

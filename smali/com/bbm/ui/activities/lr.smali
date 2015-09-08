@@ -1,81 +1,109 @@
 .class final Lcom/bbm/ui/activities/lr;
-.super Lcom/bbm/j/k;
-.source "GroupChatHistorySettingsActivity.java"
+.super Ljava/lang/Object;
+.source "GroupConversationActivity.java"
+
+# interfaces
+.implements Lcom/bbm/j/s;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
+    .locals 0
 
     .prologue
-    .line 134
-    iput-object p1, p0, Lcom/bbm/ui/activities/lr;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
+    .line 309
+    iput-object p1, p0, Lcom/bbm/ui/activities/lr;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 3
+.method public final a()Z
+    .locals 4
 
     .prologue
-    .line 137
-    iget-object v0, p0, Lcom/bbm/ui/activities/lr;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
+    const/4 v0, 0x1
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->a:Lcom/bbm/g/al;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/lr;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->b(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)Ljava/lang/String;
+    .line 312
+    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/g/an;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->o(Ljava/lang/String;)Lcom/bbm/g/q;
+    iget-object v2, p0, Lcom/bbm/ui/activities/lr;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    move-result-object v0
+    invoke-static {v2}, Lcom/bbm/ui/activities/GroupConversationActivity;->b(Lcom/bbm/ui/activities/GroupConversationActivity;)Ljava/lang/String;
 
-    .line 138
-    iget-object v1, v0, Lcom/bbm/g/q;->n:Lcom/bbm/util/bi;
+    move-result-object v2
 
-    sget-object v2, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
+    invoke-virtual {v1, v2}, Lcom/bbm/g/an;->q(Ljava/lang/String;)Lcom/bbm/g/s;
 
-    if-ne v1, v2, :cond_0
+    move-result-object v1
 
-    .line 139
-    iget-object v1, p0, Lcom/bbm/ui/activities/lr;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
+    .line 313
+    iget-object v2, v1, Lcom/bbm/g/s;->n:Lcom/bbm/util/bo;
 
-    iget-object v0, v0, Lcom/bbm/g/q;->f:Lcom/bbm/g/r;
+    sget-object v3, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
 
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->a(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;Lcom/bbm/g/r;)Lcom/bbm/g/r;
+    if-ne v2, v3, :cond_2
 
-    .line 140
-    iget-object v0, p0, Lcom/bbm/ui/activities/lr;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
+    .line 315
+    invoke-static {}, Lcom/bbm/Alaska;->p()Lcom/bbm/an;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->c(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)Lcom/bbm/ui/activities/lt;
+    move-result-object v2
 
-    move-result-object v0
+    invoke-virtual {v2}, Lcom/bbm/an;->r()Z
 
-    if-eqz v0, :cond_0
+    move-result v2
 
-    .line 141
-    iget-object v0, p0, Lcom/bbm/ui/activities/lr;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
+    if-nez v2, :cond_0
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->c(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)Lcom/bbm/ui/activities/lt;
+    iget-object v1, v1, Lcom/bbm/g/s;->h:Ljava/lang/String;
 
-    move-result-object v0
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/lt;->notifyDataSetChanged()V
+    move-result v1
 
-    .line 144
+    if-nez v1, :cond_1
+
+    .line 316
     :cond_0
-    return-void
+    iget-object v1, p0, Lcom/bbm/ui/activities/lr;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupConversationActivity;->g(Lcom/bbm/ui/activities/GroupConversationActivity;)Lcom/bbm/ui/EmoticonInputPanel;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    .line 317
+    iget-object v1, p0, Lcom/bbm/ui/activities/lr;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupConversationActivity;->c(Lcom/bbm/ui/activities/GroupConversationActivity;)Lcom/bbm/ui/SendEditText;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/bbm/ui/SendEditText;->requestFocus()Z
+
+    .line 322
+    :cond_1
+    :goto_0
+    return v0
+
+    :cond_2
+    iget-object v1, v1, Lcom/bbm/g/s;->n:Lcom/bbm/util/bo;
+
+    sget-object v2, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
+
+    if-ne v1, v2, :cond_1
+
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

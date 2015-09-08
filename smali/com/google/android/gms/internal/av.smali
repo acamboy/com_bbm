@@ -1,31 +1,19 @@
-.class public final Lcom/google/android/gms/internal/av;
+.class public interface abstract Lcom/google/android/gms/internal/av;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/google/android/gms/internal/au;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.implements Landroid/os/IInterface;
 
 
 # virtual methods
-.method public final a(J)Landroid/location/Location;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
+.method public abstract a()Ljava/lang/String;
 .end method
 
-.method public final init()V
-    .locals 0
+.method public abstract a(Ljava/lang/String;)Ljava/lang/String;
+.end method
 
-    return-void
+.method public abstract a(Ljava/lang/String;Z)V
+.end method
+
+.method public abstract a(Z)Z
 .end method

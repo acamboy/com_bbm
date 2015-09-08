@@ -26,10 +26,10 @@
     .locals 2
 
     .prologue
-    const/high16 v1, 0x3f800000
+    const/high16 v1, 0x3f800000    # 1.0f
 
     .line 51
-    const/high16 v0, 0x41000000
+    const/high16 v0, 0x41000000    # 8.0f
 
     sput v0, Lit/sephiroth/android/library/widget/ao;->f:F
 
@@ -114,7 +114,7 @@
     .locals 5
 
     .prologue
-    const/high16 v4, 0x3f800000
+    const/high16 v4, 0x3f800000    # 1.0f
 
     .line 67
     sget v0, Lit/sephiroth/android/library/widget/ao;->f:F

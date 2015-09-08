@@ -6,7 +6,7 @@
 # static fields
 .field private static final a:Ljava/lang/Object;
 
-.field private static b:Lcom/bbm/f;
+.field private static b:Lcom/bbm/l;
 
 
 # direct methods
@@ -24,7 +24,7 @@
     .line 10
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/bbm/BBMAccountService;->b:Lcom/bbm/f;
+    sput-object v0, Lcom/bbm/BBMAccountService;->b:Lcom/bbm/l;
 
     return-void
 .end method
@@ -46,9 +46,9 @@
 
     .prologue
     .line 25
-    sget-object v0, Lcom/bbm/BBMAccountService;->b:Lcom/bbm/f;
+    sget-object v0, Lcom/bbm/BBMAccountService;->b:Lcom/bbm/l;
 
-    invoke-virtual {v0}, Lcom/bbm/f;->getIBinder()Landroid/os/IBinder;
+    invoke-virtual {v0}, Lcom/bbm/l;->getIBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
@@ -69,26 +69,24 @@
 
     .line 17
     :try_start_0
-    sget-object v0, Lcom/bbm/BBMAccountService;->b:Lcom/bbm/f;
+    sget-object v0, Lcom/bbm/BBMAccountService;->b:Lcom/bbm/l;
 
     if-nez v0, :cond_0
 
     .line 18
-    new-instance v0, Lcom/bbm/f;
+    new-instance v0, Lcom/bbm/l;
 
     invoke-virtual {p0}, Lcom/bbm/BBMAccountService;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-direct {v0, v2}, Lcom/bbm/f;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v2}, Lcom/bbm/l;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Lcom/bbm/BBMAccountService;->b:Lcom/bbm/f;
+    sput-object v0, Lcom/bbm/BBMAccountService;->b:Lcom/bbm/l;
 
     .line 20
     :cond_0
     monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     return-void
 
@@ -96,6 +94,8 @@
     move-exception v0
 
     monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
 .end method

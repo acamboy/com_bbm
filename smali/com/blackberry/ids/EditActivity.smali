@@ -1123,8 +1123,6 @@
 
     .line 133
     monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
@@ -1133,6 +1131,8 @@
     move-exception v0
 
     monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
 
@@ -1853,7 +1853,7 @@
     .line 360
     const/4 v2, 0x1
 
-    const/high16 v3, 0x41200000
+    const/high16 v3, 0x41200000    # 10.0f
 
     invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 

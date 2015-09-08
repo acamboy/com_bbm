@@ -4,13 +4,13 @@
 
 
 # static fields
-.field public static final glympse_grow_from_bottom:I = 0x7f040005
+.field public static final glympse_grow_from_bottom:I = 0x7f04000b
 
-.field public static final glympse_grow_from_top:I = 0x7f040006
+.field public static final glympse_grow_from_top:I = 0x7f04000c
 
-.field public static final glympse_shrink_from_bottom:I = 0x7f040007
+.field public static final glympse_shrink_from_bottom:I = 0x7f04000d
 
-.field public static final glympse_shrink_from_top:I = 0x7f040008
+.field public static final glympse_shrink_from_top:I = 0x7f04000e
 
 
 # direct methods

@@ -1,133 +1,176 @@
 .class final Lcom/bbm/util/ca;
-.super Lcom/bbm/util/b;
+.super Ljava/lang/Object;
 .source "HttpLoader.java"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/util/b",
-        "<",
-        "Ljava/lang/Void;",
-        "Ljava/lang/Integer;",
-        "Lcom/bbm/d/ff;",
-        ">;"
-    }
-.end annotation
+# static fields
+.field static final a:Ljava/util/concurrent/atomic/AtomicLong;
+
+.field public static final h:Ljava/util/Comparator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Comparator",
+            "<",
+            "Lcom/bbm/util/ca;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field private final a:Lcom/bbm/util/bq;
+.field final b:J
 
-.field private final b:Ljava/net/URL;
+.field public final c:Landroid/app/Activity;
 
-.field private final c:Lcom/bbm/util/bz;
+.field public final d:Lcom/bbm/util/bz;
+
+.field public e:Z
+
+.field public final f:Lcom/bbm/util/bw;
+
+.field public final g:Ljava/net/URL;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/util/bq;Ljava/net/URL;Lcom/bbm/util/bz;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
     .prologue
-    .line 403
-    invoke-direct {p0}, Lcom/bbm/util/b;-><init>()V
+    .line 247
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
 
-    .line 404
-    iput-object p1, p0, Lcom/bbm/util/ca;->a:Lcom/bbm/util/bq;
+    const-wide/high16 v2, -0x8000000000000000L
 
-    .line 405
-    iput-object p2, p0, Lcom/bbm/util/ca;->b:Ljava/net/URL;
+    invoke-direct {v0, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;-><init>(J)V
 
-    .line 406
-    iput-object p3, p0, Lcom/bbm/util/ca;->c:Lcom/bbm/util/bz;
+    sput-object v0, Lcom/bbm/util/ca;->a:Ljava/util/concurrent/atomic/AtomicLong;
 
-    .line 407
+    .line 284
+    new-instance v0, Lcom/bbm/util/cb;
+
+    invoke-direct {v0}, Lcom/bbm/util/cb;-><init>()V
+
+    sput-object v0, Lcom/bbm/util/ca;->h:Ljava/util/Comparator;
+
     return-void
 .end method
 
-.method private varargs c()Lcom/bbm/d/ff;
-    .locals 3
+.method public constructor <init>(Landroid/app/Activity;Lcom/bbm/util/bz;Lcom/bbm/util/bw;Ljava/net/URL;)V
+    .locals 2
 
     .prologue
+    .line 256
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 248
+    sget-object v0, Lcom/bbm/util/ca;->a:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->getAndIncrement()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/bbm/util/ca;->b:J
+
+    .line 252
     const/4 v0, 0x0
 
-    .line 411
-    .line 413
-    :try_start_0
-    iget-object v1, p0, Lcom/bbm/util/ca;->a:Lcom/bbm/util/bq;
+    iput-boolean v0, p0, Lcom/bbm/util/ca;->e:Z
 
-    iget-object v2, p0, Lcom/bbm/util/ca;->b:Ljava/net/URL;
+    .line 257
+    iput-object p1, p0, Lcom/bbm/util/ca;->c:Landroid/app/Activity;
 
-    invoke-virtual {v1, v2}, Lcom/bbm/util/bq;->b(Ljava/net/URL;)[B
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .line 258
+    iput-object p2, p0, Lcom/bbm/util/ca;->d:Lcom/bbm/util/bz;
 
-    move-result-object v1
+    .line 259
+    iput-object p3, p0, Lcom/bbm/util/ca;->f:Lcom/bbm/util/bw;
 
-    .line 417
-    :goto_0
-    if-nez v1, :cond_0
+    .line 260
+    iput-object p4, p0, Lcom/bbm/util/ca;->g:Ljava/net/URL;
 
-    .line 420
-    :goto_1
-    return-object v0
-
-    .line 414
-    :catch_0
-    move-exception v1
-
-    invoke-static {v1}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
-
-    move-object v1, v0
-
-    goto :goto_0
-
-    .line 420
-    :cond_0
-    new-instance v0, Lcom/bbm/d/ff;
-
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/bbm/Alaska;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-direct {v0, v2, v1}, Lcom/bbm/d/ff;-><init>(Landroid/content/res/Resources;[B)V
-
-    goto :goto_1
+    .line 261
+    return-void
 .end method
 
 
 # virtual methods
-.method protected final synthetic a([Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
     .prologue
-    .line 397
-    invoke-direct {p0}, Lcom/bbm/util/ca;->c()Lcom/bbm/d/ff;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    return-object v0
+    .line 271
+    if-ne p0, p1, :cond_1
+
+    .line 281
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 274
+    :cond_1
+    if-nez p1, :cond_2
+
+    move v0, v1
+
+    .line 275
+    goto :goto_0
+
+    .line 277
+    :cond_2
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_3
+
+    move v0, v1
+
+    .line 278
+    goto :goto_0
+
+    .line 280
+    :cond_3
+    check-cast p1, Lcom/bbm/util/ca;
+
+    .line 281
+    iget-wide v2, p0, Lcom/bbm/util/ca;->b:J
+
+    iget-wide v4, p1, Lcom/bbm/util/ca;->b:J
+
+    cmp-long v2, v2, v4
+
+    if-eqz v2, :cond_0
+
+    move v0, v1
+
+    goto :goto_0
 .end method
 
-.method protected final synthetic b(Ljava/lang/Object;)V
-    .locals 1
+.method public final hashCode()I
+    .locals 5
 
     .prologue
-    .line 397
-    check-cast p1, Lcom/bbm/d/ff;
+    .line 266
+    iget-wide v0, p0, Lcom/bbm/util/ca;->b:J
 
-    iget-object v0, p0, Lcom/bbm/util/ca;->c:Lcom/bbm/util/bz;
+    iget-wide v2, p0, Lcom/bbm/util/ca;->b:J
 
-    if-eqz v0, :cond_0
+    const/16 v4, 0x20
 
-    iget-object v0, p0, Lcom/bbm/util/ca;->c:Lcom/bbm/util/bz;
+    ushr-long/2addr v2, v4
 
-    invoke-interface {v0, p1}, Lcom/bbm/util/bz;->a(Lcom/bbm/d/ff;)V
+    xor-long/2addr v0, v2
 
-    :cond_0
-    return-void
+    long-to-int v0, v0
+
+    return v0
 .end method

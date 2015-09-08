@@ -1,9 +1,9 @@
 .class final Lcom/bbm/ui/b/h;
 .super Ljava/lang/Object;
-.source "BBGenericDialog.java"
+.source "BBInfoAndCheckboxDialogFragment.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 34
+    .line 38
     iput-object p1, p0, Lcom/bbm/ui/b/h;->a:Lcom/bbm/ui/b/g;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,15 +25,55 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 2
 
     .prologue
-    .line 38
+    .line 42
     iget-object v0, p0, Lcom/bbm/ui/b/h;->a:Lcom/bbm/ui/b/g;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/b/g;->dismiss()V
+    invoke-static {v0}, Lcom/bbm/ui/b/g;->a(Lcom/bbm/ui/b/g;)Landroid/widget/CheckBox;
 
-    .line 39
+    move-result-object v0
+
+    if-ne p1, v0, :cond_1
+
+    .line 43
+    iget-object v0, p0, Lcom/bbm/ui/b/h;->a:Lcom/bbm/ui/b/g;
+
+    invoke-static {v0}, Lcom/bbm/ui/b/g;->b(Lcom/bbm/ui/b/g;)[Z
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    aput-boolean p2, v0, v1
+
+    .line 47
+    :cond_0
+    :goto_0
     return-void
+
+    .line 44
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/b/h;->a:Lcom/bbm/ui/b/g;
+
+    invoke-static {v0}, Lcom/bbm/ui/b/g;->c(Lcom/bbm/ui/b/g;)Landroid/widget/CheckBox;
+
+    move-result-object v0
+
+    if-ne p1, v0, :cond_0
+
+    .line 45
+    iget-object v0, p0, Lcom/bbm/ui/b/h;->a:Lcom/bbm/ui/b/g;
+
+    invoke-static {v0}, Lcom/bbm/ui/b/g;->b(Lcom/bbm/ui/b/g;)[Z
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    aput-boolean p2, v0, v1
+
+    goto :goto_0
 .end method

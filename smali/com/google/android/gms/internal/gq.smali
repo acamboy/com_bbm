@@ -1,47 +1,78 @@
-.class public final Lcom/google/android/gms/internal/gq;
+.class final Lcom/google/android/gms/internal/gq;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Ljava/io/File;
+
+.field final synthetic c:Lcom/google/android/gms/internal/gn;
 
 
 # direct methods
-.method public static aW(I)Ljava/lang/String;
+.method constructor <init>(Lcom/google/android/gms/internal/gn;Ljava/lang/String;Ljava/io/File;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/gq;->c:Lcom/google/android/gms/internal/gn;
+
+    iput-object p2, p0, Lcom/google/android/gms/internal/gq;->a:Ljava/lang/String;
+
+    iput-object p3, p0, Lcom/google/android/gms/internal/gq;->b:Ljava/io/File;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
     .locals 3
 
-    packed-switch p0, :pswitch_data_0
+    new-instance v0, Ljava/util/HashMap;
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v1, "event"
 
-    const-string v2, "Unknown leaderboard collection: "
+    const-string v2, "precacheCanceled"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v1, "src"
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/gq;->a:Ljava/lang/String;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/gq;->b:Ljava/io/File;
+
+    if-eqz v1, :cond_0
+
+    const-string v1, "cachedSrc"
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/gq;->b:Ljava/io/File;
+
+    invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    iget-object v1, p0, Lcom/google/android/gms/internal/gq;->c:Lcom/google/android/gms/internal/gn;
+
+    invoke-static {v1}, Lcom/google/android/gms/internal/gn;->a(Lcom/google/android/gms/internal/gn;)Lcom/google/android/gms/internal/pp;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v2, "onPrecacheEvent"
 
-    move-result-object v1
+    invoke-interface {v1, v2, v0}, Lcom/google/android/gms/internal/pp;->a(Ljava/lang/String;Ljava/util/Map;)V
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_0
-    const-string v0, "PUBLIC"
-
-    :goto_0
-    return-object v0
-
-    :pswitch_1
-    const-string v0, "SOCIAL"
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
+    return-void
 .end method

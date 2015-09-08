@@ -3,20 +3,24 @@
 .source "StickerDetailsFragment.java"
 
 # interfaces
-.implements Lcom/bbm/l/d/b;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/gr;
+.field final synthetic a:Lcom/bbm/l/b/o;
+
+.field final synthetic b:Lcom/bbm/ui/c/fx;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/gr;)V
+.method constructor <init>(Lcom/bbm/ui/c/fx;Lcom/bbm/l/b/o;)V
     .locals 0
 
     .prologue
-    .line 821
-    iput-object p1, p0, Lcom/bbm/ui/c/ha;->a:Lcom/bbm/ui/c/gr;
+    .line 538
+    iput-object p1, p0, Lcom/bbm/ui/c/ha;->b:Lcom/bbm/ui/c/fx;
+
+    iput-object p2, p0, Lcom/bbm/ui/c/ha;->a:Lcom/bbm/l/b/o;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,40 +29,92 @@
 
 
 # virtual methods
-.method public final a(ZLcom/bbm/l/d/b/x;)V
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
     .prologue
-    .line 824
-    if-eqz p1, :cond_0
+    .line 541
+    const-string v0, "Grid item clicked"
 
-    .line 825
-    iget-object v0, p0, Lcom/bbm/ui/c/ha;->a:Lcom/bbm/ui/c/gr;
+    const-class v1, Lcom/bbm/ui/c/fx;
 
-    invoke-static {v0, p2}, Lcom/bbm/ui/c/gr;->a(Lcom/bbm/ui/c/gr;Lcom/bbm/l/d/b/x;)Lcom/bbm/l/d/b/x;
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 826
-    iget-object v0, p0, Lcom/bbm/ui/c/ha;->a:Lcom/bbm/ui/c/gr;
+    .line 542
+    iget-object v0, p0, Lcom/bbm/ui/c/ha;->a:Lcom/bbm/l/b/o;
 
-    const/4 v1, 0x1
+    iget-object v0, v0, Lcom/bbm/l/b/o;->e:Ljava/util/List;
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    .line 543
+    if-eqz v0, :cond_1
 
-    move-result-object v1
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
-    invoke-static {v0, p2, v1}, Lcom/bbm/ui/c/gr;->a(Lcom/bbm/ui/c/gr;Lcom/bbm/l/d/b/x;Ljava/lang/Boolean;)V
+    move-result v1
 
-    .line 830
-    :goto_0
-    return-void
-
-    .line 828
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/c/ha;->a:Lcom/bbm/ui/c/gr;
+    if-nez v1, :cond_1
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/c/gr;->a(Lcom/bbm/ui/c/gr;Z)V
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/l/b/m;
+
+    move-object v1, v0
+
+    .line 544
+    :goto_0
+    if-eqz v1, :cond_2
+
+    iget-object v0, v1, Lcom/bbm/l/b/m;->a:Ljava/lang/String;
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    iget-object v0, v1, Lcom/bbm/l/b/m;->a:Ljava/lang/String;
+
+    .line 545
+    :goto_1
+    iget-object v2, p0, Lcom/bbm/ui/c/ha;->b:Lcom/bbm/ui/c/fx;
+
+    invoke-static {v2, v0}, Lcom/bbm/ui/c/fx;->b(Lcom/bbm/ui/c/fx;Ljava/lang/String;)V
+
+    .line 546
+    if-eqz v1, :cond_0
+
+    .line 547
+    iget-object v0, p0, Lcom/bbm/ui/c/ha;->b:Lcom/bbm/ui/c/fx;
+
+    iget-object v1, v1, Lcom/bbm/l/b/m;->b:Lcom/bbm/l/b/p;
+
+    iget-object v2, p0, Lcom/bbm/ui/c/ha;->a:Lcom/bbm/l/b/o;
+
+    iget-object v2, v2, Lcom/bbm/l/b/o;->a:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lcom/bbm/ui/c/fx;->a(Lcom/bbm/ui/c/fx;Lcom/bbm/l/b/p;Ljava/lang/String;)V
+
+    .line 549
+    :cond_0
+    return-void
+
+    .line 543
+    :cond_1
+    const/4 v0, 0x0
+
+    move-object v1, v0
 
     goto :goto_0
+
+    .line 544
+    :cond_2
+    iget-object v0, p0, Lcom/bbm/ui/c/ha;->a:Lcom/bbm/l/b/o;
+
+    iget-object v0, v0, Lcom/bbm/l/b/o;->c:Ljava/lang/String;
+
+    goto :goto_1
 .end method

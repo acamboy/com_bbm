@@ -8,10 +8,10 @@
 
 .field public final b:Ljava/lang/String;
 
-.field public final c:Lcom/bbm/util/ct;
+.field final c:Lcom/bbm/util/dc;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/bbm/util/ct",
+            "Lcom/bbm/util/dc",
             "<",
             "Ljava/lang/Boolean;",
             ">;"
@@ -25,10 +25,10 @@
 
 .field final f:Ljava/lang/String;
 
-.field final g:Lcom/bbm/util/cu;
+.field final g:Lcom/bbm/util/dd;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/bbm/util/cu",
+            "Lcom/bbm/util/dd",
             "<",
             "Ljava/lang/String;",
             ">;"
@@ -58,11 +58,11 @@
     .locals 2
 
     .prologue
-    .line 153
+    .line 154
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
-    new-instance v0, Lcom/bbm/util/ct;
+    .line 32
+    new-instance v0, Lcom/bbm/util/dc;
 
     const/4 v1, 0x0
 
@@ -70,58 +70,80 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/bbm/util/ct;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, v1}, Lcom/bbm/util/dc;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lcom/bbm/util/a/g;->c:Lcom/bbm/util/ct;
+    iput-object v0, p0, Lcom/bbm/util/a/g;->c:Lcom/bbm/util/dc;
 
-    .line 33
+    .line 34
     new-instance v0, Lcom/bbm/util/a/h;
 
     invoke-direct {v0, p0}, Lcom/bbm/util/a/h;-><init>(Lcom/bbm/util/a/g;)V
 
     iput-object v0, p0, Lcom/bbm/util/a/g;->d:Lcom/bbm/f/ac;
 
-    .line 63
+    .line 64
     const-string v0, ""
 
     iput-object v0, p0, Lcom/bbm/util/a/g;->e:Ljava/lang/String;
 
-    .line 65
-    new-instance v0, Lcom/bbm/util/cu;
+    .line 66
+    new-instance v0, Lcom/bbm/util/dd;
 
-    invoke-direct {v0}, Lcom/bbm/util/cu;-><init>()V
+    invoke-direct {v0}, Lcom/bbm/util/dd;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/util/a/g;->g:Lcom/bbm/util/cu;
+    iput-object v0, p0, Lcom/bbm/util/a/g;->g:Lcom/bbm/util/dd;
 
-    .line 67
+    .line 68
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/bbm/util/a/g;->h:Ljava/util/Map;
 
-    .line 74
+    .line 75
     new-instance v0, Lcom/bbm/util/a/i;
 
     invoke-direct {v0, p0}, Lcom/bbm/util/a/i;-><init>(Lcom/bbm/util/a/g;)V
 
     iput-object v0, p0, Lcom/bbm/util/a/g;->i:Lcom/bbm/j/k;
 
-    .line 154
+    .line 155
     iput-object p2, p0, Lcom/bbm/util/a/g;->b:Ljava/lang/String;
 
-    .line 155
+    .line 156
     iget-object v0, p0, Lcom/bbm/util/a/g;->b:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/d/a;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/bbm/d/b/a;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bbm/util/a/g;->f:Ljava/lang/String;
 
-    .line 156
+    .line 157
     iput-object p1, p0, Lcom/bbm/util/a/g;->a:Lcom/bbm/d/a;
 
-    .line 157
+    .line 158
     return-void
+.end method
+
+
+# virtual methods
+.method public final a()Z
+    .locals 1
+
+    .prologue
+    .line 217
+    iget-object v0, p0, Lcom/bbm/util/a/g;->c:Lcom/bbm/util/dc;
+
+    invoke-virtual {v0}, Lcom/bbm/util/dc;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    return v0
 .end method

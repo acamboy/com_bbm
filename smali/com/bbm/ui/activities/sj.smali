@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/activities/sj;
 .super Ljava/lang/Object;
-.source "GroupPictureCommentsActivity.java"
+.source "InviteActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/b/i;
-
-.field final synthetic b:Lcom/bbm/ui/activities/si;
+.field final synthetic a:Lcom/bbm/ui/activities/InviteActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/si;Lcom/bbm/ui/b/i;)V
+.method constructor <init>(Lcom/bbm/ui/activities/InviteActivity;)V
     .locals 0
 
     .prologue
-    .line 765
-    iput-object p1, p0, Lcom/bbm/ui/activities/sj;->b:Lcom/bbm/ui/activities/si;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/sj;->a:Lcom/bbm/ui/b/i;
+    .line 132
+    iput-object p1, p0, Lcom/bbm/ui/activities/sj;->a:Lcom/bbm/ui/activities/InviteActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,41 +25,19 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 2
 
     .prologue
-    .line 769
-    iget-object v0, p0, Lcom/bbm/ui/activities/sj;->b:Lcom/bbm/ui/activities/si;
+    .line 136
+    iget-object v0, p0, Lcom/bbm/ui/activities/sj;->a:Lcom/bbm/ui/activities/InviteActivity;
 
-    iget-object v1, v0, Lcom/bbm/ui/activities/si;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    const/4 v1, 0x1
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/sj;->a:Lcom/bbm/ui/b/i;
+    invoke-static {v0, v1}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;Z)V
 
-    iget-object v0, v0, Lcom/bbm/ui/b/i;->e:Landroid/widget/CheckBox;
-
-    invoke-virtual {v0}, Landroid/widget/CheckBox;->isChecked()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a(Z)V
-
-    .line 770
-    iget-object v0, p0, Lcom/bbm/ui/activities/sj;->a:Lcom/bbm/ui/b/i;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/b/i;->dismiss()V
-
-    .line 771
-    return-void
-
-    .line 769
-    :cond_0
+    .line 137
     const/4 v0, 0x0
 
-    goto :goto_0
+    return v0
 .end method

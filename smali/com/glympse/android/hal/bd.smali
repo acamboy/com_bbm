@@ -6,9 +6,9 @@
 # instance fields
 .field private D:Landroid/app/PendingIntent;
 
-.field private cN:Lcom/glympse/android/core/GRegion;
+.field private cQ:Lcom/glympse/android/core/GRegion;
 
-.field final synthetic cO:Lcom/glympse/android/hal/bc;
+.field final synthetic cR:Lcom/glympse/android/hal/bc;
 
 
 # direct methods
@@ -17,7 +17,7 @@
 
     .prologue
     .line 127
-    iput-object p1, p0, Lcom/glympse/android/hal/bd;->cO:Lcom/glympse/android/hal/bc;
+    iput-object p1, p0, Lcom/glympse/android/hal/bd;->cR:Lcom/glympse/android/hal/bc;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -25,7 +25,7 @@
     iput-object p2, p0, Lcom/glympse/android/hal/bd;->D:Landroid/app/PendingIntent;
 
     .line 129
-    iput-object p3, p0, Lcom/glympse/android/hal/bd;->cN:Lcom/glympse/android/core/GRegion;
+    iput-object p3, p0, Lcom/glympse/android/hal/bd;->cQ:Lcom/glympse/android/core/GRegion;
 
     .line 130
     return-void
@@ -61,7 +61,7 @@
     if-eqz v0, :cond_0
 
     .line 138
-    iget-object v0, p0, Lcom/glympse/android/hal/bd;->cO:Lcom/glympse/android/hal/bc;
+    iget-object v0, p0, Lcom/glympse/android/hal/bd;->cR:Lcom/glympse/android/hal/bc;
 
     invoke-static {v0}, Lcom/glympse/android/hal/bc;->a(Lcom/glympse/android/hal/bc;)Lcom/glympse/android/core/GProximityListener;
 
@@ -82,13 +82,13 @@
     if-eqz v0, :cond_1
 
     .line 143
-    iget-object v0, p0, Lcom/glympse/android/hal/bd;->cO:Lcom/glympse/android/hal/bc;
+    iget-object v0, p0, Lcom/glympse/android/hal/bd;->cR:Lcom/glympse/android/hal/bc;
 
     invoke-static {v0}, Lcom/glympse/android/hal/bc;->a(Lcom/glympse/android/hal/bc;)Lcom/glympse/android/core/GProximityListener;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/glympse/android/hal/bd;->cN:Lcom/glympse/android/core/GRegion;
+    iget-object v1, p0, Lcom/glympse/android/hal/bd;->cQ:Lcom/glympse/android/core/GRegion;
 
     invoke-interface {v0, v1}, Lcom/glympse/android/core/GProximityListener;->regionEntered(Lcom/glympse/android/core/GRegion;)V
 
@@ -99,13 +99,13 @@
 
     .line 147
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/hal/bd;->cO:Lcom/glympse/android/hal/bc;
+    iget-object v0, p0, Lcom/glympse/android/hal/bd;->cR:Lcom/glympse/android/hal/bc;
 
     invoke-static {v0}, Lcom/glympse/android/hal/bc;->a(Lcom/glympse/android/hal/bc;)Lcom/glympse/android/core/GProximityListener;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/glympse/android/hal/bd;->cN:Lcom/glympse/android/core/GRegion;
+    iget-object v1, p0, Lcom/glympse/android/hal/bd;->cQ:Lcom/glympse/android/core/GRegion;
 
     invoke-interface {v0, v1}, Lcom/glympse/android/core/GProximityListener;->regionLeft(Lcom/glympse/android/core/GRegion;)V
 

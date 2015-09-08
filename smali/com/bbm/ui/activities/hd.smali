@@ -1,95 +1,48 @@
 .class final Lcom/bbm/ui/activities/hd;
-.super Lcom/bbm/j/u;
+.super Ljava/lang/Object;
 .source "ConversationActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/hc;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/hc;)V
     .locals 0
 
     .prologue
-    .line 2129
-    iput-object p1, p0, Lcom/bbm/ui/activities/hd;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 585
+    iput-object p1, p0, Lcom/bbm/ui/activities/hd;->a:Lcom/bbm/ui/activities/hc;
 
-    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final b()Z
-    .locals 5
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    const/4 v1, 0x1
+    .line 589
+    const-string v0, "mAttachmentView RemoveAttachment Clicked"
 
-    .line 2133
-    iget-object v0, p0, Lcom/bbm/ui/activities/hd;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    const-class v1, Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->w(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/j/a;
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    move-result-object v0
+    .line 591
+    iget-object v0, p0, Lcom/bbm/ui/activities/hd;->a:Lcom/bbm/ui/activities/hc;
 
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
+    iget-object v0, v0, Lcom/bbm/ui/activities/hc;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    move-result-object v0
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ConversationActivity;->j()V
 
-    check-cast v0, Lcom/bbm/d/eu;
-
-    .line 2135
-    iget-object v2, v0, Lcom/bbm/d/eu;->u:Lcom/bbm/util/bi;
-
-    sget-object v3, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
-
-    if-ne v2, v3, :cond_0
-
-    .line 2136
-    const/4 v0, 0x0
-
-    .line 2145
-    :goto_0
-    return v0
-
-    .line 2139
-    :cond_0
-    new-instance v2, Landroid/content/Intent;
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/hd;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    const-class v4, Lcom/bbm/ui/activities/SelectContactActivity;
-
-    invoke-direct {v2, v3, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 2140
-    const-string v3, "com.bbm.onlyone"
-
-    invoke-virtual {v2, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    .line 2141
-    const-string v3, "com.bbm.excludedcontacts"
-
-    new-instance v4, Ljava/util/ArrayList;
-
-    iget-object v0, v0, Lcom/bbm/d/eu;->r:Ljava/util/List;
-
-    invoke-direct {v4, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putStringArrayListExtra(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;
-
-    .line 2143
-    iget-object v0, p0, Lcom/bbm/ui/activities/hd;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    const/4 v3, 0x2
-
-    invoke-virtual {v0, v2, v3}, Lcom/bbm/ui/activities/ConversationActivity;->startActivityForResult(Landroid/content/Intent;I)V
-
-    move v0, v1
-
-    .line 2145
-    goto :goto_0
+    .line 592
+    return-void
 .end method

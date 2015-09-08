@@ -30,9 +30,9 @@
 
     .prologue
     .line 1241
-    new-instance v0, Landroid/support/v4/view/cc;
+    new-instance v0, Landroid/support/v4/view/cr;
 
-    invoke-direct {v0}, Landroid/support/v4/view/cc;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/view/cr;-><init>()V
 
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -40,14 +40,14 @@
 
     if-lt v1, v2, :cond_0
 
-    new-instance v1, Landroid/support/v4/a/d;
+    new-instance v1, Landroid/support/v4/c/d;
 
-    invoke-direct {v1, v0}, Landroid/support/v4/a/d;-><init>(Landroid/support/v4/a/c;)V
+    invoke-direct {v1, v0}, Landroid/support/v4/c/d;-><init>(Landroid/support/v4/c/c;)V
 
     :cond_0
-    new-instance v1, Landroid/support/v4/a/b;
+    new-instance v1, Landroid/support/v4/c/b;
 
-    invoke-direct {v1, v0}, Landroid/support/v4/a/b;-><init>(Landroid/support/v4/a/c;)V
+    invoke-direct {v1, v0}, Landroid/support/v4/c/b;-><init>(Landroid/support/v4/c/c;)V
 
     sput-object v1, Landroid/support/v4/view/ViewPager$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 

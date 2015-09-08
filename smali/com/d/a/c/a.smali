@@ -3,187 +3,402 @@
 .source "ImageSizeUtils.java"
 
 
+# static fields
+.field private static a:Lcom/d/a/b/a/f;
+
+
 # direct methods
-.method private static a(Ljava/lang/Object;Ljava/lang/String;)I
+.method static constructor <clinit>()V
     .locals 3
 
     .prologue
-    .line 70
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    .line 72
-    :try_start_0
-    const-class v0, Landroid/widget/ImageView;
+    .line 39
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, p1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+    new-array v0, v0, [I
 
-    move-result-object v0
+    .line 40
+    const/16 v1, 0xd33
 
-    .line 73
-    const/4 v2, 0x1
+    invoke-static {v1, v0, v2}, Landroid/opengl/GLES10;->glGetIntegerv(I[II)V
 
-    invoke-virtual {v0, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+    .line 41
+    aget v0, v0, v2
 
-    .line 74
-    invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    const/16 v1, 0x800
 
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
-    .line 75
-    if-lez v0, :cond_0
+    .line 42
+    new-instance v1, Lcom/d/a/b/a/f;
 
-    const v2, 0x7fffffff
+    invoke-direct {v1, v0, v0}, Lcom/d/a/b/a/f;-><init>(II)V
 
-    if-ge v0, v2, :cond_0
+    sput-object v1, Lcom/d/a/c/a;->a:Lcom/d/a/b/a/f;
 
-    .line 81
-    :goto_0
-    return v0
-
-    .line 78
-    :catch_0
-    move-exception v0
-
-    invoke-static {v0}, Lcom/d/a/c/d;->a(Ljava/lang/Throwable;)V
-
-    :cond_0
-    move v0, v1
-
-    goto :goto_0
+    .line 43
+    return-void
 .end method
 
-.method public static a(Landroid/widget/ImageView;II)Lcom/d/a/b/a/f;
+.method public static a(Lcom/d/a/b/a/f;)I
     .locals 6
 
     .prologue
-    const/4 v0, 0x0
+    .line 155
+    iget v0, p0, Lcom/d/a/b/a/f;->a:I
 
-    const/4 v5, -0x2
+    .line 156
+    iget v1, p0, Lcom/d/a/b/a/f;->b:I
 
-    .line 51
-    invoke-virtual {p0}, Landroid/widget/ImageView;->getContext()Landroid/content/Context;
+    .line 157
+    sget-object v2, Lcom/d/a/c/a;->a:Lcom/d/a/b/a/f;
 
-    move-result-object v1
+    iget v2, v2, Lcom/d/a/b/a/f;->a:I
 
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    .line 158
+    sget-object v3, Lcom/d/a/c/a;->a:Lcom/d/a/b/a/f;
 
-    move-result-object v1
+    iget v3, v3, Lcom/d/a/b/a/f;->b:I
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    .line 160
+    int-to-float v0, v0
 
-    move-result-object v2
+    int-to-float v2, v2
 
-    .line 53
-    invoke-virtual {p0}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    div-float/2addr v0, v2
 
-    move-result-object v3
+    float-to-double v4, v0
 
-    .line 54
-    if-eqz v3, :cond_8
+    invoke-static {v4, v5}, Ljava/lang/Math;->ceil(D)D
 
-    iget v1, v3, Landroid/view/ViewGroup$LayoutParams;->width:I
+    move-result-wide v4
 
-    if-ne v1, v5, :cond_8
+    double-to-int v0, v4
 
-    move v1, v0
+    .line 161
+    int-to-float v1, v1
 
-    .line 55
-    :goto_0
-    if-gtz v1, :cond_0
+    int-to-float v2, v3
 
-    if-eqz v3, :cond_0
+    div-float/2addr v1, v2
 
-    iget v1, v3, Landroid/view/ViewGroup$LayoutParams;->width:I
+    float-to-double v2, v1
 
-    .line 56
-    :cond_0
-    if-gtz v1, :cond_1
+    invoke-static {v2, v3}, Ljava/lang/Math;->ceil(D)D
 
-    const-string v1, "mMaxWidth"
+    move-result-wide v2
 
-    invoke-static {p0, v1}, Lcom/d/a/c/a;->a(Ljava/lang/Object;Ljava/lang/String;)I
+    double-to-int v1, v2
 
-    move-result v1
-
-    .line 57
-    :cond_1
-    if-gtz v1, :cond_2
-
-    move v1, p1
-
-    .line 58
-    :cond_2
-    if-gtz v1, :cond_3
-
-    iget v1, v2, Landroid/util/DisplayMetrics;->widthPixels:I
-
-    .line 60
-    :cond_3
-    if-eqz v3, :cond_9
-
-    iget v4, v3, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    if-ne v4, v5, :cond_9
-
-    .line 61
-    :goto_1
-    if-gtz v0, :cond_4
-
-    if-eqz v3, :cond_4
-
-    iget v0, v3, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    .line 62
-    :cond_4
-    if-gtz v0, :cond_5
-
-    const-string v0, "mMaxHeight"
-
-    invoke-static {p0, v0}, Lcom/d/a/c/a;->a(Ljava/lang/Object;Ljava/lang/String;)I
+    .line 163
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
-    .line 63
-    :cond_5
-    if-gtz v0, :cond_6
+    return v0
+.end method
 
-    move v0, p2
+.method public static a(Lcom/d/a/b/a/f;Lcom/d/a/b/a/f;IZ)I
+    .locals 9
 
-    .line 64
-    :cond_6
+    .prologue
+    const/4 v1, 0x1
+
+    .line 92
+    iget v2, p0, Lcom/d/a/b/a/f;->a:I
+
+    .line 93
+    iget v3, p0, Lcom/d/a/b/a/f;->b:I
+
+    .line 94
+    iget v4, p1, Lcom/d/a/b/a/f;->a:I
+
+    .line 95
+    iget v5, p1, Lcom/d/a/b/a/f;->b:I
+
+    .line 99
+    sget-object v0, Lcom/d/a/c/b;->a:[I
+
+    add-int/lit8 v6, p2, -0x1
+
+    aget v0, v0, v6
+
+    packed-switch v0, :pswitch_data_0
+
+    move v0, v1
+
+    .line 124
+    :cond_0
+    :goto_0
     if-gtz v0, :cond_7
 
-    iget v0, v2, Landroid/util/DisplayMetrics;->heightPixels:I
+    .line 127
+    :goto_1
+    sget-object v0, Lcom/d/a/c/a;->a:Lcom/d/a/b/a/f;
 
-    .line 66
-    :cond_7
-    new-instance v2, Lcom/d/a/b/a/f;
+    iget v0, v0, Lcom/d/a/b/a/f;->a:I
 
-    invoke-direct {v2, v1, v0}, Lcom/d/a/b/a/f;-><init>(II)V
+    sget-object v4, Lcom/d/a/c/a;->a:Lcom/d/a/b/a/f;
 
-    return-object v2
+    iget v4, v4, Lcom/d/a/b/a/f;->b:I
 
-    .line 54
-    :cond_8
-    invoke-virtual {p0}, Landroid/widget/ImageView;->getWidth()I
+    :goto_2
+    div-int v5, v2, v1
 
-    move-result v1
+    if-gt v5, v0, :cond_1
+
+    div-int v5, v3, v1
+
+    if-le v5, v4, :cond_6
+
+    :cond_1
+    if-eqz p3, :cond_5
+
+    mul-int/lit8 v1, v1, 0x2
+
+    goto :goto_2
+
+    .line 101
+    :pswitch_0
+    if-eqz p3, :cond_3
+
+    .line 102
+    div-int/lit8 v6, v2, 0x2
+
+    .line 103
+    div-int/lit8 v7, v3, 0x2
+
+    move v0, v1
+
+    .line 104
+    :goto_3
+    div-int v8, v6, v0
+
+    if-gt v8, v4, :cond_2
+
+    div-int v8, v7, v0
+
+    if-le v8, v5, :cond_0
+
+    .line 105
+    :cond_2
+    mul-int/lit8 v0, v0, 0x2
+
+    goto :goto_3
+
+    .line 108
+    :cond_3
+    div-int v0, v2, v4
+
+    div-int v4, v3, v5
+
+    invoke-static {v0, v4}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
 
     goto :goto_0
 
-    .line 60
-    :cond_9
-    invoke-virtual {p0}, Landroid/widget/ImageView;->getHeight()I
+    .line 112
+    :pswitch_1
+    if-eqz p3, :cond_4
+
+    .line 113
+    div-int/lit8 v6, v2, 0x2
+
+    .line 114
+    div-int/lit8 v7, v3, 0x2
+
+    move v0, v1
+
+    .line 115
+    :goto_4
+    div-int v8, v6, v0
+
+    if-le v8, v4, :cond_0
+
+    div-int v8, v7, v0
+
+    if-le v8, v5, :cond_0
+
+    .line 116
+    mul-int/lit8 v0, v0, 0x2
+
+    goto :goto_4
+
+    .line 119
+    :cond_4
+    div-int v0, v2, v4
+
+    div-int v4, v3, v5
+
+    invoke-static {v0, v4}, Ljava/lang/Math;->min(II)I
 
     move-result v0
 
+    goto :goto_0
+
+    .line 127
+    :cond_5
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_2
+
+    .line 129
+    :cond_6
+    return v1
+
+    :cond_7
+    move v1, v0
+
     goto :goto_1
+
+    .line 99
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public static a(Lcom/d/a/b/e/a;Lcom/d/a/b/a/f;)Lcom/d/a/b/a/f;
+    .locals 3
+
+    .prologue
+    .line 54
+    invoke-interface {p0}, Lcom/d/a/b/e/a;->a()I
+
+    move-result v0
+
+    .line 55
+    if-gtz v0, :cond_0
+
+    iget v0, p1, Lcom/d/a/b/a/f;->a:I
+
+    .line 57
+    :cond_0
+    invoke-interface {p0}, Lcom/d/a/b/e/a;->b()I
+
+    move-result v1
+
+    .line 58
+    if-gtz v1, :cond_1
+
+    iget v1, p1, Lcom/d/a/b/a/f;->b:I
+
+    .line 60
+    :cond_1
+    new-instance v2, Lcom/d/a/b/a/f;
+
+    invoke-direct {v2, v0, v1}, Lcom/d/a/b/a/f;-><init>(II)V
+
+    return-object v2
+.end method
+
+.method public static b(Lcom/d/a/b/a/f;Lcom/d/a/b/a/f;IZ)F
+    .locals 7
+
+    .prologue
+    .line 190
+    iget v3, p0, Lcom/d/a/b/a/f;->a:I
+
+    .line 191
+    iget v4, p0, Lcom/d/a/b/a/f;->b:I
+
+    .line 192
+    iget v0, p1, Lcom/d/a/b/a/f;->a:I
+
+    .line 193
+    iget v1, p1, Lcom/d/a/b/a/f;->b:I
+
+    .line 195
+    int-to-float v2, v3
+
+    int-to-float v5, v0
+
+    div-float/2addr v2, v5
+
+    .line 196
+    int-to-float v5, v4
+
+    int-to-float v6, v1
+
+    div-float/2addr v5, v6
+
+    .line 200
+    sget v6, Lcom/d/a/b/a/i;->a:I
+
+    if-ne p2, v6, :cond_0
+
+    cmpl-float v6, v2, v5
+
+    if-gez v6, :cond_1
+
+    :cond_0
+    sget v6, Lcom/d/a/b/a/i;->b:I
+
+    if-ne p2, v6, :cond_5
+
+    cmpg-float v6, v2, v5
+
+    if-gez v6, :cond_5
+
+    .line 202
+    :cond_1
+    int-to-float v1, v4
+
+    div-float/2addr v1, v2
+
+    float-to-int v1, v1
+
+    move v2, v1
+
+    move v1, v0
+
+    .line 205
+    :goto_0
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    .line 209
+    if-nez p3, :cond_2
+
+    if-ge v1, v3, :cond_2
+
+    if-lt v2, v4, :cond_3
+
+    :cond_2
+    if-eqz p3, :cond_4
+
+    if-eq v1, v3, :cond_4
+
+    if-eq v2, v4, :cond_4
+
+    .line 210
+    :cond_3
+    int-to-float v0, v1
+
+    int-to-float v1, v3
+
+    div-float/2addr v0, v1
+
+    .line 213
+    :cond_4
+    return v0
+
+    .line 204
+    :cond_5
+    int-to-float v0, v3
+
+    div-float/2addr v0, v5
+
+    float-to-int v0, v0
+
+    move v2, v1
+
+    move v1, v0
+
+    goto :goto_0
 .end method

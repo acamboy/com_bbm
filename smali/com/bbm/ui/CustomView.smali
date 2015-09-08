@@ -77,7 +77,7 @@
     return-object v0
 
     :cond_0
-    invoke-static {}, Lcom/google/b/a/l;->d()Lcom/google/b/a/l;
+    invoke-static {}, Lcom/google/b/a/l;->e()Lcom/google/b/a/l;
 
     move-result-object v0
 
@@ -98,14 +98,14 @@
     move-result-object v0
 
     .line 68
-    invoke-virtual {v0}, Lcom/google/b/a/l;->a()Z
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 69
-    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -125,7 +125,7 @@
     return-void
 .end method
 
-.method public onMeasure(II)V
+.method protected onMeasure(II)V
     .locals 4
 
     .prologue
@@ -145,14 +145,14 @@
     move-result-object v2
 
     .line 41
-    invoke-virtual {v2}, Lcom/google/b/a/l;->a()Z
+    invoke-virtual {v2}, Lcom/google/b/a/l;->b()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
     .line 42
-    invoke-virtual {v2}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+    invoke-virtual {v2}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
 
     move-result-object v0
 

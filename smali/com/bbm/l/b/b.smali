@@ -35,7 +35,7 @@
 
     const/4 v2, 0x0
 
-    .line 54
+    .line 52
     new-instance v0, Lcom/bbm/l/b/b;
 
     const-string v1, "UNKW"
@@ -44,7 +44,7 @@
 
     sput-object v0, Lcom/bbm/l/b/b;->a:Lcom/bbm/l/b/b;
 
-    .line 55
+    .line 53
     new-instance v0, Lcom/bbm/l/b/b;
 
     const-string v1, "GOOG"
@@ -53,7 +53,7 @@
 
     sput-object v0, Lcom/bbm/l/b/b;->b:Lcom/bbm/l/b/b;
 
-    .line 56
+    .line 54
     new-instance v0, Lcom/bbm/l/b/b;
 
     const-string v1, "AMZN"
@@ -62,7 +62,7 @@
 
     sput-object v0, Lcom/bbm/l/b/b;->c:Lcom/bbm/l/b/b;
 
-    .line 53
+    .line 51
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/bbm/l/b/b;
@@ -93,7 +93,7 @@
     .end annotation
 
     .prologue
-    .line 53
+    .line 51
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -103,7 +103,7 @@
     .locals 1
 
     .prologue
-    .line 63
+    .line 61
     const-string v0, "GOOG"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -112,14 +112,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 64
+    .line 62
     sget-object v0, Lcom/bbm/l/b/b;->b:Lcom/bbm/l/b/b;
 
-    .line 68
+    .line 66
     :goto_0
     return-object v0
 
-    .line 65
+    .line 63
     :cond_0
     const-string v0, "AMZN"
 
@@ -129,12 +129,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 66
+    .line 64
     sget-object v0, Lcom/bbm/l/b/b;->c:Lcom/bbm/l/b/b;
 
     goto :goto_0
 
-    .line 68
+    .line 66
     :cond_1
     sget-object v0, Lcom/bbm/l/b/b;->a:Lcom/bbm/l/b/b;
 
@@ -145,7 +145,7 @@
     .locals 1
 
     .prologue
-    .line 53
+    .line 51
     const-class v0, Lcom/bbm/l/b/b;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -161,7 +161,7 @@
     .locals 1
 
     .prologue
-    .line 53
+    .line 51
     sget-object v0, Lcom/bbm/l/b/b;->d:[Lcom/bbm/l/b/b;
 
     invoke-virtual {v0}, [Lcom/bbm/l/b/b;->clone()Ljava/lang/Object;

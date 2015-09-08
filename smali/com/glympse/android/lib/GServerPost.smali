@@ -25,9 +25,6 @@
 .method public abstract doPost(I)V
 .end method
 
-.method public abstract enableIncognito(Z)V
-.end method
-
 .method public abstract enableSsl(Z)V
 .end method
 
@@ -41,6 +38,12 @@
 .end method
 
 .method public abstract getBaseUrl()Ljava/lang/String;
+.end method
+
+.method public abstract getLastPostTime()J
+.end method
+
+.method public abstract getPendingLocationsCount()I
 .end method
 
 .method public abstract getPostRate()I
@@ -58,7 +61,7 @@
 .method public abstract invokeEndpoint(Lcom/glympse/android/lib/GApiEndpoint;Z)V
 .end method
 
-.method public abstract isIncognitoEnabled()Z
+.method public abstract invokeEndpoint(Lcom/glympse/android/lib/GApiEndpoint;ZZ)V
 .end method
 
 .method public abstract isPosting()Z
@@ -71,6 +74,9 @@
 .end method
 
 .method public abstract removeEndpoint(Lcom/glympse/android/lib/GApiEndpoint;)Z
+.end method
+
+.method public abstract schedulePost()V
 .end method
 
 .method public abstract sendEvents()V

@@ -1,157 +1,217 @@
-.class public final Lcom/bbm/d/al;
-.super Lcom/bbm/d/dy;
-.source "BbmdsProtocol.java"
+.class public final enum Lcom/bbm/d/al;
+.super Ljava/lang/Enum;
+.source "BbmdsModel.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/bbm/d/al;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final enum a:Lcom/bbm/d/al;
+
+.field public static final enum b:Lcom/bbm/d/al;
+
+.field public static final enum c:Lcom/bbm/d/al;
+
+.field private static final synthetic e:[Lcom/bbm/d/al;
+
+
+# instance fields
+.field private final d:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;ZZLjava/lang/String;Ljava/lang/String;ZZZ)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 6
 
     .prologue
-    .line 510
-    const-string v0, "channelCreate"
+    const/4 v5, 0x2
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
+    const/4 v4, 0x1
 
-    .line 512
-    const-string v0, "categoryId"
+    const/4 v3, 0x0
 
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/al;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    .line 650
+    new-instance v0, Lcom/bbm/d/al;
 
-    .line 513
-    const-string v0, "chatEnabled"
+    const-string v1, "NOT_FOUND"
 
-    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const-string v2, "NotFound"
 
-    move-result-object v1
+    invoke-direct {v0, v1, v3, v2}, Lcom/bbm/d/al;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    invoke-virtual {p0, v0, v1}, Lcom/bbm/d/al;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    sput-object v0, Lcom/bbm/d/al;->a:Lcom/bbm/d/al;
 
-    .line 514
-    const-string v0, "commentsEnabled"
+    .line 651
+    new-instance v0, Lcom/bbm/d/al;
 
-    invoke-static {p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const-string v1, "SUCCESS"
 
-    move-result-object v1
+    const-string v2, "Success"
 
-    invoke-virtual {p0, v0, v1}, Lcom/bbm/d/al;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-direct {v0, v1, v4, v2}, Lcom/bbm/d/al;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 515
-    const-string v0, "displayName"
+    sput-object v0, Lcom/bbm/d/al;->b:Lcom/bbm/d/al;
 
-    invoke-virtual {p0, v0, p4}, Lcom/bbm/d/al;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    .line 652
+    new-instance v0, Lcom/bbm/d/al;
 
-    .line 516
-    const-string v0, "imagePath"
+    const-string v1, "TEMPORARY_FAILURE"
 
-    invoke-virtual {p0, v0, p5}, Lcom/bbm/d/al;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    const-string v2, "TemporaryFailure"
 
-    .line 517
-    const-string v0, "isPrivate"
+    invoke-direct {v0, v1, v5, v2}, Lcom/bbm/d/al;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    invoke-static {p6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    sput-object v0, Lcom/bbm/d/al;->c:Lcom/bbm/d/al;
 
-    move-result-object v1
+    .line 649
+    const/4 v0, 0x3
 
-    invoke-virtual {p0, v0, v1}, Lcom/bbm/d/al;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    new-array v0, v0, [Lcom/bbm/d/al;
 
-    .line 518
-    const-string v0, "searchable"
+    sget-object v1, Lcom/bbm/d/al;->a:Lcom/bbm/d/al;
 
-    invoke-static {p7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    aput-object v1, v0, v3
 
-    move-result-object v1
+    sget-object v1, Lcom/bbm/d/al;->b:Lcom/bbm/d/al;
 
-    invoke-virtual {p0, v0, v1}, Lcom/bbm/d/al;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    aput-object v1, v0, v4
 
-    .line 519
-    const-string v0, "showMap"
+    sget-object v1, Lcom/bbm/d/al;->c:Lcom/bbm/d/al;
 
-    invoke-static {p8}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    aput-object v1, v0, v5
 
-    move-result-object v1
+    sput-object v0, Lcom/bbm/d/al;->e:[Lcom/bbm/d/al;
 
-    invoke-virtual {p0, v0, v1}, Lcom/bbm/d/al;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 520
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Ljava/lang/String;)Lcom/bbm/d/al;
-    .locals 1
+.method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")V"
+        }
+    .end annotation
 
     .prologue
-    .line 542
-    const-string v0, "contactEmailAddress"
+    .line 656
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/al;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    .line 657
+    iput-object p3, p0, Lcom/bbm/d/al;->d:Ljava/lang/String;
 
-    .line 543
-    return-object p0
+    .line 658
+    return-void
 .end method
 
-.method public final a(Lorg/json/JSONObject;)Lcom/bbm/d/al;
+.method public static a(Ljava/lang/String;)Lcom/bbm/d/al;
     .locals 1
 
     .prologue
-    .line 602
-    const-string v0, "location"
+    .line 661
+    const-string v0, "NotFound"
 
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/al;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 603
-    return-object p0
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 662
+    sget-object v0, Lcom/bbm/d/al;->a:Lcom/bbm/d/al;
+
+    .line 670
+    :goto_0
+    return-object v0
+
+    .line 664
+    :cond_0
+    const-string v0, "Success"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 665
+    sget-object v0, Lcom/bbm/d/al;->b:Lcom/bbm/d/al;
+
+    goto :goto_0
+
+    .line 667
+    :cond_1
+    const-string v0, "TemporaryFailure"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 668
+    sget-object v0, Lcom/bbm/d/al;->c:Lcom/bbm/d/al;
+
+    goto :goto_0
+
+    .line 670
+    :cond_2
+    sget-object v0, Lcom/bbm/d/al;->c:Lcom/bbm/d/al;
+
+    goto :goto_0
 .end method
 
-.method public final bridge synthetic a()Lcom/bbm/f/ab;
+.method public static valueOf(Ljava/lang/String;)Lcom/bbm/d/al;
     .locals 1
 
     .prologue
-    .line 508
-    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
+    .line 649
+    const-class v0, Lcom/bbm/d/al;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/al;
 
     return-object v0
 .end method
 
-.method public final b(Ljava/lang/String;)Lcom/bbm/d/al;
+.method public static values()[Lcom/bbm/d/al;
     .locals 1
 
     .prologue
-    .line 590
-    const-string v0, "description"
+    .line 649
+    sget-object v0, Lcom/bbm/d/al;->e:[Lcom/bbm/d/al;
 
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/al;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {v0}, [Lcom/bbm/d/al;->clone()Ljava/lang/Object;
 
-    .line 591
-    return-object p0
+    move-result-object v0
+
+    check-cast v0, [Lcom/bbm/d/al;
+
+    return-object v0
 .end method
 
-.method public final c(Ljava/lang/String;)Lcom/bbm/d/al;
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 626
-    const-string v0, "phoneNumber"
+    .line 674
+    iget-object v0, p0, Lcom/bbm/d/al;->d:Ljava/lang/String;
 
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/al;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 627
-    return-object p0
-.end method
-
-.method public final d(Ljava/lang/String;)Lcom/bbm/d/al;
-    .locals 1
-
-    .prologue
-    .line 650
-    const-string v0, "webAddress"
-
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/al;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 651
-    return-object p0
+    return-object v0
 .end method

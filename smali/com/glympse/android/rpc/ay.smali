@@ -1,6 +1,6 @@
 .class Lcom/glympse/android/rpc/ay;
 .super Ljava/lang/Object;
-.source "MethodUsersList.java"
+.source "MethodSystemHealth.java"
 
 # interfaces
 .implements Lcom/glympse/android/rpc/GRpcMethod;
@@ -11,16 +11,30 @@
     .locals 0
 
     .prologue
-    .line 16
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method public static name()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 32
+    const-string v0, "system_health"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 
 # virtual methods
 .method public call(Lcom/glympse/android/rpc/GMessageGateway;Lcom/glympse/android/rpc/GConnection;Lcom/glympse/android/core/GArray;)V
-    .locals 5
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -34,108 +48,138 @@
     .end annotation
 
     .prologue
-    const/4 v4, 0x1
-
-    .line 26
+    .line 43
     invoke-static {p3}, Lcom/glympse/android/rpc/RpcMessages;->providerUnpackGlympse(Lcom/glympse/android/core/GArray;)Lcom/glympse/android/lib/GGlympsePrivate;
+
+    move-result-object v0
+
+    .line 44
+    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->getNetworkManager()Lcom/glympse/android/api/GNetworkManager;
 
     move-result-object v1
 
-    .line 27
-    invoke-interface {p3, v4}, Lcom/glympse/android/core/GArray;->at(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/glympse/android/core/GPrimitive;
-
-    invoke-interface {v0}, Lcom/glympse/android/core/GPrimitive;->getString()Ljava/lang/String;
+    .line 45
+    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->getBatteryManager()Lcom/glympse/android/api/GBatteryManager;
 
     move-result-object v2
 
-    .line 28
-    const/4 v0, 0x2
-
-    invoke-interface {p3, v0}, Lcom/glympse/android/core/GArray;->at(I)Ljava/lang/Object;
+    .line 48
+    invoke-virtual {p0}, Lcom/glympse/android/rpc/ay;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lcom/glympse/android/core/GPrimitive;
+    invoke-static {v0}, Lcom/glympse/android/rpc/RpcMessages;->createMessage(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
 
-    invoke-interface {v0}, Lcom/glympse/android/core/GPrimitive;->getBool()Z
+    move-result-object v3
 
-    move-result v3
+    .line 49
+    const/4 v0, 0x2
 
-    .line 31
-    const-string v0, "standalone"
+    invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(I)Lcom/glympse/android/core/GPrimitive;
 
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v4
+
+    .line 50
+    const-string v0, "network"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-interface {v1}, Lcom/glympse/android/api/GNetworkManager;->isNetworkError()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v1}, Lcom/glympse/android/lib/GGlympsePrivate;->getUserManager()Lcom/glympse/android/api/GUserManager;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/glympse/android/api/GUserManager;->getStandaloneUsers()Lcom/glympse/android/core/GArray;
-
-    move-result-object v0
-
-    .line 37
-    :goto_0
-    invoke-virtual {p0}, Lcom/glympse/android/rpc/ay;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/glympse/android/rpc/RpcMessages;->createMessage(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
-
-    move-result-object v1
-
-    .line 38
-    invoke-static {v4}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(I)Lcom/glympse/android/core/GPrimitive;
-
-    move-result-object v2
-
-    .line 39
-    invoke-static {v0, v2, v3}, Lcom/glympse/android/rpc/e;->a(Lcom/glympse/android/core/GArray;Lcom/glympse/android/core/GPrimitive;Z)V
-
-    .line 40
-    const-string v0, "body"
+    const-string v0, "failure"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {v1, v0, v2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
+    :goto_0
+    invoke-interface {v4, v5, v0}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 43
-    invoke-interface {p1, p2, v1}, Lcom/glympse/android/rpc/GMessageGateway;->sendData(Lcom/glympse/android/rpc/GConnection;Lcom/glympse/android/core/GPrimitive;)V
+    .line 52
+    const-string v0, "battery"
 
-    .line 44
-    return-void
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 31
-    :cond_0
-    invoke-interface {v1}, Lcom/glympse/android/lib/GGlympsePrivate;->getUserManager()Lcom/glympse/android/api/GUserManager;
+    move-result-object v1
+
+    invoke-interface {v2}, Lcom/glympse/android/api/GBatteryManager;->isBatteryLevelGood()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const-string v0, "ok"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/glympse/android/api/GUserManager;->getUsers()Lcom/glympse/android/core/GArray;
+    :goto_1
+    invoke-interface {v4, v1, v0}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 55
+    const-string v0, "arguments"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v3, v0, v4}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
+
+    .line 58
+    invoke-interface {p1, p2, v3}, Lcom/glympse/android/rpc/GMessageGateway;->sendData(Lcom/glympse/android/rpc/GConnection;Lcom/glympse/android/core/GPrimitive;)V
+
+    .line 59
+    return-void
+
+    .line 50
+    :cond_0
+    const-string v0, "ok"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
+
+    .line 52
+    :cond_1
+    invoke-interface {v2}, Lcom/glympse/android/api/GBatteryManager;->isBatteryForce()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const-string v0, "force"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_1
+
+    :cond_2
+    const-string v0, "low"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_1
 .end method
 
 .method public getName()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 20
-    const-string v0, "users_list"
-
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+    .line 37
+    invoke-static {}, Lcom/glympse/android/rpc/ay;->name()Ljava/lang/String;
 
     move-result-object v0
 
@@ -158,44 +202,36 @@
     .end annotation
 
     .prologue
-    .line 49
+    .line 64
     invoke-static {p4}, Lcom/glympse/android/rpc/RpcMessages;->consumerUnpackSink(Lcom/glympse/android/core/GArray;)Lcom/glympse/android/api/GEventSink;
 
     move-result-object v0
 
-    .line 52
-    new-instance v1, Lcom/glympse/android/hal/GVector;
+    .line 67
+    const-string v1, "arguments"
 
-    invoke-direct {v1}, Lcom/glympse/android/hal/GVector;-><init>()V
+    invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 53
-    const-string v2, "body"
+    move-result-object v1
 
-    invoke-static {v2}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p3, v1}, Lcom/glympse/android/core/GPrimitive;->get(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-interface {p3, v2}, Lcom/glympse/android/core/GPrimitive;->get(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+    .line 68
+    if-nez v1, :cond_0
 
-    move-result-object v2
-
-    .line 54
-    if-nez v2, :cond_0
-
-    .line 61
+    .line 75
     :goto_0
     return-void
 
-    .line 58
+    .line 74
     :cond_0
-    invoke-static {v1, v2}, Lcom/glympse/android/rpc/e;->b(Lcom/glympse/android/hal/GVector;Lcom/glympse/android/core/GPrimitive;)V
-
-    .line 60
     const/4 v2, 0x0
 
     const/4 v3, 0x2
 
-    const/high16 v4, 0x10000
+    const/16 v4, 0x200
 
     invoke-interface {v0, v2, v3, v4, v1}, Lcom/glympse/android/api/GEventSink;->eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
 

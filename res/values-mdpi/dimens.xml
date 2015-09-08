@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="app_store_item_width">48.0dip</dimen>
-    <dimen name="store_home_page_app_grid_height">141.0dip</dimen>
-    <dimen name="store_home_page_banner_height">110.0dip</dimen>
-</resources>

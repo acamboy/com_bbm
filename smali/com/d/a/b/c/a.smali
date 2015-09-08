@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/graphics/Bitmap;Landroid/widget/ImageView;)Landroid/graphics/Bitmap;
+.method public abstract a(Landroid/graphics/Bitmap;Lcom/d/a/b/e/a;)V
 .end method

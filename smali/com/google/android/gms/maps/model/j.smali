@@ -1,50 +1,20 @@
-.class public Lcom/google/android/gms/maps/model/j;
+.class public interface abstract Lcom/google/android/gms/maps/model/j;
 .super Ljava/lang/Object;
 
 
+# static fields
+.field public static final b:Lcom/google/android/gms/maps/model/Tile;
+
+
 # direct methods
-.method static a(Lcom/google/android/gms/maps/model/TileOverlayOptions;Landroid/os/Parcel;I)V
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/b;->p(Landroid/os/Parcel;)I
+    new-instance v0, Lcom/google/android/gms/maps/model/Tile;
 
-    move-result v0
+    invoke-direct {v0}, Lcom/google/android/gms/maps/model/Tile;-><init>()V
 
-    const/4 v1, 0x1
-
-    invoke-virtual {p0}, Lcom/google/android/gms/maps/model/TileOverlayOptions;->getVersionCode()I
-
-    move-result v2
-
-    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/b;->c(Landroid/os/Parcel;II)V
-
-    const/4 v1, 0x2
-
-    invoke-virtual {p0}, Lcom/google/android/gms/maps/model/TileOverlayOptions;->hh()Landroid/os/IBinder;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    invoke-static {p1, v1, v2, v3}, Lcom/google/android/gms/common/internal/safeparcel/b;->a(Landroid/os/Parcel;ILandroid/os/IBinder;Z)V
-
-    const/4 v1, 0x3
-
-    invoke-virtual {p0}, Lcom/google/android/gms/maps/model/TileOverlayOptions;->isVisible()Z
-
-    move-result v2
-
-    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/b;->a(Landroid/os/Parcel;IZ)V
-
-    const/4 v1, 0x4
-
-    invoke-virtual {p0}, Lcom/google/android/gms/maps/model/TileOverlayOptions;->getZIndex()F
-
-    move-result v2
-
-    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/b;->a(Landroid/os/Parcel;IF)V
-
-    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/b;->D(Landroid/os/Parcel;I)V
+    sput-object v0, Lcom/google/android/gms/maps/model/j;->b:Lcom/google/android/gms/maps/model/Tile;
 
     return-void
 .end method

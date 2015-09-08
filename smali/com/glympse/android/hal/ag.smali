@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private bs:Ljava/util/concurrent/locks/ReentrantLock;
+.field private bu:Ljava/util/concurrent/locks/ReentrantLock;
 
 
 # direct methods
@@ -23,7 +23,7 @@
 
     invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ag;->bs:Ljava/util/concurrent/locks/ReentrantLock;
+    iput-object v0, p0, Lcom/glympse/android/hal/ag;->bu:Ljava/util/concurrent/locks/ReentrantLock;
 
     .line 18
     return-void
@@ -36,7 +36,7 @@
 
     .prologue
     .line 22
-    iget-object v0, p0, Lcom/glympse/android/hal/ag;->bs:Ljava/util/concurrent/locks/ReentrantLock;
+    iget-object v0, p0, Lcom/glympse/android/hal/ag;->bu:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
@@ -49,7 +49,7 @@
 
     .prologue
     .line 27
-    iget-object v0, p0, Lcom/glympse/android/hal/ag;->bs:Ljava/util/concurrent/locks/ReentrantLock;
+    iget-object v0, p0, Lcom/glympse/android/hal/ag;->bu:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 

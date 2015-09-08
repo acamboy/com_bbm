@@ -9,9 +9,9 @@
 # instance fields
 .field private e:Landroid/content/Context;
 
-.field private eO:Lcom/glympse/android/hal/GWifiListener;
+.field private eR:Lcom/glympse/android/hal/GWifiListener;
 
-.field private eP:Lcom/glympse/android/hal/bw;
+.field private eS:Lcom/glympse/android/hal/bw;
 
 
 # direct methods
@@ -34,7 +34,7 @@
 
     .prologue
     .line 16
-    iget-object v0, p0, Lcom/glympse/android/hal/bv;->eO:Lcom/glympse/android/hal/GWifiListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/bv;->eR:Lcom/glympse/android/hal/GWifiListener;
 
     return-object v0
 .end method
@@ -118,7 +118,7 @@
 
     .prologue
     .line 29
-    iput-object p1, p0, Lcom/glympse/android/hal/bv;->eO:Lcom/glympse/android/hal/GWifiListener;
+    iput-object p1, p0, Lcom/glympse/android/hal/bv;->eR:Lcom/glympse/android/hal/GWifiListener;
 
     .line 30
     new-instance v0, Lcom/glympse/android/hal/bw;
@@ -127,12 +127,12 @@
 
     invoke-direct {v0, p0, v1}, Lcom/glympse/android/hal/bw;-><init>(Lcom/glympse/android/hal/bv;Lcom/glympse/android/hal/bv$1;)V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/bv;->eP:Lcom/glympse/android/hal/bw;
+    iput-object v0, p0, Lcom/glympse/android/hal/bv;->eS:Lcom/glympse/android/hal/bw;
 
     .line 31
     iget-object v0, p0, Lcom/glympse/android/hal/bv;->e:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/bv;->eP:Lcom/glympse/android/hal/bw;
+    iget-object v1, p0, Lcom/glympse/android/hal/bv;->eS:Lcom/glympse/android/hal/bw;
 
     new-instance v2, Landroid/content/IntentFilter;
 
@@ -155,7 +155,7 @@
     .line 36
     iget-object v0, p0, Lcom/glympse/android/hal/bv;->e:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/bv;->eP:Lcom/glympse/android/hal/bw;
+    iget-object v1, p0, Lcom/glympse/android/hal/bv;->eS:Lcom/glympse/android/hal/bw;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
@@ -163,10 +163,10 @@
     iput-object v2, p0, Lcom/glympse/android/hal/bv;->e:Landroid/content/Context;
 
     .line 38
-    iput-object v2, p0, Lcom/glympse/android/hal/bv;->eP:Lcom/glympse/android/hal/bw;
+    iput-object v2, p0, Lcom/glympse/android/hal/bv;->eS:Lcom/glympse/android/hal/bw;
 
     .line 39
-    iput-object v2, p0, Lcom/glympse/android/hal/bv;->eO:Lcom/glympse/android/hal/GWifiListener;
+    iput-object v2, p0, Lcom/glympse/android/hal/bv;->eR:Lcom/glympse/android/hal/GWifiListener;
 
     .line 40
     return-void

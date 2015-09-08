@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/mv;
 .super Ljava/lang/Object;
-.source "GroupConversationActivity.java"
+.source "GroupListItemsActivity.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupListItemsActivity;)V
     .locals 0
 
     .prologue
-    .line 670
-    iput-object p1, p0, Lcom/bbm/ui/activities/mv;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    .line 204
+    iput-object p1, p0, Lcom/bbm/ui/activities/mv;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,29 +29,18 @@
     .locals 2
 
     .prologue
-    .line 673
-    const-string v0, "Start Meeting Clicked"
+    .line 207
+    const-string v0, "addListItemButton Clicked"
 
-    const-class v1, Lcom/bbm/ui/activities/GroupConversationActivity;
+    const-class v1, Lcom/bbm/ui/activities/GroupListItemsActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 674
-    iget-object v0, p0, Lcom/bbm/ui/activities/mv;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    .line 209
+    iget-object v0, p0, Lcom/bbm/ui/activities/mv;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
-    invoke-static {v0}, Lcom/bbm/util/fh;->b(Landroid/app/Activity;)V
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupListItemsActivity;->b(Lcom/bbm/ui/activities/GroupListItemsActivity;)V
 
-    .line 675
-    iget-object v0, p0, Lcom/bbm/ui/activities/mv;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/mv;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/GroupConversationActivity;->e(Lcom/bbm/ui/activities/GroupConversationActivity;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/bbm/meetings/a;->a(Landroid/content/Context;Ljava/lang/String;)V
-
-    .line 676
+    .line 210
     return-void
 .end method

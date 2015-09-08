@@ -1,330 +1,205 @@
-.class public Lcom/google/android/gms/internal/l;
-.super Ljava/lang/Object;
+.class public final Lcom/google/android/gms/internal/l;
+.super Lcom/google/android/gms/internal/vf;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/google/android/gms/internal/vf",
+        "<",
+        "Lcom/google/android/gms/internal/l;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field private static volatile c:[Lcom/google/android/gms/internal/l;
 
 
 # instance fields
-.field private ko:Ljava/lang/String;
+.field public a:I
 
-.field private kp:Ljava/lang/String;
-
-.field private kq:[Ljava/lang/String;
-
-.field private kr:Lcom/google/android/gms/internal/h;
-
-.field private final ks:Lcom/google/android/gms/internal/g;
+.field public b:I
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/internal/h;)V
-    .locals 3
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    const-string v0, "googleads.g.doubleclick.net"
+    invoke-direct {p0}, Lcom/google/android/gms/internal/vf;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/gms/internal/l;->ko:Ljava/lang/String;
+    iput v0, p0, Lcom/google/android/gms/internal/l;->a:I
 
-    const-string v0, "/pagead/ads"
+    iput v0, p0, Lcom/google/android/gms/internal/l;->b:I
 
-    iput-object v0, p0, Lcom/google/android/gms/internal/l;->kp:Ljava/lang/String;
+    const/4 v0, 0x0
 
-    const/4 v0, 0x3
+    iput-object v0, p0, Lcom/google/android/gms/internal/l;->r:Lcom/google/android/gms/internal/vh;
 
-    new-array v0, v0, [Ljava/lang/String;
+    const/4 v0, -0x1
 
-    const/4 v1, 0x0
-
-    const-string v2, ".doubleclick.net"
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x1
-
-    const-string v2, ".googleadservices.com"
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x2
-
-    const-string v2, ".googlesyndication.com"
-
-    aput-object v2, v0, v1
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/l;->kq:[Ljava/lang/String;
-
-    new-instance v0, Lcom/google/android/gms/internal/g;
-
-    invoke-direct {v0}, Lcom/google/android/gms/internal/g;-><init>()V
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/l;->ks:Lcom/google/android/gms/internal/g;
-
-    iput-object p1, p0, Lcom/google/android/gms/internal/l;->kr:Lcom/google/android/gms/internal/h;
+    iput v0, p0, Lcom/google/android/gms/internal/l;->s:I
 
     return-void
 .end method
 
-.method private a(Landroid/net/Uri;Landroid/content/Context;Ljava/lang/String;Z)Landroid/net/Uri;
+.method public static b()[Lcom/google/android/gms/internal/l;
     .locals 2
 
+    sget-object v0, Lcom/google/android/gms/internal/l;->c:[Lcom/google/android/gms/internal/l;
+
+    if-nez v0, :cond_1
+
+    sget-object v1, Lcom/google/android/gms/internal/vj;->a:Ljava/lang/Object;
+
+    monitor-enter v1
+
     :try_start_0
-    const-string v0, "ms"
+    sget-object v0, Lcom/google/android/gms/internal/l;->c:[Lcom/google/android/gms/internal/l;
 
-    invoke-virtual {p1, v0}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+    if-nez v0, :cond_0
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    if-eqz v0, :cond_0
+    new-array v0, v0, [Lcom/google/android/gms/internal/l;
 
-    new-instance v0, Lcom/google/android/gms/internal/m;
+    sput-object v0, Lcom/google/android/gms/internal/l;->c:[Lcom/google/android/gms/internal/l;
 
-    const-string v1, "Query parameter already exists: ms"
-
-    invoke-direct {v0, v1}, Lcom/google/android/gms/internal/m;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    :cond_0
+    monitor-exit v1
     :try_end_0
-    .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :catch_0
+    :cond_1
+    sget-object v0, Lcom/google/android/gms/internal/l;->c:[Lcom/google/android/gms/internal/l;
+
+    return-object v0
+
+    :catchall_0
     move-exception v0
 
-    new-instance v0, Lcom/google/android/gms/internal/m;
-
-    const-string v1, "Provided Uri is not in a valid state"
-
-    invoke-direct {v0, v1}, Lcom/google/android/gms/internal/m;-><init>(Ljava/lang/String;)V
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw v0
-
-    :cond_0
-    if-eqz p4, :cond_1
-
-    :try_start_1
-    iget-object v0, p0, Lcom/google/android/gms/internal/l;->kr:Lcom/google/android/gms/internal/h;
-
-    invoke-interface {v0, p2, p3}, Lcom/google/android/gms/internal/h;->a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_0
-    const-string v1, "ms"
-
-    invoke-direct {p0, p1, v1, v0}, Lcom/google/android/gms/internal/l;->a(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_1
-    iget-object v0, p0, Lcom/google/android/gms/internal/l;->kr:Lcom/google/android/gms/internal/h;
-
-    invoke-interface {v0, p2}, Lcom/google/android/gms/internal/h;->a(Landroid/content/Context;)Ljava/lang/String;
-    :try_end_1
-    .catch Ljava/lang/UnsupportedOperationException; {:try_start_1 .. :try_end_1} :catch_0
-
-    move-result-object v0
-
-    goto :goto_0
-.end method
-
-.method private a(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
-    .locals 5
-
-    const/4 v2, -0x1
-
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v0, "&adurl"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
-
-    move-result v0
-
-    if-ne v0, v2, :cond_0
-
-    const-string v0, "?adurl"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
-
-    move-result v0
-
-    :cond_0
-    if-eq v0, v2, :cond_1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const/4 v3, 0x0
-
-    add-int/lit8 v4, v0, 0x1
-
-    invoke-virtual {v1, v3, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, "="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, "&"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    add-int/lit8 v0, v0, 0x1
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :cond_1
-    invoke-virtual {p1}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p2, p3}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
-
-    move-result-object v0
-
-    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public a(Landroid/net/Uri;Landroid/content/Context;)Landroid/net/Uri;
-    .locals 2
+.method protected final a()I
+    .locals 3
 
-    :try_start_0
-    const-string v0, "ai"
+    invoke-super {p0}, Lcom/google/android/gms/internal/vf;->a()I
 
-    invoke-virtual {p1, v0}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    move-result v0
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, p1, p2, v0, v1}, Lcom/google/android/gms/internal/l;->a(Landroid/net/Uri;Landroid/content/Context;Ljava/lang/String;Z)Landroid/net/Uri;
-    :try_end_0
-    .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
+    iget v2, p0, Lcom/google/android/gms/internal/l;->a:I
 
-    move-result-object v0
+    invoke-static {v1, v2}, Lcom/google/android/gms/internal/vd;->b(II)I
 
-    return-object v0
+    move-result v1
 
-    :catch_0
-    move-exception v0
+    add-int/2addr v0, v1
 
-    new-instance v0, Lcom/google/android/gms/internal/m;
+    const/4 v1, 0x2
 
-    const-string v1, "Provided Uri is not in a valid state"
+    iget v2, p0, Lcom/google/android/gms/internal/l;->b:I
 
-    invoke-direct {v0, v1}, Lcom/google/android/gms/internal/m;-><init>(Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/google/android/gms/internal/vd;->b(II)I
 
-    throw v0
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method
 
-.method public a(Landroid/view/MotionEvent;)V
-    .locals 1
+.method public final a(Lcom/google/android/gms/internal/vd;)V
+    .locals 2
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/l;->kr:Lcom/google/android/gms/internal/h;
+    const/4 v0, 0x1
 
-    invoke-interface {v0, p1}, Lcom/google/android/gms/internal/h;->a(Landroid/view/MotionEvent;)V
+    iget v1, p0, Lcom/google/android/gms/internal/l;->a:I
+
+    invoke-virtual {p1, v0, v1}, Lcom/google/android/gms/internal/vd;->a(II)V
+
+    const/4 v0, 0x2
+
+    iget v1, p0, Lcom/google/android/gms/internal/l;->b:I
+
+    invoke-virtual {p1, v0, v1}, Lcom/google/android/gms/internal/vd;->a(II)V
+
+    invoke-super {p0, p1}, Lcom/google/android/gms/internal/vf;->a(Lcom/google/android/gms/internal/vd;)V
 
     return-void
 .end method
 
-.method public a(Landroid/net/Uri;)Z
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
     const/4 v0, 0x0
 
-    if-nez p1, :cond_0
-
-    new-instance v0, Ljava/lang/NullPointerException;
-
-    invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
-
-    throw v0
-
-    :cond_0
-    :try_start_0
-    invoke-virtual {p1}, Landroid/net/Uri;->getHost()Ljava/lang/String;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/google/android/gms/internal/l;->kq:[Ljava/lang/String;
-
-    array-length v4, v3
-
-    move v1, v0
-
-    :goto_0
-    if-ge v1, v4, :cond_1
-
-    aget-object v5, v3, v1
-
-    invoke-virtual {v2, v5}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-    :try_end_0
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result v5
-
-    if-eqz v5, :cond_2
+    if-ne p1, p0, :cond_1
 
     const/4 v0, 0x1
 
-    :cond_1
-    :goto_1
+    :cond_0
+    :goto_0
     return v0
 
-    :cond_2
-    add-int/lit8 v1, v1, 0x1
+    :cond_1
+    instance-of v1, p1, Lcom/google/android/gms/internal/l;
+
+    if-eqz v1, :cond_0
+
+    check-cast p1, Lcom/google/android/gms/internal/l;
+
+    iget v1, p0, Lcom/google/android/gms/internal/l;->a:I
+
+    iget v2, p1, Lcom/google/android/gms/internal/l;->a:I
+
+    if-ne v1, v2, :cond_0
+
+    iget v1, p0, Lcom/google/android/gms/internal/l;->b:I
+
+    iget v2, p1, Lcom/google/android/gms/internal/l;->b:I
+
+    if-ne v1, v2, :cond_0
+
+    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/l;->a(Lcom/google/android/gms/internal/vf;)Z
+
+    move-result v0
 
     goto :goto_0
-
-    :catch_0
-    move-exception v1
-
-    goto :goto_1
 .end method
 
-.method public y()Lcom/google/android/gms/internal/h;
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/l;->kr:Lcom/google/android/gms/internal/h;
+    iget v0, p0, Lcom/google/android/gms/internal/l;->a:I
 
-    return-object v0
+    add-int/lit16 v0, v0, 0x20f
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lcom/google/android/gms/internal/l;->b:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/l;->c()I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method

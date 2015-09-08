@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/ahs;
 .super Ljava/lang/Object;
-.source "SettingsActivity.java"
+.source "ViewProfileActivity.java"
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ViewProfileActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ViewProfileActivity;)V
     .locals 0
 
     .prologue
-    .line 292
-    iput-object p1, p0, Lcom/bbm/ui/activities/ahs;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    .line 347
+    iput-object p1, p0, Lcom/bbm/ui/activities/ahs;->a:Lcom/bbm/ui/activities/ViewProfileActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,24 +25,15 @@
 
 
 # virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
 
     .prologue
-    .line 296
-    const-string v0, "security question invite onCheckedChanged"
+    .line 350
+    iget-object v0, p0, Lcom/bbm/ui/activities/ahs;->a:Lcom/bbm/ui/activities/ViewProfileActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/SettingsActivity;
+    invoke-static {v0}, Lcom/bbm/util/dw;->a(Landroid/app/Activity;)V
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 297
-    iget-object v0, p0, Lcom/bbm/ui/activities/ahs;->a:Lcom/bbm/ui/activities/SettingsActivity;
-
-    const-string v1, "security_question_invite"
-
-    invoke-static {v0, v1, p2}, Lcom/bbm/ui/activities/SettingsActivity;->a(Lcom/bbm/ui/activities/SettingsActivity;Ljava/lang/String;Z)V
-
-    .line 298
+    .line 351
     return-void
 .end method

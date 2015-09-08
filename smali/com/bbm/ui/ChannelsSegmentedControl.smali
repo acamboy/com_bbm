@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public a:Landroid/widget/ImageView;
+.field private a:Landroid/widget/ImageView;
 
 .field private b:Landroid/widget/ImageView;
 
@@ -12,7 +12,7 @@
 
 .field private d:Landroid/widget/ImageView;
 
-.field private e:Lcom/bbm/ui/ah;
+.field private e:Lcom/bbm/ui/ai;
 
 .field private final f:Landroid/view/View$OnClickListener;
 
@@ -54,12 +54,12 @@
     .line 20
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->e:Lcom/bbm/ui/ah;
+    iput-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->e:Lcom/bbm/ui/ai;
 
     .line 100
-    new-instance v0, Lcom/bbm/ui/ag;
+    new-instance v0, Lcom/bbm/ui/ah;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/ag;-><init>(Lcom/bbm/ui/ChannelsSegmentedControl;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/ah;-><init>(Lcom/bbm/ui/ChannelsSegmentedControl;)V
 
     iput-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->f:Landroid/view/View$OnClickListener;
 
@@ -68,7 +68,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f030071
+    const v1, 0x7f03008e
 
     const/4 v2, 0x1
 
@@ -83,7 +83,7 @@
 
     .prologue
     .line 13
-    iget-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->b:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->a:Landroid/widget/ImageView;
 
     return-object v0
 .end method
@@ -93,7 +93,7 @@
 
     .prologue
     .line 13
-    iget-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->c:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->b:Landroid/widget/ImageView;
 
     return-object v0
 .end method
@@ -103,7 +103,7 @@
 
     .prologue
     .line 13
-    iget-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->d:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->c:Landroid/widget/ImageView;
 
     return-object v0
 .end method
@@ -115,23 +115,23 @@
 
     .prologue
     .line 69
-    iget-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->b:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->a:Landroid/widget/ImageView;
 
-    const v1, 0x7f020209
+    const v1, 0x7f0201d4
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 70
-    iget-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->c:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->b:Landroid/widget/ImageView;
 
-    const v1, 0x7f02024f
+    const v1, 0x7f020245
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 71
-    iget-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->d:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->c:Landroid/widget/ImageView;
 
-    const v1, 0x7f020264
+    const v1, 0x7f02025f
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -140,24 +140,13 @@
 
     .line 91
     :goto_0
-    iget-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->e:Lcom/bbm/ui/ah;
-
-    if-eqz v0, :cond_0
-
-    .line 92
-    iget-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->e:Lcom/bbm/ui/ah;
-
-    invoke-interface {v0, p1}, Lcom/bbm/ui/ah;->a(I)V
-
-    .line 94
-    :cond_0
     return-void
 
     .line 77
     :sswitch_0
-    iget-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->b:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->a:Landroid/widget/ImageView;
 
-    const v1, 0x7f020208
+    const v1, 0x7f0201d3
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -165,9 +154,9 @@
 
     .line 81
     :sswitch_1
-    iget-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->c:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->b:Landroid/widget/ImageView;
 
-    const v1, 0x7f02024e
+    const v1, 0x7f020244
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -175,9 +164,9 @@
 
     .line 85
     :sswitch_2
-    iget-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->d:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->c:Landroid/widget/ImageView;
 
-    const v1, 0x7f020263
+    const v1, 0x7f02025e
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -189,11 +178,13 @@
     goto :goto_0
 
     .line 74
+    nop
+
     :sswitch_data_0
     .sparse-switch
-        0x7f0b005c -> :sswitch_2
-        0x7f0b0061 -> :sswitch_0
-        0x7f0b0064 -> :sswitch_1
+        0x7f0b008e -> :sswitch_2
+        0x7f0b0093 -> :sswitch_0
+        0x7f0b0096 -> :sswitch_1
     .end sparse-switch
 .end method
 
@@ -205,61 +196,7 @@
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onFinishInflate()V
 
     .line 52
-    const v0, 0x7f0b0343
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/ChannelsSegmentedControl;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->b:Landroid/widget/ImageView;
-
-    .line 53
-    iget-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->b:Landroid/widget/ImageView;
-
-    iget-object v1, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->f:Landroid/view/View$OnClickListener;
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 55
-    const v0, 0x7f0b0344
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/ChannelsSegmentedControl;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->c:Landroid/widget/ImageView;
-
-    .line 56
-    iget-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->c:Landroid/widget/ImageView;
-
-    iget-object v1, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->f:Landroid/view/View$OnClickListener;
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 58
-    const v0, 0x7f0b0346
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/ChannelsSegmentedControl;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->d:Landroid/widget/ImageView;
-
-    .line 59
-    iget-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->d:Landroid/widget/ImageView;
-
-    iget-object v1, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->f:Landroid/view/View$OnClickListener;
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 61
-    const v0, 0x7f0b0347
+    const v0, 0x7f0b03ca
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ChannelsSegmentedControl;->findViewById(I)Landroid/view/View;
 
@@ -269,8 +206,62 @@
 
     iput-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->a:Landroid/widget/ImageView;
 
+    .line 53
+    iget-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->a:Landroid/widget/ImageView;
+
+    iget-object v1, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->f:Landroid/view/View$OnClickListener;
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 55
+    const v0, 0x7f0b03cb
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/ChannelsSegmentedControl;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->b:Landroid/widget/ImageView;
+
+    .line 56
+    iget-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->b:Landroid/widget/ImageView;
+
+    iget-object v1, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->f:Landroid/view/View$OnClickListener;
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 58
+    const v0, 0x7f0b03cd
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/ChannelsSegmentedControl;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->c:Landroid/widget/ImageView;
+
+    .line 59
+    iget-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->c:Landroid/widget/ImageView;
+
+    iget-object v1, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->f:Landroid/view/View$OnClickListener;
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 61
+    const v0, 0x7f0b03ce
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/ChannelsSegmentedControl;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->d:Landroid/widget/ImageView;
+
     .line 64
-    const v0, 0x7f0b0061
+    const v0, 0x7f0b0093
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ChannelsSegmentedControl;->a(I)V
 
@@ -283,7 +274,7 @@
 
     .prologue
     .line 41
-    iget-object v1, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->a:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->d:Landroid/widget/ImageView;
 
     if-eqz p1, :cond_0
 
@@ -302,12 +293,12 @@
     goto :goto_0
 .end method
 
-.method public setOnOptionSelectedListener(Lcom/bbm/ui/ah;)V
+.method public setOnOptionSelectedListener(Lcom/bbm/ui/ai;)V
     .locals 0
 
     .prologue
     .line 97
-    iput-object p1, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->e:Lcom/bbm/ui/ah;
+    iput-object p1, p0, Lcom/bbm/ui/ChannelsSegmentedControl;->e:Lcom/bbm/ui/ai;
 
     .line 98
     return-void

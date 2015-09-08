@@ -13,7 +13,7 @@
 
     .prologue
     .line 441
-    invoke-static {}, Lcom/google/zxing/client/android/q;->values()[Lcom/google/zxing/client/android/q;
+    invoke-static {}, Lcom/google/zxing/client/android/q;->a()[I
 
     move-result-object v0
 
@@ -26,11 +26,9 @@
     :try_start_0
     sget-object v0, Lcom/google/zxing/client/android/c;->a:[I
 
-    sget-object v1, Lcom/google/zxing/client/android/q;->a:Lcom/google/zxing/client/android/q;
+    sget v1, Lcom/google/zxing/client/android/q;->a:I
 
-    invoke-virtual {v1}, Lcom/google/zxing/client/android/q;->ordinal()I
-
-    move-result v1
+    add-int/lit8 v1, v1, -0x1
 
     const/4 v2, 0x1
 
@@ -42,11 +40,9 @@
     :try_start_1
     sget-object v0, Lcom/google/zxing/client/android/c;->a:[I
 
-    sget-object v1, Lcom/google/zxing/client/android/q;->b:Lcom/google/zxing/client/android/q;
+    sget v1, Lcom/google/zxing/client/android/q;->b:I
 
-    invoke-virtual {v1}, Lcom/google/zxing/client/android/q;->ordinal()I
-
-    move-result v1
+    add-int/lit8 v1, v1, -0x1
 
     const/4 v2, 0x2
 
@@ -58,11 +54,9 @@
     :try_start_2
     sget-object v0, Lcom/google/zxing/client/android/c;->a:[I
 
-    sget-object v1, Lcom/google/zxing/client/android/q;->c:Lcom/google/zxing/client/android/q;
+    sget v1, Lcom/google/zxing/client/android/q;->c:I
 
-    invoke-virtual {v1}, Lcom/google/zxing/client/android/q;->ordinal()I
-
-    move-result v1
+    add-int/lit8 v1, v1, -0x1
 
     const/4 v2, 0x3
 
@@ -74,11 +68,9 @@
     :try_start_3
     sget-object v0, Lcom/google/zxing/client/android/c;->a:[I
 
-    sget-object v1, Lcom/google/zxing/client/android/q;->d:Lcom/google/zxing/client/android/q;
+    sget v1, Lcom/google/zxing/client/android/q;->d:I
 
-    invoke-virtual {v1}, Lcom/google/zxing/client/android/q;->ordinal()I
-
-    move-result v1
+    add-int/lit8 v1, v1, -0x1
 
     const/4 v2, 0x4
 

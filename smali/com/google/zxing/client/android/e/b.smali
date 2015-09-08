@@ -238,14 +238,14 @@
 
     .line 76
     :try_start_1
-    invoke-static {v0}, Lcom/google/zxing/client/android/e/a;->a(Ljava/lang/String;)Lcom/google/zxing/client/android/e/a;
+    invoke-static {v0}, Lcom/google/zxing/client/android/e/a;->a(Ljava/lang/String;)I
     :try_end_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
 
-    move-result-object v0
+    move-result v0
 
     .line 81
-    sget-object v3, Lcom/google/zxing/client/android/e/a;->c:Lcom/google/zxing/client/android/e/a;
+    sget v3, Lcom/google/zxing/client/android/e/a;->c:I
 
     if-ne v0, v3, :cond_4
 
@@ -302,7 +302,7 @@
     if-eqz v3, :cond_0
 
     .line 86
-    sget-object v3, Lcom/google/zxing/client/android/e/a;->a:Lcom/google/zxing/client/android/e/a;
+    sget v3, Lcom/google/zxing/client/android/e/a;->a:I
 
     if-ne v0, v3, :cond_5
 
@@ -359,7 +359,7 @@
 
     .line 88
     :cond_5
-    sget-object v3, Lcom/google/zxing/client/android/e/a;->b:Lcom/google/zxing/client/android/e/a;
+    sget v3, Lcom/google/zxing/client/android/e/a;->b:I
 
     if-ne v0, v3, :cond_0
 

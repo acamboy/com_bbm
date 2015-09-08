@@ -20,7 +20,7 @@
 
 
 # instance fields
-.field private a:Lcom/bbm/j/d;
+.field private a:I
 
 .field b:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
@@ -55,13 +55,13 @@
     .locals 1
 
     .prologue
-    .line 28
+    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 47
-    sget-object v0, Lcom/bbm/j/d;->c:Lcom/bbm/j/d;
+    sget v0, Lcom/bbm/j/d;->c:I
 
-    iput-object v0, p0, Lcom/bbm/j/a;->a:Lcom/bbm/j/d;
+    iput v0, p0, Lcom/bbm/j/a;->a:I
 
     .line 48
     const/4 v0, 0x0
@@ -101,6 +101,64 @@
 
     iput-object v0, p0, Lcom/bbm/j/a;->g:Lcom/bbm/j/h;
 
+    .line 77
+    return-void
+.end method
+
+.method public constructor <init>(B)V
+    .locals 1
+
+    .prologue
+    .line 86
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 47
+    sget v0, Lcom/bbm/j/d;->c:I
+
+    iput v0, p0, Lcom/bbm/j/a;->a:I
+
+    .line 48
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/bbm/j/a;->b:Ljava/lang/Object;
+
+    .line 49
+    new-instance v0, Lcom/bbm/j/i;
+
+    invoke-direct {v0}, Lcom/bbm/j/i;-><init>()V
+
+    iput-object v0, p0, Lcom/bbm/j/a;->d:Lcom/bbm/j/i;
+
+    .line 58
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/bbm/j/a;->c:Z
+
+    .line 60
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/j/a;->e:Ljava/util/List;
+
+    .line 61
+    new-instance v0, Lcom/bbm/j/b;
+
+    invoke-direct {v0, p0}, Lcom/bbm/j/b;-><init>(Lcom/bbm/j/a;)V
+
+    iput-object v0, p0, Lcom/bbm/j/a;->f:Lcom/bbm/j/q;
+
+    .line 68
+    new-instance v0, Lcom/bbm/j/c;
+
+    invoke-direct {v0, p0}, Lcom/bbm/j/c;-><init>(Lcom/bbm/j/a;)V
+
+    iput-object v0, p0, Lcom/bbm/j/a;->g:Lcom/bbm/j/h;
+
+    .line 87
+    invoke-virtual {p0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
+
+    .line 90
     return-void
 .end method
 
@@ -117,7 +175,7 @@
     .end annotation
 
     .prologue
-    .line 163
+    .line 178
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -135,38 +193,38 @@
 
     check-cast v0, Lcom/bbm/j/g;
 
-    .line 164
+    .line 179
     iget-object v2, p0, Lcom/bbm/j/a;->g:Lcom/bbm/j/h;
 
     invoke-interface {v0, v2}, Lcom/bbm/j/g;->b(Lcom/bbm/j/h;)V
 
     goto :goto_0
 
-    .line 166
+    .line 181
     :cond_0
     return-void
 .end method
 
-.method private f()V
+.method private e()V
     .locals 3
 
     .prologue
-    .line 116
+    .line 131
     iget-object v0, p0, Lcom/bbm/j/a;->e:Ljava/util/List;
 
     invoke-direct {p0, v0}, Lcom/bbm/j/a;->a(Ljava/util/List;)V
 
-    .line 118
+    .line 133
     iget-object v0, p0, Lcom/bbm/j/a;->f:Lcom/bbm/j/q;
 
     invoke-static {v0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/q;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 120
+    .line 135
     iput-object v0, p0, Lcom/bbm/j/a;->e:Ljava/util/List;
 
-    .line 121
+    .line 136
     iget-object v0, p0, Lcom/bbm/j/a;->e:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -192,7 +250,7 @@
 
     goto :goto_0
 
-    .line 122
+    .line 137
     :cond_0
     return-void
 .end method
@@ -211,12 +269,12 @@
     .locals 1
 
     .prologue
-    .line 96
+    .line 111
     iget-object v0, p0, Lcom/bbm/j/a;->d:Lcom/bbm/j/i;
 
     invoke-virtual {v0, p1}, Lcom/bbm/j/i;->a(Lcom/bbm/j/h;)V
 
-    .line 97
+    .line 112
     return-void
 .end method
 
@@ -229,10 +287,10 @@
     .end annotation
 
     .prologue
-    .line 84
-    iget-object v0, p0, Lcom/bbm/j/a;->a:Lcom/bbm/j/d;
+    .line 99
+    iget v0, p0, Lcom/bbm/j/a;->a:I
 
-    sget-object v1, Lcom/bbm/j/d;->c:Lcom/bbm/j/d;
+    sget v1, Lcom/bbm/j/d;->c:I
 
     if-eq v0, v1, :cond_0
 
@@ -240,23 +298,23 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/bbm/j/a;->a:Lcom/bbm/j/d;
+    iget v0, p0, Lcom/bbm/j/a;->a:I
 
-    sget-object v1, Lcom/bbm/j/d;->b:Lcom/bbm/j/d;
+    sget v1, Lcom/bbm/j/d;->b:I
 
     if-ne v0, v1, :cond_1
 
-    .line 85
+    .line 100
     :cond_0
-    invoke-direct {p0}, Lcom/bbm/j/a;->f()V
+    invoke-direct {p0}, Lcom/bbm/j/a;->e()V
 
-    .line 88
+    .line 103
     :cond_1
-    sget-object v0, Lcom/bbm/j/d;->a:Lcom/bbm/j/d;
+    sget v0, Lcom/bbm/j/d;->a:I
 
-    iput-object v0, p0, Lcom/bbm/j/a;->a:Lcom/bbm/j/d;
+    iput v0, p0, Lcom/bbm/j/a;->a:I
 
-    .line 89
+    .line 104
     iget-object v0, p0, Lcom/bbm/j/a;->b:Ljava/lang/Object;
 
     return-object v0
@@ -266,12 +324,12 @@
     .locals 1
 
     .prologue
-    .line 101
+    .line 116
     iget-object v0, p0, Lcom/bbm/j/a;->d:Lcom/bbm/j/i;
 
     invoke-virtual {v0, p1}, Lcom/bbm/j/i;->b(Lcom/bbm/j/h;)V
 
-    .line 102
+    .line 117
     return-void
 .end method
 
@@ -279,83 +337,83 @@
     .locals 2
 
     .prologue
-    .line 132
-    iget-object v0, p0, Lcom/bbm/j/a;->a:Lcom/bbm/j/d;
+    .line 147
+    iget v0, p0, Lcom/bbm/j/a;->a:I
 
-    sget-object v1, Lcom/bbm/j/d;->b:Lcom/bbm/j/d;
+    sget v1, Lcom/bbm/j/d;->b:I
 
     if-ne v0, v1, :cond_0
 
-    .line 133
-    sget-object v0, Lcom/bbm/j/d;->c:Lcom/bbm/j/d;
+    .line 148
+    sget v0, Lcom/bbm/j/d;->c:I
 
-    iput-object v0, p0, Lcom/bbm/j/a;->a:Lcom/bbm/j/d;
+    iput v0, p0, Lcom/bbm/j/a;->a:I
 
-    .line 137
+    .line 152
     :cond_0
-    iget-object v0, p0, Lcom/bbm/j/a;->a:Lcom/bbm/j/d;
+    iget v0, p0, Lcom/bbm/j/a;->a:I
 
-    sget-object v1, Lcom/bbm/j/d;->c:Lcom/bbm/j/d;
+    sget v1, Lcom/bbm/j/d;->c:I
 
     if-ne v0, v1, :cond_2
 
-    .line 160
+    .line 175
     :cond_1
     :goto_0
     return-void
 
-    .line 143
+    .line 158
     :cond_2
     iget-boolean v0, p0, Lcom/bbm/j/a;->c:Z
 
     if-eqz v0, :cond_3
 
-    .line 144
-    sget-object v0, Lcom/bbm/j/d;->b:Lcom/bbm/j/d;
+    .line 159
+    sget v0, Lcom/bbm/j/d;->b:I
 
-    iput-object v0, p0, Lcom/bbm/j/a;->a:Lcom/bbm/j/d;
+    iput v0, p0, Lcom/bbm/j/a;->a:I
 
-    .line 145
+    .line 160
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/bbm/j/a;->b:Ljava/lang/Object;
 
-    .line 146
+    .line 161
     iget-object v0, p0, Lcom/bbm/j/a;->d:Lcom/bbm/j/i;
 
     invoke-virtual {v0}, Lcom/bbm/j/i;->a()V
 
     goto :goto_0
 
-    .line 150
+    .line 165
     :cond_3
     iget-object v0, p0, Lcom/bbm/j/a;->b:Ljava/lang/Object;
 
-    .line 151
-    invoke-direct {p0}, Lcom/bbm/j/a;->f()V
+    .line 166
+    invoke-direct {p0}, Lcom/bbm/j/a;->e()V
 
-    .line 153
+    .line 168
     iget-object v1, p0, Lcom/bbm/j/a;->b:Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/util/bh;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lcom/bbm/util/bn;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 154
-    iget-object v0, p0, Lcom/bbm/j/a;->a:Lcom/bbm/j/d;
+    .line 169
+    iget v0, p0, Lcom/bbm/j/a;->a:I
 
-    sget-object v1, Lcom/bbm/j/d;->a:Lcom/bbm/j/d;
+    sget v1, Lcom/bbm/j/d;->a:I
 
     if-ne v0, v1, :cond_4
 
-    .line 155
-    sget-object v0, Lcom/bbm/j/d;->b:Lcom/bbm/j/d;
+    .line 170
+    sget v0, Lcom/bbm/j/d;->b:I
 
-    iput-object v0, p0, Lcom/bbm/j/a;->a:Lcom/bbm/j/d;
+    iput v0, p0, Lcom/bbm/j/a;->a:I
 
-    .line 158
+    .line 173
     :cond_4
     iget-object v0, p0, Lcom/bbm/j/a;->d:Lcom/bbm/j/i;
 
@@ -368,23 +426,23 @@
     .locals 1
 
     .prologue
-    .line 175
+    .line 190
     iget-object v0, p0, Lcom/bbm/j/a;->e:Ljava/util/List;
 
     invoke-direct {p0, v0}, Lcom/bbm/j/a;->a(Ljava/util/List;)V
 
-    .line 176
+    .line 191
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bbm/j/a;->e:Ljava/util/List;
 
-    .line 177
+    .line 192
     return-void
 .end method
 
-.method public final e()Ljava/lang/Object;
+.method public final f()Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -393,10 +451,10 @@
     .end annotation
 
     .prologue
-    .line 79
+    .line 94
     invoke-static {p0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/g;)V
 
-    .line 80
+    .line 95
     invoke-virtual {p0}, Lcom/bbm/j/a;->b()Ljava/lang/Object;
 
     move-result-object v0

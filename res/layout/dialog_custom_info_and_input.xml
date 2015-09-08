@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dialog_margin_horizontal" android:layout_marginTop="@dimen/dialog_margin_vertical" android:layout_marginRight="@dimen/dialog_margin_horizontal" android:layout_marginBottom="@dimen/dialog_margin_vertical">
+            <com.bbm.ui.InlineImageTextView android:textSize="@dimen/fontSizeMedium" android:id="@id/dialog_info_first_line" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dialog_spacing" android:textIsSelectable="false" />
+            <EditText android:textColor="@android:color/black" android:id="@id/dialog_input_value" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dialog_spacing" android:singleLine="true" android:inputType="text" android:imeOptions="actionDone">
+                <requestFocus />
+            </EditText>
+            <TextView android:textSize="@dimen/fontSizeMedium" android:id="@id/dialog_info_second_line" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dialog_spacing" android:textIsSelectable="false" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/dialog_checkbox_with_info_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <CheckBox android:layout_gravity="center_vertical" android:id="@id/dialog_checkBox" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/dialog_info_icon" android:paddingLeft="@dimen/abc_action_bar_icon_vertical_padding_material" android:paddingRight="@dimen/abc_action_bar_icon_vertical_padding_material" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textSize="@dimen/fontSizeMedium" android:layout_gravity="center_vertical" android:id="@id/dialog_info_third_line" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textIsSelectable="false" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

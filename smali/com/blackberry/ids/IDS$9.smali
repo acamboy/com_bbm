@@ -230,8 +230,6 @@
     .line 1663
     :cond_2
     :try_start_2
-    iget-object v0, p0, Lcom/blackberry/ids/IDS$9;->c:Ljava/lang/Object;
-
     iget-object v0, p0, Lcom/blackberry/ids/IDS$9;->d:Lcom/blackberry/ids/IManageIdentityCallback;
 
     iget-object v1, p0, Lcom/blackberry/ids/IDS$9;->b:Lcom/blackberry/ids/IFailureCallback;

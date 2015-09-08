@@ -1,578 +1,823 @@
-.class public final enum Lcom/bbm/d/fa;
-.super Ljava/lang/Enum;
-.source "FileTransfer.java"
+.class public Lcom/bbm/d/fa;
+.super Ljava/lang/Object;
+.source "CallEvent.java"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum",
-        "<",
-        "Lcom/bbm/d/fa;",
-        ">;"
-    }
-.end annotation
-
-
-# static fields
-.field public static final enum a:Lcom/bbm/d/fa;
-
-.field public static final enum b:Lcom/bbm/d/fa;
-
-.field public static final enum c:Lcom/bbm/d/fa;
-
-.field public static final enum d:Lcom/bbm/d/fa;
-
-.field public static final enum e:Lcom/bbm/d/fa;
-
-.field public static final enum f:Lcom/bbm/d/fa;
-
-.field public static final enum g:Lcom/bbm/d/fa;
-
-.field public static final enum h:Lcom/bbm/d/fa;
-
-.field public static final enum i:Lcom/bbm/d/fa;
-
-.field public static final enum j:Lcom/bbm/d/fa;
-
-.field public static final enum k:Lcom/bbm/d/fa;
-
-.field public static final enum l:Lcom/bbm/d/fa;
-
-.field public static final enum m:Lcom/bbm/d/fa;
-
-.field public static final enum n:Lcom/bbm/d/fa;
-
-.field public static final enum o:Lcom/bbm/d/fa;
-
-.field public static final enum p:Lcom/bbm/d/fa;
-
-.field public static final enum q:Lcom/bbm/d/fa;
-
-.field public static final enum r:Lcom/bbm/d/fa;
-
-.field public static final enum s:Lcom/bbm/d/fa;
-
-.field private static t:Ljava/util/Hashtable;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Hashtable",
-            "<",
-            "Ljava/lang/String;",
-            "Lcom/bbm/d/fa;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private static final synthetic v:[Lcom/bbm/d/fa;
+# interfaces
+.implements Lcom/bbm/d/a/a;
 
 
 # instance fields
-.field private final u:Ljava/lang/String;
+.field public a:Lcom/bbm/d/fb;
+
+.field public b:J
+
+.field public c:Lcom/bbm/d/fc;
+
+.field public d:Ljava/lang/String;
+
+.field public e:Z
+
+.field public f:Ljava/lang/String;
+
+.field public g:J
+
+.field public h:Ljava/lang/String;
+
+.field public i:Lcom/bbm/util/bo;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
+.method public constructor <init>()V
+    .locals 4
 
     .prologue
-    const/4 v8, 0x4
+    const-wide/16 v2, 0x0
 
-    const/4 v7, 0x3
-
-    const/4 v6, 0x2
-
-    const/4 v5, 0x1
-
-    const/4 v4, 0x0
-
-    .line 122
-    new-instance v0, Lcom/bbm/d/fa;
-
-    const-string v1, "GeneralFailure"
-
-    const-string v2, "GeneralFailure"
-
-    invoke-direct {v0, v1, v4, v2}, Lcom/bbm/d/fa;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/d/fa;->a:Lcom/bbm/d/fa;
-
-    .line 123
-    new-instance v0, Lcom/bbm/d/fa;
-
-    const-string v1, "LocalUnsupported"
-
-    const-string v2, "LocalUnsupported"
-
-    invoke-direct {v0, v1, v5, v2}, Lcom/bbm/d/fa;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/d/fa;->b:Lcom/bbm/d/fa;
-
-    .line 124
-    new-instance v0, Lcom/bbm/d/fa;
-
-    const-string v1, "RemoteUnsupported"
-
-    const-string v2, "RemoteUnsupported"
-
-    invoke-direct {v0, v1, v6, v2}, Lcom/bbm/d/fa;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/d/fa;->c:Lcom/bbm/d/fa;
-
-    .line 125
-    new-instance v0, Lcom/bbm/d/fa;
-
-    const-string v1, "Declined"
-
-    const-string v2, "Declined"
-
-    invoke-direct {v0, v1, v7, v2}, Lcom/bbm/d/fa;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/d/fa;->d:Lcom/bbm/d/fa;
-
-    .line 126
-    new-instance v0, Lcom/bbm/d/fa;
-
-    const-string v1, "LocalCancel"
-
-    const-string v2, "LocalCancel"
-
-    invoke-direct {v0, v1, v8, v2}, Lcom/bbm/d/fa;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/d/fa;->e:Lcom/bbm/d/fa;
-
-    .line 127
-    new-instance v0, Lcom/bbm/d/fa;
-
-    const-string v1, "RemoteCancel"
-
-    const/4 v2, 0x5
-
-    const-string v3, "RemoteCancel"
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/d/fa;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/d/fa;->f:Lcom/bbm/d/fa;
-
-    .line 128
-    new-instance v0, Lcom/bbm/d/fa;
-
-    const-string v1, "Expired"
-
-    const/4 v2, 0x6
-
-    const-string v3, "Expired"
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/d/fa;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/d/fa;->g:Lcom/bbm/d/fa;
-
-    .line 129
-    new-instance v0, Lcom/bbm/d/fa;
-
-    const-string v1, "TooLarge"
-
-    const/4 v2, 0x7
-
-    const-string v3, "TooLarge"
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/d/fa;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/d/fa;->h:Lcom/bbm/d/fa;
-
-    .line 130
-    new-instance v0, Lcom/bbm/d/fa;
-
-    const-string v1, "WriteError"
-
-    const/16 v2, 0x8
-
-    const-string v3, "WriteError"
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/d/fa;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/d/fa;->i:Lcom/bbm/d/fa;
+    .line 185
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 131
-    new-instance v0, Lcom/bbm/d/fa;
+    sget-object v0, Lcom/bbm/d/fb;->c:Lcom/bbm/d/fb;
 
-    const-string v1, "FileNotFound"
-
-    const/16 v2, 0x9
-
-    const-string v3, "FileNotFound"
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/d/fa;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/d/fa;->j:Lcom/bbm/d/fa;
-
-    .line 132
-    new-instance v0, Lcom/bbm/d/fa;
-
-    const-string v1, "AccessDenied"
-
-    const/16 v2, 0xa
-
-    const-string v3, "AccessDenied"
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/d/fa;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/d/fa;->k:Lcom/bbm/d/fa;
-
-    .line 133
-    new-instance v0, Lcom/bbm/d/fa;
-
-    const-string v1, "ReadError"
-
-    const/16 v2, 0xb
-
-    const-string v3, "ReadError"
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/d/fa;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/d/fa;->l:Lcom/bbm/d/fa;
-
-    .line 134
-    new-instance v0, Lcom/bbm/d/fa;
-
-    const-string v1, "Timeout"
-
-    const/16 v2, 0xc
-
-    const-string v3, "Timeout"
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/d/fa;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/d/fa;->m:Lcom/bbm/d/fa;
-
-    .line 135
-    new-instance v0, Lcom/bbm/d/fa;
-
-    const-string v1, "RemoteInterrupted"
-
-    const/16 v2, 0xd
-
-    const-string v3, "RemoteInterrupted"
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/d/fa;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/d/fa;->n:Lcom/bbm/d/fa;
-
-    .line 136
-    new-instance v0, Lcom/bbm/d/fa;
-
-    const-string v1, "TooMany"
-
-    const/16 v2, 0xe
-
-    const-string v3, "TooMany"
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/d/fa;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/d/fa;->o:Lcom/bbm/d/fa;
+    iput-object v0, p0, Lcom/bbm/d/fa;->a:Lcom/bbm/d/fb;
 
     .line 137
-    new-instance v0, Lcom/bbm/d/fa;
+    iput-wide v2, p0, Lcom/bbm/d/fa;->b:J
 
-    const-string v1, "ConversationEnded"
+    .line 142
+    sget-object v0, Lcom/bbm/d/fc;->i:Lcom/bbm/d/fc;
 
-    const/16 v2, 0xf
-
-    const-string v3, "ConversationEnded"
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/d/fa;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/d/fa;->p:Lcom/bbm/d/fa;
-
-    .line 138
-    new-instance v0, Lcom/bbm/d/fa;
-
-    const-string v1, "RemoteIdentityChanged"
-
-    const/16 v2, 0x10
-
-    const-string v3, "RemoteIdentityChanged"
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/d/fa;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/d/fa;->q:Lcom/bbm/d/fa;
-
-    .line 139
-    new-instance v0, Lcom/bbm/d/fa;
-
-    const-string v1, "InsufficientMemory"
-
-    const/16 v2, 0x11
-
-    const-string v3, "InsufficientMemory"
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/d/fa;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/d/fa;->r:Lcom/bbm/d/fa;
-
-    .line 140
-    new-instance v0, Lcom/bbm/d/fa;
-
-    const-string v1, "Unspecified"
-
-    const/16 v2, 0x12
-
-    const-string v3, ""
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/d/fa;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/d/fa;->s:Lcom/bbm/d/fa;
-
-    .line 121
-    const/16 v0, 0x13
-
-    new-array v0, v0, [Lcom/bbm/d/fa;
-
-    sget-object v1, Lcom/bbm/d/fa;->a:Lcom/bbm/d/fa;
-
-    aput-object v1, v0, v4
-
-    sget-object v1, Lcom/bbm/d/fa;->b:Lcom/bbm/d/fa;
-
-    aput-object v1, v0, v5
-
-    sget-object v1, Lcom/bbm/d/fa;->c:Lcom/bbm/d/fa;
-
-    aput-object v1, v0, v6
-
-    sget-object v1, Lcom/bbm/d/fa;->d:Lcom/bbm/d/fa;
-
-    aput-object v1, v0, v7
-
-    sget-object v1, Lcom/bbm/d/fa;->e:Lcom/bbm/d/fa;
-
-    aput-object v1, v0, v8
-
-    const/4 v1, 0x5
-
-    sget-object v2, Lcom/bbm/d/fa;->f:Lcom/bbm/d/fa;
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x6
-
-    sget-object v2, Lcom/bbm/d/fa;->g:Lcom/bbm/d/fa;
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x7
-
-    sget-object v2, Lcom/bbm/d/fa;->h:Lcom/bbm/d/fa;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0x8
-
-    sget-object v2, Lcom/bbm/d/fa;->i:Lcom/bbm/d/fa;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0x9
-
-    sget-object v2, Lcom/bbm/d/fa;->j:Lcom/bbm/d/fa;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0xa
-
-    sget-object v2, Lcom/bbm/d/fa;->k:Lcom/bbm/d/fa;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0xb
-
-    sget-object v2, Lcom/bbm/d/fa;->l:Lcom/bbm/d/fa;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0xc
-
-    sget-object v2, Lcom/bbm/d/fa;->m:Lcom/bbm/d/fa;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0xd
-
-    sget-object v2, Lcom/bbm/d/fa;->n:Lcom/bbm/d/fa;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0xe
-
-    sget-object v2, Lcom/bbm/d/fa;->o:Lcom/bbm/d/fa;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0xf
-
-    sget-object v2, Lcom/bbm/d/fa;->p:Lcom/bbm/d/fa;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0x10
-
-    sget-object v2, Lcom/bbm/d/fa;->q:Lcom/bbm/d/fa;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0x11
-
-    sget-object v2, Lcom/bbm/d/fa;->r:Lcom/bbm/d/fa;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0x12
-
-    sget-object v2, Lcom/bbm/d/fa;->s:Lcom/bbm/d/fa;
-
-    aput-object v2, v0, v1
-
-    sput-object v0, Lcom/bbm/d/fa;->v:[Lcom/bbm/d/fa;
-
-    return-void
-.end method
-
-.method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            ")V"
-        }
-    .end annotation
-
-    .prologue
-    .line 145
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    .line 146
-    iput-object p3, p0, Lcom/bbm/d/fa;->u:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/d/fa;->c:Lcom/bbm/d/fc;
 
     .line 147
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/bbm/d/fa;->d:Ljava/lang/String;
+
+    .line 153
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/bbm/d/fa;->e:Z
+
+    .line 159
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/bbm/d/fa;->f:Ljava/lang/String;
+
+    .line 164
+    iput-wide v2, p0, Lcom/bbm/d/fa;->g:J
+
+    .line 169
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/bbm/d/fa;->h:Ljava/lang/String;
+
+    .line 179
+    sget-object v0, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
+
+    iput-object v0, p0, Lcom/bbm/d/fa;->i:Lcom/bbm/util/bo;
+
+    .line 185
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;)Lcom/bbm/d/fa;
-    .locals 6
+.method private constructor <init>(Lcom/bbm/d/fa;)V
+    .locals 4
 
     .prologue
-    .line 150
-    sget-object v0, Lcom/bbm/d/fa;->t:Ljava/util/Hashtable;
+    const-wide/16 v2, 0x0
 
-    if-nez v0, :cond_1
+    .line 192
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 151
-    new-instance v1, Ljava/util/Hashtable;
+    .line 131
+    sget-object v0, Lcom/bbm/d/fb;->c:Lcom/bbm/d/fb;
 
-    invoke-direct {v1}, Ljava/util/Hashtable;-><init>()V
+    iput-object v0, p0, Lcom/bbm/d/fa;->a:Lcom/bbm/d/fb;
 
-    .line 152
-    invoke-static {}, Lcom/bbm/d/fa;->values()[Lcom/bbm/d/fa;
+    .line 137
+    iput-wide v2, p0, Lcom/bbm/d/fa;->b:J
 
-    move-result-object v2
+    .line 142
+    sget-object v0, Lcom/bbm/d/fc;->i:Lcom/bbm/d/fc;
 
-    array-length v3, v2
+    iput-object v0, p0, Lcom/bbm/d/fa;->c:Lcom/bbm/d/fc;
 
-    const/4 v0, 0x0
+    .line 147
+    const-string v0, ""
 
-    :goto_0
-    if-ge v0, v3, :cond_0
-
-    aget-object v4, v2, v0
+    iput-object v0, p0, Lcom/bbm/d/fa;->d:Ljava/lang/String;
 
     .line 153
-    iget-object v5, v4, Lcom/bbm/d/fa;->u:Ljava/lang/String;
-
-    invoke-virtual {v1, v5, v4}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 152
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    .line 155
-    :cond_0
-    sput-object v1, Lcom/bbm/d/fa;->t:Ljava/util/Hashtable;
-
-    .line 157
-    :cond_1
-    if-eqz p0, :cond_2
-
-    sget-object v0, Lcom/bbm/d/fa;->t:Ljava/util/Hashtable;
-
-    invoke-virtual {v0, p0}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/fa;
-
-    .line 158
-    :goto_1
-    if-eqz v0, :cond_3
-
-    :goto_2
-    return-object v0
-
-    .line 157
-    :cond_2
     const/4 v0, 0x0
 
-    goto :goto_1
+    iput-boolean v0, p0, Lcom/bbm/d/fa;->e:Z
 
-    .line 158
-    :cond_3
-    sget-object v0, Lcom/bbm/d/fa;->s:Lcom/bbm/d/fa;
+    .line 159
+    const-string v0, ""
 
-    goto :goto_2
-.end method
+    iput-object v0, p0, Lcom/bbm/d/fa;->f:Ljava/lang/String;
 
-.method public static valueOf(Ljava/lang/String;)Lcom/bbm/d/fa;
-    .locals 1
+    .line 164
+    iput-wide v2, p0, Lcom/bbm/d/fa;->g:J
 
-    .prologue
-    .line 121
-    const-class v0, Lcom/bbm/d/fa;
+    .line 169
+    const-string v0, ""
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iput-object v0, p0, Lcom/bbm/d/fa;->h:Ljava/lang/String;
 
-    move-result-object v0
+    .line 179
+    sget-object v0, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
 
-    check-cast v0, Lcom/bbm/d/fa;
+    iput-object v0, p0, Lcom/bbm/d/fa;->i:Lcom/bbm/util/bo;
 
-    return-object v0
-.end method
+    .line 193
+    iget-object v0, p1, Lcom/bbm/d/fa;->a:Lcom/bbm/d/fb;
 
-.method public static values()[Lcom/bbm/d/fa;
-    .locals 1
+    iput-object v0, p0, Lcom/bbm/d/fa;->a:Lcom/bbm/d/fb;
 
-    .prologue
-    .line 121
-    sget-object v0, Lcom/bbm/d/fa;->v:[Lcom/bbm/d/fa;
+    .line 194
+    iget-wide v0, p1, Lcom/bbm/d/fa;->b:J
 
-    invoke-virtual {v0}, [Lcom/bbm/d/fa;->clone()Ljava/lang/Object;
+    iput-wide v0, p0, Lcom/bbm/d/fa;->b:J
 
-    move-result-object v0
+    .line 195
+    iget-object v0, p1, Lcom/bbm/d/fa;->c:Lcom/bbm/d/fc;
 
-    check-cast v0, [Lcom/bbm/d/fa;
+    iput-object v0, p0, Lcom/bbm/d/fa;->c:Lcom/bbm/d/fc;
 
-    return-object v0
+    .line 196
+    iget-object v0, p1, Lcom/bbm/d/fa;->d:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/bbm/d/fa;->d:Ljava/lang/String;
+
+    .line 197
+    iget-boolean v0, p1, Lcom/bbm/d/fa;->e:Z
+
+    iput-boolean v0, p0, Lcom/bbm/d/fa;->e:Z
+
+    .line 198
+    iget-object v0, p1, Lcom/bbm/d/fa;->f:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/bbm/d/fa;->f:Ljava/lang/String;
+
+    .line 199
+    iget-wide v0, p1, Lcom/bbm/d/fa;->g:J
+
+    iput-wide v0, p0, Lcom/bbm/d/fa;->g:J
+
+    .line 200
+    iget-object v0, p1, Lcom/bbm/d/fa;->h:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/bbm/d/fa;->h:Ljava/lang/String;
+
+    .line 201
+    iget-object v0, p1, Lcom/bbm/d/fa;->i:Lcom/bbm/util/bo;
+
+    iput-object v0, p0, Lcom/bbm/d/fa;->i:Lcom/bbm/util/bo;
+
+    .line 202
+    return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
+.method public final a()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 162
-    iget-object v0, p0, Lcom/bbm/d/fa;->u:Ljava/lang/String;
+    .line 206
+    iget-object v0, p0, Lcom/bbm/d/fa;->d:Ljava/lang/String;
 
     return-object v0
+.end method
+
+.method public final a(Lcom/bbm/util/bo;)V
+    .locals 0
+
+    .prologue
+    .line 237
+    iput-object p1, p0, Lcom/bbm/d/fa;->i:Lcom/bbm/util/bo;
+
+    .line 238
+    return-void
+.end method
+
+.method public final a(Lorg/json/JSONObject;)V
+    .locals 4
+
+    .prologue
+    .line 212
+    const-string v0, "callType"
+
+    iget-object v1, p0, Lcom/bbm/d/fa;->a:Lcom/bbm/d/fb;
+
+    invoke-virtual {v1}, Lcom/bbm/d/fb;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/bbm/d/fb;->a(Ljava/lang/String;)Lcom/bbm/d/fb;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/d/fa;->a:Lcom/bbm/d/fb;
+
+    .line 214
+    const-string v0, "duration"
+
+    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 215
+    const-string v0, "duration"
+
+    const-wide/16 v2, 0x0
+
+    invoke-virtual {p1, v0, v2, v3}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v0
+
+    double-to-long v0, v0
+
+    iput-wide v0, p0, Lcom/bbm/d/fa;->b:J
+
+    .line 217
+    :cond_0
+    const-string v0, "eventType"
+
+    iget-object v1, p0, Lcom/bbm/d/fa;->c:Lcom/bbm/d/fc;
+
+    invoke-virtual {v1}, Lcom/bbm/d/fc;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/bbm/d/fc;->a(Ljava/lang/String;)Lcom/bbm/d/fc;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/d/fa;->c:Lcom/bbm/d/fc;
+
+    .line 218
+    const-string v0, "id"
+
+    iget-object v1, p0, Lcom/bbm/d/fa;->d:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/d/fa;->d:Ljava/lang/String;
+
+    .line 219
+    const-string v0, "incoming"
+
+    iget-boolean v1, p0, Lcom/bbm/d/fa;->e:Z
+
+    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/bbm/d/fa;->e:Z
+
+    .line 220
+    const-string v0, "message"
+
+    iget-object v1, p0, Lcom/bbm/d/fa;->f:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/d/fa;->f:Ljava/lang/String;
+
+    .line 222
+    const-string v0, "timestamp"
+
+    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 223
+    const-string v0, "timestamp"
+
+    const-string v1, ""
+
+    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 224
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    const-wide/16 v0, 0x0
+
+    :goto_0
+    iput-wide v0, p0, Lcom/bbm/d/fa;->g:J
+
+    .line 226
+    :cond_1
+    const-string v0, "userUri"
+
+    iget-object v1, p0, Lcom/bbm/d/fa;->h:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/d/fa;->h:Ljava/lang/String;
+
+    .line 227
+    return-void
+
+    .line 224
+    :cond_2
+    invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v0
+
+    goto :goto_0
+.end method
+
+.method public final b()Lcom/bbm/d/a/a;
+    .locals 1
+
+    .prologue
+    .line 232
+    new-instance v0, Lcom/bbm/d/fa;
+
+    invoke-direct {v0, p0}, Lcom/bbm/d/fa;-><init>(Lcom/bbm/d/fa;)V
+
+    return-object v0
+.end method
+
+.method public final c()Lcom/bbm/util/bo;
+    .locals 1
+
+    .prologue
+    .line 242
+    iget-object v0, p0, Lcom/bbm/d/fa;->i:Lcom/bbm/util/bo;
+
+    return-object v0
+.end method
+
+.method public equals(Ljava/lang/Object;)Z
+    .locals 6
+
+    .prologue
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    .line 265
+    if-ne p0, p1, :cond_1
+
+    .line 324
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 268
+    :cond_1
+    if-nez p1, :cond_2
+
+    move v0, v1
+
+    .line 269
+    goto :goto_0
+
+    .line 271
+    :cond_2
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_3
+
+    move v0, v1
+
+    .line 272
+    goto :goto_0
+
+    .line 274
+    :cond_3
+    check-cast p1, Lcom/bbm/d/fa;
+
+    .line 275
+    iget-object v2, p0, Lcom/bbm/d/fa;->a:Lcom/bbm/d/fb;
+
+    if-nez v2, :cond_4
+
+    .line 276
+    iget-object v2, p1, Lcom/bbm/d/fa;->a:Lcom/bbm/d/fb;
+
+    if-eqz v2, :cond_5
+
+    move v0, v1
+
+    .line 277
+    goto :goto_0
+
+    .line 279
+    :cond_4
+    iget-object v2, p0, Lcom/bbm/d/fa;->a:Lcom/bbm/d/fb;
+
+    iget-object v3, p1, Lcom/bbm/d/fa;->a:Lcom/bbm/d/fb;
+
+    invoke-virtual {v2, v3}, Lcom/bbm/d/fb;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_5
+
+    move v0, v1
+
+    .line 280
+    goto :goto_0
+
+    .line 282
+    :cond_5
+    iget-wide v2, p0, Lcom/bbm/d/fa;->b:J
+
+    iget-wide v4, p1, Lcom/bbm/d/fa;->b:J
+
+    cmp-long v2, v2, v4
+
+    if-eqz v2, :cond_6
+
+    move v0, v1
+
+    .line 283
+    goto :goto_0
+
+    .line 285
+    :cond_6
+    iget-object v2, p0, Lcom/bbm/d/fa;->c:Lcom/bbm/d/fc;
+
+    if-nez v2, :cond_7
+
+    .line 286
+    iget-object v2, p1, Lcom/bbm/d/fa;->c:Lcom/bbm/d/fc;
+
+    if-eqz v2, :cond_8
+
+    move v0, v1
+
+    .line 287
+    goto :goto_0
+
+    .line 289
+    :cond_7
+    iget-object v2, p0, Lcom/bbm/d/fa;->c:Lcom/bbm/d/fc;
+
+    iget-object v3, p1, Lcom/bbm/d/fa;->c:Lcom/bbm/d/fc;
+
+    invoke-virtual {v2, v3}, Lcom/bbm/d/fc;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_8
+
+    move v0, v1
+
+    .line 290
+    goto :goto_0
+
+    .line 292
+    :cond_8
+    iget-object v2, p0, Lcom/bbm/d/fa;->d:Ljava/lang/String;
+
+    if-nez v2, :cond_9
+
+    .line 293
+    iget-object v2, p1, Lcom/bbm/d/fa;->d:Ljava/lang/String;
+
+    if-eqz v2, :cond_a
+
+    move v0, v1
+
+    .line 294
+    goto :goto_0
+
+    .line 296
+    :cond_9
+    iget-object v2, p0, Lcom/bbm/d/fa;->d:Ljava/lang/String;
+
+    iget-object v3, p1, Lcom/bbm/d/fa;->d:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_a
+
+    move v0, v1
+
+    .line 297
+    goto :goto_0
+
+    .line 299
+    :cond_a
+    iget-boolean v2, p0, Lcom/bbm/d/fa;->e:Z
+
+    iget-boolean v3, p1, Lcom/bbm/d/fa;->e:Z
+
+    if-eq v2, v3, :cond_b
+
+    move v0, v1
+
+    .line 300
+    goto :goto_0
+
+    .line 302
+    :cond_b
+    iget-object v2, p0, Lcom/bbm/d/fa;->f:Ljava/lang/String;
+
+    if-nez v2, :cond_c
+
+    .line 303
+    iget-object v2, p1, Lcom/bbm/d/fa;->f:Ljava/lang/String;
+
+    if-eqz v2, :cond_d
+
+    move v0, v1
+
+    .line 304
+    goto :goto_0
+
+    .line 306
+    :cond_c
+    iget-object v2, p0, Lcom/bbm/d/fa;->f:Ljava/lang/String;
+
+    iget-object v3, p1, Lcom/bbm/d/fa;->f:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_d
+
+    move v0, v1
+
+    .line 307
+    goto :goto_0
+
+    .line 309
+    :cond_d
+    iget-wide v2, p0, Lcom/bbm/d/fa;->g:J
+
+    iget-wide v4, p1, Lcom/bbm/d/fa;->g:J
+
+    cmp-long v2, v2, v4
+
+    if-eqz v2, :cond_e
+
+    move v0, v1
+
+    .line 310
+    goto/16 :goto_0
+
+    .line 312
+    :cond_e
+    iget-object v2, p0, Lcom/bbm/d/fa;->h:Ljava/lang/String;
+
+    if-nez v2, :cond_f
+
+    .line 313
+    iget-object v2, p1, Lcom/bbm/d/fa;->h:Ljava/lang/String;
+
+    if-eqz v2, :cond_10
+
+    move v0, v1
+
+    .line 314
+    goto/16 :goto_0
+
+    .line 316
+    :cond_f
+    iget-object v2, p0, Lcom/bbm/d/fa;->h:Ljava/lang/String;
+
+    iget-object v3, p1, Lcom/bbm/d/fa;->h:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_10
+
+    move v0, v1
+
+    .line 317
+    goto/16 :goto_0
+
+    .line 320
+    :cond_10
+    iget-object v2, p0, Lcom/bbm/d/fa;->i:Lcom/bbm/util/bo;
+
+    iget-object v3, p1, Lcom/bbm/d/fa;->i:Lcom/bbm/util/bo;
+
+    invoke-virtual {v2, v3}, Lcom/bbm/util/bo;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    move v0, v1
+
+    .line 321
+    goto/16 :goto_0
+.end method
+
+.method public hashCode()I
+    .locals 4
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 248
+    iget-object v0, p0, Lcom/bbm/d/fa;->a:Lcom/bbm/d/fb;
+
+    if-nez v0, :cond_0
+
+    move v0, v1
+
+    :goto_0
+    add-int/lit8 v0, v0, 0x1f
+
+    .line 251
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v2, p0, Lcom/bbm/d/fa;->b:J
+
+    long-to-int v2, v2
+
+    add-int/2addr v0, v2
+
+    .line 252
+    mul-int/lit8 v2, v0, 0x1f
+
+    iget-object v0, p0, Lcom/bbm/d/fa;->c:Lcom/bbm/d/fc;
+
+    if-nez v0, :cond_1
+
+    move v0, v1
+
+    :goto_1
+    add-int/2addr v0, v2
+
+    .line 253
+    mul-int/lit8 v2, v0, 0x1f
+
+    iget-object v0, p0, Lcom/bbm/d/fa;->d:Ljava/lang/String;
+
+    if-nez v0, :cond_2
+
+    move v0, v1
+
+    :goto_2
+    add-int/2addr v0, v2
+
+    .line 254
+    mul-int/lit8 v2, v0, 0x1f
+
+    iget-boolean v0, p0, Lcom/bbm/d/fa;->e:Z
+
+    if-eqz v0, :cond_3
+
+    const/16 v0, 0x4cf
+
+    :goto_3
+    add-int/2addr v0, v2
+
+    .line 255
+    mul-int/lit8 v2, v0, 0x1f
+
+    iget-object v0, p0, Lcom/bbm/d/fa;->f:Ljava/lang/String;
+
+    if-nez v0, :cond_4
+
+    move v0, v1
+
+    :goto_4
+    add-int/2addr v0, v2
+
+    .line 256
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v2, p0, Lcom/bbm/d/fa;->g:J
+
+    long-to-int v2, v2
+
+    add-int/2addr v0, v2
+
+    .line 257
+    mul-int/lit8 v2, v0, 0x1f
+
+    iget-object v0, p0, Lcom/bbm/d/fa;->h:Ljava/lang/String;
+
+    if-nez v0, :cond_5
+
+    move v0, v1
+
+    :goto_5
+    add-int/2addr v0, v2
+
+    .line 258
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v2, p0, Lcom/bbm/d/fa;->i:Lcom/bbm/util/bo;
+
+    if-nez v2, :cond_6
+
+    :goto_6
+    add-int/2addr v0, v1
+
+    .line 259
+    return v0
+
+    .line 248
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/d/fa;->a:Lcom/bbm/d/fb;
+
+    invoke-virtual {v0}, Lcom/bbm/d/fb;->hashCode()I
+
+    move-result v0
+
+    goto :goto_0
+
+    .line 252
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/d/fa;->c:Lcom/bbm/d/fc;
+
+    invoke-virtual {v0}, Lcom/bbm/d/fc;->hashCode()I
+
+    move-result v0
+
+    goto :goto_1
+
+    .line 253
+    :cond_2
+    iget-object v0, p0, Lcom/bbm/d/fa;->d:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    goto :goto_2
+
+    .line 254
+    :cond_3
+    const/16 v0, 0x4d5
+
+    goto :goto_3
+
+    .line 255
+    :cond_4
+    iget-object v0, p0, Lcom/bbm/d/fa;->f:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    goto :goto_4
+
+    .line 257
+    :cond_5
+    iget-object v0, p0, Lcom/bbm/d/fa;->h:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    goto :goto_5
+
+    .line 258
+    :cond_6
+    iget-object v1, p0, Lcom/bbm/d/fa;->i:Lcom/bbm/util/bo;
+
+    invoke-virtual {v1}, Lcom/bbm/util/bo;->hashCode()I
+
+    move-result v1
+
+    goto :goto_6
 .end method

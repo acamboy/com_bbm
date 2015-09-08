@@ -8,13 +8,11 @@
 
 
 # instance fields
-.field private bb:[B
+.field private bc:[B
 
-.field private bc:Landroid/graphics/drawable/BitmapDrawable;
+.field private bd:Landroid/graphics/drawable/BitmapDrawable;
 
-.field private bd:Z
-
-.field private be:I
+.field private be:Z
 
 .field private bf:I
 
@@ -25,6 +23,8 @@
 .field private bi:I
 
 .field private bj:I
+
+.field private bk:I
 
 
 # direct methods
@@ -40,33 +40,33 @@
     .line 30
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ac;->bb:[B
+    iput-object v0, p0, Lcom/glympse/android/hal/ac;->bc:[B
 
     .line 34
-    iput-boolean v1, p0, Lcom/glympse/android/hal/ac;->bd:Z
+    iput-boolean v1, p0, Lcom/glympse/android/hal/ac;->be:Z
 
     .line 35
-    iput v1, p0, Lcom/glympse/android/hal/ac;->be:I
-
-    .line 36
     iput v1, p0, Lcom/glympse/android/hal/ac;->bf:I
 
-    .line 37
+    .line 36
     iput v1, p0, Lcom/glympse/android/hal/ac;->bg:I
 
-    .line 39
+    .line 37
     iput v1, p0, Lcom/glympse/android/hal/ac;->bh:I
+
+    .line 39
+    iput v1, p0, Lcom/glympse/android/hal/ac;->bi:I
 
     .line 40
     const/16 v0, 0x64
 
-    iput v0, p0, Lcom/glympse/android/hal/ac;->bi:I
+    iput v0, p0, Lcom/glympse/android/hal/ac;->bj:I
 
     .line 42
-    iput v1, p0, Lcom/glympse/android/hal/ac;->bj:I
+    iput v1, p0, Lcom/glympse/android/hal/ac;->bk:I
 
     .line 46
-    iput-object p1, p0, Lcom/glympse/android/hal/ac;->bc:Landroid/graphics/drawable/BitmapDrawable;
+    iput-object p1, p0, Lcom/glympse/android/hal/ac;->bd:Landroid/graphics/drawable/BitmapDrawable;
 
     .line 47
     return-void
@@ -84,33 +84,33 @@
     .line 30
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ac;->bb:[B
+    iput-object v0, p0, Lcom/glympse/android/hal/ac;->bc:[B
 
     .line 34
-    iput-boolean v1, p0, Lcom/glympse/android/hal/ac;->bd:Z
+    iput-boolean v1, p0, Lcom/glympse/android/hal/ac;->be:Z
 
     .line 35
-    iput v1, p0, Lcom/glympse/android/hal/ac;->be:I
-
-    .line 36
     iput v1, p0, Lcom/glympse/android/hal/ac;->bf:I
 
-    .line 37
+    .line 36
     iput v1, p0, Lcom/glympse/android/hal/ac;->bg:I
 
-    .line 39
+    .line 37
     iput v1, p0, Lcom/glympse/android/hal/ac;->bh:I
+
+    .line 39
+    iput v1, p0, Lcom/glympse/android/hal/ac;->bi:I
 
     .line 40
     const/16 v0, 0x64
 
-    iput v0, p0, Lcom/glympse/android/hal/ac;->bi:I
+    iput v0, p0, Lcom/glympse/android/hal/ac;->bj:I
 
     .line 42
-    iput v1, p0, Lcom/glympse/android/hal/ac;->bj:I
+    iput v1, p0, Lcom/glympse/android/hal/ac;->bk:I
 
     .line 51
-    iput p2, p0, Lcom/glympse/android/hal/ac;->bj:I
+    iput p2, p0, Lcom/glympse/android/hal/ac;->bk:I
 
     .line 52
     const/4 v0, 0x1
@@ -119,7 +119,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ac;->bc:Landroid/graphics/drawable/BitmapDrawable;
+    iput-object v0, p0, Lcom/glympse/android/hal/ac;->bd:Landroid/graphics/drawable/BitmapDrawable;
 
     .line 53
     return-void
@@ -514,7 +514,7 @@
     .line 377
     int-to-double v0, v0
 
-    const-wide/high16 v2, 0x4074000000000000L
+    const-wide/high16 v2, 0x4074000000000000L    # 320.0
 
     div-double/2addr v0, v2
 
@@ -526,7 +526,7 @@
     double-to-int v1, v0
 
     .line 381
-    const/high16 v0, 0x40000000
+    const/high16 v0, 0x40000000    # 2.0f
 
     .line 382
     :goto_0
@@ -807,7 +807,7 @@
     if-nez v3, :cond_4
 
     .line 280
-    iput v1, p0, Lcom/glympse/android/hal/ac;->bj:I
+    iput v1, p0, Lcom/glympse/android/hal/ac;->bk:I
 
     .line 281
     const/4 v1, 0x1
@@ -1050,7 +1050,7 @@
     .line 105
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ac;->bb:[B
+    iput-object v0, p0, Lcom/glympse/android/hal/ac;->bc:[B
 
     .line 106
     return-void
@@ -1063,7 +1063,7 @@
     const/4 v7, 0x0
 
     .line 121
-    iget-object v0, p0, Lcom/glympse/android/hal/ac;->bc:Landroid/graphics/drawable/BitmapDrawable;
+    iget-object v0, p0, Lcom/glympse/android/hal/ac;->bd:Landroid/graphics/drawable/BitmapDrawable;
 
     if-nez v0, :cond_0
 
@@ -1079,30 +1079,30 @@
 
     .line 131
     :try_start_0
-    iget-boolean v0, p0, Lcom/glympse/android/hal/ac;->bd:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/ac;->be:Z
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/glympse/android/hal/ac;->bc:Landroid/graphics/drawable/BitmapDrawable;
+    iget-object v0, p0, Lcom/glympse/android/hal/ac;->bd:Landroid/graphics/drawable/BitmapDrawable;
 
-    iget v1, p0, Lcom/glympse/android/hal/ac;->bf:I
+    iget v1, p0, Lcom/glympse/android/hal/ac;->bg:I
 
-    iget v2, p0, Lcom/glympse/android/hal/ac;->bg:I
+    iget v2, p0, Lcom/glympse/android/hal/ac;->bh:I
 
-    iget v3, p0, Lcom/glympse/android/hal/ac;->be:I
+    iget v3, p0, Lcom/glympse/android/hal/ac;->bf:I
 
-    iget v4, p0, Lcom/glympse/android/hal/ac;->bj:I
+    iget v4, p0, Lcom/glympse/android/hal/ac;->bk:I
 
-    iget v5, p0, Lcom/glympse/android/hal/ac;->bh:I
+    iget v5, p0, Lcom/glympse/android/hal/ac;->bi:I
 
-    iget v6, p0, Lcom/glympse/android/hal/ac;->bi:I
+    iget v6, p0, Lcom/glympse/android/hal/ac;->bj:I
 
     invoke-static/range {v0 .. v6}, Lcom/glympse/android/hal/ac;->a(Landroid/graphics/drawable/BitmapDrawable;IIIIII)[B
 
     move-result-object v0
 
     :goto_1
-    iput-object v0, p0, Lcom/glympse/android/hal/ac;->bb:[B
+    iput-object v0, p0, Lcom/glympse/android/hal/ac;->bc:[B
 
     .line 141
     const/4 v0, 0x1
@@ -1111,17 +1111,17 @@
 
     .line 131
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/hal/ac;->bc:Landroid/graphics/drawable/BitmapDrawable;
+    iget-object v0, p0, Lcom/glympse/android/hal/ac;->bd:Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    iget v1, p0, Lcom/glympse/android/hal/ac;->bh:I
+    iget v1, p0, Lcom/glympse/android/hal/ac;->bi:I
 
-    iget v2, p0, Lcom/glympse/android/hal/ac;->bj:I
+    iget v2, p0, Lcom/glympse/android/hal/ac;->bk:I
 
-    iget v3, p0, Lcom/glympse/android/hal/ac;->bi:I
+    iget v3, p0, Lcom/glympse/android/hal/ac;->bj:I
 
     invoke-static {v0, v1, v2, v3}, Lcom/glympse/android/hal/ac;->a(Landroid/graphics/Bitmap;III)[B
     :try_end_0
@@ -1150,7 +1150,7 @@
     const/4 v0, 0x0
 
     .line 146
-    iget-object v1, p0, Lcom/glympse/android/hal/ac;->bb:[B
+    iget-object v1, p0, Lcom/glympse/android/hal/ac;->bc:[B
 
     if-nez v1, :cond_1
 
@@ -1161,15 +1161,15 @@
 
     .line 151
     :cond_1
-    iget-object v1, p0, Lcom/glympse/android/hal/ac;->bb:[B
+    iget-object v1, p0, Lcom/glympse/android/hal/ac;->bc:[B
 
-    iget-boolean v2, p0, Lcom/glympse/android/hal/ac;->bd:Z
+    iget-boolean v2, p0, Lcom/glympse/android/hal/ac;->be:Z
 
     invoke-static {v1, v2}, Lcom/glympse/android/hal/ac;->a([BZ)Landroid/graphics/drawable/BitmapDrawable;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/glympse/android/hal/ac;->bc:Landroid/graphics/drawable/BitmapDrawable;
+    iput-object v1, p0, Lcom/glympse/android/hal/ac;->bd:Landroid/graphics/drawable/BitmapDrawable;
 
     .line 153
     if-eqz p1, :cond_2
@@ -1179,7 +1179,7 @@
 
     .line 158
     :cond_2
-    iget-object v1, p0, Lcom/glympse/android/hal/ac;->bc:Landroid/graphics/drawable/BitmapDrawable;
+    iget-object v1, p0, Lcom/glympse/android/hal/ac;->bd:Landroid/graphics/drawable/BitmapDrawable;
 
     if-eqz v1, :cond_0
 
@@ -1193,7 +1193,7 @@
 
     .prologue
     .line 110
-    iget-object v0, p0, Lcom/glympse/android/hal/ac;->bb:[B
+    iget-object v0, p0, Lcom/glympse/android/hal/ac;->bc:[B
 
     return-object v0
 .end method
@@ -1203,7 +1203,7 @@
 
     .prologue
     .line 67
-    iget-object v0, p0, Lcom/glympse/android/hal/ac;->bc:Landroid/graphics/drawable/BitmapDrawable;
+    iget-object v0, p0, Lcom/glympse/android/hal/ac;->bd:Landroid/graphics/drawable/BitmapDrawable;
 
     return-object v0
 .end method
@@ -1213,7 +1213,7 @@
 
     .prologue
     .line 115
-    iget-object v0, p0, Lcom/glympse/android/hal/ac;->bb:[B
+    iget-object v0, p0, Lcom/glympse/android/hal/ac;->bc:[B
 
     if-nez v0, :cond_0
 
@@ -1223,7 +1223,7 @@
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/hal/ac;->bb:[B
+    iget-object v0, p0, Lcom/glympse/android/hal/ac;->bc:[B
 
     array-length v0, v0
 
@@ -1235,7 +1235,7 @@
 
     .prologue
     .line 99
-    iput-object p1, p0, Lcom/glympse/android/hal/ac;->bb:[B
+    iput-object p1, p0, Lcom/glympse/android/hal/ac;->bc:[B
 
     .line 101
     return-void
@@ -1246,10 +1246,10 @@
 
     .prologue
     .line 88
-    iput p1, p0, Lcom/glympse/android/hal/ac;->bh:I
+    iput p1, p0, Lcom/glympse/android/hal/ac;->bi:I
 
     .line 89
-    iput p2, p0, Lcom/glympse/android/hal/ac;->bi:I
+    iput p2, p0, Lcom/glympse/android/hal/ac;->bj:I
 
     .line 90
     return-void
@@ -1260,7 +1260,7 @@
 
     .prologue
     .line 94
-    iput p1, p0, Lcom/glympse/android/hal/ac;->bj:I
+    iput p1, p0, Lcom/glympse/android/hal/ac;->bk:I
 
     .line 95
     return-void
@@ -1271,16 +1271,16 @@
 
     .prologue
     .line 80
-    iput-boolean p1, p0, Lcom/glympse/android/hal/ac;->bd:Z
+    iput-boolean p1, p0, Lcom/glympse/android/hal/ac;->be:Z
 
     .line 81
-    iput p2, p0, Lcom/glympse/android/hal/ac;->be:I
+    iput p2, p0, Lcom/glympse/android/hal/ac;->bf:I
 
     .line 82
-    iput p3, p0, Lcom/glympse/android/hal/ac;->bf:I
+    iput p3, p0, Lcom/glympse/android/hal/ac;->bg:I
 
     .line 83
-    iput p4, p0, Lcom/glympse/android/hal/ac;->bg:I
+    iput p4, p0, Lcom/glympse/android/hal/ac;->bh:I
 
     .line 84
     return-void

@@ -31,9 +31,9 @@
 
     .prologue
     .line 23
-    new-instance v0, Lcom/glympse/android/rpc/ba;
+    new-instance v0, Lcom/glympse/android/rpc/bf;
 
-    invoke-direct {v0}, Lcom/glympse/android/rpc/ba;-><init>()V
+    invoke-direct {v0}, Lcom/glympse/android/rpc/bf;-><init>()V
 
     return-object v0
 .end method
@@ -43,9 +43,9 @@
 
     .prologue
     .line 18
-    new-instance v0, Lcom/glympse/android/rpc/bc;
+    new-instance v0, Lcom/glympse/android/rpc/bh;
 
-    invoke-direct {v0}, Lcom/glympse/android/rpc/bc;-><init>()V
+    invoke-direct {v0}, Lcom/glympse/android/rpc/bh;-><init>()V
 
     return-object v0
 .end method

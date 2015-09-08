@@ -1,390 +1,465 @@
 .class public final Lcom/bbm/util/ex;
-.super Lcom/bbm/j/u;
-.source "UpdatesFragmentUtil.java"
+.super Landroid/media/MediaPlayer;
+.source "VoiceNoteMediaPlayer.java"
+
+# interfaces
+.implements Landroid/media/MediaPlayer$OnCompletionListener;
 
 
 # instance fields
-.field a:Lcom/bbm/util/fc;
+.field public a:Lcom/bbm/util/dc;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/util/dc",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private final b:Lcom/bbm/ui/activities/MainActivity;
+.field public b:Lcom/bbm/util/dc;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/util/dc",
+            "<",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private final c:Landroid/content/Context;
+.field public c:Lcom/bbm/util/dc;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/util/dc",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private final d:Landroid/app/Fragment;
+.field private d:Landroid/os/AsyncTask;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/AsyncTask",
+            "<",
+            "Ljava/lang/Void;",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Void;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/bbm/ui/activities/MainActivity;Landroid/app/Fragment;Lcom/bbm/util/fc;)V
+.method public constructor <init>()V
+    .locals 3
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 36
+    invoke-direct {p0}, Landroid/media/MediaPlayer;-><init>()V
+
+    .line 18
+    new-instance v0, Lcom/bbm/util/dc;
+
+    const-string v1, ""
+
+    invoke-direct {v0, v1}, Lcom/bbm/util/dc;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lcom/bbm/util/ex;->a:Lcom/bbm/util/dc;
+
+    .line 19
+    new-instance v0, Lcom/bbm/util/dc;
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/bbm/util/dc;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lcom/bbm/util/ex;->b:Lcom/bbm/util/dc;
+
+    .line 20
+    new-instance v0, Lcom/bbm/util/dc;
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/bbm/util/dc;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lcom/bbm/util/ex;->c:Lcom/bbm/util/dc;
+
+    .line 37
+    invoke-virtual {p0, p0}, Lcom/bbm/util/ex;->setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
+
+    .line 38
+    return-void
+.end method
+
+.method public static a(Lcom/bbm/d/gb;)I
+    .locals 5
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 137
+    const/4 v3, 0x0
+
+    .line 138
+    :try_start_0
+    new-instance v2, Ljava/io/FileInputStream;
+
+    iget-object v0, p0, Lcom/bbm/d/gb;->h:Ljava/lang/String;
+
+    invoke-direct {v2, v0}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 142
+    :try_start_1
+    invoke-virtual {v2}, Ljava/io/FileInputStream;->getFD()Ljava/io/FileDescriptor;
+
+    move-result-object v0
+
+    .line 143
+    new-instance v3, Landroid/media/MediaPlayer;
+
+    invoke-direct {v3}, Landroid/media/MediaPlayer;-><init>()V
+
+    .line 144
+    invoke-virtual {v3, v0}, Landroid/media/MediaPlayer;->setDataSource(Ljava/io/FileDescriptor;)V
+
+    .line 145
+    invoke-virtual {v3}, Landroid/media/MediaPlayer;->prepare()V
+
+    .line 146
+    invoke-virtual {v3}, Landroid/media/MediaPlayer;->getDuration()I
+
+    move-result v0
+
+    .line 147
+    invoke-virtual {v3}, Landroid/media/MediaPlayer;->stop()V
+
+    .line 148
+    invoke-virtual {v3}, Landroid/media/MediaPlayer;->release()V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    .line 149
+    :try_start_2
+    invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+
+    .line 161
+    :goto_0
+    return v0
+
+    .line 156
+    :catch_0
+    move-exception v1
+
+    invoke-static {v1}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    .line 150
+    :catch_1
+    move-exception v0
+
+    move-object v2, v3
+
+    .line 151
+    :goto_1
+    :try_start_3
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Error getting voice note duration"
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v3, 0x0
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    invoke-static {v0, v3}, Lcom/bbm/af;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    .line 153
+    if-eqz v2, :cond_0
+
+    .line 155
+    :try_start_4
+    invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
+
+    :cond_0
+    :goto_2
+    move v0, v1
+
+    .line 161
+    goto :goto_0
+
+    .line 156
+    :catch_2
+    move-exception v0
+
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_2
+
+    .line 153
+    :catchall_0
+    move-exception v0
+
+    move-object v2, v3
+
+    :goto_3
+    if-eqz v2, :cond_1
+
+    .line 155
+    :try_start_5
+    invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
+    :try_end_5
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
+
+    .line 158
+    :cond_1
+    :goto_4
+    throw v0
+
+    .line 156
+    :catch_3
+    move-exception v1
+
+    invoke-static {v1}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_4
+
+    .line 153
+    :catchall_1
+    move-exception v0
+
+    goto :goto_3
+
+    .line 150
+    :catch_4
+    move-exception v0
+
+    goto :goto_1
+.end method
+
+.method static synthetic a(Lcom/bbm/util/ex;)Lcom/bbm/util/dc;
     .locals 1
 
     .prologue
-    .line 862
-    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
+    .line 16
+    iget-object v0, p0, Lcom/bbm/util/ex;->c:Lcom/bbm/util/dc;
 
-    .line 856
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/bbm/util/ex;->a:Lcom/bbm/util/fc;
-
-    .line 863
-    iput-object p4, p0, Lcom/bbm/util/ex;->a:Lcom/bbm/util/fc;
-
-    .line 864
-    iput-object p1, p0, Lcom/bbm/util/ex;->c:Landroid/content/Context;
-
-    .line 865
-    iput-object p2, p0, Lcom/bbm/util/ex;->b:Lcom/bbm/ui/activities/MainActivity;
-
-    .line 866
-    iput-object p3, p0, Lcom/bbm/util/ex;->d:Landroid/app/Fragment;
-
-    .line 867
-    return-void
+    return-object v0
 .end method
 
 
 # virtual methods
-.method protected final b()Z
-    .locals 8
+.method public final a()V
+    .locals 2
 
     .prologue
-    const/4 v7, 0x0
+    .line 87
+    iget-object v0, p0, Lcom/bbm/util/ex;->d:Landroid/os/AsyncTask;
 
-    const/4 v2, 0x0
+    if-eqz v0, :cond_0
+
+    .line 88
+    iget-object v0, p0, Lcom/bbm/util/ex;->d:Landroid/os/AsyncTask;
 
     const/4 v1, 0x1
 
-    .line 871
-    iget-object v0, p0, Lcom/bbm/util/ex;->a:Lcom/bbm/util/fc;
+    invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->cancel(Z)Z
 
-    if-nez v0, :cond_0
+    .line 89
+    const/4 v0, 0x0
 
-    move v0, v1
+    iput-object v0, p0, Lcom/bbm/util/ex;->d:Landroid/os/AsyncTask;
 
-    .line 950
-    :goto_0
-    return v0
-
-    .line 875
+    .line 91
     :cond_0
-    iget-object v0, p0, Lcom/bbm/util/ex;->d:Landroid/app/Fragment;
+    return-void
+.end method
 
-    invoke-virtual {v0}, Landroid/app/Fragment;->isAdded()Z
+.method public final b()V
+    .locals 2
+
+    .prologue
+    .line 94
+    invoke-virtual {p0}, Lcom/bbm/util/ex;->a()V
+
+    .line 95
+    invoke-virtual {p0}, Lcom/bbm/util/ex;->getDuration()I
 
     move-result v0
 
-    if-nez v0, :cond_1
+    .line 97
+    new-instance v1, Lcom/bbm/util/ey;
 
-    move v0, v1
+    invoke-direct {v1, p0, v0}, Lcom/bbm/util/ey;-><init>(Lcom/bbm/util/ex;I)V
 
-    .line 876
-    goto :goto_0
+    iput-object v1, p0, Lcom/bbm/util/ex;->d:Landroid/os/AsyncTask;
 
-    .line 879
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/util/ex;->b:Lcom/bbm/ui/activities/MainActivity;
+    .line 127
+    iget-object v0, p0, Lcom/bbm/util/ex;->d:Landroid/os/AsyncTask;
 
-    iget-object v3, v0, Lcom/bbm/ui/activities/ey;->B:Lcom/bbm/ui/c/gj;
+    const/4 v1, 0x0
 
-    .line 880
-    sget-object v0, Lcom/bbm/util/ei;->f:[I
+    new-array v1, v1, [Ljava/lang/Void;
 
-    iget-object v4, p0, Lcom/bbm/util/ex;->a:Lcom/bbm/util/fc;
+    invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    iget-object v4, v4, Lcom/bbm/util/fc;->a:Lcom/bbm/util/fd;
+    .line 128
+    return-void
+.end method
 
-    invoke-virtual {v4}, Lcom/bbm/util/fd;->ordinal()I
+.method public final c()V
+    .locals 3
 
-    move-result v4
+    .prologue
+    const/4 v2, 0x0
 
-    aget v0, v0, v4
+    .line 131
+    iget-object v0, p0, Lcom/bbm/util/ex;->b:Lcom/bbm/util/dc;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    .line 942
-    :goto_1
-    iget-object v0, p0, Lcom/bbm/util/ex;->b:Lcom/bbm/ui/activities/MainActivity;
+    move-result-object v1
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/MainActivity;->o()V
+    invoke-virtual {v0, v1}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
 
-    .line 949
-    iput-object v7, p0, Lcom/bbm/util/ex;->a:Lcom/bbm/util/fc;
+    .line 132
+    iget-object v0, p0, Lcom/bbm/util/ex;->a:Lcom/bbm/util/dc;
 
-    move v0, v1
+    const-string v1, ""
 
-    .line 950
-    goto :goto_0
+    invoke-virtual {v0, v1}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
 
-    .line 882
-    :pswitch_0
-    iget-object v0, p0, Lcom/bbm/util/ex;->a:Lcom/bbm/util/fc;
+    .line 133
+    invoke-virtual {p0}, Lcom/bbm/util/ex;->a()V
 
-    iget-object v0, v0, Lcom/bbm/util/fc;->c:Lcom/bbm/d/a/a;
+    .line 134
+    iget-object v0, p0, Lcom/bbm/util/ex;->c:Lcom/bbm/util/dc;
 
-    check-cast v0, Lcom/bbm/d/gb;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 883
-    iget-object v4, v0, Lcom/bbm/d/gb;->i:Lcom/bbm/util/bi;
+    move-result-object v1
 
-    sget-object v5, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
+    invoke-virtual {v0, v1}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
 
-    if-ne v4, v5, :cond_2
+    .line 135
+    return-void
+.end method
 
-    .line 884
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+.method public final onCompletion(Landroid/media/MediaPlayer;)V
+    .locals 2
 
-    move-result-object v4
+    .prologue
+    .line 82
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v5, v0, Lcom/bbm/d/gb;->h:Ljava/lang/String;
+    const-string v1, "progresstime : "
 
-    invoke-virtual {v4, v5}, Lcom/bbm/d/a;->b(Ljava/lang/String;)Lcom/bbm/d/gr;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v4
+    invoke-virtual {p0}, Lcom/bbm/util/ex;->getCurrentPosition()I
 
-    .line 886
-    sget-object v5, Lcom/bbm/util/ei;->e:[I
+    move-result v1
 
-    iget-object v6, v4, Lcom/bbm/d/gr;->C:Lcom/bbm/util/bi;
-
-    invoke-virtual {v6}, Lcom/bbm/util/bi;->ordinal()I
-
-    move-result v6
-
-    aget v5, v5, v6
-
-    packed-switch v5, :pswitch_data_1
-
-    goto :goto_1
-
-    :pswitch_1
-    move v0, v2
-
-    .line 888
-    goto :goto_0
-
-    .line 891
-    :pswitch_2
-    const-string v3, "No user found for Uri %s"
-
-    new-array v4, v1, [Ljava/lang/Object;
-
-    iget-object v0, v0, Lcom/bbm/d/gb;->h:Ljava/lang/String;
-
-    aput-object v0, v4, v2
-
-    invoke-static {v3, v4}, Lcom/bbm/y;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 892
-    iput-object v7, p0, Lcom/bbm/util/ex;->a:Lcom/bbm/util/fc;
-
-    move v0, v1
-
-    .line 893
-    goto :goto_0
-
-    .line 896
-    :pswitch_3
-    iget-object v2, p0, Lcom/bbm/util/ex;->b:Lcom/bbm/ui/activities/MainActivity;
-
-    iget-object v0, v0, Lcom/bbm/d/gb;->g:Lcom/bbm/d/gc;
-
-    iget-object v5, p0, Lcom/bbm/util/ex;->d:Landroid/app/Fragment;
-
-    invoke-virtual {v5}, Landroid/app/Fragment;->getView()Landroid/view/View;
-
-    move-result-object v5
-
-    invoke-static {v2, v3, v4, v0, v5}, Lcom/bbm/util/ee;->a(Landroid/app/Activity;Lcom/bbm/ui/c/gj;Lcom/bbm/d/gr;Lcom/bbm/d/gc;Landroid/view/View;)V
-
-    goto :goto_1
-
-    .line 901
-    :cond_2
-    iput-object v7, p0, Lcom/bbm/util/ex;->a:Lcom/bbm/util/fc;
-
-    move v0, v1
-
-    .line 902
-    goto :goto_0
-
-    .line 908
-    :pswitch_4
-    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/e;->c:Lcom/bbm/g/al;
-
-    iget-object v4, p0, Lcom/bbm/util/ex;->a:Lcom/bbm/util/fc;
-
-    iget-object v4, v4, Lcom/bbm/util/fc;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v4}, Lcom/bbm/g/al;->t(Ljava/lang/String;)Lcom/bbm/g/a;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 909
-    sget-object v4, Lcom/bbm/util/ei;->e:[I
+    const/4 v1, 0x0
 
-    iget-object v5, v0, Lcom/bbm/g/a;->w:Lcom/bbm/util/bi;
+    new-array v1, v1, [Ljava/lang/Object;
 
-    invoke-virtual {v5}, Lcom/bbm/util/bi;->ordinal()I
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    move-result v5
+    .line 83
+    invoke-virtual {p0}, Lcom/bbm/util/ex;->c()V
 
-    aget v4, v4, v5
+    .line 84
+    return-void
+.end method
 
-    packed-switch v4, :pswitch_data_2
+.method public final stop()V
+    .locals 3
 
-    goto :goto_1
+    .prologue
+    .line 72
+    invoke-virtual {p0}, Lcom/bbm/util/ex;->c()V
 
-    :pswitch_5
-    move v0, v2
+    .line 74
+    :try_start_0
+    invoke-super {p0}, Landroid/media/MediaPlayer;->stop()V
+    :try_end_0
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 911
-    goto/16 :goto_0
+    .line 78
+    :goto_0
+    return-void
 
-    .line 914
-    :pswitch_6
-    const-string v0, "No group found for Uri %s"
+    .line 75
+    :catch_0
+    move-exception v0
 
-    new-array v3, v1, [Ljava/lang/Object;
+    .line 76
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/bbm/util/ex;->a:Lcom/bbm/util/fc;
+    const-string v2, "Error playing voice note stop: "
 
-    iget-object v4, v4, Lcom/bbm/util/fc;->d:Ljava/lang/String;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    aput-object v4, v3, v2
+    invoke-virtual {v0}, Ljava/lang/IllegalStateException;->toString()Ljava/lang/String;
 
-    invoke-static {v0, v3}, Lcom/bbm/y;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-result-object v0
 
-    .line 915
-    iput-object v7, p0, Lcom/bbm/util/ex;->a:Lcom/bbm/util/fc;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move v0, v1
+    move-result-object v0
 
-    .line 916
-    goto/16 :goto_0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 919
-    :pswitch_7
-    iget-object v2, p0, Lcom/bbm/util/ex;->c:Landroid/content/Context;
+    move-result-object v0
 
-    iget-object v4, p0, Lcom/bbm/util/ex;->b:Lcom/bbm/ui/activities/MainActivity;
+    const/4 v1, 0x0
 
-    iget-object v5, p0, Lcom/bbm/util/ex;->a:Lcom/bbm/util/fc;
+    new-array v1, v1, [Ljava/lang/Object;
 
-    iget-object v5, v5, Lcom/bbm/util/fc;->c:Lcom/bbm/d/a/a;
+    invoke-static {v0, v1}, Lcom/bbm/af;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    invoke-static {v2, v4, v3, v0}, Lcom/bbm/util/ee;->a(Landroid/content/Context;Landroid/app/Activity;Lcom/bbm/ui/c/gj;Lcom/bbm/g/a;)V
-
-    goto/16 :goto_1
-
-    .line 926
-    :pswitch_8
-    iget-object v0, p0, Lcom/bbm/util/ex;->a:Lcom/bbm/util/fc;
-
-    iget-object v0, v0, Lcom/bbm/util/fc;->c:Lcom/bbm/d/a/a;
-
-    check-cast v0, Lcom/bbm/d/ga;
-
-    .line 927
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
-
-    move-result-object v4
-
-    iget-object v5, v0, Lcom/bbm/d/ga;->b:Ljava/lang/String;
-
-    invoke-virtual {v4, v5}, Lcom/bbm/d/a;->U(Ljava/lang/String;)Lcom/bbm/d/ee;
-
-    move-result-object v4
-
-    .line 928
-    sget-object v5, Lcom/bbm/util/ei;->e:[I
-
-    iget-object v6, v4, Lcom/bbm/d/ee;->R:Lcom/bbm/util/bi;
-
-    invoke-virtual {v6}, Lcom/bbm/util/bi;->ordinal()I
-
-    move-result v6
-
-    aget v5, v5, v6
-
-    packed-switch v5, :pswitch_data_3
-
-    goto/16 :goto_1
-
-    :pswitch_9
-    move v0, v2
-
-    .line 930
-    goto/16 :goto_0
-
-    .line 933
-    :pswitch_a
-    const-string v3, "No channel found for Uri %s"
-
-    new-array v4, v1, [Ljava/lang/Object;
-
-    iget-object v0, v0, Lcom/bbm/d/ga;->b:Ljava/lang/String;
-
-    aput-object v0, v4, v2
-
-    invoke-static {v3, v4}, Lcom/bbm/y;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 934
-    iput-object v7, p0, Lcom/bbm/util/ex;->a:Lcom/bbm/util/fc;
-
-    move v0, v1
-
-    .line 935
-    goto/16 :goto_0
-
-    .line 938
-    :pswitch_b
-    iget-object v0, p0, Lcom/bbm/util/ex;->c:Landroid/content/Context;
-
-    iget-object v2, p0, Lcom/bbm/util/ex;->b:Lcom/bbm/ui/activities/MainActivity;
-
-    iget-object v5, p0, Lcom/bbm/util/ex;->a:Lcom/bbm/util/fc;
-
-    iget-object v6, p0, Lcom/bbm/util/ex;->d:Landroid/app/Fragment;
-
-    invoke-virtual {v6}, Landroid/app/Fragment;->getView()Landroid/view/View;
-
-    invoke-static {v0, v2, v3, v5, v4}, Lcom/bbm/util/ee;->a(Landroid/content/Context;Landroid/app/Activity;Lcom/bbm/ui/c/gj;Lcom/bbm/util/fc;Lcom/bbm/d/ee;)V
-
-    goto/16 :goto_1
-
-    .line 880
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_4
-        :pswitch_8
-    .end packed-switch
-
-    .line 886
-    :pswitch_data_1
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-    .end packed-switch
-
-    .line 909
-    :pswitch_data_2
-    .packed-switch 0x1
-        :pswitch_5
-        :pswitch_6
-        :pswitch_7
-    .end packed-switch
-
-    .line 928
-    :pswitch_data_3
-    .packed-switch 0x1
-        :pswitch_9
-        :pswitch_a
-        :pswitch_b
-    .end packed-switch
+    goto :goto_0
 .end method

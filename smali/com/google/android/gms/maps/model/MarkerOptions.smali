@@ -6,48 +6,48 @@
 
 
 # static fields
-.field public static final CREATOR:Lcom/google/android/gms/maps/model/MarkerOptionsCreator;
+.field public static final CREATOR:Lcom/google/android/gms/maps/model/p;
 
 
 # instance fields
-.field private CX:Ljava/lang/String;
+.field final a:I
 
-.field private PQ:Z
+.field public b:Lcom/google/android/gms/maps/model/LatLng;
 
-.field private PY:F
+.field public c:Ljava/lang/String;
 
-.field private PZ:F
+.field public d:Ljava/lang/String;
 
-.field private Qf:Lcom/google/android/gms/maps/model/LatLng;
+.field public e:Lcom/google/android/gms/maps/model/a;
 
-.field private Qg:Ljava/lang/String;
+.field public f:F
 
-.field private Qh:Lcom/google/android/gms/maps/model/BitmapDescriptor;
+.field public g:F
 
-.field private Qi:Z
+.field h:Z
 
-.field private Qj:Z
+.field i:Z
 
-.field private Qk:F
+.field public j:Z
 
-.field private Ql:F
+.field k:F
 
-.field private Qm:F
+.field l:F
 
-.field private mAlpha:F
+.field m:F
 
-.field private final wj:I
+.field n:F
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/gms/maps/model/MarkerOptionsCreator;
+    new-instance v0, Lcom/google/android/gms/maps/model/p;
 
-    invoke-direct {v0}, Lcom/google/android/gms/maps/model/MarkerOptionsCreator;-><init>()V
+    invoke-direct {v0}, Lcom/google/android/gms/maps/model/p;-><init>()V
 
-    sput-object v0, Lcom/google/android/gms/maps/model/MarkerOptions;->CREATOR:Lcom/google/android/gms/maps/model/MarkerOptionsCreator;
+    sput-object v0, Lcom/google/android/gms/maps/model/MarkerOptions;->CREATOR:Lcom/google/android/gms/maps/model/p;
 
     return-void
 .end method
@@ -57,33 +57,33 @@
 
     const/4 v4, 0x1
 
-    const/high16 v3, 0x3f800000
+    const/high16 v3, 0x3f800000    # 1.0f
 
-    const/high16 v2, 0x3f000000
+    const/high16 v2, 0x3f000000    # 0.5f
 
     const/4 v1, 0x0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v2, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->PY:F
+    iput v2, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->f:F
 
-    iput v3, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->PZ:F
+    iput v3, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->g:F
 
-    iput-boolean v4, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->PQ:Z
+    iput-boolean v4, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->i:Z
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qj:Z
+    iput-boolean v0, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->j:Z
 
-    iput v1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qk:F
+    iput v1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->k:F
 
-    iput v2, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Ql:F
+    iput v2, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->l:F
 
-    iput v1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qm:F
+    iput v1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->m:F
 
-    iput v3, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->mAlpha:F
+    iput v3, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->n:F
 
-    iput v4, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->wj:I
+    iput v4, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->a:I
 
     return-void
 .end method
@@ -93,109 +93,91 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/high16 v1, 0x3f000000
+    const/high16 v1, 0x3f000000    # 0.5f
 
-    iput v1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->PY:F
+    iput v1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->f:F
 
-    const/high16 v1, 0x3f800000
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    iput v1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->PZ:F
+    iput v1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->g:F
 
     const/4 v1, 0x1
 
-    iput-boolean v1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->PQ:Z
+    iput-boolean v1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->i:Z
 
     const/4 v1, 0x0
 
-    iput-boolean v1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qj:Z
+    iput-boolean v1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->j:Z
 
     const/4 v1, 0x0
 
-    iput v1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qk:F
+    iput v1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->k:F
 
-    const/high16 v1, 0x3f000000
+    const/high16 v1, 0x3f000000    # 0.5f
 
-    iput v1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Ql:F
+    iput v1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->l:F
 
     const/4 v1, 0x0
 
-    iput v1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qm:F
+    iput v1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->m:F
 
-    const/high16 v1, 0x3f800000
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    iput v1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->mAlpha:F
+    iput v1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->n:F
 
-    iput p1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->wj:I
+    iput p1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->a:I
 
-    iput-object p2, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qf:Lcom/google/android/gms/maps/model/LatLng;
+    iput-object p2, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->b:Lcom/google/android/gms/maps/model/LatLng;
 
-    iput-object p3, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->CX:Ljava/lang/String;
+    iput-object p3, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->c:Ljava/lang/String;
 
-    iput-object p4, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qg:Ljava/lang/String;
+    iput-object p4, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->d:Ljava/lang/String;
 
     if-nez p5, :cond_0
 
     const/4 v1, 0x0
 
     :goto_0
-    iput-object v1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qh:Lcom/google/android/gms/maps/model/BitmapDescriptor;
+    iput-object v1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->e:Lcom/google/android/gms/maps/model/a;
 
-    iput p6, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->PY:F
+    iput p6, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->f:F
 
-    iput p7, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->PZ:F
+    iput p7, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->g:F
 
-    iput-boolean p8, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qi:Z
+    iput-boolean p8, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->h:Z
 
-    iput-boolean p9, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->PQ:Z
+    iput-boolean p9, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->i:Z
 
-    iput-boolean p10, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qj:Z
+    iput-boolean p10, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->j:Z
 
-    iput p11, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qk:F
+    iput p11, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->k:F
 
-    iput p12, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Ql:F
+    iput p12, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->l:F
 
     move/from16 v0, p13
 
-    iput v0, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qm:F
+    iput v0, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->m:F
 
     move/from16 v0, p14
 
-    iput v0, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->mAlpha:F
+    iput v0, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->n:F
 
     return-void
 
     :cond_0
-    new-instance v1, Lcom/google/android/gms/maps/model/BitmapDescriptor;
+    new-instance v1, Lcom/google/android/gms/maps/model/a;
 
-    invoke-static {p5}, Lcom/google/android/gms/dynamic/b$a;->G(Landroid/os/IBinder;)Lcom/google/android/gms/dynamic/b;
+    invoke-static {p5}, Lcom/google/android/gms/a/i;->a(Landroid/os/IBinder;)Lcom/google/android/gms/a/h;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcom/google/android/gms/maps/model/BitmapDescriptor;-><init>(Lcom/google/android/gms/dynamic/b;)V
+    invoke-direct {v1, v2}, Lcom/google/android/gms/maps/model/a;-><init>(Lcom/google/android/gms/a/h;)V
 
     goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final alpha(F)Lcom/google/android/gms/maps/model/MarkerOptions;
-    .locals 0
-
-    iput p1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->mAlpha:F
-
-    return-object p0
-.end method
-
-.method public final anchor(FF)Lcom/google/android/gms/maps/model/MarkerOptions;
-    .locals 0
-
-    iput p1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->PY:F
-
-    iput p2, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->PZ:F
-
-    return-object p0
-.end method
-
 .method public final describeContents()I
     .locals 1
 
@@ -204,234 +186,10 @@
     return v0
 .end method
 
-.method public final draggable(Z)Lcom/google/android/gms/maps/model/MarkerOptions;
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qi:Z
-
-    return-object p0
-.end method
-
-.method public final flat(Z)Lcom/google/android/gms/maps/model/MarkerOptions;
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qj:Z
-
-    return-object p0
-.end method
-
-.method public final getAlpha()F
-    .locals 1
-
-    iget v0, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->mAlpha:F
-
-    return v0
-.end method
-
-.method public final getAnchorU()F
-    .locals 1
-
-    iget v0, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->PY:F
-
-    return v0
-.end method
-
-.method public final getAnchorV()F
-    .locals 1
-
-    iget v0, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->PZ:F
-
-    return v0
-.end method
-
-.method public final getIcon()Lcom/google/android/gms/maps/model/BitmapDescriptor;
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qh:Lcom/google/android/gms/maps/model/BitmapDescriptor;
-
-    return-object v0
-.end method
-
-.method public final getInfoWindowAnchorU()F
-    .locals 1
-
-    iget v0, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Ql:F
-
-    return v0
-.end method
-
-.method public final getInfoWindowAnchorV()F
-    .locals 1
-
-    iget v0, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qm:F
-
-    return v0
-.end method
-
-.method public final getPosition()Lcom/google/android/gms/maps/model/LatLng;
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qf:Lcom/google/android/gms/maps/model/LatLng;
-
-    return-object v0
-.end method
-
-.method public final getRotation()F
-    .locals 1
-
-    iget v0, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qk:F
-
-    return v0
-.end method
-
-.method public final getSnippet()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qg:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final getTitle()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->CX:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method final getVersionCode()I
-    .locals 1
-
-    iget v0, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->wj:I
-
-    return v0
-.end method
-
-.method final hf()Landroid/os/IBinder;
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qh:Lcom/google/android/gms/maps/model/BitmapDescriptor;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qh:Lcom/google/android/gms/maps/model/BitmapDescriptor;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/maps/model/BitmapDescriptor;->gK()Lcom/google/android/gms/dynamic/b;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/google/android/gms/dynamic/b;->asBinder()Landroid/os/IBinder;
-
-    move-result-object v0
-
-    goto :goto_0
-.end method
-
-.method public final icon(Lcom/google/android/gms/maps/model/BitmapDescriptor;)Lcom/google/android/gms/maps/model/MarkerOptions;
-    .locals 0
-
-    iput-object p1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qh:Lcom/google/android/gms/maps/model/BitmapDescriptor;
-
-    return-object p0
-.end method
-
-.method public final infoWindowAnchor(FF)Lcom/google/android/gms/maps/model/MarkerOptions;
-    .locals 0
-
-    iput p1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Ql:F
-
-    iput p2, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qm:F
-
-    return-object p0
-.end method
-
-.method public final isDraggable()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qi:Z
-
-    return v0
-.end method
-
-.method public final isFlat()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qj:Z
-
-    return v0
-.end method
-
-.method public final isVisible()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->PQ:Z
-
-    return v0
-.end method
-
-.method public final position(Lcom/google/android/gms/maps/model/LatLng;)Lcom/google/android/gms/maps/model/MarkerOptions;
-    .locals 0
-
-    iput-object p1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qf:Lcom/google/android/gms/maps/model/LatLng;
-
-    return-object p0
-.end method
-
-.method public final rotation(F)Lcom/google/android/gms/maps/model/MarkerOptions;
-    .locals 0
-
-    iput p1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qk:F
-
-    return-object p0
-.end method
-
-.method public final snippet(Ljava/lang/String;)Lcom/google/android/gms/maps/model/MarkerOptions;
-    .locals 0
-
-    iput-object p1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->Qg:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public final title(Ljava/lang/String;)Lcom/google/android/gms/maps/model/MarkerOptions;
-    .locals 0
-
-    iput-object p1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->CX:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public final visible(Z)Lcom/google/android/gms/maps/model/MarkerOptions;
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/google/android/gms/maps/model/MarkerOptions;->PQ:Z
-
-    return-object p0
-.end method
-
 .method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
+    .locals 0
 
-    invoke-static {}, Lcom/google/android/gms/maps/internal/r;->hc()Z
+    invoke-static {p0, p1, p2}, Lcom/google/android/gms/maps/model/p;->a(Lcom/google/android/gms/maps/model/MarkerOptions;Landroid/os/Parcel;I)V
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/gms/maps/model/f;->a(Lcom/google/android/gms/maps/model/MarkerOptions;Landroid/os/Parcel;I)V
-
-    :goto_0
     return-void
-
-    :cond_0
-    invoke-static {p0, p1, p2}, Lcom/google/android/gms/maps/model/MarkerOptionsCreator;->a(Lcom/google/android/gms/maps/model/MarkerOptions;Landroid/os/Parcel;I)V
-
-    goto :goto_0
 .end method

@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private eX:Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$OnConnectionFailedListener;
+.field private fa:Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$OnConnectionFailedListener;
 
 
 # direct methods
@@ -19,7 +19,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 90
-    iput-object p1, p0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$OnConnectionFailedListenerProxy;->eX:Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$OnConnectionFailedListener;
+    iput-object p1, p0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$OnConnectionFailedListenerProxy;->fa:Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$OnConnectionFailedListener;
 
     .line 91
     return-void
@@ -76,7 +76,7 @@
     if-eqz v0, :cond_0
 
     .line 99
-    iget-object v0, p0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$OnConnectionFailedListenerProxy;->eX:Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$OnConnectionFailedListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$OnConnectionFailedListenerProxy;->fa:Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$OnConnectionFailedListener;
 
     new-instance v1, Lcom/glympse/android/hal/gms/common/ConnectionResult;
 
@@ -97,7 +97,7 @@
 
     .line 103
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$OnConnectionFailedListenerProxy;->eX:Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$OnConnectionFailedListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$OnConnectionFailedListenerProxy;->fa:Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$OnConnectionFailedListener;
 
     invoke-virtual {p2, v0, p3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0

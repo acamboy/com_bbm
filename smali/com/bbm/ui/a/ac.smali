@@ -1,146 +1,195 @@
-.class final Lcom/bbm/ui/a/ac;
-.super Lcom/bbm/j/k;
-.source "GroupMessageListAdapter.java"
+.class public final Lcom/bbm/ui/a/ac;
+.super Landroid/support/v7/widget/cl;
+.source "MonitoredHolder.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Landroid/support/v7/widget/cl;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Landroid/view/View;
+.field final k:Landroid/os/Handler;
 
-.field final synthetic b:Lcom/bbm/ui/a/x;
+.field final l:Landroid/content/Context;
+
+.field final m:Lcom/bbm/ui/a/ah;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/ui/a/ah",
+            "<TT;>;"
+        }
+    .end annotation
+.end field
+
+.field final n:Landroid/support/v7/widget/LinearLayoutManager;
+
+.field final o:Landroid/support/v7/widget/RecyclerView;
+
+.field final p:Lcom/bbm/ui/a/af;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/ui/a/af",
+            "<TT;>;"
+        }
+    .end annotation
+.end field
+
+.field q:Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "TT;"
+        }
+    .end annotation
+.end field
+
+.field final r:Lcom/bbm/j/k;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/a/x;Landroid/view/View;)V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;Landroid/support/v7/widget/LinearLayoutManager;Landroid/support/v7/widget/RecyclerView;Lcom/bbm/ui/a/af;Lcom/bbm/ui/a/ah;Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)V
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Landroid/support/v7/widget/LinearLayoutManager;",
+            "Landroid/support/v7/widget/RecyclerView;",
+            "Lcom/bbm/ui/a/af",
+            "<TT;>;",
+            "Lcom/bbm/ui/a/ah",
+            "<TT;>;",
+            "Landroid/view/LayoutInflater;",
+            "Landroid/view/ViewGroup;",
+            ")V"
+        }
+    .end annotation
 
     .prologue
-    .line 330
-    iput-object p1, p0, Lcom/bbm/ui/a/ac;->b:Lcom/bbm/ui/a/x;
-
-    iput-object p2, p0, Lcom/bbm/ui/a/ac;->a:Landroid/view/View;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method protected final a()V
-    .locals 4
-
-    .prologue
-    .line 333
-    iget-object v0, p0, Lcom/bbm/ui/a/ac;->a:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    .line 60
+    invoke-interface {p5, p6, p7}, Lcom/bbm/ui/a/ah;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/a/ae;
+    invoke-direct {p0, v0}, Landroid/support/v7/widget/cl;-><init>(Landroid/view/View;)V
 
-    .line 334
-    iget-object v1, v0, Lcom/bbm/ui/a/ae;->b:Lcom/bbm/j/a;
+    .line 23
+    new-instance v0, Landroid/os/Handler;
 
-    invoke-virtual {v1}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    move-result-object v1
+    iput-object v0, p0, Lcom/bbm/ui/a/ac;->k:Landroid/os/Handler;
 
-    check-cast v1, Lcom/bbm/ui/e/i;
+    .line 31
+    new-instance v0, Lcom/bbm/ui/a/ad;
 
-    .line 336
-    iget-object v2, v1, Lcom/bbm/ui/e/i;->b:Lcom/bbm/g/o;
+    invoke-direct {v0, p0}, Lcom/bbm/ui/a/ad;-><init>(Lcom/bbm/ui/a/ac;)V
 
-    iget-object v2, v2, Lcom/bbm/g/o;->h:Lcom/bbm/util/bi;
+    iput-object v0, p0, Lcom/bbm/ui/a/ac;->r:Lcom/bbm/j/k;
 
-    sget-object v3, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
+    .line 61
+    iput-object p1, p0, Lcom/bbm/ui/a/ac;->l:Landroid/content/Context;
 
-    if-ne v2, v3, :cond_0
+    .line 62
+    iput-object p5, p0, Lcom/bbm/ui/a/ac;->m:Lcom/bbm/ui/a/ah;
 
-    .line 337
-    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/g/al;
+    .line 63
+    iput-object p2, p0, Lcom/bbm/ui/a/ac;->n:Landroid/support/v7/widget/LinearLayoutManager;
 
-    move-result-object v2
+    .line 64
+    iput-object p3, p0, Lcom/bbm/ui/a/ac;->o:Landroid/support/v7/widget/RecyclerView;
 
-    iget-object v3, v1, Lcom/bbm/ui/e/i;->a:Lcom/bbm/g/ad;
+    .line 65
+    iput-object p4, p0, Lcom/bbm/ui/a/ac;->p:Lcom/bbm/ui/a/af;
 
-    iget-object v3, v3, Lcom/bbm/g/ad;->d:Ljava/lang/String;
+    .line 67
+    iget-object v0, p0, Lcom/bbm/ui/a/ac;->l:Landroid/content/Context;
 
-    invoke-virtual {v2, v3}, Lcom/bbm/g/al;->q(Ljava/lang/String;)Lcom/bbm/g/o;
-
-    move-result-object v2
-
-    .line 338
-    iput-object v2, v1, Lcom/bbm/ui/e/i;->b:Lcom/bbm/g/o;
-
-    .line 339
-    invoke-static {v2}, Lcom/bbm/d/b/a;->a(Lcom/bbm/g/o;)Lcom/google/b/a/l;
-
-    move-result-object v2
-
-    iput-object v2, v1, Lcom/bbm/ui/e/i;->c:Lcom/google/b/a/l;
-
-    .line 341
-    :cond_0
-    iget-object v2, p0, Lcom/bbm/ui/a/ac;->b:Lcom/bbm/ui/a/x;
-
-    iget-object v2, v1, Lcom/bbm/ui/e/i;->a:Lcom/bbm/g/ad;
-
-    invoke-static {v2}, Lcom/bbm/ui/a/x;->a(Lcom/bbm/g/ad;)I
-
-    move-result v2
-
-    .line 343
-    iget v3, v0, Lcom/bbm/ui/a/ae;->g:I
-
-    if-eq v3, v2, :cond_3
-
-    .line 344
-    iget-object v0, p0, Lcom/bbm/ui/a/ac;->b:Lcom/bbm/ui/a/x;
-
-    invoke-static {v0}, Lcom/bbm/ui/a/x;->h(Lcom/bbm/ui/a/x;)Z
-
-    move-result v0
+    instance-of v0, v0, Landroid/app/Activity;
 
     if-eqz v0, :cond_2
 
-    .line 355
-    :cond_1
+    instance-of v0, p5, Lcom/bbm/ui/messages/i;
+
+    if-eqz v0, :cond_2
+
+    .line 68
+    iget-object v0, p0, Lcom/bbm/ui/a/ac;->l:Landroid/content/Context;
+
+    check-cast v0, Landroid/app/Activity;
+
+    .line 69
+    check-cast p5, Lcom/bbm/ui/messages/i;
+
+    invoke-interface {p5}, Lcom/bbm/ui/messages/i;->b()Ljava/util/List;
+
+    move-result-object v4
+
+    .line 70
+    const/4 v1, 0x0
+
+    move v3, v1
+
     :goto_0
-    return-void
+    invoke-interface {v4}, Ljava/util/List;->size()I
 
-    .line 349
-    :cond_2
-    iget-object v0, p0, Lcom/bbm/ui/a/ac;->b:Lcom/bbm/ui/a/x;
+    move-result v1
 
-    iget-boolean v1, v0, Lcom/bbm/ui/a/x;->h:Z
+    if-ge v3, v1, :cond_2
 
-    if-nez v1, :cond_1
+    .line 71
+    invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    const/4 v1, 0x1
+    move-result-object v1
 
-    iput-boolean v1, v0, Lcom/bbm/ui/a/x;->h:Z
+    check-cast v1, Landroid/view/View;
 
-    iget-object v1, v0, Lcom/bbm/ui/a/x;->i:Landroid/os/Handler;
+    .line 72
+    invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
-    iget-object v0, v0, Lcom/bbm/ui/a/x;->j:Ljava/lang/Runnable;
+    move-result-object v2
 
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    check-cast v2, Landroid/view/ViewGroup;
 
-    goto :goto_0
+    .line 73
+    if-eqz v2, :cond_0
 
-    .line 351
-    :cond_3
-    iget-object v2, v0, Lcom/bbm/ui/a/ae;->a:Lcom/bbm/ui/e/ai;
+    .line 74
+    invoke-virtual {v2, v1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
+    .line 76
+    :cond_0
+    new-instance v5, Lcom/bbm/ui/views/RecyclerContextMenuInfoWrapperView;
+
+    invoke-direct {v5, v1, v3}, Lcom/bbm/ui/views/RecyclerContextMenuInfoWrapperView;-><init>(Landroid/view/View;I)V
+
+    .line 77
+    invoke-virtual {v5, p0}, Lcom/bbm/ui/views/RecyclerContextMenuInfoWrapperView;->setHolder(Landroid/support/v7/widget/cl;)V
+
+    .line 78
     if-eqz v2, :cond_1
 
-    .line 352
-    iget-object v0, v0, Lcom/bbm/ui/a/ae;->a:Lcom/bbm/ui/e/ai;
+    .line 79
+    invoke-virtual {v2, v5}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    invoke-interface {v0, v1}, Lcom/bbm/ui/e/ai;->a(Lcom/bbm/ui/e/i;)V
+    .line 81
+    :cond_1
+    invoke-virtual {v0, v5}, Landroid/app/Activity;->registerForContextMenu(Landroid/view/View;)V
+
+    .line 70
+    add-int/lit8 v1, v3, 0x1
+
+    move v3, v1
 
     goto :goto_0
+
+    .line 84
+    :cond_2
+    return-void
 .end method

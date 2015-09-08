@@ -1,111 +1,58 @@
-.class public Lcom/google/android/gms/internal/ft;
+.class final Lcom/google/android/gms/internal/ft;
 .super Ljava/lang/Object;
 
-
-# static fields
-.field public static final EE:Lcom/google/android/gms/drive/metadata/OrderedMetadataField;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/drive/metadata/OrderedMetadataField",
-            "<",
-            "Ljava/util/Date;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final EF:Lcom/google/android/gms/drive/metadata/OrderedMetadataField;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/drive/metadata/OrderedMetadataField",
-            "<",
-            "Ljava/util/Date;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final EG:Lcom/google/android/gms/drive/metadata/OrderedMetadataField;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/drive/metadata/OrderedMetadataField",
-            "<",
-            "Ljava/util/Date;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final EH:Lcom/google/android/gms/drive/metadata/OrderedMetadataField;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/drive/metadata/OrderedMetadataField",
-            "<",
-            "Ljava/util/Date;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final LAST_VIEWED_BY_ME:Lcom/google/android/gms/drive/metadata/OrderedMetadataField;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/drive/metadata/OrderedMetadataField",
-            "<",
-            "Ljava/util/Date;",
-            ">;"
-        }
-    .end annotation
-.end field
+# interfaces
+.implements Lcom/google/android/gms/internal/fv;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>()V
+    .locals 0
 
-    const v2, 0x3e8fa0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lcom/google/android/gms/drive/metadata/internal/b;
+    return-void
+.end method
 
-    const-string v1, "modified"
 
-    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/drive/metadata/internal/b;-><init>(Ljava/lang/String;I)V
+# virtual methods
+.method public final a(Lcom/google/android/gms/internal/pp;Ljava/util/Map;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/android/gms/internal/pp;",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
 
-    sput-object v0, Lcom/google/android/gms/internal/ft;->EE:Lcom/google/android/gms/drive/metadata/OrderedMetadataField;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    new-instance v0, Lcom/google/android/gms/drive/metadata/internal/b;
+    const-string v0, "Received log message: "
 
-    const-string v1, "modifiedByMe"
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/drive/metadata/internal/b;-><init>(Ljava/lang/String;I)V
+    const-string v0, "string"
 
-    sput-object v0, Lcom/google/android/gms/internal/ft;->EF:Lcom/google/android/gms/drive/metadata/OrderedMetadataField;
+    invoke-interface {p2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v0, Lcom/google/android/gms/drive/metadata/internal/b;
+    move-result-object v0
 
-    const-string v1, "created"
+    check-cast v0, Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/drive/metadata/internal/b;-><init>(Ljava/lang/String;I)V
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sput-object v0, Lcom/google/android/gms/internal/ft;->EG:Lcom/google/android/gms/drive/metadata/OrderedMetadataField;
+    move-result-object v0
 
-    new-instance v0, Lcom/google/android/gms/drive/metadata/internal/b;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const-string v1, "sharedWithMe"
+    move-result-object v0
 
-    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/drive/metadata/internal/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/google/android/gms/internal/ft;->EH:Lcom/google/android/gms/drive/metadata/OrderedMetadataField;
-
-    new-instance v0, Lcom/google/android/gms/drive/metadata/internal/b;
-
-    const-string v1, "lastOpenedTime"
-
-    const v2, 0x419ce0
-
-    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/drive/metadata/internal/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/google/android/gms/internal/ft;->LAST_VIEWED_BY_ME:Lcom/google/android/gms/drive/metadata/OrderedMetadataField;
+    invoke-static {v0}, Lcom/google/android/gms/ads/internal/util/client/b;->c(Ljava/lang/String;)V
 
     return-void
 .end method

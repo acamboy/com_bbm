@@ -1,58 +1,65 @@
-.class final Lcom/bbm/d/a/a/g;
-.super Lcom/bbm/d/a/a/b;
+.class public final Lcom/bbm/d/a/a/g;
+.super Ljava/lang/Enum;
 .source "LiveList.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/bbm/d/a/a/b",
+        "Ljava/lang/Enum",
         "<",
-        "Ljava/lang/String;",
-        "TT;>;"
+        "Lcom/bbm/d/a/a/g;",
+        ">;"
     }
 .end annotation
 
 
-# instance fields
-.field final synthetic c:Lcom/bbm/d/a/a/e;
+# static fields
+.field public static final enum a:I
+
+.field public static final enum b:I
+
+.field public static final enum c:I
+
+.field private static final synthetic d:[I
 
 
 # direct methods
-.method private constructor <init>(Lcom/bbm/d/a/a/e;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
     .prologue
-    .line 44
-    iput-object p1, p0, Lcom/bbm/d/a/a/g;->c:Lcom/bbm/d/a/a/e;
+    const/4 v0, 0x3
 
-    invoke-direct {p0}, Lcom/bbm/d/a/a/b;-><init>()V
+    const/4 v4, 0x2
+
+    const/4 v3, 0x1
+
+    .line 34
+    sput v3, Lcom/bbm/d/a/a/g;->a:I
+
+    sput v4, Lcom/bbm/d/a/a/g;->b:I
+
+    sput v0, Lcom/bbm/d/a/a/g;->c:I
+
+    .line 33
+    new-array v0, v0, [I
+
+    const/4 v1, 0x0
+
+    sget v2, Lcom/bbm/d/a/a/g;->a:I
+
+    aput v2, v0, v1
+
+    sget v1, Lcom/bbm/d/a/a/g;->b:I
+
+    aput v1, v0, v3
+
+    sget v1, Lcom/bbm/d/a/a/g;->c:I
+
+    aput v1, v0, v4
+
+    sput-object v0, Lcom/bbm/d/a/a/g;->d:[I
 
     return-void
-.end method
-
-.method synthetic constructor <init>(Lcom/bbm/d/a/a/e;B)V
-    .locals 0
-
-    .prologue
-    .line 44
-    invoke-direct {p0, p1}, Lcom/bbm/d/a/a/g;-><init>(Lcom/bbm/d/a/a/e;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final synthetic c(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    .prologue
-    .line 44
-    check-cast p1, Lcom/bbm/d/a/a;
-
-    invoke-interface {p1}, Lcom/bbm/d/a/a;->a()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

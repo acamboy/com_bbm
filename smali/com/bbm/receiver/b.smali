@@ -43,9 +43,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 22
-    iget-object v0, p0, Lcom/bbm/receiver/b;->a:Lcom/bbm/receiver/c;
-
     .line 29
     :cond_0
     :goto_0

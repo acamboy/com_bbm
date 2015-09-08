@@ -151,10 +151,10 @@
 
 .field e:I
 
-.field protected f:Landroid/support/v4/b/o;
+.field protected f:Landroid/support/v4/e/r;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroid/support/v4/b/o",
+            "Landroid/support/v4/e/r",
             "<",
             "Ljava/lang/Boolean;",
             ">;"
@@ -162,10 +162,10 @@
     .end annotation
 .end field
 
-.field g:Landroid/support/v4/b/f;
+.field g:Landroid/support/v4/e/f;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroid/support/v4/b/f",
+            "Landroid/support/v4/e/f",
             "<",
             "Ljava/lang/Integer;",
             ">;"
@@ -323,7 +323,7 @@
     iput v1, p0, Lit/sephiroth/android/library/widget/AbsHListView;->aJ:I
 
     .line 461
-    const/high16 v0, 0x3f800000
+    const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->aO:F
 
@@ -443,7 +443,7 @@
     iput v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->aJ:I
 
     .line 461
-    const/high16 v3, 0x3f800000
+    const/high16 v3, 0x3f800000    # 1.0f
 
     iput v3, p0, Lit/sephiroth/android/library/widget/AbsHListView;->aO:F
 
@@ -1046,7 +1046,7 @@
     return v0
 .end method
 
-.method private g(I)Z
+.method private h(I)Z
     .locals 6
 
     .prologue
@@ -1152,7 +1152,7 @@
 
     .line 2803
     :cond_3
-    invoke-direct {p0, p1}, Lit/sephiroth/android/library/widget/AbsHListView;->h(I)V
+    invoke-direct {p0, p1}, Lit/sephiroth/android/library/widget/AbsHListView;->i(I)V
 
     move v1, v3
 
@@ -1191,7 +1191,29 @@
     goto :goto_1
 .end method
 
-.method private h(I)V
+.method static synthetic h(Lit/sephiroth/android/library/widget/AbsHListView;)Z
+    .locals 1
+
+    .prologue
+    .line 59
+    invoke-direct {p0}, Lit/sephiroth/android/library/widget/AbsHListView;->q()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method static synthetic i(Lit/sephiroth/android/library/widget/AbsHListView;)Lit/sephiroth/android/library/widget/z;
+    .locals 1
+
+    .prologue
+    .line 59
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->aQ:Lit/sephiroth/android/library/widget/z;
+
+    return-object v0
+.end method
+
+.method private i(I)V
     .locals 13
 
     .prologue
@@ -1849,28 +1871,6 @@
     move v4, v3
 
     goto/16 :goto_2
-.end method
-
-.method static synthetic h(Lit/sephiroth/android/library/widget/AbsHListView;)Z
-    .locals 1
-
-    .prologue
-    .line 59
-    invoke-direct {p0}, Lit/sephiroth/android/library/widget/AbsHListView;->q()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method static synthetic i(Lit/sephiroth/android/library/widget/AbsHListView;)Lit/sephiroth/android/library/widget/z;
-    .locals 1
-
-    .prologue
-    .line 59
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->aQ:Lit/sephiroth/android/library/widget/z;
-
-    return-object v0
 .end method
 
 .method static synthetic j(Lit/sephiroth/android/library/widget/AbsHListView;)Lit/sephiroth/android/library/widget/z;
@@ -2805,7 +2805,7 @@
     .line 1923
     iget-object v1, p0, Lit/sephiroth/android/library/widget/AbsHListView;->p:Lit/sephiroth/android/library/widget/p;
 
-    iget-object v0, v1, Lit/sephiroth/android/library/widget/p;->g:Landroid/support/v4/b/o;
+    iget-object v0, v1, Lit/sephiroth/android/library/widget/p;->g:Landroid/support/v4/e/r;
 
     if-nez v0, :cond_1
 
@@ -2813,7 +2813,7 @@
 
     .line 1924
     :goto_0
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_3
 
     .line 1988
     :cond_0
@@ -2822,48 +2822,37 @@
 
     .line 1923
     :cond_1
-    iget-object v0, v1, Lit/sephiroth/android/library/widget/p;->g:Landroid/support/v4/b/o;
+    iget-object v0, v1, Lit/sephiroth/android/library/widget/p;->g:Landroid/support/v4/e/r;
 
-    iget-boolean v3, v0, Landroid/support/v4/b/o;->a:Z
-
-    if-eqz v3, :cond_2
-
-    invoke-virtual {v0}, Landroid/support/v4/b/o;->b()V
-
-    :cond_2
-    iget-object v3, v0, Landroid/support/v4/b/o;->b:[I
-
-    iget v0, v0, Landroid/support/v4/b/o;->d:I
-
-    invoke-static {v3, v0, p1}, Landroid/support/v4/b/c;->a([III)I
+    invoke-virtual {v0, p1}, Landroid/support/v4/e/r;->d(I)I
 
     move-result v3
 
-    if-gez v3, :cond_3
+    if-gez v3, :cond_2
 
     move-object v1, v2
 
     goto :goto_0
 
-    :cond_3
-    iget-object v0, v1, Lit/sephiroth/android/library/widget/p;->g:Landroid/support/v4/b/o;
+    :cond_2
+    iget-object v0, v1, Lit/sephiroth/android/library/widget/p;->g:Landroid/support/v4/e/r;
 
-    invoke-virtual {v0, v3}, Landroid/support/v4/b/o;->c(I)Ljava/lang/Object;
+    invoke-virtual {v0, v3}, Landroid/support/v4/e/r;->c(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/View;
 
-    iget-object v1, v1, Lit/sephiroth/android/library/widget/p;->g:Landroid/support/v4/b/o;
+    iget-object v1, v1, Lit/sephiroth/android/library/widget/p;->g:Landroid/support/v4/e/r;
 
-    invoke-virtual {v1, v3}, Landroid/support/v4/b/o;->a(I)V
+    invoke-virtual {v1, v3}, Landroid/support/v4/e/r;->a(I)V
 
     move-object v1, v0
 
     goto :goto_0
 
     .line 1928
-    :cond_4
+    :cond_3
     iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->p:Lit/sephiroth/android/library/widget/p;
 
     invoke-virtual {v0, p1}, Lit/sephiroth/android/library/widget/p;->a(I)Landroid/view/View;
@@ -2871,7 +2860,7 @@
     move-result-object v1
 
     .line 1931
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_7
 
     .line 1932
     iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->j:Landroid/widget/ListAdapter;
@@ -2883,21 +2872,21 @@
     .line 1934
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-lt v2, v6, :cond_5
+    if-lt v2, v6, :cond_4
 
     .line 1935
     invoke-virtual {v0}, Landroid/view/View;->getImportantForAccessibility()I
 
     move-result v2
 
-    if-nez v2, :cond_5
+    if-nez v2, :cond_4
 
     .line 1936
     invoke-virtual {v0, v5}, Landroid/view/View;->setImportantForAccessibility(I)V
 
     .line 1940
-    :cond_5
-    if-eq v0, v1, :cond_7
+    :cond_4
+    if-eq v0, v1, :cond_6
 
     .line 1941
     iget-object v2, p0, Lit/sephiroth/android/library/widget/AbsHListView;->p:Lit/sephiroth/android/library/widget/p;
@@ -2907,7 +2896,7 @@
     .line 1942
     iget v1, p0, Lit/sephiroth/android/library/widget/AbsHListView;->aH:I
 
-    if-eqz v1, :cond_a
+    if-eqz v1, :cond_9
 
     .line 1943
     iget v1, p0, Lit/sephiroth/android/library/widget/AbsHListView;->aH:I
@@ -2920,7 +2909,7 @@
     :goto_2
     iget-boolean v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->k:Z
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_5
 
     .line 1964
     invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -2928,7 +2917,7 @@
     move-result-object v0
 
     .line 1966
-    if-nez v0, :cond_b
+    if-nez v0, :cond_a
 
     .line 1967
     invoke-virtual {p0}, Lit/sephiroth/android/library/widget/AbsHListView;->generateDefaultLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -2951,7 +2940,7 @@
     invoke-virtual {v1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 1977
-    :cond_6
+    :cond_5
     iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->aq:Landroid/view/accessibility/AccessibilityManager;
 
     invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityManager;->isEnabled()Z
@@ -2975,7 +2964,7 @@
     goto :goto_1
 
     .line 1946
-    :cond_7
+    :cond_6
     aput-boolean v5, p2, v4
 
     .line 1947
@@ -2986,7 +2975,7 @@
     goto :goto_2
 
     .line 1950
-    :cond_8
+    :cond_7
     iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->j:Landroid/widget/ListAdapter;
 
     invoke-interface {v0, p1, v2, p0}, Landroid/widget/ListAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
@@ -2996,41 +2985,41 @@
     .line 1952
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-lt v1, v6, :cond_9
+    if-lt v1, v6, :cond_8
 
     .line 1953
     invoke-virtual {v0}, Landroid/view/View;->getImportantForAccessibility()I
 
     move-result v1
 
-    if-nez v1, :cond_9
+    if-nez v1, :cond_8
 
     .line 1954
     invoke-virtual {v0, v5}, Landroid/view/View;->setImportantForAccessibility(I)V
 
     .line 1958
-    :cond_9
+    :cond_8
     iget v1, p0, Lit/sephiroth/android/library/widget/AbsHListView;->aH:I
 
-    if-eqz v1, :cond_a
+    if-eqz v1, :cond_9
 
     .line 1959
     iget v1, p0, Lit/sephiroth/android/library/widget/AbsHListView;->aH:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setDrawingCacheBackgroundColor(I)V
 
-    :cond_a
+    :cond_9
     move-object v1, v0
 
     goto :goto_2
 
     .line 1968
-    :cond_b
+    :cond_a
     invoke-virtual {p0, v0}, Lit/sephiroth/android/library/widget/AbsHListView;->checkLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Z
 
     move-result v2
 
-    if-nez v2, :cond_c
+    if-nez v2, :cond_b
 
     .line 1969
     invoke-virtual {p0, v0}, Lit/sephiroth/android/library/widget/AbsHListView;->generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;
@@ -3042,7 +3031,7 @@
     goto :goto_3
 
     .line 1971
-    :cond_c
+    :cond_b
     check-cast v0, Lit/sephiroth/android/library/widget/i;
 
     goto :goto_3
@@ -3053,25 +3042,25 @@
 
     .prologue
     .line 829
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
     if-eqz v0, :cond_0
 
     .line 830
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
-    invoke-virtual {v0}, Landroid/support/v4/b/o;->d()V
+    invoke-virtual {v0}, Landroid/support/v4/e/r;->d()V
 
     .line 832
     :cond_0
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
     if-eqz v0, :cond_1
 
     .line 833
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
-    invoke-virtual {v0}, Landroid/support/v4/b/f;->c()V
+    invoke-virtual {v0}, Landroid/support/v4/e/f;->c()V
 
     .line 835
     :cond_1
@@ -3101,9 +3090,6 @@
     iput p1, p0, Lit/sephiroth/android/library/widget/AbsHListView;->aJ:I
 
     .line 3663
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->aw:Lit/sephiroth/android/library/widget/k;
-
-    .line 3666
     :cond_0
     return-void
 .end method
@@ -3402,13 +3388,13 @@
 
     .line 929
     :cond_0
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
     invoke-static {v8}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-virtual {v0, p2, v1}, Landroid/support/v4/b/o;->a(ILjava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p2, v1}, Landroid/support/v4/e/r;->a(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -3424,16 +3410,16 @@
 
     .line 930
     :goto_0
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
     invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-virtual {v0, p2, v1}, Landroid/support/v4/b/o;->b(ILjava/lang/Object;)V
+    invoke-virtual {v0, p2, v1}, Landroid/support/v4/e/r;->b(ILjava/lang/Object;)V
 
     .line 931
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
     if-eqz v0, :cond_1
 
@@ -3449,7 +3435,7 @@
     if-eqz v6, :cond_4
 
     .line 933
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
     iget-object v1, p0, Lit/sephiroth/android/library/widget/AbsHListView;->j:Landroid/widget/ListAdapter;
 
@@ -3461,7 +3447,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v2, v3, v1}, Landroid/support/v4/b/f;->a(JLjava/lang/Object;)V
+    invoke-virtual {v0, v2, v3, v1}, Landroid/support/v4/e/f;->a(JLjava/lang/Object;)V
 
     .line 938
     :cond_1
@@ -3538,13 +3524,13 @@
 
     check-cast v0, Landroid/widget/Checkable;
 
-    iget-object v9, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v9, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
     invoke-static {v8}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v10
 
-    invoke-virtual {v9, v1, v10}, Landroid/support/v4/b/o;->a(ILjava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v9, v1, v10}, Landroid/support/v4/e/r;->a(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -3572,7 +3558,7 @@
 
     .line 935
     :cond_4
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
     iget-object v1, p0, Lit/sephiroth/android/library/widget/AbsHListView;->j:Landroid/widget/ListAdapter;
 
@@ -3580,7 +3566,7 @@
 
     move-result-wide v2
 
-    invoke-virtual {v0, v2, v3}, Landroid/support/v4/b/f;->a(J)V
+    invoke-virtual {v0, v2, v3}, Landroid/support/v4/e/f;->a(J)V
 
     goto :goto_1
 
@@ -3601,13 +3587,13 @@
     if-ne v0, v7, :cond_10
 
     .line 951
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
     invoke-static {v8}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-virtual {v0, p2, v1}, Landroid/support/v4/b/o;->a(ILjava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p2, v1}, Landroid/support/v4/e/r;->a(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -3626,21 +3612,21 @@
     if-eqz v0, :cond_a
 
     .line 953
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
-    invoke-virtual {v0}, Landroid/support/v4/b/o;->d()V
+    invoke-virtual {v0}, Landroid/support/v4/e/r;->d()V
 
     .line 954
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
     invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-virtual {v0, p2, v1}, Landroid/support/v4/b/o;->b(ILjava/lang/Object;)V
+    invoke-virtual {v0, p2, v1}, Landroid/support/v4/e/r;->b(ILjava/lang/Object;)V
 
     .line 955
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
     if-eqz v0, :cond_7
 
@@ -3653,12 +3639,12 @@
     if-eqz v0, :cond_7
 
     .line 956
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
-    invoke-virtual {v0}, Landroid/support/v4/b/f;->c()V
+    invoke-virtual {v0}, Landroid/support/v4/e/f;->c()V
 
     .line 957
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
     iget-object v1, p0, Lit/sephiroth/android/library/widget/AbsHListView;->j:Landroid/widget/ListAdapter;
 
@@ -3670,7 +3656,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v2, v3, v1}, Landroid/support/v4/b/f;->a(JLjava/lang/Object;)V
+    invoke-virtual {v0, v2, v3, v1}, Landroid/support/v4/e/f;->a(JLjava/lang/Object;)V
 
     .line 959
     :cond_7
@@ -3693,17 +3679,17 @@
 
     .line 960
     :cond_a
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
-    invoke-virtual {v0}, Landroid/support/v4/b/o;->c()I
+    invoke-virtual {v0}, Landroid/support/v4/e/r;->c()I
 
     move-result v0
 
     if-eqz v0, :cond_b
 
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
-    invoke-virtual {v0, v8}, Landroid/support/v4/b/o;->c(I)Ljava/lang/Object;
+    invoke-virtual {v0, v8}, Landroid/support/v4/e/r;->c(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -3730,13 +3716,13 @@
     :cond_d
     if-eqz v2, :cond_2
 
-    iget-object v9, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v9, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
     invoke-static {v8}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v10
 
-    invoke-virtual {v9, v1, v10}, Landroid/support/v4/b/o;->a(ILjava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v9, v1, v10}, Landroid/support/v4/e/r;->a(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -3877,13 +3863,7 @@
     if-eqz v0, :cond_0
 
     .line 1132
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->aw:Lit/sephiroth/android/library/widget/k;
-
-    iget v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->V:I
-
     invoke-virtual {p0}, Lit/sephiroth/android/library/widget/AbsHListView;->getChildCount()I
-
-    iget v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->ao:I
 
     .line 1134
     :cond_0
@@ -4943,7 +4923,7 @@
 
     mul-float/2addr v2, v3
 
-    const/high16 v3, 0x42c80000
+    const/high16 v3, 0x42c80000    # 100.0f
 
     mul-float/2addr v2, v3
 
@@ -5055,7 +5035,7 @@
 
     mul-float/2addr v1, v2
 
-    const/high16 v2, 0x42c80000
+    const/high16 v2, 0x42c80000    # 100.0f
 
     mul-float/2addr v1, v2
 
@@ -5226,7 +5206,7 @@
     move-result v4
 
     .line 3458
-    const/high16 v5, -0x3d4c0000
+    const/high16 v5, -0x3d4c0000    # -90.0f
 
     invoke-virtual {p1, v5}, Landroid/graphics/Canvas;->rotate(F)V
 
@@ -5330,7 +5310,7 @@
     move-result v0
 
     .line 3477
-    const/high16 v4, 0x42b40000
+    const/high16 v4, 0x42b40000    # 90.0f
 
     invoke-virtual {p1, v4}, Landroid/graphics/Canvas;->rotate(F)V
 
@@ -5829,7 +5809,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
     if-eqz v0, :cond_0
 
@@ -5847,10 +5827,10 @@
 
     .line 814
     :cond_2
-    iget-object v2, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v2, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
     .line 815
-    invoke-virtual {v2}, Landroid/support/v4/b/f;->b()I
+    invoke-virtual {v2}, Landroid/support/v4/e/f;->b()I
 
     move-result v3
 
@@ -5862,7 +5842,7 @@
     if-ge v1, v3, :cond_1
 
     .line 819
-    invoke-virtual {v2, v1}, Landroid/support/v4/b/f;->a(I)J
+    invoke-virtual {v2, v1}, Landroid/support/v4/e/f;->a(I)J
 
     move-result-wide v4
 
@@ -5885,24 +5865,24 @@
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
-    invoke-virtual {v0}, Landroid/support/v4/b/o;->c()I
+    invoke-virtual {v0}, Landroid/support/v4/e/r;->c()I
 
     move-result v0
 
     if-ne v0, v1, :cond_0
 
     .line 783
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/b/o;->b(I)I
+    invoke-virtual {v0, v1}, Landroid/support/v4/e/r;->b(I)I
 
     move-result v0
 
@@ -5916,12 +5896,12 @@
     goto :goto_0
 .end method
 
-.method public getCheckedItemPositions()Landroid/support/v4/b/o;
+.method public getCheckedItemPositions()Landroid/support/v4/e/r;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Landroid/support/v4/b/o",
+            "Landroid/support/v4/e/r",
             "<",
             "Ljava/lang/Boolean;",
             ">;"
@@ -5935,7 +5915,7 @@
     if-eqz v0, :cond_0
 
     .line 798
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
     .line 800
     :goto_0
@@ -6137,7 +6117,7 @@
     if-lez v1, :cond_2
 
     .line 1727
-    const/high16 v0, 0x3f800000
+    const/high16 v0, 0x3f800000    # 1.0f
 
     goto :goto_0
 
@@ -6267,7 +6247,7 @@
     if-ge v2, v3, :cond_2
 
     .line 1744
-    const/high16 v0, 0x3f800000
+    const/high16 v0, 0x3f800000    # 1.0f
 
     goto :goto_0
 
@@ -6564,9 +6544,9 @@
     if-eqz v0, :cond_7
 
     .line 5007
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
-    invoke-virtual {v0}, Landroid/support/v4/b/o;->d()V
+    invoke-virtual {v0}, Landroid/support/v4/e/r;->d()V
 
     const/4 v1, 0x0
 
@@ -6577,23 +6557,23 @@
     move v1, v0
 
     :goto_0
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
-    invoke-virtual {v0}, Landroid/support/v4/b/f;->b()I
+    invoke-virtual {v0}, Landroid/support/v4/e/f;->b()I
 
     move-result v0
 
     if-ge v1, v0, :cond_6
 
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/b/f;->a(I)J
+    invoke-virtual {v0, v1}, Landroid/support/v4/e/f;->a(I)J
 
     move-result-wide v4
 
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/b/f;->b(I)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroid/support/v4/e/f;->b(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -6646,7 +6626,7 @@
 
     const/4 v0, 0x1
 
-    iget-object v7, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v7, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
     const/4 v10, 0x1
 
@@ -6654,31 +6634,31 @@
 
     move-result-object v10
 
-    invoke-virtual {v7, v6, v10}, Landroid/support/v4/b/o;->b(ILjava/lang/Object;)V
+    invoke-virtual {v7, v6, v10}, Landroid/support/v4/e/r;->b(ILjava/lang/Object;)V
 
-    iget-object v7, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v7, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
 
-    iget-boolean v10, v7, Landroid/support/v4/b/f;->a:Z
+    iget-boolean v10, v7, Landroid/support/v4/e/f;->a:Z
 
     if-eqz v10, :cond_0
 
-    invoke-virtual {v7}, Landroid/support/v4/b/f;->a()V
+    invoke-virtual {v7}, Landroid/support/v4/e/f;->a()V
 
     :cond_0
-    iget-object v7, v7, Landroid/support/v4/b/f;->b:[Ljava/lang/Object;
+    iget-object v7, v7, Landroid/support/v4/e/f;->b:[Ljava/lang/Object;
 
     aput-object v6, v7, v1
 
     :cond_1
     if-nez v0, :cond_3
 
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
-    invoke-virtual {v0, v4, v5}, Landroid/support/v4/b/f;->a(J)V
+    invoke-virtual {v0, v4, v5}, Landroid/support/v4/e/f;->a(J)V
 
     add-int/lit8 v0, v1, -0x1
 
@@ -6741,7 +6721,7 @@
     goto :goto_1
 
     :cond_5
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
     const/4 v4, 0x1
 
@@ -6749,7 +6729,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v0, v3, v4}, Landroid/support/v4/b/o;->b(ILjava/lang/Object;)V
+    invoke-virtual {v0, v3, v4}, Landroid/support/v4/e/r;->b(ILjava/lang/Object;)V
 
     move v0, v1
 
@@ -6780,13 +6760,13 @@
     :cond_7
     iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->p:Lit/sephiroth/android/library/widget/p;
 
-    iget-object v1, v0, Lit/sephiroth/android/library/widget/p;->g:Landroid/support/v4/b/o;
+    iget-object v1, v0, Lit/sephiroth/android/library/widget/p;->g:Landroid/support/v4/e/r;
 
     if-eqz v1, :cond_8
 
-    iget-object v0, v0, Lit/sephiroth/android/library/widget/p;->g:Landroid/support/v4/b/o;
+    iget-object v0, v0, Lit/sephiroth/android/library/widget/p;->g:Landroid/support/v4/e/r;
 
-    invoke-virtual {v0}, Landroid/support/v4/b/o;->d()V
+    invoke-virtual {v0}, Landroid/support/v4/e/r;->d()V
 
     .line 5013
     :cond_8
@@ -7869,7 +7849,7 @@
     invoke-virtual {v3, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
     .line 3588
-    invoke-direct {p0, v0}, Lit/sephiroth/android/library/widget/AbsHListView;->g(I)Z
+    invoke-direct {p0, v0}, Lit/sephiroth/android/library/widget/AbsHListView;->h(I)Z
 
     move-result v0
 
@@ -8146,13 +8126,13 @@
     goto :goto_2
 
     :cond_3
-    iget-object v0, v4, Lit/sephiroth/android/library/widget/p;->g:Landroid/support/v4/b/o;
+    iget-object v0, v4, Lit/sephiroth/android/library/widget/p;->g:Landroid/support/v4/e/r;
 
     if-eqz v0, :cond_4
 
-    iget-object v0, v4, Lit/sephiroth/android/library/widget/p;->g:Landroid/support/v4/b/o;
+    iget-object v0, v4, Lit/sephiroth/android/library/widget/p;->g:Landroid/support/v4/e/r;
 
-    invoke-virtual {v0}, Landroid/support/v4/b/o;->c()I
+    invoke-virtual {v0}, Landroid/support/v4/e/r;->c()I
 
     move-result v3
 
@@ -8161,9 +8141,9 @@
     :goto_4
     if-ge v1, v3, :cond_4
 
-    iget-object v0, v4, Lit/sephiroth/android/library/widget/p;->g:Landroid/support/v4/b/o;
+    iget-object v0, v4, Lit/sephiroth/android/library/widget/p;->g:Landroid/support/v4/e/r;
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/b/o;->c(I)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroid/support/v4/e/r;->c(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -8444,25 +8424,25 @@
     .line 1585
     :cond_0
     :goto_0
-    iget-object v0, p1, Lit/sephiroth/android/library/widget/AbsHListView$SavedState;->i:Landroid/support/v4/b/o;
+    iget-object v0, p1, Lit/sephiroth/android/library/widget/AbsHListView$SavedState;->i:Landroid/support/v4/e/r;
 
     if-eqz v0, :cond_1
 
     .line 1586
-    iget-object v0, p1, Lit/sephiroth/android/library/widget/AbsHListView$SavedState;->i:Landroid/support/v4/b/o;
+    iget-object v0, p1, Lit/sephiroth/android/library/widget/AbsHListView$SavedState;->i:Landroid/support/v4/e/r;
 
-    iput-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iput-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
     .line 1589
     :cond_1
-    iget-object v0, p1, Lit/sephiroth/android/library/widget/AbsHListView$SavedState;->j:Landroid/support/v4/b/f;
+    iget-object v0, p1, Lit/sephiroth/android/library/widget/AbsHListView$SavedState;->j:Landroid/support/v4/e/f;
 
     if-eqz v0, :cond_2
 
     .line 1590
-    iget-object v0, p1, Lit/sephiroth/android/library/widget/AbsHListView$SavedState;->j:Landroid/support/v4/b/f;
+    iget-object v0, p1, Lit/sephiroth/android/library/widget/AbsHListView$SavedState;->j:Landroid/support/v4/e/f;
 
-    iput-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iput-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
     .line 1593
     :cond_2
@@ -8638,16 +8618,16 @@
     .line 1482
     iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->bc:Lit/sephiroth/android/library/widget/AbsHListView$SavedState;
 
-    iget-object v0, v0, Lit/sephiroth/android/library/widget/AbsHListView$SavedState;->i:Landroid/support/v4/b/o;
+    iget-object v0, v0, Lit/sephiroth/android/library/widget/AbsHListView$SavedState;->i:Landroid/support/v4/e/r;
 
-    iput-object v0, v3, Lit/sephiroth/android/library/widget/AbsHListView$SavedState;->i:Landroid/support/v4/b/o;
+    iput-object v0, v3, Lit/sephiroth/android/library/widget/AbsHListView$SavedState;->i:Landroid/support/v4/e/r;
 
     .line 1483
     iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->bc:Lit/sephiroth/android/library/widget/AbsHListView$SavedState;
 
-    iget-object v0, v0, Lit/sephiroth/android/library/widget/AbsHListView$SavedState;->j:Landroid/support/v4/b/f;
+    iget-object v0, v0, Lit/sephiroth/android/library/widget/AbsHListView$SavedState;->j:Landroid/support/v4/e/f;
 
-    iput-object v0, v3, Lit/sephiroth/android/library/widget/AbsHListView$SavedState;->j:Landroid/support/v4/b/f;
+    iput-object v0, v3, Lit/sephiroth/android/library/widget/AbsHListView$SavedState;->j:Landroid/support/v4/e/f;
 
     move-object v0, v3
 
@@ -8734,38 +8714,38 @@
     iput-boolean v1, v3, Lit/sephiroth/android/library/widget/AbsHListView$SavedState;->g:Z
 
     .line 1527
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
     if-eqz v0, :cond_1
 
     .line 1529
     :try_start_0
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
-    invoke-virtual {v0}, Landroid/support/v4/b/o;->a()Landroid/support/v4/b/o;
+    invoke-virtual {v0}, Landroid/support/v4/e/r;->a()Landroid/support/v4/e/r;
 
     move-result-object v0
 
-    iput-object v0, v3, Lit/sephiroth/android/library/widget/AbsHListView$SavedState;->i:Landroid/support/v4/b/o;
+    iput-object v0, v3, Lit/sephiroth/android/library/widget/AbsHListView$SavedState;->i:Landroid/support/v4/e/r;
     :try_end_0
     .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1535
     :cond_1
     :goto_4
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
     if-eqz v0, :cond_8
 
     .line 1536
-    new-instance v0, Landroid/support/v4/b/f;
+    new-instance v0, Landroid/support/v4/e/f;
 
-    invoke-direct {v0}, Landroid/support/v4/b/f;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/e/f;-><init>()V
 
     .line 1537
-    iget-object v1, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v1, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
-    invoke-virtual {v1}, Landroid/support/v4/b/f;->b()I
+    invoke-virtual {v1}, Landroid/support/v4/e/f;->b()I
 
     move-result v1
 
@@ -8774,19 +8754,19 @@
     if-ge v2, v1, :cond_7
 
     .line 1539
-    iget-object v4, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v4, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
-    invoke-virtual {v4, v2}, Landroid/support/v4/b/f;->a(I)J
+    invoke-virtual {v4, v2}, Landroid/support/v4/e/f;->a(I)J
 
     move-result-wide v4
 
-    iget-object v6, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v6, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
-    invoke-virtual {v6, v2}, Landroid/support/v4/b/f;->b(I)Ljava/lang/Object;
+    invoke-virtual {v6, v2}, Landroid/support/v4/e/f;->b(I)Ljava/lang/Object;
 
     move-result-object v6
 
-    invoke-virtual {v0, v4, v5, v6}, Landroid/support/v4/b/f;->a(JLjava/lang/Object;)V
+    invoke-virtual {v0, v4, v5, v6}, Landroid/support/v4/e/f;->a(JLjava/lang/Object;)V
 
     .line 1538
     add-int/lit8 v2, v2, 0x1
@@ -8872,17 +8852,17 @@
     invoke-virtual {v0}, Ljava/lang/NoSuchMethodError;->printStackTrace()V
 
     .line 1532
-    new-instance v0, Landroid/support/v4/b/o;
+    new-instance v0, Landroid/support/v4/e/r;
 
-    invoke-direct {v0}, Landroid/support/v4/b/o;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/e/r;-><init>()V
 
-    iput-object v0, v3, Lit/sephiroth/android/library/widget/AbsHListView$SavedState;->i:Landroid/support/v4/b/o;
+    iput-object v0, v3, Lit/sephiroth/android/library/widget/AbsHListView$SavedState;->i:Landroid/support/v4/e/r;
 
     goto :goto_4
 
     .line 1541
     :cond_7
-    iput-object v0, v3, Lit/sephiroth/android/library/widget/AbsHListView$SavedState;->j:Landroid/support/v4/b/f;
+    iput-object v0, v3, Lit/sephiroth/android/library/widget/AbsHListView$SavedState;->j:Landroid/support/v4/e/f;
 
     .line 1543
     :cond_8
@@ -9351,13 +9331,13 @@
 
     .line 3132
     :pswitch_5
-    invoke-direct {p0, v0}, Lit/sephiroth/android/library/widget/AbsHListView;->g(I)Z
+    invoke-direct {p0, v0}, Lit/sephiroth/android/library/widget/AbsHListView;->h(I)Z
 
     goto/16 :goto_1
 
     .line 3136
     :pswitch_6
-    invoke-direct {p0, v0}, Lit/sephiroth/android/library/widget/AbsHListView;->h(I)V
+    invoke-direct {p0, v0}, Lit/sephiroth/android/library/widget/AbsHListView;->i(I)V
 
     goto/16 :goto_1
 
@@ -10684,38 +10664,38 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
     if-nez v0, :cond_0
 
     .line 726
-    new-instance v0, Landroid/support/v4/b/f;
+    new-instance v0, Landroid/support/v4/e/f;
 
-    invoke-direct {v0}, Landroid/support/v4/b/f;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/e/f;-><init>()V
 
-    iput-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iput-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
     .line 730
     :cond_0
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
     if-eqz v0, :cond_1
 
     .line 731
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
-    invoke-virtual {v0}, Landroid/support/v4/b/o;->d()V
+    invoke-virtual {v0}, Landroid/support/v4/e/r;->d()V
 
     .line 734
     :cond_1
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
     if-eqz v0, :cond_2
 
     .line 735
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
-    invoke-virtual {v0}, Landroid/support/v4/b/f;->c()V
+    invoke-virtual {v0}, Landroid/support/v4/e/f;->c()V
 
     .line 737
     :cond_2
@@ -10909,20 +10889,20 @@
     if-eqz v0, :cond_4
 
     .line 1030
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
     if-nez v0, :cond_2
 
     .line 1031
-    new-instance v0, Landroid/support/v4/b/o;
+    new-instance v0, Landroid/support/v4/e/r;
 
-    invoke-direct {v0}, Landroid/support/v4/b/o;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/e/r;-><init>()V
 
-    iput-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iput-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
     .line 1033
     :cond_2
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
     if-nez v0, :cond_3
 
@@ -10939,11 +10919,11 @@
     if-eqz v0, :cond_3
 
     .line 1034
-    new-instance v0, Landroid/support/v4/b/f;
+    new-instance v0, Landroid/support/v4/e/f;
 
-    invoke-direct {v0}, Landroid/support/v4/b/f;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/e/f;-><init>()V
 
-    iput-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iput-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
     .line 1037
     :cond_3
@@ -11121,13 +11101,13 @@
 
     .line 867
     :cond_6
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-virtual {v0, p1, v1}, Landroid/support/v4/b/o;->a(ILjava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, v1}, Landroid/support/v4/e/r;->a(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -11138,16 +11118,16 @@
     move-result v0
 
     .line 868
-    iget-object v1, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v1, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
 
-    invoke-virtual {v1, p1, v2}, Landroid/support/v4/b/o;->b(ILjava/lang/Object;)V
+    invoke-virtual {v1, p1, v2}, Landroid/support/v4/e/r;->b(ILjava/lang/Object;)V
 
     .line 869
-    iget-object v1, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v1, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
     if-eqz v1, :cond_7
 
@@ -11163,7 +11143,7 @@
     if-eqz p2, :cond_a
 
     .line 871
-    iget-object v1, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v1, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
     iget-object v2, p0, Lit/sephiroth/android/library/widget/AbsHListView;->j:Landroid/widget/ListAdapter;
 
@@ -11175,7 +11155,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v1, v2, v3, v4}, Landroid/support/v4/b/f;->a(JLjava/lang/Object;)V
+    invoke-virtual {v1, v2, v3, v4}, Landroid/support/v4/e/f;->a(JLjava/lang/Object;)V
 
     .line 876
     :cond_7
@@ -11245,7 +11225,7 @@
 
     .line 873
     :cond_a
-    iget-object v1, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v1, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
     iget-object v2, p0, Lit/sephiroth/android/library/widget/AbsHListView;->j:Landroid/widget/ListAdapter;
 
@@ -11253,7 +11233,7 @@
 
     move-result-wide v2
 
-    invoke-virtual {v1, v2, v3}, Landroid/support/v4/b/f;->a(J)V
+    invoke-virtual {v1, v2, v3}, Landroid/support/v4/e/f;->a(J)V
 
     goto :goto_2
 
@@ -11269,7 +11249,7 @@
 
     .line 888
     :cond_c
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
     if-eqz v0, :cond_10
 
@@ -11291,17 +11271,17 @@
 
     if-eqz v0, :cond_11
 
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
     if-eqz v0, :cond_11
 
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v3
 
-    invoke-virtual {v0, p1, v3}, Landroid/support/v4/b/o;->a(ILjava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, v3}, Landroid/support/v4/e/r;->a(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -11316,36 +11296,36 @@
 
     .line 892
     :cond_d
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
-    invoke-virtual {v0}, Landroid/support/v4/b/o;->d()V
+    invoke-virtual {v0}, Landroid/support/v4/e/r;->d()V
 
     .line 893
     if-eqz v2, :cond_e
 
     .line 894
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
-    invoke-virtual {v0}, Landroid/support/v4/b/f;->c()V
+    invoke-virtual {v0}, Landroid/support/v4/e/f;->c()V
 
     .line 899
     :cond_e
     if-eqz p2, :cond_12
 
     .line 900
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
     invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-virtual {v0, p1, v1}, Landroid/support/v4/b/o;->b(ILjava/lang/Object;)V
+    invoke-virtual {v0, p1, v1}, Landroid/support/v4/e/r;->b(ILjava/lang/Object;)V
 
     .line 901
     if-eqz v2, :cond_f
 
     .line 902
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/b/f;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->g:Landroid/support/v4/e/f;
 
     iget-object v1, p0, Lit/sephiroth/android/library/widget/AbsHListView;->j:Landroid/widget/ListAdapter;
 
@@ -11357,7 +11337,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v2, v3, v1}, Landroid/support/v4/b/f;->a(JLjava/lang/Object;)V
+    invoke-virtual {v0, v2, v3, v1}, Landroid/support/v4/e/f;->a(JLjava/lang/Object;)V
 
     .line 904
     :cond_f
@@ -11379,17 +11359,17 @@
 
     .line 905
     :cond_12
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
-    invoke-virtual {v0}, Landroid/support/v4/b/o;->c()I
+    invoke-virtual {v0}, Landroid/support/v4/e/r;->c()I
 
     move-result v0
 
     if-eqz v0, :cond_13
 
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/AbsHListView;->f:Landroid/support/v4/e/r;
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/b/o;->c(I)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroid/support/v4/e/r;->c(I)Ljava/lang/Object;
 
     move-result-object v0
 

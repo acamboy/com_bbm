@@ -3,7 +3,7 @@
 .source "GoogleMapView.java"
 
 # interfaces
-.implements Lcom/google/android/gms/maps/GoogleMap$OnMapClickListener;
+.implements Lcom/google/android/gms/maps/h;
 
 
 # instance fields
@@ -25,7 +25,7 @@
 
 
 # virtual methods
-.method public final onMapClick(Lcom/google/android/gms/maps/model/LatLng;)V
+.method public final a(Lcom/google/android/gms/maps/model/LatLng;)V
     .locals 6
 
     .prologue
@@ -45,9 +45,9 @@
 
     move-result-object v0
 
-    iget-wide v2, p1, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
+    iget-wide v2, p1, Lcom/google/android/gms/maps/model/LatLng;->b:D
 
-    iget-wide v4, p1, Lcom/google/android/gms/maps/model/LatLng;->longitude:D
+    iget-wide v4, p1, Lcom/google/android/gms/maps/model/LatLng;->c:D
 
     invoke-interface {v0, v2, v3, v4, v5}, Lcom/bbm/compat/maps/d;->onMapClick(DD)V
 

@@ -7,7 +7,7 @@
 
 
 # static fields
-.field private static final ep:[I
+.field private static final es:[I
 
 
 # direct methods
@@ -104,7 +104,7 @@
 
     aput v2, v0, v1
 
-    sput-object v0, Lcom/glympse/android/hal/bi;->ep:[I
+    sput-object v0, Lcom/glympse/android/hal/bi;->es:[I
 
     return-void
 .end method
@@ -126,7 +126,7 @@
 
     .prologue
     .line 33
-    sget-object v0, Lcom/glympse/android/hal/bi;->ep:[I
+    sget-object v0, Lcom/glympse/android/hal/bi;->es:[I
 
     aget v0, v0, p1
 

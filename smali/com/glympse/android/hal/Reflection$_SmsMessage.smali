@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static cR:Z
+.field private static cU:Z
 
-.field private static ed:Ljava/lang/Class;
+.field private static eg:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class",
@@ -15,13 +15,13 @@
     .end annotation
 .end field
 
-.field private static ee:Ljava/lang/reflect/Method;
-
-.field private static ef:Ljava/lang/reflect/Method;
-
-.field private static eg:Ljava/lang/reflect/Method;
-
 .field private static eh:Ljava/lang/reflect/Method;
+
+.field private static ei:Ljava/lang/reflect/Method;
+
+.field private static ej:Ljava/lang/reflect/Method;
+
+.field private static ek:Ljava/lang/reflect/Method;
 
 
 # direct methods
@@ -34,22 +34,22 @@
     .line 1287
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->cR:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->cU:Z
 
     .line 1288
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ed:Ljava/lang/Class;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_SmsMessage;->eg:Ljava/lang/Class;
 
     .line 1289
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ee:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_SmsMessage;->eh:Ljava/lang/reflect/Method;
 
     .line 1290
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ef:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ei:Ljava/lang/reflect/Method;
 
     .line 1291
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_SmsMessage;->eg:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ej:Ljava/lang/reflect/Method;
 
     .line 1292
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_SmsMessage;->eh:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ek:Ljava/lang/reflect/Method;
 
     return-void
 .end method
@@ -73,12 +73,12 @@
     const/4 v5, 0x0
 
     .line 1297
-    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->cR:Z
+    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->cU:Z
 
     if-nez v0, :cond_1
 
     .line 1299
-    sput-boolean v2, Lcom/glympse/android/hal/Reflection$_SmsMessage;->cR:Z
+    sput-boolean v2, Lcom/glympse/android/hal/Reflection$_SmsMessage;->cU:Z
 
     .line 1304
     :try_start_0
@@ -88,13 +88,13 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ed:Ljava/lang/Class;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->eg:Ljava/lang/Class;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_2
 
     .line 1311
     :goto_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ed:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->eg:Ljava/lang/Class;
 
     if-nez v0, :cond_0
 
@@ -106,14 +106,14 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ed:Ljava/lang/Class;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->eg:Ljava/lang/Class;
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
     .line 1323
     :cond_0
     :goto_1
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ed:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->eg:Ljava/lang/Class;
 
     if-eqz v0, :cond_1
 
@@ -124,7 +124,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v1, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ed:Ljava/lang/Class;
+    sget-object v1, Lcom/glympse/android/hal/Reflection$_SmsMessage;->eg:Ljava/lang/Class;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -144,7 +144,7 @@
 
     .line 1329
     :try_start_2
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ed:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->eg:Ljava/lang/Class;
 
     const-string v1, "createFromPdu"
 
@@ -162,10 +162,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ef:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ei:Ljava/lang/reflect/Method;
 
     .line 1330
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ed:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->eg:Ljava/lang/Class;
 
     const-string v1, "getTimestampMillis"
 
@@ -175,10 +175,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ee:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->eh:Ljava/lang/reflect/Method;
 
     .line 1331
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ed:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->eg:Ljava/lang/Class;
 
     const-string v1, "getDisplayMessageBody"
 
@@ -188,10 +188,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->eg:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ej:Ljava/lang/reflect/Method;
 
     .line 1332
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ed:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->eg:Ljava/lang/Class;
 
     const-string v1, "getDisplayOriginatingAddress"
 
@@ -201,7 +201,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->eh:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ek:Ljava/lang/reflect/Method;
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_1
 
@@ -244,13 +244,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_SmsMessage;->Load()V
 
     .line 1347
-    sget-object v1, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ef:Ljava/lang/reflect/Method;
+    sget-object v1, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ei:Ljava/lang/reflect/Method;
 
     if-eqz v1, :cond_0
 
     .line 1351
     :try_start_0
-    sget-object v1, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ef:Ljava/lang/reflect/Method;
+    sget-object v1, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ei:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
 
@@ -292,13 +292,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_SmsMessage;->Load()V
 
     .line 1387
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->eg:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ej:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 1391
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->eg:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ej:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
 
@@ -339,13 +339,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_SmsMessage;->Load()V
 
     .line 1407
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->eh:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ek:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 1411
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->eh:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ek:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
 
@@ -384,13 +384,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_SmsMessage;->Load()V
 
     .line 1367
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ee:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->eh:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 1371
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->ee:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_SmsMessage;->eh:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
 

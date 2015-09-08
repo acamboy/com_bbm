@@ -25,10 +25,16 @@
 .method public abstract getTime()J
 .end method
 
+.method public abstract methodType()I
+.end method
+
 .method public abstract post()Ljava/lang/String;
 .end method
 
 .method public abstract process()Z
+.end method
+
+.method public abstract shouldAdd(Lcom/glympse/android/lib/GApiEndpoint;)I
 .end method
 
 .method public abstract shouldRetry(ZI)Z

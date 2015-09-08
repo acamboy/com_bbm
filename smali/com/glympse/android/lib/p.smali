@@ -11,7 +11,23 @@
 
 .field private hA:Ljava/lang/String;
 
-.field private hB:Lcom/glympse/android/hal/GVector;
+.field private hB:Ljava/lang/String;
+
+.field private hC:Ljava/lang/String;
+
+.field private hD:Ljava/lang/String;
+
+.field private hE:Ljava/lang/String;
+
+.field private hF:Ljava/lang/String;
+
+.field private hG:I
+
+.field private hH:Ljava/lang/String;
+
+.field private hI:Ljava/lang/String;
+
+.field private hJ:Lcom/glympse/android/hal/GVector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/glympse/android/hal/GVector",
@@ -22,27 +38,11 @@
     .end annotation
 .end field
 
-.field private ho:Ljava/lang/String;
-
-.field private hp:Lcom/glympse/android/api/GImage;
-
-.field private hq:Ljava/lang/String;
-
-.field private hr:Ljava/lang/String;
-
-.field private hs:Ljava/lang/String;
-
-.field private ht:Ljava/lang/String;
-
-.field private hu:Ljava/lang/String;
-
-.field private hv:Ljava/lang/String;
-
 .field private hw:Ljava/lang/String;
 
-.field private hx:Ljava/lang/String;
+.field private hx:Lcom/glympse/android/api/GImage;
 
-.field private hy:I
+.field private hy:Ljava/lang/String;
 
 .field private hz:Ljava/lang/String;
 
@@ -58,14 +58,14 @@
     .line 50
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/glympse/android/lib/p;->hy:I
+    iput v0, p0, Lcom/glympse/android/lib/p;->hG:I
 
     .line 51
     new-instance v0, Lcom/glympse/android/hal/GVector;
 
     invoke-direct {v0}, Lcom/glympse/android/hal/GVector;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/lib/p;->hB:Lcom/glympse/android/hal/GVector;
+    iput-object v0, p0, Lcom/glympse/android/lib/p;->hJ:Lcom/glympse/android/hal/GVector;
 
     .line 52
     return-void
@@ -78,11 +78,11 @@
 
     .prologue
     .line 219
-    iget-object v0, p0, Lcom/glympse/android/lib/p;->hB:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hJ:Lcom/glympse/android/hal/GVector;
 
-    new-instance v1, Lcom/glympse/android/lib/gb;
+    new-instance v1, Lcom/glympse/android/lib/go;
 
-    invoke-direct {v1, p1, p2, p3}, Lcom/glympse/android/lib/gb;-><init>(ILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, p1, p2, p3}, Lcom/glympse/android/lib/go;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V
 
@@ -95,7 +95,7 @@
 
     .prologue
     .line 66
-    iget-object v0, p0, Lcom/glympse/android/lib/p;->hA:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hI:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
 
@@ -121,7 +121,7 @@
     .line 61
     const/16 v0, 0xb
 
-    iget-object v1, p0, Lcom/glympse/android/lib/p;->ho:Ljava/lang/String;
+    iget-object v1, p0, Lcom/glympse/android/lib/p;->hw:Ljava/lang/String;
 
     iget-object v2, p0, Lcom/glympse/android/lib/p;->_name:Ljava/lang/String;
 
@@ -155,7 +155,7 @@
 
     .prologue
     .line 85
-    iget-object v0, p0, Lcom/glympse/android/lib/p;->hp:Lcom/glympse/android/api/GImage;
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hx:Lcom/glympse/android/api/GImage;
 
     return-object v0
 .end method
@@ -165,7 +165,7 @@
 
     .prologue
     .line 75
-    iget-object v0, p0, Lcom/glympse/android/lib/p;->ho:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hw:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -175,7 +175,7 @@
 
     .prologue
     .line 109
-    iget-object v0, p0, Lcom/glympse/android/lib/p;->hq:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hy:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -185,7 +185,7 @@
 
     .prologue
     .line 124
-    iget-object v0, p0, Lcom/glympse/android/lib/p;->hr:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hz:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -195,7 +195,7 @@
 
     .prologue
     .line 134
-    iget-object v0, p0, Lcom/glympse/android/lib/p;->hs:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hA:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -205,7 +205,7 @@
 
     .prologue
     .line 164
-    iget-object v0, p0, Lcom/glympse/android/lib/p;->hv:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hD:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -224,7 +224,7 @@
 
     .prologue
     .line 224
-    iget-object v0, p0, Lcom/glympse/android/lib/p;->hB:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hJ:Lcom/glympse/android/hal/GVector;
 
     return-object v0
 .end method
@@ -234,7 +234,7 @@
 
     .prologue
     .line 184
-    iget-object v0, p0, Lcom/glympse/android/lib/p;->hx:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hF:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -244,7 +244,7 @@
 
     .prologue
     .line 194
-    iget v0, p0, Lcom/glympse/android/lib/p;->hy:I
+    iget v0, p0, Lcom/glympse/android/lib/p;->hG:I
 
     return v0
 .end method
@@ -254,7 +254,7 @@
 
     .prologue
     .line 174
-    iget-object v0, p0, Lcom/glympse/android/lib/p;->hw:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hE:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -264,7 +264,7 @@
 
     .prologue
     .line 144
-    iget-object v0, p0, Lcom/glympse/android/lib/p;->ht:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hB:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -274,7 +274,7 @@
 
     .prologue
     .line 154
-    iget-object v0, p0, Lcom/glympse/android/lib/p;->hu:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hC:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -284,7 +284,7 @@
 
     .prologue
     .line 204
-    iget-object v0, p0, Lcom/glympse/android/lib/p;->hz:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hH:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -294,7 +294,7 @@
 
     .prologue
     .line 214
-    iget-object v0, p0, Lcom/glympse/android/lib/p;->hA:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hI:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -324,7 +324,7 @@
 
     .prologue
     .line 104
-    iput-object p1, p0, Lcom/glympse/android/lib/p;->hp:Lcom/glympse/android/api/GImage;
+    iput-object p1, p0, Lcom/glympse/android/lib/p;->hx:Lcom/glympse/android/api/GImage;
 
     .line 105
     return-void
@@ -335,7 +335,7 @@
 
     .prologue
     .line 114
-    iput-object p1, p0, Lcom/glympse/android/lib/p;->hq:Ljava/lang/String;
+    iput-object p1, p0, Lcom/glympse/android/lib/p;->hy:Ljava/lang/String;
 
     .line 115
     return-void
@@ -346,7 +346,7 @@
 
     .prologue
     .line 119
-    iput-object p1, p0, Lcom/glympse/android/lib/p;->hr:Ljava/lang/String;
+    iput-object p1, p0, Lcom/glympse/android/lib/p;->hz:Ljava/lang/String;
 
     .line 120
     return-void
@@ -357,7 +357,7 @@
 
     .prologue
     .line 129
-    iput-object p1, p0, Lcom/glympse/android/lib/p;->hs:Ljava/lang/String;
+    iput-object p1, p0, Lcom/glympse/android/lib/p;->hA:Ljava/lang/String;
 
     .line 130
     return-void
@@ -368,7 +368,7 @@
 
     .prologue
     .line 159
-    iput-object p1, p0, Lcom/glympse/android/lib/p;->hv:Ljava/lang/String;
+    iput-object p1, p0, Lcom/glympse/android/lib/p;->hD:Ljava/lang/String;
 
     .line 160
     return-void
@@ -379,7 +379,7 @@
 
     .prologue
     .line 179
-    iput-object p1, p0, Lcom/glympse/android/lib/p;->hx:Ljava/lang/String;
+    iput-object p1, p0, Lcom/glympse/android/lib/p;->hF:Ljava/lang/String;
 
     .line 180
     return-void
@@ -390,7 +390,7 @@
 
     .prologue
     .line 189
-    iput p1, p0, Lcom/glympse/android/lib/p;->hy:I
+    iput p1, p0, Lcom/glympse/android/lib/p;->hG:I
 
     .line 190
     return-void
@@ -401,7 +401,7 @@
 
     .prologue
     .line 169
-    iput-object p1, p0, Lcom/glympse/android/lib/p;->hw:Ljava/lang/String;
+    iput-object p1, p0, Lcom/glympse/android/lib/p;->hE:Ljava/lang/String;
 
     .line 170
     return-void
@@ -412,7 +412,7 @@
 
     .prologue
     .line 139
-    iput-object p1, p0, Lcom/glympse/android/lib/p;->ht:Ljava/lang/String;
+    iput-object p1, p0, Lcom/glympse/android/lib/p;->hB:Ljava/lang/String;
 
     .line 140
     return-void
@@ -423,7 +423,7 @@
 
     .prologue
     .line 149
-    iput-object p1, p0, Lcom/glympse/android/lib/p;->hu:Ljava/lang/String;
+    iput-object p1, p0, Lcom/glympse/android/lib/p;->hC:Ljava/lang/String;
 
     .line 150
     return-void
@@ -434,7 +434,7 @@
 
     .prologue
     .line 199
-    iput-object p1, p0, Lcom/glympse/android/lib/p;->hz:Ljava/lang/String;
+    iput-object p1, p0, Lcom/glympse/android/lib/p;->hH:Ljava/lang/String;
 
     .line 200
     return-void
@@ -445,7 +445,7 @@
 
     .prologue
     .line 209
-    iput-object p1, p0, Lcom/glympse/android/lib/p;->hA:Ljava/lang/String;
+    iput-object p1, p0, Lcom/glympse/android/lib/p;->hI:Ljava/lang/String;
 
     .line 210
     return-void
@@ -467,7 +467,7 @@
 
     .prologue
     .line 94
-    iput-object p1, p0, Lcom/glympse/android/lib/p;->ho:Ljava/lang/String;
+    iput-object p1, p0, Lcom/glympse/android/lib/p;->hw:Ljava/lang/String;
 
     .line 95
     return-void

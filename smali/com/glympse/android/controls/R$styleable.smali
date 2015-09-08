@@ -64,11 +64,13 @@
 
 .field public static final GlympseTimer:[I
 
+.field public static final GlympseTimer_android_includeFontPadding:I = 0x2
+
 .field public static final GlympseTimer_android_maxHeight:I = 0x1
 
 .field public static final GlympseTimer_android_maxWidth:I = 0x0
 
-.field public static final GlympseTimer_glympseTimerStyle:I = 0x2
+.field public static final GlympseTimer_glympseTimerStyle:I = 0x3
 
 .field public static final GlympseToggleButton:[I
 
@@ -87,7 +89,7 @@
     .line 314
     new-array v0, v3, [I
 
-    const v1, 0x7f010026
+    const v1, 0x7f010062
 
     aput v1, v0, v2
 
@@ -105,7 +107,7 @@
     .line 322
     new-array v0, v3, [I
 
-    const v1, 0x7f010028
+    const v1, 0x7f010064
 
     aput v1, v0, v2
 
@@ -114,7 +116,7 @@
     .line 324
     new-array v0, v3, [I
 
-    const v1, 0x7f010029
+    const v1, 0x7f010065
 
     aput v1, v0, v2
 
@@ -123,7 +125,7 @@
     .line 326
     new-array v0, v3, [I
 
-    const v1, 0x7f01002a
+    const v1, 0x7f010066
 
     aput v1, v0, v2
 
@@ -141,14 +143,14 @@
     .line 341
     new-array v0, v3, [I
 
-    const v1, 0x7f01002c
+    const v1, 0x7f010068
 
     aput v1, v0, v2
 
     sput-object v0, Lcom/glympse/android/controls/R$styleable;->GlympseTextView:[I
 
     .line 343
-    const/4 v0, 0x3
+    const/4 v0, 0x4
 
     new-array v0, v0, [I
 
@@ -156,10 +158,10 @@
 
     sput-object v0, Lcom/glympse/android/controls/R$styleable;->GlympseTimer:[I
 
-    .line 347
+    .line 348
     new-array v0, v3, [I
 
-    const v1, 0x7f01002e
+    const v1, 0x7f01006a
 
     aput v1, v0, v2
 
@@ -174,7 +176,7 @@
         0x1010163
         0x1010164
         0x101019e
-        0x7f010027
+        0x7f010063
     .end array-data
 
     .line 328
@@ -191,7 +193,7 @@
         0x1010163
         0x1010164
         0x101032d
-        0x7f01002b
+        0x7f010067
     .end array-data
 
     .line 343
@@ -199,7 +201,8 @@
     .array-data 4
         0x101011f
         0x1010120
-        0x7f01002d
+        0x101015f
+        0x7f010069
     .end array-data
 .end method
 

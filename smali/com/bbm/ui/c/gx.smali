@@ -3,20 +3,28 @@
 .source "StickerDetailsFragment.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Lcom/bbm/util/cf;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/gr;
+.field final synthetic a:Lcom/bbm/util/b/e;
+
+.field final synthetic b:Ljava/lang/String;
+
+.field final synthetic c:Lcom/bbm/ui/c/fx;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/gr;)V
+.method constructor <init>(Lcom/bbm/ui/c/fx;Lcom/bbm/util/b/e;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 727
-    iput-object p1, p0, Lcom/bbm/ui/c/gx;->a:Lcom/bbm/ui/c/gr;
+    .line 413
+    iput-object p1, p0, Lcom/bbm/ui/c/gx;->c:Lcom/bbm/ui/c/fx;
+
+    iput-object p2, p0, Lcom/bbm/ui/c/gx;->a:Lcom/bbm/util/b/e;
+
+    iput-object p3, p0, Lcom/bbm/ui/c/gx;->b:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,37 +33,48 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 3
+.method public final a(Lcom/bbm/d/gh;)V
+    .locals 2
 
     .prologue
-    .line 730
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    .line 416
+    iget-object v0, p0, Lcom/bbm/ui/c/gx;->a:Lcom/bbm/util/b/e;
 
-    .line 732
-    packed-switch p2, :pswitch_data_0
+    if-eqz v0, :cond_0
 
-    .line 736
-    :goto_0
+    .line 417
+    iget-object v0, p0, Lcom/bbm/ui/c/gx;->a:Lcom/bbm/util/b/e;
+
+    iget-object v1, p0, Lcom/bbm/ui/c/gx;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, p1}, Lcom/bbm/util/b/e;->a(Ljava/lang/String;Lcom/bbm/d/gh;)V
+
+    .line 420
+    :cond_0
+    if-eqz p1, :cond_1
+
+    .line 421
+    iget-object v0, p0, Lcom/bbm/ui/c/gx;->c:Lcom/bbm/ui/c/fx;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/fx;->c(Lcom/bbm/ui/c/fx;)Landroid/widget/ImageView;
+
+    move-result-object v0
+
+    iget-object v1, p1, Lcom/bbm/d/gh;->b:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 424
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/c/gx;->c:Lcom/bbm/ui/c/fx;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/fx;->d(Lcom/bbm/ui/c/fx;)Z
+
+    .line 425
+    iget-object v0, p0, Lcom/bbm/ui/c/gx;->c:Lcom/bbm/ui/c/fx;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/fx;->e(Lcom/bbm/ui/c/fx;)V
+
+    .line 426
     return-void
-
-    .line 735
-    :pswitch_0
-    iget-object v0, p0, Lcom/bbm/ui/c/gx;->a:Lcom/bbm/ui/c/gr;
-
-    new-instance v1, Landroid/content/Intent;
-
-    const-string v2, "android.settings.SETTINGS"
-
-    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/c/gr;->startActivity(Landroid/content/Intent;)V
-
-    goto :goto_0
-
-    .line 732
-    :pswitch_data_0
-    .packed-switch -0x1
-        :pswitch_0
-    .end packed-switch
 .end method

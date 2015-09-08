@@ -1,21 +1,24 @@
 .class final Lcom/bbm/util/fa;
-.super Ljava/util/TimerTask;
-.source "UpdatesFragmentUtil.java"
+.super Ljava/lang/Object;
+.source "VoiceNoteRecorder.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/util/ey;
+.field final synthetic a:Lcom/bbm/util/ez;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/util/ey;)V
+.method constructor <init>(Lcom/bbm/util/ez;)V
     .locals 0
 
     .prologue
-    .line 1033
-    iput-object p1, p0, Lcom/bbm/util/fa;->a:Lcom/bbm/util/ey;
+    .line 144
+    iput-object p1, p0, Lcom/bbm/util/fa;->a:Lcom/bbm/util/ez;
 
-    invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -23,20 +26,14 @@
 
 # virtual methods
 .method public final run()V
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 1036
-    iget-object v0, p0, Lcom/bbm/util/fa;->a:Lcom/bbm/util/ey;
+    .line 147
+    iget-object v0, p0, Lcom/bbm/util/fa;->a:Lcom/bbm/util/ez;
 
-    iget-object v0, v0, Lcom/bbm/util/ey;->e:Landroid/os/Handler;
+    invoke-virtual {v0}, Lcom/bbm/util/ez;->c()V
 
-    new-instance v1, Lcom/bbm/util/fb;
-
-    invoke-direct {v1, p0}, Lcom/bbm/util/fb;-><init>(Lcom/bbm/util/fa;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 1047
+    .line 148
     return-void
 .end method

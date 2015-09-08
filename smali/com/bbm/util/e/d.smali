@@ -1,271 +1,293 @@
-.class final Lcom/bbm/util/e/d;
-.super Ljava/lang/Object;
-.source "ProtectedStorage.java"
-
-
-# static fields
-.field private static final a:Ljava/security/SecureRandom;
+.class public final Lcom/bbm/util/e/d;
+.super Lcom/bbm/j/u;
+.source "DeleteChatDialogMonitor.java"
 
 
 # instance fields
-.field private final b:Ljava/lang/String;
+.field private final a:Lcom/bbm/d/a;
 
-.field private final c:Ljava/lang/String;
+.field private final b:Landroid/app/Activity;
+
+.field private final c:Z
+
+.field private final d:Z
+
+.field private final e:Z
+
+.field private final f:Lcom/bbm/util/e/f;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroid/app/Activity;ZZZLcom/bbm/util/e/f;)V
     .locals 1
 
     .prologue
-    .line 93
-    new-instance v0, Ljava/security/SecureRandom;
+    .line 33
+    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
-    invoke-direct {v0}, Ljava/security/SecureRandom;-><init>()V
+    .line 21
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
-    sput-object v0, Lcom/bbm/util/e/d;->a:Ljava/security/SecureRandom;
+    move-result-object v0
 
+    iput-object v0, p0, Lcom/bbm/util/e/d;->a:Lcom/bbm/d/a;
+
+    .line 34
+    iput-object p1, p0, Lcom/bbm/util/e/d;->b:Landroid/app/Activity;
+
+    .line 35
+    iput-boolean p2, p0, Lcom/bbm/util/e/d;->c:Z
+
+    .line 36
+    iput-boolean p3, p0, Lcom/bbm/util/e/d;->d:Z
+
+    .line 37
+    iput-boolean p4, p0, Lcom/bbm/util/e/d;->e:Z
+
+    .line 38
+    iput-object p5, p0, Lcom/bbm/util/e/d;->f:Lcom/bbm/util/e/f;
+
+    .line 39
     return-void
 .end method
 
-.method constructor <init>(Ljava/lang/String;)V
+.method static synthetic a(Lcom/bbm/util/e/d;)Landroid/app/Activity;
     .locals 1
 
     .prologue
-    .line 98
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 99
-    iput-object p1, p0, Lcom/bbm/util/e/d;->b:Ljava/lang/String;
-
-    .line 100
-    const-string v0, "android_id"
-
-    iput-object v0, p0, Lcom/bbm/util/e/d;->c:Ljava/lang/String;
-
-    .line 101
-    return-void
-.end method
-
-.method private a()Ljava/security/Key;
-    .locals 4
-
-    .prologue
-    .line 160
-    new-instance v0, Ljavax/crypto/spec/SecretKeySpec;
-
-    iget-object v1, p0, Lcom/bbm/util/e/d;->b:Ljava/lang/String;
-
-    invoke-static {v1}, Lcom/bbm/util/e/e;->a(Ljava/lang/String;)[B
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/util/e/d;->c:Ljava/lang/String;
-
-    invoke-static {v2}, Lcom/bbm/util/e/e;->a(Ljava/lang/String;)[B
-
-    move-result-object v2
-
-    const/16 v3, 0x10
-
-    invoke-static {v1, v2, v3}, Lcom/bbm/util/e/b;->a([B[BI)[B
-
-    move-result-object v1
-
-    const-string v2, "AES"
-
-    invoke-direct {v0, v1, v2}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
+    .line 19
+    iget-object v0, p0, Lcom/bbm/util/e/d;->b:Landroid/app/Activity;
 
     return-object v0
+.end method
+
+.method static synthetic b(Lcom/bbm/util/e/d;)Lcom/bbm/util/e/f;
+    .locals 1
+
+    .prologue
+    .line 19
+    iget-object v0, p0, Lcom/bbm/util/e/d;->f:Lcom/bbm/util/e/f;
+
+    return-object v0
+.end method
+
+.method static synthetic c(Lcom/bbm/util/e/d;)Z
+    .locals 1
+
+    .prologue
+    .line 19
+    iget-boolean v0, p0, Lcom/bbm/util/e/d;->e:Z
+
+    return v0
+.end method
+
+.method static synthetic d(Lcom/bbm/util/e/d;)Z
+    .locals 1
+
+    .prologue
+    .line 19
+    iget-boolean v0, p0, Lcom/bbm/util/e/d;->c:Z
+
+    return v0
 .end method
 
 
 # virtual methods
-.method final a(Ljava/lang/String;)Ljava/lang/String;
-    .locals 8
+.method protected final b()Z
+    .locals 4
 
     .prologue
-    const/16 v7, 0x10
+    const/4 v1, 0x1
 
-    const/4 v6, 0x0
+    .line 43
+    iget-object v0, p0, Lcom/bbm/util/e/d;->a:Lcom/bbm/d/a;
 
-    .line 106
-    invoke-static {p1}, Lcom/bbm/util/e/e;->a(Ljava/lang/String;)[B
+    const-string v2, "keepChatHistory"
 
-    move-result-object v0
-
-    .line 108
-    invoke-direct {p0}, Lcom/bbm/util/e/d;->a()Ljava/security/Key;
-
-    move-result-object v1
-
-    .line 111
-    new-array v2, v7, [B
-
-    .line 112
-    sget-object v3, Lcom/bbm/util/e/d;->a:Ljava/security/SecureRandom;
-
-    invoke-virtual {v3, v2}, Ljava/security/SecureRandom;->nextBytes([B)V
-
-    .line 116
-    :try_start_0
-    const-string v3, "AES/CBC/PKCS7Padding"
-
-    invoke-static {v3}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
-
-    move-result-object v3
-
-    .line 117
-    const/4 v4, 0x1
-
-    new-instance v5, Ljavax/crypto/spec/IvParameterSpec;
-
-    invoke-direct {v5, v2}, Ljavax/crypto/spec/IvParameterSpec;-><init>([B)V
-
-    invoke-virtual {v3, v4, v1, v5}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
-
-    .line 118
-    invoke-virtual {v3, v0}, Ljavax/crypto/Cipher;->doFinal([B)[B
-    :try_end_0
-    .catch Ljava/security/GeneralSecurityException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v0, v2}, Lcom/bbm/d/a;->I(Ljava/lang/String;)Lcom/bbm/util/bs;
 
     move-result-object v0
 
-    .line 124
-    array-length v1, v0
+    .line 44
+    iget-object v2, v0, Lcom/bbm/util/bs;->b:Lcom/bbm/util/bo;
 
-    add-int/lit8 v1, v1, 0x10
+    sget-object v3, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
 
-    new-array v1, v1, [B
+    if-ne v2, v3, :cond_a
 
-    .line 125
-    invoke-static {v2, v6, v1, v6, v7}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    .line 45
+    iget-object v0, v0, Lcom/bbm/util/bs;->a:Lorg/json/JSONObject;
 
-    .line 126
-    array-length v2, v0
+    const-string v2, "value"
 
-    invoke-static {v0, v6, v1, v7, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;)Z
 
-    .line 128
-    const/16 v0, 0xb
+    move-result v0
 
-    invoke-static {v1, v0}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+    .line 49
+    iget-boolean v2, p0, Lcom/bbm/util/e/d;->e:Z
 
-    move-result-object v0
+    if-nez v2, :cond_2
 
-    return-object v0
+    if-eqz v0, :cond_2
 
-    .line 120
-    :catch_0
-    move-exception v0
+    .line 50
+    iget-object v0, p0, Lcom/bbm/util/e/d;->f:Lcom/bbm/util/e/f;
 
-    .line 121
-    new-instance v1, Lcom/bbm/util/e/a;
+    if-eqz v0, :cond_0
 
-    invoke-direct {v1, v0}, Lcom/bbm/util/e/a;-><init>(Ljava/lang/Throwable;)V
+    .line 51
+    iget-object v0, p0, Lcom/bbm/util/e/d;->f:Lcom/bbm/util/e/f;
 
-    throw v1
-.end method
+    invoke-interface {v0}, Lcom/bbm/util/e/f;->a()V
 
-.method final b(Ljava/lang/String;)Ljava/lang/String;
-    .locals 7
-
-    .prologue
-    const/16 v2, 0x10
-
-    .line 136
-    const/16 v0, 0xb
-
-    :try_start_0
-    invoke-static {p1, v0}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    .line 141
-    array-length v1, v0
-
-    if-ge v1, v2, :cond_0
-
-    .line 142
-    new-instance v0, Lcom/bbm/util/e/a;
-
-    const-string v1, "Value to decrypt is too short."
-
-    invoke-direct {v0, v1}, Lcom/bbm/util/e/a;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 138
-    :catch_0
-    move-exception v0
-
-    .line 139
-    new-instance v1, Lcom/bbm/util/e/a;
-
-    const-string v2, "base64 failed to decode."
-
-    invoke-direct {v1, v2, v0}, Lcom/bbm/util/e/a;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v1
-
-    .line 145
+    .line 54
     :cond_0
-    invoke-direct {p0}, Lcom/bbm/util/e/d;->a()Ljava/security/Key;
+    iget-object v2, p0, Lcom/bbm/util/e/d;->b:Landroid/app/Activity;
 
-    move-result-object v1
+    iget-object v3, p0, Lcom/bbm/util/e/d;->b:Landroid/app/Activity;
 
-    .line 148
-    :try_start_1
-    const-string v2, "AES/CBC/PKCS7Padding"
+    iget-boolean v0, p0, Lcom/bbm/util/e/d;->c:Z
 
-    invoke-static {v2}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+    if-eqz v0, :cond_1
+
+    const v0, 0x7f0e0320
+
+    :goto_0
+    invoke-virtual {v3, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lcom/bbm/util/eu;->a(Landroid/content/Context;Ljava/lang/String;)V
+
+    :goto_1
+    move v0, v1
+
+    .line 98
+    :goto_2
+    return v0
+
+    .line 54
+    :cond_1
+    const v0, 0x7f0e031e
+
+    goto :goto_0
+
+    .line 59
+    :cond_2
+    iget-object v0, p0, Lcom/bbm/util/e/d;->b:Landroid/app/Activity;
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/b/m;->a(Landroid/app/Activity;Z)Lcom/bbm/ui/b/m;
 
     move-result-object v2
 
-    .line 149
-    const/4 v3, 0x2
+    .line 60
+    iget-boolean v0, p0, Lcom/bbm/util/e/d;->c:Z
 
-    new-instance v4, Ljavax/crypto/spec/IvParameterSpec;
+    if-eqz v0, :cond_5
 
-    const/4 v5, 0x0
+    const v0, 0x7f0e02d1
 
-    const/16 v6, 0x10
+    .line 61
+    :goto_3
+    iget-boolean v3, p0, Lcom/bbm/util/e/d;->e:Z
 
-    invoke-direct {v4, v0, v5, v6}, Ljavax/crypto/spec/IvParameterSpec;-><init>([BII)V
+    if-eqz v3, :cond_3
 
-    invoke-virtual {v2, v3, v1, v4}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
+    const v0, 0x7f0e02cc
 
-    .line 150
-    const/16 v1, 0x10
+    :cond_3
+    invoke-virtual {v2, v0}, Lcom/bbm/ui/b/m;->c(I)Lcom/bbm/ui/b/m;
 
-    array-length v3, v0
+    .line 62
+    iget-boolean v0, p0, Lcom/bbm/util/e/d;->e:Z
 
-    add-int/lit8 v3, v3, -0x10
+    if-eqz v0, :cond_6
 
-    invoke-virtual {v2, v0, v1, v3}, Ljavax/crypto/Cipher;->doFinal([BII)[B
+    .line 63
+    const v0, 0x7f0e02cb
+
+    invoke-virtual {v2, v0}, Lcom/bbm/ui/b/m;->g(I)Lcom/bbm/ui/b/m;
+
+    .line 69
+    :goto_4
+    const v0, 0x7f0e0199
+
+    invoke-virtual {v2, v0}, Lcom/bbm/ui/b/m;->e(I)Lcom/bbm/ui/b/m;
+
+    .line 70
+    iget-boolean v0, p0, Lcom/bbm/util/e/d;->c:Z
+
+    if-eqz v0, :cond_9
+
+    const v0, 0x7f0e07d6
+
+    .line 71
+    :goto_5
+    iget-boolean v3, p0, Lcom/bbm/util/e/d;->e:Z
+
+    if-eqz v3, :cond_4
+
+    const v0, 0x7f0e07cd
+
+    :cond_4
+    invoke-virtual {v2, v0}, Lcom/bbm/ui/b/m;->d(I)Lcom/bbm/ui/b/m;
 
     move-result-object v0
 
-    array-length v1, v0
+    new-instance v3, Lcom/bbm/util/e/e;
 
-    invoke-static {v0, v1}, Lcom/bbm/util/e/e;->a([BI)Ljava/lang/String;
-    :try_end_1
-    .catch Ljava/security/GeneralSecurityException; {:try_start_1 .. :try_end_1} :catch_1
+    invoke-direct {v3, p0}, Lcom/bbm/util/e/e;-><init>(Lcom/bbm/util/e/d;)V
 
-    move-result-object v0
+    iput-object v3, v0, Lcom/bbm/ui/b/m;->l:Landroid/content/DialogInterface$OnClickListener;
 
-    return-object v0
+    .line 94
+    invoke-virtual {v2}, Lcom/bbm/ui/b/m;->e()V
 
-    .line 152
-    :catch_1
-    move-exception v0
+    goto :goto_1
 
-    .line 153
-    new-instance v1, Lcom/bbm/util/e/a;
+    .line 60
+    :cond_5
+    const v0, 0x7f0e02cf
 
-    invoke-direct {v1, v0}, Lcom/bbm/util/e/a;-><init>(Ljava/lang/Throwable;)V
+    goto :goto_3
 
-    throw v1
+    .line 65
+    :cond_6
+    iget-boolean v0, p0, Lcom/bbm/util/e/d;->c:Z
+
+    if-eqz v0, :cond_8
+
+    const v0, 0x7f0e02d0
+
+    .line 66
+    :goto_6
+    iget-boolean v3, p0, Lcom/bbm/util/e/d;->d:Z
+
+    if-eqz v3, :cond_7
+
+    const v0, 0x7f0e02cd
+
+    :cond_7
+    invoke-virtual {v2, v0}, Lcom/bbm/ui/b/m;->g(I)Lcom/bbm/ui/b/m;
+
+    goto :goto_4
+
+    .line 65
+    :cond_8
+    const v0, 0x7f0e02ce
+
+    goto :goto_6
+
+    .line 70
+    :cond_9
+    const v0, 0x7f0e07d1
+
+    goto :goto_5
+
+    .line 98
+    :cond_a
+    const/4 v0, 0x0
+
+    goto :goto_2
 .end method

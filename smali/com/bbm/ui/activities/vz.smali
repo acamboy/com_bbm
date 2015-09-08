@@ -1,49 +1,35 @@
 .class final Lcom/bbm/ui/activities/vz;
 .super Ljava/lang/Object;
-.source "MainActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnFocusChangeListener;
+.source "NewChannelCategoryActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
+.field a:Landroid/widget/TextView;
+
+.field b:Landroid/widget/CheckBox;
+
+.field final synthetic c:Lcom/bbm/ui/activities/vx;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
+.method private constructor <init>(Lcom/bbm/ui/activities/vx;)V
     .locals 0
 
     .prologue
-    .line 597
-    iput-object p1, p0, Lcom/bbm/ui/activities/vz;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 199
+    iput-object p1, p0, Lcom/bbm/ui/activities/vz;->c:Lcom/bbm/ui/activities/vx;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final onFocusChange(Landroid/view/View;Z)V
-    .locals 2
+.method synthetic constructor <init>(Lcom/bbm/ui/activities/vx;B)V
+    .locals 0
 
     .prologue
-    .line 601
-    if-nez p2, :cond_0
+    .line 199
+    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/vz;-><init>(Lcom/bbm/ui/activities/vx;)V
 
-    .line 602
-    iget-object v0, p0, Lcom/bbm/ui/activities/vz;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/vz;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/MainActivity;->b()I
-
-    move-result v1
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/MainActivity;->b(Lcom/bbm/ui/activities/MainActivity;I)V
-
-    .line 604
-    :cond_0
     return-void
 .end method

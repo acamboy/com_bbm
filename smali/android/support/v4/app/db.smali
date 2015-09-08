@@ -1,51 +1,33 @@
-.class final Landroid/support/v4/app/db;
+.class public abstract Landroid/support/v4/app/db;
 .super Ljava/lang/Object;
-.source "TaskStackBuilder.java"
-
-# interfaces
-.implements Landroid/support/v4/app/cz;
+.source "RemoteInputCompatBase.java"
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     .prologue
-    .line 90
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 30
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;[Landroid/content/Intent;)Landroid/app/PendingIntent;
-    .locals 3
+.method protected abstract a()Ljava/lang/String;
+.end method
 
-    .prologue
-    const/4 v2, 0x0
+.method protected abstract b()Ljava/lang/CharSequence;
+.end method
 
-    .line 93
-    new-instance v0, Landroid/content/Intent;
+.method protected abstract c()[Ljava/lang/CharSequence;
+.end method
 
-    aget-object v1, p2, v2
+.method protected abstract d()Z
+.end method
 
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
-
-    const v1, 0x1000c000
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    move-result-object v0
-
-    aput-object v0, p2, v2
-
-    .line 96
-    const/high16 v0, 0x10000000
-
-    invoke-static {p1, v2, p2, v0}, Landroid/app/PendingIntent;->getActivities(Landroid/content/Context;I[Landroid/content/Intent;I)Landroid/app/PendingIntent;
-
-    move-result-object v0
-
-    return-object v0
+.method protected abstract e()Landroid/os/Bundle;
 .end method

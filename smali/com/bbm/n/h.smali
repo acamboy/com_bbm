@@ -16,7 +16,7 @@
     .locals 0
 
     .prologue
-    .line 607
+    .line 567
     iput-object p1, p0, Lcom/bbm/n/h;->c:Lcom/bbm/n/b;
 
     iput-object p2, p0, Lcom/bbm/n/h;->a:Lcom/rim/bbm/BbmMediaCallService$CallData;
@@ -38,17 +38,17 @@
 
     const/4 v3, 0x0
 
-    .line 611
+    .line 571
     const/4 v0, 0x0
 
-    .line 612
+    .line 572
     iget-object v1, p0, Lcom/bbm/n/h;->a:Lcom/rim/bbm/BbmMediaCallService$CallData;
 
     iget v1, v1, Lcom/rim/bbm/BbmMediaCallService$CallData;->failureReason:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 644
+    .line 604
     :cond_0
     iget-object v1, p0, Lcom/bbm/n/h;->a:Lcom/rim/bbm/BbmMediaCallService$CallData;
 
@@ -56,7 +56,7 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 705
+    .line 665
     :pswitch_0
     iget-object v0, p0, Lcom/bbm/n/h;->c:Lcom/bbm/n/b;
 
@@ -64,7 +64,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e0167
+    const v1, 0x7f0e0189
 
     new-array v2, v5, [Ljava/lang/Object;
 
@@ -82,11 +82,11 @@
 
     move-result-object v1
 
-    .line 709
+    .line 669
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 710
+    .line 670
     iget-object v0, p0, Lcom/bbm/n/h;->c:Lcom/bbm/n/b;
 
     invoke-static {v0}, Lcom/bbm/n/b;->c(Lcom/bbm/n/b;)Landroid/content/Context;
@@ -97,70 +97,70 @@
 
     move v4, v3
 
-    invoke-static/range {v0 .. v5}, Lcom/bbm/util/fh;->a(Landroid/content/Context;Ljava/lang/String;IIII)V
+    invoke-static/range {v0 .. v5}, Lcom/bbm/util/eu;->a(Landroid/content/Context;Ljava/lang/String;IIII)V
 
-    .line 713
+    .line 673
     :cond_1
     :goto_1
     return v5
 
-    .line 623
+    .line 583
     :sswitch_0
     iget-object v0, p0, Lcom/bbm/n/h;->b:Ljava/lang/String;
 
     if-nez v0, :cond_2
 
-    .line 631
+    .line 591
     const-string v0, "user uri is null"
 
     new-array v1, v3, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     goto :goto_1
 
-    .line 635
+    .line 595
     :cond_2
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/bbm/n/h;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->b(Ljava/lang/String;)Lcom/bbm/d/gr;
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->e(Ljava/lang/String;)Lcom/bbm/d/ie;
 
     move-result-object v0
 
-    .line 636
-    iget-object v1, v0, Lcom/bbm/d/gr;->C:Lcom/bbm/util/bi;
+    .line 596
+    iget-object v1, v0, Lcom/bbm/d/ie;->B:Lcom/bbm/util/bo;
 
-    sget-object v2, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
+    sget-object v2, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
 
     if-ne v1, v2, :cond_3
 
     move v5, v3
 
-    .line 637
+    .line 597
     goto :goto_1
 
-    .line 638
+    .line 598
     :cond_3
-    iget-object v1, v0, Lcom/bbm/d/gr;->C:Lcom/bbm/util/bi;
+    iget-object v1, v0, Lcom/bbm/d/ie;->B:Lcom/bbm/util/bo;
 
-    sget-object v2, Lcom/bbm/util/bi;->b:Lcom/bbm/util/bi;
+    sget-object v2, Lcom/bbm/util/bo;->b:Lcom/bbm/util/bo;
 
     if-ne v1, v2, :cond_0
 
-    .line 639
+    .line 599
     const-string v0, "user not found"
 
     new-array v1, v3, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     goto :goto_1
 
-    .line 651
+    .line 611
     :pswitch_1
     iget-object v0, p0, Lcom/bbm/n/h;->c:Lcom/bbm/n/b;
 
@@ -168,7 +168,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e016b
+    const v1, 0x7f0e018d
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -176,7 +176,7 @@
 
     goto :goto_0
 
-    .line 654
+    .line 614
     :pswitch_2
     iget-object v0, p0, Lcom/bbm/n/h;->c:Lcom/bbm/n/b;
 
@@ -184,7 +184,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e016e
+    const v1, 0x7f0e0190
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -192,7 +192,7 @@
 
     goto :goto_0
 
-    .line 657
+    .line 617
     :pswitch_3
     iget-object v0, p0, Lcom/bbm/n/h;->c:Lcom/bbm/n/b;
 
@@ -200,7 +200,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e016c
+    const v1, 0x7f0e018e
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -208,7 +208,7 @@
 
     goto :goto_0
 
-    .line 660
+    .line 620
     :pswitch_4
     iget-object v0, p0, Lcom/bbm/n/h;->c:Lcom/bbm/n/b;
 
@@ -216,7 +216,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e016d
+    const v1, 0x7f0e018f
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -224,7 +224,7 @@
 
     goto :goto_0
 
-    .line 663
+    .line 623
     :pswitch_5
     iget-object v1, p0, Lcom/bbm/n/h;->c:Lcom/bbm/n/b;
 
@@ -232,11 +232,11 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e0173
+    const v2, 0x7f0e0195
 
     new-array v4, v5, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/bbm/d/b/a;->b(Lcom/bbm/d/gr;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/bbm/d/b/a;->d(Lcom/bbm/d/ie;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -248,7 +248,7 @@
 
     goto/16 :goto_0
 
-    .line 675
+    .line 635
     :pswitch_6
     iget-object v1, p0, Lcom/bbm/n/h;->c:Lcom/bbm/n/b;
 
@@ -256,11 +256,11 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e016a
+    const v2, 0x7f0e018c
 
     new-array v4, v5, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/bbm/d/b/a;->b(Lcom/bbm/d/gr;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/bbm/d/b/a;->d(Lcom/bbm/d/ie;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -272,7 +272,7 @@
 
     goto/16 :goto_0
 
-    .line 679
+    .line 639
     :pswitch_7
     iget-object v1, p0, Lcom/bbm/n/h;->c:Lcom/bbm/n/b;
 
@@ -280,11 +280,11 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e0169
+    const v2, 0x7f0e018b
 
     new-array v4, v5, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/bbm/d/b/a;->b(Lcom/bbm/d/gr;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/bbm/d/b/a;->d(Lcom/bbm/d/ie;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -296,7 +296,7 @@
 
     goto/16 :goto_0
 
-    .line 683
+    .line 643
     :pswitch_8
     iget-object v0, p0, Lcom/bbm/n/h;->c:Lcom/bbm/n/b;
 
@@ -304,7 +304,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e0168
+    const v1, 0x7f0e018a
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -312,7 +312,7 @@
 
     goto/16 :goto_0
 
-    .line 695
+    .line 655
     :pswitch_9
     iget-object v0, p0, Lcom/bbm/n/h;->c:Lcom/bbm/n/b;
 
@@ -320,7 +320,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e0171
+    const v1, 0x7f0e0193
 
     new-array v2, v5, [Ljava/lang/Object;
 
@@ -340,7 +340,7 @@
 
     goto/16 :goto_0
 
-    .line 699
+    .line 659
     :pswitch_a
     iget-object v0, p0, Lcom/bbm/n/h;->c:Lcom/bbm/n/b;
 
@@ -348,7 +348,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e0170
+    const v1, 0x7f0e0192
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -356,7 +356,7 @@
 
     goto/16 :goto_0
 
-    .line 702
+    .line 662
     :pswitch_b
     iget-object v0, p0, Lcom/bbm/n/h;->c:Lcom/bbm/n/b;
 
@@ -364,7 +364,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e016f
+    const v1, 0x7f0e0191
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -372,7 +372,7 @@
 
     goto/16 :goto_0
 
-    .line 612
+    .line 572
     :sswitch_data_0
     .sparse-switch
         0x5 -> :sswitch_0
@@ -387,7 +387,7 @@
         0x25 -> :sswitch_0
     .end sparse-switch
 
-    .line 644
+    .line 604
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_9

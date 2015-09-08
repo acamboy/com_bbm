@@ -1,45 +1,36 @@
-.class final Lcom/bbm/ui/activities/aer;
+.class public final Lcom/bbm/ui/activities/aer;
 .super Ljava/lang/Object;
-.source "SearchResultsChannelsActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "ShareActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
+.field a:Lcom/bbm/ui/AvatarView;
+
+.field b:Landroid/widget/TextView;
+
+.field c:Ljava/lang/String;
+
+.field d:Ljava/lang/String;
+
+.field e:J
+
+.field final synthetic f:Lcom/bbm/ui/activities/ShareActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)V
-    .locals 0
-
-    .prologue
-    .line 360
-    iput-object p1, p0, Lcom/bbm/ui/activities/aer;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method protected constructor <init>(Lcom/bbm/ui/activities/ShareActivity;)V
     .locals 2
 
     .prologue
-    .line 363
-    iget-object v0, p0, Lcom/bbm/ui/activities/aer;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
+    .line 378
+    iput-object p1, p0, Lcom/bbm/ui/activities/aer;->f:Lcom/bbm/ui/activities/ShareActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;->h(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)Landroid/widget/EditText;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    .line 383
+    const-wide/16 v0, 0x0
 
-    const-string v1, ""
+    iput-wide v0, p0, Lcom/bbm/ui/activities/aer;->e:J
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-
-    .line 364
     return-void
 .end method

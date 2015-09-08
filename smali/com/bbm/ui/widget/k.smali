@@ -1,98 +1,44 @@
-.class public final Lcom/bbm/ui/widget/k;
+.class final Lcom/bbm/ui/widget/k;
 .super Ljava/lang/Object;
-.source "WidgetMonitor.java"
+.source "TechTipPopupWindow.java"
+
+# interfaces
+.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field final a:Landroid/os/Handler;
+.field final synthetic a:Landroid/view/GestureDetector;
 
-.field public b:Lcom/bbm/j/k;
-
-.field public final c:Landroid/content/BroadcastReceiver;
-
-.field public final d:Landroid/content/Context;
-
-.field e:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/ui/widget/b;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field final synthetic b:Lcom/bbm/ui/widget/i;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method constructor <init>(Lcom/bbm/ui/widget/i;Landroid/view/GestureDetector;)V
+    .locals 0
 
     .prologue
-    .line 56
+    .line 77
+    iput-object p1, p0, Lcom/bbm/ui/widget/k;->b:Lcom/bbm/ui/widget/i;
+
+    iput-object p2, p0, Lcom/bbm/ui/widget/k;->a:Landroid/view/GestureDetector;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/widget/k;->a:Landroid/os/Handler;
-
-    .line 36
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/bbm/ui/widget/k;->b:Lcom/bbm/j/k;
-
-    .line 37
-    new-instance v0, Lcom/bbm/ui/widget/l;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/widget/l;-><init>(Lcom/bbm/ui/widget/k;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/widget/k;->c:Landroid/content/BroadcastReceiver;
-
-    .line 57
-    iput-object p1, p0, Lcom/bbm/ui/widget/k;->d:Landroid/content/Context;
-
-    .line 58
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 1
 
     .prologue
-    .line 86
-    const-string v0, "Widget Monitor - unregister widget monitor"
+    .line 80
+    iget-object v0, p0, Lcom/bbm/ui/widget/k;->a:Landroid/view/GestureDetector;
 
-    const/4 v1, 0x0
+    invoke-virtual {v0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    new-array v1, v1, [Ljava/lang/Object;
+    move-result v0
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 87
-    iget-object v0, p0, Lcom/bbm/ui/widget/k;->b:Lcom/bbm/j/k;
-
-    if-eqz v0, :cond_0
-
-    .line 88
-    iget-object v0, p0, Lcom/bbm/ui/widget/k;->b:Lcom/bbm/j/k;
-
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
-
-    .line 90
-    :cond_0
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/bbm/ui/widget/k;->b:Lcom/bbm/j/k;
-
-    .line 91
-    return-void
+    return v0
 .end method

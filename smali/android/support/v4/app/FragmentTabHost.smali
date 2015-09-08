@@ -12,7 +12,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Landroid/support/v4/app/ae;",
+            "Landroid/support/v4/app/af;",
             ">;"
         }
     .end annotation
@@ -28,7 +28,7 @@
 
 .field private f:Landroid/widget/TabHost$OnTabChangeListener;
 
-.field private g:Landroid/support/v4/app/ae;
+.field private g:Landroid/support/v4/app/af;
 
 .field private h:Z
 
@@ -78,7 +78,7 @@
     return-void
 .end method
 
-.method private a(Ljava/lang/String;Landroid/support/v4/app/af;)Landroid/support/v4/app/af;
+.method private a(Ljava/lang/String;Landroid/support/v4/app/ag;)Landroid/support/v4/app/ag;
     .locals 4
 
     .prologue
@@ -106,10 +106,10 @@
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/v4/app/ae;
+    check-cast v0, Landroid/support/v4/app/af;
 
     .line 325
-    iget-object v3, v0, Landroid/support/v4/app/ae;->a:Ljava/lang/String;
+    iget-object v3, v0, Landroid/support/v4/app/af;->a:Ljava/lang/String;
 
     invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -154,7 +154,7 @@
 
     .line 332
     :cond_1
-    iget-object v0, p0, Landroid/support/v4/app/FragmentTabHost;->g:Landroid/support/v4/app/ae;
+    iget-object v0, p0, Landroid/support/v4/app/FragmentTabHost;->g:Landroid/support/v4/app/af;
 
     if-eq v0, v1, :cond_5
 
@@ -164,69 +164,69 @@
     .line 334
     iget-object v0, p0, Landroid/support/v4/app/FragmentTabHost;->d:Landroid/support/v4/app/v;
 
-    invoke-virtual {v0}, Landroid/support/v4/app/v;->a()Landroid/support/v4/app/af;
+    invoke-virtual {v0}, Landroid/support/v4/app/v;->a()Landroid/support/v4/app/ag;
 
     move-result-object p2
 
     .line 336
     :cond_2
-    iget-object v0, p0, Landroid/support/v4/app/FragmentTabHost;->g:Landroid/support/v4/app/ae;
+    iget-object v0, p0, Landroid/support/v4/app/FragmentTabHost;->g:Landroid/support/v4/app/af;
 
     if-eqz v0, :cond_3
 
     .line 337
-    iget-object v0, p0, Landroid/support/v4/app/FragmentTabHost;->g:Landroid/support/v4/app/ae;
+    iget-object v0, p0, Landroid/support/v4/app/FragmentTabHost;->g:Landroid/support/v4/app/af;
 
-    iget-object v0, v0, Landroid/support/v4/app/ae;->d:Landroid/support/v4/app/Fragment;
+    iget-object v0, v0, Landroid/support/v4/app/af;->d:Landroid/support/v4/app/Fragment;
 
     if-eqz v0, :cond_3
 
     .line 338
-    iget-object v0, p0, Landroid/support/v4/app/FragmentTabHost;->g:Landroid/support/v4/app/ae;
+    iget-object v0, p0, Landroid/support/v4/app/FragmentTabHost;->g:Landroid/support/v4/app/af;
 
-    iget-object v0, v0, Landroid/support/v4/app/ae;->d:Landroid/support/v4/app/Fragment;
+    iget-object v0, v0, Landroid/support/v4/app/af;->d:Landroid/support/v4/app/Fragment;
 
-    invoke-virtual {p2, v0}, Landroid/support/v4/app/af;->c(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/af;
+    invoke-virtual {p2, v0}, Landroid/support/v4/app/ag;->b(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/ag;
 
     .line 341
     :cond_3
     if-eqz v1, :cond_4
 
     .line 342
-    iget-object v0, v1, Landroid/support/v4/app/ae;->d:Landroid/support/v4/app/Fragment;
+    iget-object v0, v1, Landroid/support/v4/app/af;->d:Landroid/support/v4/app/Fragment;
 
     if-nez v0, :cond_6
 
     .line 343
     iget-object v0, p0, Landroid/support/v4/app/FragmentTabHost;->c:Landroid/content/Context;
 
-    iget-object v2, v1, Landroid/support/v4/app/ae;->b:Ljava/lang/Class;
+    iget-object v2, v1, Landroid/support/v4/app/af;->b:Ljava/lang/Class;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    iget-object v3, v1, Landroid/support/v4/app/ae;->c:Landroid/os/Bundle;
+    iget-object v3, v1, Landroid/support/v4/app/af;->c:Landroid/os/Bundle;
 
     invoke-static {v0, v2, v3}, Landroid/support/v4/app/Fragment;->instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/support/v4/app/Fragment;
 
     move-result-object v0
 
-    iput-object v0, v1, Landroid/support/v4/app/ae;->d:Landroid/support/v4/app/Fragment;
+    iput-object v0, v1, Landroid/support/v4/app/af;->d:Landroid/support/v4/app/Fragment;
 
     .line 345
     iget v0, p0, Landroid/support/v4/app/FragmentTabHost;->e:I
 
-    iget-object v2, v1, Landroid/support/v4/app/ae;->d:Landroid/support/v4/app/Fragment;
+    iget-object v2, v1, Landroid/support/v4/app/af;->d:Landroid/support/v4/app/Fragment;
 
-    iget-object v3, v1, Landroid/support/v4/app/ae;->a:Ljava/lang/String;
+    iget-object v3, v1, Landroid/support/v4/app/af;->a:Ljava/lang/String;
 
-    invoke-virtual {p2, v0, v2, v3}, Landroid/support/v4/app/af;->a(ILandroid/support/v4/app/Fragment;Ljava/lang/String;)Landroid/support/v4/app/af;
+    invoke-virtual {p2, v0, v2, v3}, Landroid/support/v4/app/ag;->a(ILandroid/support/v4/app/Fragment;Ljava/lang/String;)Landroid/support/v4/app/ag;
 
     .line 351
     :cond_4
     :goto_2
-    iput-object v1, p0, Landroid/support/v4/app/FragmentTabHost;->g:Landroid/support/v4/app/ae;
+    iput-object v1, p0, Landroid/support/v4/app/FragmentTabHost;->g:Landroid/support/v4/app/af;
 
     .line 353
     :cond_5
@@ -234,9 +234,9 @@
 
     .line 347
     :cond_6
-    iget-object v0, v1, Landroid/support/v4/app/ae;->d:Landroid/support/v4/app/Fragment;
+    iget-object v0, v1, Landroid/support/v4/app/af;->d:Landroid/support/v4/app/Fragment;
 
-    invoke-virtual {p2, v0}, Landroid/support/v4/app/af;->d(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/af;
+    invoke-virtual {p2, v0}, Landroid/support/v4/app/ag;->c(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/ag;
 
     goto :goto_2
 
@@ -389,7 +389,7 @@
     .line 171
     new-instance v2, Landroid/widget/LinearLayout$LayoutParams;
 
-    const/high16 v3, 0x3f800000
+    const/high16 v3, 0x3f800000    # 1.0f
 
     invoke-direct {v2, v4, v5, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
 
@@ -474,25 +474,25 @@
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/v4/app/ae;
+    check-cast v0, Landroid/support/v4/app/af;
 
     .line 259
     iget-object v4, p0, Landroid/support/v4/app/FragmentTabHost;->d:Landroid/support/v4/app/v;
 
-    iget-object v5, v0, Landroid/support/v4/app/ae;->a:Ljava/lang/String;
+    iget-object v5, v0, Landroid/support/v4/app/af;->a:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Landroid/support/v4/app/v;->a(Ljava/lang/String;)Landroid/support/v4/app/Fragment;
 
     move-result-object v4
 
-    iput-object v4, v0, Landroid/support/v4/app/ae;->d:Landroid/support/v4/app/Fragment;
+    iput-object v4, v0, Landroid/support/v4/app/af;->d:Landroid/support/v4/app/Fragment;
 
     .line 260
-    iget-object v4, v0, Landroid/support/v4/app/ae;->d:Landroid/support/v4/app/Fragment;
+    iget-object v4, v0, Landroid/support/v4/app/af;->d:Landroid/support/v4/app/Fragment;
 
     if-eqz v4, :cond_0
 
-    iget-object v4, v0, Landroid/support/v4/app/ae;->d:Landroid/support/v4/app/Fragment;
+    iget-object v4, v0, Landroid/support/v4/app/af;->d:Landroid/support/v4/app/Fragment;
 
     invoke-virtual {v4}, Landroid/support/v4/app/Fragment;->isDetached()Z
 
@@ -501,7 +501,7 @@
     if-nez v4, :cond_0
 
     .line 261
-    iget-object v4, v0, Landroid/support/v4/app/ae;->a:Ljava/lang/String;
+    iget-object v4, v0, Landroid/support/v4/app/af;->a:Ljava/lang/String;
 
     invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -510,7 +510,7 @@
     if-eqz v4, :cond_1
 
     .line 265
-    iput-object v0, p0, Landroid/support/v4/app/FragmentTabHost;->g:Landroid/support/v4/app/ae;
+    iput-object v0, p0, Landroid/support/v4/app/FragmentTabHost;->g:Landroid/support/v4/app/af;
 
     .line 257
     :cond_0
@@ -528,15 +528,15 @@
     .line 270
     iget-object v1, p0, Landroid/support/v4/app/FragmentTabHost;->d:Landroid/support/v4/app/v;
 
-    invoke-virtual {v1}, Landroid/support/v4/app/v;->a()Landroid/support/v4/app/af;
+    invoke-virtual {v1}, Landroid/support/v4/app/v;->a()Landroid/support/v4/app/ag;
 
     move-result-object v1
 
     .line 272
     :cond_2
-    iget-object v0, v0, Landroid/support/v4/app/ae;->d:Landroid/support/v4/app/Fragment;
+    iget-object v0, v0, Landroid/support/v4/app/af;->d:Landroid/support/v4/app/Fragment;
 
-    invoke-virtual {v1, v0}, Landroid/support/v4/app/af;->c(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/af;
+    invoke-virtual {v1, v0}, Landroid/support/v4/app/ag;->b(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/ag;
 
     goto :goto_1
 
@@ -547,7 +547,7 @@
     iput-boolean v0, p0, Landroid/support/v4/app/FragmentTabHost;->h:Z
 
     .line 280
-    invoke-direct {p0, v3, v1}, Landroid/support/v4/app/FragmentTabHost;->a(Ljava/lang/String;Landroid/support/v4/app/af;)Landroid/support/v4/app/af;
+    invoke-direct {p0, v3, v1}, Landroid/support/v4/app/FragmentTabHost;->a(Ljava/lang/String;Landroid/support/v4/app/ag;)Landroid/support/v4/app/ag;
 
     move-result-object v0
 
@@ -555,7 +555,7 @@
     if-eqz v0, :cond_4
 
     .line 282
-    invoke-virtual {v0}, Landroid/support/v4/app/af;->a()I
+    invoke-virtual {v0}, Landroid/support/v4/app/ag;->a()I
 
     .line 283
     iget-object v0, p0, Landroid/support/v4/app/FragmentTabHost;->d:Landroid/support/v4/app/v;
@@ -643,7 +643,7 @@
     .line 311
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Landroid/support/v4/app/FragmentTabHost;->a(Ljava/lang/String;Landroid/support/v4/app/af;)Landroid/support/v4/app/af;
+    invoke-direct {p0, p1, v0}, Landroid/support/v4/app/FragmentTabHost;->a(Ljava/lang/String;Landroid/support/v4/app/ag;)Landroid/support/v4/app/ag;
 
     move-result-object v0
 
@@ -651,7 +651,7 @@
     if-eqz v0, :cond_0
 
     .line 313
-    invoke-virtual {v0}, Landroid/support/v4/app/af;->a()I
+    invoke-virtual {v0}, Landroid/support/v4/app/ag;->a()I
 
     .line 316
     :cond_0

@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field private hF:Lcom/glympse/android/core/GArray;
+.field private hN:Lcom/glympse/android/core/GArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/glympse/android/core/GArray",
@@ -31,10 +31,10 @@
     .end annotation
 .end field
 
-.field private hG:Lcom/glympse/android/lib/bp;
+.field private hO:Lcom/glympse/android/lib/ca;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/glympse/android/lib/bp",
+            "Lcom/glympse/android/lib/ca",
             "<TFROM;TTO;>;"
         }
     .end annotation
@@ -42,14 +42,14 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/core/GArray;Lcom/glympse/android/lib/bp;)V
+.method public constructor <init>(Lcom/glympse/android/core/GArray;Lcom/glympse/android/lib/ca;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/glympse/android/core/GArray",
             "<TFROM;>;",
-            "Lcom/glympse/android/lib/bp",
+            "Lcom/glympse/android/lib/ca",
             "<TFROM;TTO;>;)V"
         }
     .end annotation
@@ -59,10 +59,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 24
-    iput-object p1, p0, Lcom/glympse/android/lib/s;->hF:Lcom/glympse/android/core/GArray;
+    iput-object p1, p0, Lcom/glympse/android/lib/s;->hN:Lcom/glympse/android/core/GArray;
 
     .line 25
-    iput-object p2, p0, Lcom/glympse/android/lib/s;->hG:Lcom/glympse/android/lib/bp;
+    iput-object p2, p0, Lcom/glympse/android/lib/s;->hO:Lcom/glympse/android/lib/ca;
 
     .line 26
     return-void
@@ -80,15 +80,15 @@
 
     .prologue
     .line 39
-    iget-object v0, p0, Lcom/glympse/android/lib/s;->hG:Lcom/glympse/android/lib/bp;
+    iget-object v0, p0, Lcom/glympse/android/lib/s;->hO:Lcom/glympse/android/lib/ca;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/s;->hF:Lcom/glympse/android/core/GArray;
+    iget-object v1, p0, Lcom/glympse/android/lib/s;->hN:Lcom/glympse/android/core/GArray;
 
     invoke-interface {v1, p1}, Lcom/glympse/android/core/GArray;->at(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/glympse/android/lib/bp;->c(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lcom/glympse/android/lib/ca;->c(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -107,7 +107,7 @@
 
     .prologue
     .line 49
-    iget-object v0, p0, Lcom/glympse/android/lib/s;->hF:Lcom/glympse/android/core/GArray;
+    iget-object v0, p0, Lcom/glympse/android/lib/s;->hN:Lcom/glympse/android/core/GArray;
 
     invoke-interface {v0}, Lcom/glympse/android/core/GArray;->length()I
 
@@ -125,16 +125,16 @@
     if-ge v0, v1, :cond_0
 
     .line 53
-    iget-object v3, p0, Lcom/glympse/android/lib/s;->hF:Lcom/glympse/android/core/GArray;
+    iget-object v3, p0, Lcom/glympse/android/lib/s;->hN:Lcom/glympse/android/core/GArray;
 
     invoke-interface {v3, v0}, Lcom/glympse/android/core/GArray;->at(I)Ljava/lang/Object;
 
     move-result-object v3
 
     .line 54
-    iget-object v4, p0, Lcom/glympse/android/lib/s;->hG:Lcom/glympse/android/lib/bp;
+    iget-object v4, p0, Lcom/glympse/android/lib/s;->hO:Lcom/glympse/android/lib/ca;
 
-    invoke-interface {v4, v3}, Lcom/glympse/android/lib/bp;->c(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v4, v3}, Lcom/glympse/android/lib/ca;->c(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -176,15 +176,15 @@
     .line 44
     new-instance v0, Lcom/glympse/android/lib/t;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/s;->hF:Lcom/glympse/android/core/GArray;
+    iget-object v1, p0, Lcom/glympse/android/lib/s;->hN:Lcom/glympse/android/core/GArray;
 
     invoke-interface {v1}, Lcom/glympse/android/core/GArray;->elements()Ljava/util/Enumeration;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/glympse/android/lib/s;->hG:Lcom/glympse/android/lib/bp;
+    iget-object v2, p0, Lcom/glympse/android/lib/s;->hO:Lcom/glympse/android/lib/ca;
 
-    invoke-direct {v0, p0, v1, v2}, Lcom/glympse/android/lib/t;-><init>(Lcom/glympse/android/lib/s;Ljava/util/Enumeration;Lcom/glympse/android/lib/bp;)V
+    invoke-direct {v0, p0, v1, v2}, Lcom/glympse/android/lib/t;-><init>(Lcom/glympse/android/lib/s;Ljava/util/Enumeration;Lcom/glympse/android/lib/ca;)V
 
     return-object v0
 .end method
@@ -203,15 +203,15 @@
     .line 166
     new-instance v0, Lcom/glympse/android/lib/u;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/s;->hF:Lcom/glympse/android/core/GArray;
+    iget-object v1, p0, Lcom/glympse/android/lib/s;->hN:Lcom/glympse/android/core/GArray;
 
     invoke-interface {v1}, Lcom/glympse/android/core/GArray;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/glympse/android/lib/s;->hG:Lcom/glympse/android/lib/bp;
+    iget-object v2, p0, Lcom/glympse/android/lib/s;->hO:Lcom/glympse/android/lib/ca;
 
-    invoke-direct {v0, p0, v1, v2}, Lcom/glympse/android/lib/u;-><init>(Lcom/glympse/android/lib/s;Ljava/util/Iterator;Lcom/glympse/android/lib/bp;)V
+    invoke-direct {v0, p0, v1, v2}, Lcom/glympse/android/lib/u;-><init>(Lcom/glympse/android/lib/s;Ljava/util/Iterator;Lcom/glympse/android/lib/ca;)V
 
     return-object v0
 .end method
@@ -221,7 +221,7 @@
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/glympse/android/lib/s;->hF:Lcom/glympse/android/core/GArray;
+    iget-object v0, p0, Lcom/glympse/android/lib/s;->hN:Lcom/glympse/android/core/GArray;
 
     invoke-interface {v0}, Lcom/glympse/android/core/GArray;->length()I
 

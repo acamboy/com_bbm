@@ -44,7 +44,7 @@
     .line 137
     iget-object v1, p0, Lcom/bbm/compat/maps/i;->a:Lcom/mapquest/android/maps/d;
 
-    invoke-virtual {v1, v0}, Lcom/mapquest/android/maps/d;->c(I)Lcom/mapquest/android/maps/bp;
+    invoke-virtual {v1, v0}, Lcom/mapquest/android/maps/d;->c(I)Lcom/mapquest/android/maps/bo;
 
     move-result-object v0
 
@@ -55,7 +55,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/mapquest/android/maps/AnnotationView;->a(Lcom/mapquest/android/maps/bp;)V
+    invoke-virtual {v1, v0}, Lcom/mapquest/android/maps/AnnotationView;->a(Lcom/mapquest/android/maps/bo;)V
 
     .line 139
     iget-object v1, p0, Lcom/bbm/compat/maps/i;->b:Lcom/bbm/compat/maps/MapQuestMapView;

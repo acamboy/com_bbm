@@ -1,361 +1,520 @@
 .class final Lcom/bbm/ui/activities/de;
-.super Lcom/bbm/j/k;
-.source "ChannelOwnerProfileActivity.java"
+.super Landroid/widget/BaseAdapter;
+.source "ChannelStatsActivity.java"
+
+# interfaces
+.implements Landroid/widget/ListAdapter;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+
+.field private final b:Landroid/view/LayoutInflater;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)V
+.method public constructor <init>(Lcom/bbm/ui/activities/ChannelStatsActivity;Landroid/content/Context;)V
     .locals 1
 
     .prologue
-    .line 175
-    iput-object p1, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
+    .line 93
+    iput-object p1, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    .line 94
+    invoke-static {p2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/de;->b:Landroid/view/LayoutInflater;
+
+    .line 96
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 3
+.method public final getCount()I
+    .locals 1
 
     .prologue
-    .line 179
-    :try_start_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
+    .line 134
+    iget-object v0, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->d(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)Lcom/bbm/d/a;
-
-    move-result-object v0
-
-    const-string v1, "channelOwnerProfile"
-
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->E(Ljava/lang/String;)Lcom/bbm/util/bm;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelStatsActivity;->a(Lcom/bbm/ui/activities/ChannelStatsActivity;)Lcom/bbm/d/fp;
 
     move-result-object v0
 
-    .line 181
-    iget-object v1, v0, Lcom/bbm/util/bm;->b:Lcom/bbm/util/bi;
+    iget-object v0, v0, Lcom/bbm/d/fp;->e:Ljava/util/List;
 
-    sget-object v2, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    if-ne v1, v2, :cond_1
+    move-result v0
 
-    .line 182
-    iget-object v0, v0, Lcom/bbm/util/bm;->a:Lorg/json/JSONObject;
+    return v0
+.end method
 
-    const-string v1, "value"
+.method public final getItem(I)Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+    .prologue
+    .line 139
+    iget-object v0, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelStatsActivity;->a(Lcom/bbm/ui/activities/ChannelStatsActivity;)Lcom/bbm/d/fp;
 
     move-result-object v0
 
-    .line 184
-    if-eqz v0, :cond_1
+    iget-object v0, v0, Lcom/bbm/d/fp;->e:Ljava/util/List;
 
-    .line 185
-    iget-object v1, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
-
-    const-string v2, "name"
-
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->a(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 186
-    iget-object v1, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->b(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)Landroid/widget/EditText;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->e(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-
-    .line 187
-    iget-object v1, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->e(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    .line 188
-    iget-object v1, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->b(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)Landroid/widget/EditText;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->e(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Landroid/widget/EditText;->setSelection(I)V
-
-    .line 190
-    :cond_0
-    iget-object v1, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
-
-    const-string v2, "businessName"
-
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->b(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 191
-    iget-object v1, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->g(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)Landroid/widget/EditText;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->f(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-
-    .line 192
-    iget-object v1, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
-
-    const-string v2, "secondaryEmailAddress"
-
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->c(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 193
-    iget-object v1, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->i(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)Landroid/widget/EditText;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->h(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-
-    .line 194
-    iget-object v1, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
-
-    const-string v2, "phoneNumber"
-
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->d(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 195
-    iget-object v1, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->k(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)Landroid/widget/EditText;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->j(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-
-    .line 197
-    const-string v1, "address"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    .line 198
-    const-string v1, "address"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 199
-    iget-object v1, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
+    return-object v0
+.end method
 
-    const-string v2, "street"
+.method public final getItemId(I)J
+    .locals 2
 
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    .prologue
+    .line 100
+    int-to-long v0, p1
 
-    move-result-object v2
+    return-wide v0
+.end method
 
-    invoke-static {v1, v2}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->e(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;Ljava/lang/String;)Ljava/lang/String;
+.method public final getItemViewType(I)I
+    .locals 1
 
-    .line 200
-    iget-object v1, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
+    .prologue
+    .line 144
+    const v0, 0x7f0300ea
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->m(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)Landroid/widget/EditText;
+    return v0
+.end method
 
-    move-result-object v1
+.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 7
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
+    .prologue
+    .line 106
+    if-nez p2, :cond_0
 
-    invoke-static {v2}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->l(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)Ljava/lang/String;
+    .line 107
+    new-instance v1, Lcom/bbm/ui/activities/df;
 
-    move-result-object v2
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/df;-><init>(Lcom/bbm/ui/activities/de;)V
 
-    invoke-virtual {v1, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    .line 108
+    iget-object v0, p0, Lcom/bbm/ui/activities/de;->b:Landroid/view/LayoutInflater;
 
-    .line 201
-    iget-object v1, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
+    const v2, 0x7f0300ea
 
-    const-string v2, "city"
+    const/4 v3, 0x0
 
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v2, p3, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    move-result-object v2
+    move-result-object p2
 
-    invoke-static {v1, v2}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->f(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;Ljava/lang/String;)Ljava/lang/String;
+    .line 109
+    const v0, 0x7f0b053d
 
-    .line 202
-    iget-object v1, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->o(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)Landroid/widget/EditText;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->n(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-
-    .line 203
-    iget-object v1, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
-
-    const-string v2, "region"
-
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->g(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 204
-    iget-object v1, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->q(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)Landroid/widget/EditText;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->p(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-
-    .line 205
-    iget-object v1, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
-
-    const-string v2, "postalCode"
-
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->h(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 206
-    iget-object v1, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->s(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)Landroid/widget/EditText;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->r(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-
-    .line 207
-    iget-object v1, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
-
-    const-string v2, "country"
-
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->i(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;Ljava/lang/String;)Ljava/lang/String;
+    check-cast v0, Landroid/widget/TextView;
 
-    .line 208
-    iget-object v0, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
+    iput-object v0, v1, Lcom/bbm/ui/activities/df;->a:Landroid/widget/TextView;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->u(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)Landroid/widget/EditText;
+    .line 110
+    const v0, 0x7f0b053e
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
+    check-cast v0, Landroid/widget/TextView;
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->t(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)Ljava/lang/String;
+    iput-object v0, v1, Lcom/bbm/ui/activities/df;->b:Landroid/widget/TextView;
 
-    move-result-object v1
+    .line 111
+    invoke-virtual {p2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 215
-    :cond_1
+    .line 116
     :goto_0
-    return-void
+    iget-object v0, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
 
-    .line 212
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelStatsActivity;->a(Lcom/bbm/ui/activities/ChannelStatsActivity;)Lcom/bbm/d/fp;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/bbm/d/fp;->e:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lorg/json/JSONObject;
+
+    .line 117
+    const-string v3, ""
+
+    .line 118
+    const-string v2, "0"
+
+    .line 120
+    :try_start_0
+    const-string v4, "method"
+
+    invoke-virtual {v0, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 121
+    const-string v4, "count"
+
+    invoke-virtual {v0, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    move-object v2, v3
+
+    .line 125
+    :goto_1
+    iget-object v3, v1, Lcom/bbm/ui/activities/df;->a:Landroid/widget/TextView;
+
+    iget-object v4, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+
+    sget-object v5, Lcom/bbm/ui/activities/ChannelStatsActivity;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
+    invoke-virtual {v4}, Lcom/bbm/ui/activities/ChannelStatsActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v4, 0x7f0e0231
+
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    :goto_2
+    invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 126
+    iget-object v1, v1, Lcom/bbm/ui/activities/df;->b:Landroid/widget/TextView;
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 128
+    return-object p2
+
+    .line 113
+    :cond_0
+    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/activities/df;
+
+    move-object v1, v0
+
+    goto :goto_0
+
+    .line 122
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+    move-object v6, v0
 
-    goto :goto_0
+    move-object v0, v3
+
+    move-object v3, v6
+
+    invoke-static {v3}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
+
+    move-object v6, v2
+
+    move-object v2, v0
+
+    move-object v0, v6
+
+    goto :goto_1
+
+    .line 125
+    :cond_1
+    sget-object v5, Lcom/bbm/ui/activities/ChannelStatsActivity;->b:Ljava/lang/String;
+
+    invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    invoke-virtual {v4}, Lcom/bbm/ui/activities/ChannelStatsActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v4, 0x7f0e022e
+
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    goto :goto_2
+
+    :cond_2
+    sget-object v5, Lcom/bbm/ui/activities/ChannelStatsActivity;->h:Ljava/lang/String;
+
+    invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    invoke-virtual {v4}, Lcom/bbm/ui/activities/ChannelStatsActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v4, 0x7f0e022f
+
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    goto :goto_2
+
+    :cond_3
+    sget-object v5, Lcom/bbm/ui/activities/ChannelStatsActivity;->i:Ljava/lang/String;
+
+    invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_4
+
+    invoke-virtual {v4}, Lcom/bbm/ui/activities/ChannelStatsActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v4, 0x7f0e0237
+
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    goto :goto_2
+
+    :cond_4
+    sget-object v5, Lcom/bbm/ui/activities/ChannelStatsActivity;->j:Ljava/lang/String;
+
+    invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_5
+
+    invoke-virtual {v4}, Lcom/bbm/ui/activities/ChannelStatsActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v4, 0x7f0e0236
+
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    goto :goto_2
+
+    :cond_5
+    const-string v5, "promotedPost"
+
+    invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_6
+
+    invoke-virtual {v4}, Lcom/bbm/ui/activities/ChannelStatsActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v4, 0x7f0e0233
+
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    goto :goto_2
+
+    :cond_6
+    sget-object v5, Lcom/bbm/ui/activities/ChannelStatsActivity;->k:Ljava/lang/String;
+
+    invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_7
+
+    invoke-virtual {v4}, Lcom/bbm/ui/activities/ChannelStatsActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v4, 0x7f0e0232
+
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    goto/16 :goto_2
+
+    :cond_7
+    sget-object v5, Lcom/bbm/ui/activities/ChannelStatsActivity;->l:Ljava/lang/String;
+
+    invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_8
+
+    invoke-virtual {v4}, Lcom/bbm/ui/activities/ChannelStatsActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v4, 0x7f0e0230
+
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    goto/16 :goto_2
+
+    :cond_8
+    sget-object v5, Lcom/bbm/ui/activities/ChannelStatsActivity;->m:Ljava/lang/String;
+
+    invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_9
+
+    invoke-virtual {v4}, Lcom/bbm/ui/activities/ChannelStatsActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v4, 0x7f0e022d
+
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    goto/16 :goto_2
+
+    :cond_9
+    sget-object v5, Lcom/bbm/ui/activities/ChannelStatsActivity;->n:Ljava/lang/String;
+
+    invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_a
+
+    invoke-virtual {v4}, Lcom/bbm/ui/activities/ChannelStatsActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v4, 0x7f0e0238
+
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    goto/16 :goto_2
+
+    :cond_a
+    sget-object v5, Lcom/bbm/ui/activities/ChannelStatsActivity;->o:Ljava/lang/String;
+
+    invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_b
+
+    invoke-virtual {v4}, Lcom/bbm/ui/activities/ChannelStatsActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v4, 0x7f0e0234
+
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    goto/16 :goto_2
+
+    :cond_b
+    sget-object v5, Lcom/bbm/ui/activities/ChannelStatsActivity;->p:Ljava/lang/String;
+
+    invoke-virtual {v2, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_c
+
+    invoke-virtual {v4}, Lcom/bbm/ui/activities/ChannelStatsActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v4, 0x7f0e0235
+
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    goto/16 :goto_2
+
+    :cond_c
+    const-string v2, ""
+
+    goto/16 :goto_2
+.end method
+
+.method public final getViewTypeCount()I
+    .locals 1
+
+    .prologue
+    .line 149
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final isEmpty()Z
+    .locals 1
+
+    .prologue
+    .line 154
+    iget-object v0, p0, Lcom/bbm/ui/activities/de;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelStatsActivity;->a(Lcom/bbm/ui/activities/ChannelStatsActivity;)Lcom/bbm/d/fp;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/bbm/d/fp;->e:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    return v0
 .end method

@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/dq;
 .super Ljava/lang/Object;
-.source "ChannelPostPhotoGalleryActivity.java"
+.source "CloudDirectorySearchActivity.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/support/v7/widget/dg;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/dp;
+.field final synthetic a:Lcom/bbm/ui/activities/CloudDirectorySearchActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/dp;)V
+.method constructor <init>(Lcom/bbm/ui/activities/CloudDirectorySearchActivity;)V
     .locals 0
 
     .prologue
-    .line 65
-    iput-object p1, p0, Lcom/bbm/ui/activities/dq;->a:Lcom/bbm/ui/activities/dp;
+    .line 88
+    iput-object p1, p0, Lcom/bbm/ui/activities/dq;->a:Lcom/bbm/ui/activities/CloudDirectorySearchActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,34 +25,27 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final a(Ljava/lang/String;)Z
+    .locals 1
 
     .prologue
-    const/4 v1, 0x4
+    .line 92
+    iget-object v0, p0, Lcom/bbm/ui/activities/dq;->a:Lcom/bbm/ui/activities/CloudDirectorySearchActivity;
 
-    .line 69
-    iget-object v0, p0, Lcom/bbm/ui/activities/dq;->a:Lcom/bbm/ui/activities/dp;
+    invoke-static {v0, p1}, Lcom/bbm/ui/activities/CloudDirectorySearchActivity;->a(Lcom/bbm/ui/activities/CloudDirectorySearchActivity;Ljava/lang/String;)V
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/dp;->a:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
+    .line 93
+    const/4 v0, 0x1
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;->a(Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;)Lcom/bbm/ui/FooterActionBar;
+    return v0
+.end method
 
-    move-result-object v0
+.method public final b(Ljava/lang/String;)Z
+    .locals 1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setVisibility(I)V
+    .prologue
+    .line 98
+    const/4 v0, 0x0
 
-    .line 70
-    iget-object v0, p0, Lcom/bbm/ui/activities/dq;->a:Lcom/bbm/ui/activities/dp;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/dp;->a:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;->b(Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;)Landroid/widget/ImageView;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 71
-    return-void
+    return v0
 .end method

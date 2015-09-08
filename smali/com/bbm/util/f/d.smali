@@ -1,220 +1,288 @@
-.class public final Lcom/bbm/util/f/d;
-.super Ljava/lang/Thread;
-.source "DecodeThread.java"
+.class final Lcom/bbm/util/f/d;
+.super Ljava/lang/Object;
+.source "ProtectedStorage.java"
+
+
+# static fields
+.field private static final a:Ljava/security/SecureRandom;
 
 
 # instance fields
-.field private final a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+.field private final b:Ljava/lang/String;
 
-.field private final b:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map",
-            "<",
-            "Lcom/google/zxing/e;",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private c:Landroid/os/Handler;
-
-.field private final d:Ljava/util/concurrent/CountDownLatch;
+.field private final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/ui/activities/CaptureBarcodeActivity;Ljava/util/Collection;Ljava/lang/String;Lcom/google/zxing/p;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/bbm/ui/activities/CaptureBarcodeActivity;",
-            "Ljava/util/Collection",
-            "<",
-            "Lcom/google/zxing/a;",
-            ">;",
-            "Ljava/lang/String;",
-            "Lcom/google/zxing/p;",
-            ")V"
-        }
-    .end annotation
+.method static constructor <clinit>()V
+    .locals 1
 
     .prologue
-    const/4 v2, 0x0
+    .line 155
+    new-instance v0, Ljava/security/SecureRandom;
 
-    .line 55
-    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
+    invoke-direct {v0}, Ljava/security/SecureRandom;-><init>()V
 
-    .line 57
-    iput-object p1, p0, Lcom/bbm/util/f/d;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+    sput-object v0, Lcom/bbm/util/f/d;->a:Ljava/security/SecureRandom;
 
-    .line 58
-    new-instance v0, Ljava/util/concurrent/CountDownLatch;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
-
-    iput-object v0, p0, Lcom/bbm/util/f/d;->d:Ljava/util/concurrent/CountDownLatch;
-
-    .line 60
-    new-instance v0, Ljava/util/EnumMap;
-
-    const-class v1, Lcom/google/zxing/e;
-
-    invoke-direct {v0, v1}, Ljava/util/EnumMap;-><init>(Ljava/lang/Class;)V
-
-    iput-object v0, p0, Lcom/bbm/util/f/d;->b:Ljava/util/Map;
-
-    .line 63
-    if-eqz p2, :cond_0
-
-    invoke-interface {p2}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    .line 64
-    :cond_0
-    invoke-static {p1}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 65
-    const-class v1, Lcom/google/zxing/a;
-
-    invoke-static {v1}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
-
-    move-result-object p2
-
-    .line 66
-    const-string v1, "preferences_decode_1D"
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 67
-    sget-object v1, Lcom/google/zxing/client/android/g;->b:Ljava/util/Collection;
-
-    invoke-interface {p2, v1}, Ljava/util/Collection;->addAll(Ljava/util/Collection;)Z
-
-    .line 69
-    :cond_1
-    const-string v1, "preferences_decode_QR"
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    .line 70
-    sget-object v1, Lcom/google/zxing/client/android/g;->c:Ljava/util/Collection;
-
-    invoke-interface {p2, v1}, Ljava/util/Collection;->addAll(Ljava/util/Collection;)Z
-
-    .line 72
-    :cond_2
-    const-string v1, "preferences_decode_Data_Matrix"
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    .line 73
-    sget-object v0, Lcom/google/zxing/client/android/g;->d:Ljava/util/Collection;
-
-    invoke-interface {p2, v0}, Ljava/util/Collection;->addAll(Ljava/util/Collection;)Z
-
-    .line 76
-    :cond_3
-    iget-object v0, p0, Lcom/bbm/util/f/d;->b:Ljava/util/Map;
-
-    sget-object v1, Lcom/google/zxing/e;->c:Lcom/google/zxing/e;
-
-    invoke-interface {v0, v1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 78
-    if-eqz p3, :cond_4
-
-    .line 79
-    iget-object v0, p0, Lcom/bbm/util/f/d;->b:Ljava/util/Map;
-
-    sget-object v1, Lcom/google/zxing/e;->e:Lcom/google/zxing/e;
-
-    invoke-interface {v0, v1, p3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 81
-    :cond_4
-    iget-object v0, p0, Lcom/bbm/util/f/d;->b:Ljava/util/Map;
-
-    sget-object v1, Lcom/google/zxing/e;->h:Lcom/google/zxing/e;
-
-    invoke-interface {v0, v1, p4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 82
     return-void
+.end method
+
+.method constructor <init>(Ljava/lang/String;)V
+    .locals 1
+
+    .prologue
+    .line 162
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 163
+    iput-object p1, p0, Lcom/bbm/util/f/d;->b:Ljava/lang/String;
+
+    .line 164
+    const-string v0, "android_id"
+
+    iput-object v0, p0, Lcom/bbm/util/f/d;->c:Ljava/lang/String;
+
+    .line 165
+    return-void
+.end method
+
+.method constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 167
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 168
+    iput-object p1, p0, Lcom/bbm/util/f/d;->b:Ljava/lang/String;
+
+    .line 169
+    iput-object p2, p0, Lcom/bbm/util/f/d;->c:Ljava/lang/String;
+
+    .line 170
+    return-void
+.end method
+
+.method private a()Ljava/security/Key;
+    .locals 4
+
+    .prologue
+    .line 229
+    new-instance v0, Ljavax/crypto/spec/SecretKeySpec;
+
+    iget-object v1, p0, Lcom/bbm/util/f/d;->b:Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/bbm/util/f/e;->a(Ljava/lang/String;)[B
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/bbm/util/f/d;->c:Ljava/lang/String;
+
+    invoke-static {v2}, Lcom/bbm/util/f/e;->a(Ljava/lang/String;)[B
+
+    move-result-object v2
+
+    const/16 v3, 0x10
+
+    invoke-static {v1, v2, v3}, Lcom/bbm/util/f/b;->a([B[BI)[B
+
+    move-result-object v1
+
+    const-string v2, "AES"
+
+    invoke-direct {v0, v1, v2}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a()Landroid/os/Handler;
-    .locals 1
+.method final a(Ljava/lang/String;)Ljava/lang/String;
+    .locals 8
 
     .prologue
-    .line 86
+    const/16 v7, 0x10
+
+    const/4 v6, 0x0
+
+    .line 175
+    invoke-static {p1}, Lcom/bbm/util/f/e;->a(Ljava/lang/String;)[B
+
+    move-result-object v0
+
+    .line 177
+    invoke-direct {p0}, Lcom/bbm/util/f/d;->a()Ljava/security/Key;
+
+    move-result-object v1
+
+    .line 180
+    new-array v2, v7, [B
+
+    .line 181
+    sget-object v3, Lcom/bbm/util/f/d;->a:Ljava/security/SecureRandom;
+
+    invoke-virtual {v3, v2}, Ljava/security/SecureRandom;->nextBytes([B)V
+
+    .line 185
     :try_start_0
-    iget-object v0, p0, Lcom/bbm/util/f/d;->d:Ljava/util/concurrent/CountDownLatch;
+    const-string v3, "AES/CBC/PKCS7Padding"
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
+    invoke-static {v3}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+
+    move-result-object v3
+
+    .line 186
+    const/4 v4, 0x1
+
+    new-instance v5, Ljavax/crypto/spec/IvParameterSpec;
+
+    invoke-direct {v5, v2}, Ljavax/crypto/spec/IvParameterSpec;-><init>([B)V
+
+    invoke-virtual {v3, v4, v1, v5}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
+
+    .line 187
+    invoke-virtual {v3, v0}, Ljavax/crypto/Cipher;->doFinal([B)[B
     :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/security/GeneralSecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 90
-    :goto_0
-    iget-object v0, p0, Lcom/bbm/util/f/d;->c:Landroid/os/Handler;
+    move-result-object v0
+
+    .line 193
+    array-length v1, v0
+
+    add-int/lit8 v1, v1, 0x10
+
+    new-array v1, v1, [B
+
+    .line 194
+    invoke-static {v2, v6, v1, v6, v7}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 195
+    array-length v2, v0
+
+    invoke-static {v0, v6, v1, v7, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 197
+    const/16 v0, 0xb
+
+    invoke-static {v1, v0}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 
+    .line 189
     :catch_0
     move-exception v0
 
-    goto :goto_0
+    .line 190
+    new-instance v1, Lcom/bbm/util/f/a;
+
+    invoke-direct {v1, v0}, Lcom/bbm/util/f/a;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 .end method
 
-.method public final run()V
-    .locals 3
+.method final b(Ljava/lang/String;)Ljava/lang/String;
+    .locals 7
 
     .prologue
-    .line 95
-    invoke-static {}, Landroid/os/Looper;->prepare()V
+    const/16 v2, 0x10
 
-    .line 96
-    new-instance v0, Lcom/bbm/util/f/c;
+    .line 205
+    const/16 v0, 0xb
 
-    iget-object v1, p0, Lcom/bbm/util/f/d;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+    :try_start_0
+    invoke-static {p1, v0}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v2, p0, Lcom/bbm/util/f/d;->b:Ljava/util/Map;
+    move-result-object v0
 
-    invoke-direct {v0, v1, v2}, Lcom/bbm/util/f/c;-><init>(Lcom/bbm/ui/activities/CaptureBarcodeActivity;Ljava/util/Map;)V
+    .line 210
+    array-length v1, v0
 
-    iput-object v0, p0, Lcom/bbm/util/f/d;->c:Landroid/os/Handler;
+    if-ge v1, v2, :cond_0
 
-    .line 97
-    iget-object v0, p0, Lcom/bbm/util/f/d;->d:Ljava/util/concurrent/CountDownLatch;
+    .line 211
+    new-instance v0, Lcom/bbm/util/f/a;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+    const-string v1, "Value to decrypt is too short."
 
-    .line 98
-    invoke-static {}, Landroid/os/Looper;->loop()V
+    invoke-direct {v0, v1}, Lcom/bbm/util/f/a;-><init>(Ljava/lang/String;)V
 
-    .line 99
-    return-void
+    throw v0
+
+    .line 207
+    :catch_0
+    move-exception v0
+
+    .line 208
+    new-instance v1, Lcom/bbm/util/f/a;
+
+    const-string v2, "base64 failed to decode."
+
+    invoke-direct {v1, v2, v0}, Lcom/bbm/util/f/a;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
+
+    .line 214
+    :cond_0
+    invoke-direct {p0}, Lcom/bbm/util/f/d;->a()Ljava/security/Key;
+
+    move-result-object v1
+
+    .line 217
+    :try_start_1
+    const-string v2, "AES/CBC/PKCS7Padding"
+
+    invoke-static {v2}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+
+    move-result-object v2
+
+    .line 218
+    const/4 v3, 0x2
+
+    new-instance v4, Ljavax/crypto/spec/IvParameterSpec;
+
+    const/4 v5, 0x0
+
+    const/16 v6, 0x10
+
+    invoke-direct {v4, v0, v5, v6}, Ljavax/crypto/spec/IvParameterSpec;-><init>([BII)V
+
+    invoke-virtual {v2, v3, v1, v4}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
+
+    .line 219
+    const/16 v1, 0x10
+
+    array-length v3, v0
+
+    add-int/lit8 v3, v3, -0x10
+
+    invoke-virtual {v2, v0, v1, v3}, Ljavax/crypto/Cipher;->doFinal([BII)[B
+
+    move-result-object v0
+
+    array-length v1, v0
+
+    invoke-static {v0, v1}, Lcom/bbm/util/f/e;->a([BI)Ljava/lang/String;
+    :try_end_1
+    .catch Ljava/security/GeneralSecurityException; {:try_start_1 .. :try_end_1} :catch_1
+
+    move-result-object v0
+
+    return-object v0
+
+    .line 221
+    :catch_1
+    move-exception v0
+
+    .line 222
+    new-instance v1, Lcom/bbm/util/f/a;
+
+    invoke-direct {v1, v0}, Lcom/bbm/util/f/a;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 .end method

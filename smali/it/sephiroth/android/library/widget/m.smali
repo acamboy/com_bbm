@@ -1141,7 +1141,7 @@
 
     move-result v0
 
-    const/high16 v1, 0x3f800000
+    const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-static {v0, v1}, Ljava/lang/Math;->min(FF)F
 

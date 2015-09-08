@@ -1,573 +1,838 @@
 .class final Lcom/mapquest/android/maps/bs;
 .super Ljava/lang/Object;
-.source "RotatableProjection.java"
+.source "ThreadBasedTileDownloader.java"
 
 # interfaces
-.implements Lcom/mapquest/android/maps/br;
+.implements Lcom/mapquest/android/maps/cc;
 
 
 # instance fields
-.field a:Lcom/mapquest/android/maps/br;
+.field a:Lcom/mapquest/android/maps/MapView;
 
-.field b:Landroid/graphics/Point;
+.field b:Lcom/mapquest/android/maps/ca;
 
-.field private c:Lcom/mapquest/android/maps/MapView;
+.field c:Ljava/util/Set;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Set",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private d:Landroid/graphics/Matrix;
+.field d:Lcom/mapquest/android/maps/t;
 
-.field private e:Landroid/graphics/Matrix;
+.field e:Z
 
-.field private f:[F
+.field private f:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/mapquest/android/maps/bz;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private g:[F
+.field private g:I
 
-.field private h:Landroid/graphics/RectF;
+.field private h:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/mapquest/android/maps/by;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private i:Lcom/mapquest/android/maps/bx;
 
 
 # direct methods
-.method public constructor <init>(Lcom/mapquest/android/maps/MapView;Lcom/mapquest/android/maps/bq;)V
-    .locals 2
+.method public constructor <init>(Lcom/mapquest/android/maps/MapView;Lcom/mapquest/android/maps/ca;)V
+    .locals 3
 
     .prologue
-    const/4 v1, 0x2
+    const/4 v2, 0x0
 
-    .line 25
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 21
-    new-array v0, v1, [F
-
-    iput-object v0, p0, Lcom/mapquest/android/maps/bs;->f:[F
-
-    .line 22
-    new-array v0, v1, [F
-
-    iput-object v0, p0, Lcom/mapquest/android/maps/bs;->g:[F
-
-    .line 24
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/mapquest/android/maps/bs;->b:Landroid/graphics/Point;
+    .line 80
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
-    new-instance v0, Landroid/graphics/RectF;
+    .line 68
+    const/4 v1, 0x2
 
-    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
+    iput v1, p0, Lcom/mapquest/android/maps/bs;->g:I
 
-    iput-object v0, p0, Lcom/mapquest/android/maps/bs;->h:Landroid/graphics/RectF;
+    .line 70
+    new-instance v1, Ljava/util/HashSet;
 
-    .line 26
-    iput-object p1, p0, Lcom/mapquest/android/maps/bs;->c:Lcom/mapquest/android/maps/MapView;
+    invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
-    .line 27
-    check-cast p2, Lcom/mapquest/android/maps/br;
+    invoke-static {v1}, Ljava/util/Collections;->synchronizedSet(Ljava/util/Set;)Ljava/util/Set;
 
-    iput-object p2, p0, Lcom/mapquest/android/maps/bs;->a:Lcom/mapquest/android/maps/br;
+    move-result-object v1
 
-    .line 29
-    new-instance v0, Landroid/graphics/Matrix;
+    iput-object v1, p0, Lcom/mapquest/android/maps/bs;->c:Ljava/util/Set;
 
-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+    .line 72
+    iput-object v2, p0, Lcom/mapquest/android/maps/bs;->d:Lcom/mapquest/android/maps/t;
 
-    iput-object v0, p0, Lcom/mapquest/android/maps/bs;->d:Landroid/graphics/Matrix;
+    .line 74
+    iput-object v2, p0, Lcom/mapquest/android/maps/bs;->h:Ljava/util/ArrayList;
 
-    .line 30
-    new-instance v0, Landroid/graphics/Matrix;
+    .line 76
+    const/4 v1, 0x1
 
-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+    iput-boolean v1, p0, Lcom/mapquest/android/maps/bs;->e:Z
 
-    iput-object v0, p0, Lcom/mapquest/android/maps/bs;->e:Landroid/graphics/Matrix;
+    .line 78
+    new-instance v1, Lcom/mapquest/android/maps/bx;
 
-    .line 31
+    invoke-direct {v1, p0, v0}, Lcom/mapquest/android/maps/bx;-><init>(Lcom/mapquest/android/maps/bs;B)V
+
+    iput-object v1, p0, Lcom/mapquest/android/maps/bs;->i:Lcom/mapquest/android/maps/bx;
+
+    .line 82
+    iput-object p1, p0, Lcom/mapquest/android/maps/bs;->a:Lcom/mapquest/android/maps/MapView;
+
+    .line 83
+    iput-object p2, p0, Lcom/mapquest/android/maps/bs;->b:Lcom/mapquest/android/maps/ca;
+
+    .line 85
+    new-instance v1, Ljava/util/LinkedHashMap;
+
+    const/16 v2, 0x1e
+
+    invoke-direct {v1, v2}, Ljava/util/LinkedHashMap;-><init>(I)V
+
+    iput-object v1, p0, Lcom/mapquest/android/maps/bs;->f:Ljava/util/Map;
+
+    .line 87
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v1, p0, Lcom/mapquest/android/maps/bs;->h:Ljava/util/ArrayList;
+
+    .line 89
+    invoke-static {}, Lcom/mapquest/android/maps/be;->a()Z
+
+    move-result v1
+
+    iput-boolean v1, p0, Lcom/mapquest/android/maps/bs;->e:Z
+
+    .line 91
+    iget-object v1, p0, Lcom/mapquest/android/maps/bs;->i:Lcom/mapquest/android/maps/bx;
+
+    invoke-static {v1}, Lcom/mapquest/android/maps/g;->a(Landroid/os/Handler;)V
+
+    .line 93
+    :goto_0
+    iget v1, p0, Lcom/mapquest/android/maps/bs;->g:I
+
+    if-ge v0, v1, :cond_0
+
+    .line 94
+    new-instance v1, Lcom/mapquest/android/maps/bv;
+
+    invoke-direct {v1, p0}, Lcom/mapquest/android/maps/bv;-><init>(Lcom/mapquest/android/maps/bs;)V
+
+    .line 96
+    iget-object v2, p0, Lcom/mapquest/android/maps/bs;->h:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 97
+    invoke-virtual {v1}, Lcom/mapquest/android/maps/by;->start()V
+
+    .line 93
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    .line 99
+    :cond_0
     return-void
 .end method
 
-.method private static a([FLandroid/graphics/Point;)V
+.method static synthetic a(Lcom/mapquest/android/maps/bs;Lcom/mapquest/android/maps/bz;)V
     .locals 2
 
     .prologue
-    .line 52
-    const/4 v0, 0x0
+    .line 60
+    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->c:Ljava/util/Set;
 
-    aget v0, p0, v0
+    iget-object v1, p1, Lcom/mapquest/android/maps/bz;->k:Ljava/lang/String;
 
-    float-to-int v0, v0
+    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    const/4 v1, 0x1
-
-    aget v1, p0, v1
-
-    float-to-int v1, v1
-
-    invoke-virtual {p1, v0, v1}, Landroid/graphics/Point;->set(II)V
-
-    .line 53
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)I
-    .locals 1
-
-    .prologue
-    .line 150
-    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->a:Lcom/mapquest/android/maps/br;
-
-    invoke-interface {v0, p1}, Lcom/mapquest/android/maps/br;->a(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final a(Lcom/mapquest/android/maps/b;II)I
-    .locals 1
-
-    .prologue
-    .line 160
-    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->a:Lcom/mapquest/android/maps/br;
-
-    invoke-interface {v0, p1, p2, p3}, Lcom/mapquest/android/maps/br;->a(Lcom/mapquest/android/maps/b;II)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final a(IILandroid/graphics/Point;)Landroid/graphics/Point;
+.method final a()Lcom/mapquest/android/maps/t;
     .locals 3
 
     .prologue
-    .line 63
-    if-nez p3, :cond_1
+    .line 129
+    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->d:Lcom/mapquest/android/maps/t;
 
-    new-instance p3, Landroid/graphics/Point;
+    if-nez v0, :cond_1
 
-    invoke-direct {p3, p1, p2}, Landroid/graphics/Point;-><init>(II)V
+    .line 130
+    monitor-enter p0
 
-    .line 65
-    :goto_0
-    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->c:Lcom/mapquest/android/maps/MapView;
-
-    invoke-virtual {v0}, Lcom/mapquest/android/maps/MapView;->getMapRotation()F
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    cmpl-float v0, v0, v1
-
-    if-eqz v0, :cond_0
-
-    .line 66
-    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->f:[F
-
-    const/4 v1, 0x0
-
-    int-to-float v2, p1
-
-    aput v2, v0, v1
-
-    .line 67
-    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->f:[F
-
-    const/4 v1, 0x1
-
-    int-to-float v2, p2
-
-    aput v2, v0, v1
-
-    .line 68
-    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->e:Landroid/graphics/Matrix;
-
-    iget-object v1, p0, Lcom/mapquest/android/maps/bs;->f:[F
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->mapPoints([F)V
-
-    .line 69
-    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->f:[F
-
-    invoke-static {v0, p3}, Lcom/mapquest/android/maps/bs;->a([FLandroid/graphics/Point;)V
-
-    .line 71
-    :cond_0
-    iget v0, p3, Landroid/graphics/Point;->x:I
-
-    iget v1, p3, Landroid/graphics/Point;->y:I
-
-    invoke-virtual {p0, v0, v1, p3}, Lcom/mapquest/android/maps/bs;->b(IILandroid/graphics/Point;)Landroid/graphics/Point;
-
-    move-result-object v0
-
-    .line 72
-    return-object v0
-
-    .line 64
-    :cond_1
-    invoke-virtual {p3, p1, p2}, Landroid/graphics/Point;->set(II)V
-
-    goto :goto_0
-.end method
-
-.method public final a(Lcom/mapquest/android/maps/s;Landroid/graphics/Point;)Landroid/graphics/Point;
-    .locals 4
-
-    .prologue
-    .line 188
-    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->a:Lcom/mapquest/android/maps/br;
-
-    invoke-interface {v0, p1, p2}, Lcom/mapquest/android/maps/br;->a(Lcom/mapquest/android/maps/s;Landroid/graphics/Point;)Landroid/graphics/Point;
-
-    move-result-object v0
-
-    .line 189
-    iget v1, v0, Landroid/graphics/Point;->x:I
-
-    iget v2, v0, Landroid/graphics/Point;->y:I
+    .line 131
+    :try_start_0
+    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->d:Lcom/mapquest/android/maps/t;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Landroid/graphics/Point;
+    .line 132
+    new-instance v0, Lcom/mapquest/android/maps/t;
 
-    invoke-direct {v0, v1, v2}, Landroid/graphics/Point;-><init>(II)V
+    iget v1, p0, Lcom/mapquest/android/maps/bs;->g:I
 
+    iget v2, p0, Lcom/mapquest/android/maps/bs;->g:I
+
+    invoke-direct {v0, v1, v2}, Lcom/mapquest/android/maps/t;-><init>(II)V
+
+    iput-object v0, p0, Lcom/mapquest/android/maps/bs;->d:Lcom/mapquest/android/maps/t;
+
+    .line 135
     :cond_0
-    invoke-virtual {p0, v1, v2, v0}, Lcom/mapquest/android/maps/bs;->c(IILandroid/graphics/Point;)Landroid/graphics/Point;
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/mapquest/android/maps/bs;->c:Lcom/mapquest/android/maps/MapView;
-
-    invoke-virtual {v1}, Lcom/mapquest/android/maps/MapView;->getMapRotation()F
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    cmpl-float v1, v1, v2
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lcom/mapquest/android/maps/bs;->g:[F
-
-    const/4 v2, 0x0
-
-    iget v3, v0, Landroid/graphics/Point;->x:I
-
-    int-to-float v3, v3
-
-    aput v3, v1, v2
-
-    iget-object v1, p0, Lcom/mapquest/android/maps/bs;->g:[F
-
-    const/4 v2, 0x1
-
-    iget v3, v0, Landroid/graphics/Point;->y:I
-
-    int-to-float v3, v3
-
-    aput v3, v1, v2
-
-    iget-object v1, p0, Lcom/mapquest/android/maps/bs;->d:Landroid/graphics/Matrix;
-
-    iget-object v2, p0, Lcom/mapquest/android/maps/bs;->g:[F
-
-    invoke-virtual {v1, v2}, Landroid/graphics/Matrix;->mapPoints([F)V
-
-    iget-object v1, p0, Lcom/mapquest/android/maps/bs;->g:[F
-
-    invoke-static {v1, v0}, Lcom/mapquest/android/maps/bs;->a([FLandroid/graphics/Point;)V
-
-    .line 191
+    .line 137
     :cond_1
+    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->d:Lcom/mapquest/android/maps/t;
+
     return-object v0
+
+    .line 135
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
 .end method
 
-.method public final a(II)Lcom/mapquest/android/maps/s;
+.method public final a(Lcom/mapquest/android/maps/bz;)V
     .locals 3
 
     .prologue
-    .line 174
-    new-instance v0, Landroid/graphics/Point;
+    .line 161
+    iget-object v0, p1, Lcom/mapquest/android/maps/bz;->k:Ljava/lang/String;
 
-    invoke-direct {v0, p1, p2}, Landroid/graphics/Point;-><init>(II)V
+    .line 163
+    iget-object v1, p0, Lcom/mapquest/android/maps/bs;->b:Lcom/mapquest/android/maps/ca;
 
-    .line 176
-    iget v1, v0, Landroid/graphics/Point;->x:I
+    if-nez v1, :cond_0
 
-    iget v2, v0, Landroid/graphics/Point;->y:I
+    .line 164
+    const-string v1, "mq.maps.downloader"
 
-    invoke-virtual {p0, v1, v2, v0}, Lcom/mapquest/android/maps/bs;->a(IILandroid/graphics/Point;)Landroid/graphics/Point;
+    const-string v2, "TileCacher is null. DOH!"
 
-    move-result-object v0
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 177
-    iget-object v1, p0, Lcom/mapquest/android/maps/bs;->a:Lcom/mapquest/android/maps/br;
+    .line 166
+    :cond_0
+    iget-object v1, p0, Lcom/mapquest/android/maps/bs;->f:Ljava/util/Map;
 
-    iget v2, v0, Landroid/graphics/Point;->x:I
+    invoke-interface {v1, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget v0, v0, Landroid/graphics/Point;->y:I
-
-    invoke-interface {v1, v2, v0}, Lcom/mapquest/android/maps/br;->a(II)Lcom/mapquest/android/maps/s;
-
-    move-result-object v0
-
-    .line 178
-    return-object v0
+    .line 167
+    return-void
 .end method
 
-.method public final a(FII)V
-    .locals 5
+.method public final b()V
+    .locals 4
 
     .prologue
-    .line 35
-    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->d:Landroid/graphics/Matrix;
+    const/4 v3, 0x0
 
-    .line 36
-    iget-object v1, p0, Lcom/mapquest/android/maps/bs;->e:Landroid/graphics/Matrix;
+    .line 142
+    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->f:Ljava/util/Map;
 
-    .line 38
-    const/4 v2, 0x0
+    invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    cmpl-float v2, p1, v2
+    .line 143
+    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->c:Ljava/util/Set;
 
-    if-nez v2, :cond_0
+    invoke-interface {v0}, Ljava/util/Set;->clear()V
 
-    .line 39
-    invoke-virtual {v0}, Landroid/graphics/Matrix;->reset()V
+    .line 144
+    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->h:Ljava/util/ArrayList;
 
-    .line 40
-    invoke-virtual {v1}, Landroid/graphics/Matrix;->reset()V
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    .line 41
-    const/4 v0, 0x0
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/mapquest/android/maps/bs;->b:Landroid/graphics/Point;
-
-    .line 49
     :goto_0
-    return-void
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 45
-    :cond_0
-    invoke-virtual {v1}, Landroid/graphics/Matrix;->reset()V
+    move-result v0
 
-    .line 46
-    neg-float v2, p1
+    if-eqz v0, :cond_0
 
-    int-to-float v3, p2
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    int-to-float v4, p3
+    move-result-object v0
 
-    invoke-virtual {v1, v2, v3, v4}, Landroid/graphics/Matrix;->setRotate(FFF)V
+    check-cast v0, Lcom/mapquest/android/maps/by;
 
-    .line 47
-    invoke-virtual {v0}, Landroid/graphics/Matrix;->reset()V
-
-    .line 48
-    invoke-virtual {v1, v0}, Landroid/graphics/Matrix;->invert(Landroid/graphics/Matrix;)Z
+    .line 145
+    invoke-virtual {v0}, Lcom/mapquest/android/maps/by;->b()V
 
     goto :goto_0
+
+    .line 147
+    :cond_0
+    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->h:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+
+    .line 148
+    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->i:Lcom/mapquest/android/maps/bx;
+
+    invoke-static {v0}, Lcom/mapquest/android/maps/g;->b(Landroid/os/Handler;)V
+
+    .line 149
+    iput-object v3, p0, Lcom/mapquest/android/maps/bs;->b:Lcom/mapquest/android/maps/ca;
+
+    .line 150
+    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->d:Lcom/mapquest/android/maps/t;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->d:Lcom/mapquest/android/maps/t;
+
+    iget-object v1, v0, Lcom/mapquest/android/maps/t;->b:Lorg/apache/http/impl/client/DefaultHttpClient;
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, v0, Lcom/mapquest/android/maps/t;->c:Lcom/mapquest/android/maps/v;
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, v1, Lcom/mapquest/android/maps/v;->a:Z
+
+    monitor-enter v1
+
+    :try_start_0
+    invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object v1, v0, Lcom/mapquest/android/maps/t;->a:Lorg/apache/http/impl/conn/tsccm/ThreadSafeClientConnManager;
+
+    invoke-virtual {v1}, Lorg/apache/http/impl/conn/tsccm/ThreadSafeClientConnManager;->shutdown()V
+
+    iput-object v3, v0, Lcom/mapquest/android/maps/t;->c:Lcom/mapquest/android/maps/v;
+
+    iput-object v3, v0, Lcom/mapquest/android/maps/t;->a:Lorg/apache/http/impl/conn/tsccm/ThreadSafeClientConnManager;
+
+    iput-object v3, v0, Lcom/mapquest/android/maps/t;->b:Lorg/apache/http/impl/client/DefaultHttpClient;
+
+    .line 151
+    :cond_1
+    iput-object v3, p0, Lcom/mapquest/android/maps/bs;->a:Lcom/mapquest/android/maps/MapView;
+
+    .line 153
+    return-void
+
+    .line 150
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
 .end method
 
-.method public final a(Landroid/graphics/Rect;)V
+.method final b(Lcom/mapquest/android/maps/bz;)V
     .locals 2
 
     .prologue
-    .line 57
-    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->h:Landroid/graphics/RectF;
+    .line 238
+    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->c:Ljava/util/Set;
 
-    invoke-virtual {v0, p1}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
+    iget-object v1, p1, Lcom/mapquest/android/maps/bz;->k:Ljava/lang/String;
 
-    .line 58
-    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->e:Landroid/graphics/Matrix;
+    invoke-interface {v0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    iget-object v1, p0, Lcom/mapquest/android/maps/bs;->h:Landroid/graphics/RectF;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
-
-    .line 59
-    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->h:Landroid/graphics/RectF;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/RectF;->round(Landroid/graphics/Rect;)V
-
-    .line 60
+    .line 239
     return-void
 .end method
 
-.method final b(IILandroid/graphics/Point;)Landroid/graphics/Point;
-    .locals 4
+.method public final c()V
+    .locals 1
 
     .prologue
-    .line 89
-    if-nez p3, :cond_0
+    .line 157
+    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->f:Ljava/util/Map;
 
-    new-instance p3, Landroid/graphics/Point;
+    invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    invoke-direct {p3, p1, p2}, Landroid/graphics/Point;-><init>(II)V
+    .line 158
+    return-void
+.end method
 
-    .line 92
-    :goto_0
-    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->c:Lcom/mapquest/android/maps/MapView;
+.method public final c(Lcom/mapquest/android/maps/bz;)V
+    .locals 3
 
-    .line 93
-    iget-object v1, v0, Lcom/mapquest/android/maps/MapView;->p:Landroid/graphics/Point;
+    .prologue
+    .line 246
+    invoke-virtual {p0, p1}, Lcom/mapquest/android/maps/bs;->b(Lcom/mapquest/android/maps/bz;)V
 
-    .line 95
-    if-nez v1, :cond_1
-
-    .line 99
-    :goto_1
-    return-object p3
-
-    .line 90
-    :cond_0
-    invoke-virtual {p3, p1, p2}, Landroid/graphics/Point;->set(II)V
-
-    goto :goto_0
-
-    .line 97
-    :cond_1
-    invoke-virtual {v0}, Lcom/mapquest/android/maps/MapView;->getMapWidth()I
-
-    move-result v2
-
-    shr-int/lit8 v2, v2, 0x1
-
-    iget v3, v1, Landroid/graphics/Point;->x:I
-
-    sub-int/2addr v2, v3
-
-    add-int/2addr v2, p1
-
-    iput v2, p3, Landroid/graphics/Point;->x:I
-
-    .line 98
-    invoke-virtual {v0}, Lcom/mapquest/android/maps/MapView;->getMapHeight()I
+    .line 247
+    invoke-virtual {p1}, Lcom/mapquest/android/maps/bz;->a()Z
 
     move-result v0
 
-    shr-int/lit8 v0, v0, 0x1
+    if-nez v0, :cond_1
 
-    iget v1, v1, Landroid/graphics/Point;->y:I
+    .line 248
+    const-string v0, "mq.maps.downloader"
 
-    sub-int/2addr v0, v1
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    add-int/2addr v0, p2
+    const-string v2, "no bytes for tile:"
 
-    iput v0, p3, Landroid/graphics/Point;->y:I
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p1, Lcom/mapquest/android/maps/bz;->a:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 256
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 250
+    :cond_1
+    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->a:Lcom/mapquest/android/maps/MapView;
+
+    if-eqz v0, :cond_0
+
+    .line 252
+    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->a:Lcom/mapquest/android/maps/MapView;
+
+    iget-object v1, v0, Lcom/mapquest/android/maps/MapView;->b:Lcom/mapquest/android/maps/cd;
+
+    if-eqz v1, :cond_0
+
+    iget v1, p1, Lcom/mapquest/android/maps/bz;->b:I
+
+    iget v2, v0, Lcom/mapquest/android/maps/MapView;->c:I
+
+    if-ne v1, v2, :cond_0
+
+    iget-object v1, v0, Lcom/mapquest/android/maps/MapView;->b:Lcom/mapquest/android/maps/cd;
+
+    invoke-interface {v1}, Lcom/mapquest/android/maps/cd;->d()Lcom/mapquest/android/maps/ce;
+
+    move-result-object v1
+
+    sget-object v2, Lcom/mapquest/android/maps/ce;->a:Lcom/mapquest/android/maps/ce;
+
+    if-ne v1, v2, :cond_3
+
+    iget-object v1, p1, Lcom/mapquest/android/maps/bz;->f:Lcom/mapquest/android/maps/ce;
+
+    sget-object v2, Lcom/mapquest/android/maps/ce;->a:Lcom/mapquest/android/maps/ce;
+
+    if-ne v1, v2, :cond_0
+
+    :goto_1
+    iget-object v1, p1, Lcom/mapquest/android/maps/bz;->g:Landroid/graphics/Bitmap;
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p1, Lcom/mapquest/android/maps/bz;->g:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v1}, Landroid/graphics/Bitmap;->isRecycled()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    :cond_2
+    iget-object v0, v0, Lcom/mapquest/android/maps/MapView;->e:Lcom/mapquest/android/maps/ca;
+
+    sget v1, Lcom/mapquest/android/maps/cb;->b:I
+
+    invoke-virtual {v0, v1}, Lcom/mapquest/android/maps/ca;->a(I)Lcom/mapquest/android/maps/x;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Lcom/mapquest/android/maps/x;->c(Lcom/mapquest/android/maps/bz;)V
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v1, p1, Lcom/mapquest/android/maps/bz;->f:Lcom/mapquest/android/maps/ce;
+
+    sget-object v2, Lcom/mapquest/android/maps/ce;->a:Lcom/mapquest/android/maps/ce;
+
+    if-eq v1, v2, :cond_0
 
     goto :goto_1
+
+    :cond_4
+    invoke-virtual {v0}, Lcom/mapquest/android/maps/MapView;->postInvalidate()V
+
+    goto :goto_0
 .end method
 
-.method final b(Landroid/graphics/Rect;)Landroid/graphics/Rect;
-    .locals 4
+.method public final d()V
+    .locals 8
 
     .prologue
-    .line 118
-    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->c:Lcom/mapquest/android/maps/MapView;
+    const/4 v2, 0x0
 
-    .line 119
-    iget-object v1, v0, Lcom/mapquest/android/maps/MapView;->p:Landroid/graphics/Point;
+    .line 170
+    .line 171
+    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->c:Ljava/util/Set;
 
-    .line 120
-    if-nez v1, :cond_0
-
-    .line 125
-    :goto_0
-    return-object p1
-
-    .line 122
-    :cond_0
-    iget v2, v1, Landroid/graphics/Point;->x:I
-
-    invoke-virtual {v0}, Lcom/mapquest/android/maps/MapView;->getMapWidth()I
+    invoke-interface {v0}, Ljava/util/Set;->size()I
 
     move-result v3
 
-    shr-int/lit8 v3, v3, 0x1
+    .line 172
+    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->f:Ljava/util/Map;
 
-    sub-int/2addr v2, v3
+    invoke-interface {v0}, Ljava/util/Map;->size()I
 
-    .line 123
-    iget v1, v1, Landroid/graphics/Point;->y:I
+    move-result v4
 
-    invoke-virtual {v0}, Lcom/mapquest/android/maps/MapView;->getMapHeight()I
+    .line 173
+    if-nez v4, :cond_1
+
+    .line 231
+    :cond_0
+    return-void
+
+    .line 175
+    :cond_1
+    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->f:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v5
+
+    move v1, v2
+
+    :goto_0
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    shr-int/lit8 v0, v0, 0x1
+    if-eqz v0, :cond_2
 
-    sub-int v0, v1, v0
+    .line 176
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 124
-    invoke-virtual {p1, v2, v0}, Landroid/graphics/Rect;->offset(II)V
+    move-result-object v0
 
-    goto :goto_0
-.end method
+    check-cast v0, Ljava/util/Map$Entry;
 
-.method final c(IILandroid/graphics/Point;)Landroid/graphics/Point;
-    .locals 4
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    .prologue
-    .line 104
-    if-nez p3, :cond_0
+    move-result-object v0
 
-    new-instance p3, Landroid/graphics/Point;
+    check-cast v0, Lcom/mapquest/android/maps/bz;
 
-    invoke-direct {p3, p1, p2}, Landroid/graphics/Point;-><init>(II)V
+    .line 177
+    iget-object v6, p0, Lcom/mapquest/android/maps/bs;->c:Ljava/util/Set;
 
-    .line 107
-    :goto_0
-    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->c:Lcom/mapquest/android/maps/MapView;
+    iget-object v0, v0, Lcom/mapquest/android/maps/bz;->k:Ljava/lang/String;
 
-    .line 108
-    iget-object v1, v0, Lcom/mapquest/android/maps/MapView;->p:Landroid/graphics/Point;
+    invoke-interface {v6, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-    .line 109
-    if-nez v1, :cond_1
+    move-result v0
 
-    .line 113
+    if-eqz v0, :cond_a
+
+    .line 178
+    add-int/lit8 v0, v1, 0x1
+
     :goto_1
-    return-object p3
+    move v1, v0
 
-    .line 105
-    :cond_0
-    invoke-virtual {p3, p1, p2}, Landroid/graphics/Point;->set(II)V
-
+    .line 180
     goto :goto_0
 
-    .line 111
-    :cond_1
-    iget v2, v1, Landroid/graphics/Point;->x:I
+    .line 181
+    :cond_2
+    sub-int v0, v4, v1
 
-    invoke-virtual {v0}, Lcom/mapquest/android/maps/MapView;->getMapWidth()I
+    sub-int v1, v3, v1
+
+    add-int/2addr v0, v1
+
+    .line 185
+    int-to-double v4, v4
+
+    const-wide/high16 v6, 0x3ff4000000000000L    # 1.25
+
+    mul-double/2addr v4, v6
+
+    double-to-int v1, v4
+
+    if-le v0, v1, :cond_5
+
+    .line 188
+    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->h:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_2
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    .line 189
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/mapquest/android/maps/by;
+
+    .line 190
+    invoke-virtual {v0}, Lcom/mapquest/android/maps/by;->isAlive()Z
 
     move-result v3
 
-    shr-int/lit8 v3, v3, 0x1
+    if-eqz v3, :cond_3
 
-    sub-int/2addr v2, v3
+    .line 191
+    invoke-virtual {v0}, Lcom/mapquest/android/maps/by;->b()V
 
-    add-int/2addr v2, p1
+    .line 193
+    :cond_3
+    invoke-interface {v1}, Ljava/util/Iterator;->remove()V
 
-    iput v2, p3, Landroid/graphics/Point;->x:I
+    goto :goto_2
 
-    .line 112
-    iget v1, v1, Landroid/graphics/Point;->y:I
+    .line 195
+    :cond_4
+    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->c:Ljava/util/Set;
 
-    invoke-virtual {v0}, Lcom/mapquest/android/maps/MapView;->getMapHeight()I
+    invoke-interface {v0}, Ljava/util/Set;->clear()V
+
+    .line 198
+    :cond_5
+    iget v1, p0, Lcom/mapquest/android/maps/bs;->g:I
+
+    .line 199
+    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->h:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :goto_3
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    shr-int/lit8 v0, v0, 0x1
+    if-eqz v0, :cond_7
 
-    sub-int v0, v1, v0
+    .line 200
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    add-int/2addr v0, p2
+    move-result-object v0
 
-    iput v0, p3, Landroid/graphics/Point;->y:I
+    check-cast v0, Lcom/mapquest/android/maps/by;
 
-    goto :goto_1
+    .line 203
+    invoke-virtual {v0}, Lcom/mapquest/android/maps/by;->isAlive()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_6
+
+    .line 204
+    add-int/lit8 v1, v1, -0x1
+
+    .line 208
+    :goto_4
+    iget-object v0, v0, Lcom/mapquest/android/maps/by;->l:Lcom/mapquest/android/maps/bt;
+
+    invoke-virtual {v0}, Lcom/mapquest/android/maps/bt;->clear()V
+
+    goto :goto_3
+
+    .line 206
+    :cond_6
+    invoke-interface {v3}, Ljava/util/Iterator;->remove()V
+
+    goto :goto_4
+
+    .line 212
+    :cond_7
+    if-lez v1, :cond_8
+
+    move v0, v2
+
+    .line 214
+    :goto_5
+    if-ge v0, v1, :cond_8
+
+    .line 215
+    new-instance v3, Lcom/mapquest/android/maps/bv;
+
+    invoke-direct {v3, p0}, Lcom/mapquest/android/maps/bv;-><init>(Lcom/mapquest/android/maps/bs;)V
+
+    .line 216
+    iget-object v4, p0, Lcom/mapquest/android/maps/bs;->h:Ljava/util/ArrayList;
+
+    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 217
+    invoke-virtual {v3}, Lcom/mapquest/android/maps/by;->start()V
+
+    .line 214
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_5
+
+    .line 222
+    :cond_8
+    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->f:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :goto_6
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    .line 223
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map$Entry;
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/mapquest/android/maps/bz;
+
+    .line 224
+    iget-object v1, p0, Lcom/mapquest/android/maps/bs;->h:Ljava/util/ArrayList;
+
+    iget v4, p0, Lcom/mapquest/android/maps/bs;->g:I
+
+    rem-int v4, v2, v4
+
+    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/mapquest/android/maps/by;
+
+    iget-object v1, v1, Lcom/mapquest/android/maps/by;->l:Lcom/mapquest/android/maps/bt;
+
+    invoke-virtual {v1, v0}, Lcom/mapquest/android/maps/bt;->add(Ljava/lang/Object;)Z
+
+    .line 225
+    invoke-interface {v3}, Ljava/util/Iterator;->remove()V
+
+    .line 222
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_6
+
+    .line 227
+    :cond_9
+    iget-object v0, p0, Lcom/mapquest/android/maps/bs;->h:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_7
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 228
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/mapquest/android/maps/by;
+
+    .line 229
+    invoke-virtual {v0}, Lcom/mapquest/android/maps/by;->c()V
+
+    goto :goto_7
+
+    :cond_a
+    move v0, v1
+
+    goto/16 :goto_1
+.end method
+
+.method public final e()V
+    .locals 0
+
+    .prologue
+    .line 242
+    invoke-virtual {p0}, Lcom/mapquest/android/maps/bs;->c()V
+
+    .line 243
+    return-void
 .end method

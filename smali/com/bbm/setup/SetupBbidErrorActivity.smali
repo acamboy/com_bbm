@@ -61,12 +61,12 @@
     invoke-super {p0, p1}, Lcom/bbm/setup/q;->onCreate(Landroid/os/Bundle;)V
 
     .line 70
-    const v0, 0x7f03005a
+    const v0, 0x7f030076
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/SetupBbidErrorActivity;->setContentView(I)V
 
     .line 72
-    const v0, 0x7f0b02f7
+    const v0, 0x7f0b034a
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/SetupBbidErrorActivity;->findViewById(I)Landroid/view/View;
 
@@ -77,7 +77,7 @@
     iput-object v0, p0, Lcom/bbm/setup/SetupBbidErrorActivity;->a:Landroid/widget/TextView;
 
     .line 73
-    const v0, 0x7f0b02f8
+    const v0, 0x7f0b034b
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/SetupBbidErrorActivity;->findViewById(I)Landroid/view/View;
 
@@ -88,7 +88,7 @@
     iput-object v0, p0, Lcom/bbm/setup/SetupBbidErrorActivity;->b:Landroid/widget/TextView;
 
     .line 74
-    const v0, 0x7f0b02fa
+    const v0, 0x7f0b034d
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/SetupBbidErrorActivity;->findViewById(I)Landroid/view/View;
 
@@ -113,7 +113,7 @@
     move-result-object v0
 
     .line 85
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
 
     move-result-object v1
 
@@ -132,16 +132,16 @@
     .line 98
     iget-object v0, p0, Lcom/bbm/setup/SetupBbidErrorActivity;->d:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
 
     .line 100
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
 
     move-result-object v0
 
-    sget-object v1, Lcom/bbm/c/o;->ax:Lcom/bbm/c/o;
+    sget-object v1, Lcom/bbm/c/s;->aJ:Lcom/bbm/c/s;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->c(Lcom/bbm/c/o;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->c(Lcom/bbm/c/s;)V
 
     .line 101
     invoke-super {p0}, Lcom/bbm/setup/q;->onPause()V
@@ -158,13 +158,13 @@
     invoke-super {p0}, Lcom/bbm/setup/q;->onResume()V
 
     .line 91
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
 
     move-result-object v0
 
-    sget-object v1, Lcom/bbm/c/o;->ax:Lcom/bbm/c/o;
+    sget-object v1, Lcom/bbm/c/s;->aJ:Lcom/bbm/c/s;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->a(Lcom/bbm/c/o;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->a(Lcom/bbm/c/s;)V
 
     .line 93
     iget-object v0, p0, Lcom/bbm/setup/SetupBbidErrorActivity;->d:Lcom/bbm/j/k;

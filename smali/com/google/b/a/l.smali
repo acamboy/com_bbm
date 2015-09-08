@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 99
+    .line 98
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,14 +42,14 @@
     .end annotation
 
     .prologue
-    .line 86
-    new-instance v0, Lcom/google/b/a/p;
+    .line 85
+    new-instance v0, Lcom/google/b/a/q;
 
-    invoke-static {p0}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/google/b/a/p;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, v1}, Lcom/google/b/a/q;-><init>(Ljava/lang/Object;)V
 
     return-object v0
 .end method
@@ -67,23 +67,25 @@
     .end annotation
 
     .prologue
-    .line 94
+    .line 93
     if-nez p0, :cond_0
 
-    sget-object v0, Lcom/google/b/a/a;->a:Lcom/google/b/a/a;
+    invoke-static {}, Lcom/google/b/a/a;->a()Lcom/google/b/a/l;
+
+    move-result-object v0
 
     :goto_0
     return-object v0
 
     :cond_0
-    new-instance v0, Lcom/google/b/a/p;
+    new-instance v0, Lcom/google/b/a/q;
 
-    invoke-direct {v0, p0}, Lcom/google/b/a/p;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, p0}, Lcom/google/b/a/q;-><init>(Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
-.method public static d()Lcom/google/b/a/l;
+.method public static e()Lcom/google/b/a/l;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -96,8 +98,10 @@
     .end annotation
 
     .prologue
-    .line 79
-    sget-object v0, Lcom/google/b/a/a;->a:Lcom/google/b/a/a;
+    .line 78
+    invoke-static {}, Lcom/google/b/a/a;->a()Lcom/google/b/a/l;
+
+    move-result-object v0
 
     return-object v0
 .end method
@@ -112,10 +116,10 @@
     .end annotation
 .end method
 
-.method public abstract a()Z
+.method public abstract b()Z
 .end method
 
-.method public abstract b()Ljava/lang/Object;
+.method public abstract c()Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TT;"
@@ -123,7 +127,7 @@
     .end annotation
 .end method
 
-.method public abstract c()Ljava/lang/Object;
+.method public abstract d()Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TT;"

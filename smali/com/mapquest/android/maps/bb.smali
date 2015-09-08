@@ -30,7 +30,7 @@
     iput-object p1, p0, Lcom/mapquest/android/maps/bb;->b:Lcom/mapquest/android/maps/ba;
 
     .line 127
-    const v0, 0x3f19999a
+    const v0, 0x3f19999a    # 0.6f
 
     const/4 v1, 0x1
 

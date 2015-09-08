@@ -3,14 +3,14 @@
 .source "GroupsCalendarProvider.java"
 
 # interfaces
-.implements Lcom/bbm/d/b/e;
+.implements Lcom/bbm/d/b/n;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/bbm/d/b/e",
+        "Lcom/bbm/d/b/n",
         "<",
         "Lcom/bbm/k/g;",
         ">;"
@@ -35,7 +35,7 @@
     return-void
 .end method
 
-.method private a(Ljava/util/Collection;Lcom/bbm/k/j;)V
+.method private a(Ljava/util/Collection;I)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -43,9 +43,7 @@
             "Ljava/util/Collection",
             "<",
             "Lcom/bbm/k/g;",
-            ">;",
-            "Lcom/bbm/k/j;",
-            ")V"
+            ">;I)V"
         }
     .end annotation
 
@@ -71,9 +69,7 @@
     .line 139
     sget-object v2, Lcom/bbm/k/f;->a:[I
 
-    invoke-virtual {p2}, Lcom/bbm/k/j;->ordinal()I
-
-    move-result v3
+    add-int/lit8 v3, p2, -0x1
 
     aget v2, v2, v3
 
@@ -109,7 +105,7 @@
 
     iget-object v0, v0, Lcom/bbm/k/g;->a:Lcom/bbm/g/b;
 
-    iget-object v0, v0, Lcom/bbm/g/b;->o:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/g/b;->p:Ljava/lang/String;
 
     invoke-virtual {v2, v0}, Lcom/bbm/g/f;->c(Ljava/lang/String;)Z
 
@@ -168,32 +164,32 @@
     :cond_0
     iget-object v0, p0, Lcom/bbm/k/h;->a:Lcom/bbm/k/a;
 
-    iget-object v0, v0, Lcom/bbm/k/a;->e:Lcom/bbm/util/cl;
+    iget-object v0, v0, Lcom/bbm/k/a;->e:Lcom/bbm/util/cs;
 
-    invoke-static {p1, p2, v0}, Lcom/bbm/util/cj;->a(Ljava/util/Collection;Ljava/util/Collection;Lcom/bbm/util/cl;)Lcom/bbm/util/ck;
+    invoke-static {p1, p2, v0}, Lcom/bbm/util/cq;->a(Ljava/util/Collection;Ljava/util/Collection;Lcom/bbm/util/cs;)Lcom/bbm/util/cr;
 
     move-result-object v0
 
     .line 131
-    iget-object v1, v0, Lcom/bbm/util/ck;->a:Ljava/util/Collection;
+    iget-object v1, v0, Lcom/bbm/util/cr;->a:Ljava/util/Collection;
 
-    sget-object v2, Lcom/bbm/k/j;->a:Lcom/bbm/k/j;
+    sget v2, Lcom/bbm/k/j;->a:I
 
-    invoke-direct {p0, v1, v2}, Lcom/bbm/k/h;->a(Ljava/util/Collection;Lcom/bbm/k/j;)V
+    invoke-direct {p0, v1, v2}, Lcom/bbm/k/h;->a(Ljava/util/Collection;I)V
 
     .line 132
-    iget-object v1, v0, Lcom/bbm/util/ck;->b:Ljava/util/Collection;
+    iget-object v1, v0, Lcom/bbm/util/cr;->b:Ljava/util/Collection;
 
-    sget-object v2, Lcom/bbm/k/j;->b:Lcom/bbm/k/j;
+    sget v2, Lcom/bbm/k/j;->b:I
 
-    invoke-direct {p0, v1, v2}, Lcom/bbm/k/h;->a(Ljava/util/Collection;Lcom/bbm/k/j;)V
+    invoke-direct {p0, v1, v2}, Lcom/bbm/k/h;->a(Ljava/util/Collection;I)V
 
     .line 133
-    iget-object v0, v0, Lcom/bbm/util/ck;->c:Ljava/util/Collection;
+    iget-object v0, v0, Lcom/bbm/util/cr;->c:Ljava/util/Collection;
 
-    sget-object v1, Lcom/bbm/k/j;->c:Lcom/bbm/k/j;
+    sget v1, Lcom/bbm/k/j;->c:I
 
-    invoke-direct {p0, v0, v1}, Lcom/bbm/k/h;->a(Ljava/util/Collection;Lcom/bbm/k/j;)V
+    invoke-direct {p0, v0, v1}, Lcom/bbm/k/h;->a(Ljava/util/Collection;I)V
 
     goto :goto_0
 .end method

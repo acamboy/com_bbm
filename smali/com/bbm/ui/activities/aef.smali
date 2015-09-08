@@ -1,111 +1,159 @@
-.class final synthetic Lcom/bbm/ui/activities/aef;
+.class final Lcom/bbm/ui/activities/aef;
 .super Ljava/lang/Object;
-.source "ReportProblemActivity.java"
+.source "SettingsActivity.java"
+
+# interfaces
+.implements Lcom/bbm/ui/t;
 
 
-# static fields
-.field static final synthetic a:[I
+# instance fields
+.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
+    .locals 0
 
     .prologue
-    .line 300
-    invoke-static {}, Lcom/bbm/ui/activities/ael;->values()[Lcom/bbm/ui/activities/ael;
+    .line 238
+    iput-object p1, p0, Lcom/bbm/ui/activities/aef;->a:Lcom/bbm/ui/activities/SettingsActivity;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(I)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 243
+    :try_start_0
+    invoke-static {}, Lcom/bbm/Alaska;->p()Lcom/bbm/an;
 
     move-result-object v0
 
-    array-length v0, v0
+    invoke-virtual {v0}, Lcom/bbm/an;->c()Ljava/lang/String;
 
-    new-array v0, v0, [I
+    move-result-object v1
 
-    sput-object v0, Lcom/bbm/ui/activities/aef;->a:[I
+    .line 244
+    iget-object v0, p0, Lcom/bbm/ui/activities/aef;->a:Lcom/bbm/ui/activities/SettingsActivity;
 
-    :try_start_0
-    sget-object v0, Lcom/bbm/ui/activities/aef;->a:[I
+    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->q(Lcom/bbm/ui/activities/SettingsActivity;)Ljava/util/LinkedHashMap;
 
-    sget-object v1, Lcom/bbm/ui/activities/ael;->a:Lcom/bbm/ui/activities/ael;
+    move-result-object v0
 
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/ael;->ordinal()I
+    iget-object v2, p0, Lcom/bbm/ui/activities/aef;->a:Lcom/bbm/ui/activities/SettingsActivity;
 
-    move-result v1
+    invoke-static {v2}, Lcom/bbm/ui/activities/SettingsActivity;->p(Lcom/bbm/ui/activities/SettingsActivity;)Lcom/bbm/ui/p;
 
-    const/4 v2, 0x1
+    move-result-object v2
 
-    aput v2, v0, v1
+    invoke-virtual {v2, p1}, Lcom/bbm/ui/p;->getItem(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 245
+    iget-object v0, p0, Lcom/bbm/ui/activities/aef;->a:Lcom/bbm/ui/activities/SettingsActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/SettingsActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/aef;->a:Lcom/bbm/ui/activities/SettingsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->q(Lcom/bbm/ui/activities/SettingsActivity;)Ljava/util/LinkedHashMap;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/aef;->a:Lcom/bbm/ui/activities/SettingsActivity;
+
+    invoke-static {v2}, Lcom/bbm/ui/activities/SettingsActivity;->p(Lcom/bbm/ui/activities/SettingsActivity;)Lcom/bbm/ui/p;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p1}, Lcom/bbm/ui/p;->getItem(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/media/MediaPlayer;->create(Landroid/content/Context;Landroid/net/Uri;)Landroid/media/MediaPlayer;
+
+    move-result-object v0
+
+    .line 247
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->start()V
     :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 252
+    :cond_0
     :goto_0
-    :try_start_1
-    sget-object v0, Lcom/bbm/ui/activities/aef;->a:[I
+    iget-object v1, p0, Lcom/bbm/ui/activities/aef;->a:Lcom/bbm/ui/activities/SettingsActivity;
 
-    sget-object v1, Lcom/bbm/ui/activities/ael;->b:Lcom/bbm/ui/activities/ael;
+    const-string v2, "notification_sound_uri"
 
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/ael;->ordinal()I
+    iget-object v0, p0, Lcom/bbm/ui/activities/aef;->a:Lcom/bbm/ui/activities/SettingsActivity;
 
-    move-result v1
+    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->q(Lcom/bbm/ui/activities/SettingsActivity;)Ljava/util/LinkedHashMap;
 
-    const/4 v2, 0x2
+    move-result-object v0
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
+    iget-object v3, p0, Lcom/bbm/ui/activities/aef;->a:Lcom/bbm/ui/activities/SettingsActivity;
 
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/bbm/ui/activities/aef;->a:[I
+    invoke-static {v3}, Lcom/bbm/ui/activities/SettingsActivity;->p(Lcom/bbm/ui/activities/SettingsActivity;)Lcom/bbm/ui/p;
 
-    sget-object v1, Lcom/bbm/ui/activities/ael;->c:Lcom/bbm/ui/activities/ael;
+    move-result-object v3
 
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/ael;->ordinal()I
+    invoke-virtual {v3, p1}, Lcom/bbm/ui/p;->getItem(I)Ljava/lang/Object;
 
-    move-result v1
+    move-result-object v3
 
-    const/4 v2, 0x3
+    invoke-virtual {v0, v3}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_1
+    move-result-object v0
 
-    :goto_2
-    :try_start_3
-    sget-object v0, Lcom/bbm/ui/activities/aef;->a:[I
+    check-cast v0, Ljava/lang/String;
 
-    sget-object v1, Lcom/bbm/ui/activities/ael;->d:Lcom/bbm/ui/activities/ael;
+    invoke-static {v1, v2, v0}, Lcom/bbm/ui/activities/SettingsActivity;->a(Lcom/bbm/ui/activities/SettingsActivity;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/ael;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_0
-
-    :goto_3
+    .line 253
     return-void
 
+    .line 249
     :catch_0
     move-exception v0
 
-    goto :goto_3
-
-    :catch_1
-    move-exception v0
-
-    goto :goto_2
-
-    :catch_2
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_3
-    move-exception v0
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method

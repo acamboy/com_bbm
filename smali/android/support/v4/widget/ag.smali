@@ -1,17 +1,27 @@
 .class final Landroid/support/v4/widget/ag;
 .super Ljava/lang/Object;
-.source "ScrollerCompat.java"
+.source "MaterialProgressDrawable.java"
 
 # interfaces
-.implements Landroid/support/v4/widget/af;
+.implements Landroid/view/animation/Animation$AnimationListener;
+
+
+# instance fields
+.field final synthetic a:Landroid/support/v4/widget/aj;
+
+.field final synthetic b:Landroid/support/v4/widget/ae;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Landroid/support/v4/widget/ae;Landroid/support/v4/widget/aj;)V
     .locals 0
 
     .prologue
-    .line 61
+    .line 349
+    iput-object p1, p0, Landroid/support/v4/widget/ag;->b:Landroid/support/v4/widget/ae;
+
+    iput-object p2, p0, Landroid/support/v4/widget/ag;->a:Landroid/support/v4/widget/aj;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,133 +29,109 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)I
-    .locals 1
+.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
+    .locals 0
 
     .prologue
-    .line 75
-    check-cast p1, Landroid/widget/Scroller;
-
-    invoke-virtual {p1}, Landroid/widget/Scroller;->getCurrX()I
-
-    move-result v0
-
-    return v0
+    .line 359
+    return-void
 .end method
 
-.method public final a(Landroid/content/Context;Landroid/view/animation/Interpolator;)Ljava/lang/Object;
-    .locals 1
+.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
+    .locals 4
 
     .prologue
-    .line 64
-    if-eqz p2, :cond_0
+    const/4 v3, 0x0
 
-    new-instance v0, Landroid/widget/Scroller;
+    .line 363
+    iget-object v0, p0, Landroid/support/v4/widget/ag;->a:Landroid/support/v4/widget/aj;
 
-    invoke-direct {v0, p1, p2}, Landroid/widget/Scroller;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
+    invoke-virtual {v0}, Landroid/support/v4/widget/aj;->a()V
 
+    .line 364
+    iget-object v0, p0, Landroid/support/v4/widget/ag;->a:Landroid/support/v4/widget/aj;
+
+    iget v1, v0, Landroid/support/v4/widget/aj;->j:I
+
+    add-int/lit8 v1, v1, 0x1
+
+    iget-object v2, v0, Landroid/support/v4/widget/aj;->i:[I
+
+    array-length v2, v2
+
+    rem-int/2addr v1, v2
+
+    iput v1, v0, Landroid/support/v4/widget/aj;->j:I
+
+    .line 365
+    iget-object v0, p0, Landroid/support/v4/widget/ag;->a:Landroid/support/v4/widget/aj;
+
+    iget-object v1, p0, Landroid/support/v4/widget/ag;->a:Landroid/support/v4/widget/aj;
+
+    iget v1, v1, Landroid/support/v4/widget/aj;->e:F
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/widget/aj;->a(F)V
+
+    .line 366
+    iget-object v0, p0, Landroid/support/v4/widget/ag;->b:Landroid/support/v4/widget/ae;
+
+    iget-boolean v0, v0, Landroid/support/v4/widget/ae;->b:Z
+
+    if-eqz v0, :cond_0
+
+    .line 369
+    iget-object v0, p0, Landroid/support/v4/widget/ag;->b:Landroid/support/v4/widget/ae;
+
+    iput-boolean v3, v0, Landroid/support/v4/widget/ae;->b:Z
+
+    .line 370
+    const-wide/16 v0, 0x535
+
+    invoke-virtual {p1, v0, v1}, Landroid/view/animation/Animation;->setDuration(J)V
+
+    .line 371
+    iget-object v0, p0, Landroid/support/v4/widget/ag;->a:Landroid/support/v4/widget/aj;
+
+    invoke-virtual {v0, v3}, Landroid/support/v4/widget/aj;->a(Z)V
+
+    .line 375
     :goto_0
-    return-object v0
+    return-void
 
+    .line 373
     :cond_0
-    new-instance v0, Landroid/widget/Scroller;
+    iget-object v0, p0, Landroid/support/v4/widget/ag;->b:Landroid/support/v4/widget/ae;
 
-    invoke-direct {v0, p1}, Landroid/widget/Scroller;-><init>(Landroid/content/Context;)V
+    iget-object v1, p0, Landroid/support/v4/widget/ag;->b:Landroid/support/v4/widget/ae;
+
+    invoke-static {v1}, Landroid/support/v4/widget/ae;->a(Landroid/support/v4/widget/ae;)F
+
+    move-result v1
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    add-float/2addr v1, v2
+
+    const/high16 v2, 0x40a00000    # 5.0f
+
+    rem-float/2addr v1, v2
+
+    invoke-static {v0, v1}, Landroid/support/v4/widget/ae;->a(Landroid/support/v4/widget/ae;F)F
 
     goto :goto_0
 .end method
 
-.method public final a(Ljava/lang/Object;IIIII)V
-    .locals 6
+.method public final onAnimationStart(Landroid/view/animation/Animation;)V
+    .locals 2
 
     .prologue
-    .line 102
-    move-object v0, p1
+    .line 353
+    iget-object v0, p0, Landroid/support/v4/widget/ag;->b:Landroid/support/v4/widget/ae;
 
-    check-cast v0, Landroid/widget/Scroller;
+    const/4 v1, 0x0
 
-    move v1, p2
+    invoke-static {v0, v1}, Landroid/support/v4/widget/ae;->a(Landroid/support/v4/widget/ae;F)F
 
-    move v2, p3
-
-    move v3, p4
-
-    move v4, p5
-
-    move v5, p6
-
-    invoke-virtual/range {v0 .. v5}, Landroid/widget/Scroller;->startScroll(IIIII)V
-
-    .line 103
+    .line 354
     return-void
-.end method
-
-.method public final b(Ljava/lang/Object;)I
-    .locals 1
-
-    .prologue
-    .line 80
-    check-cast p1, Landroid/widget/Scroller;
-
-    invoke-virtual {p1}, Landroid/widget/Scroller;->getCurrY()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final c(Ljava/lang/Object;)Z
-    .locals 1
-
-    .prologue
-    .line 90
-    check-cast p1, Landroid/widget/Scroller;
-
-    .line 91
-    invoke-virtual {p1}, Landroid/widget/Scroller;->computeScrollOffset()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final d(Ljava/lang/Object;)V
-    .locals 0
-
-    .prologue
-    .line 119
-    check-cast p1, Landroid/widget/Scroller;
-
-    invoke-virtual {p1}, Landroid/widget/Scroller;->abortAnimation()V
-
-    .line 120
-    return-void
-.end method
-
-.method public final e(Ljava/lang/Object;)I
-    .locals 1
-
-    .prologue
-    .line 141
-    check-cast p1, Landroid/widget/Scroller;
-
-    invoke-virtual {p1}, Landroid/widget/Scroller;->getFinalX()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final f(Ljava/lang/Object;)I
-    .locals 1
-
-    .prologue
-    .line 146
-    check-cast p1, Landroid/widget/Scroller;
-
-    invoke-virtual {p1}, Landroid/widget/Scroller;->getFinalY()I
-
-    move-result v0
-
-    return v0
 .end method

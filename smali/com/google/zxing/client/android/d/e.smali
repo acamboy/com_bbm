@@ -58,8 +58,6 @@
 
     invoke-direct {v0, p0}, Lcom/google/zxing/client/android/d/f;-><init>(Lcom/google/zxing/client/android/d/e;)V
 
-    invoke-virtual {p0, v0}, Lcom/google/zxing/client/android/d/e;->a(Landroid/view/View$OnClickListener;)V
-
     .line 49
     return-void
 .end method

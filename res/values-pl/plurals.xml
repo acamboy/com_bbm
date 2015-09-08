@@ -17,6 +17,10 @@
         <item quantity="few">%1$d członków</item>
         <item quantity="many">%1$d członków</item>
     </plurals>
+    <plurals name="common_days_1d">
+        <item quantity="other">%1$d dni</item>
+        <item quantity="one">%1$d dzień</item>
+    </plurals>
     <plurals name="ephemeral_picker_seconds">
         <item quantity="other">sek.</item>
         <item quantity="one">sek.</item>
@@ -31,7 +35,7 @@
         <item quantity="one">1 element</item>
     </plurals>
     <plurals name="invites_received_chat_item_count">
-        <item quantity="other">(Liczba oczekujących: %1$d)</item>
+        <item quantity="other">(%1$d oczekujących)</item>
         <item quantity="one">(1 oczekujące zaproszenie)</item>
     </plurals>
     <plurals name="search_number_of_results">
@@ -39,28 +43,36 @@
         <item quantity="one">1 wynik</item>
     </plurals>
     <plurals name="slide_menu_active_chats">
-        <item quantity="other">Liczba aktywnych czatów: %1$s</item>
-        <item quantity="one">1 aktywny czat</item>
+        <item quantity="other">Aktywnych czatów %1$s</item>
+        <item quantity="one">Aktywny czat %1$s</item>
+        <item quantity="few">Aktywne czaty %1$s</item>
+        <item quantity="many">Aktywnych czatów %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_channelupdates">
-        <item quantity="other">Liczba nowych powiadomień: %1$s</item>
-        <item quantity="one">1 nowe powiadomienie</item>
+        <item quantity="other">Elementów kanałów %1$s</item>
+        <item quantity="one">Element kanałów %1$s</item>
+        <item quantity="few">Elementy kanałów %1$s</item>
+        <item quantity="many">Elementów kanałów %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_invites">
-        <item quantity="other">Liczba nowych zaproszeń: %1$s</item>
-        <item quantity="one">1 nowe zaproszenie</item>
+        <item quantity="other">Nowych zaproszeń %1$s</item>
+        <item quantity="one">Nowe zaproszenie %1$s</item>
+        <item quantity="few">Nowe zaproszenia %1$s</item>
+        <item quantity="many">Nowych zaproszeń %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_updates">
-        <item quantity="other">Liczba nowych elementów: %1$s</item>
-        <item quantity="one">1 nowy element</item>
+        <item quantity="other">Nowych aktualności %1$s</item>
+        <item quantity="one">Nowa aktualność %1$s</item>
+        <item quantity="few">Nowe aktualności %1$s</item>
+        <item quantity="many">Nowych aktualności %1$s</item>
     </plurals>
     <plurals name="slide_menu_total_contacts">
-        <item quantity="other">Liczba kontaktów: %1$s</item>
-        <item quantity="one">1 kontakt</item>
+        <item quantity="other">Kontakty: %1$s</item>
+        <item quantity="one">%1$s kontakt</item>
     </plurals>
     <plurals name="slide_menu_total_groups">
         <item quantity="other">Liczba grup: %1$s</item>
-        <item quantity="one">1 grupa</item>
+        <item quantity="one">%1$s grupa</item>
     </plurals>
     <plurals name="update_channel_stats_comments">
         <item quantity="other">%1$s komentarzy</item>

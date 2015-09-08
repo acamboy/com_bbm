@@ -8,7 +8,7 @@
     .locals 2
 
     .prologue
-    .line 723
+    .line 726
     const/4 v0, 0x3
 
     const/4 v1, 0x0

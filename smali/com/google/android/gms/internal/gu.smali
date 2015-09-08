@@ -1,55 +1,47 @@
-.class public final Lcom/google/android/gms/internal/gu;
+.class final Lcom/google/android/gms/internal/gu;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Lcom/google/android/gms/internal/bp;
+
+
+# instance fields
+.field final synthetic a:Lcom/google/android/gms/internal/bo;
+
+.field final synthetic b:Lcom/google/android/gms/internal/gt;
 
 
 # direct methods
-.method public static aW(I)Ljava/lang/String;
-    .locals 3
+.method constructor <init>(Lcom/google/android/gms/internal/gt;Lcom/google/android/gms/internal/bo;)V
+    .locals 0
 
-    packed-switch p0, :pswitch_data_0
+    iput-object p1, p0, Lcom/google/android/gms/internal/gu;->b:Lcom/google/android/gms/internal/gt;
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    iput-object p2, p0, Lcom/google/android/gms/internal/gu;->a:Lcom/google/android/gms/internal/bo;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v2, "Unknown time span "
+    return-void
+.end method
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+# virtual methods
+.method public final a()V
+    .locals 4
 
-    move-result-object v1
+    new-instance v0, Ljava/util/Timer;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v0}, Ljava/util/Timer;-><init>()V
 
-    move-result-object v1
+    new-instance v1, Lcom/google/android/gms/internal/gv;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, p0}, Lcom/google/android/gms/internal/gv;-><init>(Lcom/google/android/gms/internal/gu;)V
 
-    throw v0
+    sget v2, Lcom/google/android/gms/internal/hd;->b:I
 
-    :pswitch_0
-    const-string v0, "DAILY"
+    int-to-long v2, v2
 
-    :goto_0
-    return-object v0
+    invoke-virtual {v0, v1, v2, v3}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
 
-    :pswitch_1
-    const-string v0, "WEEKLY"
-
-    goto :goto_0
-
-    :pswitch_2
-    const-string v0, "ALL_TIME"
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-    .end packed-switch
+    return-void
 .end method

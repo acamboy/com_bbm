@@ -4,10 +4,12 @@
 
 
 # virtual methods
-.method public abstract a(I)V
+.method public abstract a(Lit/sephiroth/android/library/widget/AdapterView;I)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(I)V"
+            "(",
+            "Lit/sephiroth/android/library/widget/AdapterView",
+            "<*>;I)V"
         }
     .end annotation
 .end method

@@ -1,168 +1,76 @@
-.class public final Lcom/google/android/gms/internal/da;
-.super Ljava/lang/Object;
+.class final Lcom/google/android/gms/internal/da;
+.super Lcom/google/android/gms/internal/cy;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/google/android/gms/internal/cy",
+        "<",
+        "Ljava/lang/Integer;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method public static a(Ljava/lang/String;Ljava/lang/Throwable;)V
+.method constructor <init>(Ljava/lang/String;Ljava/lang/Integer;)V
     .locals 1
 
-    const/4 v0, 0x3
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->n(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "Ads"
-
-    invoke-static {v0, p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_0
-    return-void
-.end method
-
-.method public static b(Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 1
-
-    const/4 v0, 0x5
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->n(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "Ads"
-
-    invoke-static {v0, p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_0
-    return-void
-.end method
-
-.method public static n(I)Z
-    .locals 1
-
-    const/4 v0, 0x5
-
-    if-ge p0, v0, :cond_0
-
-    const-string v0, "Ads"
-
-    invoke-static {v0, p0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_1
     const/4 v0, 0x0
 
-    goto :goto_0
-.end method
+    invoke-direct {p0, p1, p2, v0}, Lcom/google/android/gms/internal/cy;-><init>(Ljava/lang/String;Ljava/lang/Object;B)V
 
-.method public static s(Ljava/lang/String;)V
-    .locals 1
-
-    const/4 v0, 0x3
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->n(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "Ads"
-
-    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
     return-void
 .end method
 
-.method public static t(Ljava/lang/String;)V
-    .locals 1
 
-    const/4 v0, 0x6
+# virtual methods
+.method public final a()Lcom/google/android/gms/internal/qr;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/google/android/gms/internal/qr",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
 
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->n(I)Z
+    iget-object v1, p0, Lcom/google/android/gms/internal/cy;->a:Ljava/lang/String;
 
-    move-result v0
+    iget-object v0, p0, Lcom/google/android/gms/internal/cy;->b:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    check-cast v0, Ljava/lang/Integer;
 
-    const-string v0, "Ads"
+    invoke-static {v1, v0}, Lcom/google/android/gms/internal/qr;->a(Ljava/lang/String;Ljava/lang/Integer;)Lcom/google/android/gms/internal/qr;
 
-    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    move-result-object v0
 
-    :cond_0
-    return-void
+    return-object v0
 .end method
 
-.method public static u(Ljava/lang/String;)V
-    .locals 1
+.method public final synthetic a(Landroid/content/SharedPreferences;)Ljava/lang/Object;
+    .locals 2
 
-    const/4 v0, 0x4
+    iget-object v1, p0, Lcom/google/android/gms/internal/cy;->a:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->n(I)Z
+    iget-object v0, p0, Lcom/google/android/gms/internal/cy;->b:Ljava/lang/Object;
 
-    move-result v0
+    check-cast v0, Ljava/lang/Integer;
 
-    if-eqz v0, :cond_0
-
-    const-string v0, "Ads"
-
-    invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    return-void
-.end method
-
-.method public static v(Ljava/lang/String;)V
-    .locals 1
-
-    const/4 v0, 0x2
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->n(I)Z
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
-
-    const-string v0, "Ads"
-
-    invoke-static {v0, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    return-void
-.end method
-
-.method public static w(Ljava/lang/String;)V
-    .locals 1
-
-    const/4 v0, 0x5
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->n(I)Z
+    invoke-interface {p1, v1, v0}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-string v0, "Ads"
+    move-result-object v0
 
-    invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="contacts_grid_column_count">5</integer>
+    <integer name="group_fragment_columns_count">5</integer>
+    <integer name="group_picture_grid_columns_count">5</integer>
+    <integer name="sticker_picker_column_count">5</integer>
+    <integer name="sticker_store_grid_columns_count">5</integer>
+    <integer name="store_home_page_grid_columns_count">5</integer>
+</resources>

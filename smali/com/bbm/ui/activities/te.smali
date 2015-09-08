@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/activities/te;
 .super Ljava/lang/Object;
-.source "GroupPictureUploadActivity.java"
+.source "LegalActivity.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Landroid/view/inputmethod/InputMethodManager;
-
-.field final synthetic b:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/LegalActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupPictureUploadActivity;Landroid/view/inputmethod/InputMethodManager;)V
+.method constructor <init>(Lcom/bbm/ui/activities/LegalActivity;)V
     .locals 0
 
     .prologue
-    .line 125
-    iput-object p1, p0, Lcom/bbm/ui/activities/te;->b:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/te;->a:Landroid/view/inputmethod/InputMethodManager;
+    .line 23
+    iput-object p1, p0, Lcom/bbm/ui/activities/te;->a:Lcom/bbm/ui/activities/LegalActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -33,30 +29,47 @@
     .locals 3
 
     .prologue
-    .line 128
-    const-string v0, "mGroupImageFrame Clicked"
+    .line 26
+    const-string v0, "mOnClickListener Clicked"
 
-    const-class v1, Lcom/bbm/ui/activities/GroupPictureUploadActivity;
+    const-class v1, Lcom/bbm/ui/activities/LegalActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 130
-    iget-object v0, p0, Lcom/bbm/ui/activities/te;->a:Landroid/view/inputmethod/InputMethodManager;
+    .line 28
+    if-eqz p1, :cond_0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/te;->b:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
+    instance-of v0, p1, Landroid/widget/Button;
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->d(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Landroid/widget/EditText;
+    if-eqz v0, :cond_0
 
-    move-result-object v1
+    .line 29
+    check-cast p1, Landroid/widget/Button;
 
-    invoke-virtual {v1}, Landroid/widget/EditText;->getWindowToken()Landroid/os/IBinder;
+    .line 30
+    invoke-virtual {p1}, Landroid/widget/Button;->getTag()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v0
 
-    const/4 v2, 0x0
+    check-cast v0, Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
+    .line 31
+    new-instance v1, Landroid/content/Intent;
 
-    .line 131
+    const-string v2, "android.intent.action.VIEW"
+
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    invoke-direct {v1, v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    .line 32
+    iget-object v0, p0, Lcom/bbm/ui/activities/te;->a:Lcom/bbm/ui/activities/LegalActivity;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/LegalActivity;->startActivity(Landroid/content/Intent;)V
+
+    .line 34
+    :cond_0
     return-void
 .end method

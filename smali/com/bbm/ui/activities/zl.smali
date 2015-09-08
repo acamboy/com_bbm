@@ -1,104 +1,131 @@
 .class final Lcom/bbm/ui/activities/zl;
-.super Ljava/lang/Object;
-.source "NewGroupActivity.java"
-
-# interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.super Lcom/bbm/j/k;
+.source "PrivateConversationActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/NewGroupActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/NewGroupActivity;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/activities/PrivateConversationActivity;)V
+    .locals 1
 
     .prologue
-    .line 118
-    iput-object p1, p0, Lcom/bbm/ui/activities/zl;->a:Lcom/bbm/ui/activities/NewGroupActivity;
+    .line 1648
+    iput-object p1, p0, Lcom/bbm/ui/activities/zl;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 3
+.method protected final a()V
+    .locals 4
 
     .prologue
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    .line 120
-    iget-object v0, p0, Lcom/bbm/ui/activities/zl;->a:Lcom/bbm/ui/activities/NewGroupActivity;
+    .line 1651
+    iget-object v0, p0, Lcom/bbm/ui/activities/zl;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    invoke-static {v0, p2}, Lcom/bbm/ui/activities/NewGroupActivity;->a(Lcom/bbm/ui/activities/NewGroupActivity;Z)V
+    iget-object v0, v0, Lcom/bbm/ui/activities/PrivateConversationActivity;->i:Lcom/bbm/j/a;
 
-    .line 121
-    iget-object v0, p0, Lcom/bbm/ui/activities/zl;->a:Lcom/bbm/ui/activities/NewGroupActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewGroupActivity;->e(Lcom/bbm/ui/activities/NewGroupActivity;)Landroid/widget/Switch;
-
-    move-result-object v1
-
-    if-eqz p2, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/zl;->a:Lcom/bbm/ui/activities/NewGroupActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewGroupActivity;->c(Lcom/bbm/ui/activities/NewGroupActivity;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    :goto_0
-    invoke-virtual {v1, v0, v2, v2, v2}, Landroid/widget/Switch;->setCompoundDrawables(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    check-cast v0, Lcom/google/b/a/l;
 
-    .line 122
-    iget-object v0, p0, Lcom/bbm/ui/activities/zl;->a:Lcom/bbm/ui/activities/NewGroupActivity;
+    .line 1652
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Z
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewGroupActivity;->f(Lcom/bbm/ui/activities/NewGroupActivity;)Landroid/widget/TextView;
+    move-result v2
 
-    move-result-object v1
+    if-eqz v2, :cond_0
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/zl;->a:Lcom/bbm/ui/activities/NewGroupActivity;
+    .line 1653
+    invoke-virtual {v0}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/NewGroupActivity;->getResources()Landroid/content/res/Resources;
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/ie;
+
+    iget-object v0, v0, Lcom/bbm/d/ie;->z:Ljava/lang/String;
+
+    .line 1654
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v2
 
-    if-eqz p2, :cond_1
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    const v0, 0x7f0e02e6
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v3, "|"
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v3, p0, Lcom/bbm/ui/activities/zl;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
+
+    invoke-static {v3}, Lcom/bbm/ui/activities/PrivateConversationActivity;->j(Lcom/bbm/ui/activities/PrivateConversationActivity;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Lcom/bbm/d/a;->r(Ljava/lang/String;)Lcom/bbm/util/bo;
+
+    move-result-object v0
+
+    sget-object v2, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
+
+    if-ne v0, v2, :cond_1
+
+    const/4 v0, 0x1
+
+    .line 1655
+    :goto_0
+    iget-object v2, p0, Lcom/bbm/ui/activities/zl;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
+
+    invoke-static {v2}, Lcom/bbm/ui/activities/PrivateConversationActivity;->E(Lcom/bbm/ui/activities/PrivateConversationActivity;)Landroid/view/View;
+
+    move-result-object v2
+
+    if-eqz v0, :cond_2
 
     :goto_1
-    invoke-virtual {v2, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v2, v1}, Landroid/view/View;->setVisibility(I)V
 
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 123
-    iget-object v0, p0, Lcom/bbm/ui/activities/zl;->a:Lcom/bbm/ui/activities/NewGroupActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/NewGroupActivity;->a()V
-
-    .line 124
+    .line 1657
+    :cond_0
     return-void
 
-    .line 121
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/zl;->a:Lcom/bbm/ui/activities/NewGroupActivity;
+    :cond_1
+    move v0, v1
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewGroupActivity;->d(Lcom/bbm/ui/activities/NewGroupActivity;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
+    .line 1654
     goto :goto_0
 
-    .line 122
-    :cond_1
-    const v0, 0x7f0e02e5
+    .line 1655
+    :cond_2
+    const/16 v1, 0x8
 
     goto :goto_1
 .end method

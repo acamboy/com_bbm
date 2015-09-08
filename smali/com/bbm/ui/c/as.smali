@@ -1,80 +1,51 @@
 .class final Lcom/bbm/ui/c/as;
-.super Ljava/lang/Object;
-.source "ChannelDetailsFragment.java"
+.super Lcom/bbm/ui/c/au;
+.source "BlockedContactsFragment.java"
 
-# interfaces
-.implements Landroid/view/View$OnFocusChangeListener;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/ui/c/aq",
+        "<TT;TK;>.com/bbm/ui/c/au<TK;>;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/ag;
+.field final synthetic b:Lcom/bbm/ui/c/aq;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/ag;)V
+.method constructor <init>(Lcom/bbm/ui/c/aq;Landroid/content/Context;Lcom/bbm/j/r;)V
     .locals 0
 
     .prologue
-    .line 128
-    iput-object p1, p0, Lcom/bbm/ui/c/as;->a:Lcom/bbm/ui/c/ag;
+    .line 140
+    iput-object p1, p0, Lcom/bbm/ui/c/as;->b:Lcom/bbm/ui/c/aq;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2, p3}, Lcom/bbm/ui/c/au;-><init>(Lcom/bbm/ui/c/aq;Landroid/content/Context;Lcom/bbm/j/r;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onFocusChange(Landroid/view/View;Z)V
-    .locals 3
+.method protected final a(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)TK;"
+        }
+    .end annotation
 
     .prologue
-    const/16 v2, 0xf
+    .line 144
+    iget-object v0, p0, Lcom/bbm/ui/c/as;->b:Lcom/bbm/ui/c/aq;
 
-    .line 132
-    if-nez p2, :cond_0
+    invoke-virtual {v0, p1}, Lcom/bbm/ui/c/aq;->d(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-object v0, p1
+    move-result-object v0
 
-    .line 133
-    check-cast v0, Landroid/widget/EditText;
-
-    .line 134
-    const v1, 0x7f0200fd
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setBackgroundResource(I)V
-
-    .line 135
-    invoke-virtual {v0, v2, v2, v2, v2}, Landroid/widget/EditText;->setPadding(IIII)V
-
-    .line 136
-    check-cast p1, Landroid/widget/EditText;
-
-    invoke-virtual {p1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 137
-    invoke-static {v1}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 138
-    iget-object v1, p0, Lcom/bbm/ui/c/as;->a:Lcom/bbm/ui/c/ag;
-
-    invoke-static {v1}, Lcom/bbm/ui/c/ag;->c(Lcom/bbm/ui/c/ag;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-
-    .line 141
-    :cond_0
-    return-void
+    return-object v0
 .end method

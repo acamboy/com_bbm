@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_overflow_invite" android:id="@id/actionmode_add_contacts" android:title="@string/outer_circle_contact_menu_add_as_contact" app:showAsAction="always" />
+</menu>

@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private bt:Ljava/util/concurrent/Semaphore;
+.field private bv:Ljava/util/concurrent/Semaphore;
 
 
 # direct methods
@@ -25,7 +25,7 @@
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/Semaphore;-><init>(I)V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ah;->bt:Ljava/util/concurrent/Semaphore;
+    iput-object v0, p0, Lcom/glympse/android/hal/ah;->bv:Ljava/util/concurrent/Semaphore;
 
     .line 18
     return-void
@@ -39,7 +39,7 @@
     .prologue
     .line 24
     :try_start_0
-    iget-object v0, p0, Lcom/glympse/android/hal/ah;->bt:Ljava/util/concurrent/Semaphore;
+    iget-object v0, p0, Lcom/glympse/android/hal/ah;->bv:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->acquire()V
     :try_end_0
@@ -60,7 +60,7 @@
 
     .prologue
     .line 33
-    iget-object v0, p0, Lcom/glympse/android/hal/ah;->bt:Ljava/util/concurrent/Semaphore;
+    iget-object v0, p0, Lcom/glympse/android/hal/ah;->bv:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/Semaphore;->release(I)V
 

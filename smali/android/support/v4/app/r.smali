@@ -67,7 +67,7 @@
 
     iget-object v0, v0, Landroid/support/v4/app/q;->mFragments:Landroid/support/v4/app/w;
 
-    invoke-virtual {v0}, Landroid/support/v4/app/w;->d()Z
+    invoke-virtual {v0}, Landroid/support/v4/app/w;->f()Z
 
     goto :goto_0
 

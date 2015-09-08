@@ -1,222 +1,208 @@
 .class final Lcom/bbm/ui/activities/iz;
 .super Ljava/lang/Object;
-.source "ConversationActivity.java"
+.source "FilePickerActivity.java"
 
 # interfaces
-.implements Lcom/bbm/j/s;
+.implements Ljava/util/Comparator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Ljava/io/File;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/iy;
+
+.field private final b:I
+
+.field private final c:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
+.method public constructor <init>(Lcom/bbm/ui/activities/iy;IZ)V
     .locals 0
 
     .prologue
-    .line 4537
-    iput-object p1, p0, Lcom/bbm/ui/activities/iz;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 633
+    iput-object p1, p0, Lcom/bbm/ui/activities/iz;->a:Lcom/bbm/ui/activities/iy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 634
+    iput p2, p0, Lcom/bbm/ui/activities/iz;->b:I
+
+    .line 635
+    iput-boolean p3, p0, Lcom/bbm/ui/activities/iz;->c:Z
+
+    .line 636
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 7
+.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 4
 
     .prologue
-    const/4 v2, 0x0
+    .line 628
+    check-cast p1, Ljava/io/File;
 
-    const/4 v1, 0x1
+    check-cast p2, Ljava/io/File;
 
-    .line 4541
-    iget-object v0, p0, Lcom/bbm/ui/activities/iz;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->w(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/j/a;
+    invoke-virtual {p1}, Ljava/io/File;->isDirectory()Z
 
-    move-result-object v0
+    move-result v1
 
-    if-nez v0, :cond_0
+    if-eqz v1, :cond_1
 
-    move v0, v1
+    invoke-virtual {p2}, Ljava/io/File;->isFile()Z
 
-    .line 4575
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/4 v0, -0x1
+
+    :cond_0
     :goto_0
     return v0
 
-    .line 4545
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/iz;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->w(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/j/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/eu;
-
-    .line 4547
-    if-nez v0, :cond_1
-
-    move v0, v1
-
-    .line 4548
-    goto :goto_0
-
-    .line 4551
     :cond_1
-    iget-object v3, p0, Lcom/bbm/ui/activities/iz;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    invoke-virtual {p1}, Ljava/io/File;->isFile()Z
 
-    iget-object v3, v3, Lcom/bbm/ui/activities/ConversationActivity;->d:Landroid/content/SharedPreferences;
+    move-result v1
 
-    const-string v4, "has_shown_timed_message_tips"
+    if-eqz v1, :cond_2
 
-    invoke-interface {v3, v4, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-virtual {p2}, Ljava/io/File;->isDirectory()Z
 
-    move-result v3
+    move-result v1
 
-    .line 4552
-    invoke-static {}, Lcom/bbm/Alaska;->l()Lcom/bbm/ag;
+    if-eqz v1, :cond_2
 
-    move-result-object v4
+    const/4 v0, 0x1
 
-    invoke-virtual {v4}, Lcom/bbm/ag;->u()Z
-
-    move-result v4
-
-    .line 4554
-    iget-object v5, v0, Lcom/bbm/d/eu;->u:Lcom/bbm/util/bi;
-
-    sget-object v6, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
-
-    if-ne v5, v6, :cond_7
-
-    .line 4555
-    iget-boolean v2, v0, Lcom/bbm/d/eu;->i:Z
-
-    if-nez v2, :cond_4
-
-    iget-boolean v2, v0, Lcom/bbm/d/eu;->k:Z
-
-    if-nez v2, :cond_4
-
-    if-eqz v4, :cond_4
-
-    if-nez v3, :cond_4
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/iz;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/ConversationActivity;->az(Lcom/bbm/ui/activities/ConversationActivity;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/iz;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/ConversationActivity;->n(Lcom/bbm/ui/activities/ConversationActivity;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    .line 4557
-    :cond_2
-    iget-object v0, p0, Lcom/bbm/ui/activities/iz;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->aV(Lcom/bbm/ui/activities/ConversationActivity;)V
-
-    :cond_3
-    :goto_1
-    move v0, v1
-
-    .line 4573
     goto :goto_0
 
-    .line 4558
-    :cond_4
-    invoke-static {}, Lcom/bbm/Alaska;->l()Lcom/bbm/ag;
+    :cond_2
+    sget-object v1, Lcom/bbm/ui/activities/iv;->a:[I
 
-    move-result-object v2
+    iget v2, p0, Lcom/bbm/ui/activities/iz;->b:I
 
-    invoke-virtual {v2}, Lcom/bbm/ag;->t()Z
+    add-int/lit8 v2, v2, -0x1
 
-    move-result v2
+    aget v1, v1, v2
 
-    if-nez v2, :cond_5
+    packed-switch v1, :pswitch_data_0
 
-    iget-wide v2, v0, Lcom/bbm/d/eu;->p:J
+    :goto_1
+    iget-boolean v1, p0, Lcom/bbm/ui/activities/iz;->c:Z
 
-    const-wide/16 v4, 0x0
+    if-nez v1, :cond_0
 
-    cmp-long v0, v2, v4
+    neg-int v0, v0
 
-    if-nez v0, :cond_3
+    goto :goto_0
 
-    .line 4559
-    :cond_5
-    iget-object v0, p0, Lcom/bbm/ui/activities/iz;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    :pswitch_0
+    invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->aW(Lcom/bbm/ui/activities/ConversationActivity;)Z
+    move-result-object v0
+
+    invoke-virtual {p2}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
 
     move-result v0
 
-    if-nez v0, :cond_6
+    goto :goto_1
 
-    .line 4560
-    iget-object v0, p0, Lcom/bbm/ui/activities/iz;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    :pswitch_1
+    invoke-virtual {p1}, Ljava/io/File;->lastModified()J
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->B(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/os/Handler;
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    new-instance v2, Lcom/bbm/ui/activities/ja;
+    invoke-virtual {p2}, Ljava/io/File;->lastModified()J
 
-    invoke-direct {v2, p0}, Lcom/bbm/ui/activities/ja;-><init>(Lcom/bbm/ui/activities/iz;)V
+    move-result-wide v2
 
-    const-wide/16 v4, 0xc8
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {v0, v2, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    move-result-object v1
 
-    goto :goto_1
+    invoke-virtual {v0, v1}, Ljava/lang/Long;->compareTo(Ljava/lang/Long;)I
 
-    .line 4570
-    :cond_6
-    iget-object v0, p0, Lcom/bbm/ui/activities/iz;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->aX(Lcom/bbm/ui/activities/ConversationActivity;)Z
+    move-result v0
 
     goto :goto_1
 
-    .line 4575
-    :cond_7
-    iget-object v0, v0, Lcom/bbm/d/eu;->u:Lcom/bbm/util/bi;
+    :pswitch_2
+    invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
-    sget-object v3, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
+    move-result-object v0
 
-    if-eq v0, v3, :cond_8
+    invoke-static {v0}, Lcom/google/b/d/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
-    move v0, v1
+    move-result-object v0
 
-    goto/16 :goto_0
+    invoke-virtual {p2}, Ljava/io/File;->getName()Ljava/lang/String;
 
-    :cond_8
-    move v0, v2
+    move-result-object v1
 
-    goto/16 :goto_0
+    invoke-static {v1}, Lcom/google/b/d/c;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
+
+    move-result v0
+
+    goto :goto_1
+
+    :pswitch_3
+    invoke-virtual {p1}, Ljava/io/File;->length()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-virtual {p2}, Ljava/io/File;->length()J
+
+    move-result-wide v2
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/Long;->compareTo(Ljava/lang/Long;)I
+
+    move-result v0
+
+    goto :goto_1
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+    .end packed-switch
 .end method

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_add_person" android:id="@id/actionmode_add_contacts" android:title="@string/outer_circle_contact_menu_add_as_contact" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_invite_group" android:id="@id/actionmode_invite_to_group" android:title="@string/contacts_invite_to_group" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_delete" android:id="@id/actionmode_delete_block" android:title="@string/outer_circle_contact_menu_delete_and_block" app:showAsAction="always" />
+</menu>

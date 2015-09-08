@@ -1,99 +1,66 @@
 .class final Lcom/bbm/ui/activities/tf;
-.super Ljava/lang/Object;
-.source "GroupPictureUploadActivity.java"
-
-# interfaces
-.implements Landroid/text/TextWatcher;
+.super Lcom/bbm/j/k;
+.source "MainActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
+    .locals 1
 
     .prologue
-    .line 134
-    iput-object p1, p0, Lcom/bbm/ui/activities/tf;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
+    .line 165
+    iput-object p1, p0, Lcom/bbm/ui/activities/tf;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
-    .locals 0
+.method protected final a()V
+    .locals 3
 
     .prologue
-    .line 138
-    return-void
-.end method
+    .line 168
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
 
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
+    invoke-static {}, Lcom/bbm/Alaska;->v()Z
 
-    .prologue
-    .line 142
-    return-void
-.end method
-
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 2
-
-    .prologue
-    .line 146
-    iget-object v0, p0, Lcom/bbm/ui/activities/tf;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->e(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Lcom/bbm/ui/HeaderButtonActionBar;
-
-    move-result-object v1
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/tf;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->d(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Landroid/widget/EditText;
+    .line 169
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->length()I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/HeaderButtonActionBar;->setPositiveButtonEnabled(Z)V
-
-    .line 147
-    iget-object v0, p0, Lcom/bbm/ui/activities/tf;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/tf;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->d(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Landroid/widget/EditText;
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    invoke-virtual {v1}, Lcom/bbm/d/a;->i()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    iget-object v2, v0, Lcom/bbm/Alaska;->g:Lcom/bbm/r;
 
-    move-result-object v1
+    if-eqz v2, :cond_0
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->a(Lcom/bbm/ui/activities/GroupPictureUploadActivity;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/Alaska;->g:Lcom/bbm/r;
 
-    .line 148
-    return-void
+    iget-object v0, v0, Lcom/bbm/r;->a:Lcom/bbm/BbmService;
 
-    .line 146
+    invoke-static {v0}, Lcom/bbm/BbmService;->a(Lcom/bbm/BbmService;)Lcom/bbm/f/ad;
+
+    move-result-object v0
+
+    invoke-interface {v0, v1}, Lcom/bbm/f/ad;->a(Ljava/lang/String;)V
+
+    .line 173
     :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-void
 .end method

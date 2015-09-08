@@ -1,8 +1,8 @@
-.class public interface abstract Lcom/bbm/ui/gv;
+.class interface abstract Lcom/bbm/ui/gv;
 .super Ljava/lang/Object;
-.source "StickerPicker.java"
+.source "StickerItemView.java"
 
 
 # virtual methods
-.method public abstract a(Lcom/bbm/d/gh;I)V
+.method public abstract a(Lcom/bbm/d/gh;Ljava/lang/String;)V
 .end method

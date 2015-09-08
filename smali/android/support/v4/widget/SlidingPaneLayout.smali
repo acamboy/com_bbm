@@ -4,41 +4,41 @@
 
 
 # static fields
-.field static final b:Landroid/support/v4/widget/ap;
+.field static final a:Landroid/support/v4/widget/bb;
 
 
 # instance fields
-.field a:Landroid/support/v4/widget/an;
+.field private b:I
 
 .field private c:I
 
-.field private d:I
+.field private d:Landroid/graphics/drawable/Drawable;
 
 .field private e:Landroid/graphics/drawable/Drawable;
 
-.field private f:Landroid/graphics/drawable/Drawable;
+.field private final f:I
 
-.field private final g:I
+.field private g:Z
 
-.field private h:Z
+.field private h:Landroid/view/View;
 
-.field private i:Landroid/view/View;
+.field private i:F
 
 .field private j:F
 
-.field private k:F
+.field private k:I
 
-.field private l:I
+.field private l:Z
 
-.field private m:Z
+.field private m:I
 
-.field private n:I
+.field private n:F
 
 .field private o:F
 
-.field private p:F
+.field private p:Landroid/support/v4/widget/az;
 
-.field private final q:Landroid/support/v4/widget/bc;
+.field private final q:Landroid/support/v4/widget/bo;
 
 .field private r:Z
 
@@ -51,7 +51,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Landroid/support/v4/widget/ak;",
+            "Landroid/support/v4/widget/aw;",
             ">;"
         }
     .end annotation
@@ -72,11 +72,11 @@
     if-lt v0, v1, :cond_0
 
     .line 200
-    new-instance v0, Landroid/support/v4/widget/as;
+    new-instance v0, Landroid/support/v4/widget/be;
 
-    invoke-direct {v0}, Landroid/support/v4/widget/as;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/widget/be;-><init>()V
 
-    sput-object v0, Landroid/support/v4/widget/SlidingPaneLayout;->b:Landroid/support/v4/widget/ap;
+    sput-object v0, Landroid/support/v4/widget/SlidingPaneLayout;->a:Landroid/support/v4/widget/bb;
 
     .line 206
     :goto_0
@@ -89,21 +89,21 @@
     if-lt v0, v1, :cond_1
 
     .line 202
-    new-instance v0, Landroid/support/v4/widget/ar;
+    new-instance v0, Landroid/support/v4/widget/bd;
 
-    invoke-direct {v0}, Landroid/support/v4/widget/ar;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/widget/bd;-><init>()V
 
-    sput-object v0, Landroid/support/v4/widget/SlidingPaneLayout;->b:Landroid/support/v4/widget/ap;
+    sput-object v0, Landroid/support/v4/widget/SlidingPaneLayout;->a:Landroid/support/v4/widget/bb;
 
     goto :goto_0
 
     .line 204
     :cond_1
-    new-instance v0, Landroid/support/v4/widget/aq;
+    new-instance v0, Landroid/support/v4/widget/bc;
 
-    invoke-direct {v0}, Landroid/support/v4/widget/aq;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/widget/bc;-><init>()V
 
-    sput-object v0, Landroid/support/v4/widget/SlidingPaneLayout;->b:Landroid/support/v4/widget/ap;
+    sput-object v0, Landroid/support/v4/widget/SlidingPaneLayout;->a:Landroid/support/v4/widget/bb;
 
     goto :goto_0
 .end method
@@ -142,7 +142,7 @@
 
     const/4 v3, 0x0
 
-    const/high16 v2, 0x3f000000
+    const/high16 v2, 0x3f000000    # 0.5f
 
     .line 258
     invoke-direct {p0, p1, p2, p3}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -150,7 +150,7 @@
     .line 108
     const v0, -0x33333334
 
-    iput v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->c:I
+    iput v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->b:I
 
     .line 188
     iput-boolean v4, p0, Landroid/support/v4/widget/SlidingPaneLayout;->s:Z
@@ -181,7 +181,7 @@
     iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
     .line 261
-    const/high16 v1, 0x42000000
+    const/high16 v1, 0x42000000    # 32.0f
 
     mul-float/2addr v1, v0
 
@@ -189,7 +189,7 @@
 
     float-to-int v1, v1
 
-    iput v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->g:I
+    iput v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->f:I
 
     .line 263
     invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
@@ -198,34 +198,34 @@
     invoke-virtual {p0, v3}, Landroid/support/v4/widget/SlidingPaneLayout;->setWillNotDraw(Z)V
 
     .line 267
-    new-instance v1, Landroid/support/v4/widget/aj;
+    new-instance v1, Landroid/support/v4/widget/av;
 
-    invoke-direct {v1, p0}, Landroid/support/v4/widget/aj;-><init>(Landroid/support/v4/widget/SlidingPaneLayout;)V
+    invoke-direct {v1, p0}, Landroid/support/v4/widget/av;-><init>(Landroid/support/v4/widget/SlidingPaneLayout;)V
 
-    invoke-static {p0, v1}, Landroid/support/v4/view/as;->a(Landroid/view/View;Landroid/support/v4/view/a;)V
+    invoke-static {p0, v1}, Landroid/support/v4/view/bf;->a(Landroid/view/View;Landroid/support/v4/view/a;)V
 
     .line 268
-    invoke-static {p0, v4}, Landroid/support/v4/view/as;->b(Landroid/view/View;I)V
+    invoke-static {p0, v4}, Landroid/support/v4/view/bf;->c(Landroid/view/View;I)V
 
     .line 270
-    new-instance v1, Landroid/support/v4/widget/al;
+    new-instance v1, Landroid/support/v4/widget/ax;
 
-    invoke-direct {v1, p0, v3}, Landroid/support/v4/widget/al;-><init>(Landroid/support/v4/widget/SlidingPaneLayout;B)V
+    invoke-direct {v1, p0, v3}, Landroid/support/v4/widget/ax;-><init>(Landroid/support/v4/widget/SlidingPaneLayout;B)V
 
-    invoke-static {p0, v2, v1}, Landroid/support/v4/widget/bc;->a(Landroid/view/ViewGroup;FLandroid/support/v4/widget/bf;)Landroid/support/v4/widget/bc;
+    invoke-static {p0, v2, v1}, Landroid/support/v4/widget/bo;->a(Landroid/view/ViewGroup;FLandroid/support/v4/widget/br;)Landroid/support/v4/widget/bo;
 
     move-result-object v1
 
-    iput-object v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bc;
+    iput-object v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bo;
 
     .line 271
-    iget-object v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bc;
+    iget-object v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bo;
 
-    const/high16 v2, 0x43c80000
+    const/high16 v2, 0x43c80000    # 400.0f
 
     mul-float/2addr v0, v2
 
-    iput v0, v1, Landroid/support/v4/widget/bc;->h:F
+    iput v0, v1, Landroid/support/v4/widget/bo;->h:F
 
     .line 272
     return-void
@@ -236,13 +236,13 @@
 
     .prologue
     .line 89
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Landroid/view/View;
 
     if-nez v0, :cond_1
 
     const/4 v0, 0x0
 
-    iput v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->j:F
+    iput v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:F
 
     :cond_0
     :goto_0
@@ -253,15 +253,15 @@
 
     move-result v3
 
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/v4/widget/am;
+    check-cast v0, Landroid/support/v4/widget/ay;
 
-    iget-object v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
+    iget-object v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getWidth()I
 
@@ -278,7 +278,7 @@
     sub-int p1, v2, v1
 
     :cond_2
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_4
 
     invoke-virtual {p0}, Landroid/support/v4/widget/SlidingPaneLayout;->getPaddingRight()I
 
@@ -287,9 +287,9 @@
     move v2, v1
 
     :goto_1
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_5
 
-    iget v1, v0, Landroid/support/v4/widget/am;->rightMargin:I
+    iget v1, v0, Landroid/support/v4/widget/ay;->rightMargin:I
 
     :goto_2
     add-int/2addr v1, v2
@@ -298,49 +298,38 @@
 
     int-to-float v1, v1
 
-    iget v2, p0, Landroid/support/v4/widget/SlidingPaneLayout;->l:I
+    iget v2, p0, Landroid/support/v4/widget/SlidingPaneLayout;->k:I
 
     int-to-float v2, v2
 
     div-float/2addr v1, v2
 
-    iput v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->j:F
+    iput v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:F
 
-    iget v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->n:I
+    iget v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->m:I
 
     if-eqz v1, :cond_3
 
-    iget v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->j:F
+    iget v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:F
 
     invoke-direct {p0, v1}, Landroid/support/v4/widget/SlidingPaneLayout;->b(F)V
 
     :cond_3
-    iget-boolean v0, v0, Landroid/support/v4/widget/am;->c:Z
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
-
-    iget v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->j:F
-
-    iget v2, p0, Landroid/support/v4/widget/SlidingPaneLayout;->c:I
-
-    invoke-direct {p0, v0, v1, v2}, Landroid/support/v4/widget/SlidingPaneLayout;->a(Landroid/view/View;FI)V
-
-    :cond_4
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
-
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->a:Landroid/support/v4/widget/an;
+    iget-boolean v0, v0, Landroid/support/v4/widget/ay;->c:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->a:Landroid/support/v4/widget/an;
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Landroid/view/View;
 
-    iget v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->j:F
+    iget v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:F
+
+    iget v2, p0, Landroid/support/v4/widget/SlidingPaneLayout;->b:I
+
+    invoke-direct {p0, v0, v1, v2}, Landroid/support/v4/widget/SlidingPaneLayout;->a(Landroid/view/View;FI)V
 
     goto :goto_0
 
-    :cond_5
+    :cond_4
     invoke-virtual {p0}, Landroid/support/v4/widget/SlidingPaneLayout;->getPaddingLeft()I
 
     move-result v1
@@ -349,8 +338,8 @@
 
     goto :goto_1
 
-    :cond_6
-    iget v1, v0, Landroid/support/v4/widget/am;->leftMargin:I
+    :cond_5
+    iget v1, v0, Landroid/support/v4/widget/ay;->leftMargin:I
 
     goto :goto_2
 .end method
@@ -376,7 +365,7 @@
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/v4/widget/am;
+    check-cast v0, Landroid/support/v4/widget/ay;
 
     .line 970
     const/4 v1, 0x0
@@ -411,7 +400,7 @@
     or-int/2addr v1, v2
 
     .line 974
-    iget-object v2, v0, Landroid/support/v4/widget/am;->d:Landroid/graphics/Paint;
+    iget-object v2, v0, Landroid/support/v4/widget/ay;->d:Landroid/graphics/Paint;
 
     if-nez v2, :cond_0
 
@@ -420,11 +409,11 @@
 
     invoke-direct {v2}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v2, v0, Landroid/support/v4/widget/am;->d:Landroid/graphics/Paint;
+    iput-object v2, v0, Landroid/support/v4/widget/ay;->d:Landroid/graphics/Paint;
 
     .line 977
     :cond_0
-    iget-object v2, v0, Landroid/support/v4/widget/am;->d:Landroid/graphics/Paint;
+    iget-object v2, v0, Landroid/support/v4/widget/ay;->d:Landroid/graphics/Paint;
 
     new-instance v3, Landroid/graphics/PorterDuffColorFilter;
 
@@ -435,16 +424,16 @@
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
     .line 978
-    invoke-static {p1}, Landroid/support/v4/view/as;->e(Landroid/view/View;)I
+    invoke-static {p1}, Landroid/support/v4/view/bf;->g(Landroid/view/View;)I
 
     move-result v1
 
     if-eq v1, v5, :cond_1
 
     .line 979
-    iget-object v0, v0, Landroid/support/v4/widget/am;->d:Landroid/graphics/Paint;
+    iget-object v0, v0, Landroid/support/v4/widget/ay;->d:Landroid/graphics/Paint;
 
-    invoke-static {p1, v5, v0}, Landroid/support/v4/view/as;->a(Landroid/view/View;ILandroid/graphics/Paint;)V
+    invoke-static {p1, v5, v0}, Landroid/support/v4/view/bf;->a(Landroid/view/View;ILandroid/graphics/Paint;)V
 
     .line 981
     :cond_1
@@ -457,19 +446,19 @@
 
     .line 982
     :cond_3
-    invoke-static {p1}, Landroid/support/v4/view/as;->e(Landroid/view/View;)I
+    invoke-static {p1}, Landroid/support/v4/view/bf;->g(Landroid/view/View;)I
 
     move-result v1
 
     if-eqz v1, :cond_2
 
     .line 983
-    iget-object v1, v0, Landroid/support/v4/widget/am;->d:Landroid/graphics/Paint;
+    iget-object v1, v0, Landroid/support/v4/widget/ay;->d:Landroid/graphics/Paint;
 
     if-eqz v1, :cond_4
 
     .line 984
-    iget-object v0, v0, Landroid/support/v4/widget/am;->d:Landroid/graphics/Paint;
+    iget-object v0, v0, Landroid/support/v4/widget/ay;->d:Landroid/graphics/Paint;
 
     const/4 v1, 0x0
 
@@ -477,9 +466,9 @@
 
     .line 986
     :cond_4
-    new-instance v0, Landroid/support/v4/widget/ak;
+    new-instance v0, Landroid/support/v4/widget/aw;
 
-    invoke-direct {v0, p0, p1}, Landroid/support/v4/widget/ak;-><init>(Landroid/support/v4/widget/SlidingPaneLayout;Landroid/view/View;)V
+    invoke-direct {v0, p0, p1}, Landroid/support/v4/widget/aw;-><init>(Landroid/support/v4/widget/SlidingPaneLayout;Landroid/view/View;)V
 
     .line 987
     iget-object v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->u:Ljava/util/ArrayList;
@@ -487,7 +476,7 @@
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 988
-    invoke-static {p0, v0}, Landroid/support/v4/view/as;->a(Landroid/view/View;Ljava/lang/Runnable;)V
+    invoke-static {p0, v0}, Landroid/support/v4/view/bf;->a(Landroid/view/View;Ljava/lang/Runnable;)V
 
     goto :goto_0
 .end method
@@ -499,7 +488,7 @@
     const/4 v1, 0x0
 
     .line 1048
-    iget-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Z
+    iget-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->g:Z
 
     if-nez v0, :cond_0
 
@@ -516,13 +505,13 @@
     move-result v2
 
     .line 1054
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/v4/widget/am;
+    check-cast v0, Landroid/support/v4/widget/ay;
 
     .line 1057
     if-eqz v2, :cond_1
@@ -532,12 +521,12 @@
 
     move-result v2
 
-    iget v0, v0, Landroid/support/v4/widget/am;->rightMargin:I
+    iget v0, v0, Landroid/support/v4/widget/ay;->rightMargin:I
 
     add-int/2addr v0, v2
 
     .line 1059
-    iget-object v2, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
+    iget-object v2, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->getWidth()I
 
@@ -552,7 +541,7 @@
 
     int-to-float v0, v0
 
-    iget v4, p0, Landroid/support/v4/widget/SlidingPaneLayout;->l:I
+    iget v4, p0, Landroid/support/v4/widget/SlidingPaneLayout;->k:I
 
     int-to-float v4, v4
 
@@ -570,17 +559,17 @@
 
     .line 1066
     :goto_1
-    iget-object v2, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bc;
+    iget-object v2, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bo;
 
-    iget-object v3, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
+    iget-object v3, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Landroid/view/View;
 
-    iget-object v4, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
+    iget-object v4, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Landroid/view/View;
 
     invoke-virtual {v4}, Landroid/view/View;->getTop()I
 
     move-result v4
 
-    invoke-virtual {v2, v3, v0, v4}, Landroid/support/v4/widget/bc;->a(Landroid/view/View;II)Z
+    invoke-virtual {v2, v3, v0, v4}, Landroid/support/v4/widget/bo;->a(Landroid/view/View;II)Z
 
     move-result v0
 
@@ -590,7 +579,7 @@
     invoke-virtual {p0}, Landroid/support/v4/widget/SlidingPaneLayout;->a()V
 
     .line 1068
-    invoke-static {p0}, Landroid/support/v4/view/as;->c(Landroid/view/View;)V
+    invoke-static {p0}, Landroid/support/v4/view/bf;->d(Landroid/view/View;)V
 
     .line 1069
     const/4 v0, 0x1
@@ -603,14 +592,14 @@
 
     move-result v2
 
-    iget v0, v0, Landroid/support/v4/widget/am;->leftMargin:I
+    iget v0, v0, Landroid/support/v4/widget/ay;->leftMargin:I
 
     add-int/2addr v0, v2
 
     .line 1063
     int-to-float v0, v0
 
-    iget v2, p0, Landroid/support/v4/widget/SlidingPaneLayout;->l:I
+    iget v2, p0, Landroid/support/v4/widget/SlidingPaneLayout;->k:I
 
     int-to-float v2, v2
 
@@ -634,7 +623,7 @@
 
     .prologue
     .line 89
-    iget-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->m:Z
+    iget-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->l:Z
 
     return v0
 .end method
@@ -649,12 +638,12 @@
     return p1
 .end method
 
-.method static synthetic b(Landroid/support/v4/widget/SlidingPaneLayout;)Landroid/support/v4/widget/bc;
+.method static synthetic b(Landroid/support/v4/widget/SlidingPaneLayout;)Landroid/support/v4/widget/bo;
     .locals 1
 
     .prologue
     .line 89
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bc;
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bo;
 
     return-object v0
 .end method
@@ -665,7 +654,7 @@
     .prologue
     const/4 v1, 0x0
 
-    const/high16 v8, 0x3f800000
+    const/high16 v8, 0x3f800000    # 1.0f
 
     .line 1186
     invoke-direct {p0}, Landroid/support/v4/widget/SlidingPaneLayout;->c()Z
@@ -673,22 +662,22 @@
     move-result v3
 
     .line 1187
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/v4/widget/am;
+    check-cast v0, Landroid/support/v4/widget/ay;
 
     .line 1188
-    iget-boolean v2, v0, Landroid/support/v4/widget/am;->c:Z
+    iget-boolean v2, v0, Landroid/support/v4/widget/ay;->c:Z
 
     if-eqz v2, :cond_3
 
     if-eqz v3, :cond_2
 
-    iget v0, v0, Landroid/support/v4/widget/am;->rightMargin:I
+    iget v0, v0, Landroid/support/v4/widget/ay;->rightMargin:I
 
     :goto_0
     if-gtz v0, :cond_3
@@ -713,16 +702,16 @@
     move-result-object v5
 
     .line 1193
-    iget-object v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
+    iget-object v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Landroid/view/View;
 
     if-eq v5, v1, :cond_1
 
     .line 1195
-    iget v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->k:F
+    iget v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->j:F
 
     sub-float v1, v8, v1
 
-    iget v6, p0, Landroid/support/v4/widget/SlidingPaneLayout;->n:I
+    iget v6, p0, Landroid/support/v4/widget/SlidingPaneLayout;->m:I
 
     int-to-float v6, v6
 
@@ -731,12 +720,12 @@
     float-to-int v1, v1
 
     .line 1196
-    iput p1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->k:F
+    iput p1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->j:F
 
     .line 1197
     sub-float v6, v8, p1
 
-    iget v7, p0, Landroid/support/v4/widget/SlidingPaneLayout;->n:I
+    iget v7, p0, Landroid/support/v4/widget/SlidingPaneLayout;->m:I
 
     int-to-float v7, v7
 
@@ -761,12 +750,12 @@
     .line 1203
     if-eqz v3, :cond_4
 
-    iget v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->k:F
+    iget v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->j:F
 
     sub-float/2addr v1, v8
 
     :goto_3
-    iget v6, p0, Landroid/support/v4/widget/SlidingPaneLayout;->d:I
+    iget v6, p0, Landroid/support/v4/widget/SlidingPaneLayout;->c:I
 
     invoke-direct {p0, v5, v1, v6}, Landroid/support/v4/widget/SlidingPaneLayout;->a(Landroid/view/View;FI)V
 
@@ -780,7 +769,7 @@
 
     .line 1188
     :cond_2
-    iget v0, v0, Landroid/support/v4/widget/am;->leftMargin:I
+    iget v0, v0, Landroid/support/v4/widget/ay;->leftMargin:I
 
     goto :goto_0
 
@@ -791,7 +780,7 @@
 
     .line 1203
     :cond_4
-    iget v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->k:F
+    iget v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->j:F
 
     sub-float v1, v8, v1
 
@@ -838,7 +827,7 @@
 
     .prologue
     .line 89
-    iget v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->j:F
+    iget v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:F
 
     return v0
 .end method
@@ -848,9 +837,9 @@
 
     .prologue
     .line 1038
-    sget-object v0, Landroid/support/v4/widget/SlidingPaneLayout;->b:Landroid/support/v4/widget/ap;
+    sget-object v0, Landroid/support/v4/widget/SlidingPaneLayout;->a:Landroid/support/v4/widget/bb;
 
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/widget/ap;->a(Landroid/support/v4/widget/SlidingPaneLayout;Landroid/view/View;)V
+    invoke-interface {v0, p0, p1}, Landroid/support/v4/widget/bb;->a(Landroid/support/v4/widget/SlidingPaneLayout;Landroid/view/View;)V
 
     .line 1039
     return-void
@@ -863,7 +852,7 @@
     const/4 v0, 0x1
 
     .line 1642
-    invoke-static {p0}, Landroid/support/v4/view/as;->f(Landroid/view/View;)I
+    invoke-static {p0}, Landroid/support/v4/view/bf;->h(Landroid/view/View;)I
 
     move-result v1
 
@@ -883,7 +872,7 @@
 
     .prologue
     .line 89
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Landroid/view/View;
 
     return-object v0
 .end method
@@ -905,7 +894,7 @@
 
     .prologue
     .line 89
-    iget v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->l:I
+    iget v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->k:I
 
     return v0
 .end method
@@ -1016,7 +1005,7 @@
     .line 364
     if-eqz p1, :cond_5
 
-    invoke-static/range {p1 .. p1}, Landroid/support/v4/view/as;->h(Landroid/view/View;)Z
+    invoke-static/range {p1 .. p1}, Landroid/support/v4/view/bf;->j(Landroid/view/View;)Z
 
     move-result v2
 
@@ -1261,18 +1250,18 @@
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/v4/widget/am;
+    check-cast v0, Landroid/support/v4/widget/ay;
 
     .line 1248
-    iget-boolean v2, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Z
+    iget-boolean v2, p0, Landroid/support/v4/widget/SlidingPaneLayout;->g:Z
 
     if-eqz v2, :cond_1
 
-    iget-boolean v0, v0, Landroid/support/v4/widget/am;->c:Z
+    iget-boolean v0, v0, Landroid/support/v4/widget/ay;->c:Z
 
     if-eqz v0, :cond_1
 
-    iget v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->j:F
+    iget v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:F
 
     const/4 v2, 0x0
 
@@ -1295,7 +1284,7 @@
 
     .prologue
     .line 1265
-    instance-of v0, p1, Landroid/support/v4/widget/am;
+    instance-of v0, p1, Landroid/support/v4/widget/ay;
 
     if-eqz v0, :cond_0
 
@@ -1321,23 +1310,23 @@
 
     .prologue
     .line 1076
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bc;
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bo;
 
-    invoke-virtual {v0}, Landroid/support/v4/widget/bc;->c()Z
+    invoke-virtual {v0}, Landroid/support/v4/widget/bo;->c()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 1077
-    iget-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Z
+    iget-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->g:Z
 
     if-nez v0, :cond_1
 
     .line 1078
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bc;
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bo;
 
-    invoke-virtual {v0}, Landroid/support/v4/widget/bc;->b()V
+    invoke-virtual {v0}, Landroid/support/v4/widget/bo;->b()V
 
     .line 1084
     :cond_0
@@ -1346,7 +1335,7 @@
 
     .line 1082
     :cond_1
-    invoke-static {p0}, Landroid/support/v4/view/as;->c(Landroid/view/View;)V
+    invoke-static {p0}, Landroid/support/v4/view/bf;->d(Landroid/view/View;)V
 
     goto :goto_0
 .end method
@@ -1369,7 +1358,7 @@
     if-eqz v0, :cond_1
 
     .line 1156
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->f:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->e:Landroid/graphics/drawable/Drawable;
 
     .line 1161
     :goto_0
@@ -1396,7 +1385,7 @@
 
     .line 1158
     :cond_1
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->e:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->d:Landroid/graphics/drawable/Drawable;
 
     goto :goto_0
 
@@ -1469,7 +1458,7 @@
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/v4/widget/am;
+    check-cast v0, Landroid/support/v4/widget/ay;
 
     .line 996
     const/4 v2, 0x2
@@ -1479,15 +1468,15 @@
     move-result v2
 
     .line 998
-    iget-boolean v3, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Z
+    iget-boolean v3, p0, Landroid/support/v4/widget/SlidingPaneLayout;->g:Z
 
     if-eqz v3, :cond_0
 
-    iget-boolean v3, v0, Landroid/support/v4/widget/am;->b:Z
+    iget-boolean v3, v0, Landroid/support/v4/widget/ay;->b:Z
 
     if-nez v3, :cond_0
 
-    iget-object v3, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
+    iget-object v3, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Landroid/view/View;
 
     if-eqz v3, :cond_0
 
@@ -1510,7 +1499,7 @@
 
     iget v4, v4, Landroid/graphics/Rect;->left:I
 
-    iget-object v5, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
+    iget-object v5, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Landroid/view/View;
 
     invoke-virtual {v5}, Landroid/view/View;->getRight()I
 
@@ -1537,11 +1526,11 @@
     if-ge v3, v4, :cond_4
 
     .line 1010
-    iget-boolean v3, v0, Landroid/support/v4/widget/am;->c:Z
+    iget-boolean v3, v0, Landroid/support/v4/widget/ay;->c:Z
 
     if-eqz v3, :cond_5
 
-    iget v3, p0, Landroid/support/v4/widget/SlidingPaneLayout;->j:F
+    iget v3, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:F
 
     const/4 v4, 0x0
 
@@ -1583,7 +1572,7 @@
 
     int-to-float v5, v5
 
-    iget-object v0, v0, Landroid/support/v4/widget/am;->d:Landroid/graphics/Paint;
+    iget-object v0, v0, Landroid/support/v4/widget/ay;->d:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v3, v4, v5, v0}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
@@ -1604,7 +1593,7 @@
 
     iget v4, v4, Landroid/graphics/Rect;->right:I
 
-    iget-object v5, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
+    iget-object v5, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Landroid/view/View;
 
     invoke-virtual {v5}, Landroid/view/View;->getLeft()I
 
@@ -1672,9 +1661,9 @@
 
     .prologue
     .line 1253
-    new-instance v0, Landroid/support/v4/widget/am;
+    new-instance v0, Landroid/support/v4/widget/ay;
 
-    invoke-direct {v0}, Landroid/support/v4/widget/am;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/widget/ay;-><init>()V
 
     return-object v0
 .end method
@@ -1684,13 +1673,13 @@
 
     .prologue
     .line 1270
-    new-instance v0, Landroid/support/v4/widget/am;
+    new-instance v0, Landroid/support/v4/widget/ay;
 
     invoke-virtual {p0}, Landroid/support/v4/widget/SlidingPaneLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1, p1}, Landroid/support/v4/widget/am;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {v0, v1, p1}, Landroid/support/v4/widget/ay;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-object v0
 .end method
@@ -1704,19 +1693,19 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Landroid/support/v4/widget/am;
+    new-instance v0, Landroid/support/v4/widget/ay;
 
     check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    invoke-direct {v0, p1}, Landroid/support/v4/widget/am;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
+    invoke-direct {v0, p1}, Landroid/support/v4/widget/ay;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
 
     :goto_0
     return-object v0
 
     :cond_0
-    new-instance v0, Landroid/support/v4/widget/am;
+    new-instance v0, Landroid/support/v4/widget/ay;
 
-    invoke-direct {v0, p1}, Landroid/support/v4/widget/am;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-direct {v0, p1}, Landroid/support/v4/widget/ay;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_0
 .end method
@@ -1726,7 +1715,7 @@
 
     .prologue
     .line 325
-    iget v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->d:I
+    iget v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->c:I
 
     return v0
 .end method
@@ -1736,7 +1725,7 @@
 
     .prologue
     .line 292
-    iget v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->n:I
+    iget v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->m:I
 
     return v0
 .end method
@@ -1746,7 +1735,7 @@
 
     .prologue
     .line 308
-    iget v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->c:I
+    iget v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->b:I
 
     return v0
 .end method
@@ -1800,10 +1789,10 @@
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/v4/widget/ak;
+    check-cast v0, Landroid/support/v4/widget/aw;
 
     .line 435
-    invoke-virtual {v0}, Landroid/support/v4/widget/ak;->run()V
+    invoke-virtual {v0}, Landroid/support/v4/widget/aw;->run()V
 
     .line 433
     add-int/lit8 v0, v1, 0x1
@@ -1831,12 +1820,12 @@
     const/4 v1, 0x1
 
     .line 759
-    invoke-static {p1}, Landroid/support/v4/view/ab;->a(Landroid/view/MotionEvent;)I
+    invoke-static {p1}, Landroid/support/v4/view/an;->a(Landroid/view/MotionEvent;)I
 
     move-result v3
 
     .line 762
-    iget-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Z
+    iget-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->g:Z
 
     if-nez v0, :cond_0
 
@@ -1857,8 +1846,6 @@
     if-eqz v0, :cond_0
 
     .line 766
-    iget-object v4, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bc;
-
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v4
@@ -1871,7 +1858,7 @@
 
     float-to-int v5, v5
 
-    invoke-static {v0, v4, v5}, Landroid/support/v4/widget/bc;->b(Landroid/view/View;II)Z
+    invoke-static {v0, v4, v5}, Landroid/support/v4/widget/bo;->b(Landroid/view/View;II)Z
 
     move-result v0
 
@@ -1884,11 +1871,11 @@
 
     .line 771
     :cond_0
-    iget-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Z
+    iget-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->g:Z
 
     if-eqz v0, :cond_1
 
-    iget-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->m:Z
+    iget-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->l:Z
 
     if-eqz v0, :cond_4
 
@@ -1896,9 +1883,9 @@
 
     .line 772
     :cond_1
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bc;
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bo;
 
-    invoke-virtual {v0}, Landroid/support/v4/widget/bc;->a()V
+    invoke-virtual {v0}, Landroid/support/v4/widget/bo;->a()V
 
     .line 773
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
@@ -1926,9 +1913,9 @@
 
     .line 777
     :cond_5
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bc;
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bo;
 
-    invoke-virtual {v0}, Landroid/support/v4/widget/bc;->a()V
+    invoke-virtual {v0}, Landroid/support/v4/widget/bo;->a()V
 
     goto :goto_1
 
@@ -1942,9 +1929,9 @@
 
     .line 812
     :goto_2
-    iget-object v3, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bc;
+    iget-object v3, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bo;
 
-    invoke-virtual {v3, p1}, Landroid/support/v4/widget/bc;->a(Landroid/view/MotionEvent;)Z
+    invoke-virtual {v3, p1}, Landroid/support/v4/widget/bo;->a(Landroid/view/MotionEvent;)Z
 
     move-result v3
 
@@ -1960,7 +1947,7 @@
 
     .line 785
     :pswitch_1
-    iput-boolean v2, p0, Landroid/support/v4/widget/SlidingPaneLayout;->m:Z
+    iput-boolean v2, p0, Landroid/support/v4/widget/SlidingPaneLayout;->l:Z
 
     .line 786
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -1973,27 +1960,25 @@
     move-result v3
 
     .line 788
-    iput v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->o:F
+    iput v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->n:F
 
     .line 789
-    iput v3, p0, Landroid/support/v4/widget/SlidingPaneLayout;->p:F
+    iput v3, p0, Landroid/support/v4/widget/SlidingPaneLayout;->o:F
 
     .line 791
-    iget-object v4, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bc;
-
-    iget-object v4, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
+    iget-object v4, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Landroid/view/View;
 
     float-to-int v0, v0
 
     float-to-int v3, v3
 
-    invoke-static {v4, v0, v3}, Landroid/support/v4/widget/bc;->b(Landroid/view/View;II)Z
+    invoke-static {v4, v0, v3}, Landroid/support/v4/widget/bo;->b(Landroid/view/View;II)Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Landroid/support/v4/widget/SlidingPaneLayout;->b(Landroid/view/View;)Z
 
@@ -2018,7 +2003,7 @@
     move-result v3
 
     .line 801
-    iget v4, p0, Landroid/support/v4/widget/SlidingPaneLayout;->o:F
+    iget v4, p0, Landroid/support/v4/widget/SlidingPaneLayout;->n:F
 
     sub-float/2addr v0, v4
 
@@ -2027,7 +2012,7 @@
     move-result v0
 
     .line 802
-    iget v4, p0, Landroid/support/v4/widget/SlidingPaneLayout;->p:F
+    iget v4, p0, Landroid/support/v4/widget/SlidingPaneLayout;->o:F
 
     sub-float/2addr v3, v4
 
@@ -2036,9 +2021,9 @@
     move-result v3
 
     .line 803
-    iget-object v4, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bc;
+    iget-object v4, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bo;
 
-    iget v4, v4, Landroid/support/v4/widget/bc;->b:I
+    iget v4, v4, Landroid/support/v4/widget/bo;->b:I
 
     .line 804
     int-to-float v4, v4
@@ -2052,12 +2037,12 @@
     if-lez v0, :cond_7
 
     .line 805
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bc;
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bo;
 
-    invoke-virtual {v0}, Landroid/support/v4/widget/bc;->a()V
+    invoke-virtual {v0}, Landroid/support/v4/widget/bo;->a()V
 
     .line 806
-    iput-boolean v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->m:Z
+    iput-boolean v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->l:Z
 
     goto :goto_1
 
@@ -2087,11 +2072,11 @@
     .line 656
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bc;
+    iget-object v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bo;
 
     const/4 v2, 0x2
 
-    iput v2, v1, Landroid/support/v4/widget/bc;->j:I
+    iput v2, v1, Landroid/support/v4/widget/bo;->j:I
 
     .line 660
     :goto_0
@@ -2135,7 +2120,7 @@
     .line 670
     move-object/from16 v0, p0
 
-    iget-boolean v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Z
+    iget-boolean v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->g:Z
 
     if-eqz v1, :cond_4
 
@@ -2145,12 +2130,12 @@
 
     if-eqz v1, :cond_4
 
-    const/high16 v1, 0x3f800000
+    const/high16 v1, 0x3f800000    # 1.0f
 
     :goto_3
     move-object/from16 v0, p0
 
-    iput v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->j:F
+    iput v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->i:F
 
     .line 673
     :cond_0
@@ -2184,7 +2169,7 @@
 
     move-result-object v1
 
-    check-cast v1, Landroid/support/v4/widget/am;
+    check-cast v1, Landroid/support/v4/widget/ay;
 
     .line 682
     invoke-virtual {v13}, Landroid/view/View;->getMeasuredWidth()I
@@ -2195,14 +2180,14 @@
     const/4 v5, 0x0
 
     .line 685
-    iget-boolean v3, v1, Landroid/support/v4/widget/am;->b:Z
+    iget-boolean v3, v1, Landroid/support/v4/widget/ay;->b:Z
 
     if-eqz v3, :cond_7
 
     .line 686
-    iget v3, v1, Landroid/support/v4/widget/am;->leftMargin:I
+    iget v3, v1, Landroid/support/v4/widget/ay;->leftMargin:I
 
-    iget v4, v1, Landroid/support/v4/widget/am;->rightMargin:I
+    iget v4, v1, Landroid/support/v4/widget/ay;->rightMargin:I
 
     add-int/2addr v3, v4
 
@@ -2211,7 +2196,7 @@
 
     move-object/from16 v0, p0
 
-    iget v15, v0, Landroid/support/v4/widget/SlidingPaneLayout;->g:I
+    iget v15, v0, Landroid/support/v4/widget/SlidingPaneLayout;->f:I
 
     sub-int/2addr v4, v15
 
@@ -2226,12 +2211,12 @@
     .line 689
     move-object/from16 v0, p0
 
-    iput v15, v0, Landroid/support/v4/widget/SlidingPaneLayout;->l:I
+    iput v15, v0, Landroid/support/v4/widget/SlidingPaneLayout;->k:I
 
     .line 690
     if-eqz v9, :cond_5
 
-    iget v3, v1, Landroid/support/v4/widget/am;->rightMargin:I
+    iget v3, v1, Landroid/support/v4/widget/ay;->rightMargin:I
 
     .line 691
     :goto_5
@@ -2252,14 +2237,14 @@
     const/4 v4, 0x1
 
     :goto_6
-    iput-boolean v4, v1, Landroid/support/v4/widget/am;->c:Z
+    iput-boolean v4, v1, Landroid/support/v4/widget/ay;->c:Z
 
     .line 693
     int-to-float v1, v15
 
     move-object/from16 v0, p0
 
-    iget v4, v0, Landroid/support/v4/widget/SlidingPaneLayout;->j:F
+    iget v4, v0, Landroid/support/v4/widget/SlidingPaneLayout;->i:F
 
     mul-float/2addr v1, v4
 
@@ -2275,7 +2260,7 @@
 
     move-object/from16 v0, p0
 
-    iget v3, v0, Landroid/support/v4/widget/SlidingPaneLayout;->l:I
+    iget v3, v0, Landroid/support/v4/widget/SlidingPaneLayout;->k:I
 
     int-to-float v3, v3
 
@@ -2283,7 +2268,7 @@
 
     move-object/from16 v0, p0
 
-    iput v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->j:F
+    iput v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->i:F
 
     .line 705
     :goto_7
@@ -2333,11 +2318,11 @@
     :cond_1
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bc;
+    iget-object v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bo;
 
     const/4 v2, 0x1
 
-    iput v2, v1, Landroid/support/v4/widget/bc;->j:I
+    iput v2, v1, Landroid/support/v4/widget/bo;->j:I
 
     goto/16 :goto_0
 
@@ -2367,7 +2352,7 @@
 
     .line 690
     :cond_5
-    iget v3, v1, Landroid/support/v4/widget/am;->leftMargin:I
+    iget v3, v1, Landroid/support/v4/widget/ay;->leftMargin:I
 
     goto :goto_5
 
@@ -2381,28 +2366,28 @@
     :cond_7
     move-object/from16 v0, p0
 
-    iget-boolean v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Z
+    iget-boolean v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->g:Z
 
     if-eqz v1, :cond_e
 
     move-object/from16 v0, p0
 
-    iget v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->n:I
+    iget v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->m:I
 
     if-eqz v1, :cond_e
 
     .line 697
-    const/high16 v1, 0x3f800000
+    const/high16 v1, 0x3f800000    # 1.0f
 
     move-object/from16 v0, p0
 
-    iget v3, v0, Landroid/support/v4/widget/SlidingPaneLayout;->j:F
+    iget v3, v0, Landroid/support/v4/widget/SlidingPaneLayout;->i:F
 
     sub-float/2addr v1, v3
 
     move-object/from16 v0, p0
 
-    iget v3, v0, Landroid/support/v4/widget/SlidingPaneLayout;->n:I
+    iget v3, v0, Landroid/support/v4/widget/SlidingPaneLayout;->m:I
 
     int-to-float v3, v3
 
@@ -2438,21 +2423,21 @@
     .line 721
     move-object/from16 v0, p0
 
-    iget-boolean v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Z
+    iget-boolean v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->g:Z
 
     if-eqz v1, :cond_d
 
     .line 722
     move-object/from16 v0, p0
 
-    iget v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->n:I
+    iget v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->m:I
 
     if-eqz v1, :cond_a
 
     .line 723
     move-object/from16 v0, p0
 
-    iget v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->j:F
+    iget v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->i:F
 
     move-object/from16 v0, p0
 
@@ -2462,30 +2447,30 @@
     :cond_a
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
+    iget-object v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
-    check-cast v1, Landroid/support/v4/widget/am;
+    check-cast v1, Landroid/support/v4/widget/ay;
 
-    iget-boolean v1, v1, Landroid/support/v4/widget/am;->c:Z
+    iget-boolean v1, v1, Landroid/support/v4/widget/ay;->c:Z
 
     if-eqz v1, :cond_b
 
     .line 726
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
+    iget-object v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Landroid/view/View;
 
     move-object/from16 v0, p0
 
-    iget v2, v0, Landroid/support/v4/widget/SlidingPaneLayout;->j:F
+    iget v2, v0, Landroid/support/v4/widget/SlidingPaneLayout;->i:F
 
     move-object/from16 v0, p0
 
-    iget v3, v0, Landroid/support/v4/widget/SlidingPaneLayout;->c:I
+    iget v3, v0, Landroid/support/v4/widget/SlidingPaneLayout;->b:I
 
     move-object/from16 v0, p0
 
@@ -2495,7 +2480,7 @@
     :cond_b
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
+    iget-object v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Landroid/view/View;
 
     move-object/from16 v0, p0
 
@@ -2530,7 +2515,7 @@
 
     move-object/from16 v0, p0
 
-    iget v4, v0, Landroid/support/v4/widget/SlidingPaneLayout;->c:I
+    iget v4, v0, Landroid/support/v4/widget/SlidingPaneLayout;->b:I
 
     move-object/from16 v0, p0
 
@@ -2579,7 +2564,7 @@
     move-result v2
 
     .line 447
-    const/high16 v5, 0x40000000
+    const/high16 v5, 0x40000000    # 2.0f
 
     if-eq v4, v5, :cond_2
 
@@ -2666,7 +2651,7 @@
 
     move-object/from16 v0, p0
 
-    iput-object v3, v0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
+    iput-object v3, v0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Landroid/view/View;
 
     .line 502
     const/4 v3, 0x0
@@ -2694,7 +2679,7 @@
 
     move-result-object v1
 
-    check-cast v1, Landroid/support/v4/widget/am;
+    check-cast v1, Landroid/support/v4/widget/ay;
 
     .line 506
     invoke-virtual {v14}, Landroid/view/View;->getVisibility()I
@@ -2708,7 +2693,7 @@
     .line 507
     const/4 v4, 0x0
 
-    iput-boolean v4, v1, Landroid/support/v4/widget/am;->c:Z
+    iput-boolean v4, v1, Landroid/support/v4/widget/ay;->c:Z
 
     move v1, v6
 
@@ -2825,7 +2810,7 @@
 
     .line 511
     :cond_4
-    iget v4, v1, Landroid/support/v4/widget/am;->a:F
+    iget v4, v1, Landroid/support/v4/widget/ay;->a:F
 
     const/4 v5, 0x0
 
@@ -2834,25 +2819,25 @@
     if-lez v4, :cond_5
 
     .line 512
-    iget v4, v1, Landroid/support/v4/widget/am;->a:F
+    iget v4, v1, Landroid/support/v4/widget/ay;->a:F
 
     add-float/2addr v3, v4
 
     .line 516
-    iget v4, v1, Landroid/support/v4/widget/am;->width:I
+    iget v4, v1, Landroid/support/v4/widget/ay;->width:I
 
     if-eqz v4, :cond_1d
 
     .line 520
     :cond_5
-    iget v4, v1, Landroid/support/v4/widget/am;->leftMargin:I
+    iget v4, v1, Landroid/support/v4/widget/ay;->leftMargin:I
 
-    iget v5, v1, Landroid/support/v4/widget/am;->rightMargin:I
+    iget v5, v1, Landroid/support/v4/widget/ay;->rightMargin:I
 
     add-int/2addr v4, v5
 
     .line 521
-    iget v5, v1, Landroid/support/v4/widget/am;->width:I
+    iget v5, v1, Landroid/support/v4/widget/ay;->width:I
 
     const/4 v15, -0x2
 
@@ -2869,7 +2854,7 @@
 
     .line 532
     :goto_4
-    iget v5, v1, Landroid/support/v4/widget/am;->height:I
+    iget v5, v1, Landroid/support/v4/widget/ay;->height:I
 
     const/4 v15, -0x2
 
@@ -2918,19 +2903,19 @@
     const/4 v4, 0x1
 
     :goto_6
-    iput-boolean v4, v1, Landroid/support/v4/widget/am;->b:Z
+    iput-boolean v4, v1, Landroid/support/v4/widget/ay;->b:Z
 
     or-int/2addr v4, v7
 
     .line 550
-    iget-boolean v1, v1, Landroid/support/v4/widget/am;->b:Z
+    iget-boolean v1, v1, Landroid/support/v4/widget/ay;->b:Z
 
     if-eqz v1, :cond_7
 
     .line 551
     move-object/from16 v0, p0
 
-    iput-object v14, v0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
+    iput-object v14, v0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Landroid/view/View;
 
     :cond_7
     move v1, v5
@@ -2945,7 +2930,7 @@
 
     .line 524
     :cond_8
-    iget v5, v1, Landroid/support/v4/widget/am;->width:I
+    iget v5, v1, Landroid/support/v4/widget/ay;->width:I
 
     const/4 v15, -0x1
 
@@ -2954,7 +2939,7 @@
     .line 525
     sub-int v4, v11, v4
 
-    const/high16 v5, 0x40000000
+    const/high16 v5, 0x40000000    # 2.0f
 
     invoke-static {v4, v5}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
@@ -2964,9 +2949,9 @@
 
     .line 528
     :cond_9
-    iget v4, v1, Landroid/support/v4/widget/am;->width:I
+    iget v4, v1, Landroid/support/v4/widget/ay;->width:I
 
-    const/high16 v5, 0x40000000
+    const/high16 v5, 0x40000000    # 2.0f
 
     invoke-static {v4, v5}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
@@ -2976,14 +2961,14 @@
 
     .line 534
     :cond_a
-    iget v5, v1, Landroid/support/v4/widget/am;->height:I
+    iget v5, v1, Landroid/support/v4/widget/ay;->height:I
 
     const/4 v15, -0x1
 
     if-ne v5, v15, :cond_b
 
     .line 535
-    const/high16 v5, 0x40000000
+    const/high16 v5, 0x40000000    # 2.0f
 
     invoke-static {v2, v5}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
@@ -2993,9 +2978,9 @@
 
     .line 537
     :cond_b
-    iget v5, v1, Landroid/support/v4/widget/am;->height:I
+    iget v5, v1, Landroid/support/v4/widget/ay;->height:I
 
-    const/high16 v15, 0x40000000
+    const/high16 v15, 0x40000000    # 2.0f
 
     invoke-static {v5, v15}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
@@ -3023,7 +3008,7 @@
     :cond_e
     move-object/from16 v0, p0
 
-    iget v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->g:I
+    iget v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->f:I
 
     sub-int v14, v11, v1
 
@@ -3056,7 +3041,7 @@
 
     move-result-object v1
 
-    check-cast v1, Landroid/support/v4/widget/am;
+    check-cast v1, Landroid/support/v4/widget/ay;
 
     .line 568
     invoke-virtual {v15}, Landroid/view/View;->getVisibility()I
@@ -3068,11 +3053,11 @@
     if-eq v4, v5, :cond_10
 
     .line 569
-    iget v4, v1, Landroid/support/v4/widget/am;->width:I
+    iget v4, v1, Landroid/support/v4/widget/ay;->width:I
 
     if-nez v4, :cond_11
 
-    iget v4, v1, Landroid/support/v4/widget/am;->a:F
+    iget v4, v1, Landroid/support/v4/widget/ay;->a:F
 
     const/4 v5, 0x0
 
@@ -3098,18 +3083,18 @@
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
+    iget-object v4, v0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Landroid/view/View;
 
     if-eq v15, v4, :cond_16
 
     .line 575
-    iget v4, v1, Landroid/support/v4/widget/am;->width:I
+    iget v4, v1, Landroid/support/v4/widget/ay;->width:I
 
     if-gez v4, :cond_10
 
     if-gt v5, v14, :cond_f
 
-    iget v4, v1, Landroid/support/v4/widget/am;->a:F
+    iget v4, v1, Landroid/support/v4/widget/ay;->a:F
 
     const/4 v5, 0x0
 
@@ -3122,7 +3107,7 @@
     if-eqz v9, :cond_15
 
     .line 582
-    iget v4, v1, Landroid/support/v4/widget/am;->height:I
+    iget v4, v1, Landroid/support/v4/widget/ay;->height:I
 
     const/4 v5, -0x2
 
@@ -3137,7 +3122,7 @@
 
     .line 596
     :goto_a
-    const/high16 v4, 0x40000000
+    const/high16 v4, 0x40000000    # 2.0f
 
     invoke-static {v14, v4}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
@@ -3175,14 +3160,14 @@
 
     .line 585
     :cond_13
-    iget v4, v1, Landroid/support/v4/widget/am;->height:I
+    iget v4, v1, Landroid/support/v4/widget/ay;->height:I
 
     const/4 v5, -0x1
 
     if-ne v4, v5, :cond_14
 
     .line 586
-    const/high16 v1, 0x40000000
+    const/high16 v1, 0x40000000    # 2.0f
 
     invoke-static {v2, v1}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
@@ -3192,9 +3177,9 @@
 
     .line 589
     :cond_14
-    iget v1, v1, Landroid/support/v4/widget/am;->height:I
+    iget v1, v1, Landroid/support/v4/widget/ay;->height:I
 
-    const/high16 v4, 0x40000000
+    const/high16 v4, 0x40000000    # 2.0f
 
     invoke-static {v1, v4}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
@@ -3208,7 +3193,7 @@
 
     move-result v1
 
-    const/high16 v4, 0x40000000
+    const/high16 v4, 0x40000000    # 2.0f
 
     invoke-static {v1, v4}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
@@ -3218,7 +3203,7 @@
 
     .line 600
     :cond_16
-    iget v4, v1, Landroid/support/v4/widget/am;->a:F
+    iget v4, v1, Landroid/support/v4/widget/ay;->a:F
 
     const/4 v9, 0x0
 
@@ -3227,12 +3212,12 @@
     if-lez v4, :cond_10
 
     .line 602
-    iget v4, v1, Landroid/support/v4/widget/am;->width:I
+    iget v4, v1, Landroid/support/v4/widget/ay;->width:I
 
     if-nez v4, :cond_19
 
     .line 604
-    iget v4, v1, Landroid/support/v4/widget/am;->height:I
+    iget v4, v1, Landroid/support/v4/widget/ay;->height:I
 
     const/4 v9, -0x2
 
@@ -3250,9 +3235,9 @@
     if-eqz v7, :cond_1a
 
     .line 621
-    iget v9, v1, Landroid/support/v4/widget/am;->leftMargin:I
+    iget v9, v1, Landroid/support/v4/widget/ay;->leftMargin:I
 
-    iget v1, v1, Landroid/support/v4/widget/am;->rightMargin:I
+    iget v1, v1, Landroid/support/v4/widget/ay;->rightMargin:I
 
     add-int/2addr v1, v9
 
@@ -3260,7 +3245,7 @@
     sub-int v1, v11, v1
 
     .line 623
-    const/high16 v9, 0x40000000
+    const/high16 v9, 0x40000000    # 2.0f
 
     invoke-static {v1, v9}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
@@ -3276,14 +3261,14 @@
 
     .line 607
     :cond_17
-    iget v4, v1, Landroid/support/v4/widget/am;->height:I
+    iget v4, v1, Landroid/support/v4/widget/ay;->height:I
 
     const/4 v9, -0x1
 
     if-ne v4, v9, :cond_18
 
     .line 608
-    const/high16 v4, 0x40000000
+    const/high16 v4, 0x40000000    # 2.0f
 
     invoke-static {v2, v4}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
@@ -3293,9 +3278,9 @@
 
     .line 611
     :cond_18
-    iget v4, v1, Landroid/support/v4/widget/am;->height:I
+    iget v4, v1, Landroid/support/v4/widget/ay;->height:I
 
-    const/high16 v9, 0x40000000
+    const/high16 v9, 0x40000000    # 2.0f
 
     invoke-static {v4, v9}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
@@ -3309,7 +3294,7 @@
 
     move-result v4
 
-    const/high16 v9, 0x40000000
+    const/high16 v9, 0x40000000    # 2.0f
 
     invoke-static {v4, v9}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
@@ -3326,7 +3311,7 @@
     move-result v9
 
     .line 631
-    iget v1, v1, Landroid/support/v4/widget/am;->a:F
+    iget v1, v1, Landroid/support/v4/widget/ay;->a:F
 
     int-to-float v9, v9
 
@@ -3339,7 +3324,7 @@
     .line 632
     add-int/2addr v1, v5
 
-    const/high16 v5, 0x40000000
+    const/high16 v5, 0x40000000    # 2.0f
 
     invoke-static {v1, v5}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
@@ -3372,14 +3357,14 @@
     .line 644
     move-object/from16 v0, p0
 
-    iput-boolean v7, v0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Z
+    iput-boolean v7, v0, Landroid/support/v4/widget/SlidingPaneLayout;->g:Z
 
     .line 646
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bc;
+    iget-object v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bo;
 
-    iget v1, v1, Landroid/support/v4/widget/bc;->a:I
+    iget v1, v1, Landroid/support/v4/widget/bo;->a:I
 
     if-eqz v1, :cond_1c
 
@@ -3388,9 +3373,9 @@
     .line 648
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bc;
+    iget-object v1, v0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bo;
 
-    invoke-virtual {v1}, Landroid/support/v4/widget/bc;->b()V
+    invoke-virtual {v1}, Landroid/support/v4/widget/bo;->b()V
 
     .line 650
     :cond_1c
@@ -3446,13 +3431,11 @@
     if-eqz v0, :cond_2
 
     .line 1289
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
-
     iget-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->s:Z
 
     if-nez v0, :cond_0
 
-    const/high16 v0, 0x3f800000
+    const/high16 v0, 0x3f800000    # 1.0f
 
     invoke-direct {p0, v0}, Landroid/support/v4/widget/SlidingPaneLayout;->a(F)Z
 
@@ -3477,8 +3460,6 @@
 
     .line 1291
     :cond_2
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
-
     invoke-direct {p0}, Landroid/support/v4/widget/SlidingPaneLayout;->b()Z
 
     goto :goto_0
@@ -3499,17 +3480,17 @@
     invoke-direct {v1, v0}, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;-><init>(Landroid/os/Parcelable;)V
 
     .line 1278
-    iget-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Z
+    iget-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->g:Z
 
     if-eqz v0, :cond_2
 
-    iget-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Z
+    iget-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->g:Z
 
     if-eqz v0, :cond_0
 
-    iget v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->j:F
+    iget v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:F
 
-    const/high16 v2, 0x3f800000
+    const/high16 v2, 0x3f800000    # 1.0f
 
     cmpl-float v0, v0, v2
 
@@ -3561,7 +3542,7 @@
 
     .prologue
     .line 819
-    iget-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Z
+    iget-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->g:Z
 
     if-nez v0, :cond_0
 
@@ -3576,9 +3557,9 @@
 
     .line 823
     :cond_0
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bc;
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bo;
 
-    invoke-virtual {v0, p1}, Landroid/support/v4/widget/bc;->b(Landroid/view/MotionEvent;)V
+    invoke-virtual {v0, p1}, Landroid/support/v4/widget/bo;->b(Landroid/view/MotionEvent;)V
 
     .line 825
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
@@ -3609,16 +3590,16 @@
     move-result v1
 
     .line 832
-    iput v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->o:F
+    iput v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->n:F
 
     .line 833
-    iput v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->p:F
+    iput v1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->o:F
 
     goto :goto_1
 
     .line 838
     :pswitch_1
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Landroid/support/v4/widget/SlidingPaneLayout;->b(Landroid/view/View;)Z
 
@@ -3637,19 +3618,19 @@
     move-result v1
 
     .line 841
-    iget v2, p0, Landroid/support/v4/widget/SlidingPaneLayout;->o:F
+    iget v2, p0, Landroid/support/v4/widget/SlidingPaneLayout;->n:F
 
     sub-float v2, v0, v2
 
     .line 842
-    iget v3, p0, Landroid/support/v4/widget/SlidingPaneLayout;->p:F
+    iget v3, p0, Landroid/support/v4/widget/SlidingPaneLayout;->o:F
 
     sub-float v3, v1, v3
 
     .line 843
-    iget-object v4, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bc;
+    iget-object v4, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bo;
 
-    iget v4, v4, Landroid/support/v4/widget/bc;->b:I
+    iget v4, v4, Landroid/support/v4/widget/bo;->b:I
 
     .line 844
     mul-float/2addr v2, v2
@@ -3666,23 +3647,19 @@
 
     if-gez v2, :cond_1
 
-    iget-object v2, p0, Landroid/support/v4/widget/SlidingPaneLayout;->q:Landroid/support/v4/widget/bc;
-
-    iget-object v2, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
+    iget-object v2, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Landroid/view/View;
 
     float-to-int v0, v0
 
     float-to-int v1, v1
 
-    invoke-static {v2, v0, v1}, Landroid/support/v4/widget/bc;->b(Landroid/view/View;II)Z
+    invoke-static {v2, v0, v1}, Landroid/support/v4/widget/bo;->b(Landroid/view/View;II)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 847
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
-
     invoke-direct {p0}, Landroid/support/v4/widget/SlidingPaneLayout;->b()Z
 
     goto :goto_1
@@ -3709,12 +3686,12 @@
 
     if-nez v0, :cond_0
 
-    iget-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Z
+    iget-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->g:Z
 
     if-nez v0, :cond_0
 
     .line 753
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->i:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout;->h:Landroid/view/View;
 
     if-ne p1, v0, :cond_1
 
@@ -3739,18 +3716,18 @@
 
     .prologue
     .line 318
-    iput p1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->d:I
+    iput p1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->c:I
 
     .line 319
     return-void
 .end method
 
-.method public setPanelSlideListener(Landroid/support/v4/widget/an;)V
+.method public setPanelSlideListener(Landroid/support/v4/widget/az;)V
     .locals 0
 
     .prologue
     .line 329
-    iput-object p1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->a:Landroid/support/v4/widget/an;
+    iput-object p1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->p:Landroid/support/v4/widget/az;
 
     .line 330
     return-void
@@ -3761,7 +3738,7 @@
 
     .prologue
     .line 282
-    iput p1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->n:I
+    iput p1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->m:I
 
     .line 283
     invoke-virtual {p0}, Landroid/support/v4/widget/SlidingPaneLayout;->requestLayout()V
@@ -3788,7 +3765,7 @@
 
     .prologue
     .line 1105
-    iput-object p1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->e:Landroid/graphics/drawable/Drawable;
+    iput-object p1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->d:Landroid/graphics/drawable/Drawable;
 
     .line 1106
     return-void
@@ -3799,7 +3776,7 @@
 
     .prologue
     .line 1115
-    iput-object p1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->f:Landroid/graphics/drawable/Drawable;
+    iput-object p1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->e:Landroid/graphics/drawable/Drawable;
 
     .line 1116
     return-void
@@ -3869,7 +3846,7 @@
 
     .prologue
     .line 301
-    iput p1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->c:I
+    iput p1, p0, Landroid/support/v4/widget/SlidingPaneLayout;->b:I
 
     .line 302
     return-void

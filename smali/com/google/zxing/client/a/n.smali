@@ -90,13 +90,13 @@
     move-result-wide v2
 
     .line 52
-    const-wide v4, 0x4056800000000000L
+    const-wide v4, 0x4056800000000000L    # 90.0
 
     cmpl-double v1, v2, v4
 
     if-gtz v1, :cond_1
 
-    const-wide v4, -0x3fa9800000000000L
+    const-wide v4, -0x3fa9800000000000L    # -90.0
 
     cmpg-double v1, v2, v4
 
@@ -121,13 +121,13 @@
     move-result-wide v4
 
     .line 56
-    const-wide v10, 0x4066800000000000L
+    const-wide v10, 0x4066800000000000L    # 180.0
 
     cmpl-double v1, v4, v10
 
     if-gtz v1, :cond_3
 
-    const-wide v10, -0x3f99800000000000L
+    const-wide v10, -0x3f99800000000000L    # -180.0
 
     cmpg-double v1, v4, v10
 

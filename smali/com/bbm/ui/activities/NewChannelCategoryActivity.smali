@@ -1,10 +1,10 @@
 .class public Lcom/bbm/ui/activities/NewChannelCategoryActivity;
-.super Lcom/bbm/ui/activities/akz;
+.super Lcom/bbm/bali/ui/main/a/e;
 .source "NewChannelCategoryActivity.java"
 
 
 # instance fields
-.field private a:Lcom/bbm/ui/HeaderButtonActionBar;
+.field private a:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
 .field private b:Landroid/widget/RelativeLayout;
 
@@ -14,40 +14,40 @@
 
 .field private e:Landroid/widget/ListView;
 
-.field private f:Landroid/view/animation/Animation;
+.field private h:Landroid/view/animation/Animation;
 
-.field private g:Landroid/view/animation/Animation;
+.field private i:Landroid/view/animation/Animation;
 
-.field private h:Landroid/view/animation/AnimationSet;
+.field private j:Landroid/view/animation/AnimationSet;
 
-.field private i:Landroid/view/animation/AnimationSet;
+.field private k:Landroid/view/animation/AnimationSet;
 
-.field private j:Lcom/bbm/ui/activities/ze;
+.field private l:Lcom/bbm/ui/activities/vu;
 
-.field private k:Lcom/bbm/ui/activities/zh;
+.field private m:Lcom/bbm/ui/activities/vx;
 
-.field private l:Landroid/widget/ListView;
+.field private n:Landroid/widget/ListView;
 
-.field private m:Lcom/bbm/j/w;
+.field private o:Lcom/bbm/j/w;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/bbm/j/w",
             "<",
-            "Lcom/bbm/d/ep;",
+            "Lcom/bbm/d/fq;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private n:I
+.field private p:I
 
-.field private o:I
+.field private q:I
 
-.field private final p:Lcom/bbm/d/a;
+.field private final r:Lcom/bbm/d/a;
 
-.field private final q:Landroid/view/View$OnClickListener;
+.field private final s:Landroid/view/View$OnClickListener;
 
-.field private final r:Landroid/widget/AdapterView$OnItemClickListener;
+.field private final t:Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # direct methods
@@ -55,47 +55,47 @@
     .locals 1
 
     .prologue
-    .line 68
-    invoke-direct {p0}, Lcom/bbm/ui/activities/akz;-><init>()V
+    .line 67
+    invoke-direct {p0}, Lcom/bbm/bali/ui/main/a/e;-><init>()V
 
-    .line 60
-    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
+    .line 59
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/f;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/e;->b:Lcom/bbm/d/a;
+    iget-object v0, v0, Lcom/bbm/f;->b:Lcom/bbm/d/a;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->p:Lcom/bbm/d/a;
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->r:Lcom/bbm/d/a;
 
-    .line 73
-    new-instance v0, Lcom/bbm/ui/activities/yx;
+    .line 72
+    new-instance v0, Lcom/bbm/ui/activities/vn;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/yx;-><init>(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/vn;-><init>(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->q:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->s:Landroid/view/View$OnClickListener;
 
-    .line 94
-    new-instance v0, Lcom/bbm/ui/activities/yy;
+    .line 93
+    new-instance v0, Lcom/bbm/ui/activities/vo;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/yy;-><init>(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/vo;-><init>(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->r:Landroid/widget/AdapterView$OnItemClickListener;
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->t:Landroid/widget/AdapterView$OnItemClickListener;
+
+    .line 68
+    new-instance v0, Lcom/bbm/ui/gj;
+
+    invoke-direct {v0}, Lcom/bbm/ui/gj;-><init>()V
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->a(Lcom/bbm/ui/d/b;)V
 
     .line 69
-    new-instance v0, Lcom/bbm/ui/gc;
+    new-instance v0, Lcom/bbm/ui/voice/a;
 
-    invoke-direct {v0}, Lcom/bbm/ui/gc;-><init>()V
+    invoke-direct {v0}, Lcom/bbm/ui/voice/a;-><init>()V
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->a(Lcom/bbm/ui/activities/alb;)V
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->a(Lcom/bbm/ui/d/b;)V
 
     .line 70
-    new-instance v0, Lcom/bbm/ui/voice/o;
-
-    invoke-direct {v0}, Lcom/bbm/ui/voice/o;-><init>()V
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->a(Lcom/bbm/ui/activities/alb;)V
-
-    .line 71
     return-void
 .end method
 
@@ -103,7 +103,7 @@
     .locals 1
 
     .prologue
-    .line 44
+    .line 43
     iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->b:Landroid/widget/RelativeLayout;
 
     return-object v0
@@ -113,18 +113,18 @@
     .locals 0
 
     .prologue
-    .line 44
-    iput-object p1, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->m:Lcom/bbm/j/w;
+    .line 43
+    iput-object p1, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->o:Lcom/bbm/j/w;
 
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/NewChannelCategoryActivity;Lcom/bbm/ui/activities/zh;)Lcom/bbm/ui/activities/zh;
+.method static synthetic a(Lcom/bbm/ui/activities/NewChannelCategoryActivity;Lcom/bbm/ui/activities/vx;)Lcom/bbm/ui/activities/vx;
     .locals 0
 
     .prologue
-    .line 44
-    iput-object p1, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->k:Lcom/bbm/ui/activities/zh;
+    .line 43
+    iput-object p1, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->m:Lcom/bbm/ui/activities/vx;
 
     return-object p1
 .end method
@@ -133,31 +133,31 @@
     .locals 2
 
     .prologue
-    .line 44
-    iget v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->o:I
+    .line 43
+    iget v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->q:I
 
     if-ltz v0, :cond_0
 
-    iget v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->o:I
+    iget v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->q:I
 
     if-eq v0, p1, :cond_0
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->n:I
+    iput v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->p:I
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->a:Lcom/bbm/ui/HeaderButtonActionBar;
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->a:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/HeaderButtonActionBar;->setPositiveButtonEnabled(Z)V
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setPositiveButtonEnabled(Z)V
 
     :cond_0
-    iput p1, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->o:I
+    iput p1, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->q:I
 
-    new-instance v0, Lcom/bbm/ui/activities/yz;
+    new-instance v0, Lcom/bbm/ui/activities/vp;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/yz;-><init>(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/vp;-><init>(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)V
 
     invoke-static {v0}, Lcom/bbm/j/u;->a(Lcom/bbm/j/s;)V
 
@@ -168,8 +168,8 @@
     .locals 0
 
     .prologue
-    .line 44
-    iput p1, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->n:I
+    .line 43
+    iput p1, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->p:I
 
     return p1
 .end method
@@ -178,7 +178,7 @@
     .locals 1
 
     .prologue
-    .line 44
+    .line 43
     iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->e:Landroid/widget/ListView;
 
     return-object v0
@@ -188,8 +188,8 @@
     .locals 1
 
     .prologue
-    .line 44
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->h:Landroid/view/animation/AnimationSet;
+    .line 43
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->j:Landroid/view/animation/AnimationSet;
 
     return-object v0
 .end method
@@ -198,7 +198,7 @@
     .locals 1
 
     .prologue
-    .line 44
+    .line 43
     iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->c:Landroid/widget/ImageView;
 
     return-object v0
@@ -208,18 +208,18 @@
     .locals 1
 
     .prologue
-    .line 44
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->i:Landroid/view/animation/AnimationSet;
+    .line 43
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->k:Landroid/view/animation/AnimationSet;
 
     return-object v0
 .end method
 
-.method static synthetic f(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)Lcom/bbm/ui/activities/ze;
+.method static synthetic f(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)Lcom/bbm/ui/activities/vu;
     .locals 1
 
     .prologue
-    .line 44
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->j:Lcom/bbm/ui/activities/ze;
+    .line 43
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->l:Lcom/bbm/ui/activities/vu;
 
     return-object v0
 .end method
@@ -228,8 +228,8 @@
     .locals 1
 
     .prologue
-    .line 44
-    iget v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->o:I
+    .line 43
+    iget v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->q:I
 
     return v0
 .end method
@@ -238,8 +238,8 @@
     .locals 1
 
     .prologue
-    .line 44
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->p:Lcom/bbm/d/a;
+    .line 43
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->r:Lcom/bbm/d/a;
 
     return-object v0
 .end method
@@ -248,7 +248,7 @@
     .locals 1
 
     .prologue
-    .line 44
+    .line 43
     iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->d:Landroid/widget/TextView;
 
     return-object v0
@@ -258,8 +258,8 @@
     .locals 1
 
     .prologue
-    .line 44
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->l:Landroid/widget/ListView;
+    .line 43
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->n:Landroid/widget/ListView;
 
     return-object v0
 .end method
@@ -268,18 +268,18 @@
     .locals 1
 
     .prologue
-    .line 44
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->m:Lcom/bbm/j/w;
+    .line 43
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->o:Lcom/bbm/j/w;
 
     return-object v0
 .end method
 
-.method static synthetic l(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)Lcom/bbm/ui/activities/zh;
+.method static synthetic l(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)Lcom/bbm/ui/activities/vx;
     .locals 1
 
     .prologue
-    .line 44
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->k:Lcom/bbm/ui/activities/zh;
+    .line 43
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->m:Lcom/bbm/ui/activities/vx;
 
     return-object v0
 .end method
@@ -288,18 +288,18 @@
     .locals 1
 
     .prologue
-    .line 44
-    iget v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->n:I
+    .line 43
+    iget v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->p:I
 
     return v0
 .end method
 
-.method static synthetic n(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)Lcom/bbm/ui/HeaderButtonActionBar;
+.method static synthetic n(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
     .locals 1
 
     .prologue
-    .line 44
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->a:Lcom/bbm/ui/HeaderButtonActionBar;
+    .line 43
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->a:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
     return-object v0
 .end method
@@ -310,26 +310,26 @@
     .locals 13
 
     .prologue
-    const/high16 v1, 0x43340000
+    const/4 v12, -0x1
+
+    const/high16 v1, 0x43340000    # 180.0f
 
     const/4 v2, 0x0
 
-    const/4 v12, -0x1
-
-    const/high16 v4, 0x3f000000
+    const/high16 v4, 0x3f000000    # 0.5f
 
     const/4 v3, 0x1
 
-    .line 271
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/akz;->onCreate(Landroid/os/Bundle;)V
+    .line 270
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/e;->onCreate(Landroid/os/Bundle;)V
 
-    .line 272
-    const v0, 0x7f03001e
+    .line 271
+    const v0, 0x7f030033
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->setContentView(I)V
 
-    .line 275
-    const v0, 0x7f0b015d
+    .line 274
+    const v0, 0x7f0b01b2
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->findViewById(I)Landroid/view/View;
 
@@ -339,8 +339,8 @@
 
     iput-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->b:Landroid/widget/RelativeLayout;
 
-    .line 276
-    const v0, 0x7f0b015f
+    .line 275
+    const v0, 0x7f0b01b4
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->findViewById(I)Landroid/view/View;
 
@@ -350,8 +350,8 @@
 
     iput-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->c:Landroid/widget/ImageView;
 
-    .line 277
-    const v0, 0x7f0b015e
+    .line 276
+    const v0, 0x7f0b01b3
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->findViewById(I)Landroid/view/View;
 
@@ -361,8 +361,8 @@
 
     iput-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->d:Landroid/widget/TextView;
 
-    .line 278
-    const v0, 0x7f0b0160
+    .line 277
+    const v0, 0x7f0b01b5
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->findViewById(I)Landroid/view/View;
 
@@ -372,8 +372,8 @@
 
     iput-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->e:Landroid/widget/ListView;
 
-    .line 279
-    const v0, 0x7f0b0161
+    .line 278
+    const v0, 0x7f0b01b6
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->findViewById(I)Landroid/view/View;
 
@@ -381,53 +381,53 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->l:Landroid/widget/ListView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->n:Landroid/widget/ListView;
 
-    .line 282
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->p:Lcom/bbm/d/a;
+    .line 281
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->r:Lcom/bbm/d/a;
 
-    invoke-virtual {v0}, Lcom/bbm/d/a;->Q()Lcom/bbm/j/w;
+    invoke-virtual {v0}, Lcom/bbm/d/a;->ag()Lcom/bbm/j/w;
 
     move-result-object v0
 
-    .line 285
-    new-instance v5, Lcom/bbm/ui/activities/ze;
+    .line 284
+    new-instance v5, Lcom/bbm/ui/activities/vu;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->getApplicationContext()Landroid/content/Context;
 
-    invoke-direct {v5, p0, v0}, Lcom/bbm/ui/activities/ze;-><init>(Lcom/bbm/ui/activities/NewChannelCategoryActivity;Lcom/bbm/j/r;)V
+    invoke-direct {v5, p0, v0}, Lcom/bbm/ui/activities/vu;-><init>(Lcom/bbm/ui/activities/NewChannelCategoryActivity;Lcom/bbm/j/r;)V
 
-    iput-object v5, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->j:Lcom/bbm/ui/activities/ze;
+    iput-object v5, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->l:Lcom/bbm/ui/activities/vu;
 
-    .line 286
+    .line 285
     iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->b:Landroid/widget/RelativeLayout;
 
-    iget-object v5, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->q:Landroid/view/View$OnClickListener;
+    iget-object v5, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->s:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v5}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 286
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->e:Landroid/widget/ListView;
+
+    iget-object v5, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->l:Lcom/bbm/ui/activities/vu;
+
+    invoke-virtual {v0, v5}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 287
     iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->e:Landroid/widget/ListView;
 
-    iget-object v5, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->j:Lcom/bbm/ui/activities/ze;
-
-    invoke-virtual {v0, v5}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
-
-    .line 288
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->e:Landroid/widget/ListView;
-
-    iget-object v5, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->r:Landroid/widget/AdapterView$OnItemClickListener;
+    iget-object v5, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->t:Landroid/widget/AdapterView$OnItemClickListener;
 
     invoke-virtual {v0, v5}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 292
+    .line 291
     new-instance v0, Landroid/view/animation/AnimationSet;
 
     invoke-direct {v0, v3}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->h:Landroid/view/animation/AnimationSet;
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->j:Landroid/view/animation/AnimationSet;
 
-    .line 293
+    .line 292
     new-instance v0, Landroid/view/animation/RotateAnimation;
 
     move v5, v3
@@ -436,40 +436,40 @@
 
     invoke-direct/range {v0 .. v6}, Landroid/view/animation/RotateAnimation;-><init>(FFIFIF)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->f:Landroid/view/animation/Animation;
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->h:Landroid/view/animation/Animation;
 
-    .line 294
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->f:Landroid/view/animation/Animation;
+    .line 293
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->h:Landroid/view/animation/Animation;
 
     invoke-virtual {v0, v3}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
-    .line 295
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->h:Landroid/view/animation/AnimationSet;
+    .line 294
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->j:Landroid/view/animation/AnimationSet;
 
-    iget-object v5, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->f:Landroid/view/animation/Animation;
+    iget-object v5, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->h:Landroid/view/animation/Animation;
 
     invoke-virtual {v0, v5}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 296
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->h:Landroid/view/animation/AnimationSet;
+    .line 295
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->j:Landroid/view/animation/AnimationSet;
 
     invoke-virtual {v0, v3}, Landroid/view/animation/AnimationSet;->setFillAfter(Z)V
 
-    .line 297
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->h:Landroid/view/animation/AnimationSet;
+    .line 296
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->j:Landroid/view/animation/AnimationSet;
 
     const-wide/16 v6, 0xc8
 
     invoke-virtual {v0, v6, v7}, Landroid/view/animation/AnimationSet;->setDuration(J)V
 
-    .line 300
+    .line 299
     new-instance v0, Landroid/view/animation/AnimationSet;
 
     invoke-direct {v0, v3}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->i:Landroid/view/animation/AnimationSet;
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->k:Landroid/view/animation/AnimationSet;
 
-    .line 301
+    .line 300
     new-instance v5, Landroid/view/animation/RotateAnimation;
 
     move v6, v2
@@ -486,108 +486,102 @@
 
     invoke-direct/range {v5 .. v11}, Landroid/view/animation/RotateAnimation;-><init>(FFIFIF)V
 
-    iput-object v5, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->g:Landroid/view/animation/Animation;
+    iput-object v5, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->i:Landroid/view/animation/Animation;
 
-    .line 302
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->g:Landroid/view/animation/Animation;
+    .line 301
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->i:Landroid/view/animation/Animation;
 
     invoke-virtual {v0, v3}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
-    .line 303
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->i:Landroid/view/animation/AnimationSet;
+    .line 302
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->k:Landroid/view/animation/AnimationSet;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->g:Landroid/view/animation/Animation;
+    iget-object v1, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->i:Landroid/view/animation/Animation;
 
     invoke-virtual {v0, v1}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 304
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->i:Landroid/view/animation/AnimationSet;
+    .line 303
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->k:Landroid/view/animation/AnimationSet;
 
     invoke-virtual {v0, v3}, Landroid/view/animation/AnimationSet;->setFillAfter(Z)V
 
-    .line 305
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->i:Landroid/view/animation/AnimationSet;
+    .line 304
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->k:Landroid/view/animation/AnimationSet;
 
     const-wide/16 v2, 0xc8
 
     invoke-virtual {v0, v2, v3}, Landroid/view/animation/AnimationSet;->setDuration(J)V
 
-    .line 308
-    new-instance v0, Lcom/bbm/ui/HeaderButtonActionBar;
+    .line 307
+    const v0, 0x7f0b05e8
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->a:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->a:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0e0758
+    const v2, 0x7f0e085e
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setTitle(Ljava/lang/String;)V
 
-    move-result-object v2
-
-    const v3, 0x7f0e0177
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->a:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v3
+    move-result-object v1
 
-    const v4, 0x7f0e0683
+    const v2, 0x7f0e0750
 
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-direct {v0, p0, v1, v2, v3}, Lcom/bbm/ui/HeaderButtonActionBar;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setPositiveButtonLabel(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->a:Lcom/bbm/ui/HeaderButtonActionBar;
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->a:Lcom/bbm/ui/HeaderButtonActionBar;
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->a:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/HeaderButtonActionBar;->setPositiveButtonEnabled(Z)V
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setPositiveButtonEnabled(Z)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->a:Lcom/bbm/ui/HeaderButtonActionBar;
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->a:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
-    new-instance v1, Lcom/bbm/ui/activities/zb;
+    new-instance v1, Lcom/bbm/ui/activities/vr;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/zb;-><init>(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/vr;-><init>(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)V
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/HeaderButtonActionBar;->setNegativeButtonOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setNegativeButtonOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->a:Lcom/bbm/ui/HeaderButtonActionBar;
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->a:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
-    new-instance v1, Lcom/bbm/ui/activities/zc;
+    new-instance v1, Lcom/bbm/ui/activities/vs;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/zc;-><init>(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/vs;-><init>(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)V
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/HeaderButtonActionBar;->setPositiveButtonOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setPositiveButtonOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->getActionBar()Landroid/app/ActionBar;
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->a:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->a:Lcom/bbm/ui/HeaderButtonActionBar;
+    const/4 v2, 0x0
 
-    new-instance v2, Landroid/app/ActionBar$LayoutParams;
+    invoke-virtual {p0, v0, v1, v2}, Lcom/bbm/bali/ui/main/a/e;->a(Landroid/support/v7/widget/Toolbar;ZLandroid/view/View$OnClickListener;)V
 
-    invoke-direct {v2, v12, v12}, Landroid/app/ActionBar$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v1, v2}, Landroid/app/ActionBar;->setCustomView(Landroid/view/View;Landroid/app/ActionBar$LayoutParams;)V
-
-    const/16 v1, 0x10
-
-    invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setDisplayOptions(I)V
-
-    .line 311
+    .line 310
     invoke-virtual {p0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -598,25 +592,25 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->o:I
+    iput v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->q:I
 
-    iget v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->o:I
+    iget v0, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->q:I
 
     if-ltz v0, :cond_0
 
-    new-instance v0, Lcom/bbm/ui/activities/zd;
+    new-instance v0, Lcom/bbm/ui/activities/vt;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/zd;-><init>(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/vt;-><init>(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)V
 
     invoke-static {v0}, Lcom/bbm/j/u;->a(Lcom/bbm/j/s;)V
 
-    .line 313
+    .line 312
     :goto_0
     return-void
 
-    .line 311
+    .line 310
     :cond_0
-    iput v12, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->n:I
+    iput v12, p0, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->p:I
 
     goto :goto_0
 .end method
@@ -625,24 +619,26 @@
     .locals 0
 
     .prologue
-    .line 404
-    invoke-super {p0}, Lcom/bbm/ui/activities/akz;->onDestroy()V
+    .line 399
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/e;->onDestroy()V
 
-    .line 405
+    .line 400
     return-void
 .end method
 
 .method protected onPause()V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 398
-    invoke-static {p0}, Lcom/bbm/util/fh;->b(Landroid/app/Activity;)V
+    .line 393
+    const/4 v0, 0x0
 
-    .line 399
-    invoke-super {p0}, Lcom/bbm/ui/activities/akz;->onPause()V
+    invoke-static {p0, v0}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;Z)V
 
-    .line 400
+    .line 394
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/e;->onPause()V
+
+    .line 395
     return-void
 .end method
 
@@ -650,9 +646,9 @@
     .locals 0
 
     .prologue
-    .line 393
-    invoke-super {p0}, Lcom/bbm/ui/activities/akz;->onResume()V
+    .line 388
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/e;->onResume()V
 
-    .line 394
+    .line 389
     return-void
 .end method

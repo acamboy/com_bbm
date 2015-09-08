@@ -3,24 +3,20 @@
 .source "QuickShareVoicenoteView.java"
 
 # interfaces
-.implements Landroid/media/MediaPlayer$OnCompletionListener;
+.implements Lcom/bbm/util/fb;
 
 
 # instance fields
-.field final synthetic a:Landroid/media/MediaPlayer;
-
-.field final synthetic b:Lcom/bbm/ui/QuickShareVoicenoteView;
+.field final synthetic a:Lcom/bbm/ui/QuickShareVoicenoteView;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/QuickShareVoicenoteView;Landroid/media/MediaPlayer;)V
+.method constructor <init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
     .locals 0
 
     .prologue
-    .line 273
-    iput-object p1, p0, Lcom/bbm/ui/fn;->b:Lcom/bbm/ui/QuickShareVoicenoteView;
-
-    iput-object p2, p0, Lcom/bbm/ui/fn;->a:Landroid/media/MediaPlayer;
+    .line 75
+    iput-object p1, p0, Lcom/bbm/ui/fn;->a:Lcom/bbm/ui/QuickShareVoicenoteView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,20 +25,21 @@
 
 
 # virtual methods
-.method public final onCompletion(Landroid/media/MediaPlayer;)V
-    .locals 1
+.method public final a()V
+    .locals 2
 
     .prologue
-    .line 277
-    iget-object v0, p0, Lcom/bbm/ui/fn;->a:Landroid/media/MediaPlayer;
+    .line 79
+    iget-object v0, p0, Lcom/bbm/ui/fn;->a:Lcom/bbm/ui/QuickShareVoicenoteView;
 
-    invoke-virtual {v0}, Landroid/media/MediaPlayer;->stop()V
+    invoke-static {v0}, Lcom/bbm/ui/QuickShareVoicenoteView;->a(Lcom/bbm/ui/QuickShareVoicenoteView;)Landroid/widget/ImageView;
 
-    .line 278
-    iget-object v0, p0, Lcom/bbm/ui/fn;->a:Landroid/media/MediaPlayer;
+    move-result-object v0
 
-    invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
+    const/4 v1, 0x0
 
-    .line 279
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setEnabled(Z)V
+
+    .line 80
     return-void
 .end method

@@ -24,7 +24,7 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 18
-    const v0, 0x7f03000f
+    const v0, 0x7f030025
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelIntroActivity;->setContentView(I)V
 

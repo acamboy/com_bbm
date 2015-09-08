@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/activities/adp;
 .super Ljava/lang/Object;
-.source "ReceivedPendingGroupInviteActivity.java"
+.source "SettingsActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/b/i;
-
-.field final synthetic b:Lcom/bbm/ui/activities/ado;
+.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ado;Lcom/bbm/ui/b/i;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
     .locals 0
 
     .prologue
-    .line 166
-    iput-object p1, p0, Lcom/bbm/ui/activities/adp;->b:Lcom/bbm/ui/activities/ado;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/adp;->a:Lcom/bbm/ui/b/i;
+    .line 451
+    iput-object p1, p0, Lcom/bbm/ui/activities/adp;->a:Lcom/bbm/ui/activities/SettingsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,70 +25,54 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
     .locals 3
 
     .prologue
-    .line 170
-    const-string v0, "handleInviteIgnore Dialog RightButton Clicked"
+    .line 454
+    iget-object v0, p0, Lcom/bbm/ui/activities/adp;->a:Lcom/bbm/ui/activities/SettingsActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 172
-    iget-object v0, p0, Lcom/bbm/ui/activities/adp;->a:Lcom/bbm/ui/b/i;
-
-    iget-object v0, v0, Lcom/bbm/ui/b/i;->e:Landroid/widget/CheckBox;
-
-    invoke-virtual {v0}, Landroid/widget/CheckBox;->isChecked()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lcom/bbm/g/bo;->c:Lcom/bbm/g/bo;
-
-    .line 175
-    :goto_0
-    iget-object v1, p0, Lcom/bbm/ui/activities/adp;->b:Lcom/bbm/ui/activities/ado;
-
-    iget-object v1, v1, Lcom/bbm/ui/activities/ado;->a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;->a(Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;)Lcom/bbm/e;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lcom/bbm/e;->c:Lcom/bbm/g/al;
-
-    invoke-static {}, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;->b()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2, v0}, Lcom/bbm/g/am;->a(Ljava/lang/String;Lcom/bbm/g/bo;)Lcom/bbm/g/bn;
+    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->c(Lcom/bbm/ui/activities/SettingsActivity;)Lcom/bbm/d/a;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
+    invoke-virtual {v0}, Lcom/bbm/d/a;->e()Z
 
-    .line 176
-    iget-object v0, p0, Lcom/bbm/ui/activities/adp;->a:Lcom/bbm/ui/b/i;
+    move-result v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/b/i;->dismiss()V
+    if-ne p2, v0, :cond_0
 
-    .line 177
-    iget-object v0, p0, Lcom/bbm/ui/activities/adp;->b:Lcom/bbm/ui/activities/ado;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/ado;->a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;->finish()V
-
-    .line 178
+    .line 460
+    :goto_0
     return-void
 
-    .line 172
+    .line 457
     :cond_0
-    sget-object v0, Lcom/bbm/g/bo;->b:Lcom/bbm/g/bo;
+    const-string v0, "show music update onCheckedChanged"
+
+    const-class v1, Lcom/bbm/ui/activities/SettingsActivity;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 458
+    iget-object v0, p0, Lcom/bbm/ui/activities/adp;->a:Lcom/bbm/ui/activities/SettingsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->t(Lcom/bbm/ui/activities/SettingsActivity;)Z
+
+    .line 459
+    iget-object v0, p0, Lcom/bbm/ui/activities/adp;->a:Lcom/bbm/ui/activities/SettingsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->c(Lcom/bbm/ui/activities/SettingsActivity;)Lcom/bbm/d/a;
+
+    move-result-object v0
+
+    const-string v1, "receiveMusicUpdates"
+
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/bbm/d/a;->a(Ljava/lang/String;Ljava/lang/Boolean;)V
 
     goto :goto_0
 .end method

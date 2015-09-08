@@ -1,122 +1,73 @@
-.class public abstract Lcom/bbm/d/b/m;
-.super Lcom/bbm/d/b/f;
-.source "FilteredList.java"
+.class final Lcom/bbm/d/b/m;
+.super Ljava/lang/Object;
+.source "CachedObservableList.java"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Lcom/bbm/d/b/f",
-        "<TT;>;"
-    }
-.end annotation
+# interfaces
+.implements Lcom/bbm/j/h;
 
 
 # instance fields
-.field private final a:Lcom/bbm/j/r;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/bbm/j/r",
-            "<",
-            "Ljava/util/List",
-            "<TT;>;>;"
-        }
-    .end annotation
-.end field
+.field final synthetic a:Lcom/bbm/d/b/l;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/j/r;)V
+.method constructor <init>(Lcom/bbm/d/b/l;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/bbm/j/r",
-            "<",
-            "Ljava/util/List",
-            "<TT;>;>;)V"
-        }
-    .end annotation
 
     .prologue
-    .line 13
-    invoke-direct {p0}, Lcom/bbm/d/b/f;-><init>()V
+    .line 131
+    iput-object p1, p0, Lcom/bbm/d/b/m;->a:Lcom/bbm/d/b/l;
 
-    .line 14
-    iput-object p1, p0, Lcom/bbm/d/b/m;->a:Lcom/bbm/j/r;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()Ljava/util/List;
+.method public final a()V
     .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<TT;>;"
-        }
-    .end annotation
 
     .prologue
-    .line 19
-    iget-object v0, p0, Lcom/bbm/d/b/m;->a:Lcom/bbm/j/r;
+    .line 134
+    iget-object v1, p0, Lcom/bbm/d/b/m;->a:Lcom/bbm/d/b/l;
 
-    invoke-interface {v0}, Lcom/bbm/j/r;->e()Ljava/lang/Object;
+    :try_start_0
+    new-instance v2, Ljava/util/ArrayList;
 
-    move-result-object v0
+    iget-object v0, v1, Lcom/bbm/d/b/l;->a:Lcom/bbm/j/r;
 
-    check-cast v0, Ljava/util/List;
-
-    .line 20
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    .line 22
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Lcom/bbm/j/r;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    :cond_0
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    check-cast v0, Ljava/util/Collection;
 
-    move-result v2
+    invoke-direct {v2, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    if-eqz v2, :cond_1
+    iget-object v0, v1, Lcom/bbm/d/b/l;->b:Ljava/util/List;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iput-object v2, v1, Lcom/bbm/d/b/l;->b:Ljava/util/List;
 
-    move-result-object v2
-
-    .line 23
-    invoke-virtual {p0, v2}, Lcom/bbm/d/b/m;->a(Ljava/lang/Object;)Z
+    invoke-interface {v0, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_0
+    if-nez v3, :cond_0
 
-    .line 24
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v0, v2}, Lcom/bbm/d/b/l;->a(Ljava/util/List;Ljava/util/List;)V
+
+    invoke-virtual {v1}, Lcom/bbm/d/b/l;->c()V
+    :try_end_0
+    .catch Lcom/bbm/j/z; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 135
+    :cond_0
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
 
     goto :goto_0
-
-    .line 27
-    :cond_1
-    return-object v1
-.end method
-
-.method public abstract a(Ljava/lang/Object;)Z
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;)Z"
-        }
-    .end annotation
 .end method

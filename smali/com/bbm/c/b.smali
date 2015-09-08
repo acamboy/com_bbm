@@ -59,13 +59,13 @@
     if-eqz v0, :cond_0
 
     .line 32
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
 
     move-result-object v0
 
-    sget-object v1, Lcom/bbm/c/o;->aq:Lcom/bbm/c/o;
+    sget-object v1, Lcom/bbm/c/s;->aC:Lcom/bbm/c/s;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->c(Lcom/bbm/c/o;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->c(Lcom/bbm/c/s;)V
 
     .line 34
     :cond_0
@@ -90,13 +90,13 @@
     if-eqz v0, :cond_0
 
     .line 25
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
 
     move-result-object v0
 
-    sget-object v1, Lcom/bbm/c/o;->aq:Lcom/bbm/c/o;
+    sget-object v1, Lcom/bbm/c/s;->aC:Lcom/bbm/c/s;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->a(Lcom/bbm/c/o;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->a(Lcom/bbm/c/s;)V
 
     .line 27
     :cond_0

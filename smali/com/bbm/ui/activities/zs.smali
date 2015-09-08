@@ -1,56 +1,153 @@
-.class final Lcom/bbm/ui/activities/zs;
+.class final synthetic Lcom/bbm/ui/activities/zs;
 .super Ljava/lang/Object;
-.source "NewGroupActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "PrivateConversationActivity.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/NewGroupActivity;
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/NewGroupActivity;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 241
-    iput-object p1, p0, Lcom/bbm/ui/activities/zs;->a:Lcom/bbm/ui/activities/NewGroupActivity;
+    .line 1727
+    invoke-static {}, Lcom/bbm/ui/a/ab;->values()[Lcom/bbm/ui/a/ab;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    return-void
-.end method
+    array-length v0, v0
 
+    new-array v0, v0, [I
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+    sput-object v0, Lcom/bbm/ui/activities/zs;->a:[I
 
-    .prologue
-    .line 244
-    const-string v0, "mGroupIconButton Clicked"
+    :try_start_0
+    sget-object v0, Lcom/bbm/ui/activities/zs;->a:[I
 
-    const-class v1, Lcom/bbm/ui/activities/NewGroupActivity;
+    sget-object v1, Lcom/bbm/ui/a/ab;->a:Lcom/bbm/ui/a/ab;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-virtual {v1}, Lcom/bbm/ui/a/ab;->ordinal()I
 
-    .line 246
-    iget-object v0, p0, Lcom/bbm/ui/activities/zs;->a:Lcom/bbm/ui/activities/NewGroupActivity;
-
-    new-instance v1, Landroid/content/Intent;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/zs;->a:Lcom/bbm/ui/activities/NewGroupActivity;
-
-    const-class v3, Lcom/bbm/ui/activities/GroupsIconActivity;
-
-    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    move-result v1
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/activities/NewGroupActivity;->startActivityForResult(Landroid/content/Intent;I)V
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_5
 
-    .line 247
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/ui/activities/zs;->a:[I
+
+    sget-object v1, Lcom/bbm/ui/a/ab;->b:Lcom/bbm/ui/a/ab;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/a/ab;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_4
+
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/bbm/ui/activities/zs;->a:[I
+
+    sget-object v1, Lcom/bbm/ui/a/ab;->s:Lcom/bbm/ui/a/ab;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/a/ab;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_3
+
+    :goto_2
+    :try_start_3
+    sget-object v0, Lcom/bbm/ui/activities/zs;->a:[I
+
+    sget-object v1, Lcom/bbm/ui/a/ab;->t:Lcom/bbm/ui/a/ab;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/a/ab;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_2
+
+    :goto_3
+    :try_start_4
+    sget-object v0, Lcom/bbm/ui/activities/zs;->a:[I
+
+    sget-object v1, Lcom/bbm/ui/a/ab;->i:Lcom/bbm/ui/a/ab;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/a/ab;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_1
+
+    :goto_4
+    :try_start_5
+    sget-object v0, Lcom/bbm/ui/activities/zs;->a:[I
+
+    sget-object v1, Lcom/bbm/ui/a/ab;->j:Lcom/bbm/ui/a/ab;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/a/ab;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x6
+
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_0
+
+    :goto_5
     return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_5
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_4
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_3
+
+    :catch_3
+    move-exception v0
+
+    goto :goto_2
+
+    :catch_4
+    move-exception v0
+
+    goto :goto_1
+
+    :catch_5
+    move-exception v0
+
+    goto :goto_0
 .end method

@@ -1,544 +1,160 @@
-.class final synthetic Lcom/bbm/d/b/b;
+.class final Lcom/bbm/d/b/b;
 .super Ljava/lang/Object;
 .source "BbmdsUtil.java"
 
+# interfaces
+.implements Lcom/bbm/j/h;
 
-# static fields
-.field static final synthetic a:[I
 
-.field static final synthetic b:[I
+# instance fields
+.field final synthetic a:Lcom/bbm/j/w;
+
+.field final synthetic b:Lcom/google/b/f/a/u;
+
+.field final synthetic c:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/bbm/j/w;Lcom/google/b/f/a/u;Ljava/lang/String;)V
+    .locals 0
 
     .prologue
-    .line 183
-    invoke-static {}, Lcom/bbm/d/fm;->values()[Lcom/bbm/d/fm;
+    .line 791
+    iput-object p1, p0, Lcom/bbm/d/b/b;->a:Lcom/bbm/j/w;
 
-    move-result-object v0
+    iput-object p2, p0, Lcom/bbm/d/b/b;->b:Lcom/google/b/f/a/u;
 
-    array-length v0, v0
+    iput-object p3, p0, Lcom/bbm/d/b/b;->c:Ljava/lang/String;
 
-    new-array v0, v0, [I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lcom/bbm/d/b/b;->b:[I
+    return-void
+.end method
 
+
+# virtual methods
+.method public final a()V
+    .locals 5
+
+    .prologue
+    .line 795
     :try_start_0
-    sget-object v0, Lcom/bbm/d/b/b;->b:[I
+    iget-object v0, p0, Lcom/bbm/d/b/b;->a:Lcom/bbm/j/w;
 
-    sget-object v1, Lcom/bbm/d/fm;->h:Lcom/bbm/d/fm;
+    invoke-interface {v0}, Lcom/bbm/j/w;->b()Z
 
-    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
+    move-result v0
 
-    move-result v1
+    if-nez v0, :cond_1
 
-    const/4 v2, 0x1
+    .line 796
+    iget-object v0, p0, Lcom/bbm/d/b/b;->a:Lcom/bbm/j/w;
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_17
+    invoke-interface {v0, p0}, Lcom/bbm/j/w;->b(Lcom/bbm/j/h;)V
 
-    :goto_0
-    :try_start_1
-    sget-object v0, Lcom/bbm/d/b/b;->b:[I
+    .line 798
+    iget-object v0, p0, Lcom/bbm/d/b/b;->b:Lcom/google/b/f/a/u;
 
-    sget-object v1, Lcom/bbm/d/fm;->i:Lcom/bbm/d/fm;
+    invoke-virtual {v0}, Lcom/google/b/f/a/u;->isDone()Z
 
-    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
+    move-result v0
 
-    move-result v1
+    if-nez v0, :cond_1
 
-    const/4 v2, 0x2
+    .line 799
+    iget-object v0, p0, Lcom/bbm/d/b/b;->a:Lcom/bbm/j/w;
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_16
-
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/bbm/d/b/b;->b:[I
-
-    sget-object v1, Lcom/bbm/d/fm;->j:Lcom/bbm/d/fm;
-
-    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_15
-
-    :goto_2
-    :try_start_3
-    sget-object v0, Lcom/bbm/d/b/b;->b:[I
-
-    sget-object v1, Lcom/bbm/d/fm;->k:Lcom/bbm/d/fm;
-
-    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_14
-
-    :goto_3
-    :try_start_4
-    sget-object v0, Lcom/bbm/d/b/b;->b:[I
-
-    sget-object v1, Lcom/bbm/d/fm;->l:Lcom/bbm/d/fm;
-
-    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_13
-
-    :goto_4
-    :try_start_5
-    sget-object v0, Lcom/bbm/d/b/b;->b:[I
-
-    sget-object v1, Lcom/bbm/d/fm;->m:Lcom/bbm/d/fm;
-
-    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x6
-
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_12
-
-    :goto_5
-    :try_start_6
-    sget-object v0, Lcom/bbm/d/b/b;->b:[I
-
-    sget-object v1, Lcom/bbm/d/fm;->n:Lcom/bbm/d/fm;
-
-    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x7
-
-    aput v2, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_11
-
-    :goto_6
-    :try_start_7
-    sget-object v0, Lcom/bbm/d/b/b;->b:[I
-
-    sget-object v1, Lcom/bbm/d/fm;->b:Lcom/bbm/d/fm;
-
-    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
-
-    move-result v1
-
-    const/16 v2, 0x8
-
-    aput v2, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_10
-
-    :goto_7
-    :try_start_8
-    sget-object v0, Lcom/bbm/d/b/b;->b:[I
-
-    sget-object v1, Lcom/bbm/d/fm;->f:Lcom/bbm/d/fm;
-
-    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
-
-    move-result v1
-
-    const/16 v2, 0x9
-
-    aput v2, v0, v1
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_f
-
-    :goto_8
-    :try_start_9
-    sget-object v0, Lcom/bbm/d/b/b;->b:[I
-
-    sget-object v1, Lcom/bbm/d/fm;->g:Lcom/bbm/d/fm;
-
-    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
-
-    move-result v1
-
-    const/16 v2, 0xa
-
-    aput v2, v0, v1
-    :try_end_9
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_e
-
-    :goto_9
-    :try_start_a
-    sget-object v0, Lcom/bbm/d/b/b;->b:[I
-
-    sget-object v1, Lcom/bbm/d/fm;->e:Lcom/bbm/d/fm;
-
-    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
-
-    move-result v1
-
-    const/16 v2, 0xb
-
-    aput v2, v0, v1
-    :try_end_a
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_d
-
-    :goto_a
-    :try_start_b
-    sget-object v0, Lcom/bbm/d/b/b;->b:[I
-
-    sget-object v1, Lcom/bbm/d/fm;->p:Lcom/bbm/d/fm;
-
-    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
-
-    move-result v1
-
-    const/16 v2, 0xc
-
-    aput v2, v0, v1
-    :try_end_b
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_c
-
-    :goto_b
-    :try_start_c
-    sget-object v0, Lcom/bbm/d/b/b;->b:[I
-
-    sget-object v1, Lcom/bbm/d/fm;->t:Lcom/bbm/d/fm;
-
-    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
-
-    move-result v1
-
-    const/16 v2, 0xd
-
-    aput v2, v0, v1
-    :try_end_c
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_c .. :try_end_c} :catch_b
-
-    :goto_c
-    :try_start_d
-    sget-object v0, Lcom/bbm/d/b/b;->b:[I
-
-    sget-object v1, Lcom/bbm/d/fm;->o:Lcom/bbm/d/fm;
-
-    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
-
-    move-result v1
-
-    const/16 v2, 0xe
-
-    aput v2, v0, v1
-    :try_end_d
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_d .. :try_end_d} :catch_a
-
-    :goto_d
-    :try_start_e
-    sget-object v0, Lcom/bbm/d/b/b;->b:[I
-
-    sget-object v1, Lcom/bbm/d/fm;->r:Lcom/bbm/d/fm;
-
-    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
-
-    move-result v1
-
-    const/16 v2, 0xf
-
-    aput v2, v0, v1
-    :try_end_e
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_e .. :try_end_e} :catch_9
-
-    :goto_e
-    :try_start_f
-    sget-object v0, Lcom/bbm/d/b/b;->b:[I
-
-    sget-object v1, Lcom/bbm/d/fm;->u:Lcom/bbm/d/fm;
-
-    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
-
-    move-result v1
-
-    const/16 v2, 0x10
-
-    aput v2, v0, v1
-    :try_end_f
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_f .. :try_end_f} :catch_8
-
-    :goto_f
-    :try_start_10
-    sget-object v0, Lcom/bbm/d/b/b;->b:[I
-
-    sget-object v1, Lcom/bbm/d/fm;->v:Lcom/bbm/d/fm;
-
-    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
-
-    move-result v1
-
-    const/16 v2, 0x11
-
-    aput v2, v0, v1
-    :try_end_10
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_10 .. :try_end_10} :catch_7
-
-    :goto_10
-    :try_start_11
-    sget-object v0, Lcom/bbm/d/b/b;->b:[I
-
-    sget-object v1, Lcom/bbm/d/fm;->s:Lcom/bbm/d/fm;
-
-    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
-
-    move-result v1
-
-    const/16 v2, 0x12
-
-    aput v2, v0, v1
-    :try_end_11
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_11 .. :try_end_11} :catch_6
-
-    :goto_11
-    :try_start_12
-    sget-object v0, Lcom/bbm/d/b/b;->b:[I
-
-    sget-object v1, Lcom/bbm/d/fm;->a:Lcom/bbm/d/fm;
-
-    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
-
-    move-result v1
-
-    const/16 v2, 0x13
-
-    aput v2, v0, v1
-    :try_end_12
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_12 .. :try_end_12} :catch_5
-
-    :goto_12
-    :try_start_13
-    sget-object v0, Lcom/bbm/d/b/b;->b:[I
-
-    sget-object v1, Lcom/bbm/d/fm;->w:Lcom/bbm/d/fm;
-
-    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
-
-    move-result v1
-
-    const/16 v2, 0x14
-
-    aput v2, v0, v1
-    :try_end_13
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_13 .. :try_end_13} :catch_4
-
-    .line 107
-    :goto_13
-    invoke-static {}, Lcom/bbm/d/fk;->values()[Lcom/bbm/d/fk;
+    invoke-interface {v0}, Lcom/bbm/j/w;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    array-length v0, v0
+    check-cast v0, Ljava/util/List;
 
-    new-array v0, v0, [I
+    .line 800
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    sput-object v0, Lcom/bbm/d/b/b;->a:[I
+    move-result-object v2
 
-    :try_start_14
-    sget-object v0, Lcom/bbm/d/b/b;->a:[I
+    :cond_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    sget-object v1, Lcom/bbm/d/fk;->d:Lcom/bbm/d/fk;
+    move-result v0
 
-    invoke-virtual {v1}, Lcom/bbm/d/fk;->ordinal()I
+    if-eqz v0, :cond_2
 
-    move-result v1
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    const/4 v2, 0x1
+    move-result-object v0
 
-    aput v2, v0, v1
-    :try_end_14
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_14 .. :try_end_14} :catch_3
+    check-cast v0, Lcom/bbm/d/fv;
 
-    :goto_14
-    :try_start_15
-    sget-object v0, Lcom/bbm/d/b/b;->a:[I
+    .line 802
+    iget-boolean v1, v0, Lcom/bbm/d/fv;->j:Z
 
-    sget-object v1, Lcom/bbm/d/fk;->c:Lcom/bbm/d/fk;
+    if-nez v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/bbm/d/fk;->ordinal()I
+    iget-boolean v1, v0, Lcom/bbm/d/fv;->h:Z
 
-    move-result v1
+    if-nez v1, :cond_0
 
-    const/4 v2, 0x2
+    .line 803
+    iget-object v1, v0, Lcom/bbm/d/fv;->q:Ljava/util/List;
 
-    aput v2, v0, v1
-    :try_end_15
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_15 .. :try_end_15} :catch_2
+    .line 804
+    if-eqz v1, :cond_0
 
-    :goto_15
-    :try_start_16
-    sget-object v0, Lcom/bbm/d/b/b;->a:[I
+    invoke-interface {v1}, Ljava/util/List;->size()I
 
-    sget-object v1, Lcom/bbm/d/fk;->a:Lcom/bbm/d/fk;
+    move-result v3
 
-    invoke-virtual {v1}, Lcom/bbm/d/fk;->ordinal()I
+    const/4 v4, 0x1
 
-    move-result v1
+    if-ne v3, v4, :cond_0
 
-    const/4 v2, 0x3
+    .line 805
+    const/4 v3, 0x0
 
-    aput v2, v0, v1
-    :try_end_16
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_16 .. :try_end_16} :catch_1
+    invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    :goto_16
-    :try_start_17
-    sget-object v0, Lcom/bbm/d/b/b;->a:[I
+    move-result-object v1
 
-    sget-object v1, Lcom/bbm/d/fk;->b:Lcom/bbm/d/fk;
+    check-cast v1, Ljava/lang/String;
 
-    invoke-virtual {v1}, Lcom/bbm/d/fk;->ordinal()I
+    iget-object v3, p0, Lcom/bbm/d/b/b;->c:Ljava/lang/String;
+
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    const/4 v2, 0x4
+    if-eqz v1, :cond_0
 
-    aput v2, v0, v1
-    :try_end_17
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_17 .. :try_end_17} :catch_0
+    .line 807
+    iget-object v1, p0, Lcom/bbm/d/b/b;->b:Lcom/google/b/f/a/u;
 
-    :goto_17
+    iget-object v0, v0, Lcom/bbm/d/fv;->b:Ljava/lang/String;
+
+    invoke-virtual {v1, v0}, Lcom/google/b/f/a/u;->a(Ljava/lang/Object;)Z
+
+    .line 821
+    :cond_1
+    :goto_0
     return-void
 
+    .line 815
+    :cond_2
+    iget-object v0, p0, Lcom/bbm/d/b/b;->b:Lcom/google/b/f/a/u;
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Lcom/google/b/f/a/u;->a(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Lcom/bbm/j/z; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    .line 821
     :catch_0
     move-exception v0
 
-    goto :goto_17
-
-    :catch_1
-    move-exception v0
-
-    goto :goto_16
-
-    :catch_2
-    move-exception v0
-
-    goto :goto_15
-
-    :catch_3
-    move-exception v0
-
-    goto :goto_14
-
-    :catch_4
-    move-exception v0
-
-    goto :goto_13
-
-    :catch_5
-    move-exception v0
-
-    goto :goto_12
-
-    :catch_6
-    move-exception v0
-
-    goto :goto_11
-
-    :catch_7
-    move-exception v0
-
-    goto :goto_10
-
-    :catch_8
-    move-exception v0
-
-    goto :goto_f
-
-    :catch_9
-    move-exception v0
-
-    goto/16 :goto_e
-
-    :catch_a
-    move-exception v0
-
-    goto/16 :goto_d
-
-    :catch_b
-    move-exception v0
-
-    goto/16 :goto_c
-
-    :catch_c
-    move-exception v0
-
-    goto/16 :goto_b
-
-    :catch_d
-    move-exception v0
-
-    goto/16 :goto_a
-
-    :catch_e
-    move-exception v0
-
-    goto/16 :goto_9
-
-    :catch_f
-    move-exception v0
-
-    goto/16 :goto_8
-
-    :catch_10
-    move-exception v0
-
-    goto/16 :goto_7
-
-    :catch_11
-    move-exception v0
-
-    goto/16 :goto_6
-
-    :catch_12
-    move-exception v0
-
-    goto/16 :goto_5
-
-    :catch_13
-    move-exception v0
-
-    goto/16 :goto_4
-
-    :catch_14
-    move-exception v0
-
-    goto/16 :goto_3
-
-    :catch_15
-    move-exception v0
-
-    goto/16 :goto_2
-
-    :catch_16
-    move-exception v0
-
-    goto/16 :goto_1
-
-    :catch_17
-    move-exception v0
-
-    goto/16 :goto_0
+    goto :goto_0
 .end method

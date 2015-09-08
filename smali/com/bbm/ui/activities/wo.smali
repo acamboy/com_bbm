@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/wo;
 .super Ljava/lang/Object;
-.source "MainActivity.java"
+.source "NewListItemActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/text/TextWatcher;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/NewListItemActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
     .locals 0
 
     .prologue
-    .line 1190
-    iput-object p1, p0, Lcom/bbm/ui/activities/wo;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 143
+    iput-object p1, p0, Lcom/bbm/ui/activities/wo;->a:Lcom/bbm/ui/activities/NewListItemActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,30 +25,31 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 0
 
     .prologue
-    .line 1193
-    const-string v0, "root Clicked"
+    .line 148
+    return-void
+.end method
 
-    const-class v1, Lcom/bbm/ui/activities/MainActivity;
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    .prologue
+    .line 153
+    return-void
+.end method
 
-    .line 1194
-    iget-object v0, p0, Lcom/bbm/ui/activities/wo;->a:Lcom/bbm/ui/activities/MainActivity;
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 1
 
-    new-instance v1, Landroid/content/Intent;
+    .prologue
+    .line 157
+    iget-object v0, p0, Lcom/bbm/ui/activities/wo;->a:Lcom/bbm/ui/activities/NewListItemActivity;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/wo;->a:Lcom/bbm/ui/activities/MainActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewListItemActivity;->a(Lcom/bbm/ui/activities/NewListItemActivity;)V
 
-    const-class v3, Lcom/bbm/ui/activities/OwnProfileActivity;
-
-    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/MainActivity;->startActivity(Landroid/content/Intent;)V
-
-    .line 1195
+    .line 158
     return-void
 .end method

@@ -316,7 +316,7 @@
 
     .prologue
     .line 1795
-    const/high16 v0, -0x40000000
+    const/high16 v0, -0x40000000    # -2.0f
 
     const/4 v1, 0x0
 
@@ -3865,8 +3865,6 @@
     .line 1786
     invoke-interface {v0}, Lcom/a/a/j;->a()V
 
-    iget-object v1, p0, Lcom/a/a/d;->a:Lcom/a/a/m;
-
     sget-object v1, Lcom/a/a/k;->a:Lcom/a/a/k;
 
     invoke-interface {v0, v1}, Lcom/a/a/j;->a(Lcom/a/a/k;)V
@@ -3925,8 +3923,6 @@
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/a/a/d;->o:Lcom/a/a/g;
-
     sget-object v1, Lcom/a/a/k;->l:Lcom/a/a/k;
 
     invoke-interface {v0, v1}, Lcom/a/a/j;->a(Lcom/a/a/k;)V
@@ -3941,8 +3937,6 @@
     iget-object v1, p0, Lcom/a/a/d;->p:Lcom/a/a/f;
 
     if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lcom/a/a/d;->p:Lcom/a/a/f;
 
     sget-object v1, Lcom/a/a/k;->m:Lcom/a/a/k;
 

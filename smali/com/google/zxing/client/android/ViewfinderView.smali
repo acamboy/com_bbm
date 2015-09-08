@@ -475,13 +475,11 @@
 
     int-to-float v0, v0
 
-    const/high16 v9, 0x40400000
+    const/high16 v9, 0x40400000    # 3.0f
 
     iget-object v10, p0, Lcom/google/zxing/client/android/ViewfinderView;->d:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v7, v0, v9, v10}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_3
 
@@ -490,6 +488,8 @@
     move-exception v0
 
     monitor-exit v4
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
 
@@ -561,13 +561,11 @@
 
     int-to-float v0, v0
 
-    const/high16 v10, 0x40c00000
+    const/high16 v10, 0x40c00000    # 6.0f
 
     iget-object v11, p0, Lcom/google/zxing/client/android/ViewfinderView;->d:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v9, v0, v10, v11}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     goto :goto_4
 
@@ -576,6 +574,8 @@
     move-exception v0
 
     monitor-exit v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     throw v0
 

@@ -1,87 +1,72 @@
 .class final Lcom/d/a/b/j;
 .super Ljava/lang/Object;
-.source "ImageLoaderEngine.java"
+.source "ImageLoaderConfiguration.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/d/a/b/d/c;
 
 
 # instance fields
-.field final synthetic a:Lcom/d/a/b/l;
-
-.field final synthetic b:Lcom/d/a/b/i;
+.field private final a:Lcom/d/a/b/d/c;
 
 
 # direct methods
-.method constructor <init>(Lcom/d/a/b/i;Lcom/d/a/b/l;)V
+.method public constructor <init>(Lcom/d/a/b/d/c;)V
     .locals 0
 
     .prologue
-    .line 66
-    iput-object p1, p0, Lcom/d/a/b/j;->b:Lcom/d/a/b/i;
-
-    iput-object p2, p0, Lcom/d/a/b/j;->a:Lcom/d/a/b/l;
-
+    .line 612
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 613
+    iput-object p1, p0, Lcom/d/a/b/j;->a:Lcom/d/a/b/d/c;
+
+    .line 614
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final a(Ljava/lang/String;Ljava/lang/Object;)Ljava/io/InputStream;
     .locals 2
 
     .prologue
-    .line 69
-    iget-object v0, p0, Lcom/d/a/b/j;->b:Lcom/d/a/b/i;
+    .line 618
+    sget-object v0, Lcom/d/a/b/h;->a:[I
 
-    iget-object v0, v0, Lcom/d/a/b/i;->a:Lcom/d/a/b/g;
+    invoke-static {p1}, Lcom/d/a/b/d/d;->a(Ljava/lang/String;)Lcom/d/a/b/d/d;
 
-    iget-object v0, v0, Lcom/d/a/b/g;->q:Lcom/d/a/a/a/b;
+    move-result-object v1
 
-    iget-object v1, p0, Lcom/d/a/b/j;->a:Lcom/d/a/b/l;
+    invoke-virtual {v1}, Lcom/d/a/b/d/d;->ordinal()I
 
-    iget-object v1, v1, Lcom/d/a/b/l;->a:Ljava/lang/String;
+    move-result v1
 
-    invoke-interface {v0, v1}, Lcom/d/a/a/a/b;->a(Ljava/lang/String;)Ljava/io/File;
+    aget v0, v0, v1
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 623
+    iget-object v0, p0, Lcom/d/a/b/j;->a:Lcom/d/a/b/d/c;
+
+    invoke-interface {v0, p1, p2}, Lcom/d/a/b/d/c;->a(Ljava/lang/String;Ljava/lang/Object;)Ljava/io/InputStream;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+    return-object v0
 
-    move-result v0
+    .line 621
+    :pswitch_0
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    .line 70
-    iget-object v1, p0, Lcom/d/a/b/j;->b:Lcom/d/a/b/i;
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
 
-    invoke-virtual {v1}, Lcom/d/a/b/i;->a()V
+    throw v0
 
-    .line 71
-    if-eqz v0, :cond_0
-
-    .line 72
-    iget-object v0, p0, Lcom/d/a/b/j;->b:Lcom/d/a/b/i;
-
-    iget-object v0, v0, Lcom/d/a/b/i;->c:Ljava/util/concurrent/Executor;
-
-    iget-object v1, p0, Lcom/d/a/b/j;->a:Lcom/d/a/b/l;
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    .line 76
-    :goto_0
-    return-void
-
-    .line 74
-    :cond_0
-    iget-object v0, p0, Lcom/d/a/b/j;->b:Lcom/d/a/b/i;
-
-    iget-object v0, v0, Lcom/d/a/b/i;->b:Ljava/util/concurrent/Executor;
-
-    iget-object v1, p0, Lcom/d/a/b/j;->a:Lcom/d/a/b/l;
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    goto :goto_0
+    .line 618
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
 .end method

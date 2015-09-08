@@ -31,7 +31,7 @@
     .locals 0
 
     .prologue
-    .line 231
+    .line 224
     invoke-direct {p0}, Ljava/util/concurrent/locks/AbstractQueuedSynchronizer;-><init>()V
 
     return-void
@@ -48,15 +48,15 @@
     .end annotation
 
     .prologue
-    .line 302
+    .line 295
     invoke-virtual {p0}, Lcom/google/b/f/a/b;->getState()I
 
     move-result v0
 
-    .line 303
+    .line 296
     sparse-switch v0, :sswitch_data_0
 
-    .line 317
+    .line 310
     new-instance v1, Ljava/lang/IllegalStateException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -77,13 +77,13 @@
 
     throw v1
 
-    .line 305
+    .line 298
     :sswitch_0
     iget-object v0, p0, Lcom/google/b/f/a/b;->b:Ljava/lang/Throwable;
 
     if-eqz v0, :cond_0
 
-    .line 306
+    .line 299
     new-instance v0, Ljava/util/concurrent/ExecutionException;
 
     iget-object v1, p0, Lcom/google/b/f/a/b;->b:Ljava/lang/Throwable;
@@ -92,13 +92,13 @@
 
     throw v0
 
-    .line 308
+    .line 301
     :cond_0
     iget-object v0, p0, Lcom/google/b/f/a/b;->a:Ljava/lang/Object;
 
     return-object v0
 
-    .line 313
+    .line 306
     :sswitch_1
     const-string v0, "Task was cancelled."
 
@@ -110,7 +110,7 @@
 
     throw v0
 
-    .line 303
+    .line 296
     :sswitch_data_0
     .sparse-switch
         0x2 -> :sswitch_0
@@ -132,20 +132,20 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 379
+    .line 372
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, v2}, Lcom/google/b/f/a/b;->compareAndSetState(II)Z
 
     move-result v0
 
-    .line 380
+    .line 373
     if-eqz v0, :cond_2
 
-    .line 383
+    .line 376
     iput-object p1, p0, Lcom/google/b/f/a/b;->a:Ljava/lang/Object;
 
-    .line 385
+    .line 378
     and-int/lit8 v1, p3, 0xc
 
     if-eqz v1, :cond_0
@@ -159,15 +159,15 @@
     :cond_0
     iput-object p2, p0, Lcom/google/b/f/a/b;->b:Ljava/lang/Throwable;
 
-    .line 387
+    .line 380
     invoke-virtual {p0, p3}, Lcom/google/b/f/a/b;->releaseShared(I)Z
 
-    .line 393
+    .line 386
     :cond_1
     :goto_0
     return v0
 
-    .line 388
+    .line 381
     :cond_2
     invoke-virtual {p0}, Lcom/google/b/f/a/b;->getState()I
 
@@ -175,7 +175,7 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 391
+    .line 384
     const/4 v1, -0x1
 
     invoke-virtual {p0, v1}, Lcom/google/b/f/a/b;->acquireShared(I)V
@@ -187,7 +187,7 @@
     .locals 1
 
     .prologue
-    .line 327
+    .line 320
     invoke-virtual {p0}, Lcom/google/b/f/a/b;->getState()I
 
     move-result v0
@@ -211,7 +211,7 @@
     .locals 1
 
     .prologue
-    .line 334
+    .line 327
     invoke-virtual {p0}, Lcom/google/b/f/a/b;->getState()I
 
     move-result v0
@@ -231,21 +231,45 @@
     goto :goto_0
 .end method
 
+.method final d()Z
+    .locals 2
+
+    .prologue
+    .line 334
+    invoke-virtual {p0}, Lcom/google/b/f/a/b;->getState()I
+
+    move-result v0
+
+    const/16 v1, 0x8
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method protected final tryAcquireShared(I)I
     .locals 1
 
     .prologue
-    .line 250
+    .line 243
     invoke-virtual {p0}, Lcom/google/b/f/a/b;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 251
+    .line 244
     const/4 v0, 0x1
 
-    .line 253
+    .line 246
     :goto_0
     return v0
 
@@ -259,10 +283,10 @@
     .locals 1
 
     .prologue
-    .line 262
+    .line 255
     invoke-virtual {p0, p1}, Lcom/google/b/f/a/b;->setState(I)V
 
-    .line 263
+    .line 256
     const/4 v0, 0x1
 
     return v0

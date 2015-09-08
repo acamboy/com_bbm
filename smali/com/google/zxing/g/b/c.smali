@@ -30,7 +30,7 @@
     .prologue
     const/4 v2, 0x0
 
-    const/high16 v1, 0x3f800000
+    const/high16 v1, 0x3f800000    # 1.0f
 
     .line 262
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/zxing/g/b/c;->b(IIII)F
@@ -195,7 +195,7 @@
     .locals 6
 
     .prologue
-    const/high16 v5, 0x40e00000
+    const/high16 v5, 0x40e00000    # 7.0f
 
     .line 236
     iget v0, p1, Lcom/google/zxing/o;->a:F
@@ -270,7 +270,7 @@
     :cond_1
     add-float/2addr v0, v1
 
-    const/high16 v1, 0x41600000
+    const/high16 v1, 0x41600000    # 14.0f
 
     div-float/2addr v0, v1
 
@@ -514,7 +514,7 @@
 
     .line 353
     :cond_8
-    const/high16 v3, 0x7fc00000
+    const/high16 v3, 0x7fc00000    # NaNf
 
     goto :goto_8
 
@@ -601,12 +601,12 @@
 
     add-float/2addr v3, v4
 
-    const/high16 v4, 0x40000000
+    const/high16 v4, 0x40000000    # 2.0f
 
     div-float v9, v3, v4
 
     .line 93
-    const/high16 v3, 0x3f800000
+    const/high16 v3, 0x3f800000    # 1.0f
 
     cmpg-float v3, v9, v3
 
@@ -627,7 +627,7 @@
 
     div-float/2addr v3, v9
 
-    const/high16 v4, 0x3f000000
+    const/high16 v4, 0x3f000000    # 0.5f
 
     add-float/2addr v3, v4
 
@@ -643,7 +643,7 @@
 
     div-float/2addr v4, v9
 
-    const/high16 v5, 0x3f000000
+    const/high16 v5, 0x3f000000    # 0.5f
 
     add-float/2addr v4, v5
 
@@ -720,9 +720,9 @@
     add-float/2addr v5, v6
 
     .line 110
-    const/high16 v6, 0x3f800000
+    const/high16 v6, 0x3f800000    # 1.0f
 
-    const/high16 v7, 0x40400000
+    const/high16 v7, 0x40400000    # 3.0f
 
     int-to-float v4, v4
 
@@ -808,7 +808,7 @@
 
     int-to-float v4, v4
 
-    const/high16 v6, 0x40400000
+    const/high16 v6, 0x40400000    # 3.0f
 
     mul-float/2addr v6, v9
 
@@ -885,7 +885,7 @@
 
     int-to-float v3, v3
 
-    const/high16 v4, 0x40400000
+    const/high16 v4, 0x40400000    # 3.0f
 
     mul-float/2addr v4, v9
 
@@ -1063,7 +1063,7 @@
 
     int-to-float v3, v0
 
-    const/high16 v4, 0x40600000
+    const/high16 v4, 0x40600000    # 3.5f
 
     sub-float v5, v3, v4
 
@@ -1079,20 +1079,20 @@
 
     move/from16 v16, v0
 
-    const/high16 v3, 0x40400000
+    const/high16 v3, 0x40400000    # 3.0f
 
     sub-float v7, v5, v3
 
     move v8, v7
 
     :goto_8
-    const/high16 v3, 0x40600000
+    const/high16 v3, 0x40600000    # 3.5f
 
-    const/high16 v4, 0x40600000
+    const/high16 v4, 0x40600000    # 3.5f
 
-    const/high16 v6, 0x40600000
+    const/high16 v6, 0x40600000    # 3.5f
 
-    const/high16 v9, 0x40600000
+    const/high16 v9, 0x40600000    # 3.5f
 
     move-object/from16 v0, v21
 

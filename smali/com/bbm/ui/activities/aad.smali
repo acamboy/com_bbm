@@ -1,55 +1,65 @@
-.class final Lcom/bbm/ui/activities/aad;
+.class final synthetic Lcom/bbm/ui/activities/aad;
 .super Ljava/lang/Object;
-.source "NewListItemActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "ProfileIconSourceActivity.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/NewListItemActivity;
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 311
-    iput-object p1, p0, Lcom/bbm/ui/activities/aad;->a:Lcom/bbm/ui/activities/NewListItemActivity;
+    .line 143
+    invoke-static {}, Lcom/bbm/ui/activities/aag;->a()[I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/activities/aad;->a:[I
+
+    :try_start_0
+    sget-object v0, Lcom/bbm/ui/activities/aad;->a:[I
+
+    sget v1, Lcom/bbm/ui/activities/aag;->a:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_1
+
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/ui/activities/aad;->a:[I
+
+    sget v1, Lcom/bbm/ui/activities/aag;->b:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_0
+
+    :goto_1
     return-void
-.end method
 
+    :catch_0
+    move-exception v0
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+    goto :goto_1
 
-    .prologue
-    .line 315
-    const-string v0, "mHeaderActionBar PositiveButton Clicked"
+    :catch_1
+    move-exception v0
 
-    const-class v1, Lcom/bbm/ui/activities/NewListItemActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 317
-    iget-object v0, p0, Lcom/bbm/ui/activities/aad;->a:Lcom/bbm/ui/activities/NewListItemActivity;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/aad;->a:Lcom/bbm/ui/activities/NewListItemActivity;
-
-    iget-object v1, v1, Lcom/bbm/ui/activities/NewListItemActivity;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/NewListItemActivity;->a(Ljava/lang/String;)V
-
-    .line 318
-    iget-object v0, p0, Lcom/bbm/ui/activities/aad;->a:Lcom/bbm/ui/activities/NewListItemActivity;
-
-    invoke-static {v0}, Lcom/bbm/util/fh;->b(Landroid/app/Activity;)V
-
-    .line 319
-    return-void
+    goto :goto_0
 .end method

@@ -3,28 +3,20 @@
 .source "ConversationActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/b/f;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/d/ei;
-
-.field final synthetic b:Lcom/bbm/ui/b/a;
-
-.field final synthetic c:Lcom/bbm/ui/activities/ge;
+.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ge;Lcom/bbm/d/ei;Lcom/bbm/ui/b/a;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 1235
-    iput-object p1, p0, Lcom/bbm/ui/activities/gf;->c:Lcom/bbm/ui/activities/ge;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/gf;->a:Lcom/bbm/d/ei;
-
-    iput-object p3, p0, Lcom/bbm/ui/activities/gf;->b:Lcom/bbm/ui/b/a;
+    .line 2920
+    iput-object p1, p0, Lcom/bbm/ui/activities/gf;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -33,26 +25,22 @@
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 1239
-    iget-object v0, p0, Lcom/bbm/ui/activities/gf;->c:Lcom/bbm/ui/activities/ge;
+    .line 2924
+    const-string v0, "quickshare attach contact clicked"
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/gf;->a:Lcom/bbm/d/ei;
+    const-class v1, Lcom/bbm/ui/activities/ConversationActivity;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/gf;->c:Lcom/bbm/ui/activities/ge;
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    iget-wide v2, v2, Lcom/bbm/ui/activities/ge;->b:J
+    .line 2925
+    iget-object v0, p0, Lcom/bbm/ui/activities/gf;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/bbm/ui/activities/ge;->a(Lcom/bbm/d/ei;J)V
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->ar(Lcom/bbm/ui/activities/ConversationActivity;)V
 
-    .line 1240
-    iget-object v0, p0, Lcom/bbm/ui/activities/gf;->b:Lcom/bbm/ui/b/a;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/b/a;->dismiss()V
-
-    .line 1241
+    .line 2926
     return-void
 .end method

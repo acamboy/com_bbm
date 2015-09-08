@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/dc;
 .super Ljava/lang/Object;
-.source "ChannelOwnerProfileActivity.java"
+.source "ChannelStatsActivity.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ChannelStatsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ChannelStatsActivity;)V
     .locals 0
 
     .prologue
-    .line 121
-    iput-object p1, p0, Lcom/bbm/ui/activities/dc;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
+    .line 215
+    iput-object p1, p0, Lcom/bbm/ui/activities/dc;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,24 +26,34 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 1
+    .locals 3
 
     .prologue
-    .line 124
-    iget-object v0, p0, Lcom/bbm/ui/activities/dc;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
+    .line 218
+    new-instance v0, Landroid/content/Intent;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->a(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)V
+    iget-object v1, p0, Lcom/bbm/ui/activities/dc;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
 
-    .line 125
-    iget-object v0, p0, Lcom/bbm/ui/activities/dc;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
+    const-class v2, Lcom/bbm/ui/activities/ChannelSubscribersActivity;
 
-    invoke-static {v0}, Lcom/bbm/util/fh;->b(Landroid/app/Activity;)V
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 126
-    iget-object v0, p0, Lcom/bbm/ui/activities/dc;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
+    .line 219
+    const-string v1, "bbm_channel_uri"
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->finish()V
+    iget-object v2, p0, Lcom/bbm/ui/activities/dc;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
 
-    .line 127
+    invoke-static {v2}, Lcom/bbm/ui/activities/ChannelStatsActivity;->j(Lcom/bbm/ui/activities/ChannelStatsActivity;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 220
+    iget-object v1, p0, Lcom/bbm/ui/activities/dc;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/ChannelStatsActivity;->startActivity(Landroid/content/Intent;)V
+
+    .line 221
     return-void
 .end method

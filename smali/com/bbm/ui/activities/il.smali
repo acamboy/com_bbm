@@ -1,75 +1,60 @@
 .class final Lcom/bbm/ui/activities/il;
-.super Lcom/bbm/util/cp;
-.source "ConversationActivity.java"
+.super Ljava/lang/Object;
+.source "EditProfileNameActivity.java"
+
+# interfaces
+.implements Lcom/bbm/ui/ce;
 
 
 # instance fields
-.field final synthetic a:Landroid/app/ProgressDialog;
-
-.field final synthetic b:Lcom/bbm/ui/activities/ConversationActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/EditProfileNameActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;Landroid/app/ProgressDialog;)V
+.method constructor <init>(Lcom/bbm/ui/activities/EditProfileNameActivity;)V
     .locals 0
 
     .prologue
-    .line 3209
-    iput-object p1, p0, Lcom/bbm/ui/activities/il;->b:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 194
+    iput-object p1, p0, Lcom/bbm/ui/activities/il;->a:Lcom/bbm/ui/activities/EditProfileNameActivity;
 
-    iput-object p2, p0, Lcom/bbm/ui/activities/il;->a:Landroid/app/ProgressDialog;
-
-    invoke-direct {p0}, Lcom/bbm/util/cp;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
+.method public final a(Ljava/lang/String;)V
+    .locals 2
 
     .prologue
-    .line 3212
-    iget-object v0, p0, Lcom/bbm/ui/activities/il;->a:Landroid/app/ProgressDialog;
+    .line 198
+    iget-object v0, p0, Lcom/bbm/ui/activities/il;->a:Lcom/bbm/ui/activities/EditProfileNameActivity;
 
-    invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
-
-    .line 3213
-    iget-object v0, p0, Lcom/bbm/ui/activities/il;->b:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ConversationActivity;->getApplicationContext()Landroid/content/Context;
+    invoke-static {v0}, Lcom/bbm/ui/activities/EditProfileNameActivity;->b(Lcom/bbm/ui/activities/EditProfileNameActivity;)Lcom/bbm/ui/InlineImageEditText;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/il;->b:Lcom/bbm/ui/activities/ConversationActivity;
+    if-eqz v0, :cond_0
 
-    const v2, 0x7f0e050a
+    .line 199
+    iget-object v0, p0, Lcom/bbm/ui/activities/il;->a:Lcom/bbm/ui/activities/EditProfileNameActivity;
 
-    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/ConversationActivity;->getString(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/bbm/ui/activities/EditProfileNameActivity;->b(Lcom/bbm/ui/activities/EditProfileNameActivity;)Lcom/bbm/ui/InlineImageEditText;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-static {v0, v1}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/bbm/ui/EmoticonPicker;->a(Landroid/widget/EditText;Ljava/lang/String;)V
 
-    .line 3214
-    return-void
-.end method
+    .line 202
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/il;->a:Lcom/bbm/ui/activities/EditProfileNameActivity;
 
-.method public final a(Landroid/location/Location;)V
-    .locals 1
+    const/4 v1, 0x0
 
-    .prologue
-    .line 3218
-    iget-object v0, p0, Lcom/bbm/ui/activities/il;->b:Lcom/bbm/ui/activities/ConversationActivity;
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/EditProfileNameActivity;->a(Lcom/bbm/ui/activities/EditProfileNameActivity;Z)V
 
-    invoke-static {v0, p1}, Lcom/bbm/ui/activities/ConversationActivity;->a(Lcom/bbm/ui/activities/ConversationActivity;Landroid/location/Location;)V
-
-    .line 3219
-    iget-object v0, p0, Lcom/bbm/ui/activities/il;->a:Landroid/app/ProgressDialog;
-
-    invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
-
-    .line 3220
+    .line 203
     return-void
 .end method

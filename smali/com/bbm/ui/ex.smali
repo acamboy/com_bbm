@@ -1,22 +1,26 @@
 .class final Lcom/bbm/ui/ex;
 .super Ljava/lang/Object;
-.source "QuickShareGlympseView.java"
+.source "ProfileIconHelper.java"
 
 # interfaces
-.implements Landroid/location/LocationListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/QuickShareGlympseView;
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Landroid/app/Activity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/QuickShareGlympseView;)V
+.method constructor <init>(Ljava/lang/String;Landroid/app/Activity;)V
     .locals 0
 
     .prologue
-    .line 90
-    iput-object p1, p0, Lcom/bbm/ui/ex;->a:Lcom/bbm/ui/QuickShareGlympseView;
+    .line 53
+    iput-object p1, p0, Lcom/bbm/ui/ex;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Lcom/bbm/ui/ex;->b:Landroid/app/Activity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,68 +29,33 @@
 
 
 # virtual methods
-.method public final onLocationChanged(Landroid/location/Location;)V
-    .locals 0
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 3
 
     .prologue
-    .line 94
-    return-void
-.end method
+    .line 56
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
-.method public final onProviderDisabled(Ljava/lang/String;)V
-    .locals 2
+    move-result-object v0
 
-    .prologue
-    .line 110
-    iget-object v0, p0, Lcom/bbm/ui/ex;->a:Lcom/bbm/ui/QuickShareGlympseView;
+    iget-object v1, p0, Lcom/bbm/ui/ex;->a:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/ui/QuickShareGlympseView;->a(Lcom/bbm/ui/QuickShareGlympseView;)Z
+    const-string v2, "image/gif"
 
-    move-result v0
+    invoke-static {v1, v2}, Lcom/bbm/d/aj;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/d/dr;
 
-    if-eqz v0, :cond_0
+    move-result-object v1
 
-    .line 111
-    iget-object v0, p0, Lcom/bbm/ui/ex;->a:Lcom/bbm/ui/QuickShareGlympseView;
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ez;)V
 
-    const/4 v1, 0x0
+    .line 57
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/QuickShareGlympseView;->a(Lcom/bbm/ui/QuickShareGlympseView;Z)V
+    .line 58
+    iget-object v0, p0, Lcom/bbm/ui/ex;->b:Landroid/app/Activity;
 
-    .line 113
-    :cond_0
-    return-void
-.end method
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-.method public final onProviderEnabled(Ljava/lang/String;)V
-    .locals 2
-
-    .prologue
-    .line 103
-    iget-object v0, p0, Lcom/bbm/ui/ex;->a:Lcom/bbm/ui/QuickShareGlympseView;
-
-    invoke-static {v0}, Lcom/bbm/ui/QuickShareGlympseView;->a(Lcom/bbm/ui/QuickShareGlympseView;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 104
-    iget-object v0, p0, Lcom/bbm/ui/ex;->a:Lcom/bbm/ui/QuickShareGlympseView;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/QuickShareGlympseView;->a(Lcom/bbm/ui/QuickShareGlympseView;Z)V
-
-    .line 106
-    :cond_0
-    return-void
-.end method
-
-.method public final onStatusChanged(Ljava/lang/String;ILandroid/os/Bundle;)V
-    .locals 0
-
-    .prologue
-    .line 99
+    .line 59
     return-void
 .end method

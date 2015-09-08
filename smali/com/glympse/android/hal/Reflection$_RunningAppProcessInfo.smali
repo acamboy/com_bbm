@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static cR:Z
+.field private static cU:Z
 
-.field private static dV:Ljava/lang/reflect/Field;
+.field private static dY:Ljava/lang/reflect/Field;
 
 
 # direct methods
@@ -17,12 +17,12 @@
     .line 1764
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_RunningAppProcessInfo;->cR:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_RunningAppProcessInfo;->cU:Z
 
     .line 1765
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_RunningAppProcessInfo;->dV:Ljava/lang/reflect/Field;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_RunningAppProcessInfo;->dY:Ljava/lang/reflect/Field;
 
     return-void
 .end method
@@ -42,14 +42,14 @@
 
     .prologue
     .line 1770
-    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_RunningAppProcessInfo;->cR:Z
+    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_RunningAppProcessInfo;->cU:Z
 
     if-nez v0, :cond_0
 
     .line 1772
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_RunningAppProcessInfo;->cR:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_RunningAppProcessInfo;->cU:Z
 
     .line 1776
     :try_start_0
@@ -61,7 +61,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_RunningAppProcessInfo;->dV:Ljava/lang/reflect/Field;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_RunningAppProcessInfo;->dY:Ljava/lang/reflect/Field;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -89,13 +89,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_RunningAppProcessInfo;->Load()V
 
     .line 1791
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_RunningAppProcessInfo;->dV:Ljava/lang/reflect/Field;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_RunningAppProcessInfo;->dY:Ljava/lang/reflect/Field;
 
     if-eqz v0, :cond_0
 
     .line 1795
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_RunningAppProcessInfo;->dV:Ljava/lang/reflect/Field;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_RunningAppProcessInfo;->dY:Ljava/lang/reflect/Field;
 
     invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 

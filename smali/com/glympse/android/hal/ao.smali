@@ -11,11 +11,11 @@
 
 .field private _handler:Lcom/glympse/android/core/GHandler;
 
-.field private bS:Lcom/glympse/android/hal/GContactsListener;
+.field private bV:Lcom/glympse/android/hal/GContactsListener;
 
-.field private bT:Lcom/glympse/android/hal/ar;
+.field private bW:Lcom/glympse/android/hal/ar;
 
-.field private bU:Lcom/glympse/android/hal/GVector;
+.field private bX:Lcom/glympse/android/hal/GVector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/glympse/android/hal/GVector",
@@ -26,9 +26,9 @@
     .end annotation
 .end field
 
-.field private bV:Z
+.field private bY:Z
 
-.field private bW:Lcom/glympse/android/hal/ap;
+.field private bZ:Lcom/glympse/android/hal/ap;
 
 .field protected e:Landroid/content/Context;
 
@@ -44,12 +44,12 @@
     .line 47
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/glympse/android/hal/ao;->bV:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/ao;->bY:Z
 
     .line 51
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ao;->bW:Lcom/glympse/android/hal/ap;
+    iput-object v0, p0, Lcom/glympse/android/hal/ao;->bZ:Lcom/glympse/android/hal/ap;
 
     .line 55
     iput-object p1, p0, Lcom/glympse/android/hal/ao;->e:Landroid/content/Context;
@@ -59,7 +59,7 @@
 
     invoke-direct {v0}, Lcom/glympse/android/hal/GVector;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ao;->bU:Lcom/glympse/android/hal/GVector;
+    iput-object v0, p0, Lcom/glympse/android/hal/ao;->bX:Lcom/glympse/android/hal/GVector;
 
     .line 57
     return-void
@@ -80,7 +80,7 @@
 
     .prologue
     .line 29
-    iput-boolean p1, p0, Lcom/glympse/android/hal/ao;->bV:Z
+    iput-boolean p1, p0, Lcom/glympse/android/hal/ao;->bY:Z
 
     return p1
 .end method
@@ -101,20 +101,20 @@
 
     .prologue
     .line 205
-    iput-object p1, p0, Lcom/glympse/android/hal/ao;->bU:Lcom/glympse/android/hal/GVector;
+    iput-object p1, p0, Lcom/glympse/android/hal/ao;->bX:Lcom/glympse/android/hal/GVector;
 
     .line 206
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ao;->bT:Lcom/glympse/android/hal/ar;
+    iput-object v0, p0, Lcom/glympse/android/hal/ao;->bW:Lcom/glympse/android/hal/ar;
 
     .line 207
-    iget-object v0, p0, Lcom/glympse/android/hal/ao;->bS:Lcom/glympse/android/hal/GContactsListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/ao;->bV:Lcom/glympse/android/hal/GContactsListener;
 
     if-eqz v0, :cond_0
 
     .line 209
-    iget-object v0, p0, Lcom/glympse/android/hal/ao;->bS:Lcom/glympse/android/hal/GContactsListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/ao;->bV:Lcom/glympse/android/hal/GContactsListener;
 
     invoke-interface {v0, p0}, Lcom/glympse/android/hal/GContactsListener;->contactsProviderUpdateComplete(Lcom/glympse/android/hal/GContactsProvider;)V
 
@@ -137,7 +137,7 @@
 
     .prologue
     .line 173
-    iget-object v0, p0, Lcom/glympse/android/hal/ao;->bU:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/hal/ao;->bX:Lcom/glympse/android/hal/GVector;
 
     return-object v0
 .end method
@@ -229,7 +229,7 @@
 
     .prologue
     .line 115
-    iget-object v0, p0, Lcom/glympse/android/hal/ao;->bT:Lcom/glympse/android/hal/ar;
+    iget-object v0, p0, Lcom/glympse/android/hal/ao;->bW:Lcom/glympse/android/hal/ar;
 
     if-eqz v0, :cond_0
 
@@ -243,14 +243,14 @@
 
     invoke-direct {v0, p0}, Lcom/glympse/android/hal/ar;-><init>(Lcom/glympse/android/hal/ao;)V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ao;->bT:Lcom/glympse/android/hal/ar;
+    iput-object v0, p0, Lcom/glympse/android/hal/ao;->bW:Lcom/glympse/android/hal/ar;
 
     .line 122
     invoke-static {}, Lcom/glympse/android/hal/GlympseThreadPool;->instance()Lcom/glympse/android/hal/GlympseThreadPool;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/glympse/android/hal/ao;->bT:Lcom/glympse/android/hal/ar;
+    iget-object v1, p0, Lcom/glympse/android/hal/ao;->bW:Lcom/glympse/android/hal/ar;
 
     invoke-virtual {v0, v1}, Lcom/glympse/android/hal/GlympseThreadPool;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
@@ -272,14 +272,14 @@
     invoke-virtual {p0}, Lcom/glympse/android/hal/ao;->y()V
 
     .line 96
-    iget-boolean v0, p0, Lcom/glympse/android/hal/ao;->bV:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/ao;->bY:Z
 
     if-eqz v0, :cond_0
 
     .line 99
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/glympse/android/hal/ao;->bV:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/ao;->bY:Z
 
     .line 102
     invoke-virtual {p0}, Lcom/glympse/android/hal/ao;->refresh()V
@@ -301,7 +301,7 @@
 
     .prologue
     .line 61
-    iput-object p1, p0, Lcom/glympse/android/hal/ao;->bS:Lcom/glympse/android/hal/GContactsListener;
+    iput-object p1, p0, Lcom/glympse/android/hal/ao;->bV:Lcom/glympse/android/hal/GContactsListener;
 
     .line 62
     iput-object p2, p0, Lcom/glympse/android/hal/ao;->_handler:Lcom/glympse/android/core/GHandler;
@@ -323,7 +323,7 @@
     const/4 v2, 0x0
 
     .line 73
-    iget-object v0, p0, Lcom/glympse/android/hal/ao;->bT:Lcom/glympse/android/hal/ar;
+    iget-object v0, p0, Lcom/glympse/android/hal/ao;->bW:Lcom/glympse/android/hal/ar;
 
     if-eqz v0, :cond_0
 
@@ -342,11 +342,11 @@
     iput-object v2, p0, Lcom/glympse/android/hal/ao;->R:Ljava/util/concurrent/Future;
 
     .line 83
-    iput-object v2, p0, Lcom/glympse/android/hal/ao;->bT:Lcom/glympse/android/hal/ar;
+    iput-object v2, p0, Lcom/glympse/android/hal/ao;->bW:Lcom/glympse/android/hal/ar;
 
     .line 85
     :cond_0
-    iput-object v2, p0, Lcom/glympse/android/hal/ao;->bS:Lcom/glympse/android/hal/GContactsListener;
+    iput-object v2, p0, Lcom/glympse/android/hal/ao;->bV:Lcom/glympse/android/hal/GContactsListener;
 
     .line 86
     return-void
@@ -362,7 +362,7 @@
 
     .prologue
     .line 127
-    iget-object v0, p0, Lcom/glympse/android/hal/ao;->bW:Lcom/glympse/android/hal/ap;
+    iget-object v0, p0, Lcom/glympse/android/hal/ao;->bZ:Lcom/glympse/android/hal/ap;
 
     if-nez v0, :cond_0
 
@@ -379,7 +379,7 @@
 
     invoke-direct {v1, p0}, Lcom/glympse/android/hal/ap;-><init>(Lcom/glympse/android/hal/ao;)V
 
-    iput-object v1, p0, Lcom/glympse/android/hal/ao;->bW:Lcom/glympse/android/hal/ap;
+    iput-object v1, p0, Lcom/glympse/android/hal/ao;->bZ:Lcom/glympse/android/hal/ap;
 
     .line 133
     iget-object v1, p0, Lcom/glympse/android/hal/ao;->e:Landroid/content/Context;
@@ -390,7 +390,7 @@
 
     const/4 v2, 0x1
 
-    iget-object v3, p0, Lcom/glympse/android/hal/ao;->bW:Lcom/glympse/android/hal/ap;
+    iget-object v3, p0, Lcom/glympse/android/hal/ao;->bZ:Lcom/glympse/android/hal/ap;
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
@@ -404,7 +404,7 @@
 
     .prologue
     .line 140
-    iget-object v0, p0, Lcom/glympse/android/hal/ao;->bW:Lcom/glympse/android/hal/ap;
+    iget-object v0, p0, Lcom/glympse/android/hal/ao;->bZ:Lcom/glympse/android/hal/ap;
 
     if-eqz v0, :cond_0
 
@@ -415,14 +415,14 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/glympse/android/hal/ao;->bW:Lcom/glympse/android/hal/ap;
+    iget-object v1, p0, Lcom/glympse/android/hal/ao;->bZ:Lcom/glympse/android/hal/ap;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     .line 143
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ao;->bW:Lcom/glympse/android/hal/ap;
+    iput-object v0, p0, Lcom/glympse/android/hal/ao;->bZ:Lcom/glympse/android/hal/ap;
 
     .line 145
     :cond_0

@@ -1,44 +1,20 @@
-.class final Landroid/support/v4/view/aq;
+.class interface abstract Landroid/support/v4/view/aq;
 .super Ljava/lang/Object;
-.source "VelocityTrackerCompat.java"
-
-# interfaces
-.implements Landroid/support/v4/view/ar;
-
-
-# direct methods
-.method constructor <init>()V
-    .locals 0
-
-    .prologue
-    .line 51
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.source "MotionEventCompat.java"
 
 
 # virtual methods
-.method public final a(Landroid/view/VelocityTracker;I)F
-    .locals 1
-
-    .prologue
-    .line 54
-    invoke-virtual {p1, p2}, Landroid/view/VelocityTracker;->getXVelocity(I)F
-
-    move-result v0
-
-    return v0
+.method public abstract a(Landroid/view/MotionEvent;)I
 .end method
 
-.method public final b(Landroid/view/VelocityTracker;I)F
-    .locals 1
+.method public abstract a(Landroid/view/MotionEvent;I)I
+.end method
 
-    .prologue
-    .line 58
-    invoke-virtual {p1, p2}, Landroid/view/VelocityTracker;->getYVelocity(I)F
+.method public abstract b(Landroid/view/MotionEvent;I)I
+.end method
 
-    move-result v0
+.method public abstract c(Landroid/view/MotionEvent;I)F
+.end method
 
-    return v0
+.method public abstract d(Landroid/view/MotionEvent;I)F
 .end method

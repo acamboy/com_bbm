@@ -1,98 +1,103 @@
-.class final Lcom/bbm/util/aq;
-.super Lcom/bbm/ui/d/a;
+.class final synthetic Lcom/bbm/util/aq;
+.super Ljava/lang/Object;
 .source "ChannelUtil.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/util/ap;
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/util/ap;)V
-    .locals 0
-
-    .prologue
-    .line 281
-    iput-object p1, p0, Lcom/bbm/util/aq;->a:Lcom/bbm/util/ap;
-
-    invoke-direct {p0}, Lcom/bbm/ui/d/a;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()V
+.method static constructor <clinit>()V
     .locals 3
 
     .prologue
-    .line 284
-    iget-object v0, p0, Lcom/bbm/util/aq;->a:Lcom/bbm/util/ap;
+    .line 1224
+    invoke-static {}, Lcom/bbm/util/ba;->a()[I
 
-    iget-boolean v0, v0, Lcom/bbm/util/ap;->d:Z
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    array-length v0, v0
 
-    .line 285
-    new-instance v0, Landroid/content/Intent;
+    new-array v0, v0, [I
 
-    iget-object v1, p0, Lcom/bbm/util/aq;->a:Lcom/bbm/util/ap;
+    sput-object v0, Lcom/bbm/util/aq;->a:[I
 
-    iget-object v1, v1, Lcom/bbm/util/ap;->e:Landroid/app/Activity;
+    :try_start_0
+    sget-object v0, Lcom/bbm/util/aq;->a:[I
 
-    const-class v2, Lcom/bbm/ui/activities/MainActivity;
+    sget v1, Lcom/bbm/util/ba;->a:I
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    add-int/lit8 v1, v1, -0x1
 
-    .line 286
-    iget-object v1, p0, Lcom/bbm/util/aq;->a:Lcom/bbm/util/ap;
+    const/4 v2, 0x1
 
-    iget-object v1, v1, Lcom/bbm/util/ap;->e:Landroid/app/Activity;
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_3
 
-    invoke-virtual {v1, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/util/aq;->a:[I
 
-    .line 287
-    iget-object v0, p0, Lcom/bbm/util/aq;->a:Lcom/bbm/util/ap;
+    sget v1, Lcom/bbm/util/ba;->b:I
 
-    iget-object v0, v0, Lcom/bbm/util/ap;->e:Landroid/app/Activity;
+    add-int/lit8 v1, v1, -0x1
 
-    instance-of v0, v0, Lcom/bbm/ui/activities/MainActivity;
+    const/4 v2, 0x2
 
-    if-nez v0, :cond_0
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 288
-    iget-object v0, p0, Lcom/bbm/util/aq;->a:Lcom/bbm/util/ap;
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/bbm/util/aq;->a:[I
 
-    iget-object v0, v0, Lcom/bbm/util/ap;->e:Landroid/app/Activity;
+    sget v1, Lcom/bbm/util/ba;->c:I
 
-    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
+    add-int/lit8 v1, v1, -0x1
 
-    .line 291
-    :cond_0
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_1
+
+    :goto_2
+    :try_start_3
+    sget-object v0, Lcom/bbm/util/aq;->a:[I
+
+    sget v1, Lcom/bbm/util/ba;->d:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_0
+
+    :goto_3
     return-void
-.end method
 
-.method public final a(I)V
-    .locals 3
+    :catch_0
+    move-exception v0
 
-    .prologue
-    .line 295
-    iget-object v0, p0, Lcom/bbm/util/aq;->a:Lcom/bbm/util/ap;
+    goto :goto_3
 
-    iget-object v0, v0, Lcom/bbm/util/ap;->e:Landroid/app/Activity;
+    :catch_1
+    move-exception v0
 
-    iget-object v1, p0, Lcom/bbm/util/aq;->a:Lcom/bbm/util/ap;
+    goto :goto_2
 
-    iget-object v1, v1, Lcom/bbm/util/ap;->e:Landroid/app/Activity;
+    :catch_2
+    move-exception v0
 
-    invoke-virtual {v1, p1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    goto :goto_1
 
-    move-result-object v1
+    :catch_3
+    move-exception v0
 
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Lcom/bbm/util/fh;->a(Landroid/content/Context;Ljava/lang/String;I)V
-
-    .line 296
-    return-void
+    goto :goto_0
 .end method

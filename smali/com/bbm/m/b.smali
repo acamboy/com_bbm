@@ -47,7 +47,7 @@
 
     new-array v2, v8, [Ljava/lang/Object;
 
-    invoke-static {v1, v2}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v1, v2}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 353
     if-nez p2, :cond_1
@@ -60,8 +60,6 @@
     .line 359
     :cond_1
     :try_start_0
-    iget-object v1, p0, Lcom/bbm/m/b;->a:Lcom/bbm/m/a;
-
     const-string v1, "artist"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
@@ -84,8 +82,6 @@
     if-eqz v1, :cond_0
 
     .line 361
-    iget-object v1, p0, Lcom/bbm/m/b;->a:Lcom/bbm/m/a;
-
     const-string v2, ""
 
     const-string v1, "artist"
@@ -105,8 +101,6 @@
     .line 362
     :cond_2
     :goto_2
-    iget-object v1, p0, Lcom/bbm/m/b;->a:Lcom/bbm/m/a;
-
     const-string v3, ""
 
     const-string v1, "track"
@@ -126,8 +120,6 @@
     .line 363
     :cond_3
     :goto_3
-    iget-object v1, p0, Lcom/bbm/m/b;->a:Lcom/bbm/m/a;
-
     const-string v1, "duration"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
@@ -152,8 +144,6 @@
     move-result-wide v4
 
     .line 364
-    iget-object v1, p0, Lcom/bbm/m/b;->a:Lcom/bbm/m/a;
-
     const-string v1, "playing"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
@@ -229,8 +219,6 @@
     iput-boolean v6, v0, Lcom/bbm/m/c;->d:Z
 
     .line 376
-    iget-object v0, p0, Lcom/bbm/m/b;->a:Lcom/bbm/m/a;
-
     invoke-static {}, Lcom/bbm/m/a;->c()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -248,7 +236,7 @@
 
     aput-object v0, v2, v8
 
-    invoke-static {v1, v2}, Lcom/bbm/y;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v1, v2}, Lcom/bbm/af;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
@@ -460,8 +448,6 @@
 
     .line 385
     :cond_12
-    iget-object v0, p0, Lcom/bbm/m/b;->a:Lcom/bbm/m/a;
-
     invoke-static {}, Lcom/bbm/m/a;->c()V
 
     .line 390
@@ -470,8 +456,6 @@
     iget-boolean v0, v0, Lcom/bbm/m/c;->d:Z
 
     if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/m/b;->a:Lcom/bbm/m/a;
 
     invoke-static {p2}, Lcom/bbm/m/a;->a(Landroid/content/Intent;)Z
 

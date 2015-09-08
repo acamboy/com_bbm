@@ -1,367 +1,417 @@
 .class final Lcom/bbm/ui/c/ii;
-.super Lcom/bbm/d/b/f;
-.source "StoreHomeFragment.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/d/b/f",
-        "<",
-        "Lcom/bbm/ui/hc",
-        "<",
-        "Lcom/bbm/ui/c/is;",
-        "Lcom/bbm/ui/c/it;",
-        ">;>;"
-    }
-.end annotation
+.super Lcom/bbm/j/u;
+.source "UpdatesFragment.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/ig;
+.field final synthetic a:Lcom/bbm/ui/c/ic;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/ig;)V
+.method constructor <init>(Lcom/bbm/ui/c/ic;)V
     .locals 0
 
     .prologue
-    .line 129
-    iput-object p1, p0, Lcom/bbm/ui/c/ii;->a:Lcom/bbm/ui/c/ig;
+    .line 860
+    iput-object p1, p0, Lcom/bbm/ui/c/ii;->a:Lcom/bbm/ui/c/ic;
 
-    invoke-direct {p0}, Lcom/bbm/d/b/f;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()Ljava/util/List;
+.method protected final b()Z
     .locals 11
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/ui/hc",
-            "<",
-            "Lcom/bbm/ui/c/is;",
-            "Lcom/bbm/ui/c/it;",
-            ">;>;"
-        }
-    .end annotation
 
     .prologue
-    const v9, 0x7f0c0030
+    const/4 v1, 0x1
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    const/4 v2, 0x1
-
-    .line 133
-    .line 135
-    new-instance v4, Ljava/util/ArrayList;
-
-    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
-
-    .line 137
-    iget-object v0, p0, Lcom/bbm/ui/c/ii;->a:Lcom/bbm/ui/c/ig;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/ig;->b(Lcom/bbm/ui/c/ig;)Lcom/bbm/l/b/t;
+    .line 863
+    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/b/x;
 
     move-result-object v0
 
-    if-nez v0, :cond_7
+    const-string v3, "adsEnabled"
 
-    move v1, v2
-
-    .line 141
-    :goto_0
-    iget-object v0, p0, Lcom/bbm/ui/c/ii;->a:Lcom/bbm/ui/c/ig;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/ig;->c(Lcom/bbm/ui/c/ig;)Lcom/bbm/d/a;
+    invoke-virtual {v0, v3}, Lcom/bbm/b/x;->a(Ljava/lang/String;)Lcom/bbm/util/bs;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/d/a;->A()Lcom/bbm/j/w;
+    .line 864
+    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/b/x;
 
-    move-result-object v0
+    move-result-object v3
 
-    .line 142
-    new-instance v6, Ljava/util/HashSet;
+    const-string v4, "enablePostAdPrefetch"
 
-    invoke-direct {v6}, Ljava/util/HashSet;-><init>()V
+    invoke-virtual {v3, v4}, Lcom/bbm/b/x;->a(Ljava/lang/String;)Lcom/bbm/util/bs;
 
-    .line 143
-    invoke-interface {v0}, Lcom/bbm/j/w;->b()Z
+    move-result-object v3
 
-    move-result v5
+    .line 865
+    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/b/x;
 
-    if-eqz v5, :cond_1
+    move-result-object v4
 
-    move v5, v2
+    const-string v5, "postFrequency"
 
-    .line 159
-    :goto_1
-    if-nez v5, :cond_4
+    invoke-virtual {v4, v5}, Lcom/bbm/b/x;->a(Ljava/lang/String;)Lcom/bbm/util/bs;
 
-    .line 161
-    iget-object v0, p0, Lcom/bbm/ui/c/ii;->a:Lcom/bbm/ui/c/ig;
+    move-result-object v4
 
-    iget-object v1, p0, Lcom/bbm/ui/c/ii;->a:Lcom/bbm/ui/c/ig;
+    .line 866
+    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/b/x;
 
-    invoke-static {v1}, Lcom/bbm/ui/c/ig;->b(Lcom/bbm/ui/c/ig;)Lcom/bbm/l/b/t;
+    move-result-object v5
 
-    move-result-object v1
+    const-string v6, "lastRequestedAd"
 
-    iget-object v1, v1, Lcom/bbm/l/b/t;->b:Ljava/util/ArrayList;
+    invoke-virtual {v5, v6}, Lcom/bbm/b/x;->a(Ljava/lang/String;)Lcom/bbm/util/bs;
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/c/ig;->a(Lcom/bbm/ui/c/ig;Ljava/util/List;)Ljava/util/List;
+    move-result-object v5
 
-    .line 163
-    new-instance v7, Ljava/util/ArrayList;
+    .line 867
+    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/b/x;
 
-    iget-object v0, p0, Lcom/bbm/ui/c/ii;->a:Lcom/bbm/ui/c/ig;
+    move-result-object v6
 
-    invoke-virtual {v0}, Lcom/bbm/ui/c/ig;->getResources()Landroid/content/res/Resources;
+    const-string v7, "scrollEnabled"
 
-    move-result-object v0
+    invoke-virtual {v6, v7}, Lcom/bbm/b/x;->a(Ljava/lang/String;)Lcom/bbm/util/bs;
 
-    invoke-virtual {v0, v9}, Landroid/content/res/Resources;->getInteger(I)I
+    move-result-object v6
 
-    move-result v0
+    .line 868
+    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/b/x;
 
-    invoke-direct {v7, v0}, Ljava/util/ArrayList;-><init>(I)V
+    move-result-object v7
 
-    .line 164
-    new-instance v8, Ljava/util/ArrayList;
+    const-string v8, "adUISettings"
 
-    invoke-virtual {v6}, Ljava/util/HashSet;->size()I
+    invoke-virtual {v7, v8}, Lcom/bbm/b/x;->a(Ljava/lang/String;)Lcom/bbm/util/bs;
 
-    move-result v0
+    move-result-object v7
 
-    invoke-direct {v8, v0}, Ljava/util/ArrayList;-><init>(I)V
+    .line 870
+    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/b/x;
 
-    .line 165
-    iget-object v0, p0, Lcom/bbm/ui/c/ii;->a:Lcom/bbm/ui/c/ig;
+    move-result-object v8
 
-    iget-object v1, p0, Lcom/bbm/ui/c/ii;->a:Lcom/bbm/ui/c/ig;
+    invoke-virtual {v8}, Lcom/bbm/b/x;->a()Lcom/bbm/j/w;
 
-    invoke-virtual {v1}, Lcom/bbm/ui/c/ig;->getResources()Landroid/content/res/Resources;
+    move-result-object v8
 
-    move-result-object v1
+    .line 872
+    iget-object v9, v3, Lcom/bbm/util/bs;->b:Lcom/bbm/util/bo;
 
-    invoke-virtual {v1, v9}, Landroid/content/res/Resources;->getInteger(I)I
+    sget-object v10, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
 
-    move-result v1
+    if-eq v9, v10, :cond_0
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/c/ig;->a(Lcom/bbm/ui/c/ig;I)I
-
-    .line 166
-    iget-object v0, p0, Lcom/bbm/ui/c/ii;->a:Lcom/bbm/ui/c/ig;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/ig;->d(Lcom/bbm/ui/c/ig;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/bbm/ui/c/ii;->a:Lcom/bbm/ui/c/ig;
-
-    invoke-static {v1}, Lcom/bbm/ui/c/ig;->e(Lcom/bbm/ui/c/ig;)I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_0
-
-    .line 167
-    iget-object v0, p0, Lcom/bbm/ui/c/ii;->a:Lcom/bbm/ui/c/ig;
-
-    iget-object v1, p0, Lcom/bbm/ui/c/ii;->a:Lcom/bbm/ui/c/ig;
-
-    invoke-static {v1}, Lcom/bbm/ui/c/ig;->d(Lcom/bbm/ui/c/ig;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/c/ig;->a(Lcom/bbm/ui/c/ig;I)I
-
-    :cond_0
-    move v1, v3
-
-    .line 168
-    :goto_2
-    iget-object v0, p0, Lcom/bbm/ui/c/ii;->a:Lcom/bbm/ui/c/ig;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/ig;->e(Lcom/bbm/ui/c/ig;)I
-
-    move-result v0
-
-    if-ge v1, v0, :cond_3
-
-    .line 169
-    iget-object v0, p0, Lcom/bbm/ui/c/ii;->a:Lcom/bbm/ui/c/ig;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/ig;->d(Lcom/bbm/ui/c/ig;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/l/b/p;
-
-    .line 170
-    iget-object v9, v0, Lcom/bbm/l/b/s;->j:Ljava/lang/String;
-
-    invoke-virtual {v6, v9}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+    invoke-interface {v8}, Lcom/bbm/j/w;->b()Z
 
     move-result v9
 
-    if-eqz v9, :cond_2
+    if-nez v9, :cond_0
 
-    .line 171
-    invoke-virtual {v0, v2}, Lcom/bbm/l/b/p;->a(Z)V
+    iget-object v9, v4, Lcom/bbm/util/bs;->b:Lcom/bbm/util/bo;
 
-    .line 172
-    new-instance v9, Lcom/bbm/ui/c/is;
+    sget-object v10, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
 
-    sget-object v10, Lcom/bbm/ui/c/it;->b:Lcom/bbm/ui/c/it;
+    if-eq v9, v10, :cond_0
 
-    invoke-direct {v9, v10, v0}, Lcom/bbm/ui/c/is;-><init>(Lcom/bbm/ui/c/it;Lcom/bbm/l/b/p;)V
+    iget-object v9, v5, Lcom/bbm/util/bs;->b:Lcom/bbm/util/bo;
 
-    invoke-virtual {v8, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    sget-object v10, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
 
-    .line 168
-    :goto_3
-    add-int/lit8 v0, v1, 0x1
+    if-eq v9, v10, :cond_0
 
-    move v1, v0
+    iget-object v9, v0, Lcom/bbm/util/bs;->b:Lcom/bbm/util/bo;
 
-    goto :goto_2
+    sget-object v10, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
 
-    .line 146
+    if-eq v9, v10, :cond_0
+
+    iget-object v9, v6, Lcom/bbm/util/bs;->b:Lcom/bbm/util/bo;
+
+    sget-object v10, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
+
+    if-eq v9, v10, :cond_0
+
+    iget-object v7, v7, Lcom/bbm/util/bs;->b:Lcom/bbm/util/bo;
+
+    sget-object v9, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
+
+    if-ne v7, v9, :cond_1
+
+    :cond_0
+    move v0, v2
+
+    .line 937
+    :goto_0
+    return v0
+
+    .line 883
     :cond_1
-    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/f;
+
+    move-result-object v7
+
+    iget-object v7, v7, Lcom/bbm/f;->a:Lcom/bbm/b/x;
+
+    new-instance v9, Lcom/bbm/b/an;
+
+    invoke-direct {v9}, Lcom/bbm/b/an;-><init>()V
+
+    invoke-virtual {v7, v9}, Lcom/bbm/b/x;->a(Lcom/bbm/b/az;)V
+
+    .line 884
+    iget-object v0, v0, Lcom/bbm/util/bs;->a:Lorg/json/JSONObject;
+
+    const-string v7, "value"
+
+    invoke-virtual {v0, v7, v2}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    .line 886
+    if-nez v0, :cond_2
+
+    move v0, v1
+
+    .line 887
+    goto :goto_0
+
+    .line 890
+    :cond_2
+    iget-object v0, v6, Lcom/bbm/util/bs;->a:Lorg/json/JSONObject;
+
+    const-string v6, "value"
+
+    invoke-virtual {v0, v6, v2}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    .line 891
+    if-eqz v0, :cond_3
+
+    move v0, v1
+
+    .line 892
+    goto :goto_0
+
+    .line 894
+    :cond_3
+    iget-object v0, v3, Lcom/bbm/util/bs;->a:Lorg/json/JSONObject;
+
+    const-string v3, "value"
+
+    invoke-virtual {v0, v3, v2}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    .line 895
+    if-eqz v0, :cond_5
+
+    .line 897
+    invoke-interface {v8}, Lcom/bbm/j/w;->f()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/List;
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v5
-
-    :goto_4
-    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v0}, Lcom/bbm/b/p;->a(Ljava/util/List;)Lcom/bbm/b/a;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/d/gl;
+    .line 898
+    if-eqz v0, :cond_4
 
-    .line 147
-    sget-object v7, Lcom/bbm/ui/c/io;->a:[I
+    move v0, v1
 
-    iget-object v8, v0, Lcom/bbm/d/gl;->g:Lcom/bbm/util/bi;
+    .line 900
+    goto :goto_0
 
-    invoke-virtual {v8}, Lcom/bbm/util/bi;->ordinal()I
+    .line 902
+    :cond_4
+    const-string v0, "Could not find an unrendered ad"
 
-    move-result v8
+    const-class v3, Lcom/bbm/ui/c/ic;
 
-    aget v7, v7, v8
+    new-array v6, v2, [Ljava/lang/Object;
 
-    packed-switch v7, :pswitch_data_0
+    invoke-static {v0, v3, v6}, Lcom/bbm/af;->a(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    goto :goto_4
+    .line 904
+    iget-object v0, p0, Lcom/bbm/ui/c/ii;->a:Lcom/bbm/ui/c/ic;
+
+    invoke-static {v0, v4, v5}, Lcom/bbm/ui/c/ic;->a(Lcom/bbm/ui/c/ic;Lcom/bbm/util/bs;Lcom/bbm/util/bs;)Lcom/bbm/ui/c/jd;
+
+    move-result-object v0
+
+    .line 905
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Tried to force an ad request with result="
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    const-class v4, Lcom/bbm/ui/c/ic;
+
+    new-array v5, v2, [Ljava/lang/Object;
+
+    invoke-static {v3, v4, v5}, Lcom/bbm/af;->a(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Object;)V
+
+    .line 906
+    sget-object v3, Lcom/bbm/ui/c/iv;->a:[I
+
+    invoke-virtual {v0}, Lcom/bbm/ui/c/jd;->ordinal()I
+
+    move-result v0
+
+    aget v0, v3, v0
+
+    packed-switch v0, :pswitch_data_0
+
+    :goto_1
+    move v0, v2
+
+    .line 937
+    goto :goto_0
 
     :pswitch_0
-    move v1, v2
+    move v0, v1
 
-    .line 150
-    goto :goto_4
+    .line 909
+    goto :goto_0
 
-    .line 153
+    .line 912
     :pswitch_1
-    iget-object v0, v0, Lcom/bbm/d/gl;->a:Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/ui/c/ii;->a:Lcom/bbm/ui/c/ic;
 
-    invoke-virtual {v6, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    invoke-static {v0}, Lcom/bbm/ui/c/ic;->k(Lcom/bbm/ui/c/ic;)Landroid/content/Context;
 
-    goto :goto_4
+    move-result-object v0
 
-    .line 174
-    :cond_2
-    invoke-virtual {v0, v3}, Lcom/bbm/l/b/p;->a(Z)V
+    invoke-static {v0}, Lcom/bbm/b/p;->b(Landroid/content/Context;)V
 
-    .line 175
-    new-instance v9, Lcom/bbm/ui/c/is;
+    .line 913
+    const-string v0, "Prefetched an ad since no unrendered ads"
 
-    sget-object v10, Lcom/bbm/ui/c/it;->b:Lcom/bbm/ui/c/it;
+    const-class v3, Lcom/bbm/ui/c/ic;
 
-    invoke-direct {v9, v10, v0}, Lcom/bbm/ui/c/is;-><init>(Lcom/bbm/ui/c/it;Lcom/bbm/l/b/p;)V
+    new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-virtual {v7, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-static {v0, v3, v2}, Lcom/bbm/af;->a(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    goto :goto_3
+    move v0, v1
 
-    .line 178
-    :cond_3
-    invoke-virtual {v7, v8}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
-    .line 179
-    new-instance v0, Lcom/bbm/ui/hc;
-
-    sget-object v1, Lcom/bbm/ui/c/it;->b:Lcom/bbm/ui/c/it;
-
-    invoke-direct {v0, v7, v1}, Lcom/bbm/ui/hc;-><init>(Ljava/util/List;Ljava/lang/Object;)V
-
-    invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 182
-    :cond_4
-    if-eqz v5, :cond_5
-
-    .line 183
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    .line 185
-    :goto_5
-    return-object v0
-
-    :cond_5
-    move-object v0, v4
-
-    goto :goto_5
-
-    :cond_6
-    move v5, v1
-
-    goto/16 :goto_1
-
-    :cond_7
-    move v1, v3
-
+    .line 915
     goto/16 :goto_0
 
-    .line 147
-    nop
+    .line 918
+    :pswitch_2
+    iget-object v0, p0, Lcom/bbm/ui/c/ii;->a:Lcom/bbm/ui/c/ic;
 
+    invoke-static {v0}, Lcom/bbm/ui/c/ic;->k(Lcom/bbm/ui/c/ic;)Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/bbm/b/p;->b(Landroid/content/Context;)V
+
+    .line 919
+    const-string v0, "Prefetched an ad since no unrendered ads"
+
+    const-class v1, Lcom/bbm/ui/c/ic;
+
+    new-array v3, v2, [Ljava/lang/Object;
+
+    invoke-static {v0, v1, v3}, Lcom/bbm/af;->a(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Object;)V
+
+    move v0, v2
+
+    .line 921
+    goto/16 :goto_0
+
+    .line 925
+    :cond_5
+    iget-object v0, p0, Lcom/bbm/ui/c/ii;->a:Lcom/bbm/ui/c/ic;
+
+    invoke-static {v0, v4, v5}, Lcom/bbm/ui/c/ic;->a(Lcom/bbm/ui/c/ic;Lcom/bbm/util/bs;Lcom/bbm/util/bs;)Lcom/bbm/ui/c/jd;
+
+    move-result-object v0
+
+    .line 926
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Tried to force an ad with result="
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    const-class v4, Lcom/bbm/ui/c/ic;
+
+    new-array v5, v2, [Ljava/lang/Object;
+
+    invoke-static {v3, v4, v5}, Lcom/bbm/af;->a(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Object;)V
+
+    .line 927
+    sget-object v3, Lcom/bbm/ui/c/iv;->a:[I
+
+    invoke-virtual {v0}, Lcom/bbm/ui/c/jd;->ordinal()I
+
+    move-result v0
+
+    aget v0, v3, v0
+
+    packed-switch v0, :pswitch_data_1
+
+    goto :goto_1
+
+    :pswitch_3
+    move v0, v1
+
+    .line 931
+    goto/16 :goto_0
+
+    :pswitch_4
+    move v0, v2
+
+    .line 934
+    goto/16 :goto_0
+
+    .line 906
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
         :pswitch_1
+        :pswitch_2
+    .end packed-switch
+
+    .line 927
+    :pswitch_data_1
+    .packed-switch 0x1
+        :pswitch_3
+        :pswitch_3
+        :pswitch_4
     .end packed-switch
 .end method

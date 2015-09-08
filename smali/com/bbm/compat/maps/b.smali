@@ -58,7 +58,7 @@
     .line 19
     iget-object v0, p0, Lcom/bbm/compat/maps/b;->view:Lcom/bbm/compat/maps/c;
 
-    invoke-interface {v0, p1}, Lcom/bbm/compat/maps/c;->onCreate(Landroid/os/Bundle;)V
+    invoke-interface {v0, p1}, Lcom/bbm/compat/maps/c;->a(Landroid/os/Bundle;)V
 
     .line 20
     return-void
@@ -88,7 +88,7 @@
     .line 65
     iget-object v0, p0, Lcom/bbm/compat/maps/b;->view:Lcom/bbm/compat/maps/c;
 
-    invoke-interface {v0}, Lcom/bbm/compat/maps/c;->onDestroy()V
+    invoke-interface {v0}, Lcom/bbm/compat/maps/c;->a()V
 
     .line 66
     return-void
@@ -115,7 +115,7 @@
     .line 59
     iget-object v0, p0, Lcom/bbm/compat/maps/b;->view:Lcom/bbm/compat/maps/c;
 
-    invoke-interface {v0}, Lcom/bbm/compat/maps/c;->onLowMemory()V
+    invoke-interface {v0}, Lcom/bbm/compat/maps/c;->b()V
 
     .line 60
     return-void
@@ -131,7 +131,7 @@
     .line 53
     iget-object v0, p0, Lcom/bbm/compat/maps/b;->view:Lcom/bbm/compat/maps/c;
 
-    invoke-interface {v0}, Lcom/bbm/compat/maps/c;->onPause()V
+    invoke-interface {v0}, Lcom/bbm/compat/maps/c;->c()V
 
     .line 54
     return-void
@@ -147,7 +147,7 @@
     .line 41
     iget-object v0, p0, Lcom/bbm/compat/maps/b;->view:Lcom/bbm/compat/maps/c;
 
-    invoke-interface {v0}, Lcom/bbm/compat/maps/c;->onResume()V
+    invoke-interface {v0}, Lcom/bbm/compat/maps/c;->d()V
 
     .line 42
     return-void
@@ -163,7 +163,7 @@
     .line 47
     iget-object v0, p0, Lcom/bbm/compat/maps/b;->view:Lcom/bbm/compat/maps/c;
 
-    invoke-interface {v0, p1}, Lcom/bbm/compat/maps/c;->onSaveInstanceState(Landroid/os/Bundle;)V
+    invoke-interface {v0, p1}, Lcom/bbm/compat/maps/c;->b(Landroid/os/Bundle;)V
 
     .line 48
     return-void

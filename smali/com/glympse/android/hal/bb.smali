@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field protected cI:Lcom/glympse/android/api/GGlympse;
+.field protected cL:Lcom/glympse/android/api/GGlympse;
 
-.field protected cJ:Lcom/glympse/android/api/GUser;
+.field protected cM:Lcom/glympse/android/api/GUser;
 
 
 # direct methods
@@ -232,7 +232,7 @@
 
     .prologue
     .line 84
-    iget-object v0, p0, Lcom/glympse/android/hal/bb;->cJ:Lcom/glympse/android/api/GUser;
+    iget-object v0, p0, Lcom/glympse/android/hal/bb;->cM:Lcom/glympse/android/api/GUser;
 
     invoke-interface {v0}, Lcom/glympse/android/api/GUser;->getId()Ljava/lang/String;
 
@@ -272,7 +272,7 @@
 
     .prologue
     .line 33
-    iput-object p1, p0, Lcom/glympse/android/hal/bb;->cI:Lcom/glympse/android/api/GGlympse;
+    iput-object p1, p0, Lcom/glympse/android/hal/bb;->cL:Lcom/glympse/android/api/GGlympse;
 
     .line 36
     invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
@@ -282,12 +282,12 @@
     check-cast v0, Lcom/glympse/android/api/GEventListener;
 
     .line 37
-    iget-object v1, p0, Lcom/glympse/android/hal/bb;->cI:Lcom/glympse/android/api/GGlympse;
+    iget-object v1, p0, Lcom/glympse/android/hal/bb;->cL:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v1, v0}, Lcom/glympse/android/api/GGlympse;->addListener(Lcom/glympse/android/api/GEventListener;)Z
 
     .line 38
-    iget-object v1, p0, Lcom/glympse/android/hal/bb;->cI:Lcom/glympse/android/api/GGlympse;
+    iget-object v1, p0, Lcom/glympse/android/hal/bb;->cL:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v1}, Lcom/glympse/android/api/GGlympse;->getUserManager()Lcom/glympse/android/api/GUserManager;
 
@@ -297,15 +297,15 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/glympse/android/hal/bb;->cJ:Lcom/glympse/android/api/GUser;
+    iput-object v1, p0, Lcom/glympse/android/hal/bb;->cM:Lcom/glympse/android/api/GUser;
 
     .line 39
-    iget-object v1, p0, Lcom/glympse/android/hal/bb;->cJ:Lcom/glympse/android/api/GUser;
+    iget-object v1, p0, Lcom/glympse/android/hal/bb;->cM:Lcom/glympse/android/api/GUser;
 
     invoke-interface {v1, v0}, Lcom/glympse/android/api/GUser;->addListener(Lcom/glympse/android/api/GEventListener;)Z
 
     .line 40
-    iget-object v1, p0, Lcom/glympse/android/hal/bb;->cJ:Lcom/glympse/android/api/GUser;
+    iget-object v1, p0, Lcom/glympse/android/hal/bb;->cM:Lcom/glympse/android/api/GUser;
 
     invoke-interface {v1}, Lcom/glympse/android/api/GUser;->getAvatar()Lcom/glympse/android/api/GImage;
 
@@ -335,17 +335,17 @@
     check-cast v0, Lcom/glympse/android/api/GEventListener;
 
     .line 53
-    iget-object v1, p0, Lcom/glympse/android/hal/bb;->cI:Lcom/glympse/android/api/GGlympse;
+    iget-object v1, p0, Lcom/glympse/android/hal/bb;->cL:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v1, v0}, Lcom/glympse/android/api/GGlympse;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
 
     .line 54
-    iget-object v1, p0, Lcom/glympse/android/hal/bb;->cJ:Lcom/glympse/android/api/GUser;
+    iget-object v1, p0, Lcom/glympse/android/hal/bb;->cM:Lcom/glympse/android/api/GUser;
 
     invoke-interface {v1, v0}, Lcom/glympse/android/api/GUser;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
 
     .line 55
-    iget-object v1, p0, Lcom/glympse/android/hal/bb;->cJ:Lcom/glympse/android/api/GUser;
+    iget-object v1, p0, Lcom/glympse/android/hal/bb;->cM:Lcom/glympse/android/api/GUser;
 
     invoke-interface {v1}, Lcom/glympse/android/api/GUser;->getAvatar()Lcom/glympse/android/api/GImage;
 
@@ -356,7 +356,7 @@
     .line 58
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/bb;->cI:Lcom/glympse/android/api/GGlympse;
+    iput-object v0, p0, Lcom/glympse/android/hal/bb;->cL:Lcom/glympse/android/api/GGlympse;
 
     .line 59
     return-void

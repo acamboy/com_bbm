@@ -36,27 +36,27 @@
     </plurals>
     <plurals name="slide_menu_active_chats">
         <item quantity="other">%1$s aktív csevegés</item>
-        <item quantity="one">{1} aktív csevegés</item>
+        <item quantity="one">%1$s aktív csevegés</item>
     </plurals>
     <plurals name="slide_menu_new_channelupdates">
-        <item quantity="other">%1$s új értesítés</item>
-        <item quantity="one">1 új értesítés</item>
+        <item quantity="other">%1$s új Channels-elem</item>
+        <item quantity="one">%1$s új Channels-elem</item>
     </plurals>
     <plurals name="slide_menu_new_invites">
         <item quantity="other">%1$s új meghívás</item>
-        <item quantity="one">1 új meghívás</item>
+        <item quantity="one">%1$s új meghívás</item>
     </plurals>
     <plurals name="slide_menu_new_updates">
-        <item quantity="other">%1$s új elem</item>
-        <item quantity="one">1 új elem</item>
+        <item quantity="other">%1$s új frissítés</item>
+        <item quantity="one">%1$s új frissítés</item>
     </plurals>
     <plurals name="slide_menu_total_contacts">
         <item quantity="other">%1$s partner</item>
-        <item quantity="one">{1} partner</item>
+        <item quantity="one">%1$s partner</item>
     </plurals>
     <plurals name="slide_menu_total_groups">
         <item quantity="other">%1$s csoport</item>
-        <item quantity="one">1 csoport</item>
+        <item quantity="one">%1$s csoport</item>
     </plurals>
     <plurals name="update_channel_stats_comments">
         <item quantity="other">%1$s hozzászólás</item>

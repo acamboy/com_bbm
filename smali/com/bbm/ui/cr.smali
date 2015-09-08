@@ -1,172 +1,122 @@
 .class final Lcom/bbm/ui/cr;
-.super Ljava/lang/Object;
-.source "GlympseUserSelector.java"
-
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.super Lcom/bbm/j/u;
+.source "EmoticonStickerPager.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/GlympseUserSelector;
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Lcom/bbm/ui/cp;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/GlympseUserSelector;)V
+.method constructor <init>(Lcom/bbm/ui/cp;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 92
-    iput-object p1, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
+    .line 421
+    iput-object p1, p0, Lcom/bbm/ui/cr;->b:Lcom/bbm/ui/cp;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lcom/bbm/ui/cr;->a:Ljava/lang/String;
+
+    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+.method protected final b()Z
     .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
 
     .prologue
-    const/4 v5, 0x0
+    const/4 v3, 0x1
 
-    .line 96
-    iget-object v0, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
+    const/4 v2, 0x0
 
-    invoke-static {v0}, Lcom/bbm/ui/GlympseUserSelector;->f(Lcom/bbm/ui/GlympseUserSelector;)Lcom/bbm/ui/ct;
+    .line 425
+    .line 426
+    iget-object v0, p0, Lcom/bbm/ui/cr;->b:Lcom/bbm/ui/cp;
+
+    iget-object v0, v0, Lcom/bbm/ui/cp;->b:Lcom/bbm/ui/EmoticonStickerPager;
+
+    invoke-static {v0}, Lcom/bbm/ui/EmoticonStickerPager;->p(Lcom/bbm/ui/EmoticonStickerPager;)Lcom/bbm/d/b/o;
 
     move-result-object v0
 
-    invoke-virtual {v0, p3}, Lcom/bbm/ui/ct;->a(I)Lcom/glympse/android/api/GUser;
+    invoke-virtual {v0}, Lcom/bbm/d/b/o;->g()Ljava/util/List;
 
     move-result-object v0
 
-    .line 97
-    iget-object v1, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
-
-    invoke-static {v1}, Lcom/bbm/ui/GlympseUserSelector;->c(Lcom/bbm/ui/GlympseUserSelector;)Lcom/bbm/ui/GlympseUserSelectorItem;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
-
-    invoke-static {v2}, Lcom/bbm/ui/GlympseUserSelector;->g(Lcom/bbm/ui/GlympseUserSelector;)Ljava/util/List;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
-
-    invoke-static {v3}, Lcom/bbm/ui/GlympseUserSelector;->h(Lcom/bbm/ui/GlympseUserSelector;)Lcom/bbm/ui/activities/ye;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
-
-    invoke-static {v4}, Lcom/bbm/ui/GlympseUserSelector;->i(Lcom/bbm/ui/GlympseUserSelector;)Lcom/bbm/d/eu;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
 
-    invoke-static {v0, v2, v3, v4}, Lcom/bbm/util/a/k;->a(Lcom/glympse/android/api/GUser;Ljava/util/List;Lcom/bbm/ui/activities/ye;Lcom/bbm/d/eu;)I
+    move v1, v2
 
-    move-result v2
+    :goto_0
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {v1, v2}, Lcom/bbm/ui/GlympseUserSelectorItem;->setColor(I)V
-
-    .line 98
-    iget-object v1, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
-
-    invoke-static {v1}, Lcom/bbm/ui/GlympseUserSelector;->c(Lcom/bbm/ui/GlympseUserSelector;)Lcom/bbm/ui/GlympseUserSelectorItem;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/GlympseUserSelectorItem;->a(Lcom/glympse/android/api/GUser;)V
-
-    .line 99
-    iget-object v0, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
-
-    invoke-static {v0}, Lcom/bbm/ui/GlympseUserSelector;->c(Lcom/bbm/ui/GlympseUserSelector;)Lcom/bbm/ui/GlympseUserSelectorItem;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v5}, Lcom/bbm/ui/GlympseUserSelectorItem;->setExpanded(Z)V
-
-    .line 100
-    iget-object v0, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
-
-    invoke-static {v0}, Lcom/bbm/ui/GlympseUserSelector;->f(Lcom/bbm/ui/GlympseUserSelector;)Lcom/bbm/ui/ct;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/ui/ct;->notifyDataSetChanged()V
-
-    .line 101
-    iget-object v0, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
-
-    invoke-static {v0}, Lcom/bbm/ui/GlympseUserSelector;->a(Lcom/bbm/ui/GlympseUserSelector;)Landroid/widget/LinearLayout;
-
-    move-result-object v0
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    .line 102
-    iget-object v0, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
-
-    invoke-static {v0}, Lcom/bbm/ui/GlympseUserSelector;->b(Lcom/bbm/ui/GlympseUserSelector;)Landroid/widget/ImageButton;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v5}, Landroid/widget/ImageButton;->setActivated(Z)V
-
-    .line 103
-    iget-object v0, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
-
-    invoke-static {v0}, Lcom/bbm/ui/GlympseUserSelector;->e(Lcom/bbm/ui/GlympseUserSelector;)Lcom/bbm/ui/cs;
-
-    move-result-object v0
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 104
-    iget-object v0, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
-
-    invoke-static {v0}, Lcom/bbm/ui/GlympseUserSelector;->e(Lcom/bbm/ui/GlympseUserSelector;)Lcom/bbm/ui/cs;
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
+    check-cast v0, Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/bbm/ui/GlympseUserSelector;->c(Lcom/bbm/ui/GlympseUserSelector;)Lcom/bbm/ui/GlympseUserSelectorItem;
+    .line 427
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
-    move-result-object v1
+    move-result-object v5
 
-    invoke-virtual {v1}, Lcom/bbm/ui/GlympseUserSelectorItem;->getUser()Lcom/glympse/android/api/GUser;
+    invoke-virtual {v5, v0}, Lcom/bbm/d/a;->v(Ljava/lang/String;)Lcom/bbm/d/hx;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-interface {v0, v1}, Lcom/bbm/ui/cs;->a(Lcom/glympse/android/api/GUser;)V
+    .line 428
+    iget-object v0, v0, Lcom/bbm/d/hx;->b:Ljava/lang/String;
 
-    .line 106
+    iget-object v5, p0, Lcom/bbm/ui/cr;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 429
+    iget-object v0, p0, Lcom/bbm/ui/cr;->b:Lcom/bbm/ui/cp;
+
+    iget-object v0, v0, Lcom/bbm/ui/cp;->b:Lcom/bbm/ui/EmoticonStickerPager;
+
+    invoke-static {v0}, Lcom/bbm/ui/EmoticonStickerPager;->r(Lcom/bbm/ui/EmoticonStickerPager;)Landroid/support/v4/view/ViewPager;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1, v3}, Landroid/support/v4/view/ViewPager;->setCurrentItem(IZ)V
+
+    .line 430
+    iget-object v0, p0, Lcom/bbm/ui/cr;->b:Lcom/bbm/ui/cp;
+
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Lcom/bbm/ui/cp;->a:Lcom/bbm/j/u;
+
+    move v2, v3
+
+    .line 435
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
+    return v2
 
-    invoke-static {v0}, Lcom/bbm/ui/GlympseUserSelector;->d(Lcom/bbm/ui/GlympseUserSelector;)Lcom/bbm/ui/GlympseUserSelectorItem;
+    .line 433
+    :cond_1
+    add-int/lit8 v0, v1, 0x1
 
-    move-result-object v0
+    move v1, v0
 
-    invoke-virtual {v0, v5}, Lcom/bbm/ui/GlympseUserSelectorItem;->setVisibility(I)V
-
-    .line 107
-    return-void
+    .line 434
+    goto :goto_0
 .end method

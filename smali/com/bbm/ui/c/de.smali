@@ -1,355 +1,125 @@
-.class public Lcom/bbm/ui/c/de;
-.super Landroid/app/Fragment;
-.source "GroupDetailsFragment.java"
+.class final Lcom/bbm/ui/c/de;
+.super Ljava/lang/Object;
+.source "ContactsFragment.java"
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field private a:Landroid/widget/TextView;
+.field final synthetic a:Ljava/util/List;
 
-.field private b:Ljava/lang/String;
+.field final synthetic b:Lcom/bbm/ui/b/g;
 
-.field private c:Ljava/lang/String;
-
-.field private d:Lcom/bbm/e;
-
-.field private final e:Lcom/bbm/j/k;
-
-.field private final f:Landroid/view/View$OnFocusChangeListener;
+.field final synthetic c:Lcom/bbm/ui/c/cw;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 28
-    invoke-direct {p0}, Landroid/app/Fragment;-><init>()V
-
-    .line 33
-    iput-object v0, p0, Lcom/bbm/ui/c/de;->b:Ljava/lang/String;
-
-    .line 34
-    iput-object v0, p0, Lcom/bbm/ui/c/de;->c:Ljava/lang/String;
-
-    .line 35
-    iput-object v0, p0, Lcom/bbm/ui/c/de;->d:Lcom/bbm/e;
-
-    .line 37
-    new-instance v0, Lcom/bbm/ui/c/df;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/c/df;-><init>(Lcom/bbm/ui/c/de;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/c/de;->e:Lcom/bbm/j/k;
-
-    .line 56
-    new-instance v0, Lcom/bbm/ui/c/dg;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/c/dg;-><init>(Lcom/bbm/ui/c/de;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/c/de;->f:Landroid/view/View$OnFocusChangeListener;
-
-    return-void
-.end method
-
-.method static synthetic a(Lcom/bbm/ui/c/de;)Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 28
-    iget-object v0, p0, Lcom/bbm/ui/c/de;->c:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic a(Lcom/bbm/ui/c/de;Ljava/lang/String;)Ljava/lang/String;
+.method constructor <init>(Lcom/bbm/ui/c/cw;Ljava/util/List;Lcom/bbm/ui/b/g;)V
     .locals 0
 
     .prologue
-    .line 28
-    iput-object p1, p0, Lcom/bbm/ui/c/de;->b:Ljava/lang/String;
+    .line 1086
+    iput-object p1, p0, Lcom/bbm/ui/c/de;->c:Lcom/bbm/ui/c/cw;
 
-    return-object p1
-.end method
+    iput-object p2, p0, Lcom/bbm/ui/c/de;->a:Ljava/util/List;
 
-.method static synthetic b(Lcom/bbm/ui/c/de;)Lcom/bbm/e;
-    .locals 1
+    iput-object p3, p0, Lcom/bbm/ui/c/de;->b:Lcom/bbm/ui/b/g;
 
-    .prologue
-    .line 28
-    iget-object v0, p0, Lcom/bbm/ui/c/de;->d:Lcom/bbm/e;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-object v0
-.end method
-
-.method static synthetic c(Lcom/bbm/ui/c/de;)Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 28
-    iget-object v0, p0, Lcom/bbm/ui/c/de;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic d(Lcom/bbm/ui/c/de;)Landroid/widget/TextView;
-    .locals 1
-
-    .prologue
-    .line 28
-    iget-object v0, p0, Lcom/bbm/ui/c/de;->a:Landroid/widget/TextView;
-
-    return-object v0
-.end method
-
-.method static synthetic e(Lcom/bbm/ui/c/de;)V
-    .locals 5
-
-    .prologue
-    .line 28
-    iget-object v0, p0, Lcom/bbm/ui/c/de;->a:Landroid/widget/TextView;
-
-    invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, Lcom/bbm/ui/c/de;->b:Ljava/lang/String;
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lcom/bbm/ui/c/de;->b:Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    :cond_0
-    :goto_0
     return-void
-
-    :cond_1
-    new-instance v1, Lorg/json/JSONObject;
-
-    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
-
-    new-instance v2, Ljava/util/LinkedList;
-
-    invoke-direct {v2}, Ljava/util/LinkedList;-><init>()V
-
-    :try_start_0
-    const-string v3, "uri"
-
-    iget-object v4, p0, Lcom/bbm/ui/c/de;->c:Ljava/lang/String;
-
-    invoke-virtual {v1, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    move-result-object v1
-
-    const-string v3, "description"
-
-    invoke-virtual {v1, v3, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    move-result-object v0
-
-    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lcom/bbm/ui/c/de;->d:Lcom/bbm/e;
-
-    iget-object v0, v0, Lcom/bbm/e;->c:Lcom/bbm/g/al;
-
-    const-string v1, "group"
-
-    invoke-static {v2, v1}, Lcom/bbm/g/am;->a(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/g/ct;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+.method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 4
 
     .prologue
-    const/4 v3, 0x0
+    .line 1090
+    const-string v0, "DeleteContactDialog PositiveButton Clicked"
 
-    .line 88
-    const v0, 0x7f03008e
+    const-class v1, Lcom/bbm/ui/c/cw;
 
-    invoke-virtual {p1, v0, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 1091
+    iget-object v0, p0, Lcom/bbm/ui/c/de;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .line 89
-    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/c/de;->d:Lcom/bbm/e;
-
-    .line 90
-    const-string v0, "onCreateView"
-
-    const-class v2, Lcom/bbm/ui/c/de;
-
-    invoke-static {v0, v2}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 91
-    const v0, 0x7f0b03cc
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/bbm/ui/c/de;->a:Landroid/widget/TextView;
-
-    .line 92
-    iget-object v0, p0, Lcom/bbm/ui/c/de;->a:Landroid/widget/TextView;
-
-    iget-object v2, p0, Lcom/bbm/ui/c/de;->f:Landroid/view/View$OnFocusChangeListener;
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
-
-    .line 94
-    invoke-virtual {p0}, Lcom/bbm/ui/c/de;->getArguments()Landroid/os/Bundle;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p0}, Lcom/bbm/ui/c/de;->getArguments()Landroid/os/Bundle;
-
-    move-result-object v0
-
-    const-string v2, "groupUri"
-
-    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
+    :cond_0
     :goto_0
-    iput-object v0, p0, Lcom/bbm/ui/c/de;->c:Ljava/lang/String;
-
-    .line 95
-    iget-object v0, p0, Lcom/bbm/ui/c/de;->c:Ljava/lang/String;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/ui/c/de;->c:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 96
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    const-string v1, "GroupDetailsFragment invoked without group uri"
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    check-cast v0, Lcom/bbm/iceberg/a;
 
-    throw v0
+    .line 1092
+    iget-object v2, v0, Lcom/bbm/iceberg/a;->a:Lcom/bbm/iceberg/b;
 
-    .line 94
-    :cond_1
-    const-string v0, ""
+    sget-object v3, Lcom/bbm/iceberg/b;->a:Lcom/bbm/iceberg/b;
+
+    if-ne v2, v3, :cond_1
+
+    .line 1093
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
+
+    move-result-object v2
+
+    iget-object v0, v0, Lcom/bbm/iceberg/a;->b:Lcom/bbm/d/ie;
+
+    iget-object v0, v0, Lcom/bbm/d/ie;->z:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/bbm/d/aj;->c(Ljava/lang/String;)Lcom/bbm/d/ca;
+
+    move-result-object v0
+
+    iget-object v3, p0, Lcom/bbm/ui/c/de;->b:Lcom/bbm/ui/b/g;
+
+    invoke-virtual {v3}, Lcom/bbm/ui/b/g;->a()Z
+
+    move-result v3
+
+    invoke-virtual {v0, v3}, Lcom/bbm/d/ca;->a(Z)Lcom/bbm/d/ca;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ez;)V
 
     goto :goto_0
 
-    .line 98
+    .line 1094
+    :cond_1
+    iget-object v2, v0, Lcom/bbm/iceberg/a;->a:Lcom/bbm/iceberg/b;
+
+    sget-object v3, Lcom/bbm/iceberg/b;->b:Lcom/bbm/iceberg/b;
+
+    if-ne v2, v3, :cond_0
+
+    .line 1095
+    iget-object v0, v0, Lcom/bbm/iceberg/a;->c:Lcom/bbm/iceberg/m;
+
+    invoke-static {v0}, Lcom/bbm/invite/o;->a(Lcom/bbm/iceberg/m;)V
+
+    goto :goto_0
+
+    .line 1098
     :cond_2
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lcom/bbm/ui/c/de;->b:Lcom/bbm/ui/b/g;
 
-    const-string v2, "GDF:Group selected is "
+    invoke-virtual {v0}, Lcom/bbm/ui/b/g;->dismiss()V
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lcom/bbm/ui/c/de;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-array v2, v3, [Ljava/lang/Object;
-
-    invoke-static {v0, v2}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 100
-    return-object v1
-.end method
-
-.method public onPause()V
-    .locals 2
-
-    .prologue
-    .line 112
-    iget-object v0, p0, Lcom/bbm/ui/c/de;->e:Lcom/bbm/j/k;
-
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
-
-    .line 113
-    const-string v0, "onPause"
-
-    const-class v1, Lcom/bbm/ui/c/de;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 114
-    invoke-super {p0}, Landroid/app/Fragment;->onPause()V
-
-    .line 115
-    return-void
-.end method
-
-.method public onResume()V
-    .locals 2
-
-    .prologue
-    .line 105
-    invoke-super {p0}, Landroid/app/Fragment;->onResume()V
-
-    .line 106
-    const-string v0, "onResume"
-
-    const-class v1, Lcom/bbm/ui/c/de;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 107
-    iget-object v0, p0, Lcom/bbm/ui/c/de;->e:Lcom/bbm/j/k;
-
-    invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
-
-    .line 108
+    .line 1099
     return-void
 .end method

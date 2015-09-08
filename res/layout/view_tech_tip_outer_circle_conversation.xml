@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/tech_tip_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/phone_contact_tutorial_padding">
+        <com.bbm.ui.views.HtmlTextView android:textSize="@dimen/fontSizeMedium" android:textColor="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/phone_contact_tutorial_padding" custom:htmlText="@string/phone_contact_tutorial_conversation_section_1" />
+        <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/phone_contact_tutorial_padding">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/contact" />
+            <com.bbm.ui.views.HtmlTextView android:textSize="@dimen/fontSizeMedium" android:textColor="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/phone_contact_tutorial_padding" custom:htmlText="@string/phone_contact_tutorial_conversation_section_2" />
+        </LinearLayout>
+        <com.bbm.ui.views.HtmlTextView android:textSize="@dimen/fontSizeMedium" android:textColor="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/phone_contact_tutorial_padding" custom:htmlText="@string/phone_contact_tutorial_conversation_section_3" />
+    </LinearLayout>
+</ScrollView>

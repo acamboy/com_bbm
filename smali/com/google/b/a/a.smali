@@ -6,16 +6,26 @@
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/google/b/a/l",
-        "<",
+        "<T:",
         "Ljava/lang/Object;",
-        ">;"
+        ">",
+        "Lcom/google/b/a/l",
+        "<TT;>;"
     }
 .end annotation
 
 
 # static fields
 .field static final a:Lcom/google/b/a/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/b/a/a",
+            "<",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -37,43 +47,72 @@
     .locals 0
 
     .prologue
-    .line 35
+    .line 40
     invoke-direct {p0}, Lcom/google/b/a/l;-><init>()V
 
     return-void
+.end method
+
+.method static a()Lcom/google/b/a/l;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">()",
+            "Lcom/google/b/a/l",
+            "<TT;>;"
+        }
+    .end annotation
+
+    .prologue
+    .line 37
+    sget-object v0, Lcom/google/b/a/a;->a:Lcom/google/b/a/a;
+
+    return-object v0
 .end method
 
 
 # virtual methods
 .method public final a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)TT;"
+        }
+    .end annotation
 
     .prologue
-    .line 46
+    .line 51
     const-string v0, "use Optional.orNull() instead of Optional.or(null)"
 
-    invoke-static {p1, v0}, Lcom/google/b/a/o;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lcom/google/b/a/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final a()Z
+.method public final b()Z
     .locals 1
 
     .prologue
-    .line 38
+    .line 43
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final b()Ljava/lang/Object;
+.method public final c()Ljava/lang/Object;
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
 
     .prologue
-    .line 42
+    .line 47
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Optional.get() cannot be called on an absent value"
@@ -83,11 +122,16 @@
     throw v0
 .end method
 
-.method public final c()Ljava/lang/Object;
+.method public final d()Ljava/lang/Object;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
 
     .prologue
-    .line 60
+    .line 65
     const/4 v0, 0x0
 
     return-object v0
@@ -97,7 +141,7 @@
     .locals 1
 
     .prologue
-    .line 73
+    .line 78
     if-ne p1, p0, :cond_0
 
     const/4 v0, 0x1
@@ -115,7 +159,7 @@
     .locals 1
 
     .prologue
-    .line 77
+    .line 82
     const v0, 0x598df91c
 
     return v0
@@ -125,7 +169,7 @@
     .locals 1
 
     .prologue
-    .line 81
+    .line 86
     const-string v0, "Optional.absent()"
 
     return-object v0

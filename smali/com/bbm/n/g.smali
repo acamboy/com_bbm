@@ -17,7 +17,7 @@
     .locals 0
 
     .prologue
-    .line 545
+    .line 505
     iput-object p1, p0, Lcom/bbm/n/g;->b:Lcom/bbm/n/b;
 
     iput-object p2, p0, Lcom/bbm/n/g;->a:Landroid/media/MediaPlayer;
@@ -33,11 +33,11 @@
     .locals 1
 
     .prologue
-    .line 548
+    .line 508
     iget-object v0, p0, Lcom/bbm/n/g;->a:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->start()V
 
-    .line 549
+    .line 509
     return-void
 .end method

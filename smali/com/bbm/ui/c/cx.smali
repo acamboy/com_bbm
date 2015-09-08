@@ -3,20 +3,20 @@
 .source "ContactsFragment.java"
 
 # interfaces
-.implements Lcom/tonicartos/widget/stickygridheaders/j;
+.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/ch;
+.field final synthetic a:Lcom/bbm/ui/c/cw;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/ch;)V
+.method constructor <init>(Lcom/bbm/ui/c/cw;)V
     .locals 0
 
     .prologue
-    .line 484
-    iput-object p1, p0, Lcom/bbm/ui/c/cx;->a:Lcom/bbm/ui/c/ch;
+    .line 130
+    iput-object p1, p0, Lcom/bbm/ui/c/cx;->a:Lcom/bbm/ui/c/cw;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,63 +25,107 @@
 
 
 # virtual methods
-.method public final a(J)Z
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(J)Z"
-        }
-    .end annotation
 
     .prologue
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
-    .line 487
-    iget-object v0, p0, Lcom/bbm/ui/c/cx;->a:Lcom/bbm/ui/c/ch;
+    .line 134
+    iget-object v0, p0, Lcom/bbm/ui/c/cx;->a:Lcom/bbm/ui/c/cw;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/c/ch;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/bbm/ui/c/cw;->isAdded()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/bbm/ui/c/cx;->a:Lcom/bbm/ui/c/cw;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/c/cw;->getActivity()Landroid/support/v4/app/q;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/activities/MainActivity;
+    invoke-virtual {v0}, Landroid/support/v4/app/q;->getWindow()Landroid/view/Window;
 
-    .line 488
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/bbm/ui/c/cx;->a:Lcom/bbm/ui/c/cw;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/c/cw;->getActivity()Landroid/support/v4/app/q;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/support/v4/app/q;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Window;->getCurrentFocus()Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    .line 135
+    iget-object v0, p0, Lcom/bbm/ui/c/cx;->a:Lcom/bbm/ui/c/cw;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/c/cw;->getActivity()Landroid/support/v4/app/q;
+
+    move-result-object v0
+
+    const-string v1, "input_method"
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/app/q;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
+
+    .line 136
     if-eqz v0, :cond_0
 
-    .line 489
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+    .line 137
+    iget-object v1, p0, Lcom/bbm/ui/c/cx;->a:Lcom/bbm/ui/c/cw;
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+    invoke-virtual {v1}, Lcom/bbm/ui/c/cw;->getActivity()Landroid/support/v4/app/q;
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/SlidingMenu;->a:Lcom/slidingmenu/lib/CustomViewAbove;
+    move-result-object v1
 
-    iget-boolean v0, v0, Lcom/slidingmenu/lib/CustomViewAbove;->b:Z
+    invoke-virtual {v1}, Landroid/support/v4/app/q;->getWindow()Landroid/view/Window;
 
-    if-eqz v0, :cond_0
+    move-result-object v1
 
-    .line 499
-    :goto_0
-    return v2
+    invoke-virtual {v1}, Landroid/view/Window;->getCurrentFocus()Landroid/view/View;
 
-    .line 494
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
+
+    .line 139
     :cond_0
-    const-string v0, "onHeaderLongClick"
+    iget-object v0, p0, Lcom/bbm/ui/c/cx;->a:Lcom/bbm/ui/c/cw;
 
-    const-class v1, Lcom/bbm/ui/c/ch;
+    invoke-virtual {v0}, Lcom/bbm/ui/c/cw;->getActivity()Landroid/support/v4/app/q;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    move-result-object v0
 
-    .line 496
-    iget-object v0, p0, Lcom/bbm/ui/c/cx;->a:Lcom/bbm/ui/c/ch;
+    invoke-virtual {v0}, Landroid/support/v4/app/q;->getWindow()Landroid/view/Window;
 
-    invoke-static {v0, p1, p2}, Lcom/bbm/ui/c/ch;->a(Lcom/bbm/ui/c/ch;J)J
+    move-result-object v0
 
-    .line 497
-    iget-object v0, p0, Lcom/bbm/ui/c/cx;->a:Lcom/bbm/ui/c/ch;
+    invoke-virtual {v0}, Landroid/view/Window;->getCurrentFocus()Landroid/view/View;
 
-    iget-object v0, v0, Lcom/bbm/ui/c/ch;->e:Lcom/bbm/j/u;
+    move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
+    invoke-virtual {v0}, Landroid/view/View;->clearFocus()V
 
-    goto :goto_0
+    .line 141
+    :cond_1
+    return v2
 .end method

@@ -1,30 +1,22 @@
 .class final Lcom/bbm/ac;
 .super Ljava/lang/Object;
-.source "LocationSynchronizer.java"
+.source "LayoutTimer.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Landroid/location/Location;
-
-.field final synthetic b:J
-
-.field final synthetic c:Lcom/bbm/ab;
+.field final synthetic a:Lcom/bbm/ab;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ab;Landroid/location/Location;J)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ab;)V
+    .locals 0
 
     .prologue
-    .line 111
-    iput-object p1, p0, Lcom/bbm/ac;->c:Lcom/bbm/ab;
-
-    iput-object p2, p0, Lcom/bbm/ac;->a:Landroid/location/Location;
-
-    iput-wide p3, p0, Lcom/bbm/ac;->b:J
+    .line 24
+    iput-object p1, p0, Lcom/bbm/ac;->a:Lcom/bbm/ab;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,170 +26,113 @@
 
 # virtual methods
 .method public final run()V
-    .locals 10
+    .locals 7
 
     .prologue
-    .line 114
-    iget-object v6, p0, Lcom/bbm/ac;->a:Landroid/location/Location;
+    const/4 v6, 0x0
 
-    .line 115
-    invoke-virtual {v6}, Landroid/location/Location;->getAccuracy()F
+    .line 27
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result v0
+    move-result-wide v0
 
-    invoke-static {v0}, Ljava/lang/Float;->toString(F)Ljava/lang/String;
+    .line 29
+    iget-object v2, p0, Lcom/bbm/ac;->a:Lcom/bbm/ab;
 
-    move-result-object v1
+    iget-wide v2, v2, Lcom/bbm/ab;->c:J
 
-    invoke-virtual {v6}, Landroid/location/Location;->getLatitude()D
+    sub-long/2addr v0, v2
 
-    move-result-wide v2
+    iget-object v2, p0, Lcom/bbm/ac;->a:Lcom/bbm/ab;
 
-    invoke-static {v2, v3}, Ljava/lang/Double;->toString(D)Ljava/lang/String;
+    iget-wide v2, v2, Lcom/bbm/ab;->d:J
 
-    move-result-object v2
+    cmp-long v0, v0, v2
 
-    invoke-virtual {v6}, Landroid/location/Location;->getLongitude()D
+    if-gez v0, :cond_0
 
-    move-result-wide v4
+    .line 30
+    iget-object v0, p0, Lcom/bbm/ac;->a:Lcom/bbm/ab;
 
-    invoke-static {v4, v5}, Ljava/lang/Double;->toString(D)Ljava/lang/String;
+    const/4 v1, 0x1
 
-    move-result-object v3
+    iput-boolean v1, v0, Lcom/bbm/ab;->f:Z
 
-    iget-wide v4, p0, Lcom/bbm/ac;->b:J
+    .line 31
+    iget-object v0, p0, Lcom/bbm/ac;->a:Lcom/bbm/ab;
 
-    const-wide/16 v8, 0x3e8
+    iget-object v0, v0, Lcom/bbm/ab;->a:Landroid/os/Handler;
 
-    div-long/2addr v4, v8
+    iget-object v1, p0, Lcom/bbm/ac;->a:Lcom/bbm/ab;
 
-    new-instance v0, Lcom/bbm/d/ct;
+    iget-object v1, v1, Lcom/bbm/ab;->g:Ljava/lang/Runnable;
 
-    invoke-direct/range {v0 .. v5}, Lcom/bbm/d/ct;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
+    iget-object v2, p0, Lcom/bbm/ac;->a:Lcom/bbm/ab;
 
-    .line 117
-    invoke-virtual {v6}, Landroid/location/Location;->getProvider()Ljava/lang/String;
+    iget-wide v2, v2, Lcom/bbm/ab;->d:J
 
-    move-result-object v1
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    const-string v2, "network"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    .line 118
-    sget-object v1, Lcom/bbm/d/cu;->d:Lcom/bbm/d/cu;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/d/ct;->a(Lcom/bbm/d/cu;)Lcom/bbm/d/ct;
-
-    .line 128
-    :cond_0
+    .line 38
     :goto_0
-    iget-object v1, p0, Lcom/bbm/ac;->c:Lcom/bbm/ab;
+    return-void
 
-    iget-object v1, v1, Lcom/bbm/ab;->a:Lcom/bbm/z;
+    .line 34
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ac;->a:Lcom/bbm/ab;
 
-    iget-wide v2, v1, Lcom/bbm/z;->a:J
+    iput-boolean v6, v0, Lcom/bbm/ab;->f:Z
+
+    .line 35
+    iget-object v0, p0, Lcom/bbm/ac;->a:Lcom/bbm/ab;
+
+    iget-wide v0, v0, Lcom/bbm/ab;->c:J
+
+    iget-object v2, p0, Lcom/bbm/ac;->a:Lcom/bbm/ab;
+
+    iget-wide v2, v2, Lcom/bbm/ab;->b:J
+
+    sub-long/2addr v0, v2
+
+    .line 36
+    iget-object v2, p0, Lcom/bbm/ac;->a:Lcom/bbm/ab;
 
     const-wide/16 v4, 0x0
 
-    cmp-long v1, v2, v4
+    iput-wide v4, v2, Lcom/bbm/ab;->b:J
 
-    if-eqz v1, :cond_1
+    .line 37
+    iget-object v2, p0, Lcom/bbm/ac;->a:Lcom/bbm/ab;
 
-    iget-wide v2, p0, Lcom/bbm/ac;->b:J
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/bbm/ac;->c:Lcom/bbm/ab;
+    const-string v4, "Timer "
 
-    iget-object v1, v1, Lcom/bbm/ab;->a:Lcom/bbm/z;
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v4, v1, Lcom/bbm/z;->a:J
+    iget-object v2, v2, Lcom/bbm/ab;->e:Ljava/lang/String;
 
-    sub-long/2addr v2, v4
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-wide/32 v4, 0x1499700
+    move-result-object v2
 
-    cmp-long v1, v2, v4
+    const-string v3, " completed. Elapsed time: "
 
-    if-gtz v1, :cond_1
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/bbm/ac;->c:Lcom/bbm/ab;
+    move-result-object v2
 
-    iget-object v1, v1, Lcom/bbm/ab;->a:Lcom/bbm/z;
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget-object v1, v1, Lcom/bbm/z;->b:Landroid/location/Location;
+    move-result-object v0
 
-    if-eqz v1, :cond_2
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/bbm/ac;->c:Lcom/bbm/ab;
+    move-result-object v0
 
-    iget-object v1, v1, Lcom/bbm/ab;->a:Lcom/bbm/z;
+    new-array v1, v6, [Ljava/lang/Object;
 
-    iget-object v1, v1, Lcom/bbm/z;->b:Landroid/location/Location;
-
-    invoke-virtual {v1, v6}, Landroid/location/Location;->distanceTo(Landroid/location/Location;)F
-
-    move-result v1
-
-    float-to-double v2, v1
-
-    const-wide v4, 0x40a7700000000000L
-
-    cmpl-double v1, v2, v4
-
-    if-lez v1, :cond_2
-
-    .line 130
-    :cond_1
-    iget-object v1, p0, Lcom/bbm/ac;->c:Lcom/bbm/ab;
-
-    iget-object v1, v1, Lcom/bbm/ab;->a:Lcom/bbm/z;
-
-    iget-wide v2, p0, Lcom/bbm/ac;->b:J
-
-    iput-wide v2, v1, Lcom/bbm/z;->a:J
-
-    .line 131
-    iget-object v1, p0, Lcom/bbm/ac;->c:Lcom/bbm/ab;
-
-    iget-object v1, v1, Lcom/bbm/ab;->a:Lcom/bbm/z;
-
-    iput-object v6, v1, Lcom/bbm/z;->b:Landroid/location/Location;
-
-    .line 132
-    iget-object v1, p0, Lcom/bbm/ac;->c:Lcom/bbm/ab;
-
-    iget-object v1, v1, Lcom/bbm/ab;->a:Lcom/bbm/z;
-
-    iget-object v1, v1, Lcom/bbm/z;->e:Lcom/bbm/d/a;
-
-    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
-
-    .line 135
-    :cond_2
-    return-void
-
-    .line 119
-    :cond_3
-    invoke-virtual {v6}, Landroid/location/Location;->getProvider()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "gps"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 120
-    sget-object v1, Lcom/bbm/d/cu;->b:Lcom/bbm/d/cu;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/d/ct;->a(Lcom/bbm/d/cu;)Lcom/bbm/d/ct;
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method

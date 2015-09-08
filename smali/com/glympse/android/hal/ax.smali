@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field final synthetic cv:Lcom/glympse/android/hal/at;
+.field final synthetic cy:Lcom/glympse/android/hal/at;
 
-.field protected cw:Z
+.field protected cz:Z
 
 
 # direct methods
@@ -18,14 +18,14 @@
 
     .prologue
     .line 736
-    iput-object p1, p0, Lcom/glympse/android/hal/ax;->cv:Lcom/glympse/android/hal/at;
+    iput-object p1, p0, Lcom/glympse/android/hal/ax;->cy:Lcom/glympse/android/hal/at;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 738
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/glympse/android/hal/ax;->cw:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/ax;->cz:Z
 
     return-void
 .end method
@@ -49,7 +49,7 @@
     const/4 v1, 0x0
 
     .line 763
-    iget-boolean v0, p0, Lcom/glympse/android/hal/ax;->cw:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/ax;->cz:Z
 
     if-eqz v0, :cond_0
 
@@ -61,7 +61,7 @@
 
     .line 773
     :goto_0
-    iput-boolean v1, p0, Lcom/glympse/android/hal/ax;->cw:Z
+    iput-boolean v1, p0, Lcom/glympse/android/hal/ax;->cz:Z
 
     .line 775
     :cond_0
@@ -84,14 +84,14 @@
 
     .line 744
     :try_start_0
-    iget-boolean v0, p0, Lcom/glympse/android/hal/ax;->cw:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/ax;->cz:Z
 
     if-nez v0, :cond_0
 
     .line 747
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/glympse/android/hal/ax;->cw:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/ax;->cz:Z
 
     .line 750
     const-string v1, "passive"
@@ -111,7 +111,7 @@
     .line 758
     :cond_0
     :goto_0
-    iget-boolean v0, p0, Lcom/glympse/android/hal/ax;->cw:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/ax;->cz:Z
 
     return v0
 
@@ -120,7 +120,7 @@
     move-exception v0
 
     .line 755
-    iput-boolean v6, p0, Lcom/glympse/android/hal/ax;->cw:Z
+    iput-boolean v6, p0, Lcom/glympse/android/hal/ax;->cz:Z
 
     .line 756
     invoke-static {v0, v6}, Lcom/glympse/android/lib/Debug;->ex(Ljava/lang/Throwable;Z)V
@@ -137,7 +137,7 @@
 
     .line 783
     :try_start_0
-    iget-object v0, p0, Lcom/glympse/android/hal/ax;->cv:Lcom/glympse/android/hal/at;
+    iget-object v0, p0, Lcom/glympse/android/hal/ax;->cy:Lcom/glympse/android/hal/at;
 
     const-string v1, "PASSIVE"
 

@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static cR:Z
+.field private static cU:Z
 
-.field private static dH:Ljava/lang/Class;
+.field private static dK:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class",
@@ -15,9 +15,9 @@
     .end annotation
 .end field
 
-.field private static dI:Ljava/lang/reflect/Method;
+.field private static dL:Ljava/lang/reflect/Method;
 
-.field private static dJ:Ljava/lang/Class;
+.field private static dM:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class",
@@ -25,23 +25,23 @@
         }
     .end annotation
 .end field
-
-.field private static dK:Ljava/lang/reflect/Method;
-
-.field private static dL:Ljava/lang/Class;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/Class",
-            "<*>;"
-        }
-    .end annotation
-.end field
-
-.field private static dM:Ljava/lang/reflect/Method;
 
 .field private static dN:Ljava/lang/reflect/Method;
 
-.field private static dO:Ljava/lang/reflect/Method;
+.field private static dO:Ljava/lang/Class;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/Class",
+            "<*>;"
+        }
+    .end annotation
+.end field
+
+.field private static dP:Ljava/lang/reflect/Method;
+
+.field private static dQ:Ljava/lang/reflect/Method;
+
+.field private static dR:Ljava/lang/reflect/Method;
 
 
 # direct methods
@@ -54,31 +54,31 @@
     .line 1822
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->cR:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->cU:Z
 
     .line 1824
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dH:Ljava/lang/Class;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dK:Ljava/lang/Class;
 
     .line 1825
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dI:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dL:Ljava/lang/reflect/Method;
 
     .line 1827
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dJ:Ljava/lang/Class;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dM:Ljava/lang/Class;
 
     .line 1828
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dK:Ljava/lang/reflect/Method;
-
-    .line 1830
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dL:Ljava/lang/Class;
-
-    .line 1831
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dM:Ljava/lang/reflect/Method;
-
-    .line 1832
     sput-object v1, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dN:Ljava/lang/reflect/Method;
 
+    .line 1830
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dO:Ljava/lang/Class;
+
+    .line 1831
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dP:Ljava/lang/reflect/Method;
+
+    .line 1832
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dQ:Ljava/lang/reflect/Method;
+
     .line 1833
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dO:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dR:Ljava/lang/reflect/Method;
 
     return-void
 .end method
@@ -101,12 +101,12 @@
     const/4 v1, 0x1
 
     .line 1841
-    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->cR:Z
+    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->cU:Z
 
     if-nez v0, :cond_0
 
     .line 1843
-    sput-boolean v1, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->cR:Z
+    sput-boolean v1, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->cU:Z
 
     .line 1846
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_NfcEvent;->Load()V
@@ -127,7 +127,7 @@
     move-result-object v0
 
     .line 1853
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dH:Ljava/lang/Class;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dK:Ljava/lang/Class;
 
     const-string v1, "createNdefMessage"
 
@@ -147,7 +147,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dI:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dL:Ljava/lang/reflect/Method;
 
     .line 1855
     const-string v0, "android.nfc.NfcAdapter$OnNdefPushCompleteCallback"
@@ -157,7 +157,7 @@
     move-result-object v0
 
     .line 1856
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dJ:Ljava/lang/Class;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dM:Ljava/lang/Class;
 
     const-string v1, "onNdefPushComplete"
 
@@ -177,7 +177,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dK:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dN:Ljava/lang/reflect/Method;
 
     .line 1858
     const-string v0, "android.nfc.NfcAdapter"
@@ -187,7 +187,7 @@
     move-result-object v0
 
     .line 1859
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dL:Ljava/lang/Class;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dO:Ljava/lang/Class;
 
     const-string v1, "getDefaultAdapter"
 
@@ -205,10 +205,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dM:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dP:Ljava/lang/reflect/Method;
 
     .line 1860
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dL:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dO:Ljava/lang/Class;
 
     const-string v1, "setNdefPushMessageCallback"
 
@@ -218,7 +218,7 @@
 
     const/4 v3, 0x0
 
-    sget-object v4, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dH:Ljava/lang/Class;
+    sget-object v4, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dK:Ljava/lang/Class;
 
     aput-object v4, v2, v3
 
@@ -238,10 +238,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dN:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dQ:Ljava/lang/reflect/Method;
 
     .line 1861
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dL:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dO:Ljava/lang/Class;
 
     const-string v1, "setOnNdefPushCompleteCallback"
 
@@ -251,7 +251,7 @@
 
     const/4 v3, 0x0
 
-    sget-object v4, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dJ:Ljava/lang/Class;
+    sget-object v4, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dM:Ljava/lang/Class;
 
     aput-object v4, v2, v3
 
@@ -271,7 +271,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dO:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dR:Ljava/lang/reflect/Method;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -298,7 +298,7 @@
 
     .prologue
     .line 1820
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dI:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dL:Ljava/lang/reflect/Method;
 
     return-object v0
 .end method
@@ -308,7 +308,7 @@
 
     .prologue
     .line 1820
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dK:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dN:Ljava/lang/reflect/Method;
 
     return-object v0
 .end method
@@ -325,13 +325,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->Load()V
 
     .line 1893
-    sget-object v1, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dM:Ljava/lang/reflect/Method;
+    sget-object v1, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dP:Ljava/lang/reflect/Method;
 
     if-eqz v1, :cond_0
 
     .line 1897
     :try_start_0
-    sget-object v1, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dM:Ljava/lang/reflect/Method;
+    sget-object v1, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dP:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
 
@@ -373,17 +373,17 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->Load()V
 
     .line 1912
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dH:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dK:Ljava/lang/Class;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dN:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dQ:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 1916
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dH:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dK:Ljava/lang/Class;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -395,7 +395,7 @@
 
     const/4 v2, 0x0
 
-    sget-object v3, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dH:Ljava/lang/Class;
+    sget-object v3, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dK:Ljava/lang/Class;
 
     aput-object v3, v1, v2
 
@@ -408,7 +408,7 @@
     move-result-object v0
 
     .line 1921
-    sget-object v1, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dN:Ljava/lang/reflect/Method;
+    sget-object v1, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dQ:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x3
 
@@ -454,17 +454,17 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->Load()V
 
     .line 1935
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dJ:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dM:Ljava/lang/Class;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dO:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dR:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 1939
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dJ:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dM:Ljava/lang/Class;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -476,7 +476,7 @@
 
     const/4 v2, 0x0
 
-    sget-object v3, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dJ:Ljava/lang/Class;
+    sget-object v3, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dM:Ljava/lang/Class;
 
     aput-object v3, v1, v2
 
@@ -489,7 +489,7 @@
     move-result-object v0
 
     .line 1944
-    sget-object v1, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dO:Ljava/lang/reflect/Method;
+    sget-object v1, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->dR:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x3
 

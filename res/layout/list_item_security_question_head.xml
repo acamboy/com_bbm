@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:background="@android:color/transparent" android:paddingLeft="5.0dip" android:paddingTop="5.0dip" android:paddingRight="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:id="@id/list_head_security_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/invite_activity_security_label" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:textIsSelectable="false" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/primaryColor" android:id="@id/list_head_security_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/invite_activity_security_label" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:textIsSelectable="false" />
     <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:id="@id/list_head_security_current" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:textIsSelectable="false" />
     <ImageView android:id="@id/list_head_security_mark" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:src="@drawable/picker_chevron" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:contentDescription="@string/blank" />
 </RelativeLayout>

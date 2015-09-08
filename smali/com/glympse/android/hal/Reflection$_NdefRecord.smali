@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static cR:Z
+.field private static cU:Z
 
-.field private static dD:Ljava/lang/Class;
+.field private static dG:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class",
@@ -15,7 +15,7 @@
     .end annotation
 .end field
 
-.field private static dE:Ljava/lang/reflect/Constructor;
+.field private static dH:Ljava/lang/reflect/Constructor;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/reflect/Constructor",
@@ -24,9 +24,9 @@
     .end annotation
 .end field
 
-.field private static dF:Ljava/lang/reflect/Method;
+.field private static dI:Ljava/lang/reflect/Method;
 
-.field private static dG:Ljava/lang/reflect/Method;
+.field private static dJ:Ljava/lang/reflect/Method;
 
 
 # direct methods
@@ -39,19 +39,19 @@
     .line 2125
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_NdefRecord;->cR:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_NdefRecord;->cU:Z
 
     .line 2126
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dD:Ljava/lang/Class;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dG:Ljava/lang/Class;
 
     .line 2127
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dE:Ljava/lang/reflect/Constructor;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dH:Ljava/lang/reflect/Constructor;
 
     .line 2128
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dF:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dI:Ljava/lang/reflect/Method;
 
     .line 2129
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dG:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dJ:Ljava/lang/reflect/Method;
 
     return-void
 .end method
@@ -75,12 +75,12 @@
     const/4 v0, 0x0
 
     .line 2135
-    sget-boolean v1, Lcom/glympse/android/hal/Reflection$_NdefRecord;->cR:Z
+    sget-boolean v1, Lcom/glympse/android/hal/Reflection$_NdefRecord;->cU:Z
 
     if-nez v1, :cond_1
 
     .line 2137
-    sput-boolean v2, Lcom/glympse/android/hal/Reflection$_NdefRecord;->cR:Z
+    sput-boolean v2, Lcom/glympse/android/hal/Reflection$_NdefRecord;->cU:Z
 
     .line 2141
     :try_start_0
@@ -91,7 +91,7 @@
     move-result-object v1
 
     .line 2143
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dD:Ljava/lang/Class;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dG:Ljava/lang/Class;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getConstructors()[Ljava/lang/reflect/Constructor;
 
@@ -168,11 +168,11 @@
     if-eqz v4, :cond_2
 
     .line 2154
-    sput-object v3, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dE:Ljava/lang/reflect/Constructor;
+    sput-object v3, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dH:Ljava/lang/reflect/Constructor;
 
     .line 2159
     :cond_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dD:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dG:Ljava/lang/Class;
 
     const-string v1, "createApplicationRecord"
 
@@ -190,10 +190,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dF:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dI:Ljava/lang/reflect/Method;
 
     .line 2160
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dD:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dG:Ljava/lang/Class;
 
     const-string v1, "getPayload"
 
@@ -203,7 +203,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dG:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dJ:Ljava/lang/reflect/Method;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -243,13 +243,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_NdefRecord;->Load()V
 
     .line 2214
-    sget-object v1, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dF:Ljava/lang/reflect/Method;
+    sget-object v1, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dI:Ljava/lang/reflect/Method;
 
     if-eqz v1, :cond_0
 
     .line 2218
     :try_start_0
-    sget-object v1, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dF:Ljava/lang/reflect/Method;
+    sget-object v1, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dI:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
 
@@ -289,12 +289,12 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_NdefRecord;->Load()V
 
     .line 2202
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dG:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dJ:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 2204
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dD:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dG:Ljava/lang/Class;
 
     invoke-static {v0, p0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
 
@@ -320,13 +320,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_NdefRecord;->Load()V
 
     .line 2183
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dE:Ljava/lang/reflect/Constructor;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dH:Ljava/lang/reflect/Constructor;
 
     if-eqz v0, :cond_0
 
     .line 2187
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dE:Ljava/lang/reflect/Constructor;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dH:Ljava/lang/reflect/Constructor;
 
     const/4 v1, 0x4
 
@@ -385,13 +385,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_NdefRecord;->Load()V
 
     .line 2233
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dG:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dJ:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 2237
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dG:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_NdefRecord;->dJ:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
 

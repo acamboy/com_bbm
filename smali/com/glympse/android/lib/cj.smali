@@ -1,41 +1,17 @@
-.class Lcom/glympse/android/lib/cj;
+.class interface abstract Lcom/glympse/android/lib/cj;
 .super Ljava/lang/Object;
-.source "GogoLocationProvider.java"
+.source "GWifiService.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field private lW:Lcom/glympse/android/lib/ci;
-
-
-# direct methods
-.method public constructor <init>(Lcom/glympse/android/lib/ci;)V
-    .locals 0
-
-    .prologue
-    .line 197
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 198
-    iput-object p1, p0, Lcom/glympse/android/lib/cj;->lW:Lcom/glympse/android/lib/ci;
-
-    .line 199
-    return-void
-.end method
+.implements Lcom/glympse/android/core/GCommon;
 
 
 # virtual methods
-.method public run()V
-    .locals 1
+.method public abstract c(Lcom/glympse/android/lib/GGlympsePrivate;)V
+.end method
 
-    .prologue
-    .line 203
-    iget-object v0, p0, Lcom/glympse/android/lib/cj;->lW:Lcom/glympse/android/lib/ci;
+.method public abstract deactivate()V
+.end method
 
-    invoke-virtual {v0}, Lcom/glympse/android/lib/ci;->bv()V
-
-    .line 204
-    return-void
+.method public abstract getSSID()Ljava/lang/String;
 .end method

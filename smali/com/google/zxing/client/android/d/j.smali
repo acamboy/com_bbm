@@ -236,19 +236,7 @@
     :goto_0
     iput-object v0, p0, Lcom/google/zxing/client/android/d/j;->k:Ljava/lang/String;
 
-    .line 119
-    sget v0, Lcom/google/zxing/client/android/w;->shopper_button:I
-
-    invoke-virtual {p1, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    .line 120
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    .line 121
+    .line 122
     return-void
 
     :cond_0
@@ -264,16 +252,16 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 297
+    .line 299
     if-nez p0, :cond_0
 
     move v0, v1
 
-    .line 306
+    .line 308
     :goto_0
     return v0
 
-    .line 300
+    .line 302
     :cond_0
     const/4 v0, 0x0
 
@@ -282,10 +270,10 @@
 
     if-ge v0, v2, :cond_3
 
-    .line 301
+    .line 303
     aget-object v2, p1, v0
 
-    .line 302
+    .line 304
     invoke-virtual {p0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v3
@@ -304,13 +292,13 @@
 
     if-eqz v2, :cond_2
 
-    .line 303
+    .line 305
     :cond_1
     aget v0, p2, v0
 
     goto :goto_0
 
-    .line 300
+    .line 302
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
@@ -319,7 +307,7 @@
     :cond_3
     move v0, v1
 
-    .line 306
+    .line 308
     goto :goto_0
 .end method
 
@@ -327,7 +315,7 @@
     .locals 1
 
     .prologue
-    .line 493
+    .line 495
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Ljava/lang/String;->length()I
@@ -336,10 +324,10 @@
 
     if-lez v0, :cond_0
 
-    .line 494
+    .line 496
     invoke-virtual {p0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 496
+    .line 498
     :cond_0
     return-void
 .end method
@@ -356,15 +344,15 @@
     .locals 3
 
     .prologue
-    .line 470
+    .line 472
     if-eqz p1, :cond_0
 
-    .line 471
+    .line 473
     const/high16 v0, 0x80000
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 472
+    .line 474
     sget-object v0, Lcom/google/zxing/client/android/d/j;->c:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -397,38 +385,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 473
+    .line 475
     iget-object v0, p0, Lcom/google/zxing/client/android/d/j;->b:Landroid/app/Activity;
 
     invoke-virtual {v0, p1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 475
+    .line 477
     :cond_0
-    return-void
-.end method
-
-.method final a(Landroid/view/View$OnClickListener;)V
-    .locals 2
-
-    .prologue
-    .line 174
-    iget-object v0, p0, Lcom/google/zxing/client/android/d/j;->b:Landroid/app/Activity;
-
-    sget v1, Lcom/google/zxing/client/android/w;->shopper_button:I
-
-    invoke-virtual {v0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    .line 175
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    .line 176
-    invoke-virtual {v0, p1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 177
     return-void
 .end method
 
@@ -436,7 +399,7 @@
     .locals 4
 
     .prologue
-    .line 310
+    .line 312
     const-string v0, "mailto:"
 
     const/4 v1, 0x0
@@ -451,7 +414,7 @@
 
     invoke-virtual {p0, v0, v1, v2, p1}, Lcom/google/zxing/client/android/d/j;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 312
+    .line 314
     return-void
 .end method
 
@@ -459,7 +422,7 @@
     .locals 3
 
     .prologue
-    .line 340
+    .line 342
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.SENDTO"
@@ -470,22 +433,22 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 341
+    .line 343
     const-string v1, "sms_body"
 
     invoke-static {v0, v1, p2}, Lcom/google/zxing/client/android/d/j;->a(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 343
+    .line 345
     const-string v1, "compose_mode"
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 344
+    .line 346
     invoke-virtual {p0, v0}, Lcom/google/zxing/client/android/d/j;->b(Landroid/content/Intent;)V
 
-    .line 345
+    .line 347
     return-void
 .end method
 
@@ -493,7 +456,7 @@
     .locals 4
 
     .prologue
-    .line 320
+    .line 322
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.SEND"
@@ -504,10 +467,10 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 321
+    .line 323
     if-eqz p2, :cond_0
 
-    .line 322
+    .line 324
     const-string v1, "android.intent.extra.EMAIL"
 
     const/4 v2, 0x1
@@ -520,26 +483,26 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 324
+    .line 326
     :cond_0
     const-string v1, "android.intent.extra.SUBJECT"
 
     invoke-static {v0, v1, p3}, Lcom/google/zxing/client/android/d/j;->a(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 325
+    .line 327
     const-string v1, "android.intent.extra.TEXT"
 
     invoke-static {v0, v1, p4}, Lcom/google/zxing/client/android/d/j;->a(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 326
+    .line 328
     const-string v1, "text/plain"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 327
+    .line 329
     invoke-virtual {p0, v0}, Lcom/google/zxing/client/android/d/j;->b(Landroid/content/Intent;)V
 
-    .line 328
+    .line 330
     return-void
 .end method
 
@@ -547,7 +510,7 @@
     .locals 15
 
     .prologue
-    .line 206
+    .line 208
     const/4 v1, 0x0
 
     const/4 v2, 0x0
@@ -580,7 +543,7 @@
 
     invoke-virtual/range {v0 .. v14}, Lcom/google/zxing/client/android/d/j;->a([Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 207
+    .line 209
     return-void
 .end method
 
@@ -588,7 +551,7 @@
     .locals 7
 
     .prologue
-    .line 229
+    .line 231
     new-instance v2, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.INSERT_OR_EDIT"
@@ -597,12 +560,12 @@
 
     invoke-direct {v2, v1, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 230
+    .line 232
     const-string v1, "vnd.android.cursor.item/contact"
 
     invoke-virtual {v2, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 231
+    .line 233
     const-string v3, "name"
 
     if-eqz p1, :cond_1
@@ -614,12 +577,12 @@
     :goto_0
     invoke-static {v2, v3, v1}, Lcom/google/zxing/client/android/d/j;->a(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 233
+    .line 235
     const-string v1, "phonetic_name"
 
     invoke-static {v2, v1, p2}, Lcom/google/zxing/client/android/d/j;->a(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 235
+    .line 237
     if-eqz p3, :cond_2
 
     array-length v1, p3
@@ -633,13 +596,13 @@
 
     move-result v3
 
-    .line 236
+    .line 238
     const/4 v1, 0x0
 
     :goto_2
     if-ge v1, v3, :cond_3
 
-    .line 237
+    .line 239
     sget-object v4, Lcom/google/zxing/client/android/f;->a:[Ljava/lang/String;
 
     aget-object v4, v4, v1
@@ -648,14 +611,14 @@
 
     invoke-static {v2, v4, v5}, Lcom/google/zxing/client/android/d/j;->a(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 238
+    .line 240
     if-eqz p4, :cond_0
 
     array-length v4, p4
 
     if-ge v1, v4, :cond_0
 
-    .line 239
+    .line 241
     aget-object v4, p4, v1
 
     sget-object v5, Lcom/google/zxing/client/android/d/j;->e:[Ljava/lang/String;
@@ -666,35 +629,35 @@
 
     move-result v4
 
-    .line 240
+    .line 242
     if-ltz v4, :cond_0
 
-    .line 241
+    .line 243
     sget-object v5, Lcom/google/zxing/client/android/f;->b:[Ljava/lang/String;
 
     aget-object v5, v5, v1
 
     invoke-virtual {v2, v5, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 236
+    .line 238
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 231
+    .line 233
     :cond_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 235
+    .line 237
     :cond_2
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 246
+    .line 248
     :cond_3
     if-eqz p5, :cond_5
 
@@ -709,13 +672,13 @@
 
     move-result v3
 
-    .line 247
+    .line 249
     const/4 v1, 0x0
 
     :goto_4
     if-ge v1, v3, :cond_6
 
-    .line 248
+    .line 250
     sget-object v4, Lcom/google/zxing/client/android/f;->c:[Ljava/lang/String;
 
     aget-object v4, v4, v1
@@ -724,14 +687,14 @@
 
     invoke-static {v2, v4, v5}, Lcom/google/zxing/client/android/d/j;->a(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 249
+    .line 251
     if-eqz p6, :cond_4
 
     array-length v4, p6
 
     if-ge v1, v4, :cond_4
 
-    .line 250
+    .line 252
     aget-object v4, p6, v1
 
     sget-object v5, Lcom/google/zxing/client/android/d/j;->d:[Ljava/lang/String;
@@ -742,35 +705,35 @@
 
     move-result v4
 
-    .line 251
+    .line 253
     if-ltz v4, :cond_4
 
-    .line 252
+    .line 254
     sget-object v5, Lcom/google/zxing/client/android/f;->d:[Ljava/lang/String;
 
     aget-object v5, v5, v1
 
     invoke-virtual {v2, v5, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 247
+    .line 249
     :cond_4
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_4
 
-    .line 246
+    .line 248
     :cond_5
     const/4 v1, 0x0
 
     goto :goto_3
 
-    .line 258
+    .line 260
     :cond_6
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 259
+    .line 261
     const/4 v1, 0x3
 
     new-array v4, v1, [Ljava/lang/String;
@@ -796,32 +759,32 @@
 
     aget-object v5, v4, v1
 
-    .line 260
+    .line 262
     if-eqz v5, :cond_8
 
-    .line 261
+    .line 263
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
 
     move-result v6
 
     if-lez v6, :cond_7
 
-    .line 262
+    .line 264
     const/16 v6, 0xa
 
     invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 264
+    .line 266
     :cond_7
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 259
+    .line 261
     :cond_8
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_5
 
-    .line 267
+    .line 269
     :cond_9
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
 
@@ -829,7 +792,7 @@
 
     if-lez v1, :cond_a
 
-    .line 268
+    .line 270
     const-string v1, "notes"
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -838,23 +801,23 @@
 
     invoke-static {v2, v1, v3}, Lcom/google/zxing/client/android/d/j;->a(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 271
+    .line 273
     :cond_a
     const-string v1, "im_handle"
 
     invoke-static {v2, v1, p8}, Lcom/google/zxing/client/android/d/j;->a(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 272
+    .line 274
     const-string v1, "postal"
 
     move-object/from16 v0, p9
 
     invoke-static {v2, v1, v0}, Lcom/google/zxing/client/android/d/j;->a(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 273
+    .line 275
     if-eqz p10, :cond_b
 
-    .line 274
+    .line 276
     sget-object v1, Lcom/google/zxing/client/android/d/j;->f:[Ljava/lang/String;
 
     sget-object v3, Lcom/google/zxing/client/android/d/j;->i:[I
@@ -865,15 +828,15 @@
 
     move-result v1
 
-    .line 275
+    .line 277
     if-ltz v1, :cond_b
 
-    .line 276
+    .line 278
     const-string v3, "postal_type"
 
     invoke-virtual {v2, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 279
+    .line 281
     :cond_b
     const-string v1, "company"
 
@@ -881,17 +844,17 @@
 
     invoke-static {v2, v1, v0}, Lcom/google/zxing/client/android/d/j;->a(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 280
+    .line 282
     const-string v1, "job_title"
 
     move-object/from16 v0, p12
 
     invoke-static {v2, v1, v0}, Lcom/google/zxing/client/android/d/j;->a(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 281
+    .line 283
     invoke-virtual {p0, v2}, Lcom/google/zxing/client/android/d/j;->b(Landroid/content/Intent;)V
 
-    .line 282
+    .line 284
     return-void
 .end method
 
@@ -899,14 +862,14 @@
     .locals 3
 
     .prologue
-    .line 185
+    .line 187
     iget-object v0, p0, Lcom/google/zxing/client/android/d/j;->a:Lcom/google/zxing/client/a/q;
 
     invoke-virtual {v0}, Lcom/google/zxing/client/a/q;->a()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 186
+    .line 188
     const-string v1, "\r"
 
     const-string v2, ""
@@ -925,17 +888,17 @@
     .locals 3
 
     .prologue
-    .line 482
+    .line 484
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/google/zxing/client/android/d/j;->a(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 490
+    .line 492
     :goto_0
     return-void
 
-    .line 484
+    .line 486
     :catch_0
     move-exception v0
 
@@ -945,24 +908,24 @@
 
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 485
+    .line 487
     sget v1, Lcom/google/zxing/client/android/y;->app_name:I
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
-    .line 486
+    .line 488
     sget v1, Lcom/google/zxing/client/android/y;->msg_intent_failed:I
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
-    .line 487
+    .line 489
     sget v1, Lcom/google/zxing/client/android/y;->button_ok:I
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 488
+    .line 490
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
     goto :goto_0
@@ -972,7 +935,7 @@
     .locals 4
 
     .prologue
-    .line 331
+    .line 333
     const-string v0, "smsto:"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1007,7 +970,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/google/zxing/client/android/d/j;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 333
+    .line 335
     return-void
 .end method
 
@@ -1015,7 +978,7 @@
     .locals 3
 
     .prologue
-    .line 397
+    .line 399
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "http://www.google."
@@ -1056,7 +1019,7 @@
 
     move-result-object v0
 
-    .line 399
+    .line 401
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.VIEW"
@@ -1065,7 +1028,7 @@
 
     invoke-virtual {p0, v1}, Lcom/google/zxing/client/android/d/j;->b(Landroid/content/Intent;)V
 
-    .line 400
+    .line 402
     return-void
 .end method
 
@@ -1073,7 +1036,7 @@
     .locals 1
 
     .prologue
-    .line 128
+    .line 129
     iget-object v0, p0, Lcom/google/zxing/client/android/d/j;->k:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -1093,14 +1056,14 @@
     .locals 3
 
     .prologue
-    .line 409
+    .line 411
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.google.zxing.client.android.SEARCH_BOOK_CONTENTS"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 410
+    .line 412
     iget-object v1, p0, Lcom/google/zxing/client/android/d/j;->b:Landroid/app/Activity;
 
     const-class v2, Lcom/google/zxing/client/android/book/b;
@@ -1111,15 +1074,15 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 411
+    .line 413
     const-string v1, "ISBN"
 
     invoke-static {v0, v1, p1}, Lcom/google/zxing/client/android/d/j;->a(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 412
+    .line 414
     invoke-virtual {p0, v0}, Lcom/google/zxing/client/android/d/j;->b(Landroid/content/Intent;)V
 
-    .line 413
+    .line 415
     return-void
 .end method
 
@@ -1127,7 +1090,7 @@
     .locals 1
 
     .prologue
-    .line 165
+    .line 166
     const/4 v0, 0x0
 
     return v0
@@ -1137,7 +1100,7 @@
     .locals 4
 
     .prologue
-    .line 418
+    .line 420
     const-string v0, "HTTP://"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -1146,7 +1109,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 419
+    .line 421
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "http"
@@ -1167,7 +1130,7 @@
 
     move-result-object p1
 
-    .line 423
+    .line 425
     :cond_0
     :goto_0
     new-instance v0, Landroid/content/Intent;
@@ -1180,17 +1143,17 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 425
+    .line 427
     :try_start_0
     invoke-virtual {p0, v0}, Lcom/google/zxing/client/android/d/j;->b(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 429
+    .line 431
     :goto_1
     return-void
 
-    .line 420
+    .line 422
     :cond_1
     const-string v0, "HTTPS://"
 
@@ -1200,7 +1163,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 421
+    .line 423
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "https"
@@ -1223,7 +1186,7 @@
 
     goto :goto_0
 
-    .line 427
+    .line 429
     :catch_0
     move-exception v1
 
@@ -1252,22 +1215,22 @@
     .locals 2
 
     .prologue
-    .line 432
+    .line 434
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.WEB_SEARCH"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 433
+    .line 435
     const-string v1, "query"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 434
+    .line 436
     invoke-virtual {p0, v0}, Lcom/google/zxing/client/android/d/j;->b(Landroid/content/Intent;)V
 
-    .line 435
+    .line 437
     return-void
 .end method
 
@@ -1275,40 +1238,40 @@
     .locals 3
 
     .prologue
-    .line 440
+    .line 442
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.SEARCH"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 441
+    .line 443
     const-string v1, "com.google.android.apps.shopper"
 
     const-string v2, "com.google.android.apps.shopper.results.SearchResultsActivity"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 442
+    .line 444
     const-string v1, "query"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 445
+    .line 447
     iget-object v1, p0, Lcom/google/zxing/client/android/d/j;->b:Landroid/app/Activity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
-    .line 446
+    .line 448
     const/high16 v2, 0x10000
 
     invoke-virtual {v1, v0, v2}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v1
 
-    .line 448
+    .line 450
     if-eqz v1, :cond_0
 
     invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
@@ -1317,16 +1280,16 @@
 
     if-nez v1, :cond_0
 
-    .line 450
+    .line 452
     iget-object v1, p0, Lcom/google/zxing/client/android/d/j;->b:Landroid/app/Activity;
 
     invoke-virtual {v1, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 461
+    .line 463
     :goto_0
     return-void
 
-    .line 453
+    .line 455
     :cond_0
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
@@ -1334,36 +1297,36 @@
 
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 454
+    .line 456
     sget v1, Lcom/google/zxing/client/android/y;->msg_google_shopper_missing:I
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
-    .line 455
+    .line 457
     sget v1, Lcom/google/zxing/client/android/y;->msg_install_google_shopper:I
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
-    .line 456
+    .line 458
     sget v1, Lcom/google/zxing/client/android/v;->shopper_icon:I
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setIcon(I)Landroid/app/AlertDialog$Builder;
 
-    .line 457
+    .line 459
     sget v1, Lcom/google/zxing/client/android/y;->button_ok:I
 
     iget-object v2, p0, Lcom/google/zxing/client/android/d/j;->l:Landroid/content/DialogInterface$OnClickListener;
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 458
+    .line 460
     sget v1, Lcom/google/zxing/client/android/y;->button_cancel:I
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 459
+    .line 461
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
     goto :goto_0
@@ -1373,16 +1336,16 @@
     .locals 3
 
     .prologue
-    .line 509
+    .line 511
     iget-object v0, p0, Lcom/google/zxing/client/android/d/j;->k:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 520
+    .line 522
     :goto_0
     return-object p1
 
-    .line 512
+    .line 514
     :cond_0
     iget-object v0, p0, Lcom/google/zxing/client/android/d/j;->k:Ljava/lang/String;
 
@@ -1392,12 +1355,12 @@
 
     move-result-object v0
 
-    .line 513
+    .line 515
     iget-object v1, p0, Lcom/google/zxing/client/android/d/j;->j:Lcom/google/zxing/m;
 
     if-eqz v1, :cond_1
 
-    .line 514
+    .line 516
     const-string v1, "%f"
 
     iget-object v2, p0, Lcom/google/zxing/client/android/d/j;->j:Lcom/google/zxing/m;
@@ -1412,7 +1375,7 @@
 
     move-result-object v0
 
-    .line 515
+    .line 517
     const-string v1, "%t"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -1421,14 +1384,14 @@
 
     if-eqz v1, :cond_1
 
-    .line 516
+    .line 518
     iget-object v1, p0, Lcom/google/zxing/client/android/d/j;->j:Lcom/google/zxing/m;
 
     invoke-static {v1}, Lcom/google/zxing/client/a/u;->c(Lcom/google/zxing/m;)Lcom/google/zxing/client/a/q;
 
     move-result-object v1
 
-    .line 517
+    .line 519
     const-string v2, "%t"
 
     iget-object v1, v1, Lcom/google/zxing/client/a/q;->o:Lcom/google/zxing/client/a/r;
@@ -1444,6 +1407,6 @@
     :cond_1
     move-object p1, v0
 
-    .line 520
+    .line 522
     goto :goto_0
 .end method

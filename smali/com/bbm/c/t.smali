@@ -17,47 +17,104 @@
 # static fields
 .field public static final enum a:Lcom/bbm/c/t;
 
-.field private static final synthetic c:[Lcom/bbm/c/t;
+.field public static final enum b:Lcom/bbm/c/t;
+
+.field public static final enum c:Lcom/bbm/c/t;
+
+.field public static final enum d:Lcom/bbm/c/t;
+
+.field private static final synthetic f:[Lcom/bbm/c/t;
 
 
 # instance fields
-.field private b:Ljava/lang/String;
+.field private e:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 7
 
     .prologue
-    .line 454
+    const/4 v6, 0x3
+
+    const/4 v5, 0x2
+
+    const/4 v4, 0x1
+
+    const/4 v3, 0x0
+
+    .line 871
     new-instance v0, Lcom/bbm/c/t;
 
-    const-string v1, "Store"
+    const-string v1, "True"
 
-    const-string v2, "Shop Home Page"
+    const-string v2, "True"
 
-    invoke-direct {v0, v1, v2}, Lcom/bbm/c/t;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v3, v2}, Lcom/bbm/c/t;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/c/t;->a:Lcom/bbm/c/t;
 
-    .line 453
-    const/4 v0, 0x1
+    .line 872
+    new-instance v0, Lcom/bbm/c/t;
+
+    const-string v1, "False"
+
+    const-string v2, "False"
+
+    invoke-direct {v0, v1, v4, v2}, Lcom/bbm/c/t;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/c/t;->b:Lcom/bbm/c/t;
+
+    .line 873
+    new-instance v0, Lcom/bbm/c/t;
+
+    const-string v1, "Failed"
+
+    const-string v2, "Failed"
+
+    invoke-direct {v0, v1, v5, v2}, Lcom/bbm/c/t;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/c/t;->c:Lcom/bbm/c/t;
+
+    .line 874
+    new-instance v0, Lcom/bbm/c/t;
+
+    const-string v1, "Canceled"
+
+    const-string v2, "Canceled"
+
+    invoke-direct {v0, v1, v6, v2}, Lcom/bbm/c/t;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/c/t;->d:Lcom/bbm/c/t;
+
+    .line 870
+    const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/bbm/c/t;
 
-    const/4 v1, 0x0
+    sget-object v1, Lcom/bbm/c/t;->a:Lcom/bbm/c/t;
 
-    sget-object v2, Lcom/bbm/c/t;->a:Lcom/bbm/c/t;
+    aput-object v1, v0, v3
 
-    aput-object v2, v0, v1
+    sget-object v1, Lcom/bbm/c/t;->b:Lcom/bbm/c/t;
 
-    sput-object v0, Lcom/bbm/c/t;->c:[Lcom/bbm/c/t;
+    aput-object v1, v0, v4
+
+    sget-object v1, Lcom/bbm/c/t;->c:Lcom/bbm/c/t;
+
+    aput-object v1, v0, v5
+
+    sget-object v1, Lcom/bbm/c/t;->d:Lcom/bbm/c/t;
+
+    aput-object v1, v0, v6
+
+    sput-object v0, Lcom/bbm/c/t;->f:[Lcom/bbm/c/t;
 
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+.method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -67,15 +124,13 @@
     .end annotation
 
     .prologue
-    .line 457
-    const/4 v0, 0x0
+    .line 878
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {p0, p1, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 879
+    iput-object p3, p0, Lcom/bbm/c/t;->e:Ljava/lang/String;
 
-    .line 458
-    iput-object p2, p0, Lcom/bbm/c/t;->b:Ljava/lang/String;
-
-    .line 459
+    .line 880
     return-void
 .end method
 
@@ -83,7 +138,7 @@
     .locals 1
 
     .prologue
-    .line 453
+    .line 870
     const-class v0, Lcom/bbm/c/t;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -99,8 +154,8 @@
     .locals 1
 
     .prologue
-    .line 453
-    sget-object v0, Lcom/bbm/c/t;->c:[Lcom/bbm/c/t;
+    .line 870
+    sget-object v0, Lcom/bbm/c/t;->f:[Lcom/bbm/c/t;
 
     invoke-virtual {v0}, [Lcom/bbm/c/t;->clone()Ljava/lang/Object;
 
@@ -117,8 +172,8 @@
     .locals 1
 
     .prologue
-    .line 463
-    iget-object v0, p0, Lcom/bbm/c/t;->b:Ljava/lang/String;
+    .line 884
+    iget-object v0, p0, Lcom/bbm/c/t;->e:Ljava/lang/String;
 
     return-object v0
 .end method

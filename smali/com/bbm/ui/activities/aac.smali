@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/aac;
 .super Ljava/lang/Object;
-.source "NewListItemActivity.java"
+.source "ProfileIconSourceActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/NewListItemActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ProfileIconSourceActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ProfileIconSourceActivity;)V
     .locals 0
 
     .prologue
-    .line 301
-    iput-object p1, p0, Lcom/bbm/ui/activities/aac;->a:Lcom/bbm/ui/activities/NewListItemActivity;
+    .line 140
+    iput-object p1, p0, Lcom/bbm/ui/activities/aac;->a:Lcom/bbm/ui/activities/ProfileIconSourceActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,27 +25,84 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
-    .line 305
-    const-string v0, "mHeaderActionBar NegativeButton Clicked"
+    .line 143
+    sget-object v0, Lcom/bbm/ui/activities/aad;->a:[I
 
-    const-class v1, Lcom/bbm/ui/activities/NewListItemActivity;
+    iget-object v1, p0, Lcom/bbm/ui/activities/aac;->a:Lcom/bbm/ui/activities/ProfileIconSourceActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v1}, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->a(Lcom/bbm/ui/activities/ProfileIconSourceActivity;)Lcom/bbm/ui/activities/aaf;
 
-    .line 307
-    iget-object v0, p0, Lcom/bbm/ui/activities/aac;->a:Lcom/bbm/ui/activities/NewListItemActivity;
+    move-result-object v1
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/NewListItemActivity;->finish()V
+    invoke-virtual {v1, p3}, Lcom/bbm/ui/activities/aaf;->a(I)Lcom/bbm/ui/activities/aae;
 
-    .line 308
-    iget-object v0, p0, Lcom/bbm/ui/activities/aac;->a:Lcom/bbm/ui/activities/NewListItemActivity;
+    move-result-object v1
 
-    invoke-static {v0}, Lcom/bbm/util/fh;->b(Landroid/app/Activity;)V
+    iget v1, v1, Lcom/bbm/ui/activities/aae;->c:I
 
-    .line 309
+    add-int/lit8 v1, v1, -0x1
+
+    aget v0, v0, v1
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 153
+    :goto_0
     return-void
+
+    .line 145
+    :pswitch_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/aac;->a:Lcom/bbm/ui/activities/ProfileIconSourceActivity;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/aac;->a:Lcom/bbm/ui/activities/ProfileIconSourceActivity;
+
+    invoke-static {v1}, Lcom/bbm/util/eu;->d(Landroid/app/Activity;)Landroid/content/Intent;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    goto :goto_0
+
+    .line 148
+    :pswitch_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/aac;->a:Lcom/bbm/ui/activities/ProfileIconSourceActivity;
+
+    new-instance v1, Landroid/content/Intent;
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/aac;->a:Lcom/bbm/ui/activities/ProfileIconSourceActivity;
+
+    const-class v3, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;
+
+    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const/4 v2, 0x2
+
+    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    goto :goto_0
+
+    .line 143
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method

@@ -1,5 +1,5 @@
 .class public Lcom/glympse/android/lib/PersonLocal;
-.super Lcom/glympse/android/lib/go;
+.super Lcom/glympse/android/lib/hd;
 .source "PersonLocal.java"
 
 
@@ -9,7 +9,7 @@
 
     .prologue
     .line 19
-    invoke-direct {p0}, Lcom/glympse/android/lib/go;-><init>()V
+    invoke-direct {p0}, Lcom/glympse/android/lib/hd;-><init>()V
 
     .line 20
     return-void
@@ -20,34 +20,34 @@
 
     .prologue
     .line 29
-    invoke-direct {p0}, Lcom/glympse/android/lib/go;-><init>()V
+    invoke-direct {p0}, Lcom/glympse/android/lib/hd;-><init>()V
 
     .line 30
-    iput-wide p1, p0, Lcom/glympse/android/lib/PersonLocal;->qQ:J
+    iput-wide p1, p0, Lcom/glympse/android/lib/PersonLocal;->rF:J
 
     .line 31
-    iput-object p3, p0, Lcom/glympse/android/lib/PersonLocal;->qR:Ljava/lang/String;
+    iput-object p3, p0, Lcom/glympse/android/lib/PersonLocal;->rG:Ljava/lang/String;
 
     .line 32
-    iget-object v0, p0, Lcom/glympse/android/lib/PersonLocal;->qR:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/PersonLocal;->rG:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/glympse/android/lib/go;->getNormalizedName(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/glympse/android/lib/hd;->getNormalizedName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/PersonLocal;->qS:Ljava/lang/String;
+    iput-object v0, p0, Lcom/glympse/android/lib/PersonLocal;->rH:Ljava/lang/String;
 
     .line 33
-    iput-object p4, p0, Lcom/glympse/android/lib/PersonLocal;->qT:Ljava/lang/String;
+    iput-object p4, p0, Lcom/glympse/android/lib/PersonLocal;->rI:Ljava/lang/String;
 
     .line 34
-    iget-object v0, p0, Lcom/glympse/android/lib/PersonLocal;->qT:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/PersonLocal;->rI:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/glympse/android/lib/go;->getNormalizedName(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/glympse/android/lib/hd;->getNormalizedName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/PersonLocal;->qU:Ljava/lang/String;
+    iput-object v0, p0, Lcom/glympse/android/lib/PersonLocal;->rJ:Ljava/lang/String;
 
     .line 35
     iput-object p5, p0, Lcom/glympse/android/lib/PersonLocal;->_name:Ljava/lang/String;
@@ -55,23 +55,23 @@
     .line 36
     iget-object v0, p0, Lcom/glympse/android/lib/PersonLocal;->_name:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/glympse/android/lib/go;->getNormalizedName(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/glympse/android/lib/hd;->getNormalizedName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/PersonLocal;->qV:Ljava/lang/String;
+    iput-object v0, p0, Lcom/glympse/android/lib/PersonLocal;->rK:Ljava/lang/String;
 
     .line 37
-    iput-object p6, p0, Lcom/glympse/android/lib/PersonLocal;->qW:Ljava/lang/String;
+    iput-object p6, p0, Lcom/glympse/android/lib/PersonLocal;->rL:Ljava/lang/String;
 
     .line 38
-    iget-object v0, p0, Lcom/glympse/android/lib/PersonLocal;->qW:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/PersonLocal;->rL:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/glympse/android/lib/go;->getNormalizedName(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/glympse/android/lib/hd;->getNormalizedName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/PersonLocal;->qX:Ljava/lang/String;
+    iput-object v0, p0, Lcom/glympse/android/lib/PersonLocal;->rM:Ljava/lang/String;
 
     .line 39
     return-void
@@ -82,13 +82,13 @@
 
     .prologue
     .line 23
-    invoke-direct {p0}, Lcom/glympse/android/lib/go;-><init>()V
+    invoke-direct {p0}, Lcom/glympse/android/lib/hd;-><init>()V
 
     .line 24
     iput-object p1, p0, Lcom/glympse/android/lib/PersonLocal;->_name:Ljava/lang/String;
 
     .line 25
-    iput-object p2, p0, Lcom/glympse/android/lib/PersonLocal;->mj:Lcom/glympse/android/api/GImage;
+    iput-object p2, p0, Lcom/glympse/android/lib/PersonLocal;->mW:Lcom/glympse/android/api/GImage;
 
     .line 26
     return-void
@@ -108,35 +108,35 @@
 
     move-result-wide v2
 
-    iput-wide v2, v0, Lcom/glympse/android/lib/PersonLocal;->qQ:J
+    iput-wide v2, v0, Lcom/glympse/android/lib/PersonLocal;->rF:J
 
     .line 46
     invoke-interface {p0}, Lcom/glympse/android/lib/GPerson;->getFirstName()Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/glympse/android/lib/PersonLocal;->qR:Ljava/lang/String;
+    iput-object v1, v0, Lcom/glympse/android/lib/PersonLocal;->rG:Ljava/lang/String;
 
     .line 47
     invoke-interface {p0}, Lcom/glympse/android/lib/GPerson;->getNormalizedFirstName()Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/glympse/android/lib/PersonLocal;->qS:Ljava/lang/String;
+    iput-object v1, v0, Lcom/glympse/android/lib/PersonLocal;->rH:Ljava/lang/String;
 
     .line 48
     invoke-interface {p0}, Lcom/glympse/android/lib/GPerson;->getLastName()Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/glympse/android/lib/PersonLocal;->qT:Ljava/lang/String;
+    iput-object v1, v0, Lcom/glympse/android/lib/PersonLocal;->rI:Ljava/lang/String;
 
     .line 49
     invoke-interface {p0}, Lcom/glympse/android/lib/GPerson;->getNormalizedLastName()Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/glympse/android/lib/PersonLocal;->qU:Ljava/lang/String;
+    iput-object v1, v0, Lcom/glympse/android/lib/PersonLocal;->rJ:Ljava/lang/String;
 
     .line 50
     invoke-interface {p0}, Lcom/glympse/android/lib/GPerson;->getName()Ljava/lang/String;
@@ -150,28 +150,28 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/glympse/android/lib/PersonLocal;->qV:Ljava/lang/String;
+    iput-object v1, v0, Lcom/glympse/android/lib/PersonLocal;->rK:Ljava/lang/String;
 
     .line 52
     invoke-interface {p0}, Lcom/glympse/android/lib/GPerson;->getCompany()Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/glympse/android/lib/PersonLocal;->qW:Ljava/lang/String;
+    iput-object v1, v0, Lcom/glympse/android/lib/PersonLocal;->rL:Ljava/lang/String;
 
     .line 53
     invoke-interface {p0}, Lcom/glympse/android/lib/GPerson;->getNormalizedCompany()Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/glympse/android/lib/PersonLocal;->qX:Ljava/lang/String;
+    iput-object v1, v0, Lcom/glympse/android/lib/PersonLocal;->rM:Ljava/lang/String;
 
     .line 54
     invoke-interface {p0}, Lcom/glympse/android/lib/GPerson;->getAvatar()Lcom/glympse/android/api/GImage;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/glympse/android/lib/PersonLocal;->mj:Lcom/glympse/android/api/GImage;
+    iput-object v1, v0, Lcom/glympse/android/lib/PersonLocal;->mW:Lcom/glympse/android/api/GImage;
 
     .line 56
     return-object v0
@@ -184,7 +184,7 @@
 
     .prologue
     .line 16
-    invoke-super {p0, p1}, Lcom/glympse/android/lib/go;->addContact(Lcom/glympse/android/lib/GContact;)V
+    invoke-super {p0, p1}, Lcom/glympse/android/lib/hd;->addContact(Lcom/glympse/android/lib/GContact;)V
 
     return-void
 .end method
@@ -194,7 +194,7 @@
 
     .prologue
     .line 16
-    invoke-super {p0}, Lcom/glympse/android/lib/go;->getAvatar()Lcom/glympse/android/api/GImage;
+    invoke-super {p0}, Lcom/glympse/android/lib/hd;->getAvatar()Lcom/glympse/android/api/GImage;
 
     move-result-object v0
 
@@ -206,7 +206,7 @@
 
     .prologue
     .line 16
-    invoke-super {p0}, Lcom/glympse/android/lib/go;->getCompany()Ljava/lang/String;
+    invoke-super {p0}, Lcom/glympse/android/lib/hd;->getCompany()Ljava/lang/String;
 
     move-result-object v0
 
@@ -218,7 +218,7 @@
 
     .prologue
     .line 16
-    invoke-super {p0}, Lcom/glympse/android/lib/go;->getContacts()Lcom/glympse/android/core/GArray;
+    invoke-super {p0}, Lcom/glympse/android/lib/hd;->getContacts()Lcom/glympse/android/core/GArray;
 
     move-result-object v0
 
@@ -230,7 +230,7 @@
 
     .prologue
     .line 16
-    invoke-super {p0}, Lcom/glympse/android/lib/go;->getFirstName()Ljava/lang/String;
+    invoke-super {p0}, Lcom/glympse/android/lib/hd;->getFirstName()Ljava/lang/String;
 
     move-result-object v0
 
@@ -242,7 +242,7 @@
 
     .prologue
     .line 16
-    invoke-super {p0}, Lcom/glympse/android/lib/go;->getId()J
+    invoke-super {p0}, Lcom/glympse/android/lib/hd;->getId()J
 
     move-result-wide v0
 
@@ -254,7 +254,7 @@
 
     .prologue
     .line 16
-    invoke-super {p0}, Lcom/glympse/android/lib/go;->getLastName()Ljava/lang/String;
+    invoke-super {p0}, Lcom/glympse/android/lib/hd;->getLastName()Ljava/lang/String;
 
     move-result-object v0
 
@@ -266,7 +266,7 @@
 
     .prologue
     .line 16
-    invoke-super {p0}, Lcom/glympse/android/lib/go;->getName()Ljava/lang/String;
+    invoke-super {p0}, Lcom/glympse/android/lib/hd;->getName()Ljava/lang/String;
 
     move-result-object v0
 
@@ -278,7 +278,7 @@
 
     .prologue
     .line 16
-    invoke-super {p0}, Lcom/glympse/android/lib/go;->getNormalizedCompany()Ljava/lang/String;
+    invoke-super {p0}, Lcom/glympse/android/lib/hd;->getNormalizedCompany()Ljava/lang/String;
 
     move-result-object v0
 
@@ -290,7 +290,7 @@
 
     .prologue
     .line 16
-    invoke-super {p0}, Lcom/glympse/android/lib/go;->getNormalizedFirstName()Ljava/lang/String;
+    invoke-super {p0}, Lcom/glympse/android/lib/hd;->getNormalizedFirstName()Ljava/lang/String;
 
     move-result-object v0
 
@@ -302,7 +302,7 @@
 
     .prologue
     .line 16
-    invoke-super {p0}, Lcom/glympse/android/lib/go;->getNormalizedLastName()Ljava/lang/String;
+    invoke-super {p0}, Lcom/glympse/android/lib/hd;->getNormalizedLastName()Ljava/lang/String;
 
     move-result-object v0
 
@@ -314,7 +314,7 @@
 
     .prologue
     .line 16
-    invoke-super {p0}, Lcom/glympse/android/lib/go;->getNormalizedName()Ljava/lang/String;
+    invoke-super {p0}, Lcom/glympse/android/lib/hd;->getNormalizedName()Ljava/lang/String;
 
     move-result-object v0
 
@@ -326,7 +326,7 @@
 
     .prologue
     .line 16
-    invoke-super {p0}, Lcom/glympse/android/lib/go;->getSpan()I
+    invoke-super {p0}, Lcom/glympse/android/lib/hd;->getSpan()I
 
     move-result v0
 
@@ -338,7 +338,7 @@
 
     .prologue
     .line 16
-    invoke-super {p0}, Lcom/glympse/android/lib/go;->prepareAvatar()V
+    invoke-super {p0}, Lcom/glympse/android/lib/hd;->prepareAvatar()V
 
     return-void
 .end method
@@ -348,7 +348,7 @@
 
     .prologue
     .line 16
-    invoke-super {p0}, Lcom/glympse/android/lib/go;->sortContacts()V
+    invoke-super {p0}, Lcom/glympse/android/lib/hd;->sortContacts()V
 
     return-void
 .end method

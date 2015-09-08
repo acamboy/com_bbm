@@ -13,6 +13,10 @@
         <item quantity="other">%1$d सदस्य</item>
         <item quantity="one">%1$d सदस्य</item>
     </plurals>
+    <plurals name="common_days_1d">
+        <item quantity="other">%1$d दिन</item>
+        <item quantity="one">%1$d दिन</item>
+    </plurals>
     <plurals name="ephemeral_picker_seconds">
         <item quantity="other">सेकेंड</item>
         <item quantity="one">सेकेंड</item>
@@ -35,28 +39,28 @@
         <item quantity="one">1 परिणाम</item>
     </plurals>
     <plurals name="slide_menu_active_chats">
-        <item quantity="other">%1$s सक्रिय चैट्स</item>
-        <item quantity="one">1 सक्रिय चैट</item>
+        <item quantity="other">सक्रिय चैट्स %1$s</item>
+        <item quantity="one">सक्रिय चैट %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_channelupdates">
-        <item quantity="other">%1$s नई सूचनाएं</item>
-        <item quantity="one">1 नई सूचना</item>
+        <item quantity="other">नए चैनल आइटम %1$s</item>
+        <item quantity="one">नया चैनल आइटम %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_invites">
-        <item quantity="other">%1$s नए आमंत्रण</item>
-        <item quantity="one">1 नया आमंत्रण</item>
+        <item quantity="other">नए आमंत्रण %1$s</item>
+        <item quantity="one">नया आमंत्रण %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_updates">
-        <item quantity="other">%1$s नए आइटम</item>
-        <item quantity="one">1 नया आइटम</item>
+        <item quantity="other">नया फ़ीड %1$s</item>
+        <item quantity="one">नया फ़ीड %1$s</item>
     </plurals>
     <plurals name="slide_menu_total_contacts">
         <item quantity="other">%1$s संपर्क</item>
-        <item quantity="one">1 संपर्क</item>
+        <item quantity="one">%1$s संपर्क</item>
     </plurals>
     <plurals name="slide_menu_total_groups">
         <item quantity="other">%1$s समूह</item>
-        <item quantity="one">1 समूह</item>
+        <item quantity="one">%1$s समूह</item>
     </plurals>
     <plurals name="update_channel_stats_comments">
         <item quantity="other">%1$s टिप्पणियां</item>

@@ -1,4 +1,4 @@
-.class Landroid/support/v4/view/a/g;
+.class final Landroid/support/v4/view/a/g;
 .super Landroid/support/v4/view/a/f;
 .source "AccessibilityNodeInfoCompat.java"
 
@@ -8,7 +8,7 @@
     .locals 0
 
     .prologue
-    .line 1000
+    .line 1191
     invoke-direct {p0}, Landroid/support/v4/view/a/f;-><init>()V
 
     return-void

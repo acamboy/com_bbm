@@ -17,7 +17,7 @@
     .locals 0
 
     .prologue
-    .line 90
+    .line 89
     iput-object p1, p0, Lcom/bbm/ui/h;->b:Lcom/bbm/ui/AppItemView;
 
     iput-object p2, p0, Lcom/bbm/ui/h;->a:Landroid/view/GestureDetector;
@@ -33,12 +33,12 @@
     .locals 1
 
     .prologue
-    .line 94
+    .line 93
     iget-object v0, p0, Lcom/bbm/ui/h;->a:Landroid/view/GestureDetector;
 
     invoke-virtual {v0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 95
+    .line 94
     const/4 v0, 0x1
 
     return v0

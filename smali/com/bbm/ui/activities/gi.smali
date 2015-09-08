@@ -3,7 +3,7 @@
 .source "ConversationActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/e/bp;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 1295
+    .line 2959
     iput-object p1, p0, Lcom/bbm/ui/activities/gi;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,42 +25,34 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/d/fi;)V
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 1300
-    iget-object v0, p1, Lcom/bbm/d/fi;->u:Ljava/lang/String;
+    .line 2962
+    const-string v0, "quickshare attach dropbox file"
 
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+    const-class v1, Lcom/bbm/ui/activities/ConversationActivity;
 
-    .line 1301
-    new-instance v0, Lcom/bbm/ui/activities/gj;
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-direct {v0, p0, p1}, Lcom/bbm/ui/activities/gj;-><init>(Lcom/bbm/ui/activities/gi;Lcom/bbm/d/fi;)V
+    .line 2963
+    iget-object v0, p0, Lcom/bbm/ui/activities/gi;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v0}, Lcom/bbm/j/u;->a(Lcom/bbm/j/s;)V
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->i(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/b/a/a/i;
 
-    .line 1315
-    return-void
-.end method
+    move-result-object v0
 
-.method public final b(Lcom/bbm/d/fi;)V
-    .locals 1
+    sget-object v1, Lcom/b/a/a/l;->a:Lcom/b/a/a/l;
 
-    .prologue
-    .line 1319
-    iget-object v0, p1, Lcom/bbm/d/fi;->u:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/b/a/a/i;->a(Lcom/b/a/a/l;)Lcom/b/a/a/i;
 
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+    move-result-object v0
 
-    .line 1320
-    new-instance v0, Lcom/bbm/ui/activities/gk;
+    iget-object v1, p0, Lcom/bbm/ui/activities/gi;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-direct {v0, p0, p1}, Lcom/bbm/ui/activities/gk;-><init>(Lcom/bbm/ui/activities/gi;Lcom/bbm/d/fi;)V
+    invoke-virtual {v0, v1}, Lcom/b/a/a/i;->a(Landroid/app/Activity;)V
 
-    invoke-static {v0}, Lcom/bbm/j/u;->a(Lcom/bbm/j/s;)V
-
-    .line 1333
+    .line 2964
     return-void
 .end method

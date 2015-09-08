@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private dQ:Lcom/glympse/android/hal/Reflection$_OnNdefPushCompleteCallback;
+.field private dT:Lcom/glympse/android/hal/Reflection$_OnNdefPushCompleteCallback;
 
 
 # direct methods
@@ -19,7 +19,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1991
-    iput-object p1, p0, Lcom/glympse/android/hal/bh;->dQ:Lcom/glympse/android/hal/Reflection$_OnNdefPushCompleteCallback;
+    iput-object p1, p0, Lcom/glympse/android/hal/bh;->dT:Lcom/glympse/android/hal/Reflection$_OnNdefPushCompleteCallback;
 
     .line 1992
     return-void
@@ -48,7 +48,7 @@
     if-eqz v1, :cond_0
 
     .line 2001
-    iget-object v1, p0, Lcom/glympse/android/hal/bh;->dQ:Lcom/glympse/android/hal/Reflection$_OnNdefPushCompleteCallback;
+    iget-object v1, p0, Lcom/glympse/android/hal/bh;->dT:Lcom/glympse/android/hal/Reflection$_OnNdefPushCompleteCallback;
 
     const/4 v2, 0x0
 
@@ -62,7 +62,7 @@
 
     .line 2004
     :cond_0
-    iget-object v1, p0, Lcom/glympse/android/hal/bh;->dQ:Lcom/glympse/android/hal/Reflection$_OnNdefPushCompleteCallback;
+    iget-object v1, p0, Lcom/glympse/android/hal/bh;->dT:Lcom/glympse/android/hal/Reflection$_OnNdefPushCompleteCallback;
 
     invoke-virtual {p2, v1, p3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0

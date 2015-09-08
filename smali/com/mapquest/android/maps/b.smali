@@ -357,7 +357,7 @@
     .locals 6
 
     .prologue
-    const-wide v4, 0x3eb0c6f7a0b5ed8dL
+    const-wide v4, 0x3eb0c6f7a0b5ed8dL    # 1.0E-6
 
     .line 124
     new-instance v0, Ljava/lang/StringBuilder;

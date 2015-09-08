@@ -8,7 +8,7 @@
                 <bitmap android:gravity="bottom|center" android:src="@drawable/actions_bar" />
             </item>
             <item>
-                <bitmap android:gravity="top|center" android:src="@drawable/actionbar_highlight" />
+                <bitmap android:gravity="center|top" android:src="@drawable/actionbar_highlight" />
             </item>
         </layer-list>
     </item>

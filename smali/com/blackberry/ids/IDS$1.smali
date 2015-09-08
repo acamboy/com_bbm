@@ -66,10 +66,6 @@
 
     .line 514
     :try_start_0
-    iget-object v0, p0, Lcom/blackberry/ids/IDS$1;->b:Ljava/lang/Object;
-
-    iget-object v0, p0, Lcom/blackberry/ids/IDS$1;->c:Ljava/lang/String;
-
     iget-object v0, p0, Lcom/blackberry/ids/IDS$1;->d:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/blackberry/ids/IDS$1;->e:Lcom/blackberry/ids/IClearTokenCallback;

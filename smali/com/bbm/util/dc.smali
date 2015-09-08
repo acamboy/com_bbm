@@ -1,65 +1,139 @@
-.class final Lcom/bbm/util/dc;
+.class public Lcom/bbm/util/dc;
 .super Ljava/lang/Object;
-.source "ProtectedUtil.java"
+.source "Mutable.java"
 
 # interfaces
-.implements Landroid/text/InputFilter;
+.implements Lcom/bbm/j/r;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<V:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;",
+        "Lcom/bbm/j/r",
+        "<TV;>;"
+    }
+.end annotation
+
+
+# instance fields
+.field public e:Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "TV;"
+        }
+    .end annotation
+.end field
+
+.field public f:Lcom/bbm/j/i;
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TV;)V"
+        }
+    .end annotation
 
     .prologue
-    .line 38
+    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 13
+    new-instance v0, Lcom/bbm/j/i;
+
+    invoke-direct {v0}, Lcom/bbm/j/i;-><init>()V
+
+    iput-object v0, p0, Lcom/bbm/util/dc;->f:Lcom/bbm/j/i;
+
+    .line 16
+    invoke-static {p1}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 17
+    iput-object p1, p0, Lcom/bbm/util/dc;->e:Ljava/lang/Object;
+
+    .line 18
     return-void
 .end method
 
 
 # virtual methods
-.method public final filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
-    .locals 2
+.method public final a(Lcom/bbm/j/h;)V
+    .locals 1
 
     .prologue
-    .line 42
-    :goto_0
-    if-ge p2, p3, :cond_1
+    .line 35
+    iget-object v0, p0, Lcom/bbm/util/dc;->f:Lcom/bbm/j/i;
 
-    .line 43
-    invoke-interface {p1, p2}, Ljava/lang/CharSequence;->charAt(I)C
+    invoke-virtual {v0, p1}, Lcom/bbm/j/i;->a(Lcom/bbm/j/h;)V
 
-    move-result v0
+    .line 36
+    return-void
+.end method
 
-    invoke-static {v0}, Ljava/lang/Character;->toString(C)Ljava/lang/String;
+.method public final b(Lcom/bbm/j/h;)V
+    .locals 1
 
-    move-result-object v0
+    .prologue
+    .line 40
+    iget-object v0, p0, Lcom/bbm/util/dc;->f:Lcom/bbm/j/i;
 
-    const-string v1, "[a-z]|[A-Z]|[0-9]| "
+    invoke-virtual {v0, p1}, Lcom/bbm/j/i;->b(Lcom/bbm/j/h;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
+    .line 41
+    return-void
+.end method
+
+.method public b(Ljava/lang/Object;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TV;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 27
+    iget-object v0, p0, Lcom/bbm/util/dc;->e:Ljava/lang/Object;
+
+    invoke-static {v0, p1}, Lcom/bbm/util/bn;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 44
-    const-string v0, ""
+    .line 28
+    iput-object p1, p0, Lcom/bbm/util/dc;->e:Ljava/lang/Object;
 
-    .line 47
-    :goto_1
-    return-object v0
+    .line 29
+    iget-object v0, p0, Lcom/bbm/util/dc;->f:Lcom/bbm/j/i;
 
-    .line 42
+    invoke-virtual {v0}, Lcom/bbm/j/i;->a()V
+
+    .line 31
     :cond_0
-    add-int/lit8 p2, p2, 0x1
+    return-void
+.end method
 
-    goto :goto_0
+.method public final f()Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TV;"
+        }
+    .end annotation
 
-    .line 47
-    :cond_1
-    const/4 v0, 0x0
+    .prologue
+    .line 22
+    invoke-static {p0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/g;)V
 
-    goto :goto_1
+    .line 23
+    iget-object v0, p0, Lcom/bbm/util/dc;->e:Ljava/lang/Object;
+
+    return-object v0
 .end method

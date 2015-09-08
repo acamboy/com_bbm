@@ -18,21 +18,21 @@
     .locals 1
 
     .prologue
-    .line 1032
+    .line 1054
     iput-object p1, p0, Lcom/glympse/android/controls/GTimerView$Tick;->this$0:Lcom/glympse/android/controls/GTimerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1033
+    .line 1055
     iput-boolean p2, p0, Lcom/glympse/android/controls/GTimerView$Tick;->_visible:Z
 
-    .line 1034
+    .line 1056
     iput-wide p3, p0, Lcom/glympse/android/controls/GTimerView$Tick;->_rotation:D
 
-    .line 1035
+    .line 1057
     iput p5, p0, Lcom/glympse/android/controls/GTimerView$Tick;->_duration:I
 
-    .line 1036
+    .line 1058
     return-void
 .end method
 
@@ -40,7 +40,7 @@
     .locals 1
 
     .prologue
-    .line 1024
+    .line 1046
     invoke-direct/range {p0 .. p5}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDI)V
 
     return-void
@@ -50,7 +50,7 @@
     .locals 2
 
     .prologue
-    .line 1024
+    .line 1046
     iget-wide v0, p0, Lcom/glympse/android/controls/GTimerView$Tick;->_rotation:D
 
     return-wide v0
@@ -60,7 +60,7 @@
     .locals 1
 
     .prologue
-    .line 1024
+    .line 1046
     iget v0, p0, Lcom/glympse/android/controls/GTimerView$Tick;->_duration:I
 
     return v0
@@ -70,7 +70,7 @@
     .locals 1
 
     .prologue
-    .line 1024
+    .line 1046
     iget-boolean v0, p0, Lcom/glympse/android/controls/GTimerView$Tick;->_visible:Z
 
     return v0

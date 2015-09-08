@@ -1,5 +1,5 @@
 .class public Lcom/bbm/ui/activities/AppDetailsActivity;
-.super Lcom/bbm/ui/activities/akz;
+.super Lcom/bbm/bali/ui/main/a/e;
 .source "AppDetailsActivity.java"
 
 
@@ -16,66 +16,76 @@
     .locals 0
 
     .prologue
-    .line 18
-    invoke-direct {p0}, Lcom/bbm/ui/activities/akz;-><init>()V
+    .line 19
+    invoke-direct {p0}, Lcom/bbm/bali/ui/main/a/e;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onActivityResult(IILandroid/content/Intent;)V
-    .locals 3
+.method public final a(Z)V
+    .locals 1
 
     .prologue
-    const/4 v2, 0x1
-
-    .line 99
-    const-string v0, "onActivityResult"
-
-    const-class v1, Lcom/bbm/ui/activities/AppDetailsActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 101
-    iget-object v0, p0, Lcom/bbm/ui/activities/AppDetailsActivity;->b:Lcom/bbm/l/a;
-
-    invoke-static {p1, p2, p3}, Lcom/bbm/l/a;->a(IILandroid/content/Intent;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 105
-    invoke-super {p0, p1, p2, p3}, Lcom/bbm/ui/activities/akz;->onActivityResult(IILandroid/content/Intent;)V
-
-    .line 110
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 107
-    :cond_1
-    const-string v0, "onActivityResult handled by PaymentController."
-
-    const/4 v1, 0x0
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 108
+    .line 66
     iget-object v0, p0, Lcom/bbm/ui/activities/AppDetailsActivity;->c:Landroid/widget/Button;
 
     invoke-virtual {v0}, Landroid/widget/Button;->isEnabled()Z
 
     move-result v0
 
-    if-eq v0, v2, :cond_0
+    if-eq v0, p1, :cond_0
 
+    .line 67
     iget-object v0, p0, Lcom/bbm/ui/activities/AppDetailsActivity;->c:Landroid/widget/Button;
 
-    invoke-virtual {v0, v2}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v0, p1}, Landroid/widget/Button;->setEnabled(Z)V
+
+    .line 69
+    :cond_0
+    return-void
+.end method
+
+.method public onActivityResult(IILandroid/content/Intent;)V
+    .locals 2
+
+    .prologue
+    .line 100
+    const-string v0, "onActivityResult"
+
+    const-class v1, Lcom/bbm/ui/activities/AppDetailsActivity;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 102
+    invoke-static {p1, p2, p3}, Lcom/bbm/l/a;->a(IILandroid/content/Intent;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 106
+    invoke-super {p0, p1, p2, p3}, Lcom/bbm/bali/ui/main/a/e;->onActivityResult(IILandroid/content/Intent;)V
+
+    .line 110
+    :goto_0
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/AppDetailsActivity;->a(Z)V
+
+    .line 111
+    return-void
+
+    .line 108
+    :cond_0
+    const-string v0, "onActivityResult handled by PaymentController."
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
@@ -84,7 +94,7 @@
     .locals 1
 
     .prologue
-    .line 73
+    .line 74
     iget-object v0, p0, Lcom/bbm/ui/activities/AppDetailsActivity;->c:Landroid/widget/Button;
 
     invoke-virtual {v0}, Landroid/widget/Button;->isEnabled()Z
@@ -93,41 +103,39 @@
 
     if-eqz v0, :cond_0
 
-    .line 74
-    invoke-super {p0}, Lcom/bbm/ui/activities/akz;->onBackPressed()V
+    .line 75
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/e;->onBackPressed()V
 
-    .line 76
+    .line 77
     :cond_0
     return-void
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .locals 6
+    .locals 3
 
     .prologue
-    const/4 v1, 0x0
+    .line 37
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/e;->onCreate(Landroid/os/Bundle;)V
 
-    .line 32
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/akz;->onCreate(Landroid/os/Bundle;)V
-
-    .line 33
-    const v0, 0x7f03003d
+    .line 38
+    const v0, 0x7f030058
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/AppDetailsActivity;->setContentView(I)V
 
-    .line 35
+    .line 40
     invoke-virtual {p0}, Lcom/bbm/ui/activities/AppDetailsActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    const-string v2, "app_id"
+    const-string v1, "app_id"
 
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v0
 
-    .line 36
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    .line 41
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -136,107 +144,74 @@
     const/4 v0, 0x1
 
     :goto_0
-    const-string v3, "Must provide a app ID to activity"
+    const-string v1, "Must provide a app ID to activity"
 
-    invoke-static {p0, v0, v3}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;ZLjava/lang/Object;)Z
+    invoke-static {p0, v0, v1}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;ZLjava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 62
+    .line 63
     :goto_1
     return-void
 
+    .line 41
     :cond_0
-    move v0, v1
+    const/4 v0, 0x0
 
-    .line 36
     goto :goto_0
 
-    .line 39
+    .line 45
     :cond_1
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/AppDetailsActivity;->getIntent()Landroid/content/Intent;
+    new-instance v0, Lcom/bbm/ui/c/a;
 
-    move-result-object v0
-
-    const-string v3, "showAppDetail"
-
-    invoke-virtual {v0, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 40
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/AppDetailsActivity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    const-string v4, "updateAfterPurchase"
-
-    invoke-virtual {v0, v4, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
-    move-result v1
-
-    .line 41
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/AppDetailsActivity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    const-string v4, "viewSource"
-
-    invoke-virtual {v0, v4}, Landroid/content/Intent;->getSerializableExtra(Ljava/lang/String;)Ljava/io/Serializable;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/c/l;
-
-    .line 42
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/AppDetailsActivity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v4
-
-    const-string v5, "externalAppId"
-
-    invoke-virtual {v4, v5}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 44
-    invoke-static {v2, v3, v1, v0, v4}, Lcom/bbm/ui/c/a;->a(Ljava/lang/String;Ljava/lang/String;ZLcom/bbm/c/l;Ljava/lang/String;)Lcom/bbm/ui/c/a;
-
-    move-result-object v0
+    invoke-direct {v0}, Lcom/bbm/ui/c/a;-><init>()V
 
     iput-object v0, p0, Lcom/bbm/ui/activities/AppDetailsActivity;->a:Lcom/bbm/ui/c/a;
 
     .line 46
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/AppDetailsActivity;->getFragmentManager()Landroid/app/FragmentManager;
+    iget-object v0, p0, Lcom/bbm/ui/activities/AppDetailsActivity;->a:Lcom/bbm/ui/c/a;
+
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/AppDetailsActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/c/a;->setArguments(Landroid/os/Bundle;)V
+
+    .line 48
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/AppDetailsActivity;->getSupportFragmentManager()Landroid/support/v4/app/v;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
+    invoke-virtual {v0}, Landroid/support/v4/app/v;->a()Landroid/support/v4/app/ag;
 
     move-result-object v0
 
-    .line 47
-    const v1, 0x7f0b0228
+    .line 49
+    const v1, 0x7f0b0288
 
     iget-object v2, p0, Lcom/bbm/ui/activities/AppDetailsActivity;->a:Lcom/bbm/ui/c/a;
 
-    invoke-virtual {v0, v1, v2}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
+    invoke-virtual {v0, v1, v2}, Landroid/support/v4/app/ag;->b(ILandroid/support/v4/app/Fragment;)Landroid/support/v4/app/ag;
 
-    .line 48
+    .line 50
     invoke-virtual {p0}, Lcom/bbm/ui/activities/AppDetailsActivity;->isFinishing()Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    .line 49
-    invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commitAllowingStateLoss()I
-
     .line 51
+    invoke-virtual {v0}, Landroid/support/v4/app/ag;->b()I
+
+    .line 53
     :cond_2
-    const v0, 0x7f0b0229
+    const v0, 0x7f0b0289
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/AppDetailsActivity;->findViewById(I)Landroid/view/View;
 
@@ -246,7 +221,7 @@
 
     iput-object v0, p0, Lcom/bbm/ui/activities/AppDetailsActivity;->c:Landroid/widget/Button;
 
-    .line 52
+    .line 54
     iget-object v0, p0, Lcom/bbm/ui/activities/AppDetailsActivity;->c:Landroid/widget/Button;
 
     new-instance v1, Lcom/bbm/ui/activities/o;
@@ -255,7 +230,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 61
+    .line 62
     invoke-static {p0}, Lcom/bbm/l/a;->a(Landroid/content/Context;)Lcom/bbm/l/a;
 
     move-result-object v0
@@ -269,26 +244,24 @@
     .locals 1
 
     .prologue
-    .line 90
+    .line 91
     iget-object v0, p0, Lcom/bbm/ui/activities/AppDetailsActivity;->b:Lcom/bbm/l/a;
 
     if-eqz v0, :cond_0
 
-    .line 91
-    iget-object v0, p0, Lcom/bbm/ui/activities/AppDetailsActivity;->b:Lcom/bbm/l/a;
-
+    .line 92
     invoke-static {}, Lcom/bbm/l/a;->b()V
 
-    .line 92
+    .line 93
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/bbm/ui/activities/AppDetailsActivity;->b:Lcom/bbm/l/a;
 
-    .line 94
-    :cond_0
-    invoke-super {p0}, Lcom/bbm/ui/activities/akz;->onDestroy()V
-
     .line 95
+    :cond_0
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/e;->onDestroy()V
+
+    .line 96
     return-void
 .end method
 
@@ -296,10 +269,10 @@
     .locals 0
 
     .prologue
-    .line 85
-    invoke-super {p0}, Lcom/bbm/ui/activities/akz;->onPause()V
-
     .line 86
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/e;->onPause()V
+
+    .line 87
     return-void
 .end method
 
@@ -307,9 +280,9 @@
     .locals 0
 
     .prologue
-    .line 80
-    invoke-super {p0}, Lcom/bbm/ui/activities/akz;->onResume()V
-
     .line 81
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/e;->onResume()V
+
+    .line 82
     return-void
 .end method

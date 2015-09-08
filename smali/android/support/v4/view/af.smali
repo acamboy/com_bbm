@@ -1,101 +1,95 @@
-.class public abstract Landroid/support/v4/view/af;
+.class Landroid/support/v4/view/af;
 .super Ljava/lang/Object;
-.source "PagerAdapter.java"
+.source "MenuItemCompat.java"
 
-
-# instance fields
-.field private a:Landroid/database/DataSetObservable;
+# interfaces
+.implements Landroid/support/v4/view/ai;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method constructor <init>()V
+    .locals 0
 
     .prologue
-    .line 78
+    .line 158
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 79
-    new-instance v0, Landroid/database/DataSetObservable;
-
-    invoke-direct {v0}, Landroid/database/DataSetObservable;-><init>()V
-
-    iput-object v0, p0, Landroid/support/v4/view/af;->a:Landroid/database/DataSetObservable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a()I
-.end method
-
-.method public a(Landroid/view/ViewGroup;I)Ljava/lang/Object;
-    .locals 2
+.method public a(Landroid/view/MenuItem;Landroid/support/v4/view/aj;)Landroid/view/MenuItem;
+    .locals 0
 
     .prologue
-    .line 110
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "Required method instantiateItem was not overridden"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    .line 196
+    return-object p1
 .end method
 
-.method public final a(Landroid/database/DataSetObserver;)V
+.method public final a(Landroid/view/MenuItem;Landroid/view/View;)Landroid/view/MenuItem;
     .locals 1
 
     .prologue
-    .line 285
-    iget-object v0, p0, Landroid/support/v4/view/af;->a:Landroid/database/DataSetObservable;
+    .line 166
+    invoke-interface {p1, p2}, Landroid/view/MenuItem;->setActionView(Landroid/view/View;)Landroid/view/MenuItem;
 
-    invoke-virtual {v0, p1}, Landroid/database/DataSetObservable;->registerObserver(Ljava/lang/Object;)V
+    move-result-object v0
 
-    .line 286
-    return-void
+    return-object v0
 .end method
 
-.method public a(Landroid/view/ViewGroup;ILjava/lang/Object;)V
-    .locals 2
-
-    .prologue
-    .line 124
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "Required method destroyItem was not overridden"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public abstract a(Landroid/view/View;Ljava/lang/Object;)Z
-.end method
-
-.method public b()V
+.method public final a(Landroid/view/MenuItem;)Landroid/view/View;
     .locals 1
 
     .prologue
-    .line 276
-    iget-object v0, p0, Landroid/support/v4/view/af;->a:Landroid/database/DataSetObservable;
+    .line 176
+    invoke-interface {p1}, Landroid/view/MenuItem;->getActionView()Landroid/view/View;
 
-    invoke-virtual {v0}, Landroid/database/DataSetObservable;->notifyChanged()V
+    move-result-object v0
 
-    .line 277
+    return-object v0
+.end method
+
+.method public final a(Landroid/view/MenuItem;I)V
+    .locals 0
+
+    .prologue
+    .line 161
+    invoke-interface {p1, p2}, Landroid/view/MenuItem;->setShowAsAction(I)V
+
+    .line 162
     return-void
 .end method
 
-.method public final b(Landroid/database/DataSetObserver;)V
+.method public final b(Landroid/view/MenuItem;I)Landroid/view/MenuItem;
     .locals 1
 
     .prologue
-    .line 294
-    iget-object v0, p0, Landroid/support/v4/view/af;->a:Landroid/database/DataSetObservable;
+    .line 171
+    invoke-interface {p1, p2}, Landroid/view/MenuItem;->setActionView(I)Landroid/view/MenuItem;
 
-    invoke-virtual {v0, p1}, Landroid/database/DataSetObservable;->unregisterObserver(Ljava/lang/Object;)V
+    move-result-object v0
 
-    .line 295
-    return-void
+    return-object v0
+.end method
+
+.method public b(Landroid/view/MenuItem;)Z
+    .locals 1
+
+    .prologue
+    .line 181
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public c(Landroid/view/MenuItem;)Z
+    .locals 1
+
+    .prologue
+    .line 191
+    const/4 v0, 0x0
+
+    return v0
 .end method

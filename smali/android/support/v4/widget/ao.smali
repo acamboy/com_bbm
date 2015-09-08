@@ -1,56 +1,8 @@
-.class final Landroid/support/v4/widget/ao;
+.class interface abstract Landroid/support/v4/widget/ao;
 .super Ljava/lang/Object;
-.source "SlidingPaneLayout.java"
-
-# interfaces
-.implements Landroid/os/Parcelable$Creator;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/os/Parcelable$Creator",
-        "<",
-        "Landroid/support/v4/widget/SlidingPaneLayout$SavedState;",
-        ">;"
-    }
-.end annotation
-
-
-# direct methods
-.method constructor <init>()V
-    .locals 0
-
-    .prologue
-    .line 1465
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.source "PopupWindowCompat.java"
 
 
 # virtual methods
-.method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 2
-
-    .prologue
-    .line 1465
-    new-instance v0, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;-><init>(Landroid/os/Parcel;B)V
-
-    return-object v0
-.end method
-
-.method public final bridge synthetic newArray(I)[Ljava/lang/Object;
-    .locals 1
-
-    .prologue
-    .line 1465
-    new-array v0, p1, [Landroid/support/v4/widget/SlidingPaneLayout$SavedState;
-
-    return-object v0
+.method public abstract a(Landroid/widget/PopupWindow;Landroid/view/View;III)V
 .end method

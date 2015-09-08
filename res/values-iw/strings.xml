@@ -225,6 +225,21 @@
     <string name="a_newer_version_of_bbm_is_required">נדרשת גרסה חדשה יותר של BBM‏.</string>
     <string name="a_problem_has_occurred_in_bbm">אירעה בעיה ב-‏BBM. נסה שוב מאוחר יותר.</string>
     <string name="a_temporary_server_error_has_occurred">אירעה שגיאת שרת זמנית. נסה שוב.</string>
+    <string name="abc_action_bar_home_description">נווט לדף הבית</string>
+    <string name="abc_action_bar_home_description_format">‏%1$s‏, %2$s</string>
+    <string name="abc_action_bar_home_subtitle_description_format">‏%1$s‏, %2$s‏, %3$s</string>
+    <string name="abc_action_bar_up_description">נווט למעלה</string>
+    <string name="abc_action_menu_overflow_description">עוד אפשרויות</string>
+    <string name="abc_action_mode_done">בוצע</string>
+    <string name="abc_activity_chooser_view_see_all">ראה הכל</string>
+    <string name="abc_activitychooserview_choose_application">בחר אפליקציה</string>
+    <string name="abc_searchview_description_clear">מחק שאילתה</string>
+    <string name="abc_searchview_description_query">שאילתת חיפוש</string>
+    <string name="abc_searchview_description_search">חפש</string>
+    <string name="abc_searchview_description_submit">שלח שאילתה</string>
+    <string name="abc_searchview_description_voice">חיפוש קולי</string>
+    <string name="abc_shareactionprovider_share_with">שתף עם</string>
+    <string name="abc_shareactionprovider_share_with_application">‏שתף עם %s</string>
     <string name="about">אודות</string>
     <string name="about_bbm_pins_message">מספר PIN מזהה אותך באופן ייחודי ב-BBM. אנשים יכולים להזמין אותך להפוך לאיש קשר ב-BBM אם אתה משתף את קוד ה-PIN או הברקוד של BBM.</string>
     <string name="about_bbm_pins_title">אודות BBM PIN</string>
@@ -235,9 +250,9 @@
     <string name="activity_select_new_admin_title">בחר מנהל חדש</string>
     <string name="activity_select_new_admin_title_selection">+%1$d מנהלי מערכת</string>
     <string name="activity_tap_to_invite_dialog_info">האם ברצונך להפעיל את NFC?</string>
-    <string name="activity_tap_to_invite_dialog_no">לא</string>
+    <string name="activity_tap_to_invite_dialog_no">@string/no</string>
     <string name="activity_tap_to_invite_dialog_title">רדיו NFC מכובה</string>
-    <string name="activity_tap_to_invite_dialog_yes">כן</string>
+    <string name="activity_tap_to_invite_dialog_yes">@string/yes</string>
     <string name="activity_tap_to_invite_info">יישר את החלק האחורי של ההתקנים הנוכחיים שלך. יש להפעיל את NFC בשני ההתקנים.</string>
     <string name="ad_block_channel">אם תחסום את הערוץ, לא תוכל לראות תוכן ממומן מהערוץ \"%1$s\". אין אפשרות לבטל פעולה זו.</string>
     <string name="ad_block_sponsor">לא תוכל לראות תוכן ממומן מהערוץ \"%1$s\". אין אפשרות לבטל פעולה זו.</string>
@@ -263,13 +278,26 @@
     <string name="allow_comments_on_posts">אפשר תגובות לפרסומים</string>
     <string name="app_name">BBM</string>
     <string name="app_picker_name">יישומים</string>
+    <string name="app_store_app_subscribe_notification_dialog_line">באפשרותך ליידע את אנשי הקשר שלך שהפכת להיות משתמש %1$s בחבילות מנוי של BBM.</string>
+    <string name="app_store_app_subscribe_notification_message">היי, אני משתמש %1$s בחבילות מנויים של BBM עכשיו! גם אתה יכול!!!</string>
+    <string name="app_store_confirmation_screen_feature_offered_line">התכונות שהמנוי שלך מציע הן:</string>
     <string name="app_store_details_screen_install_button">התקן</string>
     <string name="app_store_details_screen_inventory_not_found">"לא ניתן לפתוח את היישום.
  נסה שוב מאוחר יותר."</string>
     <string name="app_store_details_screen_open_button">פתח</string>
+    <string name="app_store_details_screen_renew_button">חדש</string>
+    <string name="app_store_details_screen_subscribe_button">הירשם כמנוי</string>
+    <string name="app_store_details_screen_subscribed_button">רשום כמנוי</string>
     <string name="app_store_invalid_app_id">פריט זה אינו זמין</string>
+    <string name="app_store_subscribed_app_no_ads_description">הסתר מודעות והזמנות ממומנות ב-BBM בעזרת מנוי זה.</string>
+    <string name="app_store_subscribed_app_vanity_pin_description">PIN מותאם אישית משמש להזמנת משתמשים אחרים ולהצגת פרופיל. לאחר הגדרה של PIN מותאם אישית המשתמש יכול לערוך אותו במשך פרק זמן שהוגדר מראש. שנה PIN</string>
+    <string name="app_subscription_thank_you">תודה. אתה רשום כמנוי של BBM כעת.</string>
     <string name="approve_comments">אשר תגובות</string>
     <string name="approve_comments_description">באפשרותך לשנות אפשרות זו מאתר האינטרנט של הערוצים.</string>
+    <string name="archiving_disabled_message">"‏מנהל המערכת שלך כיבה את תכונת השמירה בארכיון. מעתה, שיחות צ'אט לא יישמרו במכשיר שלך ושיחות צ'אט שנשמרו במכשיר בעבר כבר אינן שמורות בו. לקבלת מידע נוסף, פנה למנהל המערכת."</string>
+    <string name="archiving_disabled_title">‏שמירה בארכיון כבויה</string>
+    <string name="archiving_enabled_message">"‏מנהל המערכת שלך הפעיל את תכונת השמירה בארכיון. שיחות צ'אט נשמרות במכשיר שלך. לקבלת מידע נוסף, פנה למנהל המערכת."</string>
+    <string name="archiving_enabled_title">‏שמירה בארכיון מופעלת</string>
     <string name="arrived_at_destination">Glympse: הגיע ליעדו</string>
     <string name="asterisk">*</string>
     <string name="attach">צרף</string>
@@ -286,15 +314,15 @@
     <string name="attach_list_voicenote">הערה קולית</string>
     <string name="audio_player_pause">השהה</string>
     <string name="audio_player_play">הפעל</string>
-    <string name="auth_client_needs_enabling_title">‏יש אפליקציה המחייבת הפעלה של שירותי Google Play.</string>
-    <string name="auth_client_needs_installation_title">‏יש אפליקציה המחייבת התקנה של שירותי Google Play.</string>
-    <string name="auth_client_needs_update_title">‏יש אפליקציה המחייבת עדכון של שירותי Google Play.</string>
-    <string name="auth_client_play_services_err_notification_msg">‏שגיאה בשירותי Google Play</string>
-    <string name="auth_client_requested_by_msg">התבקשה על ידי %1$s</string>
-    <string name="auth_client_using_bad_version_title">‏יש אפליקציה שניסתה להשתמש בגרסה שגויה של שירותי Google Play.</string>
+    <string name="autopassphrase_completed">"צ/'אט זה הוא צ/'אט של BBM Protected כעת."</string>
+    <string name="autopassphrase_failed">לא ניתן היה להגדיר את BBM Protected.</string>
+    <string name="autopassphrase_initiated">"יוצר צ'אט של BBM Protected."</string>
+    <string name="autopassphrase_retry">נסה שוב</string>
     <string name="avatar_file_not_support">הקובץ לא נתמך.</string>
     <string name="back">הקודם</string>
     <string name="backup_file_is_not_valid">"קובץ הגיבוי אינו חוקי; עליך לצאת מהתקנת BBM ולהשתמש בתוכנית השירות 'החלפת מכשיר' ב-‏BlackBerry Desktop Software."</string>
+    <string name="badge_on_your_avatar">תג על האוואטר שלך</string>
+    <string name="badge_on_your_avatar_description">ברגע שמנוי BBM יופעל, יופיע תג על האוואטר שלך...</string>
     <string name="barcode_info">באפשרותו של איש קשר לסרוק את הברקוד שלך כדי להוסיף אותך ל-BBM</string>
     <string name="bbm_account_name">BBM</string>
     <string name="bbm_account_user_name">BBM Groups</string>
@@ -310,7 +338,9 @@
     <string name="bbm_service_running">מחובר</string>
     <string name="bbm_setup">התקנת BBM</string>
     <string name="bbm_share_with_pin_uri">http://www.bbm.com/share/?BBMID=%1$s</string>
-    <string name="bbm_voice_ongoing_call">נמצא בשיחה</string>
+    <string name="bbm_voice_ongoing_call">בשיחת BBM</string>
+    <string name="billing_google_error_message_body">פריט זה כבר נרכש עבור BlackBerry ID אחר באמצעות החשבון שלך בחנות. נסה להשתמש בחשבון חנות אחר.</string>
+    <string name="billing_google_error_message_title">לא ניתן לבצע רכישה.</string>
     <string name="blackberry_channels"><b>BBM Channels</b></string>
     <string name="blackberry_id">BBID</string>
     <string name="blackberry_id_is_not_responding">BlackBerry ID אינו מגיב.</string>
@@ -419,7 +449,7 @@
     <string name="channel_geolocation_checkbox_accept">קבל</string>
     <string name="channel_geolocation_checkbox_decline">דחה</string>
     <string name="channel_geolocation_checkbox_description">לאפשר ל-BBM לגשת מדי פעם למיקום שלך?</string>
-    <string name="channel_geolocation_introduction">BBM רוצה לגשת מדי פעם למיקומים הנוכחיים או השמורים במכשיר ולהשתמש בהם כדי להתאים אישית את החוויה שלך. באפשרותך לשנות הרשאה זו בכל עת מתוך הגדרות BBM שלך.</string>
+    <string name="channel_geolocation_introduction">‏BBM רוצה לגשת מדי פעם למיקומים הנוכחיים או השמורים במכשיר ולהשתמש בהם כדי להתאים אישית את החוויה שלך. באפשרותך לשנות הרשאה זו בכל עת מתוך הגדרות BBM שלך.</string>
     <string name="channel_geolocation_setting_description">אפשר ליישום זה לגשת למיקומים הנוכחיים או השמורים של המכשיר שלך</string>
     <string name="channel_geolocation_setting_disable_description">"תכונת דיווח המיקום אינה זמינה מכיוון ששירותי המיקום כבויים. כדי להפעיל את שירותי המיקום, פתח את 'הגדרות'."</string>
     <string name="channel_geolocation_setting_disable_no">לא עכשיו</string>
@@ -497,7 +527,7 @@
     <string name="channel_preview">תצוגה מקדימה</string>
     <string name="channel_profile">פרופיל</string>
     <string name="channel_promo_button">תחילת העבודה</string>
-    <string name="channel_promo_description">"BBM Channels מאפשר לך לשוחח צ'אט עם משתמשי BBM אחרים על נושאים המעניינים אותך. הצטרף לערוצים אודות תחביבים, ספורט, בידור, אופנה, מכוניות ועוד - ולאחר מכן התחל בשיחה."</string>
+    <string name="channel_promo_description">"‏BBM Channels מאפשר לך לשוחח צ'אט עם משתמשי BBM אחרים על נושאים המעניינים אותך. הצטרף לערוצים אודות תחביבים, ספורט, בידור, אופנה, מכוניות ועוד - ולאחר מכן התחל בשיחה."</string>
     <string name="channel_promo_intro">הצגת BBM Channels</string>
     <string name="channel_removed">ערוץ זה נמחק.</string>
     <string name="channel_report_dialog_info_text">האם אתה בטוח שברצונך לדווח על ערוץ זה?</string>
@@ -573,6 +603,7 @@
     <string name="chat_history_missed_video_chat">שיחת וידאו שלא נענתה מאת &lt;b>%1$s&lt;/b></string>
     <string name="chat_history_missed_voice_chat">שיחה קולית שלא נענתה מאת &lt;b>%1$s&lt;/b></string>
     <string name="chats">"צ'אטים"</string>
+    <string name="chats_block_chat">"חסום צ'אט זה"</string>
     <string name="chats_empty_chat">"צ'אט ריק"</string>
     <string name="chats_end_chat">"סיים צ'אט"</string>
     <string name="chats_end_discussion">סיים את הדיון</string>
@@ -581,35 +612,56 @@
     <string name="chats_open_group">פתח קבוצה</string>
     <string name="chats_select_more">בחר עוד</string>
     <string name="chats_start_video">"התחל וידאו צ'אט"</string>
-    <string name="chats_status_no_chats">"הקש על הפינה העליונה כדי להתחיל צ'אט."</string>
+    <string name="chats_status_no_chats">"כדי להתחיל צ'אט, הקש על לחצן הצ'אט בתחתית המסך."</string>
+    <string name="chats_status_no_chats_widget">"הקש על הפינה העליונה כדי להתחיל צ'אט."</string>
     <string name="chats_view_bbm_profile">הצג פרופיל BBM</string>
     <string name="click_to_expire">לחץ כאן כדי לסיים את תוקף ה-Glympse שלך.</string>
     <string name="click_to_reply">לחץ כאן כדי להגיב...</string>
     <string name="click_to_view">לחץ כאן כדי להציג...</string>
     <string name="close">סגור</string>
+    <string name="cloud_directory_contact_add_coworkers">חפש עמיתים</string>
+    <string name="cloud_directory_contact_chat_failed">"לא ניתן להתחיל צ'אט של BBM עם עמית זה. נסה שוב מאוחר יותר."</string>
+    <string name="cloud_directory_fields_info">עמיתיך לעבודה יכולים לראות שם זה בעת חיפוש אנשים ב-BBM.</string>
+    <string name="cloud_directory_pin_lookup">מבקש פרטי איש קשר.</string>
+    <string name="cloud_directory_search_failed">לא ניתן לחפש עמיתים. נסה שוב מאוחר יותר.</string>
+    <string name="cloud_directory_search_more_results">החיפוש החזיר יותר מדי תוצאות. נסה למקד את החיפוש.</string>
+    <string name="cloud_directory_search_text_min_length">חיפוש העמית חייב להיות באורך 2 תווים לפחות</string>
+    <string name="cloud_directory_service_hint">"שדות חובה. הקפד להזין שם אמיתי. עמיתיך לעבודה יכולים לחפש אותך לפי שם ולהתחיל צ'אטים של BBM איתך."</string>
     <string name="coming_soon">"תכונה זו אינה זמינה כעת.
 בקרוב"</string>
     <string name="coming_soon_title">בקרוב!</string>
     <string name="comment_copied">הפקודה הועתקה</string>
     <string name="comments_disabled_label">התגובות הושבתו</string>
+    <string name="common_android_wear_notification_needs_update_text">‏%1$s דורש עדכון לאפליקציה Android Wear.</string>
+    <string name="common_android_wear_update_text">‏%1$s לא יפעל עד שתעדכן את האפליקציה Android Wear.</string>
+    <string name="common_android_wear_update_title">‏עדכון Android Wear</string>
+    <string name="common_google_play_services_api_unavailable_text">‏ל-%1$s נדרש שירות אחד או יותר של Google Play שאינו זמין כעת. צור קשר עם המפתח לקבלת סיוע.</string>
     <string name="common_google_play_services_enable_button">‏הפעל את שירותי Google Play</string>
-    <string name="common_google_play_services_enable_text">‏אפליקציה זו לא תעבוד אם לא תפעיל את שירותי Google Play.</string>
+    <string name="common_google_play_services_enable_text">‏%1$s לא יפעל אם לא תפעיל את שירותי Google Play.</string>
     <string name="common_google_play_services_enable_title">‏הפעלת שירותי Google Play</string>
+    <string name="common_google_play_services_error_notification_requested_by_msg">התבקשה על ידי %1$s</string>
     <string name="common_google_play_services_install_button">‏קבל את שירותי Google Play</string>
-    <string name="common_google_play_services_install_text_phone">‏אפליקציה זו לא תפעל ללא שירותי Google Play, החסרים בטלפון שלך.</string>
-    <string name="common_google_play_services_install_text_tablet">‏אפליקציה זו לא תפעל ללא שירותי Google Play, החסרים בטאבלט שלך.</string>
+    <string name="common_google_play_services_install_text_phone">‏%1$s לא יפעל ללא שירותי Google Play, שחסרים בטלפון שלך.</string>
+    <string name="common_google_play_services_install_text_tablet">‏%1$s לא יפעל ללא שירותי Google Play, שחסרים בטאבלט שלך.</string>
     <string name="common_google_play_services_install_title">‏קבל את שירותי Google Play</string>
     <string name="common_google_play_services_invalid_account_text">החשבון שצוין לא קיים במכשיר זה. בחר חשבון אחר.</string>
     <string name="common_google_play_services_invalid_account_title">חשבון לא חוקי</string>
+    <string name="common_google_play_services_needs_enabling_title">‏קיימת אפליקציה המחייבת הפעלה של שירותי Google Play.</string>
     <string name="common_google_play_services_network_error_text">‏דרוש חיבור נתונים כדי להתחבר לשירותי Google Play.</string>
     <string name="common_google_play_services_network_error_title">שגיאת רשת.</string>
+    <string name="common_google_play_services_notification_needs_update_title">‏קיימת אפליקציה המחייבת עדכון עבור שירותי Google Play.</string>
+    <string name="common_google_play_services_notification_ticker">‏שגיאה בשירותי Google Play</string>
+    <string name="common_google_play_services_sign_in_failed_text">אירעה שגיאה בעת הכניסה אל החשבון המצוין. בחר חשבון אחר.</string>
+    <string name="common_google_play_services_sign_in_failed_title">הכניסה נכשלה</string>
     <string name="common_google_play_services_unknown_issue">‏בעיה לא ידועה בשירותי Google Play.</string>
-    <string name="common_google_play_services_unsupported_date_text">נראה שהתאריך במכשיר שגוי. בדוק את התאריך במכשיר.</string>
-    <string name="common_google_play_services_unsupported_text">‏שירותי Google Play, שחלק מהאפליקציות שלך מתבססות עליהם, אינם נתמכים על ידי המכשיר שברשותך. צור קשר עם היצרן לקבלת סיוע.</string>
+    <string name="common_google_play_services_unsupported_text">‏%1$s מתבסס על שירותי Google Play, שאינם נתמכים במכשיר שלך. צור קשר עם היצרן לקבלת סיוע.</string>
     <string name="common_google_play_services_unsupported_title">‏שירותי Google Play</string>
     <string name="common_google_play_services_update_button">עדכן</string>
-    <string name="common_google_play_services_update_text">‏אפליקציה זו לא תפעל אם לא תעדכן את שירותי Google Play.</string>
+    <string name="common_google_play_services_update_text">‏%1$s לא יפעל אם לא תעדכן את שירותי Google Play.</string>
     <string name="common_google_play_services_update_title">‏עדכון שירותי Google Play</string>
+    <string name="common_google_play_services_updating_text">‏%1$s לא יפעל ללא שירותי Google Play, שמתעדכנים כרגע.</string>
+    <string name="common_google_play_services_updating_title">‏שירותי Google Play מתעדכנים</string>
+    <string name="common_open_on_phone">פתח בטלפון</string>
     <string name="common_signin_button_text">היכנס</string>
     <string name="common_signin_button_text_long">‏היכנס באמצעות Google</string>
     <string name="complete">הושלם</string>
@@ -618,8 +670,10 @@
     <string name="contact_add_category">הוסף קטגוריה</string>
     <string name="contact_add_category_already_exists">הקטגוריה כבר קיימת.</string>
     <string name="contact_add_category_hint">הזן כותרת קטגוריה</string>
-    <string name="contact_add_notification">המשתמש נוסף</string>
+    <string name="contact_add_notification">איש הקשר נוסף</string>
     <string name="contact_delete_category">מחק קטגוריה</string>
+    <string name="contact_delete_notification">איש הקשר נמחק</string>
+    <string name="contact_delete_notification_multiple">%1$d אנשי קשר נמחקו</string>
     <string name="contact_details">פרטי קשר</string>
     <string name="contact_details_description">כלול מספר טלפון, כתובת דואל או אתר אינטרנט.</string>
     <string name="contact_is_blocked">איש הקשר נחסם</string>
@@ -631,6 +685,8 @@
     <string name="contacts_are_blocked">אנשי הקשר נחסמו</string>
     <string name="contacts_count">0</string>
     <string name="contacts_delete_contact">מחק %1$s</string>
+    <string name="contacts_dialog_delete_and_block_info">"כל הזמנה וניסיון צ'אט עתידיים של %1$s ייחסמו. האם ברצונך למחוק ולחסום את %1$s?"</string>
+    <string name="contacts_dialog_delete_and_block_title">מחק וחסום את %1$s</string>
     <string name="contacts_dialog_delete_block_info">%1$s יתווסף/יתווספו אל רשימת החסימה שלך</string>
     <string name="contacts_dialog_delete_block_label">חסום הזמנות עתידיות</string>
     <string name="contacts_dialog_delete_multi_block_info">אנשי קשר יתווספו אל רשימת החסימה שלך</string>
@@ -655,14 +711,19 @@
     <string name="contents_sms">כתובת SMS</string>
     <string name="contents_text">טקסט רגיל</string>
     <string name="context_menu_copy_message">העתק הודעה</string>
+    <string name="context_menu_quote_message">צטט הודעה</string>
     <string name="context_menu_recall_message">בטל הודעה</string>
     <string name="context_menu_resend_message">שלח הודעה מחדש</string>
+    <string name="conversation_activity_block_chat_warning_message">"אם תחסום את הצ'אט, תספיק לקבל הודעות חדשות שנשלחות לצ'אט זה."</string>
+    <string name="conversation_activity_block_chat_warning_title">"לחסום את הצ'אט?"</string>
     <string name="conversation_activity_end_chat_on_voice_warning_message">"השיחה שלך תסתיים וכל הודעות הצ'אט יימחקו."</string>
     <string name="conversation_activity_end_chat_warning_message">"אם תסיים את הצ'אט, כל ההודעות יימחקו."</string>
     <string name="conversation_activity_end_chat_warning_title">"לסיים את הצ'אט?"</string>
+    <string name="conversation_activity_leave_chat_warning_message">"אם תעזוב את הצ'אט, כל ההודעות יימחקו."</string>
+    <string name="conversation_activity_leave_chat_warning_title">"לעזוב את הצ'אט?"</string>
     <string name="conversation_activity_reinvite_accepted">ההזמנה התקבלה</string>
     <string name="conversation_activity_reinvite_sent">ההזמנה נשלחה</string>
-    <string name="conversation_are_already_in_the_chat">"&lt;b>%1$s&lt;/b> כבר נמצאים בצ'אט"</string>
+    <string name="conversation_are_already_in_the_chat">"%1$s כבר נמצאים בצ'אט"</string>
     <string name="conversation_bubble_dropbox_caption">הנה קישור ל-%1$s ב-Dropbox שלי</string>
     <string name="conversation_button_dropbox_download">הורד</string>
     <string name="conversation_button_toast_attachment_deleted">הקובץ המצורף נמחק</string>
@@ -678,30 +739,36 @@
     <string name="conversation_file_transfert">הקובץ התקבל</string>
     <string name="conversation_file_transfert_canceled_dialog_title">העברת הקובץ בוטלה</string>
     <string name="conversation_file_transfert_canceled_dialog_too_large">%1$s גדול מדי. הגודל המרבי המותר לקובץ הוא 16MB.</string>
-    <string name="conversation_incoming_invite_req">"&lt;b>%1$s&lt;/b> מעוניין להזמין את &lt;b>%2$s&lt;/b> לצ'אט"</string>
+    <string name="conversation_groups_alt_picture_sent">התמונה שותפה</string>
+    <string name="conversation_groups_alt_sticker_sent">המדבקה שותפה</string>
+    <string name="conversation_incoming_invite_req">"%1$s רוצה להזמין את %2$s לצ'אט"</string>
     <string name="conversation_incoming_invite_req_accepted">הוספת את <b>%1$s</b></string>
-    <string name="conversation_incoming_invite_req_denied">"דחית את בקשת &lt;b>%1$s&lt;/b>'להזמין את &lt;b>%2$s&lt;/b>"</string>
+    <string name="conversation_incoming_invite_req_denied">דחית את בקשת %1$sלהזמין את %2$s</string>
     <string name="conversation_invite_accept_button">אפשר</string>
     <string name="conversation_invite_reject_button">דחה</string>
-    <string name="conversation_invited">&lt;b>%1$s&lt;/b> אישר את בקשתך להזמין את &lt;b>%2$s&lt;/b></string>
-    <string name="conversation_is_already_in_the_chat">"&lt;b>%1$s&lt;/b> כבר נמצא בצ'אט"</string>
+    <string name="conversation_invited">%1$s אישר/ה את בקשתך להזמין את %2$s</string>
+    <string name="conversation_is_already_in_the_chat">"%1$s כבר נמצא/ת בצ'אט"</string>
     <string name="conversation_is_writing_a_message">כותב/ת הודעה...</string>
-    <string name="conversation_joined_the_chat">"&lt;b>%1$s&lt;/b> הצטרף לצ'אט"</string>
-    <string name="conversation_left_the_chat">"&lt;b>%1$s&lt;/b> עזב את הצ'אט"</string>
+    <string name="conversation_joined_the_chat">"%1$s הצטרף/ה לצ'אט"</string>
+    <string name="conversation_left_the_chat">"%1$s עזב/ה את הצ'אט"</string>
     <string name="conversation_location_message_accurace_within">"מדויק בטווח של %1$s מ'"</string>
     <string name="conversation_location_received">המיקום התקבל</string>
     <string name="conversation_location_sent">המיקום נשלח</string>
+    <string name="conversation_message_edit_title">ערוך הודעה</string>
+    <string name="conversation_message_editing">עורך: %1$s</string>
+    <string name="conversation_message_editing_removed">עריכת ההודעה נמחקה</string>
     <string name="conversation_message_recall_failed">לא ניתן לבטל את ההודעה</string>
     <string name="conversation_message_recall_pending">מבטל הודעה</string>
     <string name="conversation_message_recalled">ההודעה בוטלה</string>
+    <string name="conversation_mpc_header">"צ'אט"</string>
     <string name="conversation_must_reinvite">%1$s אינו/ה מופיע/ה כאיש קשר. האם ברצונך להזמין שוב את %1$s?</string>
     <string name="conversation_notification_calendar_received">פעילות התקבלה</string>
     <string name="conversation_notification_calendar_sent">פעילות נשלחה</string>
-    <string name="conversation_notification_conf_incoming_invite_req">"&lt;b>%1$s&lt;/b> ביקש/ה להזמין מישהו לצ'אט"</string>
-    <string name="conversation_notification_conf_invited">"&lt;b>%1$s&lt;/b> הוזמן/ה לצ'אט"</string>
-    <string name="conversation_notification_conf_outgoing_invite_req">"הזמנת את &lt;b>%1$s&lt;/b> לצ'אט"</string>
-    <string name="conversation_notification_conf_outgoing_invite_req_denied">בקשתך להזמין את &lt;b>%1$s&lt;/b> נדחתה</string>
-    <string name="conversation_notification_conf_we_joined">"&lt;b>%1$s&lt;/b> הזמין/ה אותך לצ'אט"</string>
+    <string name="conversation_notification_conf_incoming_invite_req">"%1$s ביקש/ה להזמין מישהו לצ'אט"</string>
+    <string name="conversation_notification_conf_invited">"%1$s הוזמן/ה לצ'אט"</string>
+    <string name="conversation_notification_conf_outgoing_invite_req">"הזמנת את %1$s לצ'אט"</string>
+    <string name="conversation_notification_conf_outgoing_invite_req_denied">בקשתך להזמין את %1$s נדחתה</string>
+    <string name="conversation_notification_conf_we_joined">"%1$s הזמין/ה אותך לצ'אט"</string>
     <string name="conversation_notification_contact_card_received">כרטיס איש קשר התקבל</string>
     <string name="conversation_notification_contact_card_sent">כרטיס איש קשר נשלח</string>
     <string name="conversation_notification_default_incomming">ההודעה התקבלה</string>
@@ -719,8 +786,8 @@
     <string name="conversation_notification_sticker_sent">המדבקה נשלחה</string>
     <string name="conversation_notification_voice_note_received">הערה קולית התקבלה</string>
     <string name="conversation_notification_voice_note_sent">הערה קולית נשלחה</string>
-    <string name="conversation_outgoing_invite_req">בקשתך להזמין את &lt;b>%1$s&lt;/b> נשלחה ל-&lt;b>%2$s&lt;/b></string>
-    <string name="conversation_outgoing_invite_req_denied">&lt;b>%1$s&lt;/b> דחה את בקשתך להזמין את &lt;b>%2$s&lt;/b></string>
+    <string name="conversation_outgoing_invite_req">בקשתך להזמין את %1$s נשלחה ל-%2$s</string>
+    <string name="conversation_outgoing_invite_req_denied">%1$s דחה/תה את בקשתך להזמין את %2$s</string>
     <string name="conversation_picture">התמונה התקבלה</string>
     <string name="conversation_ping">איתות (Ping)!!!</string>
     <string name="conversation_reinvite_accept_button">הזמן שוב</string>
@@ -729,6 +796,7 @@
     <string name="conversation_share_max_participants">"יותר מדי משתתפים בצ'אט (%1$s לכל היותר)."</string>
     <string name="conversation_successfully_saved_picture">התמונה נשמרה בהצלחה</string>
     <string name="conversation_successfully_saved_voice_note">הערה קולית נשמרה בהצלחה</string>
+    <string name="conversation_toast_blocked_chat">"חסמת את הצ'אט. כל ההודעות נמחקו."</string>
     <string name="conversation_toast_ended_chat">"הצ'אט הסתיים"</string>
     <string name="conversation_toast_ended_chat_no_history">"הצ'אט הסתיים. כל ההודעות נמחקו."</string>
     <string name="conversation_toast_left_chat">"עזבת את הצ'אט"</string>
@@ -736,7 +804,7 @@
     <string name="conversation_unable_to_save_picture">לא ניתן לשמור את התמונה</string>
     <string name="conversation_unable_to_save_voice_note">לא ניתן לשמור הערה קולית</string>
     <string name="conversation_voice_note_transfert">הערה קולית התקבלה</string>
-    <string name="conversation_you_invited">"הזמנת את &lt;b>%1$s&lt;/b> לצ'אט"</string>
+    <string name="conversation_you_invited">"הזמנת את %1$s לצ'אט"</string>
     <string name="conversation_you_joined_the_chat">"הצטרפת לצ'אט"</string>
     <string name="copied_group_passphrase">הסיסמה הועתקה</string>
     <string name="copied_group_passphrase_toast">הועתק ללוח</string>
@@ -751,6 +819,26 @@
     <string name="creating_channel_toast_string">יוצר ערוץ</string>
     <string name="creating_private_channel_confirmation">אין אפשרות לבטל פעולה זו. האם אתה בטוח שברצונך להפוך את הערוץ לפרטי?</string>
     <string name="current">נוכחי</string>
+    <string name="custom_pin_activity_title">‏PIN מותאם אישית</string>
+    <string name="custom_pin_already_set">כבר יצרת PIN מותאם אישית.</string>
+    <string name="custom_pin_confirm_postivie_text">הוא נכון</string>
+    <string name="custom_pin_confirm_text">טקסט זה ישמש כ-PIN המותאם אישית שלך ב-BBM. האם הוא נכון?</string>
+    <string name="custom_pin_friends_ad_link">בקר בחנות BBM‏</string>
+    <string name="custom_pin_friends_ad_text">קבל PIN מותאם אישית ב-BBM כעת:</string>
+    <string name="custom_pin_get_your_custom_pin">קבל PIN מותאם אישית ב-BBM כעת: בקר בחנות BBM</string>
+    <string name="custom_pin_hint_text">הזן PIN מותאם אישית</string>
+    <string name="custom_pin_legal">"כעת עליך ליצור לעצמך PIN מותאם אישית. אל תמהר, כיוון שלא תוכל לשנות את הקוד במועד מאוחר יותר. ה-PIN המותאם אישית שלך משויך ל-BBM כל עוד המנוי שלך פעיל.
+
+הנחיות:
+* חייב להיות באורך של 6 עד 8 תווים
+* יכול לכלול ספרות, אותיות, מקפים תחתונים, קווים אלכסוניים
+* חייב לכלול מקף תחתון אחד, קו אלכסוני אחד או אות בין G ל-Z"</string>
+    <string name="custom_pin_not_subscribed">בצע התאמה אישית של ה-PIN שלי</string>
+    <string name="custom_pin_share_to_feed_body">באפשרותך ליידע את אנשי הקשר שלך שקיבלת PIN מותאם אישית: %1$s</string>
+    <string name="custom_pin_shared_feed_item">כרגע קיבלתי PIN חדש מותאם אישית ב-BBM: %1$s. כדי לבצע התאמה אישית של ה-PIN שלך, לחץ על http://shop.bbm.com/item/custom_pin</string>
+    <string name="custom_pin_terms_conditions">&lt;p>&lt;b>הנחיות ליצירת PIN מותאם אישית ב-BBM‏&lt;/b>&lt;/p> &lt;p>‏PIN מותאם אישית הוא דרך מהנה להוסיף מגע אישי לחשבון BBM שלך. PIN מותאם אישית אינו מהווה תחליף ל-PIN הנוכחי שלך (ראה \"מהו PIN?\" במקטע השאלות הנפוצות בכתובת www.bbm.com לקבלת מידע נוסף על קודי PIN רגילים), זהו PIN נוסף המוצג בפרופיל BBM שלך וניתן להשתמש בו כדי להזמין משתמשי BBM אחרים ולקבל מהם הזמנות.&lt;/p> &lt;p>בפירוט שלהלן יוצגו כמה דברים שכדאי לזכור בעת יצירה של PIN מותאם אישית:&lt;/p> &lt;p>&amp;#8226 לא ניתן לדרוש לקבל PIN מותאם אישית שמישהו אחר כבר משתמש בו.&lt;/p> &lt;p>&amp;#8226 אם לא תחדש את המנוי שלך לפני שיפוג תוקפו, לא תוכל להמשיך להשתמש ב-PIN המותאם אישית ומנוי אחר יוכל לקבל אותו.&lt;/p> &lt;p>&amp;#8226 בחר PIN מותאם אישית בקפידה. לאחר שתיצור PIN מותאם אישית, לא תוכל לשנות אותו לכל אורך תקופת המנוי.&lt;/p> &lt;p>&amp;#8226 כדי שניתן יהיה להבדיל בין ה-PIN המותאם אישית שלך לבין BBM PIN רגיל, יש ליצור קודי PIN מותאמים אישית בהתאם לדרישות הבאות: &lt;/p> &lt;p> - אורכם חייב להיות בין 6 ל-8 תווים; &lt;/p> &lt;p> - הקוד יכול לכלול ספרות, אותיות, מקפים תחתונים, קווים אלכסוניים;&lt;/p> &lt;p> - הקוד חייב לכלול מקף תחתון אחד, קו אלכסוני אחד או אות בין G ל-Z‏;&lt;/p> &lt;p>&amp;#8226 קודי PIN מותאמים אישית אינם יכולים לכלול מילים פוגעניות, קללות, השמצות, מילים גסות, התנסחות בלתי חוקית או ניסוחים מטעים או לשמש לכל מטרה בלתי חוקית.&lt;/p> &lt;p>&amp;#8226 אין להשתמש בקודי PIN מותאמים אישית כדי להתחזות לאדם, למותג, לארגון או לאירוע, או כדי להונות, לבלבל או להטעות אחרים.&lt;/p> &lt;p>&amp;#8226 קודי PIN מותאמים אישית אינם יכולים להפר זכויות, לרבות זכויות קניין רוחני, של כל אדם, מותג, ארגון או אירוע. לדוגמה, PIN מותאם אישית שתבחר אינו יכול להפר זכויות סימן מסחרי של אדם או של יישות אחרת.&lt;/p> &lt;p>&amp;#8226 ‏BlackBerry שומרת לעצמה את הזכות לדחות, להסיר ו/או להחזיר לרשותה כל PIN מותאם אישית, בכל עת, מכל סיבה שהיא, בכפוף לכל תנאי רכישה/מדיניות החזרים ישימים.&lt;/p></string>
+    <string name="custom_pin_title">‏PIN מותאם אישית:</string>
+    <string name="custom_pin_warning_on_repurchase">כדי שתוכל לשמור את ה-PIN המותאם אישית הקיים שלך, יתכן שיהיה עליך לרכוש מנוי חדש ולאחר מכן לבטל את הישן. לקבלת מידע נוסף, בקר בכתובת: %1$s</string>
     <string name="date">תאריך</string>
     <string name="date_of_birth"><b>תאריך לידה</b></string>
     <string name="date_of_birth_fail_age_limit">אינך מבוגר מספיק להשתמש ב-BBM Channels.</string>
@@ -777,6 +865,7 @@
     <string name="dialog_invite_security_question_tip">עצה: התשובות הן תלויות רישיות.</string>
     <string name="dialog_invite_security_question_title">שאלת אבטחה</string>
     <string name="did_you_know">האם ידעת?</string>
+    <string name="different_platform_string">יש ברשותך מנוי שמתחדש באופן אוטומטי, שנרכש במכשיר אחר. לרכוש מנוי דרך מכשיר זה?</string>
     <string name="discard">מחק</string>
     <string name="display_name"><i>שם תצוגה</i></string>
     <string name="do_you_want_to_switch_your_bbm_information_to_your_current_device">האם ברצונך להעביר את פרטי BBM למכשיר הנוכחי שלך?</string>
@@ -797,6 +886,15 @@
     <string name="enter_passphrase_hint"><i>הזן משפט סיסמה</i></string>
     <string name="enter_text"><i>הזן טקסט</i></string>
     <string name="entered_passphrase_incorrect">משפט הסיסמה שהזנת אינו נכון.</string>
+    <string name="entitlement_dialog_title">נדרש מנוי</string>
+    <string name="entitlement_edit_dialogue">"הגעת למספר המרבי המותר של עריכת הודעות בגרסת הניסיון.
+כדי לקבל גישה בלתי מוגבלת לתכונה זו, ניתן לרכוש מנוי."</string>
+    <string name="entitlement_privateconv_dialogue">"הגעת למספר המרבי המותר של צ'אטים פרטיים בגרסת הניסיון.
+כדי לקבל גישה בלתי מוגבלת לתכונה זו, ניתן לרכוש מנוי."</string>
+    <string name="entitlement_retracted_dialogue">"הגעת למספר המרבי האפשרי של הודעות הניתנות לביטול בגרסת הניסיון.
+כדי לקבל גישה בלתי מוגבלת לתכונה זו, ניתן לרכוש מנוי."</string>
+    <string name="entitlement_timed_dialogue">"הגעת למספר המרבי המותר של הודעות מתוזמנות בגרסת הניסיון.
+כדי לקבל גישה בלתי מוגבלת לתכונה זו, ניתן לרכוש מנוי."</string>
     <string name="ephemeral_hint_received">הודעה מתוזמנת התקבלה. גע נגיעה ממושכת כדי להציג.</string>
     <string name="ephemeral_hint_sent">ההודעה תוזמנה.</string>
     <string name="ephemeral_hint_viewed">הודעה מתוזמנת התקבלה. פג תוקף</string>
@@ -896,15 +994,17 @@
     <string name="filter_by">סנן על פי</string>
     <string name="find_friend_allow_upload_dialog_double_check_text">האם אתה בטוח? אם לא תאפשר ל-BBM לגשת לאנשי הקשר שלך, תצטרך להוסיף אנשי קשר של BBM באופן ידני.</string>
     <string name="find_friend_allow_upload_dialog_double_check_title">לא מומלץ</string>
-    <string name="find_friend_allow_upload_dialog_title">חפש חברים ב-BBM</string>
-    <string name="find_friend_allow_upload_text">אפשר ל-BBM לגשת לאנשי הקשר שלך כדי לעזור לך למצוא ולהוסיף חברים.</string>
+    <string name="find_friend_allow_upload_dialog_title">חפש חברים</string>
+    <string name="find_friend_allow_upload_text">אפשר ל-BBM לגשת לאנשי הקשר שלך כדי לעזור לך למצוא חברים. תוכל להחליט את מי מהחברים להוסיף ל-BBM.</string>
     <string name="find_friend_category_get_bbm">הזמן להורדה</string>
     <string name="find_friend_category_invite">הקש כדי להוסיף</string>
     <string name="find_friends">חפש חברים ב-BBM</string>
     <string name="find_more_friends">חפש חברים נוספים</string>
-    <string name="first_launch_after_upgrade_privacy_terms">אני מסכים לתנאי &lt;b>&lt;a href=http://www.blackberry.com/legal/privacy>מדיניות הפרטיות&lt;/a>&lt;/b> ול&lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>תנאי השירות&lt;/a>&lt;/b></string>
-    <string name="first_launch_after_upgrade_subtitle">"הוסף הנאה לצ'אטים של BBM בעזרת מדבקות. זמין כעת."</string>
-    <string name="first_launch_after_upgrade_title">שלח מדבקות!</string>
+    <string name="first_launch_after_upgrade_privacy_terms">עדכנו את &lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>תנאי השירות&lt;/a>&lt;/b> שלנו. לחיצה על המשך משמעה שאתה מסכים ל&lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>תנאי השירות&lt;/a>&lt;/b> ול&lt;b>&lt;a href=http://www.blackberry.com/legal/privacy>מדיניות הפרטיות&lt;/a>&lt;/b></string>
+    <string name="first_launch_after_upgrade_subtitle">צור BBM PIN שיהיה שלך בלבד! ממש את זכותך ל-PIN מותאם אישית עוד היום.</string>
+    <string name="first_launch_after_upgrade_title">ייחודי בדיוק כמוך</string>
+    <string name="first_name">שם פרטי</string>
+    <string name="first_name_hint">הזן שם פרטי</string>
     <string name="flagged_comments_header">תגובות</string>
     <string name="flagged_posts_header">פרסומים</string>
     <string name="format_not_supported_for_cropping">תבנית זו אינה נתמכת עבור חיתוך</string>
@@ -912,6 +1012,7 @@
     <string name="general">כללי</string>
     <string name="glympse">Glympse</string>
     <string name="glympse_attach">צרף Glympse</string>
+    <string name="glympse_duration_hourminutes">נותרו %1$d:%2$02d</string>
     <string name="glympse_duration_minutes">משך זמן: %1$d דקות</string>
     <string name="glympse_expired">פג תוקף</string>
     <string name="glympse_expires_at">שתף עד %1$s</string>
@@ -946,6 +1047,7 @@
     <string name="glympse_update">עדכן Glympse</string>
     <string name="glympse_user_selector_item_all_user_currently_sharing">כל המשתמשים המשתפים כעת</string>
     <string name="glympse_user_selector_item_speed">מהירות (קמש): %1$s</string>
+    <string name="glympse_user_selector_item_speed_na">"מהירות (קמש):  לא זמין"</string>
     <string name="glympse_user_selector_item_updated_d_ago">עודכן לאחרונה: לפני %1$d ימים</string>
     <string name="glympse_user_selector_item_updated_h_m">עודכן לאחרונה: לפני %1$d %2$s</string>
     <string name="glympse_user_selector_item_updated_m_ago">עודכן לאחרונה: לפני %1$d דקות</string>
@@ -979,9 +1081,11 @@
     <string name="group_add_list_title_hint"><i>כותרת הרשימה</i></string>
     <string name="group_admin_about">אודות מנהלי קבוצות</string>
     <string name="group_admin_text">מנהלי קבוצה יכולים לבצע את הפעולות הבאות:</string>
+    <string name="group_autopassphrase_details">משפט סיסמה אוטומטי מופעל.</string>
     <string name="group_barcode_info">איש קשר יכול לסרוק ברקוד זה כדי להצטרף לקבוצה שלך</string>
     <string name="group_barcode_scan_rejected_user_not_protected">אינך מורשה להצטרף לקבוצה זו.</string>
     <string name="group_cancel">ביטול</string>
+    <string name="group_cannot_delete_conversation">לא ניתן למחוק שיחה זו</string>
     <string name="group_chat_exists">"נושא הצ'אט כבר קיים"</string>
     <string name="group_chat_general_discussion">דיון כללי</string>
     <string name="group_chat_history_days_1">יום אחד</string>
@@ -1000,6 +1104,8 @@
     <string name="group_conversation_email_chat_message_header">מקבוצה: %1$s</string>
     <string name="group_conversation_email_chat_subject">"צ'אט של %1$s: %2$s"</string>
     <string name="group_conversation_is_writing_a_message">" מקליד…"</string>
+    <string name="group_conversation_picture_loading">טוען תמונה...</string>
+    <string name="group_conversation_picture_not_available">התמונה לא זמינה</string>
     <string name="group_conversation_slide_menu_chat_history">"היסטוריית צ'אט"</string>
     <string name="group_conversation_slide_menu_clear_chat">"נקה צ'אט"</string>
     <string name="group_conversation_slide_menu_copy_chat">"העתק צ'אט"</string>
@@ -1009,6 +1115,7 @@
     <string name="group_delete_picture">מחק תמונה</string>
     <string name="group_delete_q">למחוק קבוצה?</string>
     <string name="group_done">סיום</string>
+    <string name="group_edit_admin_cannot_remove_self">לא ניתן להסיר את עצמך כמנהל מערכת</string>
     <string name="group_edit_caption">ערוך כיתוב</string>
     <string name="group_edit_list_title">פרטי הפריט</string>
     <string name="group_event_all_day">כל היום</string>
@@ -1031,15 +1138,15 @@
     <string name="group_events_time_notice">זמן הסיום חייב להיות מאוחר יותר מזמן ההתחלה</string>
     <string name="group_invitation_was_received">הוזמנת לקבוצת Glympse</string>
     <string name="group_invite_bbg_uri">%1$s</string>
-    <string name="group_invite_email_message">"-----\ufffc----
-אני רוצה להזמין אותך להצטרף לקבוצה שלי הנקראת %1$s.
+    <string name="group_invite_email_message">"ברצוני להזמין אותך להצטרף לקבוצה שלי הנקראת \"%1$s\". כדי להצטרף לקבוצה דרך מכשיר נייד, לחץ על:
+%2$s
 
-במכשירי Android או iPhone, לחץ על %2$s כדי להצטרף לקבוצה או כדי להוריד את BBM.
 
 %3$s"</string>
-    <string name="group_invite_email_subject">הצטרף/י לקבוצת BlackBerry שלי!</string>
+    <string name="group_invite_email_subject">הזמנה ל-BBM Group מאת %1$s</string>
     <string name="group_invite_enter_passphrase">כדי להצטרף לקבוצה, הזן את משפט הסיסמה שסופק על-ידי חבר בקבוצה.</string>
     <string name="group_invite_enter_passphrase_multi_attempts">משפט הסיסמה שגוי. כדי להצטרף לקבוצה, הזן את משפט הסיסמה שסופק על-ידי חבר בקבוצה. (%1$d/%2$d)</string>
+    <string name="group_invite_expired">פג תוקף ההזמנה לקבוצה</string>
     <string name="group_invite_message_default">אני רוצה להזמין אותך להצטרף לקבוצה שלי הנקראת: %1$s</string>
     <string name="group_invite_status_enter_passphrase_max_attempts_reached">משפט הסיסמה שגוי. כדי שתוכל להצטרף לקבוצה זו, עליך לקבל הזמנה נוספת.</string>
     <string name="group_invite_status_enter_passphrase_multi_attempts">משפט הסיסמה שגוי. כדי להצטרף לקבוצה, הזן את משפט הסיסמה שסופק על-ידי חבר בקבוצה.</string>
@@ -1082,6 +1189,11 @@
     <string name="group_passphrase_info">באפשרותך לשתף את משפט הסיסמה שאנשים אשר תזמין לקבוצה יידרשו להזין בעת ההצטרפות.</string>
     <string name="group_passphrase_missing">משפט סיסמה לא זמין</string>
     <string name="group_picture_add">הוסף תמונה</string>
+    <string name="group_picture_add_failed__wrong_picture_type">@string/avatar_file_not_support</string>
+    <string name="group_picture_add_failed_file_access_error">@string/filetransfer_abort_filenotfound</string>
+    <string name="group_picture_add_failed_file_does_not_exist">@string/filetransfer_abort_filenotfound</string>
+    <string name="group_picture_add_failed_picture_too_big">@string/conversation_file_image_transfer_canceled_dialog_too_large</string>
+    <string name="group_picture_add_failed_resize_error">@string/conversation_unable_to_save_picture</string>
     <string name="group_picture_added_days">נוסף לפני %1$d ימים על-ידי %2$s</string>
     <string name="group_picture_added_today">נוסף היום ב-%1$s על-ידי %2$s</string>
     <string name="group_picture_added_yesterday">נוסף אתמול על-ידי %1$s</string>
@@ -1156,7 +1268,7 @@
     <string name="hdimage_prompt_message">האם ברצונך לאשר באופן אוטומטי בקשות HD עתידיות?</string>
     <string name="hdimage_prompt_title">אשר בקשות תמיד</string>
     <string name="help">עזרה</string>
-    <string name="help_url">http://docs.blackberry.com/bbm/25/android/he</string>
+    <string name="help_url">http://help.blackberry.com/detectLang/bbm-for-android/current/</string>
     <string name="high_priority">עדיפות גבוהה</string>
     <string name="hint_protected_enabled_chat"><i>מוגן. הזן הודעה</i></string>
     <string name="history_clear_one_history_text">נקה</string>
@@ -1185,6 +1297,7 @@
     <string name="introducing_channels_second_part">המנויים שלך קיבלו את המידע העדכני ביותר ב-BBM והם יוכלו לשתף אותך בדעתם.</string>
     <string name="introducing_channels_title">הצגת BBM Channels</string>
     <string name="invalid_passphrase_toast">משפט הסיסמה לא חוקי</string>
+    <string name="invitation_received">התקבלה הזמנה</string>
     <string name="invitation_rejected_invitee_not_protected_message">%1$s לא יכול להצטרף לקבוצה זו. ‏רק אנשי קשר של BBM Protected יכולים להצטרף.</string>
     <string name="invitation_rejected_invitee_not_protected_title">לא ניתן להזמין משתמש זה להצטרף</string>
     <string name="invitation_sent">ההזמנה נשלחה</string>
@@ -1192,10 +1305,8 @@
     <string name="invite_activity_category">קטגוריה</string>
     <string name="invite_activity_lookup">חפש...</string>
     <string name="invite_activity_mail">דואר אלקטרוני: %1$s</string>
-    <string name="invite_activity_mail_body">"ברצוני להזמין אותך לצ'אט באמצעות BBM.
-
-כדי להצטרף אליי ב-BBM, לחץ על 
-%1s
+    <string name="invite_activity_mail_body">"ברצוני להזמין אותך לצ'אט באמצעות BBM. כדי להצטרף אליי ב-BBM דרך המכשיר הנייד שלך, לחץ על:
+%1$s
 "</string>
     <string name="invite_activity_mail_subject">הזמנה ל-BBM מאת %1$s</string>
     <string name="invite_activity_phone">טלפון: %1$s</string>
@@ -1203,7 +1314,7 @@
     <string name="invite_activity_security_custom_question">הזן שאלה</string>
     <string name="invite_activity_security_custom_response">הזן תשובה</string>
     <string name="invite_activity_security_label">שאלת אבטחה</string>
-    <string name="invite_activity_sms_body">הוסף אותי ל-BBM! במכשיר BlackBerry, לחץ על קוד ה-PIN‏:%1$s ובחר \"הזמן ל-BBM\". ב-Android או iPhone, לחץ על www.pin.bbm.com/%1$s כדי להוסיף אותי או כדי להוריד את BBM.</string>
+    <string name="invite_activity_sms_body">הוסף אותי ל-BBM! לחץ על www.pin.bbm.com/‎%1$s</string>
     <string name="invite_activity_to">אל:</string>
     <string name="invite_bbm_contact">הוסף איש קשר של BBM</string>
     <string name="invite_bbm_invites">הזמנות BBM</string>
@@ -1272,6 +1383,8 @@
     <string name="key_exchange_hint_waiting_to_enter_passphrase">הזן את משפט הסיסמה כדי להצטרף</string>
     <string name="key_exchange_hint_waiting_to_join">בהמתנה להצטרפות של %1$s</string>
     <string name="key_exchange_status_accepted">משפט הסיסמה התקבל</string>
+    <string name="last_name">שם משפחה</string>
+    <string name="last_name_hint">הזן שם משפחה</string>
     <string name="learn_more_about_bbm_pins">קבל מידע נוסף בנושא מספרי PIN של BBM</string>
     <string name="learn_more_about_restoring_bbm_data">למידע נוסף על אודות שחזור נתוני BBM.</string>
     <string name="leave_channel">עזוב את הערוץ</string>
@@ -1293,6 +1406,8 @@
     <string name="location_service_failed">השגת המיקום נכשלה</string>
     <string name="low_battey_warning">מושהה בשל סוללה חלשה, לחץ כדי לחדש.</string>
     <string name="low_priority">עדיפות נמוכה</string>
+    <string name="main_drawer_close">סגור את Drawer</string>
+    <string name="main_drawer_open">פתח את Drawer</string>
     <string name="main_mood_status_format">%1$s ‏- ‏%2$s</string>
     <string name="main_status_available">זמין</string>
     <string name="main_status_busy">עסוק</string>
@@ -1304,8 +1419,10 @@
     <string name="menu_end_chat">"סיים צ'אט"</string>
     <string name="menu_help">עזרה</string>
     <string name="menu_history">היסטוריה</string>
+    <string name="menu_leave_chat">"עזוב את הצ'אט"</string>
     <string name="menu_settings">הגדרות</string>
     <string name="menu_share">שתף</string>
+    <string name="message">הודעה</string>
     <string name="message_button_accept">קבל</string>
     <string name="message_button_allow">אפשר</string>
     <string name="message_button_cancel">ביטול</string>
@@ -1323,6 +1440,7 @@
     <string name="message_with_context_new_contact">על איש הקשר החדש שלך:</string>
     <string name="message_with_context_now_playing">על הפועל כעת:</string>
     <string name="message_with_context_personal_message">על ההודעה האישית שלך:</string>
+    <string name="message_with_context_quote">%1$s כתב/ה: \"%2$s\"</string>
     <string name="message_with_context_real_time_location">על המיקום שלך:</string>
     <string name="more">עוד</string>
     <string name="msg_bulk_mode_scanned">מצב קבוצה: ברקוד נסרק ונשמר</string>
@@ -1360,6 +1478,11 @@
     <string name="my_channels_fragment_mark_favorite">סמן כמועדף</string>
     <string name="my_channels_fragment_remove_favorite">הסר מהמועדפים</string>
     <string name="mybbmbarcode">ברקוד BBM שלי</string>
+    <string name="nav_chats">"צ'אטים של BBM"</string>
+    <string name="nav_contacts">אנשי קשר של BBM</string>
+    <string name="nav_feeds">הזנות של BBM</string>
+    <string name="nav_feeds_all">כל ההזנות של BBM</string>
+    <string name="nav_groups">BBM Groups</string>
     <string name="network_settings_dialog_text">כדי להמשיך, התחבר לרשת Wi-Fi או לרשת ניידת.</string>
     <string name="network_settings_dialog_title">אין חיבור לרשת</string>
     <string name="new_channel_email_addresss">כתובת דואר אלקטרוני</string>
@@ -1368,6 +1491,7 @@
     <string name="new_chat_topic">"נושא הצ'אט החדש"</string>
     <string name="new_string">חדש</string>
     <string name="next">הבא</string>
+    <string name="no">לא</string>
     <string name="no_active_glympses">אין Glympse פעילים</string>
     <string name="no_blackberry_data">אין נתוני BlackBerry</string>
     <string name="no_blocked_invites">ניתן להוסיף אנשי קשר לרשימה זו בעת התעלמות מהזמנה או מחיקת איש קשר.</string>
@@ -1378,6 +1502,7 @@
     <string name="no_connection_found">לא נמצא חיבור</string>
     <string name="no_current_chat">"אין צ'אטים"</string>
     <string name="no_network_connection">אין חיבור לרשת.</string>
+    <string name="no_picture">אין תמונה זמינה</string>
     <string name="no_pictures">אין תמונות</string>
     <string name="no_posts">לא ניתן להציג את כל הפרסומים.</string>
     <string name="no_updates">אין פריטים חדשים.</string>
@@ -1428,6 +1553,19 @@
 במכשירי BlackBerry, הקש את קוד ה-PIN:%2$s והזן את משפט הסיסמה."</string>
     <string name="out_of_band_passphrase_message_sms">"ברצוני לשוחח אתך בצ'אט של BBM Protected. ‏במכשיר BlackBerry, הקש %1$s. הזן את משפט הסיסמה %2$s."</string>
     <string name="out_of_band_passphrase_subject">"צ'אט של BBM Protected"</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_dialog_body">תכונה זו זמינה לשימוש רק עם אנשי קשר של BBM. האם ברצונך להוסיף את %1$s לאנשי הקשר של BBM כעת?</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_dialog_title">הוסף לאנשי הקשר של BBM</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_toast">עליך להוסיף אדם זה לרשימת אנשי הקשר של BBM כדי להשתמש באפשרות זו.</string>
+    <string name="outer_circle_category_bbm_contacts">אנשי קשר של BBM</string>
+    <string name="outer_circle_category_phone_contacts">@string/outer_circle_category_phone_contacts_v1</string>
+    <string name="outer_circle_category_phone_contacts_v1">אנשי קשר</string>
+    <string name="outer_circle_category_phone_contacts_v2">אנשי קשר מהטלפון</string>
+    <string name="outer_circle_category_phone_contacts_v3">אנשי קשר מהמכשיר</string>
+    <string name="outer_circle_contact_add_more_friends">הוסף עוד חברים</string>
+    <string name="outer_circle_contact_menu_add_as_contact">הוסף לאנשי הקשר של BBM</string>
+    <string name="outer_circle_contact_menu_delete_and_block">מחק וחסום</string>
+    <string name="outer_circle_find_other_bbm_user_body">"באפשרותך להגדיר חיפוש אוטומטי של משתמשי BBM שאתה עשוי להכיר ברשימת אנשי הקשר במכשיר שלך. האם ברצונך לאשר ל-BBM לקבל גישה ליישום 'אנשי קשר'?"</string>
+    <string name="outer_circle_find_other_bbm_user_title">מצא משתמשי BBM נוספים</string>
     <string name="overlay_bbm_ongoing_notification_reason">"מדוע אני רואה סמל של BBM בראש המסך?
 
 הסמל של BBM מופיע בסרגל המצב מכיוון ש-BBM תמיד פועל כדי שתמיד תהיה מחובר."</string>
@@ -1461,13 +1599,13 @@
     <string name="partner_app_register_failed_dialog_outage_message">לא זוהה חיבור לרשת</string>
     <string name="partner_app_register_failed_dialog_title">הירשם ב-BBM</string>
     <string name="passphrase">משפט סיסמה</string>
-    <string name="passphrase_creation_details">"עליך לשתף משפט סיסמה עם איש הקשר שלך ב-BBM, כדי שיוכל להצטרף לצ'אט. יש צורך בארבע אותיות לפחות."</string>
+    <string name="passphrase_creation_details">"עליך לשתף משפט סיסמה עם איש הקשר שלך ב-BBM, כדי שיוכל להצטרף לצ'אט. יש להזין ארבעה תווים לפחות. השתמש באותיות, במספרים או גם באותיות וגם במספרים. דוגמאות: TGRS‏, 2905, TIG8."</string>
     <string name="passphrase_incorrect">&lt;b>%1$s&lt;/b> לא הזין את משפט הסיסמה הנכון.</string>
     <string name="passphrase_initiated">שיתפת את משפט הסיסמה &lt;b>%1$s&lt;/b> עם &lt;b>%2$s&lt;/b>.</string>
-    <string name="passphrase_message_email">"ברצוני לשוחח אתך בצ'אט של BBM Protected.
+    <string name="passphrase_message_email">"ברצוני לשוחח אתך בצ'אט של BBM Protected‏.
 ---o---
-הזן את שפט הסיסמה \"%1$s\" לאחר לחיצה על ה-PIN:%2$s או %3$s"</string>
-    <string name="passphrase_message_sms">"הצטרף לצ'אט BBM Protected שלי! הזן את משפט הסיסמה \"%1$s\" לאחר לחיצה על ה-PIN: %2$s או %3$s"</string>
+כדי להצטרף לצ'אט זה, הקלד את קוד ה-PIN: %1$s או %2$s. אם תתבקש להזין משפט סיסמה, הזן את המשפט \"%3$s\"."</string>
+    <string name="passphrase_message_sms">"הצטרף לצ'אט BBM Protected שלי! פשוט הקש את קוד ה-PIN: %1$s או %2$s. אם תתבקש להזין משפט סיסמה, הזן את המשפט \"%3$s\"."</string>
     <string name="passphrase_rules_details">נדרשות שלוש סדרות של אותיות שכל אחת מהן כוללת ארבע עד שבע אותיות ויש רווח ביניהן. לדוגמה: טיגריסים חומים כהים</string>
     <string name="passphrase_share_details">כיצד ברצונך לשתף את %1$s במשפט הסיסמה?</string>
     <string name="passphrase_wait_to_join">בהמתנה להצטרפות של &lt;b>%1$s&lt;/b></string>
@@ -1491,12 +1629,38 @@
     <string name="pending_invite_group_too_many_members">נדחה: קבוצה זו כבר מלאה.</string>
     <string name="pending_invite_pending">ממתינה</string>
     <string name="pending_invite_protected_group_invites_you_to">%1$s רוצה להזמין אותך אל הקבוצה הנקראת \"%2$s\". כדי להצטרף לקבוצת BBM Protected זו, עליך להזין את משפט הסיסמה שסופק על-ידי חבר בקבוצה.</string>
+    <string name="people">אנשים</string>
     <string name="personalize_profile_dialog_message">באפשרותך להקיש על הכרזה כדי לפתוח את הפרופיל שלך ב-BBM.</string>
     <string name="personalize_profile_dialog_title">בצע התאמה אישית של הפרופיל שלך</string>
+    <string name="phone_contact_add">@string/phone_contact_add_v1</string>
+    <string name="phone_contact_add_v1">הוסף איש קשר של BBM</string>
+    <string name="phone_contact_add_v2">הוסף ל-BBM</string>
+    <string name="phone_contact_add_v3">הוסף לאנשי הקשר של BBM</string>
+    <string name="phone_contact_block">חסום</string>
+    <string name="phone_contact_block_from_conversation_description">"כל הזמנה וניסיון צ'אט עתידיים של %1$s ייחסמו. האם ברצונך לחסום את %1$s?"</string>
+    <string name="phone_contact_block_from_conversation_title">חסום את %1$s</string>
+    <string name="phone_contact_invitationsent">ההזמנה נשלחה</string>
+    <string name="phone_contact_not_a_contact">כדי ליהנות מכל התכונות של BBM, הוסף אדם זה לרשימת אנשי הקשר של BBM.</string>
+    <string name="phone_contact_reinvite_message">@string/phone_contact_reinvite_message_v1</string>
+    <string name="phone_contact_reinvite_message_v1">"כדי להוסיף את %1$s לאנשי הקשר של BBM, הקש על '%2$s'."</string>
+    <string name="phone_contact_reinvite_message_v2">"עליך להוסיף את %1$s לאנשי הקשר של BBMכדי להתחיל צ'אט. כדי להוסיף את %1$s לאנשי הקשר של BBM, הקש על %2$s בראש חלון הצ'אט."</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_1">יש &lt;b>&lt;i>אנשי קשר רגילים&lt;/i>&lt;/b> ויש &lt;b>&lt;i>אנשי קשר של BBM&lt;/i>&lt;/b>.</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_2">"&lt;b>&lt;i>אנשי קשר&lt;/i>&lt;/b> הם אנשים הקיימים ברשימת אנשי הקשר במכשיר שלך ומשתמשים ב-BBM.&lt;br/>&lt;br/> *תוכל לשוחח עם אנשי הקשר שלך בצ'אט באופן מיידי&lt;br/> *אין צורך לשלוח להם הזמנה"</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_3">כדי לצרף אנשים כ&lt;b>&lt;i>אנשי קשר של BBM&lt;/i>&lt;/b> יש לשלוח להם הזמנה. רק אנשי קשר של BBM יכולים לבצע את הפעולות הבאות: &lt;br/>&lt;br/> * לראות את תמונת התצוגה שלך ב-BBM&lt;br/> * לראות את עדכוני המצב שלך ב-BBM&lt;br/> * להתקשר ולקבל שיחות באמצעות BBM Voice.</string>
+    <string name="phone_contact_tutorial_conversation_section_1">יש &lt;b>&lt;i>אנשי קשר רגילים&lt;/i>&lt;/b> ויש &lt;b>&lt;i>אנשי קשר של BBM&lt;/i>&lt;/b>.</string>
+    <string name="phone_contact_tutorial_conversation_section_2">"זהו צ'אט עם &lt;b>&lt;i>איש קשר רגיל&lt;/i>&lt;/b>. אדם זה אינו יכול לראות את המאפיינים הבאים: &lt;br/>&lt;br/> *תמונת התצוגה שלך ב-‎&lt;br/>BBM *עדכוני המצב שלך ב-BBM"</string>
+    <string name="phone_contact_tutorial_conversation_section_3">"אדם זה חייב להשתמש בגרסה העדכנית ביותר של BBM כדי שניתן יהיה לשוחח איתו בצ'אט. באפשרותך להוסיף אדם זה ל&lt;b>&lt;i>רשימת אנשי הקשר של BBM&lt;/i>&lt;/b> או לחסום אותו בכל עת."</string>
+    <string name="phone_contact_tutorial_profile_click_section_1">יש &lt;b>&lt;i>אנשי קשר רגילים&lt;/i>&lt;/b> ויש &lt;b>&lt;i>אנשי קשר של BBM&lt;/i>&lt;/b>.</string>
+    <string name="phone_contact_tutorial_profile_click_section_2">כדי לצרף אנשים כ&lt;b>&lt;i>אנשי קשר של BBM&lt;/i>&lt;/b>,יש לשלוח להם הזמנה, והם יוכלו לבצע את הפעולות הבאות: &lt;br/>&lt;br/> * לראות את תמונת התצוגה, עדכוני המצב והפרופיל שלך ב-BBM&lt;br/> * להתקשר אליך באמצעות BBM Voice&lt;br/> * לשלוח לך הודעות משודרות</string>
+    <string name="phone_contact_tutorial_profile_click_section_3">"&lt;b>&lt;i>אנשי קשר&lt;/i>&lt;/b> הם אנשים הקיימים ברשימת אנשי הקשר במכשיר שלך ומשתמשים ב-BBM. אין צורך לשלוח הזמנה לאנשי קשר רגילים אם הם משתמשים בגרסה העדכנית ביותר של BBM, ועדיין ניתן ליהנות מתכונות הצ'אט של BBM, כגון: &lt;br/>&lt;br/> &amp;#8226; קבלת עדכונים על קבלה וקריאה של הודעות&lt;br/> &amp;#8226; שליחת תמונות וקבצים&lt;br/> &amp;#8226; שיתוף המיקום שלך באמצעות Glympse"</string>
     <string name="pic_caption_hint"><i>הזן כיתוב</i></string>
+    <string name="picture">תמונה</string>
     <string name="picture_deleted">התמונה נמחקה</string>
+    <string name="picture_selection_limit_toast">יותר מדי קבצים (המספר המרבי הוא 10).</string>
+    <string name="picture_selection_type_toast">רק סוג תמונה הנתמך בשיתוף מרובה משתתפים.</string>
     <string name="pin_copied">ה-PIN הועתק</string>
     <string name="please_ensure_the_device_time_is_correctly_set">ודא שהשעה נקבעה נכון במכשיר ונסה שוב.</string>
+    <string name="policy_change_title">שינוי במדיניות</string>
     <string name="post_removed">פרסום זה נמחק.</string>
     <string name="posts_caption">פרסומים</string>
     <string name="pref_add_contact_on_tap">הוסף אנשי קשר באמצעות הקשה</string>
@@ -1557,21 +1721,49 @@
     <string name="preferences_vibrate_title">רטט</string>
     <string name="private_channel">ערוץ פרטי</string>
     <string name="private_channel_description">הסתר את הערוץ שלך מפני חיפוש והפוך אותו לבלעדי למוזמנים.</string>
+    <string name="private_chat">"צ'אט פרטי"</string>
+    <string name="private_chat_back_out_dialog_dont_ask_me_again">אל תשאל אותי שוב.</string>
+    <string name="private_chat_back_out_dialog_text">"הצ'אט הפרטי שלך יסתיים אם לא תחזור לצ'אט בעוד %1$d דקה."</string>
+    <string name="private_chat_conversation_notification_title">"%1$s רוצה לשוחח איתך בצ'אט."</string>
+    <string name="private_chat_end_menu">"סיים את הצ'אט הפרטי"</string>
+    <string name="private_chat_entry_subtitle">הקש כדי לחזור</string>
+    <string name="private_chat_menu">"התחל צ'אט פרטי"</string>
+    <string name="private_chat_message_notification_title">"הודעת צ'אט פרטי חדשה."</string>
+    <string name="private_chat_other_party_not_support">"לאיש קשר זה יש גרסה ישנה יותר של BBM שאינה תומכת בצ'אטים פרטיים."</string>
+    <string name="private_chat_request_incoming_subtitle">"בקשה לצ'אט פרטי"</string>
+    <string name="private_chat_request_invite_bubble_message">"אני רוצה לשוחח איתך בצ'אט פרטי. כדי להצטרף לצ'אט הפרטי, עליך להוריד את הגרסה האחרונה של BBM.
+
+בקר בכתובת http://bbm.com/upgrade כדי להשיג את הגרסה האחרונה של BBM."</string>
+    <string name="private_chat_request_outgoing_subtitle">"בקשה לצ'אט פרטי"</string>
+    <string name="private_chat_stop_reason_busy">"%1$s אינו/ה זמין/ה לצ'אט פרטי כעת."</string>
+    <string name="private_chat_stop_reason_cancelled">"%1$s ביטל/ה את הצ'אט הפרטי."</string>
+    <string name="private_chat_stop_reason_declined">"%1$s דחה/תה את הצ'אט הפרטי."</string>
+    <string name="private_chat_stop_reason_inactivity">"הצ'אט הפרטי שלך הסתיים באופן אוטומטי מכיוון שלא היה פעיל."</string>
+    <string name="private_chat_stop_reason_localended">"סיימת את הצ'אט הפרטי."</string>
+    <string name="private_chat_stop_reason_noresponse">"%1$s לא הגיב/ה לבקשה שלך לצ'אט פרטי."</string>
+    <string name="private_chat_stop_reason_remoteended">"%1$s סיים/ה את הצ'אט הפרטי."</string>
+    <string name="private_chat_stop_reason_unknown">"הצ'אט הפרטי שלך נותק. התחל שוב את הצ'אט הפרטי שלך."</string>
+    <string name="private_chat_tutorial_description">"שמות ותמונות פרופיל מוסתרים.
+
+הצ'אט נמחק באופן אוטומטי בשני המכשירים כאשר הצ'אט מסתיים או אינו פעיל יותר.
+
+התראות על הודעות פרטיות חדשות הן סודיות."</string>
     <string name="profile_barcode">ברקוד</string>
+    <string name="profile_bbm_pin_label">קוד PIN של BBM</string>
     <string name="profile_copy_pin">העתק PIN</string>
     <string name="profile_copypin">העתק PIN</string>
     <string name="profile_default_pin">PIN: 00000000</string>
     <string name="profile_display_name_invalid">אין להזין נקודתיים או פסיק בשם תצוגה</string>
+    <string name="profile_display_name_invalid_empty">שם התצוגה אינו יכול להיות ריק</string>
     <string name="profile_icon_source_camera">מצלמה</string>
     <string name="profile_icon_source_picture">תמונה</string>
     <string name="profile_icon_source_sample_picture">תמונה לדוגמה</string>
-    <string name="profile_location_label">מיקום/אזור זמן:</string>
+    <string name="profile_location_label">מיקום/אזור זמן</string>
     <string name="profile_mood_hint"><i>על מה את/ה חושב/ת?</i></string>
+    <string name="profile_name">שם הפרופיל</string>
     <string name="profile_no_status_message">אין הודעת סטטוס</string>
     <string name="profile_own_status_label">סטטוס</string>
-    <string name="profile_pin">%1$s</string>
     <string name="profile_pin_copied">ה-PIN הועתק</string>
-    <string name="profile_pin_label">PIN:</string>
     <string name="profile_pinlabel">PIN:</string>
     <string name="profile_revert_display_name">החזר שם תצוגה קודם</string>
     <string name="profile_selector_apps">יישומים</string>
@@ -1579,27 +1771,40 @@
     <string name="profile_selector_members">חברים</string>
     <string name="profile_selector_updates">עדכונים</string>
     <string name="profile_share_pin">שתף את קוד ה-PIN שלי</string>
+    <string name="profile_status_delete">מחק סטטוס</string>
+    <string name="profile_status_delete_info">האם אתה בטוח שברצונך למחוק סטטוס זה?</string>
     <string name="profile_status_edit">ערוך סטטוס הודעות</string>
-    <string name="profile_status_label">סטטוס:</string>
+    <string name="profile_user_has_subscription">אדם זה כבר מנוי.</string>
+    <string name="profile_user_view_all_sub">הצג את כל המנויים ל-BBM</string>
     <string name="prompt_change_bbm_picture">לשנות את תמונת BBM שלך?</string>
     <string name="prompted_after_rate_call">תודה!</string>
     <string name="prompted_before_rate_call">דרג את איכות השיחה</string>
     <string name="protected_group_invite_message_default">ברצוני להזמין אותך להצטרף לקבוצה שלי הנקראת: \"%1$s\". כדי להצטרף לקבוצת BBM Protected זו, עליך להזין את משפט הסיסמה שסופק על-ידי חבר בקבוצה.</string>
     <string name="protected_group_requires_join">מחכה לאישור משפט סיסמה כדי לשחזר את הקבוצה המוגנת</string>
     <string name="protected_mode_disabled_header">‏BBM Protected כבוי</string>
-    <string name="protected_mode_disabled_message">"אנשי הקשר ושיחות הצ'אט שלך נשמרו אך הוסרת מצ'אט רב משתתפים ומצ'אטים קבוצתיים שמשתמשים ב-BBM Protected."</string>
+    <string name="protected_mode_disabled_message">"אנשי הקשר ושיחות הצ'אט שלך נשמרו אך הוסרת מקבוצות המשתמשות ב-BBM Protected."</string>
     <string name="protected_mode_disabled_title">‏מנהל המערכת שלך כיבה את BBM Protected במכשיר שלך.</string>
     <string name="protected_mode_enabled_header">BBM Protected</string>
     <string name="protected_mode_enabled_message">"BBM Protected מוסיף עוד שכבה של הצפנה לצ'אטים, להעברות קבצים ולקבוצות ב-BBM. בפעם הבאה שתתחיל שיחת צ'אט עם איש קשר ב-BBM Protected, יהיה עליך לציין משפט סיסמה שאותו אדם יצטרך להזין כדי להצטרף לצ'אט. עליך לציין משפט סיסמה פעם אחת בלבד עבור כל איש קשר ב-BBM Protected. 
  
  ב-BBM Groups, ניתן לבחור אם להגביל את החברות בקבוצה לאנשי קשר מתוך BBM Protected או לא. כשאתה יוצר BBM Protected Group, באפשרותך לשתף את משפט הסיסמה שיש להזין כדי להצטרף לקבוצה."</string>
     <string name="protected_mode_enabled_title">מנהל המערכת שלך הפעיל את BBM Protected במכשיר שלך.</string>
+    <string name="protected_preferred_details">"איש/אשת הקשר שלך דורש צ'אט של BBM Protected."</string>
+    <string name="protected_preferred_dialog">"איש קשר זה משתמש ב-Protected Plus. צ'אטים שיתנהלו בינך לבין איש קשר זה יהיו צ'אטים של BBM Protected. "<a href="http://blackberry.com/bbmprotected">מידע נוסף</a></string>
+    <string name="protected_preferred_dialog_dismiss">אל תציג שוב</string>
+    <string name="protected_preferred_mode_disabled_message">‏מנהל המערכת שלך כיבה את Protected Plus.</string>
+    <string name="protected_preferred_mode_disabled_title">Protected Plus מושבת</string>
+    <string name="protected_preferred_mode_enabled_message">"‏מנהל המערכת שלך הפעיל את Protected Plus, שהוא תכונה של BBM Protected. צ'אטים שיתנהלו בינך לבין אנשי הקשר שלך יהיו צ'אטים של BBM Protected."</string>
+    <string name="protected_preferred_mode_enabled_title">Protected Plus מופעל</string>
+    <string name="protected_rejected_message_body">"ייתכן שיהיה עליך לשתף את משפט הסיסמה שוב כדי לאפס צ'אט זה של BBM Protected. כדי לשתף משפט סיסמה, הקש על סמל התפריט בפינה העליונה הימנית של המסך. הקש על &lt;b>%1$s&lt;/b>."</string>
+    <string name="protected_rejected_message_status">שתף שוב משפט סיסמה</string>
     <string name="purchase_failed_message">לא ניתן לעבד את התשלום. האם ברצונך לבחור שיטת תשלום אחרת?</string>
     <string name="purchase_options">אפשרויות תשלום</string>
     <string name="purchase_success_message">פריט זה נרכש בהצלחה</string>
     <string name="purchase_unexpected_error_message">הרכישה הופסקה. נסה שוב.</string>
     <string name="pyk_empty_invites_allow_upload_hint">חפש חברים שכבר משתמשים ב-BBM</string>
     <string name="qr_description">UsersQR</string>
+    <string name="quick_reply">השב וסיים</string>
     <string name="quick_share_glympse_first_experience_overlay_infos">שלח Glympse כדי לאפשר לאיש קשר של BBM לעקוב אחר המיקום שלך במפה במשך זמן הנתון לבחירתך. מושלם לארגון פגישה או כאשר אתה מאחר.</string>
     <string name="quick_share_glympse_first_experience_overlay_note"><i>הערה: בעת השימוש בתכונה זו, המערכת משתפת את קואורדינטות ה-GPS שלך עם Glympse Inc.‎ והן עומדות בפני <a href="http://glympse.com/privacy">מדיניות פרטיות</a></i></string>
     <string name="quick_share_glympse_first_experience_overlay_title">שתף את המיקום שלך.</string>
@@ -1609,8 +1814,11 @@
     <string name="quick_share_voice_note_label_busy">לא ניתן להקליט. נגן המדיה או שירות המדיה כבר בשימוש.</string>
     <string name="quick_share_voice_note_label_default">גע נגיעה ארוכה כדי להקליט</string>
     <string name="quick_share_voice_note_label_delete">שחרר כדי למחוק</string>
+    <string name="quick_share_voice_note_label_rec">הקלט</string>
     <string name="quick_share_voice_note_label_send">שחרר כדי לשלוח או החלק את האצבע כדי לבטל</string>
     <string name="quick_share_voice_note_tost_message">כדי לשלוח הערה קולית מיידית, לחץ לחיצה ארוכה על לחצן ההקלטה</string>
+    <string name="quote_at_user_name">\@%1$s</string>
+    <string name="quote_message_label">\"%1$s\"</string>
     <string name="rate_limited">הגעת למגבלת הדירוג של Glympse.</string>
     <string name="rate_my_app_ignore">לא תודה</string>
     <string name="rate_my_app_message">אם אתה נהנה להשתמש ב-BBM, הקדש רגע לדרג יישום זה. תודה!</string>
@@ -1629,6 +1837,8 @@
     <string name="remaining_title_glympse">Glympse</string>
     <string name="remove">הסר</string>
     <string name="replace_picture">החלף תמונה</string>
+    <string name="reply">השב</string>
+    <string name="reply_with_voice">השב תשובה קולית</string>
     <string name="report_channel">דווח על ערוץ</string>
     <string name="report_problem_activity_choose_email_client">בחירת דואר אלקטרוני</string>
     <string name="report_problem_activity_email_button">שלח דוח בדואר אלקטרוני</string>
@@ -1659,6 +1869,8 @@ http://blackberry.com/support/bbm"</string>
     <string name="request_was_received">קיבלת בקשה ל-Glympse</string>
     <string name="required_fields">שדות חובה*</string>
     <string name="resend_passphrase">שלח משפט סיסמה מחדש</string>
+    <string name="reset_protected_chat">"אפס צ'אט זה"</string>
+    <string name="resolve_vanitypin_not_found">‏PIN זה אינו זמין.</string>
     <string name="restore_sticker_purchases">שחזר</string>
     <string name="restore_using_device_switch">"שחזר באמצעות 'החלפת מכשיר'"</string>
     <string name="restore_using_email">שחזר באמצעות דואר אלקטרוני</string>
@@ -1711,6 +1923,8 @@ http://blackberry.com/support/bbm"</string>
     <string name="select_contacts_to_move">בחר אנשי קשר להעביר אל \"%1$s\":</string>
     <string name="select_group">בחר קבוצה</string>
     <string name="select_group_activity_title">{0,choice,0#בחר קבוצה|1#+1 קבוצה|1&lt;+{0} קבוצות}</string>
+    <string name="select_group_discussion">בחר דיון</string>
+    <string name="select_pictures">{0,choice,0# בחר תמונות|1#+1 תמונה|1&lt;+{0} תמונות}</string>
     <string name="send">שלח</string>
     <string name="send_comment">שלח תגובה</string>
     <string name="send_decline_response">שלח תגובת דחייה</string>
@@ -1719,6 +1933,11 @@ http://blackberry.com/support/bbm"</string>
     <string name="sent_pending_invite_message_label">הודעה:</string>
     <string name="sent_pending_invite_sent_label">נשלח:</string>
     <string name="set_as">הגדר בשם</string>
+    <string name="set_vanitypin_result_invalid">‏PIN זה אינו זמין.</string>
+    <string name="set_vanitypin_result_refused">‏PIN זה אינו זמין.</string>
+    <string name="set_vanitypin_result_reserved">‏PIN זה אינו זמין.</string>
+    <string name="set_vanitypin_result_success">נוצר עבורך PIN.</string>
+    <string name="set_vanitypin_result_used">‏PIN זה אינו זמין.</string>
     <string name="setas_activity_bbm_picture_updated">תמונת BBM עודכנה</string>
     <string name="setas_activity_item_bbm_picture">תמונת BBM</string>
     <string name="setas_activity_item_contact_picture">תמונת איש קשר</string>
@@ -1728,6 +1947,7 @@ http://blackberry.com/support/bbm"</string>
     <string name="setas_activity_title">הגדר בשם</string>
     <string name="settings">הגדרות</string>
     <string name="settings_activity_allow_hq_pictures">אשר תמיד בקשות לתמונות באיכות HD</string>
+    <string name="settings_activity_backup_chat_history_now">גבה כעת</string>
     <string name="settings_activity_blackberry_id_edit">ערוך</string>
     <string name="settings_activity_blackberry_id_generic_error">לא ניתן לערוך את BlackBerry ID כעת, נסה שוב מאוחר יותר</string>
     <string name="settings_activity_blocked_contacts">אנשי קשר ועדכונים חסומים</string>
@@ -1741,6 +1961,7 @@ http://blackberry.com/support/bbm"</string>
     <string name="settings_activity_deleting_chat_history_info">"היסטוריית הצ'אט עם כל אנשי הקשר תימחק. אין אפשרות לבטל פעולה זו."</string>
     <string name="settings_activity_deleting_chat_history_title">"מחק היסטוריית צ'אט"</string>
     <string name="settings_activity_hide_keyboard_on_enter_conversation">תמיד הצג מקלדת</string>
+    <string name="settings_activity_keyboard_enter_as_new_line">המקש Enter במקלדת מוסיף שורה חדשה</string>
     <string name="settings_activity_legal">משפטי</string>
     <string name="settings_activity_report_a_problem">דווח על בעיה</string>
     <string name="settings_activity_save_chat_history">"שמור היסטוריית צ'אט"</string>
@@ -1779,6 +2000,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="share_passphrase_other">אני אומר להם באופן אישי</string>
     <string name="share_passphrase_sms">הודעת טקסט</string>
     <string name="share_passphrase_title">שיתוף משפט סיסמה</string>
+    <string name="share_to_feed_title">לעדכן את העדכון שלך?</string>
     <string name="sharead_sponsored_invite">הזמנה ממומנת משותפת</string>
     <string name="sharead_sponsored_post">פרסום ממומן משותף</string>
     <string name="shared_channel_post_default_text">שתף פרסום</string>
@@ -1786,6 +2008,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="shared_channel_post_sent">נשלח פרסום לערוץ</string>
     <string name="shared_sponsored_content">תוכן ממומן משותף</string>
     <string name="shop">קנה</string>
+    <string name="shop_subscriptions">מנויים</string>
     <string name="show">הצג</string>
     <string name="show_channel_preview">תצוגה מקדימה</string>
     <string name="show_map">הצג מפה</string>
@@ -1794,6 +2017,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="sign_in_to_bbm">היכנס ל-BBM</string>
     <string name="slide_menu_add_event">הוסף אירוע</string>
     <string name="slide_menu_add_list">הוסף רשימה</string>
+    <string name="slide_menu_block_chat">"חסום את הצ'אט"</string>
     <string name="slide_menu_copy_chat">"העתק צ'אט"</string>
     <string name="slide_menu_delete_item">מחק את הפריט</string>
     <string name="slide_menu_edit">ערוך</string>
@@ -1809,6 +2033,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="slide_menu_new_chat">"התחל צ'אט חדש"</string>
     <string name="slide_menu_open_bbm_chat">"פתח צ'אט BBM"</string>
     <string name="slide_menu_ping">איתות-Ping</string>
+    <string name="slide_menu_play_in_media_player">הפעל ב-Media Player</string>
     <string name="slide_menu_remove_deleted_item">הסר את הפריט שנמחק</string>
     <string name="slide_menu_remove_from_group">הסר מקבוצה</string>
     <string name="slide_menu_reply_by_voice_note">השב באמצעות הערה קולית</string>
@@ -1827,19 +2052,23 @@ www.pin.bbm.com/%1$s"</string>
     <string name="sms_activity_title">חבר</string>
     <string name="sort_by">סדר על פי</string>
     <string name="stacked_notification_format"><Data>&lt;b>%1$s&lt;/b>: %2$s</Data></string>
+    <string name="stale_user_reinvite_message">%1$s לא היה/היתה במצב מקוון מאז %2$s</string>
+    <string name="stale_user_reinvite_title">הזמן שוב</string>
     <string name="start_chat">"התחל צ'אט"</string>
     <string name="start_chat_failed">"לא ניתן ליצור צ'אט"</string>
     <string name="start_meeting">התחל פגישות BBM</string>
-    <string name="start_meeting_confirmation_dialog">לסיים את השיחה ולהתחיל פגישה חדשה?</string>
-    <string name="start_meeting_confirmation_title">להתחיל פגישת BBM?</string>
+    <string name="start_meeting_confirmation_dialog">אתה נמצא כעת בשיחת BBM. האם ברצונך לסיים את השיחה ולהתחיל פגישת BBM?</string>
+    <string name="start_meeting_confirmation_title">התחל פגישות BBM</string>
     <string name="start_multiperson_chat">"התחל צ'אט מרובה משתתפים"</string>
+    <string name="start_pin_chat">"הקלד PIN כדי להתחיל צ'אט"</string>
     <string name="starts">הפעל</string>
     <string name="stats_caption">סטטיסטיקה</string>
     <string name="stay_in_touch_like_never_before_with_blackberry_messenger">שמור על קשר בצורה טובה מאי פעם באמצעות BlackBerry Messenger.</string>
     <string name="sticker_picker_no_stickers_purchased">לא נרכשו מדבקות.</string>
     <string name="sticker_picker_preview_hint">כדי להציג בתצוגה מקדימה, גע נגיעה ממושכת במדבקה.</string>
-    <string name="sticker_store_collection_heading">אוספים מדבקה</string>
-    <string name="sticker_store_details_artist_channel">ערוץ</string>
+    <string name="sticker_settings">הגדרות של מדבקות</string>
+    <string name="sticker_store_collection_heading">מדבקות</string>
+    <string name="sticker_store_details_artist_channel">BBM Channel</string>
     <string name="sticker_store_details_artist_website">אתר אינטרנט</string>
     <string name="sticker_store_details_promo_text">הצג כאן</string>
     <string name="sticker_store_details_screen_about">אודות</string>
@@ -1857,11 +2086,12 @@ www.pin.bbm.com/%1$s"</string>
 עצה: באפשרותך לעזוב מסך זה במהלך פעולתו."</string>
     <string name="sticker_store_server_unavailable_message">לא ניתן לפתוח את חנות BBM.</string>
     <string name="sticker_store_server_unavailable_retry_message">בדוק את חיבורי הרשת שלך ונסה שוב</string>
-    <string name="sticker_store_sticker_preview_artist">על-ידי %1$s</string>
+    <string name="sticker_store_sticker_preview_artist">מאת %1$s</string>
     <string name="sticker_store_sticker_purchase_notification_dialog_heading">להוסיף לעדכונים שלך?</string>
     <string name="sticker_store_sticker_purchase_notification_dialog_line">באפשרותך ליידע את אנשי הקשר שלך שקיבלת מדבקות חדשות.</string>
     <string name="sticker_store_sticker_purchase_notification_message">ראה את המדבקות החדשות שלי! http://shop.bbm.com/stickers/%1$s</string>
     <string name="sticker_store_store_loading">טוען...</string>
+    <string name="store_generic_billing_error">לא ניתן היה לרכוש פריט זה.</string>
     <string name="store_title">חנות BBM</string>
     <string name="submit_button">שלח</string>
     <string name="submit_passphrase">שלח</string>
@@ -1871,6 +2101,44 @@ www.pin.bbm.com/%1$s"</string>
     <string name="subscribed_channel_invite_default_message">אני רוצה להזמין אותך להצטרף לערוץ הנקרא \"%1$s\".</string>
     <string name="subscribed_channels">ערוצים רשומים</string>
     <string name="subscribers_caption">מנויים</string>
+    <string name="subscriptino_pin_promo">תוכל ליצור BBM PIN שאתה והחברים שלך תזכרו בקלות.</string>
+    <string name="subscription_already_exists_bb10">יש ברשותך מנוי שמתחדש באופן אוטומטי, שנרכש במכשיר אחר.</string>
+    <string name="subscription_app_type_no_ads">no_ads</string>
+    <string name="subscription_app_type_vanity_pin">custom_pin</string>
+    <string name="subscription_auto_renewing">‏יש ברשותך מנוי שמתחדש באופן אוטומטי.</string>
+    <string name="subscription_bbid_conflict">פריט זה נרכש עבור BlackBerry ID אחר באמצעות החשבון שלך בחנות. נסה להשתמש בחשבון חנות אחר.</string>
+    <string name="subscription_custom_pin_description">רוצה PIN מותאם אישית שאתה והחברים שלך תוכלו לזכור בקלות? צור BBM PIN שיהיה שלך בלבד. אל תפספס; ממש ראת זכותך ל-PIN מותאם אישית עוד היום.</string>
+    <string name="subscription_dialog_duration_monthly">חודשי: %1$s</string>
+    <string name="subscription_dialog_duration_title">בחר מנוי.</string>
+    <string name="subscription_dialog_duration_yearly">שנתי: %1$s</string>
+    <string name="subscription_edit_messages_description">אם טעית בהודעה, תוכל לבטל אותה, לתקן את השגיאות ולשלוח שוב את ההודעה.</string>
+    <string name="subscription_exclusive_badge">תג ייחודי</string>
+    <string name="subscription_exclusive_descritpion_pin">השווץ בסטטוס המיוחד שלך ב-BBM בעזרת תג. תג זה מוצג גם בתמונות תצוגה של בעלי מנוי פעיל.</string>
+    <string name="subscription_expired">פג תוקפו של המנוי שלך. להירשם שוב כמנוי?</string>
+    <string name="subscription_exsits_ios_72hours">תוקפו של המנוי שלך עומד לפוג. כדי להמשיך להשתמש בתכונה זו, הירשם כמנוי כאן לפני %1$s.</string>
+    <string name="subscription_exsits_on_ios">פריט זה נרכש דרך מכשיר אחר. כדי להמשיך להשתמש בתכונה זו, הירשם כמנוי כאן לפני %1$s.</string>
+    <string name="subscription_generic_guidelines">הנחיות ליצירת PIN מותאם אישית ב-BBM</string>
+    <string name="subscription_generic_learn_more">מידע נוסף</string>
+    <string name="subscription_learn_more">כדי לקבל מידע נוסף בנושא מנויים, בקר בכתובת <a href="http://bbm.com/FAQ">bbm.com/FAQ</a>.</string>
+    <string name="subscription_no_adds_share">באפשרותך ליידע את אנשי הקשר שלך שהשבתת את המודעות ב-BBM.</string>
+    <string name="subscription_no_adds_status_message">כרגע השבתתי את המודעות המוצגות ב-BBM. כדי להסתיר הודעות במכשיר שלך, לחץ על http://shop.bbm.com/item/no_ads</string>
+    <string name="subscription_no_ads">ללא מודעות</string>
+    <string name="subscription_no_ads_description">לא רוצה לראות מודעות? הסתר מודעות ב-BBM בעזרת מנוי זה.</string>
+    <string name="subscription_no_ads_promo">"ללא מודעות
+הסתר מודעות והזמנות ממומנות ב-BBM בעזרת מנוי זה."</string>
+    <string name="subscription_no_ads_title">ללא מודעות</string>
+    <string name="subscription_pin_before_share">אני יכול ליצור PIN מותאם אישית ב-BBM. כדי לבצע התאמה אישית של ה-PIN שלך, הקש על http://shop.bbm.com/item/custom_pin</string>
+    <string name="subscription_pin_before_share_prompt">באפשרותך ליידע את אנשי הקשר שלך שתקבל אפשרות ליצור PIN מותאם אישית.</string>
+    <string name="subscription_pin_feautres">התכונות הכלולות:</string>
+    <string name="subscription_private_chat_description">"בצ'אט פרטי, שם איש הקשר שלך מוסתר, והתראות על הודעות חדשות כבויות. הצ'אט שלך נמחק באופן אוטומטי לאחר זמן קצר או בעת סיום הצ'אט הפרטי."</string>
+    <string name="subscription_reactiviate">הירשם כמנוי</string>
+    <string name="subscription_retracted_messages_description">"אם לא התכוונת לשלוח הודעה, תוכל לבטל את ההודעה, כך שהיא לא תוצג בצ'אט."</string>
+    <string name="subscription_retracted_messages_title">הודעות הניתנות לביטול</string>
+    <string name="subscription_status_active_subscription">יש ברשותך מנוי שמתחדש באופן אוטומטי.</string>
+    <string name="subscription_timed_messages_description">"תוכל לשלוח הודעות ותומונות הניתנות להצגה למשך פרק זמן מסוים. ההודעה מוסתרת בצ'אט והנמען יכול לגעת בה נגיעה ממושכת כדי לחשוף אותה. לאחר שיסתיים פרק הזמן שהוגדר בקוצב הזמן, לא ניתן יהיה להציג את ההודעה."</string>
+    <string name="subscription_timed_messages_title">הודעות מתוזמנות</string>
+    <string name="subscriptions_not_entitled">עליך להירשם כמנוי כדי להשתמש בתכונה זו.</string>
+    <string name="subscriptions_restoring">בודק את המנויים שלך.</string>
     <string name="suggestion_i_invite_you">"%1$s הציע/ה שאזמין אותך לצ'אט באמצעות BBM."</string>
     <string name="suggestion_sent">ההצעה נשלחה</string>
     <string name="suggestion_want_to_invite_bbm_contact">האם ברצונך להזמין איש קשר זה של BBM?</string>
@@ -1896,7 +2164,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="timestamp_format_today_at">היום ב-%1$s</string>
     <string name="timestamp_format_yesterday_at">אתמול ב-%1$s</string>
     <string name="title_activity_category">קטגוריה</string>
-    <string name="title_activity_change_status">שנה סטטוס</string>
+    <string name="title_activity_change_status">סטטוס</string>
     <string name="title_activity_channels_lobby">כניסה אישית לערוץ</string>
     <string name="title_activity_group_event_details">פרטי אירוע קבוצתי</string>
     <string name="title_activity_group_events">אירועים קבוצתיים</string>
@@ -1929,6 +2197,9 @@ www.pin.bbm.com/%1$s"</string>
     <string name="update_fragment_hide_updates">הסתר</string>
     <string name="update_fragment_view_channel">הצג ערוץ</string>
     <string name="update_fragment_view_post">הצג פרסום</string>
+    <string name="update_list_archiving_disabled_message">‏מנהל המערכת שלך כיבה את תכונת השמירה בארכיון.</string>
+    <string name="update_list_archiving_enabled_message">‏מנהל המערכת שלך הפעיל את תכונת השמירה בארכיון.</string>
+    <string name="update_list_archiving_title">"שמירת צ'אטים של BBM בארכיון"</string>
     <string name="update_list_avatar">&lt;b>%1$s&lt;/b> שינה/תה את תמונת התצוגה.</string>
     <string name="update_list_changed_event_sub_title">אירוע שהשתנה</string>
     <string name="update_list_comment_sub_title">הערה שנוספה</string>
@@ -1984,18 +2255,30 @@ www.pin.bbm.com/%1$s"</string>
     <string name="update_list_new_contact_sub_title">איש קשר של BBM</string>
     <string name="update_list_new_event_sub_title">אירוע חדש</string>
     <string name="update_list_new_list_item_sub_title">פריט רשימה חדש</string>
+    <string name="update_list_new_status_hint">הזן שם סטטוס</string>
     <string name="update_list_new_status_message">\"%1$s\"</string>
     <string name="update_list_new_status_sub_title">סטטוס חדש</string>
     <string name="update_list_newcontact">&lt;b>%1$s&lt;/b> הוא/היא כעת איש קשר.</string>
     <string name="update_list_now_playing_message">מקשיב ל-\"%1$s\"</string>
     <string name="update_list_nowplayingmessage">&lt;b>%1$s&lt;/b> מאזין/ה ל-\"%2$s\".</string>
     <string name="update_list_personalmessage">&lt;b>%1$s&lt;/b> אמר/ה \"%2$s\"</string>
+    <string name="update_list_protected_disabled_message">‏מנהל המערכת שלך כיבה את BBM Protected. הוסרת מקבוצות המשתמשות ב-BBM Protected.</string>
+    <string name="update_list_protected_enabled_message">"‏מנהל המערכת שלך הפעיל את BBM Protected. נוספת עוד שכבה של הצפנה לצ'אטים, להעברות קבצים ולקבוצות שמשתתפים בהם אנשי קשר של BBM Protected."</string>
+    <string name="update_list_protected_preferred_disabled_message">‏מנהל המערכת שלך כיבה את Protected Plus.</string>
+    <string name="update_list_protected_preferred_enabled_message">"‏מנהל המערכת שלך הפעיל את Protected Plus. צ'אטים שיתנהלו בינך לבין אנשי הקשר שלך יהיו צ'אטים של BBM Protected."</string>
+    <string name="update_list_protected_status_sub_title">שינוי במדיניות</string>
+    <string name="update_list_protected_title">BBM Protected</string>
     <string name="update_list_you">אתה</string>
+    <string name="update_popular_channels_subtitle">הקש כדי לעיין</string>
+    <string name="update_popular_channels_title">ערוצים פופולריים</string>
     <string name="update_removed_from_blocked_list">הוסר מרשימת החסומים.</string>
     <string name="update_sponsored_content">תוכן ממומן</string>
     <string name="update_sponsored_post">פרסום ממומן</string>
+    <string name="update_your_subscription">עדכן את המנוי שלך</string>
     <string name="updates">עדכונים</string>
     <string name="upload">העלה</string>
+    <string name="user_status_stale">נראה לאחרונה %1$s</string>
+    <string name="vanity_pin">PIN מותאם אישית</string>
     <string name="verify_date_of_birth">מאמת תאריך לידה.</string>
     <string name="verify_passphrase">מאמת את משפט הסיסמה.</string>
     <string name="version">גרסה</string>
@@ -2003,6 +2286,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="view_channel_info">תצוגה מקדימה</string>
     <string name="view_channel_profile">הצג פרופיל ערוץ</string>
     <string name="visits_caption">ביקורים</string>
+    <string name="voice_note_duration">%1$02d:%2$02d</string>
     <string name="voice_rating_bad">גרועה</string>
     <string name="voice_rating_excellent">מצוינת</string>
     <string name="voice_rating_fair">בינונית</string>
@@ -2010,11 +2294,31 @@ www.pin.bbm.com/%1$s"</string>
     <string name="voice_rating_poor">לא טובה</string>
     <string name="voice_rating_title">כיצד היית מדרג את האיכות של שיחה זו?</string>
     <string name="voicecall_already_in_call">אתה כבר נמצא בשיחת BBM כדי להתקשר לאיש קשר זה, סיים את השדיחה הנוספת שערכת ונסה שוב.</string>
+    <string name="voicecall_must_add_as_contact">כדי להשתמש בתכונה זו, עליך להוסיף אדם זה לרשימת אנשי הקשר של BBM.</string>
+    <string name="voicecall_must_add_as_contact_title">הוסף לאנשי הקשר של BBM</string>
     <string name="voicecall_status_calling">מתקשר</string>
     <string name="voicecall_status_connecting">מתחבר</string>
     <string name="voicecall_status_duration">שיחה קולית %1$s</string>
     <string name="voicecall_status_duration_while_mute">%1$s הושתק/ה</string>
+    <string name="voicenote">הערה קולית</string>
     <string name="wait_passphrase_confirmation">ממתין לאישור משפט הסיסמה.</string>
+    <string name="warning_on_repurchase">כדי להבטיח שהתכונות הכלולות במנוי זה לא יופסקו, יתכן שיהיה עליך לרכוש מנוי חדש ולאחר מכן לבטל את המנוי הישן. לקבלת מידע נוסף, בקר בכתובת: %1$s</string>
+    <string name="wear_quick_call_shortly">אחזור אליך עוד מעט.</string>
+    <string name="wear_quick_cant_take">אני עסוק/ה ולא יכול/ה לענות.</string>
+    <string name="wear_quick_im_on_my_way">אני בדרך.</string>
+    <string name="wear_quick_response_1">בסדר.</string>
+    <string name="wear_quick_response_2">הבנתי!</string>
+    <string name="wear_quick_response_3">אני עסוק/ה כרגע, אענה כשאוכל.</string>
+    <string name="wear_quick_response_appreciation">תודה</string>
+    <string name="wear_quick_response_confirmation">כן</string>
+    <string name="wear_quick_response_disagree">לא</string>
+    <string name="wear_quick_response_haha">חה חה</string>
+    <string name="wear_quick_response_lol">צחוק</string>
+    <string name="wear_quick_response_on_my_way">בדרך</string>
+    <string name="wear_quick_response_see_you_soon">נתראה בקרוב</string>
+    <string name="wear_quick_response_talk_later">מצטער, אני לא יכול לדבר עכשיו</string>
+    <string name="wear_quick_response_understood">אישור</string>
+    <string name="wearable_support">תמיכה שהולכת אתך לכל מקום</string>
     <string name="widget_back_to_chat_previews">"חזור לתצוגה מקדימה של צ'אט"</string>
     <string name="widget_change_my_status_message">שנה את הודעת הסטטוס שלי</string>
     <string name="widget_edit_status">ערוך סטטוס</string>
@@ -2030,6 +2334,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="wifi_changing_network">בקשת חיבור לרשת …</string>
     <string name="wifi_ssid_label">שם רשת</string>
     <string name="wifi_type_label">סוג</string>
+    <string name="yes">כן</string>
     <string name="you_are_signed_in_with_the_following_blackberry_id">נכנסת עם BlackBerry ID הבא: %1$s</string>
     <string name="you_can_choose_another_restore_option_or_delete_your_device_data">ניתן לבחור אפשרות שחזור אחרת, או למחוק את נתוני המכשיר ולהיכנס עם ה-BlackBerry ID המשויך לקובץ הגיבוי.</string>
     <string name="you_can_now_start_video_and_voice_chats">"תוכל להתחיל כעת בצ'אטים קוליים ובווידאו מ-‏BBM (אם נתמכים)."</string>

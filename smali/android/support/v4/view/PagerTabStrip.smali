@@ -59,7 +59,7 @@
 
     const/4 v4, 0x0
 
-    const/high16 v2, 0x3f000000
+    const/high16 v2, 0x3f000000    # 0.5f
 
     .line 82
     invoke-direct {p0, p1, p2}, Landroid/support/v4/view/PagerTitleStrip;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -113,7 +113,7 @@
     iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
     .line 90
-    const/high16 v1, 0x40400000
+    const/high16 v1, 0x40400000    # 3.0f
 
     mul-float/2addr v1, v0
 
@@ -124,7 +124,7 @@
     iput v1, p0, Landroid/support/v4/view/PagerTabStrip;->g:I
 
     .line 91
-    const/high16 v1, 0x40c00000
+    const/high16 v1, 0x40c00000    # 6.0f
 
     mul-float/2addr v1, v0
 
@@ -135,7 +135,7 @@
     iput v1, p0, Landroid/support/v4/view/PagerTabStrip;->h:I
 
     .line 92
-    const/high16 v1, 0x42800000
+    const/high16 v1, 0x42800000    # 64.0f
 
     mul-float/2addr v1, v0
 
@@ -144,7 +144,7 @@
     iput v1, p0, Landroid/support/v4/view/PagerTabStrip;->i:I
 
     .line 93
-    const/high16 v1, 0x41800000
+    const/high16 v1, 0x41800000    # 16.0f
 
     mul-float/2addr v1, v0
 
@@ -155,7 +155,7 @@
     iput v1, p0, Landroid/support/v4/view/PagerTabStrip;->k:I
 
     .line 94
-    const/high16 v1, 0x3f800000
+    const/high16 v1, 0x3f800000    # 1.0f
 
     mul-float/2addr v1, v0
 
@@ -166,7 +166,7 @@
     iput v1, p0, Landroid/support/v4/view/PagerTabStrip;->q:I
 
     .line 95
-    const/high16 v1, 0x42000000
+    const/high16 v1, 0x42000000    # 32.0f
 
     mul-float/2addr v0, v1
 
@@ -224,9 +224,9 @@
     .line 105
     iget-object v0, p0, Landroid/support/v4/view/PagerTabStrip;->b:Landroid/widget/TextView;
 
-    new-instance v1, Landroid/support/v4/view/ag;
+    new-instance v1, Landroid/support/v4/view/at;
 
-    invoke-direct {v1, p0}, Landroid/support/v4/view/ag;-><init>(Landroid/support/v4/view/PagerTabStrip;)V
+    invoke-direct {v1, p0}, Landroid/support/v4/view/at;-><init>(Landroid/support/v4/view/PagerTabStrip;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -238,9 +238,9 @@
     .line 113
     iget-object v0, p0, Landroid/support/v4/view/PagerTabStrip;->d:Landroid/widget/TextView;
 
-    new-instance v1, Landroid/support/v4/view/ah;
+    new-instance v1, Landroid/support/v4/view/au;
 
-    invoke-direct {v1, p0}, Landroid/support/v4/view/ah;-><init>(Landroid/support/v4/view/PagerTabStrip;)V
+    invoke-direct {v1, p0}, Landroid/support/v4/view/au;-><init>(Landroid/support/v4/view/PagerTabStrip;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -307,7 +307,7 @@
     invoke-super {p0, p1, p2, p3}, Landroid/support/v4/view/PagerTitleStrip;->a(IFZ)V
 
     .line 288
-    const/high16 v2, 0x3f000000
+    const/high16 v2, 0x3f000000    # 0.5f
 
     sub-float v2, p2, v2
 
@@ -315,11 +315,11 @@
 
     move-result v2
 
-    const/high16 v3, 0x40000000
+    const/high16 v3, 0x40000000    # 2.0f
 
     mul-float/2addr v2, v3
 
-    const/high16 v3, 0x437f0000
+    const/high16 v3, 0x437f0000    # 255.0f
 
     mul-float/2addr v2, v3
 

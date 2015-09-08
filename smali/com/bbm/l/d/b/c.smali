@@ -15,7 +15,7 @@
             "Ljava/util/Hashtable",
             "<",
             "Ljava/lang/String;",
-            "Lcom/bbm/l/d/b/x;",
+            "Lcom/bbm/l/d/b/aa;",
             ">;"
         }
     .end annotation
@@ -38,24 +38,11 @@
 
 .field private static q:Lcom/bbm/j/u;
 
-.field private static final r:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/bbm/l/d/b/x;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private static r:Lcom/bbm/f/ac;
 
-.field private static s:Lcom/bbm/f/ac;
+.field private static s:Lcom/bbm/l/d;
 
-.field private static t:Lcom/bbm/l/d;
-
-.field private static u:Lcom/bbm/l/e;
-
-.field private static v:Z
+.field private static t:Z
 
 
 # instance fields
@@ -75,7 +62,7 @@
         value = {
             "Ljava/util/List",
             "<",
-            "Lcom/bbm/l/d/b/t;",
+            "Lcom/bbm/l/d/b/w;",
             ">;"
         }
     .end annotation
@@ -83,13 +70,13 @@
 
 .field public c:Ljava/lang/String;
 
-.field g:Lcom/bbm/l/d/b/r;
+.field g:Lcom/bbm/l/d/b/u;
 
 .field private i:Landroid/content/Context;
 
-.field private j:Lcom/bbm/l/d/b/n;
+.field private j:Lcom/bbm/l/d/b/q;
 
-.field private k:Lcom/bbm/util/bi;
+.field private k:Lcom/bbm/util/bo;
 
 .field private l:Z
 
@@ -116,7 +103,7 @@
     sput-object v0, Lcom/bbm/l/d/b/c;->q:Lcom/bbm/j/u;
 
     .line 60
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v0
 
@@ -130,13 +117,6 @@
     sput-object v0, Lcom/bbm/l/d/b/c;->e:Ljava/util/Hashtable;
 
     .line 62
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    sput-object v0, Lcom/bbm/l/d/b/c;->r:Ljava/util/ArrayList;
-
-    .line 63
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -147,69 +127,75 @@
 .end method
 
 .method private constructor <init>(Landroid/content/Context;)V
-    .locals 6
+    .locals 7
 
     .prologue
+    const/4 v6, 0x1
+
     const/4 v5, 0x3
 
     const/4 v4, 0x0
 
-    .line 75
+    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 51
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/bbm/l/d/b/c;->k:Lcom/bbm/util/bi;
+    iput-object v0, p0, Lcom/bbm/l/d/b/c;->k:Lcom/bbm/util/bo;
 
-    .line 516
-    new-instance v0, Lcom/bbm/l/d/b/l;
+    .line 644
+    new-instance v0, Lcom/bbm/l/d/b/o;
 
-    invoke-direct {v0, p0}, Lcom/bbm/l/d/b/l;-><init>(Lcom/bbm/l/d/b/c;)V
+    invoke-direct {v0, p0}, Lcom/bbm/l/d/b/o;-><init>(Lcom/bbm/l/d/b/c;)V
 
-    iput-object v0, p0, Lcom/bbm/l/d/b/c;->g:Lcom/bbm/l/d/b/r;
+    iput-object v0, p0, Lcom/bbm/l/d/b/c;->g:Lcom/bbm/l/d/b/u;
 
-    .line 76
+    .line 73
     iput-object p1, p0, Lcom/bbm/l/d/b/c;->i:Landroid/content/Context;
 
-    .line 77
-    new-instance v0, Lcom/bbm/l/d/b/n;
+    .line 74
+    new-instance v0, Lcom/bbm/l/d/b/q;
 
-    invoke-static {}, Lcom/bbm/l/d/b/w;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/bbm/l/d/b/z;->a()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-direct {v0, p1, v1}, Lcom/bbm/l/d/b/n;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v0, p1, v1}, Lcom/bbm/l/d/b/q;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/bbm/l/d/b/c;->j:Lcom/bbm/l/d/b/n;
+    iput-object v0, p0, Lcom/bbm/l/d/b/c;->j:Lcom/bbm/l/d/b/q;
 
-    .line 80
-    iget-object v0, p0, Lcom/bbm/l/d/b/c;->j:Lcom/bbm/l/d/b/n;
+    .line 77
+    iget-object v0, p0, Lcom/bbm/l/d/b/c;->j:Lcom/bbm/l/d/b/q;
 
-    invoke-virtual {v0}, Lcom/bbm/l/d/b/n;->a()V
+    invoke-virtual {v0}, Lcom/bbm/l/d/b/q;->a()V
 
-    iput-boolean v4, v0, Lcom/bbm/l/d/b/n;->a:Z
+    iput-boolean v4, v0, Lcom/bbm/l/d/b/q;->a:Z
 
-    .line 81
+    .line 78
     const-string v0, "GooglePlayMethod.startUpIabHelper()"
 
-    const-string v1, "starting IAB setup."
+    new-array v1, v6, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v2, "starting IAB setup."
 
-    sget-object v0, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
+    aput-object v2, v1, v4
 
-    iput-object v0, p0, Lcom/bbm/l/d/b/c;->k:Lcom/bbm/util/bi;
+    invoke-static {v0, v1}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcom/bbm/l/d/b/c;->j:Lcom/bbm/l/d/b/n;
+    sget-object v0, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
+
+    iput-object v0, p0, Lcom/bbm/l/d/b/c;->k:Lcom/bbm/util/bo;
+
+    iget-object v0, p0, Lcom/bbm/l/d/b/c;->j:Lcom/bbm/l/d/b/q;
 
     new-instance v1, Lcom/bbm/l/d/b/f;
 
     invoke-direct {v1, p0}, Lcom/bbm/l/d/b/f;-><init>(Lcom/bbm/l/d/b/c;)V
 
-    invoke-virtual {v0}, Lcom/bbm/l/d/b/n;->a()V
+    invoke-virtual {v0}, Lcom/bbm/l/d/b/q;->a()V
 
-    iget-boolean v2, v0, Lcom/bbm/l/d/b/n;->c:Z
+    iget-boolean v2, v0, Lcom/bbm/l/d/b/q;->c:Z
 
     if-eqz v2, :cond_0
 
@@ -224,13 +210,13 @@
     :cond_0
     const-string v2, "Starting in-app billing setup."
 
-    invoke-virtual {v0, v2}, Lcom/bbm/l/d/b/n;->c(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lcom/bbm/l/d/b/q;->c(Ljava/lang/String;)V
 
-    new-instance v2, Lcom/bbm/l/d/b/o;
+    new-instance v2, Lcom/bbm/l/d/b/r;
 
-    invoke-direct {v2, v0, v1}, Lcom/bbm/l/d/b/o;-><init>(Lcom/bbm/l/d/b/n;Lcom/bbm/l/d/b/s;)V
+    invoke-direct {v2, v0, v1}, Lcom/bbm/l/d/b/r;-><init>(Lcom/bbm/l/d/b/q;Lcom/bbm/l/d/b/v;)V
 
-    iput-object v2, v0, Lcom/bbm/l/d/b/n;->j:Landroid/content/ServiceConnection;
+    iput-object v2, v0, Lcom/bbm/l/d/b/q;->j:Landroid/content/ServiceConnection;
 
     new-instance v2, Landroid/content/Intent;
 
@@ -242,7 +228,7 @@
 
     invoke-virtual {v2, v3}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    iget-object v3, v0, Lcom/bbm/l/d/b/n;->h:Landroid/content/Context;
+    iget-object v3, v0, Lcom/bbm/l/d/b/q;->h:Landroid/content/Context;
 
     if-nez v3, :cond_2
 
@@ -250,47 +236,47 @@
 
     new-array v2, v4, [Ljava/lang/Object;
 
-    invoke-static {v0, v2}, Lcom/bbm/y;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v2}, Lcom/bbm/af;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    new-instance v0, Lcom/bbm/l/d/b/u;
+    new-instance v0, Lcom/bbm/l/d/b/x;
 
     const-string v2, "Billing service unavailable on device."
 
-    invoke-direct {v0, v5, v2}, Lcom/bbm/l/d/b/u;-><init>(ILjava/lang/String;)V
+    invoke-direct {v0, v5, v2}, Lcom/bbm/l/d/b/x;-><init>(ILjava/lang/String;)V
 
-    invoke-interface {v1, v0}, Lcom/bbm/l/d/b/s;->a(Lcom/bbm/l/d/b/u;)V
+    invoke-interface {v1, v0}, Lcom/bbm/l/d/b/v;->a(Lcom/bbm/l/d/b/x;)V
 
-    .line 83
+    .line 80
     :goto_0
-    sget-object v0, Lcom/bbm/l/d/b/c;->s:Lcom/bbm/f/ac;
+    sget-object v0, Lcom/bbm/l/d/b/c;->r:Lcom/bbm/f/ac;
 
     if-nez v0, :cond_1
 
-    .line 84
+    .line 81
     new-instance v0, Lcom/bbm/l/d/b/d;
 
     invoke-direct {v0, p0}, Lcom/bbm/l/d/b/d;-><init>(Lcom/bbm/l/d/b/c;)V
 
-    sput-object v0, Lcom/bbm/l/d/b/c;->s:Lcom/bbm/f/ac;
+    sput-object v0, Lcom/bbm/l/d/b/c;->r:Lcom/bbm/f/ac;
 
-    .line 182
+    .line 179
     sget-object v0, Lcom/bbm/l/d/b/c;->d:Lcom/bbm/d/a;
 
-    iget-object v0, v0, Lcom/bbm/d/ac;->h:Lcom/bbm/d/a/f;
+    iget-object v0, v0, Lcom/bbm/d/aq;->j:Lcom/bbm/d/a/f;
 
     iget-object v0, v0, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
 
-    sget-object v1, Lcom/bbm/l/d/b/c;->s:Lcom/bbm/f/ac;
+    sget-object v1, Lcom/bbm/l/d/b/c;->r:Lcom/bbm/f/ac;
 
     invoke-interface {v0, v1}, Lcom/bbm/f/a;->a(Lcom/bbm/f/ac;)V
 
-    .line 184
+    .line 181
     :cond_1
     return-void
 
-    .line 81
+    .line 78
     :cond_2
-    iget-object v3, v0, Lcom/bbm/l/d/b/n;->h:Landroid/content/Context;
+    iget-object v3, v0, Lcom/bbm/l/d/b/q;->h:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -302,15 +288,15 @@
 
     new-array v2, v4, [Ljava/lang/Object;
 
-    invoke-static {v0, v2}, Lcom/bbm/y;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v2}, Lcom/bbm/af;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    new-instance v0, Lcom/bbm/l/d/b/u;
+    new-instance v0, Lcom/bbm/l/d/b/x;
 
     const-string v2, "Billing service unavailable on device."
 
-    invoke-direct {v0, v5, v2}, Lcom/bbm/l/d/b/u;-><init>(ILjava/lang/String;)V
+    invoke-direct {v0, v5, v2}, Lcom/bbm/l/d/b/x;-><init>(ILjava/lang/String;)V
 
-    invoke-interface {v1, v0}, Lcom/bbm/l/d/b/s;->a(Lcom/bbm/l/d/b/u;)V
+    invoke-interface {v1, v0}, Lcom/bbm/l/d/b/v;->a(Lcom/bbm/l/d/b/x;)V
 
     goto :goto_0
 
@@ -325,15 +311,15 @@
 
     new-array v2, v4, [Ljava/lang/Object;
 
-    invoke-static {v0, v2}, Lcom/bbm/y;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v2}, Lcom/bbm/af;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    new-instance v0, Lcom/bbm/l/d/b/u;
+    new-instance v0, Lcom/bbm/l/d/b/x;
 
     const-string v2, "Billing service unavailable on device."
 
-    invoke-direct {v0, v5, v2}, Lcom/bbm/l/d/b/u;-><init>(ILjava/lang/String;)V
+    invoke-direct {v0, v5, v2}, Lcom/bbm/l/d/b/x;-><init>(ILjava/lang/String;)V
 
-    invoke-interface {v1, v0}, Lcom/bbm/l/d/b/s;->a(Lcom/bbm/l/d/b/u;)V
+    invoke-interface {v1, v0}, Lcom/bbm/l/d/b/v;->a(Lcom/bbm/l/d/b/x;)V
 
     goto :goto_0
 
@@ -344,24 +330,22 @@
 
     if-nez v3, :cond_5
 
-    iget-object v1, v0, Lcom/bbm/l/d/b/n;->h:Landroid/content/Context;
+    iget-object v1, v0, Lcom/bbm/l/d/b/q;->h:Landroid/content/Context;
 
-    iget-object v0, v0, Lcom/bbm/l/d/b/n;->j:Landroid/content/ServiceConnection;
+    iget-object v0, v0, Lcom/bbm/l/d/b/q;->j:Landroid/content/ServiceConnection;
 
-    const/4 v3, 0x1
-
-    invoke-virtual {v1, v2, v0, v3}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
+    invoke-virtual {v1, v2, v0, v6}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
     goto :goto_0
 
     :cond_5
-    new-instance v0, Lcom/bbm/l/d/b/u;
+    new-instance v0, Lcom/bbm/l/d/b/x;
 
     const-string v2, "Billing service unavailable on device."
 
-    invoke-direct {v0, v5, v2}, Lcom/bbm/l/d/b/u;-><init>(ILjava/lang/String;)V
+    invoke-direct {v0, v5, v2}, Lcom/bbm/l/d/b/x;-><init>(ILjava/lang/String;)V
 
-    invoke-interface {v1, v0}, Lcom/bbm/l/d/b/s;->a(Lcom/bbm/l/d/b/u;)V
+    invoke-interface {v1, v0}, Lcom/bbm/l/d/b/v;->a(Lcom/bbm/l/d/b/x;)V
 
     goto :goto_0
 .end method
@@ -370,7 +354,7 @@
     .locals 0
 
     .prologue
-    .line 39
+    .line 38
     sput-object p0, Lcom/bbm/l/d/b/c;->q:Lcom/bbm/j/u;
 
     return-object p0
@@ -380,31 +364,31 @@
     .locals 1
 
     .prologue
-    .line 226
+    .line 237
     sget-object v0, Lcom/bbm/l/d/b/c;->h:Lcom/bbm/l/d/b/c;
 
     if-nez v0, :cond_0
 
-    .line 227
+    .line 238
     new-instance v0, Lcom/bbm/l/d/b/c;
 
     invoke-direct {v0, p0}, Lcom/bbm/l/d/b/c;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/bbm/l/d/b/c;->h:Lcom/bbm/l/d/b/c;
 
-    .line 229
+    .line 240
     :cond_0
     sget-object v0, Lcom/bbm/l/d/b/c;->h:Lcom/bbm/l/d/b/c;
 
     return-object v0
 .end method
 
-.method static synthetic a(Lcom/bbm/l/d/b/c;Lcom/bbm/util/bi;)Lcom/bbm/util/bi;
+.method static synthetic a(Lcom/bbm/l/d/b/c;Lcom/bbm/util/bo;)Lcom/bbm/util/bo;
     .locals 0
 
     .prologue
-    .line 39
-    iput-object p1, p0, Lcom/bbm/l/d/b/c;->k:Lcom/bbm/util/bi;
+    .line 38
+    iput-object p1, p0, Lcom/bbm/l/d/b/c;->k:Lcom/bbm/util/bo;
 
     return-object p1
 .end method
@@ -415,7 +399,7 @@
     .prologue
     const-wide/16 v4, 0x7d0
 
-    .line 39
+    .line 38
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -430,9 +414,9 @@
 
     invoke-direct {v2}, Landroid/os/Handler;-><init>()V
 
-    new-instance v3, Lcom/bbm/l/d/b/k;
+    new-instance v3, Lcom/bbm/l/d/b/n;
 
-    invoke-direct {v3, p0}, Lcom/bbm/l/d/b/k;-><init>(Lcom/bbm/l/d/b/c;)V
+    invoke-direct {v3, p0}, Lcom/bbm/l/d/b/n;-><init>(Lcom/bbm/l/d/b/c;)V
 
     sub-long v0, v4, v0
 
@@ -442,7 +426,7 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lcom/bbm/util/fh;->a()V
+    invoke-static {}, Lcom/bbm/util/eu;->h()V
 
     goto :goto_0
 .end method
@@ -451,7 +435,7 @@
     .locals 1
 
     .prologue
-    .line 39
+    .line 38
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/bbm/l/d/b/c;->l:Z
@@ -463,7 +447,7 @@
     .locals 1
 
     .prologue
-    .line 39
+    .line 38
     iget-object v0, p0, Lcom/bbm/l/d/b/c;->o:Lcom/bbm/l/d/b;
 
     return-object v0
@@ -473,59 +457,39 @@
     .locals 1
 
     .prologue
-    .line 39
+    .line 38
     iget-object v0, p0, Lcom/bbm/l/d/b/c;->m:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic j()Ljava/util/ArrayList;
+.method static synthetic i()Lcom/bbm/l/d;
     .locals 1
 
     .prologue
-    .line 39
-    sget-object v0, Lcom/bbm/l/d/b/c;->r:Ljava/util/ArrayList;
+    .line 38
+    sget-object v0, Lcom/bbm/l/d/b/c;->s:Lcom/bbm/l/d;
 
     return-object v0
 .end method
 
-.method static synthetic k()Lcom/bbm/l/d;
+.method static synthetic j()Lcom/bbm/l/d;
     .locals 1
 
     .prologue
-    .line 39
-    sget-object v0, Lcom/bbm/l/d/b/c;->t:Lcom/bbm/l/d;
-
-    return-object v0
-.end method
-
-.method static synthetic l()Lcom/bbm/l/d;
-    .locals 1
-
-    .prologue
-    .line 39
+    .line 38
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/bbm/l/d/b/c;->t:Lcom/bbm/l/d;
+    sput-object v0, Lcom/bbm/l/d/b/c;->s:Lcom/bbm/l/d;
 
     return-object v0
 .end method
 
-.method static synthetic m()Lcom/bbm/l/e;
+.method static synthetic k()Z
     .locals 1
 
     .prologue
-    .line 39
-    sget-object v0, Lcom/bbm/l/d/b/c;->u:Lcom/bbm/l/e;
-
-    return-object v0
-.end method
-
-.method static synthetic n()Z
-    .locals 1
-
-    .prologue
-    .line 39
+    .line 38
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/bbm/l/d/b/c;->p:Z
@@ -533,290 +497,415 @@
     return v0
 .end method
 
-.method static synthetic o()Lcom/bbm/j/u;
+.method static synthetic l()Lcom/bbm/j/u;
     .locals 1
 
     .prologue
-    .line 39
+    .line 38
     sget-object v0, Lcom/bbm/l/d/b/c;->q:Lcom/bbm/j/u;
 
     return-object v0
 .end method
 
-.method static synthetic p()Z
+.method static synthetic m()Z
     .locals 1
 
     .prologue
-    .line 39
-    sget-boolean v0, Lcom/bbm/l/d/b/c;->v:Z
+    .line 38
+    sget-boolean v0, Lcom/bbm/l/d/b/c;->t:Z
 
     return v0
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/bbm/l/d/c;Lcom/bbm/l/e;)Ljava/lang/String;
-    .locals 4
+.method public final a(Lcom/bbm/l/d/c;)Ljava/lang/String;
+    .locals 6
 
     .prologue
-    .line 187
-    new-instance v1, Lorg/json/JSONObject;
+    .line 186
+    new-instance v2, Lorg/json/JSONObject;
 
-    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+    invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
+
+    .line 188
+    :try_start_0
+    new-instance v3, Lorg/json/JSONObject;
+
+    invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
 
     .line 189
-    :try_start_0
-    new-instance v0, Lorg/json/JSONObject;
-
-    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
-
-    .line 190
-    const-string v2, "type"
-
-    invoke-virtual {p2}, Lcom/bbm/l/e;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 191
     invoke-interface {p1}, Lcom/bbm/l/d/c;->a()Lcom/bbm/l/d/d;
 
-    move-result-object v2
+    move-result-object v1
 
-    sget-object v3, Lcom/bbm/l/d/d;->b:Lcom/bbm/l/d/d;
+    sget-object v4, Lcom/bbm/l/d/d;->b:Lcom/bbm/l/d/d;
 
-    if-ne v2, v3, :cond_1
+    if-ne v1, v4, :cond_3
+
+    .line 190
+    move-object v0, p1
+
+    check-cast v0, Lcom/bbm/l/d/b/aa;
+
+    move-object v1, v0
+
+    .line 191
+    const-string v4, "free"
+
+    iget-object v5, v1, Lcom/bbm/l/d/b/aa;->j:Ljava/lang/String;
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
 
     .line 192
-    check-cast p1, Lcom/bbm/l/d/b/x;
+    const-string v1, "productId"
+
+    check-cast p1, Lcom/bbm/l/d/b/aa;
+
+    iget-object v4, p1, Lcom/bbm/l/d/b/aa;->m:Ljava/lang/String;
+
+    invoke-virtual {v3, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     .line 193
-    const-string v2, "signature"
+    const-string v1, "platform"
 
-    iget-object v3, p1, Lcom/bbm/l/d/b/x;->q:Ljava/lang/String;
+    const-string v4, "android"
 
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v3, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     .line 194
-    const-string v2, "purchaseToken"
+    const-string v1, "free"
 
-    iget-object v3, p1, Lcom/bbm/l/d/b/x;->o:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 195
-    const-string v2, "productId"
-
-    iget-object v3, p1, Lcom/bbm/l/d/b/x;->k:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 196
-    const-string v2, "pkgName"
-
-    iget-object v3, p1, Lcom/bbm/l/d/b/x;->j:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 197
-    const-string v2, "android"
-
-    invoke-virtual {v1, v2, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v2, v1, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 217
+    .line 228
     :cond_0
     :goto_0
-    invoke-virtual {v1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    return-object v0
+    return-object v1
 
-    .line 198
+    .line 196
     :cond_1
     :try_start_1
-    invoke-interface {p1}, Lcom/bbm/l/d/c;->a()Lcom/bbm/l/d/d;
+    const-string v4, "signature"
 
-    move-result-object v2
+    iget-object v5, v1, Lcom/bbm/l/d/b/aa;->s:Ljava/lang/String;
 
-    sget-object v3, Lcom/bbm/l/d/d;->c:Lcom/bbm/l/d/d;
+    invoke-virtual {v3, v4, v5}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    if-ne v2, v3, :cond_0
+    .line 197
+    const-string v4, "purchaseToken"
+
+    iget-object v5, v1, Lcom/bbm/l/d/b/aa;->q:Ljava/lang/String;
+
+    invoke-virtual {v3, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 198
+    const-string v4, "productId"
+
+    iget-object v5, v1, Lcom/bbm/l/d/b/aa;->m:Ljava/lang/String;
+
+    invoke-virtual {v3, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     .line 199
-    check-cast p1, Lcom/bbm/l/d/a/b;
+    const-string v4, "pkgName"
+
+    iget-object v5, v1, Lcom/bbm/l/d/b/aa;->l:Ljava/lang/String;
+
+    invoke-virtual {v3, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     .line 200
-    const-string v2, "platform"
+    iget-object v1, v1, Lcom/bbm/l/d/b/aa;->t:Ljava/lang/Boolean;
 
-    const-string v3, "Android"
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    move-result v1
+
+    if-eqz v1, :cond_2
 
     .line 201
-    const-string v2, "productId"
+    const-string v1, "isSubscription"
 
-    iget-object v3, p1, Lcom/bbm/l/d/a/b;->g:Ljava/lang/String;
+    const/4 v4, 0x1
 
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 202
-    const-string v2, "licensetype"
-
-    iget-object v3, p1, Lcom/bbm/l/d/a/b;->f:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v2, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
     .line 203
-    const-string v2, "transacationtype"
+    :cond_2
+    const-string v1, "android"
 
-    iget-object v3, p1, Lcom/bbm/l/d/a/b;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 204
-    const-string v2, "transacationid"
-
-    iget-object v3, p1, Lcom/bbm/l/d/a/b;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 205
-    const-string v2, "bangocontentid"
-
-    iget-object v3, p1, Lcom/bbm/l/d/a/b;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 206
-    const-string v2, "bangouserid"
-
-    iget-object v3, p1, Lcom/bbm/l/d/a/b;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 207
-    const-string v2, "price"
-
-    iget-object v3, p1, Lcom/bbm/l/d/a/b;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 209
-    const-string v2, "currency"
-
-    const-string v3, "null"
-
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 210
-    const-string v2, "bbmcarrierbilling"
-
-    invoke-virtual {v1, v2, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v2, v1, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_0
 
-    .line 214
+    .line 225
     :catch_0
-    move-exception v0
+    move-exception v1
 
-    invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
+    invoke-static {v1}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
+
+    .line 205
+    :cond_3
+    :try_start_2
+    invoke-interface {p1}, Lcom/bbm/l/d/c;->a()Lcom/bbm/l/d/d;
+
+    move-result-object v1
+
+    sget-object v4, Lcom/bbm/l/d/d;->c:Lcom/bbm/l/d/d;
+
+    if-ne v1, v4, :cond_0
+
+    .line 206
+    check-cast p1, Lcom/bbm/l/d/a/b;
+
+    .line 207
+    const-string v1, "platform"
+
+    const-string v4, "Android"
+
+    invoke-virtual {v3, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 208
+    const-string v1, "productId"
+
+    iget-object v4, p1, Lcom/bbm/l/d/a/b;->g:Ljava/lang/String;
+
+    invoke-virtual {v3, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 209
+    const-string v1, "licensetype"
+
+    iget-object v4, p1, Lcom/bbm/l/d/a/b;->f:Ljava/lang/String;
+
+    invoke-virtual {v3, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 210
+    const-string v1, "transacationtype"
+
+    iget-object v4, p1, Lcom/bbm/l/d/a/b;->d:Ljava/lang/String;
+
+    invoke-virtual {v3, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 211
+    const-string v1, "transacationid"
+
+    iget-object v4, p1, Lcom/bbm/l/d/a/b;->c:Ljava/lang/String;
+
+    invoke-virtual {v3, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 212
+    const-string v1, "bangocontentid"
+
+    iget-object v4, p1, Lcom/bbm/l/d/a/b;->a:Ljava/lang/String;
+
+    invoke-virtual {v3, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 213
+    const-string v1, "bangouserid"
+
+    iget-object v4, p1, Lcom/bbm/l/d/a/b;->b:Ljava/lang/String;
+
+    invoke-virtual {v3, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 214
+    const-string v1, "price"
+
+    iget-object v4, p1, Lcom/bbm/l/d/a/b;->e:Ljava/lang/String;
+
+    invoke-virtual {v3, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 215
+    const-string v1, "bangoSubscriptionId"
+
+    iget-object v4, p1, Lcom/bbm/l/d/a/b;->h:Ljava/lang/String;
+
+    invoke-virtual {v3, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 217
+    const-string v1, "currency"
+
+    const-string v4, "null"
+
+    invoke-virtual {v3, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 218
+    iget-object v1, p1, Lcom/bbm/l/d/b/aa;->t:Ljava/lang/Boolean;
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    .line 219
+    const-string v1, "isSubscription"
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v2, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+
+    .line 221
+    :cond_4
+    const-string v1, "bbmcarrierbilling"
+
+    invoke-virtual {v2, v1, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    :try_end_2
+    .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_0
+
+    goto/16 :goto_0
 .end method
 
-.method public final a(Landroid/app/Activity;ZLcom/bbm/l/a;)V
-    .locals 7
+.method public final a(Landroid/app/Activity;Lcom/bbm/l/a;)V
+    .locals 4
 
     .prologue
-    .line 328
+    const/16 v3, 0x7d0
+
+    .line 338
     sget-boolean v0, Lcom/bbm/l/d/b/c;->p:Z
 
     if-eqz v0, :cond_1
 
-    .line 439
+    .line 462
     :cond_0
     :goto_0
     return-void
 
-    .line 332
+    .line 342
     :cond_1
-    iget-object v0, p0, Lcom/bbm/l/d/b/c;->k:Lcom/bbm/util/bi;
+    iget-object v0, p0, Lcom/bbm/l/d/b/c;->k:Lcom/bbm/util/bo;
 
-    sget-object v1, Lcom/bbm/util/bi;->b:Lcom/bbm/util/bi;
+    sget-object v1, Lcom/bbm/util/bo;->b:Lcom/bbm/util/bo;
 
     if-ne v0, v1, :cond_2
 
-    .line 333
+    .line 343
+    const-string v0, "Unable to restore purchases, no services available"
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 344
     if-eqz p1, :cond_0
 
-    .line 334
-    const v0, 0x7f0e072d
+    .line 345
+    const v0, 0x7f0e080b
 
     invoke-virtual {p1, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
-    invoke-static {p1, v0, v1}, Lcom/bbm/util/fh;->a(Landroid/content/Context;Ljava/lang/String;I)V
+    invoke-static {p1, v0, v3}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;Ljava/lang/String;S)V
 
     goto :goto_0
 
-    .line 339
+    .line 350
     :cond_2
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/bbm/l/d/b/c;->p:Z
 
-    .line 341
+    .line 352
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v4
+    move-result-wide v0
 
-    .line 342
+    .line 353
     if-eqz p1, :cond_3
 
-    .line 343
-    const v0, 0x7f0e0672
+    .line 354
+    const v2, 0x7f0e073f
 
-    invoke-virtual {p1, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
-    const/4 v1, -0x1
+    invoke-static {p1, v2, v3}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;Ljava/lang/String;S)V
 
-    invoke-static {p1, v0, v1}, Lcom/bbm/util/fh;->a(Landroid/content/Context;Ljava/lang/String;I)V
-
-    .line 347
+    .line 358
     :cond_3
-    sget-object v0, Lcom/bbm/l/d/b/c;->d:Lcom/bbm/d/a;
+    sget-object v2, Lcom/bbm/l/d/b/c;->d:Lcom/bbm/d/a;
 
-    invoke-virtual {v0}, Lcom/bbm/d/a;->A()Lcom/bbm/j/w;
+    new-instance v3, Lcom/bbm/d/dn;
 
-    move-result-object v0
+    invoke-direct {v3}, Lcom/bbm/d/dn;-><init>()V
 
-    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+    invoke-virtual {v2, v3}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ez;)V
 
-    .line 350
+    .line 361
+    const/4 v2, 0x0
+
+    new-instance v3, Lcom/bbm/l/d/b/h;
+
+    invoke-direct {v3, p0, v0, v1, p2}, Lcom/bbm/l/d/b/h;-><init>(Lcom/bbm/l/d/b/c;JLcom/bbm/l/a;)V
+
+    invoke-virtual {p0, v2, v3}, Lcom/bbm/l/d/b/c;->a(Ljava/lang/String;Lcom/bbm/l/d/b/w;)V
+
+    goto :goto_0
+.end method
+
+.method public final a(Lcom/bbm/l/a;)V
+    .locals 2
+
+    .prologue
+    .line 469
+    sget-boolean v0, Lcom/bbm/l/d/b/c;->p:Z
+
+    if-eqz v0, :cond_0
+
+    .line 566
+    :goto_0
+    return-void
+
+    .line 473
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/l/d/b/c;->k:Lcom/bbm/util/bo;
+
+    sget-object v1, Lcom/bbm/util/bo;->b:Lcom/bbm/util/bo;
+
+    if-ne v0, v1, :cond_1
+
+    .line 474
+    const-string v0, "Unable to revalidate purchases, no services available"
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 478
+    :cond_1
+    const/4 v0, 0x1
+
+    sput-boolean v0, Lcom/bbm/l/d/b/c;->p:Z
+
+    .line 481
     const/4 v0, 0x0
 
-    new-instance v1, Lcom/bbm/l/d/b/h;
+    new-instance v1, Lcom/bbm/l/d/b/k;
 
-    move-object v2, p0
+    invoke-direct {v1, p0, p1}, Lcom/bbm/l/d/b/k;-><init>(Lcom/bbm/l/d/b/c;Lcom/bbm/l/a;)V
 
-    move v3, p2
-
-    move-object v6, p3
-
-    invoke-direct/range {v1 .. v6}, Lcom/bbm/l/d/b/h;-><init>(Lcom/bbm/l/d/b/c;ZJLcom/bbm/l/a;)V
-
-    invoke-virtual {p0, v0, v1}, Lcom/bbm/l/d/b/c;->a(Ljava/lang/String;Lcom/bbm/l/d/b/t;)V
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/l/d/b/c;->a(Ljava/lang/String;Lcom/bbm/l/d/b/w;)V
 
     goto :goto_0
 .end method
@@ -825,21 +914,10 @@
     .locals 0
 
     .prologue
-    .line 579
-    sput-object p1, Lcom/bbm/l/d/b/c;->t:Lcom/bbm/l/d;
+    .line 702
+    sput-object p1, Lcom/bbm/l/d/b/c;->s:Lcom/bbm/l/d;
 
-    .line 580
-    return-void
-.end method
-
-.method public final a(Lcom/bbm/l/e;)V
-    .locals 0
-
-    .prologue
-    .line 567
-    sput-object p1, Lcom/bbm/l/d/b/c;->u:Lcom/bbm/l/e;
-
-    .line 568
+    .line 703
     return-void
 .end method
 
@@ -847,7 +925,7 @@
     .locals 1
 
     .prologue
-    .line 594
+    .line 716
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -855,73 +933,73 @@
     throw v0
 .end method
 
-.method public final a(Ljava/lang/String;Lcom/bbm/l/d/b/t;)V
+.method public final a(Ljava/lang/String;Lcom/bbm/l/d/b/aa;)V
     .locals 1
 
     .prologue
-    .line 263
+    .line 711
+    sget-object v0, Lcom/bbm/l/d/b/c;->e:Ljava/util/Hashtable;
+
+    invoke-virtual {v0, p1, p2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 712
+    return-void
+.end method
+
+.method public final a(Ljava/lang/String;Lcom/bbm/l/d/b/w;)V
+    .locals 1
+
+    .prologue
+    .line 274
     iget-object v0, p0, Lcom/bbm/l/d/b/c;->a:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 264
+    .line 275
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/bbm/l/d/b/c;->a:Ljava/util/List;
 
-    .line 266
+    .line 277
     :cond_0
     iget-object v0, p0, Lcom/bbm/l/d/b/c;->b:Ljava/util/List;
 
     if-nez v0, :cond_1
 
-    .line 267
+    .line 278
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/bbm/l/d/b/c;->b:Ljava/util/List;
 
-    .line 269
+    .line 280
     :cond_1
     if-eqz p1, :cond_2
 
-    .line 270
+    .line 281
     iget-object v0, p0, Lcom/bbm/l/d/b/c;->a:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 272
+    .line 283
     :cond_2
     iget-object v0, p0, Lcom/bbm/l/d/b/c;->b:Ljava/util/List;
 
     invoke-interface {v0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 273
+    .line 284
     iget-boolean v0, p0, Lcom/bbm/l/d/b/c;->l:Z
 
     if-eqz v0, :cond_3
 
-    .line 274
-    invoke-virtual {p0}, Lcom/bbm/l/d/b/c;->i()V
+    .line 285
+    invoke-virtual {p0}, Lcom/bbm/l/d/b/c;->h()V
 
-    .line 276
+    .line 287
     :cond_3
-    return-void
-.end method
-
-.method public final a(Ljava/lang/String;Lcom/bbm/l/d/b/x;)V
-    .locals 1
-
-    .prologue
-    .line 589
-    sget-object v0, Lcom/bbm/l/d/b/c;->e:Ljava/util/Hashtable;
-
-    invoke-virtual {v0, p1, p2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 590
     return-void
 .end method
 
@@ -929,7 +1007,7 @@
     .locals 1
 
     .prologue
-    .line 465
+    .line 593
     iget-boolean v0, p0, Lcom/bbm/l/d/b/c;->l:Z
 
     return v0
@@ -939,19 +1017,19 @@
     .locals 1
 
     .prologue
-    .line 510
-    iget-object v0, p0, Lcom/bbm/l/d/b/c;->j:Lcom/bbm/l/d/b/n;
+    .line 638
+    iget-object v0, p0, Lcom/bbm/l/d/b/c;->j:Lcom/bbm/l/d/b/q;
 
     if-eqz v0, :cond_0
 
-    .line 511
-    iget-object v0, p0, Lcom/bbm/l/d/b/c;->j:Lcom/bbm/l/d/b/n;
+    .line 639
+    iget-object v0, p0, Lcom/bbm/l/d/b/c;->j:Lcom/bbm/l/d/b/q;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/bbm/l/d/b/n;->a(IILandroid/content/Intent;)Z
+    invoke-virtual {v0, p1, p2, p3}, Lcom/bbm/l/d/b/q;->a(IILandroid/content/Intent;)Z
 
     move-result v0
 
-    .line 513
+    .line 641
     :goto_0
     return v0
 
@@ -961,166 +1039,158 @@
     goto :goto_0
 .end method
 
-.method public final a(Landroid/app/Activity;Ljava/lang/String;ILcom/bbm/l/d/b;Ljava/lang/String;)Z
+.method public final a(Landroid/app/Activity;Ljava/lang/String;ILcom/bbm/l/d/b;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 10
 
     .prologue
-    const/4 v9, 0x0
-
-    const/4 v0, 0x0
-
-    .line 492
-    iget-object v1, p0, Lcom/bbm/l/d/b/c;->j:Lcom/bbm/l/d/b/n;
-
-    if-eqz v1, :cond_1
-
-    .line 493
-    iput-object p4, p0, Lcom/bbm/l/d/b/c;->o:Lcom/bbm/l/d/b;
-
-    .line 494
-    iput-object p2, p0, Lcom/bbm/l/d/b/c;->m:Ljava/lang/String;
-
-    .line 495
-    iput-object p5, p0, Lcom/bbm/l/d/b/c;->n:Ljava/lang/String;
-
-    .line 496
-    iget-object v7, p0, Lcom/bbm/l/d/b/c;->j:Lcom/bbm/l/d/b/n;
-
-    iget-object v8, p0, Lcom/bbm/l/d/b/c;->g:Lcom/bbm/l/d/b/r;
-
-    iget-object v5, p0, Lcom/bbm/l/d/b/c;->c:Ljava/lang/String;
-
-    const-string v4, "inapp"
-
-    invoke-virtual {v7}, Lcom/bbm/l/d/b/n;->a()V
-
-    const-string v0, "launchPurchaseFlow"
-
-    invoke-virtual {v7, v0}, Lcom/bbm/l/d/b/n;->a(Ljava/lang/String;)V
-
-    const-string v0, "launchPurchaseFlow"
-
-    invoke-virtual {v7, v0}, Lcom/bbm/l/d/b/n;->b(Ljava/lang/String;)V
-
-    const-string v0, "subs"
-
-    invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-boolean v0, v7, Lcom/bbm/l/d/b/n;->e:Z
-
-    if-nez v0, :cond_2
-
-    new-instance v0, Lcom/bbm/l/d/b/u;
-
-    const/16 v1, -0x3f1
-
-    const-string v2, "Subscriptions are not available."
-
-    invoke-direct {v0, v1, v2}, Lcom/bbm/l/d/b/u;-><init>(ILjava/lang/String;)V
-
-    invoke-virtual {v7}, Lcom/bbm/l/d/b/n;->b()V
-
-    if-eqz v8, :cond_0
-
-    invoke-interface {v8, v0, v9}, Lcom/bbm/l/d/b/r;->a(Lcom/bbm/l/d/b/u;Lcom/bbm/l/d/b/x;)V
-
-    .line 497
-    :cond_0
-    :goto_0
-    const/4 v0, 0x1
-
-    .line 499
-    :cond_1
-    return v0
-
-    .line 496
-    :cond_2
-    :try_start_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Constructing buy intent for "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", item type: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v7, v0}, Lcom/bbm/l/d/b/n;->c(Ljava/lang/String;)V
-
-    iget-object v0, v7, Lcom/bbm/l/d/b/n;->i:Lcom/a/b/a/a;
-
-    const/4 v1, 0x3
-
-    iget-object v2, v7, Lcom/bbm/l/d/b/n;->h:Landroid/content/Context;
-
-    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v2
-
-    move-object v3, p2
-
-    invoke-interface/range {v0 .. v5}, Lcom/a/b/a/a;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
-
-    move-result-object v0
-
-    invoke-virtual {v7, v0}, Lcom/bbm/l/d/b/n;->a(Landroid/os/Bundle;)I
-
-    move-result v1
+    .line 620
+    iget-object v1, p0, Lcom/bbm/l/d/b/c;->j:Lcom/bbm/l/d/b/q;
 
     if-eqz v1, :cond_3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 621
+    iput-object p4, p0, Lcom/bbm/l/d/b/c;->o:Lcom/bbm/l/d/b;
 
-    const-string v2, "Unable to buy item, Error response: "
+    .line 622
+    move-object/from16 v0, p6
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iput-object v0, p0, Lcom/bbm/l/d/b/c;->m:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/bbm/l/d/b/n;->a(I)Ljava/lang/String;
+    .line 623
+    iput-object p5, p0, Lcom/bbm/l/d/b/c;->n:Ljava/lang/String;
 
-    move-result-object v2
+    .line 624
+    iget-object v8, p0, Lcom/bbm/l/d/b/c;->j:Lcom/bbm/l/d/b/q;
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v9, p0, Lcom/bbm/l/d/b/c;->g:Lcom/bbm/l/d/b/u;
 
-    move-result-object v0
+    iget-object v6, p0, Lcom/bbm/l/d/b/c;->c:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Lcom/bbm/l/d/b/q;->a()V
 
-    move-result-object v0
+    const-string v1, "launchPurchaseFlow"
 
-    invoke-virtual {v7, v0}, Lcom/bbm/l/d/b/n;->d(Ljava/lang/String;)V
+    invoke-virtual {v8, v1}, Lcom/bbm/l/d/b/q;->a(Ljava/lang/String;)V
 
-    invoke-virtual {v7}, Lcom/bbm/l/d/b/n;->b()V
+    const-string v1, "launchPurchaseFlow"
 
-    new-instance v0, Lcom/bbm/l/d/b/u;
+    invoke-virtual {v8, v1}, Lcom/bbm/l/d/b/q;->b(Ljava/lang/String;)V
 
-    const-string v2, "Unable to buy item"
+    const-string v1, "subs"
 
-    invoke-direct {v0, v1, v2}, Lcom/bbm/l/d/b/u;-><init>(ILjava/lang/String;)V
+    move-object/from16 v0, p7
 
-    if-eqz v8, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const/4 v1, 0x0
+    move-result v1
 
-    invoke-interface {v8, v0, v1}, Lcom/bbm/l/d/b/r;->a(Lcom/bbm/l/d/b/u;Lcom/bbm/l/d/b/x;)V
+    if-eqz v1, :cond_1
+
+    iget-boolean v1, v8, Lcom/bbm/l/d/b/q;->e:Z
+
+    if-nez v1, :cond_1
+
+    new-instance v1, Lcom/bbm/l/d/b/x;
+
+    const/16 v2, -0x3f1
+
+    const-string v3, "Subscriptions are not available."
+
+    invoke-direct {v1, v2, v3}, Lcom/bbm/l/d/b/x;-><init>(ILjava/lang/String;)V
+
+    invoke-virtual {v8}, Lcom/bbm/l/d/b/q;->b()V
+
+    if-eqz v9, :cond_0
+
+    const/4 v2, 0x0
+
+    invoke-interface {v9, v1, v2}, Lcom/bbm/l/d/b/u;->a(Lcom/bbm/l/d/b/x;Lcom/bbm/l/d/b/aa;)V
+
+    .line 625
+    :cond_0
+    :goto_0
+    const/4 v1, 0x1
+
+    .line 627
+    :goto_1
+    return v1
+
+    .line 624
+    :cond_1
+    :try_start_0
+    const-string v1, "Constructing buy intent for sku: %s, type: %s, extraData: %s"
+
+    const/4 v2, 0x3
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    aput-object p6, v2, v3
+
+    const/4 v3, 0x1
+
+    aput-object p7, v2, v3
+
+    const/4 v3, 0x2
+
+    aput-object v6, v2, v3
+
+    invoke-static {v1, v2}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    iget-object v1, v8, Lcom/bbm/l/d/b/q;->i:Lcom/a/b/a/a;
+
+    const/4 v2, 0x3
+
+    iget-object v3, v8, Lcom/bbm/l/d/b/q;->h:Landroid/content/Context;
+
+    invoke-virtual {v3}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v3
+
+    move-object/from16 v4, p6
+
+    move-object/from16 v5, p7
+
+    invoke-interface/range {v1 .. v6}, Lcom/a/b/a/a;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v1
+
+    invoke-virtual {v8, v1}, Lcom/bbm/l/d/b/q;->a(Landroid/os/Bundle;)I
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    const-string v1, "Unable to buy item, Error response: %s"
+
+    const/4 v3, 0x1
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    invoke-static {v2}, Lcom/bbm/l/d/b/q;->a(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    aput-object v5, v3, v4
+
+    invoke-static {v1, v3}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    invoke-virtual {v8}, Lcom/bbm/l/d/b/q;->b()V
+
+    new-instance v1, Lcom/bbm/l/d/b/x;
+
+    const-string v3, "Unable to buy item"
+
+    invoke-direct {v1, v2, v3}, Lcom/bbm/l/d/b/x;-><init>(ILjava/lang/String;)V
+
+    if-eqz v9, :cond_0
+
+    const/4 v2, 0x0
+
+    invoke-interface {v9, v1, v2}, Lcom/bbm/l/d/b/u;->a(Lcom/bbm/l/d/b/x;Lcom/bbm/l/d/b/aa;)V
     :try_end_0
     .catch Landroid/content/IntentSender$SendIntentException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
@@ -1128,127 +1198,121 @@
     goto :goto_0
 
     :catch_0
-    move-exception v0
+    move-exception v1
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v2, "SendIntentException while launching purchase flow for: %s"
 
-    const-string v2, "SendIntentException while launching purchase flow for sku "
+    const/4 v3, 0x1
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v4, 0x0
 
-    move-result-object v1
+    aput-object p6, v3, v4
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/bbm/af;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    move-result-object v1
+    invoke-static {v1}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
 
-    invoke-virtual {v7, v1}, Lcom/bbm/l/d/b/n;->d(Ljava/lang/String;)V
+    invoke-virtual {v8}, Lcom/bbm/l/d/b/q;->b()V
 
-    invoke-virtual {v0}, Landroid/content/IntentSender$SendIntentException;->printStackTrace()V
+    new-instance v1, Lcom/bbm/l/d/b/x;
 
-    invoke-virtual {v7}, Lcom/bbm/l/d/b/n;->b()V
+    const/16 v2, -0x3ec
 
-    new-instance v0, Lcom/bbm/l/d/b/u;
+    const-string v3, "Failed to send intent."
 
-    const/16 v1, -0x3ec
+    invoke-direct {v1, v2, v3}, Lcom/bbm/l/d/b/x;-><init>(ILjava/lang/String;)V
 
-    const-string v2, "Failed to send intent."
+    if-eqz v9, :cond_0
 
-    invoke-direct {v0, v1, v2}, Lcom/bbm/l/d/b/u;-><init>(ILjava/lang/String;)V
+    const/4 v2, 0x0
 
-    if-eqz v8, :cond_0
-
-    invoke-interface {v8, v0, v9}, Lcom/bbm/l/d/b/r;->a(Lcom/bbm/l/d/b/u;Lcom/bbm/l/d/b/x;)V
+    invoke-interface {v9, v1, v2}, Lcom/bbm/l/d/b/u;->a(Lcom/bbm/l/d/b/x;Lcom/bbm/l/d/b/aa;)V
 
     goto :goto_0
 
-    :cond_3
+    :cond_2
     :try_start_1
-    const-string v1, "BUY_INTENT"
+    const-string v2, "BUY_INTENT"
 
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/app/PendingIntent;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Launching buy intent for "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v1
 
-    const-string v2, ". Request code: "
+    check-cast v1, Landroid/app/PendingIntent;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, "Launching buy intent for: sku: %s, request code: %s"
+
+    const/4 v3, 0x2
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    aput-object p6, v3, v4
+
+    const/4 v4, 0x1
+
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v3, v4
+
+    invoke-static {v2, v3}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    iput p3, v8, Lcom/bbm/l/d/b/q;->k:I
+
+    iput-object v9, v8, Lcom/bbm/l/d/b/q;->n:Lcom/bbm/l/d/b/u;
+
+    move-object/from16 v0, p7
+
+    iput-object v0, v8, Lcom/bbm/l/d/b/q;->l:Ljava/lang/String;
+
+    invoke-virtual {v1}, Landroid/app/PendingIntent;->getIntentSender()Landroid/content/IntentSender;
+
+    move-result-object v2
+
+    new-instance v4, Landroid/content/Intent;
+
+    invoke-direct {v4}, Landroid/content/Intent;-><init>()V
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v7, v1}, Lcom/bbm/l/d/b/n;->c(Ljava/lang/String;)V
-
-    iput p3, v7, Lcom/bbm/l/d/b/n;->k:I
-
-    iput-object v8, v7, Lcom/bbm/l/d/b/n;->n:Lcom/bbm/l/d/b/r;
-
-    iput-object v4, v7, Lcom/bbm/l/d/b/n;->l:Ljava/lang/String;
-
-    invoke-virtual {v0}, Landroid/app/PendingIntent;->getIntentSender()Landroid/content/IntentSender;
-
-    move-result-object v1
-
-    new-instance v3, Landroid/content/Intent;
-
-    invoke-direct {v3}, Landroid/content/Intent;-><init>()V
-
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v4
-
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v5
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v6
 
-    move-object v0, p1
+    const/4 v1, 0x0
 
-    move v2, p3
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual/range {v0 .. v6}, Landroid/app/Activity;->startIntentSenderForResult(Landroid/content/IntentSender;ILandroid/content/Intent;III)V
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v7
+
+    move-object v1, p1
+
+    move v3, p3
+
+    invoke-virtual/range {v1 .. v7}, Landroid/app/Activity;->startIntentSenderForResult(Landroid/content/IntentSender;ILandroid/content/Intent;III)V
     :try_end_1
     .catch Landroid/content/IntentSender$SendIntentException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
@@ -1256,48 +1320,52 @@
     goto/16 :goto_0
 
     :catch_1
-    move-exception v0
+    move-exception v1
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v2, "RemoteException while launching purchase flow for: %s"
 
-    const-string v2, "RemoteException while launching purchase flow for sku "
+    const/4 v3, 0x1
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v4, 0x0
 
-    move-result-object v1
+    aput-object p6, v3, v4
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/bbm/af;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    move-result-object v1
+    invoke-static {v1}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
 
-    invoke-virtual {v7, v1}, Lcom/bbm/l/d/b/n;->d(Ljava/lang/String;)V
+    invoke-virtual {v8}, Lcom/bbm/l/d/b/q;->b()V
 
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+    new-instance v1, Lcom/bbm/l/d/b/x;
 
-    invoke-virtual {v7}, Lcom/bbm/l/d/b/n;->b()V
+    const/16 v2, -0x3e9
 
-    new-instance v0, Lcom/bbm/l/d/b/u;
+    const-string v3, "Remote exception while starting purchase flow"
 
-    const/16 v1, -0x3e9
+    invoke-direct {v1, v2, v3}, Lcom/bbm/l/d/b/x;-><init>(ILjava/lang/String;)V
 
-    const-string v2, "Remote exception while starting purchase flow"
+    if-eqz v9, :cond_0
 
-    invoke-direct {v0, v1, v2}, Lcom/bbm/l/d/b/u;-><init>(ILjava/lang/String;)V
+    const/4 v2, 0x0
 
-    if-eqz v8, :cond_0
-
-    invoke-interface {v8, v0, v9}, Lcom/bbm/l/d/b/r;->a(Lcom/bbm/l/d/b/u;Lcom/bbm/l/d/b/x;)V
+    invoke-interface {v9, v1, v2}, Lcom/bbm/l/d/b/u;->a(Lcom/bbm/l/d/b/x;Lcom/bbm/l/d/b/aa;)V
 
     goto/16 :goto_0
+
+    .line 627
+    :cond_3
+    const/4 v1, 0x0
+
+    goto/16 :goto_1
 .end method
 
 .method public final b()Z
     .locals 1
 
     .prologue
-    .line 558
+    .line 689
     sget-boolean v0, Lcom/bbm/l/d/b/c;->p:Z
 
     return v0
@@ -1307,21 +1375,21 @@
     .locals 1
 
     .prologue
-    .line 563
+    .line 694
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/bbm/l/d/b/c;->v:Z
+    sput-boolean v0, Lcom/bbm/l/d/b/c;->t:Z
 
-    .line 564
+    .line 695
     return-void
 .end method
 
-.method public final d()Lcom/bbm/util/bi;
+.method public final d()Lcom/bbm/util/bo;
     .locals 1
 
     .prologue
-    .line 472
-    iget-object v0, p0, Lcom/bbm/l/d/b/c;->k:Lcom/bbm/util/bi;
+    .line 600
+    iget-object v0, p0, Lcom/bbm/l/d/b/c;->k:Lcom/bbm/util/bo;
 
     return-object v0
 .end method
@@ -1330,173 +1398,144 @@
     .locals 1
 
     .prologue
-    .line 571
-    sget-object v0, Lcom/bbm/l/d/b/c;->t:Lcom/bbm/l/d;
+    .line 698
+    sget-object v0, Lcom/bbm/l/d/b/c;->s:Lcom/bbm/l/d;
 
     return-object v0
 .end method
 
-.method public final f()Ljava/util/ArrayList;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/bbm/l/d/b/x;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 575
-    sget-object v0, Lcom/bbm/l/d/b/c;->r:Ljava/util/ArrayList;
-
-    return-object v0
-.end method
-
-.method public final g()V
+.method public final f()V
     .locals 1
 
     .prologue
-    .line 583
-    sget-object v0, Lcom/bbm/l/d/b/c;->r:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
-    .line 584
+    .line 706
     sget-object v0, Lcom/bbm/l/d/b/c;->e:Ljava/util/Hashtable;
 
     invoke-virtual {v0}, Ljava/util/Hashtable;->clear()V
 
-    .line 585
+    .line 707
     sget-object v0, Lcom/bbm/l/d/b/c;->f:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
-    .line 586
+    .line 708
     return-void
 .end method
 
-.method public final h()V
+.method public final g()V
     .locals 4
 
     .prologue
     const/4 v3, 0x0
 
-    .line 602
-    iget-object v0, p0, Lcom/bbm/l/d/b/c;->k:Lcom/bbm/util/bi;
+    .line 724
+    iget-object v0, p0, Lcom/bbm/l/d/b/c;->k:Lcom/bbm/util/bo;
 
-    sget-object v1, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
+    sget-object v1, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
 
     if-ne v0, v1, :cond_1
 
-    .line 603
-    iget-object v0, p0, Lcom/bbm/l/d/b/c;->j:Lcom/bbm/l/d/b/n;
+    .line 725
+    iget-object v0, p0, Lcom/bbm/l/d/b/c;->j:Lcom/bbm/l/d/b/q;
 
     const-string v1, "Disposing."
 
-    invoke-virtual {v0, v1}, Lcom/bbm/l/d/b/n;->c(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/l/d/b/q;->c(Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
-    iput-boolean v1, v0, Lcom/bbm/l/d/b/n;->c:Z
+    iput-boolean v1, v0, Lcom/bbm/l/d/b/q;->c:Z
 
-    iget-object v1, v0, Lcom/bbm/l/d/b/n;->j:Landroid/content/ServiceConnection;
+    iget-object v1, v0, Lcom/bbm/l/d/b/q;->j:Landroid/content/ServiceConnection;
 
     if-eqz v1, :cond_0
 
     const-string v1, "Unbinding from service."
 
-    invoke-virtual {v0, v1}, Lcom/bbm/l/d/b/n;->c(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/l/d/b/q;->c(Ljava/lang/String;)V
 
-    iget-object v1, v0, Lcom/bbm/l/d/b/n;->h:Landroid/content/Context;
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, v0, Lcom/bbm/l/d/b/n;->i:Lcom/a/b/a/a;
+    iget-object v1, v0, Lcom/bbm/l/d/b/q;->h:Landroid/content/Context;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, v0, Lcom/bbm/l/d/b/n;->h:Landroid/content/Context;
+    iget-object v1, v0, Lcom/bbm/l/d/b/q;->i:Lcom/a/b/a/a;
 
-    iget-object v2, v0, Lcom/bbm/l/d/b/n;->j:Landroid/content/ServiceConnection;
+    if-eqz v1, :cond_0
+
+    iget-object v1, v0, Lcom/bbm/l/d/b/q;->h:Landroid/content/Context;
+
+    iget-object v2, v0, Lcom/bbm/l/d/b/q;->j:Landroid/content/ServiceConnection;
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
     :cond_0
     const/4 v1, 0x1
 
-    iput-boolean v1, v0, Lcom/bbm/l/d/b/n;->d:Z
+    iput-boolean v1, v0, Lcom/bbm/l/d/b/q;->d:Z
 
-    iput-object v3, v0, Lcom/bbm/l/d/b/n;->h:Landroid/content/Context;
+    iput-object v3, v0, Lcom/bbm/l/d/b/q;->h:Landroid/content/Context;
 
-    iput-object v3, v0, Lcom/bbm/l/d/b/n;->j:Landroid/content/ServiceConnection;
+    iput-object v3, v0, Lcom/bbm/l/d/b/q;->j:Landroid/content/ServiceConnection;
 
-    iput-object v3, v0, Lcom/bbm/l/d/b/n;->i:Lcom/a/b/a/a;
+    iput-object v3, v0, Lcom/bbm/l/d/b/q;->i:Lcom/a/b/a/a;
 
-    iput-object v3, v0, Lcom/bbm/l/d/b/n;->n:Lcom/bbm/l/d/b/r;
+    iput-object v3, v0, Lcom/bbm/l/d/b/q;->n:Lcom/bbm/l/d/b/u;
 
-    .line 605
+    .line 727
     :cond_1
-    iput-object v3, p0, Lcom/bbm/l/d/b/c;->j:Lcom/bbm/l/d/b/n;
+    iput-object v3, p0, Lcom/bbm/l/d/b/c;->j:Lcom/bbm/l/d/b/q;
 
-    .line 606
-    iput-object v3, p0, Lcom/bbm/l/d/b/c;->k:Lcom/bbm/util/bi;
+    .line 728
+    iput-object v3, p0, Lcom/bbm/l/d/b/c;->k:Lcom/bbm/util/bo;
 
-    .line 607
-    sget-object v0, Lcom/bbm/l/d/b/c;->s:Lcom/bbm/f/ac;
+    .line 729
+    sget-object v0, Lcom/bbm/l/d/b/c;->r:Lcom/bbm/f/ac;
 
     if-eqz v0, :cond_2
 
-    .line 608
+    .line 730
     sget-object v0, Lcom/bbm/l/d/b/c;->d:Lcom/bbm/d/a;
 
-    iget-object v0, v0, Lcom/bbm/d/ac;->h:Lcom/bbm/d/a/f;
+    iget-object v0, v0, Lcom/bbm/d/aq;->j:Lcom/bbm/d/a/f;
 
     iget-object v0, v0, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
 
-    sget-object v1, Lcom/bbm/l/d/b/c;->s:Lcom/bbm/f/ac;
+    sget-object v1, Lcom/bbm/l/d/b/c;->r:Lcom/bbm/f/ac;
 
     invoke-interface {v0, v1}, Lcom/bbm/f/a;->b(Lcom/bbm/f/ac;)V
 
-    .line 609
-    sput-object v3, Lcom/bbm/l/d/b/c;->s:Lcom/bbm/f/ac;
+    .line 731
+    sput-object v3, Lcom/bbm/l/d/b/c;->r:Lcom/bbm/f/ac;
 
-    .line 610
+    .line 732
     sget-object v0, Lcom/bbm/l/d/b/c;->e:Ljava/util/Hashtable;
 
     invoke-virtual {v0}, Ljava/util/Hashtable;->clear()V
 
-    .line 611
+    .line 733
     sget-object v0, Lcom/bbm/l/d/b/c;->f:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
-    .line 612
-    sget-object v0, Lcom/bbm/l/d/b/c;->r:Ljava/util/ArrayList;
+    .line 734
+    sput-object v3, Lcom/bbm/l/d/b/c;->s:Lcom/bbm/l/d;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
-    .line 613
-    sput-object v3, Lcom/bbm/l/d/b/c;->t:Lcom/bbm/l/d;
-
-    .line 615
+    .line 736
     :cond_2
     sput-object v3, Lcom/bbm/l/d/b/c;->h:Lcom/bbm/l/d/b/c;
 
-    .line 616
+    .line 737
     return-void
 .end method
 
-.method public final i()V
+.method public final h()V
     .locals 7
 
     .prologue
     const/4 v6, 0x0
 
-    .line 283
-    iget-object v0, p0, Lcom/bbm/l/d/b/c;->j:Lcom/bbm/l/d/b/n;
+    .line 294
+    iget-object v0, p0, Lcom/bbm/l/d/b/c;->j:Lcom/bbm/l/d/b/q;
 
     if-eqz v0, :cond_0
 
@@ -1504,14 +1543,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 285
+    .line 296
     const/4 v0, 0x0
 
     :try_start_0
     iput-boolean v0, p0, Lcom/bbm/l/d/b/c;->l:Z
 
-    .line 286
-    iget-object v0, p0, Lcom/bbm/l/d/b/c;->j:Lcom/bbm/l/d/b/n;
+    .line 297
+    iget-object v0, p0, Lcom/bbm/l/d/b/c;->j:Lcom/bbm/l/d/b/q;
 
     iget-object v1, p0, Lcom/bbm/l/d/b/c;->a:Ljava/util/List;
 
@@ -1523,77 +1562,77 @@
 
     invoke-direct {v3}, Landroid/os/Handler;-><init>()V
 
-    invoke-virtual {v0}, Lcom/bbm/l/d/b/n;->a()V
+    invoke-virtual {v0}, Lcom/bbm/l/d/b/q;->a()V
 
     const-string v4, "queryInventory"
 
-    invoke-virtual {v0, v4}, Lcom/bbm/l/d/b/n;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v4}, Lcom/bbm/l/d/b/q;->a(Ljava/lang/String;)V
 
     const-string v4, "refresh inventory"
 
-    invoke-virtual {v0, v4}, Lcom/bbm/l/d/b/n;->b(Ljava/lang/String;)V
+    invoke-virtual {v0, v4}, Lcom/bbm/l/d/b/q;->b(Ljava/lang/String;)V
 
     new-instance v4, Ljava/lang/Thread;
 
-    new-instance v5, Lcom/bbm/l/d/b/p;
+    new-instance v5, Lcom/bbm/l/d/b/s;
 
-    invoke-direct {v5, v0, v1, v2, v3}, Lcom/bbm/l/d/b/p;-><init>(Lcom/bbm/l/d/b/n;Ljava/util/List;Lcom/bbm/l/d/b/t;Landroid/os/Handler;)V
+    invoke-direct {v5, v0, v1, v2, v3}, Lcom/bbm/l/d/b/s;-><init>(Lcom/bbm/l/d/b/q;Ljava/util/List;Lcom/bbm/l/d/b/w;Landroid/os/Handler;)V
 
     invoke-direct {v4, v5}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
     invoke-virtual {v4}, Ljava/lang/Thread;->start()V
 
-    .line 303
+    .line 314
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/bbm/l/d/b/c;->l:Z
 
-    .line 304
+    .line 315
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/bbm/l/d/b/c;->a:Ljava/util/List;
 
-    .line 305
+    .line 316
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/bbm/l/d/b/c;->b:Ljava/util/List;
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 320
+    .line 331
     :cond_0
     return-void
 
-    .line 308
+    .line 319
     :catch_0
     move-exception v0
 
     iget-object v0, p0, Lcom/bbm/l/d/b/c;->b:Ljava/util/List;
 
-    .line 309
+    .line 320
     iput-object v6, p0, Lcom/bbm/l/d/b/c;->b:Ljava/util/List;
 
-    .line 310
+    .line 321
     iput-object v6, p0, Lcom/bbm/l/d/b/c;->a:Ljava/util/List;
 
-    .line 311
+    .line 322
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/bbm/l/d/b/c;->l:Z
 
-    .line 312
+    .line 323
     if-eqz v0, :cond_0
 
-    .line 313
-    new-instance v1, Lcom/bbm/l/d/b/u;
+    .line 324
+    new-instance v1, Lcom/bbm/l/d/b/x;
 
     const/16 v2, -0x3f0
 
     const-string v3, "Unable to complete inventory query"
 
-    invoke-direct {v1, v2, v3}, Lcom/bbm/l/d/b/u;-><init>(ILjava/lang/String;)V
+    invoke-direct {v1, v2, v3}, Lcom/bbm/l/d/b/x;-><init>(ILjava/lang/String;)V
 
-    .line 314
+    .line 325
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -1609,10 +1648,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/l/d/b/t;
+    check-cast v0, Lcom/bbm/l/d/b/w;
 
-    .line 315
-    invoke-interface {v0, v1, v6}, Lcom/bbm/l/d/b/t;->a(Lcom/bbm/l/d/b/u;Lcom/bbm/l/d/b/v;)V
+    .line 326
+    invoke-interface {v0, v1, v6, v6}, Lcom/bbm/l/d/b/w;->a(Lcom/bbm/l/d/b/x;Lcom/bbm/l/d/b/y;Lcom/bbm/l/d/b/y;)V
 
     goto :goto_0
 .end method

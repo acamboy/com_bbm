@@ -231,15 +231,15 @@
 
     iget-object v1, v1, Lcom/mapquest/android/maps/ai;->d:Lcom/mapquest/android/maps/MapView;
 
-    iget-object v2, v1, Lcom/mapquest/android/maps/MapView;->e:Lcom/mapquest/android/maps/cb;
+    iget-object v2, v1, Lcom/mapquest/android/maps/MapView;->e:Lcom/mapquest/android/maps/ca;
 
     if-eqz v2, :cond_3
 
-    iget-object v1, v1, Lcom/mapquest/android/maps/MapView;->e:Lcom/mapquest/android/maps/cb;
+    iget-object v1, v1, Lcom/mapquest/android/maps/MapView;->e:Lcom/mapquest/android/maps/ca;
 
-    sget-object v2, Lcom/mapquest/android/maps/cc;->b:Lcom/mapquest/android/maps/cc;
+    sget v2, Lcom/mapquest/android/maps/cb;->b:I
 
-    invoke-virtual {v1, v2}, Lcom/mapquest/android/maps/cb;->a(Lcom/mapquest/android/maps/cc;)Lcom/mapquest/android/maps/x;
+    invoke-virtual {v1, v2}, Lcom/mapquest/android/maps/ca;->a(I)Lcom/mapquest/android/maps/x;
 
     move-result-object v1
 
@@ -252,13 +252,13 @@
 
     iget-object v1, v1, Lcom/mapquest/android/maps/ai;->d:Lcom/mapquest/android/maps/MapView;
 
-    invoke-virtual {v1}, Lcom/mapquest/android/maps/MapView;->getTileCacher()Lcom/mapquest/android/maps/cb;
+    invoke-virtual {v1}, Lcom/mapquest/android/maps/MapView;->getTileCacher()Lcom/mapquest/android/maps/ca;
 
     move-result-object v1
 
-    sget-object v2, Lcom/mapquest/android/maps/cc;->a:Lcom/mapquest/android/maps/cc;
+    sget v2, Lcom/mapquest/android/maps/cb;->a:I
 
-    invoke-virtual {v1, v2}, Lcom/mapquest/android/maps/cb;->a(Lcom/mapquest/android/maps/cc;)Lcom/mapquest/android/maps/x;
+    invoke-virtual {v1, v2}, Lcom/mapquest/android/maps/ca;->a(I)Lcom/mapquest/android/maps/x;
 
     move-result-object v1
 

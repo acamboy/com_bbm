@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 97
+    .line 99
     iput-object p1, p0, Lcom/bbm/ui/activities/a;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +33,7 @@
 
     const/4 v3, 0x0
 
-    .line 100
+    .line 102
     iget-object v0, p0, Lcom/bbm/ui/activities/a;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     invoke-static {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->a(Lcom/bbm/ui/activities/AddChannelPostActivity;)Z
@@ -42,7 +42,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 101
+    .line 103
     iget-object v0, p0, Lcom/bbm/ui/activities/a;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     iget-object v1, p0, Lcom/bbm/ui/activities/a;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
@@ -51,20 +51,20 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e0174
+    const v2, 0x7f0e0196
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1, v3}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;I)V
+    invoke-static {v0, v1, v3}, Lcom/bbm/util/eu;->a(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 113
+    .line 115
     :cond_0
     :goto_0
     return-void
 
-    .line 102
+    .line 104
     :cond_1
     iget-object v0, p0, Lcom/bbm/ui/activities/a;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
@@ -72,13 +72,13 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/bbm/util/ec;->b(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/bbm/ui/activities/a;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     invoke-static {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->b(Lcom/bbm/ui/activities/AddChannelPostActivity;)Ljava/lang/String;
@@ -89,7 +89,7 @@
 
     move-result-object v0
 
-    .line 104
+    .line 106
     iget-object v1, p0, Lcom/bbm/ui/activities/a;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     new-instance v2, Lcom/cropimage/f;
@@ -98,7 +98,7 @@
 
     invoke-static {v1, v2}, Lcom/bbm/ui/activities/AddChannelPostActivity;->a(Lcom/bbm/ui/activities/AddChannelPostActivity;Lcom/cropimage/f;)Lcom/cropimage/f;
 
-    .line 105
+    .line 107
     iget-object v1, p0, Lcom/bbm/ui/activities/a;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     invoke-static {v1}, Lcom/bbm/ui/activities/AddChannelPostActivity;->c(Lcom/bbm/ui/activities/AddChannelPostActivity;)Lcom/cropimage/f;
@@ -107,7 +107,7 @@
 
     iput-object v0, v1, Lcom/cropimage/f;->b:Landroid/net/Uri;
 
-    .line 106
+    .line 108
     iget-object v0, p0, Lcom/bbm/ui/activities/a;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     invoke-static {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->c(Lcom/bbm/ui/activities/AddChannelPostActivity;)Lcom/cropimage/f;
@@ -116,7 +116,7 @@
 
     iput-boolean v4, v0, Lcom/cropimage/f;->c:Z
 
-    .line 107
+    .line 109
     iget-object v0, p0, Lcom/bbm/ui/activities/a;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     invoke-static {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->c(Lcom/bbm/ui/activities/AddChannelPostActivity;)Lcom/cropimage/f;
@@ -125,7 +125,7 @@
 
     iput-boolean v3, v0, Lcom/cropimage/f;->d:Z
 
-    .line 108
+    .line 110
     iget-object v0, p0, Lcom/bbm/ui/activities/a;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     invoke-static {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->c(Lcom/bbm/ui/activities/AddChannelPostActivity;)Lcom/cropimage/f;
@@ -134,7 +134,7 @@
 
     iput-boolean v3, v0, Lcom/cropimage/f;->a:Z
 
-    .line 109
+    .line 111
     iget-object v0, p0, Lcom/bbm/ui/activities/a;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     invoke-static {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->c(Lcom/bbm/ui/activities/AddChannelPostActivity;)Lcom/cropimage/f;
@@ -143,7 +143,7 @@
 
     iput-boolean v4, v0, Lcom/cropimage/f;->e:Z
 
-    .line 110
+    .line 112
     iget-object v0, p0, Lcom/bbm/ui/activities/a;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     invoke-static {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->c(Lcom/bbm/ui/activities/AddChannelPostActivity;)Lcom/cropimage/f;
@@ -154,7 +154,7 @@
 
     iput v1, v0, Lcom/cropimage/f;->f:I
 
-    .line 111
+    .line 113
     iget-object v0, p0, Lcom/bbm/ui/activities/a;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     iget-object v1, p0, Lcom/bbm/ui/activities/a;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;

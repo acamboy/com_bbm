@@ -698,7 +698,7 @@
 
     div-double/2addr v8, v12
 
-    const-wide/high16 v12, 0x3fe0000000000000L
+    const-wide/high16 v12, 0x3fe0000000000000L    # 0.5
 
     sub-double/2addr v8, v12
 
@@ -706,7 +706,7 @@
 
     move-result-wide v8
 
-    const-wide/high16 v12, 0x4034000000000000L
+    const-wide/high16 v12, 0x4034000000000000L    # 20.0
 
     mul-double/2addr v8, v12
 
@@ -1216,6 +1216,15 @@
 
 .method public static a(Ljava/lang/String;Lcom/google/zxing/g/a/n;)Lcom/google/zxing/g/c/g;
     .locals 11
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Lcom/google/zxing/g/a/n;",
+            ")",
+            "Lcom/google/zxing/g/c/g;"
+        }
+    .end annotation
 
     .prologue
     const/16 v10, 0x8

@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/lq;
 .super Ljava/lang/Object;
-.source "GroupChatHistorySettingsActivity.java"
+.source "GroupConversationActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/text/TextWatcher;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 75
-    iput-object p1, p0, Lcom/bbm/ui/activities/lq;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
+    .line 285
+    iput-object p1, p0, Lcom/bbm/ui/activities/lq;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,67 +25,80 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 0
+
+    .prologue
+    .line 300
+    return-void
+.end method
+
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
+
+    .prologue
+    .line 296
+    return-void
+.end method
+
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
     .locals 4
 
     .prologue
-    .line 79
-    const-string v0, "headerActionBar Positive Button Clicked"
+    .line 288
+    iget-object v0, p0, Lcom/bbm/ui/activities/lq;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 81
-    iget-object v0, p0, Lcom/bbm/ui/activities/lq;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->a(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)Lcom/bbm/g/r;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->f(Lcom/bbm/ui/activities/GroupConversationActivity;)Lcom/bbm/ui/activities/afs;
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_1
 
-    .line 88
-    :goto_0
-    return-void
+    iget-object v0, p0, Lcom/bbm/ui/activities/lq;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    .line 84
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->f(Lcom/bbm/ui/activities/GroupConversationActivity;)Lcom/bbm/ui/activities/afs;
+
+    move-result-object v0
+
+    iget-wide v0, v0, Lcom/bbm/ui/activities/afs;->f:J
+
+    const-wide/16 v2, -0x1
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/lq;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->f(Lcom/bbm/ui/activities/GroupConversationActivity;)Lcom/bbm/ui/activities/afs;
+
+    move-result-object v0
+
+    iget-wide v0, v0, Lcom/bbm/ui/activities/afs;->f:J
+
+    const-wide/16 v2, 0x7530
+
+    add-long/2addr v0, v2
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    cmp-long v0, v0, v2
+
+    if-gez v0, :cond_1
+
+    .line 290
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/lq;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
+    iget-object v0, p0, Lcom/bbm/ui/activities/lq;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->a(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)Lcom/bbm/g/r;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/g/r;->toString()Ljava/lang/String;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->f(Lcom/bbm/ui/activities/GroupConversationActivity;)Lcom/bbm/ui/activities/afs;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/bbm/g/bh;->a(Ljava/lang/String;)Lcom/bbm/g/bh;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/afs;->a()V
 
-    move-result-object v0
-
-    .line 86
-    iget-object v1, p0, Lcom/bbm/ui/activities/lq;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
-
-    iget-object v1, v1, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->a:Lcom/bbm/g/al;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/lq;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->b(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v3, Lcom/bbm/g/bg;
-
-    invoke-direct {v3, v2, v0}, Lcom/bbm/g/bg;-><init>(Ljava/lang/String;Lcom/bbm/g/bh;)V
-
-    invoke-virtual {v1, v3}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
-
-    .line 87
-    iget-object v0, p0, Lcom/bbm/ui/activities/lq;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->finish()V
-
-    goto :goto_0
+    .line 292
+    :cond_1
+    return-void
 .end method

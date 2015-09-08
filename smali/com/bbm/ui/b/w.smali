@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/b/w;
 .super Ljava/lang/Object;
-.source "ClickableToast.java"
+.source "CloudDirectoryServiceDialog.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/text/TextWatcher;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/b/v;
+.field final synthetic a:Lcom/bbm/ui/b/u;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/b/v;)V
+.method constructor <init>(Lcom/bbm/ui/b/u;)V
     .locals 0
 
     .prologue
-    .line 30
-    iput-object p1, p0, Lcom/bbm/ui/b/w;->a:Lcom/bbm/ui/b/v;
+    .line 45
+    iput-object p1, p0, Lcom/bbm/ui/b/w;->a:Lcom/bbm/ui/b/u;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,15 +25,31 @@
 
 
 # virtual methods
-.method public final run()V
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 0
+
+    .prologue
+    .line 50
+    return-void
+.end method
+
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
+
+    .prologue
+    .line 55
+    return-void
+.end method
+
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
     .locals 1
 
     .prologue
-    .line 33
-    iget-object v0, p0, Lcom/bbm/ui/b/w;->a:Lcom/bbm/ui/b/v;
+    .line 59
+    iget-object v0, p0, Lcom/bbm/ui/b/w;->a:Lcom/bbm/ui/b/u;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/b/v;->dismiss()V
+    invoke-static {v0}, Lcom/bbm/ui/b/u;->b(Lcom/bbm/ui/b/u;)V
 
-    .line 34
+    .line 60
     return-void
 .end method

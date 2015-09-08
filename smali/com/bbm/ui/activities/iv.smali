@@ -1,104 +1,103 @@
-.class final Lcom/bbm/ui/activities/iv;
+.class final synthetic Lcom/bbm/ui/activities/iv;
 .super Ljava/lang/Object;
-.source "ConversationActivity.java"
-
-# interfaces
-.implements Lcom/bbm/ui/c/gn;
+.source "FilePickerActivity.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 4201
-    iput-object p1, p0, Lcom/bbm/ui/activities/iv;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 646
+    invoke-static {}, Lcom/bbm/ui/activities/jb;->a()[I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    return-void
-.end method
+    array-length v0, v0
 
+    new-array v0, v0, [I
 
-# virtual methods
-.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
-    .locals 4
+    sput-object v0, Lcom/bbm/ui/activities/iv;->a:[I
 
-    .prologue
-    .line 4204
-    iget v0, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
+    :try_start_0
+    sget-object v0, Lcom/bbm/ui/activities/iv;->a:[I
 
-    packed-switch v0, :pswitch_data_0
+    sget v1, Lcom/bbm/ui/activities/jb;->a:I
 
-    .line 4215
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_3
+
     :goto_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/iv;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    :try_start_1
+    sget-object v0, Lcom/bbm/ui/activities/iv;->a:[I
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+    sget v1, Lcom/bbm/ui/activities/jb;->b:I
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+    add-int/lit8 v1, v1, -0x1
 
-    const/4 v1, 0x1
+    const/4 v2, 0x2
 
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 4216
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/bbm/ui/activities/iv;->a:[I
+
+    sget v1, Lcom/bbm/ui/activities/jb;->c:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_1
+
+    :goto_2
+    :try_start_3
+    sget-object v0, Lcom/bbm/ui/activities/iv;->a:[I
+
+    sget v1, Lcom/bbm/ui/activities/jb;->d:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_0
+
+    :goto_3
     return-void
 
-    .line 4206
-    :pswitch_0
-    const-string v0, "on recall message disabled selected"
+    :catch_0
+    move-exception v0
 
-    const-class v1, Lcom/bbm/ui/activities/ConversationActivity;
+    goto :goto_3
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    :catch_1
+    move-exception v0
 
-    .line 4208
-    iget-object v0, p0, Lcom/bbm/ui/activities/iv;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    goto :goto_2
 
-    const/4 v1, 0x0
+    :catch_2
+    move-exception v0
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ConversationActivity;->f(Lcom/bbm/ui/activities/ConversationActivity;Z)Z
+    goto :goto_1
 
-    .line 4209
-    iget-object v0, p0, Lcom/bbm/ui/activities/iv;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/iv;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->aH(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/widget/TextView;
-
-    move-result-object v1
-
-    const v2, 0x7f09006e
-
-    const v3, 0x7f090010
-
-    invoke-static {v0, v1, v2, v3}, Lcom/bbm/ui/activities/ConversationActivity;->a(Lcom/bbm/ui/activities/ConversationActivity;Landroid/widget/TextView;II)V
-
-    .line 4210
-    iget-object v0, p0, Lcom/bbm/ui/activities/iv;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/iv;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    const v2, 0x7f0e0522
-
-    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/ConversationActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;)V
+    :catch_3
+    move-exception v0
 
     goto :goto_0
-
-    .line 4204
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x7f0b0076
-        :pswitch_0
-    .end packed-switch
 .end method

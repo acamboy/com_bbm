@@ -138,13 +138,13 @@
     .line 556
     iget-object v8, p0, Lcom/google/zxing/a/b/a;->a:Lcom/google/zxing/b/b;
 
-    const/high16 v9, 0x3f000000
+    const/high16 v9, 0x3f000000    # 0.5f
 
     add-float/2addr v9, v3
 
     float-to-int v9, v9
 
-    const/high16 v10, 0x3f000000
+    const/high16 v10, 0x3f000000    # 0.5f
 
     add-float/2addr v10, v2
 
@@ -174,7 +174,7 @@
     .line 563
     float-to-double v2, v0
 
-    const-wide v4, 0x3fb999999999999aL
+    const-wide v4, 0x3fb999999999999aL    # 0.1
 
     cmpl-double v1, v2, v4
 
@@ -182,7 +182,7 @@
 
     float-to-double v2, v0
 
-    const-wide v4, 0x3feccccccccccccdL
+    const-wide v4, 0x3feccccccccccccdL    # 0.9
 
     cmpg-double v1, v2, v4
 
@@ -199,7 +199,7 @@
     :cond_2
     float-to-double v0, v0
 
-    const-wide v2, 0x3fb999999999999aL
+    const-wide v2, 0x3fb999999999999aL    # 0.1
 
     cmpg-double v0, v0, v2
 
@@ -235,9 +235,9 @@
     .locals 12
 
     .prologue
-    const/high16 v11, 0x40800000
+    const/high16 v11, 0x40800000    # 4.0f
 
-    const/high16 v10, 0x3f000000
+    const/high16 v10, 0x3f000000    # 0.5f
 
     const/4 v9, -0x1
 
@@ -710,7 +710,7 @@
     .locals 10
 
     .prologue
-    const/high16 v9, 0x3f000000
+    const/high16 v9, 0x3f000000    # 0.5f
 
     .line 479
     new-array v3, p3, [Z

@@ -10,27 +10,37 @@
 
 .field final c:I
 
-.field final d:Z
+.field final d:Landroid/graphics/drawable/Drawable;
 
-.field final e:Z
+.field final e:Landroid/graphics/drawable/Drawable;
 
-.field final f:Z
+.field final f:Landroid/graphics/drawable/Drawable;
 
-.field public final g:Lcom/d/a/b/a/e;
+.field final g:Z
 
-.field public final h:Landroid/graphics/BitmapFactory$Options;
+.field final h:Z
 
-.field final i:I
+.field final i:Z
 
-.field public final j:Ljava/lang/Object;
+.field public final j:I
 
-.field final k:Lcom/d/a/b/e/a;
+.field public final k:Landroid/graphics/BitmapFactory$Options;
 
-.field final l:Lcom/d/a/b/e/a;
+.field final l:I
 
-.field final m:Lcom/d/a/b/c/a;
+.field public final m:Z
 
-.field final n:Landroid/os/Handler;
+.field public final n:Ljava/lang/Object;
+
+.field final o:Lcom/d/a/b/g/a;
+
+.field final p:Lcom/d/a/b/g/a;
+
+.field final q:Lcom/d/a/b/c/a;
+
+.field final r:Landroid/os/Handler;
+
+.field final s:Z
 
 
 # direct methods
@@ -38,80 +48,105 @@
     .locals 1
 
     .prologue
-    .line 76
+    .line 87
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
+    .line 88
     iget v0, p1, Lcom/d/a/b/e;->a:I
 
     iput v0, p0, Lcom/d/a/b/d;->a:I
 
-    .line 78
+    .line 89
     iget v0, p1, Lcom/d/a/b/e;->b:I
 
     iput v0, p0, Lcom/d/a/b/d;->b:I
 
-    .line 79
+    .line 90
     iget v0, p1, Lcom/d/a/b/e;->c:I
 
     iput v0, p0, Lcom/d/a/b/d;->c:I
 
-    .line 80
-    iget-boolean v0, p1, Lcom/d/a/b/e;->d:Z
-
-    iput-boolean v0, p0, Lcom/d/a/b/d;->d:Z
-
-    .line 81
-    iget-boolean v0, p1, Lcom/d/a/b/e;->e:Z
-
-    iput-boolean v0, p0, Lcom/d/a/b/d;->e:Z
-
-    .line 82
-    iget-boolean v0, p1, Lcom/d/a/b/e;->f:Z
-
-    iput-boolean v0, p0, Lcom/d/a/b/d;->f:Z
-
-    .line 83
-    iget-object v0, p1, Lcom/d/a/b/e;->g:Lcom/d/a/b/a/e;
-
-    iput-object v0, p0, Lcom/d/a/b/d;->g:Lcom/d/a/b/a/e;
-
-    .line 84
-    iget-object v0, p1, Lcom/d/a/b/e;->h:Landroid/graphics/BitmapFactory$Options;
-
-    iput-object v0, p0, Lcom/d/a/b/d;->h:Landroid/graphics/BitmapFactory$Options;
-
-    .line 85
-    iget v0, p1, Lcom/d/a/b/e;->i:I
-
-    iput v0, p0, Lcom/d/a/b/d;->i:I
-
-    .line 86
-    iget-object v0, p1, Lcom/d/a/b/e;->j:Ljava/lang/Object;
-
-    iput-object v0, p0, Lcom/d/a/b/d;->j:Ljava/lang/Object;
-
-    .line 87
-    iget-object v0, p1, Lcom/d/a/b/e;->k:Lcom/d/a/b/e/a;
-
-    iput-object v0, p0, Lcom/d/a/b/d;->k:Lcom/d/a/b/e/a;
-
-    .line 88
-    iget-object v0, p1, Lcom/d/a/b/e;->l:Lcom/d/a/b/e/a;
-
-    iput-object v0, p0, Lcom/d/a/b/d;->l:Lcom/d/a/b/e/a;
-
-    .line 89
-    iget-object v0, p1, Lcom/d/a/b/e;->m:Lcom/d/a/b/c/a;
-
-    iput-object v0, p0, Lcom/d/a/b/d;->m:Lcom/d/a/b/c/a;
-
-    .line 90
-    iget-object v0, p1, Lcom/d/a/b/e;->n:Landroid/os/Handler;
-
-    iput-object v0, p0, Lcom/d/a/b/d;->n:Landroid/os/Handler;
-
     .line 91
+    iget-object v0, p1, Lcom/d/a/b/e;->d:Landroid/graphics/drawable/Drawable;
+
+    iput-object v0, p0, Lcom/d/a/b/d;->d:Landroid/graphics/drawable/Drawable;
+
+    .line 92
+    iget-object v0, p1, Lcom/d/a/b/e;->e:Landroid/graphics/drawable/Drawable;
+
+    iput-object v0, p0, Lcom/d/a/b/d;->e:Landroid/graphics/drawable/Drawable;
+
+    .line 93
+    iget-object v0, p1, Lcom/d/a/b/e;->f:Landroid/graphics/drawable/Drawable;
+
+    iput-object v0, p0, Lcom/d/a/b/d;->f:Landroid/graphics/drawable/Drawable;
+
+    .line 94
+    iget-boolean v0, p1, Lcom/d/a/b/e;->g:Z
+
+    iput-boolean v0, p0, Lcom/d/a/b/d;->g:Z
+
+    .line 95
+    iget-boolean v0, p1, Lcom/d/a/b/e;->h:Z
+
+    iput-boolean v0, p0, Lcom/d/a/b/d;->h:Z
+
+    .line 96
+    iget-boolean v0, p1, Lcom/d/a/b/e;->i:Z
+
+    iput-boolean v0, p0, Lcom/d/a/b/d;->i:Z
+
+    .line 97
+    iget v0, p1, Lcom/d/a/b/e;->j:I
+
+    iput v0, p0, Lcom/d/a/b/d;->j:I
+
+    .line 98
+    iget-object v0, p1, Lcom/d/a/b/e;->k:Landroid/graphics/BitmapFactory$Options;
+
+    iput-object v0, p0, Lcom/d/a/b/d;->k:Landroid/graphics/BitmapFactory$Options;
+
+    .line 99
+    iget v0, p1, Lcom/d/a/b/e;->l:I
+
+    iput v0, p0, Lcom/d/a/b/d;->l:I
+
+    .line 100
+    iget-boolean v0, p1, Lcom/d/a/b/e;->m:Z
+
+    iput-boolean v0, p0, Lcom/d/a/b/d;->m:Z
+
+    .line 101
+    iget-object v0, p1, Lcom/d/a/b/e;->n:Ljava/lang/Object;
+
+    iput-object v0, p0, Lcom/d/a/b/d;->n:Ljava/lang/Object;
+
+    .line 102
+    iget-object v0, p1, Lcom/d/a/b/e;->o:Lcom/d/a/b/g/a;
+
+    iput-object v0, p0, Lcom/d/a/b/d;->o:Lcom/d/a/b/g/a;
+
+    .line 103
+    iget-object v0, p1, Lcom/d/a/b/e;->p:Lcom/d/a/b/g/a;
+
+    iput-object v0, p0, Lcom/d/a/b/d;->p:Lcom/d/a/b/g/a;
+
+    .line 104
+    iget-object v0, p1, Lcom/d/a/b/e;->q:Lcom/d/a/b/c/a;
+
+    iput-object v0, p0, Lcom/d/a/b/d;->q:Lcom/d/a/b/c/a;
+
+    .line 105
+    iget-object v0, p1, Lcom/d/a/b/e;->r:Landroid/os/Handler;
+
+    iput-object v0, p0, Lcom/d/a/b/d;->r:Landroid/os/Handler;
+
+    .line 106
+    iget-boolean v0, p1, Lcom/d/a/b/e;->s:Z
+
+    iput-boolean v0, p0, Lcom/d/a/b/d;->s:Z
+
+    .line 107
     return-void
 .end method
 
@@ -119,7 +154,7 @@
     .locals 0
 
     .prologue
-    .line 59
+    .line 65
     invoke-direct {p0, p1}, Lcom/d/a/b/d;-><init>(Lcom/d/a/b/e;)V
 
     return-void
@@ -131,8 +166,8 @@
     .locals 1
 
     .prologue
-    .line 110
-    iget-object v0, p0, Lcom/d/a/b/d;->l:Lcom/d/a/b/e/a;
+    .line 126
+    iget-object v0, p0, Lcom/d/a/b/d;->p:Lcom/d/a/b/g/a;
 
     if-eqz v0, :cond_0
 
@@ -143,28 +178,6 @@
 
     :cond_0
     const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final b()Landroid/os/Handler;
-    .locals 1
-
-    .prologue
-    .line 170
-    iget-object v0, p0, Lcom/d/a/b/d;->n:Landroid/os/Handler;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Lcom/d/a/b/d;->n:Landroid/os/Handler;
 
     goto :goto_0
 .end method

@@ -3,20 +3,28 @@
 .source "ChatHeaderView.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/ai;
+.field final synthetic a:Lcom/bbm/iceberg/m;
+
+.field final synthetic b:Landroid/app/Activity;
+
+.field final synthetic c:Lcom/bbm/ui/aj;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/ai;)V
+.method constructor <init>(Lcom/bbm/ui/aj;Lcom/bbm/iceberg/m;Landroid/app/Activity;)V
     .locals 0
 
     .prologue
-    .line 260
-    iput-object p1, p0, Lcom/bbm/ui/ap;->a:Lcom/bbm/ui/ai;
+    .line 304
+    iput-object p1, p0, Lcom/bbm/ui/ap;->c:Lcom/bbm/ui/aj;
+
+    iput-object p2, p0, Lcom/bbm/ui/ap;->a:Lcom/bbm/iceberg/m;
+
+    iput-object p3, p0, Lcom/bbm/ui/ap;->b:Landroid/app/Activity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,26 +33,27 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 2
 
     .prologue
-    .line 263
-    const-string v0, "ActionBar Clicked"
+    .line 307
+    const-string v0, "right button clicked"
 
-    const-class v1, Lcom/bbm/ui/ai;
+    const-class v1, Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 264
-    iget-object v0, p0, Lcom/bbm/ui/ap;->a:Lcom/bbm/ui/ai;
+    .line 308
+    iget-object v0, p0, Lcom/bbm/ui/ap;->a:Lcom/bbm/iceberg/m;
 
-    invoke-static {v0}, Lcom/bbm/ui/ai;->k(Lcom/bbm/ui/ai;)Lcom/bbm/j/u;
+    iget-object v1, p0, Lcom/bbm/ui/ap;->b:Landroid/app/Activity;
 
-    move-result-object v0
+    invoke-static {v0, v1}, Lcom/bbm/ui/aj;->a(Lcom/bbm/iceberg/m;Landroid/app/Activity;)V
 
-    invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
+    .line 309
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 265
+    .line 310
     return-void
 .end method

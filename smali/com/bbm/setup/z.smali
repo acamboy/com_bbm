@@ -4,22 +4,28 @@
 
 
 # instance fields
-.field final a:Lcom/bbm/d/a;
+.field final a:Lcom/bbm/aa;
 
-.field public b:Lcom/bbm/j/k;
+.field final b:Lcom/bbm/d/a;
 
-.field public c:Lcom/bbm/z;
+.field public c:Lcom/bbm/j/k;
 
-.field public final d:Lcom/bbm/j/k;
+.field public d:Lcom/bbm/ag;
 
 .field public final e:Lcom/bbm/j/k;
 
 .field public final f:Lcom/bbm/j/k;
 
-.field g:Lcom/bbm/util/ct;
+.field public final g:Lcom/bbm/j/k;
+
+.field public final h:Lcom/bbm/j/k;
+
+.field public final i:Lcom/bbm/j/k;
+
+.field j:Lcom/bbm/util/dc;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/bbm/util/ct",
+            "Lcom/bbm/util/dc",
             "<",
             "Ljava/lang/String;",
             ">;"
@@ -27,744 +33,921 @@
     .end annotation
 .end field
 
-.field public h:Lcom/bbm/setup/ah;
+.field public k:Lcom/bbm/setup/ao;
 
-.field public i:Lcom/bbm/setup/am;
+.field public l:Lcom/bbm/setup/ax;
 
-.field j:Lcom/bbm/f/ae;
+.field m:Lcom/bbm/f/ae;
 
-.field private final k:Lcom/bbm/t;
+.field n:Lcom/bbm/util/dc;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/util/dc",
+            "<",
+            "Lcom/bbm/setup/am;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private l:Lcom/bbm/ag;
+.field o:Lcom/bbm/util/dc;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/util/dc",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field p:Lcom/bbm/util/dc;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/util/dc",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field q:Lcom/bbm/util/dc;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/util/dc",
+            "<",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public final r:Lcom/bbm/j/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/j/a",
+            "<",
+            "Lcom/bbm/setup/am;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field final s:Lcom/bbm/j/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/j/a",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field final t:Lcom/bbm/j/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/j/a",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private u:Lcom/bbm/an;
+
+.field private final v:Lcom/bbm/j/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/j/a",
+            "<",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final w:Lcom/bbm/setup/al;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/t;Lcom/bbm/d/a;)V
-    .locals 2
+.method public constructor <init>(Lcom/bbm/aa;Lcom/bbm/d/a;)V
+    .locals 3
 
     .prologue
-    .line 209
+    .line 268
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 117
+    .line 115
     new-instance v0, Lcom/bbm/setup/aa;
 
     invoke-direct {v0, p0}, Lcom/bbm/setup/aa;-><init>(Lcom/bbm/setup/z;)V
 
-    iput-object v0, p0, Lcom/bbm/setup/z;->b:Lcom/bbm/j/k;
+    iput-object v0, p0, Lcom/bbm/setup/z;->c:Lcom/bbm/j/k;
 
-    .line 126
-    new-instance v0, Lcom/bbm/setup/ab;
-
-    invoke-direct {v0, p0}, Lcom/bbm/setup/ab;-><init>(Lcom/bbm/setup/z;)V
-
-    iput-object v0, p0, Lcom/bbm/setup/z;->d:Lcom/bbm/j/k;
-
-    .line 133
-    new-instance v0, Lcom/bbm/setup/ac;
-
-    invoke-direct {v0, p0}, Lcom/bbm/setup/ac;-><init>(Lcom/bbm/setup/z;)V
-
-    iput-object v0, p0, Lcom/bbm/setup/z;->e:Lcom/bbm/j/k;
-
-    .line 140
+    .line 124
     new-instance v0, Lcom/bbm/setup/ad;
 
     invoke-direct {v0, p0}, Lcom/bbm/setup/ad;-><init>(Lcom/bbm/setup/z;)V
 
+    iput-object v0, p0, Lcom/bbm/setup/z;->e:Lcom/bbm/j/k;
+
+    .line 131
+    new-instance v0, Lcom/bbm/setup/ae;
+
+    invoke-direct {v0, p0}, Lcom/bbm/setup/ae;-><init>(Lcom/bbm/setup/z;)V
+
     iput-object v0, p0, Lcom/bbm/setup/z;->f:Lcom/bbm/j/k;
 
-    .line 201
-    new-instance v0, Lcom/bbm/util/ct;
+    .line 138
+    new-instance v0, Lcom/bbm/setup/af;
+
+    invoke-direct {v0, p0}, Lcom/bbm/setup/af;-><init>(Lcom/bbm/setup/z;)V
+
+    iput-object v0, p0, Lcom/bbm/setup/z;->g:Lcom/bbm/j/k;
+
+    .line 145
+    new-instance v0, Lcom/bbm/setup/ag;
+
+    invoke-direct {v0, p0}, Lcom/bbm/setup/ag;-><init>(Lcom/bbm/setup/z;)V
+
+    iput-object v0, p0, Lcom/bbm/setup/z;->h:Lcom/bbm/j/k;
+
+    .line 152
+    new-instance v0, Lcom/bbm/setup/ah;
+
+    invoke-direct {v0, p0}, Lcom/bbm/setup/ah;-><init>(Lcom/bbm/setup/z;)V
+
+    iput-object v0, p0, Lcom/bbm/setup/z;->i:Lcom/bbm/j/k;
+
+    .line 223
+    new-instance v0, Lcom/bbm/util/dc;
 
     const-string v1, ""
 
-    invoke-direct {v0, v1}, Lcom/bbm/util/ct;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, v1}, Lcom/bbm/util/dc;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lcom/bbm/setup/z;->g:Lcom/bbm/util/ct;
+    iput-object v0, p0, Lcom/bbm/setup/z;->j:Lcom/bbm/util/dc;
 
-    .line 203
-    new-instance v0, Lcom/bbm/setup/ah;
+    .line 225
+    new-instance v0, Lcom/bbm/setup/ao;
 
-    invoke-direct {v0}, Lcom/bbm/setup/ah;-><init>()V
+    invoke-direct {v0}, Lcom/bbm/setup/ao;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/setup/z;->h:Lcom/bbm/setup/ah;
+    iput-object v0, p0, Lcom/bbm/setup/z;->k:Lcom/bbm/setup/ao;
 
-    .line 207
+    .line 228
     new-instance v0, Lcom/bbm/f/ae;
 
     invoke-direct {v0}, Lcom/bbm/f/ae;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/setup/z;->j:Lcom/bbm/f/ae;
+    iput-object v0, p0, Lcom/bbm/setup/z;->m:Lcom/bbm/f/ae;
 
-    .line 210
-    iput-object p1, p0, Lcom/bbm/setup/z;->k:Lcom/bbm/t;
+    .line 230
+    new-instance v0, Lcom/bbm/util/dc;
 
-    .line 211
-    invoke-static {}, Lcom/bbm/Alaska;->l()Lcom/bbm/ag;
+    new-instance v1, Lcom/bbm/setup/am;
+
+    sget-object v2, Lcom/bbm/setup/an;->a:Lcom/bbm/setup/an;
+
+    invoke-direct {v1, v2}, Lcom/bbm/setup/am;-><init>(Lcom/bbm/setup/an;)V
+
+    invoke-direct {v0, v1}, Lcom/bbm/util/dc;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lcom/bbm/setup/z;->n:Lcom/bbm/util/dc;
+
+    .line 231
+    new-instance v0, Lcom/bbm/util/dc;
+
+    const-string v1, ""
+
+    invoke-direct {v0, v1}, Lcom/bbm/util/dc;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lcom/bbm/setup/z;->o:Lcom/bbm/util/dc;
+
+    .line 232
+    new-instance v0, Lcom/bbm/util/dc;
+
+    const-string v1, ""
+
+    invoke-direct {v0, v1}, Lcom/bbm/util/dc;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lcom/bbm/setup/z;->p:Lcom/bbm/util/dc;
+
+    .line 233
+    new-instance v0, Lcom/bbm/util/dc;
+
+    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-direct {v0, v1}, Lcom/bbm/util/dc;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lcom/bbm/setup/z;->q:Lcom/bbm/util/dc;
+
+    .line 235
+    new-instance v0, Lcom/bbm/setup/ai;
+
+    invoke-direct {v0, p0}, Lcom/bbm/setup/ai;-><init>(Lcom/bbm/setup/z;)V
+
+    iput-object v0, p0, Lcom/bbm/setup/z;->r:Lcom/bbm/j/a;
+
+    .line 242
+    new-instance v0, Lcom/bbm/setup/aj;
+
+    invoke-direct {v0, p0}, Lcom/bbm/setup/aj;-><init>(Lcom/bbm/setup/z;)V
+
+    iput-object v0, p0, Lcom/bbm/setup/z;->s:Lcom/bbm/j/a;
+
+    .line 249
+    new-instance v0, Lcom/bbm/setup/ak;
+
+    invoke-direct {v0, p0}, Lcom/bbm/setup/ak;-><init>(Lcom/bbm/setup/z;)V
+
+    iput-object v0, p0, Lcom/bbm/setup/z;->t:Lcom/bbm/j/a;
+
+    .line 256
+    new-instance v0, Lcom/bbm/setup/ab;
+
+    invoke-direct {v0, p0}, Lcom/bbm/setup/ab;-><init>(Lcom/bbm/setup/z;)V
+
+    iput-object v0, p0, Lcom/bbm/setup/z;->v:Lcom/bbm/j/a;
+
+    .line 269
+    iput-object p1, p0, Lcom/bbm/setup/z;->a:Lcom/bbm/aa;
+
+    .line 270
+    invoke-static {}, Lcom/bbm/Alaska;->p()Lcom/bbm/an;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/setup/z;->l:Lcom/bbm/ag;
+    iput-object v0, p0, Lcom/bbm/setup/z;->u:Lcom/bbm/an;
 
-    .line 212
-    iput-object p2, p0, Lcom/bbm/setup/z;->a:Lcom/bbm/d/a;
+    .line 271
+    iput-object p2, p0, Lcom/bbm/setup/z;->b:Lcom/bbm/d/a;
 
-    .line 213
-    new-instance v0, Lcom/bbm/z;
+    .line 272
+    new-instance v0, Lcom/bbm/ag;
 
-    invoke-interface {p1}, Lcom/bbm/t;->getApplicationContext()Landroid/content/Context;
+    invoke-interface {p1}, Lcom/bbm/aa;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, p2, v1}, Lcom/bbm/z;-><init>(Lcom/bbm/d/a;Landroid/content/Context;)V
+    invoke-direct {v0, p2, v1}, Lcom/bbm/ag;-><init>(Lcom/bbm/d/a;Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/bbm/setup/z;->c:Lcom/bbm/z;
+    iput-object v0, p0, Lcom/bbm/setup/z;->d:Lcom/bbm/ag;
 
-    .line 214
+    .line 273
+    new-instance v0, Lcom/bbm/setup/ax;
+
+    invoke-direct {v0, p1}, Lcom/bbm/setup/ax;-><init>(Lcom/bbm/aa;)V
+
+    iput-object v0, p0, Lcom/bbm/setup/z;->l:Lcom/bbm/setup/ax;
+
+    .line 275
+    iget-object v0, p0, Lcom/bbm/setup/z;->r:Lcom/bbm/j/a;
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lcom/bbm/j/a;->c:Z
+
+    .line 277
+    new-instance v0, Lcom/bbm/setup/al;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lcom/bbm/setup/al;-><init>(Lcom/bbm/setup/z;B)V
+
+    iput-object v0, p0, Lcom/bbm/setup/z;->w:Lcom/bbm/setup/al;
+
+    .line 278
+    iget-object v0, p2, Lcom/bbm/d/aq;->j:Lcom/bbm/d/a/f;
+
+    iget-object v0, v0, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
+
+    iget-object v1, p0, Lcom/bbm/setup/z;->w:Lcom/bbm/setup/al;
+
+    invoke-interface {v0, v1}, Lcom/bbm/f/a;->a(Lcom/bbm/f/ac;)V
+
+    .line 279
+    return-void
+.end method
+
+.method private a(Lcom/bbm/av;)Lcom/bbm/setup/am;
+    .locals 2
+
+    .prologue
+    .line 338
     new-instance v0, Lcom/bbm/setup/am;
 
-    invoke-direct {v0, p1}, Lcom/bbm/setup/am;-><init>(Lcom/bbm/t;)V
+    sget-object v1, Lcom/bbm/setup/an;->j:Lcom/bbm/setup/an;
 
-    iput-object v0, p0, Lcom/bbm/setup/z;->i:Lcom/bbm/setup/am;
+    invoke-direct {v0, v1}, Lcom/bbm/setup/am;-><init>(Lcom/bbm/setup/an;)V
 
-    .line 215
-    return-void
+    iput-object p1, v0, Lcom/bbm/setup/am;->b:Lcom/bbm/av;
+
+    .line 339
+    iget-object v1, p0, Lcom/bbm/setup/z;->n:Lcom/bbm/util/dc;
+
+    invoke-virtual {v1, v0}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
+
+    .line 340
+    return-object v0
+.end method
+
+.method private a(Lcom/bbm/setup/an;)Lcom/bbm/setup/am;
+    .locals 2
+
+    .prologue
+    .line 328
+    new-instance v0, Lcom/bbm/setup/am;
+
+    invoke-direct {v0, p1}, Lcom/bbm/setup/am;-><init>(Lcom/bbm/setup/an;)V
+
+    .line 329
+    iget-object v1, p0, Lcom/bbm/setup/z;->n:Lcom/bbm/util/dc;
+
+    invoke-virtual {v1, v0}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
+
+    .line 330
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a()Lcom/bbm/setup/af;
-    .locals 11
+.method public final a()Lcom/bbm/setup/am;
+    .locals 10
 
     .prologue
-    const/4 v3, 0x1
+    const/4 v5, 0x1
 
-    const/4 v2, 0x0
+    const/4 v4, 0x0
 
-    .line 261
-    iget-object v0, p0, Lcom/bbm/setup/z;->a:Lcom/bbm/d/a;
+    .line 362
+    iget-object v0, p0, Lcom/bbm/setup/z;->t:Lcom/bbm/j/a;
 
-    const-string v1, "bbidState"
-
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->E(Ljava/lang/String;)Lcom/bbm/util/bm;
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/util/bm;->d()Lorg/json/JSONObject;
+    check-cast v0, Ljava/lang/String;
 
-    move-result-object v0
+    .line 363
+    iget-object v1, p0, Lcom/bbm/setup/z;->s:Lcom/bbm/j/a;
 
-    const-string v1, "credentials"
+    invoke-virtual {v1}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v4
+    check-cast v1, Ljava/lang/String;
 
-    .line 262
-    iget-object v0, p0, Lcom/bbm/setup/z;->a:Lcom/bbm/d/a;
+    .line 364
+    iget-object v2, p0, Lcom/bbm/setup/z;->v:Lcom/bbm/j/a;
 
-    const-string v1, "setupState"
+    invoke-virtual {v2}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->E(Ljava/lang/String;)Lcom/bbm/util/bm;
+    move-result-object v2
 
-    move-result-object v0
+    check-cast v2, Ljava/lang/Boolean;
 
-    invoke-virtual {v0}, Lcom/bbm/util/bm;->d()Lorg/json/JSONObject;
-
-    move-result-object v0
-
-    const-string v1, "state"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    .line 263
-    iget-object v0, p0, Lcom/bbm/setup/z;->a:Lcom/bbm/d/a;
-
-    const-string v1, "upgradeNotification"
-
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->E(Ljava/lang/String;)Lcom/bbm/util/bm;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/util/bm;->d()Lorg/json/JSONObject;
-
-    move-result-object v0
-
-    const-string v1, "showNotification"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;)Z
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v6
 
-    .line 265
-    iget-object v0, p0, Lcom/bbm/setup/z;->k:Lcom/bbm/t;
+    .line 366
+    iget-object v2, p0, Lcom/bbm/setup/z;->a:Lcom/bbm/aa;
 
-    invoke-interface {v0}, Lcom/bbm/t;->B()Lcom/bbm/f/af;
+    invoke-interface {v2}, Lcom/bbm/aa;->G()Lcom/bbm/f/af;
+
+    move-result-object v2
+
+    .line 368
+    sget-object v3, Lcom/bbm/setup/ac;->a:[I
+
+    invoke-virtual {v2}, Lcom/bbm/f/af;->ordinal()I
+
+    move-result v2
+
+    aget v2, v3, v2
+
+    packed-switch v2, :pswitch_data_0
+
+    .line 377
+    const-string v2, "SetupManager getActiveScreen using cached values of bbidState.credentials %s, setupState.state %s"
+
+    const/4 v3, 0x2
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    aput-object v0, v3, v4
+
+    aput-object v1, v3, v5
+
+    invoke-static {v2, v3}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 379
+    iget-object v2, p0, Lcom/bbm/setup/z;->a:Lcom/bbm/aa;
+
+    invoke-interface {v2}, Lcom/bbm/aa;->r()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 381
+    sget-object v0, Lcom/bbm/av;->l:Lcom/bbm/av;
+
+    invoke-direct {p0, v0}, Lcom/bbm/setup/z;->a(Lcom/bbm/av;)Lcom/bbm/setup/am;
 
     move-result-object v0
 
-    .line 267
-    sget-object v1, Lcom/bbm/setup/ae;->a:[I
-
-    invoke-virtual {v0}, Lcom/bbm/f/af;->ordinal()I
-
-    move-result v0
-
-    aget v0, v1, v0
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 276
-    const-string v0, "SetupManager getActiveScreen bbidState.credentials %s, setupState.state %s"
-
-    const/4 v1, 0x2
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    aput-object v4, v1, v2
-
-    aput-object v5, v1, v3
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 278
-    iget-object v0, p0, Lcom/bbm/setup/z;->k:Lcom/bbm/t;
-
-    invoke-interface {v0}, Lcom/bbm/t;->n()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 280
-    sget-object v0, Lcom/bbm/am;->l:Lcom/bbm/am;
-
-    invoke-static {v0}, Lcom/bbm/setup/af;->a(Lcom/bbm/am;)Lcom/bbm/setup/af;
-
-    move-result-object v0
-
-    .line 419
+    .line 520
     :goto_0
     return-object v0
 
-    .line 270
+    .line 371
     :pswitch_0
-    new-instance v0, Lcom/bbm/setup/af;
+    sget-object v0, Lcom/bbm/setup/an;->l:Lcom/bbm/setup/an;
 
-    sget-object v1, Lcom/bbm/setup/ag;->l:Lcom/bbm/setup/ag;
+    invoke-direct {p0, v0}, Lcom/bbm/setup/z;->a(Lcom/bbm/setup/an;)Lcom/bbm/setup/am;
 
-    invoke-direct {v0, v1}, Lcom/bbm/setup/af;-><init>(Lcom/bbm/setup/ag;)V
+    move-result-object v0
 
     goto :goto_0
 
-    .line 273
+    .line 374
     :pswitch_1
-    new-instance v0, Lcom/bbm/setup/af;
+    sget-object v0, Lcom/bbm/setup/an;->b:Lcom/bbm/setup/an;
 
-    sget-object v1, Lcom/bbm/setup/ag;->b:Lcom/bbm/setup/ag;
+    invoke-direct {p0, v0}, Lcom/bbm/setup/z;->a(Lcom/bbm/setup/an;)Lcom/bbm/setup/am;
 
-    invoke-direct {v0, v1}, Lcom/bbm/setup/af;-><init>(Lcom/bbm/setup/ag;)V
+    move-result-object v0
 
     goto :goto_0
 
-    .line 290
+    .line 391
     :cond_0
-    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/f/ae;
+    invoke-static {}, Lcom/bbm/Alaska;->n()Lcom/bbm/f/ae;
+
+    move-result-object v2
+
+    .line 392
+    iget-boolean v2, v2, Lcom/bbm/f/ae;->i:Z
+
+    if-eqz v2, :cond_1
+
+    const-string v2, "Unknown"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 396
+    const-string v2, "Success"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    .line 397
+    sget-object v0, Lcom/bbm/setup/an;->i:Lcom/bbm/setup/an;
+
+    invoke-direct {p0, v0}, Lcom/bbm/setup/z;->a(Lcom/bbm/setup/an;)Lcom/bbm/setup/am;
 
     move-result-object v0
-
-    .line 291
-    iget-boolean v0, v0, Lcom/bbm/f/ae;->j:Z
-
-    if-eqz v0, :cond_1
-
-    const-string v0, "Unknown"
-
-    invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 295
-    const-string v0, "Success"
-
-    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 296
-    new-instance v0, Lcom/bbm/setup/af;
-
-    sget-object v1, Lcom/bbm/setup/ag;->i:Lcom/bbm/setup/ag;
-
-    invoke-direct {v0, v1}, Lcom/bbm/setup/af;-><init>(Lcom/bbm/setup/ag;)V
 
     goto :goto_0
 
-    .line 300
+    .line 401
     :cond_1
-    iget-object v0, p0, Lcom/bbm/setup/z;->a:Lcom/bbm/d/a;
+    iget-object v2, p0, Lcom/bbm/setup/z;->b:Lcom/bbm/d/a;
 
-    invoke-virtual {v0}, Lcom/bbm/d/a;->c()Lcom/google/b/a/l;
+    invoke-virtual {v2}, Lcom/bbm/d/a;->b()Lcom/google/b/a/l;
+
+    move-result-object v2
+
+    .line 402
+    invoke-virtual {v2}, Lcom/google/b/a/l;->b()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    .line 403
+    invoke-virtual {v2}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 301
-    invoke-virtual {v0}, Lcom/google/b/a/l;->a()Z
+    check-cast v0, Lcom/bbm/av;
 
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    .line 302
-    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/am;
-
-    .line 303
-    sget-object v1, Lcom/bbm/am;->j:Lcom/bbm/am;
+    .line 404
+    sget-object v1, Lcom/bbm/av;->j:Lcom/bbm/av;
 
     if-ne v0, v1, :cond_2
 
-    .line 304
-    new-instance v0, Lcom/bbm/setup/af;
+    .line 405
+    sget-object v0, Lcom/bbm/setup/an;->c:Lcom/bbm/setup/an;
 
-    sget-object v1, Lcom/bbm/setup/ag;->c:Lcom/bbm/setup/ag;
+    invoke-direct {p0, v0}, Lcom/bbm/setup/z;->a(Lcom/bbm/setup/an;)Lcom/bbm/setup/am;
 
-    invoke-direct {v0, v1}, Lcom/bbm/setup/af;-><init>(Lcom/bbm/setup/ag;)V
+    move-result-object v0
 
     goto :goto_0
 
-    .line 306
+    .line 407
     :cond_2
-    invoke-static {v0}, Lcom/bbm/setup/af;->a(Lcom/bbm/am;)Lcom/bbm/setup/af;
+    invoke-direct {p0, v0}, Lcom/bbm/setup/z;->a(Lcom/bbm/av;)Lcom/bbm/setup/am;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 310
+    .line 411
     :cond_3
-    iget-object v0, p0, Lcom/bbm/setup/z;->a:Lcom/bbm/d/a;
+    iget-object v2, p0, Lcom/bbm/setup/z;->b:Lcom/bbm/d/a;
 
-    const-string v1, "bbidState"
+    invoke-virtual {v2}, Lcom/bbm/d/a;->i()Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->E(Ljava/lang/String;)Lcom/bbm/util/bm;
+    move-result-object v3
 
-    move-result-object v1
+    invoke-virtual {v2}, Lcom/bbm/d/a;->o()Lcom/bbm/d/ie;
 
-    invoke-virtual {v1}, Lcom/bbm/util/bm;->d()Lorg/json/JSONObject;
-
-    move-result-object v1
-
-    const-string v7, "credentials"
-
-    invoke-virtual {v1, v7}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v7, "setupState"
-
-    invoke-virtual {v0, v7}, Lcom/bbm/d/a;->E(Ljava/lang/String;)Lcom/bbm/util/bm;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Lcom/bbm/util/bm;->d()Lorg/json/JSONObject;
-
-    move-result-object v7
-
-    const-string v8, "state"
-
-    invoke-virtual {v7, v8}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual {v0}, Lcom/bbm/d/a;->i()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-virtual {v0}, Lcom/bbm/d/a;->j()Lcom/bbm/d/gr;
-
-    move-result-object v0
-
-    invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v9
-
-    if-nez v9, :cond_4
-
-    invoke-virtual {v7}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v9
-
-    if-nez v9, :cond_4
-
-    invoke-virtual {v8}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v9
-
-    if-nez v9, :cond_4
-
-    iget-object v9, v0, Lcom/bbm/d/gr;->C:Lcom/bbm/util/bi;
-
-    sget-object v10, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
-
-    if-eq v9, v10, :cond_5
-
-    :cond_4
-    sget-object v0, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
-
-    move-object v1, v0
-
-    .line 315
-    :goto_1
-    const-string v0, "Unknown"
-
-    invoke-virtual {v4, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_7
-
-    const-string v0, "NotRequested"
-
-    invoke-virtual {v5, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_7
-
-    .line 316
-    iget-object v0, p0, Lcom/bbm/setup/z;->g:Lcom/bbm/util/ct;
-
-    invoke-virtual {v0}, Lcom/bbm/util/ct;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
+    move-result-object v2
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
-    move-result v0
+    move-result v7
 
-    if-nez v0, :cond_7
+    if-nez v7, :cond_4
 
-    iget-object v0, p0, Lcom/bbm/setup/z;->g:Lcom/bbm/util/ct;
+    invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
-    invoke-virtual {v0}, Lcom/bbm/util/ct;->e()Ljava/lang/Object;
+    move-result v7
 
-    move-result-object v0
+    if-nez v7, :cond_4
 
-    check-cast v0, Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v7
+
+    if-nez v7, :cond_4
+
+    iget-object v7, v2, Lcom/bbm/d/ie;->B:Lcom/bbm/util/bo;
+
+    sget-object v8, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
+
+    if-eq v7, v8, :cond_5
+
+    :cond_4
+    sget-object v2, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
+
+    move-object v3, v2
+
+    .line 416
+    :goto_1
+    const-string v2, "Unknown"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_7
+
+    const-string v2, "NotRequested"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_7
+
+    .line 417
+    iget-object v2, p0, Lcom/bbm/setup/z;->j:Lcom/bbm/util/dc;
+
+    invoke-virtual {v2}, Lcom/bbm/util/dc;->f()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    invoke-virtual {v2}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_7
+
+    iget-object v2, p0, Lcom/bbm/setup/z;->j:Lcom/bbm/util/dc;
+
+    invoke-virtual {v2}, Lcom/bbm/util/dc;->f()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
 
     const-string v7, "Unknown"
 
-    invoke-virtual {v0, v7}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v2, v7}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result v2
 
-    if-nez v0, :cond_7
+    if-nez v2, :cond_7
 
-    .line 317
-    sget-object v0, Lcom/bbm/am;->e:Lcom/bbm/am;
+    .line 418
+    sget-object v0, Lcom/bbm/av;->e:Lcom/bbm/av;
 
-    invoke-static {v0}, Lcom/bbm/setup/af;->a(Lcom/bbm/am;)Lcom/bbm/setup/af;
+    invoke-direct {p0, v0}, Lcom/bbm/setup/z;->a(Lcom/bbm/av;)Lcom/bbm/setup/am;
 
     move-result-object v0
 
     goto/16 :goto_0
 
-    .line 310
+    .line 411
     :cond_5
-    iget-object v0, v0, Lcom/bbm/d/gr;->t:Ljava/util/List;
+    iget-object v2, v2, Lcom/bbm/d/ie;->t:Ljava/util/List;
 
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
 
-    move-result-object v9
+    move-result-object v7
 
-    invoke-virtual {v9}, Lcom/bbm/Alaska;->B()Lcom/bbm/f/af;
+    invoke-virtual {v7}, Lcom/bbm/Alaska;->G()Lcom/bbm/f/af;
 
-    move-result-object v9
+    move-result-object v7
 
-    sget-object v10, Lcom/bbm/f/af;->a:Lcom/bbm/f/af;
+    sget-object v8, Lcom/bbm/f/af;->a:Lcom/bbm/f/af;
 
-    if-ne v9, v10, :cond_6
+    if-ne v7, v8, :cond_6
 
-    const-string v9, "Verified"
+    const-string v7, "Verified"
 
-    invoke-virtual {v1, v9}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v0, v7}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
-    move-result v1
+    move-result v7
 
-    if-eqz v1, :cond_6
+    if-eqz v7, :cond_6
 
-    const-string v1, "NotRequested"
+    const-string v7, "NotRequested"
 
-    invoke-virtual {v7, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v1, v7}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
-    move-result v1
+    move-result v7
 
-    if-eqz v1, :cond_6
+    if-eqz v7, :cond_6
 
-    invoke-virtual {v8}, Ljava/lang/String;->isEmpty()Z
+    invoke-virtual {v3}, Ljava/lang/String;->isEmpty()Z
 
-    move-result v1
+    move-result v7
 
-    if-nez v1, :cond_6
+    if-nez v7, :cond_6
 
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+    invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
 
-    move-result v1
+    move-result v7
 
-    if-nez v1, :cond_6
+    if-nez v7, :cond_6
 
-    invoke-interface {v0, v8}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+    invoke-interface {v2, v3}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v2
 
-    if-nez v0, :cond_6
+    if-nez v2, :cond_6
 
-    sget-object v0, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
+    sget-object v2, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
 
-    move-object v1, v0
+    move-object v3, v2
 
     goto :goto_1
 
     :cond_6
-    sget-object v0, Lcom/bbm/util/bi;->b:Lcom/bbm/util/bi;
+    sget-object v2, Lcom/bbm/util/bo;->b:Lcom/bbm/util/bo;
 
-    move-object v1, v0
+    move-object v3, v2
 
     goto :goto_1
 
-    .line 321
+    .line 422
     :cond_7
-    sget-object v0, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
+    sget-object v2, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
 
-    if-ne v1, v0, :cond_8
+    if-ne v3, v2, :cond_8
 
-    .line 322
-    new-instance v0, Lcom/bbm/setup/af;
+    .line 423
+    sget-object v0, Lcom/bbm/setup/an;->b:Lcom/bbm/setup/an;
 
-    sget-object v1, Lcom/bbm/setup/ag;->b:Lcom/bbm/setup/ag;
+    invoke-direct {p0, v0}, Lcom/bbm/setup/z;->a(Lcom/bbm/setup/an;)Lcom/bbm/setup/am;
 
-    invoke-direct {v0, v1}, Lcom/bbm/setup/af;-><init>(Lcom/bbm/setup/ag;)V
+    move-result-object v0
 
     goto/16 :goto_0
 
-    .line 323
+    .line 424
     :cond_8
-    sget-object v0, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
+    sget-object v2, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
 
-    if-ne v1, v0, :cond_9
+    if-ne v3, v2, :cond_9
 
-    .line 324
-    new-instance v0, Lcom/bbm/setup/af;
+    .line 425
+    sget-object v0, Lcom/bbm/setup/an;->d:Lcom/bbm/setup/an;
 
-    sget-object v1, Lcom/bbm/setup/ag;->d:Lcom/bbm/setup/ag;
+    invoke-direct {p0, v0}, Lcom/bbm/setup/z;->a(Lcom/bbm/setup/an;)Lcom/bbm/setup/am;
 
-    invoke-direct {v0, v1}, Lcom/bbm/setup/af;-><init>(Lcom/bbm/setup/ag;)V
+    move-result-object v0
 
     goto/16 :goto_0
 
-    .line 332
+    .line 433
     :cond_9
-    const-string v0, "Verified"
+    const-string v2, "Verified"
 
-    invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v2
 
-    if-eqz v0, :cond_a
+    if-eqz v2, :cond_a
 
-    const-string v0, "Success"
+    const-string v2, "Success"
 
-    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v2
 
-    if-nez v0, :cond_b
+    if-nez v2, :cond_b
 
-    .line 337
+    .line 438
     :cond_a
-    const-string v0, "Success"
+    const-string v2, "Success"
 
-    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v2
 
-    if-nez v0, :cond_b
+    if-nez v2, :cond_b
 
-    .line 338
-    new-instance v0, Lcom/bbm/setup/af;
+    .line 439
+    sget-object v0, Lcom/bbm/setup/an;->a:Lcom/bbm/setup/an;
 
-    sget-object v1, Lcom/bbm/setup/ag;->a:Lcom/bbm/setup/ag;
+    invoke-direct {p0, v0}, Lcom/bbm/setup/z;->a(Lcom/bbm/setup/an;)Lcom/bbm/setup/am;
 
-    invoke-direct {v0, v1}, Lcom/bbm/setup/af;-><init>(Lcom/bbm/setup/ag;)V
+    move-result-object v0
 
     goto/16 :goto_0
 
-    .line 343
+    .line 444
     :cond_b
-    iget-object v0, p0, Lcom/bbm/setup/z;->l:Lcom/bbm/ag;
+    iget-object v2, p0, Lcom/bbm/setup/z;->u:Lcom/bbm/an;
 
-    invoke-virtual {v0}, Lcom/bbm/ag;->j()Z
+    invoke-virtual {v2}, Lcom/bbm/an;->i()Z
 
-    move-result v0
+    move-result v2
 
-    if-nez v0, :cond_c
+    if-nez v2, :cond_c
 
-    .line 344
-    new-instance v0, Lcom/bbm/setup/af;
+    .line 445
+    sget-object v0, Lcom/bbm/setup/an;->g:Lcom/bbm/setup/an;
 
-    sget-object v1, Lcom/bbm/setup/ag;->g:Lcom/bbm/setup/ag;
+    invoke-direct {p0, v0}, Lcom/bbm/setup/z;->a(Lcom/bbm/setup/an;)Lcom/bbm/setup/am;
 
-    invoke-direct {v0, v1}, Lcom/bbm/setup/af;-><init>(Lcom/bbm/setup/ag;)V
+    move-result-object v0
 
     goto/16 :goto_0
 
-    .line 349
+    .line 450
     :cond_c
-    iget-object v0, p0, Lcom/bbm/setup/z;->l:Lcom/bbm/ag;
+    iget-object v2, p0, Lcom/bbm/setup/z;->u:Lcom/bbm/an;
 
-    invoke-virtual {v0}, Lcom/bbm/ag;->p()Z
+    invoke-virtual {v2}, Lcom/bbm/an;->o()Z
 
-    move-result v0
+    move-result v2
 
-    if-eqz v0, :cond_17
+    if-eqz v2, :cond_17
 
-    iget-object v0, p0, Lcom/bbm/setup/z;->l:Lcom/bbm/ag;
+    iget-object v2, p0, Lcom/bbm/setup/z;->u:Lcom/bbm/an;
 
-    invoke-virtual {v0}, Lcom/bbm/ag;->h()Z
+    invoke-virtual {v2}, Lcom/bbm/an;->g()Z
 
-    move-result v0
+    move-result v2
 
-    if-eqz v0, :cond_d
+    if-eqz v2, :cond_d
 
-    iget-object v0, p0, Lcom/bbm/setup/z;->l:Lcom/bbm/ag;
+    iget-object v2, p0, Lcom/bbm/setup/z;->u:Lcom/bbm/an;
 
-    invoke-virtual {v0}, Lcom/bbm/ag;->i()Z
+    invoke-virtual {v2}, Lcom/bbm/an;->h()Z
 
-    move-result v0
+    move-result v2
 
-    if-nez v0, :cond_17
+    if-nez v2, :cond_17
 
-    .line 352
+    .line 453
     :cond_d
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-static {v0}, Lcom/bbm/i/a;->a(Lcom/bbm/d/a;)Z
+    invoke-static {v2}, Lcom/bbm/h/a;->a(Lcom/bbm/d/a;)Z
 
-    .line 358
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
+    .line 459
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
 
-    move-result-object v1
+    move-result-object v3
 
-    iget-object v0, v1, Lcom/bbm/Alaska;->c:Lcom/bbm/util/ct;
+    iget-object v2, v3, Lcom/bbm/Alaska;->c:Lcom/bbm/util/dc;
 
-    invoke-virtual {v0}, Lcom/bbm/util/ct;->e()Ljava/lang/Object;
+    invoke-virtual {v2}, Lcom/bbm/util/dc;->f()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v2
 
-    check-cast v0, Ljava/lang/Boolean;
+    check-cast v2, Ljava/lang/Boolean;
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result v0
+    move-result v2
 
-    if-eqz v0, :cond_e
+    if-eqz v2, :cond_e
 
-    const-string v0, "Alaska PYK sentinel limit was hit"
+    const-string v2, "Alaska PYK sentinel limit was hit"
 
-    new-array v1, v2, [Ljava/lang/Object;
+    new-array v3, v4, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v2, v3}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    move v0, v3
+    move v2, v5
 
     :goto_2
-    if-nez v0, :cond_13
+    if-nez v2, :cond_13
 
-    .line 359
+    .line 460
     const-string v0, "SetupManager getActiveScreen waiting on PYK processing..."
 
-    new-array v1, v2, [Ljava/lang/Object;
+    new-array v1, v4, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 360
-    new-instance v0, Lcom/bbm/setup/af;
+    .line 461
+    sget-object v0, Lcom/bbm/setup/an;->a:Lcom/bbm/setup/an;
 
-    sget-object v1, Lcom/bbm/setup/ag;->a:Lcom/bbm/setup/ag;
+    invoke-direct {p0, v0}, Lcom/bbm/setup/z;->a(Lcom/bbm/setup/an;)Lcom/bbm/setup/am;
 
-    invoke-direct {v0, v1}, Lcom/bbm/setup/af;-><init>(Lcom/bbm/setup/ag;)V
+    move-result-object v0
 
     goto/16 :goto_0
 
-    .line 358
+    .line 459
     :cond_e
-    invoke-static {}, Lcom/bbm/Alaska;->z()Z
+    invoke-static {}, Lcom/bbm/Alaska;->E()Z
 
-    iget-object v0, v1, Lcom/bbm/Alaska;->d:Ljava/lang/Runnable;
+    iget-object v2, v3, Lcom/bbm/Alaska;->d:Ljava/lang/Runnable;
 
-    if-nez v0, :cond_10
+    if-nez v2, :cond_10
 
-    new-instance v0, Lcom/bbm/d;
+    new-instance v2, Lcom/bbm/d;
 
-    invoke-direct {v0, v1}, Lcom/bbm/d;-><init>(Lcom/bbm/Alaska;)V
+    invoke-direct {v2, v3}, Lcom/bbm/d;-><init>(Lcom/bbm/Alaska;)V
 
-    iput-object v0, v1, Lcom/bbm/Alaska;->d:Ljava/lang/Runnable;
+    iput-object v2, v3, Lcom/bbm/Alaska;->d:Ljava/lang/Runnable;
 
-    iget-object v0, v1, Lcom/bbm/Alaska;->e:Landroid/os/Handler;
+    iget-object v2, v3, Lcom/bbm/Alaska;->e:Landroid/os/Handler;
 
-    iget-object v7, v1, Lcom/bbm/Alaska;->d:Ljava/lang/Runnable;
+    iget-object v7, v3, Lcom/bbm/Alaska;->d:Ljava/lang/Runnable;
 
     const-wide/16 v8, 0x2710
 
-    invoke-virtual {v0, v7, v8, v9}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v2, v7, v8, v9}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    const-string v0, "Alaska start PYK sentinel"
+    const-string v2, "Alaska start PYK sentinel"
 
-    new-array v7, v2, [Ljava/lang/Object;
+    new-array v7, v4, [Ljava/lang/Object;
 
-    invoke-static {v0, v7}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v2, v7}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     :cond_f
     :goto_3
-    iget-object v0, v1, Lcom/bbm/Alaska;->c:Lcom/bbm/util/ct;
+    iget-object v2, v3, Lcom/bbm/Alaska;->c:Lcom/bbm/util/dc;
 
-    invoke-virtual {v0}, Lcom/bbm/util/ct;->e()Ljava/lang/Object;
+    invoke-virtual {v2}, Lcom/bbm/util/dc;->f()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v2
 
-    check-cast v0, Ljava/lang/Boolean;
+    check-cast v2, Ljava/lang/Boolean;
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result v0
+    move-result v2
 
     goto :goto_2
 
     :cond_10
-    invoke-static {}, Lcom/bbm/Alaska;->y()Lcom/bbm/iceberg/m;
+    invoke-static {}, Lcom/bbm/Alaska;->D()Lcom/bbm/iceberg/n;
 
-    move-result-object v0
+    move-result-object v2
 
-    iget-object v7, v0, Lcom/bbm/iceberg/m;->a:Lcom/bbm/iceberg/c;
+    iget-object v7, v2, Lcom/bbm/iceberg/n;->a:Lcom/bbm/iceberg/c;
 
     if-eqz v7, :cond_11
 
-    iget-object v7, v0, Lcom/bbm/iceberg/m;->a:Lcom/bbm/iceberg/c;
+    iget-object v7, v2, Lcom/bbm/iceberg/n;->a:Lcom/bbm/iceberg/c;
 
     invoke-virtual {v7}, Lcom/bbm/iceberg/c;->c()Lcom/bbm/iceberg/k;
 
@@ -773,7 +956,7 @@
     if-nez v7, :cond_12
 
     :cond_11
-    move v0, v2
+    move v2, v4
 
     :goto_4
     new-instance v7, Ljava/lang/StringBuilder;
@@ -782,7 +965,7 @@
 
     invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v7
 
@@ -790,314 +973,318 @@
 
     move-result-object v7
 
-    new-array v8, v2, [Ljava/lang/Object;
+    new-array v8, v4, [Ljava/lang/Object;
 
-    invoke-static {v7, v8}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v7, v8}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     sget v7, Lcom/bbm/Alaska;->b:I
 
-    if-lt v0, v7, :cond_f
+    if-lt v2, v7, :cond_f
 
-    iget-object v0, v1, Lcom/bbm/Alaska;->e:Landroid/os/Handler;
+    iget-object v2, v3, Lcom/bbm/Alaska;->e:Landroid/os/Handler;
 
-    iget-object v7, v1, Lcom/bbm/Alaska;->d:Ljava/lang/Runnable;
+    iget-object v7, v3, Lcom/bbm/Alaska;->d:Ljava/lang/Runnable;
 
-    invoke-virtual {v0, v7}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    invoke-virtual {v2, v7}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
-    iput-object v0, v1, Lcom/bbm/Alaska;->d:Ljava/lang/Runnable;
+    iput-object v2, v3, Lcom/bbm/Alaska;->d:Ljava/lang/Runnable;
 
-    iget-object v0, v1, Lcom/bbm/Alaska;->c:Lcom/bbm/util/ct;
+    iget-object v2, v3, Lcom/bbm/Alaska;->c:Lcom/bbm/util/dc;
 
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v7
 
-    invoke-virtual {v0, v7}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
+    invoke-virtual {v2, v7}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
 
     goto :goto_3
 
     :cond_12
-    iget-object v0, v0, Lcom/bbm/iceberg/m;->a:Lcom/bbm/iceberg/c;
+    iget-object v2, v2, Lcom/bbm/iceberg/n;->a:Lcom/bbm/iceberg/c;
 
-    invoke-virtual {v0}, Lcom/bbm/iceberg/c;->c()Lcom/bbm/iceberg/k;
+    invoke-virtual {v2}, Lcom/bbm/iceberg/c;->c()Lcom/bbm/iceberg/k;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-virtual {v0}, Lcom/bbm/iceberg/k;->a()Ljava/util/List;
+    invoke-virtual {v2}, Lcom/bbm/iceberg/k;->a()Ljava/util/List;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    invoke-interface {v2}, Ljava/util/List;->size()I
 
-    move-result v0
+    move-result v2
 
     goto :goto_4
 
-    .line 363
+    .line 464
     :cond_13
-    iget-object v0, p0, Lcom/bbm/setup/z;->l:Lcom/bbm/ag;
+    iget-object v2, p0, Lcom/bbm/setup/z;->u:Lcom/bbm/an;
 
-    invoke-virtual {v0}, Lcom/bbm/ag;->h()Z
+    invoke-virtual {v2}, Lcom/bbm/an;->g()Z
 
-    move-result v0
+    move-result v2
 
-    if-nez v0, :cond_15
+    if-nez v2, :cond_15
 
-    .line 364
-    new-instance v0, Lcom/bbm/i/b;
+    .line 465
+    new-instance v2, Lcom/bbm/h/d;
 
-    invoke-static {}, Lcom/bbm/Alaska;->x()Lcom/bbm/j/r;
+    invoke-static {}, Lcom/bbm/Alaska;->C()Lcom/bbm/j/r;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/f;
 
     move-result-object v7
 
-    invoke-direct {v0, v1, v7}, Lcom/bbm/i/b;-><init>(Lcom/bbm/j/r;Lcom/bbm/e;)V
+    invoke-direct {v2, v3, v7}, Lcom/bbm/h/d;-><init>(Lcom/bbm/j/r;Lcom/bbm/f;)V
 
-    .line 367
-    invoke-virtual {v0}, Lcom/bbm/i/b;->b()V
+    .line 468
+    invoke-virtual {v2}, Lcom/bbm/h/d;->b()V
 
-    .line 369
-    invoke-virtual {v0}, Lcom/bbm/i/b;->g()Ljava/util/List;
+    .line 470
+    invoke-virtual {v2}, Lcom/bbm/h/d;->g()Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    if-lez v2, :cond_14
+
+    .line 471
+    sget-object v0, Lcom/bbm/setup/an;->e:Lcom/bbm/setup/an;
+
+    invoke-direct {p0, v0}, Lcom/bbm/setup/z;->a(Lcom/bbm/setup/an;)Lcom/bbm/setup/am;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-lez v0, :cond_14
-
-    .line 370
-    new-instance v0, Lcom/bbm/setup/af;
-
-    sget-object v1, Lcom/bbm/setup/ag;->e:Lcom/bbm/setup/ag;
-
-    invoke-direct {v0, v1}, Lcom/bbm/setup/af;-><init>(Lcom/bbm/setup/ag;)V
-
     goto/16 :goto_0
 
-    .line 372
+    .line 473
     :cond_14
-    const-string v0, "No local friends to add. Skipping the \'Add Friends\' screen"
+    const-string v2, "No local friends to add. Skipping the \'Add Friends\' screen"
 
-    new-array v1, v2, [Ljava/lang/Object;
+    new-array v3, v4, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v2, v3}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 373
-    invoke-static {}, Lcom/bbm/Alaska;->h()Landroid/content/SharedPreferences;
+    .line 474
+    invoke-static {}, Lcom/bbm/Alaska;->l()Landroid/content/SharedPreferences;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-result-object v0
+    move-result-object v2
 
-    const-string v1, "has_shown_pyk_add"
+    const-string v3, "has_shown_pyk_add"
 
-    invoke-interface {v0, v1, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v2, v3, v5}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 379
+    .line 480
     :cond_15
-    iget-object v0, p0, Lcom/bbm/setup/z;->l:Lcom/bbm/ag;
+    iget-object v2, p0, Lcom/bbm/setup/z;->u:Lcom/bbm/an;
 
-    invoke-virtual {v0}, Lcom/bbm/ag;->i()Z
+    invoke-virtual {v2}, Lcom/bbm/an;->h()Z
 
-    move-result v0
+    move-result v2
 
-    if-nez v0, :cond_17
+    if-nez v2, :cond_17
 
-    .line 380
-    new-instance v0, Lcom/bbm/i/b;
+    .line 481
+    new-instance v2, Lcom/bbm/h/d;
 
-    invoke-static {}, Lcom/bbm/Alaska;->x()Lcom/bbm/j/r;
+    invoke-static {}, Lcom/bbm/Alaska;->C()Lcom/bbm/j/r;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/f;
 
     move-result-object v7
 
-    invoke-direct {v0, v1, v7}, Lcom/bbm/i/b;-><init>(Lcom/bbm/j/r;Lcom/bbm/e;)V
+    invoke-direct {v2, v3, v7}, Lcom/bbm/h/d;-><init>(Lcom/bbm/j/r;Lcom/bbm/f;)V
 
-    .line 383
-    invoke-virtual {v0}, Lcom/bbm/i/b;->i()V
+    .line 484
+    invoke-virtual {v2}, Lcom/bbm/h/d;->i()V
 
-    .line 384
-    invoke-virtual {v0}, Lcom/bbm/i/b;->d()I
+    .line 485
+    invoke-virtual {v2}, Lcom/bbm/h/d;->d()I
 
-    move-result v0
+    move-result v2
 
-    if-lez v0, :cond_16
+    if-lez v2, :cond_16
 
-    .line 385
-    new-instance v0, Lcom/bbm/setup/af;
+    .line 486
+    sget-object v0, Lcom/bbm/setup/an;->f:Lcom/bbm/setup/an;
 
-    sget-object v1, Lcom/bbm/setup/ag;->f:Lcom/bbm/setup/ag;
+    invoke-direct {p0, v0}, Lcom/bbm/setup/z;->a(Lcom/bbm/setup/an;)Lcom/bbm/setup/am;
 
-    invoke-direct {v0, v1}, Lcom/bbm/setup/af;-><init>(Lcom/bbm/setup/ag;)V
+    move-result-object v0
 
     goto/16 :goto_0
 
-    .line 387
+    .line 488
     :cond_16
-    const-string v0, "No local friends to add. Skipping the \'Invite To BBM\' screen"
+    const-string v2, "No local friends to add. Skipping the \'Invite To BBM\' screen"
 
-    new-array v1, v2, [Ljava/lang/Object;
+    new-array v3, v4, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v2, v3}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 388
-    invoke-static {}, Lcom/bbm/Alaska;->h()Landroid/content/SharedPreferences;
+    .line 489
+    invoke-static {}, Lcom/bbm/Alaska;->l()Landroid/content/SharedPreferences;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-result-object v0
+    move-result-object v2
 
-    const-string v1, "has_shown_pyk_invite"
+    const-string v3, "has_shown_pyk_invite"
 
-    invoke-interface {v0, v1, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v2, v3, v5}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 395
+    .line 496
     :cond_17
-    iget-object v0, p0, Lcom/bbm/setup/z;->i:Lcom/bbm/setup/am;
+    const/4 v2, 0x3
 
-    iget-object v0, v0, Lcom/bbm/setup/am;->c:Lcom/bbm/ag;
+    iget-object v3, p0, Lcom/bbm/setup/z;->l:Lcom/bbm/setup/ax;
 
-    invoke-virtual {v0}, Lcom/bbm/ag;->f()I
+    iget-object v3, v3, Lcom/bbm/setup/ax;->c:Lcom/bbm/an;
 
-    move-result v0
+    invoke-virtual {v3}, Lcom/bbm/an;->e()I
 
-    if-eq v3, v0, :cond_18
+    move-result v3
 
-    iget-object v0, p0, Lcom/bbm/setup/z;->i:Lcom/bbm/setup/am;
+    if-eq v2, v3, :cond_18
 
-    iget-object v0, v0, Lcom/bbm/setup/am;->c:Lcom/bbm/ag;
+    iget-object v2, p0, Lcom/bbm/setup/z;->l:Lcom/bbm/setup/ax;
 
-    invoke-virtual {v0}, Lcom/bbm/ag;->g()Z
+    iget-object v2, v2, Lcom/bbm/setup/ax;->c:Lcom/bbm/an;
 
-    move-result v0
+    invoke-virtual {v2}, Lcom/bbm/an;->f()Z
 
-    if-nez v0, :cond_18
+    move-result v2
 
-    .line 397
-    new-instance v0, Lcom/bbm/setup/af;
+    if-nez v2, :cond_18
 
-    sget-object v1, Lcom/bbm/setup/ag;->h:Lcom/bbm/setup/ag;
+    .line 498
+    sget-object v0, Lcom/bbm/setup/an;->h:Lcom/bbm/setup/an;
 
-    invoke-direct {v0, v1}, Lcom/bbm/setup/af;-><init>(Lcom/bbm/setup/ag;)V
+    invoke-direct {p0, v0}, Lcom/bbm/setup/z;->a(Lcom/bbm/setup/an;)Lcom/bbm/setup/am;
+
+    move-result-object v0
 
     goto/16 :goto_0
 
-    .line 400
+    .line 501
     :cond_18
-    invoke-virtual {v5}, Ljava/lang/String;->isEmpty()Z
+    invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
-    move-result v0
+    move-result v2
 
-    if-nez v0, :cond_19
+    if-nez v2, :cond_19
 
-    invoke-virtual {v4}, Ljava/lang/String;->isEmpty()Z
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_1a
 
-    .line 401
+    .line 502
     :cond_19
-    new-instance v0, Lcom/bbm/setup/af;
+    sget-object v0, Lcom/bbm/setup/an;->b:Lcom/bbm/setup/an;
 
-    sget-object v1, Lcom/bbm/setup/ag;->b:Lcom/bbm/setup/ag;
-
-    invoke-direct {v0, v1}, Lcom/bbm/setup/af;-><init>(Lcom/bbm/setup/ag;)V
-
-    goto/16 :goto_0
-
-    .line 404
-    :cond_1a
-    if-eqz v6, :cond_1b
-
-    .line 405
-    invoke-static {}, Lcom/bbm/Alaska;->h()Landroid/content/SharedPreferences;
+    invoke-direct {p0, v0}, Lcom/bbm/setup/z;->a(Lcom/bbm/setup/an;)Lcom/bbm/setup/am;
 
     move-result-object v0
 
-    const-string v1, "inapp_upgrade_notification_last_show_timestamp"
+    goto/16 :goto_0
 
-    const-wide/16 v2, 0x0
+    .line 505
+    :cond_1a
+    if-eqz v6, :cond_1b
 
-    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+    .line 506
+    invoke-static {}, Lcom/bbm/Alaska;->l()Landroid/content/SharedPreferences;
 
-    move-result-wide v0
+    move-result-object v0
 
-    .line 406
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    const-string v2, "inapp_upgrade_notification_last_show_timestamp"
+
+    const-wide/16 v4, 0x0
+
+    invoke-interface {v0, v2, v4, v5}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v2
 
-    .line 408
-    sub-long v0, v2, v0
+    .line 507
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    const-wide/32 v2, 0x5265c00
+    move-result-wide v4
 
-    cmp-long v0, v0, v2
+    .line 509
+    sub-long v2, v4, v2
+
+    const-wide/32 v4, 0x5265c00
+
+    cmp-long v0, v2, v4
 
     if-ltz v0, :cond_1b
 
-    .line 409
-    new-instance v0, Lcom/bbm/setup/af;
+    .line 510
+    sget-object v0, Lcom/bbm/setup/an;->m:Lcom/bbm/setup/an;
 
-    sget-object v1, Lcom/bbm/setup/ag;->m:Lcom/bbm/setup/ag;
+    invoke-direct {p0, v0}, Lcom/bbm/setup/z;->a(Lcom/bbm/setup/an;)Lcom/bbm/setup/am;
 
-    invoke-direct {v0, v1}, Lcom/bbm/setup/af;-><init>(Lcom/bbm/setup/ag;)V
+    move-result-object v0
 
     goto/16 :goto_0
 
-    .line 415
+    .line 516
     :cond_1b
     const-string v0, "Success"
 
-    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1c
 
-    .line 416
-    new-instance v0, Lcom/bbm/setup/af;
+    .line 517
+    sget-object v0, Lcom/bbm/setup/an;->k:Lcom/bbm/setup/an;
 
-    sget-object v1, Lcom/bbm/setup/ag;->k:Lcom/bbm/setup/ag;
+    invoke-direct {p0, v0}, Lcom/bbm/setup/z;->a(Lcom/bbm/setup/an;)Lcom/bbm/setup/am;
 
-    invoke-direct {v0, v1}, Lcom/bbm/setup/af;-><init>(Lcom/bbm/setup/ag;)V
+    move-result-object v0
 
     goto/16 :goto_0
 
-    .line 419
+    .line 520
     :cond_1c
-    new-instance v0, Lcom/bbm/setup/af;
+    sget-object v0, Lcom/bbm/setup/an;->a:Lcom/bbm/setup/an;
 
-    sget-object v1, Lcom/bbm/setup/ag;->a:Lcom/bbm/setup/ag;
+    invoke-direct {p0, v0}, Lcom/bbm/setup/z;->a(Lcom/bbm/setup/an;)Lcom/bbm/setup/am;
 
-    invoke-direct {v0, v1}, Lcom/bbm/setup/af;-><init>(Lcom/bbm/setup/ag;)V
+    move-result-object v0
 
     goto/16 :goto_0
 
-    .line 267
+    .line 368
+    nop
+
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1105,4 +1292,69 @@
         :pswitch_1
         :pswitch_1
     .end packed-switch
+.end method
+
+.method public final b()V
+    .locals 2
+
+    .prologue
+    .line 681
+    const-string v0, "SetupManager clearing all data"
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 683
+    new-instance v0, Lcom/bbm/f/ae;
+
+    invoke-direct {v0}, Lcom/bbm/f/ae;-><init>()V
+
+    iput-object v0, p0, Lcom/bbm/setup/z;->m:Lcom/bbm/f/ae;
+
+    .line 684
+    iget-object v0, p0, Lcom/bbm/setup/z;->j:Lcom/bbm/util/dc;
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
+
+    .line 685
+    iget-object v0, p0, Lcom/bbm/setup/z;->o:Lcom/bbm/util/dc;
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
+
+    .line 686
+    iget-object v0, p0, Lcom/bbm/setup/z;->p:Lcom/bbm/util/dc;
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
+
+    .line 688
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
+
+    move-result-object v0
+
+    iget-object v1, v0, Lcom/bbm/Alaska;->g:Lcom/bbm/r;
+
+    if-eqz v1, :cond_0
+
+    iget-object v0, v0, Lcom/bbm/Alaska;->g:Lcom/bbm/r;
+
+    iget-object v0, v0, Lcom/bbm/r;->a:Lcom/bbm/BbmService;
+
+    invoke-static {v0}, Lcom/bbm/BbmService;->a(Lcom/bbm/BbmService;)Lcom/bbm/f/ad;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/bbm/f/ad;->j()V
+
+    .line 689
+    :cond_0
+    return-void
 .end method

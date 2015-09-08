@@ -3,89 +3,78 @@
 .source "ChannelUtil.java"
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
-        "<",
-        "Lorg/json/JSONObject;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Ljava/lang/String;
+
+.field final synthetic c:Z
+
+.field final synthetic d:Landroid/app/Activity;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Ljava/lang/String;Ljava/lang/String;ZLandroid/app/Activity;)V
     .locals 0
 
     .prologue
-    .line 476
+    .line 327
+    iput-object p1, p0, Lcom/bbm/util/as;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Lcom/bbm/util/as;->b:Ljava/lang/String;
+
+    iput-boolean p3, p0, Lcom/bbm/util/as;->c:Z
+
+    iput-object p4, p0, Lcom/bbm/util/as;->d:Landroid/app/Activity;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method private static a(Lorg/json/JSONObject;)I
-    .locals 2
-
-    .prologue
-    .line 496
-    const-string v0, "dayOfWeek"
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p0, v0, v1}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
-
-    move-result v0
-
-    .line 498
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x7
-
-    :cond_0
-    return v0
-.end method
-
 
 # virtual methods
-.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 2
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 4
 
     .prologue
-    .line 476
-    check-cast p1, Lorg/json/JSONObject;
+    .line 330
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    check-cast p2, Lorg/json/JSONObject;
+    .line 331
+    iget-object v0, p0, Lcom/bbm/util/as;->a:Ljava/lang/String;
 
-    invoke-static {p1}, Lcom/bbm/util/as;->a(Lorg/json/JSONObject;)I
+    invoke-static {v0}, Lcom/bbm/d/aj;->a(Ljava/lang/String;)Lcom/bbm/d/bo;
 
-    move-result v0
+    move-result-object v0
 
-    invoke-static {p2}, Lcom/bbm/util/as;->a(Lorg/json/JSONObject;)I
+    .line 332
+    iget-object v1, p0, Lcom/bbm/util/as;->b:Ljava/lang/String;
 
-    move-result v1
+    invoke-virtual {v0, v1}, Lcom/bbm/d/bo;->a(Ljava/lang/String;)Lcom/bbm/d/bo;
 
-    if-ge v0, v1, :cond_0
+    .line 333
+    new-instance v1, Lcom/bbm/util/at;
 
-    const/4 v0, -0x1
+    invoke-direct {v1, p0}, Lcom/bbm/util/at;-><init>(Lcom/bbm/util/as;)V
 
-    :goto_0
-    return v0
+    .line 350
+    iget-object v2, p0, Lcom/bbm/util/as;->b:Ljava/lang/String;
 
-    :cond_0
-    if-ne v0, v1, :cond_1
+    iget-object v3, p0, Lcom/bbm/util/as;->d:Landroid/app/Activity;
 
-    const/4 v0, 0x0
+    invoke-virtual {v1, v2, v3}, Lcom/bbm/ui/e/a;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    goto :goto_0
+    .line 351
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
-    :cond_1
-    const/4 v0, 0x1
+    move-result-object v1
 
-    goto :goto_0
+    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ez;)V
+
+    .line 352
+    return-void
 .end method

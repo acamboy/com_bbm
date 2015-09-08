@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
-    <com.bbm.ui.ListHeaderView android:id="@id/path" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:showRightLabel="false" />
+    <com.bbm.ui.ListHeaderView android:id="@id/path" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/toolbar_container" custom:showRightLabel="false" />
     <LinearLayout android:orientation="vertical" android:id="@id/root_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/path">
-        <EditText android:id="@id/filename_input" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/file_picker_input_field_margin" android:hint="@string/file_picker_input_hint" android:inputType="text" style="@style/BB10Edit" />
-        <Spinner android:id="@id/type_filter" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/file_picker_input_field_margin" style="@style/CascadesSpinner" />
+        <EditText android:id="@id/filename_input" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/file_picker_input_field_margin" android:hint="@string/file_picker_input_hint" android:inputType="text" style="@style/Widget.EditText.Black" />
+        <Spinner android:id="@id/type_filter" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/file_picker_input_field_margin" style="@style/BaliSpinner" />
     </LinearLayout>
     <LinearLayout android:orientation="vertical" android:id="@id/sorting_controls" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/root_header">
         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/file_picker_input_field_margin" android:src="@drawable/grey_divider_line" android:scaleType="fitXY" android:contentDescription="@string/blank" />
-        <Spinner android:id="@id/sort_type_spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/file_picker_input_field_margin" android:layout_marginRight="@dimen/file_picker_input_field_margin" style="@style/CascadesSpinner" />
-        <Spinner android:id="@id/sort_order_spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/file_picker_input_field_margin" style="@style/CascadesSpinner" />
+        <Spinner android:id="@id/sort_type_spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/file_picker_input_field_margin" android:layout_marginRight="@dimen/file_picker_input_field_margin" style="@style/BaliSpinner" />
+        <Spinner android:id="@id/sort_order_spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/file_picker_input_field_margin" style="@style/BaliSpinner" />
     </LinearLayout>
     <ImageView android:id="@id/file_list_top_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/grey_divider_line" android:scaleType="fitXY" android:layout_below="@id/sorting_controls" android:contentDescription="@string/blank" />
-    <GridView android:id="@id/files" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:horizontalSpacing="@dimen/file_picker_grid_item_spacing" android:numColumns="1" android:layout_above="@id/footer_action_bar" android:layout_below="@id/file_list_top_divider" />
-    <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
+    <GridView android:id="@id/files" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:horizontalSpacing="@dimen/file_picker_grid_item_spacing" android:numColumns="1" android:layout_below="@id/file_list_top_divider" />
+    <LinearLayout android:orientation="vertical" android:id="@id/toolbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/toolbar_cancel_done_header" />
+    </LinearLayout>
 </RelativeLayout>

@@ -188,7 +188,7 @@
 
     const/4 v5, 0x0
 
-    const v4, -0x3fffffff
+    const v4, -0x3fffffff    # -2.0000002f
 
     .line 138
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

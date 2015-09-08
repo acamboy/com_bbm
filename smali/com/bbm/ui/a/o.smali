@@ -1,42 +1,32 @@
-.class final Lcom/bbm/ui/a/o;
+.class public final Lcom/bbm/ui/a/o;
 .super Ljava/lang/Object;
-.source "ChannelPostAdapter.java"
+.source "ChannelPostCommentListAdapter.java"
 
 
 # instance fields
-.field a:Ljava/lang/String;
+.field public a:Lcom/bbm/ui/AvatarView;
 
-.field b:Lcom/bbm/ui/LinkifyTextView;
+.field public b:Landroid/widget/ImageView;
 
-.field c:Landroid/widget/TextView;
+.field public c:Landroid/widget/ImageView;
 
-.field d:Landroid/widget/TextView;
+.field public d:Landroid/widget/TextView;
 
-.field e:Landroid/widget/TextView;
+.field public e:Landroid/widget/TextView;
 
-.field f:Lcom/bbm/ui/LinkifyTextView;
+.field public f:Landroid/widget/TextView;
 
-.field g:Landroid/widget/TextView;
+.field public g:Landroid/widget/TextView;
 
-.field h:Lcom/bbm/ui/ObservingImageView;
-
-.field i:Landroid/widget/ImageButton;
-
-.field j:Landroid/widget/ImageButton;
-
-.field k:Landroid/widget/ImageButton;
-
-.field l:Landroid/widget/ImageView;
-
-.field m:Landroid/widget/TextView;
+.field public h:Landroid/widget/ImageView;
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     .prologue
-    .line 105
+    .line 398
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

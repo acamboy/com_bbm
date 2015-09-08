@@ -19,22 +19,22 @@
     .locals 1
 
     .prologue
-    .line 175
+    .line 182
     iput-object p1, p0, Lcom/bbm/f/x;->c:Lcom/bbm/f/j;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 173
+    .line 180
     new-instance v0, Lcom/bbm/f/aa;
 
     invoke-direct {v0}, Lcom/bbm/f/aa;-><init>()V
 
     iput-object v0, p0, Lcom/bbm/f/x;->b:Lcom/bbm/f/aa;
 
-    .line 176
+    .line 183
     iput-object p2, p0, Lcom/bbm/f/x;->a:Lcom/rim/bbm/BbmCoreService$MessageType;
 
-    .line 177
+    .line 184
     return-void
 .end method
 
@@ -44,14 +44,14 @@
     .locals 1
 
     .prologue
-    .line 199
+    .line 206
     iget-object v0, p0, Lcom/bbm/f/x;->c:Lcom/bbm/f/j;
 
-    invoke-static {v0}, Lcom/bbm/f/j;->a(Lcom/bbm/f/j;)Lcom/bbm/util/ct;
+    invoke-static {v0}, Lcom/bbm/f/j;->a(Lcom/bbm/f/j;)Lcom/bbm/util/dc;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/util/ct;->e()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/util/dc;->f()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -66,23 +66,23 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 204
+    .line 211
     invoke-virtual {p1}, Lcom/bbm/f/ab;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 205
+    .line 212
     invoke-virtual {p1}, Lcom/bbm/f/ab;->b()Lorg/json/JSONObject;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/bbm/y;->a(Lorg/json/JSONObject;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/bbm/af;->a(Lorg/json/JSONObject;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v5, v1}, Lcom/bbm/y;->a(ZLjava/lang/String;)V
+    invoke-static {v5, v1}, Lcom/bbm/af;->a(ZLjava/lang/String;)V
 
-    .line 207
+    .line 214
     :try_start_0
     const-string v1, "Message to service. type: %s"
 
@@ -96,9 +96,9 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v1, v2}, Lcom/bbm/y;->g(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v1, v2}, Lcom/bbm/af;->g(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 208
+    .line 215
     iget-object v1, p0, Lcom/bbm/f/x;->c:Lcom/bbm/f/j;
 
     invoke-static {v1}, Lcom/bbm/f/j;->b(Lcom/bbm/f/j;)Lcom/rim/bbm/BbmCoreService;
@@ -115,7 +115,7 @@
 
     invoke-virtual {v1, v2, v0}, Lcom/rim/bbm/BbmCoreService;->msgToService(Lcom/rim/bbm/BbmCoreService$MessageType;[B)Z
 
-    .line 209
+    .line 216
     const-string v0, "Message to service. type: %s complete"
 
     const/4 v1, 0x1
@@ -128,15 +128,15 @@
 
     aput-object v3, v1, v2
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->g(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->g(Ljava/lang/Object;[Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 213
+    .line 220
     :goto_0
     return-void
 
-    .line 210
+    .line 217
     :catch_0
     move-exception v0
 
@@ -144,7 +144,7 @@
 
     new-array v2, v5, [Ljava/lang/Object;
 
-    invoke-static {v0, v1, v2}, Lcom/bbm/y;->d(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/bbm/af;->d(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
@@ -153,12 +153,12 @@
     .locals 1
 
     .prologue
-    .line 181
+    .line 188
     iget-object v0, p0, Lcom/bbm/f/x;->b:Lcom/bbm/f/aa;
 
     invoke-virtual {v0, p1}, Lcom/bbm/f/aa;->a(Lcom/bbm/f/ac;)V
 
-    .line 182
+    .line 189
     return-void
 .end method
 
@@ -166,11 +166,11 @@
     .locals 1
 
     .prologue
-    .line 186
+    .line 193
     iget-object v0, p0, Lcom/bbm/f/x;->b:Lcom/bbm/f/aa;
 
     invoke-virtual {v0, p1}, Lcom/bbm/f/aa;->b(Lcom/bbm/f/ac;)V
 
-    .line 187
+    .line 194
     return-void
 .end method

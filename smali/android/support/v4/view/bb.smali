@@ -1,28 +1,70 @@
-.class Landroid/support/v4/view/bb;
-.super Landroid/support/v4/view/ba;
-.source "ViewCompat.java"
+.class public final Landroid/support/v4/view/bb;
+.super Ljava/lang/Object;
+.source "VelocityTrackerCompat.java"
+
+
+# static fields
+.field static final a:Landroid/support/v4/view/be;
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
     .prologue
-    .line 1090
-    invoke-direct {p0}, Landroid/support/v4/view/ba;-><init>()V
+    .line 67
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
+    const/16 v1, 0xb
+
+    if-lt v0, v1, :cond_0
+
+    .line 68
+    new-instance v0, Landroid/support/v4/view/bd;
+
+    invoke-direct {v0}, Landroid/support/v4/view/bd;-><init>()V
+
+    sput-object v0, Landroid/support/v4/view/bb;->a:Landroid/support/v4/view/be;
+
+    .line 72
+    :goto_0
     return-void
+
+    .line 70
+    :cond_0
+    new-instance v0, Landroid/support/v4/view/bc;
+
+    invoke-direct {v0}, Landroid/support/v4/view/bc;-><init>()V
+
+    sput-object v0, Landroid/support/v4/view/bb;->a:Landroid/support/v4/view/be;
+
+    goto :goto_0
 .end method
 
-
-# virtual methods
-.method public final b(Landroid/view/View;I)V
-    .locals 0
+.method public static a(Landroid/view/VelocityTracker;I)F
+    .locals 1
 
     .prologue
-    .line 1103
-    invoke-virtual {p1, p2}, Landroid/view/View;->setImportantForAccessibility(I)V
+    .line 82
+    sget-object v0, Landroid/support/v4/view/bb;->a:Landroid/support/v4/view/be;
 
-    .line 1104
-    return-void
+    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/be;->a(Landroid/view/VelocityTracker;I)F
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static b(Landroid/view/VelocityTracker;I)F
+    .locals 1
+
+    .prologue
+    .line 91
+    sget-object v0, Landroid/support/v4/view/bb;->a:Landroid/support/v4/view/be;
+
+    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/be;->b(Landroid/view/VelocityTracker;I)F
+
+    move-result v0
+
+    return v0
 .end method

@@ -1,70 +1,96 @@
-.class final Lcom/bbm/ui/views/w;
+.class public final Lcom/bbm/ui/views/w;
 .super Ljava/lang/Object;
 .source "QuickActionAttachmentsView.java"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
-
 
 # instance fields
-.field final synthetic a:I
+.field final a:I
 
-.field final synthetic b:Landroid/view/View;
+.field final b:I
 
-.field final synthetic c:Lcom/bbm/ui/views/v;
+.field final c:Lcom/bbm/j/r;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/j/r",
+            "<",
+            "Lcom/bbm/d/gh;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field final d:Ljava/lang/String;
+
+.field final e:Landroid/view/View$OnClickListener;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/views/v;ILandroid/view/View;)V
-    .locals 0
+.method public constructor <init>(IILandroid/view/View$OnClickListener;)V
+    .locals 1
 
     .prologue
-    .line 111
-    iput-object p1, p0, Lcom/bbm/ui/views/w;->c:Lcom/bbm/ui/views/v;
+    const/4 v0, 0x0
 
-    iput p2, p0, Lcom/bbm/ui/views/w;->a:I
-
-    iput-object p3, p0, Lcom/bbm/ui/views/w;->b:Landroid/view/View;
-
+    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 64
+    iput p1, p0, Lcom/bbm/ui/views/w;->a:I
+
+    .line 65
+    iput p2, p0, Lcom/bbm/ui/views/w;->b:I
+
+    .line 66
+    iput-object p3, p0, Lcom/bbm/ui/views/w;->e:Landroid/view/View$OnClickListener;
+
+    .line 67
+    iput-object v0, p0, Lcom/bbm/ui/views/w;->c:Lcom/bbm/j/r;
+
+    .line 68
+    iput-object v0, p0, Lcom/bbm/ui/views/w;->d:Ljava/lang/String;
+
+    .line 69
     return-void
 .end method
 
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public constructor <init>(Lcom/bbm/j/r;Ljava/lang/String;Landroid/view/View$OnClickListener;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/bbm/j/r",
+            "<",
+            "Lcom/bbm/d/gh;",
+            ">;",
+            "Ljava/lang/String;",
+            "Landroid/view/View$OnClickListener;",
+            ")V"
+        }
+    .end annotation
 
     .prologue
-    .line 115
-    const-string v0, "Grid Item Clicked"
+    .line 71
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-class v1, Lcom/bbm/ui/views/QuickActionAttachmentsView;
+    .line 72
+    iput-object p1, p0, Lcom/bbm/ui/views/w;->c:Lcom/bbm/j/r;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    .line 73
+    iput-object p2, p0, Lcom/bbm/ui/views/w;->d:Ljava/lang/String;
 
-    .line 117
-    iget-object v0, p0, Lcom/bbm/ui/views/w;->c:Lcom/bbm/ui/views/v;
+    .line 74
+    const v0, 0x7f020350
 
-    iget-object v0, v0, Lcom/bbm/ui/views/v;->a:Lcom/bbm/ui/views/QuickActionAttachmentsView;
+    iput v0, p0, Lcom/bbm/ui/views/w;->a:I
 
-    invoke-static {v0}, Lcom/bbm/ui/views/QuickActionAttachmentsView;->b(Lcom/bbm/ui/views/QuickActionAttachmentsView;)Lcom/bbm/ui/views/v;
+    .line 75
+    const/4 v0, 0x0
 
-    move-result-object v0
+    iput v0, p0, Lcom/bbm/ui/views/w;->b:I
 
-    iget v1, p0, Lcom/bbm/ui/views/w;->a:I
+    .line 76
+    iput-object p3, p0, Lcom/bbm/ui/views/w;->e:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/views/v;->a(I)Lcom/bbm/ui/views/x;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/bbm/ui/views/x;->e:Landroid/view/View$OnClickListener;
-
-    iget-object v1, p0, Lcom/bbm/ui/views/w;->b:Landroid/view/View;
-
-    invoke-interface {v0, v1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
-
-    .line 118
+    .line 77
     return-void
 .end method

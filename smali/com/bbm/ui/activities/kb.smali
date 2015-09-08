@@ -1,111 +1,92 @@
-.class final synthetic Lcom/bbm/ui/activities/kb;
+.class final Lcom/bbm/ui/activities/kb;
 .super Ljava/lang/Object;
-.source "FilePickerActivity.java"
+.source "GroupAdminValidatePasswordActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
-# static fields
-.field static final synthetic a:[I
+# instance fields
+.field final synthetic a:Lcom/bbm/ui/activities/GroupAdminValidatePasswordActivity;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/bbm/ui/activities/GroupAdminValidatePasswordActivity;)V
+    .locals 0
 
     .prologue
-    .line 630
-    invoke-static {}, Lcom/bbm/ui/activities/kh;->values()[Lcom/bbm/ui/activities/kh;
+    .line 57
+    iput-object p1, p0, Lcom/bbm/ui/activities/kb;->a:Lcom/bbm/ui/activities/GroupAdminValidatePasswordActivity;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
+
+    .prologue
+    .line 61
+    const-string v0, "mButtonToolbar Positive Button Clicked"
+
+    const-class v1, Lcom/bbm/ui/activities/GroupAdminValidatePasswordActivity;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 63
+    new-instance v0, Lcom/bbm/ui/activities/kc;
+
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/kc;-><init>(Lcom/bbm/ui/activities/kb;)V
+
+    .line 82
+    iget-object v1, p0, Lcom/bbm/ui/activities/kb;->a:Lcom/bbm/ui/activities/GroupAdminValidatePasswordActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupAdminValidatePasswordActivity;->a(Lcom/bbm/ui/activities/GroupAdminValidatePasswordActivity;)Lcom/bbm/g/an;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/bbm/g/as;->a:Lcom/bbm/d/a/f;
+
+    iget-object v1, v1, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
+
+    invoke-interface {v1, v0}, Lcom/bbm/f/a;->a(Lcom/bbm/f/ac;)V
+
+    .line 83
+    iget-object v0, p0, Lcom/bbm/ui/activities/kb;->a:Lcom/bbm/ui/activities/GroupAdminValidatePasswordActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupAdminValidatePasswordActivity;->a(Lcom/bbm/ui/activities/GroupAdminValidatePasswordActivity;)Lcom/bbm/g/an;
 
     move-result-object v0
 
-    array-length v0, v0
+    iget-object v1, p0, Lcom/bbm/ui/activities/kb;->a:Lcom/bbm/ui/activities/GroupAdminValidatePasswordActivity;
 
-    new-array v0, v0, [I
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupAdminValidatePasswordActivity;->b(Lcom/bbm/ui/activities/GroupAdminValidatePasswordActivity;)Ljava/lang/String;
 
-    sput-object v0, Lcom/bbm/ui/activities/kb;->a:[I
+    move-result-object v1
 
-    :try_start_0
-    sget-object v0, Lcom/bbm/ui/activities/kb;->a:[I
+    iget-object v2, p0, Lcom/bbm/ui/activities/kb;->a:Lcom/bbm/ui/activities/GroupAdminValidatePasswordActivity;
 
-    sget-object v1, Lcom/bbm/ui/activities/kh;->a:Lcom/bbm/ui/activities/kh;
+    invoke-static {v2}, Lcom/bbm/ui/activities/GroupAdminValidatePasswordActivity;->c(Lcom/bbm/ui/activities/GroupAdminValidatePasswordActivity;)Landroid/widget/EditText;
 
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/kh;->ordinal()I
+    move-result-object v2
 
-    move-result v1
+    invoke-virtual {v2}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
-    const/4 v2, 0x1
+    move-result-object v2
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_3
+    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    :goto_0
-    :try_start_1
-    sget-object v0, Lcom/bbm/ui/activities/kb;->a:[I
+    move-result-object v2
 
-    sget-object v1, Lcom/bbm/ui/activities/kh;->b:Lcom/bbm/ui/activities/kh;
+    new-instance v3, Lcom/bbm/g/au;
 
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/kh;->ordinal()I
+    invoke-direct {v3, v1, v2}, Lcom/bbm/g/au;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result v1
+    invoke-virtual {v0, v3}, Lcom/bbm/g/an;->a(Lcom/bbm/g/db;)V
 
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
-
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/bbm/ui/activities/kb;->a:[I
-
-    sget-object v1, Lcom/bbm/ui/activities/kh;->c:Lcom/bbm/ui/activities/kh;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/kh;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_1
-
-    :goto_2
-    :try_start_3
-    sget-object v0, Lcom/bbm/ui/activities/kb;->a:[I
-
-    sget-object v1, Lcom/bbm/ui/activities/kh;->d:Lcom/bbm/ui/activities/kh;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/kh;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_0
-
-    :goto_3
+    .line 84
     return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_3
-
-    :catch_1
-    move-exception v0
-
-    goto :goto_2
-
-    :catch_2
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_3
-    move-exception v0
-
-    goto :goto_0
 .end method

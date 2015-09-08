@@ -1,15 +1,28 @@
-.class public Lcom/google/android/gms/internal/fq;
+.class final Lcom/google/android/gms/internal/fq;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Lcom/google/android/gms/internal/fv;
 
 
 # direct methods
-.method public static a(Ljava/lang/StringBuilder;Ljava/util/HashMap;)V
-    .locals 5
+.method constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lcom/google/android/gms/internal/pp;Ljava/util/Map;)V
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ljava/lang/StringBuilder;",
-            "Ljava/util/HashMap",
+            "Lcom/google/android/gms/internal/pp;",
+            "Ljava/util/Map",
             "<",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
@@ -17,102 +30,32 @@
         }
     .end annotation
 
-    const-string v0, "{"
+    invoke-interface {p1}, Lcom/google/android/gms/internal/pp;->e()Lcom/google/android/gms/ads/internal/overlay/c;
 
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const/4 v0, 0x1
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    move v1, v0
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/overlay/c;->a()V
 
     :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    if-nez v1, :cond_0
-
-    const-string v2, ","
-
-    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move v2, v1
-
-    :goto_1
-    invoke-virtual {p1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    const-string v4, "\""
-
-    invoke-virtual {p0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v4, "\":"
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-nez v1, :cond_1
-
-    const-string v0, "null"
-
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move v1, v2
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    const/4 v2, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    const-string v0, "\""
-
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {p1}, Lcom/google/android/gms/internal/pp;->f()Lcom/google/android/gms/ads/internal/overlay/c;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_1
 
-    move-result-object v0
-
-    const-string v1, "\""
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move v1, v2
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/overlay/c;->a()V
 
     goto :goto_0
 
-    :cond_2
-    const-string v0, "}"
+    :cond_1
+    const-string v0, "A GMSG tried to close something that wasn\'t an overlay."
 
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Lcom/google/android/gms/ads/internal/util/client/b;->e(Ljava/lang/String;)V
 
-    return-void
+    goto :goto_0
 .end method

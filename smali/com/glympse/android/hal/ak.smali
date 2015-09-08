@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field final synthetic bI:Lcom/glympse/android/hal/ai;
+.field final synthetic bL:Lcom/glympse/android/hal/ai;
 
 
 # direct methods
@@ -16,7 +16,7 @@
 
     .prologue
     .line 294
-    iput-object p1, p0, Lcom/glympse/android/hal/ak;->bI:Lcom/glympse/android/hal/ai;
+    iput-object p1, p0, Lcom/glympse/android/hal/ak;->bL:Lcom/glympse/android/hal/ai;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,7 +40,7 @@
 
     .prologue
     .line 298
-    iget-object v0, p0, Lcom/glympse/android/hal/ak;->bI:Lcom/glympse/android/hal/ai;
+    iget-object v0, p0, Lcom/glympse/android/hal/ak;->bL:Lcom/glympse/android/hal/ai;
 
     invoke-static {v0}, Lcom/glympse/android/hal/ai;->h(Lcom/glympse/android/hal/ai;)V
 

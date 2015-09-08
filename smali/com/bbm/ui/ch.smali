@@ -1,94 +1,123 @@
 .class final Lcom/bbm/ui/ch;
-.super Lcom/bbm/j/k;
+.super Ljava/lang/Object;
 .source "EmoticonStickerPager.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/cg;
+.field final synthetic a:Lcom/bbm/ui/EmoticonStickerPager;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/cg;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/EmoticonStickerPager;)V
+    .locals 0
 
     .prologue
-    .line 405
-    iput-object p1, p0, Lcom/bbm/ui/ch;->a:Lcom/bbm/ui/cg;
+    .line 145
+    iput-object p1, p0, Lcom/bbm/ui/ch;->a:Lcom/bbm/ui/EmoticonStickerPager;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
     .prologue
-    .line 408
-    iget-object v0, p0, Lcom/bbm/ui/ch;->a:Lcom/bbm/ui/cg;
-
-    iget-object v0, v0, Lcom/bbm/ui/cg;->b:Lcom/bbm/ui/EmoticonStickerPager;
-
-    invoke-static {v0}, Lcom/bbm/ui/EmoticonStickerPager;->q(Lcom/bbm/ui/EmoticonStickerPager;)Lcom/bbm/d/b/f;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/d/b/f;->g()Ljava/util/List;
-
-    .line 410
-    iget-object v0, p0, Lcom/bbm/ui/ch;->a:Lcom/bbm/ui/cg;
-
-    iget-object v0, v0, Lcom/bbm/ui/cg;->b:Lcom/bbm/ui/EmoticonStickerPager;
-
-    invoke-static {v0}, Lcom/bbm/ui/EmoticonStickerPager;->r(Lcom/bbm/ui/EmoticonStickerPager;)Lcom/bbm/ui/cl;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/ui/cl;->notifyDataSetChanged()V
-
-    .line 411
-    iget-object v0, p0, Lcom/bbm/ui/ch;->a:Lcom/bbm/ui/cg;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/cg;->b()V
-
-    .line 414
-    iget-object v0, p0, Lcom/bbm/ui/ch;->a:Lcom/bbm/ui/cg;
-
-    iget-object v0, v0, Lcom/bbm/ui/cg;->b:Lcom/bbm/ui/EmoticonStickerPager;
-
-    invoke-static {v0}, Lcom/bbm/ui/EmoticonStickerPager;->s(Lcom/bbm/ui/EmoticonStickerPager;)Landroid/widget/ImageButton;
-
-    move-result-object v1
-
-    iget-object v0, p0, Lcom/bbm/ui/ch;->a:Lcom/bbm/ui/cg;
-
-    iget-object v0, v0, Lcom/bbm/ui/cg;->b:Lcom/bbm/ui/EmoticonStickerPager;
-
-    invoke-static {v0}, Lcom/bbm/ui/EmoticonStickerPager;->k(Lcom/bbm/ui/EmoticonStickerPager;)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    .line 149
+    invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    sparse-switch v0, :sswitch_data_0
 
-    const/4 v0, 0x0
-
+    .line 161
     :goto_0
-    invoke-virtual {v1, v0}, Landroid/widget/ImageButton;->setVisibility(I)V
-
-    .line 415
     return-void
 
-    .line 414
+    .line 151
+    :sswitch_0
+    iget-object v0, p0, Lcom/bbm/ui/ch;->a:Lcom/bbm/ui/EmoticonStickerPager;
+
+    invoke-static {v0}, Lcom/bbm/ui/EmoticonStickerPager;->b(Lcom/bbm/ui/EmoticonStickerPager;)Landroid/view/View$OnClickListener;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 152
+    iget-object v0, p0, Lcom/bbm/ui/ch;->a:Lcom/bbm/ui/EmoticonStickerPager;
+
+    invoke-static {v0}, Lcom/bbm/ui/EmoticonStickerPager;->b(Lcom/bbm/ui/EmoticonStickerPager;)Landroid/view/View$OnClickListener;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
+
+    .line 154
     :cond_0
-    const/16 v0, 0x8
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/bbm/c/x;->b:Lcom/bbm/c/x;
+
+    sget-object v2, Lcom/bbm/c/e;->c:[I
+
+    invoke-virtual {v1}, Lcom/bbm/c/x;->ordinal()I
+
+    move-result v1
+
+    aget v1, v2, v1
+
+    packed-switch v1, :pswitch_data_0
 
     goto :goto_0
+
+    :pswitch_0
+    iget v1, v0, Lcom/bbm/c/c;->X:I
+
+    add-int/lit8 v1, v1, 0x1
+
+    iput v1, v0, Lcom/bbm/c/c;->X:I
+
+    goto :goto_0
+
+    :pswitch_1
+    iget v1, v0, Lcom/bbm/c/c;->W:I
+
+    add-int/lit8 v1, v1, 0x1
+
+    iput v1, v0, Lcom/bbm/c/c;->W:I
+
+    goto :goto_0
+
+    .line 158
+    :sswitch_1
+    iget-object v0, p0, Lcom/bbm/ui/ch;->a:Lcom/bbm/ui/EmoticonStickerPager;
+
+    invoke-static {v0}, Lcom/bbm/ui/EmoticonStickerPager;->c(Lcom/bbm/ui/EmoticonStickerPager;)V
+
+    goto :goto_0
+
+    .line 149
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x7f0b01df -> :sswitch_1
+        0x7f0b0667 -> :sswitch_0
+    .end sparse-switch
+
+    .line 154
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method

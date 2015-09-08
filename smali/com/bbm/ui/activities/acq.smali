@@ -1,90 +1,164 @@
-.class final Lcom/bbm/ui/activities/acq;
-.super Ljava/lang/Object;
-.source "ProfileActivity.java"
+.class public final Lcom/bbm/ui/activities/acq;
+.super Lcom/bbm/ui/eh;
+.source "SelectGroupActivity.java"
 
-# interfaces
-.implements Landroid/view/View$OnKeyListener;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/ui/eh",
+        "<",
+        "Lcom/bbm/g/a;",
+        "Ljava/lang/String;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ProfileActivity;
+.field final synthetic b:Lcom/bbm/ui/activities/SelectGroupActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ProfileActivity;)V
+.method public constructor <init>(Lcom/bbm/ui/activities/SelectGroupActivity;Lcom/bbm/j/r;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/bbm/j/r",
+            "<",
+            "Ljava/util/List",
+            "<",
+            "Lcom/bbm/g/a;",
+            ">;>;)V"
+        }
+    .end annotation
 
     .prologue
-    .line 167
-    iput-object p1, p0, Lcom/bbm/ui/activities/acq;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    .line 175
+    iput-object p1, p0, Lcom/bbm/ui/activities/acq;->b:Lcom/bbm/ui/activities/SelectGroupActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 176
+    invoke-direct {p0, p2}, Lcom/bbm/ui/eh;-><init>(Lcom/bbm/j/r;)V
 
+    .line 177
     return-void
 .end method
 
 
 # virtual methods
-.method public final onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
+.method protected final a(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 3
 
     .prologue
-    const/4 v2, 0x1
+    .line 181
+    iget-object v0, p0, Lcom/bbm/ui/activities/acq;->b:Lcom/bbm/ui/activities/SelectGroupActivity;
 
-    .line 171
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/SelectGroupActivity;->getApplicationContext()Landroid/content/Context;
 
-    move-result v0
+    move-result-object v0
 
-    if-ne v0, v2, :cond_0
+    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
-    const/16 v0, 0x42
+    move-result-object v0
 
-    if-ne p2, v0, :cond_0
+    const v1, 0x7f0300ef
 
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, p3, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object v1
+
+    .line 183
+    new-instance v2, Lcom/bbm/ui/activities/acr;
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/acq;->b:Lcom/bbm/ui/activities/SelectGroupActivity;
+
+    invoke-direct {v2, v0}, Lcom/bbm/ui/activities/acr;-><init>(Lcom/bbm/ui/activities/SelectGroupActivity;)V
+
+    .line 184
+    const v0, 0x7f0b054a
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/AvatarView;
+
+    iput-object v0, v2, Lcom/bbm/ui/activities/acr;->a:Lcom/bbm/ui/AvatarView;
+
+    .line 185
+    const v0, 0x7f0b054b
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, v2, Lcom/bbm/ui/activities/acr;->b:Landroid/widget/TextView;
+
+    .line 186
+    invoke-virtual {v1, v2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+
+    .line 188
+    return-object v1
+.end method
+
+.method protected final bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    .prologue
     .line 173
-    iget-object v0, p0, Lcom/bbm/ui/activities/acq;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    check-cast p1, Lcom/bbm/g/a;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ProfileActivity;->f(Lcom/bbm/ui/activities/ProfileActivity;)Z
+    iget-object v0, p1, Lcom/bbm/g/a;->v:Ljava/lang/String;
 
-    move-result v0
+    return-object v0
+.end method
 
-    if-nez v0, :cond_0
+.method protected final synthetic a(Landroid/view/View;Ljava/lang/Object;)V
+    .locals 3
 
-    .line 174
-    iget-object v0, p0, Lcom/bbm/ui/activities/acq;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    .prologue
+    .line 173
+    check-cast p2, Lcom/bbm/g/a;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ProfileActivity;->d(Lcom/bbm/ui/activities/ProfileActivity;)Lcom/google/b/a/l;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/EditText;
-
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    check-cast v0, Lcom/bbm/ui/activities/acr;
 
-    move-result-object v0
+    iget-object v1, p2, Lcom/bbm/g/a;->r:Ljava/lang/String;
 
-    .line 175
-    iget-object v1, p0, Lcom/bbm/ui/activities/acq;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    :try_start_0
+    iget-object v2, v0, Lcom/bbm/ui/activities/acr;->a:Lcom/bbm/ui/AvatarView;
 
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/ProfileActivity;->a(Lcom/bbm/ui/activities/ProfileActivity;Ljava/lang/String;)V
+    invoke-virtual {v2, p2}, Lcom/bbm/ui/AvatarView;->setContent(Lcom/bbm/g/a;)V
 
-    .line 176
-    iget-object v0, p0, Lcom/bbm/ui/activities/acq;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    iget-object v2, v0, Lcom/bbm/ui/activities/acr;->b:Landroid/widget/TextView;
 
-    invoke-static {v0, v2}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;Z)V
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 179
-    :cond_0
-    const/4 v0, 0x0
+    iget-object v0, v0, Lcom/bbm/ui/activities/acr;->b:Landroid/widget/TextView;
 
-    return v0
+    const/high16 v1, -0x1000000
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+    :try_end_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/acq;->b:Lcom/bbm/ui/activities/SelectGroupActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/SelectGroupActivity;->finish()V
+
+    goto :goto_0
 .end method

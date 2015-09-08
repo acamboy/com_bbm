@@ -1,178 +1,128 @@
 .class final Lcom/google/b/b/bc;
-.super Lcom/google/b/b/be;
+.super Ljava/util/AbstractCollection;
 .source "LocalCache.java"
-
-# interfaces
-.implements Lcom/google/b/b/am;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "<K:",
-        "Ljava/lang/Object;",
-        "V:",
-        "Ljava/lang/Object;",
-        ">",
-        "Lcom/google/b/b/be",
-        "<TK;TV;>;",
-        "Lcom/google/b/b/am",
-        "<TK;TV;>;"
+        "Ljava/util/AbstractCollection",
+        "<TV;>;"
     }
 .end annotation
 
 
 # instance fields
-.field volatile a:J
+.field final synthetic a:Lcom/google/b/b/n;
 
-.field b:Lcom/google/b/b/am;
+.field private final b:Ljava/util/concurrent/ConcurrentMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/google/b/b/am",
-            "<TK;TV;>;"
-        }
-    .end annotation
-.end field
-
-.field c:Lcom/google/b/b/am;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/b/b/am",
-            "<TK;TV;>;"
+            "Ljava/util/concurrent/ConcurrentMap",
+            "<**>;"
         }
     .end annotation
 .end field
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/ref/ReferenceQueue;Ljava/lang/Object;ILcom/google/b/b/am;)V
-    .locals 2
+.method constructor <init>(Lcom/google/b/b/n;Ljava/util/concurrent/ConcurrentMap;)V
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ljava/lang/ref/ReferenceQueue",
-            "<TK;>;TK;I",
-            "Lcom/google/b/b/am",
-            "<TK;TV;>;)V"
+            "Ljava/util/concurrent/ConcurrentMap",
+            "<**>;)V"
         }
     .end annotation
 
     .prologue
-    .line 1460
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/b/b/be;-><init>(Ljava/lang/ref/ReferenceQueue;Ljava/lang/Object;ILcom/google/b/b/am;)V
+    .line 4482
+    iput-object p1, p0, Lcom/google/b/b/bc;->a:Lcom/google/b/b/n;
 
-    .line 1465
-    const-wide v0, 0x7fffffffffffffffL
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    iput-wide v0, p0, Lcom/google/b/b/bc;->a:J
+    .line 4483
+    iput-object p2, p0, Lcom/google/b/b/bc;->b:Ljava/util/concurrent/ConcurrentMap;
 
-    .line 1477
-    invoke-static {}, Lcom/google/b/b/n;->k()Lcom/google/b/b/am;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/google/b/b/bc;->b:Lcom/google/b/b/am;
-
-    .line 1490
-    invoke-static {}, Lcom/google/b/b/n;->k()Lcom/google/b/b/am;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/google/b/b/bc;->c:Lcom/google/b/b/am;
-
-    .line 1461
+    .line 4484
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(J)V
+.method public final clear()V
     .locals 1
 
     .prologue
-    .line 1474
-    iput-wide p1, p0, Lcom/google/b/b/bc;->a:J
+    .line 4495
+    iget-object v0, p0, Lcom/google/b/b/bc;->b:Ljava/util/concurrent/ConcurrentMap;
 
-    .line 1475
+    invoke-interface {v0}, Ljava/util/concurrent/ConcurrentMap;->clear()V
+
+    .line 4496
     return-void
 .end method
 
-.method public final a(Lcom/google/b/b/am;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/b/b/am",
-            "<TK;TV;>;)V"
-        }
-    .end annotation
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 1
 
     .prologue
-    .line 1487
-    iput-object p1, p0, Lcom/google/b/b/bc;->b:Lcom/google/b/b/am;
+    .line 4505
+    iget-object v0, p0, Lcom/google/b/b/bc;->b:Ljava/util/concurrent/ConcurrentMap;
 
-    .line 1488
-    return-void
+    invoke-interface {v0, p1}, Ljava/util/concurrent/ConcurrentMap;->containsValue(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
 .end method
 
-.method public final b(Lcom/google/b/b/am;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/b/b/am",
-            "<TK;TV;>;)V"
-        }
-    .end annotation
+.method public final isEmpty()Z
+    .locals 1
 
     .prologue
-    .line 1500
-    iput-object p1, p0, Lcom/google/b/b/bc;->c:Lcom/google/b/b/am;
+    .line 4491
+    iget-object v0, p0, Lcom/google/b/b/bc;->b:Ljava/util/concurrent/ConcurrentMap;
 
-    .line 1501
-    return-void
+    invoke-interface {v0}, Ljava/util/concurrent/ConcurrentMap;->isEmpty()Z
+
+    move-result v0
+
+    return v0
 .end method
 
-.method public final e()J
+.method public final iterator()Ljava/util/Iterator;
     .locals 2
-
-    .prologue
-    .line 1469
-    iget-wide v0, p0, Lcom/google/b/b/bc;->a:J
-
-    return-wide v0
-.end method
-
-.method public final f()Lcom/google/b/b/am;
-    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/google/b/b/am",
-            "<TK;TV;>;"
+            "Ljava/util/Iterator",
+            "<TV;>;"
         }
     .end annotation
 
     .prologue
-    .line 1482
-    iget-object v0, p0, Lcom/google/b/b/bc;->b:Lcom/google/b/b/am;
+    .line 4500
+    new-instance v0, Lcom/google/b/b/ba;
+
+    iget-object v1, p0, Lcom/google/b/b/bc;->a:Lcom/google/b/b/n;
+
+    invoke-direct {v0, v1}, Lcom/google/b/b/ba;-><init>(Lcom/google/b/b/n;)V
 
     return-object v0
 .end method
 
-.method public final g()Lcom/google/b/b/am;
+.method public final size()I
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/google/b/b/am",
-            "<TK;TV;>;"
-        }
-    .end annotation
 
     .prologue
-    .line 1495
-    iget-object v0, p0, Lcom/google/b/b/bc;->c:Lcom/google/b/b/am;
+    .line 4487
+    iget-object v0, p0, Lcom/google/b/b/bc;->b:Ljava/util/concurrent/ConcurrentMap;
 
-    return-object v0
+    invoke-interface {v0}, Ljava/util/concurrent/ConcurrentMap;->size()I
+
+    move-result v0
+
+    return v0
 .end method

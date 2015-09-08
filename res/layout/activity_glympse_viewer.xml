@@ -2,8 +2,10 @@
 <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <fragment android:id="@id/glympse_viewer_map" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.glympse.map.lib.Map" />
-    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/footer_action_bar">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/toolbar_container">
         <com.bbm.ui.GlympseUserSelector android:id="@id/glympse_viewer_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" />
     </RelativeLayout>
-    <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
+    <LinearLayout android:id="@id/toolbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/view_bali_toolbar" />
+    </LinearLayout>
 </RelativeLayout>

@@ -1,24 +1,25 @@
 .class final Lcom/bbm/util/cn;
-.super Ljava/lang/Object;
-.source "LocationServicesUtil.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Landroid/text/style/ClickableSpan;
+.source "LinkifyUtil.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/b/o;
+.field final synthetic a:Landroid/content/Context;
+
+.field final synthetic b:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/b/o;)V
+.method constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 110
-    iput-object p1, p0, Lcom/bbm/util/cn;->a:Lcom/bbm/ui/b/o;
+    .line 138
+    iput-object p1, p0, Lcom/bbm/util/cn;->a:Landroid/content/Context;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lcom/bbm/util/cn;->b:Ljava/lang/String;
+
+    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
     return-void
 .end method
@@ -29,18 +30,20 @@
     .locals 2
 
     .prologue
-    .line 114
-    const-string v0, "showEnableLocationDialog left button clicked"
+    .line 142
+    const-string v0, "hasContact clickableSpan clicked"
 
-    const-class v1, Lcom/bbm/util/cm;
+    const-class v1, Lcom/bbm/util/LinkifyUtil;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 115
-    iget-object v0, p0, Lcom/bbm/util/cn;->a:Lcom/bbm/ui/b/o;
+    .line 143
+    iget-object v0, p0, Lcom/bbm/util/cn;->a:Landroid/content/Context;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->dismiss()V
+    iget-object v1, p0, Lcom/bbm/util/cn;->b:Ljava/lang/String;
 
-    .line 116
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/MainActivity;->a(Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 144
     return-void
 .end method

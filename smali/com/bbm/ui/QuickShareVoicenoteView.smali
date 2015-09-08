@@ -12,15 +12,15 @@
 # instance fields
 .field private a:Landroid/widget/ImageView;
 
-.field private b:Landroid/widget/ImageView;
+.field private b:Landroid/view/View;
 
-.field private c:Landroid/widget/TextView;
+.field private c:Landroid/widget/ViewFlipper;
 
 .field private d:Landroid/view/View;
 
-.field private e:Landroid/view/View;
+.field private e:Landroid/widget/ImageView;
 
-.field private f:Landroid/widget/ImageView;
+.field private f:I
 
 .field private final g:Landroid/os/Handler;
 
@@ -28,11 +28,11 @@
 
 .field private i:Z
 
-.field private j:Lcom/bbm/ui/fr;
+.field private j:Lcom/bbm/ui/fy;
 
-.field private k:Lcom/bbm/util/fm;
+.field private k:Lcom/bbm/util/ez;
 
-.field private final n:Lcom/bbm/util/fo;
+.field private final n:Lcom/bbm/util/fb;
 
 .field private final o:Ljava/lang/Runnable;
 
@@ -46,7 +46,7 @@
     .locals 2
 
     .prologue
-    .line 56
+    .line 65
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "file://"
@@ -91,7 +91,7 @@
 
     sput-object v0, Lcom/bbm/ui/QuickShareVoicenoteView;->l:Ljava/lang/String;
 
-    .line 61
+    .line 70
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "file://"
@@ -143,58 +143,63 @@
     .locals 1
 
     .prologue
-    .line 133
+    .line 142
     invoke-direct {p0, p1}, Lcom/bbm/ui/QuickShareBaseView;-><init>(Landroid/content/Context;)V
 
-    .line 46
+    .line 53
+    sget v0, Lcom/bbm/ui/fx;->a:I
+
+    iput v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->f:I
+
+    .line 55
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->g:Landroid/os/Handler;
 
-    .line 47
+    .line 56
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->h:Z
 
-    .line 48
+    .line 57
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->i:Z
 
-    .line 66
-    new-instance v0, Lcom/bbm/ui/fj;
+    .line 75
+    new-instance v0, Lcom/bbm/ui/fn;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/fj;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/fn;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->n:Lcom/bbm/util/fo;
+    iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->n:Lcom/bbm/util/fb;
 
-    .line 74
-    new-instance v0, Lcom/bbm/ui/fk;
+    .line 83
+    new-instance v0, Lcom/bbm/ui/fo;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/fk;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/fo;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
 
     iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->o:Ljava/lang/Runnable;
 
-    .line 83
-    new-instance v0, Lcom/bbm/ui/fl;
+    .line 92
+    new-instance v0, Lcom/bbm/ui/fp;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/fl;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/fp;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
 
     iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->p:Lcom/bbm/j/k;
 
-    .line 93
-    new-instance v0, Lcom/bbm/ui/fm;
+    .line 101
+    new-instance v0, Lcom/bbm/ui/fq;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/fm;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/fq;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
 
     iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->q:Ljava/lang/Runnable;
 
-    .line 134
+    .line 143
     invoke-direct {p0}, Lcom/bbm/ui/QuickShareVoicenoteView;->c()V
 
-    .line 135
+    .line 144
     return-void
 .end method
 
@@ -202,58 +207,63 @@
     .locals 1
 
     .prologue
-    .line 156
+    .line 165
     invoke-direct {p0, p1, p2}, Lcom/bbm/ui/QuickShareBaseView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 46
+    .line 53
+    sget v0, Lcom/bbm/ui/fx;->a:I
+
+    iput v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->f:I
+
+    .line 55
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->g:Landroid/os/Handler;
 
-    .line 47
+    .line 56
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->h:Z
 
-    .line 48
+    .line 57
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->i:Z
 
-    .line 66
-    new-instance v0, Lcom/bbm/ui/fj;
+    .line 75
+    new-instance v0, Lcom/bbm/ui/fn;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/fj;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/fn;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->n:Lcom/bbm/util/fo;
+    iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->n:Lcom/bbm/util/fb;
 
-    .line 74
-    new-instance v0, Lcom/bbm/ui/fk;
+    .line 83
+    new-instance v0, Lcom/bbm/ui/fo;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/fk;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/fo;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
 
     iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->o:Ljava/lang/Runnable;
 
-    .line 83
-    new-instance v0, Lcom/bbm/ui/fl;
+    .line 92
+    new-instance v0, Lcom/bbm/ui/fp;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/fl;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/fp;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
 
     iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->p:Lcom/bbm/j/k;
 
-    .line 93
-    new-instance v0, Lcom/bbm/ui/fm;
+    .line 101
+    new-instance v0, Lcom/bbm/ui/fq;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/fm;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/fq;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
 
     iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->q:Ljava/lang/Runnable;
 
-    .line 157
+    .line 166
     invoke-direct {p0}, Lcom/bbm/ui/QuickShareVoicenoteView;->c()V
 
-    .line 158
+    .line 167
     return-void
 .end method
 
@@ -261,58 +271,63 @@
     .locals 1
 
     .prologue
-    .line 145
+    .line 154
     invoke-direct {p0, p1, p2, p3}, Lcom/bbm/ui/QuickShareBaseView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 46
+    .line 53
+    sget v0, Lcom/bbm/ui/fx;->a:I
+
+    iput v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->f:I
+
+    .line 55
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->g:Landroid/os/Handler;
 
-    .line 47
+    .line 56
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->h:Z
 
-    .line 48
+    .line 57
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->i:Z
 
-    .line 66
-    new-instance v0, Lcom/bbm/ui/fj;
+    .line 75
+    new-instance v0, Lcom/bbm/ui/fn;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/fj;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/fn;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->n:Lcom/bbm/util/fo;
+    iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->n:Lcom/bbm/util/fb;
 
-    .line 74
-    new-instance v0, Lcom/bbm/ui/fk;
+    .line 83
+    new-instance v0, Lcom/bbm/ui/fo;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/fk;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/fo;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
 
     iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->o:Ljava/lang/Runnable;
 
-    .line 83
-    new-instance v0, Lcom/bbm/ui/fl;
+    .line 92
+    new-instance v0, Lcom/bbm/ui/fp;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/fl;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/fp;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
 
     iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->p:Lcom/bbm/j/k;
 
-    .line 93
-    new-instance v0, Lcom/bbm/ui/fm;
+    .line 101
+    new-instance v0, Lcom/bbm/ui/fq;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/fm;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/fq;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
 
     iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->q:Ljava/lang/Runnable;
 
-    .line 146
+    .line 155
     invoke-direct {p0}, Lcom/bbm/ui/QuickShareVoicenoteView;->c()V
 
-    .line 147
+    .line 156
     return-void
 .end method
 
@@ -320,23 +335,313 @@
     .locals 1
 
     .prologue
-    .line 33
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->f:Landroid/widget/ImageView;
+    .line 35
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->e:Landroid/widget/ImageView;
 
     return-object v0
 .end method
 
-.method private a(Ljava/lang/String;Lcom/bbm/ui/fq;)V
+.method private a(IZ)V
+    .locals 5
+
+    .prologue
+    const v4, 0x7f0202c1
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    .line 319
+    iget v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->f:I
+
+    if-eq v0, p1, :cond_0
+
+    .line 320
+    sget-object v0, Lcom/bbm/ui/fv;->a:[I
+
+    add-int/lit8 v1, p1, -0x1
+
+    aget v0, v0, v1
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 390
+    :goto_0
+    iput p1, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->f:I
+
+    .line 392
+    :cond_0
+    return-void
+
+    .line 322
+    :pswitch_0
+    iget v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->f:I
+
+    sget v1, Lcom/bbm/ui/fx;->b:I
+
+    if-ne v0, v1, :cond_1
+
+    .line 323
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->k:Lcom/bbm/util/ez;
+
+    invoke-virtual {v0}, Lcom/bbm/util/ez;->b()V
+
+    .line 324
+    sget-object v0, Lcom/bbm/ui/QuickShareVoicenoteView;->m:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p0, v0, v1}, Lcom/bbm/ui/QuickShareVoicenoteView;->a(Ljava/lang/String;Lcom/bbm/ui/fw;)V
+
+    .line 325
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->j:Lcom/bbm/ui/fy;
+
+    if-eqz v0, :cond_1
+
+    .line 326
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->j:Lcom/bbm/ui/fy;
+
+    iget-object v1, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->k:Lcom/bbm/util/ez;
+
+    iget-object v1, v1, Lcom/bbm/util/ez;->d:Lcom/google/b/a/l;
+
+    invoke-interface {v0, v1}, Lcom/bbm/ui/fy;->a(Lcom/google/b/a/l;)V
+
+    .line 329
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->g:Landroid/os/Handler;
+
+    iget-object v1, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->q:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    .line 330
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->c:Landroid/widget/ViewFlipper;
+
+    invoke-virtual {v0, v3}, Landroid/widget/ViewFlipper;->setDisplayedChild(I)V
+
+    .line 331
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->d:Landroid/view/View;
+
+    invoke-virtual {p0}, Lcom/bbm/ui/QuickShareVoicenoteView;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x106000d
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    .line 332
+    invoke-virtual {p0, v3}, Lcom/bbm/ui/QuickShareVoicenoteView;->setBackgroundColor(I)V
+
+    .line 333
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->a:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    .line 334
+    iput-boolean v3, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->h:Z
+
+    .line 335
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->e:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setEnabled(Z)V
+
+    goto :goto_0
+
+    .line 338
+    :pswitch_1
+    iget-object v1, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->k:Lcom/bbm/util/ez;
+
+    if-eqz p2, :cond_2
+
+    iget-object v0, v1, Lcom/bbm/util/ez;->d:Lcom/google/b/a/l;
+
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, v1, Lcom/bbm/util/ez;->d:Lcom/google/b/a/l;
+
+    invoke-virtual {v0}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->delete()Z
+
+    :cond_2
+    invoke-virtual {v1}, Lcom/bbm/util/ez;->a()V
+
+    iput-boolean v3, v1, Lcom/bbm/util/ez;->e:Z
+
+    .line 339
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->j:Lcom/bbm/ui/fy;
+
+    if-eqz v0, :cond_3
+
+    .line 340
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->j:Lcom/bbm/ui/fy;
+
+    invoke-interface {v0}, Lcom/bbm/ui/fy;->a()V
+
+    .line 342
+    :cond_3
+    invoke-virtual {p0}, Lcom/bbm/ui/QuickShareVoicenoteView;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const v1, 0x7f04001f
+
+    invoke-static {v0, v1}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
+
+    move-result-object v0
+
+    .line 343
+    new-instance v1, Lcom/bbm/ui/ft;
+
+    invoke-direct {v1, p0}, Lcom/bbm/ui/ft;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
+
+    .line 360
+    iget-object v1, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->b:Landroid/view/View;
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
+
+    goto/16 :goto_0
+
+    .line 363
+    :pswitch_2
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->c:Landroid/widget/ViewFlipper;
+
+    const/4 v1, 0x3
+
+    invoke-virtual {v0, v1}, Landroid/widget/ViewFlipper;->setDisplayedChild(I)V
+
+    .line 364
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->a:Landroid/widget/ImageView;
+
+    const v1, 0x7f020351
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    goto/16 :goto_0
+
+    .line 367
+    :pswitch_3
+    iget v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->f:I
+
+    sget v1, Lcom/bbm/ui/fx;->a:I
+
+    if-ne v0, v1, :cond_4
+
+    .line 368
+    sget-object v0, Lcom/bbm/ui/QuickShareVoicenoteView;->l:Ljava/lang/String;
+
+    new-instance v1, Lcom/bbm/ui/fu;
+
+    invoke-direct {v1, p0}, Lcom/bbm/ui/fu;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
+
+    invoke-direct {p0, v0, v1}, Lcom/bbm/ui/QuickShareVoicenoteView;->a(Ljava/lang/String;Lcom/bbm/ui/fw;)V
+
+    .line 375
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->j:Lcom/bbm/ui/fy;
+
+    invoke-interface {v0}, Lcom/bbm/ui/fy;->b()V
+
+    .line 376
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->g:Landroid/os/Handler;
+
+    iget-object v1, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->q:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 378
+    :cond_4
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->c:Landroid/widget/ViewFlipper;
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1}, Landroid/widget/ViewFlipper;->setDisplayedChild(I)V
+
+    .line 379
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->e:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setEnabled(Z)V
+
+    .line 380
+    iput-boolean v2, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->h:Z
+
+    .line 381
+    invoke-virtual {p0, v3}, Lcom/bbm/ui/QuickShareVoicenoteView;->setBackgroundColor(I)V
+
+    .line 382
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->a:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    goto/16 :goto_0
+
+    .line 385
+    :pswitch_4
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->c:Landroid/widget/ViewFlipper;
+
+    invoke-virtual {v0, v2}, Landroid/widget/ViewFlipper;->setDisplayedChild(I)V
+
+    .line 386
+    const v0, 0x7f0203c5
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/QuickShareVoicenoteView;->setBackgroundResource(I)V
+
+    .line 387
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->a:Landroid/widget/ImageView;
+
+    const v1, 0x7f0202c0
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    goto/16 :goto_0
+
+    .line 320
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+        :pswitch_4
+    .end packed-switch
+.end method
+
+.method static synthetic a(Lcom/bbm/ui/QuickShareVoicenoteView;IZ)V
+    .locals 0
+
+    .prologue
+    .line 35
+    invoke-direct {p0, p1, p2}, Lcom/bbm/ui/QuickShareVoicenoteView;->a(IZ)V
+
+    return-void
+.end method
+
+.method private a(Ljava/lang/String;Lcom/bbm/ui/fw;)V
     .locals 3
 
     .prologue
-    .line 271
+    .line 275
     :try_start_0
     new-instance v0, Landroid/media/MediaPlayer;
 
     invoke-direct {v0}, Landroid/media/MediaPlayer;-><init>()V
 
-    .line 272
+    .line 276
     invoke-virtual {p0}, Lcom/bbm/ui/QuickShareVoicenoteView;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -347,31 +652,31 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/media/MediaPlayer;->setDataSource(Landroid/content/Context;Landroid/net/Uri;)V
 
-    .line 273
-    new-instance v1, Lcom/bbm/ui/fn;
+    .line 277
+    new-instance v1, Lcom/bbm/ui/fr;
 
-    invoke-direct {v1, p0, v0}, Lcom/bbm/ui/fn;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;Landroid/media/MediaPlayer;)V
+    invoke-direct {v1, p0, v0}, Lcom/bbm/ui/fr;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;Landroid/media/MediaPlayer;)V
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
 
-    .line 282
-    new-instance v1, Lcom/bbm/ui/fo;
+    .line 286
+    new-instance v1, Lcom/bbm/ui/fs;
 
-    invoke-direct {v1, p0, p2, v0}, Lcom/bbm/ui/fo;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;Lcom/bbm/ui/fq;Landroid/media/MediaPlayer;)V
+    invoke-direct {v1, p0, p2, v0}, Lcom/bbm/ui/fs;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;Lcom/bbm/ui/fw;Landroid/media/MediaPlayer;)V
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setOnPreparedListener(Landroid/media/MediaPlayer$OnPreparedListener;)V
 
-    .line 293
+    .line 297
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->prepareAsync()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 300
+    .line 304
     :cond_0
     :goto_0
     return-void
 
-    .line 294
+    .line 298
     :catch_0
     move-exception v0
 
@@ -393,217 +698,75 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, v1, v2}, Lcom/bbm/y;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/bbm/af;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 296
+    .line 300
     if-eqz p2, :cond_0
 
-    .line 297
-    invoke-interface {p2}, Lcom/bbm/ui/fq;->a()V
+    .line 301
+    invoke-interface {p2}, Lcom/bbm/ui/fw;->a()V
 
     goto :goto_0
-.end method
-
-.method private a(Z)V
-    .locals 4
-
-    .prologue
-    const/4 v3, 0x0
-
-    .line 355
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->a:Landroid/widget/ImageView;
-
-    const v1, 0x7f02039c
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    .line 357
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->b:Landroid/widget/ImageView;
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 358
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->b:Landroid/widget/ImageView;
-
-    const v1, 0x7f020390
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    .line 360
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->c:Landroid/widget/TextView;
-
-    const v1, 0x7f0e063c
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
-
-    .line 361
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->d:Landroid/view/View;
-
-    invoke-virtual {p0}, Lcom/bbm/ui/QuickShareVoicenoteView;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x106000d
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
-
-    .line 362
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->f:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setEnabled(Z)V
-
-    .line 363
-    iput-boolean v3, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->h:Z
-
-    .line 365
-    iget-object v1, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->k:Lcom/bbm/util/fm;
-
-    if-eqz p1, :cond_0
-
-    iget-object v0, v1, Lcom/bbm/util/fm;->d:Lcom/google/b/a/l;
-
-    invoke-virtual {v0}, Lcom/google/b/a/l;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, v1, Lcom/bbm/util/fm;->d:Lcom/google/b/a/l;
-
-    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/io/File;
-
-    invoke-virtual {v0}, Ljava/io/File;->delete()Z
-
-    :cond_0
-    invoke-virtual {v1}, Lcom/bbm/util/fm;->a()V
-
-    iput-boolean v3, v1, Lcom/bbm/util/fm;->e:Z
-
-    .line 366
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->j:Lcom/bbm/ui/fr;
-
-    if-eqz v0, :cond_1
-
-    .line 367
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->j:Lcom/bbm/ui/fr;
-
-    .line 370
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->g:Landroid/os/Handler;
-
-    iget-object v1, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->q:Ljava/lang/Runnable;
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    .line 371
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->e:Landroid/view/View;
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setBackgroundColor(I)V
-
-    .line 372
-    return-void
 .end method
 
 .method static synthetic a(Lcom/bbm/ui/QuickShareVoicenoteView;Z)Z
     .locals 0
 
     .prologue
-    .line 33
+    .line 35
     iput-boolean p1, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->i:Z
 
     return p1
 .end method
 
-.method static synthetic b(Lcom/bbm/ui/QuickShareVoicenoteView;)V
-    .locals 4
+.method static synthetic b(Lcom/bbm/ui/QuickShareVoicenoteView;)Z
+    .locals 1
 
     .prologue
-    const/4 v3, 0x1
+    .line 35
+    iget-boolean v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->i:Z
 
-    const/4 v2, 0x0
+    return v0
+.end method
 
-    .line 33
-    sget-object v0, Lcom/bbm/ui/QuickShareVoicenoteView;->l:Ljava/lang/String;
+.method static synthetic c(Lcom/bbm/ui/QuickShareVoicenoteView;)Lcom/bbm/util/ez;
+    .locals 1
 
-    new-instance v1, Lcom/bbm/ui/fp;
+    .prologue
+    .line 35
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->k:Lcom/bbm/util/ez;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/fp;-><init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
-
-    invoke-direct {p0, v0, v1}, Lcom/bbm/ui/QuickShareVoicenoteView;->a(Ljava/lang/String;Lcom/bbm/ui/fq;)V
-
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->a:Landroid/widget/ImageView;
-
-    const v1, 0x7f02039d
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->c:Landroid/widget/TextView;
-
-    const v1, 0x7f0e063e
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
-
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->b:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->f:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setEnabled(Z)V
-
-    iput-boolean v3, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->h:Z
-
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->g:Landroid/os/Handler;
-
-    iget-object v1, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->q:Ljava/lang/Runnable;
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->e:Landroid/view/View;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setBackgroundColor(I)V
-
-    return-void
+    return-object v0
 .end method
 
 .method private c()V
-    .locals 3
+    .locals 4
 
     .prologue
     const/4 v2, 0x1
 
-    .line 161
-    new-instance v0, Lcom/bbm/util/fm;
+    .line 170
+    new-instance v0, Lcom/bbm/util/ez;
 
     invoke-virtual {p0}, Lcom/bbm/ui/QuickShareVoicenoteView;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/bbm/util/fm;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/bbm/util/ez;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->k:Lcom/bbm/util/fm;
+    iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->k:Lcom/bbm/util/ez;
 
-    .line 162
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->k:Lcom/bbm/util/fm;
+    .line 171
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->k:Lcom/bbm/util/ez;
 
-    iget-object v1, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->n:Lcom/bbm/util/fo;
+    iget-object v1, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->n:Lcom/bbm/util/fb;
 
-    iput-object v1, v0, Lcom/bbm/util/fm;->f:Lcom/bbm/util/fo;
+    iput-object v1, v0, Lcom/bbm/util/ez;->f:Lcom/bbm/util/fb;
 
-    .line 164
+    .line 173
     invoke-virtual {p0, v2}, Lcom/bbm/ui/QuickShareVoicenoteView;->setClickable(Z)V
 
-    .line 166
+    .line 175
     invoke-virtual {p0}, Lcom/bbm/ui/QuickShareVoicenoteView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -612,14 +775,14 @@
 
     move-result-object v0
 
-    const v1, 0x7f030148
+    const v1, 0x7f030163
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v1
 
-    .line 167
-    const v0, 0x7f0b0683
+    .line 176
+    const v0, 0x7f0b06fb
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -629,19 +792,8 @@
 
     iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->a:Landroid/widget/ImageView;
 
-    .line 168
-    const v0, 0x7f0b0681
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->b:Landroid/widget/ImageView;
-
-    .line 169
-    const v0, 0x7f0b0682
+    .line 177
+    const v0, 0x7f0b06fa
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -649,28 +801,50 @@
 
     iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->d:Landroid/view/View;
 
-    .line 170
-    const v0, 0x7f0b067e
+    .line 178
+    const v0, 0x7f0b06f3
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->b:Landroid/view/View;
 
-    iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->c:Landroid/widget/TextView;
-
-    .line 171
-    const v0, 0x7f0b0680
+    .line 179
+    const v0, 0x7f0b06f4
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->e:Landroid/view/View;
+    check-cast v0, Landroid/widget/ViewFlipper;
 
-    .line 172
-    const v0, 0x7f0b067f
+    iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->c:Landroid/widget/ViewFlipper;
+
+    .line 180
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->c:Landroid/widget/ViewFlipper;
+
+    invoke-virtual {p0}, Lcom/bbm/ui/QuickShareVoicenoteView;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    const v3, 0x7f040013
+
+    invoke-virtual {v0, v2, v3}, Landroid/widget/ViewFlipper;->setInAnimation(Landroid/content/Context;I)V
+
+    .line 181
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->c:Landroid/widget/ViewFlipper;
+
+    invoke-virtual {p0}, Lcom/bbm/ui/QuickShareVoicenoteView;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    const v3, 0x7f040018
+
+    invoke-virtual {v0, v2, v3}, Landroid/widget/ViewFlipper;->setOutAnimation(Landroid/content/Context;I)V
+
+    .line 182
+    const v0, 0x7f0b06f9
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -678,55 +852,45 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->f:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->e:Landroid/widget/ImageView;
 
-    .line 173
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->f:Landroid/widget/ImageView;
+    .line 183
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->e:Landroid/widget/ImageView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setEnabled(Z)V
 
-    .line 174
+    .line 184
     return-void
 .end method
 
-.method static synthetic c(Lcom/bbm/ui/QuickShareVoicenoteView;)Z
+.method static synthetic d(Lcom/bbm/ui/QuickShareVoicenoteView;)Landroid/view/View;
     .locals 1
 
     .prologue
-    .line 33
-    iget-boolean v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->i:Z
-
-    return v0
-.end method
-
-.method static synthetic d(Lcom/bbm/ui/QuickShareVoicenoteView;)Landroid/widget/ImageView;
-    .locals 1
-
-    .prologue
-    .line 33
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->a:Landroid/widget/ImageView;
+    .line 35
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->d:Landroid/view/View;
 
     return-object v0
 .end method
 
-.method static synthetic e(Lcom/bbm/ui/QuickShareVoicenoteView;)Landroid/widget/TextView;
+.method static synthetic e(Lcom/bbm/ui/QuickShareVoicenoteView;)Ljava/lang/Runnable;
     .locals 1
 
     .prologue
-    .line 33
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->c:Landroid/widget/TextView;
+    .line 35
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->q:Ljava/lang/Runnable;
 
     return-object v0
 .end method
 
-.method static synthetic f(Lcom/bbm/ui/QuickShareVoicenoteView;)Lcom/bbm/util/fm;
+.method static synthetic f(Lcom/bbm/ui/QuickShareVoicenoteView;)Landroid/os/Handler;
     .locals 1
 
     .prologue
-    .line 33
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->k:Lcom/bbm/util/fm;
+    .line 35
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->g:Landroid/os/Handler;
 
     return-object v0
 .end method
@@ -735,28 +899,8 @@
     .locals 1
 
     .prologue
-    .line 33
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->d:Landroid/view/View;
-
-    return-object v0
-.end method
-
-.method static synthetic h(Lcom/bbm/ui/QuickShareVoicenoteView;)Ljava/lang/Runnable;
-    .locals 1
-
-    .prologue
-    .line 33
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->q:Ljava/lang/Runnable;
-
-    return-object v0
-.end method
-
-.method static synthetic i(Lcom/bbm/ui/QuickShareVoicenoteView;)Landroid/os/Handler;
-    .locals 1
-
-    .prologue
-    .line 33
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->g:Landroid/os/Handler;
+    .line 35
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->b:Landroid/view/View;
 
     return-object v0
 .end method
@@ -767,15 +911,15 @@
     .locals 1
 
     .prologue
-    .line 376
+    .line 308
     iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->p:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 377
+    .line 309
     invoke-super {p0}, Lcom/bbm/ui/QuickShareBaseView;->a()V
 
-    .line 378
+    .line 310
     return-void
 .end method
 
@@ -783,77 +927,77 @@
     .locals 1
 
     .prologue
-    .line 382
+    .line 314
     iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->p:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
 
-    .line 383
+    .line 315
     invoke-super {p0}, Lcom/bbm/ui/QuickShareBaseView;->b()V
 
-    .line 384
+    .line 316
     return-void
 .end method
 
 .method protected onDetachedFromWindow()V
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 258
+    .line 262
     invoke-super {p0}, Lcom/bbm/ui/QuickShareBaseView;->onDetachedFromWindow()V
 
-    .line 260
-    const/4 v0, 0x0
+    .line 264
+    sget v0, Lcom/bbm/ui/fx;->c:I
 
-    invoke-direct {p0, v0}, Lcom/bbm/ui/QuickShareVoicenoteView;->a(Z)V
+    const/4 v1, 0x0
 
-    .line 261
+    invoke-direct {p0, v0, v1}, Lcom/bbm/ui/QuickShareVoicenoteView;->a(IZ)V
+
+    .line 265
     return-void
 .end method
 
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 8
+    .locals 7
 
     .prologue
-    const v7, 0x7f020390
-
     const/4 v1, 0x1
 
     const/4 v3, 0x0
 
-    .line 192
+    .line 202
     iget-boolean v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->i:Z
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
-    .line 193
+    .line 203
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v2
 
-    .line 194
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->j:Lcom/bbm/ui/fr;
+    .line 204
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->j:Lcom/bbm/ui/fy;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->j:Lcom/bbm/ui/fr;
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->j:Lcom/bbm/ui/fy;
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
-    iget-object v4, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->j:Lcom/bbm/ui/fr;
+    iget-object v4, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->j:Lcom/bbm/ui/fy;
 
-    if-ne v2, v1, :cond_3
+    if-ne v2, v1, :cond_2
 
     move v0, v1
 
     :goto_0
-    invoke-interface {v4, v0}, Lcom/bbm/ui/fr;->a(Z)Z
+    invoke-interface {v4, v0}, Lcom/bbm/ui/fy;->a(Z)Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
-    .line 196
+    .line 206
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
@@ -861,27 +1005,27 @@
 
     float-to-int v0, v0
 
-    .line 197
+    .line 207
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v4
 
     float-to-int v4, v4
 
-    .line 199
+    .line 209
     const/4 v5, 0x2
 
     new-array v5, v5, [I
 
-    .line 200
+    .line 210
     iget-object v6, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->a:Landroid/widget/ImageView;
 
     invoke-virtual {v6, v5}, Landroid/widget/ImageView;->getLocationOnScreen([I)V
 
-    .line 202
+    .line 212
     packed-switch v2, :pswitch_data_0
 
-    .line 227
+    .line 231
     :pswitch_0
     iget-object v2, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->g:Landroid/os/Handler;
 
@@ -889,98 +1033,27 @@
 
     invoke-virtual {v2, v5}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 229
+    .line 233
     iget-boolean v2, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->h:Z
 
-    if-eqz v2, :cond_6
+    if-eqz v2, :cond_5
 
-    .line 230
+    .line 234
     iget-object v2, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->a:Landroid/widget/ImageView;
 
-    invoke-static {v0, v4, v2}, Lcom/bbm/util/fl;->a(IILandroid/view/View;)Z
+    invoke-static {v0, v4, v2}, Lcom/bbm/util/ew;->a(IILandroid/view/View;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_4
 
-    .line 231
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->a:Landroid/widget/ImageView;
+    .line 235
+    sget v0, Lcom/bbm/ui/fx;->a:I
 
-    const v1, 0x7f02039c
+    invoke-direct {p0, v0, v3}, Lcom/bbm/ui/QuickShareVoicenoteView;->a(IZ)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->b:Landroid/widget/ImageView;
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->b:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, v7}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->c:Landroid/widget/TextView;
-
-    const v1, 0x7f0e063c
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
-
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->d:Landroid/view/View;
-
-    invoke-virtual {p0}, Lcom/bbm/ui/QuickShareVoicenoteView;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x106000d
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
-
-    iput-boolean v3, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->h:Z
-
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->f:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setEnabled(Z)V
-
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->k:Lcom/bbm/util/fm;
-
-    invoke-virtual {v0}, Lcom/bbm/util/fm;->b()V
-
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->j:Lcom/bbm/ui/fr;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->j:Lcom/bbm/ui/fr;
-
-    iget-object v1, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->k:Lcom/bbm/util/fm;
-
-    iget-object v1, v1, Lcom/bbm/util/fm;->d:Lcom/google/b/a/l;
-
-    invoke-interface {v0, v1}, Lcom/bbm/ui/fr;->a(Lcom/google/b/a/l;)V
-
+    .line 252
     :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->g:Landroid/os/Handler;
-
-    iget-object v1, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->q:Ljava/lang/Runnable;
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->e:Landroid/view/View;
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object v0, Lcom/bbm/ui/QuickShareVoicenoteView;->m:Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p0, v0, v1}, Lcom/bbm/ui/QuickShareVoicenoteView;->a(Ljava/lang/String;Lcom/bbm/ui/fq;)V
-
-    .line 248
-    :cond_2
     :goto_1
     invoke-super {p0, p1}, Lcom/bbm/ui/QuickShareBaseView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -988,120 +1061,86 @@
 
     return v0
 
-    :cond_3
+    :cond_2
     move v0, v3
 
-    .line 194
-    goto/16 :goto_0
-
     .line 204
+    goto :goto_0
+
+    .line 214
     :pswitch_1
     iget-boolean v1, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->h:Z
 
-    if-nez v1, :cond_2
+    if-nez v1, :cond_1
 
     iget-object v1, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->a:Landroid/widget/ImageView;
 
-    invoke-static {v0, v4, v1}, Lcom/bbm/util/fl;->a(IILandroid/view/View;)Z
+    invoke-static {v0, v4, v1}, Lcom/bbm/util/ew;->a(IILandroid/view/View;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
-    .line 205
+    .line 215
     iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->g:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->o:Ljava/lang/Runnable;
 
-    const-wide/16 v2, 0x190
+    const-wide/16 v2, 0x258
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     goto :goto_1
 
-    .line 211
+    .line 221
     :pswitch_2
     iget-boolean v1, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->h:Z
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_1
 
-    .line 212
+    .line 222
     iget-object v1, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->a:Landroid/widget/ImageView;
 
-    invoke-static {v0, v4, v1}, Lcom/bbm/util/fl;->a(IILandroid/view/View;)Z
+    invoke-static {v0, v4, v1}, Lcom/bbm/util/ew;->a(IILandroid/view/View;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_3
 
-    .line 213
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->b:Landroid/widget/ImageView;
+    .line 223
+    sget v0, Lcom/bbm/ui/fx;->b:I
 
-    invoke-virtual {v0, v7}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    .line 214
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->c:Landroid/widget/TextView;
-
-    const v1, 0x7f0e063e
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
-
-    .line 215
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->e:Landroid/view/View;
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setBackgroundColor(I)V
+    invoke-direct {p0, v0, v3}, Lcom/bbm/ui/QuickShareVoicenoteView;->a(IZ)V
 
     goto :goto_1
 
-    .line 217
+    .line 225
+    :cond_3
+    sget v0, Lcom/bbm/ui/fx;->e:I
+
+    invoke-direct {p0, v0, v3}, Lcom/bbm/ui/QuickShareVoicenoteView;->a(IZ)V
+
+    goto :goto_1
+
+    .line 237
     :cond_4
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->b:Landroid/widget/ImageView;
+    sget v0, Lcom/bbm/ui/fx;->c:I
 
-    const v1, 0x7f020391
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    .line 218
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->c:Landroid/widget/TextView;
-
-    const v1, 0x7f0e063d
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
-
-    .line 219
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->e:Landroid/view/View;
-
-    invoke-virtual {p0}, Lcom/bbm/ui/QuickShareVoicenoteView;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x7f09015b
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
+    invoke-direct {p0, v0, v1}, Lcom/bbm/ui/QuickShareVoicenoteView;->a(IZ)V
 
     goto :goto_1
 
-    .line 233
+    .line 239
     :cond_5
-    invoke-direct {p0, v1}, Lcom/bbm/ui/QuickShareVoicenoteView;->a(Z)V
-
-    goto :goto_1
-
-    .line 235
-    :cond_6
     iget-object v1, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->a:Landroid/widget/ImageView;
 
-    invoke-static {v0, v4, v1}, Lcom/bbm/util/fl;->a(IILandroid/view/View;)Z
+    invoke-static {v0, v4, v1}, Lcom/bbm/util/ew;->a(IILandroid/view/View;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
-    .line 236
+    .line 240
     invoke-virtual {p0}, Lcom/bbm/ui/QuickShareVoicenoteView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1110,7 +1149,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e063f
+    const v2, 0x7f0e0706
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1122,13 +1161,11 @@
 
     move v5, v3
 
-    invoke-static/range {v0 .. v5}, Lcom/bbm/util/fh;->a(Landroid/content/Context;Ljava/lang/String;IIII)V
+    invoke-static/range {v0 .. v5}, Lcom/bbm/util/eu;->a(Landroid/content/Context;Ljava/lang/String;IIII)V
 
     goto :goto_1
 
-    .line 202
-    nop
-
+    .line 212
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -1137,13 +1174,13 @@
     .end packed-switch
 .end method
 
-.method public setVoiceNoteActionsListener(Lcom/bbm/ui/fr;)V
+.method public setVoiceNoteActionsListener(Lcom/bbm/ui/fy;)V
     .locals 0
 
     .prologue
-    .line 182
-    iput-object p1, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->j:Lcom/bbm/ui/fr;
+    .line 192
+    iput-object p1, p0, Lcom/bbm/ui/QuickShareVoicenoteView;->j:Lcom/bbm/ui/fy;
 
-    .line 183
+    .line 193
     return-void
 .end method

@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/hf;
 .super Ljava/lang/Object;
-.source "ThreeButtonSegmentedControl.java"
+.source "StickyHeaderHelper.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/j/h;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/ThreeButtonSegmentedControl;
+.field final synthetic a:Lcom/bbm/ui/he;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/ThreeButtonSegmentedControl;)V
+.method constructor <init>(Lcom/bbm/ui/he;)V
     .locals 0
 
     .prologue
-    .line 123
-    iput-object p1, p0, Lcom/bbm/ui/hf;->a:Lcom/bbm/ui/ThreeButtonSegmentedControl;
+    .line 30
+    iput-object p1, p0, Lcom/bbm/ui/hf;->a:Lcom/bbm/ui/he;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,87 +25,45 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final a()V
     .locals 2
 
     .prologue
-    .line 128
-    iget-object v0, p0, Lcom/bbm/ui/hf;->a:Lcom/bbm/ui/ThreeButtonSegmentedControl;
+    .line 33
+    iget-object v0, p0, Lcom/bbm/ui/hf;->a:Lcom/bbm/ui/he;
 
-    invoke-static {v0}, Lcom/bbm/ui/ThreeButtonSegmentedControl;->a(Lcom/bbm/ui/ThreeButtonSegmentedControl;)Landroid/widget/LinearLayout;
+    invoke-static {v0}, Lcom/bbm/ui/he;->a(Lcom/bbm/ui/he;)Z
 
-    move-result-object v0
+    move-result v0
 
-    if-ne p1, v0, :cond_1
+    if-eqz v0, :cond_0
 
-    .line 129
-    const-string v0, "Left option clicked"
-
-    const-class v1, Lcom/bbm/ui/ThreeButtonSegmentedControl;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 130
-    iget-object v0, p0, Lcom/bbm/ui/hf;->a:Lcom/bbm/ui/ThreeButtonSegmentedControl;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/ThreeButtonSegmentedControl;->a(I)V
-
-    .line 138
-    :cond_0
+    .line 38
     :goto_0
     return-void
 
-    .line 131
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/hf;->a:Lcom/bbm/ui/ThreeButtonSegmentedControl;
-
-    invoke-static {v0}, Lcom/bbm/ui/ThreeButtonSegmentedControl;->b(Lcom/bbm/ui/ThreeButtonSegmentedControl;)Landroid/widget/LinearLayout;
-
-    move-result-object v0
-
-    if-ne p1, v0, :cond_2
-
-    .line 132
-    const-string v0, "Middle option clicked"
-
-    const-class v1, Lcom/bbm/ui/ThreeButtonSegmentedControl;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 133
-    iget-object v0, p0, Lcom/bbm/ui/hf;->a:Lcom/bbm/ui/ThreeButtonSegmentedControl;
+    .line 36
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/hf;->a:Lcom/bbm/ui/he;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/ThreeButtonSegmentedControl;->a(I)V
+    invoke-static {v0, v1}, Lcom/bbm/ui/he;->a(Lcom/bbm/ui/he;Z)Z
 
-    goto :goto_0
+    .line 37
+    iget-object v0, p0, Lcom/bbm/ui/hf;->a:Lcom/bbm/ui/he;
 
-    .line 134
-    :cond_2
-    iget-object v0, p0, Lcom/bbm/ui/hf;->a:Lcom/bbm/ui/ThreeButtonSegmentedControl;
-
-    invoke-static {v0}, Lcom/bbm/ui/ThreeButtonSegmentedControl;->c(Lcom/bbm/ui/ThreeButtonSegmentedControl;)Landroid/widget/LinearLayout;
+    invoke-static {v0}, Lcom/bbm/ui/he;->c(Lcom/bbm/ui/he;)Lcom/bbm/util/ds;
 
     move-result-object v0
 
-    if-ne p1, v0, :cond_0
+    iget-object v1, p0, Lcom/bbm/ui/hf;->a:Lcom/bbm/ui/he;
 
-    .line 135
-    const-string v0, "Right option clicked"
+    invoke-static {v1}, Lcom/bbm/ui/he;->b(Lcom/bbm/ui/he;)Ljava/lang/Runnable;
 
-    const-class v1, Lcom/bbm/ui/ThreeButtonSegmentedControl;
+    move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 136
-    iget-object v0, p0, Lcom/bbm/ui/hf;->a:Lcom/bbm/ui/ThreeButtonSegmentedControl;
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/ThreeButtonSegmentedControl;->a(I)V
+    invoke-interface {v0, v1}, Lcom/bbm/util/ds;->a(Ljava/lang/Runnable;)V
 
     goto :goto_0
 .end method

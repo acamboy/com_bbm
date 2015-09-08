@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/mc;
 .super Ljava/lang/Object;
-.source "GroupChatListActivity.java"
+.source "GroupEventDetailsActivity.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupChatListActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupEventDetailsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupChatListActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupEventDetailsActivity;)V
     .locals 0
 
     .prologue
-    .line 327
-    iput-object p1, p0, Lcom/bbm/ui/activities/mc;->a:Lcom/bbm/ui/activities/GroupChatListActivity;
+    .line 281
+    iput-object p1, p0, Lcom/bbm/ui/activities/mc;->a:Lcom/bbm/ui/activities/GroupEventDetailsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,62 +25,20 @@
 
 
 # virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 2
 
     .prologue
-    .line 331
-    iget-object v0, p0, Lcom/bbm/ui/activities/mc;->a:Lcom/bbm/ui/activities/GroupChatListActivity;
+    .line 285
+    const-string v0, "Discard Changes dialog positive Button Clicked"
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupChatListActivity;->f(Lcom/bbm/ui/activities/GroupChatListActivity;)Landroid/widget/ListView;
+    const-class v1, Lcom/bbm/ui/activities/GroupEventDetailsActivity;
 
-    move-result-object v0
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-virtual {v0, p3}, Landroid/widget/ListView;->getItemAtPosition(I)Ljava/lang/Object;
+    .line 286
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/g/q;
-
-    .line 333
-    new-instance v1, Landroid/content/Intent;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/mc;->a:Lcom/bbm/ui/activities/GroupChatListActivity;
-
-    const-class v3, Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 334
-    const-string v2, "groupConversationUri"
-
-    iget-object v0, v0, Lcom/bbm/g/q;->m:Ljava/lang/String;
-
-    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 335
-    const-string v0, "groupUri"
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/mc;->a:Lcom/bbm/ui/activities/GroupChatListActivity;
-
-    iget-object v2, v2, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
-
-    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 336
-    iget-object v0, p0, Lcom/bbm/ui/activities/mc;->a:Lcom/bbm/ui/activities/GroupChatListActivity;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/GroupChatListActivity;->startActivity(Landroid/content/Intent;)V
-
-    .line 337
+    .line 287
     return-void
 .end method

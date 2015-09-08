@@ -1,173 +1,39 @@
-.class final Lcom/bbm/ui/activities/cu;
+.class public final Lcom/bbm/ui/activities/cu;
 .super Ljava/lang/Object;
-.source "ChannelOfficeHoursSettingsActivity.java"
-
-# interfaces
-.implements Lcom/bbm/ui/be;
+.source "ChannelReportsActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
+.field public a:Ljava/lang/String;
+
+.field public b:Ljava/lang/String;
+
+.field public c:Lcom/bbm/util/n;
+
+.field final synthetic d:Lcom/bbm/ui/activities/ChannelReportsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)V
-    .locals 0
+.method public constructor <init>(Lcom/bbm/ui/activities/ChannelReportsActivity;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
     .prologue
-    .line 86
-    iput-object p1, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
+    .line 99
+    iput-object p1, p0, Lcom/bbm/ui/activities/cu;->d:Lcom/bbm/ui/activities/ChannelReportsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Ljava/util/Date;Ljava/util/Date;)V
-    .locals 6
-
-    .prologue
-    .line 90
-    :try_start_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->a(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Lcom/bbm/ui/activities/cy;
-
-    move-result-object v0
-
-    iget v1, v0, Lcom/bbm/ui/activities/cy;->a:I
-
-    .line 91
-    iget-object v0, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->a(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Lcom/bbm/ui/activities/cy;
-
-    move-result-object v0
-
-    iget-object v2, v0, Lcom/bbm/ui/activities/cy;->b:Lcom/bbm/ui/activities/da;
-
-    .line 92
-    new-instance v3, Lorg/json/JSONObject;
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->b(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lorg/json/JSONObject;
-
-    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v3, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
-
-    .line 93
-    iget-object v0, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->c(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Ljava/text/SimpleDateFormat;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p2}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 95
-    iget-object v0, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->d(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/activities/cz;
-
-    .line 97
-    sget-object v5, Lcom/bbm/ui/activities/da;->a:Lcom/bbm/ui/activities/da;
-
-    if-ne v2, v5, :cond_1
-
-    .line 98
-    const-string v2, "startTime"
-
-    invoke-virtual {v3, v2, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 99
-    iget-object v2, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->b(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1, v3}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
-
     .line 100
-    iget-object v0, v0, Lcom/bbm/ui/activities/cz;->d:Lcom/bbm/ui/DateTimePickerView;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
-
-    invoke-static {p2}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->a(Ljava/util/Date;)Ljava/util/Date;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/DateTimePickerView;->setMinDateTime(Ljava/util/Date;)V
-
-    .line 109
-    :cond_0
-    :goto_0
-    return-void
+    iput-object p2, p0, Lcom/bbm/ui/activities/cu;->a:Ljava/lang/String;
 
     .line 101
-    :cond_1
-    sget-object v5, Lcom/bbm/ui/activities/da;->b:Lcom/bbm/ui/activities/da;
-
-    if-ne v2, v5, :cond_0
+    iput-object p3, p0, Lcom/bbm/ui/activities/cu;->b:Ljava/lang/String;
 
     .line 102
-    const-string v2, "endTime"
+    const/4 v0, 0x0
 
-    invoke-virtual {v3, v2, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    iput-object v0, p0, Lcom/bbm/ui/activities/cu;->c:Lcom/bbm/util/n;
 
     .line 103
-    iget-object v2, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->b(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1, v3}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
-
-    .line 104
-    iget-object v0, v0, Lcom/bbm/ui/activities/cz;->c:Lcom/bbm/ui/DateTimePickerView;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
-
-    invoke-static {p2}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->b(Ljava/util/Date;)Ljava/util/Date;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/DateTimePickerView;->setMaxDateTime(Ljava/util/Date;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    .line 106
-    :catch_0
-    move-exception v0
-
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_0
+    return-void
 .end method

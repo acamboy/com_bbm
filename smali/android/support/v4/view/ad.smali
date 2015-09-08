@@ -1,80 +1,296 @@
-.class final Landroid/support/v4/view/ad;
+.class public final Landroid/support/v4/view/ad;
 .super Ljava/lang/Object;
-.source "MotionEventCompat.java"
+.source "MenuItemCompat.java"
 
-# interfaces
-.implements Landroid/support/v4/view/ae;
+
+# static fields
+.field static final a:Landroid/support/v4/view/ai;
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
     .prologue
-    .line 80
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 247
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
+    .line 248
+    const/16 v1, 0xe
+
+    if-lt v0, v1, :cond_0
+
+    .line 249
+    new-instance v0, Landroid/support/v4/view/ag;
+
+    invoke-direct {v0}, Landroid/support/v4/view/ag;-><init>()V
+
+    sput-object v0, Landroid/support/v4/view/ad;->a:Landroid/support/v4/view/ai;
+
+    .line 255
+    :goto_0
     return-void
+
+    .line 250
+    :cond_0
+    const/16 v1, 0xb
+
+    if-lt v0, v1, :cond_1
+
+    .line 251
+    new-instance v0, Landroid/support/v4/view/af;
+
+    invoke-direct {v0}, Landroid/support/v4/view/af;-><init>()V
+
+    sput-object v0, Landroid/support/v4/view/ad;->a:Landroid/support/v4/view/ai;
+
+    goto :goto_0
+
+    .line 253
+    :cond_1
+    new-instance v0, Landroid/support/v4/view/ae;
+
+    invoke-direct {v0}, Landroid/support/v4/view/ae;-><init>()V
+
+    sput-object v0, Landroid/support/v4/view/ad;->a:Landroid/support/v4/view/ai;
+
+    goto :goto_0
 .end method
 
-
-# virtual methods
-.method public final a(Landroid/view/MotionEvent;)I
+.method public static a(Landroid/view/MenuItem;Landroid/support/v4/view/aj;)Landroid/view/MenuItem;
     .locals 1
 
     .prologue
-    .line 99
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
+    .line 435
+    instance-of v0, p0, Landroid/support/v4/b/a/b;
 
-    move-result v0
+    if-eqz v0, :cond_0
 
-    return v0
+    .line 436
+    check-cast p0, Landroid/support/v4/b/a/b;
+
+    invoke-interface {p0, p1}, Landroid/support/v4/b/a/b;->a(Landroid/support/v4/view/aj;)Landroid/support/v4/b/a/b;
+
+    move-result-object v0
+
+    .line 438
+    :goto_0
+    return-object v0
+
+    :cond_0
+    sget-object v0, Landroid/support/v4/view/ad;->a:Landroid/support/v4/view/ai;
+
+    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/ai;->a(Landroid/view/MenuItem;Landroid/support/v4/view/aj;)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method
 
-.method public final a(Landroid/view/MotionEvent;I)I
+.method public static a(Landroid/view/MenuItem;Landroid/support/v4/view/n;)Landroid/view/MenuItem;
+    .locals 2
+
+    .prologue
+    .line 344
+    instance-of v0, p0, Landroid/support/v4/b/a/b;
+
+    if-eqz v0, :cond_0
+
+    .line 345
+    check-cast p0, Landroid/support/v4/b/a/b;
+
+    invoke-interface {p0, p1}, Landroid/support/v4/b/a/b;->a(Landroid/support/v4/view/n;)Landroid/support/v4/b/a/b;
+
+    move-result-object p0
+
+    .line 349
+    :goto_0
+    return-object p0
+
+    .line 348
+    :cond_0
+    const-string v0, "MenuItemCompat"
+
+    const-string v1, "setActionProvider: item does not implement SupportMenuItem; ignoring"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+.end method
+
+.method public static a(Landroid/view/MenuItem;Landroid/view/View;)Landroid/view/MenuItem;
     .locals 1
 
     .prologue
-    .line 83
-    invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->findPointerIndex(I)I
+    .line 287
+    instance-of v0, p0, Landroid/support/v4/b/a/b;
 
-    move-result v0
+    if-eqz v0, :cond_0
 
-    return v0
+    .line 288
+    check-cast p0, Landroid/support/v4/b/a/b;
+
+    invoke-interface {p0, p1}, Landroid/support/v4/b/a/b;->setActionView(Landroid/view/View;)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    .line 290
+    :goto_0
+    return-object v0
+
+    :cond_0
+    sget-object v0, Landroid/support/v4/view/ad;->a:Landroid/support/v4/view/ai;
+
+    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/ai;->a(Landroid/view/MenuItem;Landroid/view/View;)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method
 
-.method public final b(Landroid/view/MotionEvent;I)I
+.method public static a(Landroid/view/MenuItem;)Landroid/view/View;
     .locals 1
 
     .prologue
-    .line 87
-    invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->getPointerId(I)I
+    .line 322
+    instance-of v0, p0, Landroid/support/v4/b/a/b;
 
-    move-result v0
+    if-eqz v0, :cond_0
 
-    return v0
+    .line 323
+    check-cast p0, Landroid/support/v4/b/a/b;
+
+    invoke-interface {p0}, Landroid/support/v4/b/a/b;->getActionView()Landroid/view/View;
+
+    move-result-object v0
+
+    .line 325
+    :goto_0
+    return-object v0
+
+    :cond_0
+    sget-object v0, Landroid/support/v4/view/ad;->a:Landroid/support/v4/view/ai;
+
+    invoke-interface {v0, p0}, Landroid/support/v4/view/ai;->a(Landroid/view/MenuItem;)Landroid/view/View;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method
 
-.method public final c(Landroid/view/MotionEvent;I)F
+.method public static a(Landroid/view/MenuItem;I)V
     .locals 1
 
     .prologue
-    .line 91
-    invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->getX(I)F
+    .line 268
+    instance-of v0, p0, Landroid/support/v4/b/a/b;
 
-    move-result v0
+    if-eqz v0, :cond_0
 
-    return v0
+    .line 269
+    check-cast p0, Landroid/support/v4/b/a/b;
+
+    invoke-interface {p0, p1}, Landroid/support/v4/b/a/b;->setShowAsAction(I)V
+
+    .line 273
+    :goto_0
+    return-void
+
+    .line 271
+    :cond_0
+    sget-object v0, Landroid/support/v4/view/ad;->a:Landroid/support/v4/view/ai;
+
+    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/ai;->a(Landroid/view/MenuItem;I)V
+
+    goto :goto_0
 .end method
 
-.method public final d(Landroid/view/MotionEvent;I)F
+.method public static b(Landroid/view/MenuItem;I)Landroid/view/MenuItem;
     .locals 1
 
     .prologue
-    .line 95
-    invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->getY(I)F
+    .line 309
+    instance-of v0, p0, Landroid/support/v4/b/a/b;
+
+    if-eqz v0, :cond_0
+
+    .line 310
+    check-cast p0, Landroid/support/v4/b/a/b;
+
+    invoke-interface {p0, p1}, Landroid/support/v4/b/a/b;->setActionView(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    .line 312
+    :goto_0
+    return-object v0
+
+    :cond_0
+    sget-object v0, Landroid/support/v4/view/ad;->a:Landroid/support/v4/view/ai;
+
+    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/ai;->b(Landroid/view/MenuItem;I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method public static b(Landroid/view/MenuItem;)Z
+    .locals 1
+
+    .prologue
+    .line 383
+    instance-of v0, p0, Landroid/support/v4/b/a/b;
+
+    if-eqz v0, :cond_0
+
+    .line 384
+    check-cast p0, Landroid/support/v4/b/a/b;
+
+    invoke-interface {p0}, Landroid/support/v4/b/a/b;->expandActionView()Z
 
     move-result v0
 
+    .line 386
+    :goto_0
     return v0
+
+    :cond_0
+    sget-object v0, Landroid/support/v4/view/ad;->a:Landroid/support/v4/view/ai;
+
+    invoke-interface {v0, p0}, Landroid/support/v4/view/ai;->b(Landroid/view/MenuItem;)Z
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+.method public static c(Landroid/view/MenuItem;)Z
+    .locals 1
+
+    .prologue
+    .line 418
+    instance-of v0, p0, Landroid/support/v4/b/a/b;
+
+    if-eqz v0, :cond_0
+
+    .line 419
+    check-cast p0, Landroid/support/v4/b/a/b;
+
+    invoke-interface {p0}, Landroid/support/v4/b/a/b;->isActionViewExpanded()Z
+
+    move-result v0
+
+    .line 421
+    :goto_0
+    return v0
+
+    :cond_0
+    sget-object v0, Landroid/support/v4/view/ad;->a:Landroid/support/v4/view/ai;
+
+    invoke-interface {v0, p0}, Landroid/support/v4/view/ai;->c(Landroid/view/MenuItem;)Z
+
+    move-result v0
+
+    goto :goto_0
 .end method

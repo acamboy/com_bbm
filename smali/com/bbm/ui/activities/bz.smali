@@ -1,92 +1,51 @@
 .class final Lcom/bbm/ui/activities/bz;
-.super Lcom/bbm/d/b/m;
-.source "ChangeStatusActivity.java"
+.super Ljava/lang/Object;
+.source "ChannelOwnerProfileActivity.java"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/d/b/m",
-        "<",
-        "Lcom/bbm/d/gg;",
-        ">;"
-    }
-.end annotation
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ChangeStatusActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ChangeStatusActivity;Lcom/bbm/j/r;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)V
     .locals 0
 
     .prologue
-    .line 252
-    iput-object p1, p0, Lcom/bbm/ui/activities/bz;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
+    .line 119
+    iput-object p1, p0, Lcom/bbm/ui/activities/bz;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
 
-    invoke-direct {p0, p2}, Lcom/bbm/d/b/m;-><init>(Lcom/bbm/j/r;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final synthetic a(Ljava/lang/Object;)Z
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 252
-    check-cast p1, Lcom/bbm/d/gg;
+    .line 122
+    iget-object v0, p0, Lcom/bbm/ui/activities/bz;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
 
-    iget-object v0, p1, Lcom/bbm/d/gg;->d:Ljava/lang/String;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->a(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)V
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/bz;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
+    .line 123
+    iget-object v0, p0, Lcom/bbm/ui/activities/bz;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
 
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/ChangeStatusActivity;->getResources()Landroid/content/res/Resources;
+    const/4 v1, 0x0
 
-    move-result-object v1
+    invoke-static {v0, v1}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;Z)V
 
-    const v2, 0x7f0e050e
+    .line 124
+    iget-object v0, p0, Lcom/bbm/ui/activities/bz;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->finish()V
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p1, Lcom/bbm/d/gg;->d:Ljava/lang/String;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/bz;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/ChangeStatusActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x7f0e050f
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
+    .line 125
+    return-void
 .end method

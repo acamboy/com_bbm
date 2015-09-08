@@ -8,6 +8,8 @@
 
 .field private final m_callbacks:Lcom/rim/bbm/BbmCoreService$Callbacks;
 
+.field private final m_ccl:J
+
 .field private final m_context:Landroid/content/Context;
 
 .field private final m_databaseKey:Ljava/lang/String;
@@ -27,41 +29,46 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/rim/bbm/BbmCoreService$Callbacks;Ljava/lang/String;Ljava/lang/String;Lcom/rim/bbm/BbmPlatformService;)V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;Lcom/rim/bbm/BbmCoreService$Callbacks;JLjava/lang/String;Ljava/lang/String;Lcom/rim/bbm/BbmPlatformService;)V
+    .locals 3
 
     .prologue
-    .line 177
+    .line 181
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 522
+    .line 540
     const-string v0, "0.0.0.0"
 
     iput-object v0, p0, Lcom/rim/bbm/BbmCoreService;->m_appVersion:Ljava/lang/String;
 
-    .line 544
+    .line 562
     new-instance v0, Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
 
     iput-object v0, p0, Lcom/rim/bbm/BbmCoreService;->m_messageQueue:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    .line 178
-    iput-object p1, p0, Lcom/rim/bbm/BbmCoreService;->m_context:Landroid/content/Context;
-
-    .line 179
-    iput-object p3, p0, Lcom/rim/bbm/BbmCoreService;->m_homeDir:Ljava/lang/String;
-
-    .line 180
-    iput-object p2, p0, Lcom/rim/bbm/BbmCoreService;->m_callbacks:Lcom/rim/bbm/BbmCoreService$Callbacks;
-
-    .line 181
-    iput-object p4, p0, Lcom/rim/bbm/BbmCoreService;->m_databaseKey:Ljava/lang/String;
-
     .line 183
-    if-nez p5, :cond_0
+    const-wide/16 v0, 0x0
 
-    .line 185
+    cmp-long v0, p3, v0
+
+    if-nez v0, :cond_0
+
+    .line 184
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    const-string v1, "CCL library pointer must not be null"
+
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 186
+    :cond_0
+    if-nez p7, :cond_1
+
+    .line 187
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "BbmPlatformService must not be null"
@@ -70,8 +77,23 @@
 
     throw v0
 
-    .line 187
-    :cond_0
+    .line 190
+    :cond_1
+    iput-object p1, p0, Lcom/rim/bbm/BbmCoreService;->m_context:Landroid/content/Context;
+
+    .line 191
+    iput-object p2, p0, Lcom/rim/bbm/BbmCoreService;->m_callbacks:Lcom/rim/bbm/BbmCoreService$Callbacks;
+
+    .line 192
+    iput-wide p3, p0, Lcom/rim/bbm/BbmCoreService;->m_ccl:J
+
+    .line 193
+    iput-object p5, p0, Lcom/rim/bbm/BbmCoreService;->m_homeDir:Ljava/lang/String;
+
+    .line 194
+    iput-object p6, p0, Lcom/rim/bbm/BbmCoreService;->m_databaseKey:Ljava/lang/String;
+
+    .line 195
     return-void
 .end method
 
@@ -79,7 +101,7 @@
     .locals 1
 
     .prologue
-    .line 284
+    .line 292
     invoke-static {p0, p1, p2}, Lcom/rim/bbm/BbmCoreService;->prv_encryptFile(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
@@ -94,17 +116,27 @@
     .locals 1
 
     .prologue
-    .line 313
+    .line 321
     iget-object v0, p0, Lcom/rim/bbm/BbmCoreService;->m_appVersion:Ljava/lang/String;
 
     return-object v0
+.end method
+
+.method private prv_getCcl()J
+    .locals 2
+
+    .prologue
+    .line 519
+    iget-wide v0, p0, Lcom/rim/bbm/BbmCoreService;->m_ccl:J
+
+    return-wide v0
 .end method
 
 .method private prv_getDatabaseKey()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 319
+    .line 327
     iget-object v0, p0, Lcom/rim/bbm/BbmCoreService;->m_databaseKey:Ljava/lang/String;
 
     return-object v0
@@ -114,7 +146,7 @@
     .locals 1
 
     .prologue
-    .line 452
+    .line 460
     iget-object v0, p0, Lcom/rim/bbm/BbmCoreService;->m_context:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -134,7 +166,7 @@
     .locals 2
 
     .prologue
-    .line 438
+    .line 446
     iget-object v0, p0, Lcom/rim/bbm/BbmCoreService;->m_context:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -147,7 +179,7 @@
 
     iget v0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    .line 440
+    .line 448
     iget-object v1, p0, Lcom/rim/bbm/BbmCoreService;->m_context:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -160,7 +192,7 @@
 
     iget v1, v1, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    .line 445
+    .line 453
     if-le v0, v1, :cond_0
 
     :goto_0
@@ -176,7 +208,7 @@
     .locals 2
 
     .prologue
-    .line 424
+    .line 432
     iget-object v0, p0, Lcom/rim/bbm/BbmCoreService;->m_context:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -189,7 +221,7 @@
 
     iget v0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    .line 426
+    .line 434
     iget-object v1, p0, Lcom/rim/bbm/BbmCoreService;->m_context:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -202,7 +234,7 @@
 
     iget v1, v1, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    .line 431
+    .line 439
     if-ge v0, v1, :cond_0
 
     :goto_0
@@ -218,7 +250,7 @@
     .locals 1
 
     .prologue
-    .line 306
+    .line 314
     iget-object v0, p0, Lcom/rim/bbm/BbmCoreService;->m_homeDir:Ljava/lang/String;
 
     return-object v0
@@ -228,14 +260,14 @@
     .locals 1
 
     .prologue
-    .line 500
+    .line 508
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 501
+    .line 509
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
@@ -244,7 +276,7 @@
 
     move-result-object v0
 
-    .line 504
+    .line 512
     :goto_0
     return-object v0
 
@@ -258,7 +290,7 @@
     .locals 1
 
     .prologue
-    .line 331
+    .line 339
     iget-object v0, p0, Lcom/rim/bbm/BbmCoreService;->m_messageQueue:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->poll()Ljava/lang/Object;
@@ -274,7 +306,7 @@
     .locals 2
 
     .prologue
-    .line 482
+    .line 490
     :try_start_0
     iget-object v0, p0, Lcom/rim/bbm/BbmCoreService;->m_context:Landroid/content/Context;
 
@@ -286,17 +318,17 @@
 
     check-cast v0, Landroid/telephony/TelephonyManager;
 
-    .line 485
+    .line 493
     if-eqz v0, :cond_0
 
-    .line 486
+    .line 494
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getSimOperatorName()Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
-    .line 492
+    .line 500
     :goto_0
     return-object v0
 
@@ -313,7 +345,7 @@
     .locals 2
 
     .prologue
-    .line 462
+    .line 470
     :try_start_0
     iget-object v0, p0, Lcom/rim/bbm/BbmCoreService;->m_context:Landroid/content/Context;
 
@@ -325,17 +357,17 @@
 
     check-cast v0, Landroid/telephony/TelephonyManager;
 
-    .line 465
+    .line 473
     if-eqz v0, :cond_0
 
-    .line 466
+    .line 474
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getSimCountryIso()Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
-    .line 472
+    .line 480
     :goto_0
     return-object v0
 
@@ -352,7 +384,7 @@
     .locals 2
 
     .prologue
-    .line 346
+    .line 354
     iget-object v0, p0, Lcom/rim/bbm/BbmCoreService;->m_callbacks:Lcom/rim/bbm/BbmCoreService$Callbacks;
 
     invoke-static {p1}, Lcom/rim/bbm/BbmCoreService$MessageType;->fromOrdinal(I)Lcom/rim/bbm/BbmCoreService$MessageType;
@@ -361,7 +393,7 @@
 
     invoke-interface {v0, v1, p2}, Lcom/rim/bbm/BbmCoreService$Callbacks;->msgFromService(Lcom/rim/bbm/BbmCoreService$MessageType;[B)V
 
-    .line 347
+    .line 355
     return-void
 .end method
 
@@ -380,7 +412,7 @@
 
     const/4 v4, 0x7
 
-    .line 378
+    .line 386
     const-wide/16 v0, 0x0
 
     cmp-long v0, p2, v0
@@ -393,14 +425,14 @@
 
     if-lez v0, :cond_0
 
-    .line 380
+    .line 388
     const/4 v0, -0x1
 
-    .line 414
+    .line 422
     :goto_0
     return v0
 
-    .line 386
+    .line 394
     :cond_0
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
@@ -419,14 +451,14 @@
 
     move-result-object v0
 
-    .line 394
+    .line 402
     const-wide/16 v2, 0x3e8
 
     mul-long/2addr v2, p2
 
     invoke-virtual {v0, v2, v3}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 400
+    .line 408
     invoke-virtual {v0, v4}, Ljava/util/Calendar;->isSet(I)Z
 
     move-result v1
@@ -451,13 +483,13 @@
 
     if-nez v1, :cond_3
 
-    .line 406
+    .line 414
     :cond_1
     const/4 v0, -0x2
 
     goto :goto_0
 
-    .line 386
+    .line 394
     :cond_2
     invoke-static {p1}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
 
@@ -465,7 +497,7 @@
 
     goto :goto_1
 
-    .line 414
+    .line 422
     :cond_3
     invoke-virtual {v0, v4}, Ljava/util/Calendar;->get(I)I
 
@@ -506,12 +538,12 @@
     .locals 1
 
     .prologue
-    .line 338
+    .line 346
     iget-object v0, p0, Lcom/rim/bbm/BbmCoreService;->m_callbacks:Lcom/rim/bbm/BbmCoreService$Callbacks;
 
     invoke-interface {v0}, Lcom/rim/bbm/BbmCoreService$Callbacks;->serviceReady()V
 
-    .line 339
+    .line 347
     return-void
 .end method
 
@@ -519,12 +551,12 @@
     .locals 1
 
     .prologue
-    .line 353
+    .line 361
     iget-object v0, p0, Lcom/rim/bbm/BbmCoreService;->m_callbacks:Lcom/rim/bbm/BbmCoreService$Callbacks;
 
     invoke-interface {v0}, Lcom/rim/bbm/BbmCoreService$Callbacks;->serviceStopped()V
 
-    .line 354
+    .line 362
     return-void
 .end method
 
@@ -540,7 +572,7 @@
     .locals 2
 
     .prologue
-    .line 261
+    .line 269
     iget-object v0, p0, Lcom/rim/bbm/BbmCoreService;->m_messageQueue:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     new-instance v1, Lcom/rim/bbm/BbmCoreService$Message;
@@ -549,7 +581,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->add(Ljava/lang/Object;)Z
 
-    .line 262
+    .line 270
     invoke-direct {p0}, Lcom/rim/bbm/BbmCoreService;->prv_msgToService()Z
 
     move-result v0
@@ -561,10 +593,10 @@
     .locals 0
 
     .prologue
-    .line 215
+    .line 223
     iput-object p1, p0, Lcom/rim/bbm/BbmCoreService;->m_appVersion:Ljava/lang/String;
 
-    .line 216
+    .line 224
     return-void
 .end method
 
@@ -572,7 +604,7 @@
     .locals 1
 
     .prologue
-    .line 225
+    .line 233
     invoke-direct {p0}, Lcom/rim/bbm/BbmCoreService;->prv_startService()Z
 
     move-result v0
@@ -584,7 +616,7 @@
     .locals 1
 
     .prologue
-    .line 241
+    .line 249
     invoke-direct {p0}, Lcom/rim/bbm/BbmCoreService;->prv_stopService()Z
 
     move-result v0

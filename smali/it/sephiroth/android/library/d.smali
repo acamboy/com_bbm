@@ -102,22 +102,22 @@
         0x1010101
         0x101012b
         0x1010231
-        0x7f010004
-        0x7f010005
+        0x7f010008
+        0x7f010009
     .end array-data
 
     .line 66
     :array_1
     .array-data 4
-        0x7f01001a
-        0x7f01001b
-        0x7f01001c
-        0x7f01001d
-        0x7f01001e
-        0x7f01001f
-        0x7f010020
-        0x7f010021
-        0x7f010022
+        0x7f010057
+        0x7f010058
+        0x7f010059
+        0x7f01005a
+        0x7f01005b
+        0x7f01005c
+        0x7f01005d
+        0x7f01005e
+        0x7f01005f
     .end array-data
 
     .line 76
@@ -125,11 +125,11 @@
     .array-data 4
         0x10100b2
         0x1010129
-        0x7f01002f
-        0x7f010030
-        0x7f010031
-        0x7f010032
-        0x7f010033
-        0x7f010034
+        0x7f01006b
+        0x7f01006c
+        0x7f01006d
+        0x7f01006e
+        0x7f01006f
+        0x7f010070
     .end array-data
 .end method

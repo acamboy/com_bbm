@@ -6,17 +6,13 @@
 # instance fields
 .field private a:Ljava/lang/String;
 
-.field private b:Lcom/bbm/ui/gu;
+.field private b:Lcom/bbm/ui/hb;
 
 .field private final c:Lcom/bbm/d/a;
 
 .field private final d:Landroid/widget/GridView;
 
-.field private final e:Landroid/widget/ImageView;
-
-.field private final f:Landroid/view/View;
-
-.field private g:Lcom/bbm/ui/gv;
+.field private e:Lcom/bbm/ui/hc;
 
 
 # direct methods
@@ -24,12 +20,12 @@
     .locals 1
 
     .prologue
-    .line 44
+    .line 46
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/bbm/ui/StickerPicker;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 45
+    .line 47
     return-void
 .end method
 
@@ -37,12 +33,12 @@
     .locals 1
 
     .prologue
-    .line 48
+    .line 50
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/bbm/ui/StickerPicker;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 49
+    .line 51
     return-void
 .end method
 
@@ -50,38 +46,38 @@
     .locals 3
 
     .prologue
-    .line 52
+    .line 54
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 34
+    .line 38
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/bbm/ui/StickerPicker;->a:Ljava/lang/String;
 
-    .line 36
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    .line 40
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bbm/ui/StickerPicker;->c:Lcom/bbm/d/a;
 
-    .line 53
+    .line 55
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    const v1, 0x7f030150
+    const v1, 0x7f03016d
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    move-result-object v1
+    move-result-object v0
 
-    .line 55
-    const v0, 0x7f0b0692
+    .line 57
+    const v1, 0x7f0b0711
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -89,55 +85,35 @@
 
     iput-object v0, p0, Lcom/bbm/ui/StickerPicker;->d:Landroid/widget/GridView;
 
-    .line 56
+    .line 58
     iget-object v0, p0, Lcom/bbm/ui/StickerPicker;->d:Landroid/widget/GridView;
 
-    new-instance v2, Lcom/bbm/ui/gp;
+    new-instance v1, Lcom/bbm/ui/gw;
 
-    invoke-direct {v2, p0}, Lcom/bbm/ui/gp;-><init>(Lcom/bbm/ui/StickerPicker;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/gw;-><init>(Lcom/bbm/ui/StickerPicker;)V
 
-    invoke-virtual {v0, v2}, Landroid/widget/GridView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
-
-    .line 68
-    const v0, 0x7f0b0695
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/bbm/ui/StickerPicker;->e:Landroid/widget/ImageView;
+    invoke-virtual {v0, v1}, Landroid/widget/GridView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 69
-    const v0, 0x7f0b0693
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/StickerPicker;->f:Landroid/view/View;
-
-    .line 70
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/StickerPicker;)Lcom/bbm/ui/gv;
+.method static synthetic a(Lcom/bbm/ui/StickerPicker;)Lcom/bbm/ui/hc;
     .locals 1
 
     .prologue
-    .line 32
-    iget-object v0, p0, Lcom/bbm/ui/StickerPicker;->g:Lcom/bbm/ui/gv;
+    .line 36
+    iget-object v0, p0, Lcom/bbm/ui/StickerPicker;->e:Lcom/bbm/ui/hc;
 
     return-object v0
 .end method
 
-.method static synthetic b(Lcom/bbm/ui/StickerPicker;)Lcom/bbm/ui/gu;
+.method static synthetic b(Lcom/bbm/ui/StickerPicker;)Lcom/bbm/ui/hb;
     .locals 1
 
     .prologue
-    .line 32
-    iget-object v0, p0, Lcom/bbm/ui/StickerPicker;->b:Lcom/bbm/ui/gu;
+    .line 36
+    iget-object v0, p0, Lcom/bbm/ui/StickerPicker;->b:Lcom/bbm/ui/hb;
 
     return-object v0
 .end method
@@ -146,7 +122,7 @@
     .locals 1
 
     .prologue
-    .line 32
+    .line 36
     iget-object v0, p0, Lcom/bbm/ui/StickerPicker;->a:Ljava/lang/String;
 
     return-object v0
@@ -156,7 +132,7 @@
     .locals 1
 
     .prologue
-    .line 32
+    .line 36
     iget-object v0, p0, Lcom/bbm/ui/StickerPicker;->c:Lcom/bbm/d/a;
 
     return-object v0
@@ -166,7 +142,7 @@
     .locals 1
 
     .prologue
-    .line 32
+    .line 36
     iget-object v0, p0, Lcom/bbm/ui/StickerPicker;->d:Landroid/widget/GridView;
 
     return-object v0
@@ -174,11 +150,21 @@
 
 
 # virtual methods
+.method public getPackId()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 120
+    iget-object v0, p0, Lcom/bbm/ui/StickerPicker;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
     .prologue
-    .line 135
+    .line 151
     const/4 v0, 0x0
 
     return v0
@@ -188,124 +174,100 @@
     .locals 1
 
     .prologue
-    .line 96
-    iget-object v0, p0, Lcom/bbm/ui/StickerPicker;->b:Lcom/bbm/ui/gu;
+    .line 108
+    iget-object v0, p0, Lcom/bbm/ui/StickerPicker;->b:Lcom/bbm/ui/hb;
 
     if-nez v0, :cond_0
 
-    .line 105
+    .line 117
     :goto_0
     return-void
 
-    .line 100
+    .line 112
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 101
-    iget-object v0, p0, Lcom/bbm/ui/StickerPicker;->b:Lcom/bbm/ui/gu;
+    .line 113
+    iget-object v0, p0, Lcom/bbm/ui/StickerPicker;->b:Lcom/bbm/ui/hb;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/gu;->c()V
+    invoke-virtual {v0}, Lcom/bbm/ui/hb;->c()V
 
     goto :goto_0
 
-    .line 103
+    .line 115
     :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/StickerPicker;->b:Lcom/bbm/ui/gu;
+    iget-object v0, p0, Lcom/bbm/ui/StickerPicker;->b:Lcom/bbm/ui/hb;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/gu;->b()V
+    invoke-virtual {v0}, Lcom/bbm/ui/hb;->b()V
 
     goto :goto_0
-.end method
-
-.method public setOnCartClickedListener(Landroid/view/View$OnClickListener;)V
-    .locals 2
-
-    .prologue
-    .line 178
-    iget-object v0, p0, Lcom/bbm/ui/StickerPicker;->e:Landroid/widget/ImageView;
-
-    new-instance v1, Lcom/bbm/ui/gt;
-
-    invoke-direct {v1, p0, p1}, Lcom/bbm/ui/gt;-><init>(Lcom/bbm/ui/StickerPicker;Landroid/view/View$OnClickListener;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 187
-    return-void
 .end method
 
 .method public setStickerPackId(Ljava/lang/String;)V
     .locals 2
 
     .prologue
-    .line 73
+    .line 72
     iput-object p1, p0, Lcom/bbm/ui/StickerPicker;->a:Ljava/lang/String;
 
-    .line 74
-    new-instance v0, Lcom/bbm/ui/gu;
+    .line 73
+    new-instance v0, Lcom/bbm/ui/hb;
 
-    new-instance v1, Lcom/bbm/ui/gq;
+    new-instance v1, Lcom/bbm/ui/gx;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/gq;-><init>(Lcom/bbm/ui/StickerPicker;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/gx;-><init>(Lcom/bbm/ui/StickerPicker;)V
 
-    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/gu;-><init>(Lcom/bbm/ui/StickerPicker;Lcom/bbm/j/r;)V
+    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/hb;-><init>(Lcom/bbm/ui/StickerPicker;Lcom/bbm/j/r;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/StickerPicker;->b:Lcom/bbm/ui/gu;
+    iput-object v0, p0, Lcom/bbm/ui/StickerPicker;->b:Lcom/bbm/ui/hb;
 
-    .line 90
+    .line 103
     iget-object v0, p0, Lcom/bbm/ui/StickerPicker;->d:Landroid/widget/GridView;
 
-    iget-object v1, p0, Lcom/bbm/ui/StickerPicker;->b:Lcom/bbm/ui/gu;
+    iget-object v1, p0, Lcom/bbm/ui/StickerPicker;->b:Lcom/bbm/ui/hb;
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 91
+    .line 104
     iget-object v0, p0, Lcom/bbm/ui/StickerPicker;->d:Landroid/widget/GridView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setVisibility(I)V
 
-    .line 92
-    iget-object v0, p0, Lcom/bbm/ui/StickerPicker;->f:Landroid/view/View;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    .line 93
+    .line 105
     return-void
 .end method
 
-.method public setStickerPickerListener(Lcom/bbm/ui/gv;)V
+.method public setStickerPickerListener(Lcom/bbm/ui/hc;)V
     .locals 0
 
     .prologue
-    .line 139
-    iput-object p1, p0, Lcom/bbm/ui/StickerPicker;->g:Lcom/bbm/ui/gv;
+    .line 155
+    iput-object p1, p0, Lcom/bbm/ui/StickerPicker;->e:Lcom/bbm/ui/hc;
 
-    .line 140
+    .line 156
     return-void
 .end method
 
-.method public setStickerPreviewListener(Lcom/bbm/ui/gw;)V
+.method public setStickerPreviewListener(Lcom/bbm/ui/hd;)V
     .locals 2
 
     .prologue
-    .line 144
+    .line 160
     if-nez p1, :cond_0
 
-    .line 175
+    .line 191
     :goto_0
     return-void
 
-    .line 148
+    .line 164
     :cond_0
     iget-object v0, p0, Lcom/bbm/ui/StickerPicker;->d:Landroid/widget/GridView;
 
-    new-instance v1, Lcom/bbm/ui/gr;
+    new-instance v1, Lcom/bbm/ui/gz;
 
-    invoke-direct {v1, p0, p1}, Lcom/bbm/ui/gr;-><init>(Lcom/bbm/ui/StickerPicker;Lcom/bbm/ui/gw;)V
+    invoke-direct {v1, p0, p1}, Lcom/bbm/ui/gz;-><init>(Lcom/bbm/ui/StickerPicker;Lcom/bbm/ui/hd;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
 

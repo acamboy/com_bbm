@@ -1,22 +1,26 @@
 .class final Lcom/bbm/ui/voice/activities/c;
 .super Ljava/lang/Object;
-.source "IncomingCallActivity.java"
+.source "InCallActivity.java"
 
 # interfaces
-.implements Lcom/bbm/n/j;
+.implements Lcom/bbm/ui/b/ay;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/voice/activities/IncomingCallActivity;
+.field final synthetic a:Lcom/bbm/n/a;
+
+.field final synthetic b:Lcom/bbm/ui/voice/activities/InCallActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)V
+.method constructor <init>(Lcom/bbm/ui/voice/activities/InCallActivity;Lcom/bbm/n/a;)V
     .locals 0
 
     .prologue
-    .line 123
-    iput-object p1, p0, Lcom/bbm/ui/voice/activities/c;->a:Lcom/bbm/ui/voice/activities/IncomingCallActivity;
+    .line 376
+    iput-object p1, p0, Lcom/bbm/ui/voice/activities/c;->b:Lcom/bbm/ui/voice/activities/InCallActivity;
+
+    iput-object p2, p0, Lcom/bbm/ui/voice/activities/c;->a:Lcom/bbm/n/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,51 +30,16 @@
 
 # virtual methods
 .method public final a()V
-    .locals 0
+    .locals 2
 
     .prologue
-    .line 139
-    return-void
-.end method
+    .line 380
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/c;->a:Lcom/bbm/n/a;
 
-.method public final a(Z)V
-    .locals 1
+    const/4 v1, 0x3
 
-    .prologue
-    .line 127
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/c;->a:Lcom/bbm/ui/voice/activities/IncomingCallActivity;
+    invoke-virtual {v0, v1}, Lcom/bbm/n/a;->a(I)V
 
-    invoke-static {v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->f(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)V
-
-    .line 128
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/c;->a:Lcom/bbm/ui/voice/activities/IncomingCallActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->finish()V
-
-    .line 129
-    return-void
-.end method
-
-.method public final b()V
-    .locals 0
-
-    .prologue
-    .line 149
-    return-void
-.end method
-
-.method public final c()V
-    .locals 0
-
-    .prologue
-    .line 159
-    return-void
-.end method
-
-.method public final d()V
-    .locals 0
-
-    .prologue
-    .line 179
+    .line 381
     return-void
 .end method

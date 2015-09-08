@@ -7,13 +7,13 @@
 
 
 # static fields
-.field private static final cK:Ljava/lang/String; = "com.glympse.android.hal.proximity.REGION"
+.field private static final cN:Ljava/lang/String; = "com.glympse.android.hal.proximity.REGION"
 
 
 # instance fields
-.field private cL:Lcom/glympse/android/core/GProximityListener;
+.field private cO:Lcom/glympse/android/core/GProximityListener;
 
-.field private cM:Ljava/util/Hashtable;
+.field private cP:Ljava/util/Hashtable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Hashtable",
@@ -25,7 +25,7 @@
     .end annotation
 .end field
 
-.field private ca:Landroid/location/LocationManager;
+.field private cd:Landroid/location/LocationManager;
 
 .field private e:Landroid/content/Context;
 
@@ -52,14 +52,14 @@
 
     check-cast v0, Landroid/location/LocationManager;
 
-    iput-object v0, p0, Lcom/glympse/android/hal/bc;->ca:Landroid/location/LocationManager;
+    iput-object v0, p0, Lcom/glympse/android/hal/bc;->cd:Landroid/location/LocationManager;
 
     .line 36
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/bc;->cM:Ljava/util/Hashtable;
+    iput-object v0, p0, Lcom/glympse/android/hal/bc;->cP:Ljava/util/Hashtable;
 
     .line 37
     return-void
@@ -70,7 +70,7 @@
 
     .prologue
     .line 22
-    iget-object v0, p0, Lcom/glympse/android/hal/bc;->cL:Lcom/glympse/android/core/GProximityListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/bc;->cO:Lcom/glympse/android/core/GProximityListener;
 
     return-object v0
 .end method
@@ -93,7 +93,7 @@
     .line 104
     new-instance v1, Lcom/glympse/android/hal/GVector;
 
-    iget-object v0, p0, Lcom/glympse/android/hal/bc;->cM:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/hal/bc;->cP:Ljava/util/Hashtable;
 
     invoke-virtual {v0}, Ljava/util/Hashtable;->size()I
 
@@ -102,7 +102,7 @@
     invoke-direct {v1, v0}, Lcom/glympse/android/hal/GVector;-><init>(I)V
 
     .line 105
-    iget-object v0, p0, Lcom/glympse/android/hal/bc;->cM:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/hal/bc;->cP:Ljava/util/Hashtable;
 
     invoke-virtual {v0}, Ljava/util/Hashtable;->keys()Ljava/util/Enumeration;
 
@@ -166,7 +166,7 @@
 
     .prologue
     .line 45
-    iput-object p1, p0, Lcom/glympse/android/hal/bc;->cL:Lcom/glympse/android/core/GProximityListener;
+    iput-object p1, p0, Lcom/glympse/android/hal/bc;->cO:Lcom/glympse/android/core/GProximityListener;
 
     .line 46
     return-void
@@ -220,7 +220,7 @@
     const/4 v3, 0x0
 
     .line 50
-    iget-object v0, p0, Lcom/glympse/android/hal/bc;->cM:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/hal/bc;->cP:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->contains(Ljava/lang/Object;)Z
 
@@ -278,7 +278,7 @@
     invoke-virtual {v1, v10, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 63
-    iget-object v1, p0, Lcom/glympse/android/hal/bc;->ca:Landroid/location/LocationManager;
+    iget-object v1, p0, Lcom/glympse/android/hal/bc;->cd:Landroid/location/LocationManager;
 
     invoke-interface {p1}, Lcom/glympse/android/core/GRegion;->getLatitude()D
 
@@ -299,7 +299,7 @@
     invoke-virtual/range {v1 .. v9}, Landroid/location/LocationManager;->addProximityAlert(DDFJLandroid/app/PendingIntent;)V
 
     .line 66
-    iget-object v0, p0, Lcom/glympse/android/hal/bc;->cM:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/hal/bc;->cP:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1, v10}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -311,7 +311,7 @@
 
     .prologue
     .line 79
-    iget-object v0, p0, Lcom/glympse/android/hal/bc;->cM:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/hal/bc;->cP:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -328,7 +328,7 @@
 
     .line 86
     :cond_0
-    iget-object v1, p0, Lcom/glympse/android/hal/bc;->ca:Landroid/location/LocationManager;
+    iget-object v1, p0, Lcom/glympse/android/hal/bc;->cd:Landroid/location/LocationManager;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/bd;->L()Landroid/app/PendingIntent;
 
@@ -342,7 +342,7 @@
     invoke-virtual {v1, v0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 92
-    iget-object v0, p0, Lcom/glympse/android/hal/bc;->cM:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/hal/bc;->cP:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 

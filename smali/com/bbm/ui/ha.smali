@@ -1,136 +1,79 @@
 .class final Lcom/bbm/ui/ha;
-.super Lcom/bbm/ui/ec;
-.source "StickyHeaderHelper.java"
+.super Ljava/lang/Object;
+.source "StickerPicker.java"
+
+# interfaces
+.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field final synthetic b:Lcom/bbm/ui/gx;
+.field final synthetic a:Lcom/bbm/ui/gz;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/gx;)V
+.method constructor <init>(Lcom/bbm/ui/gz;)V
     .locals 0
 
     .prologue
-    .line 53
-    iput-object p1, p0, Lcom/bbm/ui/ha;->b:Lcom/bbm/ui/gx;
+    .line 172
+    iput-object p1, p0, Lcom/bbm/ui/ha;->a:Lcom/bbm/ui/gz;
 
-    invoke-direct {p0}, Lcom/bbm/ui/ec;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 2
 
     .prologue
-    .line 88
-    iget-object v0, p0, Lcom/bbm/ui/ha;->b:Lcom/bbm/ui/gx;
+    .line 175
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
-    invoke-virtual {p0, p1}, Lcom/bbm/ui/ha;->getItemViewType(I)I
+    move-result v0
 
-    move-result v1
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0, p3, v1}, Lcom/bbm/ui/gx;->a(Landroid/view/ViewGroup;I)Landroid/view/View;
+    .line 183
+    :pswitch_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+
+    .line 179
+    :pswitch_1
+    iget-object v0, p0, Lcom/bbm/ui/ha;->a:Lcom/bbm/ui/gz;
+
+    iget-object v0, v0, Lcom/bbm/ui/gz;->a:Lcom/bbm/ui/hd;
+
+    invoke-interface {v0}, Lcom/bbm/ui/hd;->a()V
+
+    .line 180
+    iget-object v0, p0, Lcom/bbm/ui/ha;->a:Lcom/bbm/ui/gz;
+
+    iget-object v0, v0, Lcom/bbm/ui/gz;->b:Lcom/bbm/ui/StickerPicker;
+
+    invoke-static {v0}, Lcom/bbm/ui/StickerPicker;->e(Lcom/bbm/ui/StickerPicker;)Landroid/widget/GridView;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    const/4 v1, 0x0
 
-.method protected final a(Landroid/view/View;Ljava/lang/Object;)V
-    .locals 1
+    invoke-virtual {v0, v1}, Landroid/widget/GridView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .prologue
-    .line 73
-    iget-object v0, p0, Lcom/bbm/ui/ha;->b:Lcom/bbm/ui/gx;
-
-    invoke-virtual {v0, p1, p2}, Lcom/bbm/ui/gx;->b(Landroid/view/View;Ljava/lang/Object;)V
-
-    .line 74
-    return-void
-.end method
-
-.method public final getCount()I
-    .locals 1
-
-    .prologue
-    .line 57
-    iget-object v0, p0, Lcom/bbm/ui/ha;->b:Lcom/bbm/ui/gx;
-
-    iget-object v0, v0, Lcom/bbm/ui/gx;->c:[Ljava/lang/Object;
-
-    array-length v0, v0
-
-    return v0
-.end method
-
-.method public final getItem(I)Ljava/lang/Object;
-    .locals 1
-
-    .prologue
-    .line 62
-    iget-object v0, p0, Lcom/bbm/ui/ha;->b:Lcom/bbm/ui/gx;
-
-    iget-object v0, v0, Lcom/bbm/ui/gx;->c:[Ljava/lang/Object;
-
-    aget-object v0, v0, p1
-
-    return-object v0
-.end method
-
-.method public final getItemId(I)J
-    .locals 2
-
-    .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/ha;->b:Lcom/bbm/ui/gx;
-
-    iget-object v0, v0, Lcom/bbm/ui/gx;->b:Lcom/bbm/ui/gi;
-
-    iget-object v0, v0, Lcom/bbm/ui/gi;->a:[J
-
-    aget-wide v0, v0, p1
-
-    return-wide v0
-.end method
-
-.method public final getItemViewType(I)I
-    .locals 1
-
-    .prologue
-    .line 83
-    iget-object v0, p0, Lcom/bbm/ui/ha;->b:Lcom/bbm/ui/gx;
-
-    invoke-virtual {v0, p1}, Lcom/bbm/ui/gx;->getItemViewType(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final getViewTypeCount()I
-    .locals 1
-
-    .prologue
-    .line 78
-    iget-object v0, p0, Lcom/bbm/ui/ha;->b:Lcom/bbm/ui/gx;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/gx;->getViewTypeCount()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final hasStableIds()Z
-    .locals 1
-
-    .prologue
-    .line 93
+    .line 181
     const/4 v0, 0x1
 
-    return v0
+    goto :goto_0
+
+    .line 175
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method

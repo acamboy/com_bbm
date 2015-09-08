@@ -1,56 +1,94 @@
 .class final Lcom/bbm/ui/activities/tr;
-.super Ljava/lang/Object;
-.source "GroupProfileActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Lcom/bbm/j/u;
+.source "MainActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupProfileActivity;
+.field final synthetic a:Lcom/bbm/util/dc;
+
+.field final synthetic b:Ljava/util/Map;
+
+.field final synthetic c:Lcom/bbm/f/ac;
+
+.field final synthetic d:Lcom/bbm/j/u;
+
+.field final synthetic e:Lcom/bbm/ui/activities/MainActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupProfileActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;Lcom/bbm/util/dc;Ljava/util/Map;Lcom/bbm/f/ac;Lcom/bbm/j/u;)V
     .locals 0
 
     .prologue
-    .line 256
-    iput-object p1, p0, Lcom/bbm/ui/activities/tr;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
+    .line 1068
+    iput-object p1, p0, Lcom/bbm/ui/activities/tr;->e:Lcom/bbm/ui/activities/MainActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lcom/bbm/ui/activities/tr;->a:Lcom/bbm/util/dc;
+
+    iput-object p3, p0, Lcom/bbm/ui/activities/tr;->b:Ljava/util/Map;
+
+    iput-object p4, p0, Lcom/bbm/ui/activities/tr;->c:Lcom/bbm/f/ac;
+
+    iput-object p5, p0, Lcom/bbm/ui/activities/tr;->d:Lcom/bbm/j/u;
+
+    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method protected final b()Z
+    .locals 3
 
     .prologue
-    .line 259
-    const-string v0, "mBarGroupIcon Clicked"
+    .line 1071
+    iget-object v0, p0, Lcom/bbm/ui/activities/tr;->a:Lcom/bbm/util/dc;
 
-    const-class v1, Lcom/bbm/ui/activities/GroupProfileActivity;
+    invoke-virtual {v0}, Lcom/bbm/util/dc;->f()Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    move-result-object v0
 
-    .line 261
-    iget-object v0, p0, Lcom/bbm/ui/activities/tr;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
+    check-cast v0, Ljava/lang/String;
 
-    new-instance v1, Landroid/content/Intent;
+    .line 1072
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/tr;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
+    move-result v1
 
-    const-class v3, Lcom/bbm/ui/activities/GroupsIconActivity;
+    if-eqz v1, :cond_0
 
-    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    .line 1073
+    const/4 v0, 0x0
 
-    const/4 v2, 0x1
+    .line 1078
+    :goto_0
+    return v0
 
-    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/activities/GroupProfileActivity;->startActivityForResult(Landroid/content/Intent;I)V
+    .line 1075
+    :cond_0
+    iget-object v1, p0, Lcom/bbm/ui/activities/tr;->b:Ljava/util/Map;
 
-    .line 262
-    return-void
+    const-string v2, "valid"
+
+    invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 1076
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/f/a;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/tr;->c:Lcom/bbm/f/ac;
+
+    invoke-interface {v0, v1}, Lcom/bbm/f/a;->b(Lcom/bbm/f/ac;)V
+
+    .line 1077
+    iget-object v0, p0, Lcom/bbm/ui/activities/tr;->d:Lcom/bbm/j/u;
+
+    invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
+
+    .line 1078
+    const/4 v0, 0x1
+
+    goto :goto_0
 .end method

@@ -1,46 +1,44 @@
 .class final Lcom/bbm/ui/activities/li;
-.super Ljava/lang/Object;
-.source "GroupAdminPasswordActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Ljava/util/TimerTask;
+.source "GroupConversationActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupAdminPasswordActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupAdminPasswordActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 46
-    iput-object p1, p0, Lcom/bbm/ui/activities/li;->a:Lcom/bbm/ui/activities/GroupAdminPasswordActivity;
+    .line 1023
+    iput-object p1, p0, Lcom/bbm/ui/activities/li;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final run()V
     .locals 2
 
     .prologue
-    .line 50
-    const-string v0, "mHeaderActionBar Negative Button Clicked"
+    .line 1027
+    iget-object v0, p0, Lcom/bbm/ui/activities/li;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/GroupAdminPasswordActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->x(Lcom/bbm/ui/activities/GroupConversationActivity;)Landroid/os/Handler;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    move-result-object v0
 
-    .line 52
-    iget-object v0, p0, Lcom/bbm/ui/activities/li;->a:Lcom/bbm/ui/activities/GroupAdminPasswordActivity;
+    new-instance v1, Lcom/bbm/ui/activities/lj;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupAdminPasswordActivity;->finish()V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/lj;-><init>(Lcom/bbm/ui/activities/li;)V
 
-    .line 53
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 1034
     return-void
 .end method

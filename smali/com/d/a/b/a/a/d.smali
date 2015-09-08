@@ -703,7 +703,7 @@
 .end method
 
 .method final a(Lcom/d/a/b/a/a/g;)V
-    .locals 4
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -713,7 +713,7 @@
     .end annotation
 
     .prologue
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
     .line 270
     iget-object v0, p1, Lcom/d/a/b/a/a/g;->b:Lcom/d/a/b/a/a/g;
@@ -743,9 +743,7 @@
 
     iget-object v1, v0, Lcom/d/a/b/a/a/g;->b:Lcom/d/a/b/a/a/g;
 
-    iget-object v2, v0, Lcom/d/a/b/a/a/g;->a:Ljava/lang/Object;
-
-    iput-object v3, v0, Lcom/d/a/b/a/a/g;->a:Ljava/lang/Object;
+    iput-object v2, v0, Lcom/d/a/b/a/a/g;->a:Ljava/lang/Object;
 
     iput-object v0, v0, Lcom/d/a/b/a/a/g;->b:Lcom/d/a/b/a/a/g;
 
@@ -753,7 +751,7 @@
 
     if-nez v1, :cond_2
 
-    iput-object v3, p0, Lcom/d/a/b/a/a/d;->a:Lcom/d/a/b/a/a/g;
+    iput-object v2, p0, Lcom/d/a/b/a/a/d;->a:Lcom/d/a/b/a/a/g;
 
     :goto_1
     iget v0, p0, Lcom/d/a/b/a/a/d;->d:I
@@ -769,7 +767,7 @@
     goto :goto_0
 
     :cond_2
-    iput-object v3, v1, Lcom/d/a/b/a/a/g;->c:Lcom/d/a/b/a/a/g;
+    iput-object v2, v1, Lcom/d/a/b/a/a/g;->c:Lcom/d/a/b/a/a/g;
 
     goto :goto_1
 
@@ -781,7 +779,7 @@
     iput-object v0, v1, Lcom/d/a/b/a/a/g;->b:Lcom/d/a/b/a/a/g;
 
     .line 279
-    iput-object v3, p1, Lcom/d/a/b/a/a/g;->a:Ljava/lang/Object;
+    iput-object v2, p1, Lcom/d/a/b/a/a/g;->a:Ljava/lang/Object;
 
     .line 282
     iget v0, p0, Lcom/d/a/b/a/a/d;->d:I

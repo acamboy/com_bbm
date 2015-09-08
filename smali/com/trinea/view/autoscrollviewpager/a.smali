@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 86
+    .line 88
     iput-object p1, p0, Lcom/trinea/view/autoscrollviewpager/a;->a:Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,11 +29,11 @@
     .locals 1
 
     .prologue
-    .line 90
+    .line 92
     iget-object v0, p0, Lcom/trinea/view/autoscrollviewpager/a;->a:Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;
 
     invoke-static {v0}, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->a(Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;)V
 
-    .line 91
+    .line 93
     return-void
 .end method

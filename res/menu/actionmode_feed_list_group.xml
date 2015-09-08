@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_invite_group" android:id="@id/actionmode_feed_list_group_opengroup" android:title="@string/update_list_menu_group_open_group" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_block" android:id="@id/actionmode_feed_list_group_hide" android:title="@string/update_fragment_hide_updates" app:showAsAction="always" />
+</menu>

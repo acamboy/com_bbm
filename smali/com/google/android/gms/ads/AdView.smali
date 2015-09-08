@@ -3,7 +3,7 @@
 
 
 # instance fields
-.field private final kD:Lcom/google/android/gms/internal/ak;
+.field public final a:Lcom/google/android/gms/ads/internal/client/ax;
 
 
 # direct methods
@@ -12,11 +12,11 @@
 
     invoke-direct {p0, p1}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;)V
 
-    new-instance v0, Lcom/google/android/gms/internal/ak;
+    new-instance v0, Lcom/google/android/gms/ads/internal/client/ax;
 
-    invoke-direct {v0, p0}, Lcom/google/android/gms/internal/ak;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {v0, p0}, Lcom/google/android/gms/ads/internal/client/ax;-><init>(Landroid/view/ViewGroup;)V
 
-    iput-object v0, p0, Lcom/google/android/gms/ads/AdView;->kD:Lcom/google/android/gms/internal/ak;
+    iput-object v0, p0, Lcom/google/android/gms/ads/AdView;->a:Lcom/google/android/gms/ads/internal/client/ax;
 
     return-void
 .end method
@@ -26,13 +26,13 @@
 
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    new-instance v0, Lcom/google/android/gms/internal/ak;
+    new-instance v0, Lcom/google/android/gms/ads/internal/client/ax;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, p2, v1}, Lcom/google/android/gms/internal/ak;-><init>(Landroid/view/ViewGroup;Landroid/util/AttributeSet;Z)V
+    invoke-direct {v0, p0, p2, v1}, Lcom/google/android/gms/ads/internal/client/ax;-><init>(Landroid/view/ViewGroup;Landroid/util/AttributeSet;Z)V
 
-    iput-object v0, p0, Lcom/google/android/gms/ads/AdView;->kD:Lcom/google/android/gms/internal/ak;
+    iput-object v0, p0, Lcom/google/android/gms/ads/AdView;->a:Lcom/google/android/gms/ads/internal/client/ax;
 
     return-void
 .end method
@@ -42,47 +42,35 @@
 
     invoke-direct {p0, p1, p2, p3}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    new-instance v0, Lcom/google/android/gms/internal/ak;
+    new-instance v0, Lcom/google/android/gms/ads/internal/client/ax;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, p2, v1}, Lcom/google/android/gms/internal/ak;-><init>(Landroid/view/ViewGroup;Landroid/util/AttributeSet;Z)V
+    invoke-direct {v0, p0, p2, v1}, Lcom/google/android/gms/ads/internal/client/ax;-><init>(Landroid/view/ViewGroup;Landroid/util/AttributeSet;Z)V
 
-    iput-object v0, p0, Lcom/google/android/gms/ads/AdView;->kD:Lcom/google/android/gms/internal/ak;
+    iput-object v0, p0, Lcom/google/android/gms/ads/AdView;->a:Lcom/google/android/gms/ads/internal/client/ax;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final destroy()V
+.method public final getAdListener()Lcom/google/android/gms/ads/a;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/ads/AdView;->kD:Lcom/google/android/gms/internal/ak;
+    iget-object v0, p0, Lcom/google/android/gms/ads/AdView;->a:Lcom/google/android/gms/ads/internal/client/ax;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/ak;->destroy()V
-
-    return-void
-.end method
-
-.method public final getAdListener()Lcom/google/android/gms/ads/AdListener;
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/AdView;->kD:Lcom/google/android/gms/internal/ak;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/ak;->getAdListener()Lcom/google/android/gms/ads/AdListener;
-
-    move-result-object v0
+    iget-object v0, v0, Lcom/google/android/gms/ads/internal/client/ax;->b:Lcom/google/android/gms/ads/a;
 
     return-object v0
 .end method
 
-.method public final getAdSize()Lcom/google/android/gms/ads/AdSize;
+.method public final getAdSize()Lcom/google/android/gms/ads/f;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/ads/AdView;->kD:Lcom/google/android/gms/internal/ak;
+    iget-object v0, p0, Lcom/google/android/gms/ads/AdView;->a:Lcom/google/android/gms/ads/internal/client/ax;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/ak;->getAdSize()Lcom/google/android/gms/ads/AdSize;
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/client/ax;->a()Lcom/google/android/gms/ads/f;
 
     move-result-object v0
 
@@ -92,27 +80,33 @@
 .method public final getAdUnitId()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/ads/AdView;->kD:Lcom/google/android/gms/internal/ak;
+    iget-object v0, p0, Lcom/google/android/gms/ads/AdView;->a:Lcom/google/android/gms/ads/internal/client/ax;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/ak;->getAdUnitId()Ljava/lang/String;
-
-    move-result-object v0
+    iget-object v0, v0, Lcom/google/android/gms/ads/internal/client/ax;->f:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final loadAd(Lcom/google/android/gms/ads/AdRequest;)V
-    .locals 2
+.method public final getInAppPurchaseListener()Lcom/google/android/gms/ads/purchase/a;
+    .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/ads/AdView;->kD:Lcom/google/android/gms/internal/ak;
+    iget-object v0, p0, Lcom/google/android/gms/ads/AdView;->a:Lcom/google/android/gms/ads/internal/client/ax;
 
-    invoke-virtual {p1}, Lcom/google/android/gms/ads/AdRequest;->N()Lcom/google/android/gms/internal/aj;
+    iget-object v0, v0, Lcom/google/android/gms/ads/internal/client/ax;->j:Lcom/google/android/gms/ads/purchase/a;
 
-    move-result-object v1
+    return-object v0
+.end method
 
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/internal/ak;->a(Lcom/google/android/gms/internal/aj;)V
+.method public final getMediationAdapterClassName()Ljava/lang/String;
+    .locals 1
 
-    return-void
+    iget-object v0, p0, Lcom/google/android/gms/ads/AdView;->a:Lcom/google/android/gms/ads/internal/client/ax;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/client/ax;->b()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method protected final onLayout(ZIIII)V
@@ -165,7 +159,7 @@
 .end method
 
 .method protected final onMeasure(II)V
-    .locals 5
+    .locals 4
 
     const/4 v0, 0x0
 
@@ -173,19 +167,15 @@
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lcom/google/android/gms/ads/AdView;->getAdSize()Lcom/google/android/gms/ads/AdSize;
-
-    move-result-object v3
-
     if-eqz v2, :cond_0
 
     invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
 
     move-result v1
 
-    const/16 v4, 0x8
+    const/16 v3, 0x8
 
-    if-eq v1, v4, :cond_0
+    if-eq v1, v3, :cond_0
 
     invoke-virtual {p0, v2, p1, p2}, Lcom/google/android/gms/ads/AdView;->measureChild(Landroid/view/View;II)V
 
@@ -227,17 +217,21 @@
     return-void
 
     :cond_0
-    if-eqz v3, :cond_1
+    invoke-virtual {p0}, Lcom/google/android/gms/ads/AdView;->getAdSize()Lcom/google/android/gms/ads/f;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1
 
     invoke-virtual {p0}, Lcom/google/android/gms/ads/AdView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-virtual {v3, v0}, Lcom/google/android/gms/ads/AdSize;->getWidthInPixels(Landroid/content/Context;)I
+    invoke-virtual {v2, v0}, Lcom/google/android/gms/ads/f;->b(Landroid/content/Context;)I
 
     move-result v1
 
-    invoke-virtual {v3, v0}, Lcom/google/android/gms/ads/AdSize;->getHeightInPixels(Landroid/content/Context;)I
+    invoke-virtual {v2, v0}, Lcom/google/android/gms/ads/f;->a(Landroid/content/Context;)I
 
     move-result v0
 
@@ -249,50 +243,55 @@
     goto :goto_0
 .end method
 
-.method public final pause()V
-    .locals 1
+.method public final setAdListener(Lcom/google/android/gms/ads/a;)V
+    .locals 2
 
-    iget-object v0, p0, Lcom/google/android/gms/ads/AdView;->kD:Lcom/google/android/gms/internal/ak;
+    iget-object v0, p0, Lcom/google/android/gms/ads/AdView;->a:Lcom/google/android/gms/ads/internal/client/ax;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/ak;->pause()V
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/ads/internal/client/ax;->a(Lcom/google/android/gms/ads/a;)V
 
+    if-eqz p1, :cond_1
+
+    instance-of v0, p1, Lcom/google/android/gms/ads/internal/client/a;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/AdView;->a:Lcom/google/android/gms/ads/internal/client/ax;
+
+    check-cast p1, Lcom/google/android/gms/ads/internal/client/a;
+
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/ads/internal/client/ax;->a(Lcom/google/android/gms/ads/internal/client/a;)V
+
+    :cond_0
+    :goto_0
     return-void
+
+    :cond_1
+    if-nez p1, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/AdView;->a:Lcom/google/android/gms/ads/internal/client/ax;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/google/android/gms/ads/internal/client/ax;->a(Lcom/google/android/gms/ads/internal/client/a;)V
+
+    goto :goto_0
 .end method
 
-.method public final resume()V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/AdView;->kD:Lcom/google/android/gms/internal/ak;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/ak;->resume()V
-
-    return-void
-.end method
-
-.method public final setAdListener(Lcom/google/android/gms/ads/AdListener;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/AdView;->kD:Lcom/google/android/gms/internal/ak;
-
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/internal/ak;->setAdListener(Lcom/google/android/gms/ads/AdListener;)V
-
-    return-void
-.end method
-
-.method public final setAdSize(Lcom/google/android/gms/ads/AdSize;)V
+.method public final setAdSize(Lcom/google/android/gms/ads/f;)V
     .locals 3
 
-    iget-object v0, p0, Lcom/google/android/gms/ads/AdView;->kD:Lcom/google/android/gms/internal/ak;
+    iget-object v0, p0, Lcom/google/android/gms/ads/AdView;->a:Lcom/google/android/gms/ads/internal/client/ax;
 
     const/4 v1, 0x1
 
-    new-array v1, v1, [Lcom/google/android/gms/ads/AdSize;
+    new-array v1, v1, [Lcom/google/android/gms/ads/f;
 
     const/4 v2, 0x0
 
     aput-object p1, v1, v2
 
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/internal/ak;->setAdSizes([Lcom/google/android/gms/ads/AdSize;)V
+    invoke-virtual {v0, v1}, Lcom/google/android/gms/ads/internal/client/ax;->a([Lcom/google/android/gms/ads/f;)V
 
     return-void
 .end method
@@ -300,9 +299,125 @@
 .method public final setAdUnitId(Ljava/lang/String;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/ads/AdView;->kD:Lcom/google/android/gms/internal/ak;
+    iget-object v0, p0, Lcom/google/android/gms/ads/AdView;->a:Lcom/google/android/gms/ads/internal/client/ax;
 
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/internal/ak;->setAdUnitId(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/ads/internal/client/ax;->a(Ljava/lang/String;)V
 
     return-void
+.end method
+
+.method public final setInAppPurchaseListener(Lcom/google/android/gms/ads/purchase/a;)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/AdView;->a:Lcom/google/android/gms/ads/internal/client/ax;
+
+    iget-object v1, v0, Lcom/google/android/gms/ads/internal/client/ax;->k:Lcom/google/android/gms/ads/purchase/b;
+
+    if-eqz v1, :cond_0
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Play store purchase parameter has already been set."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
+    :try_start_0
+    iput-object p1, v0, Lcom/google/android/gms/ads/internal/client/ax;->j:Lcom/google/android/gms/ads/purchase/a;
+
+    iget-object v1, v0, Lcom/google/android/gms/ads/internal/client/ax;->d:Lcom/google/android/gms/ads/internal/client/ae;
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, v0, Lcom/google/android/gms/ads/internal/client/ax;->d:Lcom/google/android/gms/ads/internal/client/ae;
+
+    if-eqz p1, :cond_2
+
+    new-instance v0, Lcom/google/android/gms/internal/kr;
+
+    invoke-direct {v0, p1}, Lcom/google/android/gms/internal/kr;-><init>(Lcom/google/android/gms/ads/purchase/a;)V
+
+    :goto_0
+    invoke-interface {v1, v0}, Lcom/google/android/gms/ads/internal/client/ae;->a(Lcom/google/android/gms/internal/kc;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_1
+    :goto_1
+    return-void
+
+    :cond_2
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "Failed to set the InAppPurchaseListener."
+
+    invoke-static {v1, v0}, Lcom/google/android/gms/ads/internal/util/client/b;->c(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_1
+.end method
+
+.method public final setPlayStorePurchaseParams(Lcom/google/android/gms/ads/purchase/b;Ljava/lang/String;)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/AdView;->a:Lcom/google/android/gms/ads/internal/client/ax;
+
+    iget-object v1, v0, Lcom/google/android/gms/ads/internal/client/ax;->j:Lcom/google/android/gms/ads/purchase/a;
+
+    if-eqz v1, :cond_0
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "InAppPurchaseListener has already been set."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
+    :try_start_0
+    iput-object p1, v0, Lcom/google/android/gms/ads/internal/client/ax;->k:Lcom/google/android/gms/ads/purchase/b;
+
+    iput-object p2, v0, Lcom/google/android/gms/ads/internal/client/ax;->g:Ljava/lang/String;
+
+    iget-object v1, v0, Lcom/google/android/gms/ads/internal/client/ax;->d:Lcom/google/android/gms/ads/internal/client/ae;
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, v0, Lcom/google/android/gms/ads/internal/client/ax;->d:Lcom/google/android/gms/ads/internal/client/ae;
+
+    if-eqz p1, :cond_2
+
+    new-instance v0, Lcom/google/android/gms/internal/kw;
+
+    invoke-direct {v0, p1}, Lcom/google/android/gms/internal/kw;-><init>(Lcom/google/android/gms/ads/purchase/b;)V
+
+    :goto_0
+    invoke-interface {v1, v0, p2}, Lcom/google/android/gms/ads/internal/client/ae;->a(Lcom/google/android/gms/internal/ko;Ljava/lang/String;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_1
+    :goto_1
+    return-void
+
+    :cond_2
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "Failed to set the play store purchase parameter."
+
+    invoke-static {v1, v0}, Lcom/google/android/gms/ads/internal/util/client/b;->c(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_1
 .end method

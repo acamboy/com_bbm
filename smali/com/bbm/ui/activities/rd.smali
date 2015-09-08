@@ -1,119 +1,106 @@
 .class final Lcom/bbm/ui/activities/rd;
-.super Lcom/bbm/j/u;
-.source "GroupLobbyActivity.java"
+.super Lcom/bbm/j/k;
+.source "GroupProfileActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/qy;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupProfileActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/qy;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/activities/GroupProfileActivity;)V
+    .locals 1
 
     .prologue
-    .line 1104
-    iput-object p1, p0, Lcom/bbm/ui/activities/rd;->a:Lcom/bbm/ui/activities/qy;
+    .line 74
+    iput-object p1, p0, Lcom/bbm/ui/activities/rd;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
 
-    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final b()Z
-    .locals 3
+.method protected final a()V
+    .locals 4
 
     .prologue
-    .line 1109
-    iget-object v0, p0, Lcom/bbm/ui/activities/rd;->a:Lcom/bbm/ui/activities/qy;
+    .line 77
+    iget-object v0, p0, Lcom/bbm/ui/activities/rd;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/qy;->a(Lcom/bbm/ui/activities/qy;)Lcom/bbm/g/al;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupProfileActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/rd;->a:Lcom/bbm/ui/activities/qy;
+    const v1, 0x7f0c001b
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/qy;->i(Lcom/bbm/ui/activities/qy;)Lcom/bbm/g/ac;
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result v0
+
+    .line 78
+    iget-object v1, p0, Lcom/bbm/ui/activities/rd;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupProfileActivity;->b(Lcom/bbm/ui/activities/GroupProfileActivity;)Lcom/bbm/g/an;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/bbm/g/ac;->c:Ljava/lang/String;
+    const-string v2, "maxGroupMembersPerGroup"
 
-    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->q(Ljava/lang/String;)Lcom/bbm/g/o;
-
-    move-result-object v0
-
-    .line 1110
-    iget-object v1, v0, Lcom/bbm/g/o;->h:Lcom/bbm/util/bi;
-
-    sget-object v2, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
-
-    if-ne v1, v2, :cond_0
-
-    .line 1111
-    iget-object v1, p0, Lcom/bbm/ui/activities/rd;->a:Lcom/bbm/ui/activities/qy;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/qy;->a(Lcom/bbm/ui/activities/qy;)Lcom/bbm/g/al;
+    invoke-virtual {v1, v2}, Lcom/bbm/g/an;->x(Ljava/lang/String;)Lcom/bbm/util/bs;
 
     move-result-object v1
 
-    iget-object v0, v0, Lcom/bbm/g/o;->g:Ljava/lang/String;
+    .line 79
+    iget-object v2, v1, Lcom/bbm/util/bs;->b:Lcom/bbm/util/bo;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/rd;->a:Lcom/bbm/ui/activities/qy;
+    sget-object v3, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
 
-    invoke-static {v2}, Lcom/bbm/ui/activities/qy;->b(Lcom/bbm/ui/activities/qy;)Lcom/bbm/g/a;
+    if-ne v2, v3, :cond_1
 
-    move-result-object v2
+    .line 80
+    iget-object v1, v1, Lcom/bbm/util/bs;->a:Lorg/json/JSONObject;
 
-    iget-object v2, v2, Lcom/bbm/g/a;->v:Ljava/lang/String;
+    const-string v2, "value"
 
-    invoke-static {v0, v2}, Lcom/bbm/g/am;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/cc;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
-
-    .line 1112
-    iget-object v0, p0, Lcom/bbm/ui/activities/rd;->a:Lcom/bbm/ui/activities/qy;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/qy;->a(Lcom/bbm/ui/activities/qy;)Lcom/bbm/g/al;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/rd;->a:Lcom/bbm/ui/activities/qy;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/qy;->b(Lcom/bbm/ui/activities/qy;)Lcom/bbm/g/a;
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/bbm/g/a;->v:Ljava/lang/String;
+    .line 81
+    if-eqz v1, :cond_0
 
-    invoke-static {v1}, Lcom/bbm/g/am;->c(Ljava/lang/String;)Lcom/bbm/g/bq;
+    .line 82
+    iget-object v2, p0, Lcom/bbm/ui/activities/rd;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
 
-    move-result-object v1
+    const-string v3, "memberCount"
 
-    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
+    invoke-virtual {v1, v3, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
 
-    .line 1115
-    iget-object v0, p0, Lcom/bbm/ui/activities/rd;->a:Lcom/bbm/ui/activities/qy;
+    move-result v0
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/qy;->f(Lcom/bbm/ui/activities/qy;)Lcom/bbm/j/u;
+    invoke-static {v2, v0}, Lcom/bbm/ui/activities/GroupProfileActivity;->a(Lcom/bbm/ui/activities/GroupProfileActivity;I)I
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
-
-    .line 1116
-    const/4 v0, 0x1
-
-    .line 1118
+    .line 89
     :goto_0
-    return v0
+    return-void
 
+    .line 84
     :cond_0
-    const/4 v0, 0x0
+    iget-object v1, p0, Lcom/bbm/ui/activities/rd;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
+
+    invoke-static {v1, v0}, Lcom/bbm/ui/activities/GroupProfileActivity;->a(Lcom/bbm/ui/activities/GroupProfileActivity;I)I
+
+    goto :goto_0
+
+    .line 87
+    :cond_1
+    iget-object v1, p0, Lcom/bbm/ui/activities/rd;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
+
+    invoke-static {v1, v0}, Lcom/bbm/ui/activities/GroupProfileActivity;->a(Lcom/bbm/ui/activities/GroupProfileActivity;I)I
 
     goto :goto_0
 .end method

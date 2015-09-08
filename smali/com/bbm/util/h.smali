@@ -1,107 +1,109 @@
 .class final Lcom/bbm/util/h;
-.super Landroid/os/Handler;
-.source "AsyncTask.java"
+.super Ljava/lang/Object;
+.source "AdWebViewPool.java"
+
+# interfaces
+.implements Lcom/bbm/j/s;
+
+
+# instance fields
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Lcom/bbm/util/g;
 
 
 # direct methods
-.method private constructor <init>()V
+.method constructor <init>(Lcom/bbm/util/g;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 604
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    .line 154
+    iput-object p1, p0, Lcom/bbm/util/h;->b:Lcom/bbm/util/g;
 
-    return-void
-.end method
+    iput-object p2, p0, Lcom/bbm/util/h;->a:Ljava/lang/String;
 
-.method synthetic constructor <init>(B)V
-    .locals 0
-
-    .prologue
-    .line 604
-    invoke-direct {p0}, Lcom/bbm/util/h;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final handleMessage(Landroid/os/Message;)V
-    .locals 4
+.method public final a()Z
+    .locals 5
 
     .prologue
-    const/4 v3, 0x0
+    const/4 v0, 0x1
 
-    .line 608
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+    .line 157
+    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/b/x;
 
-    check-cast v0, Lcom/bbm/util/g;
+    move-result-object v1
 
-    .line 609
-    iget v1, p1, Landroid/os/Message;->what:I
+    iget-object v2, p0, Lcom/bbm/util/h;->a:Ljava/lang/String;
 
-    packed-switch v1, :pswitch_data_0
+    invoke-virtual {v1, v2}, Lcom/bbm/b/x;->b(Ljava/lang/String;)Lcom/bbm/b/a;
 
-    .line 622
+    move-result-object v1
+
+    .line 159
+    iget-object v2, v1, Lcom/bbm/b/a;->C:Lcom/bbm/util/bo;
+
+    sget-object v3, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
+
+    if-ne v2, v3, :cond_1
+
+    .line 160
+    const/4 v0, 0x0
+
+    .line 173
+    :cond_0
     :goto_0
-    return-void
+    return v0
 
-    .line 613
-    :pswitch_0
-    :try_start_0
-    iget-object v1, v0, Lcom/bbm/util/g;->a:Lcom/bbm/util/b;
+    .line 162
+    :cond_1
+    iget-object v2, v1, Lcom/bbm/b/a;->C:Lcom/bbm/util/bo;
 
-    iget-object v0, v0, Lcom/bbm/util/g;->b:[Ljava/lang/Object;
+    sget-object v3, Lcom/bbm/util/bo;->b:Lcom/bbm/util/bo;
 
-    const/4 v2, 0x0
+    if-eq v2, v3, :cond_0
 
-    aget-object v0, v0, v2
+    .line 166
+    invoke-static {v1}, Lcom/bbm/b/p;->d(Lcom/bbm/b/a;)Z
 
-    invoke-static {v1, v0}, Lcom/bbm/util/b;->c(Lcom/bbm/util/b;Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    move-result v2
 
-    goto :goto_0
+    if-eqz v2, :cond_2
 
-    .line 614
-    :catch_0
-    move-exception v0
+    .line 167
+    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/b/x;
 
-    .line 615
-    new-instance v1, Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    const-string v2, "Error finishing task: "
+    iget-object v2, v2, Lcom/bbm/b/x;->g:Lcom/bbm/b/n;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sget-object v3, Lcom/bbm/b/ax;->e:Lcom/bbm/b/ax;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    sget-object v4, Lcom/bbm/b/ay;->a:Lcom/bbm/b/ay;
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-array v1, v3, [Ljava/lang/Object;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-virtual {v2, v1, v3, v4}, Lcom/bbm/b/n;->a(Lcom/bbm/b/a;Lcom/bbm/b/ax;Lcom/bbm/b/ay;)V
 
     goto :goto_0
 
-    .line 619
-    :pswitch_1
-    iget-object v1, v0, Lcom/bbm/util/g;->a:Lcom/bbm/util/b;
+    .line 170
+    :cond_2
+    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/b/x;
 
-    iget-object v0, v0, Lcom/bbm/util/g;->b:[Ljava/lang/Object;
+    move-result-object v2
 
-    invoke-static {}, Lcom/bbm/util/b;->a()V
+    iget-object v2, v2, Lcom/bbm/b/x;->g:Lcom/bbm/b/n;
+
+    sget-object v3, Lcom/bbm/b/ax;->e:Lcom/bbm/b/ax;
+
+    sget-object v4, Lcom/bbm/b/ay;->a:Lcom/bbm/b/ay;
+
+    invoke-virtual {v2, v1, v3, v4}, Lcom/bbm/b/n;->b(Lcom/bbm/b/a;Lcom/bbm/b/ax;Lcom/bbm/b/ay;)V
 
     goto :goto_0
-
-    .line 609
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
 .end method

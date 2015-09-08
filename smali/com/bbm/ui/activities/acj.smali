@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/acj;
 .super Ljava/lang/Object;
-.source "ProfileActivity.java"
+.source "SelectContactActivity.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ProfileActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SelectContactActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ProfileActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
     .locals 0
 
     .prologue
-    .line 395
-    iput-object p1, p0, Lcom/bbm/ui/activities/acj;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    .line 434
+    iput-object p1, p0, Lcom/bbm/ui/activities/acj;->a:Lcom/bbm/ui/activities/SelectContactActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,42 +29,31 @@
     .locals 2
 
     .prologue
-    .line 398
-    const-string v0, "mKeyboardButton Clicked"
+    .line 438
+    const-string v0, "mSearchCancel Clicked"
 
-    const-class v1, Lcom/bbm/ui/activities/ProfileActivity;
+    const-class v1, Lcom/bbm/ui/activities/SelectContactActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 400
-    invoke-static {}, Lcom/bbm/ui/activities/ProfileActivity;->b()Ljava/lang/Boolean;
+    .line 440
+    iget-object v0, p0, Lcom/bbm/ui/activities/acj;->a:Lcom/bbm/ui/activities/SelectContactActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/SelectContactActivity;->v(Lcom/bbm/ui/activities/SelectContactActivity;)Landroid/widget/EditText;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    const-string v1, ""
 
-    move-result v0
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    if-eqz v0, :cond_0
-
-    .line 401
-    iget-object v0, p0, Lcom/bbm/ui/activities/acj;->a:Lcom/bbm/ui/activities/ProfileActivity;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ProfileActivity;->c(Lcom/bbm/ui/activities/ProfileActivity;Z)V
-
-    .line 405
-    :goto_0
-    return-void
-
-    .line 403
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/acj;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    .line 441
+    iget-object v0, p0, Lcom/bbm/ui/activities/acj;->a:Lcom/bbm/ui/activities/SelectContactActivity;
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ProfileActivity;->c(Lcom/bbm/ui/activities/ProfileActivity;Z)V
+    invoke-static {v0, v1}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;Z)V
 
-    goto :goto_0
+    .line 442
+    return-void
 .end method

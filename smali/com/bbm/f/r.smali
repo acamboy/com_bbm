@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 442
+    .line 473
     iput-object p1, p0, Lcom/bbm/f/r;->a:Lcom/bbm/f/j;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -31,33 +31,33 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 445
+    .line 476
     const-string v0, "ServiceLayer - connection state changed"
 
     new-array v1, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 447
+    .line 478
     iget-object v0, p0, Lcom/bbm/f/r;->a:Lcom/bbm/f/j;
 
-    invoke-static {v0}, Lcom/bbm/f/j;->o(Lcom/bbm/f/j;)Lcom/bbm/util/ct;
+    invoke-static {v0}, Lcom/bbm/f/j;->o(Lcom/bbm/f/j;)Lcom/bbm/util/dc;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
 
-    .line 451
+    .line 482
     iget v0, p1, Lcom/rim/bbm/BbmPlatformService$ConnectionStatus;->status:I
 
     sget v1, Lcom/rim/bbm/BbmPlatformService;->MSDP_STATUS_CONNECTED:I
 
     if-ne v0, v1, :cond_1
 
-    .line 453
+    .line 484
     iget-object v0, p0, Lcom/bbm/f/r;->a:Lcom/bbm/f/j;
 
-    invoke-static {v0}, Lcom/bbm/f/j;->p(Lcom/bbm/f/j;)Lcom/bbm/util/ct;
+    invoke-static {v0}, Lcom/bbm/f/j;->p(Lcom/bbm/f/j;)Lcom/bbm/util/dc;
 
     move-result-object v0
 
@@ -65,24 +65,24 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
 
-    .line 455
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
+    .line 486
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
 
     move-result-object v0
 
-    .line 456
+    .line 487
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 457
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+    .line 488
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
 
     move-result-object v1
 
@@ -94,7 +94,7 @@
 
     invoke-virtual {v1, v0, v2}, Lcom/bbm/c/c;->a(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 473
+    .line 504
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/bbm/f/r;->a:Lcom/bbm/f/j;
@@ -103,18 +103,18 @@
 
     invoke-virtual {v0}, Lcom/bbm/j/a;->c()V
 
-    .line 474
+    .line 505
     return-void
 
-    .line 462
+    .line 493
     :cond_1
     iget-object v0, p0, Lcom/bbm/f/r;->a:Lcom/bbm/f/j;
 
-    invoke-static {v0}, Lcom/bbm/f/j;->p(Lcom/bbm/f/j;)Lcom/bbm/util/ct;
+    invoke-static {v0}, Lcom/bbm/f/j;->p(Lcom/bbm/f/j;)Lcom/bbm/util/dc;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/util/ct;->e()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/util/dc;->f()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -126,10 +126,10 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 463
+    .line 494
     iget-object v1, p0, Lcom/bbm/f/r;->a:Lcom/bbm/f/j;
 
-    invoke-static {v1}, Lcom/bbm/f/j;->p(Lcom/bbm/f/j;)Lcom/bbm/util/ct;
+    invoke-static {v1}, Lcom/bbm/f/j;->p(Lcom/bbm/f/j;)Lcom/bbm/util/dc;
 
     move-result-object v1
 
@@ -137,24 +137,24 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
+    invoke-virtual {v1, v0}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
 
-    .line 465
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
+    .line 496
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
 
     move-result-object v0
 
-    .line 466
+    .line 497
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 467
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+    .line 498
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
 
     move-result-object v1
 

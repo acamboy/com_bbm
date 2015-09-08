@@ -1,161 +1,206 @@
 .class final Lcom/bbm/ui/activities/bf;
-.super Lcom/bbm/j/u;
-.source "CaptureBarcodeActivity.java"
+.super Landroid/webkit/WebViewClient;
+.source "CarrierBillingActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+.field final synthetic a:Landroid/app/Activity;
+
+.field final synthetic b:Lcom/bbm/ui/activities/CarrierBillingActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/CarrierBillingActivity;Landroid/app/Activity;)V
     .locals 0
 
     .prologue
-    .line 229
-    iput-object p1, p0, Lcom/bbm/ui/activities/bf;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+    .line 125
+    iput-object p1, p0, Lcom/bbm/ui/activities/bf;->b:Lcom/bbm/ui/activities/CarrierBillingActivity;
 
-    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
+    iput-object p2, p0, Lcom/bbm/ui/activities/bf;->a:Landroid/app/Activity;
+
+    invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final b()Z
-    .locals 4
+.method public final onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
+    .locals 1
 
     .prologue
-    .line 232
-    iget-object v0, p0, Lcom/bbm/ui/activities/bf;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->a(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Ljava/lang/String;
+    .line 151
+    invoke-static {}, Landroid/webkit/CookieSyncManager;->getInstance()Landroid/webkit/CookieSyncManager;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
+    invoke-virtual {v0}, Landroid/webkit/CookieSyncManager;->sync()V
 
-    move-result v0
+    .line 152
+    return-void
+.end method
 
-    if-nez v0, :cond_0
+.method public final onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
+    .locals 3
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/bf;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+    .prologue
+    .line 156
+    iget-object v0, p0, Lcom/bbm/ui/activities/bf;->b:Lcom/bbm/ui/activities/CarrierBillingActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->b(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Lcom/bbm/d/a;
+    const-string v1, ""
 
-    move-result-object v0
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/CarrierBillingActivity;->a(Lcom/bbm/ui/activities/CarrierBillingActivity;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/bf;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+    .line 157
+    iget-object v0, p0, Lcom/bbm/ui/activities/bf;->a:Landroid/app/Activity;
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->a(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Error: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->U(Ljava/lang/String;)Lcom/bbm/d/ee;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, v2}, Lcom/bbm/util/eu;->a(Landroid/content/Context;Ljava/lang/String;I)V
+
+    .line 158
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/d/ee;->R:Lcom/bbm/util/bi;
+    invoke-virtual {v0}, Lcom/bbm/c/c;->f()Lcom/bbm/c/aa;
 
-    sget-object v1, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
+    move-result-object v0
 
-    if-ne v0, v1, :cond_0
+    :try_start_0
+    iput p2, v0, Lcom/bbm/c/aa;->q:I
+    :try_end_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 233
-    const/4 v0, 0x0
+    .line 159
+    :goto_0
+    return-void
 
-    .line 239
+    .line 158
+    :catch_0
+    move-exception v0
+
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_0
+.end method
+
+.method public final shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
+    .locals 6
+
+    .prologue
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    .line 129
+    :try_start_0
+    new-instance v2, Ljava/net/URL;
+
+    invoke-virtual {p2}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+
+    .line 130
+    const-string v3, "Redirect URL from Bango: %s"
+
+    const/4 v4, 0x1
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    aput-object v2, v4, v5
+
+    invoke-static {v3, v4}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 133
+    invoke-virtual {v2}, Ljava/net/URL;->getHost()Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, "www.blackberry.com"
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .line 136
+    iget-object v2, p0, Lcom/bbm/ui/activities/bf;->b:Lcom/bbm/ui/activities/CarrierBillingActivity;
+
+    invoke-static {v2, p2}, Lcom/bbm/ui/activities/CarrierBillingActivity;->a(Lcom/bbm/ui/activities/CarrierBillingActivity;Ljava/lang/String;)V
+
+    .line 146
     :goto_0
     return v0
 
-    .line 235
+    .line 138
     :cond_0
-    iget-object v1, p0, Lcom/bbm/ui/activities/bf;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/bf;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->j:Lcom/bbm/j/a;
-
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/net/URL;->getHost()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/String;
+    const-string v3, "payment.bango.net"
 
-    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_1
 
-    const-string v2, "bbmChannelPin"
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/bf;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->j:Lcom/bbm/j/a;
-
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
+    .line 139
+    invoke-virtual {v2}, Ljava/net/URL;->getPath()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/String;
+    const-string v2, "/confirmation/"
 
-    sget-object v3, Ljava/util/Locale;->US:Ljava/util/Locale;
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v3}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
+    move-result v0
 
-    move-result-object v0
+    if-eqz v0, :cond_1
 
-    invoke-static {v2, v0}, Landroid/content/ClipData;->newPlainText(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/content/ClipData;
+    .line 140
+    invoke-static {}, Lcom/bbm/ui/activities/CarrierBillingActivity;->a()Z
+    :try_end_0
+    .catch Ljava/net/MalformedURLException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object v0
-
+    :cond_1
     :goto_1
-    invoke-static {v1, v0}, Lcom/bbm/util/fh;->a(Landroid/content/Context;Landroid/content/ClipData;)V
+    move v0, v1
 
-    .line 238
-    iget-object v0, p0, Lcom/bbm/ui/activities/bf;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/bf;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
-
-    const v2, 0x7f0e0619
-
-    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;)V
-
-    .line 239
-    const/4 v0, 0x1
-
+    .line 146
     goto :goto_0
 
-    .line 235
-    :cond_1
-    const-string v2, "bbmUserPin"
+    .line 144
+    :catch_0
+    move-exception v0
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/bf;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+    const-string v0, "Failed to parse url."
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->c(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Lcom/bbm/util/ct;
+    new-array v2, v1, [Ljava/lang/Object;
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/util/ct;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    sget-object v3, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    invoke-virtual {v0, v3}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0}, Landroid/content/ClipData;->newPlainText(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/content/ClipData;
-
-    move-result-object v0
+    invoke-static {v0, v2}, Lcom/bbm/af;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     goto :goto_1
 .end method

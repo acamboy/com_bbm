@@ -1,35 +1,35 @@
 .class final Lcom/bbm/ui/activities/adf;
 .super Landroid/widget/BaseAdapter;
-.source "ProfileIconSourceActivity.java"
+.source "SetChannelAvatarActivity.java"
 
 # interfaces
 .implements Landroid/widget/ListAdapter;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ProfileIconSourceActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SetChannelAvatarActivity;
 
 .field private final b:Landroid/view/LayoutInflater;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/ui/activities/ProfileIconSourceActivity;Landroid/content/Context;)V
+.method public constructor <init>(Lcom/bbm/ui/activities/SetChannelAvatarActivity;Landroid/content/Context;)V
     .locals 1
 
     .prologue
-    .line 247
-    iput-object p1, p0, Lcom/bbm/ui/activities/adf;->a:Lcom/bbm/ui/activities/ProfileIconSourceActivity;
+    .line 190
+    iput-object p1, p0, Lcom/bbm/ui/activities/adf;->a:Lcom/bbm/ui/activities/SetChannelAvatarActivity;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 248
+    .line 191
     invoke-static {p2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bbm/ui/activities/adf;->b:Landroid/view/LayoutInflater;
 
-    .line 249
+    .line 192
     return-void
 .end method
 
@@ -39,10 +39,10 @@
     .locals 1
 
     .prologue
-    .line 281
-    iget-object v0, p0, Lcom/bbm/ui/activities/adf;->a:Lcom/bbm/ui/activities/ProfileIconSourceActivity;
+    .line 224
+    iget-object v0, p0, Lcom/bbm/ui/activities/adf;->a:Lcom/bbm/ui/activities/SetChannelAvatarActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->e(Lcom/bbm/ui/activities/ProfileIconSourceActivity;)Ljava/util/List;
+    invoke-static {v0}, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->b(Lcom/bbm/ui/activities/SetChannelAvatarActivity;)Ljava/util/List;
 
     move-result-object v0
 
@@ -59,10 +59,10 @@
     .locals 1
 
     .prologue
-    .line 276
-    iget-object v0, p0, Lcom/bbm/ui/activities/adf;->a:Lcom/bbm/ui/activities/ProfileIconSourceActivity;
+    .line 219
+    iget-object v0, p0, Lcom/bbm/ui/activities/adf;->a:Lcom/bbm/ui/activities/SetChannelAvatarActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->e(Lcom/bbm/ui/activities/ProfileIconSourceActivity;)Ljava/util/List;
+    invoke-static {v0}, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->b(Lcom/bbm/ui/activities/SetChannelAvatarActivity;)Ljava/util/List;
 
     move-result-object v0
 
@@ -77,7 +77,7 @@
     .locals 1
 
     .prologue
-    .line 243
+    .line 186
     invoke-virtual {p0, p1}, Lcom/bbm/ui/activities/adf;->a(I)Lcom/bbm/ui/activities/ade;
 
     move-result-object v0
@@ -89,7 +89,7 @@
     .locals 2
 
     .prologue
-    .line 286
+    .line 229
     int-to-long v0, p1
 
     return-wide v0
@@ -99,20 +99,20 @@
     .locals 4
 
     .prologue
-    .line 256
+    .line 199
     if-nez p2, :cond_0
 
-    .line 257
+    .line 200
     new-instance v1, Lcom/bbm/ui/activities/adh;
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/adf;->a:Lcom/bbm/ui/activities/ProfileIconSourceActivity;
+    iget-object v0, p0, Lcom/bbm/ui/activities/adf;->a:Lcom/bbm/ui/activities/SetChannelAvatarActivity;
 
-    invoke-direct {v1, v0}, Lcom/bbm/ui/activities/adh;-><init>(Lcom/bbm/ui/activities/ProfileIconSourceActivity;)V
+    invoke-direct {v1, v0}, Lcom/bbm/ui/activities/adh;-><init>(Lcom/bbm/ui/activities/SetChannelAvatarActivity;)V
 
-    .line 258
+    .line 201
     iget-object v0, p0, Lcom/bbm/ui/activities/adf;->b:Landroid/view/LayoutInflater;
 
-    const v2, 0x7f0300b1
+    const v2, 0x7f0300f0
 
     const/4 v3, 0x0
 
@@ -120,8 +120,8 @@
 
     move-result-object p2
 
-    .line 259
-    const v0, 0x7f0b0450
+    .line 202
+    const v0, 0x7f0b054c
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -131,8 +131,8 @@
 
     iput-object v0, v1, Lcom/bbm/ui/activities/adh;->a:Landroid/widget/ImageView;
 
-    .line 260
-    const v0, 0x7f0b0451
+    .line 203
+    const v0, 0x7f0b054d
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -142,35 +142,35 @@
 
     iput-object v0, v1, Lcom/bbm/ui/activities/adh;->b:Landroid/widget/TextView;
 
-    .line 261
+    .line 204
     invoke-virtual {p2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     move-object v0, v1
 
-    .line 266
+    .line 209
     :goto_0
     invoke-virtual {p0, p1}, Lcom/bbm/ui/activities/adf;->a(I)Lcom/bbm/ui/activities/ade;
 
     move-result-object v1
 
-    .line 268
+    .line 211
     iget-object v2, v0, Lcom/bbm/ui/activities/adh;->a:Landroid/widget/ImageView;
 
     iget v3, v1, Lcom/bbm/ui/activities/ade;->a:I
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 269
+    .line 212
     iget-object v0, v0, Lcom/bbm/ui/activities/adh;->b:Landroid/widget/TextView;
 
     iget-object v1, v1, Lcom/bbm/ui/activities/ade;->b:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 271
+    .line 214
     return-object p2
 
-    .line 263
+    .line 206
     :cond_0
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 

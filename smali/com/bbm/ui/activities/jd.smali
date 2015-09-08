@@ -1,263 +1,114 @@
-.class final synthetic Lcom/bbm/ui/activities/jd;
+.class final Lcom/bbm/ui/activities/jd;
 .super Ljava/lang/Object;
-.source "ConversationActivity.java"
+.source "FileSearchActivity.java"
+
+# interfaces
+.implements Landroid/support/v7/widget/dg;
 
 
-# static fields
-.field static final synthetic a:[I
-
-.field static final synthetic b:[I
-
-.field static final synthetic c:[I
+# instance fields
+.field final synthetic a:Lcom/bbm/ui/activities/FileSearchActivity;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/bbm/ui/activities/FileSearchActivity;)V
+    .locals 0
 
     .prologue
-    .line 2181
-    invoke-static {}, Lcom/bbm/b/b;->values()[Lcom/bbm/b/b;
+    .line 85
+    iput-object p1, p0, Lcom/bbm/ui/activities/jd;->a:Lcom/bbm/ui/activities/FileSearchActivity;
 
-    move-result-object v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    array-length v0, v0
+    return-void
+.end method
 
-    new-array v0, v0, [I
 
-    sput-object v0, Lcom/bbm/ui/activities/jd;->c:[I
+# virtual methods
+.method public final a(Ljava/lang/String;)Z
+    .locals 1
 
-    :try_start_0
-    sget-object v0, Lcom/bbm/ui/activities/jd;->c:[I
+    .prologue
+    .line 88
+    const/4 v0, 0x0
 
-    sget-object v1, Lcom/bbm/b/b;->b:Lcom/bbm/b/b;
+    return v0
+.end method
 
-    invoke-virtual {v1}, Lcom/bbm/b/b;->ordinal()I
+.method public final b(Ljava/lang/String;)Z
+    .locals 6
 
-    move-result v1
+    .prologue
+    const/16 v1, 0x8
 
-    const/4 v2, 0x1
+    const/4 v5, 0x1
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_9
+    const/4 v2, 0x0
+
+    .line 93
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    .line 94
+    iget-object v0, p0, Lcom/bbm/ui/activities/jd;->a:Lcom/bbm/ui/activities/FileSearchActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/FileSearchActivity;->b(Lcom/bbm/ui/activities/FileSearchActivity;)Lcom/bbm/ui/ListHeaderView;
+
+    move-result-object v4
+
+    if-eqz v3, :cond_1
+
+    move v0, v1
 
     :goto_0
-    :try_start_1
-    sget-object v0, Lcom/bbm/ui/activities/jd;->c:[I
+    invoke-virtual {v4, v0}, Lcom/bbm/ui/ListHeaderView;->setVisibility(I)V
 
-    sget-object v1, Lcom/bbm/b/b;->a:Lcom/bbm/b/b;
+    .line 95
+    iget-object v0, p0, Lcom/bbm/ui/activities/jd;->a:Lcom/bbm/ui/activities/FileSearchActivity;
 
-    invoke-virtual {v1}, Lcom/bbm/b/b;->ordinal()I
+    invoke-static {v0}, Lcom/bbm/ui/activities/FileSearchActivity;->c(Lcom/bbm/ui/activities/FileSearchActivity;)Landroid/widget/GridView;
 
-    move-result v1
+    move-result-object v0
 
-    const/4 v2, 0x2
+    if-eqz v3, :cond_2
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_8
-
-    .line 1418
     :goto_1
-    invoke-static {}, Lcom/bbm/d/fm;->values()[Lcom/bbm/d/fm;
+    invoke-virtual {v0, v1}, Landroid/widget/GridView;->setVisibility(I)V
 
-    move-result-object v0
+    .line 96
+    if-nez v3, :cond_0
 
-    array-length v0, v0
+    .line 97
+    new-instance v0, Lcom/bbm/ui/activities/jh;
 
-    new-array v0, v0, [I
+    iget-object v1, p0, Lcom/bbm/ui/activities/jd;->a:Lcom/bbm/ui/activities/FileSearchActivity;
 
-    sput-object v0, Lcom/bbm/ui/activities/jd;->b:[I
+    invoke-direct {v0, v1, v2}, Lcom/bbm/ui/activities/jh;-><init>(Lcom/bbm/ui/activities/FileSearchActivity;B)V
 
-    :try_start_2
-    sget-object v0, Lcom/bbm/ui/activities/jd;->b:[I
+    new-array v1, v5, [Ljava/lang/String;
 
-    sget-object v1, Lcom/bbm/d/fm;->f:Lcom/bbm/d/fm;
+    invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
+    move-result-object v3
 
-    move-result v1
+    aput-object v3, v1, v2
 
-    const/4 v2, 0x1
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/jh;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_7
+    .line 99
+    :cond_0
+    return v5
 
-    :goto_2
-    :try_start_3
-    sget-object v0, Lcom/bbm/ui/activities/jd;->b:[I
+    :cond_1
+    move v0, v2
 
-    sget-object v1, Lcom/bbm/d/fm;->g:Lcom/bbm/d/fm;
+    .line 94
+    goto :goto_0
 
-    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
+    :cond_2
+    move v1, v2
 
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_6
-
-    :goto_3
-    :try_start_4
-    sget-object v0, Lcom/bbm/ui/activities/jd;->b:[I
-
-    sget-object v1, Lcom/bbm/d/fm;->e:Lcom/bbm/d/fm;
-
-    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_5
-
-    .line 586
-    :goto_4
-    invoke-static {}, Lcom/bbm/d/gc;->values()[Lcom/bbm/d/gc;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/bbm/ui/activities/jd;->a:[I
-
-    :try_start_5
-    sget-object v0, Lcom/bbm/ui/activities/jd;->a:[I
-
-    sget-object v1, Lcom/bbm/d/gc;->c:Lcom/bbm/d/gc;
-
-    invoke-virtual {v1}, Lcom/bbm/d/gc;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_4
-
-    :goto_5
-    :try_start_6
-    sget-object v0, Lcom/bbm/ui/activities/jd;->a:[I
-
-    sget-object v1, Lcom/bbm/d/gc;->d:Lcom/bbm/d/gc;
-
-    invoke-virtual {v1}, Lcom/bbm/d/gc;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_3
-
-    :goto_6
-    :try_start_7
-    sget-object v0, Lcom/bbm/ui/activities/jd;->a:[I
-
-    sget-object v1, Lcom/bbm/d/gc;->e:Lcom/bbm/d/gc;
-
-    invoke-virtual {v1}, Lcom/bbm/d/gc;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_2
-
-    :goto_7
-    :try_start_8
-    sget-object v0, Lcom/bbm/ui/activities/jd;->a:[I
-
-    sget-object v1, Lcom/bbm/d/gc;->a:Lcom/bbm/d/gc;
-
-    invoke-virtual {v1}, Lcom/bbm/d/gc;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_1
-
-    :goto_8
-    :try_start_9
-    sget-object v0, Lcom/bbm/ui/activities/jd;->a:[I
-
-    sget-object v1, Lcom/bbm/d/gc;->b:Lcom/bbm/d/gc;
-
-    invoke-virtual {v1}, Lcom/bbm/d/gc;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_9
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_0
-
-    :goto_9
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_9
-
-    :catch_1
-    move-exception v0
-
-    goto :goto_8
-
-    :catch_2
-    move-exception v0
-
-    goto :goto_7
-
-    :catch_3
-    move-exception v0
-
-    goto :goto_6
-
-    :catch_4
-    move-exception v0
-
-    goto :goto_5
-
-    :catch_5
-    move-exception v0
-
-    goto :goto_4
-
-    :catch_6
-    move-exception v0
-
-    goto :goto_3
-
-    :catch_7
-    move-exception v0
-
-    goto :goto_2
-
-    :catch_8
-    move-exception v0
-
+    .line 95
     goto :goto_1
-
-    :catch_9
-    move-exception v0
-
-    goto/16 :goto_0
 .end method

@@ -1,30 +1,22 @@
 .class final Lcom/bbm/ui/activities/yl;
 .super Ljava/lang/Object;
-.source "NewChannelActivity.java"
+.source "PrivateConversationActivity.java"
 
 # interfaces
-.implements Lcom/bbm/j/s;
+.implements Landroid/text/TextWatcher;
 
 
 # instance fields
-.field final synthetic a:I
-
-.field final synthetic b:I
-
-.field final synthetic c:Lcom/bbm/ui/activities/NewChannelActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/NewChannelActivity;II)V
+.method constructor <init>(Lcom/bbm/ui/activities/PrivateConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 533
-    iput-object p1, p0, Lcom/bbm/ui/activities/yl;->c:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    iput p2, p0, Lcom/bbm/ui/activities/yl;->a:I
-
-    iput p3, p0, Lcom/bbm/ui/activities/yl;->b:I
+    .line 499
+    iput-object p1, p0, Lcom/bbm/ui/activities/yl;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -33,133 +25,126 @@
 
 
 # virtual methods
-.method public final a()Z
-    .locals 4
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 0
 
     .prologue
-    const/4 v1, 0x0
+    .line 526
+    return-void
+.end method
 
-    .line 536
-    iget-object v0, p0, Lcom/bbm/ui/activities/yl;->c:Lcom/bbm/ui/activities/NewChannelActivity;
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->d(Lcom/bbm/ui/activities/NewChannelActivity;)Lcom/bbm/d/a;
+    .prologue
+    .line 522
+    return-void
+.end method
+
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 2
+
+    .prologue
+    .line 502
+    const-string v0, "onTextChanged"
+
+    const-class v1, Lcom/bbm/ui/activities/PrivateConversationActivity;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 503
+    iget-object v0, p0, Lcom/bbm/ui/activities/yl;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->n(Lcom/bbm/ui/activities/PrivateConversationActivity;)V
+
+    .line 504
+    iget-object v0, p0, Lcom/bbm/ui/activities/yl;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->o(Lcom/bbm/ui/activities/PrivateConversationActivity;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 505
+    iget-object v0, p0, Lcom/bbm/ui/activities/yl;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->i(Lcom/bbm/ui/activities/PrivateConversationActivity;)Lcom/bbm/d/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/d/a;->Q()Lcom/bbm/j/w;
+    iget-object v1, p0, Lcom/bbm/ui/activities/yl;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    move-result-object v0
+    invoke-static {v1}, Lcom/bbm/ui/activities/PrivateConversationActivity;->j(Lcom/bbm/ui/activities/PrivateConversationActivity;)Ljava/lang/String;
 
-    .line 537
-    invoke-interface {v0}, Lcom/bbm/j/w;->b()Z
+    move-result-object v1
 
-    move-result v2
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->m(Ljava/lang/String;)V
 
-    if-eqz v2, :cond_0
-
-    move v0, v1
-
-    .line 553
-    :goto_0
-    return v0
-
-    .line 541
+    .line 510
     :cond_0
-    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+    iget-object v0, p0, Lcom/bbm/ui/activities/yl;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->p(Lcom/bbm/ui/activities/PrivateConversationActivity;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/List;
+    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    iget v2, p0, Lcom/bbm/ui/activities/yl;->a:I
+    move-result-object v1
 
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/d/eh;
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    .line 542
-    iget-object v2, p0, Lcom/bbm/ui/activities/yl;->c:Lcom/bbm/ui/activities/NewChannelActivity;
+    move-result v0
 
-    invoke-static {v2}, Lcom/bbm/ui/activities/NewChannelActivity;->d(Lcom/bbm/ui/activities/NewChannelActivity;)Lcom/bbm/d/a;
+    if-nez v0, :cond_1
 
-    move-result-object v2
+    iget-object v0, p0, Lcom/bbm/ui/activities/yl;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    iget-object v3, v0, Lcom/bbm/d/eh;->a:Ljava/lang/String;
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->q(Lcom/bbm/ui/activities/PrivateConversationActivity;)Z
 
-    invoke-virtual {v2, v3}, Lcom/bbm/d/a;->P(Ljava/lang/String;)Lcom/bbm/j/w;
+    move-result v0
 
-    move-result-object v2
+    if-nez v0, :cond_1
 
-    .line 544
-    invoke-interface {v2}, Lcom/bbm/j/w;->b()Z
+    .line 512
+    iget-object v0, p0, Lcom/bbm/ui/activities/yl;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    move-result v3
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->r(Lcom/bbm/ui/activities/PrivateConversationActivity;)Lcom/bbm/ui/activities/afs;
 
-    if-eqz v3, :cond_1
+    move-result-object v0
 
-    move v0, v1
+    if-eqz v0, :cond_1
 
-    .line 545
-    goto :goto_0
+    .line 513
+    iget-object v0, p0, Lcom/bbm/ui/activities/yl;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    .line 548
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->r(Lcom/bbm/ui/activities/PrivateConversationActivity;)Lcom/bbm/ui/activities/afs;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/afs;->a()V
+
+    .line 517
     :cond_1
-    invoke-interface {v2}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+    iget-object v0, p0, Lcom/bbm/ui/activities/yl;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    check-cast v1, Ljava/util/List;
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/PrivateConversationActivity;->a(Lcom/bbm/ui/activities/PrivateConversationActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    if-lez v1, :cond_2
-
-    .line 549
-    iget-object v0, p0, Lcom/bbm/ui/activities/yl;->c:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->h(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/TextView;
-
-    move-result-object v1
-
-    invoke-interface {v2}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/List;
-
-    iget v2, p0, Lcom/bbm/ui/activities/yl;->b:I
-
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/ep;
-
-    iget-object v0, v0, Lcom/bbm/d/ep;->b:Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 553
-    :goto_1
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    .line 551
-    :cond_2
-    iget-object v1, p0, Lcom/bbm/ui/activities/yl;->c:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/NewChannelActivity;->h(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/TextView;
-
-    move-result-object v1
-
-    iget-object v0, v0, Lcom/bbm/d/eh;->b:Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    goto :goto_1
+    .line 518
+    return-void
 .end method

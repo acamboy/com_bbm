@@ -35,28 +35,28 @@
         <item quantity="one">1 个结果</item>
     </plurals>
     <plurals name="slide_menu_active_chats">
-        <item quantity="other">%1$s 个活动的聊天</item>
-        <item quantity="one">1 个活动的聊天</item>
+        <item quantity="other">活动的聊天 %1$s</item>
+        <item quantity="one">活动的聊天 %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_channelupdates">
-        <item quantity="other">%1$s 个新通知</item>
-        <item quantity="one">1 个新通知</item>
+        <item quantity="other">新频道项 %1$s</item>
+        <item quantity="one">新频道项 %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_invites">
-        <item quantity="other">%1$s 个新邀请</item>
-        <item quantity="one">1 个新邀请</item>
+        <item quantity="other">新邀请 %1$s</item>
+        <item quantity="one">新邀请 %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_updates">
-        <item quantity="other">%1$s 个新项目</item>
-        <item quantity="one">1 个新项目</item>
+        <item quantity="other">新订阅源 %1$s</item>
+        <item quantity="one">新订阅源 %1$s</item>
     </plurals>
     <plurals name="slide_menu_total_contacts">
         <item quantity="other">%1$s 个联系人</item>
-        <item quantity="one">1 个联系人</item>
+        <item quantity="one">%1$s 个联系人</item>
     </plurals>
     <plurals name="slide_menu_total_groups">
-        <item quantity="other">%1$s 组</item>
-        <item quantity="one">1 组</item>
+        <item quantity="other">%1$s 个组</item>
+        <item quantity="one">%1$s 个组</item>
     </plurals>
     <plurals name="update_channel_stats_comments">
         <item quantity="other">%1$s 条评论</item>

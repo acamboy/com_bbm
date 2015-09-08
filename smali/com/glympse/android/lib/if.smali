@@ -1,143 +1,48 @@
 .class Lcom/glympse/android/lib/if;
-.super Lcom/glympse/android/lib/j;
-.source "TicketDelete.java"
+.super Ljava/lang/Object;
+.source "ServerPost.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field private _glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+.field private ma:Lcom/glympse/android/lib/GServerPost;
 
-.field private jx:Lcom/glympse/android/lib/l;
-
-.field private oh:Lcom/glympse/android/lib/GTicketPrivate;
+.field private sZ:Lcom/glympse/android/lib/GApiEndpoint;
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/lib/GGlympsePrivate;Lcom/glympse/android/api/GTicket;)V
-    .locals 2
+.method public constructor <init>(Lcom/glympse/android/lib/GServerPost;Lcom/glympse/android/lib/GApiEndpoint;)V
+    .locals 0
 
     .prologue
-    .line 24
-    invoke-direct {p0}, Lcom/glympse/android/lib/j;-><init>()V
+    .line 1291
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25
-    iput-object p1, p0, Lcom/glympse/android/lib/if;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+    .line 1292
+    iput-object p1, p0, Lcom/glympse/android/lib/if;->ma:Lcom/glympse/android/lib/GServerPost;
 
-    .line 26
-    check-cast p2, Lcom/glympse/android/lib/GTicketPrivate;
+    .line 1293
+    iput-object p2, p0, Lcom/glympse/android/lib/if;->sZ:Lcom/glympse/android/lib/GApiEndpoint;
 
-    iput-object p2, p0, Lcom/glympse/android/lib/if;->oh:Lcom/glympse/android/lib/GTicketPrivate;
-
-    .line 29
-    iget-object v0, p0, Lcom/glympse/android/lib/if;->oh:Lcom/glympse/android/lib/GTicketPrivate;
-
-    const/16 v1, 0x80
-
-    invoke-interface {v0, v1}, Lcom/glympse/android/lib/GTicketPrivate;->setState(I)Z
-
-    .line 31
-    new-instance v0, Lcom/glympse/android/lib/l;
-
-    invoke-direct {v0}, Lcom/glympse/android/lib/l;-><init>()V
-
-    iput-object v0, p0, Lcom/glympse/android/lib/if;->jx:Lcom/glympse/android/lib/l;
-
-    .line 32
-    iget-object v0, p0, Lcom/glympse/android/lib/if;->jx:Lcom/glympse/android/lib/l;
-
-    iput-object v0, p0, Lcom/glympse/android/lib/if;->hc:Lcom/glympse/android/lib/k;
-
-    .line 33
+    .line 1294
     return-void
 .end method
 
 
 # virtual methods
-.method public cancel()V
-    .locals 1
-
-    .prologue
-    .line 70
-    new-instance v0, Lcom/glympse/android/lib/l;
-
-    invoke-direct {v0}, Lcom/glympse/android/lib/l;-><init>()V
-
-    iput-object v0, p0, Lcom/glympse/android/lib/if;->jx:Lcom/glympse/android/lib/l;
-
-    .line 71
-    iget-object v0, p0, Lcom/glympse/android/lib/if;->jx:Lcom/glympse/android/lib/l;
-
-    iput-object v0, p0, Lcom/glympse/android/lib/if;->hc:Lcom/glympse/android/lib/k;
-
-    .line 72
-    return-void
-.end method
-
-.method public process()Z
+.method public run()V
     .locals 2
 
     .prologue
-    .line 55
-    iget-object v0, p0, Lcom/glympse/android/lib/if;->oh:Lcom/glympse/android/lib/GTicketPrivate;
+    .line 1298
+    iget-object v0, p0, Lcom/glympse/android/lib/if;->ma:Lcom/glympse/android/lib/GServerPost;
 
-    const/16 v1, 0x100
+    iget-object v1, p0, Lcom/glympse/android/lib/if;->sZ:Lcom/glympse/android/lib/GApiEndpoint;
 
-    invoke-interface {v0, v1}, Lcom/glympse/android/lib/GTicketPrivate;->setState(I)Z
+    invoke-interface {v0, v1}, Lcom/glympse/android/lib/GServerPost;->removeEndpoint(Lcom/glympse/android/lib/GApiEndpoint;)Z
 
-    .line 58
-    iget-object v0, p0, Lcom/glympse/android/lib/if;->oh:Lcom/glympse/android/lib/GTicketPrivate;
-
-    invoke-interface {v0}, Lcom/glympse/android/lib/GTicketPrivate;->getGlympse()Lcom/glympse/android/lib/GGlympsePrivate;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 61
-    iget-object v0, p0, Lcom/glympse/android/lib/if;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
-
-    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->getHistoryManager()Lcom/glympse/android/api/GHistoryManager;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/glympse/android/lib/GHistoryManagerPrivate;
-
-    .line 62
-    iget-object v1, p0, Lcom/glympse/android/lib/if;->oh:Lcom/glympse/android/lib/GTicketPrivate;
-
-    invoke-interface {v0, v1}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->removeTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
-
-    .line 65
-    :cond_0
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public url(Ljava/lang/StringBuilder;)Z
-    .locals 1
-
-    .prologue
-    .line 41
-    const-string v0, "tickets/"
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 42
-    iget-object v0, p0, Lcom/glympse/android/lib/if;->oh:Lcom/glympse/android/lib/GTicketPrivate;
-
-    invoke-interface {v0}, Lcom/glympse/android/lib/GTicketPrivate;->getId()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 43
-    const-string v0, "/delete"
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 44
-    const/4 v0, 0x0
-
-    return v0
+    .line 1299
+    return-void
 .end method

@@ -1,207 +1,259 @@
-.class public final Lcom/bbm/util/r;
-.super Ljava/lang/Object;
-.source "ChannelCloudImageUtils.java"
+.class final Lcom/bbm/util/r;
+.super Lcom/bbm/util/es;
+.source "ChannelCloudImageData.java"
+
+
+# instance fields
+.field final synthetic a:Lcom/bbm/util/b/e;
+
+.field final synthetic b:Lcom/bbm/util/dc;
+
+.field final synthetic c:Lcom/bbm/util/p;
 
 
 # direct methods
-.method public static a(Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/util/o;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lorg/json/JSONObject;",
-            ">;",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ")",
-            "Lcom/bbm/util/o;"
-        }
-    .end annotation
+.method constructor <init>(Lcom/bbm/util/p;Landroid/content/Context;Lcom/bbm/util/dc;IILcom/bbm/util/b/e;Lcom/bbm/util/b/e;Lcom/bbm/util/dc;)V
+    .locals 6
 
     .prologue
-    .line 17
-    if-eqz p0, :cond_2
+    .line 248
+    iput-object p1, p0, Lcom/bbm/util/r;->c:Lcom/bbm/util/p;
 
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    iput-object p7, p0, Lcom/bbm/util/r;->a:Lcom/bbm/util/b/e;
 
-    move-result v0
+    iput-object p8, p0, Lcom/bbm/util/r;->b:Lcom/bbm/util/dc;
 
-    if-lez v0, :cond_2
+    move-object v0, p0
 
-    .line 18
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    move-object v1, p2
 
-    move-result v0
+    move-object v2, p3
 
-    add-int/lit8 v0, v0, -0x1
+    move v3, p4
 
-    move v2, v0
+    move v4, p5
 
-    :goto_0
-    if-ltz v2, :cond_1
+    move-object v5, p6
 
-    .line 19
-    invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-direct/range {v0 .. v5}, Lcom/bbm/util/es;-><init>(Landroid/content/Context;Lcom/bbm/util/dc;IILcom/bbm/util/b/e;)V
 
-    move-result-object v0
-
-    check-cast v0, Lorg/json/JSONObject;
-
-    const-string v1, "width"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    .line 20
-    const/16 v1, 0x2d0
-
-    if-ne v0, v1, :cond_0
-
-    .line 21
-    new-instance v1, Lcom/bbm/util/o;
-
-    invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lorg/json/JSONObject;
-
-    invoke-direct {v1, v0, p2, p1}, Lcom/bbm/util/o;-><init>(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
-
-    move-object v0, v1
-
-    .line 27
-    :goto_1
-    return-object v0
-
-    .line 18
-    :cond_0
-    add-int/lit8 v0, v2, -0x1
-
-    move v2, v0
-
-    goto :goto_0
-
-    .line 24
-    :cond_1
-    new-instance v1, Lcom/bbm/util/o;
-
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lorg/json/JSONObject;
-
-    invoke-direct {v1, v0, p2, p1}, Lcom/bbm/util/o;-><init>(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
-
-    move-object v0, v1
-
-    .line 25
-    goto :goto_1
-
-    .line 27
-    :cond_2
-    const/4 v0, 0x0
-
-    goto :goto_1
+    return-void
 .end method
 
-.method public static a(Ljava/util/List;)Ljava/lang/String;
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lorg/json/JSONObject;",
-            ">;)",
-            "Ljava/lang/String;"
-        }
-    .end annotation
+
+# virtual methods
+.method protected final a(Lcom/bbm/d/gh;)V
+    .locals 4
 
     .prologue
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
-    const/4 v4, 0x0
+    .line 253
+    if-eqz p1, :cond_2
 
-    .line 34
-    .line 36
-    if-eqz p0, :cond_1
+    .line 255
+    iget-object v0, p0, Lcom/bbm/util/r;->a:Lcom/bbm/util/b/e;
 
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    if-eqz v0, :cond_0
 
-    move-result v1
+    .line 256
+    iget-object v0, p0, Lcom/bbm/util/r;->a:Lcom/bbm/util/b/e;
 
-    if-lez v1, :cond_1
+    iget-object v1, p0, Lcom/bbm/util/r;->c:Lcom/bbm/util/p;
 
-    move v3, v0
+    invoke-static {v1}, Lcom/bbm/util/p;->c(Lcom/bbm/util/p;)Ljava/lang/String;
 
-    move v1, v0
+    move-result-object v1
 
-    move-object v2, v4
+    invoke-virtual {v0, v1, p1}, Lcom/bbm/util/b/e;->a(Ljava/lang/String;Lcom/bbm/d/gh;)V
 
-    .line 37
-    :goto_0
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    .line 263
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/util/r;->c:Lcom/bbm/util/p;
 
-    move-result v0
-
-    if-ge v3, v0, :cond_0
-
-    .line 38
-    new-instance v5, Lcom/bbm/util/o;
-
-    invoke-interface {p0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/bbm/util/p;->d(Lcom/bbm/util/p;)Ljava/lang/ref/WeakReference;
 
     move-result-object v0
 
-    check-cast v0, Lorg/json/JSONObject;
+    if-eqz v0, :cond_1
 
-    invoke-direct {v5, v0, v4, v4}, Lcom/bbm/util/o;-><init>(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v0, p0, Lcom/bbm/util/r;->c:Lcom/bbm/util/p;
 
-    .line 39
-    iget v0, v5, Lcom/bbm/util/o;->b:I
+    invoke-static {v0}, Lcom/bbm/util/p;->d(Lcom/bbm/util/p;)Ljava/lang/ref/WeakReference;
 
-    if-le v0, v1, :cond_2
+    move-result-object v0
 
-    .line 40
-    iget v0, v5, Lcom/bbm/util/o;->b:I
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
-    .line 41
-    iget-object v1, v5, Lcom/bbm/util/o;->c:Ljava/lang/String;
+    move-result-object v0
 
-    .line 37
-    :goto_1
-    add-int/lit8 v2, v3, 0x1
+    if-eqz v0, :cond_1
 
-    move v3, v2
+    .line 264
+    iget-object v0, p0, Lcom/bbm/util/r;->b:Lcom/bbm/util/dc;
 
-    move-object v2, v1
+    invoke-virtual {v0, p1}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
 
-    move v1, v0
+    .line 265
+    iget-object v0, p0, Lcom/bbm/util/r;->c:Lcom/bbm/util/p;
+
+    invoke-static {v0}, Lcom/bbm/util/p;->d(Lcom/bbm/util/p;)Ljava/lang/ref/WeakReference;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "alpha"
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [F
+
+    fill-array-data v2, :array_0
+
+    invoke-static {v0, v1, v2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v0
+
+    const-wide/16 v2, 0xfa
+
+    invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
+
+    .line 274
+    :goto_0
+    return-void
+
+    .line 269
+    :cond_1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {}, Lcom/bbm/util/p;->b()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "ImageView is null for postId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/util/r;->c:Lcom/bbm/util/p;
+
+    invoke-static {v1}, Lcom/bbm/util/p;->f(Lcom/bbm/util/p;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-array v1, v2, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :cond_0
-    move-object v4, v2
-
-    .line 46
-    :cond_1
-    return-object v4
-
+    .line 272
     :cond_2
-    move v0, v1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-object v1, v2
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    goto :goto_1
+    invoke-static {}, Lcom/bbm/util/p;->b()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "Failed to load image for postId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/util/r;->c:Lcom/bbm/util/p;
+
+    invoke-static {v1}, Lcom/bbm/util/p;->f(Lcom/bbm/util/p;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-array v1, v2, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 265
+    nop
+
+    :array_0
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
+.end method
+
+.method protected final synthetic onCancelled(Ljava/lang/Object;)V
+    .locals 2
+
+    .prologue
+    .line 248
+    check-cast p1, Lcom/bbm/d/gh;
+
+    iget-object v0, p0, Lcom/bbm/util/r;->a:Lcom/bbm/util/b/e;
+
+    if-eqz v0, :cond_0
+
+    if-eqz p1, :cond_0
+
+    iget-object v0, p0, Lcom/bbm/util/r;->a:Lcom/bbm/util/b/e;
+
+    iget-object v1, p0, Lcom/bbm/util/r;->c:Lcom/bbm/util/p;
+
+    invoke-static {v1}, Lcom/bbm/util/p;->c(Lcom/bbm/util/p;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1, p1}, Lcom/bbm/util/b/e;->a(Ljava/lang/String;Lcom/bbm/d/gh;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method protected final synthetic onPostExecute(Ljava/lang/Object;)V
+    .locals 0
+
+    .prologue
+    .line 248
+    check-cast p1, Lcom/bbm/d/gh;
+
+    invoke-virtual {p0, p1}, Lcom/bbm/util/r;->a(Lcom/bbm/d/gh;)V
+
+    return-void
 .end method

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_store_item_width">48.0dip</dimen>
+    <dimen name="in_call_action_item_padding">22.0dip</dimen>
+    <dimen name="in_call_bottom_title_spacing">10.0dip</dimen>
+    <dimen name="in_call_details_margin">10.0dip</dimen>
+    <dimen name="in_call_details_margin_bottom">10.0dip</dimen>
+    <dimen name="in_call_end_call_margin_bottom">15.0dip</dimen>
+    <dimen name="in_call_margin_top">35.0dip</dimen>
+    <dimen name="in_call_minimize_icon_spacing">40.0dip</dimen>
+    <dimen name="in_call_outer_padding">12.0dip</dimen>
+    <dimen name="in_call_subtitle_left_margin">30.0dip</dimen>
+    <dimen name="in_call_title_spacing">8.0dip</dimen>
+    <dimen name="in_call_title_text_margin">26.0dip</dimen>
+    <dimen name="store_home_page_app_grid_height">141.0dip</dimen>
+    <dimen name="store_home_page_banner_height">110.0dip</dimen>
+</resources>

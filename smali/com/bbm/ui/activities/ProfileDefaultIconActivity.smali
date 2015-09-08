@@ -1,12 +1,10 @@
-.class public Lcom/bbm/ui/activities/ProfileDefaultIconActivity;
-.super Landroid/app/Activity;
+.class public final Lcom/bbm/ui/activities/ProfileDefaultIconActivity;
+.super Lcom/bbm/bali/ui/main/a/a;
 .source "ProfileDefaultIconActivity.java"
 
 
 # instance fields
 .field private a:[Ljava/lang/String;
-
-.field private b:Lcom/bbm/ui/FooterActionBar;
 
 
 # direct methods
@@ -14,10 +12,10 @@
     .locals 0
 
     .prologue
-    .line 28
-    invoke-direct {p0}, Landroid/app/Activity;-><init>()V
+    .line 23
+    invoke-direct {p0}, Lcom/bbm/bali/ui/main/a/a;-><init>()V
 
-    .line 98
+    .line 67
     return-void
 .end method
 
@@ -25,7 +23,7 @@
     .locals 1
 
     .prologue
-    .line 28
+    .line 23
     iget-object v0, p0, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;->a:[Ljava/lang/String;
 
     return-object v0
@@ -33,19 +31,17 @@
 
 
 # virtual methods
-.method protected onCreate(Landroid/os/Bundle;)V
-    .locals 7
+.method public final onCreate(Landroid/os/Bundle;)V
+    .locals 5
 
     .prologue
-    const/4 v6, -0x1
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    .line 29
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onCreate(Landroid/os/Bundle;)V
 
-    .line 35
-    invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
-
-    .line 36
-    new-instance v0, Ljava/io/File;
+    .line 30
+    new-instance v1, Ljava/io/File;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;->getFilesDir()Ljava/io/File;
 
@@ -53,112 +49,60 @@
 
     const-string v3, "default_avatars"
 
-    invoke-direct {v0, v2, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 37
-    invoke-virtual {v0}, Ljava/io/File;->list()[Ljava/lang/String;
+    .line 31
+    invoke-virtual {v1}, Ljava/io/File;->list()[Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;->a:[Ljava/lang/String;
 
-    .line 38
+    .line 32
     iget-object v2, p0, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;->a:[Ljava/lang/String;
 
     if-nez v2, :cond_1
 
-    .line 39
-    new-array v0, v1, [Ljava/lang/String;
+    .line 33
+    new-array v0, v0, [Ljava/lang/String;
 
     iput-object v0, p0, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;->a:[Ljava/lang/String;
 
-    .line 48
+    .line 41
     :cond_0
-    const v0, 0x7f03004c
+    const v0, 0x7f030069
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;->setContentView(I)V
 
-    .line 50
-    new-instance v0, Lcom/bbm/ui/HeaderButtonActionBar;
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    const v3, 0x7f0e0764
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    const v4, 0x7f0e0177
-
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-direct {v0, p0, v2, v3}, Lcom/bbm/ui/HeaderButtonActionBar;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 52
-    new-instance v2, Lcom/bbm/ui/activities/acx;
-
-    invoke-direct {v2, p0}, Lcom/bbm/ui/activities/acx;-><init>(Lcom/bbm/ui/activities/ProfileDefaultIconActivity;)V
-
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/HeaderButtonActionBar;->setNegativeButtonOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 62
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;->getActionBar()Landroid/app/ActionBar;
-
-    move-result-object v2
-
-    .line 63
-    new-instance v3, Landroid/app/ActionBar$LayoutParams;
-
-    invoke-direct {v3, v6, v6}, Landroid/app/ActionBar$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v2, v0, v3}, Landroid/app/ActionBar;->setCustomView(Landroid/view/View;Landroid/app/ActionBar$LayoutParams;)V
-
-    .line 64
-    const/16 v0, 0x10
-
-    invoke-virtual {v2, v0}, Landroid/app/ActionBar;->setDisplayOptions(I)V
-
-    .line 66
-    const v0, 0x7f0b00bf
+    .line 43
+    const v0, 0x7f0b013c
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/FooterActionBar;
+    check-cast v0, Landroid/support/v7/widget/Toolbar;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;->b:Lcom/bbm/ui/FooterActionBar;
+    .line 44
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;->getResources()Landroid/content/res/Resources;
 
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;->b:Lcom/bbm/ui/FooterActionBar;
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setOverflowEnabled(Z)V
+    const v2, 0x7f0e086a
 
-    .line 68
-    iget-object v0, p0, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;->b:Lcom/bbm/ui/FooterActionBar;
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    new-instance v1, Lcom/bbm/ui/activities/acy;
+    move-result-object v1
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/acy;-><init>(Lcom/bbm/ui/activities/ProfileDefaultIconActivity;)V
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;->a(Landroid/support/v7/widget/Toolbar;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
+    .line 46
+    new-instance v1, Lcom/bbm/ui/activities/aab;
 
-    .line 77
-    new-instance v1, Lcom/bbm/ui/activities/ada;
+    invoke-direct {v1, p0, p0}, Lcom/bbm/ui/activities/aab;-><init>(Lcom/bbm/ui/activities/ProfileDefaultIconActivity;Landroid/content/Context;)V
 
-    invoke-direct {v1, p0, p0}, Lcom/bbm/ui/activities/ada;-><init>(Lcom/bbm/ui/activities/ProfileDefaultIconActivity;Landroid/content/Context;)V
-
-    .line 79
-    const v0, 0x7f0b0286
+    .line 48
+    const v0, 0x7f0b02ea
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;->findViewById(I)Landroid/view/View;
 
@@ -166,79 +110,77 @@
 
     check-cast v0, Landroid/widget/GridView;
 
-    .line 80
+    .line 49
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 81
-    new-instance v1, Lcom/bbm/ui/activities/acz;
+    .line 50
+    new-instance v1, Lcom/bbm/ui/activities/aaa;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/acz;-><init>(Lcom/bbm/ui/activities/ProfileDefaultIconActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/aaa;-><init>(Lcom/bbm/ui/activities/ProfileDefaultIconActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 92
+    .line 61
     return-void
 
-    .line 41
+    .line 35
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v1
 
     sget-object v2, Ljava/io/File;->separator:Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    move v0, v1
-
-    .line 42
+    .line 36
     :goto_0
-    iget-object v3, p0, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;->a:[Ljava/lang/String;
+    iget-object v2, p0, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;->a:[Ljava/lang/String;
 
-    array-length v3, v3
+    array-length v2, v2
 
-    if-ge v0, v3, :cond_0
+    if-ge v0, v2, :cond_0
 
-    .line 43
-    iget-object v3, p0, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;->a:[Ljava/lang/String;
+    .line 37
+    iget-object v2, p0, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;->a:[Ljava/lang/String;
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v4
+    move-result-object v3
 
-    iget-object v5, p0, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;->a:[Ljava/lang/String;
+    iget-object v4, p0, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;->a:[Ljava/lang/String;
 
-    aget-object v5, v5, v0
+    aget-object v4, v4, v0
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v3
 
-    aput-object v4, v3, v0
+    aput-object v3, v2, v0
 
-    .line 42
+    .line 36
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0

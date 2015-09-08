@@ -58,9 +58,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/mapquest/android/maps/bp;
+    check-cast v0, Lcom/mapquest/android/maps/bo;
 
-    invoke-virtual {v0}, Lcom/mapquest/android/maps/bp;->a()Lcom/mapquest/android/maps/s;
+    invoke-virtual {v0}, Lcom/mapquest/android/maps/bo;->a()Lcom/mapquest/android/maps/s;
 
     move-result-object v0
 
@@ -82,9 +82,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/mapquest/android/maps/bp;
+    check-cast v0, Lcom/mapquest/android/maps/bo;
 
-    invoke-virtual {v0}, Lcom/mapquest/android/maps/bp;->a()Lcom/mapquest/android/maps/s;
+    invoke-virtual {v0}, Lcom/mapquest/android/maps/bo;->a()Lcom/mapquest/android/maps/s;
 
     move-result-object v0
 

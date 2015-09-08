@@ -1,47 +1,53 @@
 .class final Landroid/support/v4/widget/f;
-.super Landroid/support/v4/view/a;
-.source "DrawerLayout.java"
+.super Ljava/lang/Object;
+.source "ContentLoadingProgressBar.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic b:Landroid/support/v4/widget/DrawerLayout;
+.field final synthetic a:Landroid/support/v4/widget/ContentLoadingProgressBar;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/widget/DrawerLayout;)V
+.method constructor <init>(Landroid/support/v4/widget/ContentLoadingProgressBar;)V
     .locals 0
 
     .prologue
-    .line 1907
-    iput-object p1, p0, Landroid/support/v4/widget/f;->b:Landroid/support/v4/widget/DrawerLayout;
+    .line 42
+    iput-object p1, p0, Landroid/support/v4/widget/f;->a:Landroid/support/v4/widget/ContentLoadingProgressBar;
 
-    invoke-direct {p0}, Landroid/support/v4/view/a;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/view/View;Landroid/support/v4/view/a/a;)V
-    .locals 1
+.method public final run()V
+    .locals 4
 
     .prologue
-    .line 1911
-    invoke-super {p0, p1, p2}, Landroid/support/v4/view/a;->a(Landroid/view/View;Landroid/support/v4/view/a/a;)V
+    .line 46
+    iget-object v0, p0, Landroid/support/v4/widget/f;->a:Landroid/support/v4/widget/ContentLoadingProgressBar;
 
-    .line 1912
-    invoke-static {p1}, Landroid/support/v4/widget/DrawerLayout;->f(Landroid/view/View;)Z
+    invoke-static {v0}, Landroid/support/v4/widget/ContentLoadingProgressBar;->a(Landroid/support/v4/widget/ContentLoadingProgressBar;)Z
 
-    move-result v0
+    .line 47
+    iget-object v0, p0, Landroid/support/v4/widget/f;->a:Landroid/support/v4/widget/ContentLoadingProgressBar;
 
-    if-nez v0, :cond_0
+    const-wide/16 v2, -0x1
 
-    .line 1916
-    const/4 v0, 0x0
+    invoke-static {v0, v2, v3}, Landroid/support/v4/widget/ContentLoadingProgressBar;->a(Landroid/support/v4/widget/ContentLoadingProgressBar;J)J
 
-    invoke-virtual {p2, v0}, Landroid/support/v4/view/a/a;->c(Landroid/view/View;)V
+    .line 48
+    iget-object v0, p0, Landroid/support/v4/widget/f;->a:Landroid/support/v4/widget/ContentLoadingProgressBar;
 
-    .line 1918
-    :cond_0
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/widget/ContentLoadingProgressBar;->setVisibility(I)V
+
+    .line 49
     return-void
 .end method

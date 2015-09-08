@@ -29,9 +29,6 @@
 .method public abstract getGlympse()Lcom/glympse/android/lib/GGlympsePrivate;
 .end method
 
-.method public abstract getName()Ljava/lang/String;
-.end method
-
 .method public abstract getNext()J
 .end method
 
@@ -64,6 +61,12 @@
             ">;"
         }
     .end annotation
+.end method
+
+.method public abstract getProviderData()Lcom/glympse/android/core/GPrimitive;
+.end method
+
+.method public abstract getProviderId()Ljava/lang/String;
 .end method
 
 .method public abstract getRequestCode()Ljava/lang/String;
@@ -124,9 +127,6 @@
 .end method
 
 .method public abstract setMine(Z)V
-.end method
-
-.method public abstract setName(Ljava/lang/String;)V
 .end method
 
 .method public abstract setNext(J)V

@@ -1,59 +1,69 @@
 .class Lcom/glympse/android/lib/ep;
-.super Lcom/glympse/android/lib/ew;
-.source "InviteGroupTicketView.java"
+.super Lcom/glympse/android/lib/fn;
+.source "ImageCache.java"
 
 
 # instance fields
-.field protected ms:Lcom/glympse/android/lib/GGroupPrivate;
+.field private kZ:Ljava/lang/String;
 
-.field protected oy:Lcom/glympse/android/lib/GGroupMemberPrivate;
+.field private oA:Lcom/glympse/android/api/GImage;
+
+.field private oB:Z
+
+.field final synthetic oC:Lcom/glympse/android/lib/eo;
+
+.field private oz:Lcom/glympse/android/lib/eo;
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/lib/GGlympsePrivate;Lcom/glympse/android/lib/GGroupPrivate;Lcom/glympse/android/lib/GGroupMemberPrivate;Lcom/glympse/android/lib/GUserPrivate;Lcom/glympse/android/lib/GTicketPrivate;)V
-    .locals 6
+.method public constructor <init>(Lcom/glympse/android/lib/eo;Lcom/glympse/android/lib/eo;Lcom/glympse/android/api/GImage;Ljava/lang/String;Z)V
+    .locals 0
 
     .prologue
-    .line 28
-    const/4 v4, 0x1
+    .line 531
+    iput-object p1, p0, Lcom/glympse/android/lib/ep;->oC:Lcom/glympse/android/lib/eo;
 
-    const/4 v5, 0x0
+    invoke-direct {p0}, Lcom/glympse/android/lib/fn;-><init>()V
 
-    move-object v0, p0
+    .line 532
+    iput-object p2, p0, Lcom/glympse/android/lib/ep;->oz:Lcom/glympse/android/lib/eo;
 
-    move-object v1, p1
+    .line 533
+    iput-object p3, p0, Lcom/glympse/android/lib/ep;->oA:Lcom/glympse/android/api/GImage;
 
-    move-object v2, p4
+    .line 534
+    iput-object p4, p0, Lcom/glympse/android/lib/ep;->kZ:Ljava/lang/String;
 
-    move-object v3, p5
+    .line 535
+    iput-boolean p5, p0, Lcom/glympse/android/lib/ep;->oB:Z
 
-    invoke-direct/range {v0 .. v5}, Lcom/glympse/android/lib/ew;-><init>(Lcom/glympse/android/lib/GGlympsePrivate;Lcom/glympse/android/lib/GUserPrivate;Lcom/glympse/android/lib/GTicketPrivate;ZZ)V
-
-    .line 29
-    iput-object p2, p0, Lcom/glympse/android/lib/ep;->ms:Lcom/glympse/android/lib/GGroupPrivate;
-
-    .line 30
-    iput-object p3, p0, Lcom/glympse/android/lib/ep;->oy:Lcom/glympse/android/lib/GGroupMemberPrivate;
-
-    .line 31
+    .line 536
     return-void
 .end method
 
 
 # virtual methods
-.method protected ce()Z
-    .locals 2
+.method public onProcess()V
+    .locals 4
 
     .prologue
-    .line 43
-    iget-object v0, p0, Lcom/glympse/android/lib/ep;->ms:Lcom/glympse/android/lib/GGroupPrivate;
+    .line 540
+    iget-object v1, p0, Lcom/glympse/android/lib/ep;->oz:Lcom/glympse/android/lib/eo;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/ep;->oy:Lcom/glympse/android/lib/GGroupMemberPrivate;
+    iget-object v2, p0, Lcom/glympse/android/lib/ep;->kZ:Ljava/lang/String;
 
-    invoke-interface {v0, v1}, Lcom/glympse/android/lib/GGroupPrivate;->removeMember(Lcom/glympse/android/lib/GGroupMemberPrivate;)V
+    iget-object v0, p0, Lcom/glympse/android/lib/ep;->oA:Lcom/glympse/android/api/GImage;
 
-    .line 45
-    const/4 v0, 0x0
+    invoke-interface {v0}, Lcom/glympse/android/api/GImage;->getDrawable()Lcom/glympse/android/core/GDrawable;
 
-    return v0
+    move-result-object v0
+
+    check-cast v0, Lcom/glympse/android/hal/GDrawablePrivate;
+
+    iget-boolean v3, p0, Lcom/glympse/android/lib/ep;->oB:Z
+
+    invoke-virtual {v1, v2, v0, v3}, Lcom/glympse/android/lib/eo;->saveToCache(Ljava/lang/String;Lcom/glympse/android/hal/GDrawablePrivate;Z)Z
+
+    .line 541
+    return-void
 .end method

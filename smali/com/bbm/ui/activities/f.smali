@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 338
+    .line 363
     iput-object p1, p0, Lcom/bbm/ui/activities/f;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,22 +29,22 @@
     .locals 2
 
     .prologue
-    .line 341
+    const/4 v1, 0x0
+
+    .line 366
     iget-object v0, p0, Lcom/bbm/ui/activities/f;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
-    invoke-static {v0}, Lcom/bbm/util/fh;->b(Landroid/app/Activity;)V
+    invoke-static {v0, v1}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;Z)V
 
-    .line 342
+    .line 367
     iget-object v0, p0, Lcom/bbm/ui/activities/f;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->v(Lcom/bbm/ui/activities/AddChannelPostActivity;)Lcom/bbm/ui/EmoticonPicker;
+    invoke-static {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->w(Lcom/bbm/ui/activities/AddChannelPostActivity;)Lcom/bbm/ui/EmoticonPicker;
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
     invoke-virtual {v0, v1}, Lcom/bbm/ui/EmoticonPicker;->setVisibility(I)V
 
-    .line 343
+    .line 368
     return-void
 .end method

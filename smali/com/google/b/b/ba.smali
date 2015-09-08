@@ -1,67 +1,53 @@
-.class interface abstract Lcom/google/b/b/ba;
-.super Ljava/lang/Object;
+.class final Lcom/google/b/b/ba;
+.super Lcom/google/b/b/ag;
 .source "LocalCache.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "<K:",
-        "Ljava/lang/Object;",
-        "V:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;"
+        "Lcom/google/b/b/n",
+        "<TK;TV;>.com/google/b/b/ag<TV;>;"
     }
 .end annotation
 
 
+# instance fields
+.field final synthetic a:Lcom/google/b/b/n;
+
+
+# direct methods
+.method constructor <init>(Lcom/google/b/b/n;)V
+    .locals 0
+
+    .prologue
+    .line 4366
+    iput-object p1, p0, Lcom/google/b/b/ba;->a:Lcom/google/b/b/n;
+
+    invoke-direct {p0, p1}, Lcom/google/b/b/ag;-><init>(Lcom/google/b/b/n;)V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract a()I
-.end method
-
-.method public abstract a(Ljava/lang/ref/ReferenceQueue;Ljava/lang/Object;Lcom/google/b/b/am;)Lcom/google/b/b/ba;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/ref/ReferenceQueue",
-            "<TV;>;TV;",
-            "Lcom/google/b/b/am",
-            "<TK;TV;>;)",
-            "Lcom/google/b/b/ba",
-            "<TK;TV;>;"
-        }
-    .end annotation
-.end method
-
-.method public abstract a(Ljava/lang/Object;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TV;)V"
-        }
-    .end annotation
-.end method
-
-.method public abstract b()Lcom/google/b/b/am;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/google/b/b/am",
-            "<TK;TV;>;"
-        }
-    .end annotation
-.end method
-
-.method public abstract c()Z
-.end method
-
-.method public abstract d()Z
-.end method
-
-.method public abstract get()Ljava/lang/Object;
+.method public final next()Ljava/lang/Object;
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TV;"
         }
     .end annotation
+
+    .prologue
+    .line 4370
+    invoke-virtual {p0}, Lcom/google/b/b/ba;->a()Lcom/google/b/b/bm;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/b/b/bm;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
 .end method

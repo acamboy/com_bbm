@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.bbm.bali.ui.main.customControls.SplatableImageView android:layout_gravity="center_vertical" android:id="@id/item_image" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/NavDrawerCommon" />
+    <TextView android:textSize="14.0sp" android:textColor="@color/drawer_textColor" android:gravity="center|left" android:id="@id/item_name" android:layout_width="fill_parent" android:layout_height="@dimen/drawerHeight" android:layout_marginRight="@dimen/drawerHorizontalSpacing" style="@style/NavDrawerCommon" />
+</LinearLayout>

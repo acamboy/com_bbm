@@ -6,5 +6,8 @@
 
 
 # virtual methods
-.method public abstract g(Lcom/google/android/gms/dynamic/b;)V
+.method public abstract a()V
+.end method
+
+.method public abstract a(Lcom/google/android/gms/maps/internal/bc;)V
 .end method

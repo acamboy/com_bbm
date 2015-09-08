@@ -1,39 +1,50 @@
 .class final Lcom/bbm/ui/eb;
-.super Ljava/lang/Object;
-.source "MainTabBarView.java"
+.super Lcom/bbm/j/k;
+.source "MonitoredAdapter.java"
 
 
 # instance fields
-.field a:Landroid/view/ViewGroup;
+.field final synthetic a:Landroid/view/View;
 
-.field b:Landroid/widget/ImageView;
+.field final synthetic b:Ljava/lang/Object;
 
-.field c:Landroid/widget/TextView;
-
-.field d:Landroid/widget/ImageView;
-
-.field final synthetic e:Lcom/bbm/ui/MainTabBarView;
+.field final synthetic c:Lcom/bbm/ui/ea;
 
 
 # direct methods
-.method private constructor <init>(Lcom/bbm/ui/MainTabBarView;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/ea;Landroid/view/View;Ljava/lang/Object;)V
+    .locals 1
 
     .prologue
-    .line 390
-    iput-object p1, p0, Lcom/bbm/ui/eb;->e:Lcom/bbm/ui/MainTabBarView;
+    .line 61
+    iput-object p1, p0, Lcom/bbm/ui/eb;->c:Lcom/bbm/ui/ea;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lcom/bbm/ui/eb;->a:Landroid/view/View;
+
+    iput-object p3, p0, Lcom/bbm/ui/eb;->b:Ljava/lang/Object;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/bbm/ui/MainTabBarView;B)V
-    .locals 0
+
+# virtual methods
+.method public final a()V
+    .locals 3
 
     .prologue
-    .line 390
-    invoke-direct {p0, p1}, Lcom/bbm/ui/eb;-><init>(Lcom/bbm/ui/MainTabBarView;)V
+    .line 64
+    iget-object v0, p0, Lcom/bbm/ui/eb;->c:Lcom/bbm/ui/ea;
 
+    iget-object v1, p0, Lcom/bbm/ui/eb;->a:Landroid/view/View;
+
+    iget-object v2, p0, Lcom/bbm/ui/eb;->b:Ljava/lang/Object;
+
+    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/ea;->a(Landroid/view/View;Ljava/lang/Object;)V
+
+    .line 65
     return-void
 .end method

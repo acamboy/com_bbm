@@ -1,201 +1,175 @@
-.class public final Lcom/google/android/gms/internal/ed;
-.super Ljava/lang/Object;
+.class public abstract Lcom/google/android/gms/internal/ed;
+.super Landroid/os/Binder;
+
+# interfaces
+.implements Lcom/google/android/gms/internal/ec;
 
 
 # direct methods
-.method public static a(ZLjava/lang/Object;)V
-    .locals 2
-
-    if-nez p0, :cond_0
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    return-void
-.end method
-
-.method public static ac(Ljava/lang/String;)V
-    .locals 3
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
-
-    move-result-object v0
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v1
-
-    if-eq v0, v1, :cond_0
-
-    const-string v0, "Asserts"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "checkMainThread: current thread "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " IS NOT the main thread "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "!"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    return-void
-.end method
-
-.method public static ad(Ljava/lang/String;)V
-    .locals 3
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
-
-    move-result-object v0
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v1
-
-    if-ne v0, v1, :cond_0
-
-    const-string v0, "Asserts"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "checkNotMainThread: current thread "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " IS the main thread "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "!"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    return-void
-.end method
-
-.method public static d(Ljava/lang/Object;)V
-    .locals 2
-
-    if-nez p0, :cond_0
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "null reference"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    return-void
-.end method
-
-.method public static v(Z)V
+.method public constructor <init>()V
     .locals 1
 
+    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
+
+    const-string v0, "com.google.android.gms.ads.internal.formats.client.INativeAdViewDelegate"
+
+    invoke-virtual {p0, p0, v0}, Lcom/google/android/gms/internal/ed;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static a(Landroid/os/IBinder;)Lcom/google/android/gms/internal/ec;
+    .locals 2
+
     if-nez p0, :cond_0
 
-    new-instance v0, Ljava/lang/IllegalStateException;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v0
+    :goto_0
+    return-object v0
 
     :cond_0
-    return-void
+    const-string v0, "com.google.android.gms.ads.internal.formats.client.INativeAdViewDelegate"
+
+    invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    instance-of v1, v0, Lcom/google/android/gms/internal/ec;
+
+    if-eqz v1, :cond_1
+
+    check-cast v0, Lcom/google/android/gms/internal/ec;
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v0, Lcom/google/android/gms/internal/ee;
+
+    invoke-direct {v0, p0}, Lcom/google/android/gms/internal/ee;-><init>(Landroid/os/IBinder;)V
+
+    goto :goto_0
+.end method
+
+
+# virtual methods
+.method public asBinder()Landroid/os/IBinder;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    .locals 3
+
+    const/4 v1, 0x1
+
+    sparse-switch p1, :sswitch_data_0
+
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :sswitch_0
+    const-string v0, "com.google.android.gms.ads.internal.formats.client.INativeAdViewDelegate"
+
+    invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    move v0, v1
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v0, "com.google.android.gms.ads.internal.formats.client.INativeAdViewDelegate"
+
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/google/android/gms/a/i;->a(Landroid/os/IBinder;)Lcom/google/android/gms/a/h;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v0, v2}, Lcom/google/android/gms/internal/ed;->a(Ljava/lang/String;Lcom/google/android/gms/a/h;)V
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    move v0, v1
+
+    goto :goto_0
+
+    :sswitch_2
+    const-string v0, "com.google.android.gms.ads.internal.formats.client.INativeAdViewDelegate"
+
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/ed;->a(Ljava/lang/String;)Lcom/google/android/gms/a/h;
+
+    move-result-object v0
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lcom/google/android/gms/a/h;->asBinder()Landroid/os/IBinder;
+
+    move-result-object v0
+
+    :goto_1
+    invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :sswitch_3
+    const-string v0, "com.google.android.gms.ads.internal.formats.client.INativeAdViewDelegate"
+
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/google/android/gms/a/i;->a(Landroid/os/IBinder;)Lcom/google/android/gms/a/h;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/ed;->a(Lcom/google/android/gms/a/h;)V
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    move v0, v1
+
+    goto :goto_0
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x1 -> :sswitch_1
+        0x2 -> :sswitch_2
+        0x3 -> :sswitch_3
+        0x5f4e5446 -> :sswitch_0
+    .end sparse-switch
 .end method

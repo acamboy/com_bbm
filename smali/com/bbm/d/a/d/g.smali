@@ -1,5 +1,5 @@
 .class final Lcom/bbm/d/a/d/g;
-.super Lcom/bbm/util/ff;
+.super Lcom/bbm/util/es;
 .source "BbmdsStreamManager.java"
 
 
@@ -12,64 +12,62 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/d/a/d/c;Landroid/content/Context;Lcom/bbm/util/ct;Ljava/lang/String;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/d/a/d/c;Landroid/content/Context;Lcom/bbm/util/dc;ZLjava/lang/String;)V
+    .locals 0
 
     .prologue
-    .line 197
+    .line 179
     iput-object p1, p0, Lcom/bbm/d/a/d/g;->c:Lcom/bbm/d/a/d/c;
 
-    const/4 v0, 0x1
+    iput-boolean p4, p0, Lcom/bbm/d/a/d/g;->a:Z
 
-    iput-boolean v0, p0, Lcom/bbm/d/a/d/g;->a:Z
+    iput-object p5, p0, Lcom/bbm/d/a/d/g;->b:Ljava/lang/String;
 
-    iput-object p4, p0, Lcom/bbm/d/a/d/g;->b:Ljava/lang/String;
-
-    invoke-direct {p0, p2, p3}, Lcom/bbm/util/ff;-><init>(Landroid/content/Context;Lcom/bbm/util/ct;)V
+    invoke-direct {p0, p2, p3}, Lcom/bbm/util/es;-><init>(Landroid/content/Context;Lcom/bbm/util/dc;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a(Lcom/bbm/d/ff;)V
+.method protected final a(Lcom/bbm/d/gh;)V
     .locals 3
 
     .prologue
-    .line 200
-    invoke-super {p0, p1}, Lcom/bbm/util/ff;->a(Lcom/bbm/d/ff;)V
+    .line 182
+    invoke-super {p0, p1}, Lcom/bbm/util/es;->a(Lcom/bbm/d/gh;)V
 
-    .line 201
+    .line 183
     iget-boolean v0, p0, Lcom/bbm/d/a/d/g;->a:Z
 
     if-eqz v0, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 202
+    .line 184
     iget-object v0, p0, Lcom/bbm/d/a/d/g;->c:Lcom/bbm/d/a/d/c;
 
     iget-object v1, p0, Lcom/bbm/d/a/d/g;->b:Ljava/lang/String;
 
-    invoke-virtual {p1}, Lcom/bbm/d/ff;->c()[B
+    invoke-virtual {p1}, Lcom/bbm/d/gh;->c()[B
 
     move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Lcom/bbm/d/a/d/c;->a(Ljava/lang/String;[B)V
 
-    .line 204
+    .line 186
     :cond_0
     return-void
 .end method
 
-.method protected final synthetic b(Ljava/lang/Object;)V
+.method protected final synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
     .prologue
-    .line 197
-    check-cast p1, Lcom/bbm/d/ff;
+    .line 179
+    check-cast p1, Lcom/bbm/d/gh;
 
-    invoke-virtual {p0, p1}, Lcom/bbm/d/a/d/g;->a(Lcom/bbm/d/ff;)V
+    invoke-virtual {p0, p1}, Lcom/bbm/d/a/d/g;->a(Lcom/bbm/d/gh;)V
 
     return-void
 .end method

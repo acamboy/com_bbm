@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/agv;
 .super Ljava/lang/Object;
-.source "SettingsActivity.java"
+.source "ViewChannelPostActivity.java"
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
     .locals 0
 
     .prologue
-    .line 353
-    iput-object p1, p0, Lcom/bbm/ui/activities/agv;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    .line 331
+    iput-object p1, p0, Lcom/bbm/ui/activities/agv;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,29 +25,55 @@
 
 
 # virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
     .prologue
-    .line 357
-    const-string v0, "notifications enabled onCheckedChanged"
+    .line 334
+    iget-object v0, p0, Lcom/bbm/ui/activities/agv;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/SettingsActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->g(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/d/ff;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    move-result-object v0
 
-    .line 358
-    iget-object v0, p0, Lcom/bbm/ui/activities/agv;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    iget-boolean v0, v0, Lcom/bbm/d/ff;->q:Z
 
-    const-string v1, "notifications_enabled"
+    if-nez v0, :cond_1
 
-    invoke-static {v0, v1, p2}, Lcom/bbm/ui/activities/SettingsActivity;->a(Lcom/bbm/ui/activities/SettingsActivity;Ljava/lang/String;Z)V
+    iget-object v0, p0, Lcom/bbm/ui/activities/agv;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
 
-    .line 359
-    iget-object v0, p0, Lcom/bbm/ui/activities/agv;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->c(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Z
 
-    invoke-static {v0, p2}, Lcom/bbm/ui/activities/SettingsActivity;->b(Lcom/bbm/ui/activities/SettingsActivity;Z)V
+    move-result v0
 
-    .line 360
+    if-nez v0, :cond_1
+
+    .line 335
+    iget-object v0, p0, Lcom/bbm/ui/activities/agv;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a(Ljava/lang/String;)V
+
+    .line 339
+    :cond_0
+    :goto_0
     return-void
+
+    .line 336
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/agv;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->c(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 337
+    iget-object v0, p0, Lcom/bbm/ui/activities/agv;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->e(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
+
+    goto :goto_0
 .end method

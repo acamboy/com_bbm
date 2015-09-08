@@ -7,10 +7,10 @@
 .method public abstract b_()Ljava/lang/String;
 .end method
 
-.method public abstract c_()Landroid/graphics/Bitmap;
+.method public abstract c_()Ljava/lang/String;
 .end method
 
-.method public abstract d()Ljava/lang/String;
+.method public abstract e()Landroid/graphics/Bitmap;
 .end method
 
 .method public abstract f()I

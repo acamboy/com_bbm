@@ -1,22 +1,26 @@
 .class final Lcom/bbm/ui/activities/sg;
 .super Ljava/lang/Object;
-.source "GroupPictureCommentsActivity.java"
+.source "InAppUpgradeActivity.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/sf;
+.field final synthetic a:Landroid/content/Context;
+
+.field final synthetic b:Landroid/content/DialogInterface$OnClickListener;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/sf;)V
+.method constructor <init>(Landroid/content/Context;Landroid/content/DialogInterface$OnClickListener;)V
     .locals 0
 
     .prologue
-    .line 704
-    iput-object p1, p0, Lcom/bbm/ui/activities/sg;->a:Lcom/bbm/ui/activities/sf;
+    .line 30
+    iput-object p1, p0, Lcom/bbm/ui/activities/sg;->a:Landroid/content/Context;
+
+    iput-object p2, p0, Lcom/bbm/ui/activities/sg;->b:Landroid/content/DialogInterface$OnClickListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,40 +29,42 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 3
 
     .prologue
-    .line 708
-    new-instance v0, Landroid/view/animation/AlphaAnimation;
+    .line 34
+    const/4 v0, -0x1
 
-    const/high16 v1, 0x3f800000
+    if-ne p2, v0, :cond_0
 
-    const/4 v2, 0x0
+    .line 35
+    new-instance v0, Landroid/content/Intent;
 
-    invoke-direct {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
+    const-string v1, "android.intent.action.VIEW"
 
-    .line 709
-    const-wide/16 v2, 0x5dc
+    const-string v2, "http://global.blackberry.com/static-pages/bbm/upgrade/index.html"
 
-    invoke-virtual {v0, v2, v3}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
+    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    .line 710
-    const/4 v1, 0x1
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Landroid/view/animation/AlphaAnimation;->setFillAfter(Z)V
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 711
-    iget-object v1, p0, Lcom/bbm/ui/activities/sg;->a:Lcom/bbm/ui/activities/sf;
+    .line 36
+    iget-object v1, p0, Lcom/bbm/ui/activities/sg;->a:Landroid/content/Context;
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/sf;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->x(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
-
-    .line 712
+    .line 40
+    :goto_0
     return-void
+
+    .line 38
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/sg;->b:Landroid/content/DialogInterface$OnClickListener;
+
+    invoke-interface {v0, p1, p2}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
+
+    goto :goto_0
 .end method

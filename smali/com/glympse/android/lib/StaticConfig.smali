@@ -22,13 +22,13 @@
 
 .field public static final CLIENT_API_BUGFIX:I = 0x0
 
-.field public static final CLIENT_API_BUILD:I = 0x44
+.field public static final CLIENT_API_BUILD:I = 0x54
 
 .field public static final CLIENT_API_ITER:I = 0x0
 
 .field public static final CLIENT_API_MAJOR:I = 0x2
 
-.field public static final CLIENT_API_MINOR:I = 0xd
+.field public static final CLIENT_API_MINOR:I = 0x11
 
 .field public static final CLIENT_API_STATUS:I = 0x0
 
@@ -41,6 +41,8 @@
 .field public static final ETA_DISTANCE_FILTER:I = 0x96
 
 .field public static final ETA_UPDATE_INTERVAL:J = 0xea60L
+
+.field public static final EXTENDED_TRACK_TRIM_LENGTH:J = 0x240c8400L
 
 .field public static final FILE_LOG_LEVEL:I = 0x7
 
@@ -98,13 +100,13 @@
 
 .field public static final MIN_GET_RATE:I = 0x1388
 
-.field public static final MOTD_MIN_INTERVAL:J = 0x5265c00L
-
-.field public static final MOTD_NET_ERRORS:J = 0x1eL
-
-.field public static final MOTD_RETRIES:J = 0x5L
-
 .field public static final NETWORK_ERRORS_BEFORE_STATE_CHANGE:J = 0x3L
+
+.field public static final PLACE_SEARCH_CACHE_CLEANUP:I = 0x10
+
+.field public static final PLACE_SEARCH_CACHE_SIZE:I = 0xa
+
+.field public static final PLACE_SEARCH_DISTANCE_FILTER:I = 0xf0
 
 .field public static final PLATFORM_DEACTIVATE_DELAY:J = 0x7d0L
 
@@ -118,6 +120,8 @@
 
 .field public static final SMS_SENT_TIMEOUT_THRESHOLD:I = 0x2710
 
+.field public static final STANDARD_TRACK_TRIM_LENGTH:J = 0x927c0L
+
 .field public static final TICKET_CANCELLATION_TIMEOUT:I = 0xea60
 
 .field public static final TICKET_CANCELLATION_TIMER:Z = false
@@ -128,6 +132,18 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    .prologue
+    .line 37
+    const-string v0, "api"
+
+    sput-object v0, Lcom/glympse/android/lib/StaticConfig;->BUILD_NAME:Ljava/lang/String;
+
+    return-void
+.end method
+
 .method public constructor <init>()V
     .locals 0
 
@@ -198,7 +214,7 @@
     .locals 1
 
     .prologue
-    .line 466
+    .line 481
     const-string v0, "https://upload.glympse.com/"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -226,7 +242,7 @@
     .locals 2
 
     .prologue
-    .line 428
+    .line 424
     invoke-static {}, Lcom/glympse/android/hal/Platform;->getOsName()Ljava/lang/String;
 
     move-result-object v0

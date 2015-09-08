@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/mp;
 .super Ljava/lang/Object;
-.source "GroupConversationActivity.java"
+.source "GroupEventsAddActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupEventsAddActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupEventsAddActivity;)V
     .locals 0
 
     .prologue
-    .line 536
-    iput-object p1, p0, Lcom/bbm/ui/activities/mp;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    .line 316
+    iput-object p1, p0, Lcom/bbm/ui/activities/mp;->a:Lcom/bbm/ui/activities/GroupEventsAddActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,33 +25,20 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 2
 
     .prologue
-    .line 539
-    const-string v0, "clicked on cart"
+    .line 320
+    const-string v0, "Discard confirmation dialog positive Button Clicked"
 
-    const-class v1, Lcom/bbm/ui/activities/GroupConversationActivity;
+    const-class v1, Lcom/bbm/ui/activities/GroupEventsAddActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 540
-    new-instance v0, Landroid/content/Intent;
+    .line 321
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/mp;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    const-class v2, Lcom/bbm/ui/activities/StoreHomeActivity;
-
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 541
-    iget-object v1, p0, Lcom/bbm/ui/activities/mp;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    const/4 v2, 0x2
-
-    invoke-virtual {v1, v0, v2}, Lcom/bbm/ui/activities/GroupConversationActivity;->startActivityForResult(Landroid/content/Intent;I)V
-
-    .line 542
+    .line 322
     return-void
 .end method

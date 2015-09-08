@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/ad;
 .super Ljava/lang/Object;
-.source "BbidErrorActivity.java"
+.source "BroadcastActivity.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/BbidErrorActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/BroadcastActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/BbidErrorActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/BroadcastActivity;)V
     .locals 0
 
     .prologue
-    .line 151
-    iput-object p1, p0, Lcom/bbm/ui/activities/ad;->a:Lcom/bbm/ui/activities/BbidErrorActivity;
+    .line 354
+    iput-object p1, p0, Lcom/bbm/ui/activities/ad;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,46 +25,44 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 156
-    iget-object v0, p0, Lcom/bbm/ui/activities/ad;->a:Lcom/bbm/ui/activities/BbidErrorActivity;
+    .line 357
+    const-string v0, "mEmoticonButton Clicked"
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/BbidErrorActivity;->a(Lcom/bbm/ui/activities/BbidErrorActivity;)Landroid/app/AlertDialog;
+    const-class v1, Lcom/bbm/ui/activities/BroadcastActivity;
 
-    .line 157
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 159
-    packed-switch p2, :pswitch_data_0
+    .line 359
+    iget-object v0, p0, Lcom/bbm/ui/activities/ad;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
-    .line 168
+    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->m(Lcom/bbm/ui/activities/BroadcastActivity;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 360
+    iget-object v0, p0, Lcom/bbm/ui/activities/ad;->a:Lcom/bbm/ui/activities/BroadcastActivity;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/BroadcastActivity;->a(Lcom/bbm/ui/activities/BroadcastActivity;Z)V
+
+    .line 364
     :goto_0
-    :pswitch_0
     return-void
 
-    .line 165
-    :pswitch_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/ad;->a:Lcom/bbm/ui/activities/BbidErrorActivity;
+    .line 362
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/ad;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
-    new-instance v1, Landroid/content/Intent;
+    const/4 v1, 0x1
 
-    const-string v2, "android.settings.SETTINGS"
-
-    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/BbidErrorActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/BroadcastActivity;->a(Lcom/bbm/ui/activities/BroadcastActivity;Z)V
 
     goto :goto_0
-
-    .line 159
-    nop
-
-    :pswitch_data_0
-    .packed-switch -0x2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

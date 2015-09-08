@@ -7,6 +7,9 @@
 
 
 # virtual methods
+.method public abstract forceHandoffProvider(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)Z
+.end method
+
 .method public abstract getHandoffProvider()Lcom/glympse/android/api/GHandoffProvider;
 .end method
 

@@ -1,47 +1,52 @@
-.class public final Lcom/bbm/ui/gd;
-.super Lcom/bbm/ui/activities/ala;
-.source "SlideActivityLifeCycleListener.java"
+.class final Lcom/bbm/ui/gd;
+.super Ljava/lang/Object;
+.source "SearchEditText.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field final synthetic a:Lcom/bbm/ui/SearchEditText;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcom/bbm/ui/SearchEditText;)V
     .locals 0
 
     .prologue
-    .line 7
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ala;-><init>()V
+    .line 145
+    iput-object p1, p0, Lcom/bbm/ui/gd;->a:Lcom/bbm/ui/SearchEditText;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/bbm/ui/activities/akz;)V
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
     .prologue
-    .line 11
-    const v0, 0x7f04000d
+    .line 149
+    const-string v0, "Cancel Mark clicked"
 
-    const v1, 0x7f04000f
+    const-class v1, Lcom/bbm/ui/SearchEditText;
 
-    invoke-virtual {p1, v0, v1}, Lcom/bbm/ui/activities/akz;->overridePendingTransition(II)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 12
-    return-void
-.end method
+    .line 150
+    iget-object v0, p0, Lcom/bbm/ui/gd;->a:Lcom/bbm/ui/SearchEditText;
 
-.method public final c(Lcom/bbm/ui/activities/akz;)V
-    .locals 2
+    invoke-static {v0}, Lcom/bbm/ui/SearchEditText;->d(Lcom/bbm/ui/SearchEditText;)Landroid/widget/EditText;
 
-    .prologue
-    .line 16
-    const/4 v0, 0x0
+    move-result-object v0
 
-    const v1, 0x7f04000e
+    const-string v1, ""
 
-    invoke-virtual {p1, v0, v1}, Lcom/bbm/ui/activities/akz;->overridePendingTransition(II)V
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 17
+    .line 151
     return-void
 .end method

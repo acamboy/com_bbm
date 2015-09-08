@@ -40,7 +40,7 @@
 
     move-result v0
 
-    const/high16 v1, 0x3f000000
+    const/high16 v1, 0x3f000000    # 0.5f
 
     add-float/2addr v0, v1
 
@@ -59,25 +59,25 @@
     move-result-object v1
 
     .line 331
-    const/high16 v5, 0x3f000000
+    const/high16 v5, 0x3f000000    # 0.5f
 
-    const/high16 v6, 0x3f000000
+    const/high16 v6, 0x3f000000    # 0.5f
 
     move/from16 v0, p5
 
     int-to-float v2, v0
 
-    const/high16 v3, 0x3f000000
+    const/high16 v3, 0x3f000000    # 0.5f
 
     sub-float v7, v2, v3
 
-    const/high16 v8, 0x3f000000
+    const/high16 v8, 0x3f000000    # 0.5f
 
     move/from16 v0, p5
 
     int-to-float v2, v0
 
-    const/high16 v3, 0x3f000000
+    const/high16 v3, 0x3f000000    # 0.5f
 
     sub-float v9, v2, v3
 
@@ -85,17 +85,17 @@
 
     int-to-float v2, v0
 
-    const/high16 v3, 0x3f000000
+    const/high16 v3, 0x3f000000    # 0.5f
 
     sub-float v10, v2, v3
 
-    const/high16 v11, 0x3f000000
+    const/high16 v11, 0x3f000000    # 0.5f
 
     move/from16 v0, p6
 
     int-to-float v2, v0
 
-    const/high16 v3, 0x3f000000
+    const/high16 v3, 0x3f000000    # 0.5f
 
     sub-float v12, v2, v3
 

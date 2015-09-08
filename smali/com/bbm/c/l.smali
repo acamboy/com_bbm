@@ -1,219 +1,82 @@
-.class public final enum Lcom/bbm/c/l;
-.super Ljava/lang/Enum;
+.class final Lcom/bbm/c/l;
+.super Ljava/lang/Object;
 .source "EventTracker.java"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum",
-        "<",
-        "Lcom/bbm/c/l;",
-        ">;"
-    }
-.end annotation
-
-
-# static fields
-.field public static final enum a:Lcom/bbm/c/l;
-
-.field public static final enum b:Lcom/bbm/c/l;
-
-.field public static final enum c:Lcom/bbm/c/l;
-
-.field public static final enum d:Lcom/bbm/c/l;
-
-.field public static final enum e:Lcom/bbm/c/l;
-
-.field public static final enum f:Lcom/bbm/c/l;
-
-.field private static final synthetic h:[Lcom/bbm/c/l;
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field private g:Ljava/lang/String;
+.field final synthetic a:Landroid/content/Context;
+
+.field final synthetic b:Ljava/lang/String;
+
+.field final synthetic c:Lcom/bbm/c/c;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
-
-    .prologue
-    const/4 v8, 0x4
-
-    const/4 v7, 0x3
-
-    const/4 v6, 0x2
-
-    const/4 v5, 0x1
-
-    const/4 v4, 0x0
-
-    .line 468
-    new-instance v0, Lcom/bbm/c/l;
-
-    const-string v1, "Store"
-
-    const-string v2, "Store"
-
-    invoke-direct {v0, v1, v4, v2}, Lcom/bbm/c/l;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/c/l;->a:Lcom/bbm/c/l;
-
-    .line 469
-    new-instance v0, Lcom/bbm/c/l;
-
-    const-string v1, "FullVG"
-
-    const-string v2, "Full VG"
-
-    invoke-direct {v0, v1, v5, v2}, Lcom/bbm/c/l;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/c/l;->b:Lcom/bbm/c/l;
-
-    .line 470
-    new-instance v0, Lcom/bbm/c/l;
-
-    const-string v1, "StoreHomePage"
-
-    const-string v2, "Shop Home Page"
-
-    invoke-direct {v0, v1, v6, v2}, Lcom/bbm/c/l;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/c/l;->c:Lcom/bbm/c/l;
-
-    .line 471
-    new-instance v0, Lcom/bbm/c/l;
-
-    const-string v1, "Link"
-
-    const-string v2, "Link"
-
-    invoke-direct {v0, v1, v7, v2}, Lcom/bbm/c/l;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/c/l;->d:Lcom/bbm/c/l;
-
-    .line 472
-    new-instance v0, Lcom/bbm/c/l;
-
-    const-string v1, "Invocation"
-
-    const-string v2, "Tapped Buy Button"
-
-    invoke-direct {v0, v1, v8, v2}, Lcom/bbm/c/l;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/c/l;->e:Lcom/bbm/c/l;
-
-    .line 473
-    new-instance v0, Lcom/bbm/c/l;
-
-    const-string v1, "ViewAll"
-
-    const/4 v2, 0x5
-
-    const-string v3, "VG View All"
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/c/l;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/c/l;->f:Lcom/bbm/c/l;
-
-    .line 467
-    const/4 v0, 0x6
-
-    new-array v0, v0, [Lcom/bbm/c/l;
-
-    sget-object v1, Lcom/bbm/c/l;->a:Lcom/bbm/c/l;
-
-    aput-object v1, v0, v4
-
-    sget-object v1, Lcom/bbm/c/l;->b:Lcom/bbm/c/l;
-
-    aput-object v1, v0, v5
-
-    sget-object v1, Lcom/bbm/c/l;->c:Lcom/bbm/c/l;
-
-    aput-object v1, v0, v6
-
-    sget-object v1, Lcom/bbm/c/l;->d:Lcom/bbm/c/l;
-
-    aput-object v1, v0, v7
-
-    sget-object v1, Lcom/bbm/c/l;->e:Lcom/bbm/c/l;
-
-    aput-object v1, v0, v8
-
-    const/4 v1, 0x5
-
-    sget-object v2, Lcom/bbm/c/l;->f:Lcom/bbm/c/l;
-
-    aput-object v2, v0, v1
-
-    sput-object v0, Lcom/bbm/c/l;->h:[Lcom/bbm/c/l;
-
-    return-void
-.end method
-
-.method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method constructor <init>(Lcom/bbm/c/c;Landroid/content/Context;Ljava/lang/String;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            ")V"
-        }
-    .end annotation
 
     .prologue
-    .line 477
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 2627
+    iput-object p1, p0, Lcom/bbm/c/l;->c:Lcom/bbm/c/c;
 
-    .line 478
-    iput-object p3, p0, Lcom/bbm/c/l;->g:Ljava/lang/String;
+    iput-object p2, p0, Lcom/bbm/c/l;->a:Landroid/content/Context;
 
-    .line 479
+    iput-object p3, p0, Lcom/bbm/c/l;->b:Ljava/lang/String;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lcom/bbm/c/l;
-    .locals 1
-
-    .prologue
-    .line 467
-    const-class v0, Lcom/bbm/c/l;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/c/l;
-
-    return-object v0
-.end method
-
-.method public static values()[Lcom/bbm/c/l;
-    .locals 1
-
-    .prologue
-    .line 467
-    sget-object v0, Lcom/bbm/c/l;->h:[Lcom/bbm/c/l;
-
-    invoke-virtual {v0}, [Lcom/bbm/c/l;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lcom/bbm/c/l;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public final run()V
+    .locals 4
 
     .prologue
-    .line 483
-    iget-object v0, p0, Lcom/bbm/c/l;->g:Ljava/lang/String;
+    .line 2630
+    iget-object v0, p0, Lcom/bbm/c/l;->a:Landroid/content/Context;
 
-    return-object v0
+    invoke-static {v0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 2631
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    .line 2633
+    :try_start_0
+    iget-object v2, p0, Lcom/bbm/c/l;->b:Ljava/lang/String;
+
+    const/4 v3, 0x0
+
+    invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    .line 2634
+    iget-object v2, p0, Lcom/bbm/c/l;->b:Ljava/lang/String;
+
+    add-int/lit8 v0, v0, 0x1
+
+    invoke-interface {v1, v2, v0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    .line 2635
+    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
+    :try_end_0
+    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 2639
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
 .end method

@@ -53,7 +53,7 @@
 
     const/4 v4, 0x0
 
-    .line 45
+    .line 46
     new-instance v0, Lcom/d/a/b/d/d;
 
     const-string v1, "HTTP"
@@ -128,7 +128,7 @@
 
     sput-object v0, Lcom/d/a/b/d/d;->g:Lcom/d/a/b/d/d;
 
-    .line 44
+    .line 45
     const/4 v0, 0x7
 
     new-array v0, v0, [Lcom/d/a/b/d/d;
@@ -181,13 +181,13 @@
     .end annotation
 
     .prologue
-    .line 50
+    .line 51
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 51
+    .line 52
     iput-object p3, p0, Lcom/d/a/b/d/d;->h:Ljava/lang/String;
 
-    .line 52
+    .line 53
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -208,7 +208,7 @@
 
     iput-object v0, p0, Lcom/d/a/b/d/d;->i:Ljava/lang/String;
 
-    .line 53
+    .line 54
     return-void
 .end method
 
@@ -216,10 +216,10 @@
     .locals 5
 
     .prologue
-    .line 62
+    .line 63
     if-eqz p0, :cond_1
 
-    .line 63
+    .line 64
     invoke-static {}, Lcom/d/a/b/d/d;->values()[Lcom/d/a/b/d/d;
 
     move-result-object v2
@@ -235,18 +235,18 @@
 
     aget-object v0, v2, v1
 
-    .line 64
+    .line 65
     invoke-direct {v0, p0}, Lcom/d/a/b/d/d;->d(Ljava/lang/String;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 69
+    .line 70
     :goto_1
     return-object v0
 
-    .line 63
+    .line 64
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -254,7 +254,7 @@
 
     goto :goto_0
 
-    .line 69
+    .line 70
     :cond_1
     sget-object v0, Lcom/d/a/b/d/d;->g:Lcom/d/a/b/d/d;
 
@@ -262,13 +262,19 @@
 .end method
 
 .method private d(Ljava/lang/String;)Z
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 73
-    iget-object v0, p0, Lcom/d/a/b/d/d;->i:Ljava/lang/String;
+    .line 74
+    sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p1, v0}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/d/a/b/d/d;->i:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -279,7 +285,7 @@
     .locals 1
 
     .prologue
-    .line 44
+    .line 45
     const-class v0, Lcom/d/a/b/d/d;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -295,7 +301,7 @@
     .locals 1
 
     .prologue
-    .line 44
+    .line 45
     sget-object v0, Lcom/d/a/b/d/d;->j:[Lcom/d/a/b/d/d;
 
     invoke-virtual {v0}, [Lcom/d/a/b/d/d;->clone()Ljava/lang/Object;
@@ -313,7 +319,7 @@
     .locals 2
 
     .prologue
-    .line 78
+    .line 79
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -339,14 +345,14 @@
     .locals 5
 
     .prologue
-    .line 83
+    .line 84
     invoke-direct {p0, p1}, Lcom/d/a/b/d/d;->d(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 84
+    .line 85
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "URI [%1$s] doesn\'t have expected scheme [%2$s]"
@@ -373,7 +379,7 @@
 
     throw v0
 
-    .line 86
+    .line 87
     :cond_0
     iget-object v0, p0, Lcom/d/a/b/d/d;->i:Ljava/lang/String;
 

@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field final synthetic vN:Lcom/glympse/android/ui/NotificationProvider;
+.field final synthetic wH:Lcom/glympse/android/ui/NotificationProvider;
 
 
 # direct methods
@@ -12,10 +12,10 @@
     .locals 6
 
     .prologue
-    .line 751
-    iput-object p1, p0, Lcom/glympse/android/ui/d;->vN:Lcom/glympse/android/ui/NotificationProvider;
+    .line 770
+    iput-object p1, p0, Lcom/glympse/android/ui/d;->wH:Lcom/glympse/android/ui/NotificationProvider;
 
-    .line 752
+    .line 771
     invoke-static {p1}, Lcom/glympse/android/ui/NotificationProvider;->b(Lcom/glympse/android/ui/NotificationProvider;)Landroid/app/Service;
 
     move-result-object v0
@@ -46,7 +46,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/glympse/android/ui/f;-><init>(Lcom/glympse/android/ui/NotificationProvider;Ljava/lang/String;Ljava/lang/String;ILcom/glympse/android/ui/NotificationProvider$1;)V
 
-    .line 755
+    .line 774
     return-void
 .end method
 
@@ -54,7 +54,7 @@
     .locals 0
 
     .prologue
-    .line 748
+    .line 767
     invoke-direct {p0, p1}, Lcom/glympse/android/ui/d;-><init>(Lcom/glympse/android/ui/NotificationProvider;)V
 
     return-void

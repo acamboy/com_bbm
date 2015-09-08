@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private vo:Lcom/glympse/android/rpc/ImageLoader$GLoadListener;
+.field private we:Lcom/glympse/android/rpc/ImageLoader$GLoadListener;
 
 
 # direct methods
@@ -19,7 +19,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 41
-    iput-object p1, p0, Lcom/glympse/android/rpc/ImageLoader;->vo:Lcom/glympse/android/rpc/ImageLoader$GLoadListener;
+    iput-object p1, p0, Lcom/glympse/android/rpc/ImageLoader;->we:Lcom/glympse/android/rpc/ImageLoader$GLoadListener;
 
     .line 42
     return-void
@@ -133,7 +133,7 @@
     if-eqz v0, :cond_2
 
     .line 110
-    iget-object v0, p0, Lcom/glympse/android/rpc/ImageLoader;->vo:Lcom/glympse/android/rpc/ImageLoader$GLoadListener;
+    iget-object v0, p0, Lcom/glympse/android/rpc/ImageLoader;->we:Lcom/glympse/android/rpc/ImageLoader$GLoadListener;
 
     invoke-static {v0, p4}, Lcom/glympse/android/rpc/ImageLoader;->a(Lcom/glympse/android/rpc/ImageLoader$GLoadListener;Lcom/glympse/android/api/GImage;)V
 
@@ -150,7 +150,7 @@
     .line 117
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/rpc/ImageLoader;->vo:Lcom/glympse/android/rpc/ImageLoader$GLoadListener;
+    iput-object v0, p0, Lcom/glympse/android/rpc/ImageLoader;->we:Lcom/glympse/android/rpc/ImageLoader$GLoadListener;
 
     goto :goto_0
 .end method

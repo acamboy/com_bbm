@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/hx;
 .super Ljava/lang/Object;
-.source "ConversationActivity.java"
+.source "EditListItemActivity.java"
 
 # interfaces
-.implements Lcom/slidingmenu/lib/a/b;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/EditListItemActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/EditListItemActivity;)V
     .locals 0
 
     .prologue
-    .line 2893
-    iput-object p1, p0, Lcom/bbm/ui/activities/hx;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 203
+    iput-object p1, p0, Lcom/bbm/ui/activities/hx;->a:Lcom/bbm/ui/activities/EditListItemActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,50 +25,36 @@
 
 
 # virtual methods
-.method public final a()V
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
     .prologue
-    .line 2897
-    const-string v0, "onHardwareMenuButtonClicked"
+    .line 207
+    const-string v0, "mButtonToolbar Negative Button Clicked"
 
-    const-class v1, Lcom/bbm/ui/activities/ConversationActivity;
+    const-class v1, Lcom/bbm/ui/activities/EditListItemActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 2898
-    iget-object v0, p0, Lcom/bbm/ui/activities/hx;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 209
+    const-string v0, "negativebutton onClick"
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+    const-class v1, Lcom/bbm/ui/activities/EditListItemActivity;
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-virtual {v0}, Lcom/slidingmenu/lib/SlidingMenu;->b()Z
+    .line 210
+    iget-object v0, p0, Lcom/bbm/ui/activities/hx;->a:Lcom/bbm/ui/activities/EditListItemActivity;
 
-    move-result v0
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/EditListItemActivity;->finish()V
 
-    if-eqz v0, :cond_0
+    .line 211
+    iget-object v0, p0, Lcom/bbm/ui/activities/hx;->a:Lcom/bbm/ui/activities/EditListItemActivity;
 
-    .line 2899
-    iget-object v0, p0, Lcom/bbm/ui/activities/hx;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    const/4 v1, 0x0
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+    invoke-static {v0, v1}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;Z)V
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
-
-    .line 2903
-    :goto_0
+    .line 212
     return-void
-
-    .line 2901
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/hx;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->G(Lcom/bbm/ui/activities/ConversationActivity;)V
-
-    goto :goto_0
 .end method

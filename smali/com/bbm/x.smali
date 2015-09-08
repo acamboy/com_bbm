@@ -1,9 +1,6 @@
 .class final Lcom/bbm/x;
-.super Ljava/lang/Object;
-.source "LifecycleLogger.java"
-
-# interfaces
-.implements Landroid/app/Application$ActivityLifecycleCallbacks;
+.super Lcom/bbm/j/k;
+.source "GlympseWrapper.java"
 
 
 # instance fields
@@ -12,170 +9,248 @@
 
 # direct methods
 .method constructor <init>(Lcom/bbm/w;)V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 9
+    .line 55
     iput-object p1, p0, Lcom/bbm/x;->a:Lcom/bbm/w;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 2
+.method protected final a()V
+    .locals 6
 
     .prologue
-    .line 12
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 60
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v0
 
-    const-string v1, "  onActivityCreated"
+    invoke-virtual {v0}, Lcom/bbm/d/a;->o()Lcom/bbm/d/ie;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->a(Ljava/lang/Class;Ljava/lang/String;)V
+    move-result-object v2
 
-    .line 13
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 62
+    iget-object v0, v2, Lcom/bbm/d/ie;->B:Lcom/bbm/util/bo;
 
-    move-result-object v0
+    sget-object v1, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
 
-    const-string v1, "  onActivityCreated"
+    if-ne v0, v1, :cond_1
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/Class;Ljava/lang/String;)V
+    iget-object v0, p0, Lcom/bbm/x;->a:Lcom/bbm/w;
 
-    .line 14
-    const-string v0, "onCreate"
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 15
-    return-void
-.end method
-
-.method public final onActivityDestroyed(Landroid/app/Activity;)V
-    .locals 2
-
-    .prologue
-    .line 44
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v0}, Lcom/bbm/w;->a(Lcom/bbm/w;)Lcom/glympse/android/api/GGlympse;
 
     move-result-object v0
 
-    const-string v1, "  onActivityDestroyed"
+    if-eqz v0, :cond_1
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->a(Ljava/lang/Class;Ljava/lang/String;)V
+    .line 63
+    iget-object v0, p0, Lcom/bbm/x;->a:Lcom/bbm/w;
 
-    .line 45
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v0}, Lcom/bbm/w;->a(Lcom/bbm/w;)Lcom/glympse/android/api/GGlympse;
 
     move-result-object v0
 
-    const-string v1, "  onActivityDestroyed"
+    invoke-interface {v0}, Lcom/glympse/android/api/GGlympse;->getUserManager()Lcom/glympse/android/api/GUserManager;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/Class;Ljava/lang/String;)V
+    move-result-object v0
 
-    .line 46
-    const-string v0, "onDestroy"
+    invoke-interface {v0}, Lcom/glympse/android/api/GUserManager;->getSelf()Lcom/glympse/android/api/GUser;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v3
 
-    move-result-object v1
+    .line 64
+    invoke-static {v2}, Lcom/bbm/d/b/a;->d(Lcom/bbm/d/ie;)Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    move-result-object v0
 
-    .line 47
-    return-void
-.end method
+    .line 65
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-.method public final onActivityPaused(Landroid/app/Activity;)V
-    .locals 2
+    move-result v1
 
-    .prologue
-    .line 29
-    const-string v0, "onPause"
+    if-nez v1, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-interface {v3}, Lcom/glympse/android/api/GUser;->getNickname()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 30
-    return-void
-.end method
+    move-result v1
 
-.method public final onActivityResumed(Landroid/app/Activity;)V
-    .locals 2
+    if-nez v1, :cond_0
 
-    .prologue
-    .line 24
-    const-string v0, "onResume"
+    .line 67
+    invoke-interface {v3, v0}, Lcom/glympse/android/api/GUser;->setNickname(Ljava/lang/String;)Z
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 69
+    :cond_0
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-virtual {v0, v2}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ie;)Lcom/bbm/j/r;
 
-    .line 25
-    return-void
-.end method
+    move-result-object v0
 
-.method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 2
+    invoke-interface {v0}, Lcom/bbm/j/r;->f()Ljava/lang/Object;
 
-    .prologue
-    .line 39
-    const-string v0, "onSaveInstanceState"
+    move-result-object v0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast v0, Lcom/bbm/d/gh;
 
-    move-result-object v1
+    .line 71
+    if-eqz v0, :cond_1
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    iget-boolean v1, v0, Lcom/bbm/d/gh;->c:Z
 
-    .line 40
-    return-void
-.end method
+    if-nez v1, :cond_1
 
-.method public final onActivityStarted(Landroid/app/Activity;)V
-    .locals 2
+    .line 74
+    iget-boolean v1, v0, Lcom/bbm/d/gh;->a:Z
 
-    .prologue
-    .line 19
-    const-string v0, "onStart"
+    if-eqz v1, :cond_2
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0}, Lcom/bbm/d/gh;->a()Lcom/bbm/ui/cw;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    if-eqz v1, :cond_2
 
-    .line 20
-    return-void
-.end method
+    .line 75
+    new-instance v1, Landroid/graphics/drawable/BitmapDrawable;
 
-.method public final onActivityStopped(Landroid/app/Activity;)V
-    .locals 2
+    invoke-virtual {v0}, Lcom/bbm/d/gh;->a()Lcom/bbm/ui/cw;
 
-    .prologue
-    .line 34
-    const-string v0, "onStop"
+    move-result-object v0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0}, Lcom/bbm/ui/cw;->d()Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/graphics/Bitmap;)V
+
+    move-object v0, v1
+
+    .line 80
+    :goto_0
+    if-eqz v0, :cond_1
+
+    .line 82
+    :try_start_0
+    iget-object v1, p0, Lcom/bbm/x;->a:Lcom/bbm/w;
+
+    invoke-static {v1}, Lcom/bbm/w;->b(Lcom/bbm/w;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    const-string v4, "glympse_avatar_hash"
 
-    .line 35
+    const/4 v5, -0x1
+
+    invoke-interface {v1, v4, v5}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+    move-result v1
+
+    .line 83
+    iget-object v4, v2, Lcom/bbm/d/ie;->a:Ljava/lang/String;
+
+    invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v4
+
+    .line 84
+    if-eq v4, v1, :cond_1
+
+    .line 86
+    invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createDrawable(Landroid/graphics/drawable/BitmapDrawable;)Lcom/glympse/android/core/GDrawable;
+
+    move-result-object v0
+
+    .line 87
+    invoke-interface {v3}, Lcom/glympse/android/api/GUser;->isUploadingAvatar()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    .line 88
+    invoke-interface {v3, v0}, Lcom/glympse/android/api/GUser;->setAvatar(Lcom/glympse/android/core/GDrawable;)Z
+
+    .line 89
+    iget-object v0, p0, Lcom/bbm/x;->a:Lcom/bbm/w;
+
+    invoke-static {v0}, Lcom/bbm/w;->b(Lcom/bbm/w;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string v1, "glympse_avatar_hash"
+
+    invoke-interface {v0, v1, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 98
+    :cond_1
+    :goto_1
     return-void
+
+    .line 77
+    :cond_2
+    invoke-virtual {v0}, Lcom/bbm/d/gh;->b()Landroid/graphics/drawable/BitmapDrawable;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 93
+    :catch_0
+    move-exception v0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "avatarHash not an integer: ("
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, v2, Lcom/bbm/d/ie;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    goto :goto_1
 .end method

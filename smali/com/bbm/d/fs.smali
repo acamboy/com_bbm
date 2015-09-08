@@ -1,6 +1,6 @@
 .class public Lcom/bbm/d/fs;
 .super Ljava/lang/Object;
-.source "PendingPost.java"
+.source "ConferenceInvitation.java"
 
 # interfaces
 .implements Lcom/bbm/d/a/a;
@@ -11,21 +11,15 @@
 
 .field public b:Ljava/lang/String;
 
-.field public c:Lorg/json/JSONObject;
+.field public c:Ljava/lang/String;
 
 .field public d:Ljava/lang/String;
 
 .field public e:Lcom/bbm/d/ft;
 
-.field public f:Ljava/lang/String;
+.field public f:J
 
-.field public g:Ljava/lang/String;
-
-.field public h:J
-
-.field public i:Ljava/lang/String;
-
-.field public j:Lcom/bbm/util/bi;
+.field public g:Lcom/bbm/util/bo;
 
 
 # direct methods
@@ -33,62 +27,45 @@
     .locals 2
 
     .prologue
-    .line 119
+    .line 115
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 63
+    .line 74
     const-string v0, ""
 
     iput-object v0, p0, Lcom/bbm/d/fs;->a:Ljava/lang/String;
 
-    .line 68
+    .line 79
     const-string v0, ""
 
     iput-object v0, p0, Lcom/bbm/d/fs;->b:Ljava/lang/String;
 
-    .line 73
-    new-instance v0, Lorg/json/JSONObject;
+    .line 84
+    const-string v0, ""
 
-    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+    iput-object v0, p0, Lcom/bbm/d/fs;->c:Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/bbm/d/fs;->c:Lorg/json/JSONObject;
-
-    .line 78
+    .line 89
     const-string v0, ""
 
     iput-object v0, p0, Lcom/bbm/d/fs;->d:Ljava/lang/String;
 
-    .line 83
-    sget-object v0, Lcom/bbm/d/ft;->h:Lcom/bbm/d/ft;
+    .line 94
+    sget-object v0, Lcom/bbm/d/ft;->a:Lcom/bbm/d/ft;
 
     iput-object v0, p0, Lcom/bbm/d/fs;->e:Lcom/bbm/d/ft;
 
-    .line 88
-    const-string v0, ""
-
-    iput-object v0, p0, Lcom/bbm/d/fs;->f:Ljava/lang/String;
-
-    .line 93
-    const-string v0, ""
-
-    iput-object v0, p0, Lcom/bbm/d/fs;->g:Ljava/lang/String;
-
-    .line 98
+    .line 99
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/bbm/d/fs;->h:J
+    iput-wide v0, p0, Lcom/bbm/d/fs;->f:J
 
-    .line 103
-    const-string v0, ""
+    .line 109
+    sget-object v0, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
 
-    iput-object v0, p0, Lcom/bbm/d/fs;->i:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/d/fs;->g:Lcom/bbm/util/bo;
 
-    .line 113
-    sget-object v0, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
-
-    iput-object v0, p0, Lcom/bbm/d/fs;->j:Lcom/bbm/util/bi;
-
-    .line 119
+    .line 115
     return-void
 .end method
 
@@ -96,112 +73,80 @@
     .locals 2
 
     .prologue
-    .line 126
+    .line 122
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 63
+    .line 74
     const-string v0, ""
 
     iput-object v0, p0, Lcom/bbm/d/fs;->a:Ljava/lang/String;
 
-    .line 68
+    .line 79
     const-string v0, ""
 
     iput-object v0, p0, Lcom/bbm/d/fs;->b:Ljava/lang/String;
 
-    .line 73
-    new-instance v0, Lorg/json/JSONObject;
+    .line 84
+    const-string v0, ""
 
-    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+    iput-object v0, p0, Lcom/bbm/d/fs;->c:Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/bbm/d/fs;->c:Lorg/json/JSONObject;
-
-    .line 78
+    .line 89
     const-string v0, ""
 
     iput-object v0, p0, Lcom/bbm/d/fs;->d:Ljava/lang/String;
 
-    .line 83
-    sget-object v0, Lcom/bbm/d/ft;->h:Lcom/bbm/d/ft;
+    .line 94
+    sget-object v0, Lcom/bbm/d/ft;->a:Lcom/bbm/d/ft;
 
     iput-object v0, p0, Lcom/bbm/d/fs;->e:Lcom/bbm/d/ft;
 
-    .line 88
-    const-string v0, ""
-
-    iput-object v0, p0, Lcom/bbm/d/fs;->f:Ljava/lang/String;
-
-    .line 93
-    const-string v0, ""
-
-    iput-object v0, p0, Lcom/bbm/d/fs;->g:Ljava/lang/String;
-
-    .line 98
+    .line 99
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/bbm/d/fs;->h:J
+    iput-wide v0, p0, Lcom/bbm/d/fs;->f:J
 
-    .line 103
-    const-string v0, ""
+    .line 109
+    sget-object v0, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
 
-    iput-object v0, p0, Lcom/bbm/d/fs;->i:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/d/fs;->g:Lcom/bbm/util/bo;
 
-    .line 113
-    sget-object v0, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
-
-    iput-object v0, p0, Lcom/bbm/d/fs;->j:Lcom/bbm/util/bi;
-
-    .line 127
+    .line 123
     iget-object v0, p1, Lcom/bbm/d/fs;->a:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/bbm/d/fs;->a:Ljava/lang/String;
 
-    .line 128
+    .line 124
     iget-object v0, p1, Lcom/bbm/d/fs;->b:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/bbm/d/fs;->b:Ljava/lang/String;
 
-    .line 129
-    iget-object v0, p1, Lcom/bbm/d/fs;->c:Lorg/json/JSONObject;
+    .line 125
+    iget-object v0, p1, Lcom/bbm/d/fs;->c:Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/bbm/d/fs;->c:Lorg/json/JSONObject;
+    iput-object v0, p0, Lcom/bbm/d/fs;->c:Ljava/lang/String;
 
-    .line 130
+    .line 126
     iget-object v0, p1, Lcom/bbm/d/fs;->d:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/bbm/d/fs;->d:Ljava/lang/String;
 
-    .line 131
+    .line 127
     iget-object v0, p1, Lcom/bbm/d/fs;->e:Lcom/bbm/d/ft;
 
     iput-object v0, p0, Lcom/bbm/d/fs;->e:Lcom/bbm/d/ft;
 
-    .line 132
-    iget-object v0, p1, Lcom/bbm/d/fs;->f:Ljava/lang/String;
+    .line 128
+    iget-wide v0, p1, Lcom/bbm/d/fs;->f:J
 
-    iput-object v0, p0, Lcom/bbm/d/fs;->f:Ljava/lang/String;
+    iput-wide v0, p0, Lcom/bbm/d/fs;->f:J
 
-    .line 133
-    iget-object v0, p1, Lcom/bbm/d/fs;->g:Ljava/lang/String;
+    .line 129
+    iget-object v0, p1, Lcom/bbm/d/fs;->g:Lcom/bbm/util/bo;
 
-    iput-object v0, p0, Lcom/bbm/d/fs;->g:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/d/fs;->g:Lcom/bbm/util/bo;
 
-    .line 134
-    iget-wide v0, p1, Lcom/bbm/d/fs;->h:J
-
-    iput-wide v0, p0, Lcom/bbm/d/fs;->h:J
-
-    .line 135
-    iget-object v0, p1, Lcom/bbm/d/fs;->i:Ljava/lang/String;
-
-    iput-object v0, p0, Lcom/bbm/d/fs;->i:Ljava/lang/String;
-
-    .line 136
-    iget-object v0, p1, Lcom/bbm/d/fs;->j:Lcom/bbm/util/bi;
-
-    iput-object v0, p0, Lcom/bbm/d/fs;->j:Lcom/bbm/util/bi;
-
-    .line 137
+    .line 130
     return-void
 .end method
 
@@ -211,20 +156,20 @@
     .locals 1
 
     .prologue
-    .line 141
-    iget-object v0, p0, Lcom/bbm/d/fs;->f:Ljava/lang/String;
+    .line 134
+    iget-object v0, p0, Lcom/bbm/d/fs;->b:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final a(Lcom/bbm/util/bi;)V
+.method public final a(Lcom/bbm/util/bo;)V
     .locals 0
 
     .prologue
-    .line 170
-    iput-object p1, p0, Lcom/bbm/d/fs;->j:Lcom/bbm/util/bi;
+    .line 160
+    iput-object p1, p0, Lcom/bbm/d/fs;->g:Lcom/bbm/util/bo;
 
-    .line 171
+    .line 161
     return-void
 .end method
 
@@ -232,8 +177,8 @@
     .locals 2
 
     .prologue
-    .line 147
-    const-string v0, "channelUri"
+    .line 140
+    const-string v0, "conferenceUri"
 
     iget-object v1, p0, Lcom/bbm/d/fs;->a:Ljava/lang/String;
 
@@ -243,8 +188,8 @@
 
     iput-object v0, p0, Lcom/bbm/d/fs;->a:Ljava/lang/String;
 
-    .line 148
-    const-string v0, "content"
+    .line 141
+    const-string v0, "id"
 
     iget-object v1, p0, Lcom/bbm/d/fs;->b:Ljava/lang/String;
 
@@ -254,23 +199,19 @@
 
     iput-object v0, p0, Lcom/bbm/d/fs;->b:Ljava/lang/String;
 
-    .line 149
-    const-string v0, "cropRect"
+    .line 142
+    const-string v0, "invitee"
 
-    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+    iget-object v1, p0, Lcom/bbm/d/fs;->c:Ljava/lang/String;
 
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/d/fs;->c:Lorg/json/JSONObject;
-
-    invoke-static {v0, v1}, Lcom/bbm/util/cd;->b(Lorg/json/JSONObject;Lorg/json/JSONObject;)Lorg/json/JSONObject;
+    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/d/fs;->c:Lorg/json/JSONObject;
+    iput-object v0, p0, Lcom/bbm/d/fs;->c:Ljava/lang/String;
 
-    .line 150
-    const-string v0, "externalId"
+    .line 143
+    const-string v0, "invitor"
 
     iget-object v1, p0, Lcom/bbm/d/fs;->d:Ljava/lang/String;
 
@@ -280,8 +221,8 @@
 
     iput-object v0, p0, Lcom/bbm/d/fs;->d:Ljava/lang/String;
 
-    .line 151
-    const-string v0, "failureReason"
+    .line 144
+    const-string v0, "status"
 
     iget-object v1, p0, Lcom/bbm/d/fs;->e:Lcom/bbm/d/ft;
 
@@ -299,29 +240,7 @@
 
     iput-object v0, p0, Lcom/bbm/d/fs;->e:Lcom/bbm/d/ft;
 
-    .line 152
-    const-string v0, "id"
-
-    iget-object v1, p0, Lcom/bbm/d/fs;->f:Ljava/lang/String;
-
-    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/d/fs;->f:Ljava/lang/String;
-
-    .line 153
-    const-string v0, "imagePath"
-
-    iget-object v1, p0, Lcom/bbm/d/fs;->g:Ljava/lang/String;
-
-    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/d/fs;->g:Ljava/lang/String;
-
-    .line 155
+    .line 146
     const-string v0, "timestamp"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
@@ -330,7 +249,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 156
+    .line 147
     const-string v0, "timestamp"
 
     const-string v1, ""
@@ -339,7 +258,7 @@
 
     move-result-object v0
 
-    .line 157
+    .line 148
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v1
@@ -349,24 +268,13 @@
     const-wide/16 v0, 0x0
 
     :goto_0
-    iput-wide v0, p0, Lcom/bbm/d/fs;->h:J
+    iput-wide v0, p0, Lcom/bbm/d/fs;->f:J
 
-    .line 159
+    .line 150
     :cond_0
-    const-string v0, "title"
-
-    iget-object v1, p0, Lcom/bbm/d/fs;->i:Ljava/lang/String;
-
-    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/d/fs;->i:Ljava/lang/String;
-
-    .line 160
     return-void
 
-    .line 157
+    .line 148
     :cond_1
     invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
@@ -379,7 +287,7 @@
     .locals 1
 
     .prologue
-    .line 165
+    .line 155
     new-instance v0, Lcom/bbm/d/fs;
 
     invoke-direct {v0, p0}, Lcom/bbm/d/fs;-><init>(Lcom/bbm/d/fs;)V
@@ -387,12 +295,12 @@
     return-object v0
 .end method
 
-.method public final c()Lcom/bbm/util/bi;
+.method public final c()Lcom/bbm/util/bo;
     .locals 1
 
     .prologue
-    .line 175
-    iget-object v0, p0, Lcom/bbm/d/fs;->j:Lcom/bbm/util/bi;
+    .line 165
+    iget-object v0, p0, Lcom/bbm/d/fs;->g:Lcom/bbm/util/bo;
 
     return-object v0
 .end method
@@ -405,24 +313,24 @@
 
     const/4 v1, 0x0
 
-    .line 199
+    .line 186
     if-ne p0, p1, :cond_1
 
-    .line 273
+    .line 239
     :cond_0
     :goto_0
     return v0
 
-    .line 202
+    .line 189
     :cond_1
     if-nez p1, :cond_2
 
     move v0, v1
 
-    .line 203
+    .line 190
     goto :goto_0
 
-    .line 205
+    .line 192
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -436,29 +344,29 @@
 
     move v0, v1
 
-    .line 206
+    .line 193
     goto :goto_0
 
-    .line 208
+    .line 195
     :cond_3
     check-cast p1, Lcom/bbm/d/fs;
 
-    .line 209
+    .line 196
     iget-object v2, p0, Lcom/bbm/d/fs;->a:Ljava/lang/String;
 
     if-nez v2, :cond_4
 
-    .line 210
+    .line 197
     iget-object v2, p1, Lcom/bbm/d/fs;->a:Ljava/lang/String;
 
     if-eqz v2, :cond_5
 
     move v0, v1
 
-    .line 211
+    .line 198
     goto :goto_0
 
-    .line 213
+    .line 200
     :cond_4
     iget-object v2, p0, Lcom/bbm/d/fs;->a:Ljava/lang/String;
 
@@ -472,26 +380,26 @@
 
     move v0, v1
 
-    .line 214
+    .line 201
     goto :goto_0
 
-    .line 216
+    .line 203
     :cond_5
     iget-object v2, p0, Lcom/bbm/d/fs;->b:Ljava/lang/String;
 
     if-nez v2, :cond_6
 
-    .line 217
+    .line 204
     iget-object v2, p1, Lcom/bbm/d/fs;->b:Ljava/lang/String;
 
     if-eqz v2, :cond_7
 
     move v0, v1
 
-    .line 218
+    .line 205
     goto :goto_0
 
-    .line 220
+    .line 207
     :cond_6
     iget-object v2, p0, Lcom/bbm/d/fs;->b:Ljava/lang/String;
 
@@ -505,32 +413,32 @@
 
     move v0, v1
 
-    .line 221
+    .line 208
     goto :goto_0
 
-    .line 223
+    .line 210
     :cond_7
-    iget-object v2, p0, Lcom/bbm/d/fs;->c:Lorg/json/JSONObject;
+    iget-object v2, p0, Lcom/bbm/d/fs;->c:Ljava/lang/String;
 
     if-nez v2, :cond_8
 
-    .line 224
-    iget-object v2, p1, Lcom/bbm/d/fs;->c:Lorg/json/JSONObject;
+    .line 211
+    iget-object v2, p1, Lcom/bbm/d/fs;->c:Ljava/lang/String;
 
     if-eqz v2, :cond_9
 
     move v0, v1
 
-    .line 225
+    .line 212
     goto :goto_0
 
-    .line 227
+    .line 214
     :cond_8
-    iget-object v2, p0, Lcom/bbm/d/fs;->c:Lorg/json/JSONObject;
+    iget-object v2, p0, Lcom/bbm/d/fs;->c:Ljava/lang/String;
 
-    iget-object v3, p1, Lcom/bbm/d/fs;->c:Lorg/json/JSONObject;
+    iget-object v3, p1, Lcom/bbm/d/fs;->c:Ljava/lang/String;
 
-    invoke-static {v2, v3}, Lcom/bbm/util/cd;->a(Lorg/json/JSONObject;Lorg/json/JSONObject;)Z
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -538,26 +446,26 @@
 
     move v0, v1
 
-    .line 228
+    .line 215
     goto :goto_0
 
-    .line 230
+    .line 217
     :cond_9
     iget-object v2, p0, Lcom/bbm/d/fs;->d:Ljava/lang/String;
 
     if-nez v2, :cond_a
 
-    .line 231
+    .line 218
     iget-object v2, p1, Lcom/bbm/d/fs;->d:Ljava/lang/String;
 
     if-eqz v2, :cond_b
 
     move v0, v1
 
-    .line 232
+    .line 219
     goto :goto_0
 
-    .line 234
+    .line 221
     :cond_a
     iget-object v2, p0, Lcom/bbm/d/fs;->d:Ljava/lang/String;
 
@@ -571,26 +479,26 @@
 
     move v0, v1
 
-    .line 235
+    .line 222
     goto :goto_0
 
-    .line 237
+    .line 224
     :cond_b
     iget-object v2, p0, Lcom/bbm/d/fs;->e:Lcom/bbm/d/ft;
 
     if-nez v2, :cond_c
 
-    .line 238
+    .line 225
     iget-object v2, p1, Lcom/bbm/d/fs;->e:Lcom/bbm/d/ft;
 
     if-eqz v2, :cond_d
 
     move v0, v1
 
-    .line 239
+    .line 226
     goto :goto_0
 
-    .line 241
+    .line 228
     :cond_c
     iget-object v2, p0, Lcom/bbm/d/fs;->e:Lcom/bbm/d/ft;
 
@@ -604,130 +512,31 @@
 
     move v0, v1
 
-    .line 242
+    .line 229
     goto :goto_0
 
-    .line 244
+    .line 231
     :cond_d
-    iget-object v2, p0, Lcom/bbm/d/fs;->f:Ljava/lang/String;
+    iget-wide v2, p0, Lcom/bbm/d/fs;->f:J
 
-    if-nez v2, :cond_e
-
-    .line 245
-    iget-object v2, p1, Lcom/bbm/d/fs;->f:Ljava/lang/String;
-
-    if-eqz v2, :cond_f
-
-    move v0, v1
-
-    .line 246
-    goto/16 :goto_0
-
-    .line 248
-    :cond_e
-    iget-object v2, p0, Lcom/bbm/d/fs;->f:Ljava/lang/String;
-
-    iget-object v3, p1, Lcom/bbm/d/fs;->f:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_f
-
-    move v0, v1
-
-    .line 249
-    goto/16 :goto_0
-
-    .line 251
-    :cond_f
-    iget-object v2, p0, Lcom/bbm/d/fs;->g:Ljava/lang/String;
-
-    if-nez v2, :cond_10
-
-    .line 252
-    iget-object v2, p1, Lcom/bbm/d/fs;->g:Ljava/lang/String;
-
-    if-eqz v2, :cond_11
-
-    move v0, v1
-
-    .line 253
-    goto/16 :goto_0
-
-    .line 255
-    :cond_10
-    iget-object v2, p0, Lcom/bbm/d/fs;->g:Ljava/lang/String;
-
-    iget-object v3, p1, Lcom/bbm/d/fs;->g:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_11
-
-    move v0, v1
-
-    .line 256
-    goto/16 :goto_0
-
-    .line 258
-    :cond_11
-    iget-wide v2, p0, Lcom/bbm/d/fs;->h:J
-
-    iget-wide v4, p1, Lcom/bbm/d/fs;->h:J
+    iget-wide v4, p1, Lcom/bbm/d/fs;->f:J
 
     cmp-long v2, v2, v4
 
-    if-eqz v2, :cond_12
+    if-eqz v2, :cond_e
 
     move v0, v1
 
-    .line 259
+    .line 232
     goto/16 :goto_0
 
-    .line 261
-    :cond_12
-    iget-object v2, p0, Lcom/bbm/d/fs;->i:Ljava/lang/String;
+    .line 235
+    :cond_e
+    iget-object v2, p0, Lcom/bbm/d/fs;->g:Lcom/bbm/util/bo;
 
-    if-nez v2, :cond_13
+    iget-object v3, p1, Lcom/bbm/d/fs;->g:Lcom/bbm/util/bo;
 
-    .line 262
-    iget-object v2, p1, Lcom/bbm/d/fs;->i:Ljava/lang/String;
-
-    if-eqz v2, :cond_14
-
-    move v0, v1
-
-    .line 263
-    goto/16 :goto_0
-
-    .line 265
-    :cond_13
-    iget-object v2, p0, Lcom/bbm/d/fs;->i:Ljava/lang/String;
-
-    iget-object v3, p1, Lcom/bbm/d/fs;->i:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_14
-
-    move v0, v1
-
-    .line 266
-    goto/16 :goto_0
-
-    .line 269
-    :cond_14
-    iget-object v2, p0, Lcom/bbm/d/fs;->j:Lcom/bbm/util/bi;
-
-    iget-object v3, p1, Lcom/bbm/d/fs;->j:Lcom/bbm/util/bi;
-
-    invoke-virtual {v2, v3}, Lcom/bbm/util/bi;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v3}, Lcom/bbm/util/bo;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -735,7 +544,7 @@
 
     move v0, v1
 
-    .line 270
+    .line 236
     goto/16 :goto_0
 .end method
 
@@ -745,7 +554,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 181
+    .line 171
     iget-object v0, p0, Lcom/bbm/d/fs;->a:Ljava/lang/String;
 
     if-nez v0, :cond_0
@@ -755,7 +564,7 @@
     :goto_0
     add-int/lit8 v0, v0, 0x1f
 
-    .line 184
+    .line 174
     mul-int/lit8 v2, v0, 0x1f
 
     iget-object v0, p0, Lcom/bbm/d/fs;->b:Ljava/lang/String;
@@ -767,10 +576,10 @@
     :goto_1
     add-int/2addr v0, v2
 
-    .line 185
+    .line 175
     mul-int/lit8 v2, v0, 0x1f
 
-    iget-object v0, p0, Lcom/bbm/d/fs;->c:Lorg/json/JSONObject;
+    iget-object v0, p0, Lcom/bbm/d/fs;->c:Ljava/lang/String;
 
     if-nez v0, :cond_2
 
@@ -779,7 +588,7 @@
     :goto_2
     add-int/2addr v0, v2
 
-    .line 186
+    .line 176
     mul-int/lit8 v2, v0, 0x1f
 
     iget-object v0, p0, Lcom/bbm/d/fs;->d:Ljava/lang/String;
@@ -791,7 +600,7 @@
     :goto_3
     add-int/2addr v0, v2
 
-    .line 187
+    .line 177
     mul-int/lit8 v2, v0, 0x1f
 
     iget-object v0, p0, Lcom/bbm/d/fs;->e:Lcom/bbm/d/ft;
@@ -803,65 +612,29 @@
     :goto_4
     add-int/2addr v0, v2
 
-    .line 188
-    mul-int/lit8 v2, v0, 0x1f
-
-    iget-object v0, p0, Lcom/bbm/d/fs;->f:Ljava/lang/String;
-
-    if-nez v0, :cond_5
-
-    move v0, v1
-
-    :goto_5
-    add-int/2addr v0, v2
-
-    .line 189
-    mul-int/lit8 v2, v0, 0x1f
-
-    iget-object v0, p0, Lcom/bbm/d/fs;->g:Ljava/lang/String;
-
-    if-nez v0, :cond_6
-
-    move v0, v1
-
-    :goto_6
-    add-int/2addr v0, v2
-
-    .line 190
+    .line 178
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-wide v2, p0, Lcom/bbm/d/fs;->h:J
+    iget-wide v2, p0, Lcom/bbm/d/fs;->f:J
 
     long-to-int v2, v2
 
     add-int/2addr v0, v2
 
-    .line 191
-    mul-int/lit8 v2, v0, 0x1f
-
-    iget-object v0, p0, Lcom/bbm/d/fs;->i:Ljava/lang/String;
-
-    if-nez v0, :cond_7
-
-    move v0, v1
-
-    :goto_7
-    add-int/2addr v0, v2
-
-    .line 192
+    .line 179
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/bbm/d/fs;->j:Lcom/bbm/util/bi;
+    iget-object v2, p0, Lcom/bbm/d/fs;->g:Lcom/bbm/util/bo;
 
-    if-nez v2, :cond_8
+    if-nez v2, :cond_5
 
-    :goto_8
+    :goto_5
     add-int/2addr v0, v1
 
-    .line 193
+    .line 180
     return v0
 
-    .line 181
+    .line 171
     :cond_0
     iget-object v0, p0, Lcom/bbm/d/fs;->a:Ljava/lang/String;
 
@@ -871,7 +644,7 @@
 
     goto :goto_0
 
-    .line 184
+    .line 174
     :cond_1
     iget-object v0, p0, Lcom/bbm/d/fs;->b:Ljava/lang/String;
 
@@ -881,17 +654,17 @@
 
     goto :goto_1
 
-    .line 185
+    .line 175
     :cond_2
-    iget-object v0, p0, Lcom/bbm/d/fs;->c:Lorg/json/JSONObject;
+    iget-object v0, p0, Lcom/bbm/d/fs;->c:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/util/cd;->a(Lorg/json/JSONObject;)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
     goto :goto_2
 
-    .line 186
+    .line 176
     :cond_3
     iget-object v0, p0, Lcom/bbm/d/fs;->d:Ljava/lang/String;
 
@@ -901,7 +674,7 @@
 
     goto :goto_3
 
-    .line 187
+    .line 177
     :cond_4
     iget-object v0, p0, Lcom/bbm/d/fs;->e:Lcom/bbm/d/ft;
 
@@ -911,43 +684,13 @@
 
     goto :goto_4
 
-    .line 188
+    .line 179
     :cond_5
-    iget-object v0, p0, Lcom/bbm/d/fs;->f:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/d/fs;->g:Lcom/bbm/util/bo;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    goto :goto_5
-
-    .line 189
-    :cond_6
-    iget-object v0, p0, Lcom/bbm/d/fs;->g:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    goto :goto_6
-
-    .line 191
-    :cond_7
-    iget-object v0, p0, Lcom/bbm/d/fs;->i:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    goto :goto_7
-
-    .line 192
-    :cond_8
-    iget-object v1, p0, Lcom/bbm/d/fs;->j:Lcom/bbm/util/bi;
-
-    invoke-virtual {v1}, Lcom/bbm/util/bi;->hashCode()I
+    invoke-virtual {v1}, Lcom/bbm/util/bo;->hashCode()I
 
     move-result v1
 
-    goto :goto_8
+    goto :goto_5
 .end method

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:padding="@dimen/conversation_chat_bubble_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/message_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/conversation_chat_bubble_incoming_status_margin_left" android:layout_marginTop="@dimen/conversation_chat_bubble_status_margin_top" android:layout_marginRight="@dimen/conversation_chat_bubble_incoming_status_margin_right" android:contentDescription="@string/blank" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.bbm.ui.LinkifyTextView android:textSize="@dimen/fontSizeMedium" android:id="@id/message_body" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/conversation_chat_bubble_message_body_top" android:textIsSelectable="false" />
+        <TextView android:textColor="@color/ephemeral_bubble_hint_color_outgoing" android:id="@id/timer_duration" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/conversation_chat_bubble_date_padding" android:textIsSelectable="false" />
+        <TextView android:textColor="@color/ephemeral_bubble_screenshot_alert_color" android:id="@id/screenshot_alert" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/conversation_chat_bubble_date_padding" android:text="@string/ephemeral_picture_screenshot_alert" android:textIsSelectable="false" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="@dimen/conversation_chat_bubble_padding" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:id="@id/message_body_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/message_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/conversation_chat_bubble_outgoing_status_margin_R" android:contentDescription="@string/blank" />
+        <com.bbm.ui.LinkifyTextView android:id="@id/message_body" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:textIsSelectable="false" />
+    </LinearLayout>
+    <include android:id="@id/message_context_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_item_small_padding_top" android:layout_marginBottom="@dimen/settings_item_small_padding_bottom" layout="@layout/divider_common" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.bbm.ui.AvatarView android:id="@id/message_context_photo" android:layout_width="@dimen/conversation_chat_bubble_context_avatar_size" android:layout_height="@dimen/conversation_chat_bubble_context_avatar_size" app:avatarType="plain" />
+        <com.bbm.ui.LinkifyTextView android:id="@id/message_context_label" android:paddingLeft="@dimen/settings_item_padding_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="false" />
+    </LinearLayout>
+</LinearLayout>

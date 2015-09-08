@@ -1,368 +1,159 @@
-.class final enum Lcom/google/b/b/al;
-.super Ljava/lang/Enum;
+.class public final Lcom/google/b/b/al;
+.super Ljava/lang/Object;
 .source "LocalCache.java"
 
 # interfaces
-.implements Lcom/google/b/b/am;
+.implements Lcom/google/b/b/d;
+.implements Ljava/io/Serializable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ljava/lang/Enum",
-        "<",
-        "Lcom/google/b/b/al;",
-        ">;",
-        "Lcom/google/b/b/am",
-        "<",
+        "<K:",
         "Ljava/lang/Object;",
+        "V:",
         "Ljava/lang/Object;",
-        ">;"
+        ">",
+        "Ljava/lang/Object;",
+        "Lcom/google/b/b/d",
+        "<TK;TV;>;",
+        "Ljava/io/Serializable;"
     }
 .end annotation
 
 
-# static fields
-.field public static final enum a:Lcom/google/b/b/al;
-
-.field private static final synthetic b:[Lcom/google/b/b/al;
+# instance fields
+.field final a:Lcom/google/b/b/n;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/b/b/n",
+            "<TK;TV;>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    .prologue
-    .line 852
-    new-instance v0, Lcom/google/b/b/al;
-
-    const-string v1, "INSTANCE"
-
-    invoke-direct {v0, v1}, Lcom/google/b/b/al;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lcom/google/b/b/al;->a:Lcom/google/b/b/al;
-
-    .line 851
-    const/4 v0, 0x1
-
-    new-array v0, v0, [Lcom/google/b/b/al;
-
-    const/4 v1, 0x0
-
-    sget-object v2, Lcom/google/b/b/al;->a:Lcom/google/b/b/al;
-
-    aput-object v2, v0, v1
-
-    sput-object v0, Lcom/google/b/b/al;->b:[Lcom/google/b/b/al;
-
-    return-void
-.end method
-
-.method private constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>(Lcom/google/b/b/e;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "()V"
+            "(",
+            "Lcom/google/b/b/e",
+            "<-TK;-TV;>;)V"
         }
     .end annotation
 
     .prologue
-    .line 851
-    const/4 v0, 0x0
+    .line 4718
+    new-instance v0, Lcom/google/b/b/n;
 
-    invoke-direct {p0, p1, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, p1}, Lcom/google/b/b/n;-><init>(Lcom/google/b/b/e;)V
 
+    invoke-direct {p0, v0}, Lcom/google/b/b/al;-><init>(Lcom/google/b/b/n;)V
+
+    .line 4719
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcom/google/b/b/al;
-    .locals 1
+.method private constructor <init>(Lcom/google/b/b/n;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/b/b/n",
+            "<TK;TV;>;)V"
+        }
+    .end annotation
 
     .prologue
-    .line 851
-    const-class v0, Lcom/google/b/b/al;
+    .line 4721
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    .line 4722
+    iput-object p1, p0, Lcom/google/b/b/al;->a:Lcom/google/b/b/n;
 
-    move-result-object v0
-
-    check-cast v0, Lcom/google/b/b/al;
-
-    return-object v0
-.end method
-
-.method public static values()[Lcom/google/b/b/al;
-    .locals 1
-
-    .prologue
-    .line 851
-    sget-object v0, Lcom/google/b/b/al;->b:[Lcom/google/b/b/al;
-
-    invoke-virtual {v0}, [Lcom/google/b/b/al;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lcom/google/b/b/al;
-
-    return-object v0
+    .line 4723
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lcom/google/b/b/ba;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/google/b/b/ba",
-            "<",
-            "Ljava/lang/Object;",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 856
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final a(J)V
-    .locals 0
-
-    .prologue
-    .line 883
-    return-void
-.end method
-
-.method public final a(Lcom/google/b/b/am;)V
-    .locals 0
+.method public final a(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/google/b/b/am",
-            "<",
             "Ljava/lang/Object;",
-            "Ljava/lang/Object;",
-            ">;)V"
+            ")TV;"
         }
     .end annotation
 
     .prologue
-    .line 891
-    return-void
+    .line 4730
+    iget-object v0, p0, Lcom/google/b/b/al;->a:Lcom/google/b/b/n;
+
+    invoke-static {p1}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/google/b/b/n;->a(Ljava/lang/Object;)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/google/b/b/n;->a(I)Lcom/google/b/b/ao;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p1, v1}, Lcom/google/b/b/ao;->a(Ljava/lang/Object;I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    iget-object v0, v0, Lcom/google/b/b/n;->t:Lcom/google/b/b/c;
+
+    invoke-interface {v0}, Lcom/google/b/b/c;->b()V
+
+    :goto_0
+    return-object v1
+
+    :cond_0
+    iget-object v0, v0, Lcom/google/b/b/n;->t:Lcom/google/b/b/c;
+
+    invoke-interface {v0}, Lcom/google/b/b/c;->a()V
+
+    goto :goto_0
 .end method
 
-.method public final a(Lcom/google/b/b/ba;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/b/b/ba",
-            "<",
-            "Ljava/lang/Object;",
-            "Ljava/lang/Object;",
-            ">;)V"
-        }
-    .end annotation
-
-    .prologue
-    .line 860
-    return-void
-.end method
-
-.method public final b()Lcom/google/b/b/am;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/google/b/b/am",
-            "<",
-            "Ljava/lang/Object;",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 864
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final b(J)V
-    .locals 0
-
-    .prologue
-    .line 907
-    return-void
-.end method
-
-.method public final b(Lcom/google/b/b/am;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/b/b/am",
-            "<",
-            "Ljava/lang/Object;",
-            "Ljava/lang/Object;",
-            ">;)V"
-        }
-    .end annotation
-
-    .prologue
-    .line 899
-    return-void
-.end method
-
-.method public final c()I
+.method public final a()V
     .locals 1
 
     .prologue
-    .line 869
-    const/4 v0, 0x0
+    .line 4772
+    iget-object v0, p0, Lcom/google/b/b/al;->a:Lcom/google/b/b/n;
 
-    return v0
-.end method
+    invoke-virtual {v0}, Lcom/google/b/b/n;->clear()V
 
-.method public final c(Lcom/google/b/b/am;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/b/b/am",
-            "<",
-            "Ljava/lang/Object;",
-            "Ljava/lang/Object;",
-            ">;)V"
-        }
-    .end annotation
-
-    .prologue
-    .line 915
+    .line 4773
     return-void
 .end method
 
-.method public final d()Ljava/lang/Object;
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 1
-
-    .prologue
-    .line 874
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final d(Lcom/google/b/b/am;)V
-    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(",
-            "Lcom/google/b/b/am",
-            "<",
-            "Ljava/lang/Object;",
-            "Ljava/lang/Object;",
-            ">;)V"
+            "(TK;TV;)V"
         }
     .end annotation
 
     .prologue
-    .line 923
+    .line 4751
+    iget-object v0, p0, Lcom/google/b/b/al;->a:Lcom/google/b/b/n;
+
+    invoke-virtual {v0, p1, p2}, Lcom/google/b/b/n;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 4752
     return-void
-.end method
-
-.method public final e()J
-    .locals 2
-
-    .prologue
-    .line 879
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public final f()Lcom/google/b/b/am;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/google/b/b/am",
-            "<",
-            "Ljava/lang/Object;",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 887
-    return-object p0
-.end method
-
-.method public final g()Lcom/google/b/b/am;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/google/b/b/am",
-            "<",
-            "Ljava/lang/Object;",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 895
-    return-object p0
-.end method
-
-.method public final h()J
-    .locals 2
-
-    .prologue
-    .line 903
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public final i()Lcom/google/b/b/am;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/google/b/b/am",
-            "<",
-            "Ljava/lang/Object;",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 911
-    return-object p0
-.end method
-
-.method public final j()Lcom/google/b/b/am;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/google/b/b/am",
-            "<",
-            "Ljava/lang/Object;",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 919
-    return-object p0
 .end method

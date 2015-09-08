@@ -4,8 +4,8 @@
 
 
 # static fields
-.field public static final app_store_interstitial:I = 0x7f030069
+.field public static final app_store_interstitial:I = 0x7f030086
 
-.field public static final bottom_bar_light:I = 0x7f03006b
+.field public static final bottom_bar_light:I = 0x7f030088
 
-.field public static final bottom_buttons_light:I = 0x7f03006c
+.field public static final bottom_buttons_light:I = 0x7f030089

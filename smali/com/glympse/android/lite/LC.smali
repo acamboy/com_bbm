@@ -4,9 +4,9 @@
 
 
 # static fields
-.field public static final AUTH_ERROR_API_KEY:I = 0x1
+.field public static final AUTH_ERROR_ACCOUNT_CREATE_FAILED:I = 0x1
 
-.field public static final AUTH_ERROR_CREDENTIALS:I = 0x2
+.field public static final AUTH_ERROR_LOGIN_FAILED:I = 0x2
 
 .field public static final EVENT_AUTH_ERROR:I = 0x1
 

@@ -1,22 +1,38 @@
 .class final Lcom/bbm/ui/c/cq;
 .super Ljava/lang/Object;
-.source "ContactsFragment.java"
+.source "ChatsFragment.java"
 
 # interfaces
-.implements Landroid/view/View$OnTouchListener;
+.implements Ljava/util/Comparator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Ljava/lang/Integer;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/ch;
+.field final synthetic a:Ljava/util/ArrayList;
+
+.field final synthetic b:Lcom/bbm/ui/c/cp;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/ch;)V
+.method constructor <init>(Lcom/bbm/ui/c/cp;Ljava/util/ArrayList;)V
     .locals 0
 
     .prologue
-    .line 138
-    iput-object p1, p0, Lcom/bbm/ui/c/cq;->a:Lcom/bbm/ui/c/ch;
+    .line 483
+    iput-object p1, p0, Lcom/bbm/ui/c/cq;->b:Lcom/bbm/ui/c/cp;
+
+    iput-object p2, p0, Lcom/bbm/ui/c/cq;->a:Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,107 +41,67 @@
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 3
+.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 5
 
     .prologue
-    const/4 v2, 0x0
+    .line 483
+    check-cast p1, Ljava/lang/Integer;
 
-    .line 142
-    iget-object v0, p0, Lcom/bbm/ui/c/cq;->a:Lcom/bbm/ui/c/ch;
+    check-cast p2, Ljava/lang/Integer;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/c/ch;->isAdded()Z
+    iget-object v0, p0, Lcom/bbm/ui/c/cq;->a:Ljava/util/ArrayList;
 
-    move-result v0
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
-    if-eqz v0, :cond_1
+    move-result v1
 
-    iget-object v0, p0, Lcom/bbm/ui/c/cq;->a:Lcom/bbm/ui/c/ch;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/c/ch;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    check-cast v0, Ljava/lang/Long;
+
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    iget-object v0, p0, Lcom/bbm/ui/c/cq;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    check-cast v0, Ljava/lang/Long;
 
-    iget-object v0, p0, Lcom/bbm/ui/c/cq;->a:Lcom/bbm/ui/c/ch;
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    invoke-virtual {v0}, Lcom/bbm/ui/c/ch;->getActivity()Landroid/app/Activity;
+    move-result-wide v0
 
-    move-result-object v0
+    cmp-long v4, v2, v0
 
-    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    if-lez v4, :cond_0
 
-    move-result-object v0
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Landroid/view/Window;->getCurrentFocus()Landroid/view/View;
+    :goto_0
+    return v0
 
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    .line 143
-    iget-object v0, p0, Lcom/bbm/ui/c/cq;->a:Lcom/bbm/ui/c/ch;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/c/ch;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    const-string v1, "input_method"
-
-    invoke-virtual {v0, v1}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
-
-    .line 144
-    if-eqz v0, :cond_0
-
-    .line 145
-    iget-object v1, p0, Lcom/bbm/ui/c/cq;->a:Lcom/bbm/ui/c/ch;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/c/ch;->getActivity()Landroid/app/Activity;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/view/Window;->getCurrentFocus()Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
-
-    .line 147
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/c/cq;->a:Lcom/bbm/ui/c/ch;
+    cmp-long v0, v0, v2
 
-    invoke-virtual {v0}, Lcom/bbm/ui/c/ch;->getActivity()Landroid/app/Activity;
+    if-lez v0, :cond_1
 
-    move-result-object v0
+    const/4 v0, -0x1
 
-    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    goto :goto_0
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/Window;->getCurrentFocus()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->clearFocus()V
-
-    .line 149
     :cond_1
-    return v2
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

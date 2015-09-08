@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private dP:Lcom/glympse/android/hal/Reflection$_CreateNdefMessageCallback;
+.field private dS:Lcom/glympse/android/hal/Reflection$_CreateNdefMessageCallback;
 
 
 # direct methods
@@ -19,7 +19,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 1961
-    iput-object p1, p0, Lcom/glympse/android/hal/bg;->dP:Lcom/glympse/android/hal/Reflection$_CreateNdefMessageCallback;
+    iput-object p1, p0, Lcom/glympse/android/hal/bg;->dS:Lcom/glympse/android/hal/Reflection$_CreateNdefMessageCallback;
 
     .line 1962
     return-void
@@ -46,7 +46,7 @@
     if-eqz v0, :cond_0
 
     .line 1971
-    iget-object v0, p0, Lcom/glympse/android/hal/bg;->dP:Lcom/glympse/android/hal/Reflection$_CreateNdefMessageCallback;
+    iget-object v0, p0, Lcom/glympse/android/hal/bg;->dS:Lcom/glympse/android/hal/Reflection$_CreateNdefMessageCallback;
 
     const/4 v1, 0x0
 
@@ -62,7 +62,7 @@
 
     .line 1973
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/hal/bg;->dP:Lcom/glympse/android/hal/Reflection$_CreateNdefMessageCallback;
+    iget-object v0, p0, Lcom/glympse/android/hal/bg;->dS:Lcom/glympse/android/hal/Reflection$_CreateNdefMessageCallback;
 
     invoke-virtual {p2, v0, p3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0

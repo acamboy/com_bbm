@@ -225,6 +225,21 @@
     <string name="a_newer_version_of_bbm_is_required">新しいバージョンのBBMが必要です。</string>
     <string name="a_problem_has_occurred_in_bbm">BBMで問題が発生しました。しばらくしてから再度実行してください。</string>
     <string name="a_temporary_server_error_has_occurred">一時的なサーバーエラーが発生しました。再度実行してください。</string>
+    <string name="abc_action_bar_home_description">ホームへ移動</string>
+    <string name="abc_action_bar_home_description_format">%1$s、%2$s</string>
+    <string name="abc_action_bar_home_subtitle_description_format">%1$s、%2$s、%3$s</string>
+    <string name="abc_action_bar_up_description">上へ移動</string>
+    <string name="abc_action_menu_overflow_description">その他のオプション</string>
+    <string name="abc_action_mode_done">完了</string>
+    <string name="abc_activity_chooser_view_see_all">すべて表示</string>
+    <string name="abc_activitychooserview_choose_application">アプリの選択</string>
+    <string name="abc_searchview_description_clear">検索キーワードを削除</string>
+    <string name="abc_searchview_description_query">検索キーワード</string>
+    <string name="abc_searchview_description_search">検索</string>
+    <string name="abc_searchview_description_submit">検索キーワードを送信</string>
+    <string name="abc_searchview_description_voice">音声検索</string>
+    <string name="abc_shareactionprovider_share_with">共有</string>
+    <string name="abc_shareactionprovider_share_with_application">%sと共有</string>
     <string name="about">概要</string>
     <string name="about_bbm_pins_message">PINは、BBMの固有の識別IDです。BBM PINまたはバーコードを共有すると、友だちがBBM連絡先としてあなたを招待できます。</string>
     <string name="about_bbm_pins_title">BBM PINについて</string>
@@ -235,9 +250,9 @@
     <string name="activity_select_new_admin_title">新しい管理者を選択</string>
     <string name="activity_select_new_admin_title_selection">+%1$d人の管理者</string>
     <string name="activity_tap_to_invite_dialog_info">NFCをオンにしますか?</string>
-    <string name="activity_tap_to_invite_dialog_no">いいえ</string>
+    <string name="activity_tap_to_invite_dialog_no">@string/no</string>
     <string name="activity_tap_to_invite_dialog_title">NFC無線はオフです</string>
-    <string name="activity_tap_to_invite_dialog_yes">はい</string>
+    <string name="activity_tap_to_invite_dialog_yes">@string/yes</string>
     <string name="activity_tap_to_invite_info">現在のデバイスの背面とタグを合わせます。両方のデバイスでNFCをオンにしておく必要があります。</string>
     <string name="ad_block_channel">チャンネルをブロックすると、チャンネル\"%1$s\"からのスポンサー付きのコンテンツを表示できません。この操作は元に戻せません。</string>
     <string name="ad_block_sponsor">\"%1$s\"からのスポンサー付きのコンテンツを表示できません。この操作は元に戻せません。</string>
@@ -263,13 +278,26 @@
     <string name="allow_comments_on_posts">投稿へのコメントを許可する</string>
     <string name="app_name">BBM</string>
     <string name="app_picker_name">アプリケーション</string>
+    <string name="app_store_app_subscribe_notification_dialog_line">BBMサブスクリプションパッケージの%1$sユーザーになったことを連絡先に知らせることができます。</string>
+    <string name="app_store_app_subscribe_notification_message">BBMサブスクリプションパッケージの%1$sユーザーになりました。あなたにも可能です。</string>
+    <string name="app_store_confirmation_screen_feature_offered_line">次はサブスクリプションが提供する機能です。</string>
     <string name="app_store_details_screen_install_button">インストール</string>
     <string name="app_store_details_screen_inventory_not_found">"アプリケーションを開くことができません。
  しばらくしてから再度実行してください。"</string>
     <string name="app_store_details_screen_open_button">開く</string>
+    <string name="app_store_details_screen_renew_button">更新</string>
+    <string name="app_store_details_screen_subscribe_button">ｻﾌﾞｽｸﾗｲﾌﾞ</string>
+    <string name="app_store_details_screen_subscribed_button">ｻﾌﾞｽｸﾗｲﾌﾞ済み</string>
     <string name="app_store_invalid_app_id">このアイテムは利用できません</string>
+    <string name="app_store_subscribed_app_no_ads_description">このサブスクリプションでBBMのスポンサー付きの広告および招待を非表示にできます。</string>
+    <string name="app_store_subscribed_app_vanity_pin_description">カスタムPINは他のユーザーを招待したり、プロフィールを表示するのに使用します。一度カスタムPINが定義されると、ユーザーは定義された期間に編集できます。PINを変更</string>
+    <string name="app_subscription_thank_you">ありがとうございました現在、BBMに登録しています。</string>
     <string name="approve_comments">コメントを承認</string>
     <string name="approve_comments_description">チャンネルのWebサイトからこのオプションを変更できます。</string>
+    <string name="archiving_disabled_message">管理者がアーカイブ機能をオフにしました。チャットはデバイス上に保存されません。これまでにデバイス上に保存されたチャットも今後は保存されません。詳細については、管理者に問い合わせてください。</string>
+    <string name="archiving_disabled_title">アーカイブ機能がオフです</string>
+    <string name="archiving_enabled_message">管理者がアーカイブ機能をオンにしました。チャットはデバイス上に保存されます。詳細については、管理者に問い合わせてください。</string>
+    <string name="archiving_enabled_title">アーカイブ機能がオンです</string>
     <string name="arrived_at_destination">Glympse: 目的に到着しました</string>
     <string name="asterisk">*</string>
     <string name="attach">添付</string>
@@ -286,15 +314,15 @@
     <string name="attach_list_voicenote">ボイスメモ</string>
     <string name="audio_player_pause">一時停止</string>
     <string name="audio_player_play">再生</string>
-    <string name="auth_client_needs_enabling_title">アプリではGoogle Play開発者サービスを有効にする必要があります。</string>
-    <string name="auth_client_needs_installation_title">アプリではGoogle Play開発者サービスをインストールする必要があります。</string>
-    <string name="auth_client_needs_update_title">アプリではGoogle Play開発者サービスをアップデートする必要があります。</string>
-    <string name="auth_client_play_services_err_notification_msg">Google Play開発者サービスのエラー</string>
-    <string name="auth_client_requested_by_msg">%1$sによるリクエスト</string>
-    <string name="auth_client_using_bad_version_title">アプリはGoogle Play開発者サービスの不適切なバージョンを使用しようとしました。</string>
+    <string name="autopassphrase_completed">このチャットはBBM Protectedされています。</string>
+    <string name="autopassphrase_failed">BBM Protectedを設定できませんでした。</string>
+    <string name="autopassphrase_initiated">BBM Protectedチャットを作成しています。</string>
+    <string name="autopassphrase_retry">再試行</string>
     <string name="avatar_file_not_support">サポートされていないファイルです。</string>
     <string name="back">戻る</string>
     <string name="backup_file_is_not_valid">バックアップファイルが無効です。BBMセットアップを終了し、BlackBerry Desktop Softwareのデバイスの切り替えを使用する必要があります。</string>
+    <string name="badge_on_your_avatar">アバターのバッジ</string>
+    <string name="badge_on_your_avatar_description">BBMサブスクリプションがアクティブになった時点で、アバターにバッジが表示されます...</string>
     <string name="barcode_info">連絡先は、あなたのバーコードをスキャンして、BBMにあなたを追加できます</string>
     <string name="bbm_account_name">BBM</string>
     <string name="bbm_account_user_name">BBM Groups</string>
@@ -310,7 +338,9 @@
     <string name="bbm_service_running">接続済み</string>
     <string name="bbm_setup">BBMセットアップ</string>
     <string name="bbm_share_with_pin_uri">http://www.bbm.com/share/?BBMID=%1$s</string>
-    <string name="bbm_voice_ongoing_call">通話中</string>
+    <string name="bbm_voice_ongoing_call">BBM通話しています</string>
+    <string name="billing_google_error_message_body">このアイテムはあなたのストアアカウントで別のBlackBerry IDのために既に購入しています。別のストアアカウントで試してみてください。</string>
+    <string name="billing_google_error_message_title">購入できません</string>
     <string name="blackberry_channels"><b>BBM Channel</b></string>
     <string name="blackberry_id">BBID</string>
     <string name="blackberry_id_is_not_responding">BlackBerry IDは応答していません。</string>
@@ -420,7 +450,7 @@
     <string name="channel_geolocation_checkbox_decline">辞退</string>
     <string name="channel_geolocation_checkbox_description">BBMに定期的に自分のいる場所にアクセスを許可しますか?</string>
     <string name="channel_geolocation_introduction">BBMはデバイスの現在のまたは保存された位置情報に定期的にアクセスし、操作環境のカスタマイズに使用することを希望しています。この権限はBBM設定からいつでも変更できます。</string>
-    <string name="channel_geolocation_setting_description">このアプリケーションがあなたのデバイスの現在位置または保存済み位置にアクセスすることを許可します。</string>
+    <string name="channel_geolocation_setting_description">アプリがデバイスの現在位置または保存された場所にアクセスすることを許可します。</string>
     <string name="channel_geolocation_setting_disable_description">位置情報サービスがオフのため、位置情報報告機能は利用できません。位置情報サービスをオンにするには、設定を開きます。</string>
     <string name="channel_geolocation_setting_disable_no">保留</string>
     <string name="channel_geolocation_setting_disable_yes">設定</string>
@@ -504,7 +534,8 @@
     <string name="channel_report_dialog_title">チャンネルをレポート</string>
     <string name="channel_report_item_empty">アイテムが空です。</string>
     <string name="channel_report_remove_complaint">クレームを削除</string>
-    <string name="channel_repost_content_prefix">[%1$s %2$sから再投稿済み]%1$s %2$s</string>
+    <string name="channel_repost_content_prefix">"[%1$s %2$sから再投稿済み]
+"</string>
     <string name="channel_repost_failure_message">ダウンロードに失敗しました</string>
     <string name="channel_repost_report_post_dialog_info_text">この投稿をレポートしますか?</string>
     <string name="channel_repost_report_post_dialog_title">チャンネル投稿をレポート</string>
@@ -546,7 +577,7 @@
     <string name="channel_subscribe_already_subscribed">既に登録しています</string>
     <string name="channel_subscribe_error">チャンネルに参加できませんでした。しばらくしてから再度実行してください。</string>
     <string name="channel_subscribed">登録済みのチャンネル</string>
-    <string name="channel_subscribers">サブスクライバー:%1s</string>
+    <string name="channel_subscribers">サブスクライバー: %1s</string>
     <string name="channel_terms_and_policy">&lt;a href=\"http://us.blackberry.com/legal/bbm-channel-terms.html\">サービス条件&lt;/a>および&lt;a href=\"http://us.blackberry.com/legal/privacy-policy/overview.html\">プライバシーポリシー&lt;/a></string>
     <string name="channel_unsubscribe_already_unsubscribed">既に登録が解除されています</string>
     <string name="channel_unsubscribe_error">チャンネルから退出できませんでした。しばらくしてから再度実行してください。</string>
@@ -572,6 +603,7 @@
     <string name="chat_history_missed_video_chat">出られなかった&lt;b>%1$s&lt;/b>からのビデオ通話</string>
     <string name="chat_history_missed_voice_chat">&lt;b>%1$s&lt;/b>から不在中に音声通話がありました</string>
     <string name="chats">チャット</string>
+    <string name="chats_block_chat">このチャットをブロック</string>
     <string name="chats_empty_chat">空のチャット</string>
     <string name="chats_end_chat">チャットを終了</string>
     <string name="chats_end_discussion">ディスカッションを終了</string>
@@ -580,35 +612,56 @@
     <string name="chats_open_group">グループを開く</string>
     <string name="chats_select_more">さらに選択</string>
     <string name="chats_start_video">ビデオチャットを開始</string>
-    <string name="chats_status_no_chats">チャットを開始するには上部隅をタップします。</string>
+    <string name="chats_status_no_chats">チャットを開始するには、画面下部のチャットボタンをタップします。</string>
+    <string name="chats_status_no_chats_widget">チャットを開始するには上部隅をタップします。</string>
     <string name="chats_view_bbm_profile">BBMプロファイルを表示</string>
     <string name="click_to_expire">Glympseを無効にする場合はここをクリック</string>
     <string name="click_to_reply">ここをクリックして返信...</string>
     <string name="click_to_view">ここをクリックして表示...</string>
     <string name="close">閉じる</string>
+    <string name="cloud_directory_contact_add_coworkers">同僚を検索</string>
+    <string name="cloud_directory_contact_chat_failed">この同僚とBBMチャットを開始できません。しばらくしてから再度実行してください。</string>
+    <string name="cloud_directory_fields_info">同僚がBBMで人を検索したときに、この名前が表示されます。</string>
+    <string name="cloud_directory_pin_lookup">連絡先情報を要求しています。</string>
+    <string name="cloud_directory_search_failed">同僚を検索できません。しばらくしてから再度実行してください。</string>
+    <string name="cloud_directory_search_more_results">検索結果が多すぎます。検索を絞り込んでください。</string>
+    <string name="cloud_directory_search_text_min_length">同僚検索には2文字以上を指定してください。</string>
+    <string name="cloud_directory_service_hint">必須フィールドあなたの実名を入力するようにしてください。同僚はあなたを名前で検索し、BBMチャットを開始できます。</string>
     <string name="coming_soon">"現在、この機能は利用できません。
 近日公開"</string>
     <string name="coming_soon_title">間もなく公開されます。</string>
     <string name="comment_copied">コメントはコピーされました</string>
     <string name="comments_disabled_label">コメントは無効化されています</string>
+    <string name="common_android_wear_notification_needs_update_text">%1$sにはAndroid Wearアプリの更新が必要です。</string>
+    <string name="common_android_wear_update_text">%1$sの実行にはAndroid Wearアプリの更新が必要です。</string>
+    <string name="common_android_wear_update_title">Android Wearの更新</string>
+    <string name="common_google_play_services_api_unavailable_text">%1$sには現在利用されていないGoogle Play開発者サービスが必要です。詳しくはデベロッパーにお問い合わせください。</string>
     <string name="common_google_play_services_enable_button">Play開発者サービスの有効化</string>
-    <string name="common_google_play_services_enable_text">このアプリの実行には、Google Play開発者サービスの有効化が必要です。</string>
+    <string name="common_google_play_services_enable_text">%1$sの実行には、Google Play開発者サービスの有効化が必要です。</string>
     <string name="common_google_play_services_enable_title">Play開発者サービスの有効化</string>
+    <string name="common_google_play_services_error_notification_requested_by_msg">%1$sによるリクエスト</string>
     <string name="common_google_play_services_install_button">Play開発者サービスの入手</string>
-    <string name="common_google_play_services_install_text_phone">このアプリの実行にはGoogle Play開発者サービスが必要ですが、お使いの携帯端末にはインストールされていません。</string>
-    <string name="common_google_play_services_install_text_tablet">このアプリの実行にはGoogle Play開発者サービスが必要ですが、お使いのタブレットにはインストールされていません。</string>
+    <string name="common_google_play_services_install_text_phone">%1$sの実行にはGoogle Play開発者サービスが必要ですが、お使いのスマートフォンにはインストールされていません。</string>
+    <string name="common_google_play_services_install_text_tablet">%1$sの実行にはGoogle Play開発者サービスが必要ですが、お使いのタブレットにはインストールされていません。</string>
     <string name="common_google_play_services_install_title">Play開発者サービスの入手</string>
     <string name="common_google_play_services_invalid_account_text">指定したアカウントはこの端末上に存在しません。別のアカウントを選択してください。</string>
     <string name="common_google_play_services_invalid_account_title">無効なアカウント</string>
+    <string name="common_google_play_services_needs_enabling_title">アプリではGoogle Play開発者サービスを有効にする必要があります</string>
     <string name="common_google_play_services_network_error_text">Google Play開発者サービスに接続するには、データ接続が必要です。</string>
     <string name="common_google_play_services_network_error_title">ネットワークエラー</string>
+    <string name="common_google_play_services_notification_needs_update_title">アプリではGoogle Play開発者サービスを更新する必要があります</string>
+    <string name="common_google_play_services_notification_ticker">Google Play開発者サービスのエラー</string>
+    <string name="common_google_play_services_sign_in_failed_text">指定されたアカウントへのログイン中にエラーが発生しました。別のアカウントを選択してください。</string>
+    <string name="common_google_play_services_sign_in_failed_title">ログインできませんでした</string>
     <string name="common_google_play_services_unknown_issue">Google Play開発者サービスで原因不明の問題が発生しました。</string>
-    <string name="common_google_play_services_unsupported_date_text">端末上の日付が正しくないようです。端末上の日付をご確認ください。</string>
-    <string name="common_google_play_services_unsupported_text">一部のアプリが使用しているGoogle Play開発者サービスは、お使いの端末ではサポートされていません。詳しくは、端末メーカーまでお問い合わせください。</string>
+    <string name="common_google_play_services_unsupported_text">%1$sに必要なGoogle Play開発者サービスは、お使いの端末ではサポートされていません。詳しくは端末メーカーにお問い合わせください。</string>
     <string name="common_google_play_services_unsupported_title">Google Play開発者サービス</string>
     <string name="common_google_play_services_update_button">更新</string>
-    <string name="common_google_play_services_update_text">このアプリの実行には、Google Play開発者サービスの更新が必要です。</string>
+    <string name="common_google_play_services_update_text">%1$sの実行にはGoogle Play開発者サービスの更新が必要です。</string>
     <string name="common_google_play_services_update_title">Play開発者サービスの更新</string>
+    <string name="common_google_play_services_updating_text">%1$sの実行にはGoogle Play開発者サービスが必要ですが、このサービスは現在更新中です。</string>
+    <string name="common_google_play_services_updating_title">Google Play開発者サービスの更新中</string>
+    <string name="common_open_on_phone">端末で開く</string>
     <string name="common_signin_button_text">ログイン</string>
     <string name="common_signin_button_text_long">Googleでログイン</string>
     <string name="complete">完了</string>
@@ -617,8 +670,10 @@
     <string name="contact_add_category">カテゴリを追加</string>
     <string name="contact_add_category_already_exists">そのカテゴリはすでに存在します。</string>
     <string name="contact_add_category_hint">カテゴリタイトルを入力</string>
-    <string name="contact_add_notification">ユーザが追加されました</string>
+    <string name="contact_add_notification">連絡先が追加されました</string>
     <string name="contact_delete_category">カテゴリを削除</string>
+    <string name="contact_delete_notification">連絡先が削除されました</string>
+    <string name="contact_delete_notification_multiple">%1$d件の連絡先が削除されました</string>
     <string name="contact_details">連絡先の詳細</string>
     <string name="contact_details_description">電話番号、メールアドレス、Webサイトなど。</string>
     <string name="contact_is_blocked">連絡先がブロックされています</string>
@@ -630,6 +685,8 @@
     <string name="contacts_are_blocked">連絡先がブロックされています</string>
     <string name="contacts_count">0</string>
     <string name="contacts_delete_contact">%1$sを削除</string>
+    <string name="contacts_dialog_delete_and_block_info">今後%1$sからの招待とチャットはすべてブロックされます。%1$sを削除してブロックしますか?</string>
+    <string name="contacts_dialog_delete_and_block_title">%1$sを削除してブロック</string>
     <string name="contacts_dialog_delete_block_info">%1$sはブロックリストに追加されます</string>
     <string name="contacts_dialog_delete_block_label">今後の招待をブロック</string>
     <string name="contacts_dialog_delete_multi_block_info">連絡先はブロックリストに追加されます</string>
@@ -654,15 +711,20 @@
     <string name="contents_sms">SMSアドレス</string>
     <string name="contents_text">テキストデータ</string>
     <string name="context_menu_copy_message">メッセージをコピー</string>
+    <string name="context_menu_quote_message">メッセージの引用</string>
     <string name="context_menu_recall_message">メッセージを取り消す</string>
     <string name="context_menu_resend_message">メッセージを再送信</string>
+    <string name="conversation_activity_block_chat_warning_message">このチャットをブロックすると、このチャット内で送信される新規メッセージの受信が停止します。</string>
+    <string name="conversation_activity_block_chat_warning_title">チャットをブロックしますか?</string>
     <string name="conversation_activity_end_chat_on_voice_warning_message">通話が終了します。すべてのチャットメッセージは削除されます。</string>
     <string name="conversation_activity_end_chat_warning_message">チャットを終了すると、すべてのメッセージが削除されます。</string>
     <string name="conversation_activity_end_chat_warning_title">チャットを終了しますか?</string>
+    <string name="conversation_activity_leave_chat_warning_message">チャットを抜けると、すべてのメッセージが削除されます。</string>
+    <string name="conversation_activity_leave_chat_warning_title">チャットを抜けますか?</string>
     <string name="conversation_activity_reinvite_accepted">招待が受け入れられました</string>
     <string name="conversation_activity_reinvite_sent">招待が送信されました</string>
-    <string name="conversation_are_already_in_the_chat">&lt;b>%1$s&lt;/b>は既にチャットに参加しています</string>
-    <string name="conversation_bubble_dropbox_caption">ドロップボックスの%1$sへのリンクはこちら%1$sです</string>
+    <string name="conversation_are_already_in_the_chat">%1$sは既にチャットに参加しています</string>
+    <string name="conversation_bubble_dropbox_caption">ドロップボックスのへのリンクはこちら%1$sです</string>
     <string name="conversation_button_dropbox_download">ダウンロード</string>
     <string name="conversation_button_toast_attachment_deleted">添付ファイルが削除されました</string>
     <string name="conversation_button_toast_ref_content_deleted">参照するコンテンツが削除されました</string>
@@ -677,30 +739,36 @@
     <string name="conversation_file_transfert">ファイルを受信しました</string>
     <string name="conversation_file_transfert_canceled_dialog_title">ファイル転送がキャンセルされました</string>
     <string name="conversation_file_transfert_canceled_dialog_too_large">%1$sが大きすぎます。最大ファイルサイズは16MBです。</string>
-    <string name="conversation_incoming_invite_req">&lt;b>%1$s&lt;/b>は、このチャットに&lt;b>%2$s&lt;/b>を招待することを希望しています</string>
+    <string name="conversation_groups_alt_picture_sent">画像を共有</string>
+    <string name="conversation_groups_alt_sticker_sent">ステッカーを共有</string>
+    <string name="conversation_incoming_invite_req">%1$sは、このチャットに%2$sを招待することを希望しています</string>
     <string name="conversation_incoming_invite_req_accepted"><b>%1$s</b>が追加されました</string>
-    <string name="conversation_incoming_invite_req_denied">&lt;b>%2$s&lt;/b>を招待する&lt;b>%1$s&lt;/b>の要求を拒否しました</string>
+    <string name="conversation_incoming_invite_req_denied">%2$sを招待する%1$sの要求を拒否しました</string>
     <string name="conversation_invite_accept_button">許可</string>
     <string name="conversation_invite_reject_button">拒否</string>
-    <string name="conversation_invited">&lt;b>%1$s&lt;/b>は&lt;b>%2$s&lt;/b>を招待する要求を承諾しました</string>
-    <string name="conversation_is_already_in_the_chat">&lt;b>%1$s&lt;/b>は既にチャットに参加しています</string>
+    <string name="conversation_invited">%1$sは%2$sを招待する要求を承諾しました</string>
+    <string name="conversation_is_already_in_the_chat">%1$sは既にチャットに参加しています</string>
     <string name="conversation_is_writing_a_message">はメッセージを入力中です...</string>
-    <string name="conversation_joined_the_chat">&lt;b>%1$s&lt;/b>がチャットに参加しました</string>
-    <string name="conversation_left_the_chat">&lt;b>%1$s&lt;/b>がチャットから抜けました</string>
+    <string name="conversation_joined_the_chat">%1$sがチャットに参加しました</string>
+    <string name="conversation_left_the_chat">%1$sがチャットから抜けました</string>
     <string name="conversation_location_message_accurace_within">誤差%1$sm以内</string>
     <string name="conversation_location_received">場所を受信しました</string>
     <string name="conversation_location_sent">場所が送信されました</string>
+    <string name="conversation_message_edit_title">メッセージの編集</string>
+    <string name="conversation_message_editing">編集: %1$s</string>
+    <string name="conversation_message_editing_removed">メッセージの編集が削除されました</string>
     <string name="conversation_message_recall_failed">メッセージを取り消すことができませんでした</string>
     <string name="conversation_message_recall_pending">メッセージを取り消しています</string>
     <string name="conversation_message_recalled">メッセージが取り消されました</string>
+    <string name="conversation_mpc_header">チャット</string>
     <string name="conversation_must_reinvite">%1$sはあなたの連絡先を知りません。%1$sをもう一度招待しますか?</string>
     <string name="conversation_notification_calendar_received">予定を受信しました</string>
     <string name="conversation_notification_calendar_sent">予定が送信されました</string>
-    <string name="conversation_notification_conf_incoming_invite_req">&lt;b>%1$s&lt;/b>がチャットに誰かの招待をリクエストしました</string>
-    <string name="conversation_notification_conf_invited">&lt;b>%1$s&lt;/b>がチャットに招待されました</string>
-    <string name="conversation_notification_conf_outgoing_invite_req">&lt;b>%1$s&lt;/b>をチャットに招待しました</string>
-    <string name="conversation_notification_conf_outgoing_invite_req_denied">&lt;b>%1$s&lt;/b>を招待する要求が拒否されました</string>
-    <string name="conversation_notification_conf_we_joined">&lt;b>%1$s&lt;/b>があなたをチャットに招待しました</string>
+    <string name="conversation_notification_conf_incoming_invite_req">%1$sがチャットに誰かの招待をリクエストしました</string>
+    <string name="conversation_notification_conf_invited">%1$sがチャットに招待されました</string>
+    <string name="conversation_notification_conf_outgoing_invite_req">%1$sをチャットに招待しました</string>
+    <string name="conversation_notification_conf_outgoing_invite_req_denied">%1$sを招待する要求が拒否されました</string>
+    <string name="conversation_notification_conf_we_joined">%1$sがあなたをチャットに招待しました</string>
     <string name="conversation_notification_contact_card_received">連絡先カードを受信しました</string>
     <string name="conversation_notification_contact_card_sent">連絡先カードが送信されました</string>
     <string name="conversation_notification_default_incomming">メッセージを受信しました</string>
@@ -718,8 +786,8 @@
     <string name="conversation_notification_sticker_sent">ステッカーが送信されました</string>
     <string name="conversation_notification_voice_note_received">ボイスメモを受信しました</string>
     <string name="conversation_notification_voice_note_sent">ボイスメモが送信されました</string>
-    <string name="conversation_outgoing_invite_req">&lt;b>%1$s&lt;/b>を招待する要求が&lt;b>%2$s&lt;/b>に送信されました。</string>
-    <string name="conversation_outgoing_invite_req_denied">&lt;b>%1$s&lt;/b>は&lt;b>%2$s&lt;/b>を招待する要求を拒否しました</string>
+    <string name="conversation_outgoing_invite_req">%1$sを招待する要求が%2$sに送信されました。</string>
+    <string name="conversation_outgoing_invite_req_denied">%1$sは%2$sを招待する要求を拒否しました</string>
     <string name="conversation_picture">画像を受信しました</string>
     <string name="conversation_ping">PING!!!</string>
     <string name="conversation_reinvite_accept_button">再招待</string>
@@ -728,6 +796,7 @@
     <string name="conversation_share_max_participants">チャットの参加者が多すぎます(最大%1$s人)。</string>
     <string name="conversation_successfully_saved_picture">画像は正常に保存されました。</string>
     <string name="conversation_successfully_saved_voice_note">ボイスメモは正常に保存されました</string>
+    <string name="conversation_toast_blocked_chat">あなたはチャットをブロックしました。すべてのメッセージが削除されました。</string>
     <string name="conversation_toast_ended_chat">チャットが終了しました。</string>
     <string name="conversation_toast_ended_chat_no_history">チャットが終了しました。すべてのメッセージを削除しました。</string>
     <string name="conversation_toast_left_chat">チャットから抜けました。</string>
@@ -735,7 +804,7 @@
     <string name="conversation_unable_to_save_picture">画像を保存できません。</string>
     <string name="conversation_unable_to_save_voice_note">ボイスメモを保存できません</string>
     <string name="conversation_voice_note_transfert">ボイスメモを受信しました</string>
-    <string name="conversation_you_invited">&lt;b>%1$s&lt;/b>をチャットに招待しました</string>
+    <string name="conversation_you_invited">%1$sをチャットに招待しました</string>
     <string name="conversation_you_joined_the_chat">チャットに参加しました</string>
     <string name="copied_group_passphrase">コピーされたパスフレーズ</string>
     <string name="copied_group_passphrase_toast">クリップボードにコピーしました</string>
@@ -750,6 +819,26 @@
     <string name="creating_channel_toast_string">チャンネルを作成しています</string>
     <string name="creating_private_channel_confirmation">この操作は元に戻せません。このチャンネルをプライベートにしますか？</string>
     <string name="current">現在</string>
+    <string name="custom_pin_activity_title">カスタムPIN</string>
+    <string name="custom_pin_already_set">カスタムPINを既に作成しています。</string>
+    <string name="custom_pin_confirm_postivie_text">正しい</string>
+    <string name="custom_pin_confirm_text">このテキストがBBMのカスタムPINになります。正しいですか?</string>
+    <string name="custom_pin_friends_ad_link">BBMショップにアクセス</string>
+    <string name="custom_pin_friends_ad_text">今すぐBBMからカスタムPINを入手しましょう。</string>
+    <string name="custom_pin_get_your_custom_pin">今すぐBBMからカスタムPINを入手しましょう。BBMショップにアクセス</string>
+    <string name="custom_pin_hint_text">カスタムPINを入力</string>
+    <string name="custom_pin_legal">"カスタムPINを作成します。一度設定すると変更できないので、ゆっくりお選びください。カスタムPINはサブスクリプションがアクティブな限りBBMに関連付けられます。
+
+ガイドライン:
+*6から8文字にする必要があります
+*数字、文字、アンダースコア、ダッシュを含めます
+*アンダースコア、ダッシュ、またはGからZの間の文字を1つ含む必要があります"</string>
+    <string name="custom_pin_not_subscribed">PINをカスタマイズ</string>
+    <string name="custom_pin_share_to_feed_body">手に入れたカスタムPINを連絡先に知らせることができます。%1$s</string>
+    <string name="custom_pin_shared_feed_item">新しいカスタムPINをBBMで取得しました: %1$s。PINをカスタマイズするには、http://shop.bbm.com/item/custom_pin をタップします</string>
+    <string name="custom_pin_terms_conditions">&lt;p>&lt;b>BBMカスタムPINガイドライン&lt;/b>&lt;/p> &lt;p>カスタムPINでBBMをカスタマイズしましょう。カスタムPINは現在のPINを置き換えるものではありません(通常のPINについての詳細は、www.bbm.comのFAQセクションの\"PINとは\"を参照してください)。カスタムPINは他のユーザーを招待したり、招待を受信できる、BBMプロフィールに表示される第2のPINです。&lt;/p> &lt;p>次の点に留意してPINを作成しましょう。&lt;/p> &lt;p>&amp;#8226 既に別のユーザーが使用しているカスタムPINは使用できません。&lt;/p>&lt;p>&amp;#8226 サブスクリプションを有効期限内に更新しなければ、カスタムPINを使用できません。また、別のユーザーに使用される可能性があります。&lt;/p>&lt;p>&amp;#8226 慎重にカスタムPINを選んでください。一度カスタムPINを作成すると、サブスクリプション期間中は変更できません。&lt;/p> &lt;p>&amp;#8226 カスタムPINを通常のBBM PINと区別可能にするため、カスタムPINは次の条件を満たす必要があります。&lt;/p> &lt;p>- 6から8文字にする必要があります。&lt;/p> &lt;p>- 数字、文字、アンダースコア、ダッシュを含めます。&lt;/p> &lt;p>- アンダースコア、ダッシュ、またはGからZの間の文字を1つ含む必要があります。&lt;/p> &lt;p>&amp;#8226 カスタムPINは中傷的な、不快感を与えるような言葉、違法または誤解を招くような言葉、違法な目的で使用してはなりません。&lt;/p> &lt;p>&amp;#8226 カスタムPINを使用して他の人物、ブランド、団体、イベントなどに成り済まし、誤解を与えたり、騙したりしてはなりません。&lt;/p> &lt;p>&amp;#8226 カスタムPINを使用して他の人物、ブランド、団体、イベントなどの知的所有権を含む権利を侵害してはなりません。例えば、カスタムPINは他の人または団体の商標権に違反する可能性がありません。&lt;/p> &lt;p>&amp;#8226 BlackBerryは適用される購入条件/返金ポリシーの条件で、いかなる理由においてもいかなる時にもカスタムPINを拒否、消去、および/または回収する権利を留保します。</string>
+    <string name="custom_pin_title">カスタムPIN:</string>
+    <string name="custom_pin_warning_on_repurchase">現在のカスタムPINを保持するには、新しいサブスクリプションを購入し、古いのをキャンセルする必要があります。詳細については、%1$sにアクセスしてください。</string>
     <string name="date">日付</string>
     <string name="date_of_birth"><b>誕生日</b></string>
     <string name="date_of_birth_fail_age_limit">BBM Channelを使用できる年齢に達していません。</string>
@@ -785,6 +874,7 @@
     <string name="dialog_invite_security_question_tip">ヒント:回答は大文字小文字を区別します。</string>
     <string name="dialog_invite_security_question_title">セキュリティの質問</string>
     <string name="did_you_know">ご存知ですか?</string>
+    <string name="different_platform_string">別のデバイスで購入した、自動更新のサブスクリプションを使用しています。このデバイスでサブスクライブしますか?</string>
     <string name="discard">破棄</string>
     <string name="display_name"><i>表示名</i></string>
     <string name="do_you_want_to_switch_your_bbm_information_to_your_current_device">BBM情報を現在のデバイスに切り替えますか?</string>
@@ -805,6 +895,15 @@
     <string name="enter_passphrase_hint"><i>パスフレーズを入力</i></string>
     <string name="enter_text"><i>テキストを入力</i></string>
     <string name="entered_passphrase_incorrect">入力したパスフレーズが正しくありません。</string>
+    <string name="entitlement_dialog_title">サブスクリプションが必要です</string>
+    <string name="entitlement_edit_dialogue">"メッセージ編集のトライアル期間が過ぎました。
+サブスクリプションを購入すれば、この機能への無制限のアクセスが得られます。"</string>
+    <string name="entitlement_privateconv_dialogue">"プライベートチャットのトライアル期間が過ぎました。
+サブスクリプションを購入すれば、この機能への無制限のアクセスが得られます。"</string>
+    <string name="entitlement_retracted_dialogue">"メッセージ取り消しのトライアル期間が過ぎました。
+サブスクリプションを購入すれば、この機能への無制限のアクセスが得られます。"</string>
+    <string name="entitlement_timed_dialogue">"期限付きメッセージのトライアル期間が過ぎました。
+サブスクリプションを購入すれば、この機能への無制限のアクセスが得られます。"</string>
     <string name="ephemeral_hint_received">期限付きメッセージを受信しました。表示するにはタッチし続けてください。</string>
     <string name="ephemeral_hint_sent">期限付きメッセージです。</string>
     <string name="ephemeral_hint_viewed">期限付きメッセージを受信しました。期限切れです</string>
@@ -821,7 +920,7 @@
     <string name="error_network_failure"><i>ネットワーク障害</i></string>
     <string name="exit">終了</string>
     <string name="feature_glympse">Glympse</string>
-    <string name="feature_glympse_description">どこにいる？自分の場所を共有しよう。。</string>
+    <string name="feature_glympse_description">どこにいる？自分の場所を共有しよう。</string>
     <string name="feature_stickers">ステッカー</string>
     <string name="feature_stickers_description">チャットをもっと楽しくしましょう。</string>
     <string name="feature_voice">BBM Voice</string>
@@ -904,15 +1003,17 @@
     <string name="filter_by">フィルター基準</string>
     <string name="find_friend_allow_upload_dialog_double_check_text">よろしいですか?BBMに連絡先にアクセスすることを許可しない場合、BBM連絡先を手動で追加する必要があります。</string>
     <string name="find_friend_allow_upload_dialog_double_check_title">おすすめできません</string>
-    <string name="find_friend_allow_upload_dialog_title">BBMで友達を検索</string>
-    <string name="find_friend_allow_upload_text">BBMに連絡先にアクセスすることを許可して、友だちを検索および追加しやすくします。</string>
+    <string name="find_friend_allow_upload_dialog_title">友達を検索</string>
+    <string name="find_friend_allow_upload_text">BBMに連絡先へのアクセスを許可し、友だちを検索しやすくします。BBMに追加する友だちを選択できます。</string>
     <string name="find_friend_category_get_bbm">招待してダウンロード</string>
     <string name="find_friend_category_invite">タップして追加</string>
     <string name="find_friends">BBMで友達を検索</string>
-    <string name="find_more_friends">友だちをさらに検索</string>
-    <string name="first_launch_after_upgrade_privacy_terms">&lt;b>&lt;a href=http://www.blackberry.com/legal/privacy>プライバシーポリシー&lt;/a>&lt;/b>および&lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>サービス条件&lt;/a>&lt;/b>に同意します</string>
-    <string name="first_launch_after_upgrade_subtitle">ステッカーを使用するとBBMチャットをより楽しむことができます。今すぐご利用になれます。</string>
-    <string name="first_launch_after_upgrade_title">ステッカーを送信してください。</string>
+    <string name="find_more_friends">友だちを検索</string>
+    <string name="first_launch_after_upgrade_privacy_terms">&lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>サービス条件&lt;/a>&lt;/b>を更新しました。“続行”をクリックすると、&lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>サービス条件&lt;/a>&lt;/b>および&lt;b>&lt;a href=http://www.blackberry.com/legal/privacy>プライバシーポリシー&lt;/a>&lt;/b>に同意したものとみなされます</string>
+    <string name="first_launch_after_upgrade_subtitle">自分だけのBBM PINを作成しましょう。この機会に、今すぐカスタムPINを取得しましょう。</string>
+    <string name="first_launch_after_upgrade_title">あなた自身のように個性的な</string>
+    <string name="first_name">名</string>
+    <string name="first_name_hint">名を入力</string>
     <string name="flagged_comments_header">コメント</string>
     <string name="flagged_posts_header">投稿</string>
     <string name="format_not_supported_for_cropping">この形式はトリミングには対応していません</string>
@@ -920,6 +1021,7 @@
     <string name="general">標準</string>
     <string name="glympse">Glympse</string>
     <string name="glympse_attach">Glympseを添付</string>
+    <string name="glympse_duration_hourminutes">%1$d:%2$02d残り</string>
     <string name="glympse_duration_minutes">時間:%1$d分</string>
     <string name="glympse_expired">期限切れです</string>
     <string name="glympse_expires_at">%1$sまで共有</string>
@@ -954,8 +1056,9 @@
     <string name="glympse_update">Glympseを更新</string>
     <string name="glympse_user_selector_item_all_user_currently_sharing">現在共有しているすべてのユーザー</string>
     <string name="glympse_user_selector_item_speed">速度(km/h):%1$s</string>
+    <string name="glympse_user_selector_item_speed_na">速度(km/h):なし</string>
     <string name="glympse_user_selector_item_updated_d_ago">最終更新日:%1$d日前</string>
-    <string name="glympse_user_selector_item_updated_h_m">最終更新時期:%1$d前</string>
+    <string name="glympse_user_selector_item_updated_h_m">最終更新時期:%1$d:%2$s前</string>
     <string name="glympse_user_selector_item_updated_m_ago">最終更新時間:%1$d分前</string>
     <string name="glympse_user_selector_item_updated_na">最終更新:なし</string>
     <string name="glympse_user_selector_item_updated_s_ago">最終更新時間:%1$d秒前</string>
@@ -987,9 +1090,11 @@
     <string name="group_add_list_title_hint"><i>リストタイトル</i></string>
     <string name="group_admin_about">グループ管理者について</string>
     <string name="group_admin_text">管理者は次の操作を実行できます。</string>
+    <string name="group_autopassphrase_details">自動パスフレーズが有効です。</string>
     <string name="group_barcode_info">連絡先は、このバーコードをスキャンして、グループに参加できます</string>
     <string name="group_barcode_scan_rejected_user_not_protected">このグループへの参加を許可されていません。</string>
     <string name="group_cancel">キャンセル</string>
+    <string name="group_cannot_delete_conversation">この会話は削除できません</string>
     <string name="group_chat_exists">チャットトピックは既に存在します</string>
     <string name="group_chat_general_discussion">一般的な話題</string>
     <string name="group_chat_history_days_1">1日</string>
@@ -1008,6 +1113,8 @@
     <string name="group_conversation_email_chat_message_header">次のグループから: %1$s</string>
     <string name="group_conversation_email_chat_subject">%1$sのチャット: %2$s</string>
     <string name="group_conversation_is_writing_a_message">が入力しています…</string>
+    <string name="group_conversation_picture_loading">写真をロードしています...</string>
+    <string name="group_conversation_picture_not_available">画像を利用できません</string>
     <string name="group_conversation_slide_menu_chat_history">チャット履歴</string>
     <string name="group_conversation_slide_menu_clear_chat">チャットをクリア</string>
     <string name="group_conversation_slide_menu_copy_chat">チャットをコピー</string>
@@ -1017,6 +1124,7 @@
     <string name="group_delete_picture">画像を削除</string>
     <string name="group_delete_q">グループを削除しますか?</string>
     <string name="group_done">完了</string>
+    <string name="group_edit_admin_cannot_remove_self">自分自身を管理者として削除できません</string>
     <string name="group_edit_caption">キャプションを編集</string>
     <string name="group_edit_list_title">ｱｲﾃﾑの詳細</string>
     <string name="group_event_all_day">全日</string>
@@ -1039,15 +1147,15 @@
     <string name="group_events_time_notice">終了時刻は開始時刻よりも後にする必要があります</string>
     <string name="group_invitation_was_received">Glympse グループに招待されています</string>
     <string name="group_invite_bbg_uri">%1$s</string>
-    <string name="group_invite_email_message">"-----\ufffc----
-私の%1$sグループにあなたをご招待します。
+    <string name="group_invite_email_message">"私の\"%1$s\"というグループにあなたをご招待します。モバイルデバイスからグループに参加するには、
+%2$s
 
-AndroidまたはiPhoneで、%2$sをクリックしてグループに参加するか、BBMをダウンロードします。
 
-%3$s"</string>
-    <string name="group_invite_email_subject">わたしのBlackBerryグループに参加してください。</string>
+%3$sをクリックします"</string>
+    <string name="group_invite_email_subject">%1$sからのBBMグループの招待</string>
     <string name="group_invite_enter_passphrase">このグループに参加するには、グループメンバーから提供されたパスフレーズを入力します。</string>
     <string name="group_invite_enter_passphrase_multi_attempts">パスフレーズが正しくありません。このグループに参加するには、グループメンバーから提供されたパスフレーズを入力してください。(%1$d/%2$d)</string>
+    <string name="group_invite_expired">グループへの招待の期限が切れました</string>
     <string name="group_invite_message_default">私の%1$sグループにあなたをご招待します。</string>
     <string name="group_invite_status_enter_passphrase_max_attempts_reached">パスフレーズが正しくありません。このグループに参加するには、再度招待される必要があります。</string>
     <string name="group_invite_status_enter_passphrase_multi_attempts">パスフレーズが正しくありません。このグループに参加するには、グループメンバーから提供されたパスフレーズを入力してください。</string>
@@ -1090,6 +1198,11 @@ AndroidまたはiPhoneで、%2$sをクリックしてグループに参加する
     <string name="group_passphrase_info">グループに招待するユーザーが参加時に入力するパスフレーズを共有できます。</string>
     <string name="group_passphrase_missing">パスフレーズなし</string>
     <string name="group_picture_add">画像を追加</string>
+    <string name="group_picture_add_failed__wrong_picture_type">@string/avatar_file_not_support</string>
+    <string name="group_picture_add_failed_file_access_error">@string/filetransfer_abort_filenotfound</string>
+    <string name="group_picture_add_failed_file_does_not_exist">@string/filetransfer_abort_filenotfound</string>
+    <string name="group_picture_add_failed_picture_too_big">@string/conversation_file_image_transfer_canceled_dialog_too_large</string>
+    <string name="group_picture_add_failed_resize_error">@string/conversation_unable_to_save_picture</string>
     <string name="group_picture_added_days">%2$sによって%1$d日前に追加されました</string>
     <string name="group_picture_added_today">本日%1$s時に%2$sによって追加されました</string>
     <string name="group_picture_added_yesterday">昨日%1$sによって追加されました</string>
@@ -1164,7 +1277,7 @@ AndroidまたはiPhoneで、%2$sをクリックしてグループに参加する
     <string name="hdimage_prompt_message">今後自動的にHDリクエストを承諾しますか?</string>
     <string name="hdimage_prompt_title">常にリクエストを承諾</string>
     <string name="help">ヘルプ</string>
-    <string name="help_url">http://docs.blackberry.com/bbm/25/android/ja</string>
+    <string name="help_url">http://help.blackberry.com/detectLang/bbm-for-android/current/</string>
     <string name="high_priority">優先度高</string>
     <string name="hint_protected_enabled_chat"><i>保護されています。メッセージを入力</i></string>
     <string name="history_clear_one_history_text">削除</string>
@@ -1193,6 +1306,7 @@ AndroidまたはiPhoneで、%2$sをクリックしてグループに参加する
     <string name="introducing_channels_second_part">サブスクライバ―はBBMの最新情報を受信し、考えを共有することができます。</string>
     <string name="introducing_channels_title">BBM Channelの紹介</string>
     <string name="invalid_passphrase_toast">無効なパスフレーズ</string>
+    <string name="invitation_received">招待を受信しました</string>
     <string name="invitation_rejected_invitee_not_protected_message">%1$sはこのグループに参加できません。BBM Protected連絡先のみが参加できます。</string>
     <string name="invitation_rejected_invitee_not_protected_title">ユーザーを招待して参加させることができません</string>
     <string name="invitation_sent">招待が送信されました</string>
@@ -1200,18 +1314,16 @@ AndroidまたはiPhoneで、%2$sをクリックしてグループに参加する
     <string name="invite_activity_category">カテゴリ</string>
     <string name="invite_activity_lookup">参照…</string>
     <string name="invite_activity_mail">メール: %1$s</string>
-    <string name="invite_activity_mail_body">"BBMのチャットにあなたを招待します。
-
-私をBBMに追加するには、
-%1s
-をクリックします。"</string>
+    <string name="invite_activity_mail_body">"BBMでのチャットにあなたを招待します。モバイルデバイスからBBMに参加するには、
+%1$s
+をクリックします"</string>
     <string name="invite_activity_mail_subject">%1$sからのBBMの招待</string>
     <string name="invite_activity_phone">電話番号: %1$s</string>
     <string name="invite_activity_pin">PIN: %1$s</string>
     <string name="invite_activity_security_custom_question">質問を入力してください</string>
     <string name="invite_activity_security_custom_response">答えを入力してください</string>
     <string name="invite_activity_security_label">セキュリティの質問</string>
-    <string name="invite_activity_sms_body">BBMに私を追加してください。BlackBerryで、pin:%1$sをクリックして\"[BBMに招待]\"を選択します。AndroidまたはiPhoneでは、www.pin.bbm.com/%1$sをクリックして追加するか、BBMをダウンロードします。</string>
+    <string name="invite_activity_sms_body">BBMに私を追加してください。www.pin.bbm.com/%1$sをクリック</string>
     <string name="invite_activity_to">宛先:</string>
     <string name="invite_bbm_contact">BBM連絡先を追加</string>
     <string name="invite_bbm_invites">BBMの招待</string>
@@ -1280,6 +1392,8 @@ AndroidまたはiPhoneで、%2$sをクリックしてグループに参加する
     <string name="key_exchange_hint_waiting_to_enter_passphrase">パスフレーズを入力して参加</string>
     <string name="key_exchange_hint_waiting_to_join">%1$sが参加するのを待っています</string>
     <string name="key_exchange_status_accepted">パスフレーズが承諾されました</string>
+    <string name="last_name">姓</string>
+    <string name="last_name_hint">姓を入力</string>
     <string name="learn_more_about_bbm_pins">BBM PINの詳細を見る</string>
     <string name="learn_more_about_restoring_bbm_data">BBMデータの復元に関する詳細。</string>
     <string name="leave_channel">チャンネルを抜ける</string>
@@ -1301,6 +1415,8 @@ AndroidまたはiPhoneで、%2$sをクリックしてグループに参加する
     <string name="location_service_failed">場所の取得に失敗しました</string>
     <string name="low_battey_warning">バッテリー不足のため一時停止します。再開はここをクリック。</string>
     <string name="low_priority">優先度低</string>
+    <string name="main_drawer_close">ドロワーを閉じる</string>
+    <string name="main_drawer_open">ドロワーを開く</string>
     <string name="main_mood_status_format">%1$s - %2$s</string>
     <string name="main_status_available">応答可能</string>
     <string name="main_status_busy">取り込み中</string>
@@ -1312,8 +1428,10 @@ AndroidまたはiPhoneで、%2$sをクリックしてグループに参加する
     <string name="menu_end_chat">チャットを終了</string>
     <string name="menu_help">ヘルプ</string>
     <string name="menu_history">履歴</string>
+    <string name="menu_leave_chat">チャットを抜ける</string>
     <string name="menu_settings">設定</string>
     <string name="menu_share">共有</string>
+    <string name="message">メッセージ</string>
     <string name="message_button_accept">承諾</string>
     <string name="message_button_allow">許可</string>
     <string name="message_button_cancel">キャンセル</string>
@@ -1331,6 +1449,7 @@ AndroidまたはiPhoneで、%2$sをクリックしてグループに参加する
     <string name="message_with_context_new_contact">新しい連絡先について:</string>
     <string name="message_with_context_now_playing">再生中について:</string>
     <string name="message_with_context_personal_message">個人メッセージについて:</string>
+    <string name="message_with_context_quote">%1$sさんが書きました: \"%2$s\"</string>
     <string name="message_with_context_real_time_location">場所について:</string>
     <string name="more">さらに表示</string>
     <string name="msg_bulk_mode_scanned">連続モード:スキャンして保存しました</string>
@@ -1368,6 +1487,11 @@ AndroidまたはiPhoneで、%2$sをクリックしてグループに参加する
     <string name="my_channels_fragment_mark_favorite">お気に入りとしてマークする</string>
     <string name="my_channels_fragment_remove_favorite">お気に入りを削除</string>
     <string name="mybbmbarcode">自分のBBMバーコード</string>
+    <string name="nav_chats">BBMチャット</string>
+    <string name="nav_contacts">BBM連絡先</string>
+    <string name="nav_feeds">BBMフィード</string>
+    <string name="nav_feeds_all">すべてのBBMフィード</string>
+    <string name="nav_groups">BBM Groups</string>
     <string name="network_settings_dialog_text">続行するには、Wi-Fiまたはネットワークに接続してください。</string>
     <string name="network_settings_dialog_title">ネットワークに接続されていません</string>
     <string name="new_channel_email_addresss">メールアドレス</string>
@@ -1376,6 +1500,7 @@ AndroidまたはiPhoneで、%2$sをクリックしてグループに参加する
     <string name="new_chat_topic">新規チャットトピック</string>
     <string name="new_string">新規</string>
     <string name="next">次へ</string>
+    <string name="no">いいえ</string>
     <string name="no_active_glympses">稼働中のGlympse はありません</string>
     <string name="no_blackberry_data">BlackBerryデータがありません</string>
     <string name="no_blocked_invites">招待を無視する、または連絡先を削除する場合に、連絡先をこのリストに追加できます。</string>
@@ -1386,6 +1511,7 @@ AndroidまたはiPhoneで、%2$sをクリックしてグループに参加する
     <string name="no_connection_found">接続が見つかりませんでした</string>
     <string name="no_current_chat">チャットはありません</string>
     <string name="no_network_connection">ネットワークに接続していません。</string>
+    <string name="no_picture">利用できる画像がありません</string>
     <string name="no_pictures">画像なし</string>
     <string name="no_posts">すべての投稿を表示できません。</string>
     <string name="no_updates">新しいアイテムなし</string>
@@ -1436,6 +1562,19 @@ AndroidまたはiPhoneで、%2$sをクリックしてグループに参加する
 BlackBerryデバイスで、pin:%2$sをタップしてパスフレーズを入力します。"</string>
     <string name="out_of_band_passphrase_message_sms">私はあなたとBBM Protectedチャットすることを希望しています。BlackBerryデバイスで%1$sをタップします。パスフレーズ%2$sを入力します。</string>
     <string name="out_of_band_passphrase_subject">BBM Protectedチャット</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_dialog_body">この機能はBBM連絡先でのみご利用いただけます。%1$sをBBM連絡先に追加しますか?</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_dialog_title">BBM連絡先に追加する</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_toast">この機能を使用するには、このユーザーをBBM連絡先へ登録する必要があります。</string>
+    <string name="outer_circle_category_bbm_contacts">BBM連絡先</string>
+    <string name="outer_circle_category_phone_contacts">@string/outer_circle_category_phone_contacts_v1</string>
+    <string name="outer_circle_category_phone_contacts_v1">連絡先</string>
+    <string name="outer_circle_category_phone_contacts_v2">電話の連絡先</string>
+    <string name="outer_circle_category_phone_contacts_v3">デバイスの連絡先</string>
+    <string name="outer_circle_contact_add_more_friends">友だちをさらに追加</string>
+    <string name="outer_circle_contact_menu_add_as_contact">BBM連絡先に追加する</string>
+    <string name="outer_circle_contact_menu_delete_and_block">削除してブロック</string>
+    <string name="outer_circle_find_other_bbm_user_body">知り合いのBBMユーザーをデバイスの連絡先から自動で検索することができます。BBMの連絡先アプリケーションへのアクセスを許可しますか?</string>
+    <string name="outer_circle_find_other_bbm_user_title">その他のBBMユーザーを検索</string>
     <string name="overlay_bbm_ongoing_notification_reason">"BBMアイコンが画面上部に表示されている理由。
 
 BBMが常時オンで接続されているため、BBMアイコンがステータスバーに表示されます。"</string>
@@ -1469,13 +1608,13 @@ BBMが常時オンで接続されているため、BBMアイコンがステー�
     <string name="partner_app_register_failed_dialog_outage_message">ネットワーク接続が検出されませんでした</string>
     <string name="partner_app_register_failed_dialog_title">BBMに登録</string>
     <string name="passphrase">パスフレーズ</string>
-    <string name="passphrase_creation_details">チャットに参加するには、パスフレーズをBBM連絡先と共有する必要があります。大文字4文字以上にする必要があります。</string>
+    <string name="passphrase_creation_details">チャットに参加するには、パスフレーズをBBM連絡先と共有する必要があります。4文字以上にする必要があります。文字、数字またはその両方を使用してください。例:TGRS、2905、TIG8。</string>
     <string name="passphrase_incorrect">&lt;b>%1$s&lt;/b>は正しいパスフレーズを入力しませんでした。</string>
     <string name="passphrase_initiated">パスフレーズ&lt;b>%1$s&lt;/b>を&lt;b>%2$s&lt;/b>と共有しました。</string>
     <string name="passphrase_message_email">"私はあなたとBBM Protectedチャットすることを希望しています。
 ---o---
-PIN:%2$sまたは%3$sをクリックしてからパスフレーズ\"%1$s\"を入力してください。"</string>
-    <string name="passphrase_message_sms">BBM Protectedチャットに参加してください。PIN:%2$sまたは%3$sをクリックしてからパスフレーズ\"%1$s\"を入力してください。</string>
+このチャットに参加するには、PIN：%1$sまたは%2$sをクリックしてください。パスフレーズを要求された場合は、\"%3$s\"を入力してください。"</string>
+    <string name="passphrase_message_sms">BBM Protectedチャットに参加してください。PIN：%1$sまたは%2$sをクリックしてください。パスフレーズを要求された場合は、\"%3$s\"を入力してください。</string>
     <string name="passphrase_rules_details">3組の文字である必要があります。各組は大文字4～7文字でスペースで区切られています。例:DARK BROWN TIGERS</string>
     <string name="passphrase_share_details">パスフレーズをどの方法で%1$sに共有しますか?</string>
     <string name="passphrase_wait_to_join">&lt;b>%1$s&lt;/b>が参加するのを待っています。</string>
@@ -1499,12 +1638,38 @@ PIN:%2$sまたは%3$sをクリックしてからパスフレーズ\"%1$s\"を入
     <string name="pending_invite_group_too_many_members">拒否:このグループは既にいっぱいです。</string>
     <string name="pending_invite_pending">保留中</string>
     <string name="pending_invite_protected_group_invites_you_to">%1$sがあなたを\"%2$s\"というグループに招待しています。このBBM Protectedグループに参加するには、グループメンバーから提供されたパスフレーズを入力する必要があります。</string>
+    <string name="people">ピープル</string>
     <string name="personalize_profile_dialog_message">バナーをタップしてBBMプロフィールを開きます。</string>
     <string name="personalize_profile_dialog_title">プロフィールをカスタマイズ</string>
+    <string name="phone_contact_add">@string/phone_contact_add_v1</string>
+    <string name="phone_contact_add_v1">BBM連絡先を追加</string>
+    <string name="phone_contact_add_v2">BBMに追加する</string>
+    <string name="phone_contact_add_v3">BBM連絡先に追加する</string>
+    <string name="phone_contact_block">ブロック</string>
+    <string name="phone_contact_block_from_conversation_description">今後%1$sからの招待とチャットはすべてブロックされます。%1$sをブロックしますか?</string>
+    <string name="phone_contact_block_from_conversation_title">%1$sをブロック</string>
+    <string name="phone_contact_invitationsent">招待が送信されました</string>
+    <string name="phone_contact_not_a_contact">BBMのすべての機能を活かすには、このユーザーをBBM連絡先に追加しましょう。</string>
+    <string name="phone_contact_reinvite_message">@string/phone_contact_reinvite_message_v1</string>
+    <string name="phone_contact_reinvite_message_v1">%1$sをBBM連絡先に追加するには、[%2$s]をタップします。</string>
+    <string name="phone_contact_reinvite_message_v2">チャットを開始するには、%1$sをBBM連絡先に追加する必要があります。%1$sをBBM連絡先に追加するには、チャット上部の%2$sをタップします。</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_1">&lt;b>&lt;i>連絡先&lt;/i>&lt;/b>と&lt;b>&lt;i>BBM連絡先&lt;/i>&lt;/b>の2種類が存在します。</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_2">&lt;b>&lt;i>連絡先&lt;/i>&lt;/b>はデバイスの連絡先のうちBBMを使用している人です。&lt;br/>&lt;br/>*連絡先ですぐにチャットできます&lt;br/>*招待の必要はありません</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_3">&lt;b>&lt;i>BBM連絡先&lt;/i>&lt;/b>は一度招待する必要があります。BBM連絡先のみ次の操作が可能です。&lt;br/>&lt;br/>*BBM表示画像を閲覧&lt;br/>*BBMステータス更新を閲覧&lt;br/>*BBM Voiceを使用して通話を送受信。</string>
+    <string name="phone_contact_tutorial_conversation_section_1">&lt;b>&lt;i>連絡先&lt;/i>&lt;/b>と&lt;b>&lt;i>BBM連絡先&lt;/i>&lt;/b>の2種類が存在します。</string>
+    <string name="phone_contact_tutorial_conversation_section_2">これは&lt;b>&lt;i>連絡先&lt;/i>&lt;/b>でのチャットです。このユーザーは次のものを閲覧することができません。&lt;br/>&lt;br/>*BBM表示画像&lt;br/>*BBMステータスの更新</string>
+    <string name="phone_contact_tutorial_conversation_section_3">チャットするには、このユーザーは最新バージョンのBBMを使用している必要があります。このユーザーを&lt;b>&lt;i>BBM連絡先&lt;/i>&lt;/b>に追加、またはいつでもブロックすることができます。</string>
+    <string name="phone_contact_tutorial_profile_click_section_1">&lt;b>&lt;i>連絡先&lt;/i>&lt;/b>と&lt;b>&lt;i>BBM連絡先&lt;/i>&lt;/b>の2種類が存在します。</string>
+    <string name="phone_contact_tutorial_profile_click_section_2">&lt;b>&lt;i>BBM連絡先&lt;/i>&lt;/b>は一度招待する必要があります。また次の操作が可能です。&lt;br/>&lt;br/>*BBM表示画像、ステータス更新、プロフィールを閲覧&lt;br/>*BBM Voiceを使用して電話をかける&lt;br/>*一括送信メッセージを送信</string>
+    <string name="phone_contact_tutorial_profile_click_section_3">&lt;b>&lt;i>連絡先&lt;/i>&lt;/b>はデバイスの連絡先のうちBBMを使用している人です。連絡先が最新バージョンのBBMを使用している場合、招待の必要はありません。そのままBBMのチャット機能をお楽しみいただけます。次の機能が有効です。&lt;br/>&lt;br/> &amp;#8226;メッセージのD(送信済み)とR(既読)通知&lt;br/> &amp;#8226;画像、ファイルの送信&lt;br/> &amp;#8226; Glympseで自分の位置情報を共有。</string>
     <string name="pic_caption_hint"><i>キャプションを入力</i></string>
+    <string name="picture">画像</string>
     <string name="picture_deleted">画像が削除されました</string>
+    <string name="picture_selection_limit_toast">ファイルが多すぎます(最大10個)。</string>
+    <string name="picture_selection_type_toast">複数共有でサポートされるのは、画像の種類のみです。</string>
     <string name="pin_copied">PINがコピーされました</string>
     <string name="please_ensure_the_device_time_is_correctly_set">デバイス時間が正しく設定されていることを確認し、再度実行してください。</string>
+    <string name="policy_change_title">ポリシーの変更</string>
     <string name="post_removed">この投稿は削除されました。</string>
     <string name="posts_caption">投稿</string>
     <string name="pref_add_contact_on_tap">タップ時に連絡先を追加</string>
@@ -1526,7 +1691,7 @@ PIN:%2$sまたは%3$sをクリックしてからパスフレーズ\"%1$s\"を入
     <string name="pref_ping_vibrate_notifications">ピング時にバイブ</string>
     <string name="pref_security_question">招待に対するセキュリティ質問</string>
     <string name="pref_show_location">自分の国と時刻を表示</string>
-    <string name="pref_show_what_others_are_listening_to">再生中の曲名を表示</string>
+    <string name="pref_show_what_others_are_listening_to">他のユーザーの再生中の曲を表示</string>
     <string name="pref_sound_notification_bbm">BBM</string>
     <string name="pref_sound_notification_silent">サイレント</string>
     <string name="pref_sound_notifications">音</string>
@@ -1565,21 +1730,49 @@ PIN:%2$sまたは%3$sをクリックしてからパスフレーズ\"%1$s\"を入
     <string name="preferences_vibrate_title">バイブ</string>
     <string name="private_channel">プライベートチャンネル</string>
     <string name="private_channel_description">チャンネルを検索できないように非表示にして、招待する人のみを対象にします。</string>
+    <string name="private_chat">プライベートチャット</string>
+    <string name="private_chat_back_out_dialog_dont_ask_me_again">次回から確認しない。</string>
+    <string name="private_chat_back_out_dialog_text">%1$d分たってもチャットに戻らなければ、プライベートチャットは終了します。</string>
+    <string name="private_chat_conversation_notification_title">%1$sさんが、あなたとのチャットを希望しています。</string>
+    <string name="private_chat_end_menu">プライベートチャットを終了</string>
+    <string name="private_chat_entry_subtitle">タップして戻る</string>
+    <string name="private_chat_menu">プライベートチャットを開始</string>
+    <string name="private_chat_message_notification_title">新しいプライベートチャットメッセージが届きました。</string>
+    <string name="private_chat_other_party_not_support">この連絡先はプライベートチャットをサポートしていない、古いバージョンのBBMを使用しています。</string>
+    <string name="private_chat_request_incoming_subtitle">プライベートチャットリクエスト</string>
+    <string name="private_chat_request_invite_bubble_message">"私はあなたとのプライベートチャットを希望しています。プライベートチャットに参加するには、BBMの最新のバージョンをダウンロードする必要があります。
+
+BBMの最新バージョンを取得するには、http://bbm.com/upgrade に移動してください。"</string>
+    <string name="private_chat_request_outgoing_subtitle">プライベートチャットリクエスト</string>
+    <string name="private_chat_stop_reason_busy">%1$sさんは現在プライベートチャットで応答できません。</string>
+    <string name="private_chat_stop_reason_cancelled">%1$sさんはプライベートチャットをキャンセルしました。</string>
+    <string name="private_chat_stop_reason_declined">%1$sさんはプライベートチャットを拒否しました。</string>
+    <string name="private_chat_stop_reason_inactivity">プライベートチャットは、非アクティブであったため自動的に終了しました。</string>
+    <string name="private_chat_stop_reason_localended">プライベートチャットを終了しました。</string>
+    <string name="private_chat_stop_reason_noresponse">%1$sさんはプライベートチャットリクエストに応答しませんでした。</string>
+    <string name="private_chat_stop_reason_remoteended">%1$sさんはプライベートチャットを終了しました。</string>
+    <string name="private_chat_stop_reason_unknown">プライベートチャットは切断されました。プライベートチャットを再開してください。</string>
+    <string name="private_chat_tutorial_description">"名前とプロフィール画像は非表示になっています。
+
+チャットが終了したり、非アクティブになると、チャットは自動的に両方のデバイスから削除されます。
+
+新しいプライベートメッセージの通知は、目立ちません。"</string>
     <string name="profile_barcode">バーコード</string>
+    <string name="profile_bbm_pin_label">BBM PIN</string>
     <string name="profile_copy_pin">PINをコピー</string>
     <string name="profile_copypin">PINをコピー</string>
     <string name="profile_default_pin">PIN:00000000</string>
     <string name="profile_display_name_invalid">表示名にコロンまたはカンマは使用できません</string>
+    <string name="profile_display_name_invalid_empty">表示名を空白にすることはできません</string>
     <string name="profile_icon_source_camera">カメラ</string>
     <string name="profile_icon_source_picture">画像</string>
     <string name="profile_icon_source_sample_picture">サンプル画像</string>
-    <string name="profile_location_label">場所/タイムゾーン:</string>
+    <string name="profile_location_label">場所/タイムゾーン</string>
     <string name="profile_mood_hint"><i>今なにしてる?</i></string>
+    <string name="profile_name">プロファイル名</string>
     <string name="profile_no_status_message">ステータスメッセージなし</string>
     <string name="profile_own_status_label">ステータス</string>
-    <string name="profile_pin">%1$s</string>
     <string name="profile_pin_copied">PINがコピーされました</string>
-    <string name="profile_pin_label">PIN:</string>
     <string name="profile_pinlabel">PIN:</string>
     <string name="profile_revert_display_name">表示名を元に戻す</string>
     <string name="profile_selector_apps">アプリケーション</string>
@@ -1587,29 +1780,42 @@ PIN:%2$sまたは%3$sをクリックしてからパスフレーズ\"%1$s\"を入
     <string name="profile_selector_members">メンバー</string>
     <string name="profile_selector_updates">フィード</string>
     <string name="profile_share_pin">自分のPINを共有</string>
+    <string name="profile_status_delete">ステータスを削除</string>
+    <string name="profile_status_delete_info">このステータスを削除しますか?</string>
     <string name="profile_status_edit">ステータスメッセージを編集</string>
-    <string name="profile_status_label">ステータス:</string>
+    <string name="profile_user_has_subscription">このユーザーはサブスクリプションを持っています。</string>
+    <string name="profile_user_view_all_sub">BBMサブスクリプションをすべて表示</string>
     <string name="prompt_change_bbm_picture">BBM画像を変更しますか?</string>
     <string name="prompted_after_rate_call">ありがとうございました</string>
     <string name="prompted_before_rate_call">通話品質の評価をする</string>
     <string name="protected_group_invite_message_default">私の\"%1$s\"というグループにあなたをご招待します。このBBM Protectedグループに参加するには、グループメンバーから提供されたパスフレーズを入力する必要があります。</string>
     <string name="protected_group_requires_join">保護されたグループを復元するためにパスフレーズの確認を待機しています</string>
     <string name="protected_mode_disabled_header">BBM Protectedがオフです</string>
-    <string name="protected_mode_disabled_message">連絡先およびチャットは保存されましたが、BBM Protectedを使用する多人数チャットおよびグループから削除されました。</string>
+    <string name="protected_mode_disabled_message">連絡先およびチャットは保存されましたが、BBM Protectedを使用するグループから削除されました。</string>
     <string name="protected_mode_disabled_title">管理者がBBM Protectedをオフにしました。</string>
     <string name="protected_mode_enabled_header">BBM Protected</string>
     <string name="protected_mode_enabled_message">"BBM Protectedは、BBMチャット、ファイル転送、およびグループの暗号化レベルを高めます。次回BBM Protected連絡先とチャットを開始するとき、相手が参加するために入力する必要のあるパスフレーズを指定します。各BBM Protected連絡先に対してパスフレーズを指定するのは1回のみです。
  
  BBM Groupsについては、BBM Protected連絡先へのメンバーシップを制限するかどうか選択できます。BBM Protectedグループを作成する場合は、参加するためにユーザーが入力する必要のあるパスフレーズを共有できます。"</string>
     <string name="protected_mode_enabled_title">管理者により、デバイスのBBM Protectedが有効化されました。</string>
+    <string name="protected_preferred_details">連絡先はBBM Protectedチャットを要求しています。</string>
+    <string name="protected_preferred_dialog">この連絡先はProtected Plusを使用してます。この連絡先とのチャットはBBM Protectedチャットになります。 <a href="http://blackberry.com/bbmprotected">詳細を確認</a></string>
+    <string name="protected_preferred_dialog_dismiss">次回から表示しない。</string>
+    <string name="protected_preferred_mode_disabled_message">管理者により、Protected Plusがオフになっています。</string>
+    <string name="protected_preferred_mode_disabled_title">Protected Plusがオフ</string>
+    <string name="protected_preferred_mode_enabled_message">管理者により、BBM Protectedの機能であるProtected Plusがオンになっています。連絡先とのチャットはBBM Protectedチャットになります。</string>
+    <string name="protected_preferred_mode_enabled_title">Protected Plusがオン</string>
+    <string name="protected_rejected_message_body">このBBM保護されたチャットをリセットするには、パスフレーズの共有がもう一度必要な場合があります。パスフレーズを共有するには、画面右上のメニューアイコンをタップします。&lt;b>「%1$s」&lt;/b>をタップします。</string>
+    <string name="protected_rejected_message_status">もう一度パスフレーズを共有</string>
     <string name="purchase_failed_message">支払いを処理できませんでした。別の支払い方法を選択しますか?</string>
     <string name="purchase_options">支払いオプション</string>
     <string name="purchase_success_message">アイテムは正常に購入されました</string>
     <string name="purchase_unexpected_error_message">購入が中断されました。再度実行してください。</string>
     <string name="pyk_empty_invites_allow_upload_hint">BBMを使用している友だちを検索</string>
     <string name="qr_description">UsersQR</string>
-    <string name="quick_share_glympse_first_experience_overlay_infos">Glympseを送信して、選択した時間内は自分の位置情報をBBM連絡先が地図上で追えるようにします。待ち合わせや約束に遅れる時に最適です。</string>
-    <string name="quick_share_glympse_first_experience_overlay_note"><i>注意:この機能の使用中、GPS座標はGlympse Inc.と共有され次の対象となります <a href="http://glympse.com/privacy">プライバシーポリシー</a></i></string>
+    <string name="quick_reply">返信して終了</string>
+    <string name="quick_share_glympse_first_experience_overlay_infos">Glympseを送信して選択した期間にBBM連絡先が自分の場所を地図で追跡できるようにします。待ち合わせや、また約束に遅れる場合にとても便利です。</string>
+    <string name="quick_share_glympse_first_experience_overlay_note"><i>注意:この機能の使用中、GPS座標はGlympse Inc.と共有され、<a href="http://glympse.com/privacy">プライバシーポリシー</a> の対象となります。</i></string>
     <string name="quick_share_glympse_first_experience_overlay_title">自分の位置情報を共有する。</string>
     <string name="quick_share_glympse_location_services_overlay_infos">Glympseの機能を有効にするには、位置情報サービスをオンにしてください。</string>
     <string name="quick_share_glympse_location_services_overlay_title">位置情報サービスをオンにするには。</string>
@@ -1617,8 +1823,11 @@ PIN:%2$sまたは%3$sをクリックしてからパスフレーズ\"%1$s\"を入
     <string name="quick_share_voice_note_label_busy">記録できません。メディアプレイヤーまたはメディアサービスは既に使用中です。</string>
     <string name="quick_share_voice_note_label_default">タッチし続けて録音する</string>
     <string name="quick_share_voice_note_label_delete">リリースして削除する</string>
+    <string name="quick_share_voice_note_label_rec">録音</string>
     <string name="quick_share_voice_note_label_send">リリースして送信またはスライドしてキャンセルする</string>
     <string name="quick_share_voice_note_tost_message">ボイスメモを送信するには、レコードボタンを長押ししてください。</string>
+    <string name="quote_at_user_name">\@%1$s</string>
+    <string name="quote_message_label">\"%1$s\"</string>
     <string name="rate_limited">Glympseの アクセスが限界に達しました。</string>
     <string name="rate_my_app_ignore">辞退する</string>
     <string name="rate_my_app_message">BBMをご利用の場合は簡単なアプリケーション評価をお願いいたします。ご協力いただきありがとうございます。</string>
@@ -1632,12 +1841,14 @@ PIN:%2$sまたは%3$sをクリックしてからパスフレーズ\"%1$s\"を入
     <string name="received_pending_invite_pin">PIN %1$s</string>
     <string name="received_pending_invite_title">BBMへの招待</string>
     <string name="recent_pictures">最新のコメント</string>
-    <string name="remaining_details">閲覧者: 最新 %1$d 名、総計 %2$d 名</string>
+    <string name="remaining_details">%2$d 表示, %1$d 閲覧中</string>
     <string name="remaining_title">Glympse: 残り %1$s です</string>
     <string name="remaining_title_glympse">Glympse</string>
     <string name="remove">削除</string>
     <string name="replace_picture">画像の置換</string>
+    <string name="reply">返信</string>
     <string name="reply_with_a_glympse">Glympseで返信しますか?</string>
+    <string name="reply_with_voice">音声で返信</string>
     <string name="report_channel">チャンネルをレポート</string>
     <string name="report_problem_activity_choose_email_client">メールを選択</string>
     <string name="report_problem_activity_email_button">メールでレポートを送信</string>
@@ -1668,6 +1879,8 @@ http://blackberry.com/support/bbm にアクセスするとBBMサポートをオ�
     <string name="request_was_received">Glympse リクエストが届いています</string>
     <string name="required_fields">必須フィールド*</string>
     <string name="resend_passphrase">パスフレーズを再送信</string>
+    <string name="reset_protected_chat">このチャットをリセット</string>
+    <string name="resolve_vanitypin_not_found">このPINは利用できません。</string>
     <string name="restore_sticker_purchases">復元</string>
     <string name="restore_using_device_switch">デバイスの切り替えを使用して復元</string>
     <string name="restore_using_email">メールを使用して復元</string>
@@ -1720,14 +1933,21 @@ http://blackberry.com/support/bbm にアクセスするとBBMサポートをオ�
     <string name="select_contacts_to_move">連絡先を選択して\"%1$s\"に移動:</string>
     <string name="select_group">グループを選択</string>
     <string name="select_group_activity_title">{0,choice,0#グループを選択|1#+1グループ|1&lt;+{0}組のグループ}</string>
+    <string name="select_group_discussion">話題を選択</string>
+    <string name="select_pictures">{0,choice,0#画像を選択|1#+1 画像|1&lt;+{0} 画像}</string>
     <string name="send">送信</string>
     <string name="send_comment">コメントを送信</string>
-    <string name="send_decline_response">否定応答を送信</string>
+    <string name="send_decline_response">辞退の通知を送信</string>
     <string name="sent_pending_invite_delete_info">このユーザーには今後あなたからの招待は表示されません。</string>
     <string name="sent_pending_invite_delete_invitation">招待を削除しますか?</string>
     <string name="sent_pending_invite_message_label">メッセージ:</string>
     <string name="sent_pending_invite_sent_label">送信済み:</string>
     <string name="set_as">設定:</string>
+    <string name="set_vanitypin_result_invalid">このPINは利用できません。</string>
+    <string name="set_vanitypin_result_refused">このPINは利用できません。</string>
+    <string name="set_vanitypin_result_reserved">このPINは利用できません。</string>
+    <string name="set_vanitypin_result_success">PINが作成されました。</string>
+    <string name="set_vanitypin_result_used">このPINは利用できません。</string>
     <string name="setas_activity_bbm_picture_updated">BBM画像が更新されました</string>
     <string name="setas_activity_item_bbm_picture">BBM画像</string>
     <string name="setas_activity_item_contact_picture">連絡先の写真</string>
@@ -1737,6 +1957,7 @@ http://blackberry.com/support/bbm にアクセスするとBBMサポートをオ�
     <string name="setas_activity_title">設定:</string>
     <string name="settings">設定</string>
     <string name="settings_activity_allow_hq_pictures">常にHD画像のリクエストを承諾</string>
+    <string name="settings_activity_backup_chat_history_now">今すぐバックアップ</string>
     <string name="settings_activity_blackberry_id_edit">編集</string>
     <string name="settings_activity_blackberry_id_generic_error">現在BlackBerry IDを編集できません。しばらくしてから再度実行してください</string>
     <string name="settings_activity_blocked_contacts">ブロックされている連絡先とフィード</string>
@@ -1750,6 +1971,7 @@ http://blackberry.com/support/bbm にアクセスするとBBMサポートをオ�
     <string name="settings_activity_deleting_chat_history_info">すべての連絡先のチャット履歴が削除されます。この操作は元に戻せません。</string>
     <string name="settings_activity_deleting_chat_history_title">チャット履歴を削除</string>
     <string name="settings_activity_hide_keyboard_on_enter_conversation">常にキーボードを表示</string>
+    <string name="settings_activity_keyboard_enter_as_new_line">[Enter]キーを押すと、改行します</string>
     <string name="settings_activity_legal">法的事項</string>
     <string name="settings_activity_report_a_problem">問題をレポート</string>
     <string name="settings_activity_save_chat_history">チャット履歴を保存</string>
@@ -1788,6 +2010,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="share_passphrase_other">個人的に教える</string>
     <string name="share_passphrase_sms">テキストメッセージ</string>
     <string name="share_passphrase_title">パスフレーズを共有</string>
+    <string name="share_to_feed_title">フィードを更新しますか?</string>
     <string name="sharead_sponsored_invite">共有するスポンサー付きの招待</string>
     <string name="sharead_sponsored_post">共有するスポンサー付きの投稿</string>
     <string name="shared_channel_post_default_text">共有済みチャンネル投稿</string>
@@ -1795,6 +2018,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="shared_channel_post_sent">チャンネル投稿を送信しました</string>
     <string name="shared_sponsored_content">共有済みスポンサー付きのコンテンツ</string>
     <string name="shop">ショップ</string>
+    <string name="shop_subscriptions">サブスクリプション</string>
     <string name="show">表示</string>
     <string name="show_channel_preview">プレビュー</string>
     <string name="show_map">地図を表示</string>
@@ -1803,6 +2027,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="sign_in_to_bbm">BBMにサインイン</string>
     <string name="slide_menu_add_event">イベントを追加</string>
     <string name="slide_menu_add_list">リストを追加</string>
+    <string name="slide_menu_block_chat">チャットをブロック</string>
     <string name="slide_menu_copy_chat">チャットをコピー</string>
     <string name="slide_menu_delete_item">アイテムを削除</string>
     <string name="slide_menu_edit">編集</string>
@@ -1818,6 +2043,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="slide_menu_new_chat">新しいチャットを開始</string>
     <string name="slide_menu_open_bbm_chat">BBMチャットを開く</string>
     <string name="slide_menu_ping">Ping</string>
+    <string name="slide_menu_play_in_media_player">メディアプレイヤーで再生</string>
     <string name="slide_menu_remove_deleted_item">削除済みｱｲﾃﾑを削除</string>
     <string name="slide_menu_remove_from_group">グループから削除</string>
     <string name="slide_menu_reply_by_voice_note">ボイスメモで返信</string>
@@ -1836,19 +2062,23 @@ www.pin.bbm.com/%1$s"</string>
     <string name="sms_activity_title">作成</string>
     <string name="sort_by">並べ替え基準</string>
     <string name="stacked_notification_format"><Data>&lt;b>%1$s&lt;/b>: %2$s</Data></string>
+    <string name="stale_user_reinvite_message">%1$sさんは%2$s以来、オンラインになっていません。</string>
+    <string name="stale_user_reinvite_title">再招待</string>
     <string name="start_chat">チャットを開始</string>
     <string name="start_chat_failed">チャットが作成できませんでした。</string>
     <string name="start_meeting">BBM会議を開始</string>
-    <string name="start_meeting_confirmation_dialog">通話を終了して新しい会議を開始しますか?</string>
-    <string name="start_meeting_confirmation_title">BBM会議を開始しますか?</string>
+    <string name="start_meeting_confirmation_dialog">現在BBM通話を行っています。通話を終了してBBM会議を開始しますか?</string>
+    <string name="start_meeting_confirmation_title">BBM会議を開始</string>
     <string name="start_multiperson_chat">多人数チャットを開始</string>
+    <string name="start_pin_chat">PINを入力してチャットを開始します</string>
     <string name="starts">開始</string>
     <string name="stats_caption">統計</string>
     <string name="stay_in_touch_like_never_before_with_blackberry_messenger">BlackBerry Messengerは、これまでにない手軽なコミュニケーションをお届けします。</string>
     <string name="sticker_picker_no_stickers_purchased">ステッカーが購入されていません。</string>
     <string name="sticker_picker_preview_hint">プレビュー表示するには、ステッカーをタッチし続けてください。</string>
-    <string name="sticker_store_collection_heading">ステッカーコレクション</string>
-    <string name="sticker_store_details_artist_channel">チャンネル</string>
+    <string name="sticker_settings">ステッカー設定</string>
+    <string name="sticker_store_collection_heading">ステッカー</string>
+    <string name="sticker_store_details_artist_channel">BBM Channel</string>
     <string name="sticker_store_details_artist_website">Webサイト</string>
     <string name="sticker_store_details_promo_text">ここで表示</string>
     <string name="sticker_store_details_screen_about">概要</string>
@@ -1871,6 +2101,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="sticker_store_sticker_purchase_notification_dialog_line">新しく手に入れたステッカーを連絡先に知らせることができます。</string>
     <string name="sticker_store_sticker_purchase_notification_message">新しいステッカーを見てください http://.bbm.com//%1$s</string>
     <string name="sticker_store_store_loading">ロードしています...</string>
+    <string name="store_generic_billing_error">このアイテムを購入できませんでした。</string>
     <string name="store_title">BBMショップ</string>
     <string name="submit_button">送信</string>
     <string name="submit_passphrase">送信</string>
@@ -1880,6 +2111,44 @@ www.pin.bbm.com/%1$s"</string>
     <string name="subscribed_channel_invite_default_message">\"%1$s\"というグループに参加するようにあなたを招待することを希望しています。</string>
     <string name="subscribed_channels">登録済みのチャンネル</string>
     <string name="subscribers_caption">サブスクライバ―</string>
+    <string name="subscriptino_pin_promo">自分や友だちが簡単に思い出せるBBM PINを作成できます。</string>
+    <string name="subscription_already_exists_bb10">別のデバイスで購入した、自動更新のサブスクリプションを使用しています。</string>
+    <string name="subscription_app_type_no_ads">no_ads</string>
+    <string name="subscription_app_type_vanity_pin">custom_pin</string>
+    <string name="subscription_auto_renewing">自動更新のサブスクリプションを使用しています。</string>
+    <string name="subscription_bbid_conflict">このアイテムはあなたのストアアカウントで別のBlackBerry IDのために購入しています。別のストアアカウントで試してみてください。</string>
+    <string name="subscription_custom_pin_description">友だちなどが簡単に思い出せるPINが必要ですか?自分だけのBBM PINを作成します。この機会に、今すぐカスタムPINを取得しましょう。</string>
+    <string name="subscription_dialog_duration_monthly">毎月: %1$s</string>
+    <string name="subscription_dialog_duration_title">サブスクリプションを選択</string>
+    <string name="subscription_dialog_duration_yearly">毎年: %1$s</string>
+    <string name="subscription_edit_messages_description">メッセージを打ち間違えた場合は、メッセージを取り消し、間違いを修正して送信し直すことができます。</string>
+    <string name="subscription_exclusive_badge">独占バッジ</string>
+    <string name="subscription_exclusive_descritpion_pin">バッジで特別なBBMステータスを表示しましょう。このバッジはアクティブなサブスクリプションを持つ表示画像に表示します。</string>
+    <string name="subscription_expired">サブスクリプションが期限切れです。再度登録しますか?</string>
+    <string name="subscription_exsits_ios_72hours">サブスクリプションの期限がもうすぐ切れます。この機能を続行するには、%1$sの前にここで登録してください。</string>
+    <string name="subscription_exsits_on_ios">このアイテムは別のデバイスで既に購入しています。この機能を続行するには、%1$sの前にここで登録してください。</string>
+    <string name="subscription_generic_guidelines">BBMカスタムPINガイドライン</string>
+    <string name="subscription_generic_learn_more">詳細を確認</string>
+    <string name="subscription_learn_more">サブスクリプションについて詳しくは、<a href="http://bbm.com/FAQ">bbm.com/FAQ</a>にアクセスしてください。</string>
+    <string name="subscription_no_adds_share">自分のBBMの広告がオフになったことを連絡先に知らせることができます。</string>
+    <string name="subscription_no_adds_status_message">BBMの広告をオフにしました。デバイスの広告を非表示にするには、http://shop.bbm.com/item/no_ads をタップします</string>
+    <string name="subscription_no_ads">広告なし</string>
+    <string name="subscription_no_ads_description">広告を非表示にしますか?このサブスクリプションでBBMの広告を非表示にします。</string>
+    <string name="subscription_no_ads_promo">"広告なし
+BBMのスポンサー付きの広告および招待をサブスクリプションで非表示にできます。"</string>
+    <string name="subscription_no_ads_title">広告なし</string>
+    <string name="subscription_pin_before_share">BBMでカスタムPINを作成しました。PINをカスタマイズするには、http://shop.bbm.com/item/custom_pinをタップします</string>
+    <string name="subscription_pin_before_share_prompt">カスタムPINの作成が可能になったことを連絡先に知らせることができます。</string>
+    <string name="subscription_pin_feautres">次の機能があります。</string>
+    <string name="subscription_private_chat_description">プライベートチャットでは、あなたの連絡先は表示されず、新規メッセージの通知はオフになります。チャットの内容は短時間経過、またはプライベートチャットを終了した時点で自動的に削除されます。</string>
+    <string name="subscription_reactiviate">サブスクライブ</string>
+    <string name="subscription_retracted_messages_description">メッセージを間違って送信した場合、メッセージを取り消してチャットで表示されないようにできます。</string>
+    <string name="subscription_retracted_messages_title">メッセージ取り消し</string>
+    <string name="subscription_status_active_subscription">自動更新のサブスクリプションを使用しています。</string>
+    <string name="subscription_timed_messages_description">特定の時間だけ表示可能なメッセージや画像を送信することができます。チャットでそのメッセージは非表示になります。受信者はメッセージをタッチし続けることで表示させることができます。タイマーの期限が切れた後は、メッセージは表示できなくなります。</string>
+    <string name="subscription_timed_messages_title">期限付きメッセージ</string>
+    <string name="subscriptions_not_entitled">この機能を使用するには、登録する必要があります。</string>
+    <string name="subscriptions_restoring">サブスクリプションを確認しています</string>
     <string name="suggestion_i_invite_you">%1$sが、BBMでのチャットにあなたを招待することを提案しました。</string>
     <string name="suggestion_sent">提案が送信されました</string>
     <string name="suggestion_want_to_invite_bbm_contact">このBBM連絡先を招待しますか?</string>
@@ -1905,7 +2174,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="timestamp_format_today_at">本日%1$s時</string>
     <string name="timestamp_format_yesterday_at">昨日の%1$s時</string>
     <string name="title_activity_category">カテゴリ</string>
-    <string name="title_activity_change_status">ステータスを変更</string>
+    <string name="title_activity_change_status">ステータス</string>
     <string name="title_activity_channels_lobby">チャンネルロビーを所有</string>
     <string name="title_activity_group_event_details">グループイベントの詳細</string>
     <string name="title_activity_group_events">グループイベント</string>
@@ -1938,6 +2207,9 @@ www.pin.bbm.com/%1$s"</string>
     <string name="update_fragment_hide_updates">非表示</string>
     <string name="update_fragment_view_channel">チャンネルを表示</string>
     <string name="update_fragment_view_post">投稿を表示</string>
+    <string name="update_list_archiving_disabled_message">管理者がアーカイブ機能をオフにしました。</string>
+    <string name="update_list_archiving_enabled_message">管理者がアーカイブ機能をオンにしました。</string>
+    <string name="update_list_archiving_title">BBMチャットをアーカイブ</string>
     <string name="update_list_avatar">&lt;b>%1$s&lt;/b>が表示画像を変更しました。</string>
     <string name="update_list_changed_event_sub_title">変更されたイベント</string>
     <string name="update_list_comment_sub_title">追加されたコメント</string>
@@ -1993,18 +2265,30 @@ www.pin.bbm.com/%1$s"</string>
     <string name="update_list_new_contact_sub_title">BBM連絡先</string>
     <string name="update_list_new_event_sub_title">新しいイベント</string>
     <string name="update_list_new_list_item_sub_title">新しいリスト項目</string>
+    <string name="update_list_new_status_hint">ステータス名を入力</string>
     <string name="update_list_new_status_message">\"%1$s\"</string>
     <string name="update_list_new_status_sub_title">新しいステータス</string>
     <string name="update_list_newcontact">&lt;b>%1$s&lt;/b>が連絡先に追加されました。</string>
     <string name="update_list_now_playing_message">\"%1$s\"を視聴中</string>
     <string name="update_list_nowplayingmessage">&lt;b>%1$s&lt;/b>が\"%2$s\"を聞いています。</string>
     <string name="update_list_personalmessage">&lt;b>%1$s&lt;/b>が\"%2$s\"と言いました</string>
+    <string name="update_list_protected_disabled_message">管理者により、BBM Protectedがオフになっています。BBM Protectedを使用するグループから削除されました。</string>
+    <string name="update_list_protected_enabled_message">管理者により、BBM Protectedがオンになっています。BBM Protected連絡先とのBBMチャット、ファイル転送、およびグループには、高いレベルの暗号化が使用されます。</string>
+    <string name="update_list_protected_preferred_disabled_message">管理者により、Protected Plusがオフになっています。</string>
+    <string name="update_list_protected_preferred_enabled_message">管理者により、Protected Plusがオンになっています。連絡先とのチャットはBBM Protectedチャットになります。</string>
+    <string name="update_list_protected_status_sub_title">ポリシーの変更</string>
+    <string name="update_list_protected_title">BBM Protected</string>
     <string name="update_list_you">自分</string>
+    <string name="update_popular_channels_subtitle">タップして試す</string>
+    <string name="update_popular_channels_title">人気チャンネル</string>
     <string name="update_removed_from_blocked_list">ブロックリストから削除されました。</string>
     <string name="update_sponsored_content">スポンサー付きのコンテンツ</string>
     <string name="update_sponsored_post">スポンサー付きの投稿</string>
+    <string name="update_your_subscription">サブスクリプションを更新</string>
     <string name="updates">フィード</string>
     <string name="upload">アップロード</string>
+    <string name="user_status_stale">最終確認時: %1$s</string>
+    <string name="vanity_pin">カスタムPIN</string>
     <string name="verify_date_of_birth">誕生日を確認します。</string>
     <string name="verify_passphrase">パスフレーズを検証しています。</string>
     <string name="version">バージョン</string>
@@ -2012,6 +2296,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="view_channel_info">プレビュー</string>
     <string name="view_channel_profile">チャンネルプロフィールを表示</string>
     <string name="visits_caption">訪問者</string>
+    <string name="voice_note_duration">%1$02d:%2$02d</string>
     <string name="voice_rating_bad">悪い</string>
     <string name="voice_rating_excellent">大変良い</string>
     <string name="voice_rating_fair">普通</string>
@@ -2019,11 +2304,31 @@ www.pin.bbm.com/%1$s"</string>
     <string name="voice_rating_poor">やや悪い</string>
     <string name="voice_rating_title">今回の通話品質をどう評価しますか?</string>
     <string name="voicecall_already_in_call">既にBBM通話中です。この連絡先と通話をするには、その他の通話を終了し、再度実行してください。</string>
+    <string name="voicecall_must_add_as_contact">この機能を使用するには、このユーザーをBBM連絡先に登録する必要があります。</string>
+    <string name="voicecall_must_add_as_contact_title">BBM連絡先に追加する</string>
     <string name="voicecall_status_calling">通話</string>
     <string name="voicecall_status_connecting">接続</string>
     <string name="voicecall_status_duration">音声通話%1$s</string>
     <string name="voicecall_status_duration_while_mute">ミュートした%1$s</string>
+    <string name="voicenote">ボイスメモ</string>
     <string name="wait_passphrase_confirmation">パスフレーズ確認を待機しています。</string>
+    <string name="warning_on_repurchase">このサブスクリプションの機能が中断されないようにするには、新しいサブスクリプションを購入し、古いのをキャンセルする必要があります。詳細については、%1$sにアクセスしてください。</string>
+    <string name="wear_quick_call_shortly">すぐに折り返し電話します。</string>
+    <string name="wear_quick_cant_take">取り込み中です。電話に出ることができません。</string>
+    <string name="wear_quick_im_on_my_way">向かっています。</string>
+    <string name="wear_quick_response_1">OK</string>
+    <string name="wear_quick_response_2">了解</string>
+    <string name="wear_quick_response_3">現在取り込み中です。時間が空き次第返信します。</string>
+    <string name="wear_quick_response_appreciation">ありがとう</string>
+    <string name="wear_quick_response_confirmation">はい</string>
+    <string name="wear_quick_response_disagree">いいえ</string>
+    <string name="wear_quick_response_haha">笑</string>
+    <string name="wear_quick_response_lol">爆笑</string>
+    <string name="wear_quick_response_on_my_way">向かっています</string>
+    <string name="wear_quick_response_see_you_soon">またね</string>
+    <string name="wear_quick_response_talk_later">今電話に出られません</string>
+    <string name="wear_quick_response_understood">OK</string>
+    <string name="wearable_support">ウェアラブルサポート</string>
     <string name="widget_back_to_chat_previews">チャットプレビューに戻る</string>
     <string name="widget_change_my_status_message">ステータスメッセージを変更</string>
     <string name="widget_edit_status">ステータスを編集</string>
@@ -2039,6 +2344,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="wifi_changing_network">ネットワークへ接続しています…</string>
     <string name="wifi_ssid_label">ネットワーク名</string>
     <string name="wifi_type_label">タイプ</string>
+    <string name="yes">はい</string>
     <string name="you_are_signed_in_with_the_following_blackberry_id">次のBlackBerry IDでサインインしています: %1$s</string>
     <string name="you_can_choose_another_restore_option_or_delete_your_device_data">別の復元オプションを選択できます。あるいは、デバイスデータを削除して、バックアップファイルと関連付けられたBlackBerry IDでサインインできます。</string>
     <string name="you_can_now_start_video_and_voice_chats">BBMからビデオおよび音声チャットを開始できるようになりました(サポートされている場合)。</string>

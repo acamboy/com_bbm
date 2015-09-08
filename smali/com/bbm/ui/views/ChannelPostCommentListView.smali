@@ -105,9 +105,9 @@
 
     check-cast v0, Lcom/bbm/ui/activities/ViewChannelPostActivity;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->c:Lcom/bbm/ui/a/p;
+    iget-object v0, v0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->b:Lcom/bbm/ui/a/j;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/a/p;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lcom/bbm/ui/a/j;->notifyDataSetChanged()V
 
     .line 39
     invoke-virtual {p0}, Lcom/bbm/ui/views/ChannelPostCommentListView;->clearFocus()V

@@ -22,6 +22,9 @@
 .method public abstract getDeviceId()Ljava/lang/String;
 .end method
 
+.method public abstract getDirectionsProvider()Lcom/glympse/android/core/GPrimitive;
+.end method
+
 .method public abstract getExpireOnArrival()I
 .end method
 
@@ -37,6 +40,9 @@
 .method public abstract getPostRatePeriod()I
 .end method
 
+.method public abstract getTrackTrimLength()J
+.end method
+
 .method public abstract isDebug()Z
 .end method
 
@@ -49,6 +55,9 @@
 .method public abstract isSharingSpeed()Z
 .end method
 
+.method public abstract isTrackTrimmingEnabled()Z
+.end method
+
 .method public abstract save()V
 .end method
 
@@ -58,5 +67,11 @@
 .method public abstract setDebug(Z)V
 .end method
 
+.method public abstract setDirectionsProvider(Lcom/glympse/android/core/GPrimitive;)Z
+.end method
+
 .method public abstract setExpireOnArrival(I)V
+.end method
+
+.method public abstract setTrackTrimmingEnabled(Z)V
 .end method

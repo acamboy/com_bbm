@@ -1,22 +1,34 @@
 .class final Lcom/bbm/ui/activities/pg;
 .super Ljava/lang/Object;
-.source "GroupListsActivity.java"
+.source "GroupPictureActivity.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemLongClickListener;
+.implements Ljava/util/Comparator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Lcom/bbm/g/ah;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupListsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/pf;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupListsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/pf;)V
     .locals 0
 
     .prologue
-    .line 228
-    iput-object p1, p0, Lcom/bbm/ui/activities/pg;->a:Lcom/bbm/ui/activities/GroupListsActivity;
+    .line 123
+    iput-object p1, p0, Lcom/bbm/ui/activities/pg;->a:Lcom/bbm/ui/activities/pf;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,95 +37,24 @@
 
 
 # virtual methods
-.method public final onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
-    .locals 8
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)Z"
-        }
-    .end annotation
+.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 4
 
     .prologue
-    const/4 v7, 0x0
+    .line 123
+    check-cast p1, Lcom/bbm/g/ah;
 
-    .line 231
-    const-string v0, "listgridview onItemLongClick"
+    check-cast p2, Lcom/bbm/g/ah;
 
-    const-class v1, Lcom/bbm/ui/activities/GroupListsActivity;
+    iget-wide v0, p2, Lcom/bbm/g/ah;->i:J
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    iget-wide v2, p1, Lcom/bbm/g/ah;->i:J
 
-    .line 232
-    iget-object v0, p0, Lcom/bbm/ui/activities/pg;->a:Lcom/bbm/ui/activities/GroupListsActivity;
+    sub-long/2addr v0, v2
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupListsActivity;->g(Lcom/bbm/ui/activities/GroupListsActivity;)Lcom/bbm/ui/activities/pj;
+    invoke-static {v0, v1}, Lcom/bbm/util/eu;->a(J)I
 
-    move-result-object v0
-
-    invoke-virtual {v0, p3}, Lcom/bbm/ui/activities/pj;->getItem(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/g/w;
-
-    .line 233
-    if-eqz v0, :cond_0
-
-    iget-object v1, v0, Lcom/bbm/g/w;->g:Lcom/bbm/util/bi;
-
-    sget-object v2, Lcom/bbm/util/bi;->b:Lcom/bbm/util/bi;
-
-    if-eq v1, v2, :cond_0
-
-    .line 234
-    iget-object v1, p0, Lcom/bbm/ui/activities/pg;->a:Lcom/bbm/ui/activities/GroupListsActivity;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/pg;->a:Lcom/bbm/ui/activities/GroupListsActivity;
-
-    iget-object v2, v2, Lcom/bbm/ui/activities/ey;->B:Lcom/bbm/ui/c/gj;
-
-    new-instance v3, Lcom/bbm/ui/slidingmenu/a;
-
-    iget-object v4, v0, Lcom/bbm/g/w;->e:Ljava/lang/String;
-
-    invoke-direct {v3, v7, v4, v7}, Lcom/bbm/ui/slidingmenu/a;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v4, Lcom/bbm/ui/slidingmenu/a;
-
-    const v5, 0x7f02026d
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    const v6, 0x7f0e02fa
-
-    invoke-virtual {v1, v6}, Lcom/bbm/ui/activities/GroupListsActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-direct {v4, v5, v6, v7}, Lcom/bbm/ui/slidingmenu/a;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v2, v7, v3, v4}, Lcom/bbm/ui/c/gj;->a(Ljava/util/List;Lcom/bbm/ui/slidingmenu/a;Lcom/bbm/ui/slidingmenu/a;)V
-
-    new-instance v3, Lcom/bbm/ui/activities/pi;
-
-    invoke-direct {v3, v1, v0}, Lcom/bbm/ui/activities/pi;-><init>(Lcom/bbm/ui/activities/GroupListsActivity;Lcom/bbm/g/w;)V
-
-    invoke-virtual {v2, v3}, Lcom/bbm/ui/c/gj;->a(Landroid/view/View$OnClickListener;)V
-
-    .line 235
-    iget-object v0, p0, Lcom/bbm/ui/activities/pg;->a:Lcom/bbm/ui/activities/GroupListsActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupListsActivity;->o()V
-
-    .line 238
-    :cond_0
-    const/4 v0, 0x1
+    move-result v0
 
     return v0
 .end method

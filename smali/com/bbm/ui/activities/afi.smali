@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/afi;
 .super Ljava/lang/Object;
-.source "SelectContactActivity.java"
+.source "StartupActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnTouchListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SelectContactActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/StartupActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/StartupActivity;)V
     .locals 0
 
     .prologue
-    .line 127
-    iput-object p1, p0, Lcom/bbm/ui/activities/afi;->a:Lcom/bbm/ui/activities/SelectContactActivity;
+    .line 222
+    iput-object p1, p0, Lcom/bbm/ui/activities/afi;->a:Lcom/bbm/ui/activities/StartupActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,41 +25,53 @@
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 2
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 3
 
     .prologue
-    .line 131
-    iget-object v0, p0, Lcom/bbm/ui/activities/afi;->a:Lcom/bbm/ui/activities/SelectContactActivity;
+    .line 227
+    iget-object v0, p0, Lcom/bbm/ui/activities/afi;->a:Lcom/bbm/ui/activities/StartupActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/SelectContactActivity;->getWindow()Landroid/view/Window;
+    invoke-static {v0}, Lcom/bbm/ui/activities/StartupActivity;->c(Lcom/bbm/ui/activities/StartupActivity;)Landroid/app/AlertDialog;
 
-    move-result-object v0
+    .line 228
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    if-eqz v0, :cond_0
+    .line 230
+    packed-switch p2, :pswitch_data_0
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/afi;->a:Lcom/bbm/ui/activities/SelectContactActivity;
+    .line 240
+    :goto_0
+    return-void
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/SelectContactActivity;->getWindow()Landroid/view/Window;
+    .line 233
+    :pswitch_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/afi;->a:Lcom/bbm/ui/activities/StartupActivity;
 
-    move-result-object v0
+    invoke-static {v0}, Lcom/bbm/ui/activities/StartupActivity;->e(Lcom/bbm/ui/activities/StartupActivity;)V
 
-    invoke-virtual {v0}, Landroid/view/Window;->getCurrentFocus()Landroid/view/View;
+    goto :goto_0
 
-    move-result-object v0
+    .line 237
+    :pswitch_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/afi;->a:Lcom/bbm/ui/activities/StartupActivity;
 
-    if-eqz v0, :cond_0
+    new-instance v1, Landroid/content/Intent;
 
-    .line 132
-    iget-object v0, p0, Lcom/bbm/ui/activities/afi;->a:Lcom/bbm/ui/activities/SelectContactActivity;
+    const-string v2, "android.settings.SETTINGS"
 
-    const/4 v1, 0x1
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0, v1}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;Z)V
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/StartupActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 134
-    :cond_0
-    const/4 v0, 0x0
+    goto :goto_0
 
-    return v0
+    .line 230
+    nop
+
+    :pswitch_data_0
+    .packed-switch -0x2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

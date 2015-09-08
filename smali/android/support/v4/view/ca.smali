@@ -1,8 +1,15 @@
-.class public interface abstract Landroid/support/v4/view/ca;
-.super Ljava/lang/Object;
-.source "ViewPager.java"
+.class final Landroid/support/v4/view/ca;
+.super Landroid/support/v4/view/ce;
+.source "ViewGroupCompat.java"
 
 
-# virtual methods
-.method public abstract a(Landroid/view/View;F)V
+# direct methods
+.method constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 114
+    invoke-direct {p0}, Landroid/support/v4/view/ce;-><init>()V
+
+    return-void
 .end method

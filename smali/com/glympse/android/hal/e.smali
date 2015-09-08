@@ -49,7 +49,7 @@
     .prologue
     .line 67
     :try_start_0
-    iget-object v0, p0, Lcom/glympse/android/hal/e;->cI:Lcom/glympse/android/api/GGlympse;
+    iget-object v0, p0, Lcom/glympse/android/hal/e;->cL:Lcom/glympse/android/api/GGlympse;
 
     if-nez v0, :cond_1
 
@@ -138,7 +138,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v1, p0, Lcom/glympse/android/hal/e;->cJ:Lcom/glympse/android/api/GUser;
+    iget-object v1, p0, Lcom/glympse/android/hal/e;->cM:Lcom/glympse/android/api/GUser;
 
     invoke-interface {v1}, Lcom/glympse/android/api/GUser;->getId()Ljava/lang/String;
 
@@ -189,7 +189,7 @@
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/glympse/android/hal/e;->cI:Lcom/glympse/android/api/GGlympse;
+    iget-object v0, p0, Lcom/glympse/android/hal/e;->cL:Lcom/glympse/android/api/GGlympse;
 
     check-cast v0, Lcom/glympse/android/lib/GGlympsePrivate;
 

@@ -1,34 +1,26 @@
-.class public interface abstract Lcom/google/android/gms/internal/dn;
+.class public final Lcom/google/android/gms/internal/dn;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/os/IInterface;
+
+# instance fields
+.field final a:J
+
+.field final b:Ljava/lang/String;
+
+.field final c:Lcom/google/android/gms/internal/dn;
 
 
-# virtual methods
-.method public abstract a(Lcom/google/android/gms/internal/dm;)V
-.end method
+# direct methods
+.method public constructor <init>(JLjava/lang/String;Lcom/google/android/gms/internal/dn;)V
+    .locals 1
 
-.method public abstract a(Lcom/google/android/gms/internal/dm;I)V
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract a(Lcom/google/android/gms/internal/dm;ILjava/lang/String;[B)V
-.end method
+    iput-wide p1, p0, Lcom/google/android/gms/internal/dn;->a:J
 
-.method public abstract a(Lcom/google/android/gms/internal/dm;I[B)V
-.end method
+    iput-object p3, p0, Lcom/google/android/gms/internal/dn;->b:Ljava/lang/String;
 
-.method public abstract b(Lcom/google/android/gms/internal/dm;)V
-.end method
+    iput-object p4, p0, Lcom/google/android/gms/internal/dn;->c:Lcom/google/android/gms/internal/dn;
 
-.method public abstract b(Lcom/google/android/gms/internal/dm;I)V
-.end method
-
-.method public abstract c(Lcom/google/android/gms/internal/dm;)V
-.end method
-
-.method public abstract cN()I
-.end method
-
-.method public abstract cO()I
+    return-void
 .end method

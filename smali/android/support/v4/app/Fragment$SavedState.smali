@@ -38,6 +38,20 @@
     return-void
 .end method
 
+.method constructor <init>(Landroid/os/Bundle;)V
+    .locals 0
+
+    .prologue
+    .line 327
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 328
+    iput-object p1, p0, Landroid/support/v4/app/Fragment$SavedState;->a:Landroid/os/Bundle;
+
+    .line 329
+    return-void
+.end method
+
 .method constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 

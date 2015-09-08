@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:local="http://schemas.android.com/apk/res-auto">
+    <item android:drawable="@drawable/ic_channels_mychannels_selected" android:state_activated="true" />
+    <item android:drawable="@drawable/ic_channels_mychannels" android:state_activated="false" local:state_splat="false" />
+    <item android:drawable="@drawable/ic_channels_mychannels_splat" android:state_activated="false" local:state_splat="true" />
+</selector>

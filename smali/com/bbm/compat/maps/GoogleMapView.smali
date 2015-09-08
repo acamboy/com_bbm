@@ -15,7 +15,7 @@
             "Ljava/util/Map",
             "<",
             "Ljava/lang/String;",
-            "Lcom/google/android/gms/maps/model/Marker;",
+            "Lcom/google/android/gms/maps/model/e;",
             ">;"
         }
     .end annotation
@@ -27,7 +27,7 @@
             "Ljava/util/Map",
             "<",
             "Ljava/lang/String;",
-            "Lcom/google/android/gms/maps/model/Polyline;",
+            "Lcom/google/android/gms/maps/model/f;",
             ">;"
         }
     .end annotation
@@ -72,12 +72,12 @@
     iput-object v0, p0, Lcom/bbm/compat/maps/GoogleMapView;->a:Ljava/lang/String;
 
     .line 44
-    const/high16 v0, 0x41600000
+    const/high16 v0, 0x41600000    # 14.0f
 
     iput v0, p0, Lcom/bbm/compat/maps/GoogleMapView;->h:F
 
     .line 48
-    invoke-static {p1}, Lcom/google/android/gms/maps/MapsInitializer;->initialize(Landroid/content/Context;)I
+    invoke-static {p1}, Lcom/google/android/gms/maps/m;->a(Landroid/content/Context;)I
 
     .line 50
     new-instance v0, Ljava/util/HashMap;
@@ -94,7 +94,7 @@
     iput-object v0, p0, Lcom/bbm/compat/maps/GoogleMapView;->b:Ljava/util/Map;
 
     .line 53
-    invoke-direct {p0}, Lcom/bbm/compat/maps/GoogleMapView;->c()V
+    invoke-direct {p0}, Lcom/bbm/compat/maps/GoogleMapView;->g()V
 
     .line 54
     return-void
@@ -120,14 +120,14 @@
     return-object v0
 .end method
 
-.method private c()V
-    .locals 3
+.method private g()V
+    .locals 5
 
     .prologue
-    const/4 v2, 0x1
+    const/4 v4, 0x1
 
     .line 57
-    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/GoogleMap;
+    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/c;
 
     move-result-object v0
 
@@ -139,7 +139,7 @@
     if-nez v0, :cond_0
 
     .line 59
-    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/GoogleMap;
+    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/c;
 
     move-result-object v0
 
@@ -147,10 +147,19 @@
 
     invoke-direct {v1, p0}, Lcom/bbm/compat/maps/f;-><init>(Lcom/bbm/compat/maps/GoogleMapView;)V
 
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/maps/GoogleMap;->setOnMarkerClickListener(Lcom/google/android/gms/maps/GoogleMap$OnMarkerClickListener;)V
+    :try_start_0
+    iget-object v2, v0, Lcom/google/android/gms/maps/c;->a:Lcom/google/android/gms/maps/internal/d;
+
+    new-instance v3, Lcom/google/android/gms/maps/d;
+
+    invoke-direct {v3, v0, v1}, Lcom/google/android/gms/maps/d;-><init>(Lcom/google/android/gms/maps/c;Lcom/google/android/gms/maps/i;)V
+
+    invoke-interface {v2, v3}, Lcom/google/android/gms/maps/internal/d;->a(Lcom/google/android/gms/maps/internal/br;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 68
-    iput-boolean v2, p0, Lcom/bbm/compat/maps/GoogleMapView;->f:Z
+    iput-boolean v4, p0, Lcom/bbm/compat/maps/GoogleMapView;->f:Z
 
     .line 70
     :cond_0
@@ -159,7 +168,7 @@
     if-nez v0, :cond_1
 
     .line 71
-    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/GoogleMap;
+    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/c;
 
     move-result-object v0
 
@@ -167,103 +176,47 @@
 
     invoke-direct {v1, p0}, Lcom/bbm/compat/maps/g;-><init>(Lcom/bbm/compat/maps/GoogleMapView;)V
 
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/maps/GoogleMap;->setOnMapClickListener(Lcom/google/android/gms/maps/GoogleMap$OnMapClickListener;)V
+    :try_start_1
+    iget-object v2, v0, Lcom/google/android/gms/maps/c;->a:Lcom/google/android/gms/maps/internal/d;
+
+    new-instance v3, Lcom/google/android/gms/maps/f;
+
+    invoke-direct {v3, v0, v1}, Lcom/google/android/gms/maps/f;-><init>(Lcom/google/android/gms/maps/c;Lcom/google/android/gms/maps/h;)V
+
+    invoke-interface {v2, v3}, Lcom/google/android/gms/maps/internal/d;->a(Lcom/google/android/gms/maps/internal/bf;)V
+    :try_end_1
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 79
-    iput-boolean v2, p0, Lcom/bbm/compat/maps/GoogleMapView;->g:Z
+    iput-boolean v4, p0, Lcom/bbm/compat/maps/GoogleMapView;->g:Z
 
     .line 82
     :cond_1
     return-void
+
+    .line 59
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/g;
+
+    invoke-direct {v1, v0}, Lcom/google/android/gms/maps/model/g;-><init>(Landroid/os/RemoteException;)V
+
+    throw v1
+
+    .line 71
+    :catch_1
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/g;
+
+    invoke-direct {v1, v0}, Lcom/google/android/gms/maps/model/g;-><init>(Landroid/os/RemoteException;)V
+
+    throw v1
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
-
-    .prologue
-    .line 244
-    iget-object v0, p0, Lcom/bbm/compat/maps/GoogleMapView;->c:Ljava/util/Map;
-
-    invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    .line 245
-    iget-object v2, p0, Lcom/bbm/compat/maps/GoogleMapView;->c:Ljava/util/Map;
-
-    invoke-interface {v2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/android/gms/maps/model/Polyline;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/maps/model/Polyline;->remove()V
-
-    goto :goto_0
-
-    .line 247
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/compat/maps/GoogleMapView;->c:Ljava/util/Map;
-
-    invoke-interface {v0}, Ljava/util/Map;->clear()V
-
-    .line 248
-    return-void
-.end method
-
-.method public final a(DD)V
-    .locals 3
-
-    .prologue
-    .line 91
-    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/GoogleMap;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 92
-    new-instance v0, Lcom/google/android/gms/maps/model/LatLng;
-
-    invoke-direct {v0, p1, p2, p3, p4}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
-
-    .line 93
-    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/GoogleMap;
-
-    move-result-object v1
-
-    const/high16 v2, 0x41600000
-
-    invoke-static {v0, v2}, Lcom/google/android/gms/maps/CameraUpdateFactory;->newLatLngZoom(Lcom/google/android/gms/maps/model/LatLng;F)Lcom/google/android/gms/maps/CameraUpdate;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lcom/google/android/gms/maps/GoogleMap;->moveCamera(Lcom/google/android/gms/maps/CameraUpdate;)V
-
-    .line 95
-    :cond_0
-    return-void
-.end method
-
 .method public final a(Lcom/glympse/android/api/GTrack;Ljava/lang/String;)V
     .locals 8
 
@@ -308,7 +261,9 @@
 
     invoke-direct {v3, v4, v5, v6, v7}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
 
-    invoke-virtual {v1, v3}, Lcom/google/android/gms/maps/model/PolylineOptions;->add(Lcom/google/android/gms/maps/model/LatLng;)Lcom/google/android/gms/maps/model/PolylineOptions;
+    iget-object v0, v1, Lcom/google/android/gms/maps/model/PolylineOptions;->b:Ljava/util/List;
+
+    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
@@ -316,7 +271,7 @@
     :cond_0
     const v0, -0xffff01
 
-    invoke-virtual {v1, v0}, Lcom/google/android/gms/maps/model/PolylineOptions;->color(I)Lcom/google/android/gms/maps/model/PolylineOptions;
+    iput v0, v1, Lcom/google/android/gms/maps/model/PolylineOptions;->d:I
 
     .line 154
     iget-object v0, p0, Lcom/bbm/compat/maps/GoogleMapView;->c:Ljava/util/Map;
@@ -325,11 +280,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/android/gms/maps/model/Polyline;
+    check-cast v0, Lcom/google/android/gms/maps/model/f;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/google/android/gms/maps/model/Polyline;->remove()V
+    invoke-virtual {v0}, Lcom/google/android/gms/maps/model/f;->a()V
 
     iget-object v0, p0, Lcom/bbm/compat/maps/GoogleMapView;->c:Ljava/util/Map;
 
@@ -337,11 +292,11 @@
 
     .line 155
     :cond_1
-    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/GoogleMap;
+    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/c;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/maps/GoogleMap;->addPolyline(Lcom/google/android/gms/maps/model/PolylineOptions;)Lcom/google/android/gms/maps/model/Polyline;
+    invoke-virtual {v0, v1}, Lcom/google/android/gms/maps/c;->a(Lcom/google/android/gms/maps/model/PolylineOptions;)Lcom/google/android/gms/maps/model/f;
 
     move-result-object v0
 
@@ -394,28 +349,26 @@
     invoke-direct {v0, v2, v3, v4, v5}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
 
     .line 233
-    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/GoogleMap;
+    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/c;
 
     move-result-object v1
 
-    invoke-static {v0}, Lcom/google/android/gms/maps/CameraUpdateFactory;->newLatLng(Lcom/google/android/gms/maps/model/LatLng;)Lcom/google/android/gms/maps/CameraUpdate;
+    invoke-static {v0}, Lcom/google/android/gms/maps/b;->a(Lcom/google/android/gms/maps/model/LatLng;)Lcom/google/android/gms/maps/a;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/google/android/gms/maps/GoogleMap;->moveCamera(Lcom/google/android/gms/maps/CameraUpdate;)V
+    invoke-virtual {v1, v0}, Lcom/google/android/gms/maps/c;->a(Lcom/google/android/gms/maps/a;)V
 
     .line 235
-    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/GoogleMap;
+    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/c;
 
     move-result-object v0
 
-    const/high16 v1, 0x41600000
-
-    invoke-static {v1}, Lcom/google/android/gms/maps/CameraUpdateFactory;->zoomTo(F)Lcom/google/android/gms/maps/CameraUpdate;
+    invoke-static {}, Lcom/google/android/gms/maps/b;->a()Lcom/google/android/gms/maps/a;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/maps/GoogleMap;->moveCamera(Lcom/google/android/gms/maps/CameraUpdate;)V
+    invoke-virtual {v0, v1}, Lcom/google/android/gms/maps/c;->a(Lcom/google/android/gms/maps/a;)V
 
     .line 237
     if-eqz p2, :cond_0
@@ -465,9 +418,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/android/gms/maps/model/Marker;
+    check-cast v0, Lcom/google/android/gms/maps/model/e;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/maps/model/Marker;->showInfoWindow()V
+    invoke-virtual {v0}, Lcom/google/android/gms/maps/model/e;->c()V
 
     goto :goto_0
 .end method
@@ -526,9 +479,14 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/google/android/gms/maps/model/Marker;
+    check-cast v2, Lcom/google/android/gms/maps/model/e;
 
-    invoke-virtual {v2, v3}, Lcom/google/android/gms/maps/model/Marker;->setRotation(F)V
+    :try_start_0
+    iget-object v2, v2, Lcom/google/android/gms/maps/model/e;->a:Lcom/google/android/gms/maps/model/internal/s;
+
+    invoke-interface {v2, v3}, Lcom/google/android/gms/maps/model/internal/s;->a(F)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 132
     :cond_0
@@ -542,7 +500,7 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/google/android/gms/maps/model/Marker;
+    check-cast v2, Lcom/google/android/gms/maps/model/e;
 
     new-instance v4, Lcom/google/android/gms/maps/model/LatLng;
 
@@ -568,11 +526,36 @@
 
     invoke-direct {v4, v6, v7, v8, v9}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
 
-    invoke-virtual {v2, v4}, Lcom/google/android/gms/maps/model/Marker;->setPosition(Lcom/google/android/gms/maps/model/LatLng;)V
+    :try_start_1
+    iget-object v2, v2, Lcom/google/android/gms/maps/model/e;->a:Lcom/google/android/gms/maps/model/internal/s;
+
+    invoke-interface {v2, v4}, Lcom/google/android/gms/maps/model/internal/s;->a(Lcom/google/android/gms/maps/model/LatLng;)V
+    :try_end_1
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 143
     :goto_0
     return-void
+
+    .line 130
+    :catch_0
+    move-exception v2
+
+    new-instance v3, Lcom/google/android/gms/maps/model/g;
+
+    invoke-direct {v3, v2}, Lcom/google/android/gms/maps/model/g;-><init>(Landroid/os/RemoteException;)V
+
+    throw v3
+
+    .line 132
+    :catch_1
+    move-exception v2
+
+    new-instance v3, Lcom/google/android/gms/maps/model/g;
+
+    invoke-direct {v3, v2}, Lcom/google/android/gms/maps/model/g;-><init>(Landroid/os/RemoteException;)V
+
+    throw v3
 
     .line 135
     :cond_1
@@ -580,7 +563,7 @@
 
     iget-object v9, v0, Lcom/bbm/compat/maps/GoogleMapView;->b:Ljava/util/Map;
 
-    invoke-virtual/range {p0 .. p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/GoogleMap;
+    invoke-virtual/range {p0 .. p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/c;
 
     move-result-object v10
 
@@ -648,7 +631,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/google/android/gms/maps/model/BitmapDescriptorFactory;->fromBitmap(Landroid/graphics/Bitmap;)Lcom/google/android/gms/maps/model/BitmapDescriptor;
+    invoke-static {v2}, Lcom/google/android/gms/maps/model/b;->a(Landroid/graphics/Bitmap;)Lcom/google/android/gms/maps/model/a;
 
     move-result-object v2
 
@@ -659,51 +642,39 @@
 
     const/4 v4, 0x1
 
-    invoke-virtual {v3, v4}, Lcom/google/android/gms/maps/model/MarkerOptions;->flat(Z)Lcom/google/android/gms/maps/model/MarkerOptions;
+    iput-boolean v4, v3, Lcom/google/android/gms/maps/model/MarkerOptions;->j:Z
 
-    move-result-object v3
+    const/high16 v4, 0x3f000000    # 0.5f
 
-    const/high16 v4, 0x3f000000
+    iput v4, v3, Lcom/google/android/gms/maps/model/MarkerOptions;->f:F
 
-    const/high16 v5, 0x3f000000
+    const/high16 v4, 0x3f000000    # 0.5f
 
-    invoke-virtual {v3, v4, v5}, Lcom/google/android/gms/maps/model/MarkerOptions;->anchor(FF)Lcom/google/android/gms/maps/model/MarkerOptions;
+    iput v4, v3, Lcom/google/android/gms/maps/model/MarkerOptions;->g:F
 
-    move-result-object v3
-
-    invoke-virtual {v3, v2}, Lcom/google/android/gms/maps/model/MarkerOptions;->icon(Lcom/google/android/gms/maps/model/BitmapDescriptor;)Lcom/google/android/gms/maps/model/MarkerOptions;
-
-    move-result-object v2
+    iput-object v2, v3, Lcom/google/android/gms/maps/model/MarkerOptions;->e:Lcom/google/android/gms/maps/model/a;
 
     invoke-interface/range {p5 .. p5}, Lcom/glympse/android/api/GUser;->getId()Ljava/lang/String;
 
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Lcom/google/android/gms/maps/model/MarkerOptions;->title(Ljava/lang/String;)Lcom/google/android/gms/maps/model/MarkerOptions;
-
     move-result-object v2
 
-    const-string v3, "TEST"
+    iput-object v2, v3, Lcom/google/android/gms/maps/model/MarkerOptions;->c:Ljava/lang/String;
 
-    invoke-virtual {v2, v3}, Lcom/google/android/gms/maps/model/MarkerOptions;->snippet(Ljava/lang/String;)Lcom/google/android/gms/maps/model/MarkerOptions;
+    const-string v2, "TEST"
 
-    move-result-object v2
+    iput-object v2, v3, Lcom/google/android/gms/maps/model/MarkerOptions;->d:Ljava/lang/String;
 
-    const/4 v3, 0x1
+    const/4 v2, 0x1
 
-    invoke-virtual {v2, v3}, Lcom/google/android/gms/maps/model/MarkerOptions;->flat(Z)Lcom/google/android/gms/maps/model/MarkerOptions;
+    iput-boolean v2, v3, Lcom/google/android/gms/maps/model/MarkerOptions;->j:Z
 
-    move-result-object v2
+    new-instance v2, Lcom/google/android/gms/maps/model/LatLng;
 
-    new-instance v3, Lcom/google/android/gms/maps/model/LatLng;
+    invoke-direct {v2, v12, v13, v14, v15}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
 
-    invoke-direct {v3, v12, v13, v14, v15}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
+    iput-object v2, v3, Lcom/google/android/gms/maps/model/MarkerOptions;->b:Lcom/google/android/gms/maps/model/LatLng;
 
-    invoke-virtual {v2, v3}, Lcom/google/android/gms/maps/model/MarkerOptions;->position(Lcom/google/android/gms/maps/model/LatLng;)Lcom/google/android/gms/maps/model/MarkerOptions;
-
-    move-result-object v2
-
-    invoke-virtual {v10, v2}, Lcom/google/android/gms/maps/GoogleMap;->addMarker(Lcom/google/android/gms/maps/model/MarkerOptions;)Lcom/google/android/gms/maps/model/Marker;
+    invoke-virtual {v10, v3}, Lcom/google/android/gms/maps/c;->a(Lcom/google/android/gms/maps/model/MarkerOptions;)Lcom/google/android/gms/maps/model/e;
 
     move-result-object v2
 
@@ -714,7 +685,7 @@
     goto/16 :goto_0
 
     :cond_2
-    invoke-static/range {p3 .. p3}, Lcom/google/android/gms/maps/model/BitmapDescriptorFactory;->fromResource(I)Lcom/google/android/gms/maps/model/BitmapDescriptor;
+    invoke-static/range {p3 .. p3}, Lcom/google/android/gms/maps/model/b;->a(I)Lcom/google/android/gms/maps/model/a;
 
     move-result-object v2
 
@@ -728,15 +699,15 @@
     .line 252
     if-eqz p1, :cond_1
 
-    instance-of v0, p1, Lcom/google/android/gms/maps/model/Marker;
+    instance-of v0, p1, Lcom/google/android/gms/maps/model/e;
 
     if-eqz v0, :cond_1
 
     .line 253
-    check-cast p1, Lcom/google/android/gms/maps/model/Marker;
+    check-cast p1, Lcom/google/android/gms/maps/model/e;
 
     .line 254
-    invoke-virtual {p1}, Lcom/google/android/gms/maps/model/Marker;->showInfoWindow()V
+    invoke-virtual {p1}, Lcom/google/android/gms/maps/model/e;->c()V
 
     .line 255
     iget-object v0, p0, Lcom/bbm/compat/maps/GoogleMapView;->b:Ljava/util/Map;
@@ -766,9 +737,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/google/android/gms/maps/model/Marker;
+    check-cast v1, Lcom/google/android/gms/maps/model/e;
 
-    invoke-virtual {v1, p1}, Lcom/google/android/gms/maps/model/Marker;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, p1}, Lcom/google/android/gms/maps/model/e;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -813,22 +784,22 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/android/gms/maps/model/Marker;
+    check-cast v0, Lcom/google/android/gms/maps/model/e;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/maps/model/Marker;->getPosition()Lcom/google/android/gms/maps/model/LatLng;
+    invoke-virtual {v0}, Lcom/google/android/gms/maps/model/e;->a()Lcom/google/android/gms/maps/model/LatLng;
 
     move-result-object v0
 
     .line 222
-    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/GoogleMap;
+    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/c;
 
     move-result-object v1
 
-    invoke-static {v0}, Lcom/google/android/gms/maps/CameraUpdateFactory;->newLatLng(Lcom/google/android/gms/maps/model/LatLng;)Lcom/google/android/gms/maps/CameraUpdate;
+    invoke-static {v0}, Lcom/google/android/gms/maps/b;->a(Lcom/google/android/gms/maps/model/LatLng;)Lcom/google/android/gms/maps/a;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/google/android/gms/maps/GoogleMap;->moveCamera(Lcom/google/android/gms/maps/CameraUpdate;)V
+    invoke-virtual {v1, v0}, Lcom/google/android/gms/maps/c;->a(Lcom/google/android/gms/maps/a;)V
 
     .line 224
     :cond_0
@@ -854,32 +825,33 @@
 
     .line 182
     :cond_0
-    new-instance v1, Lcom/google/android/gms/maps/model/LatLngBounds$Builder;
+    new-instance v2, Lcom/google/android/gms/maps/model/d;
 
-    invoke-direct {v1}, Lcom/google/android/gms/maps/model/LatLngBounds$Builder;-><init>()V
+    invoke-direct {v2}, Lcom/google/android/gms/maps/model/d;-><init>()V
 
     .line 183
     const/4 v0, 0x0
 
     .line 185
-    iget-object v2, p0, Lcom/bbm/compat/maps/GoogleMapView;->b:Ljava/util/Map;
+    iget-object v1, p0, Lcom/bbm/compat/maps/GoogleMapView;->b:Ljava/util/Map;
 
-    invoke-interface {v2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+    invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    move-result-object v2
+    move-result-object v3
 
+    :cond_1
     :goto_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v3
+    move-result v1
 
-    if-eqz v3, :cond_1
+    if-eqz v1, :cond_8
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -890,76 +862,210 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/android/gms/maps/model/Marker;
+    check-cast v0, Lcom/google/android/gms/maps/model/e;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/maps/model/Marker;->getPosition()Lcom/google/android/gms/maps/model/LatLng;
+    invoke-virtual {v0}, Lcom/google/android/gms/maps/model/e;->a()Lcom/google/android/gms/maps/model/LatLng;
 
     move-result-object v0
 
     .line 187
-    invoke-virtual {v1, v0}, Lcom/google/android/gms/maps/model/LatLngBounds$Builder;->include(Lcom/google/android/gms/maps/model/LatLng;)Lcom/google/android/gms/maps/model/LatLngBounds$Builder;
+    iget-wide v4, v2, Lcom/google/android/gms/maps/model/d;->a:D
+
+    iget-wide v6, v0, Lcom/google/android/gms/maps/model/LatLng;->b:D
+
+    invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->min(DD)D
+
+    move-result-wide v4
+
+    iput-wide v4, v2, Lcom/google/android/gms/maps/model/d;->a:D
+
+    iget-wide v4, v2, Lcom/google/android/gms/maps/model/d;->b:D
+
+    iget-wide v6, v0, Lcom/google/android/gms/maps/model/LatLng;->b:D
+
+    invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->max(DD)D
+
+    move-result-wide v4
+
+    iput-wide v4, v2, Lcom/google/android/gms/maps/model/d;->b:D
+
+    iget-wide v4, v0, Lcom/google/android/gms/maps/model/LatLng;->c:D
+
+    iget-wide v6, v2, Lcom/google/android/gms/maps/model/d;->c:D
+
+    invoke-static {v6, v7}, Ljava/lang/Double;->isNaN(D)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    iput-wide v4, v2, Lcom/google/android/gms/maps/model/d;->c:D
+
+    :cond_2
+    iput-wide v4, v2, Lcom/google/android/gms/maps/model/d;->d:D
 
     goto :goto_1
 
+    :cond_3
+    iget-wide v6, v2, Lcom/google/android/gms/maps/model/d;->c:D
+
+    iget-wide v8, v2, Lcom/google/android/gms/maps/model/d;->d:D
+
+    cmpg-double v1, v6, v8
+
+    if-gtz v1, :cond_5
+
+    iget-wide v6, v2, Lcom/google/android/gms/maps/model/d;->c:D
+
+    cmpg-double v1, v6, v4
+
+    if-gtz v1, :cond_4
+
+    iget-wide v6, v2, Lcom/google/android/gms/maps/model/d;->d:D
+
+    cmpg-double v1, v4, v6
+
+    if-gtz v1, :cond_4
+
+    const/4 v1, 0x1
+
+    :goto_2
+    if-nez v1, :cond_1
+
+    iget-wide v6, v2, Lcom/google/android/gms/maps/model/d;->c:D
+
+    invoke-static {v6, v7, v4, v5}, Lcom/google/android/gms/maps/model/LatLngBounds;->a(DD)D
+
+    move-result-wide v6
+
+    iget-wide v8, v2, Lcom/google/android/gms/maps/model/d;->d:D
+
+    invoke-static {v8, v9, v4, v5}, Lcom/google/android/gms/maps/model/LatLngBounds;->b(DD)D
+
+    move-result-wide v8
+
+    cmpg-double v1, v6, v8
+
+    if-gez v1, :cond_2
+
+    iput-wide v4, v2, Lcom/google/android/gms/maps/model/d;->c:D
+
+    goto :goto_1
+
+    :cond_4
+    const/4 v1, 0x0
+
+    goto :goto_2
+
+    :cond_5
+    iget-wide v6, v2, Lcom/google/android/gms/maps/model/d;->c:D
+
+    cmpg-double v1, v6, v4
+
+    if-lez v1, :cond_6
+
+    iget-wide v6, v2, Lcom/google/android/gms/maps/model/d;->d:D
+
+    cmpg-double v1, v4, v6
+
+    if-gtz v1, :cond_7
+
+    :cond_6
+    const/4 v1, 0x1
+
+    goto :goto_2
+
+    :cond_7
+    const/4 v1, 0x0
+
+    goto :goto_2
+
     .line 190
-    :cond_1
-    iget-object v2, p0, Lcom/bbm/compat/maps/GoogleMapView;->b:Ljava/util/Map;
+    :cond_8
+    iget-object v1, p0, Lcom/bbm/compat/maps/GoogleMapView;->b:Ljava/util/Map;
 
-    invoke-interface {v2}, Ljava/util/Map;->size()I
+    invoke-interface {v1}, Ljava/util/Map;->size()I
 
-    move-result v2
+    move-result v1
 
     const/4 v3, 0x1
 
-    if-ne v2, v3, :cond_3
+    if-ne v1, v3, :cond_a
 
     .line 192
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_9
 
     .line 194
-    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/GoogleMap;
+    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/c;
 
     move-result-object v1
 
-    const/high16 v2, 0x41880000
-
-    invoke-static {v0, v2}, Lcom/google/android/gms/maps/CameraUpdateFactory;->newLatLngZoom(Lcom/google/android/gms/maps/model/LatLng;F)Lcom/google/android/gms/maps/CameraUpdate;
+    invoke-static {v0}, Lcom/google/android/gms/maps/b;->b(Lcom/google/android/gms/maps/model/LatLng;)Lcom/google/android/gms/maps/a;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/google/android/gms/maps/GoogleMap;->animateCamera(Lcom/google/android/gms/maps/CameraUpdate;)V
+    invoke-virtual {v1, v0}, Lcom/google/android/gms/maps/c;->b(Lcom/google/android/gms/maps/a;)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
     .line 196
-    :cond_2
-    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/GoogleMap;
+    :cond_9
+    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/c;
 
     move-result-object v1
 
-    const/high16 v2, 0x41880000
-
-    invoke-static {v0, v2}, Lcom/google/android/gms/maps/CameraUpdateFactory;->newLatLngZoom(Lcom/google/android/gms/maps/model/LatLng;F)Lcom/google/android/gms/maps/CameraUpdate;
+    invoke-static {v0}, Lcom/google/android/gms/maps/b;->b(Lcom/google/android/gms/maps/model/LatLng;)Lcom/google/android/gms/maps/a;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/google/android/gms/maps/GoogleMap;->moveCamera(Lcom/google/android/gms/maps/CameraUpdate;)V
+    invoke-virtual {v1, v0}, Lcom/google/android/gms/maps/c;->a(Lcom/google/android/gms/maps/a;)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
     .line 199
-    :cond_3
-    invoke-virtual {v1}, Lcom/google/android/gms/maps/model/LatLngBounds$Builder;->build()Lcom/google/android/gms/maps/model/LatLngBounds;
+    :cond_a
+    iget-wide v0, v2, Lcom/google/android/gms/maps/model/d;->c:D
 
-    move-result-object v0
+    invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
 
-    iget-object v1, v0, Lcom/google/android/gms/maps/model/LatLngBounds;->southwest:Lcom/google/android/gms/maps/model/LatLng;
+    move-result v0
 
-    iget-object v2, v0, Lcom/google/android/gms/maps/model/LatLngBounds;->northeast:Lcom/google/android/gms/maps/model/LatLng;
+    if-nez v0, :cond_c
 
-    iget-wide v4, v1, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
+    const/4 v0, 0x1
 
-    iget-wide v6, v2, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
+    :goto_3
+    const-string v1, "no included points"
+
+    invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/au;->a(ZLjava/lang/Object;)V
+
+    new-instance v0, Lcom/google/android/gms/maps/model/LatLngBounds;
+
+    new-instance v1, Lcom/google/android/gms/maps/model/LatLng;
+
+    iget-wide v4, v2, Lcom/google/android/gms/maps/model/d;->a:D
+
+    iget-wide v6, v2, Lcom/google/android/gms/maps/model/d;->c:D
+
+    invoke-direct {v1, v4, v5, v6, v7}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
+
+    new-instance v3, Lcom/google/android/gms/maps/model/LatLng;
+
+    iget-wide v4, v2, Lcom/google/android/gms/maps/model/d;->b:D
+
+    iget-wide v6, v2, Lcom/google/android/gms/maps/model/d;->d:D
+
+    invoke-direct {v3, v4, v5, v6, v7}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
+
+    invoke-direct {v0, v1, v3}, Lcom/google/android/gms/maps/model/LatLngBounds;-><init>(Lcom/google/android/gms/maps/model/LatLng;Lcom/google/android/gms/maps/model/LatLng;)V
+
+    iget-object v1, v0, Lcom/google/android/gms/maps/model/LatLngBounds;->b:Lcom/google/android/gms/maps/model/LatLng;
+
+    iget-object v2, v0, Lcom/google/android/gms/maps/model/LatLngBounds;->c:Lcom/google/android/gms/maps/model/LatLng;
+
+    iget-wide v4, v1, Lcom/google/android/gms/maps/model/LatLng;->b:D
+
+    iget-wide v6, v2, Lcom/google/android/gms/maps/model/LatLng;->b:D
 
     sub-double/2addr v4, v6
 
@@ -967,9 +1073,9 @@
 
     move-result-wide v4
 
-    iget-wide v6, v1, Lcom/google/android/gms/maps/model/LatLng;->longitude:D
+    iget-wide v6, v1, Lcom/google/android/gms/maps/model/LatLng;->c:D
 
-    iget-wide v8, v2, Lcom/google/android/gms/maps/model/LatLng;->longitude:D
+    iget-wide v8, v2, Lcom/google/android/gms/maps/model/LatLng;->c:D
 
     sub-double/2addr v6, v8
 
@@ -977,19 +1083,19 @@
 
     move-result-wide v6
 
-    const-wide v8, 0x3f747ae147ae147bL
+    const-wide v8, 0x3f747ae147ae147bL    # 0.005
 
     cmpg-double v3, v4, v8
 
-    if-gez v3, :cond_5
+    if-gez v3, :cond_d
 
     new-instance v3, Lcom/google/android/gms/maps/model/LatLng;
 
-    iget-wide v6, v1, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
+    iget-wide v6, v1, Lcom/google/android/gms/maps/model/LatLng;->b:D
 
-    const-wide v8, 0x3f747ae147ae147bL
+    const-wide v8, 0x3f747ae147ae147bL    # 0.005
 
-    const-wide/high16 v10, 0x4000000000000000L
+    const-wide/high16 v10, 0x4000000000000000L    # 2.0
 
     div-double v10, v4, v10
 
@@ -997,17 +1103,17 @@
 
     sub-double/2addr v6, v8
 
-    iget-wide v0, v1, Lcom/google/android/gms/maps/model/LatLng;->longitude:D
+    iget-wide v0, v1, Lcom/google/android/gms/maps/model/LatLng;->c:D
 
     invoke-direct {v3, v6, v7, v0, v1}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
 
     new-instance v1, Lcom/google/android/gms/maps/model/LatLng;
 
-    iget-wide v6, v2, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
+    iget-wide v6, v2, Lcom/google/android/gms/maps/model/LatLng;->b:D
 
-    const-wide v8, 0x3f747ae147ae147bL
+    const-wide v8, 0x3f747ae147ae147bL    # 0.005
 
-    const-wide/high16 v10, 0x4000000000000000L
+    const-wide/high16 v10, 0x4000000000000000L    # 2.0
 
     div-double/2addr v4, v10
 
@@ -1015,7 +1121,7 @@
 
     add-double/2addr v4, v6
 
-    iget-wide v6, v2, Lcom/google/android/gms/maps/model/LatLng;->longitude:D
+    iget-wide v6, v2, Lcom/google/android/gms/maps/model/LatLng;->c:D
 
     invoke-direct {v1, v4, v5, v6, v7}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
 
@@ -1024,42 +1130,45 @@
     invoke-direct {v0, v3, v1}, Lcom/google/android/gms/maps/model/LatLngBounds;-><init>(Lcom/google/android/gms/maps/model/LatLng;Lcom/google/android/gms/maps/model/LatLng;)V
 
     .line 201
-    :cond_4
-    :goto_2
-    if-eqz p1, :cond_6
+    :cond_b
+    :goto_4
+    if-eqz p1, :cond_e
 
     .line 202
-    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/GoogleMap;
+    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/c;
 
     move-result-object v1
 
-    const/16 v2, 0x64
-
-    invoke-static {v0, v2}, Lcom/google/android/gms/maps/CameraUpdateFactory;->newLatLngBounds(Lcom/google/android/gms/maps/model/LatLngBounds;I)Lcom/google/android/gms/maps/CameraUpdate;
+    invoke-static {v0}, Lcom/google/android/gms/maps/b;->a(Lcom/google/android/gms/maps/model/LatLngBounds;)Lcom/google/android/gms/maps/a;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/google/android/gms/maps/GoogleMap;->animateCamera(Lcom/google/android/gms/maps/CameraUpdate;)V
+    invoke-virtual {v1, v0}, Lcom/google/android/gms/maps/c;->b(Lcom/google/android/gms/maps/a;)V
 
     goto/16 :goto_0
 
     .line 199
-    :cond_5
-    const-wide v4, 0x3f747ae147ae147bL
+    :cond_c
+    const/4 v0, 0x0
+
+    goto :goto_3
+
+    :cond_d
+    const-wide v4, 0x3f747ae147ae147bL    # 0.005
 
     cmpg-double v3, v6, v4
 
-    if-gez v3, :cond_4
+    if-gez v3, :cond_b
 
     new-instance v3, Lcom/google/android/gms/maps/model/LatLng;
 
-    iget-wide v4, v1, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
+    iget-wide v4, v1, Lcom/google/android/gms/maps/model/LatLng;->b:D
 
-    iget-wide v0, v1, Lcom/google/android/gms/maps/model/LatLng;->longitude:D
+    iget-wide v0, v1, Lcom/google/android/gms/maps/model/LatLng;->c:D
 
-    const-wide v8, 0x3f747ae147ae147bL
+    const-wide v8, 0x3f747ae147ae147bL    # 0.005
 
-    const-wide/high16 v10, 0x4000000000000000L
+    const-wide/high16 v10, 0x4000000000000000L    # 2.0
 
     div-double v10, v6, v10
 
@@ -1071,13 +1180,13 @@
 
     new-instance v1, Lcom/google/android/gms/maps/model/LatLng;
 
-    iget-wide v4, v2, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
+    iget-wide v4, v2, Lcom/google/android/gms/maps/model/LatLng;->b:D
 
-    iget-wide v8, v2, Lcom/google/android/gms/maps/model/LatLng;->longitude:D
+    iget-wide v8, v2, Lcom/google/android/gms/maps/model/LatLng;->c:D
 
-    const-wide v10, 0x3f747ae147ae147bL
+    const-wide v10, 0x3f747ae147ae147bL    # 0.005
 
-    const-wide/high16 v12, 0x4000000000000000L
+    const-wide/high16 v12, 0x4000000000000000L    # 2.0
 
     div-double/2addr v6, v12
 
@@ -1091,26 +1200,75 @@
 
     invoke-direct {v0, v3, v1}, Lcom/google/android/gms/maps/model/LatLngBounds;-><init>(Lcom/google/android/gms/maps/model/LatLng;Lcom/google/android/gms/maps/model/LatLng;)V
 
-    goto :goto_2
+    goto :goto_4
 
     .line 204
-    :cond_6
-    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/GoogleMap;
+    :cond_e
+    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/c;
 
     move-result-object v1
 
-    const/16 v2, 0x64
-
-    invoke-static {v0, v2}, Lcom/google/android/gms/maps/CameraUpdateFactory;->newLatLngBounds(Lcom/google/android/gms/maps/model/LatLngBounds;I)Lcom/google/android/gms/maps/CameraUpdate;
+    invoke-static {v0}, Lcom/google/android/gms/maps/b;->a(Lcom/google/android/gms/maps/model/LatLngBounds;)Lcom/google/android/gms/maps/a;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/google/android/gms/maps/GoogleMap;->moveCamera(Lcom/google/android/gms/maps/CameraUpdate;)V
+    invoke-virtual {v1, v0}, Lcom/google/android/gms/maps/c;->a(Lcom/google/android/gms/maps/a;)V
 
     goto/16 :goto_0
 .end method
 
-.method public final b()V
+.method public final e()V
+    .locals 3
+
+    .prologue
+    .line 244
+    iget-object v0, p0, Lcom/bbm/compat/maps/GoogleMapView;->c:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    .line 245
+    iget-object v2, p0, Lcom/bbm/compat/maps/GoogleMapView;->c:Ljava/util/Map;
+
+    invoke-interface {v2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/android/gms/maps/model/f;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/maps/model/f;->a()V
+
+    goto :goto_0
+
+    .line 247
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/compat/maps/GoogleMapView;->c:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->clear()V
+
+    .line 248
+    return-void
+.end method
+
+.method public final f()V
     .locals 1
 
     .prologue
@@ -1132,88 +1290,149 @@
 .end method
 
 .method public setCompassEnabled(Z)V
-    .locals 1
+    .locals 2
 
     .prologue
     .line 113
-    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/GoogleMap;
+    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/c;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 114
-    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/GoogleMap;
+    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/android/gms/maps/GoogleMap;->getUiSettings()Lcom/google/android/gms/maps/UiSettings;
+    invoke-virtual {v0}, Lcom/google/android/gms/maps/c;->a()Lcom/google/android/gms/maps/t;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/maps/UiSettings;->setCompassEnabled(Z)V
+    :try_start_0
+    iget-object v0, v0, Lcom/google/android/gms/maps/t;->a:Lcom/google/android/gms/maps/internal/ab;
+
+    invoke-interface {v0, p1}, Lcom/google/android/gms/maps/internal/ab;->b(Z)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 116
     :cond_0
     return-void
+
+    .line 114
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/g;
+
+    invoke-direct {v1, v0}, Lcom/google/android/gms/maps/model/g;-><init>(Landroid/os/RemoteException;)V
+
+    throw v1
 .end method
 
 .method public setGesturesEnabled(Z)V
-    .locals 1
+    .locals 2
 
     .prologue
     .line 106
-    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/GoogleMap;
+    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/c;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 107
-    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/GoogleMap;
+    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/android/gms/maps/GoogleMap;->getUiSettings()Lcom/google/android/gms/maps/UiSettings;
+    invoke-virtual {v0}, Lcom/google/android/gms/maps/c;->a()Lcom/google/android/gms/maps/t;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/maps/UiSettings;->setAllGesturesEnabled(Z)V
+    :try_start_0
+    iget-object v0, v0, Lcom/google/android/gms/maps/t;->a:Lcom/google/android/gms/maps/internal/ab;
+
+    invoke-interface {v0, p1}, Lcom/google/android/gms/maps/internal/ab;->h(Z)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 109
     :cond_0
     return-void
+
+    .line 107
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/g;
+
+    invoke-direct {v1, v0}, Lcom/google/android/gms/maps/model/g;-><init>(Landroid/os/RemoteException;)V
+
+    throw v1
 .end method
 
 .method public setInfoWindowAdapter(Ljava/lang/Object;)V
-    .locals 1
+    .locals 3
 
     .prologue
     .line 120
     if-eqz p1, :cond_0
 
-    instance-of v0, p1, Lcom/google/android/gms/maps/GoogleMap$InfoWindowAdapter;
+    instance-of v0, p1, Lcom/google/android/gms/maps/g;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/GoogleMap;
+    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/c;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 121
-    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/GoogleMap;
+    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/c;
 
     move-result-object v0
 
-    check-cast p1, Lcom/google/android/gms/maps/GoogleMap$InfoWindowAdapter;
+    check-cast p1, Lcom/google/android/gms/maps/g;
 
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/maps/GoogleMap;->setInfoWindowAdapter(Lcom/google/android/gms/maps/GoogleMap$InfoWindowAdapter;)V
+    if-nez p1, :cond_1
+
+    :try_start_0
+    iget-object v0, v0, Lcom/google/android/gms/maps/c;->a:Lcom/google/android/gms/maps/internal/d;
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, v1}, Lcom/google/android/gms/maps/internal/d;->a(Lcom/google/android/gms/maps/internal/an;)V
 
     .line 123
     :cond_0
+    :goto_0
     return-void
+
+    .line 121
+    :cond_1
+    iget-object v1, v0, Lcom/google/android/gms/maps/c;->a:Lcom/google/android/gms/maps/internal/d;
+
+    new-instance v2, Lcom/google/android/gms/maps/e;
+
+    invoke-direct {v2, v0, p1}, Lcom/google/android/gms/maps/e;-><init>(Lcom/google/android/gms/maps/c;Lcom/google/android/gms/maps/g;)V
+
+    invoke-interface {v1, v2}, Lcom/google/android/gms/maps/internal/d;->a(Lcom/google/android/gms/maps/internal/an;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/g;
+
+    invoke-direct {v1, v0}, Lcom/google/android/gms/maps/model/g;-><init>(Landroid/os/RemoteException;)V
+
+    throw v1
 .end method
 
 .method public setOnMapClickListener(Lcom/bbm/compat/maps/d;)V
@@ -1224,7 +1443,7 @@
     iput-object p1, p0, Lcom/bbm/compat/maps/GoogleMapView;->e:Lcom/bbm/compat/maps/d;
 
     .line 322
-    invoke-direct {p0}, Lcom/bbm/compat/maps/GoogleMapView;->c()V
+    invoke-direct {p0}, Lcom/bbm/compat/maps/GoogleMapView;->g()V
 
     .line 323
     return-void
@@ -1238,35 +1457,50 @@
     iput-object p1, p0, Lcom/bbm/compat/maps/GoogleMapView;->d:Lcom/bbm/compat/maps/e;
 
     .line 316
-    invoke-direct {p0}, Lcom/bbm/compat/maps/GoogleMapView;->c()V
+    invoke-direct {p0}, Lcom/bbm/compat/maps/GoogleMapView;->g()V
 
     .line 317
     return-void
 .end method
 
 .method public setZoomControlsEnabled(Z)V
-    .locals 1
+    .locals 2
 
     .prologue
     .line 99
-    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/GoogleMap;
+    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/c;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 100
-    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/GoogleMap;
+    invoke-virtual {p0}, Lcom/bbm/compat/maps/GoogleMapView;->getMap()Lcom/google/android/gms/maps/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/android/gms/maps/GoogleMap;->getUiSettings()Lcom/google/android/gms/maps/UiSettings;
+    invoke-virtual {v0}, Lcom/google/android/gms/maps/c;->a()Lcom/google/android/gms/maps/t;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/maps/UiSettings;->setZoomControlsEnabled(Z)V
+    :try_start_0
+    iget-object v0, v0, Lcom/google/android/gms/maps/t;->a:Lcom/google/android/gms/maps/internal/ab;
+
+    invoke-interface {v0, p1}, Lcom/google/android/gms/maps/internal/ab;->a(Z)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 102
     :cond_0
     return-void
+
+    .line 100
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/g;
+
+    invoke-direct {v1, v0}, Lcom/google/android/gms/maps/model/g;-><init>(Landroid/os/RemoteException;)V
+
+    throw v1
 .end method

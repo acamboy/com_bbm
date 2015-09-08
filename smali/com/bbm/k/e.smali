@@ -3,14 +3,14 @@
 .source "GroupsCalendarProvider.java"
 
 # interfaces
-.implements Lcom/bbm/util/cl;
+.implements Lcom/bbm/util/cs;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/bbm/util/cl",
+        "Lcom/bbm/util/cs",
         "<",
         "Lcom/bbm/g/a;",
         ">;"

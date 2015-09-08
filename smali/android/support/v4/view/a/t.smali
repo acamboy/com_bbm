@@ -1,90 +1,33 @@
 .class final Landroid/support/v4/view/a/t;
-.super Landroid/view/accessibility/AccessibilityNodeProvider;
-.source "AccessibilityNodeProviderCompatKitKat.java"
-
-
-# instance fields
-.field final synthetic a:Landroid/support/v4/view/a/u;
+.super Landroid/support/v4/view/a/v;
+.source "AccessibilityNodeProviderCompat.java"
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/view/a/u;)V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 39
-    iput-object p1, p0, Landroid/support/v4/view/a/t;->a:Landroid/support/v4/view/a/u;
-
-    invoke-direct {p0}, Landroid/view/accessibility/AccessibilityNodeProvider;-><init>()V
+    .line 84
+    invoke-direct {p0}, Landroid/support/v4/view/a/v;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final createAccessibilityNodeInfo(I)Landroid/view/accessibility/AccessibilityNodeInfo;
-    .locals 1
+.method public final a(Landroid/support/v4/view/a/p;)Ljava/lang/Object;
+    .locals 2
 
     .prologue
-    .line 42
-    iget-object v0, p0, Landroid/support/v4/view/a/t;->a:Landroid/support/v4/view/a/u;
+    .line 88
+    new-instance v0, Landroid/support/v4/view/a/u;
 
-    invoke-interface {v0}, Landroid/support/v4/view/a/u;->c()Ljava/lang/Object;
+    invoke-direct {v0, p0, p1}, Landroid/support/v4/view/a/u;-><init>(Landroid/support/v4/view/a/t;Landroid/support/v4/view/a/p;)V
 
-    const/4 v0, 0x0
+    new-instance v1, Landroid/support/v4/view/a/aa;
 
-    return-object v0
-.end method
+    invoke-direct {v1, v0}, Landroid/support/v4/view/a/aa;-><init>(Landroid/support/v4/view/a/ab;)V
 
-.method public final findAccessibilityNodeInfosByText(Ljava/lang/String;I)Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "I)",
-            "Ljava/util/List",
-            "<",
-            "Landroid/view/accessibility/AccessibilityNodeInfo;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 50
-    iget-object v0, p0, Landroid/support/v4/view/a/t;->a:Landroid/support/v4/view/a/u;
-
-    invoke-interface {v0}, Landroid/support/v4/view/a/u;->b()Ljava/util/List;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final findFocus(I)Landroid/view/accessibility/AccessibilityNodeInfo;
-    .locals 1
-
-    .prologue
-    .line 61
-    iget-object v0, p0, Landroid/support/v4/view/a/t;->a:Landroid/support/v4/view/a/u;
-
-    invoke-interface {v0}, Landroid/support/v4/view/a/u;->d()Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final performAction(IILandroid/os/Bundle;)Z
-    .locals 1
-
-    .prologue
-    .line 56
-    iget-object v0, p0, Landroid/support/v4/view/a/t;->a:Landroid/support/v4/view/a/u;
-
-    invoke-interface {v0}, Landroid/support/v4/view/a/u;->a()Z
-
-    move-result v0
-
-    return v0
+    return-object v1
 .end method

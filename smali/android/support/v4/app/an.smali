@@ -1,17 +1,8 @@
 .class public interface abstract Landroid/support/v4/app/an;
 .super Ljava/lang/Object;
-.source "INotificationSideChannel.java"
-
-# interfaces
-.implements Landroid/os/IInterface;
+.source "FragmentTransitionCompat21.java"
 
 
 # virtual methods
-.method public abstract a(Ljava/lang/String;)V
-.end method
-
-.method public abstract a(Ljava/lang/String;ILjava/lang/String;)V
-.end method
-
-.method public abstract a(Ljava/lang/String;ILjava/lang/String;Landroid/app/Notification;)V
+.method public abstract a()Landroid/view/View;
 .end method

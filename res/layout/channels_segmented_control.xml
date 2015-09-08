@@ -5,6 +5,6 @@
     <ImageView android:layout_gravity="center_vertical" android:id="@id/myChannelsIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_mychannels_unpressed" android:scaleType="fitXY" android:adjustViewBounds="true" android:layout_weight="1.0" android:contentDescription="@string/blank" />
     <FrameLayout android:layout_gravity="center_vertical" android:id="@id/notificationsIconLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
         <ImageView android:id="@id/notificationsIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_notifications_unpressed" android:scaleType="fitXY" android:adjustViewBounds="true" android:contentDescription="@string/blank" />
-        <ImageView android:layout_gravity="top|right|center" android:id="@id/notification_splat" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_badge" android:contentDescription="@string/blank" />
+        <ImageView android:layout_gravity="center|right|top" android:id="@id/notification_splat" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_badge" android:contentDescription="@string/blank" />
     </FrameLayout>
 </LinearLayout>

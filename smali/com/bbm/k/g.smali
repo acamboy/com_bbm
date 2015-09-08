@@ -113,7 +113,7 @@
     .line 256
     iget-object v0, p0, Lcom/bbm/k/g;->a:Lcom/bbm/g/b;
 
-    iget-object v0, v0, Lcom/bbm/g/b;->o:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/g/b;->p:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 

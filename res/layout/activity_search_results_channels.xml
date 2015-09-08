@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:id="@id/search_results_count_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <include android:id="@id/channel_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/view_bali_toolbar" />
+    <RelativeLayout android:id="@id/search_results_count_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/channel_toolbar">
         <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/matches" android:layout_alignParentLeft="true" />
         <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/grey" android:id="@id/search_results_number_of_matches" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" />
         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/list_header_blue_divider" android:scaleType="fitXY" android:layout_below="@id/search_results_number_of_matches" android:layout_centerVertical="true" android:contentDescription="@string/blank" />

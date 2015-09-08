@@ -1,125 +1,153 @@
 .class final Lcom/bbm/d/d;
-.super Ljava/lang/Object;
+.super Lcom/bbm/d/b/ad;
 .source "BbmdsModel.java"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/d/b/ad",
+        "<",
+        "Lcom/bbm/d/gr;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/b/f/a/l;
-
-.field final synthetic b:Ljava/lang/String;
-
-.field final synthetic c:Lcom/google/b/f/a/r;
-
-.field final synthetic d:Lcom/bbm/d/a;
+.field final synthetic a:Lcom/bbm/d/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/d/a;Lcom/google/b/f/a/l;Ljava/lang/String;Lcom/google/b/f/a/r;)V
+.method constructor <init>(Lcom/bbm/d/a;)V
     .locals 0
 
     .prologue
-    .line 856
-    iput-object p1, p0, Lcom/bbm/d/d;->d:Lcom/bbm/d/a;
+    .line 1189
+    iput-object p1, p0, Lcom/bbm/d/d;->a:Lcom/bbm/d/a;
 
-    iput-object p2, p0, Lcom/bbm/d/d;->a:Lcom/google/b/f/a/l;
-
-    iput-object p3, p0, Lcom/bbm/d/d;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Lcom/bbm/d/d;->c:Lcom/google/b/f/a/r;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/d/b/ad;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method protected final a()Ljava/util/List;
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/bbm/d/gr;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 861
-    :try_start_0
-    iget-object v0, p0, Lcom/bbm/d/d;->a:Lcom/google/b/f/a/l;
+    .line 1192
+    new-instance v3, Ljava/util/ArrayList;
 
-    invoke-interface {v0}, Lcom/google/b/f/a/l;->get()Ljava/lang/Object;
+    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+
+    .line 1193
+    iget-object v0, p0, Lcom/bbm/d/d;->a:Lcom/bbm/d/a;
+
+    invoke-virtual {v0}, Lcom/bbm/d/a;->aa()Lcom/bbm/j/w;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/String;
-
-    .line 862
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+    .line 1194
+    invoke-interface {v0}, Lcom/bbm/j/w;->b()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 865
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
+    move-object v0, v3
 
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+    .line 1215
+    :goto_0
+    return-object v0
+
+    .line 1198
+    :cond_0
+    invoke-interface {v0}, Lcom/bbm/j/w;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget v1, v0, Lcom/bbm/c/c;->m:I
+    check-cast v0, Ljava/util/List;
 
-    add-int/lit8 v1, v1, 0x1
+    .line 1200
+    const/4 v1, 0x0
 
-    iput v1, v0, Lcom/bbm/c/c;->m:I
+    move v2, v1
 
-    .line 866
-    new-instance v0, Ljava/lang/StringBuilder;
+    :goto_1
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    const-string v1, "bbmpim://conversation/"
+    move-result v1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-ge v2, v1, :cond_2
 
-    iget-object v1, p0, Lcom/bbm/d/d;->d:Lcom/bbm/d/a;
-
-    invoke-virtual {v1}, Lcom/bbm/d/a;->v()Ljava/lang/String;
+    .line 1201
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v1, Lcom/bbm/d/gr;
 
-    move-result-object v0
+    .line 1202
+    iget-boolean v4, v1, Lcom/bbm/d/gr;->d:Z
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-eqz v4, :cond_1
 
-    move-result-object v0
+    iget-object v4, v1, Lcom/bbm/d/gr;->h:Lcom/bbm/d/gt;
 
-    .line 870
-    :cond_0
-    iget-object v1, p0, Lcom/bbm/d/d;->d:Lcom/bbm/d/a;
+    sget-object v5, Lcom/bbm/d/gt;->b:Lcom/bbm/d/gt;
 
-    iget-object v2, p0, Lcom/bbm/d/d;->b:Ljava/lang/String;
+    if-eq v4, v5, :cond_1
 
-    new-instance v3, Lcom/bbm/d/dk;
+    .line 1203
+    invoke-virtual {v3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {v3, v0, v2}, Lcom/bbm/d/dk;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    .line 1200
+    :cond_1
+    add-int/lit8 v1, v2, 0x1
 
-    invoke-virtual {v1, v3}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
+    move v2, v1
 
-    .line 871
-    iget-object v1, p0, Lcom/bbm/d/d;->c:Lcom/google/b/f/a/r;
+    goto :goto_1
 
-    invoke-virtual {v1, v0}, Lcom/google/b/f/a/r;->a(Ljava/lang/Object;)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .line 1208
+    :cond_2
+    new-instance v0, Lcom/bbm/d/e;
 
-    .line 875
-    :goto_0
-    return-void
+    invoke-direct {v0, p0}, Lcom/bbm/d/e;-><init>(Lcom/bbm/d/d;)V
 
-    .line 872
-    :catch_0
-    move-exception v0
+    invoke-static {v3, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+    move-object v0, v3
 
+    .line 1215
     goto :goto_0
+.end method
+
+.method public final b()Z
+    .locals 1
+
+    .prologue
+    .line 1220
+    iget-object v0, p0, Lcom/bbm/d/d;->a:Lcom/bbm/d/a;
+
+    invoke-virtual {v0}, Lcom/bbm/d/a;->aa()Lcom/bbm/j/w;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/bbm/j/w;->b()Z
+
+    move-result v0
+
+    return v0
 .end method

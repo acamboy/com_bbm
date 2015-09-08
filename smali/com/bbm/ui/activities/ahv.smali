@@ -1,158 +1,78 @@
 .class final Lcom/bbm/ui/activities/ahv;
-.super Landroid/os/Handler;
-.source "ShareActivity.java"
+.super Ljava/lang/Object;
+.source "ViewProfileActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/aia;
-
-.field final synthetic b:Ljava/lang/String;
-
-.field final synthetic c:Lcom/bbm/ui/activities/ahu;
+.field final synthetic a:Lcom/bbm/ui/activities/ViewProfileActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ahu;Lcom/bbm/ui/activities/aia;Ljava/lang/String;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ViewProfileActivity;)V
     .locals 0
 
     .prologue
-    .line 128
-    iput-object p1, p0, Lcom/bbm/ui/activities/ahv;->c:Lcom/bbm/ui/activities/ahu;
+    .line 376
+    iput-object p1, p0, Lcom/bbm/ui/activities/ahv;->a:Lcom/bbm/ui/activities/ViewProfileActivity;
 
-    iput-object p2, p0, Lcom/bbm/ui/activities/ahv;->a:Lcom/bbm/ui/activities/aia;
-
-    iput-object p3, p0, Lcom/bbm/ui/activities/ahv;->b:Ljava/lang/String;
-
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final handleMessage(Landroid/os/Message;)V
-    .locals 5
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
     .prologue
-    .line 131
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+    .line 379
+    const-string v0, "mPinCopyButton Clicked"
 
-    check-cast v0, Ljava/util/HashMap;
+    const-class v1, Lcom/bbm/ui/activities/ViewProfileActivity;
 
-    .line 132
-    const-string v1, "partnerApp"
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 381
+    const-string v0, "simple text"
 
-    move-result-object v1
+    iget-object v1, p0, Lcom/bbm/ui/activities/ahv;->a:Lcom/bbm/ui/activities/ViewProfileActivity;
 
-    check-cast v1, Lcom/bbm/d/fn;
-
-    .line 133
-    const-string v2, "token"
-
-    invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    .line 134
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/ahv;->a:Lcom/bbm/ui/activities/aia;
-
-    iget-object v3, v3, Lcom/bbm/ui/activities/aia;->c:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Lcom/bbm/d/a;->b(Ljava/lang/String;)Lcom/bbm/d/gr;
-
-    move-result-object v2
-
-    iget-wide v2, v2, Lcom/bbm/d/gr;->w:J
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 136
-    new-instance v3, Landroid/content/Intent;
-
-    invoke-direct {v3}, Landroid/content/Intent;-><init>()V
-
-    .line 137
-    const-string v4, "android.intent.action.VIEW"
-
-    invoke-virtual {v3, v4}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 138
-    iget-object v1, v1, Lcom/bbm/d/fn;->f:Ljava/lang/String;
-
-    iget-object v4, p0, Lcom/bbm/ui/activities/ahv;->b:Ljava/lang/String;
-
-    invoke-static {v1, v2, v4, v0}, Lcom/bbm/util/ds;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 139
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v1}, Lcom/bbm/ui/activities/ViewProfileActivity;->l(Lcom/bbm/ui/activities/ViewProfileActivity;)Landroid/widget/TextView;
 
     move-result-object v1
 
-    invoke-virtual {v3, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
-
-    .line 140
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Invoke TPA Uri: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, " in "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-class v1, Lcom/bbm/ui/activities/ShareActivity;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Landroid/content/ClipData;->newPlainText(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/content/ClipData;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 382
+    iget-object v1, p0, Lcom/bbm/ui/activities/ahv;->a:Lcom/bbm/ui/activities/ViewProfileActivity;
 
-    move-result-object v0
+    invoke-static {v1, v0}, Lcom/bbm/util/eu;->a(Landroid/content/Context;Landroid/content/ClipData;)V
 
-    const/4 v1, 0x0
+    .line 383
+    iget-object v0, p0, Lcom/bbm/ui/activities/ahv;->a:Lcom/bbm/ui/activities/ViewProfileActivity;
 
-    new-array v1, v1, [Ljava/lang/Object;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ahv;->a:Lcom/bbm/ui/activities/ViewProfileActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    const v2, 0x7f0e0670
 
-    .line 145
-    iget-object v0, p0, Lcom/bbm/ui/activities/ahv;->c:Lcom/bbm/ui/activities/ahu;
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/ViewProfileActivity;->getString(I)Ljava/lang/String;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/ahu;->b:Lcom/bbm/ui/activities/ShareActivity;
+    move-result-object v1
 
-    invoke-virtual {v0, v3}, Lcom/bbm/ui/activities/ShareActivity;->startActivity(Landroid/content/Intent;)V
+    const/16 v2, 0x1388
 
-    .line 146
-    iget-object v0, p0, Lcom/bbm/ui/activities/ahv;->c:Lcom/bbm/ui/activities/ahu;
+    invoke-static {v0, v1, v2}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;Ljava/lang/String;S)V
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/ahu;->b:Lcom/bbm/ui/activities/ShareActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ShareActivity;->finish()V
-
-    .line 147
+    .line 384
     return-void
 .end method

@@ -17,7 +17,7 @@
     .locals 0
 
     .prologue
-    .line 532
+    .line 492
     iput-object p1, p0, Lcom/bbm/n/f;->b:Lcom/bbm/n/b;
 
     iput-object p2, p0, Lcom/bbm/n/f;->a:Landroid/media/MediaPlayer;
@@ -35,24 +35,24 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 535
+    .line 495
     iget-object v0, p0, Lcom/bbm/n/f;->a:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->stop()V
 
-    .line 536
+    .line 496
     iget-object v0, p0, Lcom/bbm/n/f;->a:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
 
-    .line 540
+    .line 500
     const-string v0, "Setting speaker to disabled"
 
     new-array v1, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 541
+    .line 501
     iget-object v0, p0, Lcom/bbm/n/f;->b:Lcom/bbm/n/b;
 
     invoke-static {v0}, Lcom/bbm/n/b;->c(Lcom/bbm/n/b;)Landroid/content/Context;
@@ -67,9 +67,9 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 542
+    .line 502
     invoke-virtual {v0, v2}, Landroid/media/AudioManager;->setSpeakerphoneOn(Z)V
 
-    .line 543
+    .line 503
     return-void
 .end method

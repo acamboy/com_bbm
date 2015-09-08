@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/bt;
 .super Ljava/lang/Object;
-.source "ChangeStatusActivity.java"
+.source "ChannelOfficeHoursSettingsActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnKeyListener;
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ChangeStatusActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ChangeStatusActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)V
     .locals 0
 
     .prologue
-    .line 122
-    iput-object p1, p0, Lcom/bbm/ui/activities/bt;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
+    .line 110
+    iput-object p1, p0, Lcom/bbm/ui/activities/bt;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,99 +25,107 @@
 
 
 # virtual methods
-.method public final onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
-    .locals 3
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 4
 
     .prologue
-    const/4 v2, 0x0
+    .line 114
+    :try_start_0
+    iget-object v1, p0, Lcom/bbm/ui/activities/bt;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
 
-    .line 126
-    const-string v0, "onKey"
+    invoke-virtual {p1}, Landroid/widget/CompoundButton;->getTag()Ljava/lang/Object;
 
-    const-class v1, Lcom/bbm/ui/activities/ChangeStatusActivity;
+    move-result-object v0
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    check-cast v0, Lcom/bbm/ui/activities/bv;
 
-    .line 127
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
+    invoke-static {v1, v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->a(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;Lcom/bbm/ui/activities/bv;)Lcom/bbm/ui/activities/bv;
 
-    move-result v0
+    .line 115
+    iget-object v0, p0, Lcom/bbm/ui/activities/bt;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
 
-    const/4 v1, 0x1
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->a(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Lcom/bbm/ui/activities/bv;
 
-    if-ne v0, v1, :cond_0
+    move-result-object v0
+
+    iget v1, v0, Lcom/bbm/ui/activities/bv;->a:I
+
+    .line 116
+    iget-object v0, p0, Lcom/bbm/ui/activities/bt;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->d(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/activities/bw;
+
+    .line 118
+    iget-object v2, v0, Lcom/bbm/ui/activities/bw;->b:Landroid/view/View;
+
+    .line 119
+    new-instance v3, Lorg/json/JSONObject;
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/bt;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->b(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lorg/json/JSONObject;
+
+    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v3, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+
+    .line 121
+    if-eqz p2, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-virtual {v2, v0}, Landroid/view/View;->setVisibility(I)V
+
+    .line 122
+    const-string v0, "available"
+
+    invoke-virtual {v3, v0, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+
+    .line 123
+    iget-object v0, p0, Lcom/bbm/ui/activities/bt;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->b(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1, v3}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 128
-    const/16 v0, 0x42
+    :goto_1
+    return-void
 
-    if-ne p2, v0, :cond_0
-
-    .line 129
-    iget-object v0, p0, Lcom/bbm/ui/activities/bt;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChangeStatusActivity;->e(Lcom/bbm/ui/activities/ChangeStatusActivity;)Landroid/widget/EditText;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 130
-    iget-object v0, p0, Lcom/bbm/ui/activities/bt;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChangeStatusActivity;->g(Lcom/bbm/ui/activities/ChangeStatusActivity;)Landroid/widget/RelativeLayout;
-
-    move-result-object v0
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
-
-    .line 139
+    .line 121
     :cond_0
-    :goto_0
-    return v2
-
-    .line 132
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/bt;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChangeStatusActivity;->h(Lcom/bbm/ui/activities/ChangeStatusActivity;)V
-
-    .line 133
-    iget-object v0, p0, Lcom/bbm/ui/activities/bt;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
-
-    const-string v1, "input_method"
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/ChangeStatusActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
-
-    .line 134
-    iget-object v1, p0, Lcom/bbm/ui/activities/bt;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ChangeStatusActivity;->e(Lcom/bbm/ui/activities/ChangeStatusActivity;)Landroid/widget/EditText;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/widget/EditText;->getWindowToken()Landroid/os/IBinder;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
+    const/16 v0, 0x8
 
     goto :goto_0
+
+    .line 125
+    :catch_0
+    move-exception v0
+
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_1
 .end method

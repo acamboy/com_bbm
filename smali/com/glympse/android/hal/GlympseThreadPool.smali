@@ -4,17 +4,17 @@
 
 
 # static fields
-.field private static bM:I
+.field private static bP:I
 
-.field private static bN:I
+.field private static bQ:I
 
-.field private static bO:Lcom/glympse/android/hal/GlympseThreadPool;
+.field private static bR:Lcom/glympse/android/hal/GlympseThreadPool;
 
 
 # instance fields
-.field private bK:Ljava/util/concurrent/ThreadPoolExecutor;
+.field private bN:Ljava/util/concurrent/ThreadPoolExecutor;
 
-.field private bL:Ljava/util/concurrent/BlockingQueue;
+.field private bO:Ljava/util/concurrent/BlockingQueue;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/BlockingQueue",
@@ -35,9 +35,9 @@
     const/4 v0, 0x3
 
     .line 20
-    sput v0, Lcom/glympse/android/hal/GlympseThreadPool;->bM:I
+    sput v0, Lcom/glympse/android/hal/GlympseThreadPool;->bP:I
 
-    sput v0, Lcom/glympse/android/hal/GlympseThreadPool;->bN:I
+    sput v0, Lcom/glympse/android/hal/GlympseThreadPool;->bQ:I
 
     return-void
 .end method
@@ -63,7 +63,7 @@
     monitor-enter v1
 
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/GlympseThreadPool;->bO:Lcom/glympse/android/hal/GlympseThreadPool;
+    sget-object v0, Lcom/glympse/android/hal/GlympseThreadPool;->bR:Lcom/glympse/android/hal/GlympseThreadPool;
 
     if-nez v0, :cond_0
 
@@ -73,13 +73,13 @@
     invoke-direct {v0}, Lcom/glympse/android/hal/GlympseThreadPool;-><init>()V
 
     .line 36
-    sput-object v0, Lcom/glympse/android/hal/GlympseThreadPool;->bO:Lcom/glympse/android/hal/GlympseThreadPool;
+    sput-object v0, Lcom/glympse/android/hal/GlympseThreadPool;->bR:Lcom/glympse/android/hal/GlympseThreadPool;
 
     invoke-direct {v0}, Lcom/glympse/android/hal/GlympseThreadPool;->start()V
 
     .line 38
     :cond_0
-    sget-object v0, Lcom/glympse/android/hal/GlympseThreadPool;->bO:Lcom/glympse/android/hal/GlympseThreadPool;
+    sget-object v0, Lcom/glympse/android/hal/GlympseThreadPool;->bR:Lcom/glympse/android/hal/GlympseThreadPool;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -105,24 +105,24 @@
 
     invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/GlympseThreadPool;->bL:Ljava/util/concurrent/BlockingQueue;
+    iput-object v0, p0, Lcom/glympse/android/hal/GlympseThreadPool;->bO:Ljava/util/concurrent/BlockingQueue;
 
     .line 44
     new-instance v1, Ljava/util/concurrent/ThreadPoolExecutor;
 
-    sget v2, Lcom/glympse/android/hal/GlympseThreadPool;->bM:I
+    sget v2, Lcom/glympse/android/hal/GlympseThreadPool;->bP:I
 
-    sget v3, Lcom/glympse/android/hal/GlympseThreadPool;->bN:I
+    sget v3, Lcom/glympse/android/hal/GlympseThreadPool;->bQ:I
 
     const-wide/16 v4, 0x0
 
     sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    iget-object v7, p0, Lcom/glympse/android/hal/GlympseThreadPool;->bL:Ljava/util/concurrent/BlockingQueue;
+    iget-object v7, p0, Lcom/glympse/android/hal/GlympseThreadPool;->bO:Ljava/util/concurrent/BlockingQueue;
 
     invoke-direct/range {v1 .. v7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;)V
 
-    iput-object v1, p0, Lcom/glympse/android/hal/GlympseThreadPool;->bK:Ljava/util/concurrent/ThreadPoolExecutor;
+    iput-object v1, p0, Lcom/glympse/android/hal/GlympseThreadPool;->bN:Ljava/util/concurrent/ThreadPoolExecutor;
 
     .line 45
     return-void
@@ -144,12 +144,12 @@
 
     .prologue
     .line 49
-    iget-object v0, p0, Lcom/glympse/android/hal/GlympseThreadPool;->bK:Ljava/util/concurrent/ThreadPoolExecutor;
+    iget-object v0, p0, Lcom/glympse/android/hal/GlympseThreadPool;->bN:Ljava/util/concurrent/ThreadPoolExecutor;
 
     if-eqz v0, :cond_0
 
     .line 51
-    iget-object v0, p0, Lcom/glympse/android/hal/GlympseThreadPool;->bK:Ljava/util/concurrent/ThreadPoolExecutor;
+    iget-object v0, p0, Lcom/glympse/android/hal/GlympseThreadPool;->bN:Ljava/util/concurrent/ThreadPoolExecutor;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 

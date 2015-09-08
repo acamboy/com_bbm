@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:orientation="vertical" android:id="@id/viewRoot" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<LinearLayout android:orientation="vertical" android:id="@id/viewRoot" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false" android:layout_above="@id/footer_action_bar">
-        <GridView android:id="@id/lists_grid" android:padding="@dimen/group_lists_grid_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:horizontalSpacing="@dimen/group_lists_grid_horizontal_spacing" android:verticalSpacing="@dimen/group_lists_grid_vertical_spacing" android:numColumns="3" />
-        <RelativeLayout android:orientation="vertical" android:id="@id/lists_empty_layout" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <TextView android:textSize="@dimen/group_status_text_size" android:textColor="@color/message" android:layout_gravity="center_vertical" android:id="@id/lists_status" android:paddingTop="@dimen/group_status_padding" android:paddingBottom="@dimen/group_status_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/group_lists_status_text" android:layout_centerInParent="true" />
-            <ImageView android:id="@id/events_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/no_lists" android:layout_above="@id/lists_status" android:layout_centerHorizontal="true" android:contentDescription="@string/blank" />
-            <Button android:id="@id/add_list_button" android:text="@string/group_add_list_button" android:layout_below="@id/lists_status" android:layout_centerHorizontal="true" style="@style/EmptyViewButton" />
-        </RelativeLayout>
+    <include android:id="@id/group_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/toolbar_groups" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false">
+        <GridView android:layout_gravity="center" android:id="@id/lists_grid" android:padding="@dimen/group_lists_grid_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:horizontalSpacing="@dimen/group_lists_grid_horizontal_spacing" android:verticalSpacing="@dimen/group_lists_grid_vertical_spacing" android:numColumns="3" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/lists_empty_layout" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/events_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/no_lists" android:contentDescription="@string/blank" />
+            <TextView android:textSize="@dimen/group_status_text_size" android:textColor="@color/message" android:id="@id/lists_status" android:paddingTop="@dimen/group_status_padding" android:paddingBottom="@dimen/group_status_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/group_lists_status_text" />
+            <Button android:id="@id/add_list_button" android:text="@string/group_add_list_button" style="@style/EmptyViewButton" />
+        </LinearLayout>
     </LinearLayout>
-    <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
-</RelativeLayout>
+</LinearLayout>

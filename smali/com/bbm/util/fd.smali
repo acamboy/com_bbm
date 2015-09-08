@@ -1,185 +1,156 @@
-.class public final enum Lcom/bbm/util/fd;
-.super Ljava/lang/Enum;
-.source "UpdatesFragmentUtil.java"
+.class public final Lcom/bbm/util/fd;
+.super Ljava/lang/Object;
+.source "WifiStatusMonitor.java"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum",
-        "<",
-        "Lcom/bbm/util/fd;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field final a:Lcom/bbm/j/t;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/j/t",
+            "<",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
 
+.field final b:Landroid/content/Context;
 
-# static fields
-.field public static final enum a:Lcom/bbm/util/fd;
+.field private c:Z
 
-.field public static final enum b:Lcom/bbm/util/fd;
-
-.field public static final enum c:Lcom/bbm/util/fd;
-
-.field public static final enum d:Lcom/bbm/util/fd;
-
-.field public static final enum e:Lcom/bbm/util/fd;
-
-.field public static final enum f:Lcom/bbm/util/fd;
-
-.field private static final synthetic g:[Lcom/bbm/util/fd;
+.field private final d:Landroid/content/BroadcastReceiver;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
     .prologue
-    const/4 v7, 0x4
+    .line 45
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v6, 0x3
+    .line 31
+    new-instance v0, Lcom/bbm/util/fe;
 
-    const/4 v5, 0x2
+    invoke-direct {v0, p0}, Lcom/bbm/util/fe;-><init>(Lcom/bbm/util/fd;)V
 
-    const/4 v4, 0x1
+    iput-object v0, p0, Lcom/bbm/util/fd;->d:Landroid/content/BroadcastReceiver;
 
-    const/4 v3, 0x0
+    .line 46
+    iput-object p1, p0, Lcom/bbm/util/fd;->b:Landroid/content/Context;
 
-    .line 266
-    new-instance v0, Lcom/bbm/util/fd;
+    .line 47
+    new-instance v0, Lcom/bbm/j/t;
 
-    const-string v1, "CONTACT"
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v1, v3}, Lcom/bbm/util/fd;-><init>(Ljava/lang/String;I)V
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    sput-object v0, Lcom/bbm/util/fd;->a:Lcom/bbm/util/fd;
+    move-result-object v1
 
-    .line 267
-    new-instance v0, Lcom/bbm/util/fd;
+    invoke-direct {v0, v1}, Lcom/bbm/j/t;-><init>(Ljava/lang/Object;)V
 
-    const-string v1, "GROUP"
+    iput-object v0, p0, Lcom/bbm/util/fd;->a:Lcom/bbm/j/t;
 
-    invoke-direct {v0, v1, v4}, Lcom/bbm/util/fd;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/util/fd;->b:Lcom/bbm/util/fd;
-
-    .line 268
-    new-instance v0, Lcom/bbm/util/fd;
-
-    const-string v1, "CHANNEL"
-
-    invoke-direct {v0, v1, v5}, Lcom/bbm/util/fd;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/util/fd;->c:Lcom/bbm/util/fd;
-
-    .line 269
-    new-instance v0, Lcom/bbm/util/fd;
-
-    const-string v1, "SPONSOREDPOST"
-
-    invoke-direct {v0, v1, v6}, Lcom/bbm/util/fd;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/util/fd;->d:Lcom/bbm/util/fd;
-
-    .line 270
-    new-instance v0, Lcom/bbm/util/fd;
-
-    const-string v1, "CHANNELPROMOTION"
-
-    invoke-direct {v0, v1, v7}, Lcom/bbm/util/fd;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/util/fd;->e:Lcom/bbm/util/fd;
-
-    .line 271
-    new-instance v0, Lcom/bbm/util/fd;
-
-    const-string v1, "CHANNELPROMOTIONALL"
-
-    const/4 v2, 0x5
-
-    invoke-direct {v0, v1, v2}, Lcom/bbm/util/fd;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/util/fd;->f:Lcom/bbm/util/fd;
-
-    .line 265
-    const/4 v0, 0x6
-
-    new-array v0, v0, [Lcom/bbm/util/fd;
-
-    sget-object v1, Lcom/bbm/util/fd;->a:Lcom/bbm/util/fd;
-
-    aput-object v1, v0, v3
-
-    sget-object v1, Lcom/bbm/util/fd;->b:Lcom/bbm/util/fd;
-
-    aput-object v1, v0, v4
-
-    sget-object v1, Lcom/bbm/util/fd;->c:Lcom/bbm/util/fd;
-
-    aput-object v1, v0, v5
-
-    sget-object v1, Lcom/bbm/util/fd;->d:Lcom/bbm/util/fd;
-
-    aput-object v1, v0, v6
-
-    sget-object v1, Lcom/bbm/util/fd;->e:Lcom/bbm/util/fd;
-
-    aput-object v1, v0, v7
-
-    const/4 v1, 0x5
-
-    sget-object v2, Lcom/bbm/util/fd;->f:Lcom/bbm/util/fd;
-
-    aput-object v2, v0, v1
-
-    sput-object v0, Lcom/bbm/util/fd;->g:[Lcom/bbm/util/fd;
-
+    .line 48
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
+
+# virtual methods
+.method public final a()Z
+    .locals 1
 
     .prologue
-    .line 265
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 56
+    iget-object v0, p0, Lcom/bbm/util/fd;->a:Lcom/bbm/j/t;
 
+    invoke-virtual {v0}, Lcom/bbm/j/t;->b()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/bbm/util/fd;->a:Lcom/bbm/j/t;
+
+    invoke-virtual {v0}, Lcom/bbm/j/t;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final b()V
+    .locals 3
+
+    .prologue
+    .line 64
+    iget-boolean v0, p0, Lcom/bbm/util/fd;->c:Z
+
+    if-nez v0, :cond_0
+
+    .line 65
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/bbm/util/fd;->c:Z
+
+    .line 67
+    new-instance v0, Landroid/content/IntentFilter;
+
+    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
+
+    .line 68
+    const-string v1, "android.net.conn.CONNECTIVITY_CHANGE"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 69
+    iget-object v1, p0, Lcom/bbm/util/fd;->b:Landroid/content/Context;
+
+    iget-object v2, p0, Lcom/bbm/util/fd;->d:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    .line 71
+    :cond_0
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcom/bbm/util/fd;
-    .locals 1
+.method public final c()V
+    .locals 2
 
     .prologue
-    .line 265
-    const-class v0, Lcom/bbm/util/fd;
+    .line 78
+    iget-boolean v0, p0, Lcom/bbm/util/fd;->c:Z
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    .line 79
+    const/4 v0, 0x0
 
-    check-cast v0, Lcom/bbm/util/fd;
+    iput-boolean v0, p0, Lcom/bbm/util/fd;->c:Z
 
-    return-object v0
-.end method
+    .line 81
+    iget-object v0, p0, Lcom/bbm/util/fd;->b:Landroid/content/Context;
 
-.method public static values()[Lcom/bbm/util/fd;
-    .locals 1
+    iget-object v1, p0, Lcom/bbm/util/fd;->d:Landroid/content/BroadcastReceiver;
 
-    .prologue
-    .line 265
-    sget-object v0, Lcom/bbm/util/fd;->g:[Lcom/bbm/util/fd;
+    invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    invoke-virtual {v0}, [Lcom/bbm/util/fd;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lcom/bbm/util/fd;
-
-    return-object v0
+    .line 83
+    :cond_0
+    return-void
 .end method

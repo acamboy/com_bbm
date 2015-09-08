@@ -7,20 +7,16 @@
 
 
 # instance fields
-.field final synthetic a:Ljava/util/List;
-
-.field final synthetic b:Lcom/bbm/iceberg/r;
+.field final synthetic a:Lcom/bbm/iceberg/q;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/iceberg/r;Ljava/util/List;)V
+.method constructor <init>(Lcom/bbm/iceberg/q;)V
     .locals 0
 
     .prologue
-    .line 65
-    iput-object p1, p0, Lcom/bbm/iceberg/s;->b:Lcom/bbm/iceberg/r;
-
-    iput-object p2, p0, Lcom/bbm/iceberg/s;->a:Ljava/util/List;
+    .line 61
+    iput-object p1, p0, Lcom/bbm/iceberg/s;->a:Lcom/bbm/iceberg/q;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -30,46 +26,33 @@
 
 # virtual methods
 .method public final run()V
-    .locals 2
+    .locals 3
 
     .prologue
-    .line 68
-    iget-object v0, p0, Lcom/bbm/iceberg/s;->b:Lcom/bbm/iceberg/r;
+    .line 64
+    iget-object v0, p0, Lcom/bbm/iceberg/s;->a:Lcom/bbm/iceberg/q;
 
-    iget-object v0, v0, Lcom/bbm/iceberg/r;->a:Lcom/bbm/iceberg/p;
-
-    invoke-static {v0}, Lcom/bbm/iceberg/p;->b(Lcom/bbm/iceberg/p;)Z
-
-    .line 69
-    iget-object v0, p0, Lcom/bbm/iceberg/s;->b:Lcom/bbm/iceberg/r;
-
-    iget-object v0, v0, Lcom/bbm/iceberg/r;->a:Lcom/bbm/iceberg/p;
-
-    invoke-static {v0}, Lcom/bbm/iceberg/p;->c(Lcom/bbm/iceberg/p;)Lcom/bbm/util/ct;
+    invoke-static {v0}, Lcom/bbm/iceberg/q;->a(Lcom/bbm/iceberg/q;)Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/iceberg/s;->a:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
-
-    .line 70
-    iget-object v0, p0, Lcom/bbm/iceberg/s;->b:Lcom/bbm/iceberg/r;
-
-    iget-object v0, v0, Lcom/bbm/iceberg/r;->a:Lcom/bbm/iceberg/p;
-
-    invoke-static {v0}, Lcom/bbm/iceberg/p;->d(Lcom/bbm/iceberg/p;)Lcom/bbm/util/ct;
+    invoke-static {v0}, Lcom/bbm/iceberg/q;->a(Landroid/content/ContentResolver;)Ljava/util/List;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    .line 65
+    iget-object v1, p0, Lcom/bbm/iceberg/s;->a:Lcom/bbm/iceberg/q;
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v1}, Lcom/bbm/iceberg/q;->e(Lcom/bbm/iceberg/q;)Landroid/os/Handler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
+    new-instance v2, Lcom/bbm/iceberg/t;
 
-    .line 71
+    invoke-direct {v2, p0, v0}, Lcom/bbm/iceberg/t;-><init>(Lcom/bbm/iceberg/s;Ljava/util/List;)V
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 73
     return-void
 .end method

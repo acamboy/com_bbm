@@ -1,124 +1,70 @@
 .class public final Landroid/support/v4/content/d;
 .super Ljava/lang/Object;
-.source "Loader.java"
+.source "IntentCompat.java"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<D:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;"
-    }
-.end annotation
+# static fields
+.field private static final a:Landroid/support/v4/content/e;
 
 
-# instance fields
-.field public a:I
-
-.field public b:Landroid/support/v4/content/e;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/support/v4/content/e",
-            "<TD;>;"
-        }
-    .end annotation
-.end field
-
-.field public c:Z
-
-.field public d:Z
-
-.field public e:Z
-
-.field public f:Z
-
-.field public g:Z
-
-
-# virtual methods
-.method public final a(Landroid/support/v4/content/e;)V
+# direct methods
+.method static constructor <clinit>()V
     .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/support/v4/content/e",
-            "<TD;>;)V"
-        }
-    .end annotation
 
     .prologue
-    .line 143
-    iget-object v0, p0, Landroid/support/v4/content/d;->b:Landroid/support/v4/content/e;
+    .line 85
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-nez v0, :cond_0
+    .line 86
+    const/16 v1, 0xf
 
-    .line 144
-    new-instance v0, Ljava/lang/IllegalStateException;
+    if-lt v0, v1, :cond_0
 
-    const-string v1, "No listener register"
+    .line 87
+    new-instance v0, Landroid/support/v4/content/h;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0}, Landroid/support/v4/content/h;-><init>()V
 
-    throw v0
+    sput-object v0, Landroid/support/v4/content/d;->a:Landroid/support/v4/content/e;
 
-    .line 146
-    :cond_0
-    iget-object v0, p0, Landroid/support/v4/content/d;->b:Landroid/support/v4/content/e;
-
-    if-eq v0, p1, :cond_1
-
-    .line 147
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Attempting to unregister the wrong listener"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 149
-    :cond_1
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Landroid/support/v4/content/d;->b:Landroid/support/v4/content/e;
-
-    .line 150
+    .line 93
+    :goto_0
     return-void
+
+    .line 88
+    :cond_0
+    const/16 v1, 0xb
+
+    if-lt v0, v1, :cond_1
+
+    .line 89
+    new-instance v0, Landroid/support/v4/content/g;
+
+    invoke-direct {v0}, Landroid/support/v4/content/g;-><init>()V
+
+    sput-object v0, Landroid/support/v4/content/d;->a:Landroid/support/v4/content/e;
+
+    goto :goto_0
+
+    .line 91
+    :cond_1
+    new-instance v0, Landroid/support/v4/content/f;
+
+    invoke-direct {v0}, Landroid/support/v4/content/f;-><init>()V
+
+    sput-object v0, Landroid/support/v4/content/d;->a:Landroid/support/v4/content/e;
+
+    goto :goto_0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public static a(Landroid/content/ComponentName;)Landroid/content/Intent;
+    .locals 1
 
     .prologue
-    .line 376
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 221
+    sget-object v0, Landroid/support/v4/content/d;->a:Landroid/support/v4/content/e;
 
-    const/16 v1, 0x40
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    .line 377
-    invoke-static {p0, v0}, Landroid/support/v4/b/d;->a(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
-
-    .line 378
-    const-string v1, " id="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 379
-    iget v1, p0, Landroid/support/v4/content/d;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 380
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 381
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0, p0}, Landroid/support/v4/content/e;->a(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object v0
 

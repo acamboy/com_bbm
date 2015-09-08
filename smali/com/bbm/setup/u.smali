@@ -34,14 +34,14 @@
 
     const-class v1, Lcom/bbm/setup/SetupBbidErrorActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
     .line 80
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/Alaska;->w()V
+    invoke-virtual {v0}, Lcom/bbm/Alaska;->B()V
 
     .line 81
     return-void

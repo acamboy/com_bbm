@@ -1,93 +1,76 @@
-.class Lcom/glympse/android/lib/ce;
+.class interface abstract Lcom/glympse/android/lib/ce;
 .super Ljava/lang/Object;
-.source "GogoConstants.java"
+.source "GListNode.java"
+
+# interfaces
+.implements Lcom/glympse/android/core/GCommon;
 
 
-# static fields
-.field public static final lP:I = 0x2710
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;",
+        "Lcom/glympse/android/core/GCommon;"
+    }
+.end annotation
 
-.field public static final lQ:I = 0x2710
 
-.field public static final lR:I = 0x2710
-
-
-# direct methods
-.method constructor <init>()V
-    .locals 0
-
-    .prologue
-    .line 16
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+# virtual methods
+.method public abstract a(Lcom/glympse/android/lib/ce;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/glympse/android/lib/ce",
+            "<TT;>;)V"
+        }
+    .end annotation
 .end method
 
-.method public static bp()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 23
-    const-string v0, "gogoinflight"
-
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+.method public abstract b(Lcom/glympse/android/lib/ce;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/glympse/android/lib/ce",
+            "<TT;>;)V"
+        }
+    .end annotation
 .end method
 
-.method public static bq()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 31
-    const-string v0, "gogo"
-
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+.method public abstract bu()Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
 .end method
 
-.method public static br()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 39
-    const-string v0, "http://airborne.gogoinflight.com/abp/service/statusTray.do"
-
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+.method public abstract bv()Lcom/glympse/android/lib/ce;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/glympse/android/lib/ce",
+            "<TT;>;"
+        }
+    .end annotation
 .end method
 
-.method public static bs()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 47
-    const-string v0, "https://inflight.glympse.com"
-
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+.method public abstract bw()Lcom/glympse/android/lib/ce;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/glympse/android/lib/ce",
+            "<TT;>;"
+        }
+    .end annotation
 .end method
 
-.method public static bt()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 66
-    const-string v0, "flight"
-
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+.method public abstract d(Ljava/lang/Object;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)V"
+        }
+    .end annotation
 .end method

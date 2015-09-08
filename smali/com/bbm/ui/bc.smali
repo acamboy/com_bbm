@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/bc;
 .super Ljava/lang/Object;
-.source "DateTimePickerView.java"
+.source "EmoticonInputPanel.java"
 
 # interfaces
-.implements Landroid/widget/TimePicker$OnTimeChangedListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/bb;
+.field final synthetic a:Lcom/bbm/ui/EmoticonInputPanel;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/bb;)V
+.method constructor <init>(Lcom/bbm/ui/EmoticonInputPanel;)V
     .locals 0
 
     .prologue
-    .line 213
-    iput-object p1, p0, Lcom/bbm/ui/bc;->a:Lcom/bbm/ui/bb;
+    .line 261
+    iput-object p1, p0, Lcom/bbm/ui/bc;->a:Lcom/bbm/ui/EmoticonInputPanel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,15 +25,34 @@
 
 
 # virtual methods
-.method public final onTimeChanged(Landroid/widget/TimePicker;II)V
+.method public final onClick(Landroid/view/View;)V
     .locals 1
 
     .prologue
-    .line 216
-    iget-object v0, p0, Lcom/bbm/ui/bc;->a:Lcom/bbm/ui/bb;
+    .line 264
+    iget-object v0, p0, Lcom/bbm/ui/bc;->a:Lcom/bbm/ui/EmoticonInputPanel;
 
-    invoke-static {v0, p1, p2, p3}, Lcom/bbm/ui/bb;->a(Lcom/bbm/ui/bb;Landroid/widget/TimePicker;II)V
+    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->e()Z
 
-    .line 217
+    .line 265
+    iget-object v0, p0, Lcom/bbm/ui/bc;->a:Lcom/bbm/ui/EmoticonInputPanel;
+
+    invoke-static {v0}, Lcom/bbm/ui/EmoticonInputPanel;->b(Lcom/bbm/ui/EmoticonInputPanel;)Lcom/bbm/ui/bx;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 266
+    iget-object v0, p0, Lcom/bbm/ui/bc;->a:Lcom/bbm/ui/EmoticonInputPanel;
+
+    invoke-static {v0}, Lcom/bbm/ui/EmoticonInputPanel;->b(Lcom/bbm/ui/EmoticonInputPanel;)Lcom/bbm/ui/bx;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/bbm/ui/bx;->d()V
+
+    .line 268
+    :cond_0
     return-void
 .end method

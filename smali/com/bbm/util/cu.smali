@@ -1,171 +1,135 @@
-.class public final Lcom/bbm/util/cu;
-.super Lcom/bbm/d/a/a/a;
-.source "MutableList.java"
-
-# interfaces
-.implements Lcom/bbm/j/j;
-.implements Lcom/bbm/j/r;
-.implements Lcom/bbm/j/w;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Lcom/bbm/d/a/a/a;",
-        "Lcom/bbm/j/j",
-        "<TT;>;",
-        "Lcom/bbm/j/r",
-        "<",
-        "Ljava/util/List",
-        "<TT;>;>;",
-        "Lcom/bbm/j/w",
-        "<TT;>;"
-    }
-.end annotation
-
-
-# instance fields
-.field public a:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<TT;>;"
-        }
-    .end annotation
-.end field
-
-.field private b:Z
+.class public Lcom/bbm/util/cu;
+.super Ljava/lang/Object;
+.source "LocationServicesUtil.java"
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 28
-    invoke-direct {p0}, Lcom/bbm/d/a/a/a;-><init>()V
+    .line 20
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/bbm/util/cu;->a:Ljava/util/List;
-
-    .line 30
+    .line 22
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(I)Ljava/lang/Object;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I)TT;"
-        }
-    .end annotation
+.method public static a(Landroid/app/Activity;Landroid/view/View$OnClickListener;)V
+    .locals 3
 
     .prologue
-    .line 79
-    invoke-static {p0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/g;)V
-
-    .line 80
-    iget-object v0, p0, Lcom/bbm/util/cu;->a:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final a()Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<TT;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 90
-    invoke-static {p0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/g;)V
-
-    .line 91
-    iget-object v0, p0, Lcom/bbm/util/cu;->a:Ljava/util/List;
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final a(Ljava/lang/Object;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;)V"
-        }
-    .end annotation
-
-    .prologue
-    .line 33
-    iget-object v0, p0, Lcom/bbm/util/cu;->a:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 34
-    invoke-virtual {p0}, Lcom/bbm/util/cu;->c()V
-
-    .line 35
-    return-void
-.end method
-
-.method public final b()Z
-    .locals 1
-
-    .prologue
-    .line 102
-    invoke-static {p0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/g;)V
-
     .line 103
-    iget-boolean v0, p0, Lcom/bbm/util/cu;->b:Z
+    const/4 v0, 0x1
 
-    return v0
+    invoke-static {p0, v0}, Lcom/bbm/ui/b/m;->a(Landroid/app/Activity;Z)Lcom/bbm/ui/b/m;
+
+    move-result-object v0
+
+    .line 105
+    const v1, 0x7f0e0579
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/m;->c(I)Lcom/bbm/ui/b/m;
+
+    move-result-object v1
+
+    const v2, 0x7f0e0576
+
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/b/m;->g(I)Lcom/bbm/ui/b/m;
+
+    move-result-object v1
+
+    const v2, 0x7f0e0577
+
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/b/m;->e(I)Lcom/bbm/ui/b/m;
+
+    move-result-object v1
+
+    const v2, 0x7f0e0578
+
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/b/m;->d(I)Lcom/bbm/ui/b/m;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/bbm/util/cw;
+
+    invoke-direct {v2}, Lcom/bbm/util/cw;-><init>()V
+
+    iput-object v2, v1, Lcom/bbm/ui/b/m;->m:Landroid/content/DialogInterface$OnClickListener;
+
+    new-instance v2, Lcom/bbm/util/cv;
+
+    invoke-direct {v2, p0, p1}, Lcom/bbm/util/cv;-><init>(Landroid/app/Activity;Landroid/view/View$OnClickListener;)V
+
+    iput-object v2, v1, Lcom/bbm/ui/b/m;->l:Landroid/content/DialogInterface$OnClickListener;
+
+    .line 133
+    invoke-virtual {v0}, Lcom/bbm/ui/b/m;->e()V
+
+    .line 134
+    return-void
 .end method
 
-.method public final d()I
-    .locals 1
+.method public static a(Landroid/content/Context;)Z
+    .locals 4
 
     .prologue
-    .line 68
-    invoke-static {p0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/g;)V
+    const/4 v1, 0x0
 
-    .line 69
-    iget-object v0, p0, Lcom/bbm/util/cu;->a:Ljava/util/List;
+    .line 88
+    .line 89
+    const-string v0, "location"
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/location/LocationManager;
+
+    .line 94
+    :try_start_0
+    const-string v2, "gps"
+
+    invoke-virtual {v0, v2}, Landroid/location/LocationManager;->isProviderEnabled(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const-string v2, "network"
+
+    invoke-virtual {v0, v2}, Landroid/location/LocationManager;->isProviderEnabled(Ljava/lang/String;)Z
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v0
 
+    if-eqz v0, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    .line 99
+    :goto_0
     return v0
-.end method
 
-.method public final synthetic e()Ljava/lang/Object;
-    .locals 1
+    :cond_1
+    move v0, v1
 
-    .prologue
-    .line 18
-    invoke-virtual {p0}, Lcom/bbm/util/cu;->a()Ljava/util/List;
+    .line 94
+    goto :goto_0
 
-    move-result-object v0
+    .line 95
+    :catch_0
+    move-exception v0
 
-    return-object v0
+    const-string v2, "Can\'t check if Location Provider is enabled"
+
+    new-array v3, v1, [Ljava/lang/Object;
+
+    invoke-static {v0, v2, v3}, Lcom/bbm/af;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    move v0, v1
+
+    goto :goto_0
 .end method

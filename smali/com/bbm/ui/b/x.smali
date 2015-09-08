@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/b/x;
 .super Ljava/lang/Object;
-.source "ClickableToast.java"
+.source "CloudDirectoryServiceDialog.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/widget/TextView$OnEditorActionListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/b/v;
+.field final synthetic a:Lcom/bbm/ui/b/u;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/b/v;)V
+.method constructor <init>(Lcom/bbm/ui/b/u;)V
     .locals 0
 
     .prologue
-    .line 56
-    iput-object p1, p0, Lcom/bbm/ui/b/x;->a:Lcom/bbm/ui/b/v;
+    .line 64
+    iput-object p1, p0, Lcom/bbm/ui/b/x;->a:Lcom/bbm/ui/b/u;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,15 +25,29 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
     .locals 1
 
     .prologue
-    .line 59
-    iget-object v0, p0, Lcom/bbm/ui/b/x;->a:Lcom/bbm/ui/b/v;
+    .line 67
+    const/4 v0, 0x6
 
-    invoke-virtual {v0}, Lcom/bbm/ui/b/v;->dismiss()V
+    if-ne p2, v0, :cond_0
 
-    .line 60
-    return-void
+    .line 68
+    iget-object v0, p0, Lcom/bbm/ui/b/x;->a:Lcom/bbm/ui/b/u;
+
+    invoke-static {v0}, Lcom/bbm/ui/b/u;->a(Lcom/bbm/ui/b/u;)V
+
+    .line 69
+    const/4 v0, 0x1
+
+    .line 71
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

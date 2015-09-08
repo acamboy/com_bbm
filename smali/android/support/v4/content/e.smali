@@ -1,14 +1,8 @@
-.class public interface abstract Landroid/support/v4/content/e;
+.class interface abstract Landroid/support/v4/content/e;
 .super Ljava/lang/Object;
-.source "Loader.java"
+.source "IntentCompat.java"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<D:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;"
-    }
-.end annotation
+# virtual methods
+.method public abstract a(Landroid/content/ComponentName;)Landroid/content/Intent;
+.end method

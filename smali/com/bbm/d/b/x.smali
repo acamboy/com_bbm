@@ -1,116 +1,104 @@
-.class final Lcom/bbm/d/b/x;
+.class public final Lcom/bbm/d/b/x;
 .super Ljava/lang/Object;
-.source "TransformingList.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.source "PartnerAppFetcher.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/d/b/u;
+.field a:Ljava/lang/String;
+
+.field b:Lcom/bbm/util/dc;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/util/dc",
+            "<",
+            "Lcom/bbm/d/gp;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field c:Z
+
+.field d:Lcom/bbm/f/ac;
+
+.field e:Lcom/bbm/j/u;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/d/b/u;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 2
 
     .prologue
-    .line 39
-    iput-object p1, p0, Lcom/bbm/d/b/x;->a:Lcom/bbm/d/b/u;
-
+    .line 86
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 29
+    new-instance v0, Lcom/bbm/util/dc;
+
+    new-instance v1, Lcom/bbm/d/gp;
+
+    invoke-direct {v1}, Lcom/bbm/d/gp;-><init>()V
+
+    invoke-direct {v0, v1}, Lcom/bbm/util/dc;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lcom/bbm/d/b/x;->b:Lcom/bbm/util/dc;
+
+    .line 30
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/bbm/d/b/x;->c:Z
+
+    .line 31
+    new-instance v0, Lcom/bbm/d/b/y;
+
+    invoke-direct {v0, p0}, Lcom/bbm/d/b/y;-><init>(Lcom/bbm/d/b/x;)V
+
+    iput-object v0, p0, Lcom/bbm/d/b/x;->d:Lcom/bbm/f/ac;
+
+    .line 49
+    new-instance v0, Lcom/bbm/d/b/z;
+
+    invoke-direct {v0, p0}, Lcom/bbm/d/b/z;-><init>(Lcom/bbm/d/b/x;)V
+
+    iput-object v0, p0, Lcom/bbm/d/b/x;->e:Lcom/bbm/j/u;
+
+    .line 87
+    iput-object p1, p0, Lcom/bbm/d/b/x;->a:Ljava/lang/String;
+
+    .line 90
+    iget-object v0, p0, Lcom/bbm/d/b/x;->a:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    .line 91
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/bbm/d/b/x;->a:Ljava/lang/String;
+
+    .line 94
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/d/b/x;->e:Lcom/bbm/j/u;
+
+    invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
+
+    .line 95
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 7
+.method public final a()Lcom/bbm/d/gp;
+    .locals 1
 
     .prologue
-    const/4 v3, 0x0
+    .line 103
+    iget-object v0, p0, Lcom/bbm/d/b/x;->b:Lcom/bbm/util/dc;
 
-    .line 42
-    iget-object v0, p0, Lcom/bbm/d/b/x;->a:Lcom/bbm/d/b/u;
-
-    iget-boolean v1, v0, Lcom/bbm/d/b/u;->h:Z
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, v0, Lcom/bbm/d/b/u;->j:Ljava/lang/Runnable;
-
-    invoke-static {v1}, Lcom/bbm/j/p;->a(Ljava/lang/Runnable;)V
-
-    :cond_0
-    iget-object v4, v0, Lcom/bbm/d/b/u;->e:Ljava/util/Map;
-
-    .line 44
-    new-instance v5, Ljava/util/ArrayList;
-
-    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
-
-    .line 45
-    iget-object v0, p0, Lcom/bbm/d/b/x;->a:Lcom/bbm/d/b/u;
-
-    iget-object v0, v0, Lcom/bbm/d/b/u;->f:Lcom/bbm/j/r;
-
-    invoke-interface {v0}, Lcom/bbm/j/r;->e()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/util/dc;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/List;
+    check-cast v0, Lcom/bbm/d/gp;
 
-    .line 46
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v6
-
-    .line 47
-    invoke-virtual {v5, v6}, Ljava/util/ArrayList;->ensureCapacity(I)V
-
-    move v2, v3
-
-    .line 48
-    :goto_0
-    if-ge v2, v6, :cond_1
-
-    .line 49
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    .line 51
-    invoke-interface {v4, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/bbm/j/r;
-
-    invoke-interface {v1}, Lcom/bbm/j/r;->e()Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v5, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 48
-    add-int/lit8 v1, v2, 0x1
-
-    move v2, v1
-
-    goto :goto_0
-
-    .line 53
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/d/b/x;->a:Lcom/bbm/d/b/u;
-
-    iput-object v5, v0, Lcom/bbm/d/b/u;->g:Ljava/util/ArrayList;
-
-    .line 54
-    iget-object v0, p0, Lcom/bbm/d/b/x;->a:Lcom/bbm/d/b/u;
-
-    iput-boolean v3, v0, Lcom/bbm/d/b/u;->i:Z
-
-    .line 55
-    return-void
+    return-object v0
 .end method

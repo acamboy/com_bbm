@@ -22,14 +22,14 @@
 
 .field private _worldView:Lcom/glympse/map/lib/WorldView;
 
-.field private mConversation:Lcom/bbm/d/eu;
+.field private mConversation:Lcom/bbm/d/fv;
 
 .field private mUserMappingInvite:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
             "<",
-            "Lcom/bbm/ui/activities/kt;",
+            "Lcom/bbm/ui/activities/jl;",
             ">;"
         }
     .end annotation
@@ -79,12 +79,12 @@
 
 
 # virtual methods
-.method public attachConversation(Lcom/bbm/d/eu;)V
+.method public attachConversation(Lcom/bbm/d/fv;)V
     .locals 2
 
     .prologue
     .line 136
-    iput-object p1, p0, Lcom/glympse/map/lib/Map;->mConversation:Lcom/bbm/d/eu;
+    iput-object p1, p0, Lcom/glympse/map/lib/Map;->mConversation:Lcom/bbm/d/fv;
 
     .line 137
     iget-object v0, p0, Lcom/glympse/map/lib/Map;->_worldView:Lcom/glympse/map/lib/WorldView;
@@ -94,9 +94,9 @@
     .line 138
     iget-object v0, p0, Lcom/glympse/map/lib/Map;->_worldView:Lcom/glympse/map/lib/WorldView;
 
-    iget-object v1, p0, Lcom/glympse/map/lib/Map;->mConversation:Lcom/bbm/d/eu;
+    iget-object v1, p0, Lcom/glympse/map/lib/Map;->mConversation:Lcom/bbm/d/fv;
 
-    invoke-virtual {v0, v1}, Lcom/glympse/map/lib/WorldView;->attachConversation(Lcom/bbm/d/eu;)V
+    invoke-virtual {v0, v1}, Lcom/glympse/map/lib/WorldView;->attachConversation(Lcom/bbm/d/fv;)V
 
     .line 140
     :cond_0
@@ -121,7 +121,7 @@
             "(",
             "Ljava/util/List",
             "<",
-            "Lcom/bbm/ui/activities/kt;",
+            "Lcom/bbm/ui/activities/jl;",
             ">;)V"
         }
     .end annotation
@@ -150,9 +150,9 @@
 
     iget-object v3, p0, Lcom/glympse/map/lib/Map;->mUserMappingInvite:Ljava/util/List;
 
-    iget-object v4, p0, Lcom/glympse/map/lib/Map;->mConversation:Lcom/bbm/d/eu;
+    iget-object v4, p0, Lcom/glympse/map/lib/Map;->mConversation:Lcom/bbm/d/fv;
 
-    invoke-direct {v1, v2, v3, v4}, Lcom/bbm/util/a/b;-><init>(Landroid/content/Context;Ljava/util/List;Lcom/bbm/d/eu;)V
+    invoke-direct {v1, v2, v3, v4}, Lcom/bbm/util/a/b;-><init>(Landroid/content/Context;Ljava/util/List;Lcom/bbm/d/fv;)V
 
     invoke-interface {v0, v1}, Lcom/bbm/compat/maps/c;->setInfoWindowAdapter(Ljava/lang/Object;)V
 
@@ -179,7 +179,7 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
@@ -233,11 +233,11 @@
     if-nez v0, :cond_0
 
     .line 65
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
+    invoke-static {}, Lcom/bbm/w;->a()Lcom/bbm/w;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/p;->a:Lcom/glympse/android/api/GGlympse;
+    iget-object v0, v0, Lcom/bbm/w;->a:Lcom/glympse/android/api/GGlympse;
 
     iput-object v0, p0, Lcom/glympse/map/lib/Map;->_glympse:Lcom/glympse/android/api/GGlympse;
 

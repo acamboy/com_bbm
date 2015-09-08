@@ -157,30 +157,28 @@
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;Lcom/google/zxing/client/android/m;)Ljava/lang/CharSequence;
+.method public static a(Ljava/lang/String;I)Ljava/lang/CharSequence;
     .locals 1
 
     .prologue
     .line 64
     const v0, 0x7fffffff
 
-    invoke-static {p0, p1, v0}, Lcom/google/zxing/client/android/k;->a(Ljava/lang/String;Lcom/google/zxing/client/android/m;I)Ljava/lang/CharSequence;
+    invoke-static {p0, p1, v0}, Lcom/google/zxing/client/android/k;->a(Ljava/lang/String;II)Ljava/lang/CharSequence;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public static a(Ljava/lang/String;Lcom/google/zxing/client/android/m;I)Ljava/lang/CharSequence;
+.method public static a(Ljava/lang/String;II)Ljava/lang/CharSequence;
     .locals 2
 
     .prologue
     .line 76
     sget-object v0, Lcom/google/zxing/client/android/l;->a:[I
 
-    invoke-virtual {p1}, Lcom/google/zxing/client/android/m;->ordinal()I
-
-    move-result v1
+    add-int/lit8 v1, p1, -0x1
 
     aget v0, v0, v1
 

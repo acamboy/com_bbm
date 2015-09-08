@@ -14,15 +14,15 @@
     .locals 0
 
     .prologue
-    .line 159
+    .line 166
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 160
+    .line 167
     iput-object p1, p0, Lcom/bbm/f/y;->a:Lcom/rim/bbm/BbmCoreService$MessageType;
 
-    .line 161
+    .line 168
     iput-object p2, p0, Lcom/bbm/f/y;->b:[B
 
-    .line 162
+    .line 169
     return-void
 .end method

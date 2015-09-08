@@ -59,31 +59,31 @@
     invoke-super {p0, p1}, Lcom/bbm/setup/q;->onCreate(Landroid/os/Bundle;)V
 
     .line 37
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bbm/setup/DeviceSwitchActivity;->a:Lcom/bbm/d/a;
 
     .line 38
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
 
     sget-object v0, Lcom/bbm/Alaska;->f:Lcom/bbm/setup/z;
 
     iput-object v0, p0, Lcom/bbm/setup/DeviceSwitchActivity;->b:Lcom/bbm/setup/z;
 
     .line 40
-    const v0, 0x7f0e06f2
+    const v0, 0x7f0e07ca
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/DeviceSwitchActivity;->setTitle(I)V
 
     .line 41
-    const v0, 0x7f03005f
+    const v0, 0x7f03007a
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/DeviceSwitchActivity;->setContentView(I)V
 
     .line 44
-    const v0, 0x7f0b030c
+    const v0, 0x7f0b035e
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/DeviceSwitchActivity;->findViewById(I)Landroid/view/View;
 
@@ -98,8 +98,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 53
-    const v0, 0x7f0b030d
+    .line 55
+    const v0, 0x7f0b035f
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/DeviceSwitchActivity;->findViewById(I)Landroid/view/View;
 
@@ -107,14 +107,14 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    .line 54
+    .line 56
     new-instance v1, Lcom/bbm/setup/g;
 
     invoke-direct {v1, p0}, Lcom/bbm/setup/g;-><init>(Lcom/bbm/setup/DeviceSwitchActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 61
+    .line 63
     return-void
 .end method
 
@@ -122,24 +122,24 @@
     .locals 2
 
     .prologue
-    .line 65
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+    .line 67
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
 
     move-result-object v0
 
-    sget-object v1, Lcom/bbm/c/o;->au:Lcom/bbm/c/o;
+    sget-object v1, Lcom/bbm/c/s;->aG:Lcom/bbm/c/s;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->c(Lcom/bbm/c/o;)V
-
-    .line 66
-    invoke-super {p0}, Lcom/bbm/setup/q;->onPause()V
+    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->c(Lcom/bbm/c/s;)V
 
     .line 68
+    invoke-super {p0}, Lcom/bbm/setup/q;->onPause()V
+
+    .line 70
     iget-object v0, p0, Lcom/bbm/setup/DeviceSwitchActivity;->c:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
 
-    .line 69
+    .line 71
     return-void
 .end method
 
@@ -147,23 +147,23 @@
     .locals 2
 
     .prologue
-    .line 73
+    .line 75
     invoke-super {p0}, Lcom/bbm/setup/q;->onResume()V
 
-    .line 74
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+    .line 76
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
 
     move-result-object v0
 
-    sget-object v1, Lcom/bbm/c/o;->au:Lcom/bbm/c/o;
+    sget-object v1, Lcom/bbm/c/s;->aG:Lcom/bbm/c/s;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->a(Lcom/bbm/c/o;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->a(Lcom/bbm/c/s;)V
 
-    .line 76
+    .line 78
     iget-object v0, p0, Lcom/bbm/setup/DeviceSwitchActivity;->c:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 77
+    .line 79
     return-void
 .end method

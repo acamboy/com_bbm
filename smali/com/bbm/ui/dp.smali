@@ -1,94 +1,98 @@
 .class final Lcom/bbm/ui/dp;
-.super Landroid/text/style/ClickableSpan;
-.source "LinkifyTextView.java"
+.super Landroid/text/SpannableStringBuilder;
+.source "InlineImageEditText.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/LinkifyTextView;
+.field final synthetic a:Lcom/bbm/ui/InlineImageEditText;
 
 
 # direct methods
-.method private constructor <init>(Lcom/bbm/ui/LinkifyTextView;)V
+.method public constructor <init>(Lcom/bbm/ui/InlineImageEditText;Ljava/lang/CharSequence;)V
     .locals 0
 
     .prologue
-    .line 183
-    iput-object p1, p0, Lcom/bbm/ui/dp;->a:Lcom/bbm/ui/LinkifyTextView;
+    .line 26
+    iput-object p1, p0, Lcom/bbm/ui/dp;->a:Lcom/bbm/ui/InlineImageEditText;
 
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
+    .line 27
+    invoke-direct {p0, p2}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcom/bbm/ui/LinkifyTextView;B)V
-    .locals 0
-
-    .prologue
-    .line 183
-    invoke-direct {p0, p1}, Lcom/bbm/ui/dp;-><init>(Lcom/bbm/ui/LinkifyTextView;)V
-
+    .line 28
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final bridge synthetic replace(IILjava/lang/CharSequence;II)Landroid/text/Editable;
     .locals 1
 
     .prologue
-    .line 188
-    iget-object v0, p0, Lcom/bbm/ui/dp;->a:Lcom/bbm/ui/LinkifyTextView;
-
-    invoke-static {v0}, Lcom/bbm/ui/LinkifyTextView;->b(Lcom/bbm/ui/LinkifyTextView;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 189
-    iget-object v0, p0, Lcom/bbm/ui/dp;->a:Lcom/bbm/ui/LinkifyTextView;
-
-    invoke-static {v0}, Lcom/bbm/ui/LinkifyTextView;->d(Lcom/bbm/ui/LinkifyTextView;)Landroid/view/View$OnClickListener;
+    .line 25
+    invoke-virtual/range {p0 .. p5}, Lcom/bbm/ui/dp;->replace(IILjava/lang/CharSequence;II)Landroid/text/SpannableStringBuilder;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
-
-    .line 190
-    iget-object v0, p0, Lcom/bbm/ui/dp;->a:Lcom/bbm/ui/LinkifyTextView;
-
-    invoke-static {v0}, Lcom/bbm/ui/LinkifyTextView;->d(Lcom/bbm/ui/LinkifyTextView;)Landroid/view/View$OnClickListener;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
-
-    .line 195
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 193
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/dp;->a:Lcom/bbm/ui/LinkifyTextView;
-
-    invoke-static {v0}, Lcom/bbm/ui/LinkifyTextView;->c(Lcom/bbm/ui/LinkifyTextView;)Z
-
-    goto :goto_0
+    return-object v0
 .end method
 
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 1
+.method public final replace(IILjava/lang/CharSequence;II)Landroid/text/SpannableStringBuilder;
+    .locals 4
 
     .prologue
-    .line 199
-    invoke-super {p0, p1}, Landroid/text/style/ClickableSpan;->updateDrawState(Landroid/text/TextPaint;)V
+    .line 33
+    const-string v0, "LE::replace %d %d %s %d %d"
 
-    .line 200
-    const/4 v0, 0x0
+    const/4 v1, 0x5
 
-    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setUnderlineText(Z)V
+    new-array v1, v1, [Ljava/lang/Object;
 
-    .line 201
-    return-void
+    const/4 v2, 0x0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v1, v2
+
+    const/4 v2, 0x1
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v1, v2
+
+    const/4 v2, 0x2
+
+    aput-object p3, v1, v2
+
+    const/4 v2, 0x3
+
+    invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v1, v2
+
+    const/4 v2, 0x4
+
+    invoke-static {p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v1, v2
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 35
+    invoke-super/range {p0 .. p5}, Landroid/text/SpannableStringBuilder;->replace(IILjava/lang/CharSequence;II)Landroid/text/SpannableStringBuilder;
+
+    .line 36
+    iget-object v0, p0, Lcom/bbm/ui/dp;->a:Lcom/bbm/ui/InlineImageEditText;
+
+    invoke-static {v0, p0}, Lcom/bbm/ui/InlineImageEditText;->a(Lcom/bbm/ui/InlineImageEditText;Landroid/text/Editable;)V
+
+    .line 38
+    return-object p0
 .end method

@@ -1,6 +1,6 @@
 .class final Lcom/bbm/ui/activities/adh;
 .super Ljava/lang/Object;
-.source "ProfileIconSourceActivity.java"
+.source "SetChannelAvatarActivity.java"
 
 
 # instance fields
@@ -8,16 +8,16 @@
 
 .field b:Landroid/widget/TextView;
 
-.field final synthetic c:Lcom/bbm/ui/activities/ProfileIconSourceActivity;
+.field final synthetic c:Lcom/bbm/ui/activities/SetChannelAvatarActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ProfileIconSourceActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SetChannelAvatarActivity;)V
     .locals 0
 
     .prologue
-    .line 290
-    iput-object p1, p0, Lcom/bbm/ui/activities/adh;->c:Lcom/bbm/ui/activities/ProfileIconSourceActivity;
+    .line 233
+    iput-object p1, p0, Lcom/bbm/ui/activities/adh;->c:Lcom/bbm/ui/activities/SetChannelAvatarActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

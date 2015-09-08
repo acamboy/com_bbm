@@ -1,129 +1,219 @@
-.class public final Lcom/bbm/d/dp;
-.super Lcom/bbm/d/dy;
+.class public final enum Lcom/bbm/d/dp;
+.super Ljava/lang/Enum;
 .source "BbmdsProtocol.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/bbm/d/dp;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final enum a:Lcom/bbm/d/dp;
+
+.field public static final enum b:Lcom/bbm/d/dp;
+
+.field public static final enum c:Lcom/bbm/d/dp;
+
+.field public static final enum d:Lcom/bbm/d/dp;
+
+.field public static final enum e:Lcom/bbm/d/dp;
+
+.field public static final enum f:Lcom/bbm/d/dp;
+
+.field private static final synthetic h:[Lcom/bbm/d/dp;
+
+
+# instance fields
+.field private final g:Ljava/lang/String;
+
+
 # direct methods
-.method constructor <init>(Ljava/lang/String;Ljava/lang/String;Lcom/bbm/d/dq;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 9
 
     .prologue
-    .line 5422
-    const-string v0, "textMessageWithContext"
+    const/4 v8, 0x4
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
+    const/4 v7, 0x3
 
-    .line 5424
-    const-string v0, "text"
+    const/4 v6, 0x2
 
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/dp;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    const/4 v5, 0x1
 
-    .line 5425
-    const-string v0, "to"
+    const/4 v4, 0x0
 
-    invoke-virtual {p0, v0, p2}, Lcom/bbm/d/dp;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    .line 4022
+    new-instance v0, Lcom/bbm/d/dp;
 
-    .line 5426
-    const-string v0, "type"
+    const-string v1, "Unknown"
 
-    invoke-virtual {p3}, Lcom/bbm/d/dq;->toString()Ljava/lang/String;
+    const-string v2, "Unknown"
 
-    move-result-object v1
+    invoke-direct {v0, v1, v4, v2}, Lcom/bbm/d/dp;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    invoke-virtual {p0, v0, v1}, Lcom/bbm/d/dp;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    sput-object v0, Lcom/bbm/d/dp;->a:Lcom/bbm/d/dp;
 
-    .line 5427
+    .line 4027
+    new-instance v0, Lcom/bbm/d/dp;
+
+    const-string v1, "Gps"
+
+    const-string v2, "Gps"
+
+    invoke-direct {v0, v1, v5, v2}, Lcom/bbm/d/dp;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/d/dp;->b:Lcom/bbm/d/dp;
+
+    .line 4032
+    new-instance v0, Lcom/bbm/d/dp;
+
+    const-string v1, "Cell"
+
+    const-string v2, "Cell"
+
+    invoke-direct {v0, v1, v6, v2}, Lcom/bbm/d/dp;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/d/dp;->c:Lcom/bbm/d/dp;
+
+    .line 4037
+    new-instance v0, Lcom/bbm/d/dp;
+
+    const-string v1, "Wlan"
+
+    const-string v2, "Wlan"
+
+    invoke-direct {v0, v1, v7, v2}, Lcom/bbm/d/dp;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/d/dp;->d:Lcom/bbm/d/dp;
+
+    .line 4042
+    new-instance v0, Lcom/bbm/d/dp;
+
+    const-string v1, "Best"
+
+    const-string v2, "Best"
+
+    invoke-direct {v0, v1, v8, v2}, Lcom/bbm/d/dp;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/d/dp;->e:Lcom/bbm/d/dp;
+
+    .line 4047
+    new-instance v0, Lcom/bbm/d/dp;
+
+    const-string v1, "Unspecified"
+
+    const/4 v2, 0x5
+
+    const-string v3, ""
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/d/dp;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/d/dp;->f:Lcom/bbm/d/dp;
+
+    .line 4017
+    const/4 v0, 0x6
+
+    new-array v0, v0, [Lcom/bbm/d/dp;
+
+    sget-object v1, Lcom/bbm/d/dp;->a:Lcom/bbm/d/dp;
+
+    aput-object v1, v0, v4
+
+    sget-object v1, Lcom/bbm/d/dp;->b:Lcom/bbm/d/dp;
+
+    aput-object v1, v0, v5
+
+    sget-object v1, Lcom/bbm/d/dp;->c:Lcom/bbm/d/dp;
+
+    aput-object v1, v0, v6
+
+    sget-object v1, Lcom/bbm/d/dp;->d:Lcom/bbm/d/dp;
+
+    aput-object v1, v0, v7
+
+    sget-object v1, Lcom/bbm/d/dp;->e:Lcom/bbm/d/dp;
+
+    aput-object v1, v0, v8
+
+    const/4 v1, 0x5
+
+    sget-object v2, Lcom/bbm/d/dp;->f:Lcom/bbm/d/dp;
+
+    aput-object v2, v0, v1
+
+    sput-object v0, Lcom/bbm/d/dp;->h:[Lcom/bbm/d/dp;
+
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Ljava/lang/String;)Lcom/bbm/d/dp;
-    .locals 1
+.method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")V"
+        }
+    .end annotation
 
     .prologue
-    .line 5437
-    const-string v0, "context"
+    .line 4051
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/dp;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    .line 4052
+    iput-object p3, p0, Lcom/bbm/d/dp;->g:Ljava/lang/String;
 
-    .line 5438
-    return-object p0
+    .line 4053
+    return-void
 .end method
 
-.method public final a(Lorg/json/JSONObject;)Lcom/bbm/d/dp;
+.method public static valueOf(Ljava/lang/String;)Lcom/bbm/d/dp;
     .locals 1
 
     .prologue
-    .line 5473
-    const-string v0, "partnerAppContent"
+    .line 4017
+    const-class v0, Lcom/bbm/d/dp;
 
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/dp;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 5474
-    return-object p0
-.end method
-
-.method public final bridge synthetic a()Lcom/bbm/f/ab;
-    .locals 1
-
-    .prologue
-    .line 5383
-    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/dp;
 
     return-object v0
 .end method
 
-.method public final b(Ljava/lang/String;)Lcom/bbm/d/dp;
+.method public static values()[Lcom/bbm/d/dp;
     .locals 1
 
     .prologue
-    .line 5461
-    const-string v0, "id"
+    .line 4017
+    sget-object v0, Lcom/bbm/d/dp;->h:[Lcom/bbm/d/dp;
 
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/dp;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {v0}, [Lcom/bbm/d/dp;->clone()Ljava/lang/Object;
 
-    .line 5462
-    return-object p0
+    move-result-object v0
+
+    check-cast v0, [Lcom/bbm/d/dp;
+
+    return-object v0
 .end method
 
-.method public final b(Lorg/json/JSONObject;)Lcom/bbm/d/dp;
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 5485
-    const-string v0, "realtimeLocation"
+    .line 4074
+    iget-object v0, p0, Lcom/bbm/d/dp;->g:Ljava/lang/String;
 
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/dp;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 5486
-    return-object p0
-.end method
-
-.method public final c(Lorg/json/JSONObject;)Lcom/bbm/d/dp;
-    .locals 1
-
-    .prologue
-    .line 5497
-    const-string v0, "sharedChannelPost"
-
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/dp;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 5498
-    return-object p0
-.end method
-
-.method public final d(Lorg/json/JSONObject;)Lcom/bbm/d/dp;
-    .locals 1
-
-    .prologue
-    .line 5509
-    const-string v0, "sharedUrl"
-
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/dp;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 5510
-    return-object p0
+    return-object v0
 .end method

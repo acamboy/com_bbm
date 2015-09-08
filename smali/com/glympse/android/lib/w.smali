@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private hO:Lcom/glympse/android/lib/v;
+.field private hW:Lcom/glympse/android/lib/v;
 
 
 # direct methods
@@ -19,7 +19,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 325
-    iput-object p1, p0, Lcom/glympse/android/lib/w;->hO:Lcom/glympse/android/lib/v;
+    iput-object p1, p0, Lcom/glympse/android/lib/w;->hW:Lcom/glympse/android/lib/v;
 
     .line 326
     return-void
@@ -32,7 +32,7 @@
 
     .prologue
     .line 330
-    iget-object v0, p0, Lcom/glympse/android/lib/w;->hO:Lcom/glympse/android/lib/v;
+    iget-object v0, p0, Lcom/glympse/android/lib/w;->hW:Lcom/glympse/android/lib/v;
 
     invoke-static {}, Lcom/glympse/android/hal/Concurrent;->getTime()J
 
@@ -41,7 +41,7 @@
     invoke-virtual {v0, v2, v3}, Lcom/glympse/android/lib/v;->d(J)Z
 
     .line 331
-    iget-object v0, p0, Lcom/glympse/android/lib/w;->hO:Lcom/glympse/android/lib/v;
+    iget-object v0, p0, Lcom/glympse/android/lib/w;->hW:Lcom/glympse/android/lib/v;
 
     invoke-virtual {v0}, Lcom/glympse/android/lib/v;->am()V
 

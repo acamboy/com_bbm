@@ -65,7 +65,7 @@
 .method public abstract syncRefresh()V
 .end method
 
-.method public abstract syncedWithServer(Lcom/glympse/android/lib/eh;)V
+.method public abstract syncedWithServer(Lcom/glympse/android/lib/eu;)V
 .end method
 
 .method public abstract updateState(J)V

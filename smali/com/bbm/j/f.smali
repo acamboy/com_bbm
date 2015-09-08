@@ -45,7 +45,7 @@
 
     iget-object v0, v0, Lcom/bbm/j/e;->a:Lcom/google/b/a/l;
 
-    invoke-virtual {v0}, Lcom/google/b/a/l;->a()Z
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Z
 
     move-result v0
 
@@ -56,13 +56,13 @@
 
     iget-object v0, v0, Lcom/bbm/j/e;->a:Lcom/google/b/a/l;
 
-    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/bbm/j/r;
 
-    invoke-interface {v0}, Lcom/bbm/j/r;->e()Ljava/lang/Object;
+    invoke-interface {v0}, Lcom/bbm/j/r;->f()Ljava/lang/Object;
 
     move-result-object v0
 

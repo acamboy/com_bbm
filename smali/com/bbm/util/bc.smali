@@ -1,52 +1,62 @@
 .class public final Lcom/bbm/util/bc;
 .super Ljava/lang/Object;
-.source "Create.java"
+.source "ChannelUtil.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field private final a:Landroid/content/Context;
+
+.field private final b:Ljava/lang/String;
 
 
 # direct methods
-.method public static a(Ljava/lang/Class;)Ljava/lang/Object;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Ljava/lang/Class",
-            "<TT;>;)TT;"
-        }
-    .end annotation
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 0
 
     .prologue
-    .line 16
-    :try_start_0
-    invoke-virtual {p0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
+    .line 1111
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    .line 1112
+    iput-object p1, p0, Lcom/bbm/util/bc;->a:Landroid/content/Context;
 
-    return-object v0
+    .line 1113
+    iput-object p2, p0, Lcom/bbm/util/bc;->b:Ljava/lang/String;
 
-    .line 17
-    :catch_0
-    move-exception v0
+    .line 1114
+    return-void
+.end method
 
-    .line 20
-    new-instance v1, Ljava/lang/RuntimeException;
 
-    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
-    throw v1
+    .prologue
+    .line 1118
+    new-instance v0, Landroid/content/Intent;
 
-    .line 21
-    :catch_1
-    move-exception v0
+    iget-object v1, p0, Lcom/bbm/util/bc;->a:Landroid/content/Context;
 
-    .line 24
-    new-instance v1, Ljava/lang/RuntimeException;
+    const-class v2, Lcom/bbm/ui/activities/ChannelDetailsActivity;
 
-    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    throw v1
+    .line 1119
+    const-string v1, "bbm_channel_uri"
+
+    iget-object v2, p0, Lcom/bbm/util/bc;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 1120
+    iget-object v1, p0, Lcom/bbm/util/bc;->a:Landroid/content/Context;
+
+    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    .line 1121
+    return-void
 .end method

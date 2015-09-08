@@ -43,16 +43,24 @@
 
     div-float/2addr v1, v2
 
-    .line 234
+    .line 235
     cmpl-float v2, v1, v0
 
-    if-lez v2, :cond_0
+    if-gtz v2, :cond_1
 
-    .line 235
-    invoke-virtual {v5, v1, v1}, Landroid/graphics/Matrix;->preScale(FF)Z
-
-    .line 239
+    .line 242
     :goto_0
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    cmpg-float v1, v0, v1
+
+    if-gez v1, :cond_0
+
+    .line 243
+    invoke-virtual {v5, v0, v0}, Landroid/graphics/Matrix;->preScale(FF)Z
+
+    .line 245
+    :cond_0
     const/4 v1, 0x0
 
     const/4 v2, 0x0
@@ -73,44 +81,43 @@
 
     move-result-object v0
 
-    .line 240
+    .line 246
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->recycle()V
-
-    move-object p0, v0
-
-    .line 245
-    :goto_1
-    return-object p0
-
-    .line 237
-    :cond_0
-    invoke-virtual {v5, v0, v0}, Landroid/graphics/Matrix;->preScale(FF)Z
     :try_end_0
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    move-object p0, v0
 
-    .line 242
+    .line 251
+    :goto_1
+    return-object p0
+
+    .line 248
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
 
     goto :goto_1
+
+    :cond_1
+    move v0, v1
+
+    goto :goto_0
 .end method
 
 .method public static a(Ljava/io/Closeable;)V
     .locals 1
 
     .prologue
-    .line 151
+    .line 152
     if-nez p0, :cond_0
 
-    .line 159
+    .line 160
     :goto_0
     return-void
 
-    .line 155
+    .line 156
     :cond_0
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
@@ -119,7 +126,7 @@
 
     goto :goto_0
 
-    .line 159
+    .line 160
     :catch_0
     move-exception v0
 

@@ -11,7 +11,7 @@
 
 .field private final PHONE_TYPE:I
 
-.field private bU:Lcom/glympse/android/hal/GVector;
+.field private bX:Lcom/glympse/android/hal/GVector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/glympse/android/hal/GVector",
@@ -22,7 +22,7 @@
     .end annotation
 .end field
 
-.field private bY:Lcom/glympse/android/hal/ao;
+.field private cb:Lcom/glympse/android/hal/ao;
 
 
 # direct methods
@@ -44,14 +44,14 @@
     iput v0, p0, Lcom/glympse/android/hal/ar;->EMAIL_TYPE:I
 
     .line 239
-    iput-object p1, p0, Lcom/glympse/android/hal/ar;->bY:Lcom/glympse/android/hal/ao;
+    iput-object p1, p0, Lcom/glympse/android/hal/ar;->cb:Lcom/glympse/android/hal/ao;
 
     .line 240
     new-instance v0, Lcom/glympse/android/hal/GVector;
 
     invoke-direct {v0}, Lcom/glympse/android/hal/GVector;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ar;->bU:Lcom/glympse/android/hal/GVector;
+    iput-object v0, p0, Lcom/glympse/android/hal/ar;->bX:Lcom/glympse/android/hal/GVector;
 
     .line 241
     return-void
@@ -288,7 +288,7 @@
     .line 256
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/glympse/android/hal/ar;->bY:Lcom/glympse/android/hal/ao;
+    iget-object v2, v0, Lcom/glympse/android/hal/ar;->cb:Lcom/glympse/android/hal/ao;
 
     iget-object v2, v2, Lcom/glympse/android/hal/ao;->e:Landroid/content/Context;
 
@@ -664,7 +664,7 @@
     :cond_3
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/glympse/android/hal/ar;->bU:Lcom/glympse/android/hal/GVector;
+    iget-object v15, v0, Lcom/glympse/android/hal/ar;->bX:Lcom/glympse/android/hal/GVector;
 
     new-instance v3, Lcom/glympse/android/lib/PersonLocal;
 
@@ -793,7 +793,7 @@
     :cond_a
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/glympse/android/hal/ar;->bU:Lcom/glympse/android/hal/GVector;
+    iget-object v4, v0, Lcom/glympse/android/hal/ar;->bX:Lcom/glympse/android/hal/GVector;
 
     new-instance v9, Lcom/glympse/android/lib/PersonLocal;
 
@@ -898,7 +898,7 @@
     :cond_e
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/glympse/android/hal/ar;->bU:Lcom/glympse/android/hal/GVector;
+    iget-object v2, v0, Lcom/glympse/android/hal/ar;->bX:Lcom/glympse/android/hal/GVector;
 
     new-instance v15, Lcom/glympse/android/lib/PersonLocal;
 
@@ -1022,7 +1022,7 @@
     :cond_14
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/glympse/android/hal/ar;->bU:Lcom/glympse/android/hal/GVector;
+    iget-object v2, v0, Lcom/glympse/android/hal/ar;->bX:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v2}, Lcom/glympse/android/hal/GVector;->length()I
 
@@ -1035,7 +1035,7 @@
     .line 467
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/glympse/android/hal/ar;->bU:Lcom/glympse/android/hal/GVector;
+    iget-object v2, v0, Lcom/glympse/android/hal/ar;->bX:Lcom/glympse/android/hal/GVector;
 
     new-instance v3, Lcom/glympse/android/hal/as;
 
@@ -1119,7 +1119,7 @@
     invoke-direct {p0}, Lcom/glympse/android/hal/ar;->z()V
 
     .line 250
-    iget-object v0, p0, Lcom/glympse/android/hal/ar;->bY:Lcom/glympse/android/hal/ao;
+    iget-object v0, p0, Lcom/glympse/android/hal/ar;->cb:Lcom/glympse/android/hal/ao;
 
     invoke-static {v0}, Lcom/glympse/android/hal/ao;->a(Lcom/glympse/android/hal/ao;)Lcom/glympse/android/core/GHandler;
 
@@ -1127,9 +1127,9 @@
 
     new-instance v1, Lcom/glympse/android/hal/aq;
 
-    iget-object v2, p0, Lcom/glympse/android/hal/ar;->bY:Lcom/glympse/android/hal/ao;
+    iget-object v2, p0, Lcom/glympse/android/hal/ar;->cb:Lcom/glympse/android/hal/ao;
 
-    iget-object v3, p0, Lcom/glympse/android/hal/ar;->bU:Lcom/glympse/android/hal/GVector;
+    iget-object v3, p0, Lcom/glympse/android/hal/ar;->bX:Lcom/glympse/android/hal/GVector;
 
     invoke-direct {v1, v2, v3}, Lcom/glympse/android/hal/aq;-><init>(Lcom/glympse/android/hal/ao;Lcom/glympse/android/hal/GVector;)V
 

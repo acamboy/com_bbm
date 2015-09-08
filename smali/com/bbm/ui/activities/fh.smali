@@ -1,48 +1,60 @@
 .class final Lcom/bbm/ui/activities/fh;
-.super Lcom/bbm/ui/activities/fj;
-.source "ChildActivity.java"
+.super Lcom/bbm/j/a;
+.source "ConversationActivity.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/j/a",
+        "<",
+        "Ljava/lang/Boolean;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ey;
+.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ey;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
+    .locals 0
 
     .prologue
-    .line 263
-    iput-object p1, p0, Lcom/bbm/ui/activities/fh;->a:Lcom/bbm/ui/activities/ey;
+    .line 2450
+    iput-object p1, p0, Lcom/bbm/ui/activities/fh;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lcom/bbm/ui/activities/fj;-><init>(Lcom/bbm/ui/activities/ey;B)V
+    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()V
+.method protected final synthetic a()Ljava/lang/Object;
     .locals 1
 
     .prologue
-    .line 267
-    iget-object v0, p0, Lcom/bbm/ui/activities/fh;->a:Lcom/bbm/ui/activities/ey;
+    .line 2450
+    iget-object v0, p0, Lcom/bbm/ui/activities/fh;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ey;->c(Lcom/bbm/ui/activities/ey;)Z
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->q(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/j/a;
 
-    move-result v0
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
-    .line 268
-    iget-object v0, p0, Lcom/bbm/ui/activities/fh;->a:Lcom/bbm/ui/activities/ey;
+    move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ey;->e()V
+    check-cast v0, Lcom/bbm/d/fv;
 
-    .line 270
-    :cond_0
-    return-void
+    iget-boolean v0, v0, Lcom/bbm/d/fv;->j:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
 .end method

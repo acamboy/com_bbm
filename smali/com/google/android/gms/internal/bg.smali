@@ -1,28 +1,32 @@
-.class public interface abstract Lcom/google/android/gms/internal/bg;
-.super Ljava/lang/Object;
+.class final Lcom/google/android/gms/internal/bg;
+.super Landroid/content/BroadcastReceiver;
 
-# interfaces
-.implements Landroid/os/IInterface;
+
+# instance fields
+.field final synthetic a:Lcom/google/android/gms/internal/bb;
+
+
+# direct methods
+.method constructor <init>(Lcom/google/android/gms/internal/bb;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/bg;->a:Lcom/google/android/gms/internal/bb;
+
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a(Lcom/google/android/gms/dynamic/b;Lcom/google/android/gms/internal/ab;Lcom/google/android/gms/internal/z;Ljava/lang/String;Lcom/google/android/gms/internal/bh;)V
-.end method
+.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 2
 
-.method public abstract a(Lcom/google/android/gms/dynamic/b;Lcom/google/android/gms/internal/ab;Lcom/google/android/gms/internal/z;Ljava/lang/String;Ljava/lang/String;Lcom/google/android/gms/internal/bh;)V
-.end method
+    iget-object v0, p0, Lcom/google/android/gms/internal/bg;->a:Lcom/google/android/gms/internal/bb;
 
-.method public abstract a(Lcom/google/android/gms/dynamic/b;Lcom/google/android/gms/internal/z;Ljava/lang/String;Lcom/google/android/gms/internal/bh;)V
-.end method
+    const/4 v1, 0x0
 
-.method public abstract a(Lcom/google/android/gms/dynamic/b;Lcom/google/android/gms/internal/z;Ljava/lang/String;Ljava/lang/String;Lcom/google/android/gms/internal/bh;)V
-.end method
+    invoke-virtual {v0, v1}, Lcom/google/android/gms/internal/bb;->a(Z)V
 
-.method public abstract destroy()V
-.end method
-
-.method public abstract getView()Lcom/google/android/gms/dynamic/b;
-.end method
-
-.method public abstract showInterstitial()V
+    return-void
 .end method

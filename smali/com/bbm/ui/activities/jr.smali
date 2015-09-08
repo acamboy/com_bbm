@@ -1,58 +1,132 @@
 .class final Lcom/bbm/ui/activities/jr;
-.super Ljava/lang/Object;
-.source "EditListItemActivity.java"
+.super Lcom/bbm/d/b/o;
+.source "GroupAdminAddActivity.java"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/d/b/o",
+        "<",
+        "Lcom/bbm/g/ae;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/EditListItemActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/EditListItemActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupAdminAddActivity;)V
     .locals 0
 
     .prologue
-    .line 266
-    iput-object p1, p0, Lcom/bbm/ui/activities/jr;->a:Lcom/bbm/ui/activities/EditListItemActivity;
+    .line 176
+    iput-object p1, p0, Lcom/bbm/ui/activities/jr;->a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/d/b/o;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method protected final a()Ljava/util/List;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/bbm/g/ae;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 270
-    const-string v0, "mHeaderActionBar Positive Button Clicked"
+    .line 181
+    new-instance v1, Ljava/util/ArrayList;
 
-    const-class v1, Lcom/bbm/ui/activities/EditListItemActivity;
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    .line 183
+    iget-object v0, p0, Lcom/bbm/ui/activities/jr;->a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
 
-    .line 272
-    const-string v0, "positivebutton onClick"
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupAdminAddActivity;->c(Lcom/bbm/ui/activities/GroupAdminAddActivity;)Lcom/bbm/g/an;
 
-    const-class v1, Lcom/bbm/ui/activities/EditListItemActivity;
+    move-result-object v0
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    iget-object v2, p0, Lcom/bbm/ui/activities/jr;->a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
 
-    .line 273
-    iget-object v0, p0, Lcom/bbm/ui/activities/jr;->a:Lcom/bbm/ui/activities/EditListItemActivity;
+    invoke-static {v2}, Lcom/bbm/ui/activities/GroupAdminAddActivity;->f(Lcom/bbm/ui/activities/GroupAdminAddActivity;)Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/EditListItemActivity;->c(Lcom/bbm/ui/activities/EditListItemActivity;)V
+    move-result-object v2
 
-    .line 274
-    iget-object v0, p0, Lcom/bbm/ui/activities/jr;->a:Lcom/bbm/ui/activities/EditListItemActivity;
+    invoke-virtual {v0, v2}, Lcom/bbm/g/an;->i(Ljava/lang/String;)Lcom/bbm/j/w;
 
-    invoke-static {v0}, Lcom/bbm/util/fh;->b(Landroid/app/Activity;)V
+    move-result-object v0
 
-    .line 275
-    return-void
+    .line 184
+    invoke-interface {v0}, Lcom/bbm/j/w;->b()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 185
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    .line 194
+    :goto_0
+    return-object v0
+
+    .line 187
+    :cond_0
+    invoke-interface {v0}, Lcom/bbm/j/w;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_1
+    :goto_1
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/g/ae;
+
+    .line 188
+    iget-boolean v3, v0, Lcom/bbm/g/ae;->a:Z
+
+    if-nez v3, :cond_1
+
+    .line 189
+    new-instance v3, Lcom/bbm/g/ae;
+
+    invoke-direct {v3, v0}, Lcom/bbm/g/ae;-><init>(Lcom/bbm/g/ae;)V
+
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    :cond_2
+    move-object v0, v1
+
+    .line 194
+    goto :goto_0
 .end method

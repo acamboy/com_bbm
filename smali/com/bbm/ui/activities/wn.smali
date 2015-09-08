@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/wn;
 .super Ljava/lang/Object;
-.source "MainActivity.java"
+.source "NewListItemActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/NewListItemActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
     .locals 0
 
     .prologue
-    .line 1180
-    iput-object p1, p0, Lcom/bbm/ui/activities/wn;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 81
+    iput-object p1, p0, Lcom/bbm/ui/activities/wn;->a:Lcom/bbm/ui/activities/NewListItemActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,22 +25,19 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 2
 
     .prologue
-    .line 1184
-    const-string v0, "mQuickChatButton Clicked"
+    .line 85
+    iget-object v0, p0, Lcom/bbm/ui/activities/wn;->a:Lcom/bbm/ui/activities/NewListItemActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/MainActivity;
+    const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;Z)V
 
-    .line 1186
-    iget-object v0, p0, Lcom/bbm/ui/activities/wn;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 86
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/MainActivity;->n(Lcom/bbm/ui/activities/MainActivity;)V
-
-    .line 1187
-    return-void
+    return v0
 .end method

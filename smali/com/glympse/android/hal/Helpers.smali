@@ -60,7 +60,7 @@
 
 .field public static final _bearingStrings:[Ljava/lang/String;
 
-.field static final bP:[Z
+.field static final bS:[Z
 
 .field public static final ms_acBase64Encode:[C
 
@@ -88,7 +88,7 @@
 
     fill-array-data v0, :array_1
 
-    sput-object v0, Lcom/glympse/android/hal/Helpers;->bP:[Z
+    sput-object v0, Lcom/glympse/android/hal/Helpers;->bS:[Z
 
     .line 609
     new-array v0, v1, [Ljava/lang/String;
@@ -953,6 +953,17 @@
     return-object v0
 .end method
 
+.method public static ex(Ljava/lang/Throwable;Z)V
+    .locals 0
+
+    .prologue
+    .line 877
+    invoke-static {p0, p1}, Lcom/glympse/android/lib/Debug;->ex(Ljava/lang/Throwable;Z)V
+
+    .line 878
+    return-void
+.end method
+
 .method public static filenameEncode(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
@@ -993,7 +1004,7 @@
     move-result v0
 
     .line 322
-    sget-object v4, Lcom/glympse/android/hal/Helpers;->bP:[Z
+    sget-object v4, Lcom/glympse/android/hal/Helpers;->bS:[Z
 
     aget-boolean v4, v4, v0
 
@@ -1038,9 +1049,9 @@
     .locals 8
 
     .prologue
-    const-wide v4, 0x4076800000000000L
+    const-wide v4, 0x4076800000000000L    # 360.0
 
-    const-wide v6, 0x4036800000000000L
+    const-wide v6, 0x4036800000000000L    # 22.5
 
     .line 605
     if-eqz p1, :cond_0
@@ -1051,7 +1062,7 @@
 
     add-double/2addr v2, v4
 
-    const-wide v4, 0x4026800000000000L
+    const-wide v4, 0x4026800000000000L    # 11.25
 
     add-double/2addr v2, v4
 
@@ -1075,7 +1086,7 @@
 
     add-double/2addr v2, v6
 
-    const-wide v4, 0x4046800000000000L
+    const-wide v4, 0x4046800000000000L    # 45.0
 
     div-double/2addr v2, v4
 
@@ -1096,11 +1107,11 @@
     .prologue
     const/4 v5, 0x1
 
-    const-wide v10, 0x408f400000000000L
+    const-wide v10, 0x408f400000000000L    # 1000.0
 
-    const-wide/high16 v8, 0x4059000000000000L
+    const-wide/high16 v8, 0x4059000000000000L    # 100.0
 
-    const-wide/high16 v6, 0x4024000000000000L
+    const-wide/high16 v6, 0x4024000000000000L    # 10.0
 
     const/4 v4, 0x0
 
@@ -1147,7 +1158,7 @@
     :cond_0
     float-to-double v0, p0
 
-    const-wide v2, 0x3f50624dd2f1a9fcL
+    const-wide v2, 0x3f50624dd2f1a9fcL    # 0.001
 
     mul-double/2addr v0, v2
 
@@ -1244,7 +1255,7 @@
     :cond_3
     float-to-double v0, p0
 
-    const-wide v2, 0x400a3f28fd4f4b98L
+    const-wide v2, 0x400a3f28fd4f4b98L    # 3.2808399
 
     mul-double/2addr v0, v2
 
@@ -1282,7 +1293,7 @@
     :cond_4
     float-to-double v0, p0
 
-    const-wide v2, 0x3f445c7079626fb0L
+    const-wide v2, 0x3f445c7079626fb0L    # 6.21371192E-4
 
     mul-double/2addr v0, v2
 
@@ -2606,6 +2617,17 @@
     .end sparse-switch
 .end method
 
+.method public static log(ILjava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 871
+    invoke-static {p0, p1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
+
+    .line 872
+    return-void
+.end method
+
 .method public static logTODO()V
     .locals 9
 
@@ -2831,7 +2853,7 @@
     :catch_0
     move-exception v0
 
-    const-wide/high16 v0, 0x7ff8000000000000L
+    const-wide/high16 v0, 0x7ff8000000000000L    # NaN
 
     goto :goto_0
 .end method
@@ -3351,7 +3373,7 @@
     if-ge v2, p2, :cond_1
 
     .line 398
-    const-wide/high16 v4, 0x4024000000000000L
+    const-wide/high16 v4, 0x4024000000000000L    # 10.0
 
     mul-double/2addr v4, v0
 
@@ -3372,7 +3394,7 @@
 
     .line 403
     :cond_1
-    const-wide/high16 v4, 0x3fe0000000000000L
+    const-wide/high16 v4, 0x3fe0000000000000L    # 0.5
 
     add-double/2addr v0, v4
 

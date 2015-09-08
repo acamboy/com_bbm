@@ -3,24 +3,20 @@
 .source "AppDetailsFragment.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Lcom/bbm/ui/c/a;
+.field final synthetic a:Lcom/bbm/ui/c/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/a;Ljava/lang/String;)V
+.method constructor <init>(Lcom/bbm/ui/c/a;)V
     .locals 0
 
     .prologue
-    .line 280
-    iput-object p1, p0, Lcom/bbm/ui/c/e;->b:Lcom/bbm/ui/c/a;
-
-    iput-object p2, p0, Lcom/bbm/ui/c/e;->a:Ljava/lang/String;
+    .line 640
+    iput-object p1, p0, Lcom/bbm/ui/c/e;->a:Lcom/bbm/ui/c/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,24 +25,37 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 3
 
     .prologue
-    .line 284
-    const-string v0, "Vendor Web Site button clicked"
+    .line 643
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    const-class v1, Lcom/bbm/ui/c/a;
+    .line 645
+    packed-switch p2, :pswitch_data_0
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 285
-    iget-object v0, p0, Lcom/bbm/ui/c/e;->b:Lcom/bbm/ui/c/a;
-
-    iget-object v1, p0, Lcom/bbm/ui/c/e;->a:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/c/a;->a(Lcom/bbm/ui/c/a;Ljava/lang/String;)V
-
-    .line 286
+    .line 649
+    :goto_0
     return-void
+
+    .line 648
+    :pswitch_0
+    iget-object v0, p0, Lcom/bbm/ui/c/e;->a:Lcom/bbm/ui/c/a;
+
+    new-instance v1, Landroid/content/Intent;
+
+    const-string v2, "android.settings.SETTINGS"
+
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/c/a;->startActivity(Landroid/content/Intent;)V
+
+    goto :goto_0
+
+    .line 645
+    :pswitch_data_0
+    .packed-switch -0x1
+        :pswitch_0
+    .end packed-switch
 .end method

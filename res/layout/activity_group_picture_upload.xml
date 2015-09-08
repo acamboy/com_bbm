@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:windowSoftInputMode="stateVisible"
   xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/toolbar_cancel_done_header" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/toolbar_cancel_done_header" />
     <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
         <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
             <FrameLayout android:id="@id/groupImageFrame" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="@dimen/group_picture_upload_picture_container_height" android:layout_margin="@dimen/group_picture_upload_default_margin">
                 <ImageView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/groupImageToUpload" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/blank" />
             </FrameLayout>
-            <EditText android:textColor="@color/black" android:textColorHint="@color/button_disable_text_color" android:id="@id/groupImageCaption" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/group_picture_upload_default_margin" android:layout_marginRight="@dimen/group_picture_upload_default_margin" android:hint="@string/pic_caption_hint" android:inputType="textCapSentences|textAutoCorrect" style="@style/BB10Edit" />
+            <EditText android:textColor="@color/black" android:textColorHint="@color/button_disable_text_color" android:id="@id/groupImageCaption" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/group_picture_upload_default_margin" android:layout_marginRight="@dimen/group_picture_upload_default_margin" android:hint="@string/pic_caption_hint" android:inputType="textAutoCorrect|textCapSentences" style="@style/BB10Edit" />
             <requestFocus />
         </LinearLayout>
     </ScrollView>

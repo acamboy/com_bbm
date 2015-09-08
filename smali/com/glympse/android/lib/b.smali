@@ -1,12 +1,12 @@
-.class Lcom/glympse/android/lib/b;
+.class public Lcom/glympse/android/lib/b;
 .super Lcom/glympse/android/lib/k;
 .source "AccountCreate.java"
 
 
 # instance fields
-.field public gK:Ljava/lang/String;
+.field public gN:Ljava/lang/String;
 
-.field public gL:Ljava/lang/String;
+.field public gO:Ljava/lang/String;
 
 
 # direct methods
@@ -14,24 +14,24 @@
     .locals 1
 
     .prologue
-    .line 165
+    .line 176
     invoke-direct {p0}, Lcom/glympse/android/lib/k;-><init>()V
 
-    .line 166
+    .line 177
     invoke-static {}, Lcom/glympse/android/hal/Helpers;->emptyString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/b;->gK:Ljava/lang/String;
+    iput-object v0, p0, Lcom/glympse/android/lib/b;->gN:Ljava/lang/String;
 
-    .line 167
+    .line 178
     invoke-static {}, Lcom/glympse/android/hal/Helpers;->emptyString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/b;->gL:Ljava/lang/String;
+    iput-object v0, p0, Lcom/glympse/android/lib/b;->gO:Ljava/lang/String;
 
-    .line 168
+    .line 179
     return-void
 .end method
 
@@ -43,15 +43,15 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 201
+    .line 212
     if-ne v1, p1, :cond_0
 
-    .line 203
-    iget-object v0, p0, Lcom/glympse/android/lib/b;->hd:Lcom/glympse/android/lib/json/GJsonHandlerStack;
+    .line 214
+    iget-object v0, p0, Lcom/glympse/android/lib/b;->hl:Lcom/glympse/android/lib/json/GJsonHandlerStack;
 
     invoke-interface {v0}, Lcom/glympse/android/lib/json/GJsonHandlerStack;->popHandler()V
 
-    .line 205
+    .line 216
     :cond_0
     return v1
 .end method
@@ -62,8 +62,8 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 172
-    iget-object v0, p0, Lcom/glympse/android/lib/b;->he:Ljava/lang/String;
+    .line 183
+    iget-object v0, p0, Lcom/glympse/android/lib/b;->hm:Ljava/lang/String;
 
     const-string v1, "result"
 
@@ -73,21 +73,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 174
+    .line 185
     invoke-virtual {p2, v2}, Lcom/glympse/android/lib/json/GJsonPrimitive;->ownString(Z)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/b;->hf:Ljava/lang/String;
+    iput-object v0, p0, Lcom/glympse/android/lib/b;->hn:Ljava/lang/String;
 
-    .line 196
+    .line 207
     :cond_0
     :goto_0
     return v2
 
-    .line 176
+    .line 187
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/b;->he:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/b;->hm:Ljava/lang/String;
 
     const-string v1, "id"
 
@@ -97,18 +97,18 @@
 
     if-eqz v0, :cond_2
 
-    .line 178
+    .line 189
     invoke-virtual {p2, v2}, Lcom/glympse/android/lib/json/GJsonPrimitive;->ownString(Z)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/b;->gK:Ljava/lang/String;
+    iput-object v0, p0, Lcom/glympse/android/lib/b;->gN:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 180
+    .line 191
     :cond_2
-    iget-object v0, p0, Lcom/glympse/android/lib/b;->he:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/b;->hm:Ljava/lang/String;
 
     const-string v1, "password"
 
@@ -118,18 +118,18 @@
 
     if-eqz v0, :cond_3
 
-    .line 182
+    .line 193
     invoke-virtual {p2, v2}, Lcom/glympse/android/lib/json/GJsonPrimitive;->ownString(Z)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/b;->gL:Ljava/lang/String;
+    iput-object v0, p0, Lcom/glympse/android/lib/b;->gO:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 184
+    .line 195
     :cond_3
-    iget-object v0, p0, Lcom/glympse/android/lib/b;->he:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/b;->hm:Ljava/lang/String;
 
     const-string v1, "time"
 
@@ -139,7 +139,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 186
+    .line 197
     invoke-virtual {p2}, Lcom/glympse/android/lib/json/GJsonPrimitive;->getLong()J
 
     move-result-wide v0
@@ -148,9 +148,9 @@
 
     goto :goto_0
 
-    .line 188
+    .line 199
     :cond_4
-    iget-object v0, p0, Lcom/glympse/android/lib/b;->he:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/b;->hm:Ljava/lang/String;
 
     const-string v1, "error"
 
@@ -160,18 +160,18 @@
 
     if-eqz v0, :cond_5
 
-    .line 190
+    .line 201
     invoke-virtual {p2, v2}, Lcom/glympse/android/lib/json/GJsonPrimitive;->ownString(Z)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/b;->hg:Ljava/lang/String;
+    iput-object v0, p0, Lcom/glympse/android/lib/b;->ho:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 192
+    .line 203
     :cond_5
-    iget-object v0, p0, Lcom/glympse/android/lib/b;->he:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/b;->hm:Ljava/lang/String;
 
     const-string v1, "error_detail"
 
@@ -181,12 +181,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 194
+    .line 205
     invoke-virtual {p2, v2}, Lcom/glympse/android/lib/json/GJsonPrimitive;->ownString(Z)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/b;->hh:Ljava/lang/String;
+    iput-object v0, p0, Lcom/glympse/android/lib/b;->hp:Ljava/lang/String;
 
     goto :goto_0
 .end method

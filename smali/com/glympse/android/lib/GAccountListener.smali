@@ -18,3 +18,6 @@
 
 .method public abstract loggedIn(Ljava/lang/String;J)V
 .end method
+
+.method public abstract retryAccountCreate(Lcom/glympse/android/core/GPrimitive;)V
+.end method

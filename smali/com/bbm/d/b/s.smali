@@ -1,17 +1,15 @@
 .class final Lcom/bbm/d/b/s;
-.super Ljava/lang/Object;
-.source "SortedList.java"
-
-# interfaces
-.implements Ljava/util/Comparator;
+.super Lcom/bbm/j/a;
+.source "ConcatenatedList.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
-        "<TT;>;"
+        "Lcom/bbm/j/a",
+        "<",
+        "Ljava/util/List",
+        "<TT;>;>;"
     }
 .end annotation
 
@@ -25,43 +23,62 @@
     .locals 0
 
     .prologue
-    .line 27
+    .line 20
     iput-object p1, p0, Lcom/bbm/d/b/s;->a:Lcom/bbm/d/b/r;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;TT;)I"
-        }
-    .end annotation
+.method protected final synthetic a()Ljava/lang/Object;
+    .locals 3
 
     .prologue
-    .line 31
-    :try_start_0
+    .line 20
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
     iget-object v0, p0, Lcom/bbm/d/b/s;->a:Lcom/bbm/d/b/r;
 
-    invoke-virtual {v0, p1, p2}, Lcom/bbm/d/b/r;->a(Ljava/lang/Object;Ljava/lang/Object;)I
-    :try_end_0
-    .catch Lcom/bbm/j/z; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v0, v0, Lcom/bbm/d/b/r;->a:Lcom/bbm/j/r;
+
+    invoke-interface {v0}, Lcom/bbm/j/r;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    .line 38
-    :goto_0
-    return v0
+    if-eqz v0, :cond_0
 
-    :catch_0
-    move-exception v0
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    const/4 v0, 0x0
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/j/r;
+
+    invoke-interface {v0}, Lcom/bbm/j/r;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Collection;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     goto :goto_0
+
+    :cond_0
+    return-object v1
 .end method

@@ -1,82 +1,84 @@
-.class public Lcom/google/android/gms/maps/model/b;
+.class public final Lcom/google/android/gms/maps/model/b;
 .super Ljava/lang/Object;
 
 
+# static fields
+.field public static a:Lcom/google/android/gms/maps/model/internal/g;
+
+
 # direct methods
-.method static a(Lcom/google/android/gms/maps/model/CircleOptions;Landroid/os/Parcel;I)V
-    .locals 4
+.method public static a(I)Lcom/google/android/gms/maps/model/a;
+    .locals 2
 
-    invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/b;->p(Landroid/os/Parcel;)I
+    :try_start_0
+    new-instance v0, Lcom/google/android/gms/maps/model/a;
 
-    move-result v0
+    invoke-static {}, Lcom/google/android/gms/maps/model/b;->a()Lcom/google/android/gms/maps/model/internal/g;
 
-    const/4 v1, 0x1
+    move-result-object v1
 
-    invoke-virtual {p0}, Lcom/google/android/gms/maps/model/CircleOptions;->getVersionCode()I
+    invoke-interface {v1, p0}, Lcom/google/android/gms/maps/model/internal/g;->a(I)Lcom/google/android/gms/a/h;
 
-    move-result v2
+    move-result-object v1
 
-    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/b;->c(Landroid/os/Parcel;II)V
+    invoke-direct {v0, v1}, Lcom/google/android/gms/maps/model/a;-><init>(Lcom/google/android/gms/a/h;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    const/4 v1, 0x2
+    return-object v0
 
-    invoke-virtual {p0}, Lcom/google/android/gms/maps/model/CircleOptions;->getCenter()Lcom/google/android/gms/maps/model/LatLng;
+    :catch_0
+    move-exception v0
 
-    move-result-object v2
+    new-instance v1, Lcom/google/android/gms/maps/model/g;
 
-    const/4 v3, 0x0
+    invoke-direct {v1, v0}, Lcom/google/android/gms/maps/model/g;-><init>(Landroid/os/RemoteException;)V
 
-    invoke-static {p1, v1, v2, p2, v3}, Lcom/google/android/gms/common/internal/safeparcel/b;->a(Landroid/os/Parcel;ILandroid/os/Parcelable;IZ)V
+    throw v1
+.end method
 
-    const/4 v1, 0x3
+.method public static a(Landroid/graphics/Bitmap;)Lcom/google/android/gms/maps/model/a;
+    .locals 2
 
-    invoke-virtual {p0}, Lcom/google/android/gms/maps/model/CircleOptions;->getRadius()D
+    :try_start_0
+    new-instance v0, Lcom/google/android/gms/maps/model/a;
 
-    move-result-wide v2
+    invoke-static {}, Lcom/google/android/gms/maps/model/b;->a()Lcom/google/android/gms/maps/model/internal/g;
 
-    invoke-static {p1, v1, v2, v3}, Lcom/google/android/gms/common/internal/safeparcel/b;->a(Landroid/os/Parcel;ID)V
+    move-result-object v1
 
-    const/4 v1, 0x4
+    invoke-interface {v1, p0}, Lcom/google/android/gms/maps/model/internal/g;->a(Landroid/graphics/Bitmap;)Lcom/google/android/gms/a/h;
 
-    invoke-virtual {p0}, Lcom/google/android/gms/maps/model/CircleOptions;->getStrokeWidth()F
+    move-result-object v1
 
-    move-result v2
+    invoke-direct {v0, v1}, Lcom/google/android/gms/maps/model/a;-><init>(Lcom/google/android/gms/a/h;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/b;->a(Landroid/os/Parcel;IF)V
+    return-object v0
 
-    const/4 v1, 0x5
+    :catch_0
+    move-exception v0
 
-    invoke-virtual {p0}, Lcom/google/android/gms/maps/model/CircleOptions;->getStrokeColor()I
+    new-instance v1, Lcom/google/android/gms/maps/model/g;
 
-    move-result v2
+    invoke-direct {v1, v0}, Lcom/google/android/gms/maps/model/g;-><init>(Landroid/os/RemoteException;)V
 
-    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/b;->c(Landroid/os/Parcel;II)V
+    throw v1
+.end method
 
-    const/4 v1, 0x6
+.method private static a()Lcom/google/android/gms/maps/model/internal/g;
+    .locals 2
 
-    invoke-virtual {p0}, Lcom/google/android/gms/maps/model/CircleOptions;->getFillColor()I
+    sget-object v0, Lcom/google/android/gms/maps/model/b;->a:Lcom/google/android/gms/maps/model/internal/g;
 
-    move-result v2
+    const-string v1, "IBitmapDescriptorFactory is not initialized"
 
-    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/b;->c(Landroid/os/Parcel;II)V
+    invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/au;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v1, 0x7
+    move-result-object v0
 
-    invoke-virtual {p0}, Lcom/google/android/gms/maps/model/CircleOptions;->getZIndex()F
+    check-cast v0, Lcom/google/android/gms/maps/model/internal/g;
 
-    move-result v2
-
-    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/b;->a(Landroid/os/Parcel;IF)V
-
-    const/16 v1, 0x8
-
-    invoke-virtual {p0}, Lcom/google/android/gms/maps/model/CircleOptions;->isVisible()Z
-
-    move-result v2
-
-    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/b;->a(Landroid/os/Parcel;IZ)V
-
-    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/b;->D(Landroid/os/Parcel;I)V
-
-    return-void
+    return-object v0
 .end method

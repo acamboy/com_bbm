@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_open_chat" android:id="@id/actionmode_feed_list_contact_openchat" android:title="@string/update_list_menu_contact_open_chat" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_profile" android:id="@id/actionmode_feed_list_contact_viewprofile" android:title="@string/update_list_menu_contact_view_profile" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_hide" android:id="@id/actionmode_feed_list_contact_hide" android:title="@string/update_fragment_hide_updates" app:showAsAction="always" />
+</menu>

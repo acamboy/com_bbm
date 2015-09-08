@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 119
+    .line 118
     iput-object p1, p0, Lcom/bbm/ui/views/r;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,11 +29,11 @@
     .locals 1
 
     .prologue
-    .line 122
+    .line 121
     iget-object v0, p0, Lcom/bbm/ui/views/r;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
 
     invoke-virtual {v0}, Lcom/bbm/ui/views/EphemeralPickerPagerV2;->a()V
 
-    .line 123
+    .line 122
     return-void
 .end method

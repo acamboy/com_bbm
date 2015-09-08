@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/mk;
 .super Ljava/lang/Object;
-.source "GroupConversationActivity.java"
+.source "GroupEventsAddActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/ui/ba;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupEventsAddActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupEventsAddActivity;)V
     .locals 0
 
     .prologue
-    .line 148
-    iput-object p1, p0, Lcom/bbm/ui/activities/mk;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    .line 64
+    iput-object p1, p0, Lcom/bbm/ui/activities/mk;->a:Lcom/bbm/ui/activities/GroupEventsAddActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,61 +25,46 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final a(Ljava/util/Date;Ljava/util/Date;)V
+    .locals 6
 
     .prologue
-    .line 151
-    const-string v0, "mOnRootClickListener Clicked"
+    .line 67
+    invoke-virtual {p2}, Ljava/util/Date;->getTime()J
 
-    const-class v1, Lcom/bbm/ui/activities/GroupConversationActivity;
+    move-result-wide v0
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-virtual {p1}, Ljava/util/Date;->getTime()J
 
-    .line 153
-    iget-object v0, p0, Lcom/bbm/ui/activities/mk;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    move-result-wide v2
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->a(Lcom/bbm/ui/activities/GroupConversationActivity;)Lcom/bbm/ui/EmoticonInputPanel;
+    sub-long/2addr v0, v2
 
-    move-result-object v0
+    .line 68
+    iget-object v2, p0, Lcom/bbm/ui/activities/mk;->a:Lcom/bbm/ui/activities/GroupEventsAddActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->d()Z
+    iget-object v2, v2, Lcom/bbm/ui/activities/GroupEventsAddActivity;->l:Lcom/bbm/ui/DateTimePickerView;
 
-    .line 154
-    iget-object v0, p0, Lcom/bbm/ui/activities/mk;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    new-instance v3, Ljava/util/Date;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->getWindow()Landroid/view/Window;
+    iget-object v4, p0, Lcom/bbm/ui/activities/mk;->a:Lcom/bbm/ui/activities/GroupEventsAddActivity;
 
-    move-result-object v0
+    iget-object v4, v4, Lcom/bbm/ui/activities/GroupEventsAddActivity;->l:Lcom/bbm/ui/DateTimePickerView;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v4}, Lcom/bbm/ui/DateTimePickerView;->getDate()Ljava/util/Date;
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/mk;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    move-result-object v4
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->getWindow()Landroid/view/Window;
+    invoke-virtual {v4}, Ljava/util/Date;->getTime()J
 
-    move-result-object v0
+    move-result-wide v4
 
-    invoke-virtual {v0}, Landroid/view/Window;->getCurrentFocus()Landroid/view/View;
+    add-long/2addr v0, v4
 
-    move-result-object v0
+    invoke-direct {v3, v0, v1}, Ljava/util/Date;-><init>(J)V
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v2, v3}, Lcom/bbm/ui/DateTimePickerView;->setDate(Ljava/util/Date;)V
 
-    .line 155
-    iget-object v0, p0, Lcom/bbm/ui/activities/mk;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/Window;->getCurrentFocus()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->clearFocus()V
-
-    .line 157
-    :cond_0
+    .line 69
     return-void
 .end method

@@ -70,9 +70,9 @@
     .locals 5
 
     .prologue
-    const/high16 v4, 0x40800000
+    const/high16 v4, 0x40800000    # 4.0f
 
-    const/high16 v3, 0x3f000000
+    const/high16 v3, 0x3f000000    # 0.5f
 
     .line 139
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -163,7 +163,7 @@
 
     div-float/2addr v1, v2
 
-    const v2, 0x3f19999a
+    const v2, 0x3f19999a    # 0.6f
 
     mul-float/2addr v1, v2
 
@@ -190,7 +190,7 @@
 
     iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
-    const/high16 v1, 0x43960000
+    const/high16 v1, 0x43960000    # 300.0f
 
     mul-float/2addr v0, v1
 
@@ -256,9 +256,9 @@
     .prologue
     const/4 v7, 0x1
 
-    const/high16 v6, 0x40e00000
+    const/high16 v6, 0x40e00000    # 7.0f
 
-    const/high16 v5, 0x3f800000
+    const/high16 v5, 0x3f800000    # 1.0f
 
     const/4 v4, 0x0
 
@@ -307,7 +307,7 @@
     iput-wide v0, p0, Lit/sephiroth/android/library/widget/z;->v:J
 
     .line 221
-    const/high16 v0, 0x43270000
+    const/high16 v0, 0x43270000    # 167.0f
 
     iput v0, p0, Lit/sephiroth/android/library/widget/z;->w:F
 
@@ -326,7 +326,7 @@
     move-result v0
 
     .line 226
-    const v1, 0x3f19999a
+    const v1, 0x3f19999a    # 0.6f
 
     invoke-static {v0, v5}, Ljava/lang/Math;->min(FF)F
 
@@ -341,7 +341,7 @@
     iput v1, p0, Lit/sephiroth/android/library/widget/z;->j:F
 
     .line 227
-    const/high16 v1, 0x3f000000
+    const/high16 v1, 0x3f000000    # 0.5f
 
     mul-float/2addr v0, v6
 
@@ -364,7 +364,7 @@
 
     move-result v1
 
-    const v2, 0x3f8ccccd
+    const v2, 0x3f8ccccd    # 1.1f
 
     mul-float/2addr v1, v2
 
@@ -410,7 +410,7 @@
 
     .line 243
     :cond_3
-    const/high16 v1, 0x40800000
+    const/high16 v1, 0x40800000    # 4.0f
 
     iget v2, p0, Lit/sephiroth/android/library/widget/z;->m:F
 
@@ -457,9 +457,9 @@
     .locals 7
 
     .prologue
-    const/high16 v6, 0x3f800000
+    const/high16 v6, 0x3f800000    # 1.0f
 
-    const/high16 v5, 0x3f000000
+    const/high16 v5, 0x3f000000    # 0.5f
 
     const/4 v4, 0x0
 
@@ -487,11 +487,11 @@
     iput-wide v2, p0, Lit/sephiroth/android/library/widget/z;->v:J
 
     .line 295
-    const v1, 0x3dcccccd
+    const v1, 0x3dcccccd    # 0.1f
 
     int-to-float v2, v0
 
-    const v3, 0x3cf5c28f
+    const v3, 0x3cf5c28f    # 0.03f
 
     mul-float/2addr v2, v3
 
@@ -548,7 +548,7 @@
     iput v1, p0, Lit/sephiroth/android/library/widget/z;->q:F
 
     .line 317
-    const v1, 0x3ccccccd
+    const v1, 0x3ccccccd    # 0.025f
 
     div-int/lit8 v2, v0, 0x64
 
@@ -556,13 +556,13 @@
 
     int-to-float v2, v2
 
-    const v3, 0x391d4952
+    const v3, 0x391d4952    # 1.5E-4f
 
     mul-float/2addr v2, v3
 
     add-float/2addr v1, v2
 
-    const/high16 v2, 0x3fe00000
+    const/high16 v2, 0x3fe00000    # 1.75f
 
     invoke-static {v1, v2}, Ljava/lang/Math;->min(FF)F
 
@@ -577,7 +577,7 @@
 
     int-to-float v0, v0
 
-    const v2, 0x3727c5ac
+    const v2, 0x3727c5ac    # 1.0E-5f
 
     mul-float/2addr v0, v2
 
@@ -633,11 +633,11 @@
     .locals 10
 
     .prologue
-    const/high16 v9, 0x437f0000
+    const/high16 v9, 0x437f0000    # 255.0f
 
     const/4 v8, 0x3
 
-    const/high16 v7, 0x3f800000
+    const/high16 v7, 0x3f800000    # 1.0f
 
     const/4 v1, 0x0
 
@@ -724,7 +724,7 @@
 
     iput v3, p0, Lit/sephiroth/android/library/widget/z;->m:F
 
-    const v3, 0x3f7fbe77
+    const v3, 0x3f7fbe77    # 0.999f
 
     cmpl-float v0, v0, v3
 
@@ -776,7 +776,7 @@
 
     div-float/2addr v0, v2
 
-    const v2, 0x3f19999a
+    const v2, 0x3f19999a    # 0.6f
 
     mul-float/2addr v0, v2
 
@@ -784,7 +784,7 @@
 
     int-to-float v2, v2
 
-    const/high16 v3, 0x40800000
+    const/high16 v3, 0x40800000    # 4.0f
 
     mul-float/2addr v2, v3
 
@@ -795,9 +795,6 @@
     float-to-int v0, v0
 
     .line 343
-    iget v2, p0, Lit/sephiroth/android/library/widget/z;->d:I
-
-    .line 344
     iget-object v2, p0, Lit/sephiroth/android/library/widget/z;->f:Landroid/graphics/drawable/Drawable;
 
     iget v3, p0, Lit/sephiroth/android/library/widget/z;->g:I
@@ -840,9 +837,6 @@
     float-to-int v2, v2
 
     .line 355
-    iget v3, p0, Lit/sephiroth/android/library/widget/z;->d:I
-
-    .line 356
     iget-object v3, p0, Lit/sephiroth/android/library/widget/z;->e:Landroid/graphics/drawable/Drawable;
 
     iget v4, p0, Lit/sephiroth/android/library/widget/z;->g:I
@@ -887,7 +881,7 @@
 
     iput-wide v2, p0, Lit/sephiroth/android/library/widget/z;->v:J
 
-    const/high16 v0, 0x447a0000
+    const/high16 v0, 0x447a0000    # 1000.0f
 
     iput v0, p0, Lit/sephiroth/android/library/widget/z;->w:F
 
@@ -928,7 +922,7 @@
 
     iput-wide v2, p0, Lit/sephiroth/android/library/widget/z;->v:J
 
-    const/high16 v0, 0x447a0000
+    const/high16 v0, 0x447a0000    # 1000.0f
 
     iput v0, p0, Lit/sephiroth/android/library/widget/z;->w:F
 
@@ -995,7 +989,7 @@
     goto/16 :goto_0
 
     :cond_2
-    const v0, 0x7f7fffff
+    const v0, 0x7f7fffff    # Float.MAX_VALUE
 
     goto :goto_2
 
@@ -1092,7 +1086,7 @@
     iput-wide v0, p0, Lit/sephiroth/android/library/widget/z;->v:J
 
     .line 277
-    const/high16 v0, 0x447a0000
+    const/high16 v0, 0x447a0000    # 1000.0f
 
     iput v0, p0, Lit/sephiroth/android/library/widget/z;->w:F
 

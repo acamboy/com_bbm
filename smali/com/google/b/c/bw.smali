@@ -77,7 +77,7 @@
 
     check-cast p2, Ljava/lang/Comparable;
 
-    invoke-static {p1}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     if-ne p1, p2, :cond_0
 

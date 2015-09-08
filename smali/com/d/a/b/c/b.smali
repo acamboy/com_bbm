@@ -1,6 +1,6 @@
 .class public final Lcom/d/a/b/c/b;
 .super Ljava/lang/Object;
-.source "FakeBitmapDisplayer.java"
+.source "SimpleBitmapDisplayer.java"
 
 # interfaces
 .implements Lcom/d/a/b/c/a;
@@ -11,7 +11,7 @@
     .locals 0
 
     .prologue
-    .line 33
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,10 +19,13 @@
 
 
 # virtual methods
-.method public final a(Landroid/graphics/Bitmap;Landroid/widget/ImageView;)Landroid/graphics/Bitmap;
+.method public final a(Landroid/graphics/Bitmap;Lcom/d/a/b/e/a;)V
     .locals 0
 
     .prologue
-    .line 37
-    return-object p1
+    .line 31
+    invoke-interface {p2, p1}, Lcom/d/a/b/e/a;->a(Landroid/graphics/Bitmap;)Z
+
+    .line 32
+    return-void
 .end method

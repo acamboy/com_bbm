@@ -1,128 +1,94 @@
-.class public Lcom/google/android/gms/internal/fu;
-.super Lcom/google/android/gms/drive/metadata/internal/h;
+.class final Lcom/google/android/gms/internal/fu;
+.super Ljava/lang/Object;
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/google/android/gms/drive/metadata/internal/h",
-        "<",
-        "Lcom/google/android/gms/drive/DriveId;",
-        ">;"
-    }
-.end annotation
-
-
-# static fields
-.field public static final EI:Lcom/google/android/gms/internal/fu;
+# interfaces
+.implements Lcom/google/android/gms/internal/fv;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method constructor <init>()V
+    .locals 0
 
-    new-instance v0, Lcom/google/android/gms/internal/fu;
-
-    invoke-direct {v0}, Lcom/google/android/gms/internal/fu;-><init>()V
-
-    sput-object v0, Lcom/google/android/gms/internal/fu;->EI:Lcom/google/android/gms/internal/fu;
-
-    return-void
-.end method
-
-.method private constructor <init>()V
-    .locals 4
-
-    const-string v0, "driveId"
-
-    const/4 v1, 0x2
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    const-string v3, "sqlId"
-
-    aput-object v3, v1, v2
-
-    const/4 v2, 0x1
-
-    const-string v3, "resourceId"
-
-    aput-object v3, v1, v2
-
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    const v2, 0x3e8fa0
-
-    invoke-direct {p0, v0, v1, v2}, Lcom/google/android/gms/drive/metadata/internal/h;-><init>(Ljava/lang/String;Ljava/util/Collection;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected synthetic b(Lcom/google/android/gms/common/data/DataHolder;II)Ljava/lang/Object;
-    .locals 1
+.method public final a(Lcom/google/android/gms/internal/pp;Ljava/util/Map;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/android/gms/internal/pp;",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/google/android/gms/internal/fu;->i(Lcom/google/android/gms/common/data/DataHolder;II)Lcom/google/android/gms/drive/DriveId;
+    const-string v0, "tx"
+
+    invoke-interface {p2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    check-cast v0, Ljava/lang/String;
 
-.method protected i(Lcom/google/android/gms/common/data/DataHolder;II)Lcom/google/android/gms/drive/DriveId;
-    .locals 6
+    const-string v1, "ty"
 
-    invoke-virtual {p1}, Lcom/google/android/gms/common/data/DataHolder;->getMetadata()Landroid/os/Bundle;
-
-    move-result-object v0
-
-    const-string v1, "dbInstanceId"
-
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
-
-    move-result-wide v4
-
-    const-string v0, "resourceId"
-
-    invoke-virtual {p1, v0, p2, p3}, Lcom/google/android/gms/common/data/DataHolder;->getString(Ljava/lang/String;II)Ljava/lang/String;
+    invoke-interface {p2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    if-eqz v1, :cond_0
+    check-cast v1, Ljava/lang/String;
 
-    const-string v0, "generated-android-"
+    const-string v2, "td"
 
-    invoke-virtual {v1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x0
-
-    :cond_0
-    const-string v0, "sqlId"
-
-    invoke-virtual {p1, v0, p2, p3}, Lcom/google/android/gms/common/data/DataHolder;->getLong(Ljava/lang/String;II)J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-interface {p2, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
-    new-instance v0, Lcom/google/android/gms/drive/DriveId;
+    check-cast v2, Ljava/lang/String;
 
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+    :try_start_0
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    move-result-wide v2
+    move-result v0
 
-    invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/drive/DriveId;-><init>(Ljava/lang/String;JJ)V
+    invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    return-object v0
+    move-result v1
+
+    invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v2
+
+    invoke-interface {p1}, Lcom/google/android/gms/internal/pp;->j()Lcom/google/android/gms/internal/ao;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    iget-object v3, v3, Lcom/google/android/gms/internal/ao;->a:Lcom/google/android/gms/internal/ah;
+
+    invoke-interface {v3, v0, v1, v2}, Lcom/google/android/gms/internal/ah;->a(III)V
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    const-string v0, "Could not parse touch parameters from gmsg."
+
+    invoke-static {v0}, Lcom/google/android/gms/ads/internal/util/client/b;->e(Ljava/lang/String;)V
+
+    goto :goto_0
 .end method

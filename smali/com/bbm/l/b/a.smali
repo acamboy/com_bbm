@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private a:Z
+.field public a:Z
 
 .field private b:Lcom/bbm/l/b/b;
 
@@ -17,16 +17,16 @@
     .locals 0
 
     .prologue
-    .line 18
+    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
+    .line 17
     iput-boolean p1, p0, Lcom/bbm/l/b/a;->a:Z
 
-    .line 20
+    .line 18
     iput-object p2, p0, Lcom/bbm/l/b/a;->b:Lcom/bbm/l/b/b;
 
-    .line 21
+    .line 19
     return-void
 .end method
 
@@ -36,7 +36,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 30
+    .line 28
     :try_start_0
     const-string v0, "store"
 
@@ -48,14 +48,10 @@
 
     move-result-object v3
 
-    .line 31
+    .line 29
     const-string v0, "subenabled"
 
     invoke-virtual {p0, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -71,7 +67,7 @@
 
     move v1, v0
 
-    .line 32
+    .line 30
     :goto_0
     new-instance v0, Lcom/bbm/l/b/a;
 
@@ -79,17 +75,17 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 35
+    .line 33
     :goto_1
     return-object v0
 
     :cond_0
     move v1, v2
 
-    .line 31
+    .line 29
     goto :goto_0
 
-    .line 34
+    .line 32
     :catch_0
     move-exception v0
 
@@ -97,9 +93,9 @@
 
     new-array v1, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 35
+    .line 33
     const/4 v0, 0x0
 
     goto :goto_1

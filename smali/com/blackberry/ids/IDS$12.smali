@@ -234,8 +234,6 @@
     .line 1817
     :cond_2
     :try_start_2
-    iget-object v0, p0, Lcom/blackberry/ids/IDS$12;->c:Ljava/lang/Object;
-
     iget-object v0, p0, Lcom/blackberry/ids/IDS$12;->d:Lcom/blackberry/ids/IChallengeCallback;
 
     iget-object v1, p0, Lcom/blackberry/ids/IDS$12;->e:Lcom/blackberry/ids/IFailureCallback;

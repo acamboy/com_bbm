@@ -1,114 +1,65 @@
 .class final Lcom/bbm/ui/activities/rf;
-.super Ljava/lang/Object;
-.source "GroupPassphraseActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Lcom/bbm/j/k;
+.source "GroupProfileActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupPassphraseActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupProfileActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupPassphraseActivity;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/activities/GroupProfileActivity;)V
+    .locals 1
 
     .prologue
-    .line 29
-    iput-object p1, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupPassphraseActivity;
+    .line 164
+    iput-object p1, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method protected final a()V
+    .locals 1
 
     .prologue
-    .line 32
-    iget-object v0, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupPassphraseActivity;
+    .line 167
+    iget-object v0, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPassphraseActivity;->a(Lcom/bbm/ui/activities/GroupPassphraseActivity;)Landroid/widget/TextView;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupProfileActivity;->i(Lcom/bbm/ui/activities/GroupProfileActivity;)Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;->c:Lcom/bbm/util/dc;
 
-    move-result-object v1
-
-    .line 33
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v2, 0xb
-
-    if-ge v0, v2, :cond_0
-
-    .line 34
-    iget-object v0, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupPassphraseActivity;
-
-    const-string v2, "clipboard"
-
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/activities/GroupPassphraseActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/util/dc;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroid/text/ClipboardManager;
+    check-cast v0, Ljava/lang/Boolean;
 
-    .line 35
-    invoke-virtual {v0, v1}, Landroid/text/ClipboardManager;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 41
-    :goto_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupPassphraseActivity;
+    move-result v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupPassphraseActivity;
+    if-eqz v0, :cond_0
 
-    const v2, 0x7f0e02e0
+    .line 168
+    iget-object v0, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
 
-    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/GroupPassphraseActivity;->getString(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupProfileActivity;->j(Lcom/bbm/ui/activities/GroupProfileActivity;)Z
 
-    move-result-object v1
+    .line 170
+    iget-object v0, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupProfileActivity;->invalidateOptionsMenu()V
 
-    .line 42
-    return-void
-
-    .line 37
+    .line 172
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupPassphraseActivity;
-
-    const-string v2, "clipboard"
-
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/activities/GroupPassphraseActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/content/ClipboardManager;
-
-    .line 38
-    iget-object v2, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupPassphraseActivity;
-
-    const v3, 0x7f0e02df
-
-    invoke-virtual {v2, v3}, Lcom/bbm/ui/activities/GroupPassphraseActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2, v1}, Landroid/content/ClipData;->newPlainText(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/content/ClipData;
-
-    move-result-object v1
-
-    .line 39
-    invoke-virtual {v0, v1}, Landroid/content/ClipboardManager;->setPrimaryClip(Landroid/content/ClipData;)V
-
-    goto :goto_0
+    return-void
 .end method

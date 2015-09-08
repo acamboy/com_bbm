@@ -115,7 +115,7 @@
 
     iget v1, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    const/high16 v2, 0x41a00000
+    const/high16 v2, 0x41a00000    # 20.0f
 
     iget v3, v0, Landroid/util/DisplayMetrics;->density:F
 
@@ -125,7 +125,7 @@
 
     sub-int/2addr v1, v2
 
-    const v2, 0x44138000
+    const v2, 0x44138000    # 590.0f
 
     iget v3, v0, Landroid/util/DisplayMetrics;->density:F
 
@@ -139,7 +139,7 @@
 
     iget v2, v0, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    const/high16 v3, 0x42340000
+    const/high16 v3, 0x42340000    # 45.0f
 
     iget v4, v0, Landroid/util/DisplayMetrics;->density:F
 
@@ -149,7 +149,7 @@
 
     sub-int/2addr v2, v3
 
-    const/high16 v3, 0x442f0000
+    const/high16 v3, 0x442f0000    # 700.0f
 
     iget v4, v0, Landroid/util/DisplayMetrics;->density:F
 
@@ -171,7 +171,7 @@
 
     sub-int/2addr v4, v2
 
-    const/high16 v5, 0x41c80000
+    const/high16 v5, 0x41c80000    # 25.0f
 
     iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 

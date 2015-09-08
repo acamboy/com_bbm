@@ -1,132 +1,90 @@
-.class public abstract Lcom/bbm/util/d/d;
-.super Lcom/bbm/j/u;
-.source "GroupContactToUserConvertorMonitor.java"
+.class final synthetic Lcom/bbm/util/d/d;
+.super Ljava/lang/Object;
+.source "InlineImageUtil.java"
 
 
-# instance fields
-.field private final a:Lcom/bbm/g/o;
-
-.field private final b:Lcom/bbm/d/a;
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/g/o;Lcom/bbm/d/a;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 42
-    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
+    .line 323
+    invoke-static {}, Lcom/bbm/util/d/g;->values()[Lcom/bbm/util/d/g;
 
-    .line 43
-    iput-object p1, p0, Lcom/bbm/util/d/d;->a:Lcom/bbm/g/o;
+    move-result-object v0
 
-    .line 44
-    iput-object p2, p0, Lcom/bbm/util/d/d;->b:Lcom/bbm/d/a;
+    array-length v0, v0
 
-    .line 45
-    return-void
-.end method
+    new-array v0, v0, [I
 
+    sput-object v0, Lcom/bbm/util/d/d;->a:[I
 
-# virtual methods
-.method public abstract a(Lcom/google/b/a/l;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/b/a/l",
-            "<",
-            "Lcom/bbm/d/gr;",
-            ">;)V"
-        }
-    .end annotation
-.end method
+    :try_start_0
+    sget-object v0, Lcom/bbm/util/d/d;->a:[I
 
-.method protected final b()Z
-    .locals 5
+    sget-object v1, Lcom/bbm/util/d/g;->a:Lcom/bbm/util/d/g;
 
-    .prologue
-    const/4 v1, 0x1
+    invoke-virtual {v1}, Lcom/bbm/util/d/g;->ordinal()I
 
-    const/4 v0, 0x0
+    move-result v1
 
-    .line 20
-    iget-object v2, p0, Lcom/bbm/util/d/d;->b:Lcom/bbm/d/a;
+    const/4 v2, 0x1
 
-    iget-object v3, p0, Lcom/bbm/util/d/d;->a:Lcom/bbm/g/o;
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_2
 
-    iget-object v3, v3, Lcom/bbm/g/o;->e:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Lcom/bbm/d/a;->h(Ljava/lang/String;)Lcom/bbm/d/fx;
-
-    move-result-object v2
-
-    .line 22
-    sget-object v3, Lcom/bbm/util/d/e;->a:[I
-
-    iget-object v4, v2, Lcom/bbm/d/fx;->c:Lcom/bbm/util/bi;
-
-    invoke-virtual {v4}, Lcom/bbm/util/bi;->ordinal()I
-
-    move-result v4
-
-    aget v3, v3, v4
-
-    packed-switch v3, :pswitch_data_0
-
-    .line 38
-    :cond_0
     :goto_0
-    :pswitch_0
-    return v0
+    :try_start_1
+    sget-object v0, Lcom/bbm/util/d/d;->a:[I
 
-    .line 26
-    :pswitch_1
-    iget-object v2, v2, Lcom/bbm/d/fx;->b:Ljava/lang/String;
+    sget-object v1, Lcom/bbm/util/d/g;->b:Lcom/bbm/util/d/g;
 
-    .line 28
-    iget-object v3, p0, Lcom/bbm/util/d/d;->b:Lcom/bbm/d/a;
+    invoke-virtual {v1}, Lcom/bbm/util/d/g;->ordinal()I
 
-    invoke-virtual {v3, v2}, Lcom/bbm/d/a;->b(Ljava/lang/String;)Lcom/bbm/d/gr;
+    move-result v1
 
-    move-result-object v2
+    const/4 v2, 0x2
 
-    .line 29
-    iget-object v3, v2, Lcom/bbm/d/gr;->C:Lcom/bbm/util/bi;
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    sget-object v4, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/bbm/util/d/d;->a:[I
 
-    if-ne v3, v4, :cond_0
+    sget-object v1, Lcom/bbm/util/d/g;->c:Lcom/bbm/util/d/g;
 
-    .line 30
-    invoke-static {v2}, Lcom/google/b/a/l;->c(Ljava/lang/Object;)Lcom/google/b/a/l;
+    invoke-virtual {v1}, Lcom/bbm/util/d/g;->ordinal()I
 
-    move-result-object v0
+    move-result v1
 
-    invoke-virtual {p0, v0}, Lcom/bbm/util/d/d;->a(Lcom/google/b/a/l;)V
+    const/4 v2, 0x3
 
-    move v0, v1
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 31
+    :goto_2
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_2
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_1
+
+    :catch_2
+    move-exception v0
+
     goto :goto_0
-
-    .line 35
-    :pswitch_2
-    invoke-static {}, Lcom/google/b/a/l;->d()Lcom/google/b/a/l;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/bbm/util/d/d;->a(Lcom/google/b/a/l;)V
-
-    move v0, v1
-
-    .line 36
-    goto :goto_0
-
-    .line 22
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-    .end packed-switch
 .end method

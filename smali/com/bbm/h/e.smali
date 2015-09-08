@@ -1,88 +1,70 @@
 .class final Lcom/bbm/h/e;
-.super Lcom/bbm/h/j;
-.source "AddContactsAdapter.java"
+.super Ljava/lang/Object;
+.source "SuggestedFriendsComputedList.java"
+
+# interfaces
+.implements Ljava/util/Comparator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Ljava/lang/Integer;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/g/t;
-
-.field final synthetic b:Lcom/bbm/h/a;
+.field final synthetic a:[Ljava/text/CollationKey;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/h/a;Lcom/bbm/g/t;)V
-    .locals 1
+.method constructor <init>([Ljava/text/CollationKey;)V
+    .locals 0
 
     .prologue
-    .line 329
-    iput-object p1, p0, Lcom/bbm/h/e;->b:Lcom/bbm/h/a;
+    .line 131
+    iput-object p1, p0, Lcom/bbm/h/e;->a:[Ljava/text/CollationKey;
 
-    iput-object p2, p0, Lcom/bbm/h/e;->a:Lcom/bbm/g/t;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lcom/bbm/h/j;-><init>(Lcom/bbm/h/a;B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
+.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 3
 
     .prologue
-    .line 332
-    const-string v0, "incoming group invite clicked"
+    .line 131
+    check-cast p1, Ljava/lang/Integer;
 
-    const-class v1, Lcom/bbm/h/a;
+    check-cast p2, Ljava/lang/Integer;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    iget-object v0, p0, Lcom/bbm/h/e;->a:[Ljava/text/CollationKey;
 
-    .line 334
-    new-instance v0, Landroid/content/Intent;
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    iget-object v1, p0, Lcom/bbm/h/e;->b:Lcom/bbm/h/a;
+    move-result v1
 
-    invoke-static {v1}, Lcom/bbm/h/a;->b(Lcom/bbm/h/a;)Landroid/app/Activity;
+    aget-object v0, v0, v1
 
-    move-result-object v1
+    iget-object v1, p0, Lcom/bbm/h/e;->a:[Ljava/text/CollationKey;
 
-    const-class v2, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    move-result v2
 
-    .line 335
-    const-string v1, "invite_id"
+    aget-object v1, v1, v2
 
-    iget-object v2, p0, Lcom/bbm/h/e;->a:Lcom/bbm/g/t;
+    invoke-virtual {v0, v1}, Ljava/text/CollationKey;->compareTo(Ljava/text/CollationKey;)I
 
-    iget-object v2, v2, Lcom/bbm/g/t;->g:Ljava/lang/String;
+    move-result v0
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 336
-    iget-object v1, p0, Lcom/bbm/h/e;->b:Lcom/bbm/h/a;
-
-    invoke-static {v1}, Lcom/bbm/h/a;->b(Lcom/bbm/h/a;)Landroid/app/Activity;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
-
-    .line 337
-    iget-object v0, p0, Lcom/bbm/h/e;->b:Lcom/bbm/h/a;
-
-    invoke-static {v0}, Lcom/bbm/h/a;->b(Lcom/bbm/h/a;)Landroid/app/Activity;
-
-    move-result-object v0
-
-    const v1, 0x7f040001
-
-    const v2, 0x7f040004
-
-    invoke-virtual {v0, v1, v2}, Landroid/app/Activity;->overridePendingTransition(II)V
-
-    .line 338
-    return-void
+    return v0
 .end method

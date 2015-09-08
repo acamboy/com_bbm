@@ -1,157 +1,158 @@
 .class final Landroid/support/v4/widget/b;
-.super Landroid/graphics/drawable/shapes/OvalShape;
-.source "CircleImageView.java"
+.super Ljava/lang/Object;
+.source "AutoScrollHelper.java"
 
 
 # instance fields
-.field final synthetic a:Landroid/support/v4/widget/a;
+.field a:I
 
-.field private b:Landroid/graphics/RadialGradient;
+.field b:I
 
-.field private c:I
+.field c:F
 
-.field private d:Landroid/graphics/Paint;
+.field d:F
 
-.field private e:I
+.field e:J
+
+.field f:J
+
+.field g:I
+
+.field h:I
+
+.field i:J
+
+.field j:F
+
+.field k:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/support/v4/widget/a;II)V
-    .locals 7
+.method public constructor <init>()V
+    .locals 3
 
     .prologue
-    .line 128
-    iput-object p1, p0, Landroid/support/v4/widget/b;->a:Landroid/support/v4/widget/a;
+    const/4 v2, 0x0
 
-    .line 129
-    invoke-direct {p0}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
+    .line 743
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 130
-    new-instance v0, Landroid/graphics/Paint;
+    .line 744
+    const-wide/high16 v0, -0x8000000000000000L
 
-    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
+    iput-wide v0, p0, Landroid/support/v4/widget/b;->e:J
 
-    iput-object v0, p0, Landroid/support/v4/widget/b;->d:Landroid/graphics/Paint;
+    .line 745
+    const-wide/16 v0, -0x1
 
-    .line 131
-    iput p2, p0, Landroid/support/v4/widget/b;->c:I
+    iput-wide v0, p0, Landroid/support/v4/widget/b;->i:J
 
-    .line 132
-    iput p3, p0, Landroid/support/v4/widget/b;->e:I
+    .line 746
+    const-wide/16 v0, 0x0
 
-    .line 133
-    new-instance v0, Landroid/graphics/RadialGradient;
+    iput-wide v0, p0, Landroid/support/v4/widget/b;->f:J
 
-    iget v1, p0, Landroid/support/v4/widget/b;->e:I
+    .line 747
+    iput v2, p0, Landroid/support/v4/widget/b;->g:I
 
-    div-int/lit8 v1, v1, 0x2
+    .line 748
+    iput v2, p0, Landroid/support/v4/widget/b;->h:I
 
-    int-to-float v1, v1
-
-    iget v2, p0, Landroid/support/v4/widget/b;->e:I
-
-    div-int/lit8 v2, v2, 0x2
-
-    int-to-float v2, v2
-
-    iget v3, p0, Landroid/support/v4/widget/b;->c:I
-
-    int-to-float v3, v3
-
-    const/4 v4, 0x2
-
-    new-array v4, v4, [I
-
-    fill-array-data v4, :array_0
-
-    const/4 v5, 0x0
-
-    sget-object v6, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
-
-    invoke-direct/range {v0 .. v6}, Landroid/graphics/RadialGradient;-><init>(FFF[I[FLandroid/graphics/Shader$TileMode;)V
-
-    iput-object v0, p0, Landroid/support/v4/widget/b;->b:Landroid/graphics/RadialGradient;
-
-    .line 137
-    iget-object v0, p0, Landroid/support/v4/widget/b;->d:Landroid/graphics/Paint;
-
-    iget-object v1, p0, Landroid/support/v4/widget/b;->b:Landroid/graphics/RadialGradient;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
-
-    .line 138
+    .line 749
     return-void
-
-    .line 133
-    nop
-
-    :array_0
-    .array-data 4
-        0x3d000000
-        0x0
-    .end array-data
 .end method
 
 
 # virtual methods
-.method public final draw(Landroid/graphics/Canvas;Landroid/graphics/Paint;)V
-    .locals 6
+.method final a(J)F
+    .locals 5
 
     .prologue
-    .line 142
-    iget-object v0, p0, Landroid/support/v4/widget/b;->a:Landroid/support/v4/widget/a;
+    .line 787
+    iget-wide v0, p0, Landroid/support/v4/widget/b;->e:J
 
-    invoke-virtual {v0}, Landroid/support/v4/widget/a;->getWidth()I
+    cmp-long v0, p1, v0
 
-    move-result v0
+    if-gez v0, :cond_0
 
-    .line 143
-    iget-object v1, p0, Landroid/support/v4/widget/b;->a:Landroid/support/v4/widget/a;
+    .line 788
+    const/4 v0, 0x0
 
-    invoke-virtual {v1}, Landroid/support/v4/widget/a;->getHeight()I
+    .line 794
+    :goto_0
+    return v0
 
-    move-result v1
+    .line 789
+    :cond_0
+    iget-wide v0, p0, Landroid/support/v4/widget/b;->i:J
 
-    .line 144
-    div-int/lit8 v2, v0, 0x2
+    const-wide/16 v2, 0x0
 
-    int-to-float v2, v2
+    cmp-long v0, v0, v2
 
-    div-int/lit8 v3, v1, 0x2
+    if-ltz v0, :cond_1
 
-    int-to-float v3, v3
+    iget-wide v0, p0, Landroid/support/v4/widget/b;->i:J
 
-    iget v4, p0, Landroid/support/v4/widget/b;->e:I
+    cmp-long v0, p1, v0
 
-    div-int/lit8 v4, v4, 0x2
+    if-gez v0, :cond_2
 
-    iget v5, p0, Landroid/support/v4/widget/b;->c:I
+    .line 790
+    :cond_1
+    iget-wide v0, p0, Landroid/support/v4/widget/b;->e:J
 
-    add-int/2addr v4, v5
+    sub-long v0, p1, v0
 
-    int-to-float v4, v4
+    .line 791
+    const/high16 v2, 0x3f000000    # 0.5f
 
-    iget-object v5, p0, Landroid/support/v4/widget/b;->d:Landroid/graphics/Paint;
+    long-to-float v0, v0
 
-    invoke-virtual {p1, v2, v3, v4, v5}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
-
-    .line 146
-    div-int/lit8 v0, v0, 0x2
-
-    int-to-float v0, v0
-
-    div-int/lit8 v1, v1, 0x2
+    iget v1, p0, Landroid/support/v4/widget/b;->a:I
 
     int-to-float v1, v1
 
-    iget v2, p0, Landroid/support/v4/widget/b;->e:I
+    div-float/2addr v0, v1
 
-    div-int/lit8 v2, v2, 0x2
+    invoke-static {v0}, Landroid/support/v4/widget/a;->a(F)F
 
-    int-to-float v2, v2
+    move-result v0
 
-    invoke-virtual {p1, v0, v1, v2, p2}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+    mul-float/2addr v0, v2
 
-    .line 147
-    return-void
+    goto :goto_0
+
+    .line 793
+    :cond_2
+    iget-wide v0, p0, Landroid/support/v4/widget/b;->i:J
+
+    sub-long v0, p1, v0
+
+    .line 794
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    iget v3, p0, Landroid/support/v4/widget/b;->j:F
+
+    sub-float/2addr v2, v3
+
+    iget v3, p0, Landroid/support/v4/widget/b;->j:F
+
+    long-to-float v0, v0
+
+    iget v1, p0, Landroid/support/v4/widget/b;->k:I
+
+    int-to-float v1, v1
+
+    div-float/2addr v0, v1
+
+    invoke-static {v0}, Landroid/support/v4/widget/a;->a(F)F
+
+    move-result v0
+
+    mul-float/2addr v0, v3
+
+    add-float/2addr v0, v2
+
+    goto :goto_0
 .end method

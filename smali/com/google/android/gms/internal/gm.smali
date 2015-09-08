@@ -2,207 +2,130 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/google/android/gms/games/Players;
+.implements Ljava/lang/Iterable;
+
+
+# annotations
+.annotation runtime Lcom/google/android/gms/internal/mb;
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/lang/Iterable",
+        "<",
+        "Lcom/google/android/gms/internal/gk;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field final a:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcom/google/android/gms/internal/gk;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/LinkedList;
+
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/gm;->a:Ljava/util/List;
 
     return-void
 .end method
 
+.method public static a(Lcom/google/android/gms/internal/pp;)Z
+    .locals 2
+
+    const/4 v0, 0x1
+
+    invoke-static {p0}, Lcom/google/android/gms/internal/gm;->b(Lcom/google/android/gms/internal/pp;)Lcom/google/android/gms/internal/gk;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v1, Lcom/google/android/gms/internal/gk;->b:Lcom/google/android/gms/internal/gn;
+
+    iput-boolean v0, v1, Lcom/google/android/gms/internal/gn;->a:Z
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method static b(Lcom/google/android/gms/internal/pp;)Lcom/google/android/gms/internal/gk;
+    .locals 3
+
+    invoke-static {}, Lcom/google/android/gms/ads/internal/z;->q()Lcom/google/android/gms/internal/gm;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/gm;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/android/gms/internal/gk;
+
+    iget-object v2, v0, Lcom/google/android/gms/internal/gk;->a:Lcom/google/android/gms/internal/pp;
+
+    if-ne v2, p0, :cond_0
+
+    :goto_0
+    return-object v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 
 # virtual methods
-.method public final getCurrentPlayer(Lcom/google/android/gms/common/api/GoogleApiClient;)Lcom/google/android/gms/games/Player;
-    .locals 1
-
-    invoke-static {p1}, Lcom/google/android/gms/games/Games;->c(Lcom/google/android/gms/common/api/GoogleApiClient;)Lcom/google/android/gms/internal/fx;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/fx;->fp()Lcom/google/android/gms/games/Player;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getCurrentPlayerId(Lcom/google/android/gms/common/api/GoogleApiClient;)Ljava/lang/String;
-    .locals 1
-
-    invoke-static {p1}, Lcom/google/android/gms/games/Games;->c(Lcom/google/android/gms/common/api/GoogleApiClient;)Lcom/google/android/gms/internal/fx;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/fx;->fo()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getPlayerSearchIntent(Lcom/google/android/gms/common/api/GoogleApiClient;)Landroid/content/Intent;
-    .locals 1
-
-    invoke-static {p1}, Lcom/google/android/gms/games/Games;->c(Lcom/google/android/gms/common/api/GoogleApiClient;)Lcom/google/android/gms/internal/fx;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/fx;->fy()Landroid/content/Intent;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final loadConnectedPlayers(Lcom/google/android/gms/common/api/GoogleApiClient;Z)Lcom/google/android/gms/common/api/PendingResult;
+.method public final iterator()Ljava/util/Iterator;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(",
-            "Lcom/google/android/gms/common/api/GoogleApiClient;",
-            "Z)",
-            "Lcom/google/android/gms/common/api/PendingResult",
+            "()",
+            "Ljava/util/Iterator",
             "<",
-            "Lcom/google/android/gms/games/Players$LoadPlayersResult;",
+            "Lcom/google/android/gms/internal/gk;",
             ">;"
         }
     .end annotation
 
-    new-instance v0, Lcom/google/android/gms/internal/gm$6;
+    iget-object v0, p0, Lcom/google/android/gms/internal/gm;->a:Ljava/util/List;
 
-    invoke-direct {v0, p0, p2}, Lcom/google/android/gms/internal/gm$6;-><init>(Lcom/google/android/gms/internal/gm;Z)V
-
-    invoke-interface {p1, v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->a(Lcom/google/android/gms/common/api/a$a;)Lcom/google/android/gms/common/api/a$a;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final loadInvitablePlayers(Lcom/google/android/gms/common/api/GoogleApiClient;IZ)Lcom/google/android/gms/common/api/PendingResult;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/GoogleApiClient;",
-            "IZ)",
-            "Lcom/google/android/gms/common/api/PendingResult",
-            "<",
-            "Lcom/google/android/gms/games/Players$LoadPlayersResult;",
-            ">;"
-        }
-    .end annotation
-
-    new-instance v0, Lcom/google/android/gms/internal/gm$2;
-
-    invoke-direct {v0, p0, p2, p3}, Lcom/google/android/gms/internal/gm$2;-><init>(Lcom/google/android/gms/internal/gm;IZ)V
-
-    invoke-interface {p1, v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->a(Lcom/google/android/gms/common/api/a$a;)Lcom/google/android/gms/common/api/a$a;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final loadMoreInvitablePlayers(Lcom/google/android/gms/common/api/GoogleApiClient;I)Lcom/google/android/gms/common/api/PendingResult;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/GoogleApiClient;",
-            "I)",
-            "Lcom/google/android/gms/common/api/PendingResult",
-            "<",
-            "Lcom/google/android/gms/games/Players$LoadPlayersResult;",
-            ">;"
-        }
-    .end annotation
-
-    new-instance v0, Lcom/google/android/gms/internal/gm$3;
-
-    invoke-direct {v0, p0, p2}, Lcom/google/android/gms/internal/gm$3;-><init>(Lcom/google/android/gms/internal/gm;I)V
-
-    invoke-interface {p1, v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->a(Lcom/google/android/gms/common/api/a$a;)Lcom/google/android/gms/common/api/a$a;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final loadMoreRecentlyPlayedWithPlayers(Lcom/google/android/gms/common/api/GoogleApiClient;I)Lcom/google/android/gms/common/api/PendingResult;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/GoogleApiClient;",
-            "I)",
-            "Lcom/google/android/gms/common/api/PendingResult",
-            "<",
-            "Lcom/google/android/gms/games/Players$LoadPlayersResult;",
-            ">;"
-        }
-    .end annotation
-
-    new-instance v0, Lcom/google/android/gms/internal/gm$5;
-
-    invoke-direct {v0, p0, p2}, Lcom/google/android/gms/internal/gm$5;-><init>(Lcom/google/android/gms/internal/gm;I)V
-
-    invoke-interface {p1, v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->a(Lcom/google/android/gms/common/api/a$a;)Lcom/google/android/gms/common/api/a$a;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final loadPlayer(Lcom/google/android/gms/common/api/GoogleApiClient;Ljava/lang/String;)Lcom/google/android/gms/common/api/PendingResult;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/GoogleApiClient;",
-            "Ljava/lang/String;",
-            ")",
-            "Lcom/google/android/gms/common/api/PendingResult",
-            "<",
-            "Lcom/google/android/gms/games/Players$LoadPlayersResult;",
-            ">;"
-        }
-    .end annotation
-
-    new-instance v0, Lcom/google/android/gms/internal/gm$1;
-
-    invoke-direct {v0, p0, p2}, Lcom/google/android/gms/internal/gm$1;-><init>(Lcom/google/android/gms/internal/gm;Ljava/lang/String;)V
-
-    invoke-interface {p1, v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->a(Lcom/google/android/gms/common/api/a$a;)Lcom/google/android/gms/common/api/a$a;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final loadRecentlyPlayedWithPlayers(Lcom/google/android/gms/common/api/GoogleApiClient;IZ)Lcom/google/android/gms/common/api/PendingResult;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/GoogleApiClient;",
-            "IZ)",
-            "Lcom/google/android/gms/common/api/PendingResult",
-            "<",
-            "Lcom/google/android/gms/games/Players$LoadPlayersResult;",
-            ">;"
-        }
-    .end annotation
-
-    new-instance v0, Lcom/google/android/gms/internal/gm$4;
-
-    invoke-direct {v0, p0, p2, p3}, Lcom/google/android/gms/internal/gm$4;-><init>(Lcom/google/android/gms/internal/gm;IZ)V
-
-    invoke-interface {p1, v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->a(Lcom/google/android/gms/common/api/a$a;)Lcom/google/android/gms/common/api/a$a;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 

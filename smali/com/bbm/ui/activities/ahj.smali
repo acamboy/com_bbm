@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/ahj;
 .super Ljava/lang/Object;
-.source "SettingsActivity.java"
+.source "ViewProfileActivity.java"
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ViewProfileActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ViewProfileActivity;)V
     .locals 0
 
     .prologue
-    .line 518
-    iput-object p1, p0, Lcom/bbm/ui/activities/ahj;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    .line 447
+    iput-object p1, p0, Lcom/bbm/ui/activities/ahj;->a:Lcom/bbm/ui/activities/ViewProfileActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,24 +25,30 @@
 
 
 # virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
     .prologue
-    .line 521
-    const-string v0, "allow timed message onCheckedChange"
+    .line 450
+    new-instance v0, Landroid/content/Intent;
 
-    const-class v1, Lcom/bbm/ui/activities/SettingsActivity;
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    move-result-object v1
 
-    .line 522
-    iget-object v0, p0, Lcom/bbm/ui/activities/ahj;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    invoke-virtual {v1}, Lcom/bbm/Alaska;->getApplicationContext()Landroid/content/Context;
 
-    const-string v1, "allow_timed_message"
+    move-result-object v1
 
-    invoke-static {v0, v1, p2}, Lcom/bbm/ui/activities/SettingsActivity;->a(Lcom/bbm/ui/activities/SettingsActivity;Ljava/lang/String;Z)V
+    const-class v2, Lcom/bbm/ui/activities/StoreHomeActivity;
 
-    .line 523
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 451
+    iget-object v1, p0, Lcom/bbm/ui/activities/ahj;->a:Lcom/bbm/ui/activities/ViewProfileActivity;
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/ViewProfileActivity;->startActivity(Landroid/content/Intent;)V
+
+    .line 452
     return-void
 .end method

@@ -6,5 +6,23 @@
 
 
 # virtual methods
-.method public abstract getTile(III)Lcom/google/android/gms/maps/model/Tile;
+.method public abstract a()Lcom/google/android/gms/a/h;
+.end method
+
+.method public abstract a(F)Lcom/google/android/gms/a/h;
+.end method
+
+.method public abstract a(I)Lcom/google/android/gms/a/h;
+.end method
+
+.method public abstract a(Landroid/graphics/Bitmap;)Lcom/google/android/gms/a/h;
+.end method
+
+.method public abstract a(Ljava/lang/String;)Lcom/google/android/gms/a/h;
+.end method
+
+.method public abstract b(Ljava/lang/String;)Lcom/google/android/gms/a/h;
+.end method
+
+.method public abstract c(Ljava/lang/String;)Lcom/google/android/gms/a/h;
 .end method

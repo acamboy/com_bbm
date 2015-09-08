@@ -1,4 +1,4 @@
-.class public final enum Lcom/d/a/b/a/e;
+.class public final Lcom/d/a/b/a/e;
 .super Ljava/lang/Enum;
 .source "ImageScaleType.java"
 
@@ -15,24 +15,28 @@
 
 
 # static fields
-.field public static final enum a:Lcom/d/a/b/a/e;
+.field public static final enum a:I
 
-.field public static final enum b:Lcom/d/a/b/a/e;
+.field public static final enum b:I
 
-.field public static final enum c:Lcom/d/a/b/a/e;
+.field public static final enum c:I
 
-.field public static final enum d:Lcom/d/a/b/a/e;
+.field public static final enum d:I
 
-.field public static final enum e:Lcom/d/a/b/a/e;
+.field public static final enum e:I
 
-.field private static final synthetic f:[Lcom/d/a/b/a/e;
+.field public static final enum f:I
+
+.field private static final synthetic g:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 7
+    .locals 8
 
     .prologue
+    const/4 v7, 0x5
+
     const/4 v6, 0x4
 
     const/4 v5, 0x3
@@ -41,126 +45,58 @@
 
     const/4 v3, 0x1
 
-    const/4 v2, 0x0
-
     .line 26
-    new-instance v0, Lcom/d/a/b/a/e;
+    sput v3, Lcom/d/a/b/a/e;->a:I
 
-    const-string v1, "NONE"
+    .line 35
+    sput v4, Lcom/d/a/b/a/e;->b:I
 
-    invoke-direct {v0, v1, v2}, Lcom/d/a/b/a/e;-><init>(Ljava/lang/String;I)V
+    .line 43
+    sput v5, Lcom/d/a/b/a/e;->c:I
 
-    sput-object v0, Lcom/d/a/b/a/e;->a:Lcom/d/a/b/a/e;
+    .line 50
+    sput v6, Lcom/d/a/b/a/e;->d:I
 
-    .line 34
-    new-instance v0, Lcom/d/a/b/a/e;
+    .line 63
+    sput v7, Lcom/d/a/b/a/e;->e:I
 
-    const-string v1, "IN_SAMPLE_POWER_OF_2"
+    .line 77
+    const/4 v0, 0x6
 
-    invoke-direct {v0, v1, v3}, Lcom/d/a/b/a/e;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/d/a/b/a/e;->b:Lcom/d/a/b/a/e;
-
-    .line 41
-    new-instance v0, Lcom/d/a/b/a/e;
-
-    const-string v1, "IN_SAMPLE_INT"
-
-    invoke-direct {v0, v1, v4}, Lcom/d/a/b/a/e;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/d/a/b/a/e;->c:Lcom/d/a/b/a/e;
-
-    .line 54
-    new-instance v0, Lcom/d/a/b/a/e;
-
-    const-string v1, "EXACTLY"
-
-    invoke-direct {v0, v1, v5}, Lcom/d/a/b/a/e;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/d/a/b/a/e;->d:Lcom/d/a/b/a/e;
-
-    .line 69
-    new-instance v0, Lcom/d/a/b/a/e;
-
-    const-string v1, "EXACTLY_STRETCHED"
-
-    invoke-direct {v0, v1, v6}, Lcom/d/a/b/a/e;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/d/a/b/a/e;->e:Lcom/d/a/b/a/e;
+    sput v0, Lcom/d/a/b/a/e;->f:I
 
     .line 24
-    const/4 v0, 0x5
+    const/4 v0, 0x6
 
-    new-array v0, v0, [Lcom/d/a/b/a/e;
+    new-array v0, v0, [I
 
-    sget-object v1, Lcom/d/a/b/a/e;->a:Lcom/d/a/b/a/e;
+    const/4 v1, 0x0
 
-    aput-object v1, v0, v2
+    sget v2, Lcom/d/a/b/a/e;->a:I
 
-    sget-object v1, Lcom/d/a/b/a/e;->b:Lcom/d/a/b/a/e;
+    aput v2, v0, v1
 
-    aput-object v1, v0, v3
+    sget v1, Lcom/d/a/b/a/e;->b:I
 
-    sget-object v1, Lcom/d/a/b/a/e;->c:Lcom/d/a/b/a/e;
+    aput v1, v0, v3
 
-    aput-object v1, v0, v4
+    sget v1, Lcom/d/a/b/a/e;->c:I
 
-    sget-object v1, Lcom/d/a/b/a/e;->d:Lcom/d/a/b/a/e;
+    aput v1, v0, v4
 
-    aput-object v1, v0, v5
+    sget v1, Lcom/d/a/b/a/e;->d:I
 
-    sget-object v1, Lcom/d/a/b/a/e;->e:Lcom/d/a/b/a/e;
+    aput v1, v0, v5
 
-    aput-object v1, v0, v6
+    sget v1, Lcom/d/a/b/a/e;->e:I
 
-    sput-object v0, Lcom/d/a/b/a/e;->f:[Lcom/d/a/b/a/e;
+    aput v1, v0, v6
+
+    sget v1, Lcom/d/a/b/a/e;->f:I
+
+    aput v1, v0, v7
+
+    sput-object v0, Lcom/d/a/b/a/e;->g:[I
 
     return-void
-.end method
-
-.method private constructor <init>(Ljava/lang/String;I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
-
-    .prologue
-    .line 24
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lcom/d/a/b/a/e;
-    .locals 1
-
-    .prologue
-    .line 24
-    const-class v0, Lcom/d/a/b/a/e;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/d/a/b/a/e;
-
-    return-object v0
-.end method
-
-.method public static values()[Lcom/d/a/b/a/e;
-    .locals 1
-
-    .prologue
-    .line 24
-    sget-object v0, Lcom/d/a/b/a/e;->f:[Lcom/d/a/b/a/e;
-
-    invoke-virtual {v0}, [Lcom/d/a/b/a/e;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lcom/d/a/b/a/e;
-
-    return-object v0
 .end method

@@ -1,291 +1,195 @@
-.class public final Lcom/bbm/util/cx;
+.class public abstract Lcom/bbm/util/cx;
 .super Ljava/lang/Object;
-.source "PassphraseUtil.java"
+.source "LocationServicesUtil.java"
 
-
-# static fields
-.field private static c:Lcom/bbm/util/cx;
+# interfaces
+.implements Landroid/location/LocationListener;
 
 
 # instance fields
-.field a:I
+.field private a:Landroid/os/Handler;
 
-.field b:Ljava/util/LinkedHashMap;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/LinkedHashMap",
-            "<",
-            "Ljava/lang/Integer;",
-            "Lcom/bbm/util/cy;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private b:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 1
 
     .prologue
-    .line 23
+    .line 22
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 24
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/bbm/util/cx;->c:Lcom/bbm/util/cx;
+    iput-boolean v0, p0, Lcom/bbm/util/cx;->b:Z
 
     return-void
 .end method
 
-.method private constructor <init>(Landroid/content/Context;)V
-    .locals 7
+.method static synthetic a(Lcom/bbm/util/cx;)Z
+    .locals 1
 
     .prologue
-    const/4 v1, 0x0
+    .line 22
+    iget-boolean v0, p0, Lcom/bbm/util/cx;->b:Z
 
-    .line 50
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return v0
+.end method
 
-    .line 30
-    iput v1, p0, Lcom/bbm/util/cx;->a:I
+.method static synthetic b(Lcom/bbm/util/cx;)Z
+    .locals 1
+
+    .prologue
+    .line 22
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/bbm/util/cx;->b:Z
+
+    return v0
+.end method
+
+
+# virtual methods
+.method public abstract a()V
+.end method
+
+.method public final a(Landroid/content/Context;I)V
+    .locals 6
+
+    .prologue
+    const/4 v3, 0x0
+
+    .line 27
+    const-string v0, "location"
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/location/LocationManager;
+
+    .line 29
+    :try_start_0
+    const-string v1, "gps"
+
+    invoke-virtual {v0, v1}, Landroid/location/LocationManager;->isProviderEnabled(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 31
+    const-string v1, "gps"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, p0, v2}, Landroid/location/LocationManager;->requestSingleUpdate(Ljava/lang/String;Landroid/location/LocationListener;Landroid/os/Looper;)V
 
     .line 33
-    new-instance v0, Ljava/util/LinkedHashMap;
+    :cond_0
+    const-string v1, "network"
 
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+    invoke-virtual {v0, v1}, Landroid/location/LocationManager;->isProviderEnabled(Ljava/lang/String;)Z
 
-    iput-object v0, p0, Lcom/bbm/util/cx;->b:Ljava/util/LinkedHashMap;
+    move-result v1
 
-    .line 55
-    :try_start_0
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    if-eqz v1, :cond_1
 
-    move-result-object v0
+    .line 35
+    const-string v1, "network"
 
-    const v2, 0x7f06000c
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
-
-    move-result-object v0
-
-    .line 56
-    new-instance v2, Ljava/io/BufferedReader;
-
-    new-instance v3, Ljava/io/InputStreamReader;
-
-    invoke-direct {v3, v0}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
-
-    invoke-direct {v2, v3}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
-
-    .line 57
-    invoke-virtual {v2}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 59
-    new-instance v3, Lorg/json/JSONArray;
-
-    invoke-direct {v3, v0}, Lorg/json/JSONArray;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1, p0, v2}, Landroid/location/LocationManager;->requestSingleUpdate(Ljava/lang/String;Landroid/location/LocationListener;Landroid/os/Looper;)V
     :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move v2, v1
+    .line 41
+    :cond_1
+    new-instance v1, Landroid/os/Handler;
 
-    move v0, v1
+    invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    .line 61
+    iput-object v1, p0, Lcom/bbm/util/cx;->a:Landroid/os/Handler;
+
+    .line 42
+    iput-boolean v3, p0, Lcom/bbm/util/cx;->b:Z
+
+    .line 43
+    iget-object v1, p0, Lcom/bbm/util/cx;->a:Landroid/os/Handler;
+
+    new-instance v2, Lcom/bbm/util/cy;
+
+    invoke-direct {v2, p0, v0}, Lcom/bbm/util/cy;-><init>(Lcom/bbm/util/cx;Landroid/location/LocationManager;)V
+
+    int-to-long v4, p2
+
+    invoke-virtual {v1, v2, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    .line 53
     :goto_0
-    :try_start_1
-    invoke-virtual {v3}, Lorg/json/JSONArray;->length()I
+    return-void
 
-    move-result v4
-
-    if-ge v2, v4, :cond_0
-
-    .line 62
-    invoke-virtual {v3, v2}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
-
-    move-result-object v4
-
-    .line 63
-    new-instance v5, Lcom/bbm/util/cy;
-
-    invoke-direct {v5, p0, v4}, Lcom/bbm/util/cy;-><init>(Lcom/bbm/util/cx;Lorg/json/JSONObject;)V
-
-    .line 64
-    iget v4, v5, Lcom/bbm/util/cy;->b:I
-
-    add-int/2addr v0, v4
-
-    .line 65
-    iget-object v4, p0, Lcom/bbm/util/cx;->b:Ljava/util/LinkedHashMap;
-
-    iget v6, v5, Lcom/bbm/util/cy;->a:I
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    invoke-virtual {v4, v6, v5}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_2
-
-    .line 61
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    .line 68
+    .line 37
     :catch_0
     move-exception v0
 
-    iget-object v0, p0, Lcom/bbm/util/cx;->b:Ljava/util/LinkedHashMap;
+    const-string v1, "Can\'t request Single Update from Location Manager"
 
-    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->clear()V
+    new-array v2, v3, [Ljava/lang/Object;
 
-    move v0, v1
+    invoke-static {v0, v1, v2}, Lcom/bbm/af;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 73
-    :cond_0
-    :goto_1
-    iput v0, p0, Lcom/bbm/util/cx;->a:I
-
-    .line 74
-    return-void
-
-    :catch_1
-    move-exception v0
-
-    move v0, v1
-
-    goto :goto_1
-
-    :catch_2
-    move-exception v1
-
-    goto :goto_1
+    goto :goto_0
 .end method
 
-.method public static a(Landroid/content/Context;)Lcom/bbm/util/cx;
+.method public abstract a(Landroid/location/Location;)V
+.end method
+
+.method public onLocationChanged(Landroid/location/Location;)V
     .locals 1
 
     .prologue
-    .line 77
-    sget-object v0, Lcom/bbm/util/cx;->c:Lcom/bbm/util/cx;
+    .line 61
+    iget-boolean v0, p0, Lcom/bbm/util/cx;->b:Z
 
     if-nez v0, :cond_0
 
+    .line 62
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/bbm/util/cx;->b:Z
+
+    .line 63
+    invoke-virtual {p0, p1}, Lcom/bbm/util/cx;->a(Landroid/location/Location;)V
+
+    .line 65
+    :cond_0
+    return-void
+.end method
+
+.method public onProviderDisabled(Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
     .line 78
-    new-instance v0, Lcom/bbm/util/cx;
-
-    invoke-direct {v0, p0}, Lcom/bbm/util/cx;-><init>(Landroid/content/Context;)V
-
-    sput-object v0, Lcom/bbm/util/cx;->c:Lcom/bbm/util/cx;
-
-    .line 80
-    :cond_0
-    sget-object v0, Lcom/bbm/util/cx;->c:Lcom/bbm/util/cx;
-
-    return-object v0
+    return-void
 .end method
 
-.method static a(IILjava/io/InputStream;)Ljava/lang/String;
-    .locals 4
+.method public onProviderEnabled(Ljava/lang/String;)V
+    .locals 0
 
     .prologue
-    .line 86
-    :try_start_0
-    new-array v1, p1, [B
-
-    .line 87
-    invoke-virtual {p2}, Ljava/io/InputStream;->reset()V
-
-    .line 88
-    int-to-long v2, p0
-
-    invoke-virtual {p2, v2, v3}, Ljava/io/InputStream;->skip(J)J
-
-    .line 89
-    invoke-virtual {p2, v1}, Ljava/io/InputStream;->read([B)I
-
-    .line 90
-    new-instance v0, Ljava/lang/String;
-
-    const-string v2, "UTF-8"
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 92
-    :goto_0
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    const-string v0, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
-    invoke-static {v0, p1}, Lcom/bbm/util/cx;->a(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
+    .line 74
+    return-void
 .end method
 
-.method static a(Ljava/lang/String;I)Ljava/lang/String;
-    .locals 4
+.method public onStatusChanged(Ljava/lang/String;ILandroid/os/Bundle;)V
+    .locals 0
 
     .prologue
-    .line 134
-    const-string v0, ""
-
-    .line 135
-    new-instance v2, Ljava/security/SecureRandom;
-
-    invoke-direct {v2}, Ljava/security/SecureRandom;-><init>()V
-
-    .line 136
-    :goto_0
-    add-int/lit8 v1, p1, -0x1
-
-    if-lez p1, :cond_0
-
-    .line 137
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/util/Random;->nextInt(I)I
-
-    move-result v3
-
-    invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
-
-    move-result v3
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    move p1, v1
-
-    goto :goto_0
-
-    .line 139
-    :cond_0
-    return-object v0
+    .line 70
+    return-void
 .end method

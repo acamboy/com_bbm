@@ -1,51 +1,54 @@
 .class final Lcom/bbm/ui/c/w;
-.super Lcom/bbm/ui/c/ab;
-.source "BlockedContactsFragment.java"
+.super Ljava/lang/Object;
+.source "AppDetailsFragment.java"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/ui/c/v",
-        "<TT;TK;>.com/bbm/ui/c/ab<TK;>;"
-    }
-.end annotation
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic b:Lcom/bbm/ui/c/v;
+.field final synthetic a:Lcom/bbm/ui/c/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/v;Landroid/content/Context;Lcom/bbm/j/r;)V
+.method constructor <init>(Lcom/bbm/ui/c/a;)V
     .locals 0
 
     .prologue
-    .line 80
-    iput-object p1, p0, Lcom/bbm/ui/c/w;->b:Lcom/bbm/ui/c/v;
+    .line 372
+    iput-object p1, p0, Lcom/bbm/ui/c/w;->a:Lcom/bbm/ui/c/a;
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/bbm/ui/c/ab;-><init>(Lcom/bbm/ui/c/v;Landroid/content/Context;Lcom/bbm/j/r;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;)TK;"
-        }
-    .end annotation
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
     .prologue
-    .line 84
-    iget-object v0, p0, Lcom/bbm/ui/c/w;->b:Lcom/bbm/ui/c/v;
+    .line 375
+    new-instance v0, Landroid/content/Intent;
 
-    invoke-virtual {v0, p1}, Lcom/bbm/ui/c/v;->d(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
 
-    move-result-object v0
+    move-result-object v1
 
-    return-object v0
+    invoke-virtual {v1}, Lcom/bbm/Alaska;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const-class v2, Lcom/bbm/ui/activities/GenericTextActivity;
+
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 376
+    iget-object v1, p0, Lcom/bbm/ui/c/w;->a:Lcom/bbm/ui/c/a;
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/c/a;->startActivity(Landroid/content/Intent;)V
+
+    .line 377
+    return-void
 .end method

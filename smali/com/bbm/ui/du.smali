@@ -1,108 +1,68 @@
 .class final Lcom/bbm/ui/du;
 .super Ljava/lang/Object;
-.source "ListItemTouchHandler.java"
+.source "LinkifyTextView.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Ljava/util/Comparator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Landroid/text/style/ClickableSpan;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/dr;
+.field final synthetic a:Landroid/text/Spannable;
+
+.field final synthetic b:Lcom/bbm/ui/LinkifyTextView;
 
 
 # direct methods
-.method private constructor <init>(Lcom/bbm/ui/dr;)V
+.method constructor <init>(Lcom/bbm/ui/LinkifyTextView;Landroid/text/Spannable;)V
     .locals 0
 
     .prologue
-    .line 207
-    iput-object p1, p0, Lcom/bbm/ui/du;->a:Lcom/bbm/ui/dr;
+    .line 136
+    iput-object p1, p0, Lcom/bbm/ui/du;->b:Lcom/bbm/ui/LinkifyTextView;
+
+    iput-object p2, p0, Lcom/bbm/ui/du;->a:Landroid/text/Spannable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/bbm/ui/dr;B)V
-    .locals 0
-
-    .prologue
-    .line 207
-    invoke-direct {p0, p1}, Lcom/bbm/ui/du;-><init>(Lcom/bbm/ui/dr;)V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 2
 
     .prologue
-    .line 211
-    iget-object v0, p0, Lcom/bbm/ui/du;->a:Lcom/bbm/ui/dr;
+    .line 136
+    check-cast p1, Landroid/text/style/ClickableSpan;
 
-    iget-boolean v0, v0, Lcom/bbm/ui/dr;->b:Z
+    check-cast p2, Landroid/text/style/ClickableSpan;
 
-    if-nez v0, :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/du;->a:Landroid/text/Spannable;
 
-    .line 213
-    :try_start_0
-    iget-object v0, p0, Lcom/bbm/ui/du;->a:Lcom/bbm/ui/dr;
+    invoke-interface {v0, p1}, Landroid/text/Spannable;->getSpanStart(Ljava/lang/Object;)I
 
-    iget-object v1, v0, Lcom/bbm/ui/dr;->a:Lcom/bbm/ui/dw;
+    move-result v0
 
-    iget-object v0, p0, Lcom/bbm/ui/du;->a:Lcom/bbm/ui/dr;
+    iget-object v1, p0, Lcom/bbm/ui/du;->a:Landroid/text/Spannable;
 
-    invoke-static {v0}, Lcom/bbm/ui/dr;->c(Lcom/bbm/ui/dr;)Ljava/lang/ref/WeakReference;
+    invoke-interface {v1, p2}, Landroid/text/Spannable;->getSpanStart(Ljava/lang/Object;)I
 
-    move-result-object v0
+    move-result v1
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    sub-int/2addr v0, v1
 
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/AbsListView;
-
-    invoke-virtual {v0}, Landroid/widget/AbsListView;->getAdapter()Landroid/widget/Adapter;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ListAdapter;
-
-    invoke-interface {v0, p3}, Landroid/widget/ListAdapter;->getItem(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-interface {v1, v0}, Lcom/bbm/ui/dw;->a(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 218
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 214
-    :catch_0
-    move-exception v0
-
-    const-string v1, "Wrong item type expeceted in the list adapter."
-
-    const/4 v2, 0x0
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    invoke-static {v0, v1, v2}, Lcom/bbm/y;->b(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    goto :goto_0
+    return v0
 .end method

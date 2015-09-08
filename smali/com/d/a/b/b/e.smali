@@ -10,61 +10,73 @@
 
 .field final c:Lcom/d/a/b/a/f;
 
-.field final d:Lcom/d/a/b/a/e;
+.field final d:I
 
-.field final e:Lcom/d/a/b/a/l;
+.field final e:I
 
 .field final f:Lcom/d/a/b/d/c;
 
 .field final g:Ljava/lang/Object;
 
-.field final h:Landroid/graphics/BitmapFactory$Options;
+.field final h:Z
+
+.field final i:Landroid/graphics/BitmapFactory$Options;
+
+.field private final j:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Lcom/d/a/b/a/f;Lcom/d/a/b/a/l;Lcom/d/a/b/d/c;Lcom/d/a/b/d;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/d/a/b/a/f;ILcom/d/a/b/d/c;Lcom/d/a/b/d;)V
     .locals 4
 
     .prologue
-    .line 48
+    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
+    .line 52
     iput-object p1, p0, Lcom/d/a/b/b/e;->a:Ljava/lang/String;
 
-    .line 50
+    .line 53
     iput-object p2, p0, Lcom/d/a/b/b/e;->b:Ljava/lang/String;
 
-    .line 51
-    iput-object p3, p0, Lcom/d/a/b/b/e;->c:Lcom/d/a/b/a/f;
-
-    .line 53
-    iget-object v0, p6, Lcom/d/a/b/d;->g:Lcom/d/a/b/a/e;
-
-    iput-object v0, p0, Lcom/d/a/b/b/e;->d:Lcom/d/a/b/a/e;
-
     .line 54
-    iput-object p4, p0, Lcom/d/a/b/b/e;->e:Lcom/d/a/b/a/l;
+    iput-object p3, p0, Lcom/d/a/b/b/e;->j:Ljava/lang/String;
 
-    .line 56
-    iput-object p5, p0, Lcom/d/a/b/b/e;->f:Lcom/d/a/b/d/c;
+    .line 55
+    iput-object p4, p0, Lcom/d/a/b/b/e;->c:Lcom/d/a/b/a/f;
 
     .line 57
-    iget-object v0, p6, Lcom/d/a/b/d;->j:Ljava/lang/Object;
+    iget v0, p7, Lcom/d/a/b/d;->j:I
+
+    iput v0, p0, Lcom/d/a/b/b/e;->d:I
+
+    .line 58
+    iput p5, p0, Lcom/d/a/b/b/e;->e:I
+
+    .line 60
+    iput-object p6, p0, Lcom/d/a/b/b/e;->f:Lcom/d/a/b/d/c;
+
+    .line 61
+    iget-object v0, p7, Lcom/d/a/b/d;->n:Ljava/lang/Object;
 
     iput-object v0, p0, Lcom/d/a/b/b/e;->g:Ljava/lang/Object;
 
-    .line 59
+    .line 63
+    iget-boolean v0, p7, Lcom/d/a/b/d;->m:Z
+
+    iput-boolean v0, p0, Lcom/d/a/b/b/e;->h:Z
+
+    .line 64
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    iput-object v0, p0, Lcom/d/a/b/b/e;->h:Landroid/graphics/BitmapFactory$Options;
+    iput-object v0, p0, Lcom/d/a/b/b/e;->i:Landroid/graphics/BitmapFactory$Options;
 
-    .line 60
-    iget-object v0, p6, Lcom/d/a/b/d;->h:Landroid/graphics/BitmapFactory$Options;
+    .line 65
+    iget-object v0, p7, Lcom/d/a/b/d;->k:Landroid/graphics/BitmapFactory$Options;
 
-    iget-object v1, p0, Lcom/d/a/b/b/e;->h:Landroid/graphics/BitmapFactory$Options;
+    iget-object v1, p0, Lcom/d/a/b/b/e;->i:Landroid/graphics/BitmapFactory$Options;
 
     iget v2, v0, Landroid/graphics/BitmapFactory$Options;->inDensity:I
 
@@ -135,7 +147,7 @@
 
     iput-boolean v0, v1, Landroid/graphics/BitmapFactory$Options;->inMutable:Z
 
-    .line 61
+    .line 66
     :cond_1
     return-void
 .end method

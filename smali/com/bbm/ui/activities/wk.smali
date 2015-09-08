@@ -1,34 +1,22 @@
 .class final Lcom/bbm/ui/activities/wk;
 .super Ljava/lang/Object;
-.source "MainActivity.java"
+.source "NewListActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/widget/TextView$OnEditorActionListener;
 
 
 # instance fields
-.field final synthetic a:Landroid/view/View;
-
-.field final synthetic b:Landroid/view/View;
-
-.field final synthetic c:Landroid/widget/EditText;
-
-.field final synthetic d:Lcom/bbm/ui/activities/MainActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/NewListActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;Landroid/view/View;Landroid/view/View;Landroid/widget/EditText;)V
+.method constructor <init>(Lcom/bbm/ui/activities/NewListActivity;)V
     .locals 0
 
     .prologue
-    .line 933
-    iput-object p1, p0, Lcom/bbm/ui/activities/wk;->d:Lcom/bbm/ui/activities/MainActivity;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/wk;->a:Landroid/view/View;
-
-    iput-object p3, p0, Lcom/bbm/ui/activities/wk;->b:Landroid/view/View;
-
-    iput-object p4, p0, Lcom/bbm/ui/activities/wk;->c:Landroid/widget/EditText;
+    .line 63
+    iput-object p1, p0, Lcom/bbm/ui/activities/wk;->a:Lcom/bbm/ui/activities/NewListActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,41 +25,29 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
+    .locals 1
 
     .prologue
-    .line 936
-    const-string v0, "Add Contacts, search Clicked"
+    .line 66
+    const/4 v0, 0x6
 
-    const-class v1, Lcom/bbm/ui/activities/MainActivity;
+    if-ne p2, v0, :cond_0
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    .line 67
+    iget-object v0, p0, Lcom/bbm/ui/activities/wk;->a:Lcom/bbm/ui/activities/NewListActivity;
 
-    .line 937
-    iget-object v0, p0, Lcom/bbm/ui/activities/wk;->a:Landroid/view/View;
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewListActivity;->c(Lcom/bbm/ui/activities/NewListActivity;)V
 
-    const/4 v1, 0x4
+    .line 68
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    .line 70
+    :goto_0
+    return v0
 
-    .line 938
-    iget-object v0, p0, Lcom/bbm/ui/activities/wk;->b:Landroid/view/View;
+    :cond_0
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    .line 939
-    iget-object v0, p0, Lcom/bbm/ui/activities/wk;->c:Landroid/widget/EditText;
-
-    invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
-
-    .line 940
-    iget-object v0, p0, Lcom/bbm/ui/activities/wk;->d:Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-static {v0}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;)V
-
-    .line 941
-    return-void
+    goto :goto_0
 .end method

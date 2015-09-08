@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/adj;
 .super Ljava/lang/Object;
-.source "ProtectedStateActivity.java"
+.source "SettingsActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ProtectedStateActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ProtectedStateActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
     .locals 0
 
     .prologue
-    .line 63
-    iput-object p1, p0, Lcom/bbm/ui/activities/adj;->a:Lcom/bbm/ui/activities/ProtectedStateActivity;
+    .line 355
+    iput-object p1, p0, Lcom/bbm/ui/activities/adj;->a:Lcom/bbm/ui/activities/SettingsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,15 +25,27 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 2
 
     .prologue
-    .line 66
-    iget-object v0, p0, Lcom/bbm/ui/activities/adj;->a:Lcom/bbm/ui/activities/ProtectedStateActivity;
+    .line 358
+    const-string v0, "geolocation checkbox onCheckedChanged"
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ProtectedStateActivity;->finish()V
+    const-class v1, Lcom/bbm/ui/activities/SettingsActivity;
 
-    .line 67
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 359
+    iget-object v0, p0, Lcom/bbm/ui/activities/adj;->a:Lcom/bbm/ui/activities/SettingsActivity;
+
+    const-string v1, "allow_geolocation_collect"
+
+    invoke-static {v0, v1, p2}, Lcom/bbm/ui/activities/SettingsActivity;->a(Lcom/bbm/ui/activities/SettingsActivity;Ljava/lang/String;Z)V
+
+    .line 360
+    invoke-static {p2}, Lcom/bbm/d/a;->d(Z)V
+
+    .line 361
     return-void
 .end method

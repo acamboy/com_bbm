@@ -7,31 +7,26 @@
 
 
 # instance fields
-.field private qL:Lcom/glympse/android/ws/GWebSocketListener;
+.field private rA:Lcom/glympse/android/ws/GWebSocket;
 
-.field private qM:Lcom/glympse/android/ws/GWebSocket;
+.field private rz:Lcom/glympse/android/ws/GWebSocketListener;
 
 
 # direct methods
 .method public constructor <init>(Lcom/glympse/android/ws/GWebSocket;Lcom/glympse/android/ws/GWebSocketListener;)V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 606
+    .line 609
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 603
-    const/4 v0, 0x0
+    .line 610
+    iput-object p1, p0, Lcom/glympse/android/ws/c;->rA:Lcom/glympse/android/ws/GWebSocket;
 
-    iput-object v0, p0, Lcom/glympse/android/ws/c;->qL:Lcom/glympse/android/ws/GWebSocketListener;
+    .line 611
+    iput-object p2, p0, Lcom/glympse/android/ws/c;->rz:Lcom/glympse/android/ws/GWebSocketListener;
 
-    .line 607
-    iput-object p1, p0, Lcom/glympse/android/ws/c;->qM:Lcom/glympse/android/ws/GWebSocket;
-
-    .line 608
-    iput-object p2, p0, Lcom/glympse/android/ws/c;->qL:Lcom/glympse/android/ws/GWebSocketListener;
-
-    .line 609
+    .line 612
     return-void
 .end method
 
@@ -41,13 +36,13 @@
     .locals 2
 
     .prologue
-    .line 613
-    iget-object v0, p0, Lcom/glympse/android/ws/c;->qL:Lcom/glympse/android/ws/GWebSocketListener;
+    .line 616
+    iget-object v0, p0, Lcom/glympse/android/ws/c;->rz:Lcom/glympse/android/ws/GWebSocketListener;
 
-    iget-object v1, p0, Lcom/glympse/android/ws/c;->qM:Lcom/glympse/android/ws/GWebSocket;
+    iget-object v1, p0, Lcom/glympse/android/ws/c;->rA:Lcom/glympse/android/ws/GWebSocket;
 
     invoke-interface {v0, v1}, Lcom/glympse/android/ws/GWebSocketListener;->connected(Lcom/glympse/android/ws/GWebSocket;)V
 
-    .line 614
+    .line 617
     return-void
 .end method

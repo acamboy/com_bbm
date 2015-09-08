@@ -1,9 +1,6 @@
 .class Lcom/google/b/b/ax;
-.super Ljava/lang/Object;
+.super Lcom/google/b/b/r;
 .source "LocalCache.java"
-
-# interfaces
-.implements Lcom/google/b/b/ba;
 
 
 # annotations
@@ -14,135 +11,152 @@
         "V:",
         "Ljava/lang/Object;",
         ">",
-        "Ljava/lang/Object;",
-        "Lcom/google/b/b/ba",
+        "Lcom/google/b/b/r",
         "<TK;TV;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final a:Ljava/lang/Object;
+.field final g:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "TV;"
+            "TK;"
+        }
+    .end annotation
+.end field
+
+.field final h:I
+
+.field final i:Lcom/google/b/b/an;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/b/b/an",
+            "<TK;TV;>;"
+        }
+    .end annotation
+.end field
+
+.field volatile j:Lcom/google/b/b/bb;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/b/b/bb",
+            "<TK;TV;>;"
         }
     .end annotation
 .end field
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/Object;)V
-    .locals 0
+.method constructor <init>(Ljava/lang/Object;ILcom/google/b/b/an;)V
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(TV;)V"
+            "(TK;I",
+            "Lcom/google/b/b/an",
+            "<TK;TV;>;)V"
         }
     .end annotation
 
     .prologue
-    .line 1740
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1070
+    invoke-direct {p0}, Lcom/google/b/b/r;-><init>()V
 
-    .line 1741
-    iput-object p1, p0, Lcom/google/b/b/ax;->a:Ljava/lang/Object;
+    .line 1085
+    invoke-static {}, Lcom/google/b/b/n;->j()Lcom/google/b/b/bb;
 
-    .line 1742
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/b/b/ax;->j:Lcom/google/b/b/bb;
+
+    .line 1071
+    iput-object p1, p0, Lcom/google/b/b/ax;->g:Ljava/lang/Object;
+
+    .line 1072
+    iput p2, p0, Lcom/google/b/b/ax;->h:I
+
+    .line 1073
+    iput-object p3, p0, Lcom/google/b/b/ax;->i:Lcom/google/b/b/an;
+
+    .line 1074
     return-void
 .end method
 
 
 # virtual methods
-.method public a()I
-    .locals 1
-
-    .prologue
-    .line 1751
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final a(Ljava/lang/ref/ReferenceQueue;Ljava/lang/Object;Lcom/google/b/b/am;)Lcom/google/b/b/ba;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/ref/ReferenceQueue",
-            "<TV;>;TV;",
-            "Lcom/google/b/b/am",
-            "<TK;TV;>;)",
-            "Lcom/google/b/b/ba",
-            "<TK;TV;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 1762
-    return-object p0
-.end method
-
-.method public final a(Ljava/lang/Object;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TV;)V"
-        }
-    .end annotation
-
-    .prologue
-    .line 1781
-    return-void
-.end method
-
-.method public final b()Lcom/google/b/b/am;
+.method public final a()Lcom/google/b/b/bb;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/google/b/b/am",
+            "Lcom/google/b/b/bb",
             "<TK;TV;>;"
         }
     .end annotation
 
     .prologue
-    .line 1756
-    const/4 v0, 0x0
+    .line 1089
+    iget-object v0, p0, Lcom/google/b/b/ax;->j:Lcom/google/b/b/bb;
 
     return-object v0
 .end method
 
-.method public final c()Z
-    .locals 1
-
-    .prologue
-    .line 1767
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final d()Z
-    .locals 1
-
-    .prologue
-    .line 1772
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public get()Ljava/lang/Object;
-    .locals 1
+.method public final a(Lcom/google/b/b/bb;)V
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "()TV;"
+            "(",
+            "Lcom/google/b/b/bb",
+            "<TK;TV;>;)V"
         }
     .end annotation
 
     .prologue
-    .line 1746
-    iget-object v0, p0, Lcom/google/b/b/ax;->a:Ljava/lang/Object;
+    .line 1094
+    iput-object p1, p0, Lcom/google/b/b/ax;->j:Lcom/google/b/b/bb;
+
+    .line 1095
+    return-void
+.end method
+
+.method public final b()Lcom/google/b/b/an;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/google/b/b/an",
+            "<TK;TV;>;"
+        }
+    .end annotation
+
+    .prologue
+    .line 1104
+    iget-object v0, p0, Lcom/google/b/b/ax;->i:Lcom/google/b/b/an;
+
+    return-object v0
+.end method
+
+.method public final c()I
+    .locals 1
+
+    .prologue
+    .line 1099
+    iget v0, p0, Lcom/google/b/b/ax;->h:I
+
+    return v0
+.end method
+
+.method public final d()Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TK;"
+        }
+    .end annotation
+
+    .prologue
+    .line 1078
+    iget-object v0, p0, Lcom/google/b/b/ax;->g:Ljava/lang/Object;
 
     return-object v0
 .end method

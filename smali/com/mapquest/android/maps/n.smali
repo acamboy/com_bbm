@@ -13,7 +13,7 @@
 
     .prologue
     .line 222
-    invoke-static {}, Lcom/mapquest/android/maps/p;->values()[Lcom/mapquest/android/maps/p;
+    invoke-static {}, Lcom/mapquest/android/maps/p;->a()[I
 
     move-result-object v0
 
@@ -26,11 +26,9 @@
     :try_start_0
     sget-object v0, Lcom/mapquest/android/maps/n;->a:[I
 
-    sget-object v1, Lcom/mapquest/android/maps/p;->a:Lcom/mapquest/android/maps/p;
+    sget v1, Lcom/mapquest/android/maps/p;->a:I
 
-    invoke-virtual {v1}, Lcom/mapquest/android/maps/p;->ordinal()I
-
-    move-result v1
+    add-int/lit8 v1, v1, -0x1
 
     const/4 v2, 0x1
 
@@ -42,11 +40,9 @@
     :try_start_1
     sget-object v0, Lcom/mapquest/android/maps/n;->a:[I
 
-    sget-object v1, Lcom/mapquest/android/maps/p;->d:Lcom/mapquest/android/maps/p;
+    sget v1, Lcom/mapquest/android/maps/p;->d:I
 
-    invoke-virtual {v1}, Lcom/mapquest/android/maps/p;->ordinal()I
-
-    move-result v1
+    add-int/lit8 v1, v1, -0x1
 
     const/4 v2, 0x2
 
@@ -58,11 +54,9 @@
     :try_start_2
     sget-object v0, Lcom/mapquest/android/maps/n;->a:[I
 
-    sget-object v1, Lcom/mapquest/android/maps/p;->b:Lcom/mapquest/android/maps/p;
+    sget v1, Lcom/mapquest/android/maps/p;->b:I
 
-    invoke-virtual {v1}, Lcom/mapquest/android/maps/p;->ordinal()I
-
-    move-result v1
+    add-int/lit8 v1, v1, -0x1
 
     const/4 v2, 0x3
 
@@ -74,11 +68,9 @@
     :try_start_3
     sget-object v0, Lcom/mapquest/android/maps/n;->a:[I
 
-    sget-object v1, Lcom/mapquest/android/maps/p;->c:Lcom/mapquest/android/maps/p;
+    sget v1, Lcom/mapquest/android/maps/p;->c:I
 
-    invoke-virtual {v1}, Lcom/mapquest/android/maps/p;->ordinal()I
-
-    move-result v1
+    add-int/lit8 v1, v1, -0x1
 
     const/4 v2, 0x4
 

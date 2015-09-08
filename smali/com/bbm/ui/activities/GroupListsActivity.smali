@@ -1,30 +1,20 @@
 .class public Lcom/bbm/ui/activities/GroupListsActivity;
-.super Lcom/bbm/ui/activities/mj;
+.super Lcom/bbm/bali/ui/main/a/d;
 .source "GroupListsActivity.java"
 
 
 # instance fields
-.field protected a:Lcom/bbm/g/al;
+.field protected b:Lcom/bbm/g/an;
 
-.field private b:Lcom/bbm/ui/activities/pj;
+.field private h:Lcom/bbm/ui/activities/nh;
 
-.field private d:Lcom/bbm/ui/ObservingImageView;
+.field private i:Landroid/widget/GridView;
 
-.field private e:Lcom/bbm/ui/InlineImageTextView;
+.field private j:Landroid/view/View;
 
-.field private f:Lcom/bbm/ui/InlineImageTextView;
+.field private k:Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;
 
-.field private g:Landroid/widget/TextView;
-
-.field private h:Landroid/widget/GridView;
-
-.field private final i:Lcom/bbm/ui/cn;
-
-.field private final j:Lcom/bbm/j/k;
-
-.field private k:Lcom/bbm/ui/FooterActionBar;
-
-.field private l:Landroid/view/View;
+.field private l:Ljava/lang/String;
 
 
 # direct methods
@@ -32,35 +22,21 @@
     .locals 1
 
     .prologue
-    .line 185
+    .line 118
     const-class v0, Lcom/bbm/ui/activities/MainActivity;
 
-    invoke-direct {p0, v0}, Lcom/bbm/ui/activities/mj;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/bbm/bali/ui/main/a/d;-><init>(Ljava/lang/Class;)V
 
-    .line 68
-    new-instance v0, Lcom/bbm/ui/activities/pc;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/pc;-><init>(Lcom/bbm/ui/activities/GroupListsActivity;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->i:Lcom/bbm/ui/cn;
-
-    .line 85
-    new-instance v0, Lcom/bbm/ui/activities/pd;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/pd;-><init>(Lcom/bbm/ui/activities/GroupListsActivity;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->j:Lcom/bbm/j/k;
-
-    .line 186
+    .line 119
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/GroupListsActivity;)Lcom/bbm/ui/ObservingImageView;
+.method static synthetic a(Lcom/bbm/ui/activities/GroupListsActivity;)Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 53
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->d:Lcom/bbm/ui/ObservingImageView;
+    .line 39
+    iget-object v0, p0, Lcom/bbm/bali/ui/main/a/d;->a:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -69,209 +45,185 @@
     .locals 2
 
     .prologue
-    .line 313
+    .line 258
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/bbm/ui/activities/NewListActivity;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 314
+    .line 259
     const-string v1, "groupUri"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 315
+    .line 260
     invoke-virtual {p0, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 316
+    .line 261
     return-void
 .end method
 
-.method static synthetic b(Lcom/bbm/ui/activities/GroupListsActivity;)Lcom/bbm/ui/InlineImageTextView;
+.method static synthetic b(Lcom/bbm/ui/activities/GroupListsActivity;)Landroid/widget/GridView;
     .locals 1
 
     .prologue
-    .line 53
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->e:Lcom/bbm/ui/InlineImageTextView;
+    .line 39
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->i:Landroid/widget/GridView;
 
     return-object v0
 .end method
 
-.method static synthetic c(Lcom/bbm/ui/activities/GroupListsActivity;)Lcom/bbm/ui/InlineImageTextView;
+.method static synthetic c(Lcom/bbm/ui/activities/GroupListsActivity;)Landroid/view/View;
     .locals 1
 
     .prologue
-    .line 53
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->f:Lcom/bbm/ui/InlineImageTextView;
+    .line 39
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->j:Landroid/view/View;
 
     return-object v0
 .end method
 
-.method static synthetic d(Lcom/bbm/ui/activities/GroupListsActivity;)Landroid/widget/TextView;
+.method static synthetic d(Lcom/bbm/ui/activities/GroupListsActivity;)Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 53
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->g:Landroid/widget/TextView;
+    .line 39
+    iget-object v0, p0, Lcom/bbm/bali/ui/main/a/d;->a:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic e(Lcom/bbm/ui/activities/GroupListsActivity;)Landroid/widget/GridView;
+.method static synthetic e(Lcom/bbm/ui/activities/GroupListsActivity;)Lcom/bbm/ui/activities/nh;
     .locals 1
 
     .prologue
-    .line 53
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->h:Landroid/widget/GridView;
+    .line 39
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->h:Lcom/bbm/ui/activities/nh;
 
     return-object v0
 .end method
 
-.method static synthetic f(Lcom/bbm/ui/activities/GroupListsActivity;)Landroid/view/View;
+.method static synthetic f(Lcom/bbm/ui/activities/GroupListsActivity;)Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 53
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->l:Landroid/view/View;
-
-    return-object v0
-.end method
-
-.method static synthetic g(Lcom/bbm/ui/activities/GroupListsActivity;)Lcom/bbm/ui/activities/pj;
-    .locals 1
-
-    .prologue
-    .line 53
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->b:Lcom/bbm/ui/activities/pj;
+    .line 39
+    iget-object v0, p0, Lcom/bbm/bali/ui/main/a/d;->a:Ljava/lang/String;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public onCreate(Landroid/os/Bundle;)V
-    .locals 5
+.method public onContextItemSelected(Landroid/view/MenuItem;)Z
+    .locals 2
 
     .prologue
-    const/4 v4, 0x0
+    .line 206
+    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
-    .line 194
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/mj;->onCreate(Landroid/os/Bundle;)V
+    move-result v0
 
-    .line 196
-    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/g/al;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    .line 211
+    :goto_0
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/d;->onContextItemSelected(Landroid/view/MenuItem;)Z
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->a:Lcom/bbm/g/al;
+    move-result v0
 
-    .line 197
-    const v0, 0x7f03002d
+    return v0
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupListsActivity;->setContentView(I)V
+    .line 208
+    :pswitch_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->b:Lcom/bbm/g/an;
 
-    .line 200
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupListsActivity;->getActionBar()Landroid/app/ActionBar;
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupListsActivity;->l:Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/bbm/g/ar;->c(Ljava/lang/String;)Lcom/bbm/g/bw;
 
     move-result-object v1
 
-    .line 201
-    const v0, 0x7f030111
+    invoke-virtual {v0, v1}, Lcom/bbm/g/an;->a(Lcom/bbm/g/db;)V
 
-    invoke-virtual {v1, v0}, Landroid/app/ActionBar;->setCustomView(I)V
-
-    .line 202
-    const/16 v0, 0x10
-
-    invoke-virtual {v1, v0}, Landroid/app/ActionBar;->setDisplayOptions(I)V
-
-    .line 203
-    invoke-virtual {v1}, Landroid/app/ActionBar;->getCustomView()Landroid/view/View;
-
-    move-result-object v0
-
-    const v2, 0x7f0b0575
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/ObservingImageView;
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->d:Lcom/bbm/ui/ObservingImageView;
-
-    .line 204
-    invoke-virtual {v1}, Landroid/app/ActionBar;->getCustomView()Landroid/view/View;
-
-    move-result-object v0
-
-    const v2, 0x7f0b0579
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/InlineImageTextView;
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->e:Lcom/bbm/ui/InlineImageTextView;
-
-    .line 205
-    invoke-virtual {v1}, Landroid/app/ActionBar;->getCustomView()Landroid/view/View;
-
-    move-result-object v0
-
-    const v2, 0x7f0b057a
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/InlineImageTextView;
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->f:Lcom/bbm/ui/InlineImageTextView;
+    goto :goto_0
 
     .line 206
-    invoke-virtual {v1}, Landroid/app/ActionBar;->getCustomView()Landroid/view/View;
+    :pswitch_data_0
+    .packed-switch 0x7f0b0028
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public onCreate(Landroid/os/Bundle;)V
+    .locals 3
+
+    .prologue
+    .line 144
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/d;->onCreate(Landroid/os/Bundle;)V
+
+    .line 146
+    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/g/an;
 
     move-result-object v0
 
-    const v2, 0x7f0b0578
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->b:Lcom/bbm/g/an;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    .line 147
+    const v0, 0x7f030047
 
-    move-result-object v0
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupListsActivity;->setContentView(I)V
 
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->g:Landroid/widget/TextView;
-
-    .line 207
-    invoke-virtual {v1}, Landroid/app/ActionBar;->getCustomView()Landroid/view/View;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/bbm/ui/activities/pe;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/pe;-><init>(Lcom/bbm/ui/activities/GroupListsActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 217
-    const v0, 0x7f0b01b2
+    .line 150
+    const v0, 0x7f0b013c
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupListsActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    new-instance v1, Lcom/bbm/ui/activities/pf;
+    check-cast v0, Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/pf;-><init>(Lcom/bbm/ui/activities/GroupListsActivity;)V
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->k:Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;
+
+    .line 151
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->k:Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;
+
+    const-string v1, ""
+
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/activities/GroupListsActivity;->a(Landroid/support/v7/widget/Toolbar;Ljava/lang/String;)V
+
+    .line 152
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->k:Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;
+
+    iget-object v1, p0, Lcom/bbm/bali/ui/main/a/d;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;->setGroupUri(Ljava/lang/String;)V
+
+    .line 153
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->k:Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;
+
+    new-instance v1, Lcom/bbm/ui/activities/ne;
+
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/ne;-><init>(Lcom/bbm/ui/activities/GroupListsActivity;)V
+
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;->setHeaderClickListener(Lcom/bbm/bali/ui/main/groups/e;)V
+
+    .line 160
+    const v0, 0x7f0b0222
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupListsActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/bbm/ui/activities/nf;
+
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/nf;-><init>(Lcom/bbm/ui/activities/GroupListsActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 225
-    const v0, 0x7f0b01af
+    .line 168
+    const v0, 0x7f0b021f
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupListsActivity;->findViewById(I)Landroid/view/View;
 
@@ -279,126 +231,251 @@
 
     check-cast v0, Landroid/widget/GridView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->h:Landroid/widget/GridView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->i:Landroid/widget/GridView;
 
-    .line 226
-    const v0, 0x7f0b01b0
+    .line 169
+    const v0, 0x7f0b0220
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupListsActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->l:Landroid/view/View;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->j:Landroid/view/View;
 
-    .line 228
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->h:Landroid/widget/GridView;
+    .line 171
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->i:Landroid/widget/GridView;
 
-    new-instance v1, Lcom/bbm/ui/activities/pg;
+    new-instance v1, Lcom/bbm/ui/activities/ng;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/pg;-><init>(Lcom/bbm/ui/activities/GroupListsActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/GridView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
-
-    .line 242
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->h:Landroid/widget/GridView;
-
-    new-instance v1, Lcom/bbm/ui/activities/ph;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/ph;-><init>(Lcom/bbm/ui/activities/GroupListsActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/ng;-><init>(Lcom/bbm/ui/activities/GroupListsActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 254
-    new-instance v0, Lcom/bbm/ui/activities/pj;
+    .line 183
+    new-instance v0, Lcom/bbm/ui/activities/nh;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/pj;-><init>(Lcom/bbm/ui/activities/GroupListsActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/nh;-><init>(Lcom/bbm/ui/activities/GroupListsActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->b:Lcom/bbm/ui/activities/pj;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->h:Lcom/bbm/ui/activities/nh;
 
-    .line 255
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->h:Landroid/widget/GridView;
+    .line 184
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->i:Landroid/widget/GridView;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupListsActivity;->b:Lcom/bbm/ui/activities/pj;
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupListsActivity;->h:Lcom/bbm/ui/activities/nh;
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 257
-    const v0, 0x7f0b00bf
+    .line 185
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->i:Landroid/widget/GridView;
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupListsActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupListsActivity;->registerForContextMenu(Landroid/view/View;)V
 
-    move-result-object v0
+    .line 187
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->b:Lcom/bbm/g/an;
 
-    check-cast v0, Lcom/bbm/ui/FooterActionBar;
+    iget-object v1, p0, Lcom/bbm/bali/ui/main/a/d;->a:Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->k:Lcom/bbm/ui/FooterActionBar;
+    sget-object v2, Lcom/bbm/g/ba;->c:Lcom/bbm/g/ba;
 
-    .line 258
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->k:Lcom/bbm/ui/FooterActionBar;
-
-    new-instance v1, Lcom/bbm/ui/ActionBarItem;
-
-    const v2, 0x7f0202b8
-
-    const v3, 0x7f0e03c5
-
-    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;II)V
-
-    invoke-virtual {v0, v1, v4}, Lcom/bbm/ui/FooterActionBar;->a(Lcom/bbm/ui/ActionBarItem;I)V
-
-    .line 259
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->k:Lcom/bbm/ui/FooterActionBar;
-
-    invoke-virtual {v0, v4}, Lcom/bbm/ui/FooterActionBar;->setOverflowEnabled(Z)V
-
-    .line 260
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->k:Lcom/bbm/ui/FooterActionBar;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupListsActivity;->i:Lcom/bbm/ui/cn;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
-
-    .line 262
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->a:Lcom/bbm/g/al;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
-
-    sget-object v2, Lcom/bbm/g/av;->c:Lcom/bbm/g/av;
-
-    invoke-static {v1, v2}, Lcom/bbm/g/am;->a(Ljava/lang/String;Lcom/bbm/g/av;)Lcom/bbm/g/au;
+    invoke-static {v1, v2}, Lcom/bbm/g/ar;->a(Ljava/lang/String;Lcom/bbm/g/ba;)Lcom/bbm/g/az;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/g/an;->a(Lcom/bbm/g/db;)V
 
-    .line 263
+    .line 188
     return-void
+.end method
+
+.method public onCreateContextMenu(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;)V
+    .locals 4
+
+    .prologue
+    const/4 v3, 0x0
+
+    .line 192
+    const-string v0, "ListGridview onItemLongClick"
+
+    const-class v1, Lcom/bbm/ui/activities/GroupListsActivity;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    move-object v0, p3
+
+    .line 193
+    check-cast v0, Landroid/widget/AdapterView$AdapterContextMenuInfo;
+
+    .line 194
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupListsActivity;->h:Lcom/bbm/ui/activities/nh;
+
+    iget v0, v0, Landroid/widget/AdapterView$AdapterContextMenuInfo;->position:I
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/nh;->getItem(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/g/y;
+
+    .line 195
+    if-eqz v0, :cond_0
+
+    iget-object v1, v0, Lcom/bbm/g/y;->g:Lcom/bbm/util/bo;
+
+    sget-object v2, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
+
+    if-eq v1, v2, :cond_1
+
+    .line 202
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 198
+    :cond_1
+    iget-object v1, v0, Lcom/bbm/g/y;->f:Ljava/lang/String;
+
+    iput-object v1, p0, Lcom/bbm/ui/activities/GroupListsActivity;->l:Ljava/lang/String;
+
+    .line 199
+    iget-object v0, v0, Lcom/bbm/g/y;->e:Ljava/lang/String;
+
+    invoke-interface {p1, v0}, Landroid/view/ContextMenu;->setHeaderTitle(Ljava/lang/CharSequence;)Landroid/view/ContextMenu;
+
+    .line 200
+    const v0, 0x7f0b0028
+
+    const v1, 0x7f0e0354
+
+    invoke-interface {p1, v3, v0, v3, v1}, Landroid/view/ContextMenu;->add(IIII)Landroid/view/MenuItem;
+
+    .line 201
+    invoke-super {p0, p1, p2, p3}, Lcom/bbm/bali/ui/main/a/d;->onCreateContextMenu(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;)V
+
+    goto :goto_0
+.end method
+
+.method public onCreateOptionsMenu(Landroid/view/Menu;)Z
+    .locals 2
+
+    .prologue
+    .line 134
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupListsActivity;->getMenuInflater()Landroid/view/MenuInflater;
+
+    move-result-object v0
+
+    const v1, 0x7f100028
+
+    invoke-virtual {v0, v1, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
+
+    .line 135
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/d;->onCreateOptionsMenu(Landroid/view/Menu;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method protected onDestroy()V
+    .locals 2
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 244
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->k:Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;
+
+    if-eqz v0, :cond_0
+
+    .line 245
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->k:Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;
+
+    invoke-virtual {v0}, Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;->g()V
+
+    .line 246
+    iput-object v1, p0, Lcom/bbm/ui/activities/GroupListsActivity;->k:Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;
+
+    .line 248
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->h:Lcom/bbm/ui/activities/nh;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/nh;->b()V
+
+    .line 249
+    iput-object v1, p0, Lcom/bbm/ui/activities/GroupListsActivity;->h:Lcom/bbm/ui/activities/nh;
+
+    .line 250
+    iput-object v1, p0, Lcom/bbm/ui/activities/GroupListsActivity;->i:Landroid/widget/GridView;
+
+    .line 251
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/d;->onDestroy()V
+
+    .line 252
+    return-void
+.end method
+
+.method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    .locals 3
+
+    .prologue
+    const/4 v2, 0x1
+
+    .line 123
+    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
+
+    move-result v0
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 130
+    :goto_0
+    return v2
+
+    .line 125
+    :pswitch_0
+    const-string v0, "Group Add List Clicked"
+
+    const-class v1, Lcom/bbm/ui/activities/GroupPictureActivity;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 126
+    iget-object v0, p0, Lcom/bbm/bali/ui/main/a/d;->a:Ljava/lang/String;
+
+    invoke-static {p0, v0}, Lcom/bbm/ui/activities/GroupListsActivity;->a(Landroid/app/Activity;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 123
+    :pswitch_data_0
+    .packed-switch 0x7f0b0786
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method protected onPause()V
     .locals 2
 
     .prologue
-    .line 293
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->j:Lcom/bbm/j/k;
-
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
-
-    .line 294
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
-
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+    .line 226
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
 
     move-result-object v0
 
-    sget-object v1, Lcom/bbm/c/o;->o:Lcom/bbm/c/o;
+    sget-object v1, Lcom/bbm/c/s;->o:Lcom/bbm/c/s;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->c(Lcom/bbm/c/o;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->c(Lcom/bbm/c/s;)V
 
-    .line 295
-    invoke-super {p0}, Lcom/bbm/ui/activities/mj;->onPause()V
+    .line 227
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->k:Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;
 
-    .line 296
+    iget-object v0, v0, Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;->d:Lcom/bbm/j/k;
+
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
+
+    .line 228
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/d;->onPause()V
+
+    .line 229
     return-void
 .end method
 
@@ -406,25 +483,25 @@
     .locals 2
 
     .prologue
-    .line 304
-    invoke-super {p0}, Lcom/bbm/ui/activities/mj;->onResume()V
+    .line 237
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/d;->onResume()V
 
-    .line 305
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
+    .line 238
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->k:Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;
 
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/bbm/c/o;->o:Lcom/bbm/c/o;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->a(Lcom/bbm/c/o;)V
-
-    .line 306
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupListsActivity;->j:Lcom/bbm/j/k;
+    iget-object v0, v0, Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;->d:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 307
+    .line 239
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/bbm/c/s;->o:Lcom/bbm/c/s;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->a(Lcom/bbm/c/s;)V
+
+    .line 240
     return-void
 .end method

@@ -44,15 +44,15 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 69
+    .line 71
     const/4 v0, 0x0
 
     sput-object v0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->o:[I
 
-    .line 70
+    .line 72
     sput v1, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->p:I
 
-    .line 71
+    .line 73
     sput v1, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->q:I
 
     return-void
@@ -68,49 +68,49 @@
 
     const/4 v2, 0x1
 
-    .line 74
+    .line 76
     invoke-direct {p0, p1}, Landroid/support/v4/view/ViewPager;-><init>(Landroid/content/Context;)V
 
-    .line 49
+    .line 51
     const-wide/16 v0, 0x5dc
 
     iput-wide v0, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->f:J
 
-    .line 51
+    .line 53
     iput v2, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->c:I
 
-    .line 53
+    .line 55
     iput-boolean v2, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->d:Z
 
-    .line 55
+    .line 57
     iput-boolean v2, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->g:Z
 
-    .line 57
+    .line 59
     iput v3, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->h:I
 
-    .line 59
+    .line 61
     iput-boolean v2, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->e:Z
 
-    .line 62
+    .line 64
     iput-boolean v3, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->j:Z
 
-    .line 63
+    .line 65
     iput-boolean v3, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->k:Z
 
-    .line 64
+    .line 66
     iput v4, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->l:F
 
     iput v4, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->m:F
 
-    .line 65
+    .line 67
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->n:Lcom/trinea/view/autoscrollviewpager/c;
 
-    .line 75
+    .line 77
     invoke-direct {p0}, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->f()V
 
-    .line 76
+    .line 78
     return-void
 .end method
 
@@ -124,49 +124,49 @@
 
     const/4 v2, 0x1
 
-    .line 79
+    .line 81
     invoke-direct {p0, p1, p2}, Landroid/support/v4/view/ViewPager;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 49
+    .line 51
     const-wide/16 v0, 0x5dc
 
     iput-wide v0, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->f:J
 
-    .line 51
+    .line 53
     iput v2, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->c:I
 
-    .line 53
+    .line 55
     iput-boolean v2, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->d:Z
 
-    .line 55
+    .line 57
     iput-boolean v2, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->g:Z
 
-    .line 57
+    .line 59
     iput v3, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->h:I
 
-    .line 59
+    .line 61
     iput-boolean v2, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->e:Z
 
-    .line 62
+    .line 64
     iput-boolean v3, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->j:Z
 
-    .line 63
+    .line 65
     iput-boolean v3, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->k:Z
 
-    .line 64
+    .line 66
     iput v4, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->l:F
 
     iput v4, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->m:F
 
-    .line 65
+    .line 67
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->n:Lcom/trinea/view/autoscrollviewpager/c;
 
-    .line 80
+    .line 82
     invoke-direct {p0}, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->f()V
 
-    .line 81
+    .line 83
     return-void
 .end method
 
@@ -176,17 +176,17 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 139
+    .line 141
     iget-object v0, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->i:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 140
+    .line 142
     iget-object v0, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->i:Landroid/os/Handler;
 
     invoke-virtual {v0, v1, p1, p2}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 141
+    .line 143
     return-void
 .end method
 
@@ -194,7 +194,7 @@
     .locals 1
 
     .prologue
-    .line 34
+    .line 36
     const/4 v0, 0x2
 
     new-array v0, v0, [I
@@ -224,95 +224,17 @@
     .locals 1
 
     .prologue
-    .line 34
+    .line 36
     invoke-direct {p0, p1, p2}, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->a(J)V
 
     return-void
-.end method
-
-.method public static a(Landroid/view/MotionEvent;)Z
-    .locals 9
-
-    .prologue
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    .line 240
-    sget-object v2, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->o:[I
-
-    if-eqz v2, :cond_0
-
-    .line 241
-    sget-object v2, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->o:[I
-
-    aget v2, v2, v1
-
-    .line 242
-    sget-object v3, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->o:[I
-
-    aget v3, v3, v0
-
-    .line 243
-    sget v4, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->p:I
-
-    .line 244
-    sget v5, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->q:I
-
-    .line 245
-    invoke-virtual {p0}, Landroid/view/MotionEvent;->getRawX()F
-
-    move-result v6
-
-    .line 246
-    invoke-virtual {p0}, Landroid/view/MotionEvent;->getRawY()F
-
-    move-result v7
-
-    .line 248
-    int-to-float v8, v2
-
-    cmpl-float v8, v6, v8
-
-    if-ltz v8, :cond_0
-
-    add-int/2addr v2, v4
-
-    int-to-float v2, v2
-
-    cmpg-float v2, v6, v2
-
-    if-gez v2, :cond_0
-
-    int-to-float v2, v3
-
-    cmpl-float v2, v7, v2
-
-    if-ltz v2, :cond_0
-
-    add-int v2, v3, v5
-
-    int-to-float v2, v2
-
-    cmpg-float v2, v7, v2
-
-    if-gez v2, :cond_0
-
-    .line 253
-    :goto_0
-    return v0
-
-    :cond_0
-    move v0, v1
-
-    goto :goto_0
 .end method
 
 .method static synthetic b(Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;)J
     .locals 2
 
     .prologue
-    .line 34
+    .line 36
     iget-wide v0, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->f:J
 
     return-wide v0
@@ -322,7 +244,7 @@
     .locals 5
 
     .prologue
-    .line 84
+    .line 86
     new-instance v0, Lcom/trinea/view/autoscrollviewpager/b;
 
     const/4 v1, 0x0
@@ -331,7 +253,7 @@
 
     iput-object v0, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->i:Landroid/os/Handler;
 
-    .line 86
+    .line 88
     invoke-virtual {p0}, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
@@ -342,7 +264,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 94
+    .line 96
     :try_start_0
     const-class v0, Landroid/support/v4/view/ViewPager;
 
@@ -392,15 +314,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 95
+    .line 97
     :goto_0
     return-void
 
-    .line 94
+    .line 96
     :catch_0
     move-exception v0
 
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method
@@ -411,17 +333,17 @@
     .locals 2
 
     .prologue
-    .line 108
+    .line 110
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->j:Z
 
-    .line 109
+    .line 111
     iget-wide v0, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->f:J
 
     invoke-direct {p0, v0, v1}, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->a(J)V
 
-    .line 110
+    .line 112
     return-void
 .end method
 
@@ -431,15 +353,15 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 126
+    .line 128
     iput-boolean v1, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->j:Z
 
-    .line 127
+    .line 129
     iget-object v0, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->i:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 128
+    .line 130
     return-void
 .end method
 
@@ -447,7 +369,7 @@
     .locals 1
 
     .prologue
-    .line 296
+    .line 298
     iget v0, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->c:I
 
     if-nez v0, :cond_0
@@ -467,7 +389,7 @@
     .locals 2
 
     .prologue
-    .line 278
+    .line 280
     iget-wide v0, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->f:J
 
     return-wide v0
@@ -477,7 +399,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 353
     iget v0, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->h:I
 
     return v0
@@ -493,12 +415,12 @@
 
     const/4 v5, 0x1
 
-    .line 194
+    .line 196
     iget-boolean v0, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->g:Z
 
     if-eqz v0, :cond_0
 
-    .line 195
+    .line 197
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -509,13 +431,13 @@
 
     if-eqz v0, :cond_5
 
-    .line 196
+    .line 198
     iput-boolean v5, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->k:Z
 
-    .line 197
+    .line 199
     invoke-virtual {p0}, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->e()V
 
-    .line 203
+    .line 205
     :cond_0
     :goto_0
     iget v0, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->h:I
@@ -526,7 +448,7 @@
 
     if-ne v0, v5, :cond_9
 
-    .line 204
+    .line 206
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -534,35 +456,35 @@
 
     iput v0, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->l:F
 
-    .line 205
+    .line 207
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 206
+    .line 208
     iget v0, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->l:F
 
     iput v0, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->m:F
 
-    .line 208
+    .line 210
     :cond_2
     invoke-virtual {p0}, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->getCurrentItem()I
 
     move-result v2
 
-    .line 209
-    invoke-virtual {p0}, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->getAdapter()Landroid/support/v4/view/af;
+    .line 211
+    invoke-virtual {p0}, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->getAdapter()Landroid/support/v4/view/as;
 
     move-result-object v0
 
-    .line 210
+    .line 212
     if-nez v0, :cond_6
 
     move v0, v1
 
-    .line 217
+    .line 219
     :goto_1
     if-nez v2, :cond_3
 
@@ -587,30 +509,30 @@
 
     if-ltz v3, :cond_9
 
-    .line 218
+    .line 220
     :cond_4
     iget v3, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->h:I
 
     if-ne v3, v6, :cond_7
 
-    .line 219
+    .line 221
     invoke-virtual {p0}, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     invoke-interface {v0, v1}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 226
+    .line 228
     :goto_2
     invoke-super {p0, p1}, Landroid/support/v4/view/ViewPager;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 230
+    .line 232
     :goto_3
     return v0
 
-    .line 198
+    .line 200
     :cond_5
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -622,24 +544,24 @@
 
     if-eqz v0, :cond_0
 
-    .line 199
+    .line 201
     invoke-virtual {p0}, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->d()V
 
     goto :goto_0
 
-    .line 210
+    .line 212
     :cond_6
-    invoke-virtual {v0}, Landroid/support/v4/view/af;->a()I
+    invoke-virtual {v0}, Landroid/support/v4/view/as;->c()I
 
     move-result v0
 
     goto :goto_1
 
-    .line 221
+    .line 223
     :cond_7
     if-le v0, v5, :cond_8
 
-    .line 222
+    .line 224
     sub-int/2addr v0, v2
 
     add-int/lit8 v0, v0, -0x1
@@ -648,7 +570,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->setCurrentItem(IZ)V
 
-    .line 224
+    .line 226
     :cond_8
     invoke-virtual {p0}, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->getParent()Landroid/view/ViewParent;
 
@@ -658,7 +580,7 @@
 
     goto :goto_2
 
-    .line 229
+    .line 231
     :cond_9
     invoke-virtual {p0}, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->getParent()Landroid/view/ViewParent;
 
@@ -666,7 +588,7 @@
 
     invoke-interface {v0, v5}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 230
+    .line 232
     invoke-super {p0, p1}, Landroid/support/v4/view/ViewPager;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -678,10 +600,10 @@
     .locals 0
 
     .prologue
-    .line 379
+    .line 381
     iput-boolean p1, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->e:Z
 
-    .line 380
+    .line 382
     return-void
 .end method
 
@@ -689,10 +611,10 @@
     .locals 0
 
     .prologue
-    .line 323
+    .line 325
     iput-boolean p1, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->d:Z
 
-    .line 324
+    .line 326
     return-void
 .end method
 
@@ -700,10 +622,10 @@
     .locals 0
 
     .prologue
-    .line 305
+    .line 307
     iput p1, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->c:I
 
-    .line 306
+    .line 308
     return-void
 .end method
 
@@ -711,10 +633,10 @@
     .locals 1
 
     .prologue
-    .line 287
+    .line 289
     iput-wide p1, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->f:J
 
-    .line 288
+    .line 290
     return-void
 .end method
 
@@ -722,12 +644,12 @@
     .locals 1
 
     .prologue
-    .line 134
+    .line 136
     iget-object v0, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->n:Lcom/trinea/view/autoscrollviewpager/c;
 
     iput-wide p1, v0, Lcom/trinea/view/autoscrollviewpager/c;->a:D
 
-    .line 135
+    .line 137
     return-void
 .end method
 
@@ -735,10 +657,10 @@
     .locals 0
 
     .prologue
-    .line 361
+    .line 363
     iput p1, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->h:I
 
-    .line 362
+    .line 364
     return-void
 .end method
 
@@ -746,9 +668,9 @@
     .locals 0
 
     .prologue
-    .line 341
+    .line 343
     iput-boolean p1, p0, Lcom/trinea/view/autoscrollviewpager/AutoScrollViewPager;->g:Z
 
-    .line 342
+    .line 344
     return-void
 .end method

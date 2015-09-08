@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field final synthetic bI:Lcom/glympse/android/hal/ai;
+.field final synthetic bL:Lcom/glympse/android/hal/ai;
 
-.field private bJ:[B
+.field private bM:[B
 
 
 # direct methods
@@ -18,12 +18,12 @@
 
     .prologue
     .line 270
-    iput-object p1, p0, Lcom/glympse/android/hal/am;->bI:Lcom/glympse/android/hal/ai;
+    iput-object p1, p0, Lcom/glympse/android/hal/am;->bL:Lcom/glympse/android/hal/ai;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 271
-    iput-object p2, p0, Lcom/glympse/android/hal/am;->bJ:[B
+    iput-object p2, p0, Lcom/glympse/android/hal/am;->bM:[B
 
     .line 272
     return-void
@@ -37,7 +37,7 @@
     .prologue
     .line 278
     :try_start_0
-    iget-object v0, p0, Lcom/glympse/android/hal/am;->bI:Lcom/glympse/android/hal/ai;
+    iget-object v0, p0, Lcom/glympse/android/hal/am;->bL:Lcom/glympse/android/hal/ai;
 
     invoke-static {v0}, Lcom/glympse/android/hal/ai;->b(Lcom/glympse/android/hal/ai;)Ljava/net/Socket;
 
@@ -48,7 +48,7 @@
     move-result-object v0
 
     .line 279
-    iget-object v1, p0, Lcom/glympse/android/hal/am;->bJ:[B
+    iget-object v1, p0, Lcom/glympse/android/hal/am;->bM:[B
 
     invoke-virtual {v0, v1}, Ljava/io/OutputStream;->write([B)V
 
@@ -65,7 +65,7 @@
     :catch_0
     move-exception v0
 
-    iget-object v0, p0, Lcom/glympse/android/hal/am;->bI:Lcom/glympse/android/hal/ai;
+    iget-object v0, p0, Lcom/glympse/android/hal/am;->bL:Lcom/glympse/android/hal/ai;
 
     invoke-static {v0}, Lcom/glympse/android/hal/ai;->g(Lcom/glympse/android/hal/ai;)V
 

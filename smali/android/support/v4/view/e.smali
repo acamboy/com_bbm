@@ -16,7 +16,7 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Landroid/view/View;)Landroid/support/v4/view/a/i;
+.method public final a(Ljava/lang/Object;Landroid/view/View;)Landroid/support/v4/view/a/p;
     .locals 2
 
     .prologue
@@ -31,9 +31,9 @@
     if-eqz v1, :cond_0
 
     .line 278
-    new-instance v0, Landroid/support/v4/view/a/i;
+    new-instance v0, Landroid/support/v4/view/a/p;
 
-    invoke-direct {v0, v1}, Landroid/support/v4/view/a/i;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, v1}, Landroid/support/v4/view/a/p;-><init>(Ljava/lang/Object;)V
 
     .line 280
     :goto_0

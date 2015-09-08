@@ -13,7 +13,7 @@
 
     .prologue
     .line 41
-    invoke-static {}, Lcom/bbm/al;->values()[Lcom/bbm/al;
+    invoke-static {}, Lcom/bbm/au;->values()[Lcom/bbm/au;
 
     move-result-object v0
 
@@ -26,9 +26,9 @@
     :try_start_0
     sget-object v0, Lcom/bbm/setup/v;->a:[I
 
-    sget-object v1, Lcom/bbm/al;->b:Lcom/bbm/al;
+    sget-object v1, Lcom/bbm/au;->b:Lcom/bbm/au;
 
-    invoke-virtual {v1}, Lcom/bbm/al;->ordinal()I
+    invoke-virtual {v1}, Lcom/bbm/au;->ordinal()I
 
     move-result v1
 

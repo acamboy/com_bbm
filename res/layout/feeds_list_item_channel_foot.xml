@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/feeds_list_foot_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:src="@drawable/divider_one_px" android:scaleType="fitXY" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/feeds_list_item_foot_root" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="3.0">
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/list_item_channel_hypes_button" android:background="@drawable/list_item_foot_button_background" android:padding="@dimen/feeds_list_item_foot_child_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/feeds_channel_posts_like_selector" android:layout_weight="1.0" />
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/list_item_channel_comments_button" android:background="@drawable/list_item_foot_button_background" android:padding="@dimen/feeds_list_item_foot_child_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/feeds_channel_posts_comment_selector" android:layout_weight="1.0" />
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/list_item_channel_share_button" android:background="@drawable/list_item_foot_button_background" android:padding="@dimen/feeds_list_item_foot_child_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/feeds_channel_posts_share_selector" android:layout_weight="1.0" />
+    </LinearLayout>
+</merge>

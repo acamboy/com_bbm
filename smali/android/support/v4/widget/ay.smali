@@ -1,113 +1,124 @@
-.class final Landroid/support/v4/widget/ay;
-.super Landroid/view/animation/Animation;
-.source "SwipeRefreshLayout.java"
+.class public final Landroid/support/v4/widget/ay;
+.super Landroid/view/ViewGroup$MarginLayoutParams;
+.source "SlidingPaneLayout.java"
+
+
+# static fields
+.field private static final e:[I
 
 
 # instance fields
-.field final synthetic a:Landroid/support/v4/widget/SwipeRefreshLayout;
+.field public a:F
+
+.field b:Z
+
+.field c:Z
+
+.field d:Landroid/graphics/Paint;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/widget/SwipeRefreshLayout;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 842
-    iput-object p1, p0, Landroid/support/v4/widget/ay;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
+    .line 1392
+    const/4 v0, 0x1
 
-    invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
+    new-array v0, v0, [I
+
+    const/4 v1, 0x0
+
+    const v2, 0x1010181
+
+    aput v2, v0, v1
+
+    sput-object v0, Landroid/support/v4/widget/ay;->e:[I
 
     return-void
 .end method
 
+.method public constructor <init>()V
+    .locals 1
 
-# virtual methods
-.method public final applyTransformation(FLandroid/view/animation/Transformation;)V
+    .prologue
+    const/4 v0, -0x1
+
+    .line 1416
+    invoke-direct {p0, v0, v0}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
+
+    .line 1400
+    const/4 v0, 0x0
+
+    iput v0, p0, Landroid/support/v4/widget/ay;->a:F
+
+    .line 1417
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
 
     .prologue
-    .line 845
-    iget-object v0, p0, Landroid/support/v4/widget/ay;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
-
-    invoke-static {v0}, Landroid/support/v4/widget/SwipeRefreshLayout;->j(Landroid/support/v4/widget/SwipeRefreshLayout;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 848
-    iget-object v0, p0, Landroid/support/v4/widget/ay;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
-
-    invoke-static {v0}, Landroid/support/v4/widget/SwipeRefreshLayout;->k(Landroid/support/v4/widget/SwipeRefreshLayout;)F
-
-    move-result v0
-
-    iget-object v1, p0, Landroid/support/v4/widget/ay;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
-
-    iget v1, v1, Landroid/support/v4/widget/SwipeRefreshLayout;->b:I
-
-    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    sub-float/2addr v0, v1
-
-    float-to-int v0, v0
-
-    .line 852
-    :goto_0
-    iget-object v1, p0, Landroid/support/v4/widget/ay;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
-
-    iget v1, v1, Landroid/support/v4/widget/SwipeRefreshLayout;->a:I
-
-    iget-object v2, p0, Landroid/support/v4/widget/ay;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
-
-    iget v2, v2, Landroid/support/v4/widget/SwipeRefreshLayout;->a:I
-
-    sub-int/2addr v0, v2
-
-    int-to-float v0, v0
-
-    mul-float/2addr v0, p1
-
-    float-to-int v0, v0
-
-    add-int/2addr v0, v1
-
-    .line 853
-    iget-object v1, p0, Landroid/support/v4/widget/ay;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
-
-    invoke-static {v1}, Landroid/support/v4/widget/SwipeRefreshLayout;->e(Landroid/support/v4/widget/SwipeRefreshLayout;)Landroid/support/v4/widget/a;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/support/v4/widget/a;->getTop()I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    .line 854
-    iget-object v1, p0, Landroid/support/v4/widget/ay;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
-
     const/4 v2, 0x0
 
-    invoke-static {v1, v0, v2}, Landroid/support/v4/widget/SwipeRefreshLayout;->a(Landroid/support/v4/widget/SwipeRefreshLayout;IZ)V
+    .line 1437
+    invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 855
+    .line 1400
+    iput v2, p0, Landroid/support/v4/widget/ay;->a:F
+
+    .line 1439
+    sget-object v0, Landroid/support/v4/widget/ay;->e:[I
+
+    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+
+    move-result-object v0
+
+    .line 1440
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    move-result v1
+
+    iput v1, p0, Landroid/support/v4/widget/ay;->a:F
+
+    .line 1441
+    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
+
+    .line 1442
     return-void
+.end method
 
-    .line 850
-    :cond_0
-    iget-object v0, p0, Landroid/support/v4/widget/ay;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
+.method public constructor <init>(Landroid/view/ViewGroup$LayoutParams;)V
+    .locals 1
 
-    invoke-static {v0}, Landroid/support/v4/widget/SwipeRefreshLayout;->k(Landroid/support/v4/widget/SwipeRefreshLayout;)F
+    .prologue
+    .line 1424
+    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    move-result v0
+    .line 1400
+    const/4 v0, 0x0
 
-    float-to-int v0, v0
+    iput v0, p0, Landroid/support/v4/widget/ay;->a:F
 
-    goto :goto_0
+    .line 1425
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
+    .locals 1
+
+    .prologue
+    .line 1428
+    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
+
+    .line 1400
+    const/4 v0, 0x0
+
+    iput v0, p0, Landroid/support/v4/widget/ay;->a:F
+
+    .line 1429
+    return-void
 .end method

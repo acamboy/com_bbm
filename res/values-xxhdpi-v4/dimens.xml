@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_store_item_width">82.5dip</dimen>
+    <dimen name="ephemeral_picker_margin">10.0dip</dimen>
+    <dimen name="in_call_action_item_padding">28.0dip</dimen>
+    <dimen name="in_call_bottom_title_spacing">20.0dip</dimen>
+    <dimen name="in_call_details_margin">35.0dip</dimen>
+    <dimen name="in_call_details_margin_bottom">10.0dip</dimen>
+    <dimen name="in_call_end_call_margin_bottom">30.0dip</dimen>
+    <dimen name="in_call_margin_top">45.0dip</dimen>
+    <dimen name="in_call_minimize_icon_spacing">40.0dip</dimen>
+    <dimen name="in_call_outer_padding">20.0dip</dimen>
+    <dimen name="in_call_subtitle_left_margin">34.0dip</dimen>
+    <dimen name="in_call_title_spacing">14.0dip</dimen>
+    <dimen name="in_call_title_text_margin">30.0dip</dimen>
+    <dimen name="lobby_chats_message_text_size">16.0sp</dimen>
+    <dimen name="lobby_chats_name_text_size">20.0sp</dimen>
+    <dimen name="store_home_page_app_grid_height">175.0dip</dimen>
+    <dimen name="store_home_page_banner_height">138.66998dip</dimen>
+</resources>

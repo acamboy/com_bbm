@@ -7,17 +7,19 @@
 
 
 # instance fields
-.field private bl:Ljava/net/HttpURLConnection;
+.field private bm:Ljava/net/HttpURLConnection;
 
-.field private bm:I
+.field private bn:I
 
-.field private bn:[B
+.field private bo:I
 
-.field private bo:[B
+.field private bp:[B
 
-.field private bp:Z
+.field private bq:[B
 
-.field private bq:Ljava/lang/String;
+.field private br:Z
+
+.field private bs:Ljava/lang/String;
 
 
 # direct methods
@@ -25,7 +27,7 @@
     .locals 2
 
     .prologue
-    .line 45
+    .line 48
     :try_start_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -33,7 +35,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 47
+    .line 50
     const-string v0, "http.keepAlive"
 
     const-string v1, "false"
@@ -42,7 +44,7 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 53
+    .line 56
     :cond_0
     :goto_0
     return-void
@@ -54,24 +56,29 @@
 .end method
 
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
     .prologue
-    const/4 v0, 0x0
-
-    .line 56
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 57
-    iput-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
-
-    .line 58
-    iput-object v0, p0, Lcom/glympse/android/hal/ae;->bo:[B
+    const/4 v1, 0x0
 
     .line 59
-    iput-object v0, p0, Lcom/glympse/android/hal/ae;->bq:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 60
+    iput-object v1, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
+
+    .line 61
+    const/4 v0, 0x1
+
+    iput v0, p0, Lcom/glympse/android/hal/ae;->bn:I
+
+    .line 62
+    iput-object v1, p0, Lcom/glympse/android/hal/ae;->bq:[B
+
+    .line 63
+    iput-object v1, p0, Lcom/glympse/android/hal/ae;->bs:Ljava/lang/String;
+
+    .line 64
     return-void
 .end method
 
@@ -79,7 +86,7 @@
     .locals 2
 
     .prologue
-    .line 568
+    .line 605
     invoke-virtual {p0}, Ljava/net/URL;->getProtocol()Ljava/lang/String;
 
     move-result-object v0
@@ -92,17 +99,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 570
+    .line 607
     check-cast p1, Ljavax/net/ssl/HttpsURLConnection;
 
-    .line 571
+    .line 608
     new-instance v0, Lorg/apache/http/conn/ssl/BrowserCompatHostnameVerifier;
 
     invoke-direct {v0}, Lorg/apache/http/conn/ssl/BrowserCompatHostnameVerifier;-><init>()V
 
     invoke-virtual {p1, v0}, Ljavax/net/ssl/HttpsURLConnection;->setHostnameVerifier(Ljavax/net/ssl/HostnameVerifier;)V
 
-    .line 573
+    .line 610
     :cond_0
     return-void
 .end method
@@ -111,14 +118,14 @@
     .locals 2
 
     .prologue
-    .line 398
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    .line 435
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     if-eqz v0, :cond_0
 
-    .line 402
+    .line 439
     :try_start_0
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getOutputStream()Ljava/io/OutputStream;
     :try_end_0
@@ -126,11 +133,11 @@
 
     move-result-object v0
 
-    .line 409
+    .line 446
     :goto_0
     return-object v0
 
-    .line 404
+    .line 441
     :catch_0
     move-exception v0
 
@@ -138,7 +145,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->ex(Ljava/lang/Throwable;Z)V
 
-    .line 409
+    .line 446
     :cond_0
     const/4 v0, 0x0
 
@@ -153,17 +160,17 @@
 
     const/4 v4, 0x0
 
-    .line 414
+    .line 451
     const/4 v0, 0x0
 
-    .line 416
-    iget-object v1, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    .line 453
+    iget-object v1, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     if-eqz v1, :cond_1
 
-    .line 424
+    .line 461
     :try_start_0
-    iget-object v1, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    iget-object v1, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
     :try_end_0
@@ -171,24 +178,24 @@
 
     move-result-object v1
 
-    .line 435
+    .line 472
     :goto_0
     if-nez v1, :cond_0
 
-    .line 437
+    .line 474
     const-string v0, "Failed to get input stream.  Attempting to get error stream."
 
     invoke-static {v2, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
-    .line 440
+    .line 477
     :try_start_1
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getErrorStream()Ljava/io/InputStream;
 
     move-result-object v1
 
-    .line 441
+    .line 478
     const/4 v2, 0x4
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -214,11 +221,11 @@
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 452
+    .line 489
     :cond_0
     :goto_2
     :try_start_2
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     const-string v2, "Content-Encoding"
 
@@ -226,7 +233,7 @@
 
     move-result-object v0
 
-    .line 453
+    .line 490
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
 
     move-result v2
@@ -241,19 +248,19 @@
 
     if-eqz v0, :cond_3
 
-    .line 455
+    .line 492
     new-instance v0, Ljava/util/zip/GZIPInputStream;
 
     invoke-direct {v0, v1}, Ljava/util/zip/GZIPInputStream;-><init>(Ljava/io/InputStream;)V
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 464
+    .line 501
     :cond_1
     :goto_3
     return-object v0
 
-    .line 426
+    .line 463
     :catch_0
     move-exception v1
 
@@ -263,7 +270,7 @@
 
     goto :goto_0
 
-    .line 441
+    .line 478
     :cond_2
     :try_start_3
     const-string v0, "not null"
@@ -272,7 +279,7 @@
 
     goto :goto_1
 
-    .line 443
+    .line 480
     :catch_1
     move-exception v0
 
@@ -280,7 +287,7 @@
 
     goto :goto_2
 
-    .line 458
+    .line 495
     :catch_2
     move-exception v0
 
@@ -300,39 +307,39 @@
 
     const/4 v1, 0x0
 
-    .line 469
-    iget-object v2, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    .line 506
+    iget-object v2, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     if-eqz v2, :cond_0
 
-    iget-boolean v2, p0, Lcom/glympse/android/hal/ae;->bp:Z
+    iget-boolean v2, p0, Lcom/glympse/android/hal/ae;->br:Z
 
     if-eqz v2, :cond_2
 
     :cond_0
     move v0, v1
 
-    .line 561
+    .line 598
     :cond_1
     :goto_0
     return v0
 
-    .line 473
+    .line 510
     :cond_2
-    iput-boolean v0, p0, Lcom/glympse/android/hal/ae;->bp:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/ae;->br:Z
 
-    .line 475
+    .line 512
     const/4 v2, 0x0
 
-    .line 481
+    .line 518
     :try_start_0
-    iget-object v3, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    iget-object v3, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v3}, Ljava/net/HttpURLConnection;->getContentLength()I
 
     move-result v3
 
-    .line 482
+    .line 519
     const/4 v4, 0x1
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -351,10 +358,10 @@
 
     invoke-static {v4, v5}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
-    .line 485
+    .line 522
     if-eqz v3, :cond_1
 
-    .line 491
+    .line 528
     invoke-direct {p0}, Lcom/glympse/android/hal/ae;->q()Ljava/io/InputStream;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
@@ -362,13 +369,13 @@
 
     move-result-object v2
 
-    .line 492
+    .line 529
     if-nez v2, :cond_4
 
-    .line 494
+    .line 531
     if-eqz v2, :cond_3
 
-    .line 551
+    .line 588
     :try_start_1
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_1
@@ -378,10 +385,10 @@
     :goto_1
     move v0, v1
 
-    .line 557
+    .line 594
     goto :goto_0
 
-    .line 553
+    .line 590
     :catch_0
     move-exception v0
 
@@ -389,25 +396,25 @@
 
     goto :goto_1
 
-    .line 509
+    .line 546
     :cond_4
     :try_start_2
     new-instance v4, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v4}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 512
+    .line 549
     const/16 v5, 0x200
 
     if-gt v3, v5, :cond_6
 
     const/16 v3, 0x400
 
-    .line 515
+    .line 552
     :goto_2
     new-array v3, v3, [B
 
-    .line 521
+    .line 558
     :goto_3
     const/4 v5, 0x0
 
@@ -417,10 +424,10 @@
 
     move-result v5
 
-    .line 525
+    .line 562
     if-ltz v5, :cond_7
 
-    .line 527
+    .line 564
     const/4 v6, 0x0
 
     invoke-virtual {v4, v3, v6, v5}, Ljava/io/ByteArrayOutputStream;->write([BII)V
@@ -430,7 +437,7 @@
 
     goto :goto_3
 
-    .line 539
+    .line 576
     :catch_1
     move-exception v0
 
@@ -441,10 +448,10 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 542
+    .line 579
     if-eqz v2, :cond_5
 
-    .line 551
+    .line 588
     :try_start_4
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_4
@@ -454,10 +461,10 @@
     :goto_4
     move v0, v1
 
-    .line 557
+    .line 594
     goto :goto_0
 
-    .line 512
+    .line 549
     :cond_6
     const/16 v5, 0x2000
 
@@ -470,7 +477,7 @@
 
     goto :goto_2
 
-    .line 535
+    .line 572
     :cond_7
     const/4 v3, 0x1
 
@@ -494,20 +501,20 @@
 
     invoke-static {v3, v5}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
-    .line 536
+    .line 573
     invoke-virtual {v4}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/glympse/android/hal/ae;->bo:[B
+    iput-object v3, p0, Lcom/glympse/android/hal/ae;->bq:[B
     :try_end_5
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 547
+    .line 584
     if-eqz v2, :cond_1
 
-    .line 551
+    .line 588
     :try_start_6
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_6
@@ -515,7 +522,7 @@
 
     goto/16 :goto_0
 
-    .line 553
+    .line 590
     :catch_2
     move-exception v2
 
@@ -530,24 +537,24 @@
 
     goto :goto_4
 
-    .line 547
+    .line 584
     :catchall_0
     move-exception v0
 
     if-eqz v2, :cond_8
 
-    .line 551
+    .line 588
     :try_start_7
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_7
     .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_4
 
-    .line 557
+    .line 594
     :cond_8
     :goto_5
     throw v0
 
-    .line 553
+    .line 590
     :catch_4
     move-exception v2
 
@@ -564,12 +571,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 359
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    .line 396
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     if-eqz v0, :cond_0
 
-    .line 363
+    .line 400
     :try_start_0
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
@@ -581,7 +588,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 365
+    .line 402
     invoke-static {}, Lcom/glympse/android/hal/GlympseThreadPool;->instance()Lcom/glympse/android/hal/GlympseThreadPool;
 
     move-result-object v0
@@ -596,7 +603,7 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 382
+    .line 419
     :cond_0
     :goto_0
     return-void
@@ -604,18 +611,18 @@
     :catch_0
     move-exception v0
 
-    .line 375
+    .line 412
     :cond_1
     :try_start_1
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->disconnect()V
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 380
+    .line 417
     :goto_1
-    iput-object v3, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    iput-object v3, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     goto :goto_0
 
@@ -633,67 +640,67 @@
 
     const/4 v4, 0x0
 
-    .line 183
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    .line 220
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     if-nez v0, :cond_1
 
-    .line 237
+    .line 274
     :cond_0
     :goto_0
     return-void
 
-    .line 189
+    .line 226
     :cond_1
     invoke-static {v1}, Lcom/glympse/android/hal/DebugBase;->logMemory(Landroid/content/Context;)V
 
-    .line 192
-    iget v0, p0, Lcom/glympse/android/hal/ae;->bm:I
+    .line 229
+    iget v0, p0, Lcom/glympse/android/hal/ae;->bo:I
 
     if-lez v0, :cond_0
 
-    .line 199
+    .line 236
     :try_start_0
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     if-eqz v0, :cond_2
 
-    .line 201
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    .line 238
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
-    iget v2, p0, Lcom/glympse/android/hal/ae;->bm:I
+    iget v2, p0, Lcom/glympse/android/hal/ae;->bo:I
 
     invoke-virtual {v0, v2}, Ljava/net/HttpURLConnection;->setFixedLengthStreamingMode(I)V
 
-    .line 205
+    .line 242
     :cond_2
     invoke-direct {p0}, Lcom/glympse/android/hal/ae;->p()Ljava/io/OutputStream;
 
     move-result-object v1
 
-    .line 206
+    .line 243
     if-eqz v1, :cond_3
 
-    .line 209
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bn:[B
+    .line 246
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bp:[B
 
     const/4 v2, 0x0
 
-    iget v3, p0, Lcom/glympse/android/hal/ae;->bm:I
+    iget v3, p0, Lcom/glympse/android/hal/ae;->bo:I
 
     invoke-virtual {v1, v0, v2, v3}, Ljava/io/OutputStream;->write([BII)V
 
-    .line 212
+    .line 249
     invoke-virtual {v1}, Ljava/io/OutputStream;->flush()V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 223
+    .line 260
     :cond_3
     if-eqz v1, :cond_0
 
-    .line 227
+    .line 264
     :try_start_1
     invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
     :try_end_1
@@ -701,7 +708,7 @@
 
     goto :goto_0
 
-    .line 229
+    .line 266
     :catch_0
     move-exception v0
 
@@ -709,7 +716,7 @@
 
     goto :goto_0
 
-    .line 216
+    .line 253
     :catch_1
     move-exception v0
 
@@ -720,10 +727,10 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 223
+    .line 260
     if-eqz v1, :cond_0
 
-    .line 227
+    .line 264
     :try_start_3
     invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
     :try_end_3
@@ -731,7 +738,7 @@
 
     goto :goto_0
 
-    .line 229
+    .line 266
     :catch_2
     move-exception v0
 
@@ -739,24 +746,24 @@
 
     goto :goto_0
 
-    .line 223
+    .line 260
     :catchall_0
     move-exception v0
 
     if-eqz v1, :cond_4
 
-    .line 227
+    .line 264
     :try_start_4
     invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
     :try_end_4
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_3
 
-    .line 233
+    .line 270
     :cond_4
     :goto_1
     throw v0
 
-    .line 229
+    .line 266
     :catch_3
     move-exception v1
 
@@ -769,10 +776,10 @@
     .locals 1
 
     .prologue
-    .line 308
+    .line 345
     invoke-static {}, Lcom/glympse/android/hal/Helpers;->logTODO()V
 
-    .line 309
+    .line 346
     const/4 v0, 0x0
 
     return-object v0
@@ -784,17 +791,17 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 241
+    .line 278
     const/4 v2, 0x0
 
-    .line 243
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    .line 280
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     if-eqz v0, :cond_1
 
-    .line 250
+    .line 287
     :try_start_0
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getResponseCode()I
     :try_end_0
@@ -802,20 +809,20 @@
 
     move-result v0
 
-    .line 288
+    .line 325
     :cond_0
     :goto_0
     return v0
 
-    .line 252
+    .line 289
     :catch_0
     move-exception v0
 
     move-object v2, v0
 
-    .line 261
+    .line 298
     :try_start_1
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     const-string v3, "status"
 
@@ -823,14 +830,14 @@
 
     move-result-object v0
 
-    .line 262
+    .line 299
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 264
+    .line 301
     const/16 v3, 0x20
 
     invoke-static {v0, v3}, Lcom/glympse/android/hal/Helpers;->strSplit(Ljava/lang/String;C)Ljava/util/Vector;
@@ -851,15 +858,15 @@
 
     move-result v0
 
-    .line 265
+    .line 302
     if-gtz v0, :cond_0
 
-    .line 277
+    .line 314
     :cond_1
     :goto_1
     if-eqz v2, :cond_3
 
-    .line 279
+    .line 316
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -884,12 +891,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 281
+    .line 318
     const/16 v0, 0x191
 
     goto :goto_0
 
-    .line 271
+    .line 308
     :catch_1
     move-exception v0
 
@@ -897,7 +904,7 @@
 
     goto :goto_1
 
-    .line 285
+    .line 322
     :cond_2
     const/4 v0, 0x4
 
@@ -924,7 +931,7 @@
     :cond_3
     move v0, v1
 
-    .line 288
+    .line 325
     goto :goto_0
 .end method
 
@@ -932,17 +939,17 @@
     .locals 1
 
     .prologue
-    .line 329
-    iget-boolean v0, p0, Lcom/glympse/android/hal/ae;->bp:Z
+    .line 366
+    iget-boolean v0, p0, Lcom/glympse/android/hal/ae;->br:Z
 
     if-nez v0, :cond_0
 
-    .line 331
+    .line 368
     invoke-direct {p0}, Lcom/glympse/android/hal/ae;->r()Z
 
-    .line 333
+    .line 370
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bo:[B
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bq:[B
 
     return-object v0
 .end method
@@ -953,31 +960,31 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 340
+    .line 377
     :try_start_0
     invoke-virtual {p0}, Lcom/glympse/android/hal/ae;->getResponseData()[B
 
     move-result-object v1
 
-    .line 341
+    .line 378
     if-eqz v1, :cond_1
 
-    .line 343
+    .line 380
     array-length v0, v1
 
-    .line 354
+    .line 391
     :cond_0
     :goto_0
     return v0
 
-    .line 345
+    .line 382
     :cond_1
-    iget-object v1, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    iget-object v1, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     if-eqz v1, :cond_0
 
-    .line 347
-    iget-object v1, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    .line 384
+    iget-object v1, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v1}, Ljava/net/HttpURLConnection;->getContentLength()I
     :try_end_0
@@ -987,7 +994,7 @@
 
     goto :goto_0
 
-    .line 350
+    .line 387
     :catch_0
     move-exception v1
 
@@ -1000,40 +1007,40 @@
     .locals 2
 
     .prologue
-    .line 314
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bq:Ljava/lang/String;
+    .line 351
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bs:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 316
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bq:Ljava/lang/String;
+    .line 353
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bs:Ljava/lang/String;
 
-    .line 324
+    .line 361
     :goto_0
     return-object v0
 
-    .line 318
+    .line 355
     :cond_0
     invoke-virtual {p0}, Lcom/glympse/android/hal/ae;->getResponseData()[B
 
     move-result-object v0
 
-    .line 319
+    .line 356
     if-eqz v0, :cond_1
 
-    .line 321
+    .line 358
     new-instance v1, Ljava/lang/String;
 
     invoke-direct {v1, v0}, Ljava/lang/String;-><init>([B)V
 
-    iput-object v1, p0, Lcom/glympse/android/hal/ae;->bq:Ljava/lang/String;
+    iput-object v1, p0, Lcom/glympse/android/hal/ae;->bs:Ljava/lang/String;
 
-    .line 322
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bq:Ljava/lang/String;
+    .line 359
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bs:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 324
+    .line 361
     :cond_1
     const/4 v0, 0x0
 
@@ -1044,14 +1051,14 @@
     .locals 1
 
     .prologue
-    .line 293
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    .line 332
+    :try_start_0
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     if-eqz v0, :cond_0
 
-    .line 297
-    :try_start_0
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    .line 334
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0, p1}, Ljava/net/HttpURLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
     :try_end_0
@@ -1059,7 +1066,7 @@
 
     move-result-object v0
 
-    .line 303
+    .line 340
     :goto_0
     return-object v0
 
@@ -1072,57 +1079,52 @@
     goto :goto_0
 .end method
 
-.method public isPost()Z
+.method public methodType()I
     .locals 1
 
     .prologue
-    .line 177
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    .line 214
+    iget v0, p0, Lcom/glympse/android/hal/ae;->bn:I
 
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
-
-    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getDoOutput()Z
-
-    move-result v0
-
-    :goto_0
     return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method
 
 .method public setConnectTimeout(I)V
     .locals 1
 
     .prologue
-    .line 99
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    .line 105
+    :try_start_0
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     if-eqz v0, :cond_0
 
-    .line 101
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    .line 107
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0, p1}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 103
+    .line 113
     :cond_0
+    :goto_0
     return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
 .end method
 
 .method public setCookie(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 147
+    .line 184
     invoke-static {}, Lcom/glympse/android/hal/Helpers;->logTODO()V
 
-    .line 148
+    .line 185
     return-void
 .end method
 
@@ -1130,38 +1132,56 @@
     .locals 1
 
     .prologue
-    .line 115
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    .line 133
+    :try_start_0
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     if-eqz v0, :cond_0
 
-    .line 117
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    .line 135
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0, p1}, Ljava/net/HttpURLConnection;->setInstanceFollowRedirects(Z)V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 119
+    .line 141
     :cond_0
+    :goto_0
     return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
 .end method
 
 .method public setReadTimeout(I)V
     .locals 1
 
     .prologue
-    .line 107
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    .line 119
+    :try_start_0
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     if-eqz v0, :cond_0
 
-    .line 109
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    .line 121
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0, p1}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 111
+    .line 127
     :cond_0
+    :goto_0
     return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
 .end method
 
 .method public setRequestData(Ljava/lang/String;)V
@@ -1170,18 +1190,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 152
+    .line 189
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ae;->bn:[B
+    iput-object v0, p0, Lcom/glympse/android/hal/ae;->bp:[B
 
-    .line 153
-    iput v1, p0, Lcom/glympse/android/hal/ae;->bm:I
+    .line 190
+    iput v1, p0, Lcom/glympse/android/hal/ae;->bo:I
 
-    .line 155
+    .line 192
     if-eqz p1, :cond_0
 
-    .line 159
+    .line 196
     :try_start_0
     const-string v0, "UTF-8"
 
@@ -1189,23 +1209,23 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ae;->bn:[B
+    iput-object v0, p0, Lcom/glympse/android/hal/ae;->bp:[B
 
-    .line 160
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bn:[B
+    .line 197
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bp:[B
 
     array-length v0, v0
 
-    iput v0, p0, Lcom/glympse/android/hal/ae;->bm:I
+    iput v0, p0, Lcom/glympse/android/hal/ae;->bo:I
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 167
+    .line 204
     :cond_0
     :goto_0
     return-void
 
-    .line 162
+    .line 199
     :catch_0
     move-exception v0
 
@@ -1218,13 +1238,13 @@
     .locals 0
 
     .prologue
-    .line 171
-    iput-object p1, p0, Lcom/glympse/android/hal/ae;->bn:[B
+    .line 208
+    iput-object p1, p0, Lcom/glympse/android/hal/ae;->bp:[B
 
-    .line 172
-    iput p2, p0, Lcom/glympse/android/hal/ae;->bm:I
+    .line 209
+    iput p2, p0, Lcom/glympse/android/hal/ae;->bo:I
 
-    .line 173
+    .line 210
     return-void
 .end method
 
@@ -1232,77 +1252,105 @@
     .locals 1
 
     .prologue
-    .line 139
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    .line 172
+    :try_start_0
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     if-eqz v0, :cond_0
 
-    .line 141
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    .line 174
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     invoke-virtual {v0, p1, p2}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 143
+    .line 180
     :cond_0
+    :goto_0
     return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
 .end method
 
-.method public setRequestMethod(Z)V
+.method public setRequestMethod(I)V
     .locals 2
 
     .prologue
-    .line 123
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    .line 147
+    :try_start_0
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     if-eqz v0, :cond_0
 
-    .line 127
-    :try_start_0
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    .line 149
+    iput p1, p0, Lcom/glympse/android/hal/ae;->bn:I
+
+    .line 150
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setDoInput(Z)V
 
-    .line 128
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    .line 151
+    const/4 v0, 0x2
 
-    invoke-virtual {v0, p1}, Ljava/net/HttpURLConnection;->setDoOutput(Z)V
+    if-ne v0, p1, :cond_1
 
-    .line 129
-    iget-object v1, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    .line 153
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
-    if-eqz p1, :cond_1
+    const/4 v1, 0x1
 
-    const-string v0, "POST"
+    invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setDoOutput(Z)V
 
-    :goto_0
-    invoke-virtual {v1, v0}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
+    .line 154
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
-    .line 135
+    const-string v1, "POST"
+
+    invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
+
+    .line 166
     :cond_0
-    :goto_1
+    :goto_0
     return-void
 
-    .line 129
+    .line 158
     :cond_1
-    const-string v0, "GET"
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setDoOutput(Z)V
+
+    .line 159
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
+
+    const-string v1, "GET"
+
+    invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
+    .line 166
     :catch_0
     move-exception v0
 
-    goto :goto_1
+    goto :goto_0
 .end method
 
 .method public setUrl(Ljava/lang/String;)V
     .locals 3
 
     .prologue
-    .line 66
+    .line 70
     const/4 v0, 0x1
 
     :try_start_0
@@ -1328,60 +1376,60 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
-    .line 69
+    .line 73
     invoke-static {}, Lcom/glympse/android/hal/ConnectivityChecker;->isConnected()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 71
+    .line 75
     const/4 v0, 0x1
 
     const-string v1, "[GlympseHttpConnection.setUrl] Not connected"
 
     invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
-    .line 95
+    .line 99
     :cond_0
     :goto_0
     return-void
 
-    .line 76
+    .line 80
     :cond_1
     new-instance v1, Ljava/net/URL;
 
     invoke-direct {v1, p1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    .line 77
+    .line 81
     invoke-virtual {v1}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object v0
 
     check-cast v0, Ljava/net/HttpURLConnection;
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    iput-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
-    .line 79
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    .line 83
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     if-eqz v0, :cond_2
 
-    .line 82
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    .line 86
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     invoke-static {v1, v0}, Lcom/glympse/android/hal/ae;->a(Ljava/net/URL;Ljava/net/HttpURLConnection;)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 91
+    .line 95
     :cond_2
     :goto_1
-    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     if-nez v0, :cond_0
 
-    .line 93
+    .line 97
     const/4 v0, 0x5
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1408,13 +1456,13 @@
 
     goto :goto_0
 
-    .line 88
+    .line 92
     :catch_0
     move-exception v0
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ae;->bl:Ljava/net/HttpURLConnection;
+    iput-object v0, p0, Lcom/glympse/android/hal/ae;->bm:Ljava/net/HttpURLConnection;
 
     goto :goto_1
 .end method

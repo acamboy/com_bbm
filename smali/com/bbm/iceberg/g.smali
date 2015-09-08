@@ -11,24 +11,24 @@
 
 .field final synthetic b:Lcom/blackberry/a/c;
 
-.field final synthetic c:Lcom/bbm/util/di;
+.field final synthetic c:Lcom/bbm/util/ds;
 
 .field final synthetic d:Lcom/bbm/iceberg/c;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/iceberg/c;Ljava/util/List;Lcom/blackberry/a/c;Lcom/bbm/util/di;)V
+.method constructor <init>(Lcom/bbm/iceberg/c;Ljava/util/List;Lcom/blackberry/a/c;Lcom/bbm/util/ds;)V
     .locals 0
 
     .prologue
-    .line 479
+    .line 489
     iput-object p1, p0, Lcom/bbm/iceberg/g;->d:Lcom/bbm/iceberg/c;
 
     iput-object p2, p0, Lcom/bbm/iceberg/g;->a:Ljava/util/List;
 
     iput-object p3, p0, Lcom/bbm/iceberg/g;->b:Lcom/blackberry/a/c;
 
-    iput-object p4, p0, Lcom/bbm/iceberg/g;->c:Lcom/bbm/util/di;
+    iput-object p4, p0, Lcom/bbm/iceberg/g;->c:Lcom/bbm/util/ds;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,12 +43,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 483
+    .line 493
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
-    .line 485
+    .line 495
     iget-object v0, p0, Lcom/bbm/iceberg/g;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -68,10 +68,10 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 486
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    .line 496
+    new-instance v4, Lcom/bbm/iceberg/l;
 
-    move-result-object v4
+    invoke-direct {v4}, Lcom/bbm/iceberg/l;-><init>()V
 
     invoke-interface {v3, v0, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -80,7 +80,7 @@
     :cond_0
     move v0, v1
 
-    .line 491
+    .line 501
     :goto_1
     iget-object v2, p0, Lcom/bbm/iceberg/g;->a:Ljava/util/List;
 
@@ -90,13 +90,13 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 493
+    .line 503
     :try_start_0
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 495
+    .line 505
     :goto_2
     iget-object v2, p0, Lcom/bbm/iceberg/g;->a:Ljava/util/List;
 
@@ -114,7 +114,7 @@
 
     if-ge v2, v5, :cond_1
 
-    .line 496
+    .line 506
     iget-object v5, p0, Lcom/bbm/iceberg/g;->a:Ljava/util/List;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -134,7 +134,7 @@
 
     goto :goto_2
 
-    .line 499
+    .line 509
     :cond_1
     :try_start_2
     iget-object v2, p0, Lcom/bbm/iceberg/g;->b:Lcom/blackberry/a/c;
@@ -143,21 +143,21 @@
 
     move-result-object v2
 
-    .line 501
+    .line 511
     invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v4
 
-    .line 503
-    iget-object v5, p0, Lcom/bbm/iceberg/g;->c:Lcom/bbm/util/di;
+    .line 513
+    iget-object v5, p0, Lcom/bbm/iceberg/g;->c:Lcom/bbm/util/ds;
 
     new-instance v6, Lcom/bbm/iceberg/h;
 
     invoke-direct {v6, p0, v4}, Lcom/bbm/iceberg/h;-><init>(Lcom/bbm/iceberg/g;I)V
 
-    invoke-interface {v5, v6}, Lcom/bbm/util/di;->a(Ljava/lang/Runnable;)V
+    invoke-interface {v5, v6}, Lcom/bbm/util/ds;->a(Ljava/lang/Runnable;)V
 
-    .line 515
+    .line 525
     invoke-static {v2}, Lcom/bbm/iceberg/c;->a(Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object v2
@@ -168,7 +168,7 @@
 
     goto :goto_1
 
-    .line 517
+    .line 527
     :catch_0
     move-exception v2
 
@@ -181,7 +181,7 @@
 
     goto :goto_1
 
-    .line 522
+    .line 532
     :cond_2
     invoke-interface {v3}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
@@ -205,45 +205,54 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 523
+    .line 533
     invoke-interface {v3, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Ljava/util/List;
+    check-cast v1, Lcom/bbm/iceberg/l;
 
-    .line 525
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    .line 535
+    iget-object v4, v1, Lcom/bbm/iceberg/l;->b:Ljava/util/List;
 
-    move-result v1
+    if-eqz v4, :cond_3
 
-    const/4 v4, 0x1
+    iget-object v4, v1, Lcom/bbm/iceberg/l;->b:Ljava/util/List;
 
-    if-le v1, v4, :cond_3
+    invoke-interface {v4}, Ljava/util/List;->size()I
 
-    .line 526
+    move-result v4
+
+    const/4 v5, 0x1
+
+    if-le v4, v5, :cond_3
+
+    .line 536
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
-    move-result-object v1
+    move-result-object v4
 
+    iput-object v4, v1, Lcom/bbm/iceberg/l;->b:Ljava/util/List;
+
+    .line 537
     invoke-interface {v3, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_4
 
-    .line 530
+    .line 541
     :cond_4
-    iget-object v0, p0, Lcom/bbm/iceberg/g;->c:Lcom/bbm/util/di;
+    iget-object v0, p0, Lcom/bbm/iceberg/g;->c:Lcom/bbm/util/ds;
 
     new-instance v1, Lcom/bbm/iceberg/i;
 
     invoke-direct {v1, p0, v3}, Lcom/bbm/iceberg/i;-><init>(Lcom/bbm/iceberg/g;Ljava/util/Map;)V
 
-    invoke-interface {v0, v1}, Lcom/bbm/util/di;->a(Ljava/lang/Runnable;)V
+    invoke-interface {v0, v1}, Lcom/bbm/util/ds;->a(Ljava/lang/Runnable;)V
 
-    .line 552
+    .line 563
     return-void
 
-    .line 517
+    .line 527
     :catch_1
     move-exception v0
 

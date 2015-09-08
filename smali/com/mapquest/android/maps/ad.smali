@@ -66,11 +66,11 @@
 
     iget-object v1, p0, Lcom/mapquest/android/maps/ad;->a:Lcom/mapquest/android/maps/ac;
 
-    invoke-virtual {p1}, Lcom/mapquest/android/maps/MapView;->getProjection()Lcom/mapquest/android/maps/bq;
+    invoke-virtual {p1}, Lcom/mapquest/android/maps/MapView;->getProjection()Lcom/mapquest/android/maps/bp;
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/mapquest/android/maps/ae;-><init>(Lcom/mapquest/android/maps/ac;Lcom/mapquest/android/maps/bq;B)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/mapquest/android/maps/ae;-><init>(Lcom/mapquest/android/maps/ac;Lcom/mapquest/android/maps/bp;B)V
 
     invoke-virtual {p1, v0}, Lcom/mapquest/android/maps/MapView;->post(Ljava/lang/Runnable;)Z
 

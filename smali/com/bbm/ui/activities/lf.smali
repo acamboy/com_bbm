@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/lf;
 .super Ljava/lang/Object;
-.source "GroupAdminEditActivity.java"
+.source "GroupConversationActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/c/gn;
+.implements Lcom/bbm/ui/b/ah;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupAdminEditActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupAdminEditActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 189
-    iput-object p1, p0, Lcom/bbm/ui/activities/lf;->a:Lcom/bbm/ui/activities/GroupAdminEditActivity;
+    .line 866
+    iput-object p1, p0, Lcom/bbm/ui/activities/lf;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,73 +25,51 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
-    .locals 4
+.method public final a()V
+    .locals 3
 
     .prologue
-    .line 193
-    packed-switch p2, :pswitch_data_0
+    .line 870
+    new-instance v0, Lcom/bbm/ui/activities/lx;
 
-    .line 204
-    :goto_0
-    return-void
+    iget-object v1, p0, Lcom/bbm/ui/activities/lf;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    .line 195
-    :pswitch_0
-    const-string v0, "menu trash onClick"
+    const/4 v2, 0x0
 
-    const-class v1, Lcom/bbm/ui/activities/GroupAdminEditActivity;
+    invoke-direct {v0, v1, v2}, Lcom/bbm/ui/activities/lx;-><init>(Lcom/bbm/ui/activities/GroupConversationActivity;B)V
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 196
-    iget-object v0, p0, Lcom/bbm/ui/activities/lf;->a:Lcom/bbm/ui/activities/GroupAdminEditActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupAdminEditActivity;->a(Lcom/bbm/ui/activities/GroupAdminEditActivity;)Lcom/bbm/g/al;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/lf;->a:Lcom/bbm/ui/activities/GroupAdminEditActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/GroupAdminEditActivity;->b(Lcom/bbm/ui/activities/GroupAdminEditActivity;)Lcom/bbm/g/ac;
+    .line 871
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/f;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/bbm/g/ac;->c:Ljava/lang/String;
+    iget-object v1, v1, Lcom/bbm/f;->c:Lcom/bbm/g/an;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/lf;->a:Lcom/bbm/ui/activities/GroupAdminEditActivity;
+    iget-object v1, v1, Lcom/bbm/g/as;->a:Lcom/bbm/d/a/f;
 
-    iget-object v2, v2, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
+    iget-object v1, v1, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
 
-    new-instance v3, Lcom/bbm/g/cd;
+    invoke-interface {v1, v0}, Lcom/bbm/f/a;->a(Lcom/bbm/f/ac;)V
 
-    invoke-direct {v3, v1, v2}, Lcom/bbm/g/cd;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    .line 872
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/f;
 
-    invoke-virtual {v0, v3}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
+    move-result-object v0
 
-    .line 198
-    iget-object v0, p0, Lcom/bbm/ui/activities/lf;->a:Lcom/bbm/ui/activities/GroupAdminEditActivity;
+    iget-object v0, v0, Lcom/bbm/f;->c:Lcom/bbm/g/an;
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+    iget-object v1, p0, Lcom/bbm/ui/activities/lf;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupConversationActivity;->s(Lcom/bbm/ui/activities/GroupConversationActivity;)Ljava/lang/String;
 
-    const/4 v1, 0x1
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
+    invoke-static {v1}, Lcom/bbm/g/ar;->d(Ljava/lang/String;)Lcom/bbm/g/cu;
 
-    .line 200
-    iget-object v0, p0, Lcom/bbm/ui/activities/lf;->a:Lcom/bbm/ui/activities/GroupAdminEditActivity;
+    move-result-object v1
 
-    const/4 v1, 0x0
+    invoke-virtual {v0, v1}, Lcom/bbm/g/an;->a(Lcom/bbm/g/db;)V
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/GroupAdminEditActivity;->a(Lcom/bbm/ui/activities/GroupAdminEditActivity;Lcom/bbm/g/ac;)Lcom/bbm/g/ac;
-
-    goto :goto_0
-
-    .line 193
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    .line 873
+    return-void
 .end method

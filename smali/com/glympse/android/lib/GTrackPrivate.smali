@@ -77,8 +77,5 @@
 .method public abstract setSource(I)V
 .end method
 
-.method public abstract trim(JZ)Z
-.end method
-
 .method public abstract trim(JZJ)Z
 .end method

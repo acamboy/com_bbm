@@ -1,62 +1,63 @@
-.class final Lcom/bbm/ui/dk;
+.class public final Lcom/bbm/ui/dk;
 .super Ljava/lang/Object;
-.source "LinkifyTextView.java"
+.source "IncrementalListAdapter.java"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+
+# instance fields
+.field a:Ljava/lang/Object;
+
+.field b:J
+
+.field c:J
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method public constructor <init>()V
+    .locals 4
 
     .prologue
-    .line 36
+    const-wide/16 v2, -0x1
+
+    .line 127
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 128
+    iput-wide v2, p0, Lcom/bbm/ui/dk;->c:J
+
+    .line 129
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/bbm/ui/dk;->a:Ljava/lang/Object;
+
+    .line 130
+    iput-wide v2, p0, Lcom/bbm/ui/dk;->b:J
+
+    .line 131
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final a()Z
+    .locals 4
 
     .prologue
-    .line 40
-    move-object v0, p1
+    .line 142
+    iget-wide v0, p0, Lcom/bbm/ui/dk;->c:J
 
-    check-cast v0, Lcom/bbm/ui/LinkifyTextView;
+    const-wide/16 v2, -0x1
 
-    .line 41
-    invoke-static {v0}, Lcom/bbm/ui/LinkifyTextView;->a(Lcom/bbm/ui/LinkifyTextView;)Landroid/view/View$OnClickListener;
+    cmp-long v0, v0, v2
 
-    move-result-object v1
+    if-eqz v0, :cond_0
 
-    if-eqz v1, :cond_0
+    const/4 v0, 0x1
 
-    .line 42
-    invoke-static {v0}, Lcom/bbm/ui/LinkifyTextView;->b(Lcom/bbm/ui/LinkifyTextView;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    .line 43
-    invoke-static {v0}, Lcom/bbm/ui/LinkifyTextView;->a(Lcom/bbm/ui/LinkifyTextView;)Landroid/view/View$OnClickListener;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
-
-    .line 48
-    :cond_0
     :goto_0
-    return-void
+    return v0
 
-    .line 45
-    :cond_1
-    invoke-static {v0}, Lcom/bbm/ui/LinkifyTextView;->c(Lcom/bbm/ui/LinkifyTextView;)Z
+    :cond_0
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method

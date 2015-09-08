@@ -1,522 +1,270 @@
-.class public final Lcom/bbm/d/gy;
-.super Ljava/lang/Object;
-.source "UserSortUtil.java"
+.class public final enum Lcom/bbm/d/gy;
+.super Ljava/lang/Enum;
+.source "Picture.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/bbm/d/gy;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final enum a:Lcom/bbm/d/gy;
+
+.field public static final enum b:Lcom/bbm/d/gy;
+
+.field public static final enum c:Lcom/bbm/d/gy;
+
+.field public static final enum d:Lcom/bbm/d/gy;
+
+.field public static final enum e:Lcom/bbm/d/gy;
+
+.field private static final synthetic g:[Lcom/bbm/d/gy;
+
+
+# instance fields
+.field private final f:Ljava/lang/String;
 
 
 # direct methods
-.method private static a([Ljava/lang/String;Ljava/lang/String;Ljava/util/Comparator;)I
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "([",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Ljava/util/Comparator",
-            "<",
-            "Ljava/lang/String;",
-            ">;)I"
-        }
-    .end annotation
+.method static constructor <clinit>()V
+    .locals 8
 
     .prologue
-    .line 157
-    invoke-static {p0, p1, p2}, Ljava/util/Arrays;->binarySearch([Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)I
+    const/4 v7, 0x4
 
-    move-result v0
+    const/4 v6, 0x3
 
-    .line 159
-    if-gez v0, :cond_0
+    const/4 v5, 0x2
 
-    .line 160
-    add-int/lit8 v0, v0, 0x1
+    const/4 v4, 0x1
 
-    neg-int v0, v0
-
-    .line 165
-    :goto_0
-    return v0
-
-    .line 162
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-.end method
-
-.method public static a(Ljava/util/List;)Ljava/util/List;
-    .locals 7
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/d/gr;",
-            ">;)",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/d/gr;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    const/4 v2, 0x0
-
-    .line 191
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x2
-
-    if-ge v0, v1, :cond_0
-
-    .line 220
-    :goto_0
-    return-object p0
-
-    .line 195
-    :cond_0
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v3
-
-    .line 196
-    new-array v4, v3, [Ljava/text/CollationKey;
+    const/4 v3, 0x0
 
     .line 197
-    new-instance v5, Ljava/util/ArrayList;
+    new-instance v0, Lcom/bbm/d/gy;
 
-    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
+    const-string v1, "RequestSend"
 
-    .line 199
-    invoke-static {}, Ljava/text/Collator;->getInstance()Ljava/text/Collator;
+    const-string v2, "RequestSend"
 
-    move-result-object v6
+    invoke-direct {v0, v1, v3, v2}, Lcom/bbm/d/gy;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    move v1, v2
-
-    .line 201
-    :goto_1
-    if-ge v1, v3, :cond_1
-
-    .line 202
-    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/gr;
-
-    invoke-static {v0}, Lcom/bbm/d/b/a;->b(Lcom/bbm/d/gr;)Ljava/lang/String;
-
-    move-result-object v0
+    sput-object v0, Lcom/bbm/d/gy;->a:Lcom/bbm/d/gy;
 
     .line 203
-    invoke-virtual {v6, v0}, Ljava/text/Collator;->getCollationKey(Ljava/lang/String;)Ljava/text/CollationKey;
+    new-instance v0, Lcom/bbm/d/gy;
 
-    move-result-object v0
+    const-string v1, "RequestHigherQuality"
 
-    aput-object v0, v4, v1
+    const-string v2, "RequestHigherQuality"
 
-    .line 204
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-direct {v0, v1, v4, v2}, Lcom/bbm/d/gy;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    move-result-object v0
+    sput-object v0, Lcom/bbm/d/gy;->b:Lcom/bbm/d/gy;
 
-    invoke-virtual {v5, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    .line 208
+    new-instance v0, Lcom/bbm/d/gy;
 
-    .line 201
-    add-int/lit8 v0, v1, 0x1
+    const-string v1, "Progressing"
 
-    move v1, v0
+    const-string v2, "Progressing"
 
-    goto :goto_1
+    invoke-direct {v0, v1, v5, v2}, Lcom/bbm/d/gy;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 207
-    :cond_1
-    new-instance v0, Lcom/bbm/d/ha;
+    sput-object v0, Lcom/bbm/d/gy;->c:Lcom/bbm/d/gy;
 
-    invoke-direct {v0, v4}, Lcom/bbm/d/ha;-><init>([Ljava/text/CollationKey;)V
+    .line 213
+    new-instance v0, Lcom/bbm/d/gy;
 
-    invoke-static {v5, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
+    const-string v1, "Idle"
 
-    .line 214
-    new-instance v1, Ljava/util/ArrayList;
+    const-string v2, "Idle"
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v0, v1, v6, v2}, Lcom/bbm/d/gy;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 215
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->ensureCapacity(I)V
-
-    .line 217
-    :goto_2
-    if-ge v2, v3, :cond_2
+    sput-object v0, Lcom/bbm/d/gy;->d:Lcom/bbm/d/gy;
 
     .line 218
-    invoke-virtual {v5, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    new-instance v0, Lcom/bbm/d/gy;
 
-    move-result-object v0
+    const-string v1, "Unspecified"
 
-    check-cast v0, Ljava/lang/Integer;
+    const-string v2, ""
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    invoke-direct {v0, v1, v7, v2}, Lcom/bbm/d/gy;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    move-result v0
+    sput-object v0, Lcom/bbm/d/gy;->e:Lcom/bbm/d/gy;
 
-    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    .line 190
+    const/4 v0, 0x5
 
-    move-result-object v0
+    new-array v0, v0, [Lcom/bbm/d/gy;
 
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    sget-object v1, Lcom/bbm/d/gy;->a:Lcom/bbm/d/gy;
 
-    .line 217
-    add-int/lit8 v0, v2, 0x1
+    aput-object v1, v0, v3
 
-    move v2, v0
+    sget-object v1, Lcom/bbm/d/gy;->b:Lcom/bbm/d/gy;
 
-    goto :goto_2
+    aput-object v1, v0, v4
 
-    :cond_2
-    move-object p0, v1
+    sget-object v1, Lcom/bbm/d/gy;->c:Lcom/bbm/d/gy;
 
-    .line 220
-    goto :goto_0
+    aput-object v1, v0, v5
+
+    sget-object v1, Lcom/bbm/d/gy;->d:Lcom/bbm/d/gy;
+
+    aput-object v1, v0, v6
+
+    sget-object v1, Lcom/bbm/d/gy;->e:Lcom/bbm/d/gy;
+
+    aput-object v1, v0, v7
+
+    sput-object v0, Lcom/bbm/d/gy;->g:[Lcom/bbm/d/gy;
+
+    return-void
 .end method
 
-.method public static a(Ljava/util/List;Ljava/util/List;)Ljava/util/List;
-    .locals 10
+.method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/d/gr;",
-            ">;",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/d/gr;",
-            ">;)",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/d/gr;",
-            ">;"
+            "Ljava/lang/String;",
+            ")V"
         }
     .end annotation
 
     .prologue
-    const/4 v0, 0x1
+    .line 222
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 v4, 0x0
+    .line 223
+    iput-object p3, p0, Lcom/bbm/d/gy;->f:Ljava/lang/String;
 
-    .line 69
-    invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
+    .line 224
+    return-void
+.end method
 
-    move-result v1
+.method public static a(Ljava/lang/String;)Lcom/bbm/d/gy;
+    .locals 1
 
-    if-eqz v1, :cond_0
+    .prologue
+    .line 227
+    const-string v0, "RequestSend"
 
-    .line 145
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 228
+    sget-object v0, Lcom/bbm/d/gy;->a:Lcom/bbm/d/gy;
+
+    .line 239
     :goto_0
-    return-object p1
+    return-object v0
 
-    .line 73
+    .line 230
     :cond_0
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+    const-string v0, "RequestHigherQuality"
 
-    move-result v1
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-eqz v1, :cond_1
+    move-result v0
 
-    move-object p1, p0
+    if-eqz v0, :cond_1
 
-    .line 74
+    .line 231
+    sget-object v0, Lcom/bbm/d/gy;->b:Lcom/bbm/d/gy;
+
     goto :goto_0
 
-    .line 77
+    .line 233
     :cond_1
-    new-instance v3, Ljava/util/ArrayList;
+    const-string v0, "Progressing"
 
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    add-int/2addr v1, v2
-
-    invoke-direct {v3, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    .line 80
-    invoke-static {p0}, Lcom/bbm/d/gy;->b(Ljava/util/List;)[Ljava/lang/String;
-
-    move-result-object v5
-
-    .line 81
-    invoke-static {p1}, Lcom/bbm/d/gy;->b(Ljava/util/List;)[Ljava/lang/String;
-
-    move-result-object v6
-
-    .line 83
-    invoke-static {}, Ljava/text/Collator;->getInstance()Ljava/text/Collator;
-
-    move-result-object v7
-
-    .line 84
-    new-instance v2, Lcom/bbm/d/gz;
-
-    invoke-direct {v2, v7}, Lcom/bbm/d/gz;-><init>(Ljava/text/Collator;)V
-
-    .line 94
-    aget-object v1, v5, v4
-
-    aget-object v8, v6, v4
-
-    invoke-interface {v2, v1, v8}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
-
-    move-result v1
-
-    if-gez v1, :cond_2
-
-    move v1, v0
-
-    .line 97
-    :goto_1
-    if-eqz v1, :cond_4
-
-    .line 101
-    aget-object v1, v6, v4
-
-    invoke-static {v5, v1, v2}, Lcom/bbm/d/gy;->a([Ljava/lang/String;Ljava/lang/String;Ljava/util/Comparator;)I
-
-    move-result v1
-
-    move v2, v4
-
-    .line 103
-    :goto_2
-    if-ge v2, v1, :cond_3
-
-    .line 104
-    invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v8
-
-    invoke-virtual {v3, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 103
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_2
-
-    :cond_2
-    move v1, v4
-
-    .line 94
-    goto :goto_1
-
-    .line 107
-    :cond_3
-    invoke-interface {p1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 123
-    :goto_3
-    array-length v2, v5
-
-    if-ge v1, v2, :cond_7
-
-    array-length v2, v6
-
-    if-ge v0, v2, :cond_7
-
-    .line 124
-    aget-object v2, v5, v1
-
-    .line 125
-    aget-object v4, v6, v0
-
-    .line 127
-    invoke-virtual {v7, v2, v4}, Ljava/text/Collator;->compare(Ljava/lang/String;Ljava/lang/String;)I
-
-    move-result v2
-
-    if-gez v2, :cond_6
-
-    .line 128
-    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 129
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_3
-
-    .line 111
-    :cond_4
-    aget-object v1, v5, v4
-
-    invoke-static {v6, v1, v2}, Lcom/bbm/d/gy;->a([Ljava/lang/String;Ljava/lang/String;Ljava/util/Comparator;)I
-
-    move-result v1
-
-    move v2, v4
-
-    .line 113
-    :goto_4
-    if-ge v2, v1, :cond_5
-
-    .line 114
-    invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v8
-
-    invoke-virtual {v3, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 113
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_4
-
-    .line 117
-    :cond_5
-    invoke-interface {p0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    move v9, v1
-
-    move v1, v0
-
-    move v0, v9
-
-    .line 119
-    goto :goto_3
-
-    .line 131
-    :cond_6
-    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 132
-    add-int/lit8 v0, v0, 0x1
-
-    .line 134
-    goto :goto_3
-
-    .line 137
-    :cond_7
-    :goto_5
-    array-length v2, v5
-
-    if-ge v1, v2, :cond_8
-
-    .line 138
-    add-int/lit8 v2, v1, 0x1
-
-    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    move v1, v2
-
-    goto :goto_5
-
-    .line 141
-    :cond_8
-    :goto_6
-    array-length v1, v6
-
-    if-ge v0, v1, :cond_9
-
-    .line 142
-    add-int/lit8 v1, v0, 0x1
-
-    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    move v0, v1
-
-    goto :goto_6
-
-    :cond_9
-    move-object p1, v3
-
-    .line 145
-    goto/16 :goto_0
-.end method
-
-.method private static b(Ljava/util/List;)[Ljava/lang/String;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/d/gr;",
-            ">;)[",
-            "Ljava/lang/String;"
-        }
-    .end annotation
-
-    .prologue
-    .line 176
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    new-array v2, v0, [Ljava/lang/String;
+    if-eqz v0, :cond_2
 
-    .line 177
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-ge v1, v0, :cond_0
-
-    .line 178
-    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/gr;
-
-    invoke-static {v0}, Lcom/bbm/d/b/a;->b(Lcom/bbm/d/gr;)Ljava/lang/String;
-
-    move-result-object v0
-
-    aput-object v0, v2, v1
-
-    .line 177
-    add-int/lit8 v0, v1, 0x1
-
-    move v1, v0
+    .line 234
+    sget-object v0, Lcom/bbm/d/gy;->c:Lcom/bbm/d/gy;
 
     goto :goto_0
 
-    .line 180
-    :cond_0
-    return-object v2
+    .line 236
+    :cond_2
+    const-string v0, "Idle"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    .line 237
+    sget-object v0, Lcom/bbm/d/gy;->d:Lcom/bbm/d/gy;
+
+    goto :goto_0
+
+    .line 239
+    :cond_3
+    sget-object v0, Lcom/bbm/d/gy;->e:Lcom/bbm/d/gy;
+
+    goto :goto_0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lcom/bbm/d/gy;
+    .locals 1
+
+    .prologue
+    .line 190
+    const-class v0, Lcom/bbm/d/gy;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/gy;
+
+    return-object v0
+.end method
+
+.method public static values()[Lcom/bbm/d/gy;
+    .locals 1
+
+    .prologue
+    .line 190
+    sget-object v0, Lcom/bbm/d/gy;->g:[Lcom/bbm/d/gy;
+
+    invoke-virtual {v0}, [Lcom/bbm/d/gy;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcom/bbm/d/gy;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 242
+    iget-object v0, p0, Lcom/bbm/d/gy;->f:Ljava/lang/String;
+
+    return-object v0
 .end method

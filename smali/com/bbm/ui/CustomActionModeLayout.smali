@@ -6,7 +6,7 @@
 # instance fields
 .field private final a:Landroid/widget/Button;
 
-.field private b:Lcom/bbm/ui/ay;
+.field private b:Lcom/bbm/ui/at;
 
 .field private final c:Landroid/view/View$OnClickListener;
 
@@ -22,12 +22,12 @@
     .line 16
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/bbm/ui/CustomActionModeLayout;->b:Lcom/bbm/ui/ay;
+    iput-object v0, p0, Lcom/bbm/ui/CustomActionModeLayout;->b:Lcom/bbm/ui/at;
 
     .line 22
-    new-instance v0, Lcom/bbm/ui/ax;
+    new-instance v0, Lcom/bbm/ui/as;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/ax;-><init>(Lcom/bbm/ui/CustomActionModeLayout;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/as;-><init>(Lcom/bbm/ui/CustomActionModeLayout;)V
 
     iput-object v0, p0, Lcom/bbm/ui/CustomActionModeLayout;->c:Landroid/view/View$OnClickListener;
 
@@ -36,14 +36,14 @@
 
     move-result-object v0
 
-    const v1, 0x7f03012c
+    const v1, 0x7f030145
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 36
-    const v0, 0x7f0b05cd
+    const v0, 0x7f0b0660
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/CustomActionModeLayout;->findViewById(I)Landroid/view/View;
 
@@ -64,24 +64,14 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/CustomActionModeLayout;)Lcom/bbm/ui/ay;
-    .locals 1
-
-    .prologue
-    .line 13
-    iget-object v0, p0, Lcom/bbm/ui/CustomActionModeLayout;->b:Lcom/bbm/ui/ay;
-
-    return-object v0
-.end method
-
 
 # virtual methods
-.method public setListener(Lcom/bbm/ui/ay;)V
+.method public setListener(Lcom/bbm/ui/at;)V
     .locals 0
 
     .prologue
     .line 41
-    iput-object p1, p0, Lcom/bbm/ui/CustomActionModeLayout;->b:Lcom/bbm/ui/ay;
+    iput-object p1, p0, Lcom/bbm/ui/CustomActionModeLayout;->b:Lcom/bbm/ui/at;
 
     .line 42
     return-void

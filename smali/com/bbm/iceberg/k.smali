@@ -10,10 +10,8 @@
             "Ljava/util/Map",
             "<",
             "Ljava/lang/String;",
-            "Ljava/util/List",
-            "<",
-            "Ljava/lang/String;",
-            ">;>;"
+            "Lcom/bbm/iceberg/l;",
+            ">;"
         }
     .end annotation
 .end field
@@ -24,157 +22,159 @@
     .locals 1
 
     .prologue
-    .line 70
+    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 71
+    .line 73
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/bbm/iceberg/k;->a:Ljava/util/Map;
 
-    .line 72
+    .line 74
     return-void
 .end method
 
 .method public constructor <init>(Ljava/io/File;)V
-    .locals 9
+    .locals 11
 
     .prologue
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    const/4 v8, 0x0
-
-    .line 74
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 75
-    new-instance v3, Ljava/util/HashMap;
-
-    invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
+    const/4 v10, 0x0
 
     .line 76
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 77
+    new-instance v4, Ljava/util/HashMap;
+
+    invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
+
+    .line 78
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_8
 
-    .line 79
+    .line 81
     :try_start_0
-    new-instance v4, Ljava/io/FileInputStream;
+    new-instance v5, Ljava/io/FileInputStream;
 
-    invoke-direct {v4, p1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+    invoke-direct {v5, p1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 80
-    new-instance v5, Landroid/util/JsonReader;
+    .line 82
+    new-instance v6, Landroid/util/JsonReader;
 
     new-instance v0, Ljava/io/InputStreamReader;
 
-    const-string v2, "UTF-8"
+    const-string v1, "UTF-8"
 
-    invoke-direct {v0, v4, v2}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;Ljava/lang/String;)V
+    invoke-direct {v0, v5, v1}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    invoke-direct {v5, v0}, Landroid/util/JsonReader;-><init>(Ljava/io/Reader;)V
+    invoke-direct {v6, v0}, Landroid/util/JsonReader;-><init>(Ljava/io/Reader;)V
 
-    .line 82
-    invoke-virtual {v5}, Landroid/util/JsonReader;->beginArray()V
+    .line 84
+    invoke-virtual {v6}, Landroid/util/JsonReader;->beginArray()V
 
-    .line 83
+    .line 85
     :cond_0
     :goto_0
-    invoke-virtual {v5}, Landroid/util/JsonReader;->hasNext()Z
+    invoke-virtual {v6}, Landroid/util/JsonReader;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_5
-
-    .line 86
-    invoke-virtual {v5}, Landroid/util/JsonReader;->beginObject()V
-
-    move-object v0, v1
-
-    move-object v2, v1
-
-    .line 87
-    :cond_1
-    :goto_1
-    invoke-virtual {v5}, Landroid/util/JsonReader;->hasNext()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_4
-
-    .line 88
-    invoke-virtual {v5}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
-
-    move-result-object v6
+    if-eqz v0, :cond_7
 
     .line 89
-    const-string v7, "email"
+    invoke-virtual {v6}, Landroid/util/JsonReader;->beginObject()V
 
-    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-object v1, v2
+
+    move-object v0, v2
+
+    move-object v3, v2
+
+    .line 90
+    :cond_1
+    :goto_1
+    invoke-virtual {v6}, Landroid/util/JsonReader;->hasNext()Z
 
     move-result v7
 
-    if-eqz v7, :cond_2
+    if-eqz v7, :cond_5
 
-    .line 90
-    invoke-virtual {v5}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
+    .line 91
+    invoke-virtual {v6}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v7
+
+    .line 92
+    const-string v8, "email"
+
+    invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_2
+
+    .line 93
+    invoke-virtual {v6}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
+
+    move-result-object v3
 
     goto :goto_1
 
-    .line 91
-    :cond_2
-    const-string v7, "pins"
-
-    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_1
-
-    .line 92
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    .line 93
-    invoke-virtual {v5}, Landroid/util/JsonReader;->beginArray()V
-
     .line 94
-    :goto_2
-    invoke-virtual {v5}, Landroid/util/JsonReader;->hasNext()Z
+    :cond_2
+    const-string v8, "pins"
 
-    move-result v6
+    invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-eqz v6, :cond_3
+    move-result v8
+
+    if-eqz v8, :cond_4
+
+    .line 95
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     .line 96
-    invoke-virtual {v5}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
+    invoke-virtual {v6}, Landroid/util/JsonReader;->beginArray()V
 
-    move-result-object v6
+    .line 97
+    :goto_2
+    invoke-virtual {v6}, Landroid/util/JsonReader;->hasNext()Z
 
-    sget-object v7, Ljava/util/Locale;->US:Ljava/util/Locale;
+    move-result v7
 
-    invoke-virtual {v6, v7}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+    if-eqz v7, :cond_3
 
-    move-result-object v6
+    .line 99
+    invoke-virtual {v6}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
-    invoke-interface {v0, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    move-result-object v7
+
+    sget-object v8, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    invoke-virtual {v7, v8}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-interface {v1, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_2
 
-    .line 110
+    .line 120
     :catch_0
     move-exception v0
 
-    .line 111
+    .line 121
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "Error loading iceberg contacts: "
@@ -193,56 +193,125 @@
 
     move-result-object v0
 
-    new-array v1, v8, [Ljava/lang/Object;
+    new-array v1, v10, [Ljava/lang/Object;
 
     invoke-static {v0, v1}, Lcom/blackberry/a/i;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 118
+    .line 128
     :goto_3
-    iput-object v3, p0, Lcom/bbm/iceberg/k;->a:Ljava/util/Map;
+    iput-object v4, p0, Lcom/bbm/iceberg/k;->a:Ljava/util/Map;
 
-    .line 119
+    .line 129
     return-void
 
-    .line 98
+    .line 101
     :cond_3
     :try_start_1
-    invoke-virtual {v5}, Landroid/util/JsonReader;->endArray()V
+    invoke-virtual {v6}, Landroid/util/JsonReader;->endArray()V
 
     goto :goto_1
 
-    .line 101
-    :cond_4
-    invoke-virtual {v5}, Landroid/util/JsonReader;->endObject()V
-
     .line 102
-    if-eqz v2, :cond_0
+    :cond_4
+    const-string v8, "regId"
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_1
 
     .line 103
-    invoke-interface {v3, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v6}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
-    goto :goto_0
+    move-result-object v0
+
+    goto :goto_1
 
     .line 106
     :cond_5
-    invoke-virtual {v5}, Landroid/util/JsonReader;->endArray()V
+    invoke-virtual {v6}, Landroid/util/JsonReader;->endObject()V
 
     .line 107
-    invoke-virtual {v5}, Landroid/util/JsonReader;->close()V
+    if-eqz v3, :cond_0
+
+    if-eqz v1, :cond_0
 
     .line 108
-    invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_6
 
     .line 109
+    const-string v0, "Iceberg result (email: %s, pins: %s) has missing regId"
+
+    const/4 v7, 0x2
+
+    new-array v7, v7, [Ljava/lang/Object;
+
+    const/4 v8, 0x0
+
+    aput-object v3, v7, v8
+
+    const/4 v8, 0x1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    aput-object v9, v7, v8
+
+    invoke-static {v0, v7}, Lcom/blackberry/a/i;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 110
+    new-instance v0, Lcom/bbm/iceberg/l;
+
+    invoke-direct {v0}, Lcom/bbm/iceberg/l;-><init>()V
+
+    iput-object v3, v0, Lcom/bbm/iceberg/l;->a:Ljava/lang/String;
+
+    iput-object v1, v0, Lcom/bbm/iceberg/l;->b:Ljava/util/List;
+
+    invoke-interface {v4, v3, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto/16 :goto_0
+
+    .line 112
+    :cond_6
+    new-instance v7, Lcom/bbm/iceberg/l;
+
+    invoke-direct {v7}, Lcom/bbm/iceberg/l;-><init>()V
+
+    iput-object v3, v7, Lcom/bbm/iceberg/l;->a:Ljava/lang/String;
+
+    iput-object v1, v7, Lcom/bbm/iceberg/l;->b:Ljava/util/List;
+
+    iput-object v0, v7, Lcom/bbm/iceberg/l;->c:Ljava/lang/String;
+
+    invoke-interface {v4, v3, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto/16 :goto_0
+
+    .line 116
+    :cond_7
+    invoke-virtual {v6}, Landroid/util/JsonReader;->endArray()V
+
+    .line 117
+    invoke-virtual {v6}, Landroid/util/JsonReader;->close()V
+
+    .line 118
+    invoke-virtual {v5}, Ljava/io/FileInputStream;->close()V
+
+    .line 119
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "LCE: Loaded "
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v3}, Ljava/util/Map;->size()I
+    invoke-interface {v4}, Ljava/util/Map;->size()I
 
     move-result v1
 
@@ -270,15 +339,15 @@
 
     goto :goto_3
 
-    .line 115
-    :cond_6
+    .line 125
+    :cond_8
     const-string v0, "No saved iceberg contacts found. Will fetch everything from scratch."
 
-    new-array v1, v8, [Ljava/lang/Object;
+    new-array v1, v10, [Ljava/lang/Object;
 
     invoke-static {v0, v1}, Lcom/blackberry/a/i;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    goto :goto_3
+    goto/16 :goto_3
 .end method
 
 .method constructor <init>(Ljava/util/Map;)V
@@ -289,21 +358,19 @@
             "Ljava/util/Map",
             "<",
             "Ljava/lang/String;",
-            "Ljava/util/List",
-            "<",
-            "Ljava/lang/String;",
-            ">;>;)V"
+            "Lcom/bbm/iceberg/l;",
+            ">;)V"
         }
     .end annotation
 
     .prologue
-    .line 121
+    .line 131
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 122
+    .line 132
     iput-object p1, p0, Lcom/bbm/iceberg/k;->a:Ljava/util/Map;
 
-    .line 123
+    .line 133
     return-void
 .end method
 
@@ -317,29 +384,27 @@
             "Ljava/util/Map",
             "<",
             "Ljava/lang/String;",
-            "Ljava/util/List",
-            "<",
-            "Ljava/lang/String;",
-            ">;>;)",
+            "Lcom/bbm/iceberg/l;",
+            ">;)",
             "Lcom/bbm/iceberg/k;"
         }
     .end annotation
 
     .prologue
-    .line 155
+    .line 165
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 157
+    .line 167
     iget-object v1, p0, Lcom/bbm/iceberg/k;->a:Ljava/util/Map;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    .line 158
+    .line 168
     invoke-interface {v0, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    .line 160
+    .line 170
     new-instance v1, Lcom/bbm/iceberg/k;
 
     invoke-direct {v1, v0}, Lcom/bbm/iceberg/k;-><init>(Ljava/util/Map;)V
@@ -347,47 +412,54 @@
     return-object v1
 .end method
 
-.method public final a(Ljava/lang/String;)Lcom/bbm/util/bi;
-    .locals 1
+.method public final a(Ljava/lang/String;)Lcom/bbm/util/bo;
+    .locals 2
 
     .prologue
-    .line 171
+    .line 181
     iget-object v0, p0, Lcom/bbm/iceberg/k;->a:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    .line 172
-    iget-object v0, p0, Lcom/bbm/iceberg/k;->a:Ljava/util/Map;
-
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 182
+    invoke-virtual {p0, p1}, Lcom/bbm/iceberg/k;->b(Ljava/lang/String;)Lcom/bbm/iceberg/l;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/List;
+    .line 184
+    iget-object v1, v0, Lcom/bbm/iceberg/l;->b:Ljava/util/List;
 
-    .line 174
-    if-nez v0, :cond_0
+    if-eqz v1, :cond_0
 
-    .line 175
-    sget-object v0, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
+    iget-object v0, v0, Lcom/bbm/iceberg/l;->b:Ljava/util/List;
 
-    .line 179
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 185
+    :cond_0
+    sget-object v0, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
+
+    .line 189
     :goto_0
     return-object v0
 
-    .line 177
-    :cond_0
-    sget-object v0, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
+    .line 187
+    :cond_1
+    sget-object v0, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
 
     goto :goto_0
 
-    .line 179
-    :cond_1
-    sget-object v0, Lcom/bbm/util/bi;->b:Lcom/bbm/util/bi;
+    .line 189
+    :cond_2
+    sget-object v0, Lcom/bbm/util/bo;->b:Lcom/bbm/util/bo;
 
     goto :goto_0
 .end method
@@ -405,12 +477,12 @@
     .end annotation
 
     .prologue
-    .line 190
+    .line 200
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 192
+    .line 202
     iget-object v0, p0, Lcom/bbm/iceberg/k;->a:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -435,58 +507,47 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 193
-    invoke-virtual {p0, v0}, Lcom/bbm/iceberg/k;->a(Ljava/lang/String;)Lcom/bbm/util/bi;
+    .line 203
+    invoke-virtual {p0, v0}, Lcom/bbm/iceberg/k;->a(Ljava/lang/String;)Lcom/bbm/util/bo;
 
     move-result-object v3
 
-    sget-object v4, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
+    sget-object v4, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
 
     if-eq v3, v4, :cond_0
 
-    .line 194
+    .line 204
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 197
+    .line 207
     :cond_1
     return-object v1
 .end method
 
-.method public final b(Ljava/lang/String;)Ljava/util/List;
+.method public final b(Ljava/lang/String;)Lcom/bbm/iceberg/l;
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            ")",
-            "Ljava/util/List",
-            "<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
 
     .prologue
-    .line 208
+    .line 218
     iget-object v0, p0, Lcom/bbm/iceberg/k;->a:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/List;
+    check-cast v0, Lcom/bbm/iceberg/l;
 
-    .line 210
+    .line 220
     if-nez v0, :cond_0
 
-    .line 211
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    .line 221
+    new-instance v0, Lcom/bbm/iceberg/l;
 
-    move-result-object v0
+    invoke-direct {v0}, Lcom/bbm/iceberg/l;-><init>()V
 
-    .line 214
+    .line 224
     :cond_0
     return-object v0
 .end method
@@ -499,24 +560,24 @@
 
     const/4 v1, 0x0
 
-    .line 227
+    .line 237
     if-ne p0, p1, :cond_1
 
-    .line 244
+    .line 254
     :cond_0
     :goto_0
     return v0
 
-    .line 230
+    .line 240
     :cond_1
     if-nez p1, :cond_2
 
     move v0, v1
 
-    .line 231
+    .line 241
     goto :goto_0
 
-    .line 233
+    .line 243
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -530,29 +591,29 @@
 
     move v0, v1
 
-    .line 234
+    .line 244
     goto :goto_0
 
-    .line 236
+    .line 246
     :cond_3
     check-cast p1, Lcom/bbm/iceberg/k;
 
-    .line 237
+    .line 247
     iget-object v2, p0, Lcom/bbm/iceberg/k;->a:Ljava/util/Map;
 
     if-nez v2, :cond_4
 
-    .line 238
+    .line 248
     iget-object v2, p1, Lcom/bbm/iceberg/k;->a:Ljava/util/Map;
 
     if-eqz v2, :cond_0
 
     move v0, v1
 
-    .line 239
+    .line 249
     goto :goto_0
 
-    .line 241
+    .line 251
     :cond_4
     iget-object v2, p0, Lcom/bbm/iceberg/k;->a:Ljava/util/Map;
 
@@ -566,7 +627,7 @@
 
     move v0, v1
 
-    .line 242
+    .line 252
     goto :goto_0
 .end method
 
@@ -574,7 +635,7 @@
     .locals 1
 
     .prologue
-    .line 219
+    .line 229
     iget-object v0, p0, Lcom/bbm/iceberg/k;->a:Ljava/util/Map;
 
     if-nez v0, :cond_0
@@ -584,10 +645,10 @@
     :goto_0
     add-int/lit8 v0, v0, 0x1f
 
-    .line 222
+    .line 232
     return v0
 
-    .line 219
+    .line 229
     :cond_0
     iget-object v0, p0, Lcom/bbm/iceberg/k;->a:Ljava/util/Map;
 

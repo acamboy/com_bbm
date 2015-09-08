@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/c/do;
 .super Ljava/lang/Object;
-.source "GroupMembersFragment.java"
+.source "ContactsFragment.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/support/v7/widget/dg;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/dn;
+.field final synthetic a:Lcom/bbm/ui/c/cw;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/dn;)V
+.method constructor <init>(Lcom/bbm/ui/c/cw;)V
     .locals 0
 
     .prologue
-    .line 562
-    iput-object p1, p0, Lcom/bbm/ui/c/do;->a:Lcom/bbm/ui/c/dn;
+    .line 567
+    iput-object p1, p0, Lcom/bbm/ui/c/do;->a:Lcom/bbm/ui/c/cw;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,112 +25,130 @@
 
 
 # virtual methods
-.method public final run()V
+.method public final a(Ljava/lang/String;)Z
+    .locals 1
+
+    .prologue
+    .line 570
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final b(Ljava/lang/String;)Z
     .locals 4
 
     .prologue
-    .line 566
-    iget-object v0, p0, Lcom/bbm/ui/c/do;->a:Lcom/bbm/ui/c/dn;
+    const/16 v3, 0x8
 
-    iget v0, v0, Lcom/bbm/ui/c/dn;->a:I
+    const/4 v2, 0x0
 
-    const v1, 0x7f0b0054
+    .line 575
+    invoke-static {p1}, Ljava/util/regex/Pattern;->quote(Ljava/lang/String;)Ljava/lang/String;
 
-    if-ne v0, v1, :cond_0
+    move-result-object v0
 
-    .line 568
-    :try_start_0
-    new-instance v0, Ljava/util/ArrayList;
+    .line 576
+    iget-object v1, p0, Lcom/bbm/ui/c/do;->a:Lcom/bbm/ui/c/cw;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    .line 569
-    new-instance v1, Lorg/json/JSONObject;
-
-    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
-
-    const-string v2, "uri"
-
-    iget-object v3, p0, Lcom/bbm/ui/c/do;->a:Lcom/bbm/ui/c/dn;
-
-    iget-object v3, v3, Lcom/bbm/ui/c/dn;->b:Lcom/bbm/g/o;
-
-    iget-object v3, v3, Lcom/bbm/g/o;->g:Ljava/lang/String;
-
-    invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-static {v1}, Lcom/bbm/ui/c/cw;->e(Lcom/bbm/ui/c/cw;)Lcom/bbm/d/b/aa;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v0}, Lcom/bbm/d/b/aa;->a(Ljava/lang/String;)V
 
-    .line 570
-    iget-object v1, p0, Lcom/bbm/ui/c/do;->a:Lcom/bbm/ui/c/dn;
+    .line 577
+    iget-object v0, p0, Lcom/bbm/ui/c/do;->a:Lcom/bbm/ui/c/cw;
 
-    iget-object v1, v1, Lcom/bbm/ui/c/dn;->c:Lcom/bbm/ui/c/dh;
+    invoke-static {v0, p1}, Lcom/bbm/ui/c/cw;->a(Lcom/bbm/ui/c/cw;Ljava/lang/String;)Ljava/lang/String;
 
-    iget-object v1, v1, Lcom/bbm/ui/c/dh;->a:Lcom/bbm/e;
+    .line 579
+    iget-object v0, p0, Lcom/bbm/ui/c/do;->a:Lcom/bbm/ui/c/cw;
 
-    iget-object v1, v1, Lcom/bbm/e;->c:Lcom/bbm/g/al;
-
-    const-string v2, "groupContactInactive"
-
-    invoke-static {v0, v2}, Lcom/bbm/g/am;->b(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/g/cu;
+    invoke-static {v0}, Lcom/bbm/ui/c/cw;->f(Lcom/bbm/ui/c/cw;)Lcom/bbm/d/b/ad;
 
     move-result-object v0
 
-    iget-object v2, p0, Lcom/bbm/ui/c/do;->a:Lcom/bbm/ui/c/dn;
+    invoke-virtual {v0}, Lcom/bbm/d/b/ad;->b()Z
 
-    iget-object v2, v2, Lcom/bbm/ui/c/dn;->c:Lcom/bbm/ui/c/dh;
+    move-result v0
 
-    iget-object v2, v2, Lcom/bbm/ui/c/dh;->b:Ljava/lang/String;
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0, v2}, Lcom/bbm/g/cu;->a(Ljava/lang/String;)Lcom/bbm/g/cu;
+    .line 580
+    iget-object v0, p0, Lcom/bbm/ui/c/do;->a:Lcom/bbm/ui/c/cw;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/cw;->f(Lcom/bbm/ui/c/cw;)Lcom/bbm/d/b/ad;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v0}, Lcom/bbm/d/b/ad;->d()I
 
-    .line 578
+    move-result v0
+
+    .line 585
+    if-nez v0, :cond_0
+
+    .line 586
+    iget-object v0, p0, Lcom/bbm/ui/c/do;->a:Lcom/bbm/ui/c/cw;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/cw;->g(Lcom/bbm/ui/c/cw;)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+
+    .line 587
+    iget-object v0, p0, Lcom/bbm/ui/c/do;->a:Lcom/bbm/ui/c/cw;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/cw;->h(Lcom/bbm/ui/c/cw;)Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setVisibility(I)V
+
+    .line 588
+    iget-object v0, p0, Lcom/bbm/ui/c/do;->a:Lcom/bbm/ui/c/cw;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/cw;->i(Lcom/bbm/ui/c/cw;)Lcom/bbm/ui/FloatingActionButton;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Lcom/bbm/ui/FloatingActionButton;->setVisibility(I)V
+
+    .line 595
     :goto_0
-    return-void
+    const/4 v0, 0x1
 
-    .line 572
-    :catch_0
-    move-exception v0
+    return v0
 
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    .line 576
+    .line 590
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/c/do;->a:Lcom/bbm/ui/c/dn;
+    iget-object v0, p0, Lcom/bbm/ui/c/do;->a:Lcom/bbm/ui/c/cw;
 
-    iget-object v0, v0, Lcom/bbm/ui/c/dn;->c:Lcom/bbm/ui/c/dh;
+    invoke-static {v0}, Lcom/bbm/ui/c/cw;->g(Lcom/bbm/ui/c/cw;)Landroid/view/View;
 
-    iget-object v0, v0, Lcom/bbm/ui/c/dh;->a:Lcom/bbm/e;
+    move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/e;->c:Lcom/bbm/g/al;
+    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v1, p0, Lcom/bbm/ui/c/do;->a:Lcom/bbm/ui/c/dn;
+    .line 591
+    iget-object v0, p0, Lcom/bbm/ui/c/do;->a:Lcom/bbm/ui/c/cw;
 
-    iget-object v1, v1, Lcom/bbm/ui/c/dn;->b:Lcom/bbm/g/o;
+    invoke-static {v0}, Lcom/bbm/ui/c/cw;->h(Lcom/bbm/ui/c/cw;)Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
-    iget-object v1, v1, Lcom/bbm/g/o;->g:Ljava/lang/String;
+    move-result-object v0
 
-    iget-object v2, p0, Lcom/bbm/ui/c/do;->a:Lcom/bbm/ui/c/dn;
+    invoke-virtual {v0, v2}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setVisibility(I)V
 
-    iget-object v2, v2, Lcom/bbm/ui/c/dn;->c:Lcom/bbm/ui/c/dh;
+    .line 592
+    iget-object v0, p0, Lcom/bbm/ui/c/do;->a:Lcom/bbm/ui/c/cw;
 
-    iget-object v2, v2, Lcom/bbm/ui/c/dh;->b:Ljava/lang/String;
+    invoke-static {v0}, Lcom/bbm/ui/c/cw;->i(Lcom/bbm/ui/c/cw;)Lcom/bbm/ui/FloatingActionButton;
 
-    new-instance v3, Lcom/bbm/g/cf;
+    move-result-object v0
 
-    invoke-direct {v3, v1, v2}, Lcom/bbm/g/cf;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v3}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
+    invoke-virtual {v0, v2}, Lcom/bbm/ui/FloatingActionButton;->setVisibility(I)V
 
     goto :goto_0
 .end method

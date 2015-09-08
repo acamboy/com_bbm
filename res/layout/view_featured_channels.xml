@@ -2,12 +2,12 @@
 <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/list_header_view_content_height">
-        <TextView android:textColor="@android:color/black" android:gravity="center_vertical" android:id="@id/featured_channels_label" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/list_header_view_horizontal_margin" android:text="@string/featured_channels" style="@style/ContactsHeaderFont" />
+        <TextView android:textColor="@android:color/black" android:gravity="center_vertical" android:id="@id/featured_channels_label" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/list_header_view_horizontal_margin" android:text="@string/featured_channels" style="@style/ContactsHeaderFont" />
     </LinearLayout>
     <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/list_header_blue_divider" android:scaleType="fitXY" android:contentDescription="@string/blank" />
     <GridLayout android:orientation="vertical" android:id="@id/channels_grid" android:padding="@dimen/channel_grid_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:columnCount="3" android:columnOrderPreserved="true" />
     <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/list_header_view_content_height">
-        <TextView android:textColor="@android:color/black" android:gravity="center_vertical" android:id="@id/featured_posts_label" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/list_header_view_horizontal_margin" android:text="@string/featured_posts" style="@style/ContactsHeaderFont" />
+        <TextView android:textColor="@android:color/black" android:gravity="center_vertical" android:id="@id/featured_posts_label" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/list_header_view_horizontal_margin" android:text="@string/featured_posts" style="@style/ContactsHeaderFont" />
     </LinearLayout>
     <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/list_header_blue_divider" android:scaleType="fitXY" android:contentDescription="@string/blank" />
 </LinearLayout>

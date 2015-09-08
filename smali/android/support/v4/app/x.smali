@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 451
+    .line 453
     iput-object p1, p0, Landroid/support/v4/app/x;->a:Landroid/support/v4/app/w;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,11 +29,11 @@
     .locals 1
 
     .prologue
-    .line 454
+    .line 456
     iget-object v0, p0, Landroid/support/v4/app/x;->a:Landroid/support/v4/app/w;
 
-    invoke-virtual {v0}, Landroid/support/v4/app/w;->d()Z
+    invoke-virtual {v0}, Landroid/support/v4/app/w;->f()Z
 
-    .line 455
+    .line 457
     return-void
 .end method

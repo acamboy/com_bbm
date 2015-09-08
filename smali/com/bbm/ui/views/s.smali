@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 126
+    .line 125
     iput-object p1, p0, Lcom/bbm/ui/views/s;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,18 +26,14 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 129
+    .line 128
     iget-object v0, p0, Lcom/bbm/ui/views/s;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
-
-    iget-object v1, p0, Lcom/bbm/ui/views/s;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
-
-    invoke-static {v1}, Lcom/bbm/ui/views/EphemeralPickerPagerV2;->c(Lcom/bbm/ui/views/EphemeralPickerPagerV2;)I
 
     invoke-virtual {v0}, Lcom/bbm/ui/views/EphemeralPickerPagerV2;->b()V
 
-    .line 130
+    .line 129
     return-void
 .end method

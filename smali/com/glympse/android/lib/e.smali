@@ -6,17 +6,17 @@
 .implements Lcom/glympse/android/lib/GAccountImportListener;
 .implements Lcom/glympse/android/lib/GAccountListener;
 .implements Lcom/glympse/android/lib/GAccountManager;
-.implements Lcom/glympse/android/lib/GBatchListener;
+.implements Lcom/glympse/android/lib/bz;
 
 
 # instance fields
 .field private _glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-.field private gF:Lcom/glympse/android/lib/GAccountListener;
+.field private gI:Lcom/glympse/android/lib/GAccountListener;
 
-.field private gW:Lcom/glympse/android/lib/GAccountProvider;
+.field private gZ:Lcom/glympse/android/lib/GAccountProvider;
 
-.field private gX:Lcom/glympse/android/lib/HttpJob;
+.field private ha:Lcom/glympse/android/lib/HttpJob;
 
 
 # direct methods
@@ -27,67 +27,168 @@
     .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 449
     return-void
 .end method
 
 .method private a(Lcom/glympse/android/core/GPrimitive;)V
-    .locals 3
-
-    .prologue
-    .line 294
-    new-instance v0, Lcom/glympse/android/lib/a;
-
-    iget-object v1, p0, Lcom/glympse/android/lib/e;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
-
-    invoke-direct {p0}, Lcom/glympse/android/lib/e;->ah()Lcom/glympse/android/lib/GAccountListener;
-
-    move-result-object v2
-
-    invoke-direct {v0, v1, v2, p1}, Lcom/glympse/android/lib/a;-><init>(Lcom/glympse/android/lib/GGlympsePrivate;Lcom/glympse/android/lib/GAccountListener;Lcom/glympse/android/core/GPrimitive;)V
-
-    invoke-direct {p0, v0}, Lcom/glympse/android/lib/e;->a(Lcom/glympse/android/lib/GApiEndpoint;)V
-
-    .line 295
-    return-void
-.end method
-
-.method private a(Lcom/glympse/android/lib/GApiEndpoint;)V
     .locals 4
 
     .prologue
+    .line 300
+    const-string v0, "type"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Lcom/glympse/android/core/GPrimitive;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 301
+    if-nez v0, :cond_0
+
+    .line 303
+    const/4 v0, 0x1
+
+    const/4 v1, 0x4
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0, v0, v1, v2}, Lcom/glympse/android/lib/e;->failedToCreate(ZILcom/glympse/android/api/GServerError;)V
+
+    .line 320
+    :goto_0
+    return-void
+
+    .line 308
+    :cond_0
+    new-instance v1, Lcom/glympse/android/hal/GVector;
+
+    invoke-direct {v1}, Lcom/glympse/android/hal/GVector;-><init>()V
+
     .line 309
-    new-instance v0, Lcom/glympse/android/hal/GVector;
+    invoke-static {}, Lcom/glympse/android/api/GC;->LINKED_ACCOUNT_TYPE_PAIRING()Ljava/lang/String;
 
-    invoke-direct {v0}, Lcom/glympse/android/hal/GVector;-><init>()V
+    move-result-object v2
 
-    .line 310
-    invoke-virtual {v0, p1}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
 
     .line 311
+    const-string v0, "code"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Lcom/glympse/android/core/GPrimitive;->hasKey(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 313
+    new-instance v0, Lcom/glympse/android/lib/cn;
+
+    iget-object v2, p0, Lcom/glympse/android/lib/e;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    invoke-direct {p0}, Lcom/glympse/android/lib/e;->ah()Lcom/glympse/android/lib/GAccountListener;
+
+    move-result-object v3
+
+    invoke-direct {v0, v2, v3, p1}, Lcom/glympse/android/lib/cn;-><init>(Lcom/glympse/android/lib/GGlympsePrivate;Lcom/glympse/android/lib/GAccountListener;Lcom/glympse/android/core/GPrimitive;)V
+
+    invoke-virtual {v1, v0}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V
+
+    .line 316
+    :cond_1
+    new-instance v0, Lcom/glympse/android/lib/a;
+
+    iget-object v2, p0, Lcom/glympse/android/lib/e;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    invoke-direct {p0}, Lcom/glympse/android/lib/e;->ah()Lcom/glympse/android/lib/GAccountListener;
+
+    move-result-object v3
+
+    invoke-direct {v0, v2, v3, p1}, Lcom/glympse/android/lib/a;-><init>(Lcom/glympse/android/lib/GGlympsePrivate;Lcom/glympse/android/lib/GAccountListener;Lcom/glympse/android/core/GPrimitive;)V
+
+    invoke-virtual {v1, v0}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V
+
+    .line 319
+    invoke-direct {p0, v1}, Lcom/glympse/android/lib/e;->a(Lcom/glympse/android/hal/GVector;)V
+
+    goto :goto_0
+.end method
+
+.method private a(Lcom/glympse/android/hal/GVector;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/glympse/android/hal/GVector",
+            "<",
+            "Lcom/glympse/android/lib/GApiEndpoint;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 341
+    new-instance v0, Lcom/glympse/android/lib/ac;
+
+    iget-object v1, p0, Lcom/glympse/android/lib/e;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    invoke-direct {p0}, Lcom/glympse/android/lib/e;->ai()Lcom/glympse/android/lib/bz;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2, p1}, Lcom/glympse/android/lib/ac;-><init>(Lcom/glympse/android/lib/GGlympsePrivate;Lcom/glympse/android/lib/bz;Lcom/glympse/android/hal/GVector;)V
+
+    .line 343
     new-instance v1, Lcom/glympse/android/lib/f;
 
     iget-object v2, p0, Lcom/glympse/android/lib/e;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-    invoke-direct {p0}, Lcom/glympse/android/lib/e;->ai()Lcom/glympse/android/lib/GBatchListener;
+    invoke-direct {v1, v2, v0}, Lcom/glympse/android/lib/f;-><init>(Lcom/glympse/android/lib/GGlympsePrivate;Lcom/glympse/android/lib/ac;)V
 
-    move-result-object v3
+    iput-object v1, p0, Lcom/glympse/android/lib/e;->ha:Lcom/glympse/android/lib/HttpJob;
 
-    invoke-direct {v1, v2, v3, v0}, Lcom/glympse/android/lib/f;-><init>(Lcom/glympse/android/lib/GGlympsePrivate;Lcom/glympse/android/lib/GBatchListener;Lcom/glympse/android/hal/GVector;)V
-
-    iput-object v1, p0, Lcom/glympse/android/lib/e;->gX:Lcom/glympse/android/lib/HttpJob;
-
-    .line 312
+    .line 344
     iget-object v0, p0, Lcom/glympse/android/lib/e;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
     invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->getJobQueue()Lcom/glympse/android/lib/GJobQueue;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/glympse/android/lib/e;->gX:Lcom/glympse/android/lib/HttpJob;
+    iget-object v1, p0, Lcom/glympse/android/lib/e;->ha:Lcom/glympse/android/lib/HttpJob;
 
     invoke-interface {v0, v1}, Lcom/glympse/android/lib/GJobQueue;->addJob(Lcom/glympse/android/lib/GJob;)V
 
-    .line 313
+    .line 345
+    return-void
+.end method
+
+.method private a(Lcom/glympse/android/lib/GApiEndpoint;)V
+    .locals 1
+
+    .prologue
+    .line 334
+    new-instance v0, Lcom/glympse/android/hal/GVector;
+
+    invoke-direct {v0}, Lcom/glympse/android/hal/GVector;-><init>()V
+
+    .line 335
+    invoke-virtual {v0, p1}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V
+
+    .line 336
+    invoke-direct {p0, v0}, Lcom/glympse/android/lib/e;->a(Lcom/glympse/android/hal/GVector;)V
+
+    .line 337
     return-void
 .end method
 
@@ -95,7 +196,7 @@
     .locals 6
 
     .prologue
-    .line 299
+    .line 324
     new-instance v0, Lcom/glympse/android/lib/a;
 
     iget-object v1, p0, Lcom/glympse/android/lib/e;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
@@ -114,7 +215,7 @@
 
     invoke-direct {p0, v0}, Lcom/glympse/android/lib/e;->a(Lcom/glympse/android/lib/GApiEndpoint;)V
 
-    .line 300
+    .line 325
     return-void
 .end method
 
@@ -122,7 +223,7 @@
     .locals 3
 
     .prologue
-    .line 289
+    .line 294
     new-instance v0, Lcom/glympse/android/lib/a;
 
     iget-object v1, p0, Lcom/glympse/android/lib/e;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
@@ -135,7 +236,7 @@
 
     invoke-direct {p0, v0}, Lcom/glympse/android/lib/e;->a(Lcom/glympse/android/lib/GApiEndpoint;)V
 
-    .line 290
+    .line 295
     return-void
 .end method
 
@@ -143,7 +244,7 @@
     .locals 1
 
     .prologue
-    .line 342
+    .line 374
     invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -157,7 +258,7 @@
     .locals 1
 
     .prologue
-    .line 347
+    .line 379
     invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -167,16 +268,16 @@
     return-object v0
 .end method
 
-.method private ai()Lcom/glympse/android/lib/GBatchListener;
+.method private ai()Lcom/glympse/android/lib/bz;
     .locals 1
 
     .prologue
-    .line 352
+    .line 384
     invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/glympse/android/lib/GBatchListener;
+    check-cast v0, Lcom/glympse/android/lib/bz;
 
     return-object v0
 .end method
@@ -185,7 +286,7 @@
     .locals 3
 
     .prologue
-    .line 304
+    .line 329
     new-instance v0, Lcom/glympse/android/lib/c;
 
     iget-object v1, p0, Lcom/glympse/android/lib/e;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
@@ -198,12 +299,20 @@
 
     invoke-direct {p0, v0}, Lcom/glympse/android/lib/e;->a(Lcom/glympse/android/lib/GApiEndpoint;)V
 
-    .line 305
+    .line 330
     return-void
 .end method
 
 
 # virtual methods
+.method public a(Lcom/glympse/android/lib/ac;)V
+    .locals 0
+
+    .prologue
+    .line 274
+    return-void
+.end method
+
 .method public accountCreated(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
@@ -222,18 +331,18 @@
 
     .line 138
     :cond_1
-    iput-object v1, p0, Lcom/glympse/android/lib/e;->gW:Lcom/glympse/android/lib/GAccountProvider;
+    iput-object v1, p0, Lcom/glympse/android/lib/e;->gZ:Lcom/glympse/android/lib/GAccountProvider;
 
     .line 139
-    iput-object v1, p0, Lcom/glympse/android/lib/e;->gX:Lcom/glympse/android/lib/HttpJob;
+    iput-object v1, p0, Lcom/glympse/android/lib/e;->ha:Lcom/glympse/android/lib/HttpJob;
 
     .line 142
-    iget-object v0, p0, Lcom/glympse/android/lib/e;->gF:Lcom/glympse/android/lib/GAccountListener;
+    iget-object v0, p0, Lcom/glympse/android/lib/e;->gI:Lcom/glympse/android/lib/GAccountListener;
 
     if-eqz v0, :cond_0
 
     .line 144
-    iget-object v0, p0, Lcom/glympse/android/lib/e;->gF:Lcom/glympse/android/lib/GAccountListener;
+    iget-object v0, p0, Lcom/glympse/android/lib/e;->gI:Lcom/glympse/android/lib/GAccountListener;
 
     invoke-interface {v0, p1, p2}, Lcom/glympse/android/lib/GAccountListener;->accountCreated(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -246,23 +355,23 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 227
+    .line 232
     iget-object v0, p0, Lcom/glympse/android/lib/e;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
     if-nez v0, :cond_0
 
-    .line 238
+    .line 243
     :goto_0
     return-void
 
-    .line 233
+    .line 238
     :cond_0
-    iput-object v1, p0, Lcom/glympse/android/lib/e;->gW:Lcom/glympse/android/lib/GAccountProvider;
+    iput-object v1, p0, Lcom/glympse/android/lib/e;->gZ:Lcom/glympse/android/lib/GAccountProvider;
 
-    .line 234
-    iput-object v1, p0, Lcom/glympse/android/lib/e;->gX:Lcom/glympse/android/lib/HttpJob;
+    .line 239
+    iput-object v1, p0, Lcom/glympse/android/lib/e;->ha:Lcom/glympse/android/lib/HttpJob;
 
-    .line 237
+    .line 242
     invoke-direct {p0, p1}, Lcom/glympse/android/lib/e;->a(Lcom/glympse/android/core/GPrimitive;)V
 
     goto :goto_0
@@ -272,10 +381,10 @@
     .locals 0
 
     .prologue
-    .line 221
+    .line 226
     invoke-virtual {p0, p1, p2}, Lcom/glympse/android/lib/e;->accountCreated(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 222
+    .line 227
     return-void
 .end method
 
@@ -285,59 +394,33 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 243
+    .line 248
     iget-object v0, p0, Lcom/glympse/android/lib/e;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
     if-nez v0, :cond_0
 
-    .line 254
+    .line 259
     :goto_0
     return-void
 
-    .line 249
+    .line 254
     :cond_0
-    iput-object v1, p0, Lcom/glympse/android/lib/e;->gW:Lcom/glympse/android/lib/GAccountProvider;
+    iput-object v1, p0, Lcom/glympse/android/lib/e;->gZ:Lcom/glympse/android/lib/GAccountProvider;
 
-    .line 250
-    iput-object v1, p0, Lcom/glympse/android/lib/e;->gX:Lcom/glympse/android/lib/HttpJob;
+    .line 255
+    iput-object v1, p0, Lcom/glympse/android/lib/e;->ha:Lcom/glympse/android/lib/HttpJob;
 
-    .line 253
+    .line 258
     invoke-direct {p0, p1, p2, p3}, Lcom/glympse/android/lib/e;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method public batchCompleted(Lcom/glympse/android/hal/GVector;)V
+.method public b(Lcom/glympse/android/lib/ac;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/glympse/android/hal/GVector",
-            "<",
-            "Lcom/glympse/android/lib/GApiEndpoint;",
-            ">;)V"
-        }
-    .end annotation
 
     .prologue
-    .line 269
-    return-void
-.end method
-
-.method public batchFailed(Lcom/glympse/android/hal/GVector;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/glympse/android/hal/GVector",
-            "<",
-            "Lcom/glympse/android/lib/GApiEndpoint;",
-            ">;)V"
-        }
-    .end annotation
-
-    .prologue
-    .line 275
+    .line 280
     return-void
 .end method
 
@@ -348,21 +431,21 @@
     const/4 v1, 0x0
 
     .line 115
-    iget-object v0, p0, Lcom/glympse/android/lib/e;->gW:Lcom/glympse/android/lib/GAccountProvider;
+    iget-object v0, p0, Lcom/glympse/android/lib/e;->gZ:Lcom/glympse/android/lib/GAccountProvider;
 
     if-eqz v0, :cond_0
 
     .line 117
-    iget-object v0, p0, Lcom/glympse/android/lib/e;->gW:Lcom/glympse/android/lib/GAccountProvider;
+    iget-object v0, p0, Lcom/glympse/android/lib/e;->gZ:Lcom/glympse/android/lib/GAccountProvider;
 
     invoke-interface {v0}, Lcom/glympse/android/lib/GAccountProvider;->cancel()V
 
     .line 118
-    iput-object v1, p0, Lcom/glympse/android/lib/e;->gW:Lcom/glympse/android/lib/GAccountProvider;
+    iput-object v1, p0, Lcom/glympse/android/lib/e;->gZ:Lcom/glympse/android/lib/GAccountProvider;
 
     .line 122
     :cond_0
-    iput-object v1, p0, Lcom/glympse/android/lib/e;->gX:Lcom/glympse/android/lib/HttpJob;
+    iput-object v1, p0, Lcom/glympse/android/lib/e;->ha:Lcom/glympse/android/lib/HttpJob;
 
     .line 123
     return-void
@@ -375,11 +458,11 @@
     const/4 v3, 0x0
 
     .line 56
-    iget-object v0, p0, Lcom/glympse/android/lib/e;->gW:Lcom/glympse/android/lib/GAccountProvider;
+    iget-object v0, p0, Lcom/glympse/android/lib/e;->gZ:Lcom/glympse/android/lib/GAccountProvider;
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/glympse/android/lib/e;->gX:Lcom/glympse/android/lib/HttpJob;
+    iget-object v0, p0, Lcom/glympse/android/lib/e;->ha:Lcom/glympse/android/lib/HttpJob;
 
     if-eqz v0, :cond_1
 
@@ -413,11 +496,11 @@
 
     invoke-direct {v1, v2, v0}, Lcom/glympse/android/lib/i;-><init>(Lcom/glympse/android/core/GHandler;Lcom/glympse/android/core/GPrimitive;)V
 
-    iput-object v1, p0, Lcom/glympse/android/lib/e;->gW:Lcom/glympse/android/lib/GAccountProvider;
+    iput-object v1, p0, Lcom/glympse/android/lib/e;->gZ:Lcom/glympse/android/lib/GAccountProvider;
 
     .line 81
     :goto_1
-    iget-object v0, p0, Lcom/glympse/android/lib/e;->gW:Lcom/glympse/android/lib/GAccountProvider;
+    iget-object v0, p0, Lcom/glympse/android/lib/e;->gZ:Lcom/glympse/android/lib/GAccountProvider;
 
     invoke-direct {p0}, Lcom/glympse/android/lib/e;->ag()Lcom/glympse/android/lib/GAccountImportListener;
 
@@ -426,7 +509,7 @@
     invoke-interface {v0, v1}, Lcom/glympse/android/lib/GAccountProvider;->setAccountListener(Lcom/glympse/android/lib/GAccountImportListener;)V
 
     .line 85
-    iget-object v0, p0, Lcom/glympse/android/lib/e;->gW:Lcom/glympse/android/lib/GAccountProvider;
+    iget-object v0, p0, Lcom/glympse/android/lib/e;->gZ:Lcom/glympse/android/lib/GAccountProvider;
 
     invoke-interface {v0, p1}, Lcom/glympse/android/lib/GAccountProvider;->create(Ljava/lang/String;)Z
 
@@ -435,7 +518,7 @@
     if-nez v0, :cond_2
 
     .line 88
-    iput-object v3, p0, Lcom/glympse/android/lib/e;->gW:Lcom/glympse/android/lib/GAccountProvider;
+    iput-object v3, p0, Lcom/glympse/android/lib/e;->gZ:Lcom/glympse/android/lib/GAccountProvider;
 
     .line 91
     invoke-direct {p0}, Lcom/glympse/android/lib/e;->af()V
@@ -483,7 +566,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/e;->gW:Lcom/glympse/android/lib/GAccountProvider;
+    iput-object v0, p0, Lcom/glympse/android/lib/e;->gZ:Lcom/glympse/android/lib/GAccountProvider;
 
     goto :goto_1
 
@@ -493,7 +576,7 @@
 
     invoke-direct {v0, v3}, Lcom/glympse/android/lib/g;-><init>(Lcom/glympse/android/lib/e$1;)V
 
-    iput-object v0, p0, Lcom/glympse/android/lib/e;->gW:Lcom/glympse/android/lib/GAccountProvider;
+    iput-object v0, p0, Lcom/glympse/android/lib/e;->gZ:Lcom/glympse/android/lib/GAccountProvider;
 
     goto :goto_1
 .end method
@@ -504,55 +587,55 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 151
+    .line 156
     iget-object v0, p0, Lcom/glympse/android/lib/e;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
     if-nez v0, :cond_1
 
-    .line 177
+    .line 182
     :cond_0
     :goto_0
     return-void
 
-    .line 157
+    .line 162
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/e;->gW:Lcom/glympse/android/lib/GAccountProvider;
+    iget-object v0, p0, Lcom/glympse/android/lib/e;->gZ:Lcom/glympse/android/lib/GAccountProvider;
 
     if-eqz v0, :cond_2
 
     const/4 v0, 0x1
 
-    .line 160
+    .line 165
     :goto_1
-    iput-object v1, p0, Lcom/glympse/android/lib/e;->gW:Lcom/glympse/android/lib/GAccountProvider;
+    iput-object v1, p0, Lcom/glympse/android/lib/e;->gZ:Lcom/glympse/android/lib/GAccountProvider;
 
-    .line 161
-    iput-object v1, p0, Lcom/glympse/android/lib/e;->gX:Lcom/glympse/android/lib/HttpJob;
+    .line 166
+    iput-object v1, p0, Lcom/glympse/android/lib/e;->ha:Lcom/glympse/android/lib/HttpJob;
 
-    .line 164
+    .line 169
     if-eqz v0, :cond_3
 
     if-nez p1, :cond_3
 
-    .line 167
+    .line 172
     invoke-direct {p0}, Lcom/glympse/android/lib/e;->af()V
 
     goto :goto_0
 
-    .line 157
+    .line 162
     :cond_2
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 172
+    .line 177
     :cond_3
-    iget-object v0, p0, Lcom/glympse/android/lib/e;->gF:Lcom/glympse/android/lib/GAccountListener;
+    iget-object v0, p0, Lcom/glympse/android/lib/e;->gI:Lcom/glympse/android/lib/GAccountListener;
 
     if-eqz v0, :cond_0
 
-    .line 174
-    iget-object v0, p0, Lcom/glympse/android/lib/e;->gF:Lcom/glympse/android/lib/GAccountListener;
+    .line 179
+    iget-object v0, p0, Lcom/glympse/android/lib/e;->gI:Lcom/glympse/android/lib/GAccountListener;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/glympse/android/lib/GAccountListener;->failedToCreate(ZILcom/glympse/android/api/GServerError;)V
 
@@ -563,12 +646,12 @@
     .locals 1
 
     .prologue
-    .line 258
+    .line 263
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/glympse/android/lib/e;->failedToCreate(ZILcom/glympse/android/api/GServerError;)V
 
-    .line 259
+    .line 264
     return-void
 .end method
 
@@ -576,62 +659,70 @@
     .locals 1
 
     .prologue
-    .line 200
+    .line 205
     iget-object v0, p0, Lcom/glympse/android/lib/e;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
     if-nez v0, :cond_1
 
-    .line 213
+    .line 218
     :cond_0
     :goto_0
     return-void
 
-    .line 206
+    .line 211
     :cond_1
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/e;->gX:Lcom/glympse/android/lib/HttpJob;
+    iput-object v0, p0, Lcom/glympse/android/lib/e;->ha:Lcom/glympse/android/lib/HttpJob;
 
-    .line 209
-    iget-object v0, p0, Lcom/glympse/android/lib/e;->gF:Lcom/glympse/android/lib/GAccountListener;
+    .line 214
+    iget-object v0, p0, Lcom/glympse/android/lib/e;->gI:Lcom/glympse/android/lib/GAccountListener;
 
     if-eqz v0, :cond_0
 
-    .line 211
-    iget-object v0, p0, Lcom/glympse/android/lib/e;->gF:Lcom/glympse/android/lib/GAccountListener;
+    .line 216
+    iget-object v0, p0, Lcom/glympse/android/lib/e;->gI:Lcom/glympse/android/lib/GAccountListener;
 
     invoke-interface {v0, p1, p2}, Lcom/glympse/android/lib/GAccountListener;->failedToLogin(ILcom/glympse/android/api/GServerError;)V
 
     goto :goto_0
 .end method
 
+.method public k(Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 286
+    return-void
+.end method
+
 .method public loggedIn(Ljava/lang/String;J)V
     .locals 2
 
     .prologue
-    .line 182
+    .line 187
     iget-object v0, p0, Lcom/glympse/android/lib/e;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
     if-nez v0, :cond_1
 
-    .line 195
+    .line 200
     :cond_0
     :goto_0
     return-void
 
-    .line 188
+    .line 193
     :cond_1
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/e;->gX:Lcom/glympse/android/lib/HttpJob;
+    iput-object v0, p0, Lcom/glympse/android/lib/e;->ha:Lcom/glympse/android/lib/HttpJob;
 
-    .line 191
-    iget-object v0, p0, Lcom/glympse/android/lib/e;->gF:Lcom/glympse/android/lib/GAccountListener;
+    .line 196
+    iget-object v0, p0, Lcom/glympse/android/lib/e;->gI:Lcom/glympse/android/lib/GAccountListener;
 
     if-eqz v0, :cond_0
 
-    .line 193
-    iget-object v0, p0, Lcom/glympse/android/lib/e;->gF:Lcom/glympse/android/lib/GAccountListener;
+    .line 198
+    iget-object v0, p0, Lcom/glympse/android/lib/e;->gI:Lcom/glympse/android/lib/GAccountListener;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/glympse/android/lib/GAccountListener;->loggedIn(Ljava/lang/String;J)V
 
@@ -643,11 +734,11 @@
 
     .prologue
     .line 101
-    iget-object v0, p0, Lcom/glympse/android/lib/e;->gW:Lcom/glympse/android/lib/GAccountProvider;
+    iget-object v0, p0, Lcom/glympse/android/lib/e;->gZ:Lcom/glympse/android/lib/GAccountProvider;
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/glympse/android/lib/e;->gX:Lcom/glympse/android/lib/HttpJob;
+    iget-object v0, p0, Lcom/glympse/android/lib/e;->ha:Lcom/glympse/android/lib/HttpJob;
 
     if-eqz v0, :cond_1
 
@@ -669,11 +760,14 @@
     goto :goto_0
 .end method
 
-.method public sessionFailed(Ljava/lang/String;)V
+.method public retryAccountCreate(Lcom/glympse/android/core/GPrimitive;)V
     .locals 0
 
     .prologue
-    .line 281
+    .line 150
+    invoke-direct {p0, p1}, Lcom/glympse/android/lib/e;->a(Lcom/glympse/android/core/GPrimitive;)V
+
+    .line 151
     return-void
 .end method
 
@@ -682,7 +776,7 @@
 
     .prologue
     .line 50
-    iput-object p1, p0, Lcom/glympse/android/lib/e;->gF:Lcom/glympse/android/lib/GAccountListener;
+    iput-object p1, p0, Lcom/glympse/android/lib/e;->gI:Lcom/glympse/android/lib/GAccountListener;
 
     .line 51
     return-void
@@ -709,7 +803,7 @@
     invoke-virtual {p0}, Lcom/glympse/android/lib/e;->cancel()V
 
     .line 44
-    iput-object v0, p0, Lcom/glympse/android/lib/e;->gF:Lcom/glympse/android/lib/GAccountListener;
+    iput-object v0, p0, Lcom/glympse/android/lib/e;->gI:Lcom/glympse/android/lib/GAccountListener;
 
     .line 45
     iput-object v0, p0, Lcom/glympse/android/lib/e;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;

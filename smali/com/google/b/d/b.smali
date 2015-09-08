@@ -8,7 +8,7 @@
     .locals 0
 
     .prologue
-    .line 578
+    .line 621
     invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
     return-void
@@ -20,7 +20,7 @@
     .locals 1
 
     .prologue
-    .line 593
+    .line 636
     const-string v0, "ByteStreams.nullOutputStream()"
 
     return-object v0
@@ -30,7 +30,7 @@
     .locals 0
 
     .prologue
-    .line 581
+    .line 624
     return-void
 .end method
 
@@ -38,10 +38,10 @@
     .locals 0
 
     .prologue
-    .line 584
-    invoke-static {p1}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 627
+    invoke-static {p1}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 585
+    .line 628
     return-void
 .end method
 
@@ -49,9 +49,9 @@
     .locals 0
 
     .prologue
-    .line 588
-    invoke-static {p1}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 631
+    invoke-static {p1}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 589
+    .line 632
     return-void
 .end method

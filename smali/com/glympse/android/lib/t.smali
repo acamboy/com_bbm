@@ -17,16 +17,16 @@
 
 
 # instance fields
-.field private hG:Lcom/glympse/android/lib/bp;
+.field private hO:Lcom/glympse/android/lib/ca;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/glympse/android/lib/bp",
+            "Lcom/glympse/android/lib/ca",
             "<TFROM;TTO;>;"
         }
     .end annotation
 .end field
 
-.field private hH:Ljava/util/Enumeration;
+.field private hP:Ljava/util/Enumeration;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Enumeration",
@@ -35,33 +35,33 @@
     .end annotation
 .end field
 
-.field final synthetic hI:Lcom/glympse/android/lib/s;
+.field final synthetic hQ:Lcom/glympse/android/lib/s;
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/lib/s;Ljava/util/Enumeration;Lcom/glympse/android/lib/bp;)V
+.method public constructor <init>(Lcom/glympse/android/lib/s;Ljava/util/Enumeration;Lcom/glympse/android/lib/ca;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Enumeration",
             "<TFROM;>;",
-            "Lcom/glympse/android/lib/bp",
+            "Lcom/glympse/android/lib/ca",
             "<TFROM;TTO;>;)V"
         }
     .end annotation
 
     .prologue
     .line 70
-    iput-object p1, p0, Lcom/glympse/android/lib/t;->hI:Lcom/glympse/android/lib/s;
+    iput-object p1, p0, Lcom/glympse/android/lib/t;->hQ:Lcom/glympse/android/lib/s;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 71
-    iput-object p2, p0, Lcom/glympse/android/lib/t;->hH:Ljava/util/Enumeration;
+    iput-object p2, p0, Lcom/glympse/android/lib/t;->hP:Ljava/util/Enumeration;
 
     .line 72
-    iput-object p3, p0, Lcom/glympse/android/lib/t;->hG:Lcom/glympse/android/lib/bp;
+    iput-object p3, p0, Lcom/glympse/android/lib/t;->hO:Lcom/glympse/android/lib/ca;
 
     .line 73
     return-void
@@ -74,7 +74,7 @@
 
     .prologue
     .line 81
-    iget-object v0, p0, Lcom/glympse/android/lib/t;->hH:Ljava/util/Enumeration;
+    iget-object v0, p0, Lcom/glympse/android/lib/t;->hP:Ljava/util/Enumeration;
 
     invoke-interface {v0}, Ljava/util/Enumeration;->hasMoreElements()Z
 
@@ -93,15 +93,15 @@
 
     .prologue
     .line 86
-    iget-object v0, p0, Lcom/glympse/android/lib/t;->hG:Lcom/glympse/android/lib/bp;
+    iget-object v0, p0, Lcom/glympse/android/lib/t;->hO:Lcom/glympse/android/lib/ca;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/t;->hH:Ljava/util/Enumeration;
+    iget-object v1, p0, Lcom/glympse/android/lib/t;->hP:Ljava/util/Enumeration;
 
     invoke-interface {v1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/glympse/android/lib/bp;->c(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lcom/glympse/android/lib/ca;->c(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 

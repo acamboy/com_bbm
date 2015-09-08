@@ -3,7 +3,7 @@
 .source "EmoticonInputPanel.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 252
+    .line 168
     iput-object p1, p0, Lcom/bbm/ui/bm;->a:Lcom/bbm/ui/EmoticonInputPanel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,29 +25,12 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 1
 
     .prologue
-    .line 255
-    iget-object v0, p0, Lcom/bbm/ui/bm;->a:Lcom/bbm/ui/EmoticonInputPanel;
+    .line 172
+    const/4 v0, 0x1
 
-    invoke-static {v0}, Lcom/bbm/ui/EmoticonInputPanel;->d(Lcom/bbm/ui/EmoticonInputPanel;)Landroid/view/View$OnClickListener;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 256
-    iget-object v0, p0, Lcom/bbm/ui/bm;->a:Lcom/bbm/ui/EmoticonInputPanel;
-
-    invoke-static {v0}, Lcom/bbm/ui/EmoticonInputPanel;->d(Lcom/bbm/ui/EmoticonInputPanel;)Landroid/view/View$OnClickListener;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
-
-    .line 258
-    :cond_0
-    return-void
+    return v0
 .end method

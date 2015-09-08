@@ -7,7 +7,7 @@
 .method public abstract a()V
 .end method
 
-.method public abstract a(DD)V
+.method public abstract a(Landroid/os/Bundle;)V
 .end method
 
 .method public abstract a(Lcom/glympse/android/api/GTrack;Ljava/lang/String;)V
@@ -45,31 +45,25 @@
 .method public abstract b()V
 .end method
 
+.method public abstract b(Landroid/os/Bundle;)V
+.end method
+
+.method public abstract c()V
+.end method
+
+.method public abstract d()V
+.end method
+
+.method public abstract e()V
+.end method
+
+.method public abstract f()V
+.end method
+
 .method public abstract getView()Landroid/view/View;
 .end method
 
-.method public abstract onCreate(Landroid/os/Bundle;)V
-.end method
-
-.method public abstract onDestroy()V
-.end method
-
-.method public abstract onLowMemory()V
-.end method
-
-.method public abstract onPause()V
-.end method
-
-.method public abstract onResume()V
-.end method
-
-.method public abstract onSaveInstanceState(Landroid/os/Bundle;)V
-.end method
-
 .method public abstract setCompassEnabled(Z)V
-.end method
-
-.method public abstract setGesturesEnabled(Z)V
 .end method
 
 .method public abstract setInfoWindowAdapter(Ljava/lang/Object;)V

@@ -1,104 +1,81 @@
-.class public final Lcom/bbm/util/h/b;
+.class final Lcom/bbm/util/h/b;
 .super Ljava/lang/Object;
-.source "BbmVCardEntryHandler.java"
+.source "TimeRangeFormatter.java"
 
 # interfaces
-.implements Lcom/a/a/w;
-
-
-# instance fields
-.field public a:Lcom/google/b/a/l;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/b/a/l",
-            "<",
-            "Lcom/bbm/util/h/a;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private b:I
+.implements Lcom/bbm/util/h/j;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method constructor <init>()V
+    .locals 0
 
     .prologue
-    .line 8
+    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 10
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/bbm/util/h/b;->b:I
-
-    .line 11
-    invoke-static {}, Lcom/google/b/a/l;->d()Lcom/google/b/a/l;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/util/h/b;->a:Lcom/google/b/a/l;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/a/a/d;)V
-    .locals 2
+.method public final a(Landroid/content/Context;JJ)Ljava/lang/String;
+    .locals 4
 
     .prologue
-    .line 19
-    iget v0, p0, Lcom/bbm/util/h/b;->b:I
+    const/4 v2, 0x1
 
-    if-lez v0, :cond_0
+    .line 51
+    const-wide/32 v0, 0xea60
 
-    .line 32
+    div-long v0, p4, v0
+
+    long-to-int v0, v0
+
+    .line 52
+    if-gtz v0, :cond_0
+
+    .line 53
+    const v0, 0x7f0e0859
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 57
     :goto_0
-    return-void
+    return-object v0
 
-    .line 23
+    .line 54
     :cond_0
-    iget v0, p0, Lcom/bbm/util/h/b;->b:I
+    if-ne v0, v2, :cond_1
 
-    add-int/lit8 v0, v0, 0x1
+    .line 55
+    const v0, 0x7f0e085b
 
-    iput v0, p0, Lcom/bbm/util/h/b;->b:I
-
-    .line 24
-    const/4 v1, 0x0
-
-    .line 26
-    :try_start_0
-    const-class v0, Lcom/bbm/util/h/a;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
-
-    check-cast v0, Lcom/bbm/util/h/a;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 31
-    :goto_1
-    invoke-static {v0}, Lcom/google/b/a/l;->c(Ljava/lang/Object;)Lcom/google/b/a/l;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/util/h/b;->a:Lcom/google/b/a/l;
 
     goto :goto_0
 
-    .line 27
-    :catch_0
-    move-exception v0
+    .line 57
+    :cond_1
+    const v1, 0x7f0e085a
 
-    invoke-static {v0}, Lcom/blackberry/ids/Ln;->w(Ljava/lang/Throwable;)V
+    new-array v2, v2, [Ljava/lang/Object;
 
-    move-object v0, v1
+    const/4 v3, 0x0
 
-    goto :goto_1
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    aput-object v0, v2, v3
+
+    invoke-virtual {p1, v1, v2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method

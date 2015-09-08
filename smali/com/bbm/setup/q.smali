@@ -18,13 +18,13 @@
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Lcom/bbm/setup/ag;)Lcom/google/b/a/l;
+.method public static a(Landroid/content/Context;Lcom/bbm/setup/an;)Lcom/google/b/a/l;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lcom/bbm/setup/ag;",
+            "Lcom/bbm/setup/an;",
             ")",
             "Lcom/google/b/a/l",
             "<",
@@ -35,7 +35,7 @@
 
     .prologue
     .line 47
-    iget-object v0, p1, Lcom/bbm/setup/ag;->n:Ljava/lang/String;
+    iget-object v0, p1, Lcom/bbm/setup/an;->n:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
@@ -56,7 +56,7 @@
     .line 49
     new-instance v1, Landroid/content/ComponentName;
 
-    iget-object v2, p1, Lcom/bbm/setup/ag;->n:Ljava/lang/String;
+    iget-object v2, p1, Lcom/bbm/setup/an;->n:Ljava/lang/String;
 
     invoke-direct {v1, p0, v2}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
@@ -79,25 +79,25 @@
 
     .line 53
     :cond_1
-    invoke-static {}, Lcom/google/b/a/l;->d()Lcom/google/b/a/l;
+    invoke-static {}, Lcom/google/b/a/l;->e()Lcom/google/b/a/l;
 
     move-result-object v0
 
     goto :goto_1
 .end method
 
-.method private e()Lcom/bbm/setup/ag;
+.method private e()Lcom/bbm/setup/an;
     .locals 1
 
     .prologue
     .line 69
     iget-object v0, p0, Lcom/bbm/setup/q;->a:Lcom/bbm/setup/z;
 
-    invoke-virtual {v0}, Lcom/bbm/setup/z;->a()Lcom/bbm/setup/af;
+    invoke-virtual {v0}, Lcom/bbm/setup/z;->a()Lcom/bbm/setup/am;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/setup/af;->a:Lcom/bbm/setup/ag;
+    iget-object v0, v0, Lcom/bbm/setup/am;->a:Lcom/bbm/setup/an;
 
     return-object v0
 .end method
@@ -109,15 +109,15 @@
 
     .prologue
     .line 76
-    invoke-direct {p0}, Lcom/bbm/setup/q;->e()Lcom/bbm/setup/ag;
+    invoke-direct {p0}, Lcom/bbm/setup/q;->e()Lcom/bbm/setup/an;
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/bbm/setup/q;->a(Landroid/content/Context;Lcom/bbm/setup/ag;)Lcom/google/b/a/l;
+    invoke-static {p0, v0}, Lcom/bbm/setup/q;->a(Landroid/content/Context;Lcom/bbm/setup/an;)Lcom/google/b/a/l;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/google/b/a/l;->a()Z
+    invoke-virtual {v1}, Lcom/google/b/a/l;->b()Z
 
     move-result v2
 
@@ -129,7 +129,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, v0, Lcom/bbm/setup/ag;->n:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/setup/an;->n:Ljava/lang/String;
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -143,9 +143,9 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v2}, Lcom/bbm/af;->c(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-virtual {v1}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+    invoke-virtual {v1}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -155,9 +155,9 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/bbm/setup/q;->startActivityForResult(Landroid/content/Intent;I)V
 
-    const v0, 0x7f040003
+    const v0, 0x7f040009
 
-    const v1, 0x7f040004
+    const v1, 0x7f04000a
 
     invoke-virtual {p0, v0, v1}, Lcom/bbm/setup/q;->overridePendingTransition(II)V
 
@@ -177,24 +177,24 @@
 
     .prologue
     .line 80
-    invoke-direct {p0}, Lcom/bbm/setup/q;->e()Lcom/bbm/setup/ag;
+    invoke-direct {p0}, Lcom/bbm/setup/q;->e()Lcom/bbm/setup/an;
 
     move-result-object v1
 
     .line 81
-    invoke-static {p0, v1}, Lcom/bbm/setup/q;->a(Landroid/content/Context;Lcom/bbm/setup/ag;)Lcom/google/b/a/l;
+    invoke-static {p0, v1}, Lcom/bbm/setup/q;->a(Landroid/content/Context;Lcom/bbm/setup/an;)Lcom/google/b/a/l;
 
     move-result-object v0
 
     .line 82
-    invoke-virtual {v0}, Lcom/google/b/a/l;->a()Z
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
     .line 83
-    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -212,7 +212,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, v1, Lcom/bbm/setup/ag;->n:Ljava/lang/String;
+    iget-object v1, v1, Lcom/bbm/setup/an;->n:Ljava/lang/String;
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -226,7 +226,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v1, v2}, Lcom/bbm/af;->c(Ljava/lang/String;Ljava/lang/Class;)V
 
     .line 88
     invoke-virtual {p0, v0}, Lcom/bbm/setup/q;->startActivity(Landroid/content/Intent;)V
@@ -235,9 +235,9 @@
     invoke-virtual {p0}, Lcom/bbm/setup/q;->finish()V
 
     .line 90
-    const v0, 0x7f040003
+    const v0, 0x7f040009
 
-    const v1, 0x7f040004
+    const v1, 0x7f04000a
 
     invoke-virtual {p0, v0, v1}, Lcom/bbm/setup/q;->overridePendingTransition(II)V
 
@@ -265,7 +265,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/String;Ljava/lang/Class;)V
 
     .line 114
     const/16 v0, 0x64
@@ -295,7 +295,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/String;Ljava/lang/Class;)V
 
     .line 121
     const/16 v0, 0xca
@@ -323,7 +323,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/String;Ljava/lang/Class;)V
 
     .line 129
     if-nez p1, :cond_0
@@ -361,7 +361,7 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 60
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
 
     sget-object v0, Lcom/bbm/Alaska;->f:Lcom/bbm/setup/z;
 

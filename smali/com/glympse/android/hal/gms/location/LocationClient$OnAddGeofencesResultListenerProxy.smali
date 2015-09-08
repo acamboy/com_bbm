@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private fU:Lcom/glympse/android/hal/gms/location/LocationClient$OnAddGeofencesResultListener;
+.field private fX:Lcom/glympse/android/hal/gms/location/LocationClient$OnAddGeofencesResultListener;
 
 
 # direct methods
@@ -19,7 +19,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 295
-    iput-object p1, p0, Lcom/glympse/android/hal/gms/location/LocationClient$OnAddGeofencesResultListenerProxy;->fU:Lcom/glympse/android/hal/gms/location/LocationClient$OnAddGeofencesResultListener;
+    iput-object p1, p0, Lcom/glympse/android/hal/gms/location/LocationClient$OnAddGeofencesResultListenerProxy;->fX:Lcom/glympse/android/hal/gms/location/LocationClient$OnAddGeofencesResultListener;
 
     .line 296
     return-void
@@ -80,7 +80,7 @@
     if-eqz v0, :cond_0
 
     .line 304
-    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/LocationClient$OnAddGeofencesResultListenerProxy;->fU:Lcom/glympse/android/hal/gms/location/LocationClient$OnAddGeofencesResultListener;
+    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/LocationClient$OnAddGeofencesResultListenerProxy;->fX:Lcom/glympse/android/hal/gms/location/LocationClient$OnAddGeofencesResultListener;
 
     const/4 v0, 0x0
 

@@ -1,180 +1,246 @@
-.class public final Lcom/bbm/ui/activities/ahz;
-.super Lcom/bbm/ui/ej;
-.source "ShareActivity.java"
+.class final Lcom/bbm/ui/activities/ahz;
+.super Ljava/lang/Object;
+.source "ViewSubscribedChannelActivity.java"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/ui/ej",
-        "<",
-        "Lcom/bbm/d/gr;",
-        "Ljava/lang/String;",
-        ">;"
-    }
-.end annotation
+# interfaces
+.implements Lcom/bbm/j/s;
 
 
 # instance fields
-.field final synthetic b:Lcom/bbm/ui/activities/ShareActivity;
+.field final synthetic a:Landroid/view/Menu;
+
+.field final synthetic b:Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/ui/activities/ShareActivity;Lcom/bbm/j/r;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;Landroid/view/Menu;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/bbm/j/r",
-            "<",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/d/gr;",
-            ">;>;)V"
-        }
-    .end annotation
 
     .prologue
-    .line 241
-    iput-object p1, p0, Lcom/bbm/ui/activities/ahz;->b:Lcom/bbm/ui/activities/ShareActivity;
+    .line 106
+    iput-object p1, p0, Lcom/bbm/ui/activities/ahz;->b:Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;
 
-    .line 242
-    invoke-direct {p0, p2}, Lcom/bbm/ui/ej;-><init>(Lcom/bbm/j/r;)V
+    iput-object p2, p0, Lcom/bbm/ui/activities/ahz;->a:Landroid/view/Menu;
 
-    .line 243
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 3
-
-    .prologue
-    .line 247
-    iget-object v0, p0, Lcom/bbm/ui/activities/ahz;->b:Lcom/bbm/ui/activities/ShareActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ShareActivity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v0
-
-    const v1, 0x7f0300b0
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, p3, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object v1
-
-    .line 253
-    new-instance v2, Lcom/bbm/ui/activities/aia;
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/ahz;->b:Lcom/bbm/ui/activities/ShareActivity;
-
-    invoke-direct {v2, v0}, Lcom/bbm/ui/activities/aia;-><init>(Lcom/bbm/ui/activities/ShareActivity;)V
-
-    .line 254
-    const v0, 0x7f0b044e
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/ObservingImageView;
-
-    iput-object v0, v2, Lcom/bbm/ui/activities/aia;->a:Lcom/bbm/ui/ObservingImageView;
-
-    .line 255
-    const v0, 0x7f0b044f
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, v2, Lcom/bbm/ui/activities/aia;->b:Landroid/widget/TextView;
-
-    .line 256
-    invoke-virtual {v1, v2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
-
-    .line 257
-    return-object v1
-.end method
-
-.method protected final bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    .prologue
-    .line 239
-    check-cast p1, Lcom/bbm/d/gr;
-
-    iget-object v0, p1, Lcom/bbm/d/gr;->B:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method protected final synthetic a(Landroid/view/View;Ljava/lang/Object;)V
+.method public final a()Z
     .locals 6
 
     .prologue
-    .line 239
-    check-cast p2, Lcom/bbm/d/gr;
+    const/4 v2, 0x0
 
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    const/4 v1, 0x1
+
+    .line 109
+    iget-object v0, p0, Lcom/bbm/ui/activities/ahz;->b:Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->h:Lcom/bbm/j/a;
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/activities/aia;
+    check-cast v0, Lcom/bbm/d/ff;
 
-    invoke-static {p2}, Lcom/bbm/d/b/a;->b(Lcom/bbm/d/gr;)Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/d/ff;->R:Lcom/bbm/util/bo;
 
-    move-result-object v1
+    sget-object v3, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
 
-    iget-object v2, p2, Lcom/bbm/d/gr;->B:Ljava/lang/String;
+    if-ne v0, v3, :cond_1
 
-    iget-object v3, p2, Lcom/bbm/d/gr;->a:Ljava/lang/String;
+    move v1, v2
 
-    :try_start_0
-    iget-object v4, v0, Lcom/bbm/ui/activities/aia;->a:Lcom/bbm/ui/ObservingImageView;
+    .line 154
+    :cond_0
+    :goto_0
+    return v1
 
-    iget-object v5, p0, Lcom/bbm/ui/activities/ahz;->b:Lcom/bbm/ui/activities/ShareActivity;
+    .line 114
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/ahz;->b:Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;
 
-    invoke-static {v5}, Lcom/bbm/ui/activities/ShareActivity;->c(Lcom/bbm/ui/activities/ShareActivity;)Lcom/bbm/d/a;
+    iget-object v0, v0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->h:Lcom/bbm/j/a;
 
-    move-result-object v5
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
-    invoke-virtual {v5, v2, v3}, Lcom/bbm/d/a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/j/r;
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/ff;
+
+    invoke-static {v0}, Lcom/bbm/util/af;->a(Lcom/bbm/d/ff;)Z
+
+    move-result v0
+
+    .line 115
+    iget-object v3, p0, Lcom/bbm/ui/activities/ahz;->a:Landroid/view/Menu;
+
+    const v4, 0x7f0b0750
+
+    invoke-interface {v3, v4}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
     move-result-object v3
 
-    invoke-virtual {v4, v3}, Lcom/bbm/ui/ObservingImageView;->setObservableImage(Lcom/bbm/j/r;)V
+    .line 116
+    if-eqz v3, :cond_2
 
-    iget-object v3, v0, Lcom/bbm/ui/activities/aia;->b:Landroid/widget/TextView;
+    .line 117
+    invoke-interface {v3, v0}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
-    invoke-virtual {v3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    .line 119
+    :cond_2
+    iget-object v3, p0, Lcom/bbm/ui/activities/ahz;->a:Landroid/view/Menu;
 
-    iget-object v1, v0, Lcom/bbm/ui/activities/aia;->b:Landroid/widget/TextView;
+    const v4, 0x7f0b0755
 
-    const/high16 v3, -0x1000000
+    invoke-interface {v3, v4}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
-    invoke-virtual {v1, v3}, Landroid/widget/TextView;->setTextColor(I)V
+    move-result-object v3
 
-    iput-object v2, v0, Lcom/bbm/ui/activities/aia;->c:Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+    .line 120
+    if-eqz v3, :cond_3
 
-    :goto_0
-    return-void
+    .line 121
+    invoke-interface {v3, v0}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
-    :catch_0
-    move-exception v0
+    .line 125
+    :cond_3
+    iget-object v0, p0, Lcom/bbm/ui/activities/ahz;->a:Landroid/view/Menu;
 
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+    const v3, 0x7f0b0753
 
-    goto :goto_0
+    invoke-interface {v0, v3}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v3
+
+    .line 126
+    if-eqz v3, :cond_4
+
+    .line 127
+    iget-object v0, p0, Lcom/bbm/ui/activities/ahz;->b:Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->h:Lcom/bbm/j/a;
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/ff;
+
+    iget-boolean v0, v0, Lcom/bbm/d/ff;->u:Z
+
+    if-nez v0, :cond_8
+
+    move v0, v1
+
+    :goto_1
+    invoke-interface {v3, v0}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    .line 132
+    :cond_4
+    iget-object v0, p0, Lcom/bbm/ui/activities/ahz;->b:Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->h:Lcom/bbm/j/a;
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/ff;
+
+    iget-boolean v3, v0, Lcom/bbm/d/ff;->l:Z
+
+    .line 133
+    iget-object v0, p0, Lcom/bbm/ui/activities/ahz;->a:Landroid/view/Menu;
+
+    const v4, 0x7f0b074a
+
+    invoke-interface {v0, v4}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v4
+
+    .line 134
+    iget-object v0, p0, Lcom/bbm/ui/activities/ahz;->a:Landroid/view/Menu;
+
+    const v5, 0x7f0b074b
+
+    invoke-interface {v0, v5}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v5
+
+    .line 135
+    if-eqz v4, :cond_5
+
+    .line 136
+    if-nez v3, :cond_9
+
+    move v0, v1
+
+    :goto_2
+    invoke-interface {v4, v0}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    .line 138
+    :cond_5
+    if-eqz v5, :cond_6
+
+    .line 139
+    invoke-interface {v5, v3}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    .line 143
+    :cond_6
+    iget-object v0, p0, Lcom/bbm/ui/activities/ahz;->a:Landroid/view/Menu;
+
+    const v3, 0x7f0b0756
+
+    invoke-interface {v0, v3}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    .line 144
+    if-eqz v0, :cond_7
+
+    .line 145
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    .line 149
+    :cond_7
+    iget-object v0, p0, Lcom/bbm/ui/activities/ahz;->b:Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->h:Lcom/bbm/j/a;
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/ff;
+
+    iget-boolean v0, v0, Lcom/bbm/d/ff;->q:Z
+
+    if-eqz v0, :cond_0
+
+    .line 150
+    iget-object v0, p0, Lcom/bbm/ui/activities/ahz;->a:Landroid/view/Menu;
+
+    const v3, 0x7f0b074d
+
+    invoke-interface {v0, v3, v2}, Landroid/view/Menu;->setGroupEnabled(IZ)V
+
+    goto/16 :goto_0
+
+    :cond_8
+    move v0, v2
+
+    .line 127
+    goto :goto_1
+
+    :cond_9
+    move v0, v2
+
+    .line 136
+    goto :goto_2
 .end method

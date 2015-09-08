@@ -1,134 +1,61 @@
-.class final Lcom/google/android/gms/internal/ge;
+.class public final Lcom/google/android/gms/internal/ge;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/google/android/gms/games/multiplayer/realtime/RealTimeSocket;
+.implements Lcom/google/android/gms/internal/fv;
+
+
+# annotations
+.annotation runtime Lcom/google/android/gms/internal/mb;
+.end annotation
 
 
 # instance fields
-.field private AC:Landroid/os/ParcelFileDescriptor;
-
-.field private final GZ:Ljava/lang/String;
-
-.field private final HG:Landroid/net/LocalSocket;
+.field private final a:Lcom/google/android/gms/internal/gf;
 
 
 # direct methods
-.method constructor <init>(Landroid/net/LocalSocket;Ljava/lang/String;)V
+.method public constructor <init>(Lcom/google/android/gms/internal/gf;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/gms/internal/ge;->HG:Landroid/net/LocalSocket;
-
-    iput-object p2, p0, Lcom/google/android/gms/internal/ge;->GZ:Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/android/gms/internal/ge;->a:Lcom/google/android/gms/internal/gf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/ge;->HG:Landroid/net/LocalSocket;
-
-    invoke-virtual {v0}, Landroid/net/LocalSocket;->close()V
-
-    return-void
-.end method
-
-.method public final getInputStream()Ljava/io/InputStream;
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/ge;->HG:Landroid/net/LocalSocket;
-
-    invoke-virtual {v0}, Landroid/net/LocalSocket;->getInputStream()Ljava/io/InputStream;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getOutputStream()Ljava/io/OutputStream;
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/ge;->HG:Landroid/net/LocalSocket;
-
-    invoke-virtual {v0}, Landroid/net/LocalSocket;->getOutputStream()Ljava/io/OutputStream;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getParcelFileDescriptor()Landroid/os/ParcelFileDescriptor;
+.method public final a(Lcom/google/android/gms/internal/pp;Ljava/util/Map;)V
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/android/gms/internal/pp;",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/ge;->AC:Landroid/os/ParcelFileDescriptor;
+    const-string v0, "1"
 
-    if-nez v0, :cond_0
+    const-string v1, "transparentBackground"
 
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/ge;->isClosed()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/google/android/gms/internal/ge;->HG:Landroid/net/LocalSocket;
-
-    invoke-virtual {v1}, Landroid/net/LocalSocket;->getFileDescriptor()Ljava/io/FileDescriptor;
+    invoke-interface {p2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeFileDescriptor(Ljava/io/FileDescriptor;)V
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/os/Parcel;->setDataPosition(I)V
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->readFileDescriptor()Landroid/os/ParcelFileDescriptor;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/ge;->AC:Landroid/os/ParcelFileDescriptor;
-
-    :cond_0
-    iget-object v0, p0, Lcom/google/android/gms/internal/ge;->AC:Landroid/os/ParcelFileDescriptor;
-
-    return-object v0
-.end method
-
-.method public final isClosed()Z
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/ge;->HG:Landroid/net/LocalSocket;
-
-    invoke-virtual {v0}, Landroid/net/LocalSocket;->isConnected()Z
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    iget-object v1, p0, Lcom/google/android/gms/internal/ge;->a:Lcom/google/android/gms/internal/gf;
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/ge;->HG:Landroid/net/LocalSocket;
+    invoke-interface {v1, v0}, Lcom/google/android/gms/internal/gf;->b(Z)V
 
-    invoke-virtual {v0}, Landroid/net/LocalSocket;->isBound()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-void
 .end method

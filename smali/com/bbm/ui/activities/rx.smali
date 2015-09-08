@@ -1,29 +1,46 @@
-.class public final Lcom/bbm/ui/activities/rx;
+.class final Lcom/bbm/ui/activities/rx;
 .super Ljava/lang/Object;
-.source "GroupPictureActivity.java"
+.source "GroupTextShareActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field a:Lcom/bbm/ui/SquaredObservingImageView;
-
-.field b:Landroid/widget/ImageView;
-
-.field c:Landroid/widget/ImageView;
-
-.field d:Landroid/widget/TextView;
-
-.field final synthetic e:Lcom/bbm/ui/activities/rw;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupTextShareActivity;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/ui/activities/rw;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupTextShareActivity;)V
     .locals 0
 
     .prologue
-    .line 636
-    iput-object p1, p0, Lcom/bbm/ui/activities/rx;->e:Lcom/bbm/ui/activities/rw;
+    .line 103
+    iput-object p1, p0, Lcom/bbm/ui/activities/rx;->a:Lcom/bbm/ui/activities/GroupTextShareActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
+
+    .prologue
+    .line 107
+    const-string v0, "buttonToolbar Negative Button Clicked"
+
+    const-class v1, Lcom/bbm/ui/activities/GroupTextShareActivity;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 108
+    iget-object v0, p0, Lcom/bbm/ui/activities/rx;->a:Lcom/bbm/ui/activities/GroupTextShareActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupTextShareActivity;->finish()V
+
+    .line 109
     return-void
 .end method

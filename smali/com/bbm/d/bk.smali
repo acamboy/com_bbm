@@ -1,52 +1,39 @@
 .class public final Lcom/bbm/d/bk;
-.super Lcom/bbm/d/dy;
+.super Lcom/bbm/d/ez;
 .source "BbmdsProtocol.java"
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>(J)V
+    .locals 3
 
     .prologue
-    .line 2109
-    const-string v0, "contactRemove"
+    .line 1134
+    const-string v0, "channelMarkNotificationsAsRead"
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/d/ez;-><init>(Ljava/lang/String;)V
 
-    .line 2111
-    const-string v0, "uri"
+    .line 1136
+    const-string v0, "timestamp"
 
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/bk;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 2112
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Z)Lcom/bbm/d/bk;
-    .locals 2
-
-    .prologue
-    .line 2122
-    const-string v0, "ignore"
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {p1, p2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p0, v0, v1}, Lcom/bbm/d/bk;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 2123
-    return-object p0
+    .line 1137
+    return-void
 .end method
 
+
+# virtual methods
 .method public final bridge synthetic a()Lcom/bbm/f/ab;
     .locals 1
 
     .prologue
-    .line 2107
-    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
+    .line 1132
+    invoke-super {p0}, Lcom/bbm/d/ez;->a()Lcom/bbm/f/ab;
 
     move-result-object v0
 

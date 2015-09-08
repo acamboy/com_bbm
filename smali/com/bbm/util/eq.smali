@@ -1,22 +1,22 @@
 .class final Lcom/bbm/util/eq;
 .super Ljava/lang/Object;
-.source "UpdatesFragmentUtil.java"
+.source "TpaUtil.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/bbm/f/ac;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/util/ep;
+.field final synthetic a:Lcom/bbm/util/dc;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/util/ep;)V
+.method constructor <init>(Lcom/bbm/util/dc;)V
     .locals 0
 
     .prologue
-    .line 780
-    iput-object p1, p0, Lcom/bbm/util/eq;->a:Lcom/bbm/util/ep;
+    .line 514
+    iput-object p1, p0, Lcom/bbm/util/eq;->a:Lcom/bbm/util/dc;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,29 +25,121 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final a(Lcom/bbm/f/ab;)V
+    .locals 2
 
     .prologue
-    .line 783
-    iget-object v0, p0, Lcom/bbm/util/eq;->a:Lcom/bbm/util/ep;
+    .line 521
+    iget-object v0, p1, Lcom/bbm/f/ab;->b:Ljava/lang/String;
 
-    iget-object v0, v0, Lcom/bbm/util/ep;->a:Landroid/app/Activity;
+    const-string v1, "generatePartnerTokenResponse"
 
-    iget-object v1, p0, Lcom/bbm/util/eq;->a:Lcom/bbm/util/ep;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-object v1, v1, Lcom/bbm/util/ep;->b:Lcom/bbm/d/gr;
+    move-result v0
 
-    iget-object v2, p0, Lcom/bbm/util/eq;->a:Lcom/bbm/util/ep;
+    if-eqz v0, :cond_0
 
-    iget-object v2, v2, Lcom/bbm/util/ep;->c:Lcom/bbm/d/gc;
+    .line 522
+    iget-object v0, p1, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
 
-    iget-object v3, p0, Lcom/bbm/util/eq;->a:Lcom/bbm/util/ep;
+    .line 523
+    const-string v1, "token"
 
-    iget-object v3, v3, Lcom/bbm/util/ep;->d:Landroid/view/View;
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
-    invoke-static {v0, v1, v2}, Lcom/bbm/util/ee;->a(Landroid/app/Activity;Lcom/bbm/d/gr;Lcom/bbm/d/gc;)V
+    move-result v1
 
-    .line 784
+    if-eqz v1, :cond_1
+
+    .line 525
+    :try_start_0
+    const-string v1, "token"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 526
+    iget-object v1, p0, Lcom/bbm/util/eq;->a:Lcom/bbm/util/dc;
+
+    invoke-virtual {v1, v0}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 530
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/bbm/d/aq;->j:Lcom/bbm/d/a/f;
+
+    iget-object v0, v0, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
+
+    invoke-interface {v0, p0}, Lcom/bbm/f/a;->b(Lcom/bbm/f/ac;)V
+
+    .line 536
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 527
+    :catch_0
+    move-exception v0
+
+    :try_start_1
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 530
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/bbm/d/aq;->j:Lcom/bbm/d/a/f;
+
+    iget-object v0, v0, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
+
+    invoke-interface {v0, p0}, Lcom/bbm/f/a;->b(Lcom/bbm/f/ac;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/bbm/d/aq;->j:Lcom/bbm/d/a/f;
+
+    iget-object v1, v1, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
+
+    invoke-interface {v1, p0}, Lcom/bbm/f/a;->b(Lcom/bbm/f/ac;)V
+
+    throw v0
+
+    .line 533
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/util/eq;->a:Lcom/bbm/util/dc;
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+.end method
+
+.method public final a_()V
+    .locals 0
+
+    .prologue
+    .line 517
     return-void
 .end method

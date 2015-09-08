@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private fT:Lcom/glympse/android/hal/gms/location/LocationListener;
+.field private fW:Lcom/glympse/android/hal/gms/location/LocationListener;
 
 
 # direct methods
@@ -19,7 +19,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 230
-    iput-object p1, p0, Lcom/glympse/android/hal/gms/location/LocationClient$LocationListenerHandler;->fT:Lcom/glympse/android/hal/gms/location/LocationListener;
+    iput-object p1, p0, Lcom/glympse/android/hal/gms/location/LocationClient$LocationListenerHandler;->fW:Lcom/glympse/android/hal/gms/location/LocationListener;
 
     .line 231
     return-void
@@ -80,7 +80,7 @@
     if-eqz v0, :cond_0
 
     .line 239
-    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/LocationClient$LocationListenerHandler;->fT:Lcom/glympse/android/hal/gms/location/LocationListener;
+    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/LocationClient$LocationListenerHandler;->fW:Lcom/glympse/android/hal/gms/location/LocationListener;
 
     const/4 v0, 0x0
 
@@ -110,7 +110,7 @@
     if-eqz v0, :cond_1
 
     .line 243
-    iget-object v0, p0, Lcom/glympse/android/hal/gms/location/LocationClient$LocationListenerHandler;->fT:Lcom/glympse/android/hal/gms/location/LocationListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/gms/location/LocationClient$LocationListenerHandler;->fW:Lcom/glympse/android/hal/gms/location/LocationListener;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -149,9 +149,9 @@
     check-cast v0, Lcom/glympse/android/hal/gms/location/LocationClient$LocationListenerHandler;
 
     .line 250
-    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/LocationClient$LocationListenerHandler;->fT:Lcom/glympse/android/hal/gms/location/LocationListener;
+    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/LocationClient$LocationListenerHandler;->fW:Lcom/glympse/android/hal/gms/location/LocationListener;
 
-    iget-object v0, v0, Lcom/glympse/android/hal/gms/location/LocationClient$LocationListenerHandler;->fT:Lcom/glympse/android/hal/gms/location/LocationListener;
+    iget-object v0, v0, Lcom/glympse/android/hal/gms/location/LocationClient$LocationListenerHandler;->fW:Lcom/glympse/android/hal/gms/location/LocationListener;
 
     invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 

@@ -1,96 +1,64 @@
 .class final Lcom/bbm/ui/activities/bx;
-.super Lcom/bbm/d/b/m;
-.source "ChangeStatusActivity.java"
+.super Ljava/lang/Enum;
+.source "ChannelOfficeHoursSettingsActivity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/bbm/d/b/m",
+        "Ljava/lang/Enum",
         "<",
-        "Lcom/bbm/d/gg;",
+        "Lcom/bbm/ui/activities/bx;",
         ">;"
     }
 .end annotation
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/bw;
+# static fields
+.field public static final enum a:I
+
+.field public static final enum b:I
+
+.field public static final enum c:I
+
+.field private static final synthetic d:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/bw;Lcom/bbm/j/r;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
     .prologue
-    .line 186
-    iput-object p1, p0, Lcom/bbm/ui/activities/bx;->a:Lcom/bbm/ui/activities/bw;
+    const/4 v0, 0x3
 
-    invoke-direct {p0, p2}, Lcom/bbm/d/b/m;-><init>(Lcom/bbm/j/r;)V
+    const/4 v4, 0x2
+
+    const/4 v3, 0x1
+
+    .line 44
+    sput v3, Lcom/bbm/ui/activities/bx;->a:I
+
+    sput v4, Lcom/bbm/ui/activities/bx;->b:I
+
+    sput v0, Lcom/bbm/ui/activities/bx;->c:I
+
+    new-array v0, v0, [I
+
+    const/4 v1, 0x0
+
+    sget v2, Lcom/bbm/ui/activities/bx;->a:I
+
+    aput v2, v0, v1
+
+    sget v1, Lcom/bbm/ui/activities/bx;->b:I
+
+    aput v1, v0, v3
+
+    sget v1, Lcom/bbm/ui/activities/bx;->c:I
+
+    aput v1, v0, v4
+
+    sput-object v0, Lcom/bbm/ui/activities/bx;->d:[I
 
     return-void
-.end method
-
-
-# virtual methods
-.method protected final synthetic a(Ljava/lang/Object;)Z
-    .locals 3
-
-    .prologue
-    .line 186
-    check-cast p1, Lcom/bbm/d/gg;
-
-    iget-object v0, p1, Lcom/bbm/d/gg;->d:Ljava/lang/String;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/bx;->a:Lcom/bbm/ui/activities/bw;
-
-    iget-object v1, v1, Lcom/bbm/ui/activities/bw;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/ChangeStatusActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x7f0e050e
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p1, Lcom/bbm/d/gg;->d:Ljava/lang/String;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/bx;->a:Lcom/bbm/ui/activities/bw;
-
-    iget-object v1, v1, Lcom/bbm/ui/activities/bw;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/ChangeStatusActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x7f0e050f
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method

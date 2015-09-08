@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textStyle="bold" android:textColor="@color/sticker_pack_link_blue" android:id="@id/pin_not_created_textview" android:background="@android:color/white" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/profile_location_container_padding_left" android:layout_marginRight="@dimen/profile_location_container_padding_right" android:text="@string/custom_pin_get_your_custom_pin" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/profile_location_container_padding_left">
+        <ProgressBar android:layout_gravity="center" android:id="@id/custom_pin_progress" android:visibility="gone" android:layout_width="@dimen/sticker_pack_progressbar_size" android:layout_height="@dimen/sticker_pack_progressbar_size" />
+        <TextView android:textStyle="bold" android:textColor="@color/custom_pin_loading_color" android:id="@id/pin_restoring_textview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/subscriptions_restoring" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/custom_pin_layout" android:background="@android:color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:padding="@dimen/profile_location_container_padding_between_buttons" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_custom_pin" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/profile_location_container_padding_left" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/fontSizeMedium" android:textStyle="bold" android:textColor="@color/profile_header_field_value_color" android:id="@id/pin_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/fontSizeMedium" android:textColor="@color/profile_header_field_desc_color" android:id="@id/pin_title_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/custom_pin_activity_title" />
+        </LinearLayout>
+        <ImageButton android:id="@id/copy_pin_button" android:background="@android:color/transparent" android:padding="@dimen/profile_location_container_padding_between_buttons" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_copy" />
+        <ImageButton android:id="@id/share_pin_button" android:background="@android:color/transparent" android:padding="@dimen/profile_location_container_padding_between_buttons" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_share_pin" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/profile_friend_container" android:background="@color/custom_pin_friends_background_color" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/profile_pin_icon_view" android:paddingTop="3.0dip" android:paddingBottom="3.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/profile_location_container_padding_left" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/profile_location_container_padding_left" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/custom_pin_friends_text_color" android:id="@id/custom_pin_friend_label" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/custom_pin_friends_ad_text" />
+            <TextView android:textStyle="bold" android:textColor="@color/sticker_pack_link_blue" android:id="@id/custom_pin_friend_label_link" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/custom_pin_friends_ad_link" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

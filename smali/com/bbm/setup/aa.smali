@@ -12,7 +12,7 @@
     .locals 1
 
     .prologue
-    .line 117
+    .line 115
     iput-object p1, p0, Lcom/bbm/setup/aa;->a:Lcom/bbm/setup/z;
 
     const/4 v0, 0x0
@@ -28,11 +28,11 @@
     .locals 1
 
     .prologue
-    .line 120
+    .line 118
     iget-object v0, p0, Lcom/bbm/setup/aa;->a:Lcom/bbm/setup/z;
 
-    invoke-virtual {v0}, Lcom/bbm/setup/z;->a()Lcom/bbm/setup/af;
+    invoke-virtual {v0}, Lcom/bbm/setup/z;->a()Lcom/bbm/setup/am;
 
-    .line 121
+    .line 119
     return-void
 .end method

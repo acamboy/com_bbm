@@ -30,11 +30,17 @@
 
 .field public static final BATTERY_STATE_CHANGED:I = 0x1
 
-.field public static final CONFIG_CHANGED:I = 0x3
+.field public static final CONFIG_ACCOUNTS_LINKED_CHANGED:I = 0x8
+
+.field public static final CONFIG_CHANGED:I = 0xf
 
 .field public static final CONFIG_LOCATION_SHARING_CHANGED:I = 0x2
 
+.field public static final CONFIG_TICKET_SENT_CHANGED:I = 0x4
+
 .field public static final CONFIG_XOA_CHANGED:I = 0x1
+
+.field public static final FAVORITES_CHANGED:I = 0x1
 
 .field public static final GROUPS_DECODED:I = 0x2
 
@@ -90,6 +96,8 @@
 
 .field public static final LISTENER_CONFIG:I = 0xb
 
+.field public static final LISTENER_FAVORITES:I = 0x12
+
 .field public static final LISTENER_GROUP:I = 0xa
 
 .field public static final LISTENER_GROUPS:I = 0x9
@@ -109,6 +117,10 @@
 .field public static final LISTENER_LOCATION:I = 0x8
 
 .field public static final LISTENER_NETWORK:I = 0x5
+
+.field public static final LISTENER_PAIRING:I = 0x11
+
+.field public static final LISTENER_PLACE_SEARCH:I = 0x10
 
 .field public static final LISTENER_PLATFORM:I = 0x1
 
@@ -132,9 +144,23 @@
 
 .field public static final NETWORK_RECOVERED:I = 0x2
 
+.field public static final NETWORK_RESPONSE_RECEIVED:I = 0x40
+
 .field public static final NETWORK_START_FAILING:I = 0x1
 
 .field public static final NETWORK_WILL_SEND_REQUEST:I = 0x10
+
+.field public static final PAIRING_CODE_CLAIMED:I = 0x1
+
+.field public static final PAIRING_CODE_FAILED:I = 0x2
+
+.field public static final PAIRING_GET_CODE_FAILED:I = 0x8
+
+.field public static final PAIRING_GET_CODE_SUCCEEDED:I = 0x4
+
+.field public static final PLACE_SEARCH_COMPLETED:I = 0x1
+
+.field public static final PLACE_SEARCH_FAILED:I = 0x2
 
 .field public static final PLATFORM_ACCOUNT_CREATED:I = 0x2
 
@@ -143,10 +169,6 @@
 .field public static final PLATFORM_DATA_APPENDED:I = 0x1000
 
 .field public static final PLATFORM_FIRST_LAUNCH:I = 0x1000000
-
-.field public static final PLATFORM_INVALID_API_KEY:I = 0x1
-
-.field public static final PLATFORM_INVALID_CREDENTIALS:I = 0x10
 
 .field public static final PLATFORM_INVITE_REQUEST:I = 0x800000
 
@@ -260,7 +282,7 @@
 
 .field public static final USER_ACTIVE_TICKET_RESIGNING:I = 0x40
 
-.field public static final USER_AVATAR_FAILED_TO_UPLOAD:I = 0x20
+.field public static final USER_AVATAR_NOT_UPLOADED:I = 0x20
 
 .field public static final USER_AVATAR_UPLOADED:I = 0x10
 

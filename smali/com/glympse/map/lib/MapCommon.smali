@@ -12,7 +12,7 @@
 
 .field private final _map:Lcom/bbm/compat/maps/c;
 
-.field private final mColors:Lcom/bbm/ui/activities/ye;
+.field private final mColors:Lcom/bbm/ui/activities/dk;
 
 
 # direct methods
@@ -24,11 +24,11 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 23
-    new-instance v0, Lcom/bbm/ui/activities/ye;
+    new-instance v0, Lcom/bbm/ui/activities/dk;
 
-    invoke-direct {v0}, Lcom/bbm/ui/activities/ye;-><init>()V
+    invoke-direct {v0}, Lcom/bbm/ui/activities/dk;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/map/lib/MapCommon;->mColors:Lcom/bbm/ui/activities/ye;
+    iput-object v0, p0, Lcom/glympse/map/lib/MapCommon;->mColors:Lcom/bbm/ui/activities/dk;
 
     .line 26
     iput-object p1, p0, Lcom/glympse/map/lib/MapCommon;->_map:Lcom/bbm/compat/maps/c;
@@ -138,13 +138,13 @@
     .line 54
     iget-object v0, p0, Lcom/glympse/map/lib/MapCommon;->_map:Lcom/bbm/compat/maps/c;
 
-    invoke-interface {v0}, Lcom/bbm/compat/maps/c;->a()V
+    invoke-interface {v0}, Lcom/bbm/compat/maps/c;->e()V
 
     .line 55
     return-void
 .end method
 
-.method public draw(Lcom/glympse/android/api/GTicket;Lcom/glympse/android/api/GUser;ILjava/util/List;Lcom/bbm/d/eu;)V
+.method public draw(Lcom/glympse/android/api/GTicket;Lcom/glympse/android/api/GUser;ILjava/util/List;Lcom/bbm/d/fv;)V
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -154,9 +154,9 @@
             "I",
             "Ljava/util/List",
             "<",
-            "Lcom/bbm/ui/activities/kt;",
+            "Lcom/bbm/ui/activities/jl;",
             ">;",
-            "Lcom/bbm/d/eu;",
+            "Lcom/bbm/d/fv;",
             ")V"
         }
     .end annotation
@@ -185,7 +185,7 @@
 
     .line 35
     :cond_1
-    iget-object v4, p0, Lcom/glympse/map/lib/MapCommon;->mColors:Lcom/bbm/ui/activities/ye;
+    iget-object v4, p0, Lcom/glympse/map/lib/MapCommon;->mColors:Lcom/bbm/ui/activities/dk;
 
     invoke-interface {p2}, Lcom/glympse/android/api/GUser;->isSelf()Z
 
@@ -193,11 +193,9 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {}, Lcom/bbm/ui/activities/ye;->a()Lcom/bbm/ui/activities/yf;
+    sget-object v0, Lcom/bbm/ui/activities/dl;->l:Lcom/bbm/ui/activities/dl;
 
-    move-result-object v0
-
-    iget v3, v0, Lcom/bbm/ui/activities/yf;->f:I
+    iget v3, v0, Lcom/bbm/ui/activities/dl;->n:I
 
     .line 36
     :goto_1
@@ -230,15 +228,13 @@
 
     .line 35
     :cond_2
-    iget-boolean v0, p5, Lcom/bbm/d/eu;->k:Z
+    iget-boolean v0, p5, Lcom/bbm/d/fv;->j:Z
 
     if-nez v0, :cond_3
 
-    invoke-static {}, Lcom/bbm/ui/activities/ye;->b()Lcom/bbm/ui/activities/yf;
+    sget-object v0, Lcom/bbm/ui/activities/dl;->k:Lcom/bbm/ui/activities/dl;
 
-    move-result-object v0
-
-    iget v3, v0, Lcom/bbm/ui/activities/yf;->f:I
+    iget v3, v0, Lcom/bbm/ui/activities/dl;->n:I
 
     goto :goto_1
 
@@ -262,15 +258,15 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/activities/kt;
+    check-cast v0, Lcom/bbm/ui/activities/jl;
 
-    iget-object v6, v0, Lcom/bbm/ui/activities/kt;->b:Ljava/lang/String;
+    iget-object v6, v0, Lcom/bbm/ui/activities/jl;->b:Ljava/lang/String;
 
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
+    invoke-static {}, Lcom/bbm/w;->a()Lcom/bbm/w;
 
     move-result-object v7
 
-    iget-object v7, v7, Lcom/bbm/p;->a:Lcom/glympse/android/api/GGlympse;
+    iget-object v7, v7, Lcom/bbm/w;->a:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v7}, Lcom/glympse/android/api/GGlympse;->getUserManager()Lcom/glympse/android/api/GUserManager;
 
@@ -282,7 +278,7 @@
 
     if-ne p2, v6, :cond_6
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/kt;->a:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/ui/activities/jl;->a:Ljava/lang/String;
 
     :goto_3
     move-object v2, v0
@@ -292,11 +288,11 @@
     :cond_4
     if-eqz v2, :cond_5
 
-    invoke-virtual {v4, v2}, Lcom/bbm/ui/activities/ye;->a(Ljava/lang/String;)Lcom/bbm/ui/activities/yf;
+    invoke-virtual {v4, v2}, Lcom/bbm/ui/activities/dk;->a(Ljava/lang/String;)Lcom/bbm/ui/activities/dl;
 
     move-result-object v0
 
-    iget v0, v0, Lcom/bbm/ui/activities/yf;->f:I
+    iget v0, v0, Lcom/bbm/ui/activities/dl;->n:I
 
     :goto_4
     move v3, v0
@@ -334,7 +330,7 @@
     .line 74
     iget-object v0, p0, Lcom/glympse/map/lib/MapCommon;->_map:Lcom/bbm/compat/maps/c;
 
-    invoke-interface {v0}, Lcom/bbm/compat/maps/c;->b()V
+    invoke-interface {v0}, Lcom/bbm/compat/maps/c;->f()V
 
     .line 75
     return-void

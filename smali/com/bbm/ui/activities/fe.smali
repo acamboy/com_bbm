@@ -1,55 +1,58 @@
 .class final Lcom/bbm/ui/activities/fe;
-.super Ljava/lang/Object;
-.source "ChildActivity.java"
+.super Lcom/bbm/j/a;
+.source "ConversationActivity.java"
 
-# interfaces
-.implements Landroid/view/View$OnTouchListener;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/j/a",
+        "<",
+        "Lcom/bbm/d/fv;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ey;
+.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ey;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 222
-    iput-object p1, p0, Lcom/bbm/ui/activities/fe;->a:Lcom/bbm/ui/activities/ey;
+    .line 2419
+    iput-object p1, p0, Lcom/bbm/ui/activities/fe;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 1
+.method protected final synthetic a()Ljava/lang/Object;
+    .locals 2
 
     .prologue
-    .line 226
-    iget-object v0, p0, Lcom/bbm/ui/activities/fe;->a:Lcom/bbm/ui/activities/ey;
+    .line 2419
+    iget-object v0, p0, Lcom/bbm/ui/activities/fe;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ey;->b(Lcom/bbm/ui/activities/ey;)Landroid/support/v4/view/n;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 227
-    iget-object v0, p0, Lcom/bbm/ui/activities/fe;->a:Lcom/bbm/ui/activities/ey;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ey;->b(Lcom/bbm/ui/activities/ey;)Landroid/support/v4/view/n;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->g(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, p2}, Landroid/support/v4/view/n;->a(Landroid/view/MotionEvent;)Z
+    iget-object v1, p0, Lcom/bbm/ui/activities/fe;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    .line 229
-    :cond_0
-    const/4 v0, 0x1
+    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->e(Lcom/bbm/ui/activities/ConversationActivity;)Ljava/lang/String;
 
-    return v0
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->O(Ljava/lang/String;)Lcom/bbm/d/fv;
+
+    move-result-object v0
+
+    return-object v0
 .end method

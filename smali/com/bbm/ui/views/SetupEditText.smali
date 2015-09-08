@@ -51,17 +51,17 @@
 
     .prologue
     .line 30
-    const v0, 0x7f09016c
+    const v0, 0x7f0901d7
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/views/SetupEditText;->setHintTextColor(I)V
 
     .line 31
-    const v0, 0x7f09016d
+    const v0, 0x7f0901d8
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/views/SetupEditText;->setTextColor(I)V
 
     .line 32
-    const v0, 0x7f09016b
+    const v0, 0x7f0901d6
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/views/SetupEditText;->setBackgroundResource(I)V
 

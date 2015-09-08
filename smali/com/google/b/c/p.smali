@@ -19,10 +19,10 @@
     .end annotation
 
     .prologue
-    .line 123
-    invoke-static {p0}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 127
+    invoke-static {p0}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 125
+    .line 129
     instance-of v0, p0, Ljava/util/Collection;
 
     if-eqz v0, :cond_0
@@ -41,58 +41,15 @@
     :cond_0
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-static {v0}, Lcom/google/b/c/p;->a(Ljava/util/Iterator;)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    goto :goto_0
-.end method
-
-.method private static a(Ljava/util/Iterator;)Ljava/util/ArrayList;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<E:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Ljava/util/Iterator",
-            "<+TE;>;)",
-            "Ljava/util/ArrayList",
-            "<TE;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 142
-    invoke-static {p0}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 143
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 144
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 145
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lcom/google/b/c/m;->a(Ljava/util/Collection;Ljava/util/Iterator;)Z
 
     goto :goto_0
-
-    .line 147
-    :cond_0
-    return-object v0
 .end method
 
 .method public static varargs a([Ljava/lang/Object;)Ljava/util/ArrayList;
@@ -108,26 +65,52 @@
     .end annotation
 
     .prologue
-    .line 96
-    invoke-static {p0}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 100
+    invoke-static {p0}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 98
-    array-length v1, p0
+    .line 102
+    array-length v0, p0
 
-    if-ltz v1, :cond_0
+    const-string v1, "arraySize"
 
-    const/4 v0, 0x1
+    if-gez v0, :cond_0
 
-    :goto_0
-    invoke-static {v0}, Lcom/google/b/a/o;->a(Z)V
+    new-instance v2, Ljava/lang/IllegalArgumentException;
 
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v3, " cannot be negative but was: "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v2
+
+    :cond_0
     const-wide/16 v2, 0x5
 
-    int-to-long v4, v1
+    int-to-long v4, v0
 
     add-long/2addr v2, v4
 
-    div-int/lit8 v0, v1, 0xa
+    div-int/lit8 v0, v0, 0xa
 
     int-to-long v0, v0
 
@@ -137,20 +120,14 @@
 
     move-result v0
 
-    .line 99
+    .line 103
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 100
+    .line 104
     invoke-static {v1, p0}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
-    .line 101
+    .line 105
     return-object v1
-
-    .line 98
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method

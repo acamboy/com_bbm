@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public a:Lcom/bbm/util/bi;
+.field public a:Lcom/bbm/util/bo;
 
 .field public b:Z
 
@@ -26,9 +26,9 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 40
-    sget-object v0, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
+    sget-object v0, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
 
-    iput-object v0, p0, Lcom/bbm/util/a/f;->a:Lcom/bbm/util/bi;
+    iput-object v0, p0, Lcom/bbm/util/a/f;->a:Lcom/bbm/util/bo;
 
     .line 41
     const/4 v0, 0x0
@@ -57,9 +57,9 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 47
-    sget-object v0, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
+    sget-object v0, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
 
-    iput-object v0, p0, Lcom/bbm/util/a/f;->a:Lcom/bbm/util/bi;
+    iput-object v0, p0, Lcom/bbm/util/a/f;->a:Lcom/bbm/util/bo;
 
     .line 48
     invoke-interface {p1}, Lcom/glympse/android/api/GTicket;->isActive()Z
@@ -130,9 +130,9 @@
 
     if-ne v1, v2, :cond_0
 
-    iget-object v1, p0, Lcom/bbm/util/a/f;->a:Lcom/bbm/util/bi;
+    iget-object v1, p0, Lcom/bbm/util/a/f;->a:Lcom/bbm/util/bo;
 
-    iget-object v2, p1, Lcom/bbm/util/a/f;->a:Lcom/bbm/util/bi;
+    iget-object v2, p1, Lcom/bbm/util/a/f;->a:Lcom/bbm/util/bo;
 
     if-ne v1, v2, :cond_0
 
@@ -191,7 +191,7 @@
     .line 60
     mul-int/lit8 v2, v0, 0x1f
 
-    iget-object v0, p0, Lcom/bbm/util/a/f;->a:Lcom/bbm/util/bi;
+    iget-object v0, p0, Lcom/bbm/util/a/f;->a:Lcom/bbm/util/bo;
 
     if-nez v0, :cond_0
 
@@ -244,9 +244,9 @@
 
     .line 60
     :cond_0
-    iget-object v0, p0, Lcom/bbm/util/a/f;->a:Lcom/bbm/util/bi;
+    iget-object v0, p0, Lcom/bbm/util/a/f;->a:Lcom/bbm/util/bo;
 
-    invoke-virtual {v0}, Lcom/bbm/util/bi;->hashCode()I
+    invoke-virtual {v0}, Lcom/bbm/util/bo;->hashCode()I
 
     move-result v0
 

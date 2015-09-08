@@ -1,22 +1,30 @@
 .class final Lcom/bbm/ui/activities/so;
 .super Ljava/lang/Object;
-.source "GroupPictureCommentsActivity.java"
+.source "InviteActivity.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemLongClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+.field final synthetic a:I
+
+.field final synthetic b:Lcom/bbm/ui/activities/tc;
+
+.field final synthetic c:Lcom/bbm/ui/activities/InviteActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/InviteActivity;ILcom/bbm/ui/activities/tc;)V
     .locals 0
 
     .prologue
-    .line 229
-    iput-object p1, p0, Lcom/bbm/ui/activities/so;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    .line 771
+    iput-object p1, p0, Lcom/bbm/ui/activities/so;->c:Lcom/bbm/ui/activities/InviteActivity;
+
+    iput p2, p0, Lcom/bbm/ui/activities/so;->a:I
+
+    iput-object p3, p0, Lcom/bbm/ui/activities/so;->b:Lcom/bbm/ui/activities/tc;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,106 +33,84 @@
 
 
 # virtual methods
-.method public final onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
-    .locals 8
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)Z"
-        }
-    .end annotation
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
     .prologue
-    const/4 v7, 0x1
+    const/4 v3, 0x0
 
-    .line 232
-    const-string v0, "comment long click"
+    .line 775
+    iget-object v0, p0, Lcom/bbm/ui/activities/so;->c:Lcom/bbm/ui/activities/InviteActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->z(Lcom/bbm/ui/activities/InviteActivity;)I
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    move-result v0
 
-    .line 234
-    iget-object v0, p0, Lcom/bbm/ui/activities/so;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    const/4 v1, -0x1
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->e(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Landroid/widget/ListView;
+    if-eq v0, v1, :cond_0
 
-    move-result-object v0
+    .line 776
+    iget-object v0, p0, Lcom/bbm/ui/activities/so;->c:Lcom/bbm/ui/activities/InviteActivity;
 
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setTranscriptMode(I)V
-
-    .line 235
-    iget-object v0, p0, Lcom/bbm/ui/activities/so;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    invoke-static {v0, p3}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->c(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;I)I
-
-    .line 236
-    iget-object v0, p0, Lcom/bbm/ui/activities/so;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->e(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Landroid/widget/ListView;
+    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->A(Lcom/bbm/ui/activities/InviteActivity;)Landroid/widget/GridLayout;
 
     move-result-object v0
 
-    invoke-virtual {v0, p3, v7}, Landroid/widget/ListView;->setItemChecked(IZ)V
+    iget-object v1, p0, Lcom/bbm/ui/activities/so;->c:Lcom/bbm/ui/activities/InviteActivity;
 
-    .line 237
-    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
+    invoke-static {v1}, Lcom/bbm/ui/activities/InviteActivity;->z(Lcom/bbm/ui/activities/InviteActivity;)I
 
-    move-result-object v0
+    move-result v1
 
-    iget-object v1, v0, Lcom/bbm/e;->c:Lcom/bbm/g/al;
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/so;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->f(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/ui/activities/sv;
+    invoke-virtual {v0, v1}, Landroid/widget/GridLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-virtual {v0, p3}, Lcom/bbm/ui/activities/sv;->getItem(I)Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/g/ag;
+    check-cast v0, Lcom/bbm/ui/activities/tc;
 
-    iget-object v0, v0, Lcom/bbm/g/ag;->d:Ljava/lang/String;
+    .line 777
+    iget-object v1, v0, Lcom/bbm/ui/activities/tc;->d:Landroid/widget/ImageView;
 
-    invoke-virtual {v1, v0}, Lcom/bbm/g/al;->q(Ljava/lang/String;)Lcom/bbm/g/o;
+    const/16 v2, 0x8
 
-    move-result-object v2
+    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 238
-    iget-object v6, p0, Lcom/bbm/ui/activities/so;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    .line 778
+    iget-object v0, v0, Lcom/bbm/ui/activities/tc;->a:Landroid/view/View;
 
-    new-instance v0, Lcom/bbm/ui/activities/sp;
+    invoke-virtual {v0, v3}, Landroid/view/View;->setActivated(Z)V
 
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    .line 780
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/so;->c:Lcom/bbm/ui/activities/InviteActivity;
 
-    move-result-object v3
+    iget v1, p0, Lcom/bbm/ui/activities/so;->a:I
 
-    move-object v1, p0
+    add-int/lit8 v1, v1, -0x1
 
-    move-object v4, v2
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/InviteActivity;->b(Lcom/bbm/ui/activities/InviteActivity;I)I
 
-    move v5, p3
+    .line 782
+    iget-object v0, p0, Lcom/bbm/ui/activities/so;->b:Lcom/bbm/ui/activities/tc;
 
-    invoke-direct/range {v0 .. v5}, Lcom/bbm/ui/activities/sp;-><init>(Lcom/bbm/ui/activities/so;Lcom/bbm/g/o;Lcom/bbm/d/a;Lcom/bbm/g/o;I)V
+    iget-object v0, v0, Lcom/bbm/ui/activities/tc;->a:Landroid/view/View;
 
-    invoke-static {v6, v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;Lcom/bbm/util/d/d;)Lcom/bbm/util/d/d;
+    const/4 v1, 0x1
 
-    .line 251
-    iget-object v0, p0, Lcom/bbm/ui/activities/so;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setActivated(Z)V
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->g(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/util/d/d;
+    .line 783
+    iget-object v0, p0, Lcom/bbm/ui/activities/so;->b:Lcom/bbm/ui/activities/tc;
 
-    move-result-object v0
+    iget-object v0, v0, Lcom/bbm/ui/activities/tc;->d:Landroid/widget/ImageView;
 
-    invoke-virtual {v0}, Lcom/bbm/util/d/d;->c()V
+    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 253
-    return v7
+    .line 784
+    return-void
 .end method

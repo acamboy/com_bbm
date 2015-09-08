@@ -9,9 +9,9 @@
 # instance fields
 .field private e:Landroid/content/Context;
 
-.field private eF:Lcom/glympse/android/hal/GMessageListener;
+.field private eI:Lcom/glympse/android/hal/GMessageListener;
 
-.field private eG:Lcom/glympse/android/hal/br;
+.field private eJ:Lcom/glympse/android/hal/br;
 
 
 # direct methods
@@ -34,7 +34,7 @@
 
     .prologue
     .line 14
-    iget-object v0, p0, Lcom/glympse/android/hal/bq;->eF:Lcom/glympse/android/hal/GMessageListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/bq;->eI:Lcom/glympse/android/hal/GMessageListener;
 
     return-object v0
 .end method
@@ -182,12 +182,12 @@
 
     .line 264
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/hal/bq;->eF:Lcom/glympse/android/hal/GMessageListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/bq;->eI:Lcom/glympse/android/hal/GMessageListener;
 
     if-eqz v0, :cond_2
 
     .line 266
-    iget-object v0, p0, Lcom/glympse/android/hal/bq;->eF:Lcom/glympse/android/hal/GMessageListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/bq;->eI:Lcom/glympse/android/hal/GMessageListener;
 
     const/4 v1, 0x0
 
@@ -219,7 +219,7 @@
     .line 295
     :cond_3
     :goto_1
-    iget-object v2, p0, Lcom/glympse/android/hal/bq;->eF:Lcom/glympse/android/hal/GMessageListener;
+    iget-object v2, p0, Lcom/glympse/android/hal/bq;->eI:Lcom/glympse/android/hal/GMessageListener;
 
     if-eqz v2, :cond_4
 
@@ -228,7 +228,7 @@
     if-eqz v2, :cond_4
 
     .line 297
-    iget-object v2, p0, Lcom/glympse/android/hal/bq;->eF:Lcom/glympse/android/hal/GMessageListener;
+    iget-object v2, p0, Lcom/glympse/android/hal/bq;->eI:Lcom/glympse/android/hal/GMessageListener;
 
     invoke-interface {v2, p0, v0, v1}, Lcom/glympse/android/hal/GMessageListener;->lastMessageFound(Lcom/glympse/android/core/GCommon;J)V
 
@@ -352,10 +352,10 @@
     const/4 v3, 0x0
 
     .line 34
-    iput-object p3, p0, Lcom/glympse/android/hal/bq;->eF:Lcom/glympse/android/hal/GMessageListener;
+    iput-object p3, p0, Lcom/glympse/android/hal/bq;->eI:Lcom/glympse/android/hal/GMessageListener;
 
     .line 38
-    iget-object v0, p0, Lcom/glympse/android/hal/bq;->eG:Lcom/glympse/android/hal/br;
+    iget-object v0, p0, Lcom/glympse/android/hal/bq;->eJ:Lcom/glympse/android/hal/br;
 
     if-nez v0, :cond_0
 
@@ -367,7 +367,7 @@
 
     invoke-direct {v0, p0, v1}, Lcom/glympse/android/hal/br;-><init>(Lcom/glympse/android/hal/bq;Lcom/glympse/android/hal/bq$1;)V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/bq;->eG:Lcom/glympse/android/hal/br;
+    iput-object v0, p0, Lcom/glympse/android/hal/bq;->eJ:Lcom/glympse/android/hal/br;
 
     .line 43
     new-instance v0, Landroid/content/IntentFilter;
@@ -391,7 +391,7 @@
     :try_start_2
     iget-object v1, p0, Lcom/glympse/android/hal/bq;->e:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/glympse/android/hal/bq;->eG:Lcom/glympse/android/hal/br;
+    iget-object v2, p0, Lcom/glympse/android/hal/bq;->eJ:Lcom/glympse/android/hal/br;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
     :try_end_2
@@ -434,7 +434,7 @@
     const/4 v2, 0x0
 
     .line 80
-    iget-object v0, p0, Lcom/glympse/android/hal/bq;->eG:Lcom/glympse/android/hal/br;
+    iget-object v0, p0, Lcom/glympse/android/hal/bq;->eJ:Lcom/glympse/android/hal/br;
 
     if-eqz v0, :cond_0
 
@@ -442,7 +442,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/glympse/android/hal/bq;->e:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/bq;->eG:Lcom/glympse/android/hal/br;
+    iget-object v1, p0, Lcom/glympse/android/hal/bq;->eJ:Lcom/glympse/android/hal/br;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
     :try_end_0
@@ -450,11 +450,11 @@
 
     .line 90
     :goto_0
-    iput-object v2, p0, Lcom/glympse/android/hal/bq;->eG:Lcom/glympse/android/hal/br;
+    iput-object v2, p0, Lcom/glympse/android/hal/bq;->eJ:Lcom/glympse/android/hal/br;
 
     .line 94
     :cond_0
-    iput-object v2, p0, Lcom/glympse/android/hal/bq;->eF:Lcom/glympse/android/hal/GMessageListener;
+    iput-object v2, p0, Lcom/glympse/android/hal/bq;->eI:Lcom/glympse/android/hal/GMessageListener;
 
     .line 95
     return-void

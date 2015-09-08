@@ -11,9 +11,9 @@
 
 .field private _jobQueue:Lcom/glympse/android/lib/GJobQueue;
 
-.field private hi:Ljava/lang/String;
+.field private hq:Ljava/lang/String;
 
-.field private hj:Lcom/glympse/android/lib/GJob;
+.field private hr:Lcom/glympse/android/lib/GJob;
 
 
 # direct methods
@@ -29,7 +29,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/m;->hi:Ljava/lang/String;
+    iput-object v0, p0, Lcom/glympse/android/lib/m;->hq:Ljava/lang/String;
 
     .line 31
     invoke-static {}, Lcom/glympse/android/hal/HalFactory;->createHandler()Lcom/glympse/android/core/GHandler;
@@ -47,7 +47,7 @@
 
     .prologue
     .line 16
-    iget-object v0, p0, Lcom/glympse/android/lib/m;->hi:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/m;->hq:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -68,26 +68,26 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 79
-    iput-object v2, p0, Lcom/glympse/android/lib/m;->hj:Lcom/glympse/android/lib/GJob;
+    .line 80
+    iput-object v2, p0, Lcom/glympse/android/lib/m;->hr:Lcom/glympse/android/lib/GJob;
 
-    .line 82
+    .line 83
     iget-object v0, p0, Lcom/glympse/android/lib/m;->_jobQueue:Lcom/glympse/android/lib/GJobQueue;
 
     const/4 v1, 0x1
 
     invoke-interface {v0, v1}, Lcom/glympse/android/lib/GJobQueue;->stop(Z)V
 
-    .line 83
+    .line 84
     iput-object v2, p0, Lcom/glympse/android/lib/m;->_jobQueue:Lcom/glympse/android/lib/GJobQueue;
 
-    .line 86
+    .line 87
     if-eqz p2, :cond_0
 
-    .line 88
+    .line 89
     invoke-interface {p2, p1}, Lcom/glympse/android/api/GApiStatusListener;->statusUpdated(Z)V
 
-    .line 90
+    .line 91
     :cond_0
     return-void
 .end method
@@ -103,32 +103,32 @@
     const/4 v0, 0x0
 
     .line 41
-    iget-object v2, p0, Lcom/glympse/android/lib/m;->hi:Ljava/lang/String;
+    iget-object v2, p0, Lcom/glympse/android/lib/m;->hq:Ljava/lang/String;
 
     if-nez v2, :cond_1
 
-    .line 68
+    .line 69
     :cond_0
     :goto_0
     return v0
 
     .line 47
     :cond_1
-    iget-object v2, p0, Lcom/glympse/android/lib/m;->hj:Lcom/glympse/android/lib/GJob;
+    iget-object v2, p0, Lcom/glympse/android/lib/m;->hr:Lcom/glympse/android/lib/GJob;
 
     if-nez v2, :cond_0
 
     .line 54
-    iget-object v2, p0, Lcom/glympse/android/lib/m;->hi:Ljava/lang/String;
+    iget-object v2, p0, Lcom/glympse/android/lib/m;->hq:Ljava/lang/String;
 
     if-eqz v2, :cond_0
 
     .line 60
-    new-instance v0, Lcom/glympse/android/lib/fc;
+    new-instance v0, Lcom/glympse/android/lib/fo;
 
     iget-object v2, p0, Lcom/glympse/android/lib/m;->_handler:Lcom/glympse/android/core/GHandler;
 
-    invoke-direct {v0, v2}, Lcom/glympse/android/lib/fc;-><init>(Lcom/glympse/android/core/GHandler;)V
+    invoke-direct {v0, v2}, Lcom/glympse/android/lib/fo;-><init>(Lcom/glympse/android/core/GHandler;)V
 
     iput-object v0, p0, Lcom/glympse/android/lib/m;->_jobQueue:Lcom/glympse/android/lib/GJobQueue;
 
@@ -137,7 +137,12 @@
 
     invoke-interface {v0, v1}, Lcom/glympse/android/lib/GJobQueue;->start(I)Z
 
-    .line 65
+    .line 62
+    iget-object v0, p0, Lcom/glympse/android/lib/m;->_jobQueue:Lcom/glympse/android/lib/GJobQueue;
+
+    invoke-interface {v0, v1}, Lcom/glympse/android/lib/GJobQueue;->setActive(Z)V
+
+    .line 66
     new-instance v2, Lcom/glympse/android/lib/n;
 
     invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
@@ -148,17 +153,17 @@
 
     invoke-direct {v2, v0, p1}, Lcom/glympse/android/lib/n;-><init>(Lcom/glympse/android/lib/m;Lcom/glympse/android/api/GApiStatusListener;)V
 
-    iput-object v2, p0, Lcom/glympse/android/lib/m;->hj:Lcom/glympse/android/lib/GJob;
+    iput-object v2, p0, Lcom/glympse/android/lib/m;->hr:Lcom/glympse/android/lib/GJob;
 
-    .line 66
+    .line 67
     iget-object v0, p0, Lcom/glympse/android/lib/m;->_jobQueue:Lcom/glympse/android/lib/GJobQueue;
 
-    iget-object v2, p0, Lcom/glympse/android/lib/m;->hj:Lcom/glympse/android/lib/GJob;
+    iget-object v2, p0, Lcom/glympse/android/lib/m;->hr:Lcom/glympse/android/lib/GJob;
 
     invoke-interface {v0, v2}, Lcom/glympse/android/lib/GJobQueue;->addJob(Lcom/glympse/android/lib/GJob;)V
 
     move v0, v1
 
-    .line 68
+    .line 69
     goto :goto_0
 .end method

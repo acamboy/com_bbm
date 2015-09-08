@@ -9,9 +9,9 @@
 # instance fields
 .field private _handler:Lcom/glympse/android/core/GHandler;
 
-.field private cD:Lcom/glympse/android/hal/PhoneFavoriteProvider;
+.field private cG:Lcom/glympse/android/hal/PhoneFavoriteProvider;
 
-.field private cE:Lcom/glympse/android/hal/GVector;
+.field private cH:Lcom/glympse/android/hal/GVector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/glympse/android/hal/GVector",
@@ -36,7 +36,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 120
-    iput-object v0, p0, Lcom/glympse/android/hal/ba;->cD:Lcom/glympse/android/hal/PhoneFavoriteProvider;
+    iput-object v0, p0, Lcom/glympse/android/hal/ba;->cG:Lcom/glympse/android/hal/PhoneFavoriteProvider;
 
     .line 121
     iput-object v0, p0, Lcom/glympse/android/hal/ba;->e:Landroid/content/Context;
@@ -45,10 +45,10 @@
     iput-object v0, p0, Lcom/glympse/android/hal/ba;->_handler:Lcom/glympse/android/core/GHandler;
 
     .line 123
-    iput-object v0, p0, Lcom/glympse/android/hal/ba;->cE:Lcom/glympse/android/hal/GVector;
+    iput-object v0, p0, Lcom/glympse/android/hal/ba;->cH:Lcom/glympse/android/hal/GVector;
 
     .line 127
-    iput-object p1, p0, Lcom/glympse/android/hal/ba;->cD:Lcom/glympse/android/hal/PhoneFavoriteProvider;
+    iput-object p1, p0, Lcom/glympse/android/hal/ba;->cG:Lcom/glympse/android/hal/PhoneFavoriteProvider;
 
     .line 128
     iput-object p2, p0, Lcom/glympse/android/hal/ba;->e:Landroid/content/Context;
@@ -63,7 +63,7 @@
 
     invoke-direct {v0}, Lcom/glympse/android/hal/GVector;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ba;->cE:Lcom/glympse/android/hal/GVector;
+    iput-object v0, p0, Lcom/glympse/android/hal/ba;->cH:Lcom/glympse/android/hal/GVector;
 
     .line 131
     return-void
@@ -83,16 +83,16 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ba;->cE:Lcom/glympse/android/hal/GVector;
+    iput-object v0, p0, Lcom/glympse/android/hal/ba;->cH:Lcom/glympse/android/hal/GVector;
 
     .line 138
     iget-object v0, p0, Lcom/glympse/android/hal/ba;->_handler:Lcom/glympse/android/core/GHandler;
 
     new-instance v1, Lcom/glympse/android/hal/az;
 
-    iget-object v2, p0, Lcom/glympse/android/hal/ba;->cD:Lcom/glympse/android/hal/PhoneFavoriteProvider;
+    iget-object v2, p0, Lcom/glympse/android/hal/ba;->cG:Lcom/glympse/android/hal/PhoneFavoriteProvider;
 
-    iget-object v3, p0, Lcom/glympse/android/hal/ba;->cE:Lcom/glympse/android/hal/GVector;
+    iget-object v3, p0, Lcom/glympse/android/hal/ba;->cH:Lcom/glympse/android/hal/GVector;
 
     invoke-direct {v1, v2, v3}, Lcom/glympse/android/hal/az;-><init>(Lcom/glympse/android/hal/PhoneFavoriteProvider;Lcom/glympse/android/hal/GVector;)V
 

@@ -1520,7 +1520,7 @@
 
     int-to-float v0, v0
 
-    const/high16 v1, 0x41880000
+    const/high16 v1, 0x41880000    # 17.0f
 
     div-float v3, v0, v1
 
@@ -1545,7 +1545,7 @@
     if-ge v0, v1, :cond_5
 
     .line 425
-    const/high16 v1, 0x3f800000
+    const/high16 v1, 0x3f800000    # 1.0f
 
     aget v8, v2, v0
 
@@ -1556,7 +1556,7 @@
     div-float v8, v1, v3
 
     .line 426
-    const/high16 v1, 0x3f000000
+    const/high16 v1, 0x3f000000    # 0.5f
 
     add-float/2addr v1, v8
 
@@ -2439,16 +2439,40 @@
 
     iget v1, v5, Lcom/google/zxing/e/a/b;->a:I
 
-    if-ne v0, v1, :cond_4
+    if-ne v0, v1, :cond_3
 
     const/4 v0, 0x1
 
     :goto_1
-    if-eqz v0, :cond_5
+    if-nez v0, :cond_5
 
-    iget-object v0, p0, Lcom/google/zxing/e/a/a/b;->n:Ljava/util/List;
+    iget-object v0, v4, Lcom/google/zxing/e/a/a/a;->c:Lcom/google/zxing/e/a/b;
+
+    if-nez v0, :cond_4
+
+    const/4 v0, 0x1
+
+    :goto_2
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Lcom/google/zxing/i;->a()Lcom/google/zxing/i;
+
+    move-result-object v0
+
+    throw v0
+
+    :cond_3
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_4
+    const/4 v0, 0x0
+
+    goto :goto_2
 
     .line 124
+    :cond_5
     iget-object v4, p0, Lcom/google/zxing/e/a/a/b;->n:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->size()I
@@ -2477,7 +2501,7 @@
 
     add-int/lit8 v0, v1, -0x1
 
-    :goto_2
+    :goto_3
     mul-int/lit8 v0, v0, 0xc
 
     new-instance v5, Lcom/google/zxing/b/a;
@@ -2506,7 +2530,7 @@
 
     move v0, v8
 
-    :goto_3
+    :goto_4
     if-ltz v1, :cond_7
 
     const/4 v3, 0x1
@@ -2515,45 +2539,17 @@
 
     and-int/2addr v3, v2
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_6
 
     invoke-virtual {v5, v0}, Lcom/google/zxing/b/a;->b(I)V
 
-    :cond_3
+    :cond_6
     add-int/lit8 v0, v0, 0x1
 
     add-int/lit8 v1, v1, -0x1
 
-    goto :goto_3
-
-    .line 123
-    :cond_4
-    const/4 v0, 0x0
-
-    goto :goto_1
-
-    :cond_5
-    iget-object v0, v4, Lcom/google/zxing/e/a/a/a;->c:Lcom/google/zxing/e/a/b;
-
-    if-nez v0, :cond_6
-
-    const/4 v0, 0x1
-
-    :goto_4
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Lcom/google/zxing/i;->a()Lcom/google/zxing/i;
-
-    move-result-object v0
-
-    throw v0
-
-    :cond_6
-    const/4 v0, 0x0
-
     goto :goto_4
 
-    .line 124
     :cond_7
     const/4 v1, 0x1
 
@@ -2926,7 +2922,7 @@
     :cond_10
     move v0, v1
 
-    goto/16 :goto_2
+    goto/16 :goto_3
 
     :pswitch_data_0
     .packed-switch 0x4

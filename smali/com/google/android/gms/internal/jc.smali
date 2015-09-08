@@ -1,528 +1,88 @@
-.class public final Lcom/google/android/gms/internal/jc;
-.super Lcom/google/android/gms/common/data/b;
+.class final Lcom/google/android/gms/internal/jc;
+.super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/google/android/gms/plus/model/people/Person;
+.implements Landroid/content/DialogInterface$OnClickListener;
+
+
+# instance fields
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Ljava/lang/String;
+
+.field final synthetic c:Lcom/google/android/gms/internal/jb;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/common/data/DataHolder;I)V
+.method constructor <init>(Lcom/google/android/gms/internal/jb;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/google/android/gms/common/data/b;-><init>(Lcom/google/android/gms/common/data/DataHolder;I)V
+    iput-object p1, p0, Lcom/google/android/gms/internal/jc;->c:Lcom/google/android/gms/internal/jb;
+
+    iput-object p2, p0, Lcom/google/android/gms/internal/jc;->a:Ljava/lang/String;
+
+    iput-object p3, p0, Lcom/google/android/gms/internal/jc;->b:Ljava/lang/String;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic freeze()Ljava/lang/Object;
-    .locals 1
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 4
 
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/jc;->it()Lcom/google/android/gms/plus/model/people/Person;
+    iget-object v0, p0, Lcom/google/android/gms/internal/jc;->c:Lcom/google/android/gms/internal/jb;
 
-    move-result-object v0
+    iget-object v0, v0, Lcom/google/android/gms/internal/jb;->b:Landroid/content/Context;
 
-    return-object v0
-.end method
+    const-string v1, "download"
 
-.method public final getAboutMe()Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final getAgeRange()Lcom/google/android/gms/plus/model/people/Person$AgeRange;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final getBirthday()Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final getBraggingRights()Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final getCircledByCount()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final getCover()Lcom/google/android/gms/plus/model/people/Person$Cover;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final getCurrentLocation()Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final getDisplayName()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "displayName"
-
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/jc;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    check-cast v0, Landroid/app/DownloadManager;
 
-.method public final getGender()I
-    .locals 1
+    :try_start_0
+    iget-object v1, p0, Lcom/google/android/gms/internal/jc;->a:Ljava/lang/String;
 
-    const/4 v0, 0x0
+    iget-object v2, p0, Lcom/google/android/gms/internal/jc;->b:Ljava/lang/String;
 
-    return v0
-.end method
+    new-instance v3, Landroid/app/DownloadManager$Request;
 
-.method public final getId()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "personId"
-
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/jc;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getImage()Lcom/google/android/gms/plus/model/people/Person$Image;
-    .locals 2
-
-    new-instance v0, Lcom/google/android/gms/internal/ir$c;
-
-    const-string v1, "image"
-
-    invoke-virtual {p0, v1}, Lcom/google/android/gms/internal/jc;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/google/android/gms/internal/ir$c;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v1}, Landroid/app/DownloadManager$Request;-><init>(Landroid/net/Uri;)V
 
-    return-object v0
-.end method
+    sget-object v1, Landroid/os/Environment;->DIRECTORY_PICTURES:Ljava/lang/String;
 
-.method public final getLanguage()Ljava/lang/String;
-    .locals 1
+    invoke-virtual {v3, v1, v2}, Landroid/app/DownloadManager$Request;->setDestinationInExternalPublicDir(Ljava/lang/String;Ljava/lang/String;)Landroid/app/DownloadManager$Request;
 
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final getName()Lcom/google/android/gms/plus/model/people/Person$Name;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final getNickname()Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final getObjectType()I
-    .locals 1
-
-    const-string v0, "objectType"
-
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/jc;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/ir$e;->aT(Ljava/lang/String;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final synthetic getOrganizations()Ljava/util/List;
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/jc;->iq()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final synthetic getPlacesLived()Ljava/util/List;
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/jc;->ir()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getPlusOneCount()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final getRelationshipStatus()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final getTagline()Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final getUrl()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "url"
-
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/jc;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final synthetic getUrls()Ljava/util/List;
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/jc;->is()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final hasAboutMe()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final hasAgeRange()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final hasBirthday()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final hasBraggingRights()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final hasCircledByCount()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final hasCover()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final hasCurrentLocation()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final hasDisplayName()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final hasGender()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final hasId()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final hasImage()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final hasIsPlusUser()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final hasLanguage()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final hasName()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final hasNickname()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final hasObjectType()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final hasOrganizations()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final hasPlacesLived()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final hasPlusOneCount()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final hasRelationshipStatus()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final hasTagline()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final hasUrl()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final hasUrls()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final hasVerified()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final iq()Ljava/util/ArrayList;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/google/android/gms/plus/model/people/Person$Organizations;",
-            ">;"
-        }
-    .end annotation
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final ir()Ljava/util/ArrayList;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/google/android/gms/plus/model/people/Person$PlacesLived;",
-            ">;"
-        }
-    .end annotation
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final is()Ljava/util/ArrayList;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/google/android/gms/plus/model/people/Person$Urls;",
-            ">;"
-        }
-    .end annotation
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final isPlusUser()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final isVerified()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final it()Lcom/google/android/gms/plus/model/people/Person;
-    .locals 6
-
-    new-instance v0, Lcom/google/android/gms/internal/ir;
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/jc;->getDisplayName()Ljava/lang/String;
+    invoke-static {}, Lcom/google/android/gms/ads/internal/z;->g()Lcom/google/android/gms/internal/oc;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/jc;->getId()Ljava/lang/String;
+    invoke-virtual {v1, v3}, Lcom/google/android/gms/internal/oc;->a(Landroid/app/DownloadManager$Request;)Z
 
-    move-result-object v2
+    invoke-virtual {v0, v3}, Landroid/app/DownloadManager;->enqueue(Landroid/app/DownloadManager$Request;)J
+    :try_end_0
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/jc;->getImage()Lcom/google/android/gms/plus/model/people/Person$Image;
+    :goto_0
+    return-void
 
-    move-result-object v3
+    :catch_0
+    move-exception v0
 
-    check-cast v3, Lcom/google/android/gms/internal/ir$c;
+    iget-object v0, p0, Lcom/google/android/gms/internal/jc;->c:Lcom/google/android/gms/internal/jb;
 
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/jc;->getObjectType()I
+    const-string v1, "Could not store picture."
 
-    move-result v4
+    invoke-virtual {v0, v1}, Lcom/google/android/gms/internal/jb;->a(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/jc;->getUrl()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/internal/ir;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/google/android/gms/internal/ir$c;ILjava/lang/String;)V
-
-    return-object v0
+    goto :goto_0
 .end method

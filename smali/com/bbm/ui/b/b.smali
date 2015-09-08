@@ -37,14 +37,14 @@
 
     iget-object v0, v0, Lcom/bbm/d/a;->f:Lcom/bbm/j/a;
 
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/util/ay;
+    check-cast v0, Lcom/bbm/util/bb;
 
     .line 99
-    sget-object v1, Lcom/bbm/util/ay;->b:Lcom/bbm/util/ay;
+    sget-object v1, Lcom/bbm/util/bb;->b:Lcom/bbm/util/bb;
 
     if-ne v0, v1, :cond_0
 

@@ -22,6 +22,9 @@
 .method public abstract isEnabled()Z
 .end method
 
+.method public abstract isForceable()Z
+.end method
+
 .method public abstract isHandoffAllowed()Z
 .end method
 

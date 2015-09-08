@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/activities/pi;
 .super Ljava/lang/Object;
-.source "GroupListsActivity.java"
+.source "GroupPictureActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/bali/ui/main/groups/e;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/g/w;
-
-.field final synthetic b:Lcom/bbm/ui/activities/GroupListsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupPictureActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupListsActivity;Lcom/bbm/g/w;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupPictureActivity;)V
     .locals 0
 
     .prologue
-    .line 276
-    iput-object p1, p0, Lcom/bbm/ui/activities/pi;->b:Lcom/bbm/ui/activities/GroupListsActivity;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/pi;->a:Lcom/bbm/g/w;
+    .line 251
+    iput-object p1, p0, Lcom/bbm/ui/activities/pi;->a:Lcom/bbm/ui/activities/GroupPictureActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,43 +25,27 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final a()V
+    .locals 4
 
     .prologue
-    .line 279
-    const-string v0, "menu delete onClick"
+    .line 254
+    iget-object v0, p0, Lcom/bbm/ui/activities/pi;->a:Lcom/bbm/ui/activities/GroupPictureActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/GroupListsActivity;
+    new-instance v1, Landroid/content/Intent;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    const-class v2, Lcom/bbm/ui/activities/GroupProfileActivity;
 
-    .line 281
-    iget-object v0, p0, Lcom/bbm/ui/activities/pi;->b:Lcom/bbm/ui/activities/GroupListsActivity;
+    invoke-direct {v1, v0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/GroupListsActivity;->a:Lcom/bbm/g/al;
+    const-string v2, "groupUri"
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/pi;->a:Lcom/bbm/g/w;
+    iget-object v3, v0, Lcom/bbm/bali/ui/main/a/d;->a:Ljava/lang/String;
 
-    iget-object v1, v1, Lcom/bbm/g/w;->f:Ljava/lang/String;
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-static {v1}, Lcom/bbm/g/am;->d(Ljava/lang/String;)Lcom/bbm/g/br;
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/GroupPictureActivity;->startActivity(Landroid/content/Intent;)V
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
-
-    .line 282
-    iget-object v0, p0, Lcom/bbm/ui/activities/pi;->b:Lcom/bbm/ui/activities/GroupListsActivity;
-
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
-
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
-
-    .line 283
+    .line 255
     return-void
 .end method

@@ -8,35 +8,35 @@
 
 
 # static fields
-.field static final vE:I = 0x0
+.field static final wA:I = 0x2
 
-.field static final vF:I = 0x1
+.field static final wB:I = 0x3
 
-.field static final vG:I = 0x2
+.field static final wC:I = 0x4
 
-.field static final vH:I = 0x3
+.field static final wy:I = 0x0
 
-.field static final vI:I = 0x4
+.field static final wz:I = 0x1
 
 
 # instance fields
-.field private cI:Lcom/glympse/android/api/GGlympse;
+.field private cL:Lcom/glympse/android/api/GGlympse;
 
-.field private vA:Lcom/glympse/android/ui/e;
+.field private wq:Landroid/app/Service;
 
-.field private vB:Lcom/glympse/android/ui/d;
+.field private wr:Lcom/glympse/android/hal/GResourceGateway;
 
-.field private vC:Lcom/glympse/android/ui/g;
+.field private ws:Landroid/app/NotificationManager;
 
-.field private vD:I
+.field private wt:Lcom/glympse/android/ui/a;
 
-.field private vw:Landroid/app/Service;
+.field private wu:Lcom/glympse/android/ui/e;
 
-.field private vx:Lcom/glympse/android/hal/GResourceGateway;
+.field private wv:Lcom/glympse/android/ui/d;
 
-.field private vy:Landroid/app/NotificationManager;
+.field private ww:Lcom/glympse/android/ui/g;
 
-.field private vz:Lcom/glympse/android/ui/a;
+.field private wx:I
 
 
 # direct methods
@@ -46,16 +46,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 36
+    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
-    iput-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vy:Landroid/app/NotificationManager;
+    .line 43
+    iput-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->ws:Landroid/app/NotificationManager;
 
-    .line 44
-    iput-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vz:Lcom/glympse/android/ui/a;
+    .line 45
+    iput-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wt:Lcom/glympse/android/ui/a;
 
-    .line 56
+    .line 57
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -66,142 +66,48 @@
 
     long-to-int v0, v0
 
-    const v1, 0x3fffffff
+    const v1, 0x3fffffff    # 1.9999999f
 
     and-int/2addr v0, v1
 
-    iput v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vD:I
+    iput v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wx:I
 
-    .line 794
+    .line 813
     return-void
-.end method
-
-.method private A(I)V
-    .locals 1
-
-    .prologue
-    .line 332
-    if-lez p1, :cond_1
-
-    const/4 v0, 0x1
-
-    .line 333
-    :goto_0
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vA:Lcom/glympse/android/ui/e;
-
-    if-eqz v0, :cond_0
-
-    .line 335
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vA:Lcom/glympse/android/ui/e;
-
-    invoke-virtual {v0}, Lcom/glympse/android/ui/e;->remove()V
-
-    .line 336
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vA:Lcom/glympse/android/ui/e;
-
-    .line 338
-    :cond_0
-    return-void
-
-    .line 332
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method private B(I)V
-    .locals 3
-
-    .prologue
-    const/4 v2, 0x0
-
-    .line 342
-    if-lez p1, :cond_1
-
-    const/4 v0, 0x1
-
-    .line 343
-    :goto_0
-    if-eqz v0, :cond_2
-
-    iget-object v1, p0, Lcom/glympse/android/ui/NotificationProvider;->vB:Lcom/glympse/android/ui/d;
-
-    if-nez v1, :cond_2
-
-    .line 345
-    new-instance v0, Lcom/glympse/android/ui/d;
-
-    invoke-direct {v0, p0, v2}, Lcom/glympse/android/ui/d;-><init>(Lcom/glympse/android/ui/NotificationProvider;Lcom/glympse/android/ui/NotificationProvider$1;)V
-
-    iput-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vB:Lcom/glympse/android/ui/d;
-
-    .line 352
-    :cond_0
-    :goto_1
-    return-void
-
-    .line 342
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    .line 347
-    :cond_2
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vB:Lcom/glympse/android/ui/d;
-
-    if-eqz v0, :cond_0
-
-    .line 349
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vB:Lcom/glympse/android/ui/d;
-
-    invoke-virtual {v0}, Lcom/glympse/android/ui/d;->remove()V
-
-    .line 350
-    iput-object v2, p0, Lcom/glympse/android/ui/NotificationProvider;->vB:Lcom/glympse/android/ui/d;
-
-    goto :goto_1
 .end method
 
 .method private C(I)V
     .locals 1
 
     .prologue
-    .line 356
+    .line 344
     if-lez p1, :cond_1
 
     const/4 v0, 0x1
 
-    .line 357
+    .line 345
     :goto_0
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vC:Lcom/glympse/android/ui/g;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wu:Lcom/glympse/android/ui/e;
 
     if-eqz v0, :cond_0
 
-    .line 359
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vC:Lcom/glympse/android/ui/g;
+    .line 347
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wu:Lcom/glympse/android/ui/e;
 
-    invoke-virtual {v0}, Lcom/glympse/android/ui/g;->remove()V
+    invoke-virtual {v0}, Lcom/glympse/android/ui/e;->remove()V
 
-    .line 360
+    .line 348
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vC:Lcom/glympse/android/ui/g;
+    iput-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wu:Lcom/glympse/android/ui/e;
 
-    .line 362
+    .line 350
     :cond_0
     return-void
 
-    .line 356
+    .line 344
     :cond_1
     const/4 v0, 0x0
 
@@ -214,100 +120,194 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 366
+    .line 354
+    if-lez p1, :cond_1
+
+    const/4 v0, 0x1
+
+    .line 355
+    :goto_0
+    if-eqz v0, :cond_2
+
+    iget-object v1, p0, Lcom/glympse/android/ui/NotificationProvider;->wv:Lcom/glympse/android/ui/d;
+
+    if-nez v1, :cond_2
+
+    .line 357
+    new-instance v0, Lcom/glympse/android/ui/d;
+
+    invoke-direct {v0, p0, v2}, Lcom/glympse/android/ui/d;-><init>(Lcom/glympse/android/ui/NotificationProvider;Lcom/glympse/android/ui/NotificationProvider$1;)V
+
+    iput-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wv:Lcom/glympse/android/ui/d;
+
+    .line 364
+    :cond_0
+    :goto_1
+    return-void
+
+    .line 354
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    .line 359
+    :cond_2
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wv:Lcom/glympse/android/ui/d;
+
+    if-eqz v0, :cond_0
+
+    .line 361
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wv:Lcom/glympse/android/ui/d;
+
+    invoke-virtual {v0}, Lcom/glympse/android/ui/d;->remove()V
+
+    .line 362
+    iput-object v2, p0, Lcom/glympse/android/ui/NotificationProvider;->wv:Lcom/glympse/android/ui/d;
+
+    goto :goto_1
+.end method
+
+.method private E(I)V
+    .locals 1
+
+    .prologue
+    .line 368
+    if-lez p1, :cond_1
+
+    const/4 v0, 0x1
+
+    .line 369
+    :goto_0
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->ww:Lcom/glympse/android/ui/g;
+
+    if-eqz v0, :cond_0
+
+    .line 371
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->ww:Lcom/glympse/android/ui/g;
+
+    invoke-virtual {v0}, Lcom/glympse/android/ui/g;->remove()V
+
+    .line 372
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->ww:Lcom/glympse/android/ui/g;
+
+    .line 374
+    :cond_0
+    return-void
+
+    .line 368
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method private F(I)V
+    .locals 3
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 378
     const/4 v0, 0x1
 
     const-string v1, "Removing Notification"
 
     invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
-    .line 368
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vz:Lcom/glympse/android/ui/a;
+    .line 380
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wt:Lcom/glympse/android/ui/a;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vz:Lcom/glympse/android/ui/a;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wt:Lcom/glympse/android/ui/a;
 
-    iget v0, v0, Lcom/glympse/android/ui/a;->vP:I
+    iget v0, v0, Lcom/glympse/android/ui/a;->wJ:I
 
     if-ne p1, v0, :cond_1
 
-    .line 370
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vz:Lcom/glympse/android/ui/a;
+    .line 382
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wt:Lcom/glympse/android/ui/a;
 
     invoke-virtual {v0}, Lcom/glympse/android/ui/a;->remove()V
 
-    .line 371
-    iput-object v2, p0, Lcom/glympse/android/ui/NotificationProvider;->vz:Lcom/glympse/android/ui/a;
+    .line 383
+    iput-object v2, p0, Lcom/glympse/android/ui/NotificationProvider;->wt:Lcom/glympse/android/ui/a;
 
-    .line 388
+    .line 400
     :cond_0
     :goto_0
     return-void
 
-    .line 373
+    .line 385
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vB:Lcom/glympse/android/ui/d;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wv:Lcom/glympse/android/ui/d;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vB:Lcom/glympse/android/ui/d;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wv:Lcom/glympse/android/ui/d;
 
-    iget v0, v0, Lcom/glympse/android/ui/d;->vP:I
+    iget v0, v0, Lcom/glympse/android/ui/d;->wJ:I
 
     if-ne p1, v0, :cond_2
 
-    .line 375
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vB:Lcom/glympse/android/ui/d;
+    .line 387
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wv:Lcom/glympse/android/ui/d;
 
     invoke-virtual {v0}, Lcom/glympse/android/ui/d;->remove()V
 
-    .line 376
-    iput-object v2, p0, Lcom/glympse/android/ui/NotificationProvider;->vB:Lcom/glympse/android/ui/d;
+    .line 388
+    iput-object v2, p0, Lcom/glympse/android/ui/NotificationProvider;->wv:Lcom/glympse/android/ui/d;
 
     goto :goto_0
 
-    .line 378
+    .line 390
     :cond_2
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vA:Lcom/glympse/android/ui/e;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wu:Lcom/glympse/android/ui/e;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vA:Lcom/glympse/android/ui/e;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wu:Lcom/glympse/android/ui/e;
 
-    iget v0, v0, Lcom/glympse/android/ui/e;->vP:I
+    iget v0, v0, Lcom/glympse/android/ui/e;->wJ:I
 
     if-ne p1, v0, :cond_3
 
-    .line 380
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vA:Lcom/glympse/android/ui/e;
+    .line 392
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wu:Lcom/glympse/android/ui/e;
 
     invoke-virtual {v0}, Lcom/glympse/android/ui/e;->remove()V
 
-    .line 381
-    iput-object v2, p0, Lcom/glympse/android/ui/NotificationProvider;->vA:Lcom/glympse/android/ui/e;
+    .line 393
+    iput-object v2, p0, Lcom/glympse/android/ui/NotificationProvider;->wu:Lcom/glympse/android/ui/e;
 
     goto :goto_0
 
-    .line 383
+    .line 395
     :cond_3
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vC:Lcom/glympse/android/ui/g;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->ww:Lcom/glympse/android/ui/g;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vC:Lcom/glympse/android/ui/g;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->ww:Lcom/glympse/android/ui/g;
 
-    iget v0, v0, Lcom/glympse/android/ui/g;->vP:I
+    iget v0, v0, Lcom/glympse/android/ui/g;->wJ:I
 
     if-ne p1, v0, :cond_0
 
-    .line 385
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vC:Lcom/glympse/android/ui/g;
+    .line 397
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->ww:Lcom/glympse/android/ui/g;
 
     invoke-virtual {v0}, Lcom/glympse/android/ui/g;->remove()V
 
-    .line 386
-    iput-object v2, p0, Lcom/glympse/android/ui/NotificationProvider;->vC:Lcom/glympse/android/ui/g;
+    .line 398
+    iput-object v2, p0, Lcom/glympse/android/ui/NotificationProvider;->ww:Lcom/glympse/android/ui/g;
 
     goto :goto_0
 .end method
@@ -316,12 +316,12 @@
     .locals 2
 
     .prologue
-    .line 36
-    iget v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vD:I
+    .line 37
+    iget v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wx:I
 
     add-int/lit8 v1, v0, 0x1
 
-    iput v1, p0, Lcom/glympse/android/ui/NotificationProvider;->vD:I
+    iput v1, p0, Lcom/glympse/android/ui/NotificationProvider;->wx:I
 
     return v0
 .end method
@@ -330,8 +330,8 @@
     .locals 1
 
     .prologue
-    .line 36
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vw:Landroid/app/Service;
+    .line 37
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wq:Landroid/app/Service;
 
     return-object v0
 .end method
@@ -340,8 +340,8 @@
     .locals 1
 
     .prologue
-    .line 36
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vx:Lcom/glympse/android/hal/GResourceGateway;
+    .line 37
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wr:Lcom/glympse/android/hal/GResourceGateway;
 
     return-object v0
 .end method
@@ -350,17 +350,17 @@
     .locals 2
 
     .prologue
-    .line 314
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vA:Lcom/glympse/android/ui/e;
+    .line 326
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wu:Lcom/glympse/android/ui/e;
 
     if-eqz v0, :cond_0
 
-    .line 316
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vA:Lcom/glympse/android/ui/e;
+    .line 328
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wu:Lcom/glympse/android/ui/e;
 
     invoke-virtual {v0}, Lcom/glympse/android/ui/e;->remove()V
 
-    .line 318
+    .line 330
     :cond_0
     new-instance v0, Lcom/glympse/android/ui/e;
 
@@ -368,9 +368,9 @@
 
     invoke-direct {v0, p0, p1, v1}, Lcom/glympse/android/ui/e;-><init>(Lcom/glympse/android/ui/NotificationProvider;Lcom/glympse/android/api/GUserTicket;Lcom/glympse/android/ui/NotificationProvider$1;)V
 
-    iput-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vA:Lcom/glympse/android/ui/e;
+    iput-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wu:Lcom/glympse/android/ui/e;
 
-    .line 319
+    .line 331
     return-void
 .end method
 
@@ -380,27 +380,27 @@
     .prologue
     const/high16 v3, 0x10000000
 
-    .line 887
+    .line 906
     invoke-static {p0, p2, p1, v3}, Landroid/app/PendingIntent;->getService(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v0
 
-    .line 889
+    .line 908
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x12
 
     if-le v1, v2, :cond_0
 
-    .line 893
+    .line 912
     invoke-virtual {v0}, Landroid/app/PendingIntent;->cancel()V
 
-    .line 894
+    .line 913
     invoke-static {p0, p2, p1, v3}, Landroid/app/PendingIntent;->getService(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v0
 
-    .line 896
+    .line 915
     :cond_0
     return-object v0
 .end method
@@ -409,8 +409,8 @@
     .locals 1
 
     .prologue
-    .line 36
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->cI:Lcom/glympse/android/api/GGlympse;
+    .line 37
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->cL:Lcom/glympse/android/api/GGlympse;
 
     return-object v0
 .end method
@@ -419,17 +419,17 @@
     .locals 2
 
     .prologue
-    .line 323
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vC:Lcom/glympse/android/ui/g;
+    .line 335
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->ww:Lcom/glympse/android/ui/g;
 
     if-eqz v0, :cond_0
 
-    .line 325
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vC:Lcom/glympse/android/ui/g;
+    .line 337
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->ww:Lcom/glympse/android/ui/g;
 
     invoke-virtual {v0}, Lcom/glympse/android/ui/g;->remove()V
 
-    .line 327
+    .line 339
     :cond_0
     new-instance v0, Lcom/glympse/android/ui/g;
 
@@ -437,73 +437,73 @@
 
     invoke-direct {v0, p0, p1, v1}, Lcom/glympse/android/ui/g;-><init>(Lcom/glympse/android/ui/NotificationProvider;Lcom/glympse/android/api/GUserTicket;Lcom/glympse/android/ui/NotificationProvider$1;)V
 
-    iput-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vC:Lcom/glympse/android/ui/g;
+    iput-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->ww:Lcom/glympse/android/ui/g;
 
-    .line 328
+    .line 340
     return-void
 .end method
 
-.method private ds()V
+.method private dx()V
     .locals 1
 
     .prologue
-    .line 263
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vz:Lcom/glympse/android/ui/a;
-
-    if-eqz v0, :cond_0
-
-    .line 265
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vz:Lcom/glympse/android/ui/a;
-
-    invoke-virtual {v0}, Lcom/glympse/android/ui/a;->dy()V
-
-    .line 267
-    :cond_0
-    return-void
-.end method
-
-.method private dt()V
-    .locals 1
-
-    .prologue
-    .line 271
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vz:Lcom/glympse/android/ui/a;
-
-    if-eqz v0, :cond_0
-
-    .line 273
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vz:Lcom/glympse/android/ui/a;
-
-    invoke-virtual {v0}, Lcom/glympse/android/ui/a;->dA()V
-
     .line 275
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wt:Lcom/glympse/android/ui/a;
+
+    if-eqz v0, :cond_0
+
+    .line 277
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wt:Lcom/glympse/android/ui/a;
+
+    invoke-virtual {v0}, Lcom/glympse/android/ui/a;->dD()V
+
+    .line 279
     :cond_0
     return-void
 .end method
 
-.method private du()V
+.method private dy()V
     .locals 1
 
     .prologue
-    .line 279
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vz:Lcom/glympse/android/ui/a;
+    .line 283
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wt:Lcom/glympse/android/ui/a;
+
+    if-eqz v0, :cond_0
+
+    .line 285
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wt:Lcom/glympse/android/ui/a;
+
+    invoke-virtual {v0}, Lcom/glympse/android/ui/a;->dF()V
+
+    .line 287
+    :cond_0
+    return-void
+.end method
+
+.method private dz()V
+    .locals 1
+
+    .prologue
+    .line 291
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wt:Lcom/glympse/android/ui/a;
 
     if-nez v0, :cond_0
 
-    .line 281
+    .line 293
     new-instance v0, Lcom/glympse/android/ui/a;
 
     invoke-direct {v0, p0}, Lcom/glympse/android/ui/a;-><init>(Lcom/glympse/android/ui/NotificationProvider;)V
 
-    iput-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vz:Lcom/glympse/android/ui/a;
+    iput-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wt:Lcom/glympse/android/ui/a;
 
-    .line 283
+    .line 295
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vz:Lcom/glympse/android/ui/a;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wt:Lcom/glympse/android/ui/a;
 
     invoke-static {v0}, Lcom/glympse/android/ui/a;->b(Lcom/glympse/android/ui/a;)V
 
-    .line 284
+    .line 296
     return-void
 .end method
 
@@ -511,8 +511,8 @@
     .locals 1
 
     .prologue
-    .line 36
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vz:Lcom/glympse/android/ui/a;
+    .line 37
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wt:Lcom/glympse/android/ui/a;
 
     return-object v0
 .end method
@@ -521,15 +521,15 @@
     .locals 1
 
     .prologue
-    .line 36
-    iget v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vD:I
+    .line 37
+    iget v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wx:I
 
     return v0
 .end method
 
 
 # virtual methods
-.method protected E(I)I
+.method protected G(I)I
     .locals 6
 
     .prologue
@@ -543,12 +543,12 @@
 
     const/4 v1, 0x2
 
-    .line 395
+    .line 407
     const/16 v0, 0x9
 
     if-lt p1, v0, :cond_0
 
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vx:Lcom/glympse/android/hal/GResourceGateway;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wr:Lcom/glympse/android/hal/GResourceGateway;
 
     const/16 v1, 0x9
 
@@ -556,17 +556,17 @@
 
     move-result v0
 
-    .line 405
+    .line 417
     :goto_0
     return v0
 
-    .line 396
+    .line 408
     :cond_0
     const/16 v0, 0x8
 
     if-lt p1, v0, :cond_1
 
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vx:Lcom/glympse/android/hal/GResourceGateway;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wr:Lcom/glympse/android/hal/GResourceGateway;
 
     const/16 v1, 0x8
 
@@ -576,13 +576,13 @@
 
     goto :goto_0
 
-    .line 397
+    .line 409
     :cond_1
     const/4 v0, 0x7
 
     if-lt p1, v0, :cond_2
 
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vx:Lcom/glympse/android/hal/GResourceGateway;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wr:Lcom/glympse/android/hal/GResourceGateway;
 
     const/4 v1, 0x7
 
@@ -592,11 +592,11 @@
 
     goto :goto_0
 
-    .line 398
+    .line 410
     :cond_2
     if-lt p1, v5, :cond_3
 
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vx:Lcom/glympse/android/hal/GResourceGateway;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wr:Lcom/glympse/android/hal/GResourceGateway;
 
     invoke-interface {v0, v5}, Lcom/glympse/android/hal/GResourceGateway;->getDrawable(I)I
 
@@ -604,11 +604,11 @@
 
     goto :goto_0
 
-    .line 399
+    .line 411
     :cond_3
     if-lt p1, v4, :cond_4
 
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vx:Lcom/glympse/android/hal/GResourceGateway;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wr:Lcom/glympse/android/hal/GResourceGateway;
 
     invoke-interface {v0, v4}, Lcom/glympse/android/hal/GResourceGateway;->getDrawable(I)I
 
@@ -616,11 +616,11 @@
 
     goto :goto_0
 
-    .line 400
+    .line 412
     :cond_4
     if-lt p1, v3, :cond_5
 
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vx:Lcom/glympse/android/hal/GResourceGateway;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wr:Lcom/glympse/android/hal/GResourceGateway;
 
     invoke-interface {v0, v3}, Lcom/glympse/android/hal/GResourceGateway;->getDrawable(I)I
 
@@ -628,11 +628,11 @@
 
     goto :goto_0
 
-    .line 401
+    .line 413
     :cond_5
     if-lt p1, v2, :cond_6
 
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vx:Lcom/glympse/android/hal/GResourceGateway;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wr:Lcom/glympse/android/hal/GResourceGateway;
 
     invoke-interface {v0, v2}, Lcom/glympse/android/hal/GResourceGateway;->getDrawable(I)I
 
@@ -640,11 +640,11 @@
 
     goto :goto_0
 
-    .line 402
+    .line 414
     :cond_6
     if-lt p1, v1, :cond_7
 
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vx:Lcom/glympse/android/hal/GResourceGateway;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wr:Lcom/glympse/android/hal/GResourceGateway;
 
     invoke-interface {v0, v1}, Lcom/glympse/android/hal/GResourceGateway;->getDrawable(I)I
 
@@ -652,11 +652,11 @@
 
     goto :goto_0
 
-    .line 403
+    .line 415
     :cond_7
     if-lez p1, :cond_8
 
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vx:Lcom/glympse/android/hal/GResourceGateway;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wr:Lcom/glympse/android/hal/GResourceGateway;
 
     const/4 v1, 0x1
 
@@ -666,9 +666,9 @@
 
     goto :goto_0
 
-    .line 405
+    .line 417
     :cond_8
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vx:Lcom/glympse/android/hal/GResourceGateway;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wr:Lcom/glympse/android/hal/GResourceGateway;
 
     const/4 v1, 0x0
 
@@ -683,28 +683,28 @@
     .locals 7
 
     .prologue
-    .line 289
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->cI:Lcom/glympse/android/api/GGlympse;
+    .line 301
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->cL:Lcom/glympse/android/api/GGlympse;
 
     if-nez v0, :cond_1
 
-    .line 310
+    .line 322
     :cond_0
     :goto_0
     return-void
 
-    .line 293
+    .line 305
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->cI:Lcom/glympse/android/api/GGlympse;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->cL:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v0}, Lcom/glympse/android/api/GGlympse;->getConfig()Lcom/glympse/android/api/GConfig;
 
     move-result-object v0
 
-    .line 294
+    .line 306
     if-eqz v0, :cond_0
 
-    .line 300
+    .line 312
     const/4 v1, 0x1
 
     invoke-interface {v0}, Lcom/glympse/android/api/GConfig;->getExpireOnArrival()I
@@ -713,12 +713,12 @@
 
     if-ne v1, v0, :cond_0
 
-    .line 307
+    .line 319
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    .line 309
+    .line 321
     new-instance v1, Lcom/glympse/android/ui/b;
 
     const/4 v6, 0x0
@@ -736,30 +736,30 @@
     .locals 2
 
     .prologue
-    .line 158
+    .line 162
     const/4 v0, 0x1
 
     if-ne v0, p2, :cond_4
 
-    .line 161
+    .line 165
     const/high16 v0, 0x200000
 
     and-int/2addr v0, p3
 
     if-eqz v0, :cond_1
 
-    .line 163
+    .line 167
     check-cast p4, Lcom/glympse/android/api/GTicket;
 
-    .line 164
+    .line 168
     invoke-virtual {p0, p4}, Lcom/glympse/android/ui/NotificationProvider;->addTicketArrivedEvent(Lcom/glympse/android/api/GTicket;)V
 
-    .line 259
+    .line 271
     :cond_0
     :goto_0
     return-void
 
-    .line 166
+    .line 170
     :cond_1
     const/high16 v0, 0x20000
 
@@ -767,13 +767,13 @@
 
     if-eqz v0, :cond_2
 
-    .line 168
+    .line 172
     check-cast p4, Lcom/glympse/android/api/GTicket;
 
-    .line 169
+    .line 173
     invoke-interface {p4, p0}, Lcom/glympse/android/api/GTicket;->addListener(Lcom/glympse/android/api/GEventListener;)Z
 
-    .line 173
+    .line 177
     invoke-interface {p1}, Lcom/glympse/android/api/GGlympse;->getHistoryManager()Lcom/glympse/android/api/GHistoryManager;
 
     move-result-object v0
@@ -790,12 +790,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 175
-    invoke-direct {p0}, Lcom/glympse/android/ui/NotificationProvider;->du()V
+    .line 179
+    invoke-direct {p0}, Lcom/glympse/android/ui/NotificationProvider;->dz()V
 
     goto :goto_0
 
-    .line 178
+    .line 182
     :cond_2
     const/high16 v0, 0x40000
 
@@ -803,185 +803,147 @@
 
     if-eqz v0, :cond_3
 
-    .line 180
+    .line 184
     check-cast p4, Lcom/glympse/android/api/GTicket;
 
-    .line 181
+    .line 185
     invoke-interface {p4, p0}, Lcom/glympse/android/api/GTicket;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
 
-    .line 185
-    invoke-direct {p0}, Lcom/glympse/android/ui/NotificationProvider;->du()V
+    .line 189
+    invoke-direct {p0}, Lcom/glympse/android/ui/NotificationProvider;->dz()V
 
     goto :goto_0
 
-    .line 187
+    .line 191
     :cond_3
     and-int/lit16 v0, p3, 0x80
 
     if-eqz v0, :cond_0
 
-    .line 190
-    invoke-direct {p0}, Lcom/glympse/android/ui/NotificationProvider;->du()V
+    .line 194
+    invoke-direct {p0}, Lcom/glympse/android/ui/NotificationProvider;->dz()V
 
     goto :goto_0
-
-    .line 194
-    :cond_4
-    const/4 v0, 0x4
-
-    if-ne v0, p2, :cond_8
-
-    .line 196
-    and-int/lit8 v0, p3, 0x1
-
-    if-eqz v0, :cond_5
 
     .line 198
-    invoke-direct {p0}, Lcom/glympse/android/ui/NotificationProvider;->du()V
+    :cond_4
+    const v0, 0x10002
+
+    if-ne v0, p2, :cond_5
+
+    .line 200
+    and-int/lit16 v0, p3, 0x800
+
+    if-eqz v0, :cond_0
+
+    .line 202
+    invoke-direct {p0}, Lcom/glympse/android/ui/NotificationProvider;->dz()V
 
     goto :goto_0
 
-    .line 200
+    .line 206
     :cond_5
-    and-int/lit8 v0, p3, 0x10
+    const/4 v0, 0x4
+
+    if-ne v0, p2, :cond_9
+
+    .line 208
+    and-int/lit8 v0, p3, 0x1
 
     if-eqz v0, :cond_6
 
-    .line 202
-    invoke-direct {p0}, Lcom/glympse/android/ui/NotificationProvider;->du()V
+    .line 210
+    invoke-direct {p0}, Lcom/glympse/android/ui/NotificationProvider;->dz()V
 
     goto :goto_0
 
-    .line 204
+    .line 212
     :cond_6
-    and-int/lit8 v0, p3, 0x2
+    and-int/lit8 v0, p3, 0x10
 
     if-eqz v0, :cond_7
 
-    .line 206
-    invoke-direct {p0}, Lcom/glympse/android/ui/NotificationProvider;->du()V
+    .line 214
+    invoke-direct {p0}, Lcom/glympse/android/ui/NotificationProvider;->dz()V
 
     goto :goto_0
 
-    .line 208
+    .line 216
     :cond_7
+    and-int/lit8 v0, p3, 0x2
+
+    if-eqz v0, :cond_8
+
+    .line 218
+    invoke-direct {p0}, Lcom/glympse/android/ui/NotificationProvider;->dz()V
+
+    goto :goto_0
+
+    .line 220
+    :cond_8
     and-int/lit16 v0, p3, 0x4000
 
     if-eqz v0, :cond_0
 
-    .line 210
-    invoke-direct {p0}, Lcom/glympse/android/ui/NotificationProvider;->du()V
+    .line 222
+    invoke-direct {p0}, Lcom/glympse/android/ui/NotificationProvider;->dz()V
 
     goto :goto_0
 
-    .line 215
-    :cond_8
+    .line 227
+    :cond_9
     const/4 v0, 0x5
 
-    if-ne v0, p2, :cond_9
+    if-ne v0, p2, :cond_a
 
-    .line 217
+    .line 229
     and-int/lit8 v0, p3, 0x3
 
     if-eqz v0, :cond_0
 
-    .line 219
-    invoke-direct {p0}, Lcom/glympse/android/ui/NotificationProvider;->dt()V
+    .line 231
+    invoke-direct {p0}, Lcom/glympse/android/ui/NotificationProvider;->dy()V
 
     goto :goto_0
 
-    .line 224
-    :cond_9
+    .line 236
+    :cond_a
     const/4 v0, 0x6
 
-    if-ne v0, p2, :cond_a
+    if-ne v0, p2, :cond_b
 
-    .line 226
-    invoke-direct {p0}, Lcom/glympse/android/ui/NotificationProvider;->ds()V
+    .line 238
+    invoke-direct {p0}, Lcom/glympse/android/ui/NotificationProvider;->dx()V
 
     goto :goto_0
 
-    .line 230
-    :cond_a
+    .line 242
+    :cond_b
     const v0, 0x20002
 
     if-ne v0, p2, :cond_0
 
-    .line 232
+    .line 244
     and-int/lit8 v0, p3, 0x40
-
-    if-eqz v0, :cond_c
-
-    move-object v0, p4
-
-    .line 234
-    check-cast v0, Lcom/glympse/android/api/GUserTicket;
-
-    .line 235
-    invoke-direct {p0, v0}, Lcom/glympse/android/ui/NotificationProvider;->d(Lcom/glympse/android/api/GUserTicket;)V
-
-    .line 242
-    :cond_b
-    :goto_1
-    and-int/lit8 v0, p3, 0x1
 
     if-eqz v0, :cond_d
 
-    .line 244
-    check-cast p4, Ljava/lang/Long;
-
-    invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    long-to-int v0, v0
-
-    invoke-direct {p0, v0}, Lcom/glympse/android/ui/NotificationProvider;->A(I)V
-
-    goto/16 :goto_0
-
-    .line 237
-    :cond_c
-    and-int/lit16 v0, p3, 0x80
-
-    if-eqz v0, :cond_b
-
     move-object v0, p4
 
-    .line 239
+    .line 246
     check-cast v0, Lcom/glympse/android/api/GUserTicket;
 
-    .line 240
-    invoke-direct {p0, v0}, Lcom/glympse/android/ui/NotificationProvider;->c(Lcom/glympse/android/api/GUserTicket;)V
+    .line 247
+    invoke-direct {p0, v0}, Lcom/glympse/android/ui/NotificationProvider;->d(Lcom/glympse/android/api/GUserTicket;)V
 
-    goto :goto_1
-
-    .line 246
-    :cond_d
-    and-int/lit8 v0, p3, 0x2
+    .line 254
+    :cond_c
+    :goto_1
+    and-int/lit8 v0, p3, 0x1
 
     if-eqz v0, :cond_e
 
-    .line 248
-    check-cast p4, Ljava/lang/Long;
-
-    invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    long-to-int v0, v0
-
-    invoke-direct {p0, v0}, Lcom/glympse/android/ui/NotificationProvider;->B(I)V
-
-    goto/16 :goto_0
-
-    .line 250
-    :cond_e
-    and-int/lit8 v0, p3, 0x4
-
-    if-eqz v0, :cond_f
-
-    .line 252
+    .line 256
     check-cast p4, Ljava/lang/Long;
 
     invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
@@ -994,13 +956,29 @@
 
     goto/16 :goto_0
 
-    .line 254
-    :cond_f
-    and-int/lit8 v0, p3, 0x20
+    .line 249
+    :cond_d
+    and-int/lit16 v0, p3, 0x80
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_c
 
-    .line 256
+    move-object v0, p4
+
+    .line 251
+    check-cast v0, Lcom/glympse/android/api/GUserTicket;
+
+    .line 252
+    invoke-direct {p0, v0}, Lcom/glympse/android/ui/NotificationProvider;->c(Lcom/glympse/android/api/GUserTicket;)V
+
+    goto :goto_1
+
+    .line 258
+    :cond_e
+    and-int/lit8 v0, p3, 0x2
+
+    if-eqz v0, :cond_f
+
+    .line 260
     check-cast p4, Ljava/lang/Long;
 
     invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
@@ -1012,19 +990,57 @@
     invoke-direct {p0, v0}, Lcom/glympse/android/ui/NotificationProvider;->D(I)V
 
     goto/16 :goto_0
+
+    .line 262
+    :cond_f
+    and-int/lit8 v0, p3, 0x4
+
+    if-eqz v0, :cond_10
+
+    .line 264
+    check-cast p4, Ljava/lang/Long;
+
+    invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    long-to-int v0, v0
+
+    invoke-direct {p0, v0}, Lcom/glympse/android/ui/NotificationProvider;->E(I)V
+
+    goto/16 :goto_0
+
+    .line 266
+    :cond_10
+    and-int/lit8 v0, p3, 0x20
+
+    if-eqz v0, :cond_0
+
+    .line 268
+    check-cast p4, Ljava/lang/Long;
+
+    invoke-virtual {p4}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    long-to-int v0, v0
+
+    invoke-direct {p0, v0}, Lcom/glympse/android/ui/NotificationProvider;->F(I)V
+
+    goto/16 :goto_0
 .end method
 
 .method public getNotificationManager()Landroid/app/NotificationManager;
     .locals 2
 
     .prologue
-    .line 67
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vy:Landroid/app/NotificationManager;
+    .line 68
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->ws:Landroid/app/NotificationManager;
 
     if-nez v0, :cond_0
 
-    .line 69
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vw:Landroid/app/Service;
+    .line 70
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wq:Landroid/app/Service;
 
     const-string v1, "notification"
 
@@ -1034,11 +1050,11 @@
 
     check-cast v0, Landroid/app/NotificationManager;
 
-    iput-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vy:Landroid/app/NotificationManager;
+    iput-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->ws:Landroid/app/NotificationManager;
 
-    .line 71
+    .line 72
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vy:Landroid/app/NotificationManager;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->ws:Landroid/app/NotificationManager;
 
     return-object v0
 .end method
@@ -1047,16 +1063,16 @@
     .locals 2
 
     .prologue
-    .line 81
-    iput-object p1, p0, Lcom/glympse/android/ui/NotificationProvider;->vw:Landroid/app/Service;
-
     .line 82
-    iput-object p2, p0, Lcom/glympse/android/ui/NotificationProvider;->cI:Lcom/glympse/android/api/GGlympse;
+    iput-object p1, p0, Lcom/glympse/android/ui/NotificationProvider;->wq:Landroid/app/Service;
 
     .line 83
-    check-cast p2, Lcom/glympse/android/lib/GGlympsePrivate;
+    iput-object p2, p0, Lcom/glympse/android/ui/NotificationProvider;->cL:Lcom/glympse/android/api/GGlympse;
 
     .line 84
+    check-cast p2, Lcom/glympse/android/lib/GGlympsePrivate;
+
+    .line 85
     invoke-interface {p2}, Lcom/glympse/android/lib/GGlympsePrivate;->getContextHolder()Lcom/glympse/android/hal/GContextHolder;
 
     move-result-object v0
@@ -1065,24 +1081,24 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vx:Lcom/glympse/android/hal/GResourceGateway;
+    iput-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wr:Lcom/glympse/android/hal/GResourceGateway;
 
-    .line 87
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->cI:Lcom/glympse/android/api/GGlympse;
+    .line 88
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->cL:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v0, p0}, Lcom/glympse/android/api/GGlympse;->addListener(Lcom/glympse/android/api/GEventListener;)Z
 
-    .line 90
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->cI:Lcom/glympse/android/api/GGlympse;
+    .line 91
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->cL:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v0}, Lcom/glympse/android/api/GGlympse;->getHistoryManager()Lcom/glympse/android/api/GHistoryManager;
 
     move-result-object v0
 
-    .line 91
+    .line 92
     if-eqz v0, :cond_0
 
-    .line 93
+    .line 94
     invoke-interface {v0}, Lcom/glympse/android/api/GHistoryManager;->getTickets()Lcom/glympse/android/core/GArray;
 
     move-result-object v0
@@ -1104,40 +1120,40 @@
 
     check-cast v0, Lcom/glympse/android/api/GTicket;
 
-    .line 95
+    .line 96
     invoke-interface {v0, p0}, Lcom/glympse/android/api/GTicket;->addListener(Lcom/glympse/android/api/GEventListener;)Z
 
     goto :goto_0
 
-    .line 99
+    .line 100
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->cI:Lcom/glympse/android/api/GGlympse;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->cL:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v0}, Lcom/glympse/android/api/GGlympse;->getNetworkManager()Lcom/glympse/android/api/GNetworkManager;
 
     move-result-object v0
 
-    .line 100
+    .line 101
     if-eqz v0, :cond_1
 
-    .line 102
+    .line 103
     invoke-interface {v0, p0}, Lcom/glympse/android/api/GNetworkManager;->addListener(Lcom/glympse/android/api/GEventListener;)Z
 
-    .line 105
+    .line 106
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->cI:Lcom/glympse/android/api/GGlympse;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->cL:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v0}, Lcom/glympse/android/api/GGlympse;->getBatteryManager()Lcom/glympse/android/api/GBatteryManager;
 
     move-result-object v0
 
-    .line 106
+    .line 107
     if-eqz v0, :cond_2
 
-    .line 108
+    .line 109
     invoke-interface {v0, p0}, Lcom/glympse/android/api/GBatteryManager;->addListener(Lcom/glympse/android/api/GEventListener;)Z
 
-    .line 110
+    .line 111
     :cond_2
     return-void
 .end method
@@ -1150,78 +1166,84 @@
 
     const/4 v1, 0x0
 
-    .line 116
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vz:Lcom/glympse/android/ui/a;
+    .line 117
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wt:Lcom/glympse/android/ui/a;
 
     if-eqz v0, :cond_0
 
-    .line 118
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->vz:Lcom/glympse/android/ui/a;
+    .line 119
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wt:Lcom/glympse/android/ui/a;
 
     invoke-static {v0}, Lcom/glympse/android/ui/a;->a(Lcom/glympse/android/ui/a;)V
 
-    .line 122
+    .line 123
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->cI:Lcom/glympse/android/api/GGlympse;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->cL:Lcom/glympse/android/api/GGlympse;
 
     if-eqz v0, :cond_3
 
-    .line 124
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->cI:Lcom/glympse/android/api/GGlympse;
+    .line 125
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->cL:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v0}, Lcom/glympse/android/api/GGlympse;->getNetworkManager()Lcom/glympse/android/api/GNetworkManager;
 
     move-result-object v0
 
-    .line 125
+    .line 126
     if-eqz v0, :cond_1
 
-    .line 127
+    .line 128
     invoke-interface {v0, p0}, Lcom/glympse/android/api/GNetworkManager;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
 
-    .line 130
+    .line 131
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->cI:Lcom/glympse/android/api/GGlympse;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->cL:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v0}, Lcom/glympse/android/api/GGlympse;->getBatteryManager()Lcom/glympse/android/api/GBatteryManager;
 
     move-result-object v0
 
-    .line 131
+    .line 132
     if-eqz v0, :cond_2
 
-    .line 133
+    .line 134
     invoke-interface {v0, p0}, Lcom/glympse/android/api/GBatteryManager;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
 
-    .line 136
+    .line 137
     :cond_2
-    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->cI:Lcom/glympse/android/api/GGlympse;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->cL:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v0, p0}, Lcom/glympse/android/api/GGlympse;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
 
-    .line 137
-    iput-object v2, p0, Lcom/glympse/android/ui/NotificationProvider;->cI:Lcom/glympse/android/api/GGlympse;
-
-    .line 141
-    :cond_3
-    invoke-direct {p0, v1}, Lcom/glympse/android/ui/NotificationProvider;->A(I)V
+    .line 138
+    iput-object v2, p0, Lcom/glympse/android/ui/NotificationProvider;->cL:Lcom/glympse/android/api/GGlympse;
 
     .line 142
-    invoke-direct {p0, v1}, Lcom/glympse/android/ui/NotificationProvider;->B(I)V
-
-    .line 143
+    :cond_3
     invoke-direct {p0, v1}, Lcom/glympse/android/ui/NotificationProvider;->C(I)V
 
-    .line 145
-    invoke-virtual {p0}, Lcom/glympse/android/ui/NotificationProvider;->getNotificationManager()Landroid/app/NotificationManager;
+    .line 143
+    invoke-direct {p0, v1}, Lcom/glympse/android/ui/NotificationProvider;->D(I)V
 
-    move-result-object v0
+    .line 144
+    invoke-direct {p0, v1}, Lcom/glympse/android/ui/NotificationProvider;->E(I)V
 
-    invoke-virtual {v0}, Landroid/app/NotificationManager;->cancelAll()V
+    .line 146
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wt:Lcom/glympse/android/ui/a;
+
+    if-eqz v0, :cond_4
 
     .line 148
-    iput-object v2, p0, Lcom/glympse/android/ui/NotificationProvider;->vw:Landroid/app/Service;
+    iget-object v0, p0, Lcom/glympse/android/ui/NotificationProvider;->wt:Lcom/glympse/android/ui/a;
 
-    .line 149
+    iget v0, v0, Lcom/glympse/android/ui/a;->wJ:I
+
+    invoke-direct {p0, v0}, Lcom/glympse/android/ui/NotificationProvider;->F(I)V
+
+    .line 152
+    :cond_4
+    iput-object v2, p0, Lcom/glympse/android/ui/NotificationProvider;->wq:Landroid/app/Service;
+
+    .line 153
     return-void
 .end method

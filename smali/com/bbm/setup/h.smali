@@ -29,43 +29,47 @@
 
     .prologue
     .line 50
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
     .line 52
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
 
-    sget-object v1, Lcom/bbm/Alaska;->f:Lcom/bbm/setup/z;
+    sget-object v0, Lcom/bbm/Alaska;->f:Lcom/bbm/setup/z;
 
-    invoke-virtual {v1}, Lcom/bbm/setup/z;->a()Lcom/bbm/setup/af;
+    iget-object v0, v0, Lcom/bbm/setup/z;->r:Lcom/bbm/j/a;
 
-    move-result-object v1
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
-    iget-object v1, v1, Lcom/bbm/setup/af;->a:Lcom/bbm/setup/ag;
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/setup/am;
+
+    iget-object v0, v0, Lcom/bbm/setup/am;->a:Lcom/bbm/setup/an;
 
     .line 53
-    sget-object v2, Lcom/bbm/setup/ag;->a:Lcom/bbm/setup/ag;
+    sget-object v2, Lcom/bbm/setup/an;->a:Lcom/bbm/setup/an;
 
-    if-eq v2, v1, :cond_0
+    if-eq v2, v0, :cond_0
 
-    sget-object v2, Lcom/bbm/setup/ag;->b:Lcom/bbm/setup/ag;
+    sget-object v2, Lcom/bbm/setup/an;->b:Lcom/bbm/setup/an;
 
-    if-ne v2, v1, :cond_1
+    if-ne v2, v0, :cond_6
 
     .line 54
     :cond_0
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
 
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v0
 
     const-string v1, "setupState"
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->E(Ljava/lang/String;)Lcom/bbm/util/bm;
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->I(Ljava/lang/String;)Lcom/bbm/util/bs;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/util/bm;->d()Lorg/json/JSONObject;
+    invoke-virtual {v0}, Lcom/bbm/util/bs;->d()Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -83,7 +87,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_3
 
     .line 59
     const-string v1, "progressMessage"
@@ -99,10 +103,10 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     .line 61
-    sget-object v0, Lcom/bbm/c/o;->at:Lcom/bbm/c/o;
+    sget-object v0, Lcom/bbm/c/s;->aF:Lcom/bbm/c/s;
 
     .line 62
     iget-object v1, p0, Lcom/bbm/setup/h;->a:Lcom/bbm/setup/LoadingActivity;
@@ -110,17 +114,16 @@
     invoke-static {v1}, Lcom/bbm/setup/LoadingActivity;->a(Lcom/bbm/setup/LoadingActivity;)V
 
     .line 93
-    :cond_1
     :goto_0
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
     iget-object v1, p0, Lcom/bbm/setup/h;->a:Lcom/bbm/setup/LoadingActivity;
 
-    invoke-static {v1}, Lcom/bbm/setup/LoadingActivity;->e(Lcom/bbm/setup/LoadingActivity;)Lcom/bbm/c/o;
+    invoke-static {v1}, Lcom/bbm/setup/LoadingActivity;->e(Lcom/bbm/setup/LoadingActivity;)Lcom/bbm/c/s;
 
     move-result-object v1
 
-    if-eq v1, v0, :cond_2
+    if-eq v1, v0, :cond_1
 
     .line 94
     iget-object v1, p0, Lcom/bbm/setup/h;->a:Lcom/bbm/setup/LoadingActivity;
@@ -130,15 +133,15 @@
     .line 95
     iget-object v1, p0, Lcom/bbm/setup/h;->a:Lcom/bbm/setup/LoadingActivity;
 
-    invoke-static {v1, v0}, Lcom/bbm/setup/LoadingActivity;->a(Lcom/bbm/setup/LoadingActivity;Lcom/bbm/c/o;)V
+    invoke-static {v1, v0}, Lcom/bbm/setup/LoadingActivity;->a(Lcom/bbm/setup/LoadingActivity;Lcom/bbm/c/s;)V
 
     .line 97
-    :cond_2
+    :cond_1
     return-void
 
     .line 64
-    :cond_3
-    sget-object v0, Lcom/bbm/c/o;->ar:Lcom/bbm/c/o;
+    :cond_2
+    sget-object v0, Lcom/bbm/c/s;->aD:Lcom/bbm/c/s;
 
     .line 65
     iget-object v1, p0, Lcom/bbm/setup/h;->a:Lcom/bbm/setup/LoadingActivity;
@@ -148,14 +151,14 @@
     goto :goto_0
 
     .line 67
-    :cond_4
+    :cond_3
     const-string v0, "Success"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_5
 
     .line 68
     iget-object v0, p0, Lcom/bbm/setup/h;->a:Lcom/bbm/setup/LoadingActivity;
@@ -164,10 +167,10 @@
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_4
 
     .line 69
-    sget-object v0, Lcom/bbm/c/o;->as:Lcom/bbm/c/o;
+    sget-object v0, Lcom/bbm/c/s;->aE:Lcom/bbm/c/s;
 
     .line 70
     iget-object v1, p0, Lcom/bbm/setup/h;->a:Lcom/bbm/setup/LoadingActivity;
@@ -177,8 +180,8 @@
     goto :goto_0
 
     .line 72
-    :cond_5
-    sget-object v0, Lcom/bbm/c/o;->ar:Lcom/bbm/c/o;
+    :cond_4
+    sget-object v0, Lcom/bbm/c/s;->aD:Lcom/bbm/c/s;
 
     .line 73
     iget-object v1, p0, Lcom/bbm/setup/h;->a:Lcom/bbm/setup/LoadingActivity;
@@ -188,13 +191,18 @@
     goto :goto_0
 
     .line 76
-    :cond_6
-    sget-object v0, Lcom/bbm/c/o;->ar:Lcom/bbm/c/o;
+    :cond_5
+    sget-object v0, Lcom/bbm/c/s;->aD:Lcom/bbm/c/s;
 
     .line 77
     iget-object v1, p0, Lcom/bbm/setup/h;->a:Lcom/bbm/setup/LoadingActivity;
 
     invoke-static {v1}, Lcom/bbm/setup/LoadingActivity;->b(Lcom/bbm/setup/LoadingActivity;)V
+
+    goto :goto_0
+
+    :cond_6
+    move-object v0, v1
 
     goto :goto_0
 .end method

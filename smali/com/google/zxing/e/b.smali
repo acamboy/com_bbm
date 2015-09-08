@@ -2901,7 +2901,7 @@
 
     int-to-float v2, v2
 
-    const/high16 v3, 0x40000000
+    const/high16 v3, 0x40000000    # 2.0f
 
     div-float v5, v2, v3
 
@@ -2910,7 +2910,7 @@
 
     int-to-float v2, v2
 
-    const/high16 v3, 0x40000000
+    const/high16 v3, 0x40000000    # 2.0f
 
     div-float v4, v2, v3
 

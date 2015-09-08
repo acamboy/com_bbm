@@ -1,70 +1,64 @@
 .class final Lcom/bbm/ui/activities/pu;
-.super Lcom/bbm/j/a;
-.source "GroupLobbyActivity.java"
+.super Ljava/lang/Object;
+.source "GroupPictureCommentsActivity.java"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/j/a",
-        "<",
-        "Ljava/lang/Integer;",
-        ">;"
-    }
-.end annotation
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/pt;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupLobbyActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/pt;)V
     .locals 0
 
     .prologue
-    .line 115
-    iput-object p1, p0, Lcom/bbm/ui/activities/pu;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    .line 623
+    iput-object p1, p0, Lcom/bbm/ui/activities/pu;->a:Lcom/bbm/ui/activities/pt;
 
-    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final synthetic a()Ljava/lang/Object;
-    .locals 2
+.method public final run()V
+    .locals 4
 
     .prologue
-    .line 115
-    iget-object v0, p0, Lcom/bbm/ui/activities/pu;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    .line 627
+    new-instance v0, Landroid/view/animation/AlphaAnimation;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->a(Lcom/bbm/ui/activities/GroupLobbyActivity;)Lcom/bbm/g/al;
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    move-result-object v0
+    const/4 v2, 0x0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/pu;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    invoke-direct {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
+    .line 628
+    const-wide/16 v2, 0x5dc
 
-    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->g(Ljava/lang/String;)Lcom/bbm/j/w;
+    invoke-virtual {v0, v2, v3}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
 
-    move-result-object v0
+    .line 629
+    const/4 v1, 0x1
 
-    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroid/view/animation/AlphaAnimation;->setFillAfter(Z)V
 
-    move-result-object v0
+    .line 630
+    iget-object v1, p0, Lcom/bbm/ui/activities/pu;->a:Lcom/bbm/ui/activities/pt;
 
-    check-cast v0, Ljava/util/List;
+    iget-object v1, v1, Lcom/bbm/ui/activities/pt;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->p(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Landroid/widget/TextView;
 
-    move-result v0
+    move-result-object v1
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    move-result-object v0
-
-    return-object v0
+    .line 631
+    return-void
 .end method

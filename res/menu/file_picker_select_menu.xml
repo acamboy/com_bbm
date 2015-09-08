@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_channels_search" android:id="@id/file_picker_search" android:title="@string/search" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_file_picker_add_folder" android:id="@id/file_picker_addfolder" android:visible="false" android:title="@string/file_picker_add_folder" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_grid" android:id="@id/file_picker_gridview" android:title="@string/file_picker_grid" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_sort" android:id="@id/file_picker_sort" android:title="@string/file_picker_sort" app:showAsAction="never" />
+</menu>

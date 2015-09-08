@@ -16,15 +16,15 @@
     .prologue
     const/4 v1, 0x3
 
-    .line 193
+    .line 195
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 195
+    .line 197
     new-array v0, v1, [Z
 
     iput-object v0, p0, Lcom/rim/bbm/BbmMediaCallService$BbmvServices;->serviceEnabled:[Z
 
-    .line 196
+    .line 198
     new-array v0, v1, [Z
 
     iput-object v0, p0, Lcom/rim/bbm/BbmMediaCallService$BbmvServices;->serviceSupported:[Z

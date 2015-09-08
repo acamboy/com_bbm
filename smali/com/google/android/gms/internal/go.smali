@@ -1,13 +1,35 @@
-.class public final Lcom/google/android/gms/internal/go;
+.class final Lcom/google/android/gms/internal/go;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/google/android/gms/games/request/Requests;
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Ljava/io/File;
+
+.field final synthetic c:I
+
+.field final synthetic d:I
+
+.field final synthetic e:Lcom/google/android/gms/internal/gn;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcom/google/android/gms/internal/gn;Ljava/lang/String;Ljava/io/File;II)V
     .locals 0
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/go;->e:Lcom/google/android/gms/internal/gn;
+
+    iput-object p2, p0, Lcom/google/android/gms/internal/go;->a:Ljava/lang/String;
+
+    iput-object p3, p0, Lcom/google/android/gms/internal/go;->b:Ljava/io/File;
+
+    iput p4, p0, Lcom/google/android/gms/internal/go;->c:I
+
+    iput p5, p0, Lcom/google/android/gms/internal/go;->d:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -16,380 +38,64 @@
 
 
 # virtual methods
-.method public final acceptRequest(Lcom/google/android/gms/common/api/GoogleApiClient;Ljava/lang/String;)Lcom/google/android/gms/common/api/PendingResult;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/GoogleApiClient;",
-            "Ljava/lang/String;",
-            ")",
-            "Lcom/google/android/gms/common/api/PendingResult",
-            "<",
-            "Lcom/google/android/gms/games/request/Requests$UpdateRequestsResult;",
-            ">;"
-        }
-    .end annotation
+.method public final run()V
+    .locals 3
 
-    new-instance v0, Ljava/util/ArrayList;
+    new-instance v0, Ljava/util/HashMap;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {v0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {p0, p1, v0}, Lcom/google/android/gms/internal/go;->acceptRequests(Lcom/google/android/gms/common/api/GoogleApiClient;Ljava/util/List;)Lcom/google/android/gms/common/api/PendingResult;
-
-    move-result-object v0
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    return-object v0
-.end method
+    const-string v1, "event"
 
-.method public final acceptRequests(Lcom/google/android/gms/common/api/GoogleApiClient;Ljava/util/List;)Lcom/google/android/gms/common/api/PendingResult;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/GoogleApiClient;",
-            "Ljava/util/List",
-            "<",
-            "Ljava/lang/String;",
-            ">;)",
-            "Lcom/google/android/gms/common/api/PendingResult",
-            "<",
-            "Lcom/google/android/gms/games/request/Requests$UpdateRequestsResult;",
-            ">;"
-        }
-    .end annotation
+    const-string v2, "precacheProgress"
 
-    if-nez p2, :cond_0
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v0, 0x0
+    const-string v1, "src"
 
-    :goto_0
-    new-instance v1, Lcom/google/android/gms/internal/go$1;
+    iget-object v2, p0, Lcom/google/android/gms/internal/go;->a:Ljava/lang/String;
 
-    invoke-direct {v1, p0, v0}, Lcom/google/android/gms/internal/go$1;-><init>(Lcom/google/android/gms/internal/go;[Ljava/lang/String;)V
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-interface {p1, v1}, Lcom/google/android/gms/common/api/GoogleApiClient;->b(Lcom/google/android/gms/common/api/a$a;)Lcom/google/android/gms/common/api/a$a;
+    const-string v1, "cachedSrc"
 
-    move-result-object v0
+    iget-object v2, p0, Lcom/google/android/gms/internal/go;->b:Ljava/io/File;
 
-    return-object v0
+    invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-    :cond_0
-    invoke-interface {p2}, Ljava/util/List;->size()I
+    move-result-object v2
 
-    move-result v0
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-array v0, v0, [Ljava/lang/String;
+    const-string v1, "bytesLoaded"
 
-    invoke-interface {p2, v0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    iget v2, p0, Lcom/google/android/gms/internal/go;->c:I
 
-    move-result-object v0
+    invoke-static {v2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
-    check-cast v0, [Ljava/lang/String;
+    move-result-object v2
 
-    goto :goto_0
-.end method
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-.method public final dismissRequest(Lcom/google/android/gms/common/api/GoogleApiClient;Ljava/lang/String;)Lcom/google/android/gms/common/api/PendingResult;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/GoogleApiClient;",
-            "Ljava/lang/String;",
-            ")",
-            "Lcom/google/android/gms/common/api/PendingResult",
-            "<",
-            "Lcom/google/android/gms/games/request/Requests$UpdateRequestsResult;",
-            ">;"
-        }
-    .end annotation
+    const-string v1, "totalBytes"
 
-    new-instance v0, Ljava/util/ArrayList;
+    iget v2, p0, Lcom/google/android/gms/internal/go;->d:I
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-static {v2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
-    invoke-virtual {v0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-result-object v2
 
-    invoke-virtual {p0, p1, v0}, Lcom/google/android/gms/internal/go;->dismissRequests(Lcom/google/android/gms/common/api/GoogleApiClient;Ljava/util/List;)Lcom/google/android/gms/common/api/PendingResult;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    iget-object v1, p0, Lcom/google/android/gms/internal/go;->e:Lcom/google/android/gms/internal/gn;
 
-    return-object v0
-.end method
-
-.method public final dismissRequests(Lcom/google/android/gms/common/api/GoogleApiClient;Ljava/util/List;)Lcom/google/android/gms/common/api/PendingResult;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/GoogleApiClient;",
-            "Ljava/util/List",
-            "<",
-            "Ljava/lang/String;",
-            ">;)",
-            "Lcom/google/android/gms/common/api/PendingResult",
-            "<",
-            "Lcom/google/android/gms/games/request/Requests$UpdateRequestsResult;",
-            ">;"
-        }
-    .end annotation
-
-    if-nez p2, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    new-instance v1, Lcom/google/android/gms/internal/go$2;
-
-    invoke-direct {v1, p0, v0}, Lcom/google/android/gms/internal/go$2;-><init>(Lcom/google/android/gms/internal/go;[Ljava/lang/String;)V
-
-    invoke-interface {p1, v1}, Lcom/google/android/gms/common/api/GoogleApiClient;->b(Lcom/google/android/gms/common/api/a$a;)Lcom/google/android/gms/common/api/a$a;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    invoke-interface {p2}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    new-array v0, v0, [Ljava/lang/String;
-
-    invoke-interface {p2, v0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ljava/lang/String;
-
-    goto :goto_0
-.end method
-
-.method public final getGameRequestsFromBundle(Landroid/os/Bundle;)Ljava/util/ArrayList;
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/os/Bundle;",
-            ")",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/google/android/gms/games/request/GameRequest;",
-            ">;"
-        }
-    .end annotation
-
-    if-eqz p1, :cond_0
-
-    const-string v0, "requests"
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    :cond_0
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    :goto_0
-    return-object v0
-
-    :cond_1
-    const-string v0, "requests"
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/ArrayList;
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v4
-
-    move v3, v1
-
-    :goto_1
-    if-ge v3, v4, :cond_2
-
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-static {v1}, Lcom/google/android/gms/internal/gn;->a(Lcom/google/android/gms/internal/gn;)Lcom/google/android/gms/internal/pp;
 
     move-result-object v1
 
-    check-cast v1, Lcom/google/android/gms/games/request/GameRequest;
+    const-string v2, "onPrecacheEvent"
 
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v3, 0x1
-
-    move v3, v1
-
-    goto :goto_1
-
-    :cond_2
-    move-object v0, v2
-
-    goto :goto_0
-.end method
-
-.method public final getGameRequestsFromInboxResponse(Landroid/content/Intent;)Ljava/util/ArrayList;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/content/Intent;",
-            ")",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/google/android/gms/games/request/GameRequest;",
-            ">;"
-        }
-    .end annotation
-
-    if-nez p1, :cond_0
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/go;->getGameRequestsFromBundle(Landroid/os/Bundle;)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    goto :goto_0
-.end method
-
-.method public final getInboxIntent(Lcom/google/android/gms/common/api/GoogleApiClient;)Landroid/content/Intent;
-    .locals 1
-
-    invoke-static {p1}, Lcom/google/android/gms/games/Games;->c(Lcom/google/android/gms/common/api/GoogleApiClient;)Lcom/google/android/gms/internal/fx;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/fx;->fD()Landroid/content/Intent;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getMaxLifetimeDays(Lcom/google/android/gms/common/api/GoogleApiClient;)I
-    .locals 1
-
-    invoke-static {p1}, Lcom/google/android/gms/games/Games;->c(Lcom/google/android/gms/common/api/GoogleApiClient;)Lcom/google/android/gms/internal/fx;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/fx;->fF()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final getMaxPayloadSize(Lcom/google/android/gms/common/api/GoogleApiClient;)I
-    .locals 1
-
-    invoke-static {p1}, Lcom/google/android/gms/games/Games;->c(Lcom/google/android/gms/common/api/GoogleApiClient;)Lcom/google/android/gms/internal/fx;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/fx;->fE()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final getSendIntent(Lcom/google/android/gms/common/api/GoogleApiClient;I[BILandroid/graphics/Bitmap;Ljava/lang/String;)Landroid/content/Intent;
-    .locals 6
-
-    invoke-static {p1}, Lcom/google/android/gms/games/Games;->c(Lcom/google/android/gms/common/api/GoogleApiClient;)Lcom/google/android/gms/internal/fx;
-
-    move-result-object v0
-
-    move v1, p2
-
-    move-object v2, p3
-
-    move v3, p4
-
-    move-object v4, p5
-
-    move-object v5, p6
-
-    invoke-virtual/range {v0 .. v5}, Lcom/google/android/gms/internal/fx;->a(I[BILandroid/graphics/Bitmap;Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final loadRequests(Lcom/google/android/gms/common/api/GoogleApiClient;III)Lcom/google/android/gms/common/api/PendingResult;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/GoogleApiClient;",
-            "III)",
-            "Lcom/google/android/gms/common/api/PendingResult",
-            "<",
-            "Lcom/google/android/gms/games/request/Requests$LoadRequestsResult;",
-            ">;"
-        }
-    .end annotation
-
-    new-instance v0, Lcom/google/android/gms/internal/go$3;
-
-    invoke-direct {v0, p0, p2, p3, p4}, Lcom/google/android/gms/internal/go$3;-><init>(Lcom/google/android/gms/internal/go;III)V
-
-    invoke-interface {p1, v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->a(Lcom/google/android/gms/common/api/a$a;)Lcom/google/android/gms/common/api/a$a;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final registerRequestListener(Lcom/google/android/gms/common/api/GoogleApiClient;Lcom/google/android/gms/games/request/OnRequestReceivedListener;)V
-    .locals 1
-
-    invoke-static {p1}, Lcom/google/android/gms/games/Games;->c(Lcom/google/android/gms/common/api/GoogleApiClient;)Lcom/google/android/gms/internal/fx;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p2}, Lcom/google/android/gms/internal/fx;->a(Lcom/google/android/gms/games/request/OnRequestReceivedListener;)V
-
-    return-void
-.end method
-
-.method public final unregisterRequestListener(Lcom/google/android/gms/common/api/GoogleApiClient;)V
-    .locals 1
-
-    invoke-static {p1}, Lcom/google/android/gms/games/Games;->c(Lcom/google/android/gms/common/api/GoogleApiClient;)Lcom/google/android/gms/internal/fx;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/fx;->fx()V
+    invoke-interface {v1, v2, v0}, Lcom/google/android/gms/internal/pp;->a(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
 .end method

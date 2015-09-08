@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bbm.ui.EmoticonPanelViewLayout android:id="@id/conversation_root" android:background="@color/conversation_pane_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/private_conversation_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/view_bali_toolbar" />
+    <android.support.v7.widget.RecyclerView android:id="@id/list_messages" android:scrollbars="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <com.bbm.ui.EmoticonInputPanel android:id="@id/emoticon_input_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:hasVoiceNote="false" custom:hasSecondaryBar="true" custom:hasTimebomb="true" custom:hasPicture="true" custom:hasCamera="true" custom:hasAttachMore="true" custom:inputHint="@string/conversation_enter_a_message" />
+</com.bbm.ui.EmoticonPanelViewLayout>

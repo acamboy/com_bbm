@@ -392,9 +392,9 @@
     .line 187
     iget-object v0, p0, Lcom/google/zxing/e/a/a/a/t;->b:Lcom/google/zxing/e/a/a/a/m;
 
-    sget-object v1, Lcom/google/zxing/e/a/a/a/n;->b:Lcom/google/zxing/e/a/a/a/n;
+    sget v1, Lcom/google/zxing/e/a/a/a/n;->b:I
 
-    iput-object v1, v0, Lcom/google/zxing/e/a/a/a/m;->b:Lcom/google/zxing/e/a/a/a/n;
+    iput v1, v0, Lcom/google/zxing/e/a/a/a/m;->b:I
 
     .line 188
     iget-object v0, p0, Lcom/google/zxing/e/a/a/a/t;->b:Lcom/google/zxing/e/a/a/a/m;
@@ -925,9 +925,9 @@
     .line 207
     iget-object v0, p0, Lcom/google/zxing/e/a/a/a/t;->b:Lcom/google/zxing/e/a/a/a/m;
 
-    sget-object v1, Lcom/google/zxing/e/a/a/a/n;->a:Lcom/google/zxing/e/a/a/a/n;
+    sget v1, Lcom/google/zxing/e/a/a/a/n;->a:I
 
-    iput-object v1, v0, Lcom/google/zxing/e/a/a/a/m;->b:Lcom/google/zxing/e/a/a/a/n;
+    iput v1, v0, Lcom/google/zxing/e/a/a/a/m;->b:I
 
     .line 217
     :cond_9
@@ -972,9 +972,9 @@
     :goto_6
     iget-object v0, p0, Lcom/google/zxing/e/a/a/a/t;->b:Lcom/google/zxing/e/a/a/a/m;
 
-    sget-object v1, Lcom/google/zxing/e/a/a/a/n;->b:Lcom/google/zxing/e/a/a/a/n;
+    sget v1, Lcom/google/zxing/e/a/a/a/n;->b:I
 
-    iput-object v1, v0, Lcom/google/zxing/e/a/a/a/m;->b:Lcom/google/zxing/e/a/a/a/n;
+    iput v1, v0, Lcom/google/zxing/e/a/a/a/m;->b:I
 
     goto :goto_5
 
@@ -1126,9 +1126,9 @@
 
     iget-object v0, p0, Lcom/google/zxing/e/a/a/a/t;->b:Lcom/google/zxing/e/a/a/a/m;
 
-    iget-object v0, v0, Lcom/google/zxing/e/a/a/a/m;->b:Lcom/google/zxing/e/a/a/a/n;
+    iget v0, v0, Lcom/google/zxing/e/a/a/a/m;->b:I
 
-    sget-object v1, Lcom/google/zxing/e/a/a/a/n;->b:Lcom/google/zxing/e/a/a/a/n;
+    sget v1, Lcom/google/zxing/e/a/a/a/n;->b:I
 
     if-ne v0, v1, :cond_4
 
@@ -1430,9 +1430,9 @@
 
     iget-object v0, p0, Lcom/google/zxing/e/a/a/a/t;->b:Lcom/google/zxing/e/a/a/a/m;
 
-    sget-object v1, Lcom/google/zxing/e/a/a/a/n;->a:Lcom/google/zxing/e/a/a/a/n;
+    sget v1, Lcom/google/zxing/e/a/a/a/n;->a:I
 
-    iput-object v1, v0, Lcom/google/zxing/e/a/a/a/m;->b:Lcom/google/zxing/e/a/a/a/n;
+    iput v1, v0, Lcom/google/zxing/e/a/a/a/m;->b:I
 
     :cond_c
     :goto_9
@@ -1472,9 +1472,9 @@
     :goto_a
     iget-object v0, p0, Lcom/google/zxing/e/a/a/a/t;->b:Lcom/google/zxing/e/a/a/a/m;
 
-    sget-object v1, Lcom/google/zxing/e/a/a/a/n;->c:Lcom/google/zxing/e/a/a/a/n;
+    sget v1, Lcom/google/zxing/e/a/a/a/n;->c:I
 
-    iput-object v1, v0, Lcom/google/zxing/e/a/a/a/m;->b:Lcom/google/zxing/e/a/a/a/n;
+    iput v1, v0, Lcom/google/zxing/e/a/a/a/m;->b:I
 
     goto :goto_9
 
@@ -1492,9 +1492,9 @@
     :cond_f
     iget-object v0, p0, Lcom/google/zxing/e/a/a/a/t;->b:Lcom/google/zxing/e/a/a/a/m;
 
-    iget-object v0, v0, Lcom/google/zxing/e/a/a/a/m;->b:Lcom/google/zxing/e/a/a/a/n;
+    iget v0, v0, Lcom/google/zxing/e/a/a/a/m;->b:I
 
-    sget-object v1, Lcom/google/zxing/e/a/a/a/n;->c:Lcom/google/zxing/e/a/a/a/n;
+    sget v1, Lcom/google/zxing/e/a/a/a/n;->c:I
 
     if-ne v0, v1, :cond_10
 

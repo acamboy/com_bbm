@@ -1,594 +1,415 @@
-.class public Lcom/bbm/ui/e/d;
+.class public final Lcom/bbm/ui/e/d;
 .super Ljava/lang/Object;
-.source "ChannelInviteMessageHolder.java"
+.source "ChannelIncomingManager.java"
 
 # interfaces
-.implements Lcom/bbm/ui/e/bd;
-
-
-# static fields
-.field private static h:Lcom/bbm/d/fi;
+.implements Lcom/bbm/f/ac;
 
 
 # instance fields
-.field a:Landroid/widget/ImageView;
+.field private final a:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/bbm/ui/e/c;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field b:Lcom/bbm/ui/ObservingImageView;
+.field private final b:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/bbm/ui/e/c;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field c:Landroid/widget/TextView;
-
-.field d:Landroid/widget/Button;
-
-.field e:Landroid/widget/Button;
-
-.field private final f:Lcom/bbm/ui/e/co;
-
-.field private g:Landroid/widget/TextView;
-
-.field private i:Lcom/bbm/d/fi;
-
-.field private final j:Lcom/bbm/ui/e/bo;
-
-.field private final k:Lcom/bbm/d/a;
-
-.field private l:Lcom/bbm/ui/ChannelInviteMessageView;
-
-.field private m:Landroid/view/View$OnTouchListener;
-
-.field private final n:Lcom/bbm/ui/activities/ye;
-
-.field private final o:Landroid/content/Context;
+.field private final c:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/Object;",
+            "Ljava/util/Set",
+            "<",
+            "Lcom/bbm/ui/e/c;",
+            ">;>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lcom/bbm/f/a;)V
+    .locals 8
 
     .prologue
-    .line 44
-    new-instance v0, Lcom/bbm/d/fi;
+    const/4 v2, 0x0
 
-    invoke-direct {v0}, Lcom/bbm/d/fi;-><init>()V
+    const/4 v1, 0x1
 
-    sput-object v0, Lcom/bbm/ui/e/d;->h:Lcom/bbm/d/fi;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Lcom/bbm/d/a;Lcom/bbm/ui/activities/ye;Lcom/bbm/ui/e/bo;Landroid/view/View$OnTouchListener;Lcom/bbm/ui/e/co;)V
-    .locals 1
-
-    .prologue
-    .line 56
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
-    sget-object v0, Lcom/bbm/ui/e/d;->h:Lcom/bbm/d/fi;
+    .line 19
+    new-instance v0, Lcom/google/b/c/q;
 
-    iput-object v0, p0, Lcom/bbm/ui/e/d;->i:Lcom/bbm/d/fi;
+    invoke-direct {v0}, Lcom/google/b/c/q;-><init>()V
 
-    .line 51
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Lcom/google/b/c/q;->e()Lcom/google/b/c/q;
 
-    iput-object v0, p0, Lcom/bbm/ui/e/d;->m:Landroid/view/View$OnTouchListener;
+    move-result-object v0
 
-    .line 57
-    iput-object p1, p0, Lcom/bbm/ui/e/d;->o:Landroid/content/Context;
+    invoke-virtual {v0, v1}, Lcom/google/b/c/q;->a(I)Lcom/google/b/c/q;
 
-    .line 58
-    iput-object p2, p0, Lcom/bbm/ui/e/d;->k:Lcom/bbm/d/a;
+    move-result-object v0
 
-    .line 59
-    iput-object p3, p0, Lcom/bbm/ui/e/d;->n:Lcom/bbm/ui/activities/ye;
+    invoke-virtual {v0}, Lcom/google/b/c/q;->f()Ljava/util/concurrent/ConcurrentMap;
 
-    .line 60
-    iput-object p4, p0, Lcom/bbm/ui/e/d;->j:Lcom/bbm/ui/e/bo;
+    move-result-object v0
 
-    .line 61
-    iput-object p5, p0, Lcom/bbm/ui/e/d;->m:Landroid/view/View$OnTouchListener;
+    iput-object v0, p0, Lcom/bbm/ui/e/d;->a:Ljava/util/Map;
 
-    .line 62
-    iput-object p6, p0, Lcom/bbm/ui/e/d;->f:Lcom/bbm/ui/e/co;
+    .line 23
+    new-instance v0, Lcom/google/b/c/q;
 
-    .line 64
+    invoke-direct {v0}, Lcom/google/b/c/q;-><init>()V
+
+    invoke-virtual {v0}, Lcom/google/b/c/q;->e()Lcom/google/b/c/q;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lcom/google/b/c/q;->a(I)Lcom/google/b/c/q;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/b/c/q;->f()Ljava/util/concurrent/ConcurrentMap;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/e/d;->b:Ljava/util/Map;
+
+    .line 27
+    new-instance v3, Lcom/google/b/c/q;
+
+    invoke-direct {v3}, Lcom/google/b/c/q;-><init>()V
+
+    sget-object v4, Lcom/google/b/c/bc;->c:Lcom/google/b/c/bc;
+
+    iget-object v0, v3, Lcom/google/b/c/q;->f:Lcom/google/b/c/bc;
+
+    if-nez v0, :cond_2
+
+    move v0, v1
+
+    :goto_0
+    const-string v5, "Key strength was already set to %s"
+
+    new-array v6, v1, [Ljava/lang/Object;
+
+    iget-object v7, v3, Lcom/google/b/c/q;->f:Lcom/google/b/c/bc;
+
+    aput-object v7, v6, v2
+
+    invoke-static {v0, v5, v6}, Lcom/google/b/a/m;->a(ZLjava/lang/String;[Ljava/lang/Object;)V
+
+    invoke-static {v4}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/b/c/bc;
+
+    iput-object v0, v3, Lcom/google/b/c/q;->f:Lcom/google/b/c/bc;
+
+    iget-object v0, v3, Lcom/google/b/c/q;->f:Lcom/google/b/c/bc;
+
+    sget-object v5, Lcom/google/b/c/bc;->b:Lcom/google/b/c/bc;
+
+    if-eq v0, v5, :cond_0
+
+    move v2, v1
+
+    :cond_0
+    const-string v0, "Soft keys are not supported"
+
+    invoke-static {v2, v0}, Lcom/google/b/a/m;->a(ZLjava/lang/Object;)V
+
+    sget-object v0, Lcom/google/b/c/bc;->a:Lcom/google/b/c/bc;
+
+    if-eq v4, v0, :cond_1
+
+    iput-boolean v1, v3, Lcom/google/b/c/q;->b:Z
+
+    :cond_1
+    invoke-virtual {v3, v1}, Lcom/google/b/c/q;->a(I)Lcom/google/b/c/q;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/b/c/q;->f()Ljava/util/concurrent/ConcurrentMap;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/e/d;->c:Ljava/util/Map;
+
+    .line 32
+    new-instance v1, Lcom/bbm/ui/e/b;
+
+    invoke-direct {v1}, Lcom/bbm/ui/e/b;-><init>()V
+
+    .line 33
+    iget-object v0, v1, Lcom/bbm/ui/e/b;->a:[Ljava/lang/String;
+
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_1
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    .line 34
+    invoke-virtual {p0, v0, v1, p0}, Lcom/bbm/ui/e/d;->b(Ljava/lang/String;Lcom/bbm/ui/e/c;Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_2
+    move v0, v2
+
+    .line 27
+    goto :goto_0
+
+    .line 36
+    :cond_3
+    invoke-interface {p1, p0}, Lcom/bbm/f/a;->a(Lcom/bbm/f/ac;)V
+
+    .line 37
     return-void
-.end method
-
-.method static synthetic a(Lcom/bbm/ui/e/d;)Lcom/bbm/d/fi;
-    .locals 1
-
-    .prologue
-    .line 33
-    iget-object v0, p0, Lcom/bbm/ui/e/d;->i:Lcom/bbm/d/fi;
-
-    return-object v0
-.end method
-
-.method static synthetic b(Lcom/bbm/ui/e/d;)Lcom/bbm/ui/e/bo;
-    .locals 1
-
-    .prologue
-    .line 33
-    iget-object v0, p0, Lcom/bbm/ui/e/d;->j:Lcom/bbm/ui/e/bo;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 4
+.method public final a(Lcom/bbm/f/ab;)V
+    .locals 2
 
     .prologue
-    const/4 v3, 0x0
+    .line 41
+    iget-object v0, p1, Lcom/bbm/f/ab;->b:Ljava/lang/String;
 
-    .line 68
-    const v0, 0x7f0300d9
+    .line 43
+    iget-object v1, p0, Lcom/bbm/ui/e/d;->b:Ljava/util/Map;
 
-    invoke-virtual {p1, v0, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object v1
-
-    .line 69
-    const v0, 0x7f0b0493
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/bbm/ui/e/d;->a:Landroid/widget/ImageView;
-
-    .line 70
-    const v0, 0x7f0b0494
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/bbm/ui/e/d;->g:Landroid/widget/TextView;
-
-    .line 71
-    iget-object v0, p0, Lcom/bbm/ui/e/d;->g:Landroid/widget/TextView;
-
-    iget-object v2, p0, Lcom/bbm/ui/e/d;->m:Landroid/view/View$OnTouchListener;
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
-
-    .line 72
-    const v0, 0x7f0b0385
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/ObservingImageView;
-
-    iput-object v0, p0, Lcom/bbm/ui/e/d;->b:Lcom/bbm/ui/ObservingImageView;
-
-    .line 73
-    iget-object v0, p0, Lcom/bbm/ui/e/d;->b:Lcom/bbm/ui/ObservingImageView;
-
-    if-eqz v0, :cond_0
-
-    .line 74
-    iget-object v0, p0, Lcom/bbm/ui/e/d;->b:Lcom/bbm/ui/ObservingImageView;
-
-    invoke-virtual {v0, v3}, Lcom/bbm/ui/ObservingImageView;->setAnimationAllowed(Z)V
-
-    .line 77
-    :cond_0
-    const v0, 0x7f0b04cd
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/bbm/ui/e/d;->c:Landroid/widget/TextView;
-
-    .line 79
-    const v0, 0x7f0b04cf
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/Button;
-
-    iput-object v0, p0, Lcom/bbm/ui/e/d;->d:Landroid/widget/Button;
-
-    .line 80
-    const v0, 0x7f0b04d0
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/Button;
-
-    iput-object v0, p0, Lcom/bbm/ui/e/d;->e:Landroid/widget/Button;
-
-    .line 81
-    iget-object v0, p0, Lcom/bbm/ui/e/d;->e:Landroid/widget/Button;
-
-    new-instance v2, Lcom/bbm/ui/e/e;
-
-    invoke-direct {v2, p0}, Lcom/bbm/ui/e/e;-><init>(Lcom/bbm/ui/e/d;)V
-
-    invoke-virtual {v0, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    move-object v0, v1
-
-    .line 90
-    check-cast v0, Lcom/bbm/ui/ChannelInviteMessageView;
-
-    iput-object v0, p0, Lcom/bbm/ui/e/d;->l:Lcom/bbm/ui/ChannelInviteMessageView;
-
-    .line 92
-    return-object v1
-.end method
-
-.method public final a(Lcom/bbm/ui/e/j;Z)V
-    .locals 4
-
-    .prologue
-    .line 97
-    iget-object v0, p1, Lcom/bbm/ui/e/j;->a:Lcom/bbm/d/fi;
-
-    iput-object v0, p0, Lcom/bbm/ui/e/d;->i:Lcom/bbm/d/fi;
-
-    .line 98
-    iget-object v0, p0, Lcom/bbm/ui/e/d;->l:Lcom/bbm/ui/ChannelInviteMessageView;
-
-    iget-object v1, p0, Lcom/bbm/ui/e/d;->n:Lcom/bbm/ui/activities/ye;
-
-    invoke-static {v0, v1, p1, p2}, Lcom/bbm/ui/e/b;->a(Landroid/view/View;Lcom/bbm/ui/activities/ye;Lcom/bbm/ui/e/j;Z)V
-
-    .line 100
-    iget-object v0, p0, Lcom/bbm/ui/e/d;->a:Landroid/widget/ImageView;
-
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lcom/bbm/ui/e/d;->i:Lcom/bbm/d/fi;
-
-    iget-boolean v1, v1, Lcom/bbm/d/fi;->j:Z
-
-    if-eqz v1, :cond_4
-
-    iget-object v0, p0, Lcom/bbm/ui/e/d;->i:Lcom/bbm/d/fi;
-
-    iget-object v0, v0, Lcom/bbm/d/fi;->p:Lcom/bbm/d/fl;
-
-    sget-object v1, Lcom/bbm/d/fl;->f:Lcom/bbm/d/fl;
-
-    if-ne v0, v1, :cond_3
-
-    sget-object v0, Lcom/bbm/ui/e/co;->d:Landroid/graphics/drawable/Drawable;
-
-    :cond_0
-    :goto_0
-    iget-object v1, p0, Lcom/bbm/ui/e/d;->a:Landroid/widget/ImageView;
-
-    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 101
-    :cond_1
-    iget-object v0, p1, Lcom/bbm/ui/e/j;->a:Lcom/bbm/d/fi;
-
-    iget-object v1, v0, Lcom/bbm/d/fi;->c:Ljava/lang/String;
-
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-interface {v1, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-nez v1, :cond_2
+    if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/bbm/ui/e/d;->k:Lcom/bbm/d/a;
+    .line 44
+    iget-object v1, p0, Lcom/bbm/ui/e/d;->b:Ljava/util/Map;
 
-    iget-object v2, v0, Lcom/bbm/d/fi;->o:Ljava/lang/String;
+    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1, v2}, Lcom/bbm/d/a;->b(Ljava/lang/String;)Lcom/bbm/d/gr;
+    move-result-object v0
 
-    move-result-object v1
+    check-cast v0, Lcom/bbm/ui/e/c;
 
-    iget-object v2, p0, Lcom/bbm/ui/e/d;->l:Lcom/bbm/ui/ChannelInviteMessageView;
+    .line 45
+    if-eqz v0, :cond_0
 
-    invoke-static {v1}, Lcom/bbm/d/b/a;->b(Lcom/bbm/d/gr;)Ljava/lang/String;
+    .line 46
+    invoke-interface {v0, p1}, Lcom/bbm/ui/e/c;->a(Lcom/bbm/f/ab;)V
 
-    move-result-object v1
+    .line 50
+    :cond_0
+    iget-object v0, p1, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
 
-    invoke-virtual {v2, v1}, Lcom/bbm/ui/ChannelInviteMessageView;->setSenderText(Ljava/lang/String;)V
+    const-string v1, "cookie"
 
-    iget-object v1, p0, Lcom/bbm/ui/e/d;->l:Lcom/bbm/ui/ChannelInviteMessageView;
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->opt(Ljava/lang/String;)Ljava/lang/Object;
 
-    iget-wide v2, v0, Lcom/bbm/d/fi;->s:J
+    move-result-object v0
 
-    invoke-virtual {v1, v2, v3}, Lcom/bbm/ui/ChannelInviteMessageView;->setDateText(J)V
+    check-cast v0, Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/bbm/ui/e/d;->k:Lcom/bbm/d/a;
+    .line 52
+    iget-object v1, p0, Lcom/bbm/ui/e/d;->a:Ljava/util/Map;
 
-    iget-object v0, v0, Lcom/bbm/d/fi;->c:Ljava/lang/String;
+    invoke-interface {v1, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
-    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->S(Ljava/lang/String;)Lcom/bbm/d/ei;
+    move-result v1
 
-    move-result-object v1
+    if-eqz v1, :cond_1
 
-    iget-object v0, v1, Lcom/bbm/d/ei;->h:Lcom/bbm/util/bi;
+    .line 53
+    iget-object v1, p0, Lcom/bbm/ui/e/d;->a:Ljava/util/Map;
 
-    sget-object v2, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
+    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-ne v0, v2, :cond_14
+    move-result-object v0
 
-    iget-object v0, p0, Lcom/bbm/ui/e/d;->l:Lcom/bbm/ui/ChannelInviteMessageView;
+    check-cast v0, Lcom/bbm/ui/e/c;
 
-    iget-object v2, v1, Lcom/bbm/d/ei;->d:Ljava/lang/String;
+    .line 54
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/ChannelInviteMessageView;->setBodyText(Ljava/lang/String;)V
+    .line 55
+    invoke-interface {v0, p1}, Lcom/bbm/ui/e/c;->a(Lcom/bbm/f/ab;)V
 
-    iget-object v0, p0, Lcom/bbm/ui/e/d;->k:Lcom/bbm/d/a;
+    .line 58
+    :cond_1
+    return-void
+.end method
 
-    iget-object v2, v1, Lcom/bbm/d/ei;->a:Ljava/lang/String;
+.method public final a(Ljava/lang/Object;Lcom/bbm/ui/e/c;)V
+    .locals 1
 
-    invoke-virtual {v0, v2}, Lcom/bbm/d/a;->U(Ljava/lang/String;)Lcom/bbm/d/ee;
+    .prologue
+    .line 90
+    iget-object v0, p0, Lcom/bbm/ui/e/d;->c:Ljava/util/Map;
 
-    move-result-object v2
-
-    iget-object v0, v2, Lcom/bbm/d/ee;->R:Lcom/bbm/util/bi;
-
-    sget-object v3, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
-
-    if-ne v0, v3, :cond_13
-
-    iget-object v0, p0, Lcom/bbm/ui/e/d;->d:Landroid/widget/Button;
-
-    new-instance v3, Lcom/bbm/ui/e/f;
-
-    invoke-direct {v3, p0, v2}, Lcom/bbm/ui/e/f;-><init>(Lcom/bbm/ui/e/d;Lcom/bbm/d/ee;)V
-
-    invoke-virtual {v0, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v3, p0, Lcom/bbm/ui/e/d;->l:Lcom/bbm/ui/ChannelInviteMessageView;
-
-    iget-object v0, v2, Lcom/bbm/d/ee;->k:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
+    invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_0
 
-    iget-object v0, v2, Lcom/bbm/d/ee;->I:Ljava/lang/String;
+    .line 91
+    iget-object v0, p0, Lcom/bbm/ui/e/d;->c:Ljava/util/Map;
 
-    :goto_1
-    invoke-virtual {v3, v0}, Lcom/bbm/ui/ChannelInviteMessageView;->setChanneNameText(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lcom/bbm/ui/e/d;->l:Lcom/bbm/ui/ChannelInviteMessageView;
+    move-result-object v0
 
-    iget-object v3, v2, Lcom/bbm/d/ee;->j:Ljava/lang/String;
+    check-cast v0, Ljava/util/Set;
 
-    invoke-virtual {v0, v3}, Lcom/bbm/ui/ChannelInviteMessageView;->setChanneDescriptionText(Ljava/lang/String;)V
+    .line 92
+    invoke-interface {v0, p2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcom/bbm/ui/e/d;->l:Lcom/bbm/ui/ChannelInviteMessageView;
+    .line 94
+    :cond_0
+    return-void
+.end method
 
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/ChannelInviteMessageView;->setChannelAvatar(Lcom/bbm/d/ee;)V
+.method public final a(Ljava/lang/String;Lcom/bbm/ui/e/c;Ljava/lang/Object;)V
+    .locals 2
 
-    iget-boolean v0, v1, Lcom/bbm/d/ei;->c:Z
+    .prologue
+    .line 66
+    iget-object v0, p0, Lcom/bbm/ui/e/d;->a:Ljava/util/Map;
 
-    if-eqz v0, :cond_10
+    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lcom/bbm/ui/e/d;->l:Lcom/bbm/ui/ChannelInviteMessageView;
+    .line 68
+    iget-object v0, p0, Lcom/bbm/ui/e/d;->c:Ljava/util/Map;
 
-    const-string v3, ""
+    invoke-interface {v0, p3}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v3}, Lcom/bbm/ui/ChannelInviteMessageView;->setInviteStatusText(Ljava/lang/String;)V
+    move-result v0
 
-    iget-boolean v0, v2, Lcom/bbm/d/ee;->v:Z
+    if-eqz v0, :cond_0
 
-    if-eqz v0, :cond_d
+    .line 69
+    iget-object v0, p0, Lcom/bbm/ui/e/d;->c:Ljava/util/Map;
 
-    iget-object v0, p0, Lcom/bbm/ui/e/d;->l:Lcom/bbm/ui/ChannelInviteMessageView;
+    invoke-interface {v0, p3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/ChannelInviteMessageView;->setInviteeRestritedState()V
+    move-result-object v0
 
-    .line 102
-    :cond_2
-    :goto_2
+    check-cast v0, Ljava/util/Set;
+
+    .line 74
+    :goto_0
+    invoke-interface {v0, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    .line 75
     return-void
 
-    .line 100
-    :cond_3
-    sget-object v0, Lcom/bbm/ui/e/co;->e:Landroid/graphics/drawable/Drawable;
+    .line 71
+    :cond_0
+    new-instance v0, Ljava/util/HashSet;
 
-    goto/16 :goto_0
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    :cond_4
-    iget-object v1, p0, Lcom/bbm/ui/e/d;->i:Lcom/bbm/d/fi;
+    .line 72
+    iget-object v1, p0, Lcom/bbm/ui/e/d;->c:Ljava/util/Map;
 
-    iget-object v1, v1, Lcom/bbm/d/fi;->p:Lcom/bbm/d/fl;
+    invoke-interface {v1, p3, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v2, Lcom/bbm/d/fl;->a:Lcom/bbm/d/fl;
+    goto :goto_0
+.end method
 
-    if-ne v1, v2, :cond_5
+.method public final a_()V
+    .locals 0
 
-    sget-object v0, Lcom/bbm/ui/e/co;->f:Landroid/graphics/drawable/Drawable;
+    .prologue
+    .line 63
+    return-void
+.end method
 
-    goto/16 :goto_0
+.method public final b(Ljava/lang/String;Lcom/bbm/ui/e/c;Ljava/lang/Object;)V
+    .locals 2
 
-    :cond_5
-    iget-object v1, p0, Lcom/bbm/ui/e/d;->i:Lcom/bbm/d/fi;
+    .prologue
+    .line 78
+    iget-object v0, p0, Lcom/bbm/ui/e/d;->b:Ljava/util/Map;
 
-    iget-object v1, v1, Lcom/bbm/d/fi;->p:Lcom/bbm/d/fl;
+    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v2, Lcom/bbm/d/fl;->c:Lcom/bbm/d/fl;
+    .line 80
+    iget-object v0, p0, Lcom/bbm/ui/e/d;->c:Ljava/util/Map;
 
-    if-ne v1, v2, :cond_6
+    invoke-interface {v0, p3}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
-    sget-object v0, Lcom/bbm/ui/e/co;->g:Landroid/graphics/drawable/Drawable;
+    move-result v0
 
-    goto/16 :goto_0
+    if-eqz v0, :cond_0
 
-    :cond_6
-    iget-object v1, p0, Lcom/bbm/ui/e/d;->i:Lcom/bbm/d/fi;
+    .line 81
+    iget-object v0, p0, Lcom/bbm/ui/e/d;->c:Ljava/util/Map;
 
-    iget-object v1, v1, Lcom/bbm/d/fi;->p:Lcom/bbm/d/fl;
+    invoke-interface {v0, p3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v2, Lcom/bbm/d/fl;->d:Lcom/bbm/d/fl;
+    move-result-object v0
 
-    if-ne v1, v2, :cond_7
+    check-cast v0, Ljava/util/Set;
 
-    sget-object v0, Lcom/bbm/ui/e/co;->h:Landroid/graphics/drawable/Drawable;
+    .line 86
+    :goto_0
+    invoke-interface {v0, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    goto/16 :goto_0
+    .line 87
+    return-void
 
-    :cond_7
-    iget-object v1, p0, Lcom/bbm/ui/e/d;->i:Lcom/bbm/d/fi;
+    .line 83
+    :cond_0
+    new-instance v0, Ljava/util/HashSet;
 
-    iget-object v1, v1, Lcom/bbm/d/fi;->p:Lcom/bbm/d/fl;
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    sget-object v2, Lcom/bbm/d/fl;->f:Lcom/bbm/d/fl;
+    .line 84
+    iget-object v1, p0, Lcom/bbm/ui/e/d;->c:Ljava/util/Map;
 
-    if-ne v1, v2, :cond_9
+    invoke-interface {v1, p3, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz p2, :cond_8
-
-    sget-object v0, Lcom/bbm/ui/e/co;->d:Landroid/graphics/drawable/Drawable;
-
-    goto/16 :goto_0
-
-    :cond_8
-    sget-object v0, Lcom/bbm/ui/e/co;->i:Landroid/graphics/drawable/Drawable;
-
-    goto/16 :goto_0
-
-    :cond_9
-    iget-object v1, p0, Lcom/bbm/ui/e/d;->i:Lcom/bbm/d/fi;
-
-    iget-object v1, v1, Lcom/bbm/d/fi;->p:Lcom/bbm/d/fl;
-
-    sget-object v2, Lcom/bbm/d/fl;->e:Lcom/bbm/d/fl;
-
-    if-ne v1, v2, :cond_b
-
-    if-eqz p2, :cond_a
-
-    sget-object v0, Lcom/bbm/ui/e/co;->e:Landroid/graphics/drawable/Drawable;
-
-    goto/16 :goto_0
-
-    :cond_a
-    sget-object v0, Lcom/bbm/ui/e/co;->j:Landroid/graphics/drawable/Drawable;
-
-    goto/16 :goto_0
-
-    :cond_b
-    iget-object v1, p0, Lcom/bbm/ui/e/d;->i:Lcom/bbm/d/fi;
-
-    iget-object v1, v1, Lcom/bbm/d/fi;->p:Lcom/bbm/d/fl;
-
-    sget-object v2, Lcom/bbm/d/fl;->b:Lcom/bbm/d/fl;
-
-    if-ne v1, v2, :cond_0
-
-    if-nez p2, :cond_0
-
-    sget-object v0, Lcom/bbm/ui/e/co;->k:Landroid/graphics/drawable/Drawable;
-
-    goto/16 :goto_0
-
-    .line 101
-    :cond_c
-    iget-object v0, v2, Lcom/bbm/d/ee;->k:Ljava/lang/String;
-
-    goto :goto_1
-
-    :cond_d
-    iget-object v3, p0, Lcom/bbm/ui/e/d;->l:Lcom/bbm/ui/ChannelInviteMessageView;
-
-    iget-object v0, v1, Lcom/bbm/d/ei;->e:Lcom/bbm/d/ej;
-
-    sget-object v1, Lcom/bbm/d/ej;->b:Lcom/bbm/d/ej;
-
-    if-eq v0, v1, :cond_e
-
-    iget-boolean v0, v2, Lcom/bbm/d/ee;->t:Z
-
-    if-nez v0, :cond_e
-
-    iget-boolean v0, v2, Lcom/bbm/d/ee;->w:Z
-
-    if-eqz v0, :cond_f
-
-    :cond_e
-    const/4 v0, 0x1
-
-    :goto_3
-    invoke-virtual {v3, v0}, Lcom/bbm/ui/ChannelInviteMessageView;->setInviteeState(Z)V
-
-    goto :goto_2
-
-    :cond_f
-    const/4 v0, 0x0
-
-    goto :goto_3
-
-    :cond_10
-    iget-object v2, p0, Lcom/bbm/ui/e/d;->l:Lcom/bbm/ui/ChannelInviteMessageView;
-
-    iget-object v0, v1, Lcom/bbm/d/ei;->e:Lcom/bbm/d/ej;
-
-    sget-object v3, Lcom/bbm/d/ej;->c:Lcom/bbm/d/ej;
-
-    if-ne v0, v3, :cond_11
-
-    const v0, 0x7f0e01ae
-
-    :goto_4
-    invoke-virtual {v2, v0}, Lcom/bbm/ui/ChannelInviteMessageView;->setInviteStatusText(I)V
-
-    iget-object v0, p0, Lcom/bbm/ui/e/d;->l:Lcom/bbm/ui/ChannelInviteMessageView;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/ChannelInviteMessageView;->setInviterState()V
-
-    goto/16 :goto_2
-
-    :cond_11
-    iget-object v0, v1, Lcom/bbm/d/ei;->e:Lcom/bbm/d/ej;
-
-    sget-object v1, Lcom/bbm/d/ej;->b:Lcom/bbm/d/ej;
-
-    if-ne v0, v1, :cond_12
-
-    const v0, 0x7f0e01ad
-
-    goto :goto_4
-
-    :cond_12
-    const v0, 0x7f0e01af
-
-    goto :goto_4
-
-    :cond_13
-    iget-object v0, p0, Lcom/bbm/ui/e/d;->l:Lcom/bbm/ui/ChannelInviteMessageView;
-
-    iget-object v1, p0, Lcom/bbm/ui/e/d;->k:Lcom/bbm/d/a;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/ChannelInviteMessageView;->a(Lcom/bbm/d/a;)V
-
-    goto/16 :goto_2
-
-    :cond_14
-    iget-object v0, p0, Lcom/bbm/ui/e/d;->l:Lcom/bbm/ui/ChannelInviteMessageView;
-
-    iget-object v1, p0, Lcom/bbm/ui/e/d;->k:Lcom/bbm/d/a;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/ChannelInviteMessageView;->a(Lcom/bbm/d/a;)V
-
-    goto/16 :goto_2
+    goto :goto_0
 .end method

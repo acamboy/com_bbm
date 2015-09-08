@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@id/menu_view_bbm_profile" android:title="@string/contacts_view_bbm_profile" />
-    <item android:id="@id/menu_invite_to_group" android:title="@string/contacts_invite_to_group" />
-    <item android:id="@id/menu_move_contact" android:title="@string/contacts_move_contact" />
-    <item android:id="@id/menu_select_more" android:title="@string/contacts_select_more" />
-    <item android:id="@id/menu_delete_contact" android:title="@string/delete" />
-</menu>

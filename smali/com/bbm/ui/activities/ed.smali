@@ -1,39 +1,47 @@
 .class final Lcom/bbm/ui/activities/ed;
 .super Ljava/lang/Object;
-.source "ChannelReportsActivity.java"
+.source "ConversationActivity.java"
+
+# interfaces
+.implements Lcom/bbm/ui/messages/cq;
 
 
 # instance fields
-.field public a:Ljava/lang/String;
-
-.field public b:Ljava/lang/String;
-
-.field public c:Lcom/bbm/util/m;
-
-.field final synthetic d:Lcom/bbm/ui/activities/ChannelReportsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/ui/activities/ChannelReportsActivity;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
+    .locals 0
 
     .prologue
-    .line 99
-    iput-object p1, p0, Lcom/bbm/ui/activities/ed;->d:Lcom/bbm/ui/activities/ChannelReportsActivity;
+    .line 979
+    iput-object p1, p0, Lcom/bbm/ui/activities/ed;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 100
-    iput-object p2, p0, Lcom/bbm/ui/activities/ed;->a:Ljava/lang/String;
+    return-void
+.end method
 
-    .line 101
-    iput-object p3, p0, Lcom/bbm/ui/activities/ed;->b:Ljava/lang/String;
 
-    .line 102
-    const/4 v0, 0x0
+# virtual methods
+.method public final a(Lcom/bbm/ui/messages/cn;)V
+    .locals 2
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ed;->c:Lcom/bbm/util/m;
+    .prologue
+    .line 982
+    iget-object v0, p0, Lcom/bbm/ui/activities/ed;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    .line 103
+    iget-object v1, p0, Lcom/bbm/ui/activities/ed;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->q(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/j/a;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
+
+    invoke-virtual {p1, v0}, Lcom/bbm/ui/messages/cn;->a(Landroid/app/Activity;)V
+
+    .line 983
     return-void
 .end method

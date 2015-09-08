@@ -1,9 +1,6 @@
 .class final Lcom/bbm/ui/activities/an;
-.super Ljava/lang/Object;
+.super Lcom/bbm/j/k;
 .source "BroadcastActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -12,35 +9,93 @@
 
 # direct methods
 .method constructor <init>(Lcom/bbm/ui/activities/BroadcastActivity;)V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 393
+    .line 218
     iput-object p1, p0, Lcom/bbm/ui/activities/an;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method protected final a()V
+    .locals 3
 
     .prologue
-    .line 397
-    const-string v0, "mEmoticonButtonArea Clicked"
+    const/16 v1, 0x8
 
-    const-class v1, Lcom/bbm/ui/activities/BroadcastActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 399
+    .line 222
     iget-object v0, p0, Lcom/bbm/ui/activities/an;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
-    invoke-static {v0}, Lcom/bbm/util/fh;->b(Landroid/app/Activity;)V
+    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->f(Lcom/bbm/ui/activities/BroadcastActivity;)Lcom/bbm/util/dc;
 
-    .line 400
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/util/dc;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 223
+    iget-object v0, p0, Lcom/bbm/ui/activities/an;->a:Lcom/bbm/ui/activities/BroadcastActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->h(Lcom/bbm/ui/activities/BroadcastActivity;)Lcom/bbm/ui/CustomListView;
+
+    move-result-object v2
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/an;->a:Lcom/bbm/ui/activities/BroadcastActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->g(Lcom/bbm/ui/activities/BroadcastActivity;)Lcom/bbm/d/b/v;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/d/b/v;->g()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    move v0, v1
+
+    :goto_0
+    invoke-virtual {v2, v0}, Lcom/bbm/ui/CustomListView;->setVisibility(I)V
+
+    .line 228
+    :goto_1
     return-void
+
+    .line 223
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    .line 225
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/an;->a:Lcom/bbm/ui/activities/BroadcastActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->h(Lcom/bbm/ui/activities/BroadcastActivity;)Lcom/bbm/ui/CustomListView;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/CustomListView;->setVisibility(I)V
+
+    goto :goto_1
 .end method

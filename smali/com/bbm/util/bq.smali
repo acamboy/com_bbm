@@ -1,1143 +1,1350 @@
-.class public Lcom/bbm/util/bq;
+.class public final Lcom/bbm/util/bq;
 .super Ljava/lang/Object;
-.source "HttpLoader.java"
+.source "FileUtil.java"
 
 
 # static fields
-.field private static e:I
-
-.field private static f:Ljava/util/PriorityQueue;
+.field private static a:Ljava/util/EnumMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/PriorityQueue",
+            "Ljava/util/EnumMap",
             "<",
-            "Lcom/bbm/util/bu;",
+            "Lcom/bbm/util/br;",
+            "Ljava/lang/Integer;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private static g:Ljava/util/HashSet;
+.field private static b:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/HashSet",
+            "Ljava/util/Map",
             "<",
-            "Lcom/bbm/util/bu;",
+            "Ljava/lang/String;",
+            "Lcom/bbm/util/br;",
             ">;"
         }
     .end annotation
 .end field
-
-.field private static h:Lcom/bbm/util/bx;
-
-.field private static i:Ljava/util/PriorityQueue;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/PriorityQueue",
-            "<",
-            "Lcom/bbm/util/bu;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field protected final a:Lcom/bbm/ui/activities/akz;
-
-.field protected b:Z
-
-.field protected final c:I
-
-.field protected final d:Lcom/bbm/util/bt;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
     .prologue
-    .line 37
-    const/4 v0, 0x5
+    .line 56
+    new-instance v0, Ljava/util/EnumMap;
 
-    sput v0, Lcom/bbm/util/bq;->e:I
+    const-class v1, Lcom/bbm/util/br;
 
-    .line 291
-    new-instance v0, Ljava/util/PriorityQueue;
+    invoke-direct {v0, v1}, Ljava/util/EnumMap;-><init>(Ljava/lang/Class;)V
 
-    sget v1, Lcom/bbm/util/bq;->e:I
+    sput-object v0, Lcom/bbm/util/bq;->a:Ljava/util/EnumMap;
 
-    sget-object v2, Lcom/bbm/util/bu;->h:Ljava/util/Comparator;
+    .line 58
+    new-instance v0, Ljava/util/HashMap;
 
-    invoke-direct {v0, v1, v2}, Ljava/util/PriorityQueue;-><init>(ILjava/util/Comparator;)V
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/bbm/util/bq;->f:Ljava/util/PriorityQueue;
-
-    .line 293
-    new-instance v0, Ljava/util/HashSet;
-
-    sget v1, Lcom/bbm/util/bq;->e:I
-
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(I)V
-
-    sput-object v0, Lcom/bbm/util/bq;->g:Ljava/util/HashSet;
-
-    .line 295
-    const/4 v0, 0x0
-
-    sput-object v0, Lcom/bbm/util/bq;->h:Lcom/bbm/util/bx;
-
-    .line 297
-    new-instance v0, Ljava/util/PriorityQueue;
-
-    sget v1, Lcom/bbm/util/bq;->e:I
-
-    sget-object v2, Lcom/bbm/util/bu;->h:Ljava/util/Comparator;
-
-    invoke-direct {v0, v1, v2}, Ljava/util/PriorityQueue;-><init>(ILjava/util/Comparator;)V
-
-    sput-object v0, Lcom/bbm/util/bq;->i:Ljava/util/PriorityQueue;
+    sput-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/bbm/ui/activities/akz;ZILcom/bbm/util/bt;)V
-    .locals 3
+.method public static a(Landroid/content/Context;J)Ljava/lang/String;
+    .locals 9
 
     .prologue
-    .line 44
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v4, 0x1
 
-    .line 40
-    const/4 v0, 0x1
+    const/4 v8, 0x0
 
-    iput-boolean v0, p0, Lcom/bbm/util/bq;->b:Z
+    .line 120
+    new-instance v0, Ljava/text/DecimalFormat;
 
-    .line 45
-    iput-object p1, p0, Lcom/bbm/util/bq;->a:Lcom/bbm/ui/activities/akz;
+    const-string v1, "0.00"
 
-    .line 46
-    iput-boolean p2, p0, Lcom/bbm/util/bq;->b:Z
+    invoke-direct {v0, v1}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
 
-    .line 47
-    iput p3, p0, Lcom/bbm/util/bq;->c:I
+    .line 122
+    const-wide/32 v2, 0x40000000
 
-    .line 48
-    iput-object p4, p0, Lcom/bbm/util/bq;->d:Lcom/bbm/util/bt;
+    cmp-long v1, p1, v2
 
-    .line 49
-    iget-object v0, p0, Lcom/bbm/util/bq;->a:Lcom/bbm/ui/activities/akz;
+    if-ltz v1, :cond_0
 
-    new-instance v1, Lcom/bbm/util/bs;
+    .line 123
+    const v1, 0x7f0e03ae
 
-    const/4 v2, 0x0
+    new-array v2, v4, [Ljava/lang/Object;
 
-    invoke-direct {v1, v2}, Lcom/bbm/util/bs;-><init>(B)V
+    long-to-double v4, p1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/akz;->a(Lcom/bbm/ui/activities/alb;)V
+    const-wide/high16 v6, 0x41d0000000000000L    # 1.073741824E9
 
-    .line 50
-    return-void
-.end method
+    div-double/2addr v4, v6
 
-.method static synthetic a()Ljava/util/PriorityQueue;
-    .locals 1
+    invoke-virtual {v0, v4, v5}, Ljava/text/DecimalFormat;->format(D)Ljava/lang/String;
 
-    .prologue
-    .line 29
-    sget-object v0, Lcom/bbm/util/bq;->f:Ljava/util/PriorityQueue;
+    move-result-object v0
 
+    aput-object v0, v2, v8
+
+    invoke-virtual {p0, v1, v2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 129
+    :goto_0
     return-object v0
+
+    .line 124
+    :cond_0
+    const-wide/32 v2, 0x100000
+
+    cmp-long v1, p1, v2
+
+    if-ltz v1, :cond_1
+
+    .line 125
+    const v1, 0x7f0e03b0
+
+    new-array v2, v4, [Ljava/lang/Object;
+
+    long-to-double v4, p1
+
+    const-wide/high16 v6, 0x4130000000000000L    # 1048576.0
+
+    div-double/2addr v4, v6
+
+    invoke-virtual {v0, v4, v5}, Ljava/text/DecimalFormat;->format(D)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v2, v8
+
+    invoke-virtual {p0, v1, v2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 126
+    :cond_1
+    const-wide/16 v2, 0x400
+
+    cmp-long v1, p1, v2
+
+    if-ltz v1, :cond_2
+
+    .line 127
+    const v1, 0x7f0e03af
+
+    new-array v2, v4, [Ljava/lang/Object;
+
+    long-to-double v4, p1
+
+    const-wide/high16 v6, 0x4090000000000000L    # 1024.0
+
+    div-double/2addr v4, v6
+
+    invoke-virtual {v0, v4, v5}, Ljava/text/DecimalFormat;->format(D)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v2, v8
+
+    invoke-virtual {p0, v1, v2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 129
+    :cond_2
+    const v0, 0x7f0e03ad
+
+    new-array v1, v4, [Ljava/lang/Object;
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    aput-object v2, v1, v8
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method
 
-.method private static a(Lcom/bbm/util/bu;)V
-    .locals 3
+.method public static a(Ljava/lang/String;)Lorg/json/JSONObject;
+    .locals 6
 
     .prologue
-    .line 201
-    sget-object v1, Lcom/bbm/util/bq;->f:Ljava/util/PriorityQueue;
+    const/4 v1, 0x0
 
-    monitor-enter v1
-
-    .line 202
+    .line 73
     :try_start_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/io/File;
 
-    const-string v2, "Queue finished "
+    invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 74
+    new-instance v2, Ljava/io/FileInputStream;
 
-    iget-object v2, p0, Lcom/bbm/util/bu;->g:Ljava/net/URL;
+    invoke-direct {v2, v0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    .line 75
+    invoke-virtual {v0}, Ljava/io/File;->length()J
 
-    move-result-object v0
+    move-result-wide v4
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    long-to-int v0, v4
 
-    move-result-object v0
+    .line 76
+    new-array v3, v0, [B
+
+    .line 77
+    const/4 v4, 0x0
+
+    invoke-virtual {v2, v3, v4, v0}, Ljava/io/FileInputStream;->read([BII)I
+
+    move-result v4
+
+    .line 78
+    if-nez v4, :cond_0
+
+    .line 79
+    const-string v0, "Attempted read of attachment list return 0 bytes"
 
     const/4 v2, 0x0
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, v2}, Lcom/bbm/y;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v2}, Lcom/bbm/af;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 203
-    sget-object v0, Lcom/bbm/util/bq;->g:Ljava/util/HashSet;
+    move-object v0, v1
 
-    invoke-virtual {v0, p0}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
-
-    .line 204
-    invoke-static {}, Lcom/bbm/util/bq;->e()V
-
-    .line 205
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-
-    throw v0
-.end method
-
-.method static synthetic b()Lcom/bbm/util/bx;
-    .locals 1
-
-    .prologue
-    .line 29
-    const/4 v0, 0x0
-
-    sput-object v0, Lcom/bbm/util/bq;->h:Lcom/bbm/util/bx;
-
+    .line 94
+    :goto_0
     return-object v0
-.end method
 
-.method static synthetic c()V
-    .locals 0
-
-    .prologue
-    .line 29
-    invoke-static {}, Lcom/bbm/util/bq;->e()V
-
-    return-void
-.end method
-
-.method static synthetic d()Ljava/util/PriorityQueue;
-    .locals 1
-
-    .prologue
-    .line 29
-    sget-object v0, Lcom/bbm/util/bq;->i:Ljava/util/PriorityQueue;
-
-    return-object v0
-.end method
-
-.method private e(Ljava/net/URL;)Lcom/bbm/util/bu;
-    .locals 5
-
-    .prologue
-    .line 173
-    new-instance v1, Lcom/bbm/util/bu;
-
-    iget-object v0, p0, Lcom/bbm/util/bq;->a:Lcom/bbm/ui/activities/akz;
-
-    iget-object v2, p0, Lcom/bbm/util/bq;->d:Lcom/bbm/util/bt;
-
-    invoke-direct {v1, v0, v2, p0, p1}, Lcom/bbm/util/bu;-><init>(Lcom/bbm/ui/activities/akz;Lcom/bbm/util/bt;Lcom/bbm/util/bq;Ljava/net/URL;)V
-
-    .line 174
-    sget-object v2, Lcom/bbm/util/bq;->f:Ljava/util/PriorityQueue;
-
-    monitor-enter v2
-
-    .line 175
-    :try_start_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v3, "Queue add "
-
-    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v3, 0x0
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    invoke-static {v0, v3}, Lcom/bbm/y;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 176
-    sget-object v0, Lcom/bbm/util/bq;->f:Ljava/util/PriorityQueue;
-
-    invoke-virtual {v0, v1}, Ljava/util/PriorityQueue;->add(Ljava/lang/Object;)Z
-
-    .line 178
-    sget-object v0, Lcom/bbm/util/bq;->i:Ljava/util/PriorityQueue;
-
-    invoke-virtual {v0}, Ljava/util/PriorityQueue;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
+    .line 81
     :cond_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    if-eq v4, v0, :cond_1
 
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 179
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/util/bu;
-
-    .line 180
-    iget-object v0, v0, Lcom/bbm/util/bu;->g:Ljava/net/URL;
-
-    invoke-virtual {v0, p1}, Ljava/net/URL;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 181
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v4, "Preload remove existing "
-
-    invoke-direct {v0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    .line 82
+    const-string v0, "Read of file did not match expected size, will attempt JSON conversion regardless"
 
     const/4 v4, 0x0
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    invoke-static {v0, v4}, Lcom/bbm/y;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v4}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 182
-    invoke-interface {v3}, Ljava/util/Iterator;->remove()V
-
-    .line 186
+    .line 84
     :cond_1
-    invoke-static {}, Lcom/bbm/util/bq;->e()V
+    invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
 
-    .line 187
-    monitor-exit v2
+    .line 86
+    new-instance v2, Ljava/lang/String;
+
+    const-string v0, "UTF-8"
+
+    invoke-direct {v2, v3, v0}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
+
+    .line 87
+    new-instance v0, Lorg/json/JSONObject;
+
+    invoke-direct {v0, v2}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 188
-    monitor-enter v1
-
-    .line 189
-    :goto_0
-    :try_start_1
-    iget-boolean v0, v1, Lcom/bbm/util/bu;->e:Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    if-nez v0, :cond_2
-
-    .line 191
-    :try_start_2
-    invoke-virtual {v1}, Ljava/lang/Object;->wait()V
-    :try_end_2
-    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
     goto :goto_0
 
-    .line 194
+    .line 90
     :catch_0
     move-exception v0
 
+    :goto_1
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
+
+    move-object v0, v1
+
+    .line 94
     goto :goto_0
 
-    .line 187
-    :catchall_0
+    .line 90
+    :catch_1
     move-exception v0
 
-    monitor-exit v2
-
-    throw v0
-
-    .line 196
-    :cond_2
-    :try_start_3
-    monitor-exit v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    .line 197
-    return-object v1
-
-    .line 196
-    :catchall_1
-    move-exception v0
-
-    monitor-exit v1
-
-    throw v0
+    goto :goto_1
 .end method
 
-.method private static e()V
-    .locals 5
+.method public static a(Ljava/io/File;Ljava/io/File;)V
+    .locals 8
 
     .prologue
-    .line 209
-    sget-object v2, Lcom/bbm/util/bq;->f:Ljava/util/PriorityQueue;
+    .line 105
+    new-instance v0, Ljava/io/FileInputStream;
 
-    monitor-enter v2
+    invoke-direct {v0, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 210
-    :goto_0
-    :try_start_0
-    sget-object v0, Lcom/bbm/util/bq;->g:Ljava/util/HashSet;
+    .line 106
+    new-instance v7, Ljava/io/FileOutputStream;
 
-    invoke-virtual {v0}, Ljava/util/HashSet;->size()I
+    invoke-virtual {p1}, Ljava/io/File;->getPath()Ljava/lang/String;
 
-    move-result v0
+    move-result-object v1
 
-    sget v1, Lcom/bbm/util/bq;->e:I
+    invoke-direct {v7, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
 
-    if-ge v0, v1, :cond_0
+    .line 107
+    invoke-virtual {v0}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
-    sget-object v0, Lcom/bbm/util/bq;->f:Ljava/util/PriorityQueue;
+    move-result-object v1
 
-    invoke-virtual {v0}, Ljava/util/PriorityQueue;->isEmpty()Z
+    .line 108
+    invoke-virtual {v7}, Ljava/io/FileOutputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
-    move-result v0
+    move-result-object v6
 
-    if-nez v0, :cond_0
+    .line 110
+    const-wide/16 v2, 0x0
 
-    .line 211
-    sget-object v0, Lcom/bbm/util/bq;->f:Ljava/util/PriorityQueue;
+    invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->size()J
 
-    invoke-virtual {v0}, Ljava/util/PriorityQueue;->poll()Ljava/lang/Object;
+    move-result-wide v4
+
+    invoke-virtual/range {v1 .. v6}, Ljava/nio/channels/FileChannel;->transferTo(JJLjava/nio/channels/WritableByteChannel;)J
+
+    .line 112
+    invoke-virtual {v0}, Ljava/io/FileInputStream;->close()V
+
+    .line 113
+    invoke-virtual {v7}, Ljava/io/FileOutputStream;->flush()V
+
+    .line 114
+    invoke-virtual {v7}, Ljava/io/FileOutputStream;->close()V
+
+    .line 115
+    invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->close()V
+
+    .line 116
+    invoke-virtual {v6}, Ljava/nio/channels/FileChannel;->close()V
+
+    .line 117
+    return-void
+.end method
+
+.method public static a(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
+
+    .prologue
+    .line 68
+    new-instance v0, Ljava/io/File;
+
+    invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    new-instance v1, Ljava/io/File;
+
+    invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v0, v1}, Lcom/bbm/util/bq;->a(Ljava/io/File;Ljava/io/File;)V
+
+    .line 69
+    return-void
+.end method
+
+.method public static b(Ljava/lang/String;)I
+    .locals 4
+
+    .prologue
+    .line 133
+    invoke-static {p0}, Lcom/google/b/d/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/util/bu;
+    invoke-static {v0}, Lcom/bbm/util/bq;->h(Ljava/lang/String;)Lcom/bbm/util/br;
 
-    .line 212
-    new-instance v1, Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const-string v3, "Queue scheduling "
+    .line 134
+    sget-object v1, Lcom/bbm/util/bq;->a:Ljava/util/EnumMap;
 
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1}, Ljava/util/EnumMap;->isEmpty()Z
 
-    iget-object v3, v0, Lcom/bbm/util/bu;->g:Ljava/net/URL;
+    move-result v1
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-eqz v1, :cond_0
+
+    sget-object v1, Lcom/bbm/util/bq;->a:Ljava/util/EnumMap;
+
+    sget-object v2, Lcom/bbm/util/br;->c:Lcom/bbm/util/br;
+
+    const v3, 0x7f0200da
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Ljava/util/EnumMap;->put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v1, Lcom/bbm/util/bq;->a:Ljava/util/EnumMap;
+
+    sget-object v2, Lcom/bbm/util/br;->e:Lcom/bbm/util/br;
+
+    const v3, 0x7f0200df
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Ljava/util/EnumMap;->put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v1, Lcom/bbm/util/bq;->a:Ljava/util/EnumMap;
+
+    sget-object v2, Lcom/bbm/util/br;->f:Lcom/bbm/util/br;
+
+    const v3, 0x7f0200d8
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Ljava/util/EnumMap;->put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v1, Lcom/bbm/util/bq;->a:Ljava/util/EnumMap;
+
+    sget-object v2, Lcom/bbm/util/br;->g:Lcom/bbm/util/br;
+
+    const v3, 0x7f0200e1
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Ljava/util/EnumMap;->put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v1, Lcom/bbm/util/bq;->a:Ljava/util/EnumMap;
+
+    sget-object v2, Lcom/bbm/util/br;->h:Lcom/bbm/util/br;
+
+    const v3, 0x7f0200dd
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Ljava/util/EnumMap;->put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v1, Lcom/bbm/util/bq;->a:Ljava/util/EnumMap;
+
+    sget-object v2, Lcom/bbm/util/br;->i:Lcom/bbm/util/br;
+
+    const v3, 0x7f0200db
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Ljava/util/EnumMap;->put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v1, Lcom/bbm/util/bq;->a:Ljava/util/EnumMap;
+
+    sget-object v2, Lcom/bbm/util/br;->l:Lcom/bbm/util/br;
+
+    const v3, 0x7f0200d7
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Ljava/util/EnumMap;->put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v1, Lcom/bbm/util/bq;->a:Ljava/util/EnumMap;
+
+    sget-object v2, Lcom/bbm/util/br;->k:Lcom/bbm/util/br;
+
+    const v3, 0x7f0200de
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Ljava/util/EnumMap;->put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v1, Lcom/bbm/util/bq;->a:Ljava/util/EnumMap;
+
+    sget-object v2, Lcom/bbm/util/br;->d:Lcom/bbm/util/br;
+
+    const v3, 0x7f0200e0
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Ljava/util/EnumMap;->put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v1, Lcom/bbm/util/bq;->a:Ljava/util/EnumMap;
+
+    sget-object v2, Lcom/bbm/util/br;->b:Lcom/bbm/util/br;
+
+    const v3, 0x7f0200dc
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Ljava/util/EnumMap;->put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    sget-object v1, Lcom/bbm/util/bq;->a:Ljava/util/EnumMap;
+
+    invoke-virtual {v1, v0}, Ljava/util/EnumMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    sget-object v1, Lcom/bbm/util/bq;->a:Ljava/util/EnumMap;
+
+    invoke-virtual {v1, v0}, Ljava/util/EnumMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_1
+    const v0, 0x7f0200d9
+
+    goto :goto_0
+.end method
+
+.method public static c(Ljava/lang/String;)Z
+    .locals 2
+
+    .prologue
+    .line 138
+    invoke-static {p0}, Lcom/google/b/d/c;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/bbm/util/bq;->h(Ljava/lang/String;)Lcom/bbm/util/br;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/bbm/util/br;->k:Lcom/bbm/util/br;
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static d(Ljava/lang/String;)Z
+    .locals 2
+
+    .prologue
+    .line 142
+    invoke-static {p0}, Lcom/google/b/d/c;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/bbm/util/bq;->h(Ljava/lang/String;)Lcom/bbm/util/br;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/bbm/util/br;->b:Lcom/bbm/util/br;
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static e(Ljava/lang/String;)Z
+    .locals 2
+
+    .prologue
+    .line 146
+    invoke-static {p0}, Lcom/google/b/d/c;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/bbm/util/bq;->h(Ljava/lang/String;)Lcom/bbm/util/br;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/bbm/util/br;->d:Lcom/bbm/util/br;
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static f(Ljava/lang/String;)Ljava/lang/String;
+    .locals 3
+
+    .prologue
+    .line 288
+    new-instance v0, Ljava/io/File;
+
+    invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/16 v2, 0x2e
 
-    move-result-object v1
+    invoke-virtual {v1, v2}, Ljava/lang/String;->lastIndexOf(I)I
+
+    move-result v1
+
+    const/4 v2, -0x1
+
+    if-ne v1, v2, :cond_0
+
+    const-string v0, ""
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    add-int/lit8 v1, v1, 0x1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method public static g(Ljava/lang/String;)[B
+    .locals 10
+
+    .prologue
+    const/4 v2, 0x1
 
     const/4 v3, 0x0
 
-    new-array v3, v3, [Ljava/lang/Object;
+    .line 297
+    new-array v0, v3, [B
 
-    invoke-static {v1, v3}, Lcom/bbm/y;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
+    .line 298
+    invoke-static {p0}, Lcom/bbm/util/ec;->b(Ljava/lang/String;)Z
 
-    .line 213
-    sget-object v1, Lcom/bbm/util/bq;->g:Ljava/util/HashSet;
+    move-result v1
 
-    invoke-virtual {v1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    if-nez v1, :cond_0
 
-    .line 214
-    monitor-enter v0
+    .line 300
+    :try_start_0
+    new-instance v1, Ljava/io/File;
+
+    invoke-direct {v1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    .line 301
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    .line 302
+    new-instance v4, Ljava/io/FileInputStream;
+
+    invoke-direct {v4, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 215
-    const/4 v1, 0x1
-
+    .line 304
     :try_start_1
-    iput-boolean v1, v0, Lcom/bbm/util/bu;->e:Z
+    invoke-virtual {v1}, Ljava/io/File;->length()J
 
-    .line 216
-    invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
+    move-result-wide v6
 
-    .line 217
-    monitor-exit v0
+    .line 305
+    const-wide/32 v8, 0x400000
+
+    cmp-long v1, v6, v8
+
+    if-gez v1, :cond_1
+
+    move v1, v2
+
+    :goto_0
+    const-string v5, "Trying to read a file larger then 4mb into memory"
+
+    invoke-static {v1, v5}, Lcom/bbm/util/eu;->a(ZLjava/lang/Object;)Z
     :try_end_1
+    .catch Ljava/lang/OutOfMemoryError; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_3
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    .line 317
+    :try_start_2
+    invoke-static {v4}, Lcom/bbm/util/ci;->a(Ljava/io/Closeable;)V
+    :try_end_2
+    .catch Ljava/io/FileNotFoundException; {:try_start_2 .. :try_end_2} :catch_0
+
+    .line 324
+    :cond_0
+    :goto_1
+    return-object v0
+
+    :cond_1
+    move v1, v3
+
+    .line 305
     goto :goto_0
+
+    .line 309
+    :cond_2
+    long-to-int v1, v6
+
+    :try_start_3
+    invoke-static {v4, v1}, Lcom/bbm/util/ci;->a(Ljava/io/InputStream;I)[B
+    :try_end_3
+    .catch Ljava/lang/OutOfMemoryError; {:try_start_3 .. :try_end_3} :catch_1
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    move-result-object v0
+
+    .line 317
+    :try_start_4
+    invoke-static {v4}, Lcom/bbm/util/ci;->a(Ljava/io/Closeable;)V
+    :try_end_4
+    .catch Ljava/io/FileNotFoundException; {:try_start_4 .. :try_end_4} :catch_0
+
+    goto :goto_1
+
+    .line 320
+    :catch_0
+    move-exception v1
+
+    const-string v4, "filePathToByteArray couldn\'t open path %s"
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    aput-object p0, v2, v3
+
+    invoke-static {v1, v4, v2}, Lcom/bbm/af;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    .line 310
+    :catch_1
+    move-exception v1
+
+    :try_start_5
+    const-string v5, "OOM filePathToByteArray couldn\'t read from path %s"
+
+    const/4 v6, 0x1
+
+    new-array v6, v6, [Ljava/lang/Object;
+
+    const/4 v7, 0x0
+
+    aput-object p0, v6, v7
+
+    invoke-static {v1, v5, v6}, Lcom/bbm/af;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    .line 317
+    :try_start_6
+    invoke-static {v4}, Lcom/bbm/util/ci;->a(Ljava/io/Closeable;)V
+    :try_end_6
+    .catch Ljava/io/FileNotFoundException; {:try_start_6 .. :try_end_6} :catch_0
+
+    goto :goto_1
+
+    .line 312
+    :catch_2
+    move-exception v1
+
+    :try_start_7
+    const-string v5, "filePathToByteArray couldn\'t read from path %s"
+
+    const/4 v6, 0x1
+
+    new-array v6, v6, [Ljava/lang/Object;
+
+    const/4 v7, 0x0
+
+    aput-object p0, v6, v7
+
+    invoke-static {v1, v5, v6}, Lcom/bbm/af;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_0
+
+    .line 317
+    :try_start_8
+    invoke-static {v4}, Lcom/bbm/util/ci;->a(Ljava/io/Closeable;)V
+    :try_end_8
+    .catch Ljava/io/FileNotFoundException; {:try_start_8 .. :try_end_8} :catch_0
+
+    goto :goto_1
+
+    .line 314
+    :catch_3
+    move-exception v1
+
+    :try_start_9
+    invoke-static {v1}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_0
+
+    .line 317
+    :try_start_a
+    invoke-static {v4}, Lcom/bbm/util/ci;->a(Ljava/io/Closeable;)V
+
+    goto :goto_1
 
     :catchall_0
     move-exception v1
 
-    :try_start_2
-    monitor-exit v0
+    invoke-static {v4}, Lcom/bbm/util/ci;->a(Ljava/io/Closeable;)V
 
     throw v1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    .line 238
-    :catchall_1
-    move-exception v0
-
-    monitor-exit v2
-
-    throw v0
-
-    .line 218
-    :cond_0
-    :try_start_3
-    sget-object v0, Lcom/bbm/util/bq;->g:Ljava/util/HashSet;
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    sget-object v0, Lcom/bbm/util/bq;->i:Ljava/util/PriorityQueue;
-
-    invoke-virtual {v0}, Ljava/util/PriorityQueue;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    sget-object v0, Lcom/bbm/util/bq;->h:Lcom/bbm/util/bx;
-
-    if-nez v0, :cond_1
-
-    .line 220
-    sget-object v0, Lcom/bbm/util/bq;->i:Ljava/util/PriorityQueue;
-
-    invoke-virtual {v0}, Ljava/util/PriorityQueue;->poll()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/util/bu;
-
-    .line 221
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v3, "Preload scheduling "
-
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v3, v0, Lcom/bbm/util/bu;->g:Ljava/net/URL;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v3, 0x0
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    invoke-static {v1, v3}, Lcom/bbm/y;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 222
-    new-instance v1, Lcom/bbm/util/bx;
-
-    iget-object v3, v0, Lcom/bbm/util/bu;->f:Lcom/bbm/util/bq;
-
-    iget-object v0, v0, Lcom/bbm/util/bu;->g:Ljava/net/URL;
-
-    new-instance v4, Lcom/bbm/util/br;
-
-    invoke-direct {v4}, Lcom/bbm/util/br;-><init>()V
-
-    invoke-direct {v1, v3, v0, v4}, Lcom/bbm/util/bx;-><init>(Lcom/bbm/util/bq;Ljava/net/URL;Lcom/bbm/util/bw;)V
-
-    .line 236
-    sput-object v1, Lcom/bbm/util/bq;->h:Lcom/bbm/util/bx;
-
-    sget-object v0, Lcom/bbm/util/b;->i:Ljava/util/concurrent/Executor;
-
-    const/4 v3, 0x0
-
-    new-array v3, v3, [Ljava/lang/Void;
-
-    invoke-virtual {v1, v0, v3}, Lcom/bbm/util/bx;->a(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Lcom/bbm/util/b;
-
-    .line 238
-    :cond_1
-    monitor-exit v2
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    return-void
+    :try_end_a
+    .catch Ljava/io/FileNotFoundException; {:try_start_a .. :try_end_a} :catch_0
 .end method
 
-
-# virtual methods
-.method public final a(Ljava/lang/String;Lcom/bbm/util/bz;)V
-    .locals 8
+.method private static h(Ljava/lang/String;)Lcom/bbm/util/br;
+    .locals 3
 
     .prologue
-    .line 152
-    new-instance v7, Ljava/net/URL;
+    .line 171
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
 
-    invoke-direct {v7, p1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
-
-    .line 154
-    :try_start_0
-    new-instance v0, Ljava/net/URI;
-
-    invoke-virtual {v7}, Ljava/net/URL;->getProtocol()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v7}, Ljava/net/URL;->getUserInfo()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v7}, Ljava/net/URL;->getHost()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v7}, Ljava/net/URL;->getPort()I
-
-    move-result v4
-
-    invoke-virtual {v7}, Ljava/net/URL;->getPath()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v7}, Ljava/net/URL;->getQuery()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v7}, Ljava/net/URL;->getRef()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-direct/range {v0 .. v7}, Ljava/net/URI;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 155
-    invoke-virtual {v0}, Ljava/net/URI;->toURL()Ljava/net/URL;
-
-    move-result-object v0
-
-    .line 156
-    invoke-virtual {p0, v0, p2}, Lcom/bbm/util/bq;->a(Ljava/net/URL;Lcom/bbm/util/bz;)V
-    :try_end_0
-    .catch Ljava/net/URISyntaxException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 160
-    :goto_0
-    return-void
-
-    .line 157
-    :catch_0
-    move-exception v0
-
-    .line 158
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "URISyntaxException :: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    goto :goto_0
-.end method
-
-.method public final a(Ljava/net/URL;)V
-    .locals 4
-
-    .prologue
-    .line 58
-    sget-object v1, Lcom/bbm/util/bq;->f:Ljava/util/PriorityQueue;
-
-    monitor-enter v1
-
-    .line 60
-    :try_start_0
-    sget-object v0, Lcom/bbm/util/bq;->i:Ljava/util/PriorityQueue;
-
-    invoke-virtual {v0}, Ljava/util/PriorityQueue;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :cond_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/util/bu;
-
-    .line 61
-    iget-object v0, v0, Lcom/bbm/util/bu;->g:Ljava/net/URL;
-
-    invoke-virtual {v0, p1}, Ljava/net/URL;->equals(Ljava/lang/Object;)Z
+    invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 62
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 173
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
 
-    const-string v2, "Preload ignoring existing "
+    const-string v1, "doc"
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sget-object v2, Lcom/bbm/util/br;->f:Lcom/bbm/util/br;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    .line 174
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v1, "docx"
 
-    move-result-object v0
+    sget-object v2, Lcom/bbm/util/br;->f:Lcom/bbm/util/br;
 
-    const/4 v2, 0x0
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-array v2, v2, [Ljava/lang/Object;
+    .line 175
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
 
-    invoke-static {v0, v2}, Lcom/bbm/y;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
+    const-string v1, "dot"
 
-    .line 63
-    monitor-exit v1
+    sget-object v2, Lcom/bbm/util/br;->f:Lcom/bbm/util/br;
 
-    .line 70
-    :goto_0
-    return-void
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 66
-    :cond_1
-    new-instance v0, Lcom/bbm/util/bu;
+    .line 176
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
 
-    iget-object v2, p0, Lcom/bbm/util/bq;->a:Lcom/bbm/ui/activities/akz;
+    const-string v1, "rtf"
 
-    iget-object v3, p0, Lcom/bbm/util/bq;->d:Lcom/bbm/util/bt;
+    sget-object v2, Lcom/bbm/util/br;->f:Lcom/bbm/util/br;
 
-    invoke-direct {v0, v2, v3, p0, p1}, Lcom/bbm/util/bu;-><init>(Lcom/bbm/ui/activities/akz;Lcom/bbm/util/bt;Lcom/bbm/util/bq;Ljava/net/URL;)V
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 67
-    new-instance v2, Ljava/lang/StringBuilder;
+    .line 178
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
 
-    const-string v3, "Preload add "
+    const-string v1, "xls"
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sget-object v2, Lcom/bbm/util/br;->g:Lcom/bbm/util/br;
 
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v2
+    .line 179
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v1, "xlsx"
 
-    move-result-object v2
+    sget-object v2, Lcom/bbm/util/br;->g:Lcom/bbm/util/br;
 
-    const/4 v3, 0x0
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-array v3, v3, [Ljava/lang/Object;
+    .line 180
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
 
-    invoke-static {v2, v3}, Lcom/bbm/y;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
+    const-string v1, "xlb"
 
-    .line 68
-    sget-object v2, Lcom/bbm/util/bq;->i:Ljava/util/PriorityQueue;
+    sget-object v2, Lcom/bbm/util/br;->g:Lcom/bbm/util/br;
 
-    invoke-virtual {v2, v0}, Ljava/util/PriorityQueue;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 69
-    invoke-static {}, Lcom/bbm/util/bq;->e()V
+    .line 181
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
 
-    .line 70
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const-string v1, "xlt"
 
-    goto :goto_0
+    sget-object v2, Lcom/bbm/util/br;->g:Lcom/bbm/util/br;
 
-    :catchall_0
-    move-exception v0
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    monitor-exit v1
+    .line 183
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
 
-    throw v0
-.end method
+    const-string v1, "ppt"
 
-.method public final a(Ljava/net/URL;Lcom/bbm/util/bw;)V
-    .locals 3
+    sget-object v2, Lcom/bbm/util/br;->h:Lcom/bbm/util/br;
 
-    .prologue
-    .line 141
-    new-instance v0, Lcom/bbm/util/bx;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/bbm/util/bx;-><init>(Lcom/bbm/util/bq;Ljava/net/URL;Lcom/bbm/util/bw;)V
+    .line 184
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
 
-    sget-object v1, Lcom/bbm/util/b;->i:Ljava/util/concurrent/Executor;
+    const-string v1, "pps"
 
-    const/4 v2, 0x0
+    sget-object v2, Lcom/bbm/util/br;->h:Lcom/bbm/util/br;
 
-    new-array v2, v2, [Ljava/lang/Void;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1, v2}, Lcom/bbm/util/bx;->a(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Lcom/bbm/util/b;
+    .line 185
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
 
-    .line 142
-    return-void
-.end method
+    const-string v1, "pptx"
 
-.method public final a(Ljava/net/URL;Lcom/bbm/util/bz;)V
-    .locals 3
+    sget-object v2, Lcom/bbm/util/br;->h:Lcom/bbm/util/br;
 
-    .prologue
-    .line 169
-    new-instance v0, Lcom/bbm/util/ca;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/bbm/util/ca;-><init>(Lcom/bbm/util/bq;Ljava/net/URL;Lcom/bbm/util/bz;)V
+    .line 186
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
 
-    sget-object v1, Lcom/bbm/util/b;->i:Ljava/util/concurrent/Executor;
+    const-string v1, "ppsx"
 
-    const/4 v2, 0x0
+    sget-object v2, Lcom/bbm/util/br;->h:Lcom/bbm/util/br;
 
-    new-array v2, v2, [Ljava/lang/Void;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1, v2}, Lcom/bbm/util/ca;->a(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Lcom/bbm/util/b;
+    .line 188
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
 
-    .line 170
-    return-void
-.end method
+    const-string v1, "pdf"
 
-.method public final b(Ljava/net/URL;)[B
-    .locals 6
+    sget-object v2, Lcom/bbm/util/br;->i:Lcom/bbm/util/br;
 
-    .prologue
-    const/4 v0, 0x0
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 79
-    invoke-direct {p0, p1}, Lcom/bbm/util/bq;->e(Ljava/net/URL;)Lcom/bbm/util/bu;
+    .line 190
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
 
-    move-result-object v2
+    const-string v1, "bmp"
 
-    .line 80
-    sget-object v1, Lcom/bbm/util/bq;->f:Ljava/util/PriorityQueue;
+    sget-object v2, Lcom/bbm/util/br;->b:Lcom/bbm/util/br;
 
-    monitor-enter v1
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 81
-    :try_start_0
-    sget-object v3, Lcom/bbm/util/bq;->g:Ljava/util/HashSet;
+    .line 191
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
 
-    invoke-virtual {v3, v2}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+    const-string v1, "gif"
 
-    move-result v3
+    sget-object v2, Lcom/bbm/util/br;->b:Lcom/bbm/util/br;
 
-    if-nez v3, :cond_0
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 83
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .line 192
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
 
-    .line 98
-    :goto_0
-    return-object v0
+    const-string v1, "jpeg"
 
-    .line 85
+    sget-object v2, Lcom/bbm/util/br;->b:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 193
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "jpg"
+
+    sget-object v2, Lcom/bbm/util/br;->b:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 194
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "png"
+
+    sget-object v2, Lcom/bbm/util/br;->b:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 195
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "svg"
+
+    sget-object v2, Lcom/bbm/util/br;->b:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 196
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "svgz"
+
+    sget-object v2, Lcom/bbm/util/br;->b:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 197
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "tif"
+
+    sget-object v2, Lcom/bbm/util/br;->b:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 198
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "tiff"
+
+    sget-object v2, Lcom/bbm/util/br;->b:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 200
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "amr"
+
+    sget-object v2, Lcom/bbm/util/br;->d:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 201
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "mid"
+
+    sget-object v2, Lcom/bbm/util/br;->c:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 202
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "midi"
+
+    sget-object v2, Lcom/bbm/util/br;->c:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 203
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "m3u"
+
+    sget-object v2, Lcom/bbm/util/br;->c:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 204
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "wma"
+
+    sget-object v2, Lcom/bbm/util/br;->c:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 205
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "wav"
+
+    sget-object v2, Lcom/bbm/util/br;->c:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 206
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "mp3"
+
+    sget-object v2, Lcom/bbm/util/br;->c:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 207
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "ogg"
+
+    sget-object v2, Lcom/bbm/util/br;->c:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 209
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "3gp"
+
+    sget-object v2, Lcom/bbm/util/br;->e:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 210
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "3gpp"
+
+    sget-object v2, Lcom/bbm/util/br;->e:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 211
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "3g2"
+
+    sget-object v2, Lcom/bbm/util/br;->e:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 212
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "3gpp2"
+
+    sget-object v2, Lcom/bbm/util/br;->e:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 213
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "mp4"
+
+    sget-object v2, Lcom/bbm/util/br;->e:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 214
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "mpg"
+
+    sget-object v2, Lcom/bbm/util/br;->e:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 215
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "mpeg"
+
+    sget-object v2, Lcom/bbm/util/br;->e:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 216
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "qt"
+
+    sget-object v2, Lcom/bbm/util/br;->e:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 217
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "mov"
+
+    sget-object v2, Lcom/bbm/util/br;->e:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 218
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "wmv"
+
+    sget-object v2, Lcom/bbm/util/br;->e:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 219
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "avi"
+
+    sget-object v2, Lcom/bbm/util/br;->e:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 221
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "html"
+
+    sget-object v2, Lcom/bbm/util/br;->j:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 222
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "xhtml"
+
+    sget-object v2, Lcom/bbm/util/br;->j:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 223
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "txt"
+
+    sget-object v2, Lcom/bbm/util/br;->j:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 224
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "xml"
+
+    sget-object v2, Lcom/bbm/util/br;->j:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 225
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "wpd"
+
+    sget-object v2, Lcom/bbm/util/br;->j:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 227
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "vcf"
+
+    sget-object v2, Lcom/bbm/util/br;->k:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 229
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "vcs"
+
+    sget-object v2, Lcom/bbm/util/br;->l:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 231
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "dcf"
+
+    sget-object v2, Lcom/bbm/util/br;->m:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 232
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "dm"
+
+    sget-object v2, Lcom/bbm/util/br;->m:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 233
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
+
+    const-string v1, "dr"
+
+    sget-object v2, Lcom/bbm/util/br;->m:Lcom/bbm/util/br;
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 236
     :cond_0
-    monitor-exit v1
+    sget-object v0, Lcom/bbm/util/bq;->b:Ljava/util/Map;
 
-    .line 89
-    :try_start_1
-    invoke-virtual {p0, p1}, Lcom/bbm/util/bq;->d(Ljava/net/URL;)Ljava/net/URLConnection;
+    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    move-result-object v3
-
-    .line 90
-    new-instance v1, Ljava/io/BufferedInputStream;
-
-    invoke-virtual {v3}, Ljava/net/URLConnection;->getInputStream()Ljava/io/InputStream;
-
-    move-result-object v4
-
-    invoke-direct {v1, v4}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    .line 91
-    :try_start_2
-    invoke-virtual {v3}, Ljava/net/URLConnection;->getContentLength()I
-
-    move-result v0
-
-    invoke-static {v1, v0}, Lcom/bbm/util/cc;->a(Ljava/io/InputStream;I)[B
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
-
-    move-result-object v0
-
-    .line 93
-    invoke-static {v2}, Lcom/bbm/util/bq;->a(Lcom/bbm/util/bu;)V
-
-    .line 94
-    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
-
-    goto :goto_0
-
-    .line 85
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-
-    throw v0
-
-    .line 93
-    :catchall_1
-    move-exception v1
-
-    move-object v5, v1
-
-    move-object v1, v0
-
-    move-object v0, v5
-
-    :goto_1
-    invoke-static {v2}, Lcom/bbm/util/bq;->a(Lcom/bbm/util/bu;)V
-
-    .line 94
-    if-eqz v1, :cond_1
-
-    .line 95
-    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
-
-    :cond_1
-    throw v0
-
-    .line 93
-    :catchall_2
-    move-exception v0
-
-    goto :goto_1
-.end method
-
-.method public final c(Ljava/net/URL;)[Ljava/lang/Object;
-    .locals 7
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 103
-    invoke-direct {p0, p1}, Lcom/bbm/util/bq;->e(Ljava/net/URL;)Lcom/bbm/util/bu;
-
-    move-result-object v3
-
-    .line 104
-    sget-object v1, Lcom/bbm/util/bq;->f:Ljava/util/PriorityQueue;
-
-    monitor-enter v1
-
-    .line 105
-    :try_start_0
-    sget-object v2, Lcom/bbm/util/bq;->g:Ljava/util/HashSet;
-
-    invoke-virtual {v2, v3}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    .line 107
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 126
-    :goto_0
-    return-object v0
-
-    .line 109
-    :cond_0
-    monitor-exit v1
-
-    .line 110
-    const/4 v1, 0x2
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    .line 114
-    :try_start_1
-    invoke-virtual {p0, p1}, Lcom/bbm/util/bq;->d(Ljava/net/URL;)Ljava/net/URLConnection;
-
-    move-result-object v4
-
-    .line 115
-    new-instance v2, Ljava/io/BufferedInputStream;
-
-    invoke-virtual {v4}, Ljava/net/URLConnection;->getInputStream()Ljava/io/InputStream;
-
-    move-result-object v5
-
-    invoke-direct {v2, v5}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    .line 116
-    :try_start_2
-    invoke-virtual {v4}, Ljava/net/URLConnection;->getContentLength()I
-
-    move-result v0
-
-    invoke-static {v2, v0}, Lcom/bbm/util/cc;->a(Ljava/io/InputStream;I)[B
-
-    move-result-object v0
-
-    .line 117
-    invoke-virtual {v4}, Ljava/net/URLConnection;->getHeaderFields()Ljava/util/Map;
-
-    move-result-object v4
-
-    .line 118
-    const/4 v5, 0x0
-
-    aput-object v0, v1, v5
-
-    .line 119
-    const/4 v0, 0x1
-
-    aput-object v4, v1, v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
-
-    .line 121
-    invoke-static {v3}, Lcom/bbm/util/bq;->a(Lcom/bbm/util/bu;)V
-
-    .line 122
-    invoke-virtual {v2}, Ljava/io/InputStream;->close()V
-
-    move-object v0, v1
-
-    .line 126
-    goto :goto_0
-
-    .line 109
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-
-    throw v0
-
-    .line 121
-    :catchall_1
-    move-exception v1
-
-    move-object v6, v1
-
-    move-object v1, v0
-
-    move-object v0, v6
-
-    :goto_1
-    invoke-static {v3}, Lcom/bbm/util/bq;->a(Lcom/bbm/util/bu;)V
-
-    .line 122
-    if-eqz v1, :cond_1
-
-    .line 123
-    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
-
-    :cond_1
-    throw v0
-
-    .line 121
-    :catchall_2
-    move-exception v0
-
-    move-object v1, v2
-
-    goto :goto_1
-.end method
-
-.method protected d(Ljava/net/URL;)Ljava/net/URLConnection;
-    .locals 4
-
-    .prologue
-    .line 130
-    invoke-virtual {p1}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/net/HttpURLConnection;
-
-    .line 131
-    const-string v2, "Cache-Control"
-
-    iget-boolean v1, p0, Lcom/bbm/util/bq;->b:Z
-
-    if-eqz v1, :cond_0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v3, "max-age="
-
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v3, p0, Lcom/bbm/util/bq;->c:I
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v1}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v0
 
-    :goto_0
-    invoke-virtual {v0, v2, v1}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
+    check-cast v0, Lcom/bbm/util/br;
 
-    .line 132
     return-object v0
-
-    .line 131
-    :cond_0
-    const-string v1, "no-cache"
-
-    goto :goto_0
 .end method

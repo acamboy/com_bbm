@@ -12,7 +12,7 @@
     .locals 0
 
     .prologue
-    .line 88
+    .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 88
+    .line 97
     invoke-direct {p0}, Lcom/bbm/ui/a/e;-><init>()V
 
     return-void

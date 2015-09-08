@@ -1,4 +1,4 @@
-.class public abstract Lcom/google/b/c/j;
+.class abstract Lcom/google/b/c/j;
 .super Ljava/lang/Object;
 .source "GenericMapMaker.java"
 
@@ -13,6 +13,9 @@
         ">",
         "Ljava/lang/Object;"
     }
+.end annotation
+
+.annotation runtime Ljava/lang/Deprecated;
 .end annotation
 
 
@@ -32,7 +35,7 @@
     .locals 0
 
     .prologue
-    .line 56
+    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,7 +54,7 @@
     .end annotation
 
     .prologue
-    .line 116
+    .line 131
     iget-object v0, p0, Lcom/google/b/c/j;->a:Lcom/google/b/c/y;
 
     sget-object v1, Lcom/google/b/c/k;->a:Lcom/google/b/c/k;

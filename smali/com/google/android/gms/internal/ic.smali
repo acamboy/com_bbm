@@ -1,123 +1,59 @@
-.class public Lcom/google/android/gms/internal/ic;
+.class public final Lcom/google/android/gms/internal/ic;
 .super Ljava/lang/Object;
 
 
-# static fields
-.field private static OB:I
-
-.field private static OC:I
+# annotations
+.annotation runtime Lcom/google/android/gms/internal/mb;
+.end annotation
 
 
 # instance fields
-.field private final Lk:Lcom/google/android/gms/internal/hl;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/internal/hl",
-            "<",
-            "Lcom/google/android/gms/internal/hg;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public final a:I
 
-.field private final OD:Ljava/lang/String;
+.field public final b:Lcom/google/android/gms/internal/ht;
 
-.field private final OE:Ljava/util/concurrent/BlockingQueue;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/concurrent/BlockingQueue",
-            "<",
-            "Lcom/google/android/gms/internal/hx$a;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public final c:Lcom/google/android/gms/internal/ij;
 
-.field private OF:I
+.field public final d:Ljava/lang/String;
 
-.field private final Ou:I
-
-.field private final mg:Ljava/lang/Object;
+.field public final e:Lcom/google/android/gms/internal/hz;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 6
 
-    const/16 v0, 0x2710
+    const/4 v1, 0x0
 
-    sput v0, Lcom/google/android/gms/internal/ic;->OB:I
+    move-object v0, p0
 
-    const/16 v0, 0x3e8
+    move-object v2, v1
 
-    sput v0, Lcom/google/android/gms/internal/ic;->OC:I
+    move-object v3, v1
+
+    move-object v4, v1
+
+    move v5, p1
+
+    invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/internal/ic;-><init>(Lcom/google/android/gms/internal/ht;Lcom/google/android/gms/internal/ij;Ljava/lang/String;Lcom/google/android/gms/internal/hz;I)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/google/android/gms/internal/hl;Ljava/lang/String;I)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/internal/hl",
-            "<",
-            "Lcom/google/android/gms/internal/hg;",
-            ">;",
-            "Ljava/lang/String;",
-            "I)V"
-        }
-    .end annotation
+.method public constructor <init>(Lcom/google/android/gms/internal/ht;Lcom/google/android/gms/internal/ij;Ljava/lang/String;Lcom/google/android/gms/internal/hz;I)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/Object;
+    iput-object p1, p0, Lcom/google/android/gms/internal/ic;->b:Lcom/google/android/gms/internal/ht;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lcom/google/android/gms/internal/ic;->c:Lcom/google/android/gms/internal/ij;
 
-    iput-object v0, p0, Lcom/google/android/gms/internal/ic;->mg:Ljava/lang/Object;
+    iput-object p3, p0, Lcom/google/android/gms/internal/ic;->d:Ljava/lang/String;
 
-    iput-object p1, p0, Lcom/google/android/gms/internal/ic;->Lk:Lcom/google/android/gms/internal/hl;
+    iput-object p4, p0, Lcom/google/android/gms/internal/ic;->e:Lcom/google/android/gms/internal/hz;
 
-    iput-object p2, p0, Lcom/google/android/gms/internal/ic;->OD:Ljava/lang/String;
-
-    iput p3, p0, Lcom/google/android/gms/internal/ic;->Ou:I
-
-    new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
-
-    sget v1, Lcom/google/android/gms/internal/ic;->OB:I
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>(I)V
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/ic;->OE:Ljava/util/concurrent/BlockingQueue;
-
-    sget v0, Lcom/google/android/gms/internal/ic;->OC:I
-
-    iput v0, p0, Lcom/google/android/gms/internal/ic;->OF:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public a(Lcom/google/android/gms/internal/hx$a$a;)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/ic;->OD:Ljava/lang/String;
-
-    invoke-virtual {p1, v0}, Lcom/google/android/gms/internal/hx$a$a;->aK(Ljava/lang/String;)Lcom/google/android/gms/internal/hx$a$a;
-
-    iget v0, p0, Lcom/google/android/gms/internal/ic;->Ou:I
-
-    invoke-virtual {p1, v0}, Lcom/google/android/gms/internal/hx$a$a;->bv(I)Lcom/google/android/gms/internal/hx$a$a;
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/ic;->OE:Ljava/util/concurrent/BlockingQueue;
-
-    invoke-virtual {p1}, Lcom/google/android/gms/internal/hx$a$a;->gJ()Lcom/google/android/gms/internal/hx$a;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/BlockingQueue;->offer(Ljava/lang/Object;)Z
+    iput p5, p0, Lcom/google/android/gms/internal/ic;->a:I
 
     return-void
 .end method

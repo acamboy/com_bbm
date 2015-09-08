@@ -122,7 +122,7 @@
 
 .field final transient o:Lcom/google/b/c/ae;
 
-.field final p:Lcom/google/b/a/v;
+.field final p:Lcom/google/b/a/w;
 
 .field transient s:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
@@ -205,7 +205,7 @@
     invoke-direct {p0}, Ljava/util/AbstractMap;-><init>()V
 
     .line 196
-    invoke-virtual {p1}, Lcom/google/b/c/q;->d()I
+    invoke-virtual {p1}, Lcom/google/b/c/q;->c()I
 
     move-result v0
 
@@ -218,7 +218,7 @@
     iput v0, p0, Lcom/google/b/c/aa;->e:I
 
     .line 198
-    invoke-virtual {p1}, Lcom/google/b/c/q;->e()Lcom/google/b/c/bc;
+    invoke-virtual {p1}, Lcom/google/b/c/q;->d()Lcom/google/b/c/bc;
 
     move-result-object v0
 
@@ -240,7 +240,7 @@
     .line 201
     iget-object v0, p1, Lcom/google/b/c/q;->k:Lcom/google/b/a/c;
 
-    invoke-virtual {p1}, Lcom/google/b/c/q;->e()Lcom/google/b/c/bc;
+    invoke-virtual {p1}, Lcom/google/b/c/q;->d()Lcom/google/b/c/bc;
 
     move-result-object v1
 
@@ -310,9 +310,9 @@
     iput-object v0, p0, Lcom/google/b/c/aa;->o:Lcom/google/b/c/ae;
 
     .line 209
-    iget-object v0, p1, Lcom/google/b/c/q;->l:Lcom/google/b/a/v;
+    iget-object v0, p1, Lcom/google/b/c/q;->l:Lcom/google/b/a/w;
 
-    invoke-static {}, Lcom/google/b/a/v;->b()Lcom/google/b/a/v;
+    invoke-static {}, Lcom/google/b/a/w;->b()Lcom/google/b/a/w;
 
     move-result-object v1
 
@@ -320,9 +320,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/b/a/v;
+    check-cast v0, Lcom/google/b/a/w;
 
-    iput-object v0, p0, Lcom/google/b/c/aa;->p:Lcom/google/b/a/v;
+    iput-object v0, p0, Lcom/google/b/c/aa;->p:Lcom/google/b/a/w;
 
     .line 211
     invoke-virtual {p1}, Lcom/google/b/c/q;->a()Lcom/google/b/c/y;
@@ -348,7 +348,7 @@
 
     move-result v0
 
-    const/high16 v1, 0x40000000
+    const/high16 v1, 0x40000000    # 2.0f
 
     invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
 
@@ -873,9 +873,9 @@
 
     .prologue
     .line 1916
-    iget-object v0, p0, Lcom/google/b/c/aa;->p:Lcom/google/b/a/v;
+    iget-object v0, p0, Lcom/google/b/c/aa;->p:Lcom/google/b/a/w;
 
-    invoke-virtual {v0}, Lcom/google/b/a/v;->a()J
+    invoke-virtual {v0}, Lcom/google/b/a/w;->a()J
 
     move-result-wide v0
 
@@ -1620,10 +1620,10 @@
 
     .prologue
     .line 3499
-    invoke-static {p1}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3500
-    invoke-static {p2}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p2}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3501
     invoke-direct {p0, p1}, Lcom/google/b/c/aa;->a(Ljava/lang/Object;)I
@@ -1705,10 +1705,10 @@
 
     .prologue
     .line 3507
-    invoke-static {p1}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3508
-    invoke-static {p2}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p2}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3509
     invoke-direct {p0, p1}, Lcom/google/b/c/aa;->a(Ljava/lang/Object;)I
@@ -1813,10 +1813,10 @@
 
     .prologue
     .line 3551
-    invoke-static {p1}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3552
-    invoke-static {p2}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p2}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3553
     invoke-direct {p0, p1}, Lcom/google/b/c/aa;->a(Ljava/lang/Object;)I
@@ -1845,10 +1845,10 @@
 
     .prologue
     .line 3540
-    invoke-static {p1}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3541
-    invoke-static {p3}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p3}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3542
     if-nez p2, :cond_0

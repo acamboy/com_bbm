@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/pw;
 .super Ljava/lang/Object;
-.source "GroupLobbyActivity.java"
+.source "GroupPictureCommentsActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/pv;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupLobbyActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/pv;)V
     .locals 0
 
     .prologue
-    .line 349
-    iput-object p1, p0, Lcom/bbm/ui/activities/pw;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    .line 647
+    iput-object p1, p0, Lcom/bbm/ui/activities/pw;->a:Lcom/bbm/ui/activities/pv;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,22 +25,19 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final run()V
     .locals 2
 
     .prologue
-    .line 352
-    const-string v0, "barGroupHeaderContainer Clicked"
+    .line 651
+    iget-object v0, p0, Lcom/bbm/ui/activities/pw;->a:Lcom/bbm/ui/activities/pv;
 
-    const-class v1, Lcom/bbm/ui/activities/GroupLobbyActivity;
+    iget-object v0, v0, Lcom/bbm/ui/activities/pv;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    const/4 v1, 0x0
 
-    .line 354
-    iget-object v0, p0, Lcom/bbm/ui/activities/pw;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;Z)V
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->b()V
-
-    .line 355
+    .line 652
     return-void
 .end method

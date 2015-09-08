@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 286
+    .line 312
     iput-object p1, p0, Lcom/bbm/ui/activities/d;->a:Lcom/bbm/ui/activities/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,13 +29,13 @@
     .locals 1
 
     .prologue
-    .line 289
+    .line 315
     iget-object v0, p0, Lcom/bbm/ui/activities/d;->a:Lcom/bbm/ui/activities/c;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/c;->c:Lcom/bbm/ui/activities/AddChannelPostActivity;
+    iget-object v0, v0, Lcom/bbm/ui/activities/c;->d:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
-    invoke-static {v0}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;)V
+    invoke-static {v0}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;)V
 
-    .line 290
+    .line 316
     return-void
 .end method

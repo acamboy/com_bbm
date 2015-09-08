@@ -1,45 +1,98 @@
 .class final Lcom/bbm/ui/activities/fp;
-.super Ljava/lang/Object;
+.super Lcom/bbm/j/a;
 .source "ConversationActivity.java"
 
-# interfaces
-.implements Lcom/bbm/ui/b/an;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/j/a",
+        "<",
+        "Ljava/lang/Boolean;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/n/a;
-
-.field final synthetic b:Lcom/bbm/ui/activities/ConversationActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;Lcom/bbm/n/a;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 855
-    iput-object p1, p0, Lcom/bbm/ui/activities/fp;->b:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 2549
+    iput-object p1, p0, Lcom/bbm/ui/activities/fp;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    iput-object p2, p0, Lcom/bbm/ui/activities/fp;->a:Lcom/bbm/n/a;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method protected final synthetic a()Ljava/lang/Object;
+    .locals 1
 
     .prologue
-    .line 859
-    iget-object v0, p0, Lcom/bbm/ui/activities/fp;->a:Lcom/bbm/n/a;
+    .line 2549
+    iget-object v0, p0, Lcom/bbm/ui/activities/fp;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    const/4 v1, 0x3
+    iget-object v0, v0, Lcom/bbm/ui/activities/ConversationActivity;->t:Lcom/bbm/j/a;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/n/a;->a(I)V
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
-    .line 860
-    return-void
+    move-result-object v0
+
+    check-cast v0, Lcom/google/b/a/l;
+
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/fp;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/ConversationActivity;->t:Lcom/bbm/j/a;
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/b/a/l;
+
+    invoke-virtual {v0}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/ie;
+
+    iget-object v0, v0, Lcom/bbm/d/ie;->z:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/bbm/d/b/a;->a(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method

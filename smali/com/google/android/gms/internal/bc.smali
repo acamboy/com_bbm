@@ -1,54 +1,51 @@
-.class public final Lcom/google/android/gms/internal/bc;
+.class final Lcom/google/android/gms/internal/bc;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Lcom/google/android/gms/internal/pi;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/google/android/gms/internal/pi",
+        "<",
+        "Lcom/google/android/gms/internal/ca;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field public final mL:I
+.field final synthetic a:Lorg/json/JSONObject;
 
-.field public final mM:Lcom/google/android/gms/internal/ax;
-
-.field public final mN:Lcom/google/android/gms/internal/bg;
-
-.field public final mO:Ljava/lang/String;
-
-.field public final mP:Lcom/google/android/gms/internal/ba;
+.field final synthetic b:Lcom/google/android/gms/internal/bb;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 6
+.method constructor <init>(Lcom/google/android/gms/internal/bb;Lorg/json/JSONObject;)V
+    .locals 0
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lcom/google/android/gms/internal/bc;->b:Lcom/google/android/gms/internal/bb;
 
-    move-object v0, p0
+    iput-object p2, p0, Lcom/google/android/gms/internal/bc;->a:Lorg/json/JSONObject;
 
-    move-object v2, v1
-
-    move-object v3, v1
-
-    move-object v4, v1
-
-    move v5, p1
-
-    invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/internal/bc;-><init>(Lcom/google/android/gms/internal/ax;Lcom/google/android/gms/internal/bg;Ljava/lang/String;Lcom/google/android/gms/internal/ba;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/google/android/gms/internal/ax;Lcom/google/android/gms/internal/bg;Ljava/lang/String;Lcom/google/android/gms/internal/ba;I)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;)V
+    .locals 2
 
-    iput-object p1, p0, Lcom/google/android/gms/internal/bc;->mM:Lcom/google/android/gms/internal/ax;
+    iget-object v0, p0, Lcom/google/android/gms/internal/bc;->b:Lcom/google/android/gms/internal/bb;
 
-    iput-object p2, p0, Lcom/google/android/gms/internal/bc;->mN:Lcom/google/android/gms/internal/bg;
+    iget-object v1, p0, Lcom/google/android/gms/internal/bc;->a:Lorg/json/JSONObject;
 
-    iput-object p3, p0, Lcom/google/android/gms/internal/bc;->mO:Ljava/lang/String;
-
-    iput-object p4, p0, Lcom/google/android/gms/internal/bc;->mP:Lcom/google/android/gms/internal/ba;
-
-    iput p5, p0, Lcom/google/android/gms/internal/bc;->mL:I
+    invoke-virtual {v0, v1}, Lcom/google/android/gms/internal/bb;->a(Lorg/json/JSONObject;)V
 
     return-void
 .end method

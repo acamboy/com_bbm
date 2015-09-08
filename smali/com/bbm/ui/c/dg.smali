@@ -1,58 +1,84 @@
-.class final Lcom/bbm/ui/c/dg;
+.class final synthetic Lcom/bbm/ui/c/dg;
 .super Ljava/lang/Object;
-.source "GroupDetailsFragment.java"
-
-# interfaces
-.implements Landroid/view/View$OnFocusChangeListener;
+.source "ContactsFragment.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/c/de;
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/de;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 56
-    iput-object p1, p0, Lcom/bbm/ui/c/dg;->a:Lcom/bbm/ui/c/de;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onFocusChange(Landroid/view/View;Z)V
-    .locals 2
-
-    .prologue
-    .line 60
-    iget-object v0, p0, Lcom/bbm/ui/c/dg;->a:Lcom/bbm/ui/c/de;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/de;->d(Lcom/bbm/ui/c/de;)Landroid/widget/TextView;
+    .line 775
+    invoke-static {}, Lcom/bbm/ui/c/dq;->a()[I
 
     move-result-object v0
 
-    if-ne p1, v0, :cond_0
+    array-length v0, v0
 
-    if-nez p2, :cond_0
+    new-array v0, v0, [I
 
-    .line 61
-    const-string v0, "onFocusChange"
+    sput-object v0, Lcom/bbm/ui/c/dg;->a:[I
 
-    const-class v1, Lcom/bbm/ui/c/de;
+    :try_start_0
+    sget-object v0, Lcom/bbm/ui/c/dg;->a:[I
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    sget v1, Lcom/bbm/ui/c/dq;->a:I
 
-    .line 62
-    iget-object v0, p0, Lcom/bbm/ui/c/dg;->a:Lcom/bbm/ui/c/de;
+    add-int/lit8 v1, v1, -0x1
 
-    invoke-static {v0}, Lcom/bbm/ui/c/de;->e(Lcom/bbm/ui/c/de;)V
+    const/4 v2, 0x1
 
-    .line 64
-    :cond_0
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_2
+
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/ui/c/dg;->a:[I
+
+    sget v1, Lcom/bbm/ui/c/dq;->c:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/bbm/ui/c/dg;->a:[I
+
+    sget v1, Lcom/bbm/ui/c/dq;->b:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_0
+
+    :goto_2
     return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_2
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_1
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_0
 .end method

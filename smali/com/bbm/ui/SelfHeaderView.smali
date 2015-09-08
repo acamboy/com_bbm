@@ -24,14 +24,14 @@
     invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 31
-    new-instance v0, Lcom/bbm/ui/ga;
+    new-instance v0, Lcom/bbm/ui/gh;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/ga;-><init>(Lcom/bbm/ui/SelfHeaderView;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/gh;-><init>(Lcom/bbm/ui/SelfHeaderView;)V
 
     iput-object v0, p0, Lcom/bbm/ui/SelfHeaderView;->e:Lcom/bbm/j/k;
 
     .line 50
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v0
 
@@ -42,7 +42,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f03014c
+    const v1, 0x7f030167
 
     const/4 v2, 0x1
 
@@ -99,7 +99,7 @@
 
     .prologue
     .line 57
-    const v0, 0x7f0b068a
+    const v0, 0x7f0b0703
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/SelfHeaderView;->findViewById(I)Landroid/view/View;
 
@@ -110,7 +110,7 @@
     iput-object v0, p0, Lcom/bbm/ui/SelfHeaderView;->b:Lcom/bbm/ui/ObservingImageView;
 
     .line 58
-    const v0, 0x7f0b068b
+    const v0, 0x7f0b0704
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/SelfHeaderView;->findViewById(I)Landroid/view/View;
 
@@ -121,7 +121,7 @@
     iput-object v0, p0, Lcom/bbm/ui/SelfHeaderView;->c:Landroid/widget/TextView;
 
     .line 59
-    const v0, 0x7f0b068c
+    const v0, 0x7f0b0705
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/SelfHeaderView;->findViewById(I)Landroid/view/View;
 
@@ -134,9 +134,9 @@
     .line 61
     iget-object v0, p0, Lcom/bbm/ui/SelfHeaderView;->b:Lcom/bbm/ui/ObservingImageView;
 
-    new-instance v1, Lcom/bbm/ui/gb;
+    new-instance v1, Lcom/bbm/ui/gi;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/gb;-><init>(Lcom/bbm/ui/SelfHeaderView;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/gi;-><init>(Lcom/bbm/ui/SelfHeaderView;)V
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/ObservingImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

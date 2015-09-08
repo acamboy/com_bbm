@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ScrollView android:id="@id/settings_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/footer_action_bar" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/toolbar_cancel_done_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" layout="@layout/toolbar_cancel_done_header" />
+    <ScrollView android:id="@id/settings_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/toolbar_cancel_done_header" android:layout_alignParentLeft="true" android:layout_alignParentRight="true">
         <RelativeLayout android:id="@id/ads_interstitial_container" android:background="@color/whiteBackground" android:layout_width="fill_parent" android:layout_height="wrap_content">
             <com.bbm.ui.ObservingImageView android:id="@id/ad_interstitial_image" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginTop="@dimen/ad_interstitial_margin_top" android:scaleType="centerInside" android:layout_alignParentTop="true" android:layout_centerInParent="true" />
             <TextView android:textSize="@dimen/ad_interstitial_header_text_size" android:textColor="#ff000000" android:id="@id/ad_interstitial_header" android:paddingLeft="@dimen/ad_interstitial_padding_left" android:paddingRight="@dimen/ad_interstitial_padding_right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ad_interstitial_margin_top" android:layout_below="@id/ad_interstitial_image" android:layout_alignParentLeft="true" android:textIsSelectable="false" />
             <TextView android:textSize="@dimen/ad_interstitial_description_text_size" android:textColor="#ff000000" android:id="@id/ad_interstital_description" android:paddingLeft="@dimen/ad_interstitial_padding_left" android:paddingRight="@dimen/ad_interstitial_padding_right" android:paddingBottom="@dimen/ad_interstitial_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ad_interstitial_margin_top" android:layout_below="@id/ad_interstitial_header" android:layout_alignParentLeft="true" android:textIsSelectable="false" />
         </RelativeLayout>
     </ScrollView>
-    <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
+    <com.bbm.ui.FloatingActionButton android:id="@id/floating_action_button" android:visibility="gone" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" custom:withColor="@color/primaryColor" custom:withDrawable="@drawable/ic_share" style="@style/FloatingActionButton" />
 </RelativeLayout>

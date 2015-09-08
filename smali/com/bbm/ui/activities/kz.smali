@@ -1,130 +1,86 @@
 .class final Lcom/bbm/ui/activities/kz;
-.super Lcom/bbm/d/b/f;
-.source "GroupAdminAddActivity.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/d/b/f",
-        "<",
-        "Lcom/bbm/g/ac;",
-        ">;"
-    }
-.end annotation
+.super Lcom/bbm/ui/bz;
+.source "GroupConversationActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupAdminAddActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;Landroid/view/View;)V
     .locals 0
 
     .prologue
-    .line 180
-    iput-object p1, p0, Lcom/bbm/ui/activities/kz;->a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
+    .line 684
+    iput-object p1, p0, Lcom/bbm/ui/activities/kz;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    invoke-direct {p0}, Lcom/bbm/d/b/f;-><init>()V
+    invoke-direct {p0, p2}, Lcom/bbm/ui/bz;-><init>(Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()Ljava/util/List;
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/g/ac;",
-            ">;"
-        }
-    .end annotation
+.method public final a()V
+    .locals 2
 
     .prologue
-    .line 185
-    new-instance v1, Ljava/util/ArrayList;
+    .line 688
+    iget-object v0, p0, Lcom/bbm/ui/activities/kz;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    .line 187
-    iget-object v0, p0, Lcom/bbm/ui/activities/kz;->a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupAdminAddActivity;->b(Lcom/bbm/ui/activities/GroupAdminAddActivity;)Lcom/bbm/g/al;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/kz;->a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
-
-    iget-object v2, v2, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Lcom/bbm/g/al;->g(Ljava/lang/String;)Lcom/bbm/j/w;
-
-    move-result-object v0
-
-    .line 188
-    invoke-interface {v0}, Lcom/bbm/j/w;->b()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 189
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    .line 198
-    :goto_0
-    return-object v0
-
-    .line 191
-    :cond_0
-    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :cond_1
-    :goto_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->l(Lcom/bbm/ui/activities/GroupConversationActivity;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_0
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 689
+    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/g/an;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/g/ac;
+    iget-object v1, p0, Lcom/bbm/ui/activities/kz;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    .line 192
-    iget-boolean v3, v0, Lcom/bbm/g/ac;->a:Z
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupConversationActivity;->b(Lcom/bbm/ui/activities/GroupConversationActivity;)Ljava/lang/String;
 
-    if-nez v3, :cond_1
+    move-result-object v1
 
-    .line 193
-    new-instance v3, Lcom/bbm/g/ac;
+    invoke-virtual {v0, v1}, Lcom/bbm/g/an;->d(Ljava/lang/String;)V
 
-    invoke-direct {v3, v0}, Lcom/bbm/g/ac;-><init>(Lcom/bbm/g/ac;)V
+    .line 691
+    :cond_0
+    return-void
+.end method
 
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+.method public final b()V
+    .locals 0
 
-    goto :goto_1
+    .prologue
+    .line 695
+    return-void
+.end method
 
-    :cond_2
-    move-object v0, v1
+.method public final c()V
+    .locals 2
 
-    .line 198
-    goto :goto_0
+    .prologue
+    .line 699
+    const-string v0, "ListView tapped to dismiss keyboard"
+
+    const-class v1, Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 700
+    iget-object v0, p0, Lcom/bbm/ui/activities/kz;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->g(Lcom/bbm/ui/activities/GroupConversationActivity;)Lcom/bbm/ui/EmoticonInputPanel;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->e()Z
+
+    .line 701
+    return-void
 .end method

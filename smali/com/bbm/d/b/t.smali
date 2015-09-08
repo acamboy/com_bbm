@@ -1,32 +1,39 @@
-.class public abstract Lcom/bbm/d/b/t;
-.super Lcom/bbm/d/b/f;
-.source "StateAwareComputedList.java"
+.class final Lcom/bbm/d/b/t;
+.super Ljava/lang/Object;
+.source "ConcatenatedList.java"
 
 # interfaces
-.implements Lcom/bbm/j/w;
+.implements Lcom/bbm/j/h;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Lcom/bbm/d/b/f",
-        "<TT;>;",
-        "Lcom/bbm/j/w",
-        "<TT;>;"
-    }
-.end annotation
+# instance fields
+.field final synthetic a:Lcom/bbm/d/b/r;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcom/bbm/d/b/r;)V
     .locals 0
 
     .prologue
-    .line 5
-    invoke-direct {p0}, Lcom/bbm/d/b/f;-><init>()V
+    .line 58
+    iput-object p1, p0, Lcom/bbm/d/b/t;->a:Lcom/bbm/d/b/r;
 
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
+    .locals 1
+
+    .prologue
+    .line 61
+    iget-object v0, p0, Lcom/bbm/d/b/t;->a:Lcom/bbm/d/b/r;
+
+    invoke-virtual {v0}, Lcom/bbm/d/b/r;->c()V
+
+    .line 62
     return-void
 .end method

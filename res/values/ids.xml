@@ -1,15 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <item type="id" name="action_bar_activity_content" />
+    <item type="id" name="action_bar_spinner" />
+    <item type="id" name="action_menu_divider" />
+    <item type="id" name="action_menu_presenter" />
+    <item type="id" name="actionmode_feed_list_ad_block" />
+    <item type="id" name="actionmode_menu_channel_block_subscriber" />
+    <item type="id" name="actionmode_menu_channel_copy_comment" />
+    <item type="id" name="actionmode_menu_channel_copy_post" />
+    <item type="id" name="actionmode_menu_channel_delete_channel" />
+    <item type="id" name="actionmode_menu_channel_delete_comment" />
+    <item type="id" name="actionmode_menu_channel_delete_post" />
+    <item type="id" name="actionmode_menu_channel_favorite_channel" />
+    <item type="id" name="actionmode_menu_channel_leave_channel" />
+    <item type="id" name="actionmode_menu_channel_reply_comment" />
+    <item type="id" name="actionmode_menu_channel_report_comment" />
+    <item type="id" name="actionmode_menu_channel_report_post" />
+    <item type="id" name="actionmode_menu_channel_repost" />
+    <item type="id" name="actionmode_menu_channel_share_post" />
+    <item type="id" name="actionmode_menu_feed_list_ad_addchannel" />
+    <item type="id" name="actionmode_menu_feed_list_ad_calltoaction_browse" />
+    <item type="id" name="actionmode_menu_feed_list_ad_calltoaction_display" />
+    <item type="id" name="actionmode_menu_invites_block_ad" />
+    <item type="id" name="actionmode_menu_invites_join_ad" />
+    <item type="id" name="actionmode_menu_invites_share_ad" />
+    <item type="id" name="actionmode_menu_item_groups_comment_copy" />
+    <item type="id" name="actionmode_menu_item_groups_member_invite" />
+    <item type="id" name="actionmode_menu_item_groups_member_pendinginvite" />
+    <item type="id" name="actionmode_menu_item_groups_member_remove" />
+    <item type="id" name="ad_webview_layout" />
+    <item type="id" name="ad_webview_progressbar" />
+    <item type="id" name="bbm_toolbar" />
     <item type="id" name="channel_comment_avatar" />
+    <item type="id" name="context_menu_item_channel_copy_content" />
+    <item type="id" name="context_menu_item_contact_select_all" />
+    <item type="id" name="context_menu_item_groups_item_complete" />
+    <item type="id" name="context_menu_item_groups_item_delete" />
+    <item type="id" name="context_menu_item_groups_item_edit" />
+    <item type="id" name="context_menu_item_groups_item_incomplete" />
+    <item type="id" name="context_menu_item_groups_item_remove_deleted" />
+    <item type="id" name="context_menu_item_groups_item_restore" />
+    <item type="id" name="context_menu_item_groups_list_delete" />
     <item type="id" name="current_value" />
     <item type="id" name="decode" />
     <item type="id" name="decode_failed" />
     <item type="id" name="decode_succeeded" />
     <item type="id" name="emoticon_image" />
     <item type="id" name="glympse_cet_edit" />
+    <item type="id" name="home" />
     <item type="id" name="item_type" />
     <item type="id" name="launch_product_query" />
     <item type="id" name="observable_monitor" />
+    <item type="id" name="progress_circular" />
+    <item type="id" name="progress_horizontal" />
     <item type="id" name="quit" />
     <item type="id" name="restart_preview" />
     <item type="id" name="return_scan_result" />
@@ -63,7 +106,9 @@
     <item type="id" name="slide_menu_item_common_settings" />
     <item type="id" name="slide_menu_item_common_share_pins" />
     <item type="id" name="slide_menu_item_common_tell_friends" />
+    <item type="id" name="slide_menu_item_contacts_add_as_contact" />
     <item type="id" name="slide_menu_item_contacts_add_category" />
+    <item type="id" name="slide_menu_item_contacts_delete_category" />
     <item type="id" name="slide_menu_item_contacts_delete_contact" />
     <item type="id" name="slide_menu_item_contacts_invite_group" />
     <item type="id" name="slide_menu_item_contacts_move_contact" />
@@ -73,6 +118,7 @@
     <item type="id" name="slide_menu_item_contacts_select_more" />
     <item type="id" name="slide_menu_item_contacts_view_profile" />
     <item type="id" name="slide_menu_item_groups_add_group" />
+    <item type="id" name="slide_menu_item_groups_comment_send" />
     <item type="id" name="slide_menu_item_groups_invite" />
     <item type="id" name="slide_menu_item_groups_join_group" />
     <item type="id" name="slide_menu_item_groups_lobby_add_event" />
@@ -82,7 +128,6 @@
     <item type="id" name="slide_menu_item_groups_lobby_leave_group" />
     <item type="id" name="slide_menu_item_groups_lobby_new_chat" />
     <item type="id" name="slide_menu_item_groups_lobby_view_profile" />
-    <item type="id" name="slide_menu_item_groups_lobby_view_settings" />
     <item type="id" name="slide_menu_item_groups_member_type_contact" />
     <item type="id" name="slide_menu_item_groups_member_type_inactive_contact" />
     <item type="id" name="slide_menu_item_groups_member_type_non_contact" />
@@ -90,6 +135,11 @@
     <item type="id" name="slide_menu_item_groups_member_type_self" />
     <item type="id" name="slide_menu_item_groups_open_chat" />
     <item type="id" name="slide_menu_item_groups_open_groups" />
+    <item type="id" name="slide_menu_item_groups_picture_like" />
+    <item type="id" name="slide_menu_item_groups_picture_save" />
+    <item type="id" name="slide_menu_item_groups_picture_set_as" />
+    <item type="id" name="slide_menu_item_groups_picture_share" />
+    <item type="id" name="slide_menu_item_groups_settings" />
     <item type="id" name="slide_menu_item_groups_view_pending_invite" />
     <item type="id" name="slide_menu_item_groups_view_profile" />
     <item type="id" name="slide_menu_item_main_channel_notifications" />
@@ -107,6 +157,7 @@
     <item type="id" name="slide_menu_item_main_updates" />
     <item type="id" name="slide_menu_item_options_add_item" />
     <item type="id" name="slide_menu_item_options_attach" />
+    <item type="id" name="slide_menu_item_options_block_chat" />
     <item type="id" name="slide_menu_item_options_chat_history" />
     <item type="id" name="slide_menu_item_options_clear_chat" />
     <item type="id" name="slide_menu_item_options_copy_chat" />
@@ -118,6 +169,8 @@
     <item type="id" name="slide_menu_item_options_mark_complete" />
     <item type="id" name="slide_menu_item_options_mark_incomplete" />
     <item type="id" name="slide_menu_item_options_ping" />
+    <item type="id" name="slide_menu_item_options_play_voice_note" />
+    <item type="id" name="slide_menu_item_options_quote_message" />
     <item type="id" name="slide_menu_item_options_recall_message" />
     <item type="id" name="slide_menu_item_options_request_high_quility" />
     <item type="id" name="slide_menu_item_options_resend_message" />
@@ -132,26 +185,65 @@
     <item type="id" name="slide_menu_item_options_view_comments" />
     <item type="id" name="slide_menu_item_shop_restore_sticker_purchases" />
     <item type="id" name="slide_menu_item_start_meeting" />
+    <item type="id" name="snackButton" />
+    <item type="id" name="snackContainer" />
+    <item type="id" name="snackMessage" />
+    <item type="id" name="split_action_bar" />
     <item type="id" name="tag_update_holder" />
     <item type="id" name="tag_view_holder" />
+    <item type="id" name="up" />
     <item type="id" name="view_holder" />
     <item type="id" name="view_primary_key" />
+    <item type="id" name="action_bar_title">false</item>
+    <item type="id" name="action_bar_subtitle">false</item>
+    <item type="id" name="action_mode_close_button">false</item>
+    <item type="id" name="activity_chooser_view_content">false</item>
+    <item type="id" name="expand_activities_button">false</item>
+    <item type="id" name="image">false</item>
+    <item type="id" name="default_activity_button">false</item>
+    <item type="id" name="list_item">false</item>
+    <item type="id" name="icon">false</item>
+    <item type="id" name="title">false</item>
+    <item type="id" name="expanded_menu">false</item>
+    <item type="id" name="checkbox">false</item>
+    <item type="id" name="shortcut">false</item>
+    <item type="id" name="radio">false</item>
+    <item type="id" name="action_bar_root">false</item>
+    <item type="id" name="action_mode_bar_stub">false</item>
+    <item type="id" name="action_mode_bar">false</item>
+    <item type="id" name="decor_content_parent">false</item>
+    <item type="id" name="action_bar_container">false</item>
+    <item type="id" name="action_bar">false</item>
+    <item type="id" name="action_context_bar">false</item>
+    <item type="id" name="edit_query">false</item>
+    <item type="id" name="search_bar">false</item>
+    <item type="id" name="search_badge">false</item>
+    <item type="id" name="search_button">false</item>
+    <item type="id" name="search_edit_frame">false</item>
+    <item type="id" name="search_mag_icon">false</item>
+    <item type="id" name="search_plate">false</item>
+    <item type="id" name="search_src_text">false</item>
+    <item type="id" name="search_close_btn">false</item>
+    <item type="id" name="submit_area">false</item>
+    <item type="id" name="search_go_btn">false</item>
+    <item type="id" name="search_voice_btn">false</item>
+    <item type="id" name="actionmode_name">false</item>
     <item type="id" name="add_post_root">false</item>
-    <item type="id" name="add_post_spinner">false</item>
+    <item type="id" name="toolbar_cancel_done_header">false</item>
     <item type="id" name="new_post_progress_bar">false</item>
     <item type="id" name="add_channel_post_scroll">false</item>
-    <item type="id" name="add_post_bottom_layout">false</item>
     <item type="id" name="add_post_top_layout">false</item>
-    <item type="id" name="channel_image_button">false</item>
-    <item type="id" name="channel_image_crop_button">false</item>
-    <item type="id" name="channel_image_cancel_button">false</item>
+    <item type="id" name="channel_image_layout">false</item>
+    <item type="id" name="channel_post_image">false</item>
+    <item type="id" name="channel_post_image_crop_button">false</item>
+    <item type="id" name="channel_post_image_cancel_button">false</item>
     <item type="id" name="channel_add_post_title">false</item>
     <item type="id" name="channel_add_post_divider">false</item>
     <item type="id" name="channel_add_post_message">false</item>
-    <item type="id" name="add_post_emoticon_layout">false</item>
+    <item type="id" name="add_post_bottom_layout">false</item>
     <item type="id" name="channel_post_message_count">false</item>
-    <item type="id" name="channel_post_add_emoticon">false</item>
     <item type="id" name="channel_post_add_picture">false</item>
+    <item type="id" name="channel_post_add_emoticon">false</item>
     <item type="id" name="add_post_emoticon_picker">false</item>
     <item type="id" name="groupProfileRoot">false</item>
     <item type="id" name="group_user_list">false</item>
@@ -161,30 +253,25 @@
     <item type="id" name="password_field">false</item>
     <item type="id" name="password_confirm_label">false</item>
     <item type="id" name="password_confirm_field">false</item>
-    <item type="id" name="attachRoot">false</item>
-    <item type="id" name="attachList">false</item>
-    <item type="id" name="footer_action_bar">false</item>
+    <item type="id" name="toolbar_container">false</item>
     <item type="id" name="audio_player_title">false</item>
     <item type="id" name="audio_player_background">false</item>
+    <item type="id" name="progress_container">false</item>
+    <item type="id" name="audio_toggle">false</item>
     <item type="id" name="progress">false</item>
     <item type="id" name="avatar_viewer_root">false</item>
     <item type="id" name="show_own_larger_avatar_container">false</item>
     <item type="id" name="show_own_larger_avatar_image">false</item>
+    <item type="id" name="footer_action_bar">false</item>
     <item type="id" name="blocked_contacts_selector">false</item>
     <item type="id" name="greyDividingLine">false</item>
     <item type="id" name="blocked_contacts_fragment_container">false</item>
+    <item type="id" name="main_toolbar">false</item>
+    <item type="id" name="capture_info_text_view">false</item>
     <item type="id" name="preview_view">false</item>
-    <item type="id" name="view_foot_action_bar_container">false</item>
-    <item type="id" name="capture_viewfinder_container_top_padding_grey_edge">false</item>
     <item type="id" name="no_cam_textview">false</item>
     <item type="id" name="upper_frame">false</item>
-    <item type="id" name="capture_barcode_container">false</item>
     <item type="id" name="viewfinder_view">false</item>
-    <item type="id" name="capture_viewfinder_container_top_padding">false</item>
-    <item type="id" name="capture_viewfinder_container_bottom_padding">false</item>
-    <item type="id" name="capture_viewfinder_container_bottom_grey_padding">false</item>
-    <item type="id" name="capture_info">false</item>
-    <item type="id" name="capture_info_text_view">false</item>
     <item type="id" name="capture_barcode_container_low">false</item>
     <item type="id" name="banner_container">false</item>
     <item type="id" name="banner_avatar">false</item>
@@ -194,29 +281,9 @@
     <item type="id" name="barcode_qr">false</item>
     <item type="id" name="barcode_pin_left">false</item>
     <item type="id" name="barcode_pin_right">false</item>
-    <item type="id" name="result_view">false</item>
-    <item type="id" name="barcode_image_view">false</item>
-    <item type="id" name="format_text_view">false</item>
-    <item type="id" name="type_text_view">false</item>
-    <item type="id" name="time_text_view">false</item>
-    <item type="id" name="meta_text_view_label">false</item>
-    <item type="id" name="meta_text_view">false</item>
-    <item type="id" name="contents_text_view">false</item>
-    <item type="id" name="contents_supplement_text_view">false</item>
-    <item type="id" name="result_button_view">false</item>
-    <item type="id" name="shopper_button">false</item>
     <item type="id" name="cb_main_layout">false</item>
     <item type="id" name="progress_bar_payment">false</item>
-    <item type="id" name="result_text_view">false</item>
-    <item type="id" name="cb_divider">false</item>
-    <item type="id" name="cb_button_layout">false</item>
-    <item type="id" name="purchase_cancel_button">false</item>
-    <item type="id" name="purchase_continue_button">false</item>
-    <item type="id" name="change_status_root">false</item>
-    <item type="id" name="change_status_new_container">false</item>
-    <item type="id" name="change_status_new_busy">false</item>
-    <item type="id" name="change_status_new_edit">false</item>
-    <item type="id" name="change_status_list">false</item>
+    <item type="id" name="channel_toolbar">false</item>
     <item type="id" name="chats_empty_layout">false</item>
     <item type="id" name="chats_empty_label">false</item>
     <item type="id" name="chats_empty_icon">false</item>
@@ -227,6 +294,7 @@
     <item type="id" name="view_channel_removed_overlay_text">false</item>
     <item type="id" name="ownProfileRoot">false</item>
     <item type="id" name="channel_preview_fragment_container">false</item>
+    <item type="id" name="default_conversation_toolbar">false</item>
     <item type="id" name="channel_invite_to_bbm">false</item>
     <item type="id" name="channel_invite_to_bbm_progress_bar">false</item>
     <item type="id" name="channel_invite_to_bbm_user_avatar">false</item>
@@ -253,16 +321,6 @@
     <item type="id" name="channel_owner__zip">false</item>
     <item type="id" name="channel_owner__country">false</item>
     <item type="id" name="channel_picker_list">false</item>
-    <item type="id" name="post_image_layout">false</item>
-    <item type="id" name="post_image">false</item>
-    <item type="id" name="post_title_overlay">false</item>
-    <item type="id" name="channel_name_overlay">false</item>
-    <item type="id" name="post_body">false</item>
-    <item type="id" name="post_timestamp">false</item>
-    <item type="id" name="post_comments_button">false</item>
-    <item type="id" name="post_comments_count">false</item>
-    <item type="id" name="post_hypes_button">false</item>
-    <item type="id" name="post_hypes_count">false</item>
     <item type="id" name="activity_channel_post_comment_reply">false</item>
     <item type="id" name="channel_post_commentor_photo">false</item>
     <item type="id" name="channel_post_details_layout">false</item>
@@ -275,7 +333,6 @@
     <item type="id" name="activity_channel_post_comment">false</item>
     <item type="id" name="channel_post_replyImage">false</item>
     <item type="id" name="channel_post_comment_root_view">false</item>
-    <item type="id" name="emoticon_panel">false</item>
     <item type="id" name="channel_post_comment_listview_frame">false</item>
     <item type="id" name="channel_post_comment_listview">false</item>
     <item type="id" name="channel_posts_comments_message_bar">false</item>
@@ -287,11 +344,17 @@
     <item type="id" name="channel_post_gallery_root">false</item>
     <item type="id" name="loading_image_progress_bar">false</item>
     <item type="id" name="channel_post_gallery_image">false</item>
-    <item type="id" name="content">false</item>
-    <item type="id" name="gallery_footer_frame_layout">false</item>
+    <item type="id" name="post_image">false</item>
     <item type="id" name="post_text_content">false</item>
+    <item type="id" name="post_title_overlay">false</item>
+    <item type="id" name="post_body">false</item>
+    <item type="id" name="post_timestamp">false</item>
     <item type="id" name="post_read_button">false</item>
     <item type="id" name="post_read_count">false</item>
+    <item type="id" name="post_comments_button">false</item>
+    <item type="id" name="post_comments_count">false</item>
+    <item type="id" name="post_hypes_button">false</item>
+    <item type="id" name="post_hypes_count">false</item>
     <item type="id" name="post_reported">false</item>
     <item type="id" name="post_reported_count">false</item>
     <item type="id" name="comments_disabled">false</item>
@@ -326,13 +389,27 @@
     <item type="id" name="channel_category_arrow_badge">false</item>
     <item type="id" name="channels_category_list">false</item>
     <item type="id" name="channels_subcategory_list">false</item>
+    <item type="id" name="channel_main_drawer">false</item>
+    <item type="id" name="channel_main_content_frame">false</item>
+    <item type="id" name="channel_main_content_overlay">false</item>
+    <item type="id" name="cloud_dir_action_bar">false</item>
+    <item type="id" name="refine_search_warning">false</item>
+    <item type="id" name="search_results_count_header">false</item>
+    <item type="id" name="search_results_number_of_matches">false</item>
+    <item type="id" name="search_results_listView">false</item>
+    <item type="id" name="search_results_message_bar">false</item>
+    <item type="id" name="search_results_message_text">false</item>
+    <item type="id" name="search_results_message_image">false</item>
+    <item type="id" name="search_progress_bar">false</item>
+    <item type="id" name="lookup">false</item>
+    <item type="id" name="lookupSpinner">false</item>
     <item type="id" name="conversation_root">false</item>
-    <item type="id" name="message_root_layout">false</item>
+    <item type="id" name="channel_chat_conversation_toolbar">false</item>
     <item type="id" name="list_messages">false</item>
     <item type="id" name="protected_hint_panel">false</item>
     <item type="id" name="protected_hint_text">false</item>
     <item type="id" name="emoticon_input_panel">false</item>
-    <item type="id" name="bbm_voice_actionbar">false</item>
+    <item type="id" name="bbm_phone_contact_add_block">false</item>
     <item type="id" name="channel_blocked">false</item>
     <item type="id" name="rootView">false</item>
     <item type="id" name="list_item_list_name">false</item>
@@ -344,6 +421,15 @@
     <item type="id" name="list_item_priority_spinner">false</item>
     <item type="id" name="list_item_last_edited_by">false</item>
     <item type="id" name="list_item_added_by">false</item>
+    <item type="id" name="activity_edit_profile_name_root">false</item>
+    <item type="id" name="broadcast_scroll_view">false</item>
+    <item type="id" name="profile_display_name">false</item>
+    <item type="id" name="emoticon_picker_layout">false</item>
+    <item type="id" name="keyboard_button_area">false</item>
+    <item type="id" name="keyboard_button">false</item>
+    <item type="id" name="emoticon_picker">false</item>
+    <item type="id" name="emoticon_button_area">false</item>
+    <item type="id" name="emoticon_button">false</item>
     <item type="id" name="image_view">false</item>
     <item type="id" name="countdown_progress">false</item>
     <item type="id" name="image_description_layout">false</item>
@@ -366,12 +452,16 @@
     <item type="id" name="arrow_bottom_left">false</item>
     <item type="id" name="arrow_bottom_right">false</item>
     <item type="id" name="label3">false</item>
+    <item type="id" name="gudlines_text">false</item>
     <item type="id" name="glympse_viewer_map">false</item>
     <item type="id" name="glympse_viewer_selector">false</item>
     <item type="id" name="viewRoot">false</item>
     <item type="id" name="membersListHeader">false</item>
     <item type="id" name="history_list">false</item>
+    <item type="id" name="group_toolbar">false</item>
     <item type="id" name="groupChatslist">false</item>
+    <item type="id" name="select_group_discussion_root">false</item>
+    <item type="id" name="discussions">false</item>
     <item type="id" name="events_list">false</item>
     <item type="id" name="events_empty_layout">false</item>
     <item type="id" name="events_status">false</item>
@@ -400,8 +490,8 @@
     <item type="id" name="add_new_list_item_button">false</item>
     <item type="id" name="list_items_list">false</item>
     <item type="id" name="list_items_empty_layout">false</item>
-    <item type="id" name="list_items_status">false</item>
     <item type="id" name="list_items_icon">false</item>
+    <item type="id" name="list_items_status">false</item>
     <item type="id" name="add_list_item_button">false</item>
     <item type="id" name="lists_grid">false</item>
     <item type="id" name="lists_empty_layout">false</item>
@@ -450,6 +540,7 @@
     <item type="id" name="group_passphrase">false</item>
     <item type="id" name="group_passphrase_copy">false</item>
     <item type="id" name="divider_bottom">false</item>
+    <item type="id" name="group_autopassphrase">false</item>
     <item type="id" name="pictures_grid">false</item>
     <item type="id" name="groupPicEmpty">false</item>
     <item type="id" name="groupPicEmptyImage">false</item>
@@ -457,25 +548,20 @@
     <item type="id" name="groupPicEmptyButton">false</item>
     <item type="id" name="activity_group_picture_comments_root">false</item>
     <item type="id" name="pic_to_comment_container">false</item>
-    <item type="id" name="pic_roll_count_over_image">false</item>
     <item type="id" name="pic_to_comment">false</item>
-    <item type="id" name="pic_roll_count_animating">false</item>
     <item type="id" name="pic_roll_count_text">false</item>
     <item type="id" name="pic_image_description_layout">false</item>
     <item type="id" name="pic_caption_text">false</item>
     <item type="id" name="pic_date_added_text">false</item>
+    <item type="id" name="group_pic_comment_count">false</item>
     <item type="id" name="pic_liking">false</item>
     <item type="id" name="pic_comment_list">false</item>
-    <item type="id" name="pic_no_comment_text">false</item>
-    <item type="id" name="select_contact_root">false</item>
-    <item type="id" name="contactslist">false</item>
     <item type="id" name="groupImageFrame">false</item>
     <item type="id" name="groupImageToUpload">false</item>
     <item type="id" name="groupImageCaption">false</item>
     <item type="id" name="groupProfileFragmentSelector">false</item>
     <item type="id" name="groupProfileFragmentDropShadow">false</item>
     <item type="id" name="groupProfileFragmentContainer">false</item>
-    <item type="id" name="footer_bar_group_profile">false</item>
     <item type="id" name="activity_group_select_new_admin_list">false</item>
     <item type="id" name="allow_chat_notifications">false</item>
     <item type="id" name="allow_picture_notifications">false</item>
@@ -489,47 +575,37 @@
     <item type="id" name="admin_password">false</item>
     <item type="id" name="admin_password_text">false</item>
     <item type="id" name="admin_password_button">false</item>
+    <item type="id" name="select_contact_root">false</item>
+    <item type="id" name="contactslist">false</item>
     <item type="id" name="group_icons_grid">false</item>
-    <item type="id" name="show_larger_image_root">false</item>
     <item type="id" name="show_larger_image_container">false</item>
     <item type="id" name="show_larger_image">false</item>
-    <item type="id" name="incoming_call_root">false</item>
-    <item type="id" name="incomingCallBackground">false</item>
+    <item type="id" name="video_screen_root">false</item>
+    <item type="id" name="call_details_header">false</item>
+    <item type="id" name="call_title">false</item>
+    <item type="id" name="call_subtitle">false</item>
+    <item type="id" name="call_screen_speaker">false</item>
+    <item type="id" name="call_screen_upgrade_to_meeting">false</item>
+    <item type="id" name="call_screen_mute">false</item>
+    <item type="id" name="in_call_minimize_button">false</item>
+    <item type="id" name="caller_avatar_view">false</item>
+    <item type="id" name="end_call">false</item>
     <item type="id" name="incomingCallDisplayName">false</item>
-    <item type="id" name="incoming_call_accepted_gradient">false</item>
-    <item type="id" name="incoming_call_declined_gradient">false</item>
-    <item type="id" name="incomingCallAnswerBar">false</item>
-    <item type="id" name="sliderBackground">false</item>
-    <item type="id" name="hintArrows">false</item>
-    <item type="id" name="redArrow3">false</item>
-    <item type="id" name="redArrow2">false</item>
-    <item type="id" name="redArrow1">false</item>
-    <item type="id" name="greenArrow1">false</item>
-    <item type="id" name="greenArrow2">false</item>
-    <item type="id" name="greenArrow3">false</item>
-    <item type="id" name="temporary_gradient_control">false</item>
-    <item type="id" name="acceptRing">false</item>
-    <item type="id" name="acceptRingWhite">false</item>
-    <item type="id" name="acceptIcon">false</item>
-    <item type="id" name="acceptIconWhite">false</item>
-    <item type="id" name="rejectIcon">false</item>
-    <item type="id" name="rejectIconWhite">false</item>
-    <item type="id" name="rejectRing">false</item>
-    <item type="id" name="rejectRingWhite">false</item>
-    <item type="id" name="muteButton">false</item>
-    <item type="id" name="incomingCallTypeIcon">false</item>
-    <item type="id" name="callTypeDeclineIcon">false</item>
-    <item type="id" name="callTypeAcceptIcon">false</item>
     <item type="id" name="incomingCallTypeText">false</item>
-    <item type="id" name="callTypeDeclineText">false</item>
-    <item type="id" name="callTypeAcceptText">false</item>
+    <item type="id" name="muteButton">false</item>
+    <item type="id" name="incomingCallerAvatar">false</item>
+    <item type="id" name="acceptDeclineLayout">false</item>
+    <item type="id" name="acceptCallButton">false</item>
+    <item type="id" name="ignoreCallButton">false</item>
     <item type="id" name="invite_category_spinner">false</item>
     <item type="id" name="store_fragment_container">false</item>
     <item type="id" name="store_close">false</item>
     <item type="id" name="legal_container">false</item>
-    <item type="id" name="tab">false</item>
+    <item type="id" name="main_drawer">false</item>
     <item type="id" name="content_frame">false</item>
     <item type="id" name="content_overlay">false</item>
+    <item type="id" name="drawer_items_list">false</item>
+    <item type="id" name="mpc_members_list">false</item>
     <item type="id" name="imagebuttonLayout">false</item>
     <item type="id" name="channel_icon_button">false</item>
     <item type="id" name="new_channel_progress_bar">false</item>
@@ -565,9 +641,6 @@
     <item type="id" name="group_passphrase_field">false</item>
     <item type="id" name="group_passphrase_details">false</item>
     <item type="id" name="list_title">false</item>
-    <item type="id" name="profileFragmentSelector">false</item>
-    <item type="id" name="profileDivider">false</item>
-    <item type="id" name="profileFragmentContainer">false</item>
     <item type="id" name="channel_chat_picture">false</item>
     <item type="id" name="channel_chat_splat">false</item>
     <item type="id" name="channel_chat_frame">false</item>
@@ -611,24 +684,28 @@
     <item type="id" name="channel_posts_frame">false</item>
     <item type="id" name="channel_number_of_posts">false</item>
     <item type="id" name="channel_posts_caption">false</item>
-    <item type="id" name="switch_title">false</item>
-    <item type="id" name="go_with_cb_button">false</item>
-    <item type="id" name="go_with_primary_button">false</item>
+    <item type="id" name="loading_container">false</item>
+    <item type="id" name="progress_bar">false</item>
+    <item type="id" name="app_taking_longer_than_expected">false</item>
+    <item type="id" name="partnerWebView">false</item>
+    <item type="id" name="closePartnerWebViewButton">false</item>
+    <item type="id" name="policy_title">false</item>
+    <item type="id" name="policy_message">false</item>
+    <item type="id" name="channel_preview_toolbar">false</item>
     <item type="id" name="channel_preview_fragment_selector">false</item>
     <item type="id" name="profile_overlay">false</item>
     <item type="id" name="profile_overlay_message">false</item>
-    <item type="id" name="profileRoot">false</item>
+    <item type="id" name="private_conversation_toolbar">false</item>
     <item type="id" name="profile_icons_grid">false</item>
+    <item type="id" name="toolbar">false</item>
     <item type="id" name="source_list">false</item>
     <item type="id" name="protected_title">false</item>
     <item type="id" name="protected_message">false</item>
-    <item type="id" name="footer_actionbar_content">false</item>
-    <item type="id" name="ok">false</item>
     <item type="id" name="received_pending_contact_content">false</item>
     <item type="id" name="received_pending_avatar">false</item>
     <item type="id" name="received_pending_name">false</item>
-    <item type="id" name="received_pending_pin">false</item>
     <item type="id" name="received_pending_date">false</item>
+    <item type="id" name="received_pending_pin">false</item>
     <item type="id" name="received_pending_message">false</item>
     <item type="id" name="status_message">false</item>
     <item type="id" name="activity_report_problem_step01_view">false</item>
@@ -639,20 +716,11 @@
     <item type="id" name="upload_button">false</item>
     <item type="id" name="email_button">false</item>
     <item type="id" name="activity_report_problem_step02_view">false</item>
-    <item type="id" name="progress_bar">false</item>
     <item type="id" name="report_status">false</item>
     <item type="id" name="activity_report_problem_step03_view">false</item>
     <item type="id" name="problem_report_sent_label">false</item>
     <item type="id" name="incident_label">false</item>
-    <item type="id" name="activity_search_channel_view_layout">false</item>
-    <item type="id" name="channel_view_two_button_segmented_control">false</item>
-    <item type="id" name="search_content_frame">false</item>
-    <item type="id" name="search_results_count_header">false</item>
-    <item type="id" name="search_results_number_of_matches">false</item>
-    <item type="id" name="search_results_listView">false</item>
-    <item type="id" name="search_results_message_bar">false</item>
-    <item type="id" name="search_results_message_text">false</item>
-    <item type="id" name="search_results_message_image">false</item>
+    <item type="id" name="report_problem_activity_info">false</item>
     <item type="id" name="search_channel_progress_bar">false</item>
     <item type="id" name="search_results_profile_photo">false</item>
     <item type="id" name="search_results_new">false</item>
@@ -671,11 +739,9 @@
     <item type="id" name="search_contacts_cancel">false</item>
     <item type="id" name="greyDividingLine1">false</item>
     <item type="id" name="additional_message">false</item>
-    <item type="id" name="protected_contacts_only">false</item>
     <item type="id" name="greyDividingLine2">false</item>
     <item type="id" name="no_contacts_message">false</item>
     <item type="id" name="activity_send_broadcast_root">false</item>
-    <item type="id" name="broadcast_scroll_view">false</item>
     <item type="id" name="broadcast_to">false</item>
     <item type="id" name="broadcast_top_container">false</item>
     <item type="id" name="broadcast_grid">false</item>
@@ -686,12 +752,6 @@
     <item type="id" name="broadcast_contact_suggestion">false</item>
     <item type="id" name="broadcast_message_container">false</item>
     <item type="id" name="broadcast_message">false</item>
-    <item type="id" name="emoticon_picker_layout">false</item>
-    <item type="id" name="keyboard_button_area">false</item>
-    <item type="id" name="keyboard_button">false</item>
-    <item type="id" name="emoticon_picker">false</item>
-    <item type="id" name="emoticon_button_area">false</item>
-    <item type="id" name="emoticon_button">false</item>
     <item type="id" name="sent_pending_invite_sent_label">false</item>
     <item type="id" name="sent_pending_invite_sent_value">false</item>
     <item type="id" name="sent_pending_invite_message_label">false</item>
@@ -700,32 +760,33 @@
     <item type="id" name="edit_blackberry_id_label">false</item>
     <item type="id" name="edit_blackberry_id_button">false</item>
     <item type="id" name="edit_blackberry_id_user_id">false</item>
-    <item type="id" name="switch_show_location">false</item>
-    <item type="id" name="switch_swilt">false</item>
-    <item type="id" name="switch_show_what_others_are_listening_to">false</item>
-    <item type="id" name="switch_allow_contact_upload">false</item>
-    <item type="id" name="switch_sticky_notification">false</item>
+    <item type="id" name="view_show_location">false</item>
+    <item type="id" name="view_swilt">false</item>
+    <item type="id" name="view_show_what_others_are_listening_to">false</item>
+    <item type="id" name="view_allow_contact_upload">false</item>
+    <item type="id" name="view_sticky_notification">false</item>
     <item type="id" name="text_sticky_notification_warning">false</item>
     <item type="id" name="switch_notifications">false</item>
-    <item type="id" name="switch_vibrate_notifications">false</item>
-    <item type="id" name="switch_ping_vibrate_notifications">false</item>
+    <item type="id" name="view_vibrate_notifications">false</item>
+    <item type="id" name="view_ping_vibrate_notifications">false</item>
     <item type="id" name="settings_basic_notifications_spinner">false</item>
     <item type="id" name="settings_led_notifications_spinner">false</item>
-    <item type="id" name="switch_show_avatar">false</item>
-    <item type="id" name="switch_chat_history">false</item>
-    <item type="id" name="switch_show_action_bar_with_keyboard">false</item>
-    <item type="id" name="switch_hide_keyboard_on_enter_converstation">false</item>
-    <item type="id" name="switch_allow_hq_pictures">false</item>
-    <item type="id" name="switch_timed_message">false</item>
+    <item type="id" name="settings_group">false</item>
+    <item type="id" name="view_show_avatar">false</item>
+    <item type="id" name="view_hide_keyboard_on_enter_converstation">false</item>
+    <item type="id" name="view_enter_button_as_new_line">false</item>
+    <item type="id" name="view_allow_hq_pictures">false</item>
+    <item type="id" name="view_timed_message">false</item>
+    <item type="id" name="view_chat_history">false</item>
+    <item type="id" name="settings_backup_chat_history_now_button">false</item>
     <item type="id" name="settings_clear_chat_history_button">false</item>
     <item type="id" name="settings_contacts_layout_spinner">false</item>
-    <item type="id" name="switch_add_contacts_on_tap">false</item>
-    <item type="id" name="switch_security_question">false</item>
+    <item type="id" name="view_security_question">false</item>
     <item type="id" name="edit_blocked_contacts_label">false</item>
     <item type="id" name="edit_blocked_contacts_button">false</item>
-    <item type="id" name="switch_allow_geolocation">false</item>
+    <item type="id" name="view_allow_geolocation">false</item>
     <item type="id" name="geolocation_description">false</item>
-    <item type="id" name="switch_allow_mobile_calls">false</item>
+    <item type="id" name="view_allow_mobile_calls">false</item>
     <item type="id" name="version_label">false</item>
     <item type="id" name="version">false</item>
     <item type="id" name="view_legal">false</item>
@@ -740,7 +801,6 @@
     <item type="id" name="button_continue">false</item>
     <item type="id" name="loading_root">false</item>
     <item type="id" name="loading_title">false</item>
-    <item type="id" name="loading_container">false</item>
     <item type="id" name="feature_voice">false</item>
     <item type="id" name="feature_voice_title">false</item>
     <item type="id" name="feature_voice_description">false</item>
@@ -760,22 +820,63 @@
     <item type="id" name="first_launch_after_upgrade_privacy_terms">false</item>
     <item type="id" name="first_launch_after_upgrade_continue_button">false</item>
     <item type="id" name="searchContacts">false</item>
-    <item type="id" name="barcodeRoot">false</item>
-    <item type="id" name="barcode_switch_capture">false</item>
-    <item type="id" name="barcode_infos">false</item>
-    <item type="id" name="barcode_group_infos">false</item>
-    <item type="id" name="barcode_group_qr">false</item>
+    <item type="id" name="share_feed_scroll_view_scroll_view">false</item>
+    <item type="id" name="share_container">false</item>
+    <item type="id" name="info_container">false</item>
+    <item type="id" name="pa_loading_container">false</item>
+    <item type="id" name="pa_progress_bar">false</item>
+    <item type="id" name="pa_loading_container_text">false</item>
+    <item type="id" name="pa_prompt">false</item>
+    <item type="id" name="pa_share_content_container">false</item>
+    <item type="id" name="pa_share_content_text">false</item>
+    <item type="id" name="user_avatar">false</item>
+    <item type="id" name="share_display_name">false</item>
+    <item type="id" name="share_date">false</item>
+    <item type="id" name="share_text">false</item>
+    <item type="id" name="pa_info_container">false</item>
+    <item type="id" name="pa_added_by">false</item>
+    <item type="id" name="partner_app_icon">false</item>
+    <item type="id" name="partner_app_name">false</item>
     <item type="id" name="ads_interstitial_container">false</item>
     <item type="id" name="ad_interstitial_image">false</item>
     <item type="id" name="ad_interstitial_header">false</item>
     <item type="id" name="ad_interstital_description">false</item>
+    <item type="id" name="floating_action_button">false</item>
     <item type="id" name="channel_stats_counts">false</item>
     <item type="id" name="channel_stats_time_period">false</item>
     <item type="id" name="channel_stats_engagement">false</item>
     <item type="id" name="channel_stats_joins">false</item>
+    <item type="id" name="stickerpack_list">false</item>
+    <item type="id" name="custom_pin_banner_image">false</item>
+    <item type="id" name="custom_pin_legal_textview">false</item>
+    <item type="id" name="custom_pin_learn_more">false</item>
+    <item type="id" name="custom_pin_edit_text">false</item>
+    <item type="id" name="custom_pin_error_text">false</item>
     <item type="id" name="channel_post_top_layout">false</item>
     <item type="id" name="channel_post_error_layout_stub">false</item>
     <item type="id" name="channel_post_list">false</item>
+    <item type="id" name="view_profile_root">false</item>
+    <item type="id" name="profile_avatar">false</item>
+    <item type="id" name="profile_display_name_edit_button">false</item>
+    <item type="id" name="profile_status_message">false</item>
+    <item type="id" name="profile_status_message_clear_button">false</item>
+    <item type="id" name="whatsonyourmind_layout">false</item>
+    <item type="id" name="viewallsubscriptions_area">false</item>
+    <item type="id" name="cloud_directory_shadow">false</item>
+    <item type="id" name="cloud_directory">false</item>
+    <item type="id" name="cloud_directory_name">false</item>
+    <item type="id" name="edit_cloud_directory_attributes">false</item>
+    <item type="id" name="status_text">false</item>
+    <item type="id" name="edit_status_button">false</item>
+    <item type="id" name="location_container">false</item>
+    <item type="id" name="location_timezone">false</item>
+    <item type="id" name="pin_text">false</item>
+    <item type="id" name="copy_pin_button">false</item>
+    <item type="id" name="share_pin_button">false</item>
+    <item type="id" name="custom_pin_crtl">false</item>
+    <item type="id" name="profile_feeds_header_text_view">false</item>
+    <item type="id" name="feeds_list">false</item>
+    <item type="id" name="feed_lower_pane">false</item>
     <item type="id" name="dbx_button_container">false</item>
     <item type="id" name="dbx_button_bar">false</item>
     <item type="id" name="dbx_main_container">false</item>
@@ -791,8 +892,20 @@
     <item type="id" name="dbx_bottom_bar">false</item>
     <item type="id" name="dbx_bottom_bar_cancel_button">false</item>
     <item type="id" name="dbx_bottom_bar_ok_button">false</item>
+    <item type="id" name="capture_info">false</item>
     <item type="id" name="show_my_barcode_container">false</item>
     <item type="id" name="show_my_barcode">false</item>
+    <item type="id" name="result_view">false</item>
+    <item type="id" name="barcode_image_view">false</item>
+    <item type="id" name="format_text_view">false</item>
+    <item type="id" name="type_text_view">false</item>
+    <item type="id" name="time_text_view">false</item>
+    <item type="id" name="meta_text_view_label">false</item>
+    <item type="id" name="meta_text_view">false</item>
+    <item type="id" name="contents_text_view">false</item>
+    <item type="id" name="contents_supplement_text_view">false</item>
+    <item type="id" name="result_button_view">false</item>
+    <item type="id" name="shopper_button">false</item>
     <item type="id" name="channel_stats_subscribers_layout">false</item>
     <item type="id" name="channel_stats_number_of_subscribers">false</item>
     <item type="id" name="channel_stats_number_of_visits">false</item>
@@ -812,7 +925,82 @@
     <item type="id" name="notificationsIconLayout">false</item>
     <item type="id" name="notificationsIcon">false</item>
     <item type="id" name="notification_splat">false</item>
-    <item type="id" name="image">false</item>
+    <item type="id" name="message_call_type">false</item>
+    <item type="id" name="message_body">false</item>
+    <item type="id" name="message_date">false</item>
+    <item type="id" name="message_section">false</item>
+    <item type="id" name="message_status">false</item>
+    <item type="id" name="message_body_divider">false</item>
+    <item type="id" name="channel_body">false</item>
+    <item type="id" name="channel_avatar">false</item>
+    <item type="id" name="invite_status">false</item>
+    <item type="id" name="invite_buttons">false</item>
+    <item type="id" name="invite_join">false</item>
+    <item type="id" name="invite_preview">false</item>
+    <item type="id" name="invite_status_message">false</item>
+    <item type="id" name="message_status_layout">false</item>
+    <item type="id" name="channel_post_channel_name">false</item>
+    <item type="id" name="channel_post_title">false</item>
+    <item type="id" name="channel_post_body">false</item>
+    <item type="id" name="timer_duration">false</item>
+    <item type="id" name="screenshot_alert">false</item>
+    <item type="id" name="ephemeral_picture">false</item>
+    <item type="id" name="message_status_icon">false</item>
+    <item type="id" name="ephemeral_message">false</item>
+    <item type="id" name="ephemeral_duration">false</item>
+    <item type="id" name="ephemeral_progress">false</item>
+    <item type="id" name="message_picture">false</item>
+    <item type="id" name="message_status_progress">false</item>
+    <item type="id" name="message_filename">false</item>
+    <item type="id" name="message_filesize">false</item>
+    <item type="id" name="message_suggestion_name">false</item>
+    <item type="id" name="file_status">false</item>
+    <item type="id" name="hd_image_request_button_container">false</item>
+    <item type="id" name="message_progress">false</item>
+    <item type="id" name="message_actions">false</item>
+    <item type="id" name="message_accept">false</item>
+    <item type="id" name="message_decline">false</item>
+    <item type="id" name="message_cancel">false</item>
+    <item type="id" name="message_invite_a_bbm_contact_card">false</item>
+    <item type="id" name="message_photo_container">false</item>
+    <item type="id" name="message_photo">false</item>
+    <item type="id" name="content_specific_container">false</item>
+    <item type="id" name="message_header">false</item>
+    <item type="id" name="message_realtime_location_glympse_icon">false</item>
+    <item type="id" name="message_realtime_location_label">false</item>
+    <item type="id" name="message_realtime_location_expire_time">false</item>
+    <item type="id" name="message_realtime_location_view_glympse_button">false</item>
+    <item type="id" name="message_accept_invite_button">false</item>
+    <item type="id" name="message_reject_invite_button">false</item>
+    <item type="id" name="resend_button">false</item>
+    <item type="id" name="enter_button">false</item>
+    <item type="id" name="message_address">false</item>
+    <item type="id" name="message_accuracy">false</item>
+    <item type="id" name="message_map">false</item>
+    <item type="id" name="message_sender">false</item>
+    <item type="id" name="message_body_container">false</item>
+    <item type="id" name="message_context_divider">false</item>
+    <item type="id" name="message_context_photo">false</item>
+    <item type="id" name="message_context_label">false</item>
+    <item type="id" name="status_container">false</item>
+    <item type="id" name="picture_transfer_status">false</item>
+    <item type="id" name="message_accept_reject_bar">false</item>
+    <item type="id" name="status_message_container">false</item>
+    <item type="id" name="ad_container">false</item>
+    <item type="id" name="message_adImage">false</item>
+    <item type="id" name="message_sharedad_sponsorname">false</item>
+    <item type="id" name="message_sharedad_header">false</item>
+    <item type="id" name="message_sharedad_description">false</item>
+    <item type="id" name="message_context_sublabel">false</item>
+    <item type="id" name="message_sticker">false</item>
+    <item type="id" name="message_tpa_content_vendor_icon">false</item>
+    <item type="id" name="message_tpa_content_status">false</item>
+    <item type="id" name="message_tpa_content_custom_message">false</item>
+    <item type="id" name="message_tpa_content_message">false</item>
+    <item type="id" name="play_pause_icon">false</item>
+    <item type="id" name="voice_play_progress">false</item>
+    <item type="id" name="voice_length">false</item>
+    <item type="id" name="context_header">false</item>
     <item type="id" name="discard">false</item>
     <item type="id" name="rotateLeft">false</item>
     <item type="id" name="save">false</item>
@@ -829,6 +1017,27 @@
     <item type="id" name="dob_cancel">false</item>
     <item type="id" name="dob_submit">false</item>
     <item type="id" name="dob_error_button">false</item>
+    <item type="id" name="first_name_label">false</item>
+    <item type="id" name="first_name">false</item>
+    <item type="id" name="last_name_label">false</item>
+    <item type="id" name="last_name">false</item>
+    <item type="id" name="description">false</item>
+    <item type="id" name="button_next">false</item>
+    <item type="id" name="dialog_first_checkbox_text">false</item>
+    <item type="id" name="dialog_first_checkbox">false</item>
+    <item type="id" name="dialog_info_first_line">false</item>
+    <item type="id" name="dialog_second_checkbox_text">false</item>
+    <item type="id" name="dialog_second_checkbox">false</item>
+    <item type="id" name="dialog_info_second_line">false</item>
+    <item type="id" name="dialog_input_value">false</item>
+    <item type="id" name="dialog_checkbox_with_info_layout">false</item>
+    <item type="id" name="dialog_checkBox">false</item>
+    <item type="id" name="dialog_info_icon">false</item>
+    <item type="id" name="dialog_info_third_line">false</item>
+    <item type="id" name="dialog_first_radioButton_text">false</item>
+    <item type="id" name="dialog_first_radioButton">false</item>
+    <item type="id" name="dialog_second_radioButton_text">false</item>
+    <item type="id" name="dialog_second_radioButton">false</item>
     <item type="id" name="linearLayout1">false</item>
     <item type="id" name="datePicker">false</item>
     <item type="id" name="timePicker">false</item>
@@ -836,23 +1045,16 @@
     <item type="id" name="okButton">false</item>
     <item type="id" name="button_camera">false</item>
     <item type="id" name="button_gallery">false</item>
-    <item type="id" name="dialog_first_checkbox_text">false</item>
-    <item type="id" name="dialog_first_checkbox">false</item>
-    <item type="id" name="dialog_info_first_line">false</item>
-    <item type="id" name="dialog_second_checkbox_text">false</item>
-    <item type="id" name="dialog_second_checkbox">false</item>
-    <item type="id" name="dialog_info_second_line">false</item>
     <item type="id" name="dialog_left_button">false</item>
     <item type="id" name="dialog_right_button">false</item>
     <item type="id" name="dialog_info_divider">false</item>
     <item type="id" name="dialog_ignore_checkbox">false</item>
-    <item type="id" name="dialog_input_value">false</item>
-    <item type="id" name="dialog_first_radioButton_text">false</item>
-    <item type="id" name="dialog_first_radioButton">false</item>
-    <item type="id" name="dialog_second_radioButton_text">false</item>
-    <item type="id" name="dialog_second_radioButton">false</item>
     <item type="id" name="key_exchange_dialog">false</item>
     <item type="id" name="create_passphrase">false</item>
+    <item type="id" name="protected_plus_message">false</item>
+    <item type="id" name="protected_plus_dismiss_future">false</item>
+    <item type="id" name="protected_plus_divider_line">false</item>
+    <item type="id" name="protected_plus_confirm">false</item>
     <item type="id" name="passphrase_creation_details">false</item>
     <item type="id" name="key_exchange_passphrase_field">false</item>
     <item type="id" name="create_passphrase_divider">false</item>
@@ -872,13 +1074,70 @@
     <item type="id" name="stickerpack_install">false</item>
     <item type="id" name="stickerpack_restore">false</item>
     <item type="id" name="stickerpack_cancel">false</item>
+    <item type="id" name="item_avatar">false</item>
+    <item type="id" name="item_username">false</item>
+    <item type="id" name="item_status">false</item>
+    <item type="id" name="item_image">false</item>
+    <item type="id" name="item_name">false</item>
     <item type="id" name="channel_preview_header">false</item>
-    <item type="id" name="channel_avatar">false</item>
+    <item type="id" name="channel_preview_head_layout">false</item>
     <item type="id" name="channel_name_verify">false</item>
     <item type="id" name="join_channel">false</item>
     <item type="id" name="channel_show_verified">false</item>
     <item type="id" name="website_divider">false</item>
-    <item type="id" name="invites_fragment_root">false</item>
+    <item type="id" name="feeds_list_item_ads_root">false</item>
+    <item type="id" name="update_sponsoredpost_base_listitem">false</item>
+    <item type="id" name="update_sponsoredpost_head_layout">false</item>
+    <item type="id" name="update_sponsoredpost_avatar">false</item>
+    <item type="id" name="update_sponsoredpost_name">false</item>
+    <item type="id" name="update_sponsored_type">false</item>
+    <item type="id" name="update_sponsored_post_photo">false</item>
+    <item type="id" name="progressBarForWebView">false</item>
+    <item type="id" name="update_sponsoredpost_title">false</item>
+    <item type="id" name="update_sponsoredpost_callinaction">false</item>
+    <item type="id" name="update_sponsoredpost_body">false</item>
+    <item type="id" name="update_ad_divider">false</item>
+    <item type="id" name="update_sponsoredpostshare_button">false</item>
+    <item type="id" name="ad_native_app_install_ad_view">false</item>
+    <item type="id" name="feeds_list_item_ad_mobs_root">false</item>
+    <item type="id" name="ad_mob_native_content_ad_view">false</item>
+    <item type="id" name="feeds_list_foot_divider">false</item>
+    <item type="id" name="feeds_list_item_foot_root">false</item>
+    <item type="id" name="list_item_channel_hypes_button">false</item>
+    <item type="id" name="list_item_channel_comments_button">false</item>
+    <item type="id" name="list_item_channel_share_button">false</item>
+    <item type="id" name="feeds_list_item_channel_posts_root">false</item>
+    <item type="id" name="feeds_list_item_channel_states">false</item>
+    <item type="id" name="feeds_list_contacts_root">false</item>
+    <item type="id" name="feeds_list_item_contacts_body_root">false</item>
+    <item type="id" name="feeds_list_item_contacts_body_image">false</item>
+    <item type="id" name="feeds_list_item_contacts_body_title">false</item>
+    <item type="id" name="feeds_list_item_contacts_body_message">false</item>
+    <item type="id" name="feeds_list_featured_channels_root">false</item>
+    <item type="id" name="update_featureChannelItem_root">false</item>
+    <item type="id" name="update_featureChannelItem_small_root">false</item>
+    <item type="id" name="update_featureChannelItem_small_top">false</item>
+    <item type="id" name="update_featureChannelItem_small_top_channel_image">false</item>
+    <item type="id" name="update_featureChannelItem_small_top_channel_name_overlay">false</item>
+    <item type="id" name="update_featureChannelItem_small_top_channel_show_verified">false</item>
+    <item type="id" name="update_featureChannelItem_small_top_channel_name">false</item>
+    <item type="id" name="update_featureChannelItem_small_bot">false</item>
+    <item type="id" name="update_featureChannelItem_small_bot_channel_image">false</item>
+    <item type="id" name="update_featureChannelItem_small_bot_channel_name_overlay">false</item>
+    <item type="id" name="update_featureChannelItem_small_bot_channel_show_verified">false</item>
+    <item type="id" name="update_featureChannelItem_small_bot_channel_name">false</item>
+    <item type="id" name="update_featureChannelItem_big_root">false</item>
+    <item type="id" name="update_featureChannelItem_big_channel_image">false</item>
+    <item type="id" name="update_featureChannelItem_big_channel_name_overlay">false</item>
+    <item type="id" name="update_featureChannelItem_big_channel_show_verified">false</item>
+    <item type="id" name="update_featureChannelItem_big_channel_name">false</item>
+    <item type="id" name="feeds_list_item_contacts_title_root">false</item>
+    <item type="id" name="feeds_list_item_contacts_title_avatar">false</item>
+    <item type="id" name="feeds_list_item_contacts_title_text_root">false</item>
+    <item type="id" name="feeds_list_item_contacts_title_title">false</item>
+    <item type="id" name="feeds_list_item_contacts_title_subtitle_root">false</item>
+    <item type="id" name="feeds_list_item_contacts_title_subtitle">false</item>
+    <item type="id" name="feeds_list_item_contacts_title_date">false</item>
     <item type="id" name="barcode_scan">false</item>
     <item type="id" name="barcode_scan_label">false</item>
     <item type="id" name="add_contact">false</item>
@@ -893,7 +1152,6 @@
     <item type="id" name="app_title">false</item>
     <item type="id" name="app_artist_name">false</item>
     <item type="id" name="app_buy">false</item>
-    <item type="id" name="app_taking_longer_than_expected">false</item>
     <item type="id" name="mainContent">false</item>
     <item type="id" name="app_image">false</item>
     <item type="id" name="app_description">false</item>
@@ -911,6 +1169,33 @@
     <item type="id" name="server_unavailable_retry_message">false</item>
     <item type="id" name="retryButton">false</item>
     <item type="id" name="app_gridview">false</item>
+    <item type="id" name="subscription_status_container">false</item>
+    <item type="id" name="subscription_progress_bar">false</item>
+    <item type="id" name="subscription_info_text">false</item>
+    <item type="id" name="feature_given_by_app">false</item>
+    <item type="id" name="subscription_first_row">false</item>
+    <item type="id" name="subscription_feature_image_first_row">false</item>
+    <item type="id" name="subscription_feature_title_first_row">false</item>
+    <item type="id" name="subscription_feature_description_first_row">false</item>
+    <item type="id" name="subscription_feature_customize_pin">false</item>
+    <item type="id" name="subscription_second_row">false</item>
+    <item type="id" name="subscription_feature_title_second_row">false</item>
+    <item type="id" name="subscription_feature_description_second_row">false</item>
+    <item type="id" name="subscription_feature_image_second_row">false</item>
+    <item type="id" name="subscription_third_row">false</item>
+    <item type="id" name="subscription_feature_image_third_row">false</item>
+    <item type="id" name="subscription_feature_title_third_row">false</item>
+    <item type="id" name="subscription_feature_description_third_row">false</item>
+    <item type="id" name="subscription_fourth_row">false</item>
+    <item type="id" name="subscription_feature_title_fourth_row">false</item>
+    <item type="id" name="subscription_feature_description_fourth_row">false</item>
+    <item type="id" name="subscription_feature_image_fourth_row">false</item>
+    <item type="id" name="app_badge_avatar_left">false</item>
+    <item type="id" name="badge_on_your_avatar">false</item>
+    <item type="id" name="badge_on_your_avatar_description">false</item>
+    <item type="id" name="app_badge_avatar_right">false</item>
+    <item type="id" name="update_subscription_link">false</item>
+    <item type="id" name="learn_more_text">false</item>
     <item type="id" name="blocked_items_list">false</item>
     <item type="id" name="empty_layout">false</item>
     <item type="id" name="empty_icon">false</item>
@@ -918,7 +1203,8 @@
     <item type="id" name="fragment_own_profile_details_root">false</item>
     <item type="id" name="channel_preview_posts_list">false</item>
     <item type="id" name="no_posts_view">false</item>
-    <item type="id" name="channel_view_list_view">false</item>
+    <item type="id" name="channel_main_tabstrip">false</item>
+    <item type="id" name="channels_main_viewpager">false</item>
     <item type="id" name="notification_image">false</item>
     <item type="id" name="notification_text">false</item>
     <item type="id" name="notification_delete_button">false</item>
@@ -927,12 +1213,9 @@
     <item type="id" name="notifications_grid">false</item>
     <item type="id" name="chats_fragment_root">false</item>
     <item type="id" name="limited_connection_layout">false</item>
+    <item type="id" name="private_chat_item">false</item>
     <item type="id" name="invites_item">false</item>
-    <item type="id" name="invites_image">false</item>
-    <item type="id" name="invites_count">false</item>
     <item type="id" name="system_message_layout">false</item>
-    <item type="id" name="system_message_list">false</item>
-    <item type="id" name="image_chat_zoom">false</item>
     <item type="id" name="chatslist">false</item>
     <item type="id" name="contacts_fragment_root">false</item>
     <item type="id" name="contacts_nonempty_layout">false</item>
@@ -940,6 +1223,7 @@
     <item type="id" name="contacts_empty_layout">false</item>
     <item type="id" name="no_contacts_label">false</item>
     <item type="id" name="add_first_contact_button">false</item>
+    <item type="id" name="add_coworkers_button">false</item>
     <item type="id" name="featured_posts_list">false</item>
     <item type="id" name="featured_channels_spinner">false</item>
     <item type="id" name="featured_channels_message_text">false</item>
@@ -956,39 +1240,16 @@
     <item type="id" name="groups_icon">false</item>
     <item type="id" name="add_group_button">false</item>
     <item type="id" name="groups_grid">false</item>
+    <item type="id" name="main_tabstrip">false</item>
+    <item type="id" name="main_viewpager">false</item>
     <item type="id" name="channels_grid">false</item>
     <item type="id" name="noChannel">false</item>
     <item type="id" name="noChannelImage">false</item>
     <item type="id" name="noChannelText">false</item>
     <item type="id" name="browseButton">false</item>
     <item type="id" name="createButton">false</item>
-    <item type="id" name="column_one">false</item>
-    <item type="id" name="column_two">false</item>
-    <item type="id" name="column_three">false</item>
-    <item type="id" name="channel_image">false</item>
-    <item type="id" name="channel_display_name">false</item>
-    <item type="id" name="channel_id">false</item>
-    <item type="id" name="own_profile_mood">false</item>
-    <item type="id" name="own_profile_status_spinner">false</item>
-    <item type="id" name="my_pin">false</item>
-    <item type="id" name="copy_pin_button">false</item>
-    <item type="id" name="share_pin_button">false</item>
-    <item type="id" name="own_profile_location_container">false</item>
-    <item type="id" name="own_profile_update_list">false</item>
-    <item type="id" name="fragment_profile_details_root">false</item>
-    <item type="id" name="profile_mood_container">false</item>
-    <item type="id" name="profile_mood">false</item>
-    <item type="id" name="profile_status_container">false</item>
-    <item type="id" name="profile_status_label">false</item>
-    <item type="id" name="profile_status">false</item>
-    <item type="id" name="profile_location_container">false</item>
-    <item type="id" name="profile_updates_list">false</item>
-    <item type="id" name="profile_update_empty_view">false</item>
     <item type="id" name="invite_all_switch">false</item>
     <item type="id" name="find_friends_list">false</item>
-    <item type="id" name="slide_menu_top_item">false</item>
-    <item type="id" name="slide_menu_list">false</item>
-    <item type="id" name="slide_menu_bottom_item_layout">false</item>
     <item type="id" name="stickerpack_title">false</item>
     <item type="id" name="stickerpack_artist_name">false</item>
     <item type="id" name="purchase_container">false</item>
@@ -1012,41 +1273,10 @@
     <item type="id" name="sticker_gridview">false</item>
     <item type="id" name="home_page_fragment_root">false</item>
     <item type="id" name="home_page_container">false</item>
-    <item type="id" name="home_page_scroll_view">false</item>
     <item type="id" name="home_page_container1">false</item>
     <item type="id" name="banner_view">false</item>
-    <item type="id" name="vg_gridview">false</item>
-    <item type="id" name="updateFragmentSelector">false</item>
-    <item type="id" name="updates_list">false</item>
-    <item type="id" name="channel_promo_avatar">false</item>
-    <item type="id" name="channel_promo_intro">false</item>
-    <item type="id" name="channel_promo_image">false</item>
-    <item type="id" name="channel_promo_description">false</item>
-    <item type="id" name="channel_promo_button">false</item>
-    <item type="id" name="updates_channel_posts">false</item>
-    <item type="id" name="update_channel_post_title">false</item>
-    <item type="id" name="update_photo_large">false</item>
-    <item type="id" name="update_channel_post_body">false</item>
-    <item type="id" name="update_channel_post_stats">false</item>
-    <item type="id" name="update_channel_divider">false</item>
-    <item type="id" name="update_channel_comments_button">false</item>
-    <item type="id" name="update_channel_hypes_button">false</item>
-    <item type="id" name="update_photo">false</item>
-    <item type="id" name="update_title">false</item>
-    <item type="id" name="update_subtitle">false</item>
-    <item type="id" name="update_date">false</item>
-    <item type="id" name="update_message">false</item>
-    <item type="id" name="updates_sponsored_posts">false</item>
-    <item type="id" name="update_sponsoredpost_base_listitem">false</item>
-    <item type="id" name="update_sponsoredpost_avatar">false</item>
-    <item type="id" name="update_sponsoredpost_name">false</item>
-    <item type="id" name="update_sponsored_type">false</item>
-    <item type="id" name="update_sponsored_post_photo">false</item>
-    <item type="id" name="update_sponsoredpost_title">false</item>
-    <item type="id" name="update_sponsoredpost_callinaction">false</item>
-    <item type="id" name="update_sponsoredpost_body">false</item>
-    <item type="id" name="update_ad_divider">false</item>
-    <item type="id" name="update_sponsoredpostshare_button">false</item>
+    <item type="id" name="feeds_list_root">false</item>
+    <item type="id" name="feeds_personal_status_emoticon">false</item>
     <item type="id" name="inner_glympse_button">false</item>
     <item type="id" name="layout_root">false</item>
     <item type="id" name="glympse_text_expires">false</item>
@@ -1057,41 +1287,36 @@
     <item type="id" name="done_button">false</item>
     <item type="id" name="history_title">false</item>
     <item type="id" name="history_detail">false</item>
+    <item type="id" name="gridGallery">false</item>
+    <item type="id" name="empty_view">false</item>
+    <item type="id" name="thumbnail">false</item>
+    <item type="id" name="check_box">false</item>
     <item type="id" name="join_method_item_method">false</item>
     <item type="id" name="join_method_item_count">false</item>
-    <item type="id" name="bbm_voice_actionbar_layout">false</item>
-    <item type="id" name="bbm_voice_actionbar_start_meeting">false</item>
-    <item type="id" name="bbm_voice_actionbar_speakerphone">false</item>
-    <item type="id" name="bbm_voice_actionbar_mute">false</item>
-    <item type="id" name="bbm_voice_actionbar_endcall">false</item>
-    <item type="id" name="bbm_voice_actionbar_bottom_divider">false</item>
+    <item type="id" name="phone_contact_text">false</item>
+    <item type="id" name="phone_contact_add_block_area">false</item>
+    <item type="id" name="button_phone_contact_add">false</item>
+    <item type="id" name="button_phone_contact_block">false</item>
     <item type="id" name="group_pic">false</item>
     <item type="id" name="group_pic_liking">false</item>
     <item type="id" name="group_pic_splat">false</item>
-    <item type="id" name="group_pic_comment_count">false</item>
-    <item type="id" name="list_invite_target_root">false</item>
-    <item type="id" name="invite_tag_left">false</item>
     <item type="id" name="invite_tag_right">false</item>
     <item type="id" name="list_invite_target_name">false</item>
+    <item type="id" name="list_pin_progress">false</item>
     <item type="id" name="list_invite_target_delete">false</item>
     <item type="id" name="admin_photo">false</item>
     <item type="id" name="admin_username">false</item>
     <item type="id" name="attachIcon">false</item>
     <item type="id" name="attachLabel">false</item>
-    <item type="id" name="item_avatar">false</item>
-    <item type="id" name="item_name">false</item>
     <item type="id" name="item_subtitle">false</item>
-    <item type="id" name="slide_menu_bottom_divider_top">false</item>
-    <item type="id" name="slide_menu_bottom_item">false</item>
-    <item type="id" name="slide_menu_bottom_divider_bottom">false</item>
     <item type="id" name="list_item_broadcast_suggestion_root">false</item>
     <item type="id" name="list_item_broadcast_suggestion_name">false</item>
-    <item type="id" name="list_category_label">false</item>
-    <item type="id" name="list_category_badge">false</item>
     <item type="id" name="change_status_root_list">false</item>
     <item type="id" name="list_change_status_busy">false</item>
     <item type="id" name="list_change_status_edit">false</item>
-    <item type="id" name="channel_photo">false</item>
+    <item type="id" name="status_buttons_layout">false</item>
+    <item type="id" name="status_edit">false</item>
+    <item type="id" name="status_delete">false</item>
     <item type="id" name="category_title">false</item>
     <item type="id" name="category_checkmark">false</item>
     <item type="id" name="chat_photo">false</item>
@@ -1102,9 +1327,6 @@
     <item type="id" name="channel_picker_item_description">false</item>
     <item type="id" name="channel_post_preview_header_stub">false</item>
     <item type="id" name="channel_post_preview_header">false</item>
-    <item type="id" name="channel_post_image">false</item>
-    <item type="id" name="channel_post_title">false</item>
-    <item type="id" name="channel_post_body">false</item>
     <item type="id" name="channel_post_divider_line">false</item>
     <item type="id" name="post_actions_layout">false</item>
     <item type="id" name="channel_post_timestamp">false</item>
@@ -1122,13 +1344,6 @@
     <item type="id" name="channel_subcategory_item_checkbox">false</item>
     <item type="id" name="subscriber_avatar">false</item>
     <item type="id" name="subscriber_name">false</item>
-    <item type="id" name="chat_photo_container_left">false</item>
-    <item type="id" name="chat_photo_left_top">false</item>
-    <item type="id" name="chat_photo_left_bottom">false</item>
-    <item type="id" name="chat_photo_container_right">false</item>
-    <item type="id" name="chat_photo_right_top">false</item>
-    <item type="id" name="chat_photo_right_bottom">false</item>
-    <item type="id" name="chat_photo_participants">false</item>
     <item type="id" name="chat_title">false</item>
     <item type="id" name="chat_date">false</item>
     <item type="id" name="chat_message">false</item>
@@ -1140,22 +1355,13 @@
     <item type="id" name="selection_border">false</item>
     <item type="id" name="multi_selection_border">false</item>
     <item type="id" name="contact_message">false</item>
-    <item type="id" name="invite_icon">false</item>
-    <item type="id" name="message_sender">false</item>
-    <item type="id" name="message_date">false</item>
-    <item type="id" name="message_status">false</item>
-    <item type="id" name="message_body">false</item>
-    <item type="id" name="screenshot_alert">false</item>
-    <item type="id" name="message_photo">false</item>
-    <item type="id" name="timer_duration">false</item>
     <item type="id" name="channel_splat">false</item>
-    <item type="id" name="icon">false</item>
-    <item type="id" name="folder_name">false</item>
-    <item type="id" name="size">false</item>
-    <item type="id" name="file_name">false</item>
-    <item type="id" name="date">false</item>
+    <item type="id" name="channel_name_overlay">false</item>
     <item type="id" name="name">false</item>
     <item type="id" name="details">false</item>
+    <item type="id" name="folder_name">false</item>
+    <item type="id" name="size">false</item>
+    <item type="id" name="date">false</item>
     <item type="id" name="filename">false</item>
     <item type="id" name="invite_date">false</item>
     <item type="id" name="image_invite">false</item>
@@ -1166,6 +1372,7 @@
     <item type="id" name="group_chat_date">false</item>
     <item type="id" name="group_chat_message">false</item>
     <item type="id" name="historyRadioButton">false</item>
+    <item type="id" name="group_discussion_name">false</item>
     <item type="id" name="event_subject">false</item>
     <item type="id" name="event_times">false</item>
     <item type="id" name="event_location">false</item>
@@ -1180,81 +1387,23 @@
     <item type="id" name="listitem_name">false</item>
     <item type="id" name="listitem_due_date">false</item>
     <item type="id" name="listitem_assigned_to">false</item>
+    <item type="id" name="delete_item">false</item>
     <item type="id" name="spinner">false</item>
-    <item type="id" name="photoFrameLayout">false</item>
     <item type="id" name="member_photo">false</item>
-    <item type="id" name="admin_bar">false</item>
     <item type="id" name="add_contact_photo">false</item>
-    <item type="id" name="out_of_coverage">false</item>
+    <item type="id" name="admin_bar">false</item>
     <item type="id" name="member_username">false</item>
     <item type="id" name="member_status">false</item>
     <item type="id" name="comment_avatar">false</item>
     <item type="id" name="comment_name">false</item>
-    <item type="id" name="comment_message">false</item>
     <item type="id" name="comment_date">false</item>
-    <item type="id" name="invite_photo">false</item>
-    <item type="id" name="invite_username">false</item>
-    <item type="id" name="invite_greeting">false</item>
+    <item type="id" name="comment_message">false</item>
+    <item type="id" name="update_photo">false</item>
+    <item type="id" name="update_message">false</item>
+    <item type="id" name="update_date">false</item>
     <item type="id" name="channel_recreate">false</item>
     <item type="id" name="channel_show_favorite">false</item>
-    <item type="id" name="message_call_type">false</item>
-    <item type="id" name="message_section">false</item>
-    <item type="id" name="message_body_divider">false</item>
-    <item type="id" name="channel_body">false</item>
-    <item type="id" name="invite_status">false</item>
-    <item type="id" name="invite_buttons">false</item>
-    <item type="id" name="invite_join">false</item>
-    <item type="id" name="invite_preview">false</item>
-    <item type="id" name="invite_status_message">false</item>
-    <item type="id" name="message_status_layout">false</item>
-    <item type="id" name="default_message_body">false</item>
-    <item type="id" name="channel_post_channel_name">false</item>
-    <item type="id" name="message_accept_invite_button">false</item>
-    <item type="id" name="message_reject_invite_button">false</item>
-    <item type="id" name="resend_button">false</item>
-    <item type="id" name="enter_button">false</item>
-    <item type="id" name="message_address">false</item>
-    <item type="id" name="message_accuracy">false</item>
-    <item type="id" name="message_map">false</item>
-    <item type="id" name="message_picture">false</item>
-    <item type="id" name="message_status_progress">false</item>
-    <item type="id" name="message_status_icon">false</item>
-    <item type="id" name="message_filename">false</item>
-    <item type="id" name="message_filesize">false</item>
-    <item type="id" name="message_suggestion_name">false</item>
-    <item type="id" name="hd_image_request_button_container">false</item>
-    <item type="id" name="message_progress">false</item>
-    <item type="id" name="message_actions">false</item>
-    <item type="id" name="message_accept">false</item>
-    <item type="id" name="message_decline">false</item>
-    <item type="id" name="message_cancel">false</item>
-    <item type="id" name="message_invite_a_bbm_contact_card">false</item>
-    <item type="id" name="message_realtime_location_sender">false</item>
-    <item type="id" name="message_realtime_location_date">false</item>
-    <item type="id" name="message_realtime_location_glympse_icon">false</item>
-    <item type="id" name="message_realtime_location_status">false</item>
-    <item type="id" name="message_realtime_location_expire_time">false</item>
-    <item type="id" name="message_realtime_location_view_glympse_button">false</item>
-    <item type="id" name="sender_date_container">false</item>
-    <item type="id" name="status_message_container">false</item>
-    <item type="id" name="ad_container">false</item>
-    <item type="id" name="message_adImage">false</item>
-    <item type="id" name="message_sharedad_sponsorname">false</item>
-    <item type="id" name="message_sharedad_header">false</item>
-    <item type="id" name="message_sharedad_description">false</item>
-    <item type="id" name="message_context_divider">false</item>
-    <item type="id" name="message_context_photo">false</item>
-    <item type="id" name="message_context_label">false</item>
-    <item type="id" name="message_context_sublabel">false</item>
-    <item type="id" name="message_header">false</item>
-    <item type="id" name="message_sticker">false</item>
-    <item type="id" name="message_tpa_content_sender">false</item>
-    <item type="id" name="message_tpa_content_date">false</item>
-    <item type="id" name="message_tpa_content_vendor_icon">false</item>
-    <item type="id" name="message_tpa_content_status">false</item>
-    <item type="id" name="message_tpa_content_custom_message">false</item>
-    <item type="id" name="message_tpa_content_message">false</item>
-    <item type="id" name="message_body_container">false</item>
+    <item type="id" name="exchange_keys_button">false</item>
     <item type="id" name="day_hours">false</item>
     <item type="id" name="start_time">false</item>
     <item type="id" name="end_time">false</item>
@@ -1271,38 +1420,22 @@
     <item type="id" name="category_name">false</item>
     <item type="id" name="current_category">false</item>
     <item type="id" name="contact_photo">false</item>
+    <item type="id" name="contact_details">false</item>
+    <item type="id" name="select_contact_checkbox">false</item>
     <item type="id" name="contact_status">false</item>
-    <item type="id" name="group_member_pic">false</item>
-    <item type="id" name="group_member_name">false</item>
     <item type="id" name="list_item_set_as_icon">false</item>
     <item type="id" name="list_item_set_as_option">false</item>
-    <item type="id" name="list_item_slide_menu_root">false</item>
-    <item type="id" name="slide_menu_item_icon_splat_container">false</item>
-    <item type="id" name="slide_menu_item_icon">false</item>
-    <item type="id" name="slide_menu_item_splat">false</item>
-    <item type="id" name="slide_menu_item_title">false</item>
-    <item type="id" name="slide_menu_item_subTitle">false</item>
     <item type="id" name="spinner_head_label">false</item>
     <item type="id" name="spinner_head_current_value">false</item>
     <item type="id" name="spinner_head_mark">false</item>
     <item type="id" name="spinner_item_label">false</item>
     <item type="id" name="spinner_item_image">false</item>
-    <item type="id" name="list_status_label">false</item>
-    <item type="id" name="list_status_badge">false</item>
+    <item type="id" name="stickerpack_icon">false</item>
+    <item type="id" name="stickerpack_visible_button">false</item>
     <item type="id" name="system_message_avatar">false</item>
     <item type="id" name="system_message_title">false</item>
     <item type="id" name="system_message_chevron">false</item>
-    <item type="id" name="contents">false</item>
-    <item type="id" name="override_back_pressed">false</item>
     <item type="id" name="picker_tab_icon">false</item>
-    <item type="id" name="post_title">false</item>
-    <item type="id" name="post_description">false</item>
-    <item type="id" name="post_line_divider">false</item>
-    <item type="id" name="post_date">false</item>
-    <item type="id" name="post_hype_count">false</item>
-    <item type="id" name="post_hype_count_image">false</item>
-    <item type="id" name="post_comment_count">false</item>
-    <item type="id" name="post_comment_count_image">false</item>
     <item type="id" name="query_text_view">false</item>
     <item type="id" name="query_button">false</item>
     <item type="id" name="result_list_view">false</item>
@@ -1312,6 +1445,7 @@
     <item type="id" name="shadow_frame_left_shadow">false</item>
     <item type="id" name="shadow_frame_right_shadow">false</item>
     <item type="id" name="shadow_frame_top_shadow">false</item>
+    <item type="id" name="contents">false</item>
     <item type="id" name="shadow_frame_bottom_shadow_1">false</item>
     <item type="id" name="shadow_frame_bottom_shadow_2">false</item>
     <item type="id" name="shadow_frame_bottom_shadow_3">false</item>
@@ -1328,73 +1462,52 @@
     <item type="id" name="group_port_picker">false</item>
     <item type="id" name="connect_button">false</item>
     <item type="id" name="bbmcore_button">false</item>
-    <item type="id" name="slidingmenumain">false</item>
-    <item type="id" name="view_custom_toast_label">false</item>
-    <item type="id" name="toast_divider">false</item>
-    <item type="id" name="toast_button">false</item>
-    <item type="id" name="actionbar_add_contacts">false</item>
-    <item type="id" name="add_contacts_normal_container">false</item>
-    <item type="id" name="add_contacts_search_contacts_button">false</item>
-    <item type="id" name="add_contacts_search_container">false</item>
-    <item type="id" name="add_contacts_search_edit_text">false</item>
-    <item type="id" name="add_contacts_cancel_button">false</item>
-    <item type="id" name="channel_actionbar_root">false</item>
-    <item type="id" name="channelFragmentSelector">false</item>
-    <item type="id" name="searchChannelsIcon">false</item>
-    <item type="id" name="actionbar_overlay">false</item>
-    <item type="id" name="channel_header_container">false</item>
-    <item type="id" name="actionbar_divider_line">false</item>
+    <item type="id" name="button_toolbar">false</item>
+    <item type="id" name="button_toolbar_root">false</item>
+    <item type="id" name="cancel_button_layout">false</item>
+    <item type="id" name="toolbar_cancel_button">false</item>
+    <item type="id" name="toolbar_title_button">false</item>
+    <item type="id" name="toolbar_done_button">false</item>
+    <item type="id" name="channels_main_toolbar">false</item>
+    <item type="id" name="channel_toolbar_container">false</item>
     <item type="id" name="actionbar_channel_icon_frame">false</item>
     <item type="id" name="actionbar_channel_icon">false</item>
-    <item type="id" name="private_flagged_layout">false</item>
-    <item type="id" name="right_to_left_spacer">false</item>
     <item type="id" name="actionbar_channel_name">false</item>
+    <item type="id" name="verified_channel">false</item>
+    <item type="id" name="actionbar_channel_status">false</item>
+    <item type="id" name="private_flagged_layout">false</item>
     <item type="id" name="private_channel">false</item>
     <item type="id" name="flagged_channel">false</item>
-    <item type="id" name="actionbar_channel_status">false</item>
+    <item type="id" name="group_toolbar_container">false</item>
+    <item type="id" name="actionbar_group_icon">false</item>
+    <item type="id" name="actionbar_group_name">false</item>
+    <item type="id" name="actionbar_group_count">false</item>
+    <item type="id" name="actionbar_group_description">false</item>
+    <item type="id" name="change_status_root">false</item>
+    <item type="id" name="change_status_list">false</item>
+    <item type="id" name="add_button">false</item>
+    <item type="id" name="channel_header_container">false</item>
+    <item type="id" name="actionbar_divider_line">false</item>
+    <item type="id" name="right_to_left_spacer">false</item>
     <item type="id" name="disabled_overlay">false</item>
-    <item type="id" name="searchChannels">false</item>
     <item type="id" name="status_actionbar_root">false</item>
-    <item type="id" name="actionbar_avatar">false</item>
-    <item type="id" name="actionbar_indicator_list">false</item>
-    <item type="id" name="glympse_topbar_active">false</item>
-    <item type="id" name="actionbar_voice_call_button">false</item>
-    <item type="id" name="actionbar_quick_chat_button">false</item>
-    <item type="id" name="actionbar_icon_text">false</item>
     <item type="id" name="actionbar_busy_icon">false</item>
     <item type="id" name="actionbar_name">false</item>
     <item type="id" name="actionbar_music_icon">false</item>
     <item type="id" name="actionbar_status_message">false</item>
     <item type="id" name="voice_call_progress">false</item>
-    <item type="id" name="groups_header_container">false</item>
-    <item type="id" name="actionbar_start_meeting_button">false</item>
-    <item type="id" name="actionbar_group_icon_frame">false</item>
-    <item type="id" name="actionbar_group_icon">false</item>
-    <item type="id" name="actionbar_group_avatar_number">false</item>
-    <item type="id" name="actionbar_group_member_icon">false</item>
-    <item type="id" name="actionbar_group_member_number">false</item>
-    <item type="id" name="actionbar_group_name">false</item>
-    <item type="id" name="actionbar_group_description">false</item>
-    <item type="id" name="header_text">false</item>
-    <item type="id" name="conference_topbar_actions">false</item>
-    <item type="id" name="actionbar_count">false</item>
-    <item type="id" name="actionbar_count_text">false</item>
-    <item type="id" name="actionbar_group_avatar_view">false</item>
-    <item type="id" name="actionbar_group_participant_avatars">false</item>
-    <item type="id" name="actionbar_profile_avatar">false</item>
-    <item type="id" name="actionbar_profile_name">false</item>
-    <item type="id" name="actionbar_profile_revert">false</item>
-    <item type="id" name="search_input">false</item>
-    <item type="id" name="button_done">false</item>
-    <item type="id" name="search_channels_cancel_button">false</item>
-    <item type="id" name="search_channels_framelayout">false</item>
-    <item type="id" name="search_channels_edit_text">false</item>
-    <item type="id" name="search_channels_clear_button">false</item>
-    <item type="id" name="search_channels_results_text">false</item>
+    <item type="id" name="actionbar_voice_call_button">false</item>
+    <item type="id" name="actionbar_add_more">false</item>
+    <item type="id" name="glympse_topbar_active">false</item>
+    <item type="id" name="conversation_mpc_header">false</item>
+    <item type="id" name="mpc_header_counter">false</item>
+    <item type="id" name="mpc_header_title">false</item>
     <item type="id" name="header_action_bar_negative_button">false</item>
     <item type="id" name="header_action_bar_title">false</item>
     <item type="id" name="header_action_bar_positive_button">false</item>
     <item type="id" name="actionbar_title">false</item>
+    <item type="id" name="header_progress_toolbar">false</item>
+    <item type="id" name="save_progress">false</item>
     <item type="id" name="app_avatar_layout">false</item>
     <item type="id" name="appView">false</item>
     <item type="id" name="app_splat">false</item>
@@ -1413,6 +1526,13 @@
     <item type="id" name="please_sign_in_icon">false</item>
     <item type="id" name="widget_footer_divider">false</item>
     <item type="id" name="view_appwidget_chat_row">false</item>
+    <item type="id" name="chat_photo_container_left">false</item>
+    <item type="id" name="chat_photo_left_top">false</item>
+    <item type="id" name="chat_photo_left_bottom">false</item>
+    <item type="id" name="chat_photo_container_right">false</item>
+    <item type="id" name="chat_photo_right_top">false</item>
+    <item type="id" name="chat_photo_right_bottom">false</item>
+    <item type="id" name="chat_photo_participants">false</item>
     <item type="id" name="chat_title_normal">false</item>
     <item type="id" name="chat_title_bold">false</item>
     <item type="id" name="chat_message_icon">false</item>
@@ -1427,20 +1547,27 @@
     <item type="id" name="playback_progress">false</item>
     <item type="id" name="startLabel">false</item>
     <item type="id" name="endLabel">false</item>
-    <item type="id" name="frameLayout1">false</item>
-    <item type="id" name="back_badge">false</item>
-    <item type="id" name="back_text">false</item>
-    <item type="id" name="back_divider">false</item>
-    <item type="id" name="input_row">false</item>
-    <item type="id" name="quick_share_button">false</item>
-    <item type="id" name="message_input_text">false</item>
-    <item type="id" name="timebomb_button">false</item>
+    <item type="id" name="avatar_image">false</item>
+    <item type="id" name="avatar_badge">false</item>
     <item type="id" name="attachment_pane">false</item>
-    <item type="id" name="divider_line">false</item>
+    <item type="id" name="input_row">false</item>
+    <item type="id" name="voice_send_Flipper">false</item>
+    <item type="id" name="voice_button">false</item>
+    <item type="id" name="send_button">false</item>
+    <item type="id" name="message_input_text">false</item>
+    <item type="id" name="extended_row">false</item>
+    <item type="id" name="timebomb_button">false</item>
+    <item type="id" name="timebomb_button_divider">false</item>
+    <item type="id" name="attach_more">false</item>
+    <item type="id" name="middle_button_bar">false</item>
+    <item type="id" name="attach_picture">false</item>
+    <item type="id" name="attach_camera">false</item>
+    <item type="id" name="attach_glympse">false</item>
+    <item type="id" name="attach_file">false</item>
+    <item type="id" name="attach_dropbox">false</item>
     <item type="id" name="lower_pane">false</item>
-    <item type="id" name="quickshare_bar">false</item>
-    <item type="id" name="quickshare_pane">false</item>
     <item type="id" name="view_block_overlay">false</item>
+    <item type="id" name="gestureOverlayView">false</item>
     <item type="id" name="view_block_overlay_text">false</item>
     <item type="id" name="setting_button">false</item>
     <item type="id" name="count">false</item>
@@ -1451,24 +1578,21 @@
     <item type="id" name="channel_post_uploading">false</item>
     <item type="id" name="channel_post_progress_bar">false</item>
     <item type="id" name="channel_uploading_shadow">false</item>
-    <item type="id" name="clickable_toast_label">false</item>
-    <item type="id" name="clickable_toast_button">false</item>
     <item type="id" name="limited_connection_progress_bar">false</item>
     <item type="id" name="limited_connection_image">false</item>
     <item type="id" name="limited_connection_title">false</item>
     <item type="id" name="limited_connection_message">false</item>
     <item type="id" name="actionmode_close">false</item>
     <item type="id" name="view_custom_toast_title">false</item>
+    <item type="id" name="view_custom_toast_label">false</item>
     <item type="id" name="datetime">false</item>
     <item type="id" name="emoticon_grid">false</item>
     <item type="id" name="tab_buttons">false</item>
     <item type="id" name="shop_button_layout">false</item>
     <item type="id" name="shop_button">false</item>
     <item type="id" name="shop_button_splat">false</item>
-    <item type="id" name="sticker_button">false</item>
     <item type="id" name="page_indicator_scroller">false</item>
     <item type="id" name="emoticon_sticker_viewpager">false</item>
-    <item type="id" name="top_divider">false</item>
     <item type="id" name="preview_hint">false</item>
     <item type="id" name="preview_hint_text">false</item>
     <item type="id" name="preview_hint_close">false</item>
@@ -1489,9 +1613,6 @@
     <item type="id" name="ephemeral_picker_pin_text">false</item>
     <item type="id" name="featured_channels_label">false</item>
     <item type="id" name="featured_posts_label">false</item>
-    <item type="id" name="back_action">false</item>
-    <item type="id" name="filler_view">false</item>
-    <item type="id" name="overflow_action">false</item>
     <item type="id" name="actionbar_icon">false</item>
     <item type="id" name="actionbar_badge">false</item>
     <item type="id" name="glympse_info_windows_adapter_avatar_border">false</item>
@@ -1510,47 +1631,9 @@
     <item type="id" name="glympse_user_selector_item_duration">false</item>
     <item type="id" name="glympse_user_selector_item_updated">false</item>
     <item type="id" name="glympse_user_selector_item_speed">false</item>
-    <item type="id" name="title">false</item>
     <item type="id" name="cancel">false</item>
     <item type="id" name="list_header_content">false</item>
     <item type="id" name="blueDividingLine">false</item>
-    <item type="id" name="location">false</item>
-    <item type="id" name="tab_leftmenu">false</item>
-    <item type="id" name="leftmenu_icon">false</item>
-    <item type="id" name="leftmenu_badge">false</item>
-    <item type="id" name="tab_invites">false</item>
-    <item type="id" name="invites_icon">false</item>
-    <item type="id" name="invites_badge">false</item>
-    <item type="id" name="invites_label">false</item>
-    <item type="id" name="leftmenu_icon_invites_overflow">false</item>
-    <item type="id" name="tab_channels">false</item>
-    <item type="id" name="channels_icon">false</item>
-    <item type="id" name="channels_badge">false</item>
-    <item type="id" name="channels_label">false</item>
-    <item type="id" name="leftmenu_icon_channels_overflow">false</item>
-    <item type="id" name="tab_contacts">false</item>
-    <item type="id" name="contacts_icon">false</item>
-    <item type="id" name="contacts_label">false</item>
-    <item type="id" name="leftmenu_icon_contacts_overflow">false</item>
-    <item type="id" name="tab_shop">false</item>
-    <item type="id" name="shop_icon">false</item>
-    <item type="id" name="shop_badge">false</item>
-    <item type="id" name="shop_label">false</item>
-    <item type="id" name="leftmenu_icon_shop_overflow">false</item>
-    <item type="id" name="tab_chats">false</item>
-    <item type="id" name="chats_icon">false</item>
-    <item type="id" name="chats_badge">false</item>
-    <item type="id" name="chats_label">false</item>
-    <item type="id" name="tab_updates">false</item>
-    <item type="id" name="updates_icon">false</item>
-    <item type="id" name="updates_badge">false</item>
-    <item type="id" name="updates_label">false</item>
-    <item type="id" name="tab_groups">false</item>
-    <item type="id" name="groups_label">false</item>
-    <item type="id" name="tab_overflow">false</item>
-    <item type="id" name="overflow_icon">false</item>
-    <item type="id" name="rightmenu_badge">false</item>
-    <item type="id" name="overflow_label">false</item>
     <item type="id" name="channel_details_root">false</item>
     <item type="id" name="channel_avatar_layout">false</item>
     <item type="id" name="channel_details_progress_bar">false</item>
@@ -1599,20 +1682,32 @@
     <item type="id" name="invite_pin">false</item>
     <item type="id" name="invite_suggestion_container">false</item>
     <item type="id" name="invite_pin_suggestion">false</item>
+    <item type="id" name="private_icon">false</item>
+    <item type="id" name="private_chat_title">false</item>
+    <item type="id" name="private_chat_subtitle">false</item>
+    <item type="id" name="personal_status_bar_send_button">false</item>
+    <item type="id" name="personal_status_bar_emoticon_button">false</item>
+    <item type="id" name="personal_status_bar_input_text">false</item>
     <item type="id" name="view_pin_share_barcode_qr">false</item>
     <item type="id" name="view_pin_share_title">false</item>
     <item type="id" name="view_pin_share_barcode_pin_label">false</item>
     <item type="id" name="view_pin_share_barcode_pin">false</item>
     <item type="id" name="view_pin_share_bbm_com">false</item>
     <item type="id" name="view_pin_share_bbm_logo">false</item>
-    <item type="id" name="option_left">false</item>
-    <item type="id" name="option_left_text">false</item>
-    <item type="id" name="option_right">false</item>
-    <item type="id" name="option_right_text">false</item>
+    <item type="id" name="private_chat_icon">false</item>
+    <item type="id" name="text_is_typing">false</item>
+    <item type="id" name="pin_not_created_textview">false</item>
+    <item type="id" name="custom_pin_progress">false</item>
+    <item type="id" name="pin_restoring_textview">false</item>
+    <item type="id" name="custom_pin_layout">false</item>
+    <item type="id" name="pin_textview">false</item>
+    <item type="id" name="pin_title_label">false</item>
+    <item type="id" name="profile_friend_container">false</item>
+    <item type="id" name="profile_pin_icon_view">false</item>
+    <item type="id" name="custom_pin_friend_label">false</item>
+    <item type="id" name="custom_pin_friend_label_link">false</item>
     <item type="id" name="attachments_grid">false</item>
-    <item type="id" name="item_image">false</item>
     <item type="id" name="item_label">false</item>
-    <item type="id" name="quick_action_camera_shot_button">false</item>
     <item type="id" name="quick_share_glympse_root">false</item>
     <item type="id" name="quick_share_glympse_map_container">false</item>
     <item type="id" name="quick_share_glympse_main_components">false</item>
@@ -1634,14 +1729,18 @@
     <item type="id" name="quick_share_glympse_retry">false</item>
     <item type="id" name="quick_share_glympse_google_play_services_overlay_info">false</item>
     <item type="id" name="upgrading_button">false</item>
+    <item type="id" name="delete_effect">false</item>
+    <item type="id" name="label_flipper">false</item>
     <item type="id" name="record_label">false</item>
+    <item type="id" name="cancel_label">false</item>
+    <item type="id" name="send_label">false</item>
+    <item type="id" name="busy_label">false</item>
     <item type="id" name="recording_status_icon">false</item>
-    <item type="id" name="buttons_container">false</item>
-    <item type="id" name="cancel_button">false</item>
     <item type="id" name="record_button_container">false</item>
     <item type="id" name="record_button">false</item>
+    <item type="id" name="invites_image">false</item>
+    <item type="id" name="invites_count">false</item>
     <item type="id" name="search_edit_text">false</item>
-    <item type="id" name="secondary_slide_menu">false</item>
     <item type="id" name="optionLeft">false</item>
     <item type="id" name="optionLeftText">false</item>
     <item type="id" name="optionRight">false</item>
@@ -1649,24 +1748,28 @@
     <item type="id" name="user_self_avatar">false</item>
     <item type="id" name="user_self_name">false</item>
     <item type="id" name="user_self_mood">false</item>
-    <item type="id" name="slide_menu">false</item>
+    <item type="id" name="view_checkbox_text">false</item>
+    <item type="id" name="view_checkbox">false</item>
     <item type="id" name="tab_back">false</item>
+    <item type="id" name="frameLayout1">false</item>
     <item type="id" name="tab_blank2">false</item>
     <item type="id" name="tab_send">false</item>
     <item type="id" name="tab_blank3">false</item>
+    <item type="id" name="snackBar">false</item>
+    <item type="id" name="splat_widget_layout">false</item>
+    <item type="id" name="splat_widget_app_icon">false</item>
+    <item type="id" name="simple_widget_splat">false</item>
     <item type="id" name="sticker_grid">false</item>
-    <item type="id" name="empty_state_container">false</item>
-    <item type="id" name="empty_state_text">false</item>
-    <item type="id" name="empty_state">false</item>
     <item type="id" name="avatar_layout">false</item>
-    <item type="id" name="sticker_splat">false</item>
     <item type="id" name="wingman_left">false</item>
     <item type="id" name="wingman_right">false</item>
     <item type="id" name="heroView">false</item>
+    <item type="id" name="sticker_splat">false</item>
     <item type="id" name="textLayout">false</item>
     <item type="id" name="titleView">false</item>
     <item type="id" name="installedTextView">false</item>
     <item type="id" name="viewAll">false</item>
+    <item type="id" name="system_message_list">false</item>
     <item type="id" name="tech_tip_title">false</item>
     <item type="id" name="tech_tip_body">false</item>
     <item type="id" name="tech_tip_image">false</item>
@@ -1680,28 +1783,140 @@
     <item type="id" name="star_5">false</item>
     <item type="id" name="rating_title">false</item>
     <item type="id" name="image_display">false</item>
-    <item type="id" name="baseThumb">false</item>
-    <item type="id" name="acceptThumb">false</item>
-    <item type="id" name="rejectThumb">false</item>
-    <item type="id" name="acceptMaxThumb">false</item>
-    <item type="id" name="rejectMaxThumb">false</item>
-    <item type="id" name="post_hypes_button_background">false</item>
-    <item type="id" name="post_hypes_button_background_flipped">false</item>
-    <item type="id" name="menu_chat_invite_more">false</item>
-    <item type="id" name="menu_end_chat">false</item>
-    <item type="id" name="action_settings">false</item>
+    <item type="id" name="contextual_block_chat">false</item>
+    <item type="id" name="actionmode_channel_my_channel_channel_settings">false</item>
+    <item type="id" name="actionmode_menu_channel_report_delete">false</item>
+    <item type="id" name="actionmode_menu_channel_report_ignore">false</item>
+    <item type="id" name="actionmode_add_contacts">false</item>
+    <item type="id" name="actionmode_view_profile">false</item>
+    <item type="id" name="actionmode_invite_to_group">false</item>
+    <item type="id" name="actionmode_move_contact">false</item>
+    <item type="id" name="actionmode_delete_contact">false</item>
+    <item type="id" name="actionmode_start_multiperson_chat">false</item>
+    <item type="id" name="actionmode_send_broadcast_message">false</item>
+    <item type="id" name="actionmode_delete_block">false</item>
+    <item type="id" name="actionmode_feed_list_ad_share">false</item>
+    <item type="id" name="actionmode_feed_list_channel_view_channel">false</item>
+    <item type="id" name="actionmode_feed_list_channel_share_post">false</item>
+    <item type="id" name="actionmode_feed_list_channel_hide">false</item>
+    <item type="id" name="actionmode_feed_list_contact_openchat">false</item>
+    <item type="id" name="actionmode_feed_list_contact_viewprofile">false</item>
+    <item type="id" name="actionmode_feed_list_contact_hide">false</item>
+    <item type="id" name="actionmode_feed_list_group_opengroup">false</item>
+    <item type="id" name="actionmode_feed_list_group_hide">false</item>
+    <item type="id" name="actionmode_leave_group">false</item>
+    <item type="id" name="contextual_open_group">false</item>
     <item type="id" name="contextual_delete">false</item>
-    <item type="id" name="menu_select_more">false</item>
-    <item type="id" name="menu_unblock">false</item>
-    <item type="id" name="menu_delete_chat">false</item>
-    <item type="id" name="menu_view_bbm_profile">false</item>
-    <item type="id" name="menu_start_video_chat">false</item>
-    <item type="id" name="menu_invite_to_group">false</item>
-    <item type="id" name="menu_move_contact">false</item>
-    <item type="id" name="menu_delete_contact">false</item>
-    <item type="id" name="contextual_move_contact">false</item>
+    <item type="id" name="contextual_cancel_invite">false</item>
+    <item type="id" name="menu_channels_details">false</item>
+    <item type="id" name="button_channel_barcode">false</item>
+    <item type="id" name="menu_search_channel">false</item>
+    <item type="id" name="menu_create_channel">false</item>
+    <item type="id" name="menu_edit_channel_profile">false</item>
+    <item type="id" name="menu_join_channel">false</item>
+    <item type="id" name="menu_preview_channel">false</item>
+    <item type="id" name="button_join_channel">false</item>
+    <item type="id" name="menu_report_channel">false</item>
+    <item type="id" name="menu_remove_report_channel">false</item>
+    <item type="id" name="channels_search">false</item>
+    <item type="id" name="menu_view_channel">false</item>
+    <item type="id" name="button_channel_invite">false</item>
+    <item type="id" name="button_channel_add_post">false</item>
+    <item type="id" name="button_open_chat">false</item>
+    <item type="id" name="menu_view_channel_profile">false</item>
+    <item type="id" name="menu_channel_settings">false</item>
+    <item type="id" name="menu_channel_invite">false</item>
+    <item type="id" name="menu_channel_add_post">false</item>
+    <item type="id" name="menu_open_chat">false</item>
+    <item type="id" name="menu_leave_channel">false</item>
+    <item type="id" name="menu_delete_channel">false</item>
+    <item type="id" name="button_like">false</item>
+    <item type="id" name="button_unlike">false</item>
+    <item type="id" name="button_repost">false</item>
+    <item type="id" name="menu_like">false</item>
+    <item type="id" name="menu_unlike">false</item>
+    <item type="id" name="menu_repost">false</item>
     <item type="id" name="menu_share">false</item>
+    <item type="id" name="menu_report_post">false</item>
+    <item type="id" name="menu_remove_report_post">false</item>
+    <item type="id" name="menu_join">false</item>
+    <item type="id" name="menu_preview">false</item>
+    <item type="id" name="cloud_directory_search">false</item>
+    <item type="id" name="contextual_move_contact">false</item>
+    <item type="id" name="contextual_profile_screen">false</item>
+    <item type="id" name="conversation_menu_copy">false</item>
+    <item type="id" name="conversation_menu_email">false</item>
+    <item type="id" name="conversation_menu_delete">false</item>
+    <item type="id" name="default_menu">false</item>
+    <item type="id" name="bbm_glympes_menu">false</item>
+    <item type="id" name="bbm_voice_menu">false</item>
+    <item type="id" name="bbm_private_chat_menu">false</item>
+    <item type="id" name="bbm_invitemore">false</item>
+    <item type="id" name="menu_bbm_meetings">false</item>
+    <item type="id" name="conversation_menu_ping">false</item>
+    <item type="id" name="reset_protected_chat">false</item>
+    <item type="id" name="conversation_menu_block">false</item>
+    <item type="id" name="protected_menu">false</item>
+    <item type="id" name="protected_key_exchange">false</item>
+    <item type="id" name="conversation_menu_leave">false</item>
     <item type="id" name="menu_encode">false</item>
+    <item type="id" name="file_search_menu">false</item>
+    <item type="id" name="file_picker_search">false</item>
+    <item type="id" name="file_picker_addfolder">false</item>
+    <item type="id" name="file_picker_gridview">false</item>
+    <item type="id" name="file_picker_sort">false</item>
+    <item type="id" name="group_admin_remove">false</item>
+    <item type="id" name="group_admin_add">false</item>
+    <item type="id" name="group_chat_menu_bbm_meetings">false</item>
+    <item type="id" name="group_chat_invite">false</item>
+    <item type="id" name="group_chat_menu_clear_chat">false</item>
+    <item type="id" name="group_chat_menu_copy">false</item>
+    <item type="id" name="group_chat_menu_email">false</item>
+    <item type="id" name="group_chat_menu_history">false</item>
+    <item type="id" name="group_chat_menu_setting">false</item>
+    <item type="id" name="group_chatlist_menu_start_chat">false</item>
+    <item type="id" name="group_event_menu_add_event">false</item>
+    <item type="id" name="group_lists_menu_add">false</item>
+    <item type="id" name="group_listsitem_menu_view_Comments">false</item>
+    <item type="id" name="group_listsitem_menu_add">false</item>
+    <item type="id" name="group_listsitem_menu_delete">false</item>
+    <item type="id" name="picture_share_menu">false</item>
+    <item type="id" name="picture_like_menu">false</item>
+    <item type="id" name="picture_save_menu">false</item>
+    <item type="id" name="picture_set_as_menu">false</item>
+    <item type="id" name="picture_group_settings_menu">false</item>
+    <item type="id" name="picture_group_contextual_delete">false</item>
+    <item type="id" name="group_picture_menu_add_picture">false</item>
+    <item type="id" name="group_picture_menu_camera">false</item>
+    <item type="id" name="group_picture_menu_setting">false</item>
+    <item type="id" name="group_profile_menu_barcode">false</item>
+    <item type="id" name="group_profile_menu_setting">false</item>
+    <item type="id" name="group_profile_menu_passphrase">false</item>
+    <item type="id" name="groups_add_camera">false</item>
+    <item type="id" name="groups_add_picture">false</item>
     <item type="id" name="menu_history_send">false</item>
     <item type="id" name="menu_history_clear_text">false</item>
+    <item type="id" name="copy_pin_menu">false</item>
+    <item type="id" name="share_pin_menu">false</item>
+    <item type="id" name="invite_search">false</item>
+    <item type="id" name="menu_shop">false</item>
+    <item type="id" name="menu_invite">false</item>
+    <item type="id" name="menu_bbm_mpc">false</item>
+    <item type="id" name="menu_broadcast_message">false</item>
+    <item type="id" name="menu_contact_search">false</item>
+    <item type="id" name="menu_start_chat">false</item>
+    <item type="id" name="menu_add_category">false</item>
+    <item type="id" name="glympse_modify">false</item>
+    <item type="id" name="glympse_reply">false</item>
+    <item type="id" name="menu_create_group">false</item>
+    <item type="id" name="menu_join_group">false</item>
+    <item type="id" name="channel_invite">false</item>
+    <item type="id" name="channel_openchat">false</item>
+    <item type="id" name="menu_scan">false</item>
+    <item type="id" name="avatar_replace">false</item>
+    <item type="id" name="avatar_remove">false</item>
+    <item type="id" name="menu_profile_icon_source">false</item>
+    <item type="id" name="accept_pending_invite">false</item>
+    <item type="id" name="ignore_pending_invite">false</item>
+    <item type="id" name="menu_select_all_contact">false</item>
 </resources>

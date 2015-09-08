@@ -1,156 +1,394 @@
-.class public final Lcom/bbm/ui/activities/az;
-.super Lcom/bbm/ui/ej;
-.source "BroadcastActivity.java"
-
-# interfaces
-.implements Landroid/widget/ListAdapter;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/ui/ej",
-        "<",
-        "Lcom/bbm/d/et;",
-        "Ljava/lang/String;",
-        ">;",
-        "Landroid/widget/ListAdapter;"
-    }
-.end annotation
+.class final Lcom/bbm/ui/activities/az;
+.super Lcom/bbm/j/k;
+.source "CaptureBarcodeActivity.java"
 
 
 # instance fields
-.field final synthetic b:Lcom/bbm/ui/activities/BroadcastActivity;
-
-.field private final c:Landroid/view/LayoutInflater;
+.field final synthetic a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/ui/activities/BroadcastActivity;Lcom/bbm/j/r;Landroid/content/Context;)V
+.method constructor <init>(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/bbm/j/r",
-            "<",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/d/et;",
-            ">;>;",
-            "Landroid/content/Context;",
-            ")V"
-        }
-    .end annotation
 
     .prologue
-    .line 504
-    iput-object p1, p0, Lcom/bbm/ui/activities/az;->b:Lcom/bbm/ui/activities/BroadcastActivity;
+    .line 272
+    iput-object p1, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
 
-    .line 505
-    invoke-direct {p0, p2}, Lcom/bbm/ui/ej;-><init>(Lcom/bbm/j/r;)V
+    const/4 v0, 0x0
 
-    .line 507
-    invoke-static {p3}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/az;->c:Landroid/view/LayoutInflater;
-
-    .line 508
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 4
+.method protected final a()V
+    .locals 7
 
     .prologue
-    .line 517
-    new-instance v1, Lcom/bbm/ui/activities/ba;
+    const/4 v4, 0x1
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/ba;-><init>(Lcom/bbm/ui/activities/az;)V
+    const/4 v6, 0x0
 
-    .line 522
-    iget-object v0, p0, Lcom/bbm/ui/activities/az;->c:Landroid/view/LayoutInflater;
+    .line 275
+    iget-object v0, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
 
-    const v2, 0x7f0300b4
+    invoke-static {v0}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->e(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Z
 
-    const/4 v3, 0x0
+    move-result v0
 
-    invoke-virtual {v0, v2, p3, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    if-eqz v0, :cond_2
 
-    move-result-object v2
+    .line 276
+    iget-object v0, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
 
-    .line 523
-    const v0, 0x7f0b0458
-
-    invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-static {v0}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->l(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Lcom/bbm/f;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/RelativeLayout;
+    iget-object v0, v0, Lcom/bbm/f;->b:Lcom/bbm/d/a;
 
-    iput-object v0, v1, Lcom/bbm/ui/activities/ba;->a:Landroid/widget/RelativeLayout;
+    iget-object v1, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
 
-    .line 524
-    const v0, 0x7f0b0459
-
-    invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, v1, Lcom/bbm/ui/activities/ba;->b:Landroid/widget/TextView;
-
-    .line 525
-    invoke-virtual {v2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
-
-    .line 527
-    return-object v2
-.end method
-
-.method protected final bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    .prologue
-    .line 500
-    check-cast p1, Lcom/bbm/d/et;
-
-    iget-object v0, p1, Lcom/bbm/d/et;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method protected final synthetic a(Landroid/view/View;Ljava/lang/Object;)V
-    .locals 3
-
-    .prologue
-    .line 500
-    check-cast p2, Lcom/bbm/d/et;
-
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/activities/ba;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/az;->b:Lcom/bbm/ui/activities/BroadcastActivity;
-
-    iget-object v1, v1, Lcom/bbm/ui/activities/BroadcastActivity;->b:Lcom/bbm/d/a;
-
-    iget-object v2, p2, Lcom/bbm/d/et;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Lcom/bbm/d/a;->b(Ljava/lang/String;)Lcom/bbm/d/gr;
+    invoke-static {v1}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->k(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/ba;->b:Landroid/widget/TextView;
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->e(Ljava/lang/String;)Lcom/bbm/d/ie;
 
-    iget-object v1, v1, Lcom/bbm/d/gr;->d:Ljava/lang/String;
+    move-result-object v0
+
+    .line 277
+    iget-object v1, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->m(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Lcom/bbm/ui/AvatarView;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/AvatarView;->setContent(Lcom/bbm/d/ie;)V
+
+    .line 278
+    iget-object v1, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->n(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Landroid/widget/TextView;
+
+    move-result-object v1
+
+    invoke-static {v0}, Lcom/bbm/d/b/a;->d(Lcom/bbm/d/ie;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 279
+    iget-object v1, v0, Lcom/bbm/d/ie;->z:Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    invoke-static {v2}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->l(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Lcom/bbm/f;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lcom/bbm/f;->b:Lcom/bbm/d/a;
+
+    invoke-virtual {v2}, Lcom/bbm/d/a;->o()Lcom/bbm/d/ie;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lcom/bbm/d/ie;->z:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 280
+    iget-object v0, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->o(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Landroid/widget/TextView;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    invoke-static {v2}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->l(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Lcom/bbm/f;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/bbm/d/b/a;->a(Landroid/content/Context;Lcom/bbm/f;)Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 304
+    :cond_0
+    :goto_0
     return-void
+
+    .line 282
+    :cond_1
+    iget-object v1, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->o(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Landroid/widget/TextView;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    invoke-static {v2, v0}, Lcom/bbm/d/b/a;->a(Landroid/content/Context;Lcom/bbm/d/ie;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_0
+
+    .line 284
+    :cond_2
+    iget-object v0, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->g(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    .line 285
+    iget-object v0, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->b(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Lcom/bbm/d/a;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->a(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->Y(Ljava/lang/String;)Lcom/bbm/d/ff;
+
+    move-result-object v0
+
+    .line 286
+    iget-object v1, v0, Lcom/bbm/d/ff;->R:Lcom/bbm/util/bo;
+
+    sget-object v2, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
+
+    if-ne v1, v2, :cond_0
+
+    .line 287
+    iget-object v1, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->m(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Lcom/bbm/ui/AvatarView;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/AvatarView;->setContent(Lcom/bbm/d/ff;)V
+
+    .line 288
+    iget-object v1, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->n(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Landroid/widget/TextView;
+
+    move-result-object v1
+
+    iget-object v0, v0, Lcom/bbm/d/ff;->k:Ljava/lang/String;
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 289
+    iget-object v0, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->b(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Lcom/bbm/d/a;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->a(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "AllTime"
+
+    invoke-static {v1, v2}, Lcom/bbm/ui/activities/bj;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->U(Ljava/lang/String;)Lcom/bbm/d/fp;
+
+    move-result-object v0
+
+    .line 290
+    iget-object v1, v0, Lcom/bbm/d/fp;->h:Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/bbm/util/ec;->b(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    const-string v0, "0"
+
+    .line 291
+    :goto_1
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    .line 292
+    iget-object v1, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->o(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Landroid/widget/TextView;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    invoke-virtual {v2}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v3, 0x7f0d0001
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v4, v6
+
+    invoke-virtual {v2, v3, v0, v4}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto/16 :goto_0
+
+    .line 290
+    :cond_3
+    iget-object v0, v0, Lcom/bbm/d/fp;->h:Ljava/lang/String;
+
+    goto :goto_1
+
+    .line 294
+    :cond_4
+    iget-object v0, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->p(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 295
+    iget-object v0, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->q(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Lcom/bbm/g/an;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    iget-object v1, v1, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->k:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/g/an;->i(Ljava/lang/String;)Lcom/bbm/j/w;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/bbm/j/w;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    .line 296
+    iget-object v1, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->q(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Lcom/bbm/g/an;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    iget-object v2, v2, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->k:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Lcom/bbm/g/an;->w(Ljava/lang/String;)Lcom/bbm/g/a;
+
+    move-result-object v1
+
+    .line 297
+    iget-object v2, v1, Lcom/bbm/g/a;->w:Lcom/bbm/util/bo;
+
+    sget-object v3, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
+
+    if-ne v2, v3, :cond_0
+
+    .line 300
+    iget-object v2, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    invoke-static {v2}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->m(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Lcom/bbm/ui/AvatarView;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Lcom/bbm/ui/AvatarView;->setContent(Lcom/bbm/g/a;)V
+
+    .line 301
+    iget-object v2, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    invoke-static {v2}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->n(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Landroid/widget/TextView;
+
+    move-result-object v2
+
+    iget-object v1, v1, Lcom/bbm/g/a;->r:Ljava/lang/String;
+
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 302
+    iget-object v1, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->o(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Landroid/widget/TextView;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/az;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    invoke-virtual {v2}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v3, 0x7f0d0002
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v4, v6
+
+    invoke-virtual {v2, v3, v0, v4}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto/16 :goto_0
 .end method

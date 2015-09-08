@@ -1,73 +1,103 @@
 .class final Lcom/bbm/ui/activities/nj;
-.super Lcom/bbm/ui/activities/nl;
-.source "GroupConversationActivity.java"
+.super Ljava/lang/Object;
+.source "GroupListsCommentActivity.java"
+
+# interfaces
+.implements Lcom/bbm/ui/bx;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupListsCommentActivity;
 
 
 # direct methods
-.method private constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
-    .locals 1
-
-    .prologue
-    .line 1037
-    iput-object p1, p0, Lcom/bbm/ui/activities/nj;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lcom/bbm/ui/activities/nl;-><init>(Lcom/bbm/ui/activities/GroupConversationActivity;B)V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;B)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupListsCommentActivity;)V
     .locals 0
 
     .prologue
-    .line 1037
-    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/nj;-><init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
+    .line 56
+    iput-object p1, p0, Lcom/bbm/ui/activities/nj;->a:Lcom/bbm/ui/activities/GroupListsCommentActivity;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a(Ljava/lang/StringBuilder;)V
-    .locals 3
+.method public final a()Z
+    .locals 1
 
     .prologue
-    .line 1041
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 60
+    const/4 v0, 0x1
 
-    move-result-object v0
+    return v0
+.end method
 
-    .line 1042
-    const-string v1, "simple text"
+.method public final b()V
+    .locals 0
 
-    invoke-static {v1, v0}, Landroid/content/ClipData;->newPlainText(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/content/ClipData;
+    .prologue
+    .line 65
+    return-void
+.end method
 
-    move-result-object v0
+.method public final c()Lcom/bbm/ui/QuickShareGlympseView;
+    .locals 1
 
-    .line 1043
-    iget-object v1, p0, Lcom/bbm/ui/activities/nj;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    .prologue
+    .line 69
+    const/4 v0, 0x0
 
-    invoke-static {v1, v0}, Lcom/bbm/util/fh;->a(Landroid/content/Context;Landroid/content/ClipData;)V
+    return-object v0
+.end method
 
-    .line 1044
-    iget-object v0, p0, Lcom/bbm/ui/activities/nj;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+.method public final d()V
+    .locals 0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/nj;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    .prologue
+    .line 75
+    return-void
+.end method
 
-    const v2, 0x7f0e022c
+.method public final e()V
+    .locals 0
 
-    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/GroupConversationActivity;->getString(I)Ljava/lang/String;
+    .prologue
+    .line 80
+    return-void
+.end method
 
-    move-result-object v1
+.method public final f()Lcom/bbm/ui/QuickShareBaseView;
+    .locals 1
 
-    invoke-static {v0, v1}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;)V
+    .prologue
+    .line 84
+    const/4 v0, 0x0
 
-    .line 1045
+    return-object v0
+.end method
+
+.method public final g()Lcom/bbm/ui/QuickShareBaseView;
+    .locals 1
+
+    .prologue
+    .line 89
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final h()V
+    .locals 1
+
+    .prologue
+    .line 94
+    iget-object v0, p0, Lcom/bbm/ui/activities/nj;->a:Lcom/bbm/ui/activities/GroupListsCommentActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupListsCommentActivity;->a(Lcom/bbm/ui/activities/GroupListsCommentActivity;)V
+
+    .line 95
     return-void
 .end method

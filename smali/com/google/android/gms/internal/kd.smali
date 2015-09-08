@@ -1,96 +1,105 @@
-.class public Lcom/google/android/gms/internal/kd;
-.super Ljava/io/IOException;
+.class public abstract Lcom/google/android/gms/internal/kd;
+.super Landroid/os/Binder;
+
+# interfaces
+.implements Lcom/google/android/gms/internal/kc;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
+
+    const-string v0, "com.google.android.gms.ads.internal.purchase.client.IInAppPurchaseListener"
+
+    invoke-virtual {p0, p0, v0}, Lcom/google/android/gms/internal/kd;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method static kO()Lcom/google/android/gms/internal/kd;
-    .locals 2
 
-    new-instance v0, Lcom/google/android/gms/internal/kd;
+# virtual methods
+.method public asBinder()Landroid/os/IBinder;
+    .locals 0
 
-    const-string v1, "While parsing a protocol message, the input ended unexpectedly in the middle of a field.  This could mean either than the input has been truncated or that an embedded message misreported its own length."
-
-    invoke-direct {v0, v1}, Lcom/google/android/gms/internal/kd;-><init>(Ljava/lang/String;)V
-
-    return-object v0
+    return-object p0
 .end method
 
-.method static kP()Lcom/google/android/gms/internal/kd;
-    .locals 2
+.method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    .locals 4
 
-    new-instance v0, Lcom/google/android/gms/internal/kd;
+    const/4 v1, 0x1
 
-    const-string v1, "CodedInputStream encountered an embedded string or message which claimed to have negative size."
+    sparse-switch p1, :sswitch_data_0
 
-    invoke-direct {v0, v1}, Lcom/google/android/gms/internal/kd;-><init>(Ljava/lang/String;)V
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    return-object v0
-.end method
+    move-result v0
 
-.method static kQ()Lcom/google/android/gms/internal/kd;
-    .locals 2
+    :goto_0
+    return v0
 
-    new-instance v0, Lcom/google/android/gms/internal/kd;
+    :sswitch_0
+    const-string v0, "com.google.android.gms.ads.internal.purchase.client.IInAppPurchaseListener"
 
-    const-string v1, "CodedInputStream encountered a malformed varint."
+    invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lcom/google/android/gms/internal/kd;-><init>(Ljava/lang/String;)V
+    move v0, v1
 
-    return-object v0
-.end method
+    goto :goto_0
 
-.method static kR()Lcom/google/android/gms/internal/kd;
-    .locals 2
+    :sswitch_1
+    const-string v0, "com.google.android.gms.ads.internal.purchase.client.IInAppPurchaseListener"
 
-    new-instance v0, Lcom/google/android/gms/internal/kd;
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    const-string v1, "Protocol message contained an invalid tag (zero)."
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
-    invoke-direct {v0, v1}, Lcom/google/android/gms/internal/kd;-><init>(Ljava/lang/String;)V
+    move-result-object v2
 
-    return-object v0
-.end method
+    if-nez v2, :cond_0
 
-.method static kS()Lcom/google/android/gms/internal/kd;
-    .locals 2
+    const/4 v0, 0x0
 
-    new-instance v0, Lcom/google/android/gms/internal/kd;
+    :goto_1
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/kd;->a(Lcom/google/android/gms/internal/jz;)V
 
-    const-string v1, "Protocol message end-group tag did not match expected tag."
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    invoke-direct {v0, v1}, Lcom/google/android/gms/internal/kd;-><init>(Ljava/lang/String;)V
+    move v0, v1
 
-    return-object v0
-.end method
+    goto :goto_0
 
-.method static kT()Lcom/google/android/gms/internal/kd;
-    .locals 2
+    :cond_0
+    const-string v0, "com.google.android.gms.ads.internal.purchase.client.IInAppPurchase"
 
-    new-instance v0, Lcom/google/android/gms/internal/kd;
+    invoke-interface {v2, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
-    const-string v1, "Protocol message tag had invalid wire type."
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Lcom/google/android/gms/internal/kd;-><init>(Ljava/lang/String;)V
+    if-eqz v0, :cond_1
 
-    return-object v0
-.end method
+    instance-of v3, v0, Lcom/google/android/gms/internal/jz;
 
-.method static kU()Lcom/google/android/gms/internal/kd;
-    .locals 2
+    if-eqz v3, :cond_1
 
-    new-instance v0, Lcom/google/android/gms/internal/kd;
+    check-cast v0, Lcom/google/android/gms/internal/jz;
 
-    const-string v1, "Protocol message had too many levels of nesting.  May be malicious.  Use CodedInputStream.setRecursionLimit() to increase the depth limit."
+    goto :goto_1
 
-    invoke-direct {v0, v1}, Lcom/google/android/gms/internal/kd;-><init>(Ljava/lang/String;)V
+    :cond_1
+    new-instance v0, Lcom/google/android/gms/internal/kb;
 
-    return-object v0
+    invoke-direct {v0, v2}, Lcom/google/android/gms/internal/kb;-><init>(Landroid/os/IBinder;)V
+
+    goto :goto_1
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x1 -> :sswitch_1
+        0x5f4e5446 -> :sswitch_0
+    .end sparse-switch
 .end method

@@ -1,48 +1,53 @@
 .class final Lcom/bbm/ui/activities/aht;
-.super Lcom/bbm/d/b/q;
-.source "ShareActivity.java"
+.super Ljava/lang/Object;
+.source "ViewProfileActivity.java"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/d/b/q",
-        "<",
-        "Lcom/bbm/d/gr;",
-        ">;"
-    }
-.end annotation
+# interfaces
+.implements Landroid/widget/TextView$OnEditorActionListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ShareActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ViewProfileActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ShareActivity;Lcom/bbm/j/r;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ViewProfileActivity;)V
     .locals 0
 
     .prologue
-    .line 77
-    iput-object p1, p0, Lcom/bbm/ui/activities/aht;->a:Lcom/bbm/ui/activities/ShareActivity;
+    .line 356
+    iput-object p1, p0, Lcom/bbm/ui/activities/aht;->a:Lcom/bbm/ui/activities/ViewProfileActivity;
 
-    invoke-direct {p0, p2}, Lcom/bbm/d/b/q;-><init>(Lcom/bbm/j/r;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic b(Ljava/lang/Object;)Ljava/lang/String;
+.method public final onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
     .locals 1
 
     .prologue
-    .line 77
-    check-cast p1, Lcom/bbm/d/gr;
+    .line 359
+    const/4 v0, 0x4
 
-    invoke-static {p1}, Lcom/bbm/d/b/a;->b(Lcom/bbm/d/gr;)Ljava/lang/String;
+    if-ne p2, v0, :cond_0
 
-    move-result-object v0
+    .line 360
+    iget-object v0, p0, Lcom/bbm/ui/activities/aht;->a:Lcom/bbm/ui/activities/ViewProfileActivity;
 
-    return-object v0
+    invoke-static {v0}, Lcom/bbm/ui/activities/ViewProfileActivity;->p(Lcom/bbm/ui/activities/ViewProfileActivity;)V
+
+    .line 361
+    const/4 v0, 0x1
+
+    .line 363
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

@@ -3,20 +3,24 @@
 .source "StickerDetailsFragment.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/view/View$OnLayoutChangeListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/gr;
+.field final synthetic a:Landroid/view/View;
+
+.field final synthetic b:Lcom/bbm/ui/c/fx;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/gr;)V
+.method constructor <init>(Lcom/bbm/ui/c/fx;Landroid/view/View;)V
     .locals 0
 
     .prologue
-    .line 678
-    iput-object p1, p0, Lcom/bbm/ui/c/gw;->a:Lcom/bbm/ui/c/gr;
+    .line 276
+    iput-object p1, p0, Lcom/bbm/ui/c/gw;->b:Lcom/bbm/ui/c/fx;
+
+    iput-object p2, p0, Lcom/bbm/ui/c/gw;->a:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,22 +29,22 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 2
 
     .prologue
-    .line 681
-    const-string v0, "Purchase Button clicked"
+    .line 281
+    iget-object v0, p0, Lcom/bbm/ui/c/gw;->b:Lcom/bbm/ui/c/fx;
 
-    const-class v1, Lcom/bbm/ui/c/gr;
+    sub-int v1, p4, p2
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/ui/c/fx;->a(Lcom/bbm/ui/c/fx;I)V
 
-    .line 682
-    iget-object v0, p0, Lcom/bbm/ui/c/gw;->a:Lcom/bbm/ui/c/gr;
+    .line 282
+    iget-object v0, p0, Lcom/bbm/ui/c/gw;->a:Landroid/view/View;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/c/gr;->a()V
+    invoke-virtual {v0, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    .line 683
+    .line 283
     return-void
 .end method

@@ -1,106 +1,69 @@
 .class final Lcom/bbm/ui/activities/qf;
-.super Lcom/bbm/j/k;
-.source "GroupLobbyActivity.java"
+.super Ljava/lang/Object;
+.source "GroupPictureCommentsActivity.java"
+
+# interfaces
+.implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupLobbyActivity;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+    .locals 0
 
     .prologue
-    .line 470
-    iput-object p1, p0, Lcom/bbm/ui/activities/qf;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    .line 252
+    iput-object p1, p0, Lcom/bbm/ui/activities/qf;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 4
+.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
-    .line 473
-    iget-object v0, p0, Lcom/bbm/ui/activities/qf;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    .line 255
+    const-string v0, "comment click"
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->getResources()Landroid/content/res/Resources;
+    const-class v1, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 256
+    iget-object v0, p0, Lcom/bbm/ui/activities/qf;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->g(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/ui/EmoticonInputPanel;
 
     move-result-object v0
 
-    const v1, 0x7f0c0018
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
+    .line 257
+    iget-object v0, p0, Lcom/bbm/ui/activities/qf;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
 
-    move-result v0
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->g(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/ui/EmoticonInputPanel;
 
-    .line 474
-    iget-object v1, p0, Lcom/bbm/ui/activities/qf;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    move-result-object v0
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/GroupLobbyActivity;->a(Lcom/bbm/ui/activities/GroupLobbyActivity;)Lcom/bbm/g/al;
+    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->e()Z
 
-    move-result-object v1
-
-    const-string v2, "maxGroupMembersPerGroup"
-
-    invoke-virtual {v1, v2}, Lcom/bbm/g/al;->u(Ljava/lang/String;)Lcom/bbm/util/bm;
-
-    move-result-object v1
-
-    .line 475
-    iget-object v2, v1, Lcom/bbm/util/bm;->b:Lcom/bbm/util/bi;
-
-    sget-object v3, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
-
-    if-ne v2, v3, :cond_1
-
-    .line 476
-    iget-object v1, v1, Lcom/bbm/util/bm;->a:Lorg/json/JSONObject;
-
-    const-string v2, "value"
-
-    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    move-result-object v1
-
-    .line 477
-    if-eqz v1, :cond_0
-
-    .line 478
-    iget-object v2, p0, Lcom/bbm/ui/activities/qf;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
-
-    const-string v3, "memberCount"
-
-    invoke-virtual {v1, v3, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
-
-    move-result v0
-
-    invoke-static {v2, v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->d(Lcom/bbm/ui/activities/GroupLobbyActivity;I)I
-
-    .line 485
-    :goto_0
-    return-void
-
-    .line 480
+    .line 259
     :cond_0
-    iget-object v1, p0, Lcom/bbm/ui/activities/qf;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
-
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->d(Lcom/bbm/ui/activities/GroupLobbyActivity;I)I
-
-    goto :goto_0
-
-    .line 483
-    :cond_1
-    iget-object v1, p0, Lcom/bbm/ui/activities/qf;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
-
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->d(Lcom/bbm/ui/activities/GroupLobbyActivity;I)I
-
-    goto :goto_0
+    return-void
 .end method

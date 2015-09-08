@@ -6,9 +6,9 @@
 # instance fields
 .field a:I
 
-.field b:I
+.field final synthetic b:Lcom/tonicartos/widget/stickygridheaders/r;
 
-.field final synthetic c:Lcom/tonicartos/widget/stickygridheaders/r;
+.field private c:I
 
 
 # direct methods
@@ -17,12 +17,12 @@
 
     .prologue
     .line 134
-    iput-object p1, p0, Lcom/tonicartos/widget/stickygridheaders/t;->c:Lcom/tonicartos/widget/stickygridheaders/r;
+    iput-object p1, p0, Lcom/tonicartos/widget/stickygridheaders/t;->b:Lcom/tonicartos/widget/stickygridheaders/r;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 135
-    iput p2, p0, Lcom/tonicartos/widget/stickygridheaders/t;->b:I
+    iput p2, p0, Lcom/tonicartos/widget/stickygridheaders/t;->c:I
 
     .line 136
     const/4 v0, 0x0

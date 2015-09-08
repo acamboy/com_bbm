@@ -453,6 +453,7 @@
     :goto_6
     move v12, v5
 
+    .line 252
     goto :goto_5
 
     .line 206

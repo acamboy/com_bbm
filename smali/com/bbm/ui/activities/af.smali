@@ -1,43 +1,48 @@
 .class final Lcom/bbm/ui/activities/af;
-.super Lcom/bbm/ui/cn;
-.source "BlockedContactsActivity.java"
+.super Ljava/lang/Object;
+.source "BroadcastActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/BlockedContactsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/BroadcastActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/BlockedContactsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/BroadcastActivity;)V
     .locals 0
 
     .prologue
-    .line 52
-    iput-object p1, p0, Lcom/bbm/ui/activities/af;->a:Lcom/bbm/ui/activities/BlockedContactsActivity;
+    .line 378
+    iput-object p1, p0, Lcom/bbm/ui/activities/af;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
-    invoke-direct {p0}, Lcom/bbm/ui/cn;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
     .prologue
-    .line 56
-    const-string v0, "footer action bar onBackAction"
+    .line 382
+    const-string v0, "mEmoticonButtonArea Clicked"
 
-    const-class v1, Lcom/bbm/ui/activities/BlockedContactsActivity;
+    const-class v1, Lcom/bbm/ui/activities/BroadcastActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 57
-    iget-object v0, p0, Lcom/bbm/ui/activities/af;->a:Lcom/bbm/ui/activities/BlockedContactsActivity;
+    .line 384
+    iget-object v0, p0, Lcom/bbm/ui/activities/af;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/BlockedContactsActivity;->h()V
+    const/4 v1, 0x0
 
-    .line 58
+    invoke-static {v0, v1}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;Z)V
+
+    .line 385
     return-void
 .end method

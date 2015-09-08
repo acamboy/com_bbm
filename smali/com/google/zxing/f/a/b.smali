@@ -676,9 +676,9 @@
 
     .line 185
     :cond_1
-    sget-object v3, Lcom/google/zxing/f/a/d;->a:Lcom/google/zxing/f/a/d;
+    sget v3, Lcom/google/zxing/f/a/d;->a:I
 
-    sget-object v2, Lcom/google/zxing/f/a/d;->a:Lcom/google/zxing/f/a/d;
+    sget v2, Lcom/google/zxing/f/a/d;->a:I
 
     const/4 v0, 0x0
 
@@ -693,9 +693,7 @@
 
     sget-object v8, Lcom/google/zxing/f/a/c;->a:[I
 
-    invoke-virtual {v3}, Lcom/google/zxing/f/a/d;->ordinal()I
-
-    move-result v9
+    add-int/lit8 v9, v3, -0x1
 
     aget v8, v8, v9
 
@@ -739,7 +737,7 @@
 
     if-ne v7, v8, :cond_6
 
-    sget-object v3, Lcom/google/zxing/f/a/d;->b:Lcom/google/zxing/f/a/d;
+    sget v3, Lcom/google/zxing/f/a/d;->b:I
 
     goto :goto_2
 
@@ -748,7 +746,7 @@
 
     if-ne v7, v8, :cond_7
 
-    sget-object v3, Lcom/google/zxing/f/a/d;->c:Lcom/google/zxing/f/a/d;
+    sget v3, Lcom/google/zxing/f/a/d;->c:I
 
     goto :goto_2
 
@@ -757,13 +755,13 @@
 
     if-ne v7, v8, :cond_8
 
-    sget-object v2, Lcom/google/zxing/f/a/d;->f:Lcom/google/zxing/f/a/d;
+    sget v2, Lcom/google/zxing/f/a/d;->f:I
 
-    move-object v10, v3
+    move v10, v3
 
-    move-object v3, v2
+    move v3, v2
 
-    move-object v2, v10
+    move v2, v10
 
     goto :goto_2
 
@@ -785,7 +783,7 @@
 
     if-ne v7, v8, :cond_2
 
-    sget-object v3, Lcom/google/zxing/f/a/d;->a:Lcom/google/zxing/f/a/d;
+    sget v3, Lcom/google/zxing/f/a/d;->a:I
 
     goto :goto_2
 
@@ -814,13 +812,13 @@
 
     if-ne v7, v8, :cond_c
 
-    sget-object v2, Lcom/google/zxing/f/a/d;->e:Lcom/google/zxing/f/a/d;
+    sget v2, Lcom/google/zxing/f/a/d;->e:I
 
-    move-object v10, v3
+    move v10, v3
 
-    move-object v3, v2
+    move v3, v2
 
-    move-object v2, v10
+    move v2, v10
 
     goto :goto_2
 
@@ -829,7 +827,7 @@
 
     if-ne v7, v8, :cond_d
 
-    sget-object v3, Lcom/google/zxing/f/a/d;->c:Lcom/google/zxing/f/a/d;
+    sget v3, Lcom/google/zxing/f/a/d;->c:I
 
     goto :goto_2
 
@@ -838,13 +836,13 @@
 
     if-ne v7, v8, :cond_e
 
-    sget-object v2, Lcom/google/zxing/f/a/d;->f:Lcom/google/zxing/f/a/d;
+    sget v2, Lcom/google/zxing/f/a/d;->f:I
 
-    move-object v10, v3
+    move v10, v3
 
-    move-object v3, v2
+    move v3, v2
 
-    move-object v2, v10
+    move v2, v10
 
     goto :goto_2
 
@@ -866,7 +864,7 @@
 
     if-ne v7, v8, :cond_2
 
-    sget-object v3, Lcom/google/zxing/f/a/d;->a:Lcom/google/zxing/f/a/d;
+    sget v3, Lcom/google/zxing/f/a/d;->a:I
 
     goto :goto_2
 
@@ -886,7 +884,7 @@
 
     if-ne v7, v8, :cond_11
 
-    sget-object v3, Lcom/google/zxing/f/a/d;->d:Lcom/google/zxing/f/a/d;
+    sget v3, Lcom/google/zxing/f/a/d;->d:I
 
     goto/16 :goto_2
 
@@ -904,7 +902,7 @@
 
     if-ne v7, v8, :cond_13
 
-    sget-object v3, Lcom/google/zxing/f/a/d;->b:Lcom/google/zxing/f/a/d;
+    sget v3, Lcom/google/zxing/f/a/d;->b:I
 
     goto/16 :goto_2
 
@@ -913,7 +911,7 @@
 
     if-ne v7, v8, :cond_14
 
-    sget-object v3, Lcom/google/zxing/f/a/d;->a:Lcom/google/zxing/f/a/d;
+    sget v3, Lcom/google/zxing/f/a/d;->a:I
 
     goto/16 :goto_2
 
@@ -922,13 +920,13 @@
 
     if-ne v7, v8, :cond_15
 
-    sget-object v2, Lcom/google/zxing/f/a/d;->f:Lcom/google/zxing/f/a/d;
+    sget v2, Lcom/google/zxing/f/a/d;->f:I
 
-    move-object v10, v3
+    move v10, v3
 
-    move-object v3, v2
+    move v3, v2
 
-    move-object v2, v10
+    move v2, v10
 
     goto/16 :goto_2
 
@@ -950,7 +948,7 @@
 
     if-ne v7, v8, :cond_2
 
-    sget-object v3, Lcom/google/zxing/f/a/d;->a:Lcom/google/zxing/f/a/d;
+    sget v3, Lcom/google/zxing/f/a/d;->a:I
 
     goto/16 :goto_2
 
@@ -970,7 +968,7 @@
 
     if-ne v7, v8, :cond_18
 
-    sget-object v3, Lcom/google/zxing/f/a/d;->a:Lcom/google/zxing/f/a/d;
+    sget v3, Lcom/google/zxing/f/a/d;->a:I
 
     goto/16 :goto_2
 
@@ -992,7 +990,7 @@
 
     if-ne v7, v8, :cond_2
 
-    sget-object v3, Lcom/google/zxing/f/a/d;->a:Lcom/google/zxing/f/a/d;
+    sget v3, Lcom/google/zxing/f/a/d;->a:I
 
     goto/16 :goto_2
 
@@ -1005,7 +1003,7 @@
 
     int-to-char v0, v0
 
-    move-object v3, v2
+    move v3, v2
 
     goto/16 :goto_2
 
@@ -1016,7 +1014,7 @@
 
     const/16 v0, 0x20
 
-    move-object v3, v2
+    move v3, v2
 
     goto/16 :goto_2
 
@@ -1025,7 +1023,7 @@
 
     if-ne v7, v3, :cond_20
 
-    sget-object v3, Lcom/google/zxing/f/a/d;->a:Lcom/google/zxing/f/a/d;
+    sget v3, Lcom/google/zxing/f/a/d;->a:I
 
     goto/16 :goto_2
 
@@ -1038,7 +1036,7 @@
 
     aget-char v0, v0, v7
 
-    move-object v3, v2
+    move v3, v2
 
     goto/16 :goto_2
 
@@ -1047,7 +1045,7 @@
 
     if-ne v7, v3, :cond_1d
 
-    sget-object v3, Lcom/google/zxing/f/a/d;->a:Lcom/google/zxing/f/a/d;
+    sget v3, Lcom/google/zxing/f/a/d;->a:I
 
     goto/16 :goto_2
 
@@ -1062,7 +1060,7 @@
 
     invoke-virtual {p2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    move-object v3, v2
+    move v3, v2
 
     goto/16 :goto_2
 
@@ -1071,7 +1069,7 @@
 
     if-ne v7, v3, :cond_20
 
-    sget-object v3, Lcom/google/zxing/f/a/d;->a:Lcom/google/zxing/f/a/d;
+    sget v3, Lcom/google/zxing/f/a/d;->a:I
 
     goto/16 :goto_2
 
@@ -1080,7 +1078,7 @@
     return p1
 
     :cond_20
-    move-object v3, v2
+    move v3, v2
 
     goto/16 :goto_2
 

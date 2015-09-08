@@ -3,24 +3,32 @@
 .source "AdUtils.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/ui/b/f;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/b/o;
+.field final synthetic a:Lcom/bbm/b/a;
 
-.field final synthetic b:Lcom/bbm/b/p;
+.field final synthetic b:Lcom/bbm/b/ay;
+
+.field final synthetic c:Landroid/app/Activity;
+
+.field final synthetic d:Lcom/bbm/ui/b/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/b/p;Lcom/bbm/ui/b/o;)V
+.method constructor <init>(Lcom/bbm/b/a;Lcom/bbm/b/ay;Landroid/app/Activity;Lcom/bbm/ui/b/a;)V
     .locals 0
 
     .prologue
-    .line 380
-    iput-object p1, p0, Lcom/bbm/b/q;->b:Lcom/bbm/b/p;
+    .line 134
+    iput-object p1, p0, Lcom/bbm/b/q;->a:Lcom/bbm/b/a;
 
-    iput-object p2, p0, Lcom/bbm/b/q;->a:Lcom/bbm/ui/b/o;
+    iput-object p2, p0, Lcom/bbm/b/q;->b:Lcom/bbm/b/ay;
+
+    iput-object p3, p0, Lcom/bbm/b/q;->c:Landroid/app/Activity;
+
+    iput-object p4, p0, Lcom/bbm/b/q;->d:Lcom/bbm/ui/b/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,47 +37,30 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final a()V
     .locals 4
 
     .prologue
-    .line 383
-    iget-object v0, p0, Lcom/bbm/b/q;->a:Lcom/bbm/ui/b/o;
+    .line 138
+    iget-object v0, p0, Lcom/bbm/b/q;->a:Lcom/bbm/b/a;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->dismiss()V
+    iget-object v0, v0, Lcom/bbm/b/a;->d:Ljava/lang/String;
 
-    .line 384
-    iget-object v0, p0, Lcom/bbm/b/q;->b:Lcom/bbm/b/p;
+    iget-object v1, p0, Lcom/bbm/b/q;->a:Lcom/bbm/b/a;
 
-    iget-object v0, v0, Lcom/bbm/b/p;->a:Lcom/bbm/ui/activities/MainActivity;
+    iget-object v1, v1, Lcom/bbm/b/a;->j:Ljava/lang/String;
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+    iget-object v2, p0, Lcom/bbm/b/q;->b:Lcom/bbm/b/ay;
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+    iget-object v3, p0, Lcom/bbm/b/q;->c:Landroid/app/Activity;
 
-    const/4 v1, 0x1
+    invoke-static {v0, v1, v2, v3}, Lcom/bbm/b/p;->a(Ljava/lang/String;Ljava/lang/String;Lcom/bbm/b/ay;Landroid/app/Activity;)V
 
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
+    .line 139
+    iget-object v0, p0, Lcom/bbm/b/q;->d:Lcom/bbm/ui/b/a;
 
-    .line 385
-    invoke-static {}, Lcom/bbm/Alaska;->d()Lcom/bbm/b/w;
+    invoke-virtual {v0}, Lcom/bbm/ui/b/a;->dismiss()V
 
-    move-result-object v0
-
-    sget-object v1, Lcom/bbm/b/ai;->a:Lcom/bbm/b/ai;
-
-    iget-object v2, p0, Lcom/bbm/b/q;->b:Lcom/bbm/b/p;
-
-    iget-object v2, v2, Lcom/bbm/b/p;->b:Lcom/bbm/b/a;
-
-    iget-object v2, v2, Lcom/bbm/b/a;->j:Ljava/lang/String;
-
-    new-instance v3, Lcom/bbm/b/ah;
-
-    invoke-direct {v3, v1, v2}, Lcom/bbm/b/ah;-><init>(Lcom/bbm/b/ai;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v3}, Lcom/bbm/b/w;->a(Lcom/bbm/b/au;)V
-
-    .line 386
+    .line 140
     return-void
 .end method

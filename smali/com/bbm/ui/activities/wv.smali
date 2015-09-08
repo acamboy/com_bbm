@@ -1,26 +1,22 @@
-.class public final Lcom/bbm/ui/activities/wv;
+.class final Lcom/bbm/ui/activities/wv;
 .super Ljava/lang/Object;
-.source "MainActivity.java"
+.source "NewListItemActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/d/ec;
-
-.field final synthetic b:Lcom/bbm/ui/activities/MainActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/wu;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/ui/activities/MainActivity;Lcom/bbm/d/ec;)V
+.method constructor <init>(Lcom/bbm/ui/activities/wu;)V
     .locals 0
 
     .prologue
-    .line 2112
-    iput-object p1, p0, Lcom/bbm/ui/activities/wv;->b:Lcom/bbm/ui/activities/MainActivity;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/wv;->a:Lcom/bbm/d/ec;
+    .line 417
+    iput-object p1, p0, Lcom/bbm/ui/activities/wv;->a:Lcom/bbm/ui/activities/wu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,33 +25,54 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 2
 
     .prologue
-    .line 2115
-    const-string v0, "CategoriesContextSlideMenu Bottom Item Clicked"
+    .line 420
+    const-string v0, "mItemCategory onSpinnerItemClicked Dialog Left Button Clicked"
 
-    const-class v1, Lcom/bbm/ui/activities/MainActivity;
+    const-class v1, Lcom/bbm/ui/activities/NewListItemActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 2117
-    iget-object v0, p0, Lcom/bbm/ui/activities/wv;->a:Lcom/bbm/d/ec;
+    .line 422
+    iget-object v0, p0, Lcom/bbm/ui/activities/wv;->a:Lcom/bbm/ui/activities/wu;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/SelectCategoryActivity;->a(Lcom/bbm/d/ec;)V
+    iget-object v0, v0, Lcom/bbm/ui/activities/wu;->a:Lcom/bbm/ui/activities/NewListItemActivity;
 
-    .line 2118
-    iget-object v0, p0, Lcom/bbm/ui/activities/wv;->b:Lcom/bbm/ui/activities/MainActivity;
+    iget-object v0, v0, Lcom/bbm/ui/activities/NewListItemActivity;->s:Lcom/bbm/ui/p;
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+    iget-object v1, p0, Lcom/bbm/ui/activities/wv;->a:Lcom/bbm/ui/activities/wu;
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+    iget-object v1, v1, Lcom/bbm/ui/activities/wu;->a:Lcom/bbm/ui/activities/NewListItemActivity;
 
-    const/4 v1, 0x1
+    iget-object v1, v1, Lcom/bbm/ui/activities/NewListItemActivity;->s:Lcom/bbm/ui/p;
 
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
+    iget v1, v1, Lcom/bbm/ui/p;->b:I
 
-    .line 2119
+    iput v1, v0, Lcom/bbm/ui/p;->a:I
+
+    .line 423
+    iget-object v0, p0, Lcom/bbm/ui/activities/wv;->a:Lcom/bbm/ui/activities/wu;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/wu;->a:Lcom/bbm/ui/activities/NewListItemActivity;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/NewListItemActivity;->m:Landroid/widget/Spinner;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/wv;->a:Lcom/bbm/ui/activities/wu;
+
+    iget-object v1, v1, Lcom/bbm/ui/activities/wu;->a:Lcom/bbm/ui/activities/NewListItemActivity;
+
+    iget-object v1, v1, Lcom/bbm/ui/activities/NewListItemActivity;->s:Lcom/bbm/ui/p;
+
+    iget v1, v1, Lcom/bbm/ui/p;->a:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setSelection(I)V
+
+    .line 424
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+
+    .line 425
     return-void
 .end method

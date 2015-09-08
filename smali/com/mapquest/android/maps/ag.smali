@@ -91,7 +91,7 @@
     .line 89
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/mapquest/android/maps/MapView;->e()V
+    invoke-virtual {v0}, Lcom/mapquest/android/maps/MapView;->i()V
 
     goto :goto_0
 
@@ -130,7 +130,7 @@
     check-cast v0, Lcom/mapquest/android/maps/MapView;
 
     .line 53
-    invoke-virtual {v0}, Lcom/mapquest/android/maps/MapView;->onPause()V
+    invoke-virtual {v0}, Lcom/mapquest/android/maps/MapView;->c()V
 
     goto :goto_0
 
@@ -169,7 +169,7 @@
     check-cast v0, Lcom/mapquest/android/maps/MapView;
 
     .line 65
-    invoke-virtual {v0}, Lcom/mapquest/android/maps/MapView;->onResume()V
+    invoke-virtual {v0}, Lcom/mapquest/android/maps/MapView;->d()V
 
     goto :goto_0
 
@@ -209,15 +209,15 @@
     check-cast v0, Lcom/mapquest/android/maps/MapView;
 
     .line 77
-    iget-object v2, v0, Lcom/mapquest/android/maps/MapView;->e:Lcom/mapquest/android/maps/cb;
+    iget-object v2, v0, Lcom/mapquest/android/maps/MapView;->e:Lcom/mapquest/android/maps/ca;
 
     if-eqz v2, :cond_0
 
-    iget-object v0, v0, Lcom/mapquest/android/maps/MapView;->e:Lcom/mapquest/android/maps/cb;
+    iget-object v0, v0, Lcom/mapquest/android/maps/MapView;->e:Lcom/mapquest/android/maps/ca;
 
-    sget-object v2, Lcom/mapquest/android/maps/cc;->b:Lcom/mapquest/android/maps/cc;
+    sget v2, Lcom/mapquest/android/maps/cb;->b:I
 
-    invoke-virtual {v0, v2}, Lcom/mapquest/android/maps/cb;->a(Lcom/mapquest/android/maps/cc;)Lcom/mapquest/android/maps/x;
+    invoke-virtual {v0, v2}, Lcom/mapquest/android/maps/ca;->a(I)Lcom/mapquest/android/maps/x;
 
     move-result-object v0
 

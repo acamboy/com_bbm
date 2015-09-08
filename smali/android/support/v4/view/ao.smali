@@ -1,70 +1,123 @@
-.class public final Landroid/support/v4/view/ao;
+.class final Landroid/support/v4/view/ao;
 .super Ljava/lang/Object;
-.source "VelocityTrackerCompat.java"
+.source "MotionEventCompat.java"
 
-
-# static fields
-.field static final a:Landroid/support/v4/view/ar;
+# interfaces
+.implements Landroid/support/v4/view/aq;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method constructor <init>()V
+    .locals 0
 
     .prologue
-    .line 67
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    .line 40
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0xb
-
-    if-lt v0, v1, :cond_0
-
-    .line 68
-    new-instance v0, Landroid/support/v4/view/aq;
-
-    invoke-direct {v0}, Landroid/support/v4/view/aq;-><init>()V
-
-    sput-object v0, Landroid/support/v4/view/ao;->a:Landroid/support/v4/view/ar;
-
-    .line 72
-    :goto_0
     return-void
+.end method
 
-    .line 70
+
+# virtual methods
+.method public final a(Landroid/view/MotionEvent;)I
+    .locals 1
+
+    .prologue
+    .line 73
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final a(Landroid/view/MotionEvent;I)I
+    .locals 1
+
+    .prologue
+    .line 43
+    if-nez p2, :cond_0
+
+    .line 45
+    const/4 v0, 0x0
+
+    .line 47
+    :goto_0
+    return v0
+
     :cond_0
-    new-instance v0, Landroid/support/v4/view/ap;
-
-    invoke-direct {v0}, Landroid/support/v4/view/ap;-><init>()V
-
-    sput-object v0, Landroid/support/v4/view/ao;->a:Landroid/support/v4/view/ar;
+    const/4 v0, -0x1
 
     goto :goto_0
 .end method
 
-.method public static a(Landroid/view/VelocityTracker;I)F
-    .locals 1
+.method public final b(Landroid/view/MotionEvent;I)I
+    .locals 2
 
     .prologue
-    .line 82
-    sget-object v0, Landroid/support/v4/view/ao;->a:Landroid/support/v4/view/ar;
+    .line 51
+    if-nez p2, :cond_0
 
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/ar;->a(Landroid/view/VelocityTracker;I)F
-
-    move-result v0
+    .line 53
+    const/4 v0, 0x0
 
     return v0
+
+    .line 55
+    :cond_0
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string v1, "Pre-Eclair does not support multiple pointers"
+
+    invoke-direct {v0, v1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
-.method public static b(Landroid/view/VelocityTracker;I)F
-    .locals 1
+.method public final c(Landroid/view/MotionEvent;I)F
+    .locals 2
 
     .prologue
-    .line 91
-    sget-object v0, Landroid/support/v4/view/ao;->a:Landroid/support/v4/view/ar;
+    .line 59
+    if-nez p2, :cond_0
 
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/ar;->b(Landroid/view/VelocityTracker;I)F
+    .line 60
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
     return v0
+
+    .line 62
+    :cond_0
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string v1, "Pre-Eclair does not support multiple pointers"
+
+    invoke-direct {v0, v1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final d(Landroid/view/MotionEvent;I)F
+    .locals 2
+
+    .prologue
+    .line 66
+    if-nez p2, :cond_0
+
+    .line 67
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v0
+
+    return v0
+
+    .line 69
+    :cond_0
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string v1, "Pre-Eclair does not support multiple pointers"
+
+    invoke-direct {v0, v1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

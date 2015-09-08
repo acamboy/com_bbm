@@ -1,60 +1,103 @@
 .class Lcom/glympse/android/lib/dk;
 .super Lcom/glympse/android/lib/k;
-.source "GroupMemberView.java"
+.source "GroupEventsParser.java"
 
 
 # instance fields
-.field public mN:Lcom/glympse/android/lib/GGroupMemberPrivate;
+.field public S:Lcom/glympse/android/hal/GVector;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/glympse/android/hal/GVector",
+            "<",
+            "Lcom/glympse/android/lib/dm;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public nl:J
+
+.field public nm:Lcom/glympse/android/lib/dm;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 85
+    .line 40
     invoke-direct {p0}, Lcom/glympse/android/lib/k;-><init>()V
 
-    .line 86
-    new-instance v0, Lcom/glympse/android/lib/dg;
+    .line 41
+    const-wide/16 v0, 0x0
 
-    invoke-direct {v0}, Lcom/glympse/android/lib/dg;-><init>()V
+    iput-wide v0, p0, Lcom/glympse/android/lib/dk;->nl:J
 
-    iput-object v0, p0, Lcom/glympse/android/lib/dk;->mN:Lcom/glympse/android/lib/GGroupMemberPrivate;
+    .line 42
+    new-instance v0, Lcom/glympse/android/hal/GVector;
 
-    .line 87
+    invoke-direct {v0}, Lcom/glympse/android/hal/GVector;-><init>()V
+
+    iput-object v0, p0, Lcom/glympse/android/lib/dk;->S:Lcom/glympse/android/hal/GVector;
+
+    .line 43
     return-void
 .end method
 
 
 # virtual methods
 .method public endObject(I)Z
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 127
+    .line 93
     packed-switch p1, :pswitch_data_0
 
-    .line 135
+    .line 110
+    :cond_0
     :goto_0
+    :pswitch_0
     const/4 v0, 0x1
 
     return v0
 
-    .line 131
-    :pswitch_0
-    iget-object v0, p0, Lcom/glympse/android/lib/dk;->hd:Lcom/glympse/android/lib/json/GJsonHandlerStack;
+    .line 98
+    :pswitch_1
+    iget-object v0, p0, Lcom/glympse/android/lib/dk;->hl:Lcom/glympse/android/lib/json/GJsonHandlerStack;
 
     invoke-interface {v0}, Lcom/glympse/android/lib/json/GJsonHandlerStack;->popHandler()V
 
     goto :goto_0
 
-    .line 127
+    .line 103
+    :pswitch_2
+    iget-object v0, p0, Lcom/glympse/android/lib/dk;->nm:Lcom/glympse/android/lib/dm;
+
+    iget-object v0, v0, Lcom/glympse/android/lib/dm;->iJ:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 105
+    iget-object v0, p0, Lcom/glympse/android/lib/dk;->S:Lcom/glympse/android/hal/GVector;
+
+    iget-object v1, p0, Lcom/glympse/android/lib/dk;->nm:Lcom/glympse/android/lib/dm;
+
+    invoke-virtual {v0, v1}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 93
     nop
 
     :pswitch_data_0
-    .packed-switch 0x1
+    .packed-switch 0x2
+        :pswitch_1
         :pswitch_0
+        :pswitch_2
     .end packed-switch
 .end method
 
@@ -64,19 +107,20 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 91
+    .line 47
     packed-switch p1, :pswitch_data_0
 
-    .line 122
+    .line 74
     :cond_0
     :goto_0
+    :pswitch_0
     return v2
 
-    .line 95
-    :pswitch_0
-    iget-object v0, p0, Lcom/glympse/android/lib/dk;->he:Ljava/lang/String;
+    .line 51
+    :pswitch_1
+    iget-object v0, p0, Lcom/glympse/android/lib/dk;->hm:Ljava/lang/String;
 
-    const-string v1, "result"
+    const-string v1, "next"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -84,20 +128,20 @@
 
     if-eqz v0, :cond_0
 
-    .line 97
-    invoke-virtual {p2, v2}, Lcom/glympse/android/lib/json/GJsonPrimitive;->ownString(Z)Ljava/lang/String;
+    .line 53
+    invoke-virtual {p2}, Lcom/glympse/android/lib/json/GJsonPrimitive;->getLong()J
 
-    move-result-object v0
+    move-result-wide v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/dk;->hf:Ljava/lang/String;
+    iput-wide v0, p0, Lcom/glympse/android/lib/dk;->nl:J
 
     goto :goto_0
 
-    .line 103
-    :pswitch_1
-    iget-object v0, p0, Lcom/glympse/android/lib/dk;->he:Ljava/lang/String;
+    .line 59
+    :pswitch_2
+    iget-object v0, p0, Lcom/glympse/android/lib/dk;->hm:Ljava/lang/String;
 
-    const-string v1, "invite"
+    const-string v1, "type"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -105,22 +149,22 @@
 
     if-eqz v0, :cond_1
 
-    .line 105
-    iget-object v0, p0, Lcom/glympse/android/lib/dk;->mN:Lcom/glympse/android/lib/GGroupMemberPrivate;
+    .line 61
+    iget-object v0, p0, Lcom/glympse/android/lib/dk;->nm:Lcom/glympse/android/lib/dm;
 
     invoke-virtual {p2, v2}, Lcom/glympse/android/lib/json/GJsonPrimitive;->ownString(Z)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/glympse/android/lib/GGroupMemberPrivate;->setInviteCode(Ljava/lang/String;)V
+    iput-object v1, v0, Lcom/glympse/android/lib/dm;->iJ:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 107
+    .line 63
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/dk;->he:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/dk;->hm:Ljava/lang/String;
 
-    const-string v1, "time"
+    const-string v1, "member"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -128,41 +172,22 @@
 
     if-eqz v0, :cond_2
 
-    .line 109
-    invoke-virtual {p2}, Lcom/glympse/android/lib/json/GJsonPrimitive;->getLong()J
+    .line 65
+    iget-object v0, p0, Lcom/glympse/android/lib/dk;->nm:Lcom/glympse/android/lib/dm;
 
-    move-result-wide v0
-
-    iput-wide v0, p0, Lcom/glympse/android/lib/dk;->_time:J
-
-    goto :goto_0
-
-    .line 111
-    :cond_2
-    iget-object v0, p0, Lcom/glympse/android/lib/dk;->he:Ljava/lang/String;
-
-    const-string v1, "error"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    .line 113
     invoke-virtual {p2, v2}, Lcom/glympse/android/lib/json/GJsonPrimitive;->ownString(Z)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/glympse/android/lib/dk;->hg:Ljava/lang/String;
+    iput-object v1, v0, Lcom/glympse/android/lib/dm;->nn:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 115
-    :cond_3
-    iget-object v0, p0, Lcom/glympse/android/lib/dk;->he:Ljava/lang/String;
+    .line 67
+    :cond_2
+    iget-object v0, p0, Lcom/glympse/android/lib/dk;->hm:Ljava/lang/String;
 
-    const-string v1, "error_detail"
+    const-string v1, "invite"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -170,21 +195,65 @@
 
     if-eqz v0, :cond_0
 
-    .line 117
+    .line 69
+    iget-object v0, p0, Lcom/glympse/android/lib/dk;->nm:Lcom/glympse/android/lib/dm;
+
     invoke-virtual {p2, v2}, Lcom/glympse/android/lib/json/GJsonPrimitive;->ownString(Z)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/glympse/android/lib/dk;->hh:Ljava/lang/String;
+    iput-object v1, v0, Lcom/glympse/android/lib/dm;->jV:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 91
+    .line 47
     nop
 
     :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
+    .packed-switch 0x2
         :pswitch_1
+        :pswitch_0
+        :pswitch_2
+    .end packed-switch
+.end method
+
+.method public startObject(I)Z
+    .locals 2
+
+    .prologue
+    .line 79
+    packed-switch p1, :pswitch_data_0
+
+    .line 88
+    :goto_0
+    const/4 v0, 0x1
+
+    return v0
+
+    .line 83
+    :pswitch_0
+    new-instance v0, Lcom/glympse/android/lib/dl;
+
+    invoke-direct {v0}, Lcom/glympse/android/lib/dl;-><init>()V
+
+    iput-object v0, p0, Lcom/glympse/android/lib/dk;->nm:Lcom/glympse/android/lib/dm;
+
+    .line 84
+    iget-object v0, p0, Lcom/glympse/android/lib/dk;->nm:Lcom/glympse/android/lib/dm;
+
+    invoke-static {}, Lcom/glympse/android/hal/Helpers;->emptyString()Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/glympse/android/lib/dm;->jV:Ljava/lang/String;
+
+    goto :goto_0
+
+    .line 79
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x4
+        :pswitch_0
     .end packed-switch
 .end method

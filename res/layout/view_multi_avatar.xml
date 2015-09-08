@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/chat_photo_container_left" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <com.bbm.ui.CircleImageView android:id="@id/chat_photo_left_top" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:layout_weight="1.0" app:border_width="@dimen/avatar_circular_border_width" app:border_color="@color/avatar_circular_border_color" />
+        <com.bbm.ui.CircleImageView android:id="@id/chat_photo_left_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:layout_weight="1.0" app:border_width="@dimen/avatar_circular_border_width" app:border_color="@color/avatar_circular_border_color" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/chat_photo_container_right" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <com.bbm.ui.CircleImageView android:id="@id/chat_photo_right_top" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:layout_weight="1.0" app:border_width="@dimen/avatar_circular_border_width" app:border_color="@color/avatar_circular_border_color" />
+        <com.bbm.ui.CircleImageView android:id="@id/chat_photo_right_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:layout_weight="1.0" app:border_width="@dimen/avatar_circular_border_width" app:border_color="@color/avatar_circular_border_color" />
+        <TextView android:textSize="16.0sp" android:textStyle="bold" android:gravity="center" android:id="@id/chat_photo_participants" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

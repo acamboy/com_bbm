@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/activities/wg;
 .super Ljava/lang/Object;
-.source "MainActivity.java"
+.source "NewGroupActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/text/TextWatcher;
 
 
 # instance fields
-.field final synthetic a:Landroid/widget/EditText;
-
-.field final synthetic b:Lcom/bbm/ui/activities/MainActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/NewGroupActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;Landroid/widget/EditText;)V
+.method constructor <init>(Lcom/bbm/ui/activities/NewGroupActivity;)V
     .locals 0
 
     .prologue
-    .line 848
-    iput-object p1, p0, Lcom/bbm/ui/activities/wg;->b:Lcom/bbm/ui/activities/MainActivity;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/wg;->a:Landroid/widget/EditText;
+    .line 215
+    iput-object p1, p0, Lcom/bbm/ui/activities/wg;->a:Lcom/bbm/ui/activities/NewGroupActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,24 +25,31 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 0
 
     .prologue
-    .line 851
-    const-string v0, "clearButton Clicked"
+    .line 220
+    return-void
+.end method
 
-    const-class v1, Lcom/bbm/ui/activities/MainActivity;
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    .prologue
+    .line 225
+    return-void
+.end method
 
-    .line 853
-    iget-object v0, p0, Lcom/bbm/ui/activities/wg;->a:Landroid/widget/EditText;
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 1
 
-    const-string v1, ""
+    .prologue
+    .line 229
+    iget-object v0, p0, Lcom/bbm/ui/activities/wg;->a:Lcom/bbm/ui/activities/NewGroupActivity;
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/NewGroupActivity;->d()V
 
-    .line 854
+    .line 230
     return-void
 .end method

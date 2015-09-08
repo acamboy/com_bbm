@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:id="@id/footer_actionbar_content" android:background="@drawable/actions_bar" android:layout_width="fill_parent" android:layout_height="@dimen/actionbar_height" android:weightSum="@integer/footer_actionbar_weight_sum"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.bbm.ui.ActionBarItem android:id="@id/back_action" android:background="@drawable/footer_actionbar_back_action_background" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@integer/footer_actionbar_weight_back" app:showSplat="false" app:text="@string/back" app:icon="@drawable/back" />
-    <ImageView android:id="@id/back_divider" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/actionbar_back_divider" android:scaleType="fitXY" android:contentDescription="@string/blank" />
-    <View android:id="@id/filler_view" android:layout_width="0.0dip" android:layout_height="fill_parent" />
-    <com.bbm.ui.ActionBarItem android:id="@id/overflow_action" android:background="@drawable/footer_actionbar_action_background" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@integer/footer_actionbar_weight_overflow" app:showSplat="false" app:text="@string/more" app:icon="@drawable/ic_navigationbar_overflow" />
-</LinearLayout>

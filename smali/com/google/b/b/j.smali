@@ -3,7 +3,7 @@
 .source "CacheBuilder.java"
 
 # interfaces
-.implements Lcom/google/b/b/cf;
+.implements Lcom/google/b/b/cg;
 
 
 # annotations
@@ -13,7 +13,7 @@
         "<",
         "Lcom/google/b/b/j;",
         ">;",
-        "Lcom/google/b/b/cf",
+        "Lcom/google/b/b/cg",
         "<",
         "Ljava/lang/Object;",
         "Ljava/lang/Object;",

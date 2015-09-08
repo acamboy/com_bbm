@@ -1,176 +1,243 @@
-.class public final Lcom/google/android/gms/internal/cy;
-.super Lcom/google/android/gms/internal/ct;
+.class public abstract Lcom/google/android/gms/internal/cy;
+.super Ljava/lang/Object;
+
+
+# annotations
+.annotation runtime Lcom/google/android/gms/internal/mb;
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
 
 
 # instance fields
-.field private final mContext:Landroid/content/Context;
+.field final a:Ljava/lang/String;
 
-.field private final pR:Ljava/lang/String;
-
-.field private final pS:Ljava/lang/String;
+.field final b:Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "TT;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method private constructor <init>(Ljava/lang/String;Ljava/lang/Object;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "TT;)V"
+        }
+    .end annotation
 
-    invoke-direct {p0}, Lcom/google/android/gms/internal/ct;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/gms/internal/cy;->mContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/google/android/gms/internal/cy;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lcom/google/android/gms/internal/cy;->pR:Ljava/lang/String;
+    iput-object p2, p0, Lcom/google/android/gms/internal/cy;->b:Ljava/lang/Object;
 
-    iput-object p3, p0, Lcom/google/android/gms/internal/cy;->pS:Ljava/lang/String;
+    invoke-static {}, Lcom/google/android/gms/ads/internal/z;->m()Lcom/google/android/gms/internal/dd;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/google/android/gms/internal/dd;->a:Ljava/util/Collection;
+
+    invoke-interface {v0, p0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     return-void
+.end method
+
+.method synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Object;B)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/google/android/gms/internal/cy;-><init>(Ljava/lang/String;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public static a(Ljava/lang/String;)Lcom/google/android/gms/internal/cy;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Lcom/google/android/gms/internal/cy",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    invoke-static {p0, v0}, Lcom/google/android/gms/internal/cy;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/google/android/gms/internal/cy;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/google/android/gms/ads/internal/z;->m()Lcom/google/android/gms/internal/dd;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/google/android/gms/internal/dd;->b:Ljava/util/Collection;
+
+    invoke-interface {v1, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    return-object v0
+.end method
+
+.method public static a(Ljava/lang/String;I)Lcom/google/android/gms/internal/cy;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "I)",
+            "Lcom/google/android/gms/internal/cy",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v0, Lcom/google/android/gms/internal/da;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-direct {v0, p0, v1}, Lcom/google/android/gms/internal/da;-><init>(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    return-object v0
+.end method
+
+.method public static a(Ljava/lang/String;J)Lcom/google/android/gms/internal/cy;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "J)",
+            "Lcom/google/android/gms/internal/cy",
+            "<",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v0, Lcom/google/android/gms/internal/db;
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-direct {v0, p0, v1}, Lcom/google/android/gms/internal/db;-><init>(Ljava/lang/String;Ljava/lang/Long;)V
+
+    return-object v0
+.end method
+
+.method public static a(Ljava/lang/String;Ljava/lang/Boolean;)Lcom/google/android/gms/internal/cy;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/lang/Boolean;",
+            ")",
+            "Lcom/google/android/gms/internal/cy",
+            "<",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v0, Lcom/google/android/gms/internal/cz;
+
+    invoke-direct {v0, p0, p1}, Lcom/google/android/gms/internal/cz;-><init>(Ljava/lang/String;Ljava/lang/Boolean;)V
+
+    return-object v0
+.end method
+
+.method public static a(Ljava/lang/String;Ljava/lang/String;)Lcom/google/android/gms/internal/cy;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ")",
+            "Lcom/google/android/gms/internal/cy",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v0, Lcom/google/android/gms/internal/dc;
+
+    invoke-direct {v0, p0, p1}, Lcom/google/android/gms/internal/dc;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public static b(Ljava/lang/String;)Lcom/google/android/gms/internal/cy;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Lcom/google/android/gms/internal/cy",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    invoke-static {p0, v0}, Lcom/google/android/gms/internal/cy;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/google/android/gms/internal/cy;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/google/android/gms/ads/internal/z;->m()Lcom/google/android/gms/internal/dd;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/google/android/gms/internal/dd;->c:Ljava/util/Collection;
+
+    invoke-interface {v1, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final aB()V
-    .locals 4
-
-    :try_start_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Pinging URL: "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcom/google/android/gms/internal/cy;->pS:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->v(Ljava/lang/String;)V
-
-    new-instance v0, Ljava/net/URL;
-
-    iget-object v1, p0, Lcom/google/android/gms/internal/cy;->pS:Ljava/lang/String;
-
-    invoke-direct {v0, v1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/net/HttpURLConnection;
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :try_start_1
-    iget-object v1, p0, Lcom/google/android/gms/internal/cy;->mContext:Landroid/content/Context;
-
-    iget-object v2, p0, Lcom/google/android/gms/internal/cy;->pR:Ljava/lang/String;
-
-    const/4 v3, 0x1
-
-    invoke-static {v1, v2, v3, v0}, Lcom/google/android/gms/internal/cv;->a(Landroid/content/Context;Ljava/lang/String;ZLjava/net/HttpURLConnection;)V
-
-    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getResponseCode()I
-
-    move-result v1
-
-    const/16 v2, 0xc8
-
-    if-lt v1, v2, :cond_0
-
-    const/16 v2, 0x12c
-
-    if-lt v1, v2, :cond_1
-
-    :cond_0
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Received non-success response code "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " from pinging URL: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/google/android/gms/internal/cy;->pS:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/google/android/gms/internal/da;->w(Ljava/lang/String;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :cond_1
-    :try_start_2
-    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->disconnect()V
-
-    :goto_0
-    return-void
-
-    :catchall_0
-    move-exception v1
-
-    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->disconnect()V
-
-    throw v1
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Error while pinging URL: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lcom/google/android/gms/internal/cy;->pS:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ". "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->w(Ljava/lang/String;)V
-
-    goto :goto_0
+.method public abstract a()Lcom/google/android/gms/internal/qr;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/google/android/gms/internal/qr",
+            "<TT;>;"
+        }
+    .end annotation
 .end method
 
-.method public final onStop()V
-    .locals 0
-
-    return-void
+.method protected abstract a(Landroid/content/SharedPreferences;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/SharedPreferences;",
+            ")TT;"
+        }
+    .end annotation
 .end method

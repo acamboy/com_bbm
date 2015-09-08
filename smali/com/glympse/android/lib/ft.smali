@@ -1,55 +1,68 @@
 .class Lcom/glympse/android/lib/ft;
 .super Ljava/lang/Object;
-.source "LocationManager.java"
+.source "JobThread.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field private hL:Lcom/glympse/android/core/GLocation;
+.field private qh:Lcom/glympse/android/lib/GJob;
 
-.field private qb:Lcom/glympse/android/lib/fr;
-
-.field private qc:Z
+.field final synthetic qj:Lcom/glympse/android/lib/fs;
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/lib/fr;Lcom/glympse/android/core/GLocation;Z)V
+.method public constructor <init>(Lcom/glympse/android/lib/fs;Lcom/glympse/android/lib/GJob;)V
     .locals 0
 
     .prologue
-    .line 830
+    .line 92
+    iput-object p1, p0, Lcom/glympse/android/lib/ft;->qj:Lcom/glympse/android/lib/fs;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 831
-    iput-object p1, p0, Lcom/glympse/android/lib/ft;->qb:Lcom/glympse/android/lib/fr;
+    .line 93
+    iput-object p2, p0, Lcom/glympse/android/lib/ft;->qh:Lcom/glympse/android/lib/GJob;
 
-    .line 832
-    iput-object p2, p0, Lcom/glympse/android/lib/ft;->hL:Lcom/glympse/android/core/GLocation;
-
-    .line 833
-    iput-boolean p3, p0, Lcom/glympse/android/lib/ft;->qc:Z
-
-    .line 834
+    .line 94
     return-void
 .end method
 
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 1
 
     .prologue
-    .line 838
-    iget-object v0, p0, Lcom/glympse/android/lib/ft;->qb:Lcom/glympse/android/lib/fr;
+    .line 102
+    iget-object v0, p0, Lcom/glympse/android/lib/ft;->qh:Lcom/glympse/android/lib/GJob;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/ft;->hL:Lcom/glympse/android/core/GLocation;
+    invoke-interface {v0}, Lcom/glympse/android/lib/GJob;->isAborted()Z
 
-    iget-boolean v2, p0, Lcom/glympse/android/lib/ft;->qc:Z
+    move-result v0
 
-    invoke-virtual {v0, v1, v2}, Lcom/glympse/android/lib/fr;->a(Lcom/glympse/android/core/GLocation;Z)V
+    if-eqz v0, :cond_0
 
-    .line 839
+    .line 104
+    iget-object v0, p0, Lcom/glympse/android/lib/ft;->qh:Lcom/glympse/android/lib/GJob;
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GJob;->onAbort()V
+
+    .line 110
+    :goto_0
+    iget-object v0, p0, Lcom/glympse/android/lib/ft;->qh:Lcom/glympse/android/lib/GJob;
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GJob;->onDetach()V
+
+    .line 116
     return-void
+
+    .line 108
+    :cond_0
+    iget-object v0, p0, Lcom/glympse/android/lib/ft;->qh:Lcom/glympse/android/lib/GJob;
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GJob;->onComplete()V
+
+    goto :goto_0
 .end method

@@ -1,21 +1,24 @@
 .class final Lcom/bbm/ui/activities/dx;
-.super Lcom/bbm/ui/cn;
-.source "ChannelReportsActivity.java"
+.super Ljava/lang/Object;
+.source "ConversationActivity.java"
+
+# interfaces
+.implements Lcom/bbm/receiver/c;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ChannelReportsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ChannelReportsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 464
-    iput-object p1, p0, Lcom/bbm/ui/activities/dx;->a:Lcom/bbm/ui/activities/ChannelReportsActivity;
+    .line 346
+    iput-object p1, p0, Lcom/bbm/ui/activities/dx;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-direct {p0}, Lcom/bbm/ui/cn;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -26,27 +29,11 @@
     .locals 1
 
     .prologue
-    .line 472
-    iget-object v0, p0, Lcom/bbm/ui/activities/dx;->a:Lcom/bbm/ui/activities/ChannelReportsActivity;
+    .line 350
+    iget-object v0, p0, Lcom/bbm/ui/activities/dx;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ChannelReportsActivity;->onBackPressed()V
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->a(Lcom/bbm/ui/activities/ConversationActivity;)Z
 
-    .line 473
-    return-void
-.end method
-
-.method public final a(I)V
-    .locals 0
-
-    .prologue
-    .line 477
-    return-void
-.end method
-
-.method public final b()V
-    .locals 0
-
-    .prologue
-    .line 468
+    .line 351
     return-void
 .end method

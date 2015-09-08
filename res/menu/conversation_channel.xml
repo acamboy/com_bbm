@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_menu_copy" android:id="@id/conversation_menu_copy" android:title="@string/group_conversation_slide_menu_copy_chat" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_menu_send_email" android:id="@id/conversation_menu_email" android:title="@string/group_conversation_slide_menu_email_chat" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_menu_delete" android:id="@id/conversation_menu_delete" android:title="@string/menu_end_chat" app:showAsAction="never" />
+</menu>

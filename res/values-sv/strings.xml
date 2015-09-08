@@ -225,6 +225,21 @@
     <string name="a_newer_version_of_bbm_is_required">En nyare version av BBM krävs.</string>
     <string name="a_problem_has_occurred_in_bbm">Ett problem uppstod i BBM. Försök igen senare.</string>
     <string name="a_temporary_server_error_has_occurred">Ett tillfälligt serverfel har uppstått. Försök igen senare. Försök igen.</string>
+    <string name="abc_action_bar_home_description">Visa startsidan</string>
+    <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
+    <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
+    <string name="abc_action_bar_up_description">Navigera uppåt</string>
+    <string name="abc_action_menu_overflow_description">Fler alternativ</string>
+    <string name="abc_action_mode_done">Klart</string>
+    <string name="abc_activity_chooser_view_see_all">Visa alla</string>
+    <string name="abc_activitychooserview_choose_application">Välj en app</string>
+    <string name="abc_searchview_description_clear">Ta bort frågan</string>
+    <string name="abc_searchview_description_query">Sökfråga</string>
+    <string name="abc_searchview_description_search">Sök</string>
+    <string name="abc_searchview_description_submit">Skicka fråga</string>
+    <string name="abc_searchview_description_voice">Röstsökning</string>
+    <string name="abc_shareactionprovider_share_with">Dela med</string>
+    <string name="abc_shareactionprovider_share_with_application">Dela med %s</string>
     <string name="about">Om</string>
     <string name="about_bbm_pins_message">En PIN-kod är en unik identifiering för dig i BBM. Om du delar din BBM-PIN eller streckkod kan andra personer bjuda in dig att bli deras BBM-kontakt.</string>
     <string name="about_bbm_pins_title">Om BBM-PIN</string>
@@ -235,9 +250,9 @@
     <string name="activity_select_new_admin_title">Välj ny admin</string>
     <string name="activity_select_new_admin_title_selection">+%1$d administratörer</string>
     <string name="activity_tap_to_invite_dialog_info">Vill du aktivera NFC?</string>
-    <string name="activity_tap_to_invite_dialog_no">Nej</string>
+    <string name="activity_tap_to_invite_dialog_no">@string/no</string>
     <string name="activity_tap_to_invite_dialog_title">NFC-radio är av</string>
-    <string name="activity_tap_to_invite_dialog_yes">Ja</string>
+    <string name="activity_tap_to_invite_dialog_yes">@string/yes</string>
     <string name="activity_tap_to_invite_info">Håll enheternas baksidor mot varandra. NFC måste vara aktiverat i båda enheterna.</string>
     <string name="ad_block_channel">Om du blockerar kanalen ser du inte sponsrat innehåll från kanalen \"%1$s\". Åtgärden kan inte ångras.</string>
     <string name="ad_block_sponsor">Om du blockerar kanalen ser du inte sponsrat innehåll från \"%1$s\". Åtgärden kan inte ångras.</string>
@@ -263,14 +278,27 @@
     <string name="allow_comments_on_posts">Tillåt kommentarer till inlägg</string>
     <string name="app_name">BBM</string>
     <string name="app_picker_name">Applikationer</string>
+    <string name="app_store_app_subscribe_notification_dialog_line">Du kan låta dina kontakter få veta att du just har börjat använda BBM-prenumerationspaket %1$s</string>
+    <string name="app_store_app_subscribe_notification_message">Hej! Jag använder BBM-prenumerationspaket %1$s nu. Det kan du också göra.</string>
+    <string name="app_store_confirmation_screen_feature_offered_line">Funktioner som erbjuds i din prenumeration:</string>
     <string name="app_store_details_screen_install_button">Installera</string>
     <string name="app_store_details_screen_inventory_not_found">"Det går inte att öppna programmet.
 Försök igen senare."</string>
     <string name="app_store_details_screen_open_button">Öppna</string>
+    <string name="app_store_details_screen_renew_button">FÖRNYA</string>
+    <string name="app_store_details_screen_subscribe_button">Prenumerera</string>
+    <string name="app_store_details_screen_subscribed_button">Prenumeration</string>
     <string name="app_store_invalid_app_id">Objektet är inte tillgängligt.</string>
+    <string name="app_store_subscribed_app_no_ads_description">Dölj sponsrade annonser och sponsrade inbjudningar i BBM med den här prenumerationen.</string>
+    <string name="app_store_subscribed_app_vanity_pin_description">Anpassad PIN-kod används för att bjuda in en annan användare och för att visa profil. När den anpassade PIN-koden har definierats kan användaren ändra den under en begränsad tidsperiod. Ändra PIN-kod</string>
+    <string name="app_subscription_thank_you">Tack. Nu prenumererar du på BBM.</string>
     <string name="approve_comments">Godkänna kommentarer</string>
     <string name="approve_comments_description">Du kan ändra det här alternativet på kanalwebbplatsen.</string>
-    <string name="arrived_at_destination">Glympse: Ankom till destinationen</string>
+    <string name="archiving_disabled_message">Din administratör har inaktiverat arkiveringsfunktionen. Chattar och tidigare sparade chattar sparas inte längre på din enhet. Kontakta din administratör för mer information.</string>
+    <string name="archiving_disabled_title">Arkivering inaktiverad</string>
+    <string name="archiving_enabled_message">Din administratör har aktiverat arkiveringsfunktionen. Chattar sparas på din enhet. Kontakta din administratör för mer information.</string>
+    <string name="archiving_enabled_title">Arkivering aktiverad</string>
+    <string name="arrived_at_destination">Glympse: Ankommit till målet</string>
     <string name="asterisk">*</string>
     <string name="attach">Bifoga</string>
     <string name="attachImageDescription">Ikonen Bifoga</string>
@@ -286,15 +314,15 @@ Försök igen senare."</string>
     <string name="attach_list_voicenote">Röstanteckning</string>
     <string name="audio_player_pause">Pausa</string>
     <string name="audio_player_play">Spela</string>
-    <string name="auth_client_needs_enabling_title">Google Play Tjänster måste aktiveras för en att app ska fungera.</string>
-    <string name="auth_client_needs_installation_title">Google Play Tjänster måste installeras för att en app ska fungera.</string>
-    <string name="auth_client_needs_update_title">Google Play Tjänster måste uppdateras för en app ska fungera.</string>
-    <string name="auth_client_play_services_err_notification_msg">Fel på Google Play Tjänster</string>
-    <string name="auth_client_requested_by_msg">Begärdes av %1$s</string>
-    <string name="auth_client_using_bad_version_title">En olämplig version av Google Play Tjänster anropades av en app.</string>
+    <string name="autopassphrase_completed">Den här chatten är nu BBM Protected.</string>
+    <string name="autopassphrase_failed">Det gick inte att ställa in BBM Protected.</string>
+    <string name="autopassphrase_initiated">Skapar en BBM Protected-chatt.</string>
+    <string name="autopassphrase_retry">Försök igen</string>
     <string name="avatar_file_not_support">Filen stöds inte.</string>
     <string name="back">Tillbaka</string>
     <string name="backup_file_is_not_valid">Säkerhetskopieringsfilen är ogiltig. Du måste avsluta konfigurationsprogrammet för BBM och använda funktionen för enhetsbyte i BlackBerry Desktop Software.</string>
+    <string name="badge_on_your_avatar">Märke på din avatar</string>
+    <string name="badge_on_your_avatar_description">När BBM-prenumerationen är aktiv får du märket på din avatar ...</string>
     <string name="barcode_info">En kontakt kan lägga till dig i BBM genom att läsa av din streckkod</string>
     <string name="bbm_account_name">BBM</string>
     <string name="bbm_account_user_name">BBM Groups</string>
@@ -310,7 +338,9 @@ Försök igen senare."</string>
     <string name="bbm_service_running">Ansluten</string>
     <string name="bbm_setup">BBM-konfiguration</string>
     <string name="bbm_share_with_pin_uri">http://www.bbm.com/share/?BBMID=%1$s</string>
-    <string name="bbm_voice_ongoing_call">Pratar i telefon</string>
+    <string name="bbm_voice_ongoing_call">I ett BBM-samtal</string>
+    <string name="billing_google_error_message_body">Det här objektet har redan köpts för ett annat BlackBerry ID med ditt butikskonto. Prova med ett annat butikskonto.</string>
+    <string name="billing_google_error_message_title">Det går inte att köpa</string>
     <string name="blackberry_channels"><b>BBM Channels</b></string>
     <string name="blackberry_id">BBID</string>
     <string name="blackberry_id_is_not_responding">BlackBerry ID svarar inte.</string>
@@ -573,6 +603,7 @@ Försök igen senare."</string>
     <string name="chat_history_missed_video_chat">Missat videosamtal från &lt;b>%1$s&lt;/b></string>
     <string name="chat_history_missed_voice_chat">Missat röstsamtal från &lt;b>%1$s&lt;/b></string>
     <string name="chats">Chattar</string>
+    <string name="chats_block_chat">Blockera den här chatten</string>
     <string name="chats_empty_chat">Tom chatt</string>
     <string name="chats_end_chat">Avsluta chatt</string>
     <string name="chats_end_discussion">Avsluta diskussion</string>
@@ -581,35 +612,56 @@ Försök igen senare."</string>
     <string name="chats_open_group">Öppna grupp</string>
     <string name="chats_select_more">Välj fler</string>
     <string name="chats_start_video">Starta videochatt</string>
-    <string name="chats_status_no_chats">Tryck på det övre hörnet för att starta en chatt.</string>
+    <string name="chats_status_no_chats">Starta en chatt genom att trycka på chattknappen längst ned på skärmen.</string>
+    <string name="chats_status_no_chats_widget">Tryck på det övre hörnet för att starta en chatt.</string>
     <string name="chats_view_bbm_profile">Visa BBM-profil</string>
-    <string name="click_to_expire">Klicka här om du vill att din Glympse ska förfalla</string>
+    <string name="click_to_expire">Klicka här för att avaktivera en Glympse</string>
     <string name="click_to_reply">Klicka här för att svara...</string>
     <string name="click_to_view">Klicka här för att visa...</string>
     <string name="close">Stäng</string>
+    <string name="cloud_directory_contact_add_coworkers">Sök efter kollegor</string>
+    <string name="cloud_directory_contact_chat_failed">Det går inte att starta en BBM-chatt med den här kollegan. Försök igen senare.</string>
+    <string name="cloud_directory_fields_info">Dina kollegor kan se ditt namn när de söker efter personer i BBM.</string>
+    <string name="cloud_directory_pin_lookup">Begär kontaktinformation.</string>
+    <string name="cloud_directory_search_failed">Det går inte att söka efter kollegor. Försök igen senare.</string>
+    <string name="cloud_directory_search_more_results">Sökningen genererade för många träffar. Försök att begränsa din sökning.</string>
+    <string name="cloud_directory_search_text_min_length">Sökningen efter en kollega måste bestå av minst 2 tecken.</string>
+    <string name="cloud_directory_service_hint">Obligatoriska fält. Ange ditt riktiga namn. Dina kollegor kan söka efter ditt namn och starta BBM-chattar med dig.</string>
     <string name="coming_soon">"Den här funktionen är inte tillgänglig för tillfället.
 Kommer snart"</string>
     <string name="coming_soon_title">Kommer snart!</string>
     <string name="comment_copied">Kommentar har kopierats</string>
     <string name="comments_disabled_label">Kommentarer inaktiverade</string>
+    <string name="common_android_wear_notification_needs_update_text">En uppdatering av appen Android Wear krävs för %1$s.</string>
+    <string name="common_android_wear_update_text">%1$s körs inte om du inte uppdaterar appen Android Wear.</string>
+    <string name="common_android_wear_update_title">Uppdatera Android Wear</string>
+    <string name="common_google_play_services_api_unavailable_text">För %1$s krävs en eller flera Google Play-tjänster som inte är tillgängliga för närvarande. Kontakta utvecklaren om du vill ha hjälp.</string>
     <string name="common_google_play_services_enable_button">Aktivera Google Play Tjänster</string>
-    <string name="common_google_play_services_enable_text">Du måste aktivera Google Play Tjänster för att den här appen ska fungera.</string>
+    <string name="common_google_play_services_enable_text">%1$s fungerar inte om du inte aktiverar Google Play-tjänster.</string>
     <string name="common_google_play_services_enable_title">Aktivera Google Play Tjänster</string>
+    <string name="common_google_play_services_error_notification_requested_by_msg">Begärdes av %1$s</string>
     <string name="common_google_play_services_install_button">Hämta Google Play Tjänster</string>
-    <string name="common_google_play_services_install_text_phone">Den här appen kan inte köras utan Google Play Tjänster, som saknas på mobilen.</string>
-    <string name="common_google_play_services_install_text_tablet">Den här appen kan inte köras utan Google Play Tjänster, som saknas på surfplattan.</string>
+    <string name="common_google_play_services_install_text_phone">%1$s kan inte köras utan Google Play-tjänster, och dessa saknas på mobilen.</string>
+    <string name="common_google_play_services_install_text_tablet">%1$s kan inte köras utan Google Play-tjänster, och dessa saknas på surfplattan.</string>
     <string name="common_google_play_services_install_title">Hämta Google Play Tjänster</string>
     <string name="common_google_play_services_invalid_account_text">Det angivna kontot finns inte på den här enheten. Välj ett annat konto.</string>
     <string name="common_google_play_services_invalid_account_title">Ogiltigt konto</string>
+    <string name="common_google_play_services_needs_enabling_title">Google Play-tjänster måste aktiveras för att en app ska fungera.</string>
     <string name="common_google_play_services_network_error_text">En dataanslutning krävs för att ansluta till Google Plays tjänster.</string>
     <string name="common_google_play_services_network_error_title">Nätverksfel</string>
+    <string name="common_google_play_services_notification_needs_update_title">Google Play-tjänster måste uppdateras för en app ska fungera.</string>
+    <string name="common_google_play_services_notification_ticker">Fel på Google Play-tjänster</string>
+    <string name="common_google_play_services_sign_in_failed_text">Ett fel uppstod när du försökte logga in på kontot. Välj ett annat konto.</string>
+    <string name="common_google_play_services_sign_in_failed_title">Det gick inte att logga in</string>
     <string name="common_google_play_services_unknown_issue">Okänt problem med Google Play Tjänster</string>
-    <string name="common_google_play_services_unsupported_date_text">Datumet på enheten verkar inte vara rätt. Kontrollera datumet på enheten.</string>
-    <string name="common_google_play_services_unsupported_text">Några av dina appar använder Google Play-tjänster som inte stöds av din enhet. Kontakta tillverkaren om du vill ha hjälp.</string>
+    <string name="common_google_play_services_unsupported_text">För %1$s krävs Google Play-tjänster, och dessa stöds inte på enheten. Kontakta tillverkaren om du vill ha hjälp.</string>
     <string name="common_google_play_services_unsupported_title">Google Play-tjänster</string>
     <string name="common_google_play_services_update_button">Uppdatera</string>
-    <string name="common_google_play_services_update_text">Du måste uppdatera Google Play Tjänster innan du kan köra den här appen.</string>
+    <string name="common_google_play_services_update_text">%1$s kan inte köras om du inte uppdaterar Google Play-tjänsterna.</string>
     <string name="common_google_play_services_update_title">Uppdatera Google Play Tjänster</string>
+    <string name="common_google_play_services_updating_text">%1$s kan inte köras utan Google Play-tjänster, och dessa uppdateras för närvarande.</string>
+    <string name="common_google_play_services_updating_title">Google Play-tjänsterna uppdateras</string>
+    <string name="common_open_on_phone">Öppna på mobilen</string>
     <string name="common_signin_button_text">Logga in</string>
     <string name="common_signin_button_text_long">Logga in med Google</string>
     <string name="complete">Klar</string>
@@ -618,8 +670,10 @@ Kommer snart"</string>
     <string name="contact_add_category">Lägg till kategori</string>
     <string name="contact_add_category_already_exists">Kategorin finns redan.</string>
     <string name="contact_add_category_hint">Ange en kategorirubrik</string>
-    <string name="contact_add_notification">Användare har lagts till</string>
+    <string name="contact_add_notification">Kontakt har lagts till</string>
     <string name="contact_delete_category">Ta bort kategori</string>
+    <string name="contact_delete_notification">Kontakt har raderats</string>
+    <string name="contact_delete_notification_multiple">%1$d kontakter har raderats</string>
     <string name="contact_details">Kontaktinformation</string>
     <string name="contact_details_description">Ta med telefonnummer, e-postadress eller webbplats.</string>
     <string name="contact_is_blocked">Kontakten är blockerad</string>
@@ -631,6 +685,8 @@ Kommer snart"</string>
     <string name="contacts_are_blocked">Kontakterna är blockerade</string>
     <string name="contacts_count">0</string>
     <string name="contacts_delete_contact">Ta bort %1$s</string>
+    <string name="contacts_dialog_delete_and_block_info">Alla framtida inbjudningar och chattar från %1$s kommer att blockeras. Vill du radera och blockera %1$s?</string>
+    <string name="contacts_dialog_delete_and_block_title">Radera och blockera %1$s</string>
     <string name="contacts_dialog_delete_block_info">%1$s läggs till i din lista över blockerade kontakter</string>
     <string name="contacts_dialog_delete_block_label">Blockera framtida inbjudningar</string>
     <string name="contacts_dialog_delete_multi_block_info">Kontakterna läggs till i din blockeringslista</string>
@@ -655,20 +711,25 @@ Kommer snart"</string>
     <string name="contents_sms">SMS-adress</string>
     <string name="contents_text">Vanlig text</string>
     <string name="context_menu_copy_message">Kopiera meddelande</string>
-    <string name="context_menu_recall_message">Ta tillbaka meddelandet</string>
+    <string name="context_menu_quote_message">Citera meddelande</string>
+    <string name="context_menu_recall_message">Ta tillbaka meddelande</string>
     <string name="context_menu_resend_message">Skicka meddelandet på nytt</string>
+    <string name="conversation_activity_block_chat_warning_message">Om du blockerar chatten får du inga fler meddelanden som skickas i den här chatten.</string>
+    <string name="conversation_activity_block_chat_warning_title">Blockera chatt?</string>
     <string name="conversation_activity_end_chat_on_voice_warning_message">Samtalet avslutas och alla chattmeddelanden tas bort.</string>
     <string name="conversation_activity_end_chat_warning_message">Om du avslutar chatten tas alla meddelanden bort.</string>
     <string name="conversation_activity_end_chat_warning_title">Avsluta chatt?</string>
+    <string name="conversation_activity_leave_chat_warning_message">Om du lämnar chatten tas alla meddelanden bort.</string>
+    <string name="conversation_activity_leave_chat_warning_title">Lämna chatten?</string>
     <string name="conversation_activity_reinvite_accepted">Inbjudan godkändes</string>
     <string name="conversation_activity_reinvite_sent">Inbjudan skickad</string>
-    <string name="conversation_are_already_in_the_chat">&lt;b>%1$s&lt;/b> deltar redan i chatten</string>
+    <string name="conversation_are_already_in_the_chat">%1$s deltar redan i chatten</string>
     <string name="conversation_bubble_dropbox_caption">Här är en länk till %1$s i min Dropbox</string>
     <string name="conversation_button_dropbox_download">Hämta</string>
     <string name="conversation_button_toast_attachment_deleted">Bilagan har tagits bort</string>
     <string name="conversation_button_toast_ref_content_deleted">Det refererade innehållet har tagits bort</string>
     <string name="conversation_button_toast_undo">Ångra</string>
-    <string name="conversation_button_view_glympse">Visa karta</string>
+    <string name="conversation_button_view_glympse">VISA KARTA</string>
     <string name="conversation_email_chat_subject_multiple_participants">Chatt med %1$s, %2$s och andra den %3$s</string>
     <string name="conversation_email_chat_subject_three_participants">Chatt med %1$s och %2$s den %3$s</string>
     <string name="conversation_email_chat_subject_two_participants">Chatt med %1$s den %2$s</string>
@@ -678,30 +739,36 @@ Kommer snart"</string>
     <string name="conversation_file_transfert">Fil mottagen</string>
     <string name="conversation_file_transfert_canceled_dialog_title">Filöverföring avbruten</string>
     <string name="conversation_file_transfert_canceled_dialog_too_large">%1$s är för stor. Maximal filstorlek är 16 MB.</string>
-    <string name="conversation_incoming_invite_req">&lt;b>%1$s&lt;/b> vill bjuda in &lt;b>%2$s&lt;/b> till chatten</string>
+    <string name="conversation_groups_alt_picture_sent">Bild delad</string>
+    <string name="conversation_groups_alt_sticker_sent">Sticker delad</string>
+    <string name="conversation_incoming_invite_req">%1$s vill bjuda in %2$s till chatten</string>
     <string name="conversation_incoming_invite_req_accepted">Du lade till <b>%1$s</b></string>
-    <string name="conversation_incoming_invite_req_denied">Du avvisade en begäran från &lt;b>%1$s&lt;/b> om att bjuda in &lt;b>%2$s&lt;/b></string>
-    <string name="conversation_invite_accept_button">Tillåt</string>
-    <string name="conversation_invite_reject_button">Avvisa</string>
-    <string name="conversation_invited">&lt;b>%1$s&lt;/b> godtog din begäran om att bjuda in &lt;b>%2$s&lt;/b></string>
-    <string name="conversation_is_already_in_the_chat">&lt;b>%1$s&lt;/b> deltar redan i chatten</string>
+    <string name="conversation_incoming_invite_req_denied">Du avvisade en begäran från %1$s om att bjuda in %2$s</string>
+    <string name="conversation_invite_accept_button">TILLÅT</string>
+    <string name="conversation_invite_reject_button">AVVISA</string>
+    <string name="conversation_invited">%1$s godtog din begäran om att bjuda in %2$s</string>
+    <string name="conversation_is_already_in_the_chat">%1$s deltar redan i chatten</string>
     <string name="conversation_is_writing_a_message">skriver ett meddelande...</string>
-    <string name="conversation_joined_the_chat">&lt;b>%1$s&lt;/b> har anslutit till chatten.</string>
-    <string name="conversation_left_the_chat">&lt;b>%1$s&lt;/b> lämnade chatten</string>
+    <string name="conversation_joined_the_chat">%1$s har anslutit till chatten</string>
+    <string name="conversation_left_the_chat">%1$s lämnade chatten</string>
     <string name="conversation_location_message_accurace_within">Exakt inom %1$s m</string>
     <string name="conversation_location_received">Plats mottagen</string>
     <string name="conversation_location_sent">Plats skickad</string>
+    <string name="conversation_message_edit_title">Redigera meddelande</string>
+    <string name="conversation_message_editing">Redigerar: %1$s</string>
+    <string name="conversation_message_editing_removed">Redigerat meddelande borttaget</string>
     <string name="conversation_message_recall_failed">Meddelandet kunde inte tas tillbaka</string>
     <string name="conversation_message_recall_pending">Meddelandet tas tillbaka</string>
     <string name="conversation_message_recalled">Meddelandet togs tillbaka</string>
+    <string name="conversation_mpc_header">Chatt</string>
     <string name="conversation_must_reinvite">%1$s har inte dig som kontakt. Vill du skicka en ny inbjudan till %1$s?</string>
     <string name="conversation_notification_calendar_received">Möte mottaget</string>
     <string name="conversation_notification_calendar_sent">Möte skickat</string>
-    <string name="conversation_notification_conf_incoming_invite_req">&lt;b>%1$s&lt;/b> vill bjuda in någon till chatten</string>
-    <string name="conversation_notification_conf_invited">&lt;b>%1$s&lt;/b> bjöds in till chatten</string>
-    <string name="conversation_notification_conf_outgoing_invite_req">Du har bjudit in &lt;b>%1$s&lt;/b> till chatten</string>
-    <string name="conversation_notification_conf_outgoing_invite_req_denied">Din begäran om att bjuda in &lt;b>%1$s&lt;/b> har nekats</string>
-    <string name="conversation_notification_conf_we_joined">&lt;b>%1$s&lt;/b> bjöd in dig till chatten</string>
+    <string name="conversation_notification_conf_incoming_invite_req">%1$s vill bjuda in någon till chatten</string>
+    <string name="conversation_notification_conf_invited">%1$s bjöds in till chatten</string>
+    <string name="conversation_notification_conf_outgoing_invite_req">Du har bjudit in %1$s till chatten</string>
+    <string name="conversation_notification_conf_outgoing_invite_req_denied">Din begäran om att bjuda in %1$s har nekats</string>
+    <string name="conversation_notification_conf_we_joined">%1$s bjöd in dig till chatten</string>
     <string name="conversation_notification_contact_card_received">Kontaktkort mottaget</string>
     <string name="conversation_notification_contact_card_sent">Kontaktkort skickat</string>
     <string name="conversation_notification_default_incomming">Meddelande mottaget</string>
@@ -719,16 +786,17 @@ Kommer snart"</string>
     <string name="conversation_notification_sticker_sent">Etikett skickad</string>
     <string name="conversation_notification_voice_note_received">Röstanteckning mottagen</string>
     <string name="conversation_notification_voice_note_sent">Röstanteckning skickad</string>
-    <string name="conversation_outgoing_invite_req">Din begäran om att bjuda in &lt;b>%1$s&lt;/b> har skickats till &lt;b>%2$s&lt;/b></string>
-    <string name="conversation_outgoing_invite_req_denied">&lt;b>%1$s&lt;/b> nekade din begäran om att bjuda in &lt;b>%2$s&lt;/b></string>
+    <string name="conversation_outgoing_invite_req">Din begäran om att bjuda in %1$s har skickats till %2$s</string>
+    <string name="conversation_outgoing_invite_req_denied">%1$s nekade din begäran om att bjuda in %2$s</string>
     <string name="conversation_picture">Bild mottagen</string>
     <string name="conversation_ping">PING!</string>
-    <string name="conversation_reinvite_accept_button">Ny inbjudan</string>
-    <string name="conversation_reinvite_reject_button">Ta bort kontakt</string>
+    <string name="conversation_reinvite_accept_button">NY INBJUDAN</string>
+    <string name="conversation_reinvite_reject_button">TA BORT KONTAKT</string>
     <string name="conversation_send_button">Skicka</string>
     <string name="conversation_share_max_participants">För många chattdeltagare (högsta antal är %1$s).</string>
     <string name="conversation_successfully_saved_picture">Bilden sparades.</string>
     <string name="conversation_successfully_saved_voice_note">Röstanteckning sparad</string>
+    <string name="conversation_toast_blocked_chat">Du blockerade chatten. Alla meddelanden borttagna.</string>
     <string name="conversation_toast_ended_chat">Chatt avslutad</string>
     <string name="conversation_toast_ended_chat_no_history">Chatt avslutad. Alla meddelanden borttagna.</string>
     <string name="conversation_toast_left_chat">Du lämnade chatten</string>
@@ -736,7 +804,7 @@ Kommer snart"</string>
     <string name="conversation_unable_to_save_picture">Det gick inte att spara bilden</string>
     <string name="conversation_unable_to_save_voice_note">Det går inte att spara röstanteckning</string>
     <string name="conversation_voice_note_transfert">Röstanteckning mottagen</string>
-    <string name="conversation_you_invited">Du har bjudit in &lt;b>%1$s&lt;/b> till chatten</string>
+    <string name="conversation_you_invited">Du har bjudit in %1$s till chatten</string>
     <string name="conversation_you_joined_the_chat">Du har anslutit till chatten</string>
     <string name="copied_group_passphrase">Kopierad lösenordsfras</string>
     <string name="copied_group_passphrase_toast">Kopierat till Urklipp</string>
@@ -751,6 +819,26 @@ Kommer snart"</string>
     <string name="creating_channel_toast_string">Skapar kanal</string>
     <string name="creating_private_channel_confirmation">Åtgärden kan inte ångras. Vill du göra den här kanalen privat?</string>
     <string name="current">Aktuell</string>
+    <string name="custom_pin_activity_title">Anpassad PIN-kod</string>
+    <string name="custom_pin_already_set">Du har redan skapat en anpassad PIN-kod.</string>
+    <string name="custom_pin_confirm_postivie_text">Det är korrekt</string>
+    <string name="custom_pin_confirm_text">Den här texten blir din anpassade PIN-kod för BBM. Är detta korrekt?</string>
+    <string name="custom_pin_friends_ad_link">Besök BBM Shop</string>
+    <string name="custom_pin_friends_ad_text">Skaffa din anpassade PIN-kod på BBM nu:</string>
+    <string name="custom_pin_get_your_custom_pin">Skaffa din anpassade PIN på BBM nu: besök BBM Shop</string>
+    <string name="custom_pin_hint_text">Ange en anpassad PIN-kod</string>
+    <string name="custom_pin_legal">"Det är dags att skapa en anpassad PIN-kod. Ta god tid på dig, du kan inte ändra den senare. Din anpassade PIN-kod är kopplad till BBM så länge som din prenumeration är aktiv.
+
+Riktlinjer:
+* Måste vara mellan 6 och 8 tecken.
+* Kan innehålla siffror, bokstäver, understreck och tankstreck.
+* Måste innehålla ett understreck, tankstreck eller en bokstav mellan G och Z."</string>
+    <string name="custom_pin_not_subscribed">Anpassa min PIN-kod</string>
+    <string name="custom_pin_share_to_feed_body">Du kan låta dina kontakter få veta att du just har fått din anpassade PIN-kod: %1$s</string>
+    <string name="custom_pin_shared_feed_item">Jag har just fått en ny anpassad PIN-kod på BBM: %1$s Tryck på http://shop.bbm.com/item/custom_pin för att anpassa din PIN-kod</string>
+    <string name="custom_pin_terms_conditions">&lt;p>&lt;b>Riktlinjer för anpassad PIN-kod för BBM&lt;/b>&lt;/p> &lt;p>En anpassad PIN-kod är ett roligt sätt att göra ditt BBM-konto mer personligt. En anpassad PIN-kod ersätter inte din aktuella PIN-kod (se avsnittet \"What is a PIN?\" bland de vanliga frågorna på www.bbm.com för mer information om vanliga PIN-koder), utan är en extra PIN-kod som visas på din BBM-profil och som kan användas för att bjuda in och ta emot inbjudningar från andra BBM-användare.&lt;/p> &lt;p>Här följer några saker som du bör tänka på när du skapar en anpassad PIN-kod:&lt;/p> &lt;p>&amp;#8226 Du kan inte välja en anpassad PIN-kod som används av någon annan.&lt;/p> &lt;p>&amp;#8226 Om din prenumeration inte förnyas innan den löper ut kan du inte längre använda din anpassade PIN-kod och den kan väljas av en annan prenumerant.&lt;/p> &lt;p>&amp;#8226 Välj din anpassade PIN-kod noga. När din anpassade PIN-kod har skapats kan den inte ändras så länge som din prenumeration gäller.&lt;/p> &lt;p> &amp;#8226 För att din anpassade PIN-kod ska kunna skiljas åt från en vanlig PIN-kod för BBM måste anpassade PIN-koder uppfylla följande krav: &lt;/p> &lt;p> – måste innehålla 6–8 tecken&lt;/p> &lt;p> – kan innehålla siffror, bokstäver, understreck och tankstreck&lt;/p> &lt;p> – måste innehålla ett understreck, tankstreck eller en bokstav mellan G och Z&lt;/p> &lt;p> &amp;#8226 Anpassade PIN-koder får inte innehålla kränkande, nedsättande, förolämpande, oanständigt, olagligt eller missledande språk eller användas för något annat olagligt ändamål.&lt;/p> &lt;p>&amp;#8226 Anpassade PIN-koder får inte användas för att efterlikna andra personer, märken, organisationer eller händelser eller för att på något annat sätt missleda, förvirra eller vilseleda andra.&lt;/p> &lt;p>&amp;#8226 Anpassade PIN-koder får inte inkräkta på eller bryta mot andra personers, märkens, organisationers eller händelsers rättigheter, inklusive immateriella rättigheter. Till exempel får din anpassade PIN-kod inte bryta mot en annan persons eller enhets varumärkesrättigheter.&lt;/p> &lt;p>&amp;#8226 BlackBerry förbehåller sig rätten att avslå, ta bort och/eller ta tillbaka en anpassad PIN-kod av vilket skäl som helst i enlighet med alla tillämpliga inköpsvillkor och policyer för återbetalning.&lt;/p></string>
+    <string name="custom_pin_title">Anpassad PIN-kod:</string>
+    <string name="custom_pin_warning_on_repurchase">Det kan hända att du behöver köpa en ny prenumeration och avbryta din gamla för att behålla din nuvarande anpassade PIN-kod. Ytterligare information finns här: %1$s</string>
     <string name="date">Datum</string>
     <string name="date_of_birth"><b>Födelsedatum</b></string>
     <string name="date_of_birth_fail_age_limit">Du är inte tillräckligt gammal för att använda BBM Channels.</string>
@@ -777,6 +865,7 @@ Kommer snart"</string>
     <string name="dialog_invite_security_question_tip">Tips: Svar är skiftlägeskänsliga.</string>
     <string name="dialog_invite_security_question_title">Kontrollfråga</string>
     <string name="did_you_know">Visste du att ...</string>
+    <string name="different_platform_string">Du har en prenumeration som förnyas automatiskt och som köptes på en annan enhet. Vill du prenumerera på den här enheten?</string>
     <string name="discard">Ta bort</string>
     <string name="display_name"><i>Visningsnamn</i></string>
     <string name="do_you_want_to_switch_your_bbm_information_to_your_current_device">Vill du flytta din BBM-information till din nuvarande enhet?</string>
@@ -793,10 +882,19 @@ Kommer snart"</string>
     <string name="enter_an_address">Ange en adress</string>
     <string name="enter_comment"><i>Skriv en kommentar</i></string>
     <string name="enter_date_of_birth">Ange födelsedatum för att få åtkomst till BBM Channels.</string>
-    <string name="enter_passphrase">Ange lösenordsfras</string>
+    <string name="enter_passphrase">ANGE LÖSENORDSFRAS</string>
     <string name="enter_passphrase_hint"><i>Ange lösenordsfras</i></string>
     <string name="enter_text"><i>Ange text</i></string>
     <string name="entered_passphrase_incorrect">Den lösenordsfras som du angett stämmer inte.</string>
+    <string name="entitlement_dialog_title">Prenumeration krävs</string>
+    <string name="entitlement_edit_dialogue">"Du uppnått gränsen för att redigera meddelanden i utvärderingsversionen.
+För att få obegränsad tillgång till denna funktion krävs en prenumeration."</string>
+    <string name="entitlement_privateconv_dialogue">"Du har nått gränsen för privata chattar i utvärderingsversionen.
+För att få obegränsad tillgång till denna funktion krävs en prenumeration."</string>
+    <string name="entitlement_retracted_dialogue">"Du uppnått gränsen för återkallade meddelanden i utvärderingsversionen.
+För att få obegränsad tillgång till denna funktion krävs en prenumeration."</string>
+    <string name="entitlement_timed_dialogue">"Du uppnått gränsen för tidsbegränsade meddelanden i utvärderingsversionen.
+För att få obegränsad tillgång till denna funktion krävs en prenumeration."</string>
     <string name="ephemeral_hint_received">Tidsbegränsat meddelande mottaget. Tryck på och håll kvar för att visa.</string>
     <string name="ephemeral_hint_sent">Tidsbegränsat meddelande.</string>
     <string name="ephemeral_hint_viewed">Tidsbegränsat meddelande mottaget. Förfallit</string>
@@ -896,15 +994,17 @@ Kommer snart"</string>
     <string name="filter_by">Filtrera efter</string>
     <string name="find_friend_allow_upload_dialog_double_check_text">Är du säker? Om du inte ger BBM åtkomst till dina kontakter måste du lägga till BBM-kontakter manuellt.</string>
     <string name="find_friend_allow_upload_dialog_double_check_title">Rekommenderas inte</string>
-    <string name="find_friend_allow_upload_dialog_title">Sök efter vänner på BBM</string>
-    <string name="find_friend_allow_upload_text">Tillåt BBM att regelbundet få åtkomst till dina kontakter för att hitta vänner.</string>
+    <string name="find_friend_allow_upload_dialog_title">Sök efter vänner</string>
+    <string name="find_friend_allow_upload_text">Tillåt BBM att få åtkomst till dina kontakter så blir det lättare att hitta vänner. Du kan bestämma vilka vänner du vill lägga till i BBM.</string>
     <string name="find_friend_category_get_bbm">Bjud in att hämta</string>
     <string name="find_friend_category_invite">Tryck för att lägga till</string>
     <string name="find_friends">Sök efter vänner på BBM</string>
-    <string name="find_more_friends">Sök efter fler vänner</string>
-    <string name="first_launch_after_upgrade_privacy_terms">Jag godkänner &lt;b>&lt;a href=http://www.blackberry.com/legal/privacy>sekretesspolicyn&lt;/a>&lt;/b> och &lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>tjänstvillkoren&lt;/a>&lt;/b></string>
-    <string name="first_launch_after_upgrade_subtitle">Gör BBM-chatten ännu roligare med etiketter. Tillgängligt nu.</string>
-    <string name="first_launch_after_upgrade_title">Skicka etiketter!</string>
+    <string name="find_more_friends">Sök efter vänner</string>
+    <string name="first_launch_after_upgrade_privacy_terms">Vi har uppdaterat våra &lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>Tjänstvillkor&lt;/a>&lt;/b>. Genom att klicka på ”Fortsätt” godkänner du &lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>tjänstvillkoren&lt;/a>&lt;/b> och &lt;b>&lt;a href=http://www.blackberry.com/legal/privacy>sekretesspolicyn&lt;/a>&lt;/b></string>
+    <string name="first_launch_after_upgrade_subtitle">Skapa en PIN-kod för BBM som bara är din! Skaffa din anpassade PIN-kod idag.</string>
+    <string name="first_launch_after_upgrade_title">Lika unik som du är</string>
+    <string name="first_name">Förnamn</string>
+    <string name="first_name_hint">Ange förnamn</string>
     <string name="flagged_comments_header">Kommentarer</string>
     <string name="flagged_posts_header">Inlägg</string>
     <string name="format_not_supported_for_cropping">Det här formatet kan inte beskäras</string>
@@ -912,6 +1012,7 @@ Kommer snart"</string>
     <string name="general">Allmänt</string>
     <string name="glympse">Glympse</string>
     <string name="glympse_attach">Bifoga Glympse</string>
+    <string name="glympse_duration_hourminutes">%1$d:%2$02d kvar</string>
     <string name="glympse_duration_minutes">Längd: %1$d min</string>
     <string name="glympse_expired">Förfallit</string>
     <string name="glympse_expires_at">Dela till %1$s</string>
@@ -946,13 +1047,14 @@ Kommer snart"</string>
     <string name="glympse_update">Uppdatera Glympse</string>
     <string name="glympse_user_selector_item_all_user_currently_sharing">Alla användare som delar just nu</string>
     <string name="glympse_user_selector_item_speed">Hastighet (km/h): %1$s</string>
+    <string name="glympse_user_selector_item_speed_na">Hastighet (km/h): Ej tillämpligt</string>
     <string name="glympse_user_selector_item_updated_d_ago">Senast uppdaterad : %1$d: dagar sedan</string>
     <string name="glympse_user_selector_item_updated_h_m">Senast uppdaterad : %1$d:%2$s sedan</string>
     <string name="glympse_user_selector_item_updated_m_ago">Senast uppdaterad : %1$d minuter sedan</string>
     <string name="glympse_user_selector_item_updated_na">Senast uppdaterad: Ej tillämpligt</string>
     <string name="glympse_user_selector_item_updated_s_ago">Senast uppdaterad : %1$d sekunder sedan</string>
     <string name="glympse_user_selector_item_view_all_user_currently_sharing">Visa alla användare som delar just nu</string>
-    <string name="glympse_was_received">Du har mottagit en Glympse</string>
+    <string name="glympse_was_received">Du har fått en Glympse</string>
     <string name="google_play_services_are_not_available">Den här funktionen kräver en uppdaterad version av Google Play Services.</string>
     <string name="group">Grupp</string>
     <string name="group_add_event_button">Lägg till händelse</string>
@@ -979,9 +1081,11 @@ Kommer snart"</string>
     <string name="group_add_list_title_hint"><i>Listnamn</i></string>
     <string name="group_admin_about">Om gruppadministratörer</string>
     <string name="group_admin_text">Administratörer kan göra följande:</string>
+    <string name="group_autopassphrase_details">Automatiskt lösenord aktiverat</string>
     <string name="group_barcode_info">En kontakt kan läsa av den här streckkoden för att gå med i din grupp</string>
     <string name="group_barcode_scan_rejected_user_not_protected">Du har inte tillstånd att gå med i den här gruppen.</string>
     <string name="group_cancel">Avbryt</string>
+    <string name="group_cannot_delete_conversation">Den här konversationen kan inte tas bort</string>
     <string name="group_chat_exists">Ämnet finns redan</string>
     <string name="group_chat_general_discussion">Allmän diskussion</string>
     <string name="group_chat_history_days_1">1 dag</string>
@@ -1000,6 +1104,8 @@ Kommer snart"</string>
     <string name="group_conversation_email_chat_message_header">Från grupp: %1$s</string>
     <string name="group_conversation_email_chat_subject">%1$ss chatt: %2$s</string>
     <string name="group_conversation_is_writing_a_message">" skriver..."</string>
+    <string name="group_conversation_picture_loading">Läser in bild ...</string>
+    <string name="group_conversation_picture_not_available">Bilden är inte tillgänglig</string>
     <string name="group_conversation_slide_menu_chat_history">Chatthistorik</string>
     <string name="group_conversation_slide_menu_clear_chat">Rensa chatt</string>
     <string name="group_conversation_slide_menu_copy_chat">Kopiera chatt</string>
@@ -1009,6 +1115,7 @@ Kommer snart"</string>
     <string name="group_delete_picture">Ta bort bild</string>
     <string name="group_delete_q">Ta bort grupp?</string>
     <string name="group_done">Klar</string>
+    <string name="group_edit_admin_cannot_remove_self">Du kan inte ta bort dig själv som administratör</string>
     <string name="group_edit_caption">Redigera bildtext</string>
     <string name="group_edit_list_title">Objektinformation</string>
     <string name="group_event_all_day">Hela dagen</string>
@@ -1029,17 +1136,17 @@ Kommer snart"</string>
     <string name="group_events_status_text">Inga händelser</string>
     <string name="group_events_subject"><i>Ämne</i></string>
     <string name="group_events_time_notice">Sluttiden måste ligga efter starttiden</string>
-    <string name="group_invitation_was_received">Du har bjudits in till en Glympse-grupp</string>
+    <string name="group_invitation_was_received">Du blev inbjuden till en Glympse grupp</string>
     <string name="group_invite_bbg_uri">%1$s</string>
-    <string name="group_invite_email_message">"-----\ufffc----
-Jag vill bjuda in dig till min grupp som heter %1$s.
+    <string name="group_invite_email_message">"Jag vill bjuda in dig till min grupp: \"%1$s\". Om du vill gå med i gruppen på en mobil enhet klickar du på:
+%2$s
 
-Android eller iPhone: Klicka på %2$s för att gå med i gruppen eller hämta BBM.
 
 %3$s"</string>
-    <string name="group_invite_email_subject">Gå med i min BlackBerry-grupp!</string>
+    <string name="group_invite_email_subject">Inbjudan till BBM Group från %1$s</string>
     <string name="group_invite_enter_passphrase">Om du vill gå med i den här gruppen måste du ange en lösenordsfras som tillhandahålls av en gruppmedlem.</string>
     <string name="group_invite_enter_passphrase_multi_attempts">Felaktig lösenordsfras. Om du vill gå med i den här gruppen måste du ange en lösenordsfras som tillhandahålls av en gruppmedlem. (%1$d/%2$d)</string>
+    <string name="group_invite_expired">Gruppinbjudan har upphört att gälla</string>
     <string name="group_invite_message_default">Jag vill bjuda in dig till min grupp: %1$s</string>
     <string name="group_invite_status_enter_passphrase_max_attempts_reached">Felaktig lösenordsfras. Du måste bli inbjuden igen för att delta i den här gruppen.</string>
     <string name="group_invite_status_enter_passphrase_multi_attempts">Felaktig lösenordsfras. Om du vill gå med i den här gruppen måste du ange en lösenordsfras som tillhandahålls av en gruppmedlem.</string>
@@ -1082,6 +1189,11 @@ Android eller iPhone: Klicka på %2$s för att gå med i gruppen eller hämta BB
     <string name="group_passphrase_info">Du kan dela den lösenordsfras som de inbjudna måste ange för att gå med i gruppen.</string>
     <string name="group_passphrase_missing">Lösenordsfras ej tillämplig</string>
     <string name="group_picture_add">Lägg till bild</string>
+    <string name="group_picture_add_failed__wrong_picture_type">@string/avatar_file_not_support</string>
+    <string name="group_picture_add_failed_file_access_error">@string/filetransfer_abort_filenotfound</string>
+    <string name="group_picture_add_failed_file_does_not_exist">@string/filetransfer_abort_filenotfound</string>
+    <string name="group_picture_add_failed_picture_too_big">@string/conversation_file_image_transfer_canceled_dialog_too_large</string>
+    <string name="group_picture_add_failed_resize_error">@string/conversation_unable_to_save_picture</string>
     <string name="group_picture_added_days">Lades till för %1$d dagar sedan av %2$s</string>
     <string name="group_picture_added_today">Lades till idag kl. %1$s av %2$s</string>
     <string name="group_picture_added_yesterday">Lades till igår av %1$s</string>
@@ -1098,7 +1210,7 @@ Android eller iPhone: Klicka på %2$s för att gå med i gruppen eller hämta BB
     <string name="group_settings_admin_password_text">Den gruppmedlem som anger detta lösenord blir administratör.</string>
     <string name="group_settings_administration">Administration</string>
     <string name="group_settings_administrators">Administratörer</string>
-    <string name="group_settings_allow_invite">Tillåt medlemmar bjuda in andra</string>
+    <string name="group_settings_allow_invite">Låt medlemmar bjuda in andra</string>
     <string name="group_settings_change">Ändra</string>
     <string name="group_settings_chat_notification">Chattaviseringar för den här gruppen</string>
     <string name="group_settings_create">Skapa</string>
@@ -1132,7 +1244,7 @@ Android eller iPhone: Klicka på %2$s för att gå med i gruppen eller hämta BB
     <string name="group_update_list_item_updated">&lt;b>%1$s&lt;/b> uppdaterade objektet &lt;b>%2$s&lt;/b> i listan &lt;b>%3$s&lt;/b>.</string>
     <string name="group_view_lists">Visa lista</string>
     <string name="groups">Grupper</string>
-    <string name="groupsButtonLabel">Tillåt medlemmar bjuda in andra</string>
+    <string name="groupsButtonLabel">Låt medlemmar bjuda in andra</string>
     <string name="groupsDefaultDescription"><i>Lägg till en beskrivning</i></string>
     <string name="groupsDefaultName"><i>Gruppnamn</i></string>
     <string name="groupsDefaultUpdateDescription"><i>Ange beskrivning</i></string>
@@ -1156,7 +1268,7 @@ Android eller iPhone: Klicka på %2$s för att gå med i gruppen eller hämta BB
     <string name="hdimage_prompt_message">Vill du automatiskt acceptera framtida HD-begäranden?</string>
     <string name="hdimage_prompt_title">Acceptera alltid begäranden</string>
     <string name="help">Hjälp</string>
-    <string name="help_url">http://docs.blackberry.com/bbm/25/android/sv</string>
+    <string name="help_url">http://help.blackberry.com/detectLang/bbm-for-android/current/</string>
     <string name="high_priority">Hög prioritet</string>
     <string name="hint_protected_enabled_chat"><i>Skyddad. Skriv ett meddelande</i></string>
     <string name="history_clear_one_history_text">Rensa</string>
@@ -1185,6 +1297,7 @@ Android eller iPhone: Klicka på %2$s för att gå med i gruppen eller hämta BB
     <string name="introducing_channels_second_part">Dina prenumeranter får den senaste informationen via BBM och kan dela med sig av sina tankar.</string>
     <string name="introducing_channels_title">Presentation av BBM Channels</string>
     <string name="invalid_passphrase_toast">Ogiltigt lösenordsfras</string>
+    <string name="invitation_received">Inbjudan mottagen</string>
     <string name="invitation_rejected_invitee_not_protected_message">%1$s kan inte gå med i den här gruppen. Endast BBM Protected-kontakter kan gå med.</string>
     <string name="invitation_rejected_invitee_not_protected_title">Kan inte bjuda in användare</string>
     <string name="invitation_sent">Inbjudan skickad</string>
@@ -1192,23 +1305,22 @@ Android eller iPhone: Klicka på %2$s för att gå med i gruppen eller hämta BB
     <string name="invite_activity_category">Kategori</string>
     <string name="invite_activity_lookup">Slå upp...</string>
     <string name="invite_activity_mail">E-post: %1$s</string>
-    <string name="invite_activity_mail_body">"Jag vill bjuda in dig att chatta via BBM.
-
-Klicka på 
-%1s
- för att ansluta till mig på BBM"</string>
+    <string name="invite_activity_mail_body">"Jag vill bjuda in dig att chatta via BBM. Om du vill chatta med mig på BBM på din mobila enhet klickar du på:
+%1$s
+"</string>
     <string name="invite_activity_mail_subject">BBM-inbjudan från %1$s</string>
     <string name="invite_activity_phone">Telefon: %1$s</string>
     <string name="invite_activity_pin">PIN-kod: %1$s</string>
     <string name="invite_activity_security_custom_question">Ange en kontrollfråga</string>
     <string name="invite_activity_security_custom_response">Ange ett svar</string>
     <string name="invite_activity_security_label">Kontrollfråga</string>
-    <string name="invite_activity_sms_body">Lägg till mig i BBM! På BlackBerry klickar du på pinkoden:%1$s och väljer Bjud in till BBM. Android eller iPhone: Klicka på www.pin.bbm.com/%1$s om du vill lägga till mig eller hämta BBM.</string>
+    <string name="invite_activity_sms_body">Lägg till mig på BBM! Klicka på www.pin.bbm.com/%1$s</string>
     <string name="invite_activity_to">Till:</string>
     <string name="invite_bbm_contact">Lägg till en BBM-kontakt</string>
     <string name="invite_bbm_invites">BBM-inbjudningar</string>
-    <string name="invite_button_join">Gå med</string>
-    <string name="invite_button_preview">Förhandsgranska</string>
+    <string name="invite_button_join">GÅ MED</string>
+    <string name="invite_button_preview">"Förhands-
+granskning"</string>
     <string name="invite_by_barcode">Bjud in via streckkod</string>
     <string name="invite_by_email">Bjud in via e-post</string>
     <string name="invite_by_other">Bjud in via sms eller PIN-kod</string>
@@ -1272,6 +1384,8 @@ Klicka på
     <string name="key_exchange_hint_waiting_to_enter_passphrase">Ange lösenordsfrasen för att gå med</string>
     <string name="key_exchange_hint_waiting_to_join">Väntar på att %1$s ska gå med</string>
     <string name="key_exchange_status_accepted">Lösenordsfras godkänd</string>
+    <string name="last_name">Efternamn</string>
+    <string name="last_name_hint">Ange efternamn</string>
     <string name="learn_more_about_bbm_pins">Mer information om BBM-PIN</string>
     <string name="learn_more_about_restoring_bbm_data">Läs mer om återställning av BBM-data.</string>
     <string name="leave_channel">Lämna kanal</string>
@@ -1291,8 +1405,10 @@ Klicka på
     <string name="location_service_dialog_right_button">Inställningar</string>
     <string name="location_service_dialog_title">Positioneringstjänster inaktiverade</string>
     <string name="location_service_failed">Det gick inte att hämta plats</string>
-    <string name="low_battey_warning">Pausad pga lågt batteri, klicka för att återgå.</string>
+    <string name="low_battey_warning">Pausad på grund av lågt batteri, klicka för att återuppta.</string>
     <string name="low_priority">Låg prioritet</string>
+    <string name="main_drawer_close">Stäng låda</string>
+    <string name="main_drawer_open">Öppna låda</string>
     <string name="main_mood_status_format">%1$s – %2$s</string>
     <string name="main_status_available">Tillgänglig</string>
     <string name="main_status_busy">Upptagen</string>
@@ -1304,13 +1420,15 @@ Klicka på
     <string name="menu_end_chat">Avsluta chatt</string>
     <string name="menu_help">Hjälp</string>
     <string name="menu_history">Historik</string>
+    <string name="menu_leave_chat">Lämna chatt</string>
     <string name="menu_settings">Inställningar</string>
     <string name="menu_share">Dela</string>
-    <string name="message_button_accept">Acceptera</string>
-    <string name="message_button_allow">Tillåt</string>
-    <string name="message_button_cancel">Avbryt</string>
-    <string name="message_button_decline">Avböj</string>
-    <string name="message_button_deny">Avvisa</string>
+    <string name="message">Meddelande</string>
+    <string name="message_button_accept">ACCEPTERA</string>
+    <string name="message_button_allow">TILLÅT</string>
+    <string name="message_button_cancel">AVBRYT</string>
+    <string name="message_button_decline">AVBÖJ</string>
+    <string name="message_button_deny">AVVISA</string>
     <string name="message_copied">Meddelandet har kopierats</string>
     <string name="message_recall_tech_tip_body">"Ville du inte skicka ett meddelande?
 Tryck på och håll kvar meddelandet för att återta ta det från den andra personens BBM-chatt."</string>
@@ -1323,6 +1441,7 @@ Tryck på och håll kvar meddelandet för att återta ta det från den andra per
     <string name="message_with_context_new_contact">Om din nya kontakt:</string>
     <string name="message_with_context_now_playing">Om spelas nu:</string>
     <string name="message_with_context_personal_message">Om ditt personliga meddelande:</string>
+    <string name="message_with_context_quote">%1$s skrev: \"%2$s\"</string>
     <string name="message_with_context_real_time_location">Om din plats:</string>
     <string name="more">Mer</string>
     <string name="msg_bulk_mode_scanned">Bulk-läge: streckkod har inskannats och sparats</string>
@@ -1360,6 +1479,11 @@ Tryck på och håll kvar meddelandet för att återta ta det från den andra per
     <string name="my_channels_fragment_mark_favorite">Markera som favorit</string>
     <string name="my_channels_fragment_remove_favorite">Ta bort som favorit</string>
     <string name="mybbmbarcode">Min BBM-streckkod</string>
+    <string name="nav_chats">BBM-chattar</string>
+    <string name="nav_contacts">BBM-kontakter</string>
+    <string name="nav_feeds">BBM-flöden</string>
+    <string name="nav_feeds_all">Alla BBM-flöden</string>
+    <string name="nav_groups">BBM Groups</string>
     <string name="network_settings_dialog_text">Anslut till ett trådlöst eller mobilt nätverk om du vill fortsätta.</string>
     <string name="network_settings_dialog_title">Ingen nätverksanslutning</string>
     <string name="new_channel_email_addresss">E-postadress</string>
@@ -1368,7 +1492,8 @@ Tryck på och håll kvar meddelandet för att återta ta det från den andra per
     <string name="new_chat_topic">Nytt chattämne</string>
     <string name="new_string">NYHET</string>
     <string name="next">Nästa</string>
-    <string name="no_active_glympses">Ingen aktiv Glympse</string>
+    <string name="no">Nej</string>
+    <string name="no_active_glympses">Inga aktiva Glympses</string>
     <string name="no_blackberry_data">Inga BlackBerry-data</string>
     <string name="no_blocked_invites">Du kan lägga till kontakter i listan när du ignorerar en inbjudan eller tar bort en kontakt.</string>
     <string name="no_blocked_updates">Du kan lägga till kontakter eller grupper i listan när du visar dina BBM-flöden.</string>
@@ -1378,6 +1503,7 @@ Tryck på och håll kvar meddelandet för att återta ta det från den andra per
     <string name="no_connection_found">Ingen anslutning hittades.</string>
     <string name="no_current_chat">Inga chattar</string>
     <string name="no_network_connection">Ingen nätverksanslutning.</string>
+    <string name="no_picture">Ingen bild tillgänglig</string>
     <string name="no_pictures">Inga bilder</string>
     <string name="no_posts">Det går inte att visa alla inlägg.</string>
     <string name="no_updates">Inga nya objekt.</string>
@@ -1428,6 +1554,20 @@ Tryck på och håll kvar meddelandet för att återta ta det från den andra per
 På BlackBerry-enheter trycker du på PIN-koden:%2$s och anger lösenordsfrasen."</string>
     <string name="out_of_band_passphrase_message_sms">Jag vill starta en BBM Protected-chatt med dig. Tryck på %1$s på en BlackBerry-enhet. Ange lösenordsfrasen %2$s.</string>
     <string name="out_of_band_passphrase_subject">BBM Protected-chatt</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_dialog_body">Denna funktion är endast tillgänglig med BBM-kontakter. Vill du lägga till %1$s i dina BBM-kontakter nu?</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_dialog_title">Lägg till i BBM-kontakter</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_toast">"Du måste lägga till denna person som 
+BBM-kontakt för att använda detta alternativ."</string>
+    <string name="outer_circle_category_bbm_contacts">BBM-kontakter</string>
+    <string name="outer_circle_category_phone_contacts">@string/outer_circle_category_phone_contacts_v1</string>
+    <string name="outer_circle_category_phone_contacts_v1">Kontakter</string>
+    <string name="outer_circle_category_phone_contacts_v2">Telefonkontakter</string>
+    <string name="outer_circle_category_phone_contacts_v3">Enhets-kontakter</string>
+    <string name="outer_circle_contact_add_more_friends">Lägg till fler vänner</string>
+    <string name="outer_circle_contact_menu_add_as_contact">Lägg till i BBM-kontakter</string>
+    <string name="outer_circle_contact_menu_delete_and_block">Radera och blockera</string>
+    <string name="outer_circle_find_other_bbm_user_body">Du kan söka automatiskt bland enhetskontakterna efter BBM-användare som du kanske känner. Vill du ge BBM åtkomst till din kontakter-app?</string>
+    <string name="outer_circle_find_other_bbm_user_title">Sök efter andra BBM-användare</string>
     <string name="overlay_bbm_ongoing_notification_reason">"Varför visas en BBM-ikon överst på skärmen?
 
 BBM-ikonen visas i statusfältet eftersom BBM alltid är aktivt så att du alltid är ansluten."</string>
@@ -1461,20 +1601,20 @@ BBM-ikonen visas i statusfältet eftersom BBM alltid är aktivt så att du allti
     <string name="partner_app_register_failed_dialog_outage_message">Ingen nätverksanslutning har identifierats</string>
     <string name="partner_app_register_failed_dialog_title">Registrera i BBM</string>
     <string name="passphrase">Lösenordsfras</string>
-    <string name="passphrase_creation_details">En lösenordsfras måste delas med din BBM-kontakt för att ansluta till chatten. Måste bestå av minst 4 versaler.</string>
+    <string name="passphrase_creation_details">En lösenordsfras måste delas med din BBM-kontakt för att ansluta till chatten. Måste bestå av minst 4 tecken. Använd bokstäver, siffror eller både och. Exempel: TGRS, 2905, TIG8.</string>
     <string name="passphrase_incorrect">&lt;b>%1$s&lt;/b> angav en felaktig lösenordsfras.</string>
     <string name="passphrase_initiated">Du delade lösenorsfrasen &lt;b>%1$s&lt;/b> med &lt;b>%2$s&lt;/b>.</string>
     <string name="passphrase_message_email">"Jag vill starta en BBM Protected-chatt med dig.
 ---o---
-Ange lösenordsfrasen \"%1$s\" när du har klickat på PIN-koden:%2$s eller %3$s"</string>
-    <string name="passphrase_message_sms">Gå med i min BBM Protected-chatt! Ange lösenordsfrasen \"%1$s\" när du har klickat på PIN-koden:%2$s eller %3$s</string>
+För att gå med i denna chatt, klicka på PIN:%1$s eller %2$s. Om ett lösenord efterfrågas, ange \"%3$s\"."</string>
+    <string name="passphrase_message_sms">Gå med i min BBM Protected-chatt! Klicka bara PIN:%1$s eller %2$s. Om ett lösenord efterfrågas, ange \"%3$s\".</string>
     <string name="passphrase_rules_details">Måste bestå av tre bokstavsuppsättningar, fyra till sju versaler i varje uppsättning, separerade med ett mellanrum. Exempel: FLERA STARKA TIGRAR</string>
     <string name="passphrase_share_details">Hur vill du dela lösenordsfrasen med %1$s?</string>
     <string name="passphrase_wait_to_join">Väntar på att &lt;b>%1$s&lt;/b> ska gå med.</string>
     <string name="pay_with_blackberry">Använd operatörsfaktura</string>
     <string name="pay_with_google_play">Använd Google Play</string>
     <string name="pending_group_invite_accepted">Accepterade: %1$s</string>
-    <string name="pending_group_invite_declined">Inbjudan avböjdes:</string>
+    <string name="pending_group_invite_declined">Inbjudan avböjdes: %1$s</string>
     <string name="pending_group_invite_failed">Kan inte delta: %1$s</string>
     <string name="pending_group_invite_verifying">Verifierar svar: %1$s</string>
     <string name="pending_group_invite_verifying_passphrase">Verifierar lösenordsfras: %1$s</string>
@@ -1491,12 +1631,38 @@ Ange lösenordsfrasen \"%1$s\" när du har klickat på PIN-koden:%2$s eller %3$s
     <string name="pending_invite_group_too_many_members">Nekad: Den här gruppen är redan full.</string>
     <string name="pending_invite_pending">Väntande</string>
     <string name="pending_invite_protected_group_invites_you_to">%1$s vill bjuda in dig till gruppen \"%2$s\". Om du vill gå med i den här BBM Protected-gruppen måste du ange en lösenordsfras som tillhandahålls av en gruppmedlem.</string>
+    <string name="people">Personer</string>
     <string name="personalize_profile_dialog_message">Du kan öppna din BBM-profil genom att trycka på banderollen.</string>
     <string name="personalize_profile_dialog_title">Anpassa din profil</string>
+    <string name="phone_contact_add">@string/phone_contact_add_v1</string>
+    <string name="phone_contact_add_v1">Lägg till en BBM-kontakt</string>
+    <string name="phone_contact_add_v2">Lägg till i BBM</string>
+    <string name="phone_contact_add_v3">Lägg till i BBM-kontakter</string>
+    <string name="phone_contact_block">Blockera</string>
+    <string name="phone_contact_block_from_conversation_description">Alla framtida inbjudningar och chattar från %1$s kommer att blockeras. Vill du blockera %1$s?</string>
+    <string name="phone_contact_block_from_conversation_title">Blockera %1$s</string>
+    <string name="phone_contact_invitationsent">Inbjudan skickad</string>
+    <string name="phone_contact_not_a_contact">För att kunna dra nytta av alla BBM-funktioner måste du lägga till den här personen i dina BBM-kontakter.</string>
+    <string name="phone_contact_reinvite_message">@string/phone_contact_reinvite_message_v1</string>
+    <string name="phone_contact_reinvite_message_v1">För att lägga till %1$s i dina BBM-kontakter, tryck %2$s.</string>
+    <string name="phone_contact_reinvite_message_v2">Du måste lägga till %1$s i dina BBM-kontakter för att starta en chatt. För att lägga till %1$s i dina BBM-kontakter, tryck %2$s längst upp i chatten.</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_1">Det finns &lt;b>&lt;i>kontakter&lt;/i>&lt;/b> och det finns &lt;b>&lt;i>BBM-kontakter&lt;/i>&lt;/b>.</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_2">&lt;b>&lt;i>Kontakter&lt;/i>&lt;/b> är personer bland kontakterna i din enhet som använder BBM.&lt;br/>&lt;br/> * Chatta med kontakter nu&lt;br/> * Ingen inbjudan krävs</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_3">&lt;b>&lt;i>BBM-kontakter&lt;/i>&lt;/b> kräver en inbjudan. Endast BBM-kontakter kan göra följande:&lt;br/>&lt;br/> * Se din BBM-visningsbild&lt;br/> * Se dina &lt;br/>BBM-statusuppdateringar&lt;br/> * Ringa eller ta emot samtal med BBM Voice.</string>
+    <string name="phone_contact_tutorial_conversation_section_1">Det finns &lt;b>&lt;i>kontakter&lt;/i>&lt;/b> och det finns &lt;b>&lt;i>BBM-kontakter&lt;/i>&lt;/b>.</string>
+    <string name="phone_contact_tutorial_conversation_section_2">Detta är en chatt med en &lt;b>&lt;i>kontakt&lt;/i>&lt;/b>. Denna person kan inte se följande:&lt;br/>&lt;br/> * Din BBM-visningsbild&lt;br/> * Dina BBM-statusuppdateringar</string>
+    <string name="phone_contact_tutorial_conversation_section_3">Den här personen chattar via den senaste versionen av BBM. Du kan lägga till den här personen i dina&lt;br/> &lt;b>&lt;i>BBM-kontakter&lt;/i>&lt;/b> eller blockera personen när som helst.</string>
+    <string name="phone_contact_tutorial_profile_click_section_1">Det finns &lt;b>&lt;i>kontakter&lt;/i>&lt;/b> och det finns &lt;b>&lt;i>BBM-kontakter&lt;/i>&lt;/b>.</string>
+    <string name="phone_contact_tutorial_profile_click_section_2">&lt;b>&lt;i>BBM-kontakter&lt;/i>&lt;/b> kräver en inbjudan och kan göra följande: &lt;br/>&lt;br/> * Se din BBM-visningsbild, statusuppdateringar och profil&lt;br/> * Ringa dig via BBM Voice&lt;br/> * Skicka sändningsmeddelanden</string>
+    <string name="phone_contact_tutorial_profile_click_section_3">&lt;b>&lt;i>Kontakter&lt;/i>&lt;/b> är personer bland kontakterna i din enhet som använder BBM. Med kontakter krävs ingen inbjudan och du kan fortfarande använda den senaste versionen av BBM och njuta av chattfunktioner samt:&lt;br/>&lt;br/> &amp;#8226; Raderings- och återkallningsaviseringar&lt;br/> &amp;#8226; Skicka bilder och filer&lt;br/>&amp;#8226; Dela din position med Glympse</string>
     <string name="pic_caption_hint"><i>Ange en bildtext</i></string>
+    <string name="picture">Bild</string>
     <string name="picture_deleted">Bilden togs bort</string>
+    <string name="picture_selection_limit_toast">För många filer (maxantalet är 10).</string>
+    <string name="picture_selection_type_toast">Enda bildtyp som stöds vid gruppdelning.</string>
     <string name="pin_copied">PIN-kod kopierad</string>
     <string name="please_ensure_the_device_time_is_correctly_set">Se till att enhetstiden är rätt inställd och försök igen.</string>
+    <string name="policy_change_title">Policyändring</string>
     <string name="post_removed">Detta inlägg har tagits bort.</string>
     <string name="posts_caption">Inlägg</string>
     <string name="pref_add_contact_on_tap">Lägg till kontakter vid tryckning</string>
@@ -1557,21 +1723,49 @@ Ange lösenordsfrasen \"%1$s\" när du har klickat på PIN-koden:%2$s eller %3$s
     <string name="preferences_vibrate_title">Vibrera</string>
     <string name="private_channel">Privat kanal</string>
     <string name="private_channel_description">Dölj din kanal från sökningar och gör den exklusiv för de som du bjuder in.</string>
+    <string name="private_chat">Privat chatt</string>
+    <string name="private_chat_back_out_dialog_dont_ask_me_again">Fråga mig inte igen.</string>
+    <string name="private_chat_back_out_dialog_text">Din privata chatt avslutas om du inte fortsätter inom %1$d minuter.</string>
+    <string name="private_chat_conversation_notification_title">%1$s vill starta en privat chatt med dig.</string>
+    <string name="private_chat_end_menu">Avsluta privat chatt</string>
+    <string name="private_chat_entry_subtitle">Tryck för att gå tillbaka</string>
+    <string name="private_chat_menu">Starta privat chatt</string>
+    <string name="private_chat_message_notification_title">Nytt privat chattmeddelande.</string>
+    <string name="private_chat_other_party_not_support">Den här kontakten har en äldre version av BBM som inte stöder privata chattar.</string>
+    <string name="private_chat_request_incoming_subtitle">Privat chattbegäran</string>
+    <string name="private_chat_request_invite_bubble_message">"Jag vill starta en privat chatt med dig. Du måste hämta den senaste versionen av BBM för att kunna ansluta dig till den privata chatten.
+
+Gå till http://bbm.com/upgrade för att hämta den senaste versionen av BBM."</string>
+    <string name="private_chat_request_outgoing_subtitle">Privat chattbegäran</string>
+    <string name="private_chat_stop_reason_busy">%1$s är inte tillgänglig för en privat chatt just nu.</string>
+    <string name="private_chat_stop_reason_cancelled">%1$s avbröt den privata chatten.</string>
+    <string name="private_chat_stop_reason_declined">%1$s avböjde den privata chatten.</string>
+    <string name="private_chat_stop_reason_inactivity">Din privata chatt avslutades automatiskt eftersom den var inaktiverad.</string>
+    <string name="private_chat_stop_reason_localended">Du avslutade den privata chatten.</string>
+    <string name="private_chat_stop_reason_noresponse">%1$s svarade inte på din privata chattbegäran.</string>
+    <string name="private_chat_stop_reason_remoteended">%1$s avslutade den privata chatten.</string>
+    <string name="private_chat_stop_reason_unknown">Din privata chatt kopplades från. Starta din privata chatt igen.</string>
+    <string name="private_chat_tutorial_description">"Namn och profilbilder är dolda.
+
+Chatten tas bort automatiskt på båda enheterna när den inaktiveras eller avslutas.
+
+Aviseringarna om nya privata meddelanden är diskret."</string>
     <string name="profile_barcode">Streckkod</string>
+    <string name="profile_bbm_pin_label">BBM-KOD</string>
     <string name="profile_copy_pin">Kopiera PIN-kod</string>
     <string name="profile_copypin">Kopiera PIN-kod</string>
     <string name="profile_default_pin">PIN-kod: 00000000</string>
     <string name="profile_display_name_invalid">Kolon eller kommatecken får inte finnas i visningsnamnet</string>
+    <string name="profile_display_name_invalid_empty">Visningsnamnet får inte vara tomt</string>
     <string name="profile_icon_source_camera">Kamera</string>
     <string name="profile_icon_source_picture">Bild</string>
     <string name="profile_icon_source_sample_picture">Exempelbild</string>
-    <string name="profile_location_label">Plats/tidszon:</string>
+    <string name="profile_location_label">Plats/tidszon</string>
     <string name="profile_mood_hint"><i>Vad tänker du på?</i></string>
+    <string name="profile_name">Profilnamn</string>
     <string name="profile_no_status_message">Statusmeddelande saknas</string>
     <string name="profile_own_status_label">Status</string>
-    <string name="profile_pin">%1$s</string>
     <string name="profile_pin_copied">PIN-kod kopierad</string>
-    <string name="profile_pin_label">PIN-kod:</string>
     <string name="profile_pinlabel">PIN:</string>
     <string name="profile_revert_display_name">Återställ visningsnamn</string>
     <string name="profile_selector_apps">Appar</string>
@@ -1579,27 +1773,40 @@ Ange lösenordsfrasen \"%1$s\" när du har klickat på PIN-koden:%2$s eller %3$s
     <string name="profile_selector_members">Medlemmar</string>
     <string name="profile_selector_updates">Flöden</string>
     <string name="profile_share_pin">Dela min PIN-kod</string>
+    <string name="profile_status_delete">Ta bort status</string>
+    <string name="profile_status_delete_info">Vill du ta bort den här statusen?</string>
     <string name="profile_status_edit">Redigera statusmeddelanden</string>
-    <string name="profile_status_label">Status:</string>
+    <string name="profile_user_has_subscription">Den här personen har en prenumeration.</string>
+    <string name="profile_user_view_all_sub">Visa alla BBM-prenumerationer</string>
     <string name="prompt_change_bbm_picture">Vill du ändra din BBM-bild?</string>
     <string name="prompted_after_rate_call">Tack!</string>
     <string name="prompted_before_rate_call">Betygsätt samtalets kvalitet</string>
     <string name="protected_group_invite_message_default">Jag vill bjuda in dig till min grupp: \"%1$s\". Om du vill gå med i den här BBM Protected-gruppen måste du ange en lösenordsfras som tillhandahålls av en gruppmedlem.</string>
     <string name="protected_group_requires_join">Väntar på bekräftelse av lösenordsfras för att återställa den skyddade gruppen</string>
     <string name="protected_mode_disabled_header">BBM Protected har inaktiverats</string>
-    <string name="protected_mode_disabled_message">Dina kontakter och chattar har sparats men du har inte längre tillgång till gruppchattar eller BBM Protected-grupper.</string>
+    <string name="protected_mode_disabled_message">Dina kontakter och chattar har sparats men du har tagits bort från grupper som använder BBM Protected.</string>
     <string name="protected_mode_disabled_title">Din administratör har inaktiverat BBM Protected.</string>
     <string name="protected_mode_enabled_header">BBM Protected</string>
     <string name="protected_mode_enabled_message">"BBM Protected ger ett extra krypteringslager för dina BBM-chattar, filöverföringar och grupper. Nästa gång du startar en chatt med en BBM Protected-kontakt, anger du en lösenordsfras som den andra personen måste ange för att gå med. Du måste bara ange en lösenordsfras en gång för varje BBM Protected-kontakt. 
  
  För BBM Groups kan du välja om du vill begränsa medlemskapet till BBM Protected-kontakter eller ej. Om du skapar en BBM Protected-grupp kan du dela lösenordsfrasen som personer måste ange för att gå med."</string>
     <string name="protected_mode_enabled_title">Administratören har aktiverat BBM Protected i enheten.</string>
+    <string name="protected_preferred_details">BBM Protected-chatt krävs för kontakten.</string>
+    <string name="protected_preferred_dialog">Den här kontakten använder Protected Plus. Chattar mellan dig och den här kontakten kommer att vara BBM Protected-chattar. <a href="http://blackberry.com/bbmprotected">Läs mer</a></string>
+    <string name="protected_preferred_dialog_dismiss">Visa inte igen</string>
+    <string name="protected_preferred_mode_disabled_message">Din administratör har inaktiverat Protected Plus.</string>
+    <string name="protected_preferred_mode_disabled_title">Protected Plus är inaktiverat</string>
+    <string name="protected_preferred_mode_enabled_message">Din administratör har aktiverat Protected Plus, en funktion inom BBM Protected. Chattar mellan dig och dina kontakter kommer att vara BBM Protected-chattar.</string>
+    <string name="protected_preferred_mode_enabled_title">Protected Plus är aktiverat</string>
+    <string name="protected_rejected_message_body">Du kan vara tvungen att dela lösenordsfrasen på nytt för att starta den här BBM Protected-chatten. Dela en lösenordsfras genom att trycka på menyikonen i det övre högra hörnet av skärmen. Tryck på &lt;b>%1$s&lt;/b>.</string>
+    <string name="protected_rejected_message_status">Dela lösenordsfras igen</string>
     <string name="purchase_failed_message">Betalningen kunde inte behandlas. Vill du välja en annan betalningsmetod?</string>
     <string name="purchase_options">Betalningsalternativ</string>
     <string name="purchase_success_message">Köpet har gått igenom</string>
     <string name="purchase_unexpected_error_message">Köpet avbröts. Försök igen.</string>
     <string name="pyk_empty_invites_allow_upload_hint">Sök efter vänner som redan använder BBM</string>
     <string name="qr_description">UsersQR</string>
+    <string name="quick_reply">”Svara och avsluta”</string>
     <string name="quick_share_glympse_first_experience_overlay_infos">Skicka en Glympse och låt en BBM-kontakt följa din position på en karta. Du väljer själv hur länge. Perfekt när du ska träffa någon eller när du är försenad.</string>
     <string name="quick_share_glympse_first_experience_overlay_note"><i>Obs! När du använder den här funktionen delas GPS-koordinaterna med Glympse Inc. och regleras av en <a href="http://glympse.com/privacy">sekretesspolicy</a></i></string>
     <string name="quick_share_glympse_first_experience_overlay_title">Dela din position.</string>
@@ -1607,11 +1814,14 @@ Ange lösenordsfrasen \"%1$s\" när du har klickat på PIN-koden:%2$s eller %3$s
     <string name="quick_share_glympse_location_services_overlay_title">Aktivera positioneringstjänsterna.</string>
     <string name="quick_share_glympse_sending_glympse">Skickar Glympse</string>
     <string name="quick_share_voice_note_label_busy">Kan inte spela in. Mediespelaren eller medietjänsten används redan.</string>
-    <string name="quick_share_voice_note_label_default">Tryck på och håll kvar om du vill spela in</string>
+    <string name="quick_share_voice_note_label_default">Tryck och håll för att spela in</string>
     <string name="quick_share_voice_note_label_delete">Släpp för att ta bort</string>
+    <string name="quick_share_voice_note_label_rec">SPELA IN</string>
     <string name="quick_share_voice_note_label_send">Släpp för att skicka eller dra om du vill avbryta</string>
     <string name="quick_share_voice_note_tost_message">Skicka en direkt röstanteckning genom att trycka på och hålla nere inspelningsknappen</string>
-    <string name="rate_limited">Hastighetsgränsen för Glympse är uppnådd.</string>
+    <string name="quote_at_user_name">\@%1$s</string>
+    <string name="quote_message_label">\"%1$s\"</string>
+    <string name="rate_limited">Gränsen för Glympses har nåtts.</string>
     <string name="rate_my_app_ignore">Nej tack</string>
     <string name="rate_my_app_message">Om du trivs med BBM, får du gärna ägna en stund åt att betygsätta appen. Tack!</string>
     <string name="rate_my_app_rate_now">Betygsätt nu</string>
@@ -1624,11 +1834,14 @@ Ange lösenordsfrasen \"%1$s\" när du har klickat på PIN-koden:%2$s eller %3$s
     <string name="received_pending_invite_pin">PIN-kod %1$s</string>
     <string name="received_pending_invite_title">Inbjudan till BBM</string>
     <string name="recent_pictures">Senaste kommentarerna</string>
-    <string name="remaining_details">Visningar: %1$d visningar, %2$d totalt</string>
-    <string name="remaining_title">Glympse: %1$s kvar</string>
+    <string name="remaining_details">%2$d visningar, %1$d tittar</string>
+    <string name="remaining_title">Glympse: %1$s återstår</string>
     <string name="remaining_title_glympse">Glympse</string>
     <string name="remove">Ta bort</string>
     <string name="replace_picture">Ersätt bild</string>
+    <string name="reply">Svara</string>
+    <string name="reply_with_a_glympse">Svara med en Glympse?</string>
+    <string name="reply_with_voice">Svara med röst</string>
     <string name="report_channel">Rapportera kanal</string>
     <string name="report_problem_activity_choose_email_client">Välj e-post</string>
     <string name="report_problem_activity_email_button">Skicka rapport via e-post</string>
@@ -1656,9 +1869,11 @@ http://blackberry.com/support/bbm"</string>
     <string name="report_problem_activity_your_report_info_was_secured">Rapportinformationen krypterades för att skydda den vid överföring.</string>
     <string name="reports_caption">Rapporterat (%1d)</string>
     <string name="reports_caption_none">Rapporterat</string>
-    <string name="request_was_received">Du har fått en Glympse-förfrågan</string>
+    <string name="request_was_received">Du har fått en Glympse förfrågan</string>
     <string name="required_fields">Obligatoriska fält*</string>
-    <string name="resend_passphrase">Skicka lösenordsfras på nytt</string>
+    <string name="resend_passphrase">SKICKA LÖSENORDSFRAS PÅ NYTT</string>
+    <string name="reset_protected_chat">Återställ den här chatten</string>
+    <string name="resolve_vanitypin_not_found">Den här PIN-koden är inte tillgänglig.</string>
     <string name="restore_sticker_purchases">Återställ</string>
     <string name="restore_using_device_switch">Återställ med funktionen för enhetsbyte</string>
     <string name="restore_using_email">Återställ med e-postadress</string>
@@ -1704,13 +1919,15 @@ http://blackberry.com/support/bbm"</string>
     <string name="select_category">Välj kategori</string>
     <string name="select_category_with_count">%1$s (%2$d)</string>
     <string name="select_contact">Välj kontakt</string>
-    <string name="select_contact_activity_protected_title">Skyddad(%1$s)</string>
+    <string name="select_contact_activity_protected_title">Skyddad (%1$s)</string>
     <string name="select_contact_activity_title">{0,choice,0#Välj kontakter|1#+1 kontakt|1&lt;+{0} kontakter}</string>
     <string name="select_contact_all_filtered">Inga kontakter hittades.</string>
     <string name="select_contacts_for_existing_protected_chat">Den här chatten är skyddad. Endast BBM Protected-användare kan gå med.</string>
     <string name="select_contacts_to_move">Välj kontakter som ska flyttas till \"%1$s\":</string>
     <string name="select_group">Välj grupp</string>
     <string name="select_group_activity_title">{0,choice,0#Välj grupp|1#+1 grupp|1&lt;+{0} grupper}</string>
+    <string name="select_group_discussion">Välj diskussion</string>
+    <string name="select_pictures">{0,choice,0#Välj bilder|1#+1 Bild|1&lt;+{0} Bilder}</string>
     <string name="send">Skicka</string>
     <string name="send_comment">Skicka kommentar</string>
     <string name="send_decline_response">Skicka svar att du avböjde</string>
@@ -1719,6 +1936,11 @@ http://blackberry.com/support/bbm"</string>
     <string name="sent_pending_invite_message_label">Meddelande:</string>
     <string name="sent_pending_invite_sent_label">Skickat:</string>
     <string name="set_as">Ange som</string>
+    <string name="set_vanitypin_result_invalid">Den här PIN-koden är inte tillgänglig.</string>
+    <string name="set_vanitypin_result_refused">Den här PIN-koden är inte tillgänglig.</string>
+    <string name="set_vanitypin_result_reserved">Den här PIN-koden är inte tillgänglig.</string>
+    <string name="set_vanitypin_result_success">Din PIN-kod har skapats.</string>
+    <string name="set_vanitypin_result_used">Den här PIN-koden är inte tillgänglig.</string>
     <string name="setas_activity_bbm_picture_updated">BBM-bild uppdaterad</string>
     <string name="setas_activity_item_bbm_picture">BBM-bild</string>
     <string name="setas_activity_item_contact_picture">Kontaktbild</string>
@@ -1728,6 +1950,7 @@ http://blackberry.com/support/bbm"</string>
     <string name="setas_activity_title">Ange som</string>
     <string name="settings">Inställningar</string>
     <string name="settings_activity_allow_hq_pictures">Acceptera alltid begäranden om HD-bild</string>
+    <string name="settings_activity_backup_chat_history_now">Säkerhetskopiera nu</string>
     <string name="settings_activity_blackberry_id_edit">Redigera</string>
     <string name="settings_activity_blackberry_id_generic_error">Det går inte att redigera ditt BlackBerry ID för tillfället, försök igen senare</string>
     <string name="settings_activity_blocked_contacts">Blockerade kontakter och flöden</string>
@@ -1741,6 +1964,7 @@ http://blackberry.com/support/bbm"</string>
     <string name="settings_activity_deleting_chat_history_info">Chatthistoriken med alla kontakter tas bort. Åtgärden kan inte ångras.</string>
     <string name="settings_activity_deleting_chat_history_title">Ta bort chatthistorik</string>
     <string name="settings_activity_hide_keyboard_on_enter_conversation">Visa alltid tangentbord</string>
+    <string name="settings_activity_keyboard_enter_as_new_line">Enter på tangentbordet infogar ny rad</string>
     <string name="settings_activity_legal">Juridisk information</string>
     <string name="settings_activity_report_a_problem">Rapportera ett problem</string>
     <string name="settings_activity_save_chat_history">Spara chatthistorik</string>
@@ -1779,6 +2003,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="share_passphrase_other">Jag berättar för dem själv</string>
     <string name="share_passphrase_sms">Textmeddelande</string>
     <string name="share_passphrase_title">Dela lösenordsfras</string>
+    <string name="share_to_feed_title">Vill du uppdatera ditt flöde?</string>
     <string name="sharead_sponsored_invite">Delad sponsrad inbjudan</string>
     <string name="sharead_sponsored_post">Delat sponsrat inlägg</string>
     <string name="shared_channel_post_default_text">Delat kanalinlägg</string>
@@ -1786,6 +2011,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="shared_channel_post_sent">Kanalinlägg skickat</string>
     <string name="shared_sponsored_content">Delat sponsrat innehåll</string>
     <string name="shop">Butik</string>
+    <string name="shop_subscriptions">Prenumerationer</string>
     <string name="show">Visa</string>
     <string name="show_channel_preview">Förhandsgranska</string>
     <string name="show_map">Visa karta</string>
@@ -1794,6 +2020,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="sign_in_to_bbm">Logga in på BBM</string>
     <string name="slide_menu_add_event">Lägg till händelse</string>
     <string name="slide_menu_add_list">Lägg till lista</string>
+    <string name="slide_menu_block_chat">Blockera chatt</string>
     <string name="slide_menu_copy_chat">Kopiera chatt</string>
     <string name="slide_menu_delete_item">Ta bort objekt</string>
     <string name="slide_menu_edit">Ändra</string>
@@ -1809,6 +2036,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="slide_menu_new_chat">Starta ny chatt</string>
     <string name="slide_menu_open_bbm_chat">Öppna BBM-chatt</string>
     <string name="slide_menu_ping">Pinga</string>
+    <string name="slide_menu_play_in_media_player">Spela upp i mediespelaren</string>
     <string name="slide_menu_remove_deleted_item">Ta bort borttaget objekt</string>
     <string name="slide_menu_remove_from_group">Ta bort från grupp</string>
     <string name="slide_menu_reply_by_voice_note">Svara med röstanteckning</string>
@@ -1827,19 +2055,23 @@ www.pin.bbm.com/%1$s"</string>
     <string name="sms_activity_title">Skriv</string>
     <string name="sort_by">Sortera efter</string>
     <string name="stacked_notification_format"><Data>&lt;b>%1$s&lt;/b>: %2$s</Data></string>
+    <string name="stale_user_reinvite_message">%1$s har inte synts online sedan %2$s</string>
+    <string name="stale_user_reinvite_title">Ny inbjudan</string>
     <string name="start_chat">Starta chatt</string>
     <string name="start_chat_failed">Det gick inte att skapa chatt</string>
-    <string name="start_meeting">Starta BBM Meeting</string>
-    <string name="start_meeting_confirmation_dialog">Vill du avsluta samtalet och påbörja ett nytt möte?</string>
-    <string name="start_meeting_confirmation_title">Vill du starta BBM Meeting?</string>
+    <string name="start_meeting">Starta BBM Meetings</string>
+    <string name="start_meeting_confirmation_dialog">Du är redan i ett BBM-samtal. Vill du avsluta ditt samtal och starta ett BBM-möte?</string>
+    <string name="start_meeting_confirmation_title">Starta BBM Meetings</string>
     <string name="start_multiperson_chat">Starta gruppchatt</string>
+    <string name="start_pin_chat">Ange en PIN-kod för att starta en chatt</string>
     <string name="starts">Börjar</string>
     <string name="stats_caption">Statistik</string>
     <string name="stay_in_touch_like_never_before_with_blackberry_messenger">Håll kontakten på ett helt nytt sätt med BlackBerry Messenger.</string>
     <string name="sticker_picker_no_stickers_purchased">Inga stickers har köpts.</string>
     <string name="sticker_picker_preview_hint">Förhandsgranska en sticker genom att trycka på och hålla kvar den.</string>
-    <string name="sticker_store_collection_heading">klistermärken samlingar</string>
-    <string name="sticker_store_details_artist_channel">Kanal</string>
+    <string name="sticker_settings">Inställningar för stickers</string>
+    <string name="sticker_store_collection_heading">Etiketter</string>
+    <string name="sticker_store_details_artist_channel">BBM Channel</string>
     <string name="sticker_store_details_artist_website">Webbplats</string>
     <string name="sticker_store_details_promo_text">VISA HÄR</string>
     <string name="sticker_store_details_screen_about">Om</string>
@@ -1861,6 +2093,7 @@ Tips: Du kan lämna den här skärmen medan den fortsätter."</string>
     <string name="sticker_store_sticker_purchase_notification_dialog_line">Du kan låta dina kontakter få veta att du just har fått nya stickers.</string>
     <string name="sticker_store_sticker_purchase_notification_message">Titta på mina nya stickers! http://shop.bbm.com/stickers/%1$s</string>
     <string name="sticker_store_store_loading">Läser in...</string>
+    <string name="store_generic_billing_error">Det gick inte att köpa det här objektet.</string>
     <string name="store_title">BBM-butik</string>
     <string name="submit_button">Skicka</string>
     <string name="submit_passphrase">Skicka</string>
@@ -1870,6 +2103,45 @@ Tips: Du kan lämna den här skärmen medan den fortsätter."</string>
     <string name="subscribed_channel_invite_default_message">Jag vill bjuda in dig till kanalen \"%1$s\".</string>
     <string name="subscribed_channels">Kanaler som du prenumererar på</string>
     <string name="subscribers_caption">Prenumeranter</string>
+    <string name="subscriptino_pin_promo">Du kan skaffa en PIN-kod för BBM som är lätt för dig och dina vänner att komma ihåg.</string>
+    <string name="subscription_already_exists_bb10">Du har en prenumeration som förnyas automatiskt och som köptes på en annan enhet.</string>
+    <string name="subscription_app_type_no_ads">no_ads</string>
+    <string name="subscription_app_type_vanity_pin">custom_pin</string>
+    <string name="subscription_auto_renewing">Du har en prenumeration som förnyas automatiskt.</string>
+    <string name="subscription_bbid_conflict">Det här objektet köptes för ett annat BlackBerry ID med ditt butikskonto. Prova med ett annat butikskonto.</string>
+    <string name="subscription_custom_pin_description">Vill du ha en anpassad PIN-kod som är lätt för dig och dina vänner att komma ihåg? Skapa en PIN-kod för BBM som bara är din. Skaffa din anpassade PIN-kod idag så att du inte går miste om något.</string>
+    <string name="subscription_dialog_duration_monthly">Varje månad: %1$s</string>
+    <string name="subscription_dialog_duration_title">Välj en prenumeration</string>
+    <string name="subscription_dialog_duration_yearly">Varje år: %1$s</string>
+    <string name="subscription_edit_messages_description">Om du gjorde ett misstag i ett meddelande, kan du ta tillbaka det, korrigera felen och skicka meddelandet på nytt.</string>
+    <string name="subscription_exclusive_badge">Exklusivt märke</string>
+    <string name="subscription_exclusive_descritpion_pin">"Visa upp din speciella 
+BBM-status med ett märke. Det här märket visas också på visningsbilder med en aktiv prenumeration."</string>
+    <string name="subscription_expired">Din prenumeration har löpt ut. Vill du prenumerera igen?</string>
+    <string name="subscription_exsits_ios_72hours">Din prenumeration löper snart ut. Prenumerera här före %1$s för att fortsätta använda den här funktionen.</string>
+    <string name="subscription_exsits_on_ios">Det här objektet köptes på en annan enhet. Prenumerera här före %1$s för att fortsätta använda den här funktionen.</string>
+    <string name="subscription_generic_guidelines">Riktlinjer för anpassad PIN för BBM</string>
+    <string name="subscription_generic_learn_more">Läs mer</string>
+    <string name="subscription_learn_more">Gå till <a href="http://bbm.com/FAQ">bbm.com/FAQ</a> för att läsa mer om prenumerationer.</string>
+    <string name="subscription_no_adds_share">Du kan låta dina kontakter få veta att du just har stängt av annonser i BBM.</string>
+    <string name="subscription_no_adds_status_message">Jag stängde just av annonser i BBM. Tryck på http://shop.bbm.com/item/no_ads för dölja annonser på din enhet.</string>
+    <string name="subscription_no_ads">Inga annonser</string>
+    <string name="subscription_no_ads_description">Vill du inte se annonser? Dölj annonser i BBM med den här prenumerationen.</string>
+    <string name="subscription_no_ads_promo">"Inga annonser
+Dölj sponsrade annonser och sponsrade inbjudningar i BBM med den här prenumerationen."</string>
+    <string name="subscription_no_ads_title">Inga annonser</string>
+    <string name="subscription_pin_before_share">Jag kan skapa en anpassad PIN-kod på BBM. Tryck på http://shop.bbm.com/item/custom_pin för att anpassa din PIN-kod</string>
+    <string name="subscription_pin_before_share_prompt">Du kan låta dina kontakter få veta att du kan skapa en anpassad PIN-kod.</string>
+    <string name="subscription_pin_feautres">Funktioner som ingår:</string>
+    <string name="subscription_private_chat_description">I en privat chatt är kontaktens namn dolt och aviseringar om nytt meddelande är inaktiverat. Din chatt tas automatiskt bort efter en kort tid, eller när du avslutar den privata chatten.</string>
+    <string name="subscription_reactiviate">Prenumerera</string>
+    <string name="subscription_retracted_messages_description">Om du inte menade att skicka ett meddelande kan du återkalla det så att det inte visas i chatten.</string>
+    <string name="subscription_retracted_messages_title">Återkallade meddelanden</string>
+    <string name="subscription_status_active_subscription">Du har en prenumeration som förnyas automatiskt.</string>
+    <string name="subscription_timed_messages_description">Du kan skicka meddelanden och bilder som visas under en bestämd tid. Meddelandet är dolt i chatten och mottagaren kan trycka och hålla meddelandet för att se det. När timern går ut kan meddelandet inte visas.</string>
+    <string name="subscription_timed_messages_title">Tidsbegränsade meddelanden</string>
+    <string name="subscriptions_not_entitled">Du måste prenumerera för att använda den här funktionen.</string>
+    <string name="subscriptions_restoring">Kontrollerar dina prenumerationer</string>
     <string name="suggestion_i_invite_you">%1$s föreslog att jag bjuder in dig att chatta via BBM.</string>
     <string name="suggestion_sent">Förslag skickat</string>
     <string name="suggestion_want_to_invite_bbm_contact">Vill du bjuda in den här BBM-kontakten?</string>
@@ -1895,7 +2167,7 @@ Tips: Du kan lämna den här skärmen medan den fortsätter."</string>
     <string name="timestamp_format_today_at">I dag kl. %1$s</string>
     <string name="timestamp_format_yesterday_at">Igår kl. %1$s</string>
     <string name="title_activity_category">Kategori</string>
-    <string name="title_activity_change_status">Ändra status</string>
+    <string name="title_activity_change_status">Status</string>
     <string name="title_activity_channels_lobby">Egen kanallobby</string>
     <string name="title_activity_group_event_details">Information om grupphändelse</string>
     <string name="title_activity_group_events">Grupphändelser</string>
@@ -1928,6 +2200,9 @@ Tips: Du kan lämna den här skärmen medan den fortsätter."</string>
     <string name="update_fragment_hide_updates">Dölj</string>
     <string name="update_fragment_view_channel">Visa kanal</string>
     <string name="update_fragment_view_post">Visa inlägg</string>
+    <string name="update_list_archiving_disabled_message">Din administratör har inaktiverat arkiveringsfunktionen.</string>
+    <string name="update_list_archiving_enabled_message">Din administratör har aktiverat arkiveringsfunktionen.</string>
+    <string name="update_list_archiving_title">Arkiverar BBM-chattar</string>
     <string name="update_list_avatar">&lt;b>%1$s&lt;/b> har bytt visningsbild.</string>
     <string name="update_list_changed_event_sub_title">Har ändrat händelse</string>
     <string name="update_list_comment_sub_title">Har lagt till kommentar</string>
@@ -1983,18 +2258,30 @@ Tips: Du kan lämna den här skärmen medan den fortsätter."</string>
     <string name="update_list_new_contact_sub_title">BBM-kontakt</string>
     <string name="update_list_new_event_sub_title">Ny händelse</string>
     <string name="update_list_new_list_item_sub_title">Nytt listobjekt</string>
+    <string name="update_list_new_status_hint">Ange ett statusnamn</string>
     <string name="update_list_new_status_message">\"%1$s\"</string>
     <string name="update_list_new_status_sub_title">Ny status</string>
     <string name="update_list_newcontact">&lt;b>%1$s&lt;/b> är nu en kontakt.</string>
     <string name="update_list_now_playing_message">Lyssnar på \"%1$s\"</string>
     <string name="update_list_nowplayingmessage">&lt;b>%1$s&lt;/b> lyssnar på \"%2$s\".</string>
     <string name="update_list_personalmessage">&lt;b>%1$s&lt;/b> sade \"%2$s\"</string>
+    <string name="update_list_protected_disabled_message">Din administratör har inaktiverat BBM Protected. Du har tagits bort från grupper som använder BBM Protected.</string>
+    <string name="update_list_protected_enabled_message">Din administratör har aktiverat BBM Protected. Ett extra krypteringslager används för BBM-chattar, filöverföringar och grupper med BBM Protected-kontakter.</string>
+    <string name="update_list_protected_preferred_disabled_message">Din administratör har inaktiverat Protected Plus.</string>
+    <string name="update_list_protected_preferred_enabled_message">Din administratör har aktiverat Protected Plus. Chattar mellan dig och dina kontakter kommer att vara BBM Protected-chattar.</string>
+    <string name="update_list_protected_status_sub_title">Policyändring</string>
+    <string name="update_list_protected_title">BBM Protected</string>
     <string name="update_list_you">Du</string>
+    <string name="update_popular_channels_subtitle">Tryck för att utforska</string>
+    <string name="update_popular_channels_title">Populära kanaler</string>
     <string name="update_removed_from_blocked_list">Borttaget från listan med blockerade kontakter.</string>
     <string name="update_sponsored_content">Sponsrat innehåll</string>
     <string name="update_sponsored_post">Sponsrat inlägg</string>
+    <string name="update_your_subscription">Uppdatera din prenumeration</string>
     <string name="updates">Flöden</string>
     <string name="upload">Överför</string>
+    <string name="user_status_stale">Syntes senast %1$s</string>
+    <string name="vanity_pin">Anpassad PIN-kod</string>
     <string name="verify_date_of_birth">Kontrollera ditt födelsedatum.</string>
     <string name="verify_passphrase">Verifierar lösenordsfras</string>
     <string name="version">Version</string>
@@ -2002,6 +2289,7 @@ Tips: Du kan lämna den här skärmen medan den fortsätter."</string>
     <string name="view_channel_info">Förhandsgranska</string>
     <string name="view_channel_profile">Visa kanalprofil</string>
     <string name="visits_caption">Besök</string>
+    <string name="voice_note_duration">%1$02d:%2$02d</string>
     <string name="voice_rating_bad">Dålig</string>
     <string name="voice_rating_excellent">Utmärkt</string>
     <string name="voice_rating_fair">Medel</string>
@@ -2009,11 +2297,31 @@ Tips: Du kan lämna den här skärmen medan den fortsätter."</string>
     <string name="voice_rating_poor">Låg</string>
     <string name="voice_rating_title">Hur bedömer du kvaliteten på det här samtalet?</string>
     <string name="voicecall_already_in_call">Du har redan ett BBM-samtal. Avsluta pågående samtal för att kunna ringa upp denna kontakt.</string>
+    <string name="voicecall_must_add_as_contact">Du måste lägga till den här personen i dina BBM-kontakter för att använda den här funktionen.</string>
+    <string name="voicecall_must_add_as_contact_title">Lägg till i BBM-kontakter</string>
     <string name="voicecall_status_calling">Ringer</string>
     <string name="voicecall_status_connecting">Ansluter</string>
     <string name="voicecall_status_duration">Röstsamtal %1$s</string>
     <string name="voicecall_status_duration_while_mute">Tyst %1$s</string>
+    <string name="voicenote">Röstanteckning</string>
     <string name="wait_passphrase_confirmation">Väntar på bekräftelse av lösenordsfras.</string>
+    <string name="warning_on_repurchase">Det kan hända att du behöver köpa en ny prenumeration och avbryta din gamla för att säkerställa att funktionerna för den här prenumerationen inte avbryts. Ytterligare information finns här: %1$s</string>
+    <string name="wear_quick_call_shortly">”Jag ringer snart tillbaka till dig”</string>
+    <string name="wear_quick_cant_take">Jag är upptagen och kan inte ta ditt samtal.</string>
+    <string name="wear_quick_im_on_my_way">”Jag är på väg”</string>
+    <string name="wear_quick_response_1">Okej.</string>
+    <string name="wear_quick_response_2">Jag har fått det!</string>
+    <string name="wear_quick_response_3">Jag är upptagen just nu och svarar när jag kan.</string>
+    <string name="wear_quick_response_appreciation">Tack</string>
+    <string name="wear_quick_response_confirmation">Ja</string>
+    <string name="wear_quick_response_disagree">Nej</string>
+    <string name="wear_quick_response_haha">Haha</string>
+    <string name="wear_quick_response_lol">LOL</string>
+    <string name="wear_quick_response_on_my_way">På väg</string>
+    <string name="wear_quick_response_see_you_soon">Ses snart</string>
+    <string name="wear_quick_response_talk_later">Kan inte prata nu</string>
+    <string name="wear_quick_response_understood">OK</string>
+    <string name="wearable_support">”Stöd för bärbara enheter”</string>
     <string name="widget_back_to_chat_previews">Tillbaka till chattförhandsgranskningar</string>
     <string name="widget_change_my_status_message">Ändra mitt statusmeddelande</string>
     <string name="widget_edit_status">Redigera status</string>
@@ -2029,6 +2337,7 @@ Tips: Du kan lämna den här skärmen medan den fortsätter."</string>
     <string name="wifi_changing_network">Begär anslutning till nätverk…</string>
     <string name="wifi_ssid_label">Nätverksnamn</string>
     <string name="wifi_type_label">Typ</string>
+    <string name="yes">Ja</string>
     <string name="you_are_signed_in_with_the_following_blackberry_id">Du är inloggad med följande BlackBerry ID: %1$s</string>
     <string name="you_can_choose_another_restore_option_or_delete_your_device_data">Du kan välja ett annat återställningsalternativ eller ta bort enhetsdata och logga in med det BlackBerry ID som är kopplat till säkerhetskopieringsfilen.</string>
     <string name="you_can_now_start_video_and_voice_chats">Du kan nu starta videosamtal och röstchatt från BBM (om funktionen finns).</string>
@@ -2038,5 +2347,5 @@ Tips: Du kan lämna den här skärmen medan den fortsätter."</string>
     <string name="your_blackberry_id">Ditt BlackBerry ID</string>
     <string name="your_blackberry_id_doesnt_match_the_one_associated_with_the_backup_file">Ditt BlackBerry ID %1$s överensstämmer inte med det som är kopplat till säkerhetskopieringsfilen.</string>
     <string name="your_connection_to_the_wireless_network_is_turned_off">Anslutningen till det trådlösa nätverket är inaktiverad. Återställ anslutningarna och försök igen.</string>
-    <string name="zero_time">0:00</string>
+    <string name="zero_time">0.00</string>
 </resources>

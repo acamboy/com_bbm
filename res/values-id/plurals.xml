@@ -35,28 +35,28 @@
         <item quantity="one">1 Hasil</item>
     </plurals>
     <plurals name="slide_menu_active_chats">
-        <item quantity="other">%1$s Obrolan Aktif</item>
-        <item quantity="one">1 Obrolan Aktif</item>
+        <item quantity="other">Obrolan Aktif %1$s</item>
+        <item quantity="one">Obrolan Aktif %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_channelupdates">
-        <item quantity="other">%1$s Notifikasi Baru</item>
-        <item quantity="one">1 Notifikasi Baru</item>
+        <item quantity="other">Item Saluran Baru %1$s</item>
+        <item quantity="one">Item Saluran Baru %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_invites">
-        <item quantity="other">%1$s Undangan Baru</item>
-        <item quantity="one">1 Undangan Baru</item>
+        <item quantity="other">Undangan Baru %1$s</item>
+        <item quantity="one">Undangan Baru %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_updates">
-        <item quantity="other">%1$s Item Baru</item>
-        <item quantity="one">1 Item Baru</item>
+        <item quantity="other">Umpan Baru %1$s</item>
+        <item quantity="one">Umpan Baru %1$s</item>
     </plurals>
     <plurals name="slide_menu_total_contacts">
         <item quantity="other">%1$s Kontak</item>
-        <item quantity="one">1 Kontak</item>
+        <item quantity="one">%1$s Kontak</item>
     </plurals>
     <plurals name="slide_menu_total_groups">
         <item quantity="other">%1$s Grup</item>
-        <item quantity="one">1 Grup</item>
+        <item quantity="one">%1$s Grup</item>
     </plurals>
     <plurals name="update_channel_stats_comments">
         <item quantity="other">%1$s Komentar</item>

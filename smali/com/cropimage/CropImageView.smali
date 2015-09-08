@@ -160,7 +160,7 @@
 
     const/4 v6, 0x0
 
-    const v4, 0x3f19999a
+    const v4, 0x3f19999a    # 0.6f
 
     .line 169
     iget-object v0, p1, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
@@ -216,7 +216,7 @@
     mul-float/2addr v0, v1
 
     .line 182
-    const/high16 v1, 0x3f800000
+    const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-static {v1, v0}, Ljava/lang/Math;->max(FF)F
 
@@ -237,7 +237,7 @@
 
     float-to-double v2, v1
 
-    const-wide v4, 0x3fb999999999999aL
+    const-wide v4, 0x3fb999999999999aL    # 0.1
 
     cmpl-double v1, v2, v4
 
@@ -507,7 +507,7 @@
 
     int-to-float v8, v8
 
-    const/high16 v9, 0x40000000
+    const/high16 v9, 0x40000000    # 2.0f
 
     div-float v9, v4, v9
 
@@ -519,13 +519,13 @@
 
     int-to-float v9, v9
 
-    const/high16 v10, 0x40000000
+    const/high16 v10, 0x40000000    # 2.0f
 
     div-float/2addr v7, v10
 
     add-float/2addr v7, v9
 
-    const/high16 v9, 0x40000000
+    const/high16 v9, 0x40000000    # 2.0f
 
     div-float/2addr v4, v9
 
@@ -533,13 +533,25 @@
 
     invoke-virtual {v5, v8, v7, v4, v9}, Landroid/graphics/Path;->addCircle(FFFLandroid/graphics/Path$Direction;)V
 
+    :goto_2
     iget-object v4, v2, Lcom/cropimage/g;->q:Landroid/graphics/Paint;
 
-    const v7, -0x10fb2a
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Lcom/bbm/Alaska;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v7
+
+    const v8, 0x7f09019a
+
+    invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v7
 
     invoke-virtual {v4, v7}, Landroid/graphics/Paint;->setColor(I)V
 
-    :goto_2
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->isHardwareAccelerated()Z
 
     move-result v4
@@ -572,12 +584,6 @@
     invoke-virtual {v0, v5, v4}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
     :goto_4
-    iget-object v4, v2, Lcom/cropimage/g;->d:Lcom/cropimage/h;
-
-    sget-object v5, Lcom/cropimage/h;->c:Lcom/cropimage/h;
-
-    if-ne v4, v5, :cond_0
-
     iget-boolean v4, v2, Lcom/cropimage/g;->k:Z
 
     if-eqz v4, :cond_6
@@ -594,7 +600,7 @@
 
     move-result v5
 
-    const-wide v6, 0x3fe921fb54442d18L
+    const-wide v6, 0x3fe921fb54442d18L    # 0.7853981633974483
 
     invoke-static {v6, v7}, Ljava/lang/Math;->cos(D)D
 
@@ -608,7 +614,7 @@
 
     int-to-double v8, v8
 
-    const-wide/high16 v10, 0x4000000000000000L
+    const-wide/high16 v10, 0x4000000000000000L    # 2.0
 
     div-double/2addr v8, v10
 
@@ -698,12 +704,6 @@
     sget-object v7, Landroid/graphics/Path$Direction;->CW:Landroid/graphics/Path$Direction;
 
     invoke-virtual {v5, v4, v7}, Landroid/graphics/Path;->addRect(Landroid/graphics/RectF;Landroid/graphics/Path$Direction;)V
-
-    iget-object v4, v2, Lcom/cropimage/g;->q:Landroid/graphics/Paint;
-
-    const/16 v7, -0x7600
-
-    invoke-virtual {v4, v7}, Landroid/graphics/Paint;->setColor(I)V
 
     goto/16 :goto_2
 
@@ -1031,11 +1031,11 @@
     .locals 13
 
     .prologue
-    const/high16 v4, 0x41c80000
+    const/high16 v4, 0x41c80000    # 25.0f
 
-    const/high16 v10, 0x40000000
+    const/high16 v10, 0x40000000    # 2.0f
 
-    const/high16 v11, 0x41a00000
+    const/high16 v11, 0x41a00000    # 20.0f
 
     const/4 v3, 0x1
 
@@ -1225,10 +1225,10 @@
 
     if-ne v2, v0, :cond_e
 
-    sget-object v0, Lcom/cropimage/h;->b:Lcom/cropimage/h;
+    sget v0, Lcom/cropimage/h;->b:I
 
     :goto_4
-    invoke-virtual {v1, v0}, Lcom/cropimage/g;->a(Lcom/cropimage/h;)V
+    invoke-virtual {v1, v0}, Lcom/cropimage/g;->a(I)V
 
     goto/16 :goto_1
 
@@ -1417,7 +1417,7 @@
 
     .line 93
     :cond_e
-    sget-object v0, Lcom/cropimage/h;->c:Lcom/cropimage/h;
+    sget v0, Lcom/cropimage/h;->c:I
 
     goto/16 :goto_4
 
@@ -1443,9 +1443,9 @@
     .line 105
     iget-object v0, p0, Lcom/cropimage/CropImageView;->b:Lcom/cropimage/g;
 
-    sget-object v1, Lcom/cropimage/h;->a:Lcom/cropimage/h;
+    sget v1, Lcom/cropimage/h;->a:I
 
-    invoke-virtual {v0, v1}, Lcom/cropimage/g;->a(Lcom/cropimage/h;)V
+    invoke-virtual {v0, v1}, Lcom/cropimage/g;->a(I)V
 
     .line 108
     :cond_10
@@ -2027,7 +2027,7 @@
 
     move-result v0
 
-    const/high16 v1, 0x3f800000
+    const/high16 v1, 0x3f800000    # 1.0f
 
     cmpl-float v0, v0, v1
 

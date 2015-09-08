@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:id="@id/contacts_fragment_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<FrameLayout android:id="@id/contacts_fragment_root" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
     <LinearLayout android:orientation="vertical" android:id="@id/contacts_nonempty_layout" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <com.bbm.ui.SearchEditText android:id="@id/searchContacts" android:layout_width="fill_parent" android:layout_height="@dimen/contacts_search_area_height" custom:hint="@string/contacts_search" />
         <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/grey_divider_line" android:scaleType="fitXY" android:contentDescription="@string/blank">
             <requestFocus />
         </ImageView>
         <com.tonicartos.widget.stickygridheaders.StickyGridHeadersGridView android:id="@id/contacts_grid" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
-        <RelativeLayout android:orientation="vertical" android:id="@id/nocontactsfound_layout" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <RelativeLayout android:orientation="vertical" android:id="@id/nocontactsfound_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
             <TextView android:textSize="@dimen/contacts_status_text_size" android:textColor="@color/message" android:id="@id/no_contacts_found_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nocontactsfound_label_padding" android:text="@string/select_contact_all_filtered" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
             <ImageView android:id="@id/no_contacts_found_image_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/nocontactsfound_image_padding" android:src="@drawable/no_contacts_guy" android:layout_below="@id/no_contacts_found_label" android:layout_centerHorizontal="true" android:contentDescription="@string/blank" />
             <Button android:id="@id/no_contacts_found_button" android:layout_marginTop="@dimen/nocontactsfound_button_padding" android:text="@string/invite_to_bbm" android:layout_below="@id/no_contacts_found_image_view" android:layout_centerHorizontal="true" style="@style/EmptyViewButton" />
         </RelativeLayout>
     </LinearLayout>
-    <RelativeLayout android:orientation="vertical" android:id="@id/contacts_empty_layout" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <RelativeLayout android:orientation="vertical" android:id="@id/contacts_empty_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
         <TextView android:textSize="@dimen/contacts_status_text_size" android:textColor="@color/message" android:layout_gravity="center_vertical" android:id="@id/no_contacts_label" android:paddingTop="@dimen/contacts_status_padding" android:paddingBottom="@dimen/contacts_status_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/contacts_status_no_contacts" android:layout_centerInParent="true" />
         <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/no_contacts_guy" android:layout_above="@id/no_contacts_label" android:layout_centerHorizontal="true" android:contentDescription="@string/blank" />
         <Button android:id="@id/add_first_contact_button" android:text="@string/invite_to_bbm" android:layout_below="@id/no_contacts_label" android:layout_centerHorizontal="true" style="@style/EmptyViewButton" />
+        <Button android:id="@id/add_coworkers_button" android:visibility="gone" android:layout_marginTop="@dimen/contacts_status_padding" android:text="@string/cloud_directory_contact_add_coworkers" android:layout_below="@id/add_first_contact_button" android:layout_centerHorizontal="true" style="@style/EmptyViewButton" />
     </RelativeLayout>
+    <com.bbm.ui.FloatingActionButton android:layout_gravity="end|bottom|center" android:id="@id/floating_action_button" custom:withColor="@color/primaryColor" custom:withDrawable="@drawable/ic_fab_addcontact" style="@style/FloatingActionButton" />
 </FrameLayout>

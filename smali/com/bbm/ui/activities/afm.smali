@@ -1,32 +1,32 @@
 .class final Lcom/bbm/ui/activities/afm;
-.super Lcom/bbm/d/b/f;
-.source "SelectContactActivity.java"
+.super Lcom/bbm/d/b/o;
+.source "StickerSettingsActivity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/bbm/d/b/f",
+        "Lcom/bbm/d/b/o",
         "<",
-        "Lcom/bbm/d/gr;",
+        "Lcom/bbm/d/hx;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SelectContactActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/StickerSettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/StickerSettingsActivity;)V
     .locals 0
 
     .prologue
-    .line 556
-    iput-object p1, p0, Lcom/bbm/ui/activities/afm;->a:Lcom/bbm/ui/activities/SelectContactActivity;
+    .line 58
+    iput-object p1, p0, Lcom/bbm/ui/activities/afm;->a:Lcom/bbm/ui/activities/StickerSettingsActivity;
 
-    invoke-direct {p0}, Lcom/bbm/d/b/f;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/d/b/o;-><init>()V
 
     return-void
 .end method
@@ -34,66 +34,62 @@
 
 # virtual methods
 .method protected final a()Ljava/util/List;
-    .locals 3
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
             "Ljava/util/List",
             "<",
-            "Lcom/bbm/d/gr;",
+            "Lcom/bbm/d/hx;",
             ">;"
         }
     .end annotation
 
     .prologue
-    .line 560
+    .line 61
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/d/a;->z()Lcom/bbm/j/w;
+
+    move-result-object v0
+
+    .line 62
+    invoke-interface {v0}, Lcom/bbm/j/w;->b()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 63
     new-instance v1, Ljava/util/ArrayList;
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/afm;->a:Lcom/bbm/ui/activities/SelectContactActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/SelectContactActivity;->k(Lcom/bbm/ui/activities/SelectContactActivity;)Lcom/bbm/d/b/q;
+    invoke-interface {v0}, Lcom/bbm/j/w;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/d/b/q;->g()Ljava/util/List;
-
-    move-result-object v0
+    check-cast v0, Ljava/util/Collection;
 
     invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 562
-    iget-object v0, p0, Lcom/bbm/ui/activities/afm;->a:Lcom/bbm/ui/activities/SelectContactActivity;
+    .line 64
+    new-instance v0, Lcom/bbm/ui/activities/afn;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/SelectContactActivity;->x(Lcom/bbm/ui/activities/SelectContactActivity;)Lcom/bbm/util/ct;
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/afn;-><init>(Lcom/bbm/ui/activities/afm;)V
 
-    move-result-object v0
+    invoke-static {v1, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    invoke-virtual {v0}, Lcom/bbm/util/ct;->e()Ljava/lang/Object;
+    move-object v0, v1
 
-    move-result-object v0
+    .line 79
+    :goto_0
+    return-object v0
 
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 563
-    new-instance v0, Lcom/bbm/d/gr;
-
-    invoke-direct {v0}, Lcom/bbm/d/gr;-><init>()V
-
-    .line 564
-    const-string v2, "select_contact_activity_find_more_fake_user_uri"
-
-    iput-object v2, v0, Lcom/bbm/d/gr;->B:Ljava/lang/String;
-
-    .line 565
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 567
     :cond_0
-    return-object v1
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method

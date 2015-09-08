@@ -42,17 +42,17 @@
     invoke-super {p0, p1}, Landroid/app/Dialog;->onCreate(Landroid/os/Bundle;)V
 
     .line 28
-    const v0, 0x7f030075
+    const v0, 0x7f0300b1
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/b/y;->setContentView(I)V
 
     .line 29
-    const v0, 0x7f0e05cb
+    const v0, 0x7f0e0655
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/b/y;->setTitle(I)V
 
     .line 31
-    const v0, 0x7f0b035e
+    const v0, 0x7f0b0445
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/b/y;->findViewById(I)Landroid/view/View;
 
@@ -68,7 +68,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 38
-    const v0, 0x7f0b035f
+    const v0, 0x7f0b0446
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/b/y;->findViewById(I)Landroid/view/View;
 

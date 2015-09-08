@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/update_ad_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:src="@drawable/divider_one_px" android:scaleType="fitXY" />
+    <ImageButton android:layout_gravity="center" android:id="@id/update_sponsoredpostshare_button" android:background="@drawable/list_item_foot_button_background" android:padding="@dimen/feeds_list_item_foot_child_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/feeds_channel_posts_share_selector" />
+</merge>

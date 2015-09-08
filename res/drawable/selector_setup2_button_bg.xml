@@ -3,7 +3,7 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true">
         <shape>
-            <solid android:color="#ff0b4190" />
+            <solid android:color="@color/setup2_button_color_pressed" />
         </shape>
     </item>
     <item>

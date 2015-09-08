@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_profile" android:id="@id/actionmode_view_profile" android:title="@string/contacts_view_bbm_profile" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_invite_group" android:id="@id/actionmode_invite_to_group" android:title="@string/contacts_invite_to_group" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_move_contacts" android:id="@id/actionmode_move_contact" android:title="@string/contacts_move_contact" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_delete" android:id="@id/actionmode_delete_contact" android:title="@string/delete" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_menu_chat_history" android:id="@id/actionmode_start_multiperson_chat" android:title="@string/start_multiperson_chat" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_menu_broadcast_msg" android:id="@id/actionmode_send_broadcast_message" android:title="@string/broadcast_message" app:showAsAction="never" />
+</menu>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/change_status_root" android:background="@color/change_status_activity_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/toolbar_cancel_done_header" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/toolbar_cancel_done_header" />
+    <ListView android:id="@id/change_status_list" android:visibility="visible" android:clickable="true" android:longClickable="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="@dimen/action_bar_title_right_padding" android:layout_marginRight="@dimen/action_bar_title_right_padding" android:listSelector="@color/selection_and_info" android:drawSelectorOnTop="false" android:divider="@drawable/grey_divider_line" android:choiceMode="singleChoice" android:layout_weight="1.0" />
+    <Button android:layout_gravity="center|top" android:id="@id/add_button" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/abc_action_bar_icon_vertical_padding_material" android:layout_marginBottom="@dimen/abc_action_bar_icon_vertical_padding_material" android:minHeight="@dimen/abc_action_button_min_height_material" android:text="@string/add_new" style="@style/BaliButton" />
+</LinearLayout>

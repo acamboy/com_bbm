@@ -1,107 +1,97 @@
-.class public interface abstract Lcom/google/android/gms/internal/hg;
-.super Ljava/lang/Object;
+.class public final Lcom/google/android/gms/internal/hg;
+.super Lcom/google/android/gms/internal/pj;
 
-# interfaces
-.implements Landroid/os/IInterface;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/google/android/gms/internal/pj",
+        "<",
+        "Lcom/google/android/gms/internal/ca;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field final a:Lcom/google/android/gms/internal/hk;
+
+.field private final e:Ljava/lang/Object;
+
+.field private f:Z
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/android/gms/internal/hk;)V
+    .locals 1
+
+    invoke-direct {p0}, Lcom/google/android/gms/internal/pj;-><init>()V
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/hg;->e:Ljava/lang/Object;
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/hg;->a:Lcom/google/android/gms/internal/hk;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a(JZLandroid/app/PendingIntent;)V
-.end method
+.method public final a()V
+    .locals 3
 
-.method public abstract a(Landroid/app/PendingIntent;)V
-.end method
+    iget-object v1, p0, Lcom/google/android/gms/internal/hg;->e:Ljava/lang/Object;
 
-.method public abstract a(Landroid/app/PendingIntent;Lcom/google/android/gms/internal/hf;Ljava/lang/String;)V
-.end method
+    monitor-enter v1
 
-.method public abstract a(Landroid/location/Location;I)V
-.end method
+    :try_start_0
+    iget-boolean v0, p0, Lcom/google/android/gms/internal/hg;->f:Z
 
-.method public abstract a(Lcom/google/android/gms/internal/hf;Ljava/lang/String;)V
-.end method
+    if-eqz v0, :cond_0
 
-.method public abstract a(Lcom/google/android/gms/internal/hn;Lcom/google/android/gms/internal/id;Lcom/google/android/gms/internal/hv;)V
-.end method
+    monitor-exit v1
 
-.method public abstract a(Lcom/google/android/gms/internal/hp;Lcom/google/android/gms/internal/id;)V
-.end method
+    :goto_0
+    return-void
 
-.method public abstract a(Lcom/google/android/gms/internal/hr;Lcom/google/android/gms/internal/id;Landroid/app/PendingIntent;)V
-.end method
+    :cond_0
+    const/4 v0, 0x1
 
-.method public abstract a(Lcom/google/android/gms/internal/id;Landroid/app/PendingIntent;)V
-.end method
+    iput-boolean v0, p0, Lcom/google/android/gms/internal/hg;->f:Z
 
-.method public abstract a(Lcom/google/android/gms/location/LocationRequest;Landroid/app/PendingIntent;)V
-.end method
+    new-instance v0, Lcom/google/android/gms/internal/hh;
 
-.method public abstract a(Lcom/google/android/gms/location/LocationRequest;Lcom/google/android/gms/location/a;)V
-.end method
+    invoke-direct {v0, p0}, Lcom/google/android/gms/internal/hh;-><init>(Lcom/google/android/gms/internal/hg;)V
 
-.method public abstract a(Lcom/google/android/gms/location/LocationRequest;Lcom/google/android/gms/location/a;Ljava/lang/String;)V
-.end method
+    new-instance v2, Lcom/google/android/gms/internal/ph;
 
-.method public abstract a(Lcom/google/android/gms/location/a;)V
-.end method
+    invoke-direct {v2}, Lcom/google/android/gms/internal/ph;-><init>()V
 
-.method public abstract a(Lcom/google/android/gms/maps/model/LatLng;Lcom/google/android/gms/internal/hn;Lcom/google/android/gms/internal/id;Lcom/google/android/gms/internal/hv;)V
-.end method
+    invoke-virtual {p0, v0, v2}, Lcom/google/android/gms/internal/hg;->a(Lcom/google/android/gms/internal/pi;Lcom/google/android/gms/internal/pg;)V
 
-.method public abstract a(Lcom/google/android/gms/maps/model/LatLngBounds;ILcom/google/android/gms/internal/hn;Lcom/google/android/gms/internal/id;Lcom/google/android/gms/internal/hv;)V
-.end method
+    new-instance v0, Lcom/google/android/gms/internal/hi;
 
-.method public abstract a(Ljava/lang/String;Lcom/google/android/gms/internal/id;Lcom/google/android/gms/internal/hv;)V
-.end method
+    invoke-direct {v0, p0}, Lcom/google/android/gms/internal/hi;-><init>(Lcom/google/android/gms/internal/hg;)V
 
-.method public abstract a(Ljava/util/List;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/google/android/gms/internal/hx$a;",
-            ">;)V"
-        }
-    .end annotation
-.end method
+    new-instance v2, Lcom/google/android/gms/internal/hj;
 
-.method public abstract a(Ljava/util/List;Landroid/app/PendingIntent;Lcom/google/android/gms/internal/hf;Ljava/lang/String;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/google/android/gms/internal/hj;",
-            ">;",
-            "Landroid/app/PendingIntent;",
-            "Lcom/google/android/gms/internal/hf;",
-            "Ljava/lang/String;",
-            ")V"
-        }
-    .end annotation
-.end method
+    invoke-direct {v2, p0}, Lcom/google/android/gms/internal/hj;-><init>(Lcom/google/android/gms/internal/hg;)V
 
-.method public abstract a([Ljava/lang/String;Lcom/google/android/gms/internal/hf;Ljava/lang/String;)V
-.end method
+    invoke-virtual {p0, v0, v2}, Lcom/google/android/gms/internal/hg;->a(Lcom/google/android/gms/internal/pi;Lcom/google/android/gms/internal/pg;)V
 
-.method public abstract aF(Ljava/lang/String;)Landroid/location/Location;
-.end method
+    monitor-exit v1
 
-.method public abstract aG(Ljava/lang/String;)Lcom/google/android/gms/location/b;
-.end method
+    goto :goto_0
 
-.method public abstract b(Ljava/lang/String;Lcom/google/android/gms/internal/id;Lcom/google/android/gms/internal/hv;)V
-.end method
+    :catchall_0
+    move-exception v0
 
-.method public abstract gk()Landroid/location/Location;
-.end method
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-.method public abstract removeActivityUpdates(Landroid/app/PendingIntent;)V
-.end method
-
-.method public abstract setMockLocation(Landroid/location/Location;)V
-.end method
-
-.method public abstract setMockMode(Z)V
+    throw v0
 .end method

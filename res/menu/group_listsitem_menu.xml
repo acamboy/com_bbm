@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_menu_view_comments" android:id="@id/group_listsitem_menu_view_Comments" android:title="@string/group_list_items_view_comments" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_add_list" android:id="@id/group_listsitem_menu_add" android:title="@string/group_add_list_item_button" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_menu_delete" android:id="@id/group_listsitem_menu_delete" android:title="@string/group_lists_delete_list" app:showAsAction="never" />
+</menu>

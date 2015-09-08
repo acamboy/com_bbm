@@ -28,6 +28,9 @@
 .method public abstract expireTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
 .end method
 
+.method public abstract handoffTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
+.end method
+
 .method public abstract ownTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
 .end method
 

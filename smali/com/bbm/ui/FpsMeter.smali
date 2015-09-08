@@ -67,9 +67,9 @@
     iput-wide v2, p0, Lcom/bbm/ui/FpsMeter;->e:J
 
     .line 18
-    new-instance v0, Lcom/bbm/ui/co;
+    new-instance v0, Lcom/bbm/ui/cv;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/co;-><init>(Lcom/bbm/ui/FpsMeter;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/cv;-><init>(Lcom/bbm/ui/FpsMeter;)V
 
     iput-object v0, p0, Lcom/bbm/ui/FpsMeter;->f:Landroid/view/View$OnTouchListener;
 
@@ -131,7 +131,7 @@
 
     long-to-double v2, v2
 
-    const-wide v4, 0x408f400000000000L
+    const-wide v4, 0x408f400000000000L    # 1000.0
 
     mul-double/2addr v2, v4
 
@@ -181,7 +181,7 @@
     .locals 6
 
     .prologue
-    const-wide/high16 v4, 0x4024000000000000L
+    const-wide/high16 v4, 0x4024000000000000L    # 10.0
 
     .line 56
     iget-wide v0, p0, Lcom/bbm/ui/FpsMeter;->b:J

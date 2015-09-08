@@ -91,7 +91,7 @@
 
     sput-object v0, Lcom/bbm/g/c;->d:Lcom/bbm/g/c;
 
-    .line 26
+    .line 30
     new-instance v0, Lcom/bbm/g/c;
 
     const-string v1, "Unspecified"
@@ -143,13 +143,13 @@
     .end annotation
 
     .prologue
-    .line 30
+    .line 34
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 31
+    .line 35
     iput-object p3, p0, Lcom/bbm/g/c;->f:Ljava/lang/String;
 
-    .line 32
+    .line 36
     return-void
 .end method
 
@@ -157,7 +157,7 @@
     .locals 1
 
     .prologue
-    .line 35
+    .line 39
     const-string v0, "Free"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -166,14 +166,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 36
+    .line 40
     sget-object v0, Lcom/bbm/g/c;->a:Lcom/bbm/g/c;
 
-    .line 47
+    .line 51
     :goto_0
     return-object v0
 
-    .line 38
+    .line 42
     :cond_0
     const-string v0, "Tentative"
 
@@ -183,12 +183,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 39
+    .line 43
     sget-object v0, Lcom/bbm/g/c;->b:Lcom/bbm/g/c;
 
     goto :goto_0
 
-    .line 41
+    .line 45
     :cond_1
     const-string v0, "Busy"
 
@@ -198,12 +198,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 42
+    .line 46
     sget-object v0, Lcom/bbm/g/c;->c:Lcom/bbm/g/c;
 
     goto :goto_0
 
-    .line 44
+    .line 48
     :cond_2
     const-string v0, "OutOfOffice"
 
@@ -213,12 +213,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 45
+    .line 49
     sget-object v0, Lcom/bbm/g/c;->d:Lcom/bbm/g/c;
 
     goto :goto_0
 
-    .line 47
+    .line 51
     :cond_3
     sget-object v0, Lcom/bbm/g/c;->e:Lcom/bbm/g/c;
 
@@ -263,7 +263,7 @@
     .locals 1
 
     .prologue
-    .line 50
+    .line 54
     iget-object v0, p0, Lcom/bbm/g/c;->f:Ljava/lang/String;
 
     return-object v0

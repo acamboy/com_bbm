@@ -1,100 +1,65 @@
 .class final Lcom/bbm/util/ef;
 .super Ljava/lang/Object;
-.source "UpdatesFragmentUtil.java"
+.source "ThreadUtils.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Ljava/util/concurrent/ThreadFactory;
 
 
 # instance fields
-.field final synthetic a:Ljava/util/Set;
-
-.field final synthetic b:Lcom/bbm/util/fe;
-
-.field final synthetic c:Landroid/content/Context;
+.field private final a:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method constructor <init>(Ljava/util/Set;Lcom/bbm/util/fe;Landroid/content/Context;)V
-    .locals 0
+.method constructor <init>()V
+    .locals 2
 
     .prologue
-    .line 591
-    iput-object p1, p0, Lcom/bbm/util/ef;->a:Ljava/util/Set;
-
-    iput-object p2, p0, Lcom/bbm/util/ef;->b:Lcom/bbm/util/fe;
-
-    iput-object p3, p0, Lcom/bbm/util/ef;->c:Landroid/content/Context;
-
+    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 12
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object v0, p0, Lcom/bbm/util/ef;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 3
 
     .prologue
-    const/4 v2, 0x1
+    .line 16
+    new-instance v0, Ljava/lang/Thread;
 
-    .line 595
-    const-string v0, "updates Expanded View clicked"
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-class v1, Lcom/bbm/util/ee;
+    const-string v2, "AsyncTask #"
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 596
-    iget-object v0, p0, Lcom/bbm/util/ef;->a:Ljava/util/Set;
+    iget-object v2, p0, Lcom/bbm/util/ef;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iget-object v1, p0, Lcom/bbm/util/ef;->b:Lcom/bbm/util/fe;
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    iget-object v1, v1, Lcom/bbm/util/fe;->o:Ljava/lang/String;
+    move-result v2
 
-    invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result v0
+    move-result-object v1
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 597
-    iget-object v0, p0, Lcom/bbm/util/ef;->b:Lcom/bbm/util/fe;
+    move-result-object v1
 
-    iget-object v1, p0, Lcom/bbm/util/ef;->c:Landroid/content/Context;
+    invoke-direct {v0, p1, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    invoke-static {v0, v1, v2}, Lcom/bbm/util/ee;->b(Lcom/bbm/util/fe;Landroid/content/Context;Z)V
-
-    .line 598
-    iget-object v0, p0, Lcom/bbm/util/ef;->a:Ljava/util/Set;
-
-    iget-object v1, p0, Lcom/bbm/util/ef;->b:Lcom/bbm/util/fe;
-
-    iget-object v1, v1, Lcom/bbm/util/fe;->o:Ljava/lang/String;
-
-    invoke-interface {v0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-
-    .line 604
-    :goto_0
-    return-void
-
-    .line 600
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/util/ef;->b:Lcom/bbm/util/fe;
-
-    iget-object v1, p0, Lcom/bbm/util/ef;->c:Landroid/content/Context;
-
-    invoke-static {v0, v1, v2}, Lcom/bbm/util/ee;->a(Lcom/bbm/util/fe;Landroid/content/Context;Z)V
-
-    .line 601
-    iget-object v0, p0, Lcom/bbm/util/ef;->a:Ljava/util/Set;
-
-    iget-object v1, p0, Lcom/bbm/util/ef;->b:Lcom/bbm/util/fe;
-
-    iget-object v1, v1, Lcom/bbm/util/fe;->o:Ljava/lang/String;
-
-    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
+    return-object v0
 .end method

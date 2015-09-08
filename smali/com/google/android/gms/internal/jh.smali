@@ -1,92 +1,184 @@
-.class public final Lcom/google/android/gms/internal/jh;
+.class public Lcom/google/android/gms/internal/jh;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable;
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator",
-            "<",
-            "Lcom/google/android/gms/internal/jh;",
-            ">;"
-        }
-    .end annotation
-.end field
+# annotations
+.annotation runtime Lcom/google/android/gms/internal/mb;
+.end annotation
 
 
 # instance fields
-.field label:Ljava/lang/String;
+.field private final a:Ljava/lang/String;
 
-.field value:Ljava/lang/String;
-
-.field private final wj:I
+.field final t:Lcom/google/android/gms/internal/pp;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lcom/google/android/gms/internal/pp;)V
     .locals 1
 
-    new-instance v0, Lcom/google/android/gms/internal/ji;
+    const-string v0, ""
 
-    invoke-direct {v0}, Lcom/google/android/gms/internal/ji;-><init>()V
-
-    sput-object v0, Lcom/google/android/gms/internal/jh;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {p0, p1, v0}, Lcom/google/android/gms/internal/jh;-><init>(Lcom/google/android/gms/internal/pp;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lcom/google/android/gms/internal/jh;->wj:I
-
-    return-void
-.end method
-
-.method constructor <init>(ILjava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Lcom/google/android/gms/internal/pp;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lcom/google/android/gms/internal/jh;->wj:I
+    iput-object p1, p0, Lcom/google/android/gms/internal/jh;->t:Lcom/google/android/gms/internal/pp;
 
-    iput-object p2, p0, Lcom/google/android/gms/internal/jh;->label:Ljava/lang/String;
-
-    iput-object p3, p0, Lcom/google/android/gms/internal/jh;->value:Ljava/lang/String;
+    iput-object p2, p0, Lcom/google/android/gms/internal/jh;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final a(IIIIFI)V
+    .locals 4
 
-    const/4 v0, 0x0
+    :try_start_0
+    new-instance v0, Lorg/json/JSONObject;
 
-    return v0
-.end method
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-.method public final getVersionCode()I
-    .locals 1
+    const-string v1, "width"
 
-    iget v0, p0, Lcom/google/android/gms/internal/jh;->wj:I
+    invoke-virtual {v0, v1, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    return v0
-.end method
+    move-result-object v0
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    const-string v1, "height"
 
-    invoke-static {p0, p1, p2}, Lcom/google/android/gms/internal/ji;->a(Lcom/google/android/gms/internal/jh;Landroid/os/Parcel;I)V
+    invoke-virtual {v0, v1, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
+    move-result-object v0
+
+    const-string v1, "maxSizeWidth"
+
+    invoke-virtual {v0, v1, p3}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v1, "maxSizeHeight"
+
+    invoke-virtual {v0, v1, p4}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v1, "density"
+
+    float-to-double v2, p5
+
+    invoke-virtual {v0, v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v1, "rotation"
+
+    invoke-virtual {v0, v1, p6}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/jh;->t:Lcom/google/android/gms/internal/pp;
+
+    const-string v2, "onScreenInfoChanged"
+
+    invoke-interface {v1, v2, v0}, Lcom/google/android/gms/internal/pp;->a(Ljava/lang/String;Lorg/json/JSONObject;)V
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
     return-void
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "Error occured while obtaining screen information."
+
+    invoke-static {v1, v0}, Lcom/google/android/gms/ads/internal/util/client/b;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_0
+.end method
+
+.method public final a(Ljava/lang/String;)V
+    .locals 3
+
+    :try_start_0
+    new-instance v0, Lorg/json/JSONObject;
+
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+
+    const-string v1, "message"
+
+    invoke-virtual {v0, v1, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v1, "action"
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/jh;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/jh;->t:Lcom/google/android/gms/internal/pp;
+
+    const-string v2, "onError"
+
+    invoke-interface {v1, v2, v0}, Lcom/google/android/gms/internal/pp;->a(Ljava/lang/String;Lorg/json/JSONObject;)V
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "Error occurred while dispatching error event."
+
+    invoke-static {v1, v0}, Lcom/google/android/gms/ads/internal/util/client/b;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_0
+.end method
+
+.method public final b(Ljava/lang/String;)V
+    .locals 3
+
+    :try_start_0
+    new-instance v0, Lorg/json/JSONObject;
+
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+
+    const-string v1, "state"
+
+    invoke-virtual {v0, v1, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/jh;->t:Lcom/google/android/gms/internal/pp;
+
+    const-string v2, "onStateChanged"
+
+    invoke-interface {v1, v2, v0}, Lcom/google/android/gms/internal/pp;->a(Ljava/lang/String;Lorg/json/JSONObject;)V
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "Error occured while dispatching state change."
+
+    invoke-static {v1, v0}, Lcom/google/android/gms/ads/internal/util/client/b;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_0
 .end method

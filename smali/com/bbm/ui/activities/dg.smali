@@ -1,111 +1,97 @@
 .class final Lcom/bbm/ui/activities/dg;
-.super Lcom/bbm/d/b/f;
-.source "ChannelPickerActivity.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/d/b/f",
-        "<",
-        "Lcom/bbm/d/ee;",
-        ">;"
-    }
-.end annotation
+.super Lcom/bbm/j/k;
+.source "ChannelSubscribersActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ChannelPickerActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ChannelSubscribersActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ChannelPickerActivity;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/activities/ChannelSubscribersActivity;)V
+    .locals 1
 
     .prologue
-    .line 45
-    iput-object p1, p0, Lcom/bbm/ui/activities/dg;->a:Lcom/bbm/ui/activities/ChannelPickerActivity;
+    .line 47
+    iput-object p1, p0, Lcom/bbm/ui/activities/dg;->a:Lcom/bbm/ui/activities/ChannelSubscribersActivity;
 
-    invoke-direct {p0}, Lcom/bbm/d/b/f;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()Ljava/util/List;
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/d/ee;",
-            ">;"
-        }
-    .end annotation
+.method protected final a()V
+    .locals 2
 
     .prologue
-    .line 48
-    new-instance v1, Ljava/util/ArrayList;
+    .line 50
+    iget-object v0, p0, Lcom/bbm/ui/activities/dg;->a:Lcom/bbm/ui/activities/ChannelSubscribersActivity;
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    .line 49
-    iget-object v0, p0, Lcom/bbm/ui/activities/dg;->a:Lcom/bbm/ui/activities/ChannelPickerActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelPickerActivity;->a(Lcom/bbm/ui/activities/ChannelPickerActivity;)Lcom/bbm/j/w;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->a(Lcom/bbm/ui/activities/ChannelSubscribersActivity;)Lcom/bbm/j/x;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :cond_0
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v0}, Lcom/bbm/j/x;->b()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/fg;
-
-    .line 50
-    iget-object v3, p0, Lcom/bbm/ui/activities/dg;->a:Lcom/bbm/ui/activities/ChannelPickerActivity;
-
-    invoke-static {v3}, Lcom/bbm/ui/activities/ChannelPickerActivity;->b(Lcom/bbm/ui/activities/ChannelPickerActivity;)Lcom/bbm/d/a;
-
-    move-result-object v3
-
-    iget-object v0, v0, Lcom/bbm/d/fg;->a:Ljava/lang/String;
-
-    invoke-virtual {v3, v0}, Lcom/bbm/d/a;->U(Ljava/lang/String;)Lcom/bbm/d/ee;
-
-    move-result-object v0
-
     .line 51
-    iget-boolean v3, v0, Lcom/bbm/d/ee;->t:Z
+    iget-object v1, p0, Lcom/bbm/ui/activities/dg;->a:Lcom/bbm/ui/activities/ChannelSubscribersActivity;
 
-    if-eqz v3, :cond_0
+    invoke-static {v1}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->a(Lcom/bbm/ui/activities/ChannelSubscribersActivity;)Lcom/bbm/j/x;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lcom/bbm/j/x;->d()Z
+
+    move-result v1
 
     .line 52
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    if-eqz v1, :cond_0
+
+    .line 53
+    iget-object v0, p0, Lcom/bbm/ui/activities/dg;->a:Lcom/bbm/ui/activities/ChannelSubscribersActivity;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/dg;->a:Lcom/bbm/ui/activities/ChannelSubscribersActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->a(Lcom/bbm/ui/activities/ChannelSubscribersActivity;)Lcom/bbm/j/x;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lcom/bbm/j/x;->e()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->a(Lcom/bbm/ui/activities/ChannelSubscribersActivity;Ljava/lang/String;)V
+
+    .line 59
+    :goto_0
+    return-void
+
+    .line 54
+    :cond_0
+    if-eqz v0, :cond_1
+
+    .line 55
+    iget-object v0, p0, Lcom/bbm/ui/activities/dg;->a:Lcom/bbm/ui/activities/ChannelSubscribersActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->b(Lcom/bbm/ui/activities/ChannelSubscribersActivity;)V
 
     goto :goto_0
 
-    .line 55
+    .line 57
     :cond_1
-    return-object v1
+    iget-object v0, p0, Lcom/bbm/ui/activities/dg;->a:Lcom/bbm/ui/activities/ChannelSubscribersActivity;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->a:Landroid/widget/RelativeLayout;
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+
+    goto :goto_0
 .end method

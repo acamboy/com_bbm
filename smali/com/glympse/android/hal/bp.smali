@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field final synthetic eE:Lcom/glympse/android/hal/bo;
+.field final synthetic eH:Lcom/glympse/android/hal/bo;
 
 
 # direct methods
@@ -16,7 +16,7 @@
 
     .prologue
     .line 434
-    iput-object p1, p0, Lcom/glympse/android/hal/bp;->eE:Lcom/glympse/android/hal/bo;
+    iput-object p1, p0, Lcom/glympse/android/hal/bp;->eH:Lcom/glympse/android/hal/bo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -52,16 +52,16 @@
     invoke-static {v1, v2}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
     .line 444
-    iget-object v1, p0, Lcom/glympse/android/hal/bp;->eE:Lcom/glympse/android/hal/bo;
+    iget-object v1, p0, Lcom/glympse/android/hal/bp;->eH:Lcom/glympse/android/hal/bo;
 
-    iget-object v1, v1, Lcom/glympse/android/hal/bo;->ez:Lcom/glympse/android/hal/bm;
+    iget-object v1, v1, Lcom/glympse/android/hal/bo;->eC:Lcom/glympse/android/hal/bm;
 
     invoke-static {v1}, Lcom/glympse/android/hal/bm;->c(Lcom/glympse/android/hal/bm;)I
 
     .line 445
-    iget-object v1, p0, Lcom/glympse/android/hal/bp;->eE:Lcom/glympse/android/hal/bo;
+    iget-object v1, p0, Lcom/glympse/android/hal/bp;->eH:Lcom/glympse/android/hal/bo;
 
-    iget-object v1, v1, Lcom/glympse/android/hal/bo;->ez:Lcom/glympse/android/hal/bm;
+    iget-object v1, v1, Lcom/glympse/android/hal/bo;->eC:Lcom/glympse/android/hal/bm;
 
     invoke-static {v1}, Lcom/glympse/android/hal/bm;->d(Lcom/glympse/android/hal/bm;)I
 
@@ -70,15 +70,15 @@
     if-nez v1, :cond_0
 
     .line 447
-    iget-object v1, p0, Lcom/glympse/android/hal/bp;->eE:Lcom/glympse/android/hal/bo;
+    iget-object v1, p0, Lcom/glympse/android/hal/bp;->eH:Lcom/glympse/android/hal/bo;
 
-    iget-object v1, v1, Lcom/glympse/android/hal/bo;->ez:Lcom/glympse/android/hal/bm;
+    iget-object v1, v1, Lcom/glympse/android/hal/bo;->eC:Lcom/glympse/android/hal/bm;
 
     invoke-virtual {v1}, Lcom/glympse/android/hal/bm;->X()V
 
     .line 450
     :cond_0
-    iget-object v1, p0, Lcom/glympse/android/hal/bp;->eE:Lcom/glympse/android/hal/bo;
+    iget-object v1, p0, Lcom/glympse/android/hal/bp;->eH:Lcom/glympse/android/hal/bo;
 
     invoke-static {v1}, Lcom/glympse/android/hal/bo;->a(Lcom/glympse/android/hal/bo;)Lcom/glympse/android/hal/GSmsListener;
 
@@ -91,12 +91,12 @@
     invoke-interface {v1, v2, v3, v0, v4}, Lcom/glympse/android/hal/GSmsListener;->complete(ZILjava/lang/String;Lcom/glympse/android/core/GCommon;)V
 
     .line 451
-    iget-object v0, p0, Lcom/glympse/android/hal/bp;->eE:Lcom/glympse/android/hal/bo;
+    iget-object v0, p0, Lcom/glympse/android/hal/bp;->eH:Lcom/glympse/android/hal/bo;
 
     invoke-static {v0, v4}, Lcom/glympse/android/hal/bo;->a(Lcom/glympse/android/hal/bo;Lcom/glympse/android/hal/GSmsListener;)Lcom/glympse/android/hal/GSmsListener;
 
     .line 452
-    iget-object v0, p0, Lcom/glympse/android/hal/bp;->eE:Lcom/glympse/android/hal/bo;
+    iget-object v0, p0, Lcom/glympse/android/hal/bp;->eH:Lcom/glympse/android/hal/bo;
 
     invoke-static {v0}, Lcom/glympse/android/hal/bo;->b(Lcom/glympse/android/hal/bo;)V
 

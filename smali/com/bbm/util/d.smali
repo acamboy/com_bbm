@@ -1,77 +1,52 @@
-.class final Lcom/bbm/util/d;
-.super Lcom/bbm/util/l;
-.source "AsyncTask.java"
+.class public final Lcom/bbm/util/d;
+.super Ljava/lang/Object;
+.source "AdWebView.java"
+
+# interfaces
+.implements Landroid/webkit/ValueCallback;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/bbm/util/l",
-        "<TParams;TResult;>;"
+        "Ljava/lang/Object;",
+        "Landroid/webkit/ValueCallback",
+        "<",
+        "Ljava/lang/String;",
+        ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/util/b;
+.field final synthetic a:Lcom/bbm/util/AdWebView;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/util/b;)V
-    .locals 1
+.method public constructor <init>(Lcom/bbm/util/AdWebView;)V
+    .locals 0
 
     .prologue
-    .line 295
-    iput-object p1, p0, Lcom/bbm/util/d;->a:Lcom/bbm/util/b;
+    .line 237
+    iput-object p1, p0, Lcom/bbm/util/d;->a:Lcom/bbm/util/AdWebView;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/util/l;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()TResult;"
-        }
-    .end annotation
+.method public final synthetic onReceiveValue(Ljava/lang/Object;)V
+    .locals 1
 
     .prologue
-    .line 298
-    iget-object v0, p0, Lcom/bbm/util/d;->a:Lcom/bbm/util/b;
+    .line 237
+    check-cast p1, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/util/b;->a(Lcom/bbm/util/b;)Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-object v0, p0, Lcom/bbm/util/d;->a:Lcom/bbm/util/AdWebView;
 
-    move-result-object v0
+    invoke-static {v0, p1}, Lcom/bbm/util/AdWebView;->a(Lcom/bbm/util/AdWebView;Ljava/lang/String;)V
 
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    .line 300
-    const/16 v0, 0xa
-
-    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
-
-    .line 302
-    iget-object v0, p0, Lcom/bbm/util/d;->a:Lcom/bbm/util/b;
-
-    iget-object v1, p0, Lcom/bbm/util/d;->a:Lcom/bbm/util/b;
-
-    iget-object v2, p0, Lcom/bbm/util/d;->b:[Ljava/lang/Object;
-
-    invoke-virtual {v1, v2}, Lcom/bbm/util/b;->a([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/bbm/util/b;->a(Lcom/bbm/util/b;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

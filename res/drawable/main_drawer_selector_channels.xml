@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:local="http://schemas.android.com/apk/res-auto">
+    <item android:drawable="@drawable/ic_drawer_channels" local:state_splat="false" />
+    <item android:drawable="@drawable/ic_drawer_channels_splat" local:state_splat="true" />
+</selector>

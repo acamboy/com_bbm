@@ -36,27 +36,27 @@
     </plurals>
     <plurals name="slide_menu_active_chats">
         <item quantity="other">%1$s berriketa aktibo</item>
-        <item quantity="one">1 berriketa aktibo</item>
+        <item quantity="one">%1$s berriketa aktibo</item>
     </plurals>
     <plurals name="slide_menu_new_channelupdates">
-        <item quantity="other">%1$s jakinarazpen berri</item>
-        <item quantity="one">1 jakinarazpen berri</item>
+        <item quantity="other">%1$s kanaleko elementu berri</item>
+        <item quantity="one">%1$s kanaleko elementu berri</item>
     </plurals>
     <plurals name="slide_menu_new_invites">
         <item quantity="other">%1$s gonbidapen berri</item>
-        <item quantity="one">1 gonbidapen berri</item>
+        <item quantity="one">%1$s gonbidapen berri</item>
     </plurals>
     <plurals name="slide_menu_new_updates">
-        <item quantity="other">%1$s elementu berri</item>
-        <item quantity="one">1 elementu berri</item>
+        <item quantity="other">%1$s iturri berri</item>
+        <item quantity="one">%1$s iturri berri</item>
     </plurals>
     <plurals name="slide_menu_total_contacts">
         <item quantity="other">%1$s kontaktu</item>
-        <item quantity="one">1 kontaktu</item>
+        <item quantity="one">%1$s kontaktu</item>
     </plurals>
     <plurals name="slide_menu_total_groups">
         <item quantity="other">%1$s talde</item>
-        <item quantity="one">1 talde</item>
+        <item quantity="one">%1$s talde</item>
     </plurals>
     <plurals name="update_channel_stats_comments">
         <item quantity="other">%1$s iruzkin</item>

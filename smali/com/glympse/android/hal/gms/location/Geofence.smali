@@ -19,11 +19,11 @@
     .end annotation
 .end field
 
-.field private static fq:Ljava/lang/reflect/Method;
+.field private static ft:Ljava/lang/reflect/Method;
 
 
 # instance fields
-.field private fr:Ljava/lang/Object;
+.field private fu:Ljava/lang/Object;
 
 
 # direct methods
@@ -34,7 +34,7 @@
     .line 13
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/Geofence;->fq:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/Geofence;->ft:Ljava/lang/reflect/Method;
 
     return-void
 .end method
@@ -47,7 +47,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 19
-    iput-object p1, p0, Lcom/glympse/android/hal/gms/location/Geofence;->fr:Ljava/lang/Object;
+    iput-object p1, p0, Lcom/glympse/android/hal/gms/location/Geofence;->fu:Ljava/lang/Object;
 
     .line 20
     return-void
@@ -59,7 +59,7 @@
     .prologue
     .line 128
     :try_start_0
-    const-string v0, "com.google.android.gms.location.Geofence"
+    const-string v0, "com.google.android.gms.location.e"
 
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -76,10 +76,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/Geofence;->fq:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/Geofence;->ft:Ljava/lang/reflect/Method;
 
     .line 131
-    const-string v0, "com.google.android.gms.location.Geofence$Builder"
+    const-string v0, "com.google.android.gms.location.f"
 
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -241,9 +241,9 @@
 
     .line 26
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/location/Geofence;->fq:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/Geofence;->ft:Ljava/lang/reflect/Method;
 
-    iget-object v2, p0, Lcom/glympse/android/hal/gms/location/Geofence;->fr:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/glympse/android/hal/gms/location/Geofence;->fu:Ljava/lang/Object;
 
     const/4 v3, 0x0
 
@@ -272,7 +272,7 @@
 
     .prologue
     .line 36
-    iget-object v0, p0, Lcom/glympse/android/hal/gms/location/Geofence;->fr:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/glympse/android/hal/gms/location/Geofence;->fu:Ljava/lang/Object;
 
     return-object v0
 .end method

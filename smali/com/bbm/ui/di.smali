@@ -1,58 +1,57 @@
 .class final Lcom/bbm/ui/di;
-.super Landroid/text/Editable$Factory;
-.source "InlineImageEditText.java"
+.super Ljava/lang/Object;
+.source "IncrementalListAdapter.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/InlineImageEditText;
+.field final synthetic a:Lcom/bbm/ui/df;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/InlineImageEditText;)V
+.method constructor <init>(Lcom/bbm/ui/df;)V
     .locals 0
 
     .prologue
-    .line 52
-    iput-object p1, p0, Lcom/bbm/ui/di;->a:Lcom/bbm/ui/InlineImageEditText;
+    .line 532
+    iput-object p1, p0, Lcom/bbm/ui/di;->a:Lcom/bbm/ui/df;
 
-    invoke-direct {p0}, Landroid/text/Editable$Factory;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final newEditable(Ljava/lang/CharSequence;)Landroid/text/Editable;
-    .locals 4
+.method public final run()V
+    .locals 1
 
     .prologue
-    .line 55
-    iget-object v0, p0, Lcom/bbm/ui/di;->a:Lcom/bbm/ui/InlineImageEditText;
+    .line 535
+    iget-object v0, p0, Lcom/bbm/ui/di;->a:Lcom/bbm/ui/df;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/InlineImageEditText;->getContext()Landroid/content/Context;
+    invoke-static {v0}, Lcom/bbm/ui/df;->n(Lcom/bbm/ui/df;)Z
 
-    move-result-object v0
+    .line 537
+    iget-object v0, p0, Lcom/bbm/ui/di;->a:Lcom/bbm/ui/df;
 
-    invoke-static {v0}, Lcom/bbm/util/c/c;->a(Landroid/content/Context;)Lcom/bbm/util/c/c;
+    invoke-static {v0}, Lcom/bbm/ui/df;->e(Lcom/bbm/ui/df;)Z
 
-    move-result-object v0
+    move-result v0
 
-    .line 56
-    new-instance v1, Lcom/bbm/ui/dj;
+    if-eqz v0, :cond_0
 
-    iget-object v2, p0, Lcom/bbm/ui/di;->a:Lcom/bbm/ui/InlineImageEditText;
+    .line 541
+    :goto_0
+    return-void
 
-    iget-object v3, p0, Lcom/bbm/ui/di;->a:Lcom/bbm/ui/InlineImageEditText;
+    .line 540
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/di;->a:Lcom/bbm/ui/df;
 
-    invoke-virtual {v3}, Lcom/bbm/ui/InlineImageEditText;->getTextSize()F
+    invoke-virtual {v0}, Lcom/bbm/ui/df;->f()V
 
-    move-result v3
-
-    invoke-virtual {v0, p1, v3}, Lcom/bbm/util/c/c;->a(Ljava/lang/CharSequence;F)Landroid/text/Spannable;
-
-    move-result-object v0
-
-    invoke-direct {v1, v2, v0}, Lcom/bbm/ui/dj;-><init>(Lcom/bbm/ui/InlineImageEditText;Ljava/lang/CharSequence;)V
-
-    return-object v1
+    goto :goto_0
 .end method

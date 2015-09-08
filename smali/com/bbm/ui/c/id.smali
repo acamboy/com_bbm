@@ -1,132 +1,79 @@
-.class final enum Lcom/bbm/ui/c/id;
-.super Ljava/lang/Enum;
-.source "StickerStoreFragment.java"
+.class final Lcom/bbm/ui/c/id;
+.super Ljava/lang/Object;
+.source "UpdatesFragment.java"
+
+# interfaces
+.implements Ljava/util/Comparator;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ljava/lang/Enum",
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
         "<",
-        "Lcom/bbm/ui/c/id;",
+        "Lcom/bbm/bali/ui/b/q;",
         ">;"
     }
 .end annotation
 
 
-# static fields
-.field public static final enum a:Lcom/bbm/ui/c/id;
-
-.field public static final enum b:Lcom/bbm/ui/c/id;
-
-.field public static final enum c:Lcom/bbm/ui/c/id;
-
-.field private static final synthetic d:[Lcom/bbm/ui/c/id;
+# instance fields
+.field final synthetic a:Lcom/bbm/ui/c/ic;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    .prologue
-    const/4 v4, 0x2
-
-    const/4 v3, 0x1
-
-    const/4 v2, 0x0
-
-    .line 356
-    new-instance v0, Lcom/bbm/ui/c/id;
-
-    const-string v1, "FEATURED_CAROUSEL"
-
-    invoke-direct {v0, v1, v2}, Lcom/bbm/ui/c/id;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/ui/c/id;->a:Lcom/bbm/ui/c/id;
-
-    .line 357
-    new-instance v0, Lcom/bbm/ui/c/id;
-
-    const-string v1, "STICKER_PACK"
-
-    invoke-direct {v0, v1, v3}, Lcom/bbm/ui/c/id;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/ui/c/id;->b:Lcom/bbm/ui/c/id;
-
-    .line 358
-    new-instance v0, Lcom/bbm/ui/c/id;
-
-    const-string v1, "APP"
-
-    invoke-direct {v0, v1, v4}, Lcom/bbm/ui/c/id;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/ui/c/id;->c:Lcom/bbm/ui/c/id;
-
-    .line 355
-    const/4 v0, 0x3
-
-    new-array v0, v0, [Lcom/bbm/ui/c/id;
-
-    sget-object v1, Lcom/bbm/ui/c/id;->a:Lcom/bbm/ui/c/id;
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lcom/bbm/ui/c/id;->b:Lcom/bbm/ui/c/id;
-
-    aput-object v1, v0, v3
-
-    sget-object v1, Lcom/bbm/ui/c/id;->c:Lcom/bbm/ui/c/id;
-
-    aput-object v1, v0, v4
-
-    sput-object v0, Lcom/bbm/ui/c/id;->d:[Lcom/bbm/ui/c/id;
-
-    return-void
-.end method
-
-.method private constructor <init>(Ljava/lang/String;I)V
+.method constructor <init>(Lcom/bbm/ui/c/ic;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
     .prologue
-    .line 355
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 141
+    iput-object p1, p0, Lcom/bbm/ui/c/id;->a:Lcom/bbm/ui/c/ic;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcom/bbm/ui/c/id;
-    .locals 1
+
+# virtual methods
+.method public final bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 4
 
     .prologue
-    .line 355
-    const-class v0, Lcom/bbm/ui/c/id;
+    .line 141
+    check-cast p1, Lcom/bbm/bali/ui/b/q;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p2, Lcom/bbm/bali/ui/b/q;
 
-    move-result-object v0
+    iget-wide v0, p1, Lcom/bbm/bali/ui/b/q;->d:J
 
-    check-cast v0, Lcom/bbm/ui/c/id;
+    iget-wide v2, p2, Lcom/bbm/bali/ui/b/q;->d:J
 
-    return-object v0
-.end method
+    cmp-long v0, v0, v2
 
-.method public static values()[Lcom/bbm/ui/c/id;
-    .locals 1
+    if-gez v0, :cond_0
 
-    .prologue
-    .line 355
-    sget-object v0, Lcom/bbm/ui/c/id;->d:[Lcom/bbm/ui/c/id;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, [Lcom/bbm/ui/c/id;->clone()Ljava/lang/Object;
+    :goto_0
+    return v0
 
-    move-result-object v0
+    :cond_0
+    iget-wide v0, p1, Lcom/bbm/bali/ui/b/q;->d:J
 
-    check-cast v0, [Lcom/bbm/ui/c/id;
+    iget-wide v2, p2, Lcom/bbm/bali/ui/b/q;->d:J
 
-    return-object v0
+    cmp-long v0, v0, v2
+
+    if-lez v0, :cond_1
+
+    const/4 v0, -0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

@@ -3,7 +3,7 @@
 .source "EmoticonInputPanel.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/ui/hc;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 119
+    .line 450
     iput-object p1, p0, Lcom/bbm/ui/bh;->a:Lcom/bbm/ui/EmoticonInputPanel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,46 +25,29 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final a(Lcom/bbm/d/ht;I)V
+    .locals 1
 
     .prologue
-    .line 123
-    const-string v0, "toggleQuickSharePanel"
-
-    const-class v1, Lcom/bbm/ui/EmoticonInputPanel;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 124
+    .line 453
     iget-object v0, p0, Lcom/bbm/ui/bh;->a:Lcom/bbm/ui/EmoticonInputPanel;
 
-    invoke-static {v0}, Lcom/bbm/ui/EmoticonInputPanel;->a(Lcom/bbm/ui/EmoticonInputPanel;)Lcom/bbm/ui/bp;
+    invoke-static {v0}, Lcom/bbm/ui/EmoticonInputPanel;->h(Lcom/bbm/ui/EmoticonInputPanel;)Lcom/bbm/ui/hc;
 
     move-result-object v0
 
-    sget-object v1, Lcom/bbm/ui/bp;->d:Lcom/bbm/ui/bp;
+    if-eqz v0, :cond_0
 
-    if-ne v0, v1, :cond_0
-
-    .line 125
+    .line 454
     iget-object v0, p0, Lcom/bbm/ui/bh;->a:Lcom/bbm/ui/EmoticonInputPanel;
 
-    sget-object v1, Lcom/bbm/ui/bp;->b:Lcom/bbm/ui/bp;
+    invoke-static {v0}, Lcom/bbm/ui/EmoticonInputPanel;->h(Lcom/bbm/ui/EmoticonInputPanel;)Lcom/bbm/ui/hc;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/EmoticonInputPanel;->setLowerPanel(Lcom/bbm/ui/bp;)V
+    move-result-object v0
 
-    .line 129
-    :goto_0
-    return-void
+    invoke-interface {v0, p1, p2}, Lcom/bbm/ui/hc;->a(Lcom/bbm/d/ht;I)V
 
-    .line 127
+    .line 456
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/bh;->a:Lcom/bbm/ui/EmoticonInputPanel;
-
-    sget-object v1, Lcom/bbm/ui/bp;->d:Lcom/bbm/ui/bp;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/EmoticonInputPanel;->setLowerPanel(Lcom/bbm/ui/bp;)V
-
-    goto :goto_0
+    return-void
 .end method

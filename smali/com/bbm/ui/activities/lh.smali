@@ -1,25 +1,58 @@
-.class public final Lcom/bbm/ui/activities/lh;
+.class final Lcom/bbm/ui/activities/lh;
 .super Ljava/lang/Object;
-.source "GroupAdminEditActivity.java"
+.source "GroupConversationActivity.java"
+
+# interfaces
+.implements Lcom/bbm/bali/ui/snackbar/e;
 
 
 # instance fields
-.field a:Lcom/bbm/ui/ObservingImageView;
-
-.field b:Landroid/widget/TextView;
-
-.field final synthetic c:Lcom/bbm/ui/activities/GroupAdminEditActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
 
 # direct methods
-.method protected constructor <init>(Lcom/bbm/ui/activities/GroupAdminEditActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 173
-    iput-object p1, p0, Lcom/bbm/ui/activities/lh;->c:Lcom/bbm/ui/activities/GroupAdminEditActivity;
+    .line 971
+    iput-object p1, p0, Lcom/bbm/ui/activities/lh;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
+    .locals 1
+
+    .prologue
+    .line 974
+    iget-object v0, p0, Lcom/bbm/ui/activities/lh;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->t(Lcom/bbm/ui/activities/GroupConversationActivity;)Z
+
+    .line 975
+    iget-object v0, p0, Lcom/bbm/ui/activities/lh;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->u(Lcom/bbm/ui/activities/GroupConversationActivity;)Lcom/bbm/bali/ui/snackbar/b;
+
+    .line 977
+    iget-object v0, p0, Lcom/bbm/ui/activities/lh;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->v(Lcom/bbm/ui/activities/GroupConversationActivity;)V
+
+    .line 978
+    iget-object v0, p0, Lcom/bbm/ui/activities/lh;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->g(Lcom/bbm/ui/activities/GroupConversationActivity;)Lcom/bbm/ui/EmoticonInputPanel;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->e()Z
+
+    .line 979
     return-void
 .end method

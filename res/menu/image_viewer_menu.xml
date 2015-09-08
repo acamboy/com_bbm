@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_share" android:id="@id/slide_menu_item_options_share" android:title="@string/share" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_set_as" android:id="@id/slide_menu_item_options_set_as_bbm_display" android:title="@string/set_as" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_save_picture" android:id="@id/slide_menu_item_channels_save_as" android:title="@string/save_as" app:showAsAction="always" />
+</menu>

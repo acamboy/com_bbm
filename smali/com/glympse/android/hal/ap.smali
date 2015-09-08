@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field final synthetic bX:Lcom/glympse/android/hal/ao;
+.field final synthetic ca:Lcom/glympse/android/hal/ao;
 
 
 # direct methods
@@ -13,7 +13,7 @@
 
     .prologue
     .line 151
-    iput-object p1, p0, Lcom/glympse/android/hal/ap;->bX:Lcom/glympse/android/hal/ao;
+    iput-object p1, p0, Lcom/glympse/android/hal/ap;->ca:Lcom/glympse/android/hal/ao;
 
     .line 152
     const/4 v0, 0x0
@@ -44,7 +44,7 @@
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
     .line 161
-    iget-object v0, p0, Lcom/glympse/android/hal/ap;->bX:Lcom/glympse/android/hal/ao;
+    iget-object v0, p0, Lcom/glympse/android/hal/ap;->ca:Lcom/glympse/android/hal/ao;
 
     const/4 v1, 0x1
 

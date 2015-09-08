@@ -30,7 +30,7 @@
     .line 325
     iput-object p1, p0, Lcom/cropimage/k;->g:Lcom/cropimage/i;
 
-    const/high16 v0, 0x43960000
+    const/high16 v0, 0x43960000    # 300.0f
 
     iput v0, p0, Lcom/cropimage/k;->a:F
 

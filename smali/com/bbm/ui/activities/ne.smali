@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/ne;
 .super Ljava/lang/Object;
-.source "GroupConversationActivity.java"
+.source "GroupListsActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnKeyListener;
+.implements Lcom/bbm/bali/ui/main/groups/e;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupListsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupListsActivity;)V
     .locals 0
 
     .prologue
-    .line 266
-    iput-object p1, p0, Lcom/bbm/ui/activities/ne;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    .line 153
+    iput-object p1, p0, Lcom/bbm/ui/activities/ne;->a:Lcom/bbm/ui/activities/GroupListsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,34 +25,27 @@
 
 
 # virtual methods
-.method public final onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
-    .locals 2
+.method public final a()V
+    .locals 4
 
     .prologue
-    const/4 v0, 0x1
+    .line 156
+    iget-object v0, p0, Lcom/bbm/ui/activities/ne;->a:Lcom/bbm/ui/activities/GroupListsActivity;
 
-    .line 270
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
+    new-instance v1, Landroid/content/Intent;
 
-    move-result v1
+    const-class v2, Lcom/bbm/ui/activities/GroupProfileActivity;
 
-    if-ne v1, v0, :cond_0
+    invoke-direct {v1, v0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    const/16 v1, 0x42
+    const-string v2, "groupUri"
 
-    if-ne p2, v1, :cond_0
+    iget-object v3, v0, Lcom/bbm/bali/ui/main/a/d;->a:Ljava/lang/String;
 
-    .line 272
-    iget-object v1, p0, Lcom/bbm/ui/activities/ne;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/GroupConversationActivity;->b()V
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/GroupListsActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 275
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
+    .line 157
+    return-void
 .end method

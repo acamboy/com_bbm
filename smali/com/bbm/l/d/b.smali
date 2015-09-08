@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract a(ZLcom/bbm/l/d/b/x;)V
+.method public abstract a(IZLcom/bbm/l/d/b/aa;)V
 .end method

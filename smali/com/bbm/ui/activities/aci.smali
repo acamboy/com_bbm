@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/aci;
 .super Ljava/lang/Object;
-.source "ProfileActivity.java"
+.source "SelectContactActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/widget/TextView$OnEditorActionListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ProfileActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SelectContactActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ProfileActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
     .locals 0
 
     .prologue
-    .line 383
-    iput-object p1, p0, Lcom/bbm/ui/activities/aci;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    .line 424
+    iput-object p1, p0, Lcom/bbm/ui/activities/aci;->a:Lcom/bbm/ui/activities/SelectContactActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,29 +25,44 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
+    .locals 3
 
     .prologue
-    .line 387
-    const-string v0, "mKeyboardButtonArea Clicked"
+    .line 427
+    iget-object v0, p0, Lcom/bbm/ui/activities/aci;->a:Lcom/bbm/ui/activities/SelectContactActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/ProfileActivity;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 389
-    iget-object v0, p0, Lcom/bbm/ui/activities/aci;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ProfileActivity;->e(Lcom/bbm/ui/activities/ProfileActivity;)V
+    move-result-object v2
 
-    .line 390
-    iget-object v0, p0, Lcom/bbm/ui/activities/aci;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
+    move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ProfileActivity;->b(Lcom/bbm/ui/activities/ProfileActivity;Z)V
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 391
-    return-void
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/SelectContactActivity;->a(Ljava/lang/String;)V
+
+    .line 428
+    iget-object v0, p0, Lcom/bbm/ui/activities/aci;->a:Lcom/bbm/ui/activities/SelectContactActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/SelectContactActivity;->v(Lcom/bbm/ui/activities/SelectContactActivity;)Landroid/widget/EditText;
+
+    move-result-object v0
+
+    const/4 v1, 0x6
+
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setImeOptions(I)V
+
+    .line 429
+    const/4 v0, 0x0
+
+    return v0
 .end method

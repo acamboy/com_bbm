@@ -11,7 +11,7 @@
 
 .field private _type:I
 
-.field private rm:Lcom/glympse/android/hal/GVector;
+.field private sp:Lcom/glympse/android/hal/GVector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/glympse/android/hal/GVector",
@@ -22,7 +22,7 @@
     .end annotation
 .end field
 
-.field private rn:Ljava/util/Hashtable;
+.field private sq:Ljava/util/Hashtable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Hashtable",
@@ -34,11 +34,11 @@
     .end annotation
 .end field
 
-.field private ro:J
+.field private sr:J
 
-.field private rp:D
+.field private ss:D
 
-.field private rq:Ljava/lang/String;
+.field private st:Ljava/lang/String;
 
 
 # direct methods
@@ -55,9 +55,9 @@
     iput v0, p0, Lcom/glympse/android/lib/Primitive;->_type:I
 
     .line 72
-    const-wide/high16 v0, 0x7ff8000000000000L
+    const-wide/high16 v0, 0x7ff8000000000000L    # NaN
 
-    iput-wide v0, p0, Lcom/glympse/android/lib/Primitive;->rp:D
+    iput-wide v0, p0, Lcom/glympse/android/lib/Primitive;->ss:D
 
     .line 73
     return-void
@@ -76,12 +76,12 @@
     iput v0, p0, Lcom/glympse/android/lib/Primitive;->_type:I
 
     .line 46
-    iput-wide p1, p0, Lcom/glympse/android/lib/Primitive;->rp:D
+    iput-wide p1, p0, Lcom/glympse/android/lib/Primitive;->ss:D
 
     .line 47
     double-to-long v0, p1
 
-    iput-wide v0, p0, Lcom/glympse/android/lib/Primitive;->ro:J
+    iput-wide v0, p0, Lcom/glympse/android/lib/Primitive;->sr:J
 
     .line 48
     return-void
@@ -109,7 +109,7 @@
     invoke-direct {v0}, Lcom/glympse/android/hal/GVector;-><init>()V
 
     :goto_0
-    iput-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iput-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     .line 40
     const/4 v0, 0x2
@@ -121,7 +121,7 @@
     invoke-direct {v1}, Ljava/util/Hashtable;-><init>()V
 
     :cond_0
-    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     .line 41
     return-void
@@ -146,12 +146,12 @@
     iput v0, p0, Lcom/glympse/android/lib/Primitive;->_type:I
 
     .line 53
-    iput-wide p1, p0, Lcom/glympse/android/lib/Primitive;->ro:J
+    iput-wide p1, p0, Lcom/glympse/android/lib/Primitive;->sr:J
 
     .line 54
     long-to-double v0, p1
 
-    iput-wide v0, p0, Lcom/glympse/android/lib/Primitive;->rp:D
+    iput-wide v0, p0, Lcom/glympse/android/lib/Primitive;->ss:D
 
     .line 55
     return-void
@@ -170,7 +170,7 @@
     iput v0, p0, Lcom/glympse/android/lib/Primitive;->_type:I
 
     .line 66
-    iput-object p1, p0, Lcom/glympse/android/lib/Primitive;->rq:Ljava/lang/String;
+    iput-object p1, p0, Lcom/glympse/android/lib/Primitive;->st:Ljava/lang/String;
 
     .line 67
     return-void
@@ -195,6 +195,121 @@
     return-void
 .end method
 
+.method private static b(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)Z
+    .locals 4
+
+    .prologue
+    const/4 v1, 0x0
+
+    const/4 v0, 0x1
+
+    .line 257
+    .line 258
+    invoke-interface {p0}, Lcom/glympse/android/core/GPrimitive;->type()I
+
+    move-result v2
+
+    packed-switch v2, :pswitch_data_0
+
+    .line 266
+    invoke-interface {p1}, Lcom/glympse/android/core/GPrimitive;->type()I
+
+    move-result v2
+
+    invoke-interface {p0}, Lcom/glympse/android/core/GPrimitive;->type()I
+
+    move-result v3
+
+    if-ne v2, v3, :cond_0
+
+    .line 288
+    :goto_0
+    :pswitch_0
+    return v0
+
+    :cond_0
+    move v0, v1
+
+    .line 266
+    goto :goto_0
+
+    .line 272
+    :pswitch_1
+    invoke-interface {p1}, Lcom/glympse/android/core/GPrimitive;->type()I
+
+    move-result v2
+
+    const/4 v3, 0x2
+
+    if-ne v2, v3, :cond_2
+
+    .line 275
+    invoke-interface {p1}, Lcom/glympse/android/core/GPrimitive;->getKeys()Ljava/util/Enumeration;
+
+    move-result-object v2
+
+    move v1, v0
+
+    :goto_1
+    invoke-interface {v2}, Ljava/util/Enumeration;->hasMoreElements()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 277
+    invoke-interface {v2}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    .line 278
+    invoke-interface {p1, v0}, Lcom/glympse/android/core/GPrimitive;->get(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+
+    move-result-object v3
+
+    .line 279
+    invoke-interface {p0, v0}, Lcom/glympse/android/core/GPrimitive;->get(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+
+    move-result-object v0
+
+    .line 280
+    if-eqz v0, :cond_1
+
+    .line 282
+    invoke-static {v0, v3}, Lcom/glympse/android/lib/Primitive;->b(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)Z
+
+    move-result v0
+
+    and-int/2addr v0, v1
+
+    :goto_2
+    move v1, v0
+
+    .line 284
+    goto :goto_1
+
+    :cond_1
+    move v0, v1
+
+    goto :goto_2
+
+    :cond_2
+    move v0, v1
+
+    goto :goto_0
+
+    .line 258
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
 
 # virtual methods
 .method public clone()Lcom/glympse/android/core/GPrimitive;
@@ -209,9 +324,9 @@
     invoke-direct {v2, v0}, Lcom/glympse/android/lib/Primitive;-><init>(I)V
 
     .line 130
-    iget-wide v0, p0, Lcom/glympse/android/lib/Primitive;->ro:J
+    iget-wide v0, p0, Lcom/glympse/android/lib/Primitive;->sr:J
 
-    iput-wide v0, v2, Lcom/glympse/android/lib/Primitive;->ro:J
+    iput-wide v0, v2, Lcom/glympse/android/lib/Primitive;->sr:J
 
     .line 131
     iget-boolean v0, p0, Lcom/glympse/android/lib/Primitive;->_bool:Z
@@ -219,14 +334,14 @@
     iput-boolean v0, v2, Lcom/glympse/android/lib/Primitive;->_bool:Z
 
     .line 132
-    iget-wide v0, p0, Lcom/glympse/android/lib/Primitive;->rp:D
+    iget-wide v0, p0, Lcom/glympse/android/lib/Primitive;->ss:D
 
-    iput-wide v0, v2, Lcom/glympse/android/lib/Primitive;->rp:D
+    iput-wide v0, v2, Lcom/glympse/android/lib/Primitive;->ss:D
 
     .line 133
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rq:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->st:Ljava/lang/String;
 
-    iput-object v0, v2, Lcom/glympse/android/lib/Primitive;->rq:Ljava/lang/String;
+    iput-object v0, v2, Lcom/glympse/android/lib/Primitive;->st:Ljava/lang/String;
 
     .line 136
     iget v0, p0, Lcom/glympse/android/lib/Primitive;->_type:I
@@ -239,7 +354,7 @@
 
     .line 141
     :pswitch_0
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -254,7 +369,7 @@
     if-ge v1, v3, :cond_0
 
     .line 145
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, v1}, Lcom/glympse/android/hal/GVector;->elementAt(I)Ljava/lang/Object;
 
@@ -263,7 +378,7 @@
     check-cast v0, Lcom/glympse/android/core/GPrimitive;
 
     .line 147
-    iget-object v4, v2, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v4, v2, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-interface {v0}, Lcom/glympse/android/core/GPrimitive;->clone()Lcom/glympse/android/core/GPrimitive;
 
@@ -280,7 +395,7 @@
 
     .line 155
     :pswitch_1
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     invoke-virtual {v0}, Ljava/util/Hashtable;->keys()Ljava/util/Enumeration;
 
@@ -301,7 +416,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 158
-    iget-object v1, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    iget-object v1, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     invoke-virtual {v1, v0}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -310,7 +425,7 @@
     check-cast v1, Lcom/glympse/android/core/GPrimitive;
 
     .line 160
-    iget-object v4, v2, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    iget-object v4, v2, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     invoke-interface {v1}, Lcom/glympse/android/core/GPrimitive;->clone()Lcom/glympse/android/core/GPrimitive;
 
@@ -344,12 +459,12 @@
     .locals 1
 
     .prologue
-    .line 269
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 391
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -357,16 +472,16 @@
 
     if-gt v0, p1, :cond_1
 
-    .line 270
+    .line 392
     :cond_0
     const/4 v0, 0x0
 
-    .line 271
+    .line 393
     :goto_0
     return-object v0
 
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/hal/GVector;->elementAt(I)Ljava/lang/Object;
 
@@ -381,20 +496,20 @@
     .locals 1
 
     .prologue
-    .line 199
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    .line 321
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     if-nez v0, :cond_0
 
-    .line 200
+    .line 322
     const/4 v0, 0x0
 
-    .line 201
+    .line 323
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -418,8 +533,8 @@
     .end annotation
 
     .prologue
-    .line 264
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 386
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     return-object v0
 .end method
@@ -428,7 +543,7 @@
     .locals 1
 
     .prologue
-    .line 185
+    .line 307
     iget-boolean v0, p0, Lcom/glympse/android/lib/Primitive;->_bool:Z
 
     return v0
@@ -438,12 +553,12 @@
     .locals 1
 
     .prologue
-    .line 292
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 414
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -451,17 +566,17 @@
 
     if-gt v0, p1, :cond_1
 
-    .line 293
+    .line 415
     :cond_0
     const/4 v0, 0x0
 
-    .line 295
+    .line 417
     :goto_0
     return v0
 
-    .line 294
+    .line 416
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/hal/GVector;->elementAt(I)Ljava/lang/Object;
 
@@ -469,7 +584,7 @@
 
     check-cast v0, Lcom/glympse/android/core/GPrimitive;
 
-    .line 295
+    .line 417
     invoke-interface {v0}, Lcom/glympse/android/core/GPrimitive;->getBool()Z
 
     move-result v0
@@ -483,20 +598,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 226
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    .line 348
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     if-nez v0, :cond_0
 
     move v0, v1
 
-    .line 231
+    .line 353
     :goto_0
     return v0
 
-    .line 228
+    .line 350
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -504,15 +619,15 @@
 
     check-cast v0, Lcom/glympse/android/core/GPrimitive;
 
-    .line 229
+    .line 351
     if-nez v0, :cond_1
 
     move v0, v1
 
-    .line 230
+    .line 352
     goto :goto_0
 
-    .line 231
+    .line 353
     :cond_1
     invoke-interface {v0}, Lcom/glympse/android/core/GPrimitive;->getBool()Z
 
@@ -525,8 +640,8 @@
     .locals 2
 
     .prologue
-    .line 175
-    iget-wide v0, p0, Lcom/glympse/android/lib/Primitive;->rp:D
+    .line 297
+    iget-wide v0, p0, Lcom/glympse/android/lib/Primitive;->ss:D
 
     return-wide v0
 .end method
@@ -535,12 +650,12 @@
     .locals 2
 
     .prologue
-    .line 276
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 398
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -548,17 +663,17 @@
 
     if-gt v0, p1, :cond_1
 
-    .line 277
+    .line 399
     :cond_0
     const-wide/16 v0, 0x0
 
-    .line 279
+    .line 401
     :goto_0
     return-wide v0
 
-    .line 278
+    .line 400
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/hal/GVector;->elementAt(I)Ljava/lang/Object;
 
@@ -566,7 +681,7 @@
 
     check-cast v0, Lcom/glympse/android/core/GPrimitive;
 
-    .line 279
+    .line 401
     invoke-interface {v0}, Lcom/glympse/android/core/GPrimitive;->getDouble()D
 
     move-result-wide v0
@@ -580,20 +695,20 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 206
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    .line 328
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     if-nez v0, :cond_0
 
     move-wide v0, v2
 
-    .line 211
+    .line 333
     :goto_0
     return-wide v0
 
-    .line 208
+    .line 330
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -601,15 +716,15 @@
 
     check-cast v0, Lcom/glympse/android/core/GPrimitive;
 
-    .line 209
+    .line 331
     if-nez v0, :cond_1
 
     move-wide v0, v2
 
-    .line 210
+    .line 332
     goto :goto_0
 
-    .line 211
+    .line 333
     :cond_1
     invoke-interface {v0}, Lcom/glympse/android/core/GPrimitive;->getDouble()D
 
@@ -631,20 +746,20 @@
     .end annotation
 
     .prologue
-    .line 246
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    .line 368
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     if-nez v0, :cond_0
 
-    .line 247
+    .line 369
     const/4 v0, 0x0
 
-    .line 248
+    .line 370
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     invoke-virtual {v0}, Ljava/util/Hashtable;->keys()Ljava/util/Enumeration;
 
@@ -657,8 +772,8 @@
     .locals 2
 
     .prologue
-    .line 180
-    iget-wide v0, p0, Lcom/glympse/android/lib/Primitive;->ro:J
+    .line 302
+    iget-wide v0, p0, Lcom/glympse/android/lib/Primitive;->sr:J
 
     return-wide v0
 .end method
@@ -667,12 +782,12 @@
     .locals 2
 
     .prologue
-    .line 284
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 406
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -680,17 +795,17 @@
 
     if-gt v0, p1, :cond_1
 
-    .line 285
+    .line 407
     :cond_0
     const-wide/16 v0, 0x0
 
-    .line 287
+    .line 409
     :goto_0
     return-wide v0
 
-    .line 286
+    .line 408
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/hal/GVector;->elementAt(I)Ljava/lang/Object;
 
@@ -698,7 +813,7 @@
 
     check-cast v0, Lcom/glympse/android/core/GPrimitive;
 
-    .line 287
+    .line 409
     invoke-interface {v0}, Lcom/glympse/android/core/GPrimitive;->getLong()J
 
     move-result-wide v0
@@ -712,20 +827,20 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 216
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    .line 338
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     if-nez v0, :cond_0
 
     move-wide v0, v2
 
-    .line 221
+    .line 343
     :goto_0
     return-wide v0
 
-    .line 218
+    .line 340
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -733,15 +848,15 @@
 
     check-cast v0, Lcom/glympse/android/core/GPrimitive;
 
-    .line 219
+    .line 341
     if-nez v0, :cond_1
 
     move-wide v0, v2
 
-    .line 220
+    .line 342
     goto :goto_0
 
-    .line 221
+    .line 343
     :cond_1
     invoke-interface {v0}, Lcom/glympse/android/core/GPrimitive;->getLong()J
 
@@ -754,8 +869,8 @@
     .locals 1
 
     .prologue
-    .line 190
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rq:Ljava/lang/String;
+    .line 312
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->st:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -764,12 +879,12 @@
     .locals 1
 
     .prologue
-    .line 300
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 422
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -777,17 +892,17 @@
 
     if-gt v0, p1, :cond_1
 
-    .line 301
+    .line 423
     :cond_0
     const/4 v0, 0x0
 
-    .line 303
+    .line 425
     :goto_0
     return-object v0
 
-    .line 302
+    .line 424
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/hal/GVector;->elementAt(I)Ljava/lang/Object;
 
@@ -795,7 +910,7 @@
 
     check-cast v0, Lcom/glympse/android/core/GPrimitive;
 
-    .line 303
+    .line 425
     invoke-interface {v0}, Lcom/glympse/android/core/GPrimitive;->getString()Ljava/lang/String;
 
     move-result-object v0
@@ -809,20 +924,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 236
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    .line 358
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     if-nez v0, :cond_0
 
     move-object v0, v1
 
-    .line 241
+    .line 363
     :goto_0
     return-object v0
 
-    .line 238
+    .line 360
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -830,15 +945,15 @@
 
     check-cast v0, Lcom/glympse/android/core/GPrimitive;
 
-    .line 239
+    .line 361
     if-nez v0, :cond_1
 
     move-object v0, v1
 
-    .line 240
+    .line 362
     goto :goto_0
 
-    .line 241
+    .line 363
     :cond_1
     invoke-interface {v0}, Lcom/glympse/android/core/GPrimitive;->getString()Ljava/lang/String;
 
@@ -851,20 +966,20 @@
     .locals 1
 
     .prologue
-    .line 253
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    .line 375
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     if-nez v0, :cond_0
 
-    .line 254
+    .line 376
     const/4 v0, 0x0
 
-    .line 255
+    .line 377
     :goto_0
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->containsKey(Ljava/lang/Object;)Z
 
@@ -877,12 +992,12 @@
     .locals 1
 
     .prologue
-    .line 447
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 585
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -890,14 +1005,14 @@
 
     if-ge v0, p1, :cond_1
 
-    .line 450
+    .line 588
     :cond_0
     :goto_0
     return-void
 
-    .line 449
+    .line 587
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, p2, p1}, Lcom/glympse/android/hal/GVector;->insertElementAt(Ljava/lang/Object;I)V
 
@@ -976,19 +1091,19 @@
 
     const/4 v2, 0x0
 
-    .line 514
+    .line 652
     check-cast p1, Lcom/glympse/android/lib/Primitive;
 
-    .line 515
+    .line 653
     if-nez p1, :cond_0
 
     move v0, v2
 
-    .line 601
+    .line 739
     :goto_0
     return v0
 
-    .line 521
+    .line 659
     :cond_0
     iget v0, p0, Lcom/glympse/android/lib/Primitive;->_type:I
 
@@ -998,10 +1113,10 @@
 
     move v0, v2
 
-    .line 523
+    .line 661
     goto :goto_0
 
-    .line 527
+    .line 665
     :cond_1
     iget v0, p0, Lcom/glympse/android/lib/Primitive;->_type:I
 
@@ -1010,19 +1125,19 @@
     :cond_2
     move v0, v3
 
-    .line 601
+    .line 739
     goto :goto_0
 
-    .line 532
+    .line 670
     :sswitch_0
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
     move-result v5
 
-    .line 533
-    iget-object v0, p1, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 671
+    iget-object v0, p1, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -1032,18 +1147,18 @@
 
     move v0, v2
 
-    .line 535
+    .line 673
     goto :goto_0
 
     :cond_3
     move v4, v2
 
-    .line 539
+    .line 677
     :goto_1
     if-ge v4, v5, :cond_2
 
-    .line 541
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 679
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, v4}, Lcom/glympse/android/hal/GVector;->elementAt(I)Ljava/lang/Object;
 
@@ -1051,8 +1166,8 @@
 
     check-cast v0, Lcom/glympse/android/core/GPrimitive;
 
-    .line 542
-    iget-object v1, p1, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 680
+    iget-object v1, p1, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v1, v4}, Lcom/glympse/android/hal/GVector;->elementAt(I)Ljava/lang/Object;
 
@@ -1060,7 +1175,7 @@
 
     check-cast v1, Lcom/glympse/android/core/GPrimitive;
 
-    .line 545
+    .line 683
     invoke-interface {v0, v1}, Lcom/glympse/android/core/GPrimitive;->isEqual(Lcom/glympse/android/core/GCommon;)Z
 
     move-result v0
@@ -1069,10 +1184,10 @@
 
     move v0, v2
 
-    .line 547
+    .line 685
     goto :goto_0
 
-    .line 539
+    .line 677
     :cond_4
     add-int/lit8 v0, v4, 0x1
 
@@ -1080,15 +1195,15 @@
 
     goto :goto_1
 
-    .line 557
+    .line 695
     :sswitch_1
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     invoke-virtual {v0}, Ljava/util/Hashtable;->size()I
 
     move-result v0
 
-    iget-object v1, p1, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    iget-object v1, p1, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     invoke-virtual {v1}, Ljava/util/Hashtable;->size()I
 
@@ -1098,12 +1213,12 @@
 
     move v0, v2
 
-    .line 559
+    .line 697
     goto :goto_0
 
-    .line 565
+    .line 703
     :cond_5
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     invoke-virtual {v0}, Ljava/util/Hashtable;->keys()Ljava/util/Enumeration;
 
@@ -1116,15 +1231,15 @@
 
     if-eqz v0, :cond_2
 
-    .line 567
+    .line 705
     invoke-interface {v4}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 568
-    iget-object v1, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    .line 706
+    iget-object v1, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     invoke-virtual {v1, v0}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1132,8 +1247,8 @@
 
     check-cast v1, Lcom/glympse/android/core/GPrimitive;
 
-    .line 569
-    iget-object v5, p1, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    .line 707
+    iget-object v5, p1, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     invoke-virtual {v5, v0}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1141,7 +1256,7 @@
 
     check-cast v0, Lcom/glympse/android/core/GPrimitive;
 
-    .line 572
+    .line 710
     if-eqz v0, :cond_7
 
     invoke-interface {v1, v0}, Lcom/glympse/android/core/GPrimitive;->isEqual(Lcom/glympse/android/core/GCommon;)Z
@@ -1153,14 +1268,14 @@
     :cond_7
     move v0, v2
 
-    .line 574
+    .line 712
     goto :goto_0
 
-    .line 581
+    .line 719
     :sswitch_2
-    iget-wide v0, p0, Lcom/glympse/android/lib/Primitive;->rp:D
+    iget-wide v0, p0, Lcom/glympse/android/lib/Primitive;->ss:D
 
-    iget-wide v4, p1, Lcom/glympse/android/lib/Primitive;->rp:D
+    iget-wide v4, p1, Lcom/glympse/android/lib/Primitive;->ss:D
 
     cmpl-double v0, v0, v4
 
@@ -1175,11 +1290,11 @@
 
     goto/16 :goto_0
 
-    .line 585
+    .line 723
     :sswitch_3
-    iget-wide v0, p0, Lcom/glympse/android/lib/Primitive;->ro:J
+    iget-wide v0, p0, Lcom/glympse/android/lib/Primitive;->sr:J
 
-    iget-wide v4, p1, Lcom/glympse/android/lib/Primitive;->ro:J
+    iget-wide v4, p1, Lcom/glympse/android/lib/Primitive;->sr:J
 
     cmp-long v0, v0, v4
 
@@ -1194,7 +1309,7 @@
 
     goto/16 :goto_0
 
-    .line 589
+    .line 727
     :sswitch_4
     iget-boolean v0, p0, Lcom/glympse/android/lib/Primitive;->_bool:Z
 
@@ -1211,11 +1326,11 @@
 
     goto/16 :goto_0
 
-    .line 593
+    .line 731
     :sswitch_5
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rq:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->st:Ljava/lang/String;
 
-    iget-object v1, p1, Lcom/glympse/android/lib/Primitive;->rq:Ljava/lang/String;
+    iget-object v1, p1, Lcom/glympse/android/lib/Primitive;->st:Ljava/lang/String;
 
     invoke-static {v0, v1}, Lcom/glympse/android/hal/Helpers;->safeEquals(Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -1226,10 +1341,10 @@
     :sswitch_6
     move v0, v3
 
-    .line 597
+    .line 735
     goto/16 :goto_0
 
-    .line 527
+    .line 665
     nop
 
     :sswitch_data_0
@@ -1332,22 +1447,291 @@
     goto :goto_0
 .end method
 
+.method public merge(Lcom/glympse/android/core/GPrimitive;Z)Z
+    .locals 5
+
+    .prologue
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    .line 172
+    if-nez p2, :cond_0
+
+    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/glympse/android/core/GPrimitive;
+
+    invoke-static {v0, p1}, Lcom/glympse/android/lib/Primitive;->b(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    move v0, v1
+
+    .line 249
+    :goto_0
+    return v0
+
+    .line 177
+    :cond_0
+    iget v0, p0, Lcom/glympse/android/lib/Primitive;->_type:I
+
+    if-ne v2, v0, :cond_3
+
+    .line 180
+    invoke-interface {p1}, Lcom/glympse/android/core/GPrimitive;->type()I
+
+    move-result v0
+
+    if-ne v2, v0, :cond_1
+
+    .line 183
+    invoke-interface {p1}, Lcom/glympse/android/core/GPrimitive;->getArray()Lcom/glympse/android/core/GArray;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/glympse/android/core/GArray;->elements()Ljava/util/Enumeration;
+
+    move-result-object v1
+
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Enumeration;->hasMoreElements()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 185
+    invoke-interface {v1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/glympse/android/core/GPrimitive;
+
+    invoke-interface {v0}, Lcom/glympse/android/core/GPrimitive;->clone()Lcom/glympse/android/core/GPrimitive;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/glympse/android/lib/Primitive;->put(Lcom/glympse/android/core/GPrimitive;)V
+
+    goto :goto_1
+
+    .line 190
+    :cond_1
+    invoke-virtual {p0, p1}, Lcom/glympse/android/lib/Primitive;->put(Lcom/glympse/android/core/GPrimitive;)V
+
+    :cond_2
+    move v0, v2
+
+    .line 192
+    goto :goto_0
+
+    .line 194
+    :cond_3
+    if-nez p2, :cond_4
+
+    iget v0, p0, Lcom/glympse/android/lib/Primitive;->_type:I
+
+    invoke-interface {p1}, Lcom/glympse/android/core/GPrimitive;->type()I
+
+    move-result v3
+
+    if-ne v0, v3, :cond_8
+
+    .line 197
+    :cond_4
+    invoke-interface {p1}, Lcom/glympse/android/core/GPrimitive;->type()I
+
+    move-result v0
+
+    sparse-switch v0, :sswitch_data_0
+
+    :cond_5
+    :goto_2
+    move v0, v2
+
+    .line 240
+    goto :goto_0
+
+    .line 200
+    :sswitch_0
+    invoke-virtual {p0}, Lcom/glympse/android/lib/Primitive;->setArray()V
+
+    .line 201
+    invoke-interface {p1}, Lcom/glympse/android/core/GPrimitive;->getArray()Lcom/glympse/android/core/GArray;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/glympse/android/core/GArray;->elements()Ljava/util/Enumeration;
+
+    move-result-object v1
+
+    :goto_3
+    invoke-interface {v1}, Ljava/util/Enumeration;->hasMoreElements()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    .line 203
+    invoke-interface {v1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/glympse/android/core/GPrimitive;
+
+    invoke-interface {v0}, Lcom/glympse/android/core/GPrimitive;->clone()Lcom/glympse/android/core/GPrimitive;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/glympse/android/lib/Primitive;->put(Lcom/glympse/android/core/GPrimitive;)V
+
+    goto :goto_3
+
+    .line 207
+    :sswitch_1
+    const/4 v0, 0x2
+
+    iget v1, p0, Lcom/glympse/android/lib/Primitive;->_type:I
+
+    if-eq v0, v1, :cond_6
+
+    .line 209
+    invoke-virtual {p0}, Lcom/glympse/android/lib/Primitive;->setObject()V
+
+    .line 211
+    :cond_6
+    invoke-interface {p1}, Lcom/glympse/android/core/GPrimitive;->getKeys()Ljava/util/Enumeration;
+
+    move-result-object v1
+
+    :goto_4
+    invoke-interface {v1}, Ljava/util/Enumeration;->hasMoreElements()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    .line 213
+    invoke-interface {v1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    .line 214
+    invoke-interface {p1, v0}, Lcom/glympse/android/core/GPrimitive;->get(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+
+    move-result-object v3
+
+    .line 215
+    invoke-virtual {p0, v0}, Lcom/glympse/android/lib/Primitive;->get(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+
+    move-result-object v4
+
+    .line 216
+    if-eqz v4, :cond_7
+
+    .line 218
+    invoke-interface {v4, v3, p2}, Lcom/glympse/android/core/GPrimitive;->merge(Lcom/glympse/android/core/GPrimitive;Z)Z
+
+    goto :goto_4
+
+    .line 222
+    :cond_7
+    invoke-interface {v3}, Lcom/glympse/android/core/GPrimitive;->clone()Lcom/glympse/android/core/GPrimitive;
+
+    move-result-object v3
+
+    invoke-virtual {p0, v0, v3}, Lcom/glympse/android/lib/Primitive;->put(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
+
+    goto :goto_4
+
+    .line 227
+    :sswitch_2
+    invoke-virtual {p0}, Lcom/glympse/android/lib/Primitive;->setNull()V
+
+    goto :goto_2
+
+    .line 230
+    :sswitch_3
+    invoke-interface {p1}, Lcom/glympse/android/core/GPrimitive;->getLong()J
+
+    move-result-wide v0
+
+    invoke-virtual {p0, v0, v1}, Lcom/glympse/android/lib/Primitive;->set(J)V
+
+    goto :goto_2
+
+    .line 233
+    :sswitch_4
+    invoke-interface {p1}, Lcom/glympse/android/core/GPrimitive;->getDouble()D
+
+    move-result-wide v0
+
+    invoke-virtual {p0, v0, v1}, Lcom/glympse/android/lib/Primitive;->set(D)V
+
+    goto :goto_2
+
+    .line 236
+    :sswitch_5
+    invoke-interface {p1}, Lcom/glympse/android/core/GPrimitive;->getString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/glympse/android/lib/Primitive;->set(Ljava/lang/String;)V
+
+    goto :goto_2
+
+    .line 239
+    :sswitch_6
+    invoke-interface {p1}, Lcom/glympse/android/core/GPrimitive;->getBool()Z
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/glympse/android/lib/Primitive;->set(Z)V
+
+    goto :goto_2
+
+    :cond_8
+    move v0, v1
+
+    .line 249
+    goto/16 :goto_0
+
+    .line 197
+    :sswitch_data_0
+    .sparse-switch
+        0x1 -> :sswitch_0
+        0x2 -> :sswitch_1
+        0x4 -> :sswitch_4
+        0x8 -> :sswitch_3
+        0x10 -> :sswitch_6
+        0x20 -> :sswitch_5
+        0x40 -> :sswitch_2
+    .end sparse-switch
+.end method
+
 .method public put(D)V
     .locals 3
 
     .prologue
-    .line 419
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 557
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     if-nez v0, :cond_0
 
-    .line 422
+    .line 560
     :goto_0
     return-void
 
-    .line 421
+    .line 559
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     new-instance v1, Lcom/glympse/android/lib/Primitive;
 
@@ -1362,12 +1746,12 @@
     .locals 2
 
     .prologue
-    .line 461
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 599
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -1375,14 +1759,14 @@
 
     if-gt v0, p1, :cond_1
 
-    .line 464
+    .line 602
     :cond_0
     :goto_0
     return-void
 
-    .line 463
+    .line 601
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     new-instance v1, Lcom/glympse/android/lib/Primitive;
 
@@ -1397,12 +1781,12 @@
     .locals 2
 
     .prologue
-    .line 468
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 606
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -1410,14 +1794,14 @@
 
     if-gt v0, p1, :cond_1
 
-    .line 471
+    .line 609
     :cond_0
     :goto_0
     return-void
 
-    .line 470
+    .line 608
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     new-instance v1, Lcom/glympse/android/lib/Primitive;
 
@@ -1432,12 +1816,12 @@
     .locals 1
 
     .prologue
-    .line 454
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 592
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -1445,14 +1829,14 @@
 
     if-gt v0, p1, :cond_1
 
-    .line 457
+    .line 595
     :cond_0
     :goto_0
     return-void
 
-    .line 456
+    .line 594
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, p2, p1}, Lcom/glympse/android/hal/GVector;->setElementAt(Ljava/lang/Object;I)V
 
@@ -1463,12 +1847,12 @@
     .locals 2
 
     .prologue
-    .line 482
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 620
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -1476,14 +1860,14 @@
 
     if-gt v0, p1, :cond_1
 
-    .line 485
+    .line 623
     :cond_0
     :goto_0
     return-void
 
-    .line 484
+    .line 622
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     new-instance v1, Lcom/glympse/android/lib/Primitive;
 
@@ -1498,12 +1882,12 @@
     .locals 2
 
     .prologue
-    .line 475
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 613
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -1511,14 +1895,14 @@
 
     if-gt v0, p1, :cond_1
 
-    .line 478
+    .line 616
     :cond_0
     :goto_0
     return-void
 
-    .line 477
+    .line 615
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     new-instance v1, Lcom/glympse/android/lib/Primitive;
 
@@ -1533,18 +1917,18 @@
     .locals 3
 
     .prologue
-    .line 426
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 564
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     if-nez v0, :cond_0
 
-    .line 429
+    .line 567
     :goto_0
     return-void
 
-    .line 428
+    .line 566
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     new-instance v1, Lcom/glympse/android/lib/Primitive;
 
@@ -1559,18 +1943,18 @@
     .locals 1
 
     .prologue
-    .line 412
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 550
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     if-nez v0, :cond_0
 
-    .line 415
+    .line 553
     :goto_0
     return-void
 
-    .line 414
+    .line 552
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V
 
@@ -1581,18 +1965,18 @@
     .locals 2
 
     .prologue
-    .line 440
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 578
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     if-nez v0, :cond_0
 
-    .line 443
+    .line 581
     :goto_0
     return-void
 
-    .line 442
+    .line 580
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     new-instance v1, Lcom/glympse/android/lib/Primitive;
 
@@ -1607,18 +1991,18 @@
     .locals 2
 
     .prologue
-    .line 366
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    .line 504
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     if-nez v0, :cond_0
 
-    .line 369
+    .line 507
     :goto_0
     return-void
 
-    .line 368
+    .line 506
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     new-instance v1, Lcom/glympse/android/lib/Primitive;
 
@@ -1633,18 +2017,18 @@
     .locals 2
 
     .prologue
-    .line 373
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    .line 511
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     if-nez v0, :cond_0
 
-    .line 376
+    .line 514
     :goto_0
     return-void
 
-    .line 375
+    .line 513
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     new-instance v1, Lcom/glympse/android/lib/Primitive;
 
@@ -1659,18 +2043,18 @@
     .locals 1
 
     .prologue
-    .line 359
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    .line 497
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     if-nez v0, :cond_0
 
-    .line 362
+    .line 500
     :goto_0
     return-void
 
-    .line 361
+    .line 499
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1681,18 +2065,18 @@
     .locals 2
 
     .prologue
-    .line 387
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    .line 525
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     if-nez v0, :cond_0
 
-    .line 390
+    .line 528
     :goto_0
     return-void
 
-    .line 389
+    .line 527
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     new-instance v1, Lcom/glympse/android/lib/Primitive;
 
@@ -1707,18 +2091,18 @@
     .locals 2
 
     .prologue
-    .line 380
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    .line 518
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     if-nez v0, :cond_0
 
-    .line 383
+    .line 521
     :goto_0
     return-void
 
-    .line 382
+    .line 520
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     new-instance v1, Lcom/glympse/android/lib/Primitive;
 
@@ -1733,18 +2117,18 @@
     .locals 2
 
     .prologue
-    .line 433
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 571
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     if-nez v0, :cond_0
 
-    .line 436
+    .line 574
     :goto_0
     return-void
 
-    .line 435
+    .line 573
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     new-instance v1, Lcom/glympse/android/lib/Primitive;
 
@@ -1759,12 +2143,12 @@
     .locals 2
 
     .prologue
-    .line 489
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 627
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -1772,14 +2156,14 @@
 
     if-gt v0, p1, :cond_1
 
-    .line 492
+    .line 630
     :cond_0
     :goto_0
     return-void
 
-    .line 491
+    .line 629
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     new-instance v1, Lcom/glympse/android/lib/Primitive;
 
@@ -1794,18 +2178,18 @@
     .locals 2
 
     .prologue
-    .line 394
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    .line 532
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     if-nez v0, :cond_0
 
-    .line 397
+    .line 535
     :goto_0
     return-void
 
-    .line 396
+    .line 534
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     new-instance v1, Lcom/glympse/android/lib/Primitive;
 
@@ -1820,18 +2204,18 @@
     .locals 1
 
     .prologue
-    .line 496
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 634
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     if-nez v0, :cond_0
 
-    .line 499
+    .line 637
     :goto_0
     return-void
 
-    .line 498
+    .line 636
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/hal/GVector;->removeElementAt(I)V
 
@@ -1842,18 +2226,18 @@
     .locals 1
 
     .prologue
-    .line 503
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 641
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     if-nez v0, :cond_0
 
-    .line 506
+    .line 644
     :goto_0
     return-void
 
-    .line 505
+    .line 643
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/hal/GVector;->removeElement(Ljava/lang/Object;)Z
 
@@ -1864,18 +2248,18 @@
     .locals 1
 
     .prologue
-    .line 401
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    .line 539
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     if-nez v0, :cond_0
 
-    .line 404
+    .line 542
     :goto_0
     return-void
 
-    .line 403
+    .line 541
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1888,24 +2272,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 312
+    .line 434
     const/4 v0, 0x4
 
     iput v0, p0, Lcom/glympse/android/lib/Primitive;->_type:I
 
-    .line 313
-    iput-wide p1, p0, Lcom/glympse/android/lib/Primitive;->rp:D
+    .line 435
+    iput-wide p1, p0, Lcom/glympse/android/lib/Primitive;->ss:D
 
-    .line 314
-    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->rq:Ljava/lang/String;
+    .line 436
+    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->st:Ljava/lang/String;
 
-    .line 315
-    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 437
+    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
-    .line 316
-    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    .line 438
+    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
-    .line 317
+    .line 439
     return-void
 .end method
 
@@ -1915,24 +2299,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 321
+    .line 443
     const/16 v0, 0x8
 
     iput v0, p0, Lcom/glympse/android/lib/Primitive;->_type:I
 
-    .line 322
-    iput-wide p1, p0, Lcom/glympse/android/lib/Primitive;->ro:J
+    .line 444
+    iput-wide p1, p0, Lcom/glympse/android/lib/Primitive;->sr:J
 
-    .line 323
-    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->rq:Ljava/lang/String;
+    .line 445
+    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->st:Ljava/lang/String;
 
-    .line 324
-    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 446
+    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
-    .line 325
-    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    .line 447
+    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
-    .line 326
+    .line 448
     return-void
 .end method
 
@@ -1942,21 +2326,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 339
+    .line 461
     const/16 v0, 0x20
 
     iput v0, p0, Lcom/glympse/android/lib/Primitive;->_type:I
 
-    .line 340
-    iput-object p1, p0, Lcom/glympse/android/lib/Primitive;->rq:Ljava/lang/String;
+    .line 462
+    iput-object p1, p0, Lcom/glympse/android/lib/Primitive;->st:Ljava/lang/String;
 
-    .line 341
-    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 463
+    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
-    .line 342
-    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    .line 464
+    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
-    .line 343
+    .line 465
     return-void
 .end method
 
@@ -1966,24 +2350,52 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 330
+    .line 452
     const/16 v0, 0x10
 
     iput v0, p0, Lcom/glympse/android/lib/Primitive;->_type:I
 
-    .line 331
+    .line 453
     iput-boolean p1, p0, Lcom/glympse/android/lib/Primitive;->_bool:Z
 
-    .line 332
-    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->rq:Ljava/lang/String;
+    .line 454
+    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->st:Ljava/lang/String;
 
-    .line 333
-    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 455
+    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
-    .line 334
-    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    .line 456
+    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
-    .line 335
+    .line 457
+    return-void
+.end method
+
+.method public setArray()V
+    .locals 2
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 477
+    const/4 v0, 0x1
+
+    iput v0, p0, Lcom/glympse/android/lib/Primitive;->_type:I
+
+    .line 478
+    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->st:Ljava/lang/String;
+
+    .line 479
+    new-instance v0, Lcom/glympse/android/hal/GVector;
+
+    invoke-direct {v0}, Lcom/glympse/android/hal/GVector;-><init>()V
+
+    iput-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
+
+    .line 480
+    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
+
+    .line 481
     return-void
 .end method
 
@@ -1993,21 +2405,49 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 347
+    .line 469
     const/16 v0, 0x40
 
     iput v0, p0, Lcom/glympse/android/lib/Primitive;->_type:I
 
-    .line 348
-    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->rq:Ljava/lang/String;
+    .line 470
+    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->st:Ljava/lang/String;
 
-    .line 349
-    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    .line 471
+    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
-    .line 350
-    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    .line 472
+    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
-    .line 351
+    .line 473
+    return-void
+.end method
+
+.method public setObject()V
+    .locals 2
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 485
+    const/4 v0, 0x2
+
+    iput v0, p0, Lcom/glympse/android/lib/Primitive;->_type:I
+
+    .line 486
+    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->st:Ljava/lang/String;
+
+    .line 487
+    iput-object v1, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
+
+    .line 488
+    new-instance v0, Ljava/util/Hashtable;
+
+    invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
+
+    iput-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
+
+    .line 489
     return-void
 .end method
 
@@ -2016,11 +2456,11 @@
 
     .prologue
     .line 121
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rm:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sp:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -2030,11 +2470,11 @@
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->rn:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/lib/Primitive;->sq:Ljava/util/Hashtable;
 
     invoke-virtual {v0}, Ljava/util/Hashtable;->size()I
 

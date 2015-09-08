@@ -1,68 +1,113 @@
-.class public final Lcom/bbm/l/d/b/m;
-.super Ljava/lang/Exception;
-.source "IabException.java"
+.class final Lcom/bbm/l/d/b/m;
+.super Ljava/lang/Object;
+.source "GooglePlayMethod.java"
+
+# interfaces
+.implements Lcom/bbm/l/d;
 
 
 # instance fields
-.field a:Lcom/bbm/l/d/b/u;
+.field final synthetic a:Ljava/util/ArrayList;
+
+.field final synthetic b:Z
+
+.field final synthetic c:Lcom/bbm/l/d/b/l;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/l/d/b/l;Ljava/util/ArrayList;Z)V
+    .locals 0
 
     .prologue
-    .line 32
-    new-instance v0, Lcom/bbm/l/d/b/u;
+    .line 536
+    iput-object p1, p0, Lcom/bbm/l/d/b/m;->c:Lcom/bbm/l/d/b/l;
 
-    invoke-direct {v0, p1, p2}, Lcom/bbm/l/d/b/u;-><init>(ILjava/lang/String;)V
+    iput-object p2, p0, Lcom/bbm/l/d/b/m;->a:Ljava/util/ArrayList;
 
-    invoke-direct {p0, v0}, Lcom/bbm/l/d/b/m;-><init>(Lcom/bbm/l/d/b/u;)V
+    iput-boolean p3, p0, Lcom/bbm/l/d/b/m;->b:Z
 
-    .line 33
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     return-void
 .end method
 
-.method public constructor <init>(ILjava/lang/String;Ljava/lang/Exception;)V
-    .locals 1
+
+# virtual methods
+.method public final a()V
+    .locals 5
 
     .prologue
-    .line 41
-    new-instance v0, Lcom/bbm/l/d/b/u;
+    const/4 v2, 0x0
 
-    invoke-direct {v0, p1, p2}, Lcom/bbm/l/d/b/u;-><init>(ILjava/lang/String;)V
+    .line 541
+    .line 542
+    iget-object v0, p0, Lcom/bbm/l/d/b/m;->a:Ljava/util/ArrayList;
 
-    invoke-direct {p0, v0, p3}, Lcom/bbm/l/d/b/m;-><init>(Lcom/bbm/l/d/b/u;Ljava/lang/Exception;)V
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    .line 42
+    move-result-object v3
+
+    move v1, v2
+
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/l/d/b/aa;
+
+    .line 543
+    iget-object v0, v0, Lcom/bbm/l/d/b/aa;->i:Lcom/bbm/l/d/b/ab;
+
+    sget-object v4, Lcom/bbm/l/d/b/ab;->f:Lcom/bbm/l/d/b/ab;
+
+    if-ne v0, v4, :cond_2
+
+    .line 544
+    const/4 v0, 0x1
+
+    :goto_1
+    move v1, v0
+
+    .line 546
+    goto :goto_0
+
+    .line 547
+    :cond_0
+    invoke-static {}, Lcom/bbm/l/d/b/c;->k()Z
+
+    .line 548
+    iget-boolean v0, p0, Lcom/bbm/l/d/b/m;->b:Z
+
+    if-eqz v0, :cond_1
+
+    if-nez v1, :cond_1
+
+    .line 551
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
+
+    move-result-object v0
+
+    const-string v1, "revalidateStickers"
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/bbm/d/a;->a(Ljava/lang/String;Ljava/lang/Boolean;)V
+
+    .line 553
+    :cond_1
     return-void
-.end method
 
-.method private constructor <init>(Lcom/bbm/l/d/b/u;)V
-    .locals 1
+    :cond_2
+    move v0, v1
 
-    .prologue
-    .line 28
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lcom/bbm/l/d/b/m;-><init>(Lcom/bbm/l/d/b/u;Ljava/lang/Exception;)V
-
-    .line 29
-    return-void
-.end method
-
-.method private constructor <init>(Lcom/bbm/l/d/b/u;Ljava/lang/Exception;)V
-    .locals 1
-
-    .prologue
-    .line 36
-    iget-object v0, p1, Lcom/bbm/l/d/b/u;->b:Ljava/lang/String;
-
-    invoke-direct {p0, v0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    .line 37
-    iput-object p1, p0, Lcom/bbm/l/d/b/m;->a:Lcom/bbm/l/d/b/u;
-
-    .line 38
-    return-void
+    goto :goto_1
 .end method

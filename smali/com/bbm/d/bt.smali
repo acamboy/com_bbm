@@ -1,24 +1,19 @@
 .class public final Lcom/bbm/d/bt;
-.super Lcom/bbm/d/dy;
+.super Lcom/bbm/d/ez;
 .source "BbmdsProtocol.java"
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>()V
     .locals 1
 
     .prologue
-    .line 2424
-    const-string v0, "inviteCancelled"
+    .line 1705
+    const-string v0, "clearMessageHistory"
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/d/ez;-><init>(Ljava/lang/String;)V
 
-    .line 2426
-    const-string v0, "id"
-
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/bt;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 2427
+    .line 1707
     return-void
 .end method
 
@@ -28,8 +23,8 @@
     .locals 1
 
     .prologue
-    .line 2422
-    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
+    .line 1703
+    invoke-super {p0}, Lcom/bbm/d/ez;->a()Lcom/bbm/f/ab;
 
     move-result-object v0
 

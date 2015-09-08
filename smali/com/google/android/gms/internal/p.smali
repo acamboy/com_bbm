@@ -1,275 +1,352 @@
-.class public Lcom/google/android/gms/internal/p;
-.super Ljava/lang/Object;
+.class public final Lcom/google/android/gms/internal/p;
+.super Lcom/google/android/gms/internal/vf;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/google/android/gms/internal/vf",
+        "<",
+        "Lcom/google/android/gms/internal/p;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field private final ka:Lcom/google/android/gms/internal/n;
+.field public a:[Lcom/google/android/gms/internal/o;
 
-.field private final kt:Ljava/security/SecureRandom;
+.field public b:Lcom/google/android/gms/internal/m;
+
+.field public c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/internal/n;Ljava/security/SecureRandom;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/google/android/gms/internal/p;->ka:Lcom/google/android/gms/internal/n;
-
-    iput-object p2, p0, Lcom/google/android/gms/internal/p;->kt:Ljava/security/SecureRandom;
-
-    return-void
-.end method
-
-.method static c([B)V
+.method public constructor <init>()V
     .locals 2
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    :goto_0
-    array-length v1, p0
+    invoke-direct {p0}, Lcom/google/android/gms/internal/vf;-><init>()V
 
-    if-ge v0, v1, :cond_0
+    invoke-static {}, Lcom/google/android/gms/internal/o;->b()[Lcom/google/android/gms/internal/o;
 
-    aget-byte v1, p0, v0
+    move-result-object v0
 
-    xor-int/lit8 v1, v1, 0x44
+    iput-object v0, p0, Lcom/google/android/gms/internal/p;->a:[Lcom/google/android/gms/internal/o;
 
-    int-to-byte v1, v1
+    iput-object v1, p0, Lcom/google/android/gms/internal/p;->b:Lcom/google/android/gms/internal/m;
 
-    aput-byte v1, p0, v0
+    const-string v0, ""
 
-    add-int/lit8 v0, v0, 0x1
+    iput-object v0, p0, Lcom/google/android/gms/internal/p;->c:Ljava/lang/String;
 
-    goto :goto_0
+    iput-object v1, p0, Lcom/google/android/gms/internal/p;->r:Lcom/google/android/gms/internal/vh;
 
-    :cond_0
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcom/google/android/gms/internal/p;->s:I
+
     return-void
 .end method
 
 
 # virtual methods
-.method public c([BLjava/lang/String;)[B
-    .locals 6
+.method protected final a()I
+    .locals 4
 
-    const/16 v2, 0x10
+    invoke-super {p0}, Lcom/google/android/gms/internal/vf;->a()I
 
-    array-length v0, p1
+    move-result v1
 
-    if-eq v0, v2, :cond_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/p;->a:[Lcom/google/android/gms/internal/o;
 
-    new-instance v0, Lcom/google/android/gms/internal/p$a;
+    if-eqz v0, :cond_1
 
-    invoke-direct {v0, p0}, Lcom/google/android/gms/internal/p$a;-><init>(Lcom/google/android/gms/internal/p;)V
-
-    throw v0
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/internal/p;->ka:Lcom/google/android/gms/internal/n;
-
-    const/4 v1, 0x0
-
-    invoke-interface {v0, p2, v1}, Lcom/google/android/gms/internal/n;->a(Ljava/lang/String;Z)[B
-
-    move-result-object v0
-
-    array-length v1, v0
-
-    if-gt v1, v2, :cond_1
-
-    new-instance v0, Lcom/google/android/gms/internal/p$a;
-
-    invoke-direct {v0, p0}, Lcom/google/android/gms/internal/p$a;-><init>(Lcom/google/android/gms/internal/p;)V
-
-    throw v0
-    :try_end_0
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/security/InvalidKeyException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljavax/crypto/IllegalBlockSizeException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljavax/crypto/NoSuchPaddingException; {:try_start_0 .. :try_end_0} :catch_3
-    .catch Ljavax/crypto/BadPaddingException; {:try_start_0 .. :try_end_0} :catch_4
-    .catch Ljava/security/InvalidAlgorithmParameterException; {:try_start_0 .. :try_end_0} :catch_5
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_6
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Lcom/google/android/gms/internal/p$a;
-
-    invoke-direct {v1, p0, v0}, Lcom/google/android/gms/internal/p$a;-><init>(Lcom/google/android/gms/internal/p;Ljava/lang/Throwable;)V
-
-    throw v1
-
-    :cond_1
-    :try_start_1
-    array-length v1, v0
-
-    invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
-
-    const/16 v2, 0x10
-
-    new-array v2, v2, [B
+    iget-object v0, p0, Lcom/google/android/gms/internal/p;->a:[Lcom/google/android/gms/internal/o;
 
     array-length v0, v0
 
-    add-int/lit8 v0, v0, -0x10
+    if-lez v0, :cond_1
 
-    new-array v0, v0, [B
+    const/4 v0, 0x0
 
-    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
+    :goto_0
+    iget-object v2, p0, Lcom/google/android/gms/internal/p;->a:[Lcom/google/android/gms/internal/o;
 
-    invoke-virtual {v1, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
+    array-length v2, v2
 
-    new-instance v1, Ljavax/crypto/spec/SecretKeySpec;
+    if-ge v0, v2, :cond_1
 
-    const-string v3, "AES"
+    iget-object v2, p0, Lcom/google/android/gms/internal/p;->a:[Lcom/google/android/gms/internal/o;
 
-    invoke-direct {v1, p1, v3}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
+    aget-object v2, v2, v0
 
-    const-string v3, "AES/CBC/PKCS5Padding"
+    if-eqz v2, :cond_0
 
-    invoke-static {v3}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+    const/4 v3, 0x1
 
-    move-result-object v3
+    invoke-static {v3, v2}, Lcom/google/android/gms/internal/vd;->b(ILcom/google/android/gms/internal/vk;)I
 
-    const/4 v4, 0x2
+    move-result v2
 
-    new-instance v5, Ljavax/crypto/spec/IvParameterSpec;
+    add-int/2addr v1, v2
 
-    invoke-direct {v5, v2}, Ljavax/crypto/spec/IvParameterSpec;-><init>([B)V
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
 
-    invoke-virtual {v3, v4, v1, v5}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
+    goto :goto_0
 
-    invoke-virtual {v3, v0}, Ljavax/crypto/Cipher;->doFinal([B)[B
-    :try_end_1
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Ljava/security/InvalidKeyException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljavax/crypto/IllegalBlockSizeException; {:try_start_1 .. :try_end_1} :catch_2
-    .catch Ljavax/crypto/NoSuchPaddingException; {:try_start_1 .. :try_end_1} :catch_3
-    .catch Ljavax/crypto/BadPaddingException; {:try_start_1 .. :try_end_1} :catch_4
-    .catch Ljava/security/InvalidAlgorithmParameterException; {:try_start_1 .. :try_end_1} :catch_5
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_6
+    :cond_1
+    iget-object v0, p0, Lcom/google/android/gms/internal/p;->b:Lcom/google/android/gms/internal/m;
 
-    move-result-object v0
+    if-eqz v0, :cond_2
 
-    return-object v0
+    const/4 v0, 0x2
 
-    :catch_1
-    move-exception v0
+    iget-object v2, p0, Lcom/google/android/gms/internal/p;->b:Lcom/google/android/gms/internal/m;
 
-    new-instance v1, Lcom/google/android/gms/internal/p$a;
+    invoke-static {v0, v2}, Lcom/google/android/gms/internal/vd;->b(ILcom/google/android/gms/internal/vk;)I
 
-    invoke-direct {v1, p0, v0}, Lcom/google/android/gms/internal/p$a;-><init>(Lcom/google/android/gms/internal/p;Ljava/lang/Throwable;)V
+    move-result v0
 
-    throw v1
+    add-int/2addr v1, v0
 
-    :catch_2
-    move-exception v0
+    :cond_2
+    iget-object v0, p0, Lcom/google/android/gms/internal/p;->c:Ljava/lang/String;
 
-    new-instance v1, Lcom/google/android/gms/internal/p$a;
+    const-string v2, ""
 
-    invoke-direct {v1, p0, v0}, Lcom/google/android/gms/internal/p$a;-><init>(Lcom/google/android/gms/internal/p;Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    throw v1
+    move-result v0
 
-    :catch_3
-    move-exception v0
+    if-nez v0, :cond_3
 
-    new-instance v1, Lcom/google/android/gms/internal/p$a;
+    const/4 v0, 0x3
 
-    invoke-direct {v1, p0, v0}, Lcom/google/android/gms/internal/p$a;-><init>(Lcom/google/android/gms/internal/p;Ljava/lang/Throwable;)V
+    iget-object v2, p0, Lcom/google/android/gms/internal/p;->c:Ljava/lang/String;
 
-    throw v1
+    invoke-static {v0, v2}, Lcom/google/android/gms/internal/vd;->b(ILjava/lang/String;)I
 
-    :catch_4
-    move-exception v0
+    move-result v0
 
-    new-instance v1, Lcom/google/android/gms/internal/p$a;
+    add-int/2addr v1, v0
 
-    invoke-direct {v1, p0, v0}, Lcom/google/android/gms/internal/p$a;-><init>(Lcom/google/android/gms/internal/p;Ljava/lang/Throwable;)V
-
-    throw v1
-
-    :catch_5
-    move-exception v0
-
-    new-instance v1, Lcom/google/android/gms/internal/p$a;
-
-    invoke-direct {v1, p0, v0}, Lcom/google/android/gms/internal/p$a;-><init>(Lcom/google/android/gms/internal/p;Ljava/lang/Throwable;)V
-
-    throw v1
-
-    :catch_6
-    move-exception v0
-
-    new-instance v1, Lcom/google/android/gms/internal/p$a;
-
-    invoke-direct {v1, p0, v0}, Lcom/google/android/gms/internal/p$a;-><init>(Lcom/google/android/gms/internal/p;Ljava/lang/Throwable;)V
-
-    throw v1
+    :cond_3
+    return v1
 .end method
 
-.method public d(Ljava/lang/String;)[B
+.method public final a(Lcom/google/android/gms/internal/vd;)V
     .locals 3
 
-    :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/internal/p;->ka:Lcom/google/android/gms/internal/n;
+    iget-object v0, p0, Lcom/google/android/gms/internal/p;->a:[Lcom/google/android/gms/internal/o;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/p;->a:[Lcom/google/android/gms/internal/o;
+
+    array-length v0, v0
+
+    if-lez v0, :cond_1
+
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v1, p0, Lcom/google/android/gms/internal/p;->a:[Lcom/google/android/gms/internal/o;
+
+    array-length v1, v1
+
+    if-ge v0, v1, :cond_1
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/p;->a:[Lcom/google/android/gms/internal/o;
+
+    aget-object v1, v1, v0
+
+    if-eqz v1, :cond_0
+
+    const/4 v2, 0x1
+
+    invoke-virtual {p1, v2, v1}, Lcom/google/android/gms/internal/vd;->a(ILcom/google/android/gms/internal/vk;)V
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lcom/google/android/gms/internal/p;->b:Lcom/google/android/gms/internal/m;
+
+    if-eqz v0, :cond_2
+
+    const/4 v0, 0x2
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/p;->b:Lcom/google/android/gms/internal/m;
+
+    invoke-virtual {p1, v0, v1}, Lcom/google/android/gms/internal/vd;->a(ILcom/google/android/gms/internal/vk;)V
+
+    :cond_2
+    iget-object v0, p0, Lcom/google/android/gms/internal/p;->c:Ljava/lang/String;
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    const/4 v0, 0x3
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/p;->c:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v1}, Lcom/google/android/gms/internal/vd;->a(ILjava/lang/String;)V
+
+    :cond_3
+    invoke-super {p0, p1}, Lcom/google/android/gms/internal/vf;->a(Lcom/google/android/gms/internal/vd;)V
+
+    return-void
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x0
+
+    if-ne p1, p0, :cond_1
+
+    const/4 v0, 0x1
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    instance-of v1, p1, Lcom/google/android/gms/internal/p;
+
+    if-eqz v1, :cond_0
+
+    check-cast p1, Lcom/google/android/gms/internal/p;
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/p;->a:[Lcom/google/android/gms/internal/o;
+
+    iget-object v2, p1, Lcom/google/android/gms/internal/p;->a:[Lcom/google/android/gms/internal/o;
+
+    invoke-static {v1, v2}, Lcom/google/android/gms/internal/vj;->a([Ljava/lang/Object;[Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/p;->b:Lcom/google/android/gms/internal/m;
+
+    if-nez v1, :cond_4
+
+    iget-object v1, p1, Lcom/google/android/gms/internal/p;->b:Lcom/google/android/gms/internal/m;
+
+    if-nez v1, :cond_0
+
+    :cond_2
+    iget-object v1, p0, Lcom/google/android/gms/internal/p;->c:Ljava/lang/String;
+
+    if-nez v1, :cond_5
+
+    iget-object v1, p1, Lcom/google/android/gms/internal/p;->c:Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    :cond_3
+    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/p;->a(Lcom/google/android/gms/internal/vf;)Z
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v1, p0, Lcom/google/android/gms/internal/p;->b:Lcom/google/android/gms/internal/m;
+
+    iget-object v2, p1, Lcom/google/android/gms/internal/p;->b:Lcom/google/android/gms/internal/m;
+
+    invoke-virtual {v1, v2}, Lcom/google/android/gms/internal/m;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    goto :goto_0
+
+    :cond_5
+    iget-object v1, p0, Lcom/google/android/gms/internal/p;->c:Ljava/lang/String;
+
+    iget-object v2, p1, Lcom/google/android/gms/internal/p;->c:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    goto :goto_0
+.end method
+
+.method public final hashCode()I
+    .locals 3
 
     const/4 v1, 0x0
 
-    invoke-interface {v0, p1, v1}, Lcom/google/android/gms/internal/n;->a(Ljava/lang/String;Z)[B
+    iget-object v0, p0, Lcom/google/android/gms/internal/p;->a:[Lcom/google/android/gms/internal/o;
 
-    move-result-object v0
+    invoke-static {v0}, Lcom/google/android/gms/internal/vj;->a([Ljava/lang/Object;)I
 
-    array-length v1, v0
+    move-result v0
 
-    const/16 v2, 0x20
+    add-int/lit16 v0, v0, 0x20f
 
-    if-eq v1, v2, :cond_0
+    mul-int/lit8 v2, v0, 0x1f
 
-    new-instance v0, Lcom/google/android/gms/internal/p$a;
+    iget-object v0, p0, Lcom/google/android/gms/internal/p;->b:Lcom/google/android/gms/internal/m;
 
-    invoke-direct {v0, p0}, Lcom/google/android/gms/internal/p$a;-><init>(Lcom/google/android/gms/internal/p;)V
+    if-nez v0, :cond_0
 
-    throw v0
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+    move v0, v1
 
-    :catch_0
-    move-exception v0
+    :goto_0
+    add-int/2addr v0, v2
 
-    new-instance v1, Lcom/google/android/gms/internal/p$a;
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-direct {v1, p0, v0}, Lcom/google/android/gms/internal/p$a;-><init>(Lcom/google/android/gms/internal/p;Ljava/lang/Throwable;)V
+    iget-object v2, p0, Lcom/google/android/gms/internal/p;->c:Ljava/lang/String;
 
-    throw v1
+    if-nez v2, :cond_1
+
+    :goto_1
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/p;->c()I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    return v0
 
     :cond_0
-    const/4 v1, 0x4
+    iget-object v0, p0, Lcom/google/android/gms/internal/p;->b:Lcom/google/android/gms/internal/m;
 
-    const/16 v2, 0x10
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/m;->hashCode()I
 
-    :try_start_1
-    invoke-static {v0, v1, v2}, Ljava/nio/ByteBuffer;->wrap([BII)Ljava/nio/ByteBuffer;
+    move-result v0
 
-    move-result-object v0
+    goto :goto_0
 
-    const/16 v1, 0x10
+    :cond_1
+    iget-object v1, p0, Lcom/google/android/gms/internal/p;->c:Ljava/lang/String;
 
-    new-array v1, v1, [B
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
+    move-result v1
 
-    invoke-static {v1}, Lcom/google/android/gms/internal/p;->c([B)V
-    :try_end_1
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
-
-    return-object v1
+    goto :goto_1
 .end method

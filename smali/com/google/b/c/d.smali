@@ -12,7 +12,7 @@
     .locals 2
 
     .prologue
-    .line 376
+    .line 323
     const-string v0, ", "
 
     invoke-static {v0}, Lcom/google/b/a/g;->a(Ljava/lang/String;)Lcom/google/b/a/g;
@@ -45,7 +45,7 @@
     .end annotation
 
     .prologue
-    .line 373
+    .line 320
     check-cast p0, Ljava/util/Collection;
 
     return-object p0

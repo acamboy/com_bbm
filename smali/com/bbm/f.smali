@@ -1,88 +1,195 @@
 .class public final Lcom/bbm/f;
-.super Landroid/accounts/AbstractAccountAuthenticator;
-.source "BBMAuthenticator.java"
+.super Ljava/lang/Object;
+.source "AppModel.java"
+
+
+# instance fields
+.field public final a:Lcom/bbm/b/x;
+
+.field public final b:Lcom/bbm/d/a;
+
+.field public final c:Lcom/bbm/g/an;
+
+.field public d:Lcom/bbm/j/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/j/a",
+            "<",
+            "Lcom/bbm/i/b;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public e:Lcom/bbm/j/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/j/a",
+            "<",
+            "Lcom/bbm/i/b;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public f:Lcom/bbm/j/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/j/a",
+            "<",
+            "Lcom/bbm/i/b;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private g:Lcom/bbm/j/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/j/a",
+            "<",
+            "Lcom/bbm/i/b;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private h:Lcom/bbm/j/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/j/a",
+            "<",
+            "Lcom/bbm/i/b;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
+.method public constructor <init>(Lcom/bbm/d/a;Lcom/bbm/g/an;Lcom/bbm/b/x;)V
+    .locals 1
 
     .prologue
-    .line 15
-    invoke-direct {p0, p1}, Landroid/accounts/AbstractAccountAuthenticator;-><init>(Landroid/content/Context;)V
+    const/4 v0, 0x0
 
-    .line 16
+    .line 24
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 46
+    iput-object v0, p0, Lcom/bbm/f;->d:Lcom/bbm/j/a;
+
+    .line 47
+    iput-object v0, p0, Lcom/bbm/f;->e:Lcom/bbm/j/a;
+
+    .line 48
+    iput-object v0, p0, Lcom/bbm/f;->g:Lcom/bbm/j/a;
+
+    .line 49
+    iput-object v0, p0, Lcom/bbm/f;->h:Lcom/bbm/j/a;
+
+    .line 50
+    iput-object v0, p0, Lcom/bbm/f;->f:Lcom/bbm/j/a;
+
+    .line 25
+    iput-object p3, p0, Lcom/bbm/f;->a:Lcom/bbm/b/x;
+
+    .line 26
+    iput-object p1, p0, Lcom/bbm/f;->b:Lcom/bbm/d/a;
+
+    .line 27
+    iput-object p2, p0, Lcom/bbm/f;->c:Lcom/bbm/g/an;
+
+    .line 28
     return-void
+.end method
+
+.method static synthetic a(Lcom/bbm/f;)Z
+    .locals 1
+
+    .prologue
+    .line 18
+    iget-object v0, p0, Lcom/bbm/f;->b:Lcom/bbm/d/a;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/bbm/f;->c:Lcom/bbm/g/an;
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final addAccount(Landroid/accounts/AccountAuthenticatorResponse;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+.method public final a()Lcom/bbm/j/a;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/bbm/j/a",
+            "<",
+            "Lcom/bbm/i/b;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 24
-    const/4 v0, 0x0
+    .line 156
+    iget-object v0, p0, Lcom/bbm/f;->g:Lcom/bbm/j/a;
+
+    if-nez v0, :cond_0
+
+    .line 157
+    new-instance v0, Lcom/bbm/j;
+
+    invoke-direct {v0, p0}, Lcom/bbm/j;-><init>(Lcom/bbm/f;)V
+
+    iput-object v0, p0, Lcom/bbm/f;->g:Lcom/bbm/j/a;
+
+    .line 187
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/f;->g:Lcom/bbm/j/a;
 
     return-object v0
 .end method
 
-.method public final confirmCredentials(Landroid/accounts/AccountAuthenticatorResponse;Landroid/accounts/Account;Landroid/os/Bundle;)Landroid/os/Bundle;
+.method public final b()Lcom/bbm/j/a;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/bbm/j/a",
+            "<",
+            "Lcom/bbm/i/b;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 31
-    const/4 v0, 0x0
+    .line 191
+    iget-object v0, p0, Lcom/bbm/f;->h:Lcom/bbm/j/a;
 
-    return-object v0
-.end method
+    if-nez v0, :cond_0
 
-.method public final editProperties(Landroid/accounts/AccountAuthenticatorResponse;Ljava/lang/String;)Landroid/os/Bundle;
-    .locals 1
+    .line 192
+    new-instance v0, Lcom/bbm/k;
 
-    .prologue
-    .line 38
-    const/4 v0, 0x0
+    invoke-direct {v0, p0}, Lcom/bbm/k;-><init>(Lcom/bbm/f;)V
 
-    return-object v0
-.end method
+    iput-object v0, p0, Lcom/bbm/f;->h:Lcom/bbm/j/a;
 
-.method public final getAuthToken(Landroid/accounts/AccountAuthenticatorResponse;Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
-    .locals 1
-
-    .prologue
-    .line 46
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final getAuthTokenLabel(Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 51
-    const-string v0, "com.bbm.account"
-
-    return-object v0
-.end method
-
-.method public final hasFeatures(Landroid/accounts/AccountAuthenticatorResponse;Landroid/accounts/Account;[Ljava/lang/String;)Landroid/os/Bundle;
-    .locals 1
-
-    .prologue
-    .line 58
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final updateCredentials(Landroid/accounts/AccountAuthenticatorResponse;Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
-    .locals 1
-
-    .prologue
-    .line 66
-    const/4 v0, 0x0
+    .line 212
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/f;->h:Lcom/bbm/j/a;
 
     return-object v0
 .end method

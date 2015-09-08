@@ -12,9 +12,9 @@
 
 .field private _handler:Lcom/glympse/android/core/GHandler;
 
-.field private eJ:Ljava/lang/Runnable;
+.field private eM:Ljava/lang/Runnable;
 
-.field private eK:Z
+.field private eN:Z
 
 
 # direct methods
@@ -26,7 +26,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 23
-    iput-object p1, p0, Lcom/glympse/android/hal/bs;->eJ:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/glympse/android/hal/bs;->eM:Ljava/lang/Runnable;
 
     .line 24
     iput-wide p2, p0, Lcom/glympse/android/hal/bs;->C:J
@@ -37,7 +37,7 @@
     .line 26
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/glympse/android/hal/bs;->eK:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/bs;->eN:Z
 
     .line 27
     return-void
@@ -50,7 +50,7 @@
 
     .prologue
     .line 46
-    iget-boolean v0, p0, Lcom/glympse/android/hal/bs;->eK:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/bs;->eN:Z
 
     if-nez v0, :cond_1
 
@@ -61,12 +61,12 @@
 
     .line 48
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/hal/bs;->eJ:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/glympse/android/hal/bs;->eM:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     .line 49
-    iget-boolean v0, p0, Lcom/glympse/android/hal/bs;->eK:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/bs;->eN:Z
 
     if-eqz v0, :cond_0
 
@@ -97,7 +97,7 @@
     .line 33
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/glympse/android/hal/bs;->eK:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/bs;->eN:Z
 
     .line 34
     return-void
@@ -108,7 +108,7 @@
 
     .prologue
     .line 38
-    iget-boolean v0, p0, Lcom/glympse/android/hal/bs;->eK:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/bs;->eN:Z
 
     if-nez v0, :cond_0
 
@@ -125,7 +125,7 @@
     .line 41
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/glympse/android/hal/bs;->eK:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/bs;->eN:Z
 
     goto :goto_0
 .end method

@@ -1,81 +1,67 @@
-.class final Lcom/bbm/util/g/b;
-.super Ljava/lang/Object;
-.source "TimeRangeFormatter.java"
+.class public final Lcom/bbm/util/g/b;
+.super Ljava/lang/Enum;
+.source "CaptureActivityHandler.java"
 
-# interfaces
-.implements Lcom/bbm/util/g/j;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/bbm/util/g/b;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final enum a:I
+
+.field public static final enum b:I
+
+.field public static final enum c:I
+
+.field private static final synthetic d:[I
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
     .prologue
-    .line 41
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x3
+
+    const/4 v4, 0x2
+
+    const/4 v3, 0x1
+
+    .line 60
+    sput v3, Lcom/bbm/util/g/b;->a:I
+
+    .line 61
+    sput v4, Lcom/bbm/util/g/b;->b:I
+
+    .line 62
+    sput v0, Lcom/bbm/util/g/b;->c:I
+
+    .line 59
+    new-array v0, v0, [I
+
+    const/4 v1, 0x0
+
+    sget v2, Lcom/bbm/util/g/b;->a:I
+
+    aput v2, v0, v1
+
+    sget v1, Lcom/bbm/util/g/b;->b:I
+
+    aput v1, v0, v3
+
+    sget v1, Lcom/bbm/util/g/b;->c:I
+
+    aput v1, v0, v4
+
+    sput-object v0, Lcom/bbm/util/g/b;->d:[I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(Landroid/content/Context;JJ)Ljava/lang/String;
-    .locals 4
-
-    .prologue
-    const/4 v2, 0x1
-
-    .line 45
-    const-wide/32 v0, 0xea60
-
-    div-long v0, p4, v0
-
-    long-to-int v0, v0
-
-    .line 46
-    if-gtz v0, :cond_0
-
-    .line 47
-    const v0, 0x7f0e0753
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 51
-    :goto_0
-    return-object v0
-
-    .line 48
-    :cond_0
-    if-ne v0, v2, :cond_1
-
-    .line 49
-    const v0, 0x7f0e0755
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    .line 51
-    :cond_1
-    const v1, 0x7f0e0754
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    aput-object v0, v2, v3
-
-    invoke-virtual {p1, v1, v2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
 .end method

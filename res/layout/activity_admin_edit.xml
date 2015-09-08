@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/groupProfileRoot" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<LinearLayout android:orientation="vertical" android:id="@id/groupProfileRoot" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <ListView android:id="@id/group_admin_list" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@color/white" android:divider="@drawable/list_item_default_divider" />
-    <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
-</RelativeLayout>
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/view_bali_toolbar" />
+    <ListView android:id="@id/group_admin_list" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@color/white" android:divider="@drawable/list_item_default_divider" />
+</LinearLayout>

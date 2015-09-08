@@ -34,16 +34,14 @@
 
     .prologue
     .line 260
-    iget-object v0, p0, Landroid/support/v4/view/f;->a:Landroid/support/v4/view/a;
-
-    invoke-static {p1}, Landroid/support/v4/view/a;->a(Landroid/view/View;)Landroid/support/v4/view/a/i;
+    invoke-static {p1}, Landroid/support/v4/view/a;->a(Landroid/view/View;)Landroid/support/v4/view/a/p;
 
     move-result-object v0
 
     .line 262
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Landroid/support/v4/view/a/i;->a:Ljava/lang/Object;
+    iget-object v0, v0, Landroid/support/v4/view/a/p;->a:Ljava/lang/Object;
 
     :goto_0
     return-object v0
@@ -55,12 +53,10 @@
 .end method
 
 .method public final a(Landroid/view/View;I)V
-    .locals 1
+    .locals 0
 
     .prologue
     .line 250
-    iget-object v0, p0, Landroid/support/v4/view/f;->a:Landroid/support/v4/view/a;
-
     invoke-static {p1, p2}, Landroid/support/v4/view/a;->a(Landroid/view/View;I)V
 
     .line 251
@@ -74,11 +70,11 @@
     .line 233
     iget-object v0, p0, Landroid/support/v4/view/f;->a:Landroid/support/v4/view/a;
 
-    new-instance v1, Landroid/support/v4/view/a/a;
+    new-instance v1, Landroid/support/v4/view/a/e;
 
-    invoke-direct {v1, p2}, Landroid/support/v4/view/a/a;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v1, p2}, Landroid/support/v4/view/a/e;-><init>(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, p1, v1}, Landroid/support/v4/view/a;->a(Landroid/view/View;Landroid/support/v4/view/a/a;)V
+    invoke-virtual {v0, p1, v1}, Landroid/support/v4/view/a;->a(Landroid/view/View;Landroid/support/v4/view/a/e;)V
 
     .line 235
     return-void
@@ -140,12 +136,10 @@
 .end method
 
 .method public final c(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
-    .locals 1
+    .locals 0
 
     .prologue
     .line 239
-    iget-object v0, p0, Landroid/support/v4/view/f;->a:Landroid/support/v4/view/a;
-
     invoke-static {p1, p2}, Landroid/support/v4/view/a;->c(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
     .line 240
@@ -153,12 +147,10 @@
 .end method
 
 .method public final d(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
-    .locals 1
+    .locals 0
 
     .prologue
     .line 255
-    iget-object v0, p0, Landroid/support/v4/view/f;->a:Landroid/support/v4/view/a;
-
     invoke-static {p1, p2}, Landroid/support/v4/view/a;->a(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
     .line 256

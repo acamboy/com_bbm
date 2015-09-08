@@ -9,9 +9,9 @@
 # instance fields
 .field private _name:Ljava/lang/String;
 
-.field private hm:Ljava/lang/String;
+.field private hu:Ljava/lang/String;
 
-.field private hn:Lcom/glympse/android/lib/GImagePrivate;
+.field private hv:Lcom/glympse/android/lib/GImagePrivate;
 
 
 # direct methods
@@ -23,11 +23,11 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 27
-    new-instance v0, Lcom/glympse/android/lib/dz;
+    new-instance v0, Lcom/glympse/android/lib/en;
 
-    invoke-direct {v0}, Lcom/glympse/android/lib/dz;-><init>()V
+    invoke-direct {v0}, Lcom/glympse/android/lib/en;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/lib/o;->hn:Lcom/glympse/android/lib/GImagePrivate;
+    iput-object v0, p0, Lcom/glympse/android/lib/o;->hv:Lcom/glympse/android/lib/GImagePrivate;
 
     .line 28
     return-void
@@ -41,19 +41,19 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 32
-    iput-object p1, p0, Lcom/glympse/android/lib/o;->hm:Ljava/lang/String;
+    iput-object p1, p0, Lcom/glympse/android/lib/o;->hu:Ljava/lang/String;
 
     .line 33
     iput-object p2, p0, Lcom/glympse/android/lib/o;->_name:Ljava/lang/String;
 
     .line 36
-    new-instance v0, Lcom/glympse/android/lib/dz;
+    new-instance v0, Lcom/glympse/android/lib/en;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p3, v1}, Lcom/glympse/android/lib/dz;-><init>(Ljava/lang/String;Lcom/glympse/android/core/GDrawable;)V
+    invoke-direct {v0, p3, v1}, Lcom/glympse/android/lib/en;-><init>(Ljava/lang/String;Lcom/glympse/android/core/GDrawable;)V
 
-    iput-object v0, p0, Lcom/glympse/android/lib/o;->hn:Lcom/glympse/android/lib/GImagePrivate;
+    iput-object v0, p0, Lcom/glympse/android/lib/o;->hv:Lcom/glympse/android/lib/GImagePrivate;
 
     .line 37
     return-void
@@ -76,7 +76,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/o;->hm:Ljava/lang/String;
+    iput-object v0, p0, Lcom/glympse/android/lib/o;->hu:Ljava/lang/String;
 
     .line 129
     const-string v0, "name"
@@ -92,7 +92,7 @@
     iput-object v0, p0, Lcom/glympse/android/lib/o;->_name:Ljava/lang/String;
 
     .line 130
-    iget-object v0, p0, Lcom/glympse/android/lib/o;->hn:Lcom/glympse/android/lib/GImagePrivate;
+    iget-object v0, p0, Lcom/glympse/android/lib/o;->hv:Lcom/glympse/android/lib/GImagePrivate;
 
     const-string v1, "icon"
 
@@ -115,7 +115,7 @@
 
     .prologue
     .line 111
-    iget-object v0, p0, Lcom/glympse/android/lib/o;->hm:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/o;->hu:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
 
@@ -130,7 +130,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/glympse/android/lib/o;->hm:Ljava/lang/String;
+    iget-object v1, p0, Lcom/glympse/android/lib/o;->hu:Ljava/lang/String;
 
     invoke-interface {p1, v0, v1}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -157,7 +157,7 @@
 
     .line 119
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/o;->hn:Lcom/glympse/android/lib/GImagePrivate;
+    iget-object v0, p0, Lcom/glympse/android/lib/o;->hv:Lcom/glympse/android/lib/GImagePrivate;
 
     invoke-interface {v0}, Lcom/glympse/android/lib/GImagePrivate;->getUrl()Ljava/lang/String;
 
@@ -189,7 +189,7 @@
 
     .prologue
     .line 55
-    iget-object v0, p0, Lcom/glympse/android/lib/o;->hn:Lcom/glympse/android/lib/GImagePrivate;
+    iget-object v0, p0, Lcom/glympse/android/lib/o;->hv:Lcom/glympse/android/lib/GImagePrivate;
 
     return-object v0
 .end method
@@ -199,7 +199,7 @@
 
     .prologue
     .line 45
-    iget-object v0, p0, Lcom/glympse/android/lib/o;->hm:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/o;->hu:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -233,9 +233,9 @@
 
     .line 71
     :cond_1
-    iget-object v1, p0, Lcom/glympse/android/lib/o;->hm:Ljava/lang/String;
+    iget-object v1, p0, Lcom/glympse/android/lib/o;->hu:Ljava/lang/String;
 
-    iget-object v2, p1, Lcom/glympse/android/lib/o;->hm:Ljava/lang/String;
+    iget-object v2, p1, Lcom/glympse/android/lib/o;->hu:Ljava/lang/String;
 
     invoke-static {v1, v2}, Lcom/glympse/android/hal/Helpers;->safeEquals(Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -255,12 +255,12 @@
     if-eqz v1, :cond_0
 
     .line 83
-    iget-object v1, p0, Lcom/glympse/android/lib/o;->hn:Lcom/glympse/android/lib/GImagePrivate;
+    iget-object v1, p0, Lcom/glympse/android/lib/o;->hv:Lcom/glympse/android/lib/GImagePrivate;
 
     if-nez v1, :cond_3
 
     .line 85
-    iget-object v1, p1, Lcom/glympse/android/lib/o;->hn:Lcom/glympse/android/lib/GImagePrivate;
+    iget-object v1, p1, Lcom/glympse/android/lib/o;->hv:Lcom/glympse/android/lib/GImagePrivate;
 
     if-nez v1, :cond_0
 
@@ -272,18 +272,18 @@
 
     .line 92
     :cond_3
-    iget-object v1, p1, Lcom/glympse/android/lib/o;->hn:Lcom/glympse/android/lib/GImagePrivate;
+    iget-object v1, p1, Lcom/glympse/android/lib/o;->hv:Lcom/glympse/android/lib/GImagePrivate;
 
     if-eqz v1, :cond_0
 
     .line 96
-    iget-object v1, p0, Lcom/glympse/android/lib/o;->hn:Lcom/glympse/android/lib/GImagePrivate;
+    iget-object v1, p0, Lcom/glympse/android/lib/o;->hv:Lcom/glympse/android/lib/GImagePrivate;
 
     invoke-interface {v1}, Lcom/glympse/android/lib/GImagePrivate;->getUrl()Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v2, p1, Lcom/glympse/android/lib/o;->hn:Lcom/glympse/android/lib/GImagePrivate;
+    iget-object v2, p1, Lcom/glympse/android/lib/o;->hv:Lcom/glympse/android/lib/GImagePrivate;
 
     invoke-interface {v2}, Lcom/glympse/android/lib/GImagePrivate;->getUrl()Ljava/lang/String;
 

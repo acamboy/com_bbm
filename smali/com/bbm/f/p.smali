@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 403
+    .line 434
     iput-object p1, p0, Lcom/bbm/f/p;->a:Lcom/bbm/f/j;
 
     invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
@@ -37,7 +37,7 @@
     .locals 3
 
     .prologue
-    .line 403
+    .line 434
     invoke-static {}, Lcom/blackberry/ids/IDS;->getCurrentAuthState()Lcom/blackberry/ids/UserAuthState$AuthState;
 
     move-result-object v0
@@ -64,7 +64,7 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-static {v1, v2}, Lcom/bbm/y;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v1, v2}, Lcom/bbm/af;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     return-object v0
 .end method

@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/ro;
 .super Ljava/lang/Object;
-.source "GroupPictureActivity.java"
+.source "GroupSettingsActivity.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupPictureActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupSettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupPictureActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupSettingsActivity;)V
     .locals 0
 
     .prologue
-    .line 271
-    iput-object p1, p0, Lcom/bbm/ui/activities/ro;->a:Lcom/bbm/ui/activities/GroupPictureActivity;
+    .line 85
+    iput-object p1, p0, Lcom/bbm/ui/activities/ro;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,21 +26,41 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 2
+    .locals 3
 
     .prologue
-    .line 274
-    const-string v0, "barGroupIcon Clicked"
+    .line 89
+    const-string v0, "editButton Clicked"
 
-    const-class v1, Lcom/bbm/ui/activities/GroupPictureActivity;
+    const-class v1, Lcom/bbm/ui/activities/GroupSettingsActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 276
-    iget-object v0, p0, Lcom/bbm/ui/activities/ro;->a:Lcom/bbm/ui/activities/GroupPictureActivity;
+    .line 91
+    new-instance v0, Landroid/content/Intent;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupPictureActivity;->b()V
+    iget-object v1, p0, Lcom/bbm/ui/activities/ro;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
 
-    .line 277
+    const-class v2, Lcom/bbm/ui/activities/GroupAdminEditActivity;
+
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 92
+    const-string v1, "groupUri"
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/ro;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
+
+    invoke-static {v2}, Lcom/bbm/ui/activities/GroupSettingsActivity;->b(Lcom/bbm/ui/activities/GroupSettingsActivity;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 93
+    iget-object v1, p0, Lcom/bbm/ui/activities/ro;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/GroupSettingsActivity;->startActivity(Landroid/content/Intent;)V
+
+    .line 95
     return-void
 .end method

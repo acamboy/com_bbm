@@ -1,54 +1,29 @@
-.class final Lcom/bbm/ui/activities/abf;
+.class public final Lcom/bbm/ui/activities/abf;
 .super Ljava/lang/Object;
-.source "OwnProfileActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "ReportProblemActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/OwnProfileActivity;
+.field public a:Ljava/lang/String;
+
+.field public b:Ljava/lang/String;
+
+.field public c:Ljava/lang/String;
+
+.field public d:Ljava/io/File;
+
+.field final synthetic e:Lcom/bbm/ui/activities/ReportProblemActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/OwnProfileActivity;)V
+.method public constructor <init>(Lcom/bbm/ui/activities/ReportProblemActivity;)V
     .locals 0
 
     .prologue
-    .line 417
-    iput-object p1, p0, Lcom/bbm/ui/activities/abf;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
+    .line 482
+    iput-object p1, p0, Lcom/bbm/ui/activities/abf;->e:Lcom/bbm/ui/activities/ReportProblemActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
-
-    .prologue
-    .line 420
-    const-string v0, "mAvatarView Clicked"
-
-    const-class v1, Lcom/bbm/ui/activities/OwnProfileActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 422
-    iget-object v0, p0, Lcom/bbm/ui/activities/abf;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
-
-    new-instance v1, Landroid/content/Intent;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/abf;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
-
-    const-class v3, Lcom/bbm/ui/activities/AvatarViewerActivity;
-
-    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/OwnProfileActivity;->startActivity(Landroid/content/Intent;)V
-
-    .line 423
     return-void
 .end method

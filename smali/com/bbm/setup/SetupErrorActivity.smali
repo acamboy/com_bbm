@@ -10,7 +10,7 @@
 
 .field private c:Landroid/widget/Button;
 
-.field private d:Lcom/bbm/am;
+.field private d:Lcom/bbm/av;
 
 .field private e:Lcom/bbm/j/k;
 
@@ -43,12 +43,12 @@
     return-object v0
 .end method
 
-.method static synthetic a(Lcom/bbm/setup/SetupErrorActivity;Lcom/bbm/am;)Lcom/bbm/am;
+.method static synthetic a(Lcom/bbm/setup/SetupErrorActivity;Lcom/bbm/av;)Lcom/bbm/av;
     .locals 0
 
     .prologue
     .line 21
-    iput-object p1, p0, Lcom/bbm/setup/SetupErrorActivity;->d:Lcom/bbm/am;
+    iput-object p1, p0, Lcom/bbm/setup/SetupErrorActivity;->d:Lcom/bbm/av;
 
     return-object p1
 .end method
@@ -63,12 +63,12 @@
     return-object v0
 .end method
 
-.method static synthetic c(Lcom/bbm/setup/SetupErrorActivity;)Lcom/bbm/am;
+.method static synthetic c(Lcom/bbm/setup/SetupErrorActivity;)Lcom/bbm/av;
     .locals 1
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/bbm/setup/SetupErrorActivity;->d:Lcom/bbm/am;
+    iget-object v0, p0, Lcom/bbm/setup/SetupErrorActivity;->d:Lcom/bbm/av;
 
     return-object v0
 .end method
@@ -83,12 +83,12 @@
     invoke-super {p0, p1}, Lcom/bbm/setup/q;->onCreate(Landroid/os/Bundle;)V
 
     .line 116
-    const v0, 0x7f03005a
+    const v0, 0x7f030076
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/SetupErrorActivity;->setContentView(I)V
 
     .line 118
-    const v0, 0x7f0b02f7
+    const v0, 0x7f0b034a
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/SetupErrorActivity;->findViewById(I)Landroid/view/View;
 
@@ -99,7 +99,7 @@
     iput-object v0, p0, Lcom/bbm/setup/SetupErrorActivity;->a:Landroid/widget/TextView;
 
     .line 119
-    const v0, 0x7f0b02f8
+    const v0, 0x7f0b034b
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/SetupErrorActivity;->findViewById(I)Landroid/view/View;
 
@@ -110,7 +110,7 @@
     iput-object v0, p0, Lcom/bbm/setup/SetupErrorActivity;->b:Landroid/widget/TextView;
 
     .line 121
-    const v0, 0x7f0b02fa
+    const v0, 0x7f0b034d
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/SetupErrorActivity;->findViewById(I)Landroid/view/View;
 
@@ -129,7 +129,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 147
+    .line 132
     return-void
 .end method
 
@@ -137,26 +137,26 @@
     .locals 2
 
     .prologue
-    .line 159
+    .line 144
     iget-object v0, p0, Lcom/bbm/setup/SetupErrorActivity;->e:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
 
-    .line 161
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
+    .line 146
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
 
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
 
     move-result-object v0
 
-    sget-object v1, Lcom/bbm/c/o;->ax:Lcom/bbm/c/o;
+    sget-object v1, Lcom/bbm/c/s;->aJ:Lcom/bbm/c/s;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->c(Lcom/bbm/c/o;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->c(Lcom/bbm/c/s;)V
 
-    .line 162
+    .line 147
     invoke-super {p0}, Lcom/bbm/setup/q;->onPause()V
 
-    .line 163
+    .line 148
     return-void
 .end method
 
@@ -164,25 +164,25 @@
     .locals 2
 
     .prologue
-    .line 151
+    .line 136
     invoke-super {p0}, Lcom/bbm/setup/q;->onResume()V
 
-    .line 152
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
+    .line 137
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
 
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
 
     move-result-object v0
 
-    sget-object v1, Lcom/bbm/c/o;->ax:Lcom/bbm/c/o;
+    sget-object v1, Lcom/bbm/c/s;->aJ:Lcom/bbm/c/s;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->a(Lcom/bbm/c/o;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->a(Lcom/bbm/c/s;)V
 
-    .line 154
+    .line 139
     iget-object v0, p0, Lcom/bbm/setup/SetupErrorActivity;->e:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 155
+    .line 140
     return-void
 .end method

@@ -1,6 +1,9 @@
 .class final Lcom/bbm/ui/activities/s;
-.super Lcom/bbm/ui/cn;
+.super Ljava/lang/Object;
 .source "AudioPlayerActivity.java"
+
+# interfaces
+.implements Landroid/media/MediaPlayer$OnCompletionListener;
 
 
 # instance fields
@@ -12,51 +15,33 @@
     .locals 0
 
     .prologue
-    .line 64
+    .line 80
     iput-object p1, p0, Lcom/bbm/ui/activities/s;->a:Lcom/bbm/ui/activities/AudioPlayerActivity;
 
-    invoke-direct {p0}, Lcom/bbm/ui/cn;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final onCompletion(Landroid/media/MediaPlayer;)V
+    .locals 2
 
     .prologue
-    .line 68
+    .line 83
     iget-object v0, p0, Lcom/bbm/ui/activities/s;->a:Lcom/bbm/ui/activities/AudioPlayerActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/AudioPlayerActivity;->finish()V
+    invoke-static {v0}, Lcom/bbm/ui/activities/AudioPlayerActivity;->f(Lcom/bbm/ui/activities/AudioPlayerActivity;)Landroid/os/Handler;
 
-    .line 69
+    move-result-object v0
+
+    new-instance v1, Lcom/bbm/ui/activities/t;
+
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/t;-><init>(Lcom/bbm/ui/activities/s;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 91
     return-void
-.end method
-
-.method public final a(I)V
-    .locals 1
-
-    .prologue
-    .line 73
-    packed-switch p1, :pswitch_data_0
-
-    .line 78
-    :goto_0
-    return-void
-
-    .line 75
-    :pswitch_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/s;->a:Lcom/bbm/ui/activities/AudioPlayerActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/AudioPlayerActivity;->c(Lcom/bbm/ui/activities/AudioPlayerActivity;)V
-
-    goto :goto_0
-
-    .line 73
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

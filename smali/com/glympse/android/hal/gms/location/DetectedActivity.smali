@@ -18,7 +18,7 @@
 
 .field public static final UNKNOWN:I = 0x4
 
-.field private static fm:Ljava/lang/Class;
+.field private static fp:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class",
@@ -27,13 +27,13 @@
     .end annotation
 .end field
 
-.field private static fn:Ljava/lang/reflect/Method;
+.field private static fq:Ljava/lang/reflect/Method;
 
-.field private static fo:Ljava/lang/reflect/Method;
+.field private static fr:Ljava/lang/reflect/Method;
 
 
 # instance fields
-.field private fp:Ljava/lang/Object;
+.field private fs:Ljava/lang/Object;
 
 
 # direct methods
@@ -44,10 +44,10 @@
     const/4 v0, 0x0
 
     .line 22
-    sput-object v0, Lcom/glympse/android/hal/gms/location/DetectedActivity;->fn:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/DetectedActivity;->fq:Ljava/lang/reflect/Method;
 
     .line 23
-    sput-object v0, Lcom/glympse/android/hal/gms/location/DetectedActivity;->fo:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/DetectedActivity;->fr:Ljava/lang/reflect/Method;
 
     return-void
 .end method
@@ -62,10 +62,10 @@
     .line 25
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/gms/location/DetectedActivity;->fp:Ljava/lang/Object;
+    iput-object v0, p0, Lcom/glympse/android/hal/gms/location/DetectedActivity;->fs:Ljava/lang/Object;
 
     .line 29
-    iput-object p1, p0, Lcom/glympse/android/hal/gms/location/DetectedActivity;->fp:Ljava/lang/Object;
+    iput-object p1, p0, Lcom/glympse/android/hal/gms/location/DetectedActivity;->fs:Ljava/lang/Object;
 
     .line 30
     return-void
@@ -84,7 +84,7 @@
     move-result-object v0
 
     .line 61
-    sput-object v0, Lcom/glympse/android/hal/gms/location/DetectedActivity;->fm:Ljava/lang/Class;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/DetectedActivity;->fp:Ljava/lang/Class;
 
     const-string v1, "getType"
 
@@ -94,10 +94,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/DetectedActivity;->fn:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/DetectedActivity;->fq:Ljava/lang/reflect/Method;
 
     .line 62
-    sget-object v0, Lcom/glympse/android/hal/gms/location/DetectedActivity;->fm:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/DetectedActivity;->fp:Ljava/lang/Class;
 
     const-string v1, "getConfidence"
 
@@ -107,7 +107,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/DetectedActivity;->fo:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/DetectedActivity;->fr:Ljava/lang/reflect/Method;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -129,9 +129,9 @@
     .prologue
     .line 48
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/location/DetectedActivity;->fo:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/DetectedActivity;->fr:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/DetectedActivity;->fp:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/DetectedActivity;->fs:Ljava/lang/Object;
 
     const/4 v2, 0x0
 
@@ -165,9 +165,9 @@
     .prologue
     .line 36
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/location/DetectedActivity;->fn:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/DetectedActivity;->fq:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/DetectedActivity;->fp:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/DetectedActivity;->fs:Ljava/lang/Object;
 
     const/4 v2, 0x0
 

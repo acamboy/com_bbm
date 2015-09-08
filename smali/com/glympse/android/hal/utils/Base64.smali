@@ -20,23 +20,17 @@
 
 .field public static final URL_SAFE:I = 0x10
 
-.field private static final gd:I = 0x4c
+.field private static final gg:I = 0x4c
 
-.field private static final ge:B = 0x3dt
+.field private static final gh:B = 0x3dt
 
-.field private static final gf:B = 0xat
+.field private static final gi:B = 0xat
 
-.field private static final gg:Ljava/lang/String; = "US-ASCII"
+.field private static final gj:Ljava/lang/String; = "US-ASCII"
 
-.field private static final gh:B = -0x5t
+.field private static final gk:B = -0x5t
 
-.field private static final gi:B = -0x1t
-
-.field private static final gj:[B
-
-.field private static final gk:[B
-
-.field private static final gl:[B
+.field private static final gl:B = -0x1t
 
 .field private static final gm:[B
 
@@ -44,7 +38,13 @@
 
 .field private static final go:[B
 
-.field static final synthetic gp:Z
+.field private static final gp:[B
+
+.field private static final gq:[B
+
+.field private static final gr:[B
+
+.field static final synthetic gs:Z
 
 
 # direct methods
@@ -68,42 +68,42 @@
     const/4 v0, 0x1
 
     :goto_0
-    sput-boolean v0, Lcom/glympse/android/hal/utils/Base64;->gp:Z
+    sput-boolean v0, Lcom/glympse/android/hal/utils/Base64;->gs:Z
 
     .line 227
     new-array v0, v1, [B
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/glympse/android/hal/utils/Base64;->gj:[B
+    sput-object v0, Lcom/glympse/android/hal/utils/Base64;->gm:[B
 
     .line 245
     new-array v0, v2, [B
 
     fill-array-data v0, :array_1
 
-    sput-object v0, Lcom/glympse/android/hal/utils/Base64;->gk:[B
+    sput-object v0, Lcom/glympse/android/hal/utils/Base64;->gn:[B
 
     .line 287
     new-array v0, v1, [B
 
     fill-array-data v0, :array_2
 
-    sput-object v0, Lcom/glympse/android/hal/utils/Base64;->gl:[B
+    sput-object v0, Lcom/glympse/android/hal/utils/Base64;->go:[B
 
     .line 303
     new-array v0, v2, [B
 
     fill-array-data v0, :array_3
 
-    sput-object v0, Lcom/glympse/android/hal/utils/Base64;->gm:[B
+    sput-object v0, Lcom/glympse/android/hal/utils/Base64;->gp:[B
 
     .line 350
     new-array v0, v1, [B
 
     fill-array-data v0, :array_4
 
-    sput-object v0, Lcom/glympse/android/hal/utils/Base64;->gn:[B
+    sput-object v0, Lcom/glympse/android/hal/utils/Base64;->gq:[B
 
     .line 368
     const/16 v0, 0x101
@@ -112,7 +112,7 @@
 
     fill-array-data v0, :array_5
 
-    sput-object v0, Lcom/glympse/android/hal/utils/Base64;->go:[B
+    sput-object v0, Lcom/glympse/android/hal/utils/Base64;->gr:[B
 
     return-void
 
@@ -3003,7 +3003,7 @@
 
     .line 728
     :cond_0
-    sget-boolean v1, Lcom/glympse/android/hal/utils/Base64;->gp:Z
+    sget-boolean v1, Lcom/glympse/android/hal/utils/Base64;->gs:Z
 
     if-nez v1, :cond_1
 
@@ -3020,7 +3020,7 @@
     move-exception v1
 
     .line 726
-    sget-boolean v2, Lcom/glympse/android/hal/utils/Base64;->gp:Z
+    sget-boolean v2, Lcom/glympse/android/hal/utils/Base64;->gs:Z
 
     if-nez v2, :cond_0
 
@@ -3074,7 +3074,7 @@
 
     .line 797
     :cond_0
-    sget-boolean v1, Lcom/glympse/android/hal/utils/Base64;->gp:Z
+    sget-boolean v1, Lcom/glympse/android/hal/utils/Base64;->gs:Z
 
     if-nez v1, :cond_1
 
@@ -3091,7 +3091,7 @@
     move-exception v1
 
     .line 795
-    sget-boolean v2, Lcom/glympse/android/hal/utils/Base64;->gp:Z
+    sget-boolean v2, Lcom/glympse/android/hal/utils/Base64;->gs:Z
 
     if-nez v2, :cond_0
 
@@ -3173,7 +3173,7 @@
     move-exception v1
 
     .line 867
-    sget-boolean v2, Lcom/glympse/android/hal/utils/Base64;->gp:Z
+    sget-boolean v2, Lcom/glympse/android/hal/utils/Base64;->gs:Z
 
     if-nez v2, :cond_0
 
@@ -3789,11 +3789,11 @@
 
     long-to-double v4, v4
 
-    const-wide v6, 0x3ff6666666666666L
+    const-wide v6, 0x3ff6666666666666L    # 1.4
 
     mul-double/2addr v4, v6
 
-    const-wide/high16 v6, 0x3ff0000000000000L
+    const-wide/high16 v6, 0x3ff0000000000000L    # 1.0
 
     add-double/2addr v4, v6
 
@@ -4330,7 +4330,7 @@
     if-ne v0, v1, :cond_0
 
     .line 419
-    sget-object v0, Lcom/glympse/android/hal/utils/Base64;->gl:[B
+    sget-object v0, Lcom/glympse/android/hal/utils/Base64;->go:[B
 
     .line 423
     :goto_0
@@ -4345,13 +4345,13 @@
     if-ne v0, v1, :cond_1
 
     .line 421
-    sget-object v0, Lcom/glympse/android/hal/utils/Base64;->gn:[B
+    sget-object v0, Lcom/glympse/android/hal/utils/Base64;->gq:[B
 
     goto :goto_0
 
     .line 423
     :cond_1
-    sget-object v0, Lcom/glympse/android/hal/utils/Base64;->gj:[B
+    sget-object v0, Lcom/glympse/android/hal/utils/Base64;->gm:[B
 
     goto :goto_0
 .end method
@@ -4368,7 +4368,7 @@
     if-ne v0, v1, :cond_0
 
     .line 437
-    sget-object v0, Lcom/glympse/android/hal/utils/Base64;->gm:[B
+    sget-object v0, Lcom/glympse/android/hal/utils/Base64;->gp:[B
 
     .line 441
     :goto_0
@@ -4383,13 +4383,13 @@
     if-ne v0, v1, :cond_1
 
     .line 439
-    sget-object v0, Lcom/glympse/android/hal/utils/Base64;->go:[B
+    sget-object v0, Lcom/glympse/android/hal/utils/Base64;->gr:[B
 
     goto :goto_0
 
     .line 441
     :cond_1
-    sget-object v0, Lcom/glympse/android/hal/utils/Base64;->gk:[B
+    sget-object v0, Lcom/glympse/android/hal/utils/Base64;->gn:[B
 
     goto :goto_0
 .end method

@@ -1,4 +1,4 @@
-.class final enum Lcom/google/zxing/c/a/e;
+.class final Lcom/google/zxing/c/a/e;
 .super Ljava/lang/Enum;
 .source "DecodedBitStreamParser.java"
 
@@ -15,21 +15,21 @@
 
 
 # static fields
-.field public static final enum a:Lcom/google/zxing/c/a/e;
+.field public static final enum a:I
 
-.field public static final enum b:Lcom/google/zxing/c/a/e;
+.field public static final enum b:I
 
-.field public static final enum c:Lcom/google/zxing/c/a/e;
+.field public static final enum c:I
 
-.field public static final enum d:Lcom/google/zxing/c/a/e;
+.field public static final enum d:I
 
-.field public static final enum e:Lcom/google/zxing/c/a/e;
+.field public static final enum e:I
 
-.field public static final enum f:Lcom/google/zxing/c/a/e;
+.field public static final enum f:I
 
-.field public static final enum g:Lcom/google/zxing/c/a/e;
+.field public static final enum g:I
 
-.field private static final synthetic h:[Lcom/google/zxing/c/a/e;
+.field private static final synthetic h:[I
 
 
 # direct methods
@@ -37,168 +37,95 @@
     .locals 8
 
     .prologue
-    const/4 v7, 0x4
+    const/4 v7, 0x5
 
-    const/4 v6, 0x3
+    const/4 v6, 0x4
 
-    const/4 v5, 0x2
+    const/4 v5, 0x3
 
-    const/4 v4, 0x1
+    const/4 v4, 0x2
 
-    const/4 v3, 0x0
+    const/4 v3, 0x1
 
     .line 40
-    new-instance v0, Lcom/google/zxing/c/a/e;
-
-    const-string v1, "PAD_ENCODE"
-
-    invoke-direct {v0, v1, v3}, Lcom/google/zxing/c/a/e;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/google/zxing/c/a/e;->a:Lcom/google/zxing/c/a/e;
+    sput v3, Lcom/google/zxing/c/a/e;->a:I
 
     .line 41
-    new-instance v0, Lcom/google/zxing/c/a/e;
-
-    const-string v1, "ASCII_ENCODE"
-
-    invoke-direct {v0, v1, v4}, Lcom/google/zxing/c/a/e;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/google/zxing/c/a/e;->b:Lcom/google/zxing/c/a/e;
+    sput v4, Lcom/google/zxing/c/a/e;->b:I
 
     .line 42
-    new-instance v0, Lcom/google/zxing/c/a/e;
-
-    const-string v1, "C40_ENCODE"
-
-    invoke-direct {v0, v1, v5}, Lcom/google/zxing/c/a/e;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/google/zxing/c/a/e;->c:Lcom/google/zxing/c/a/e;
+    sput v5, Lcom/google/zxing/c/a/e;->c:I
 
     .line 43
-    new-instance v0, Lcom/google/zxing/c/a/e;
-
-    const-string v1, "TEXT_ENCODE"
-
-    invoke-direct {v0, v1, v6}, Lcom/google/zxing/c/a/e;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/google/zxing/c/a/e;->d:Lcom/google/zxing/c/a/e;
+    sput v6, Lcom/google/zxing/c/a/e;->d:I
 
     .line 44
-    new-instance v0, Lcom/google/zxing/c/a/e;
-
-    const-string v1, "ANSIX12_ENCODE"
-
-    invoke-direct {v0, v1, v7}, Lcom/google/zxing/c/a/e;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/google/zxing/c/a/e;->e:Lcom/google/zxing/c/a/e;
+    sput v7, Lcom/google/zxing/c/a/e;->e:I
 
     .line 45
-    new-instance v0, Lcom/google/zxing/c/a/e;
+    const/4 v0, 0x6
 
-    const-string v1, "EDIFACT_ENCODE"
-
-    const/4 v2, 0x5
-
-    invoke-direct {v0, v1, v2}, Lcom/google/zxing/c/a/e;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/google/zxing/c/a/e;->f:Lcom/google/zxing/c/a/e;
+    sput v0, Lcom/google/zxing/c/a/e;->f:I
 
     .line 46
-    new-instance v0, Lcom/google/zxing/c/a/e;
+    const/4 v0, 0x7
 
-    const-string v1, "BASE256_ENCODE"
-
-    const/4 v2, 0x6
-
-    invoke-direct {v0, v1, v2}, Lcom/google/zxing/c/a/e;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/google/zxing/c/a/e;->g:Lcom/google/zxing/c/a/e;
+    sput v0, Lcom/google/zxing/c/a/e;->g:I
 
     .line 39
     const/4 v0, 0x7
 
-    new-array v0, v0, [Lcom/google/zxing/c/a/e;
+    new-array v0, v0, [I
 
-    sget-object v1, Lcom/google/zxing/c/a/e;->a:Lcom/google/zxing/c/a/e;
+    const/4 v1, 0x0
 
-    aput-object v1, v0, v3
+    sget v2, Lcom/google/zxing/c/a/e;->a:I
 
-    sget-object v1, Lcom/google/zxing/c/a/e;->b:Lcom/google/zxing/c/a/e;
+    aput v2, v0, v1
 
-    aput-object v1, v0, v4
+    sget v1, Lcom/google/zxing/c/a/e;->b:I
 
-    sget-object v1, Lcom/google/zxing/c/a/e;->c:Lcom/google/zxing/c/a/e;
+    aput v1, v0, v3
 
-    aput-object v1, v0, v5
+    sget v1, Lcom/google/zxing/c/a/e;->c:I
 
-    sget-object v1, Lcom/google/zxing/c/a/e;->d:Lcom/google/zxing/c/a/e;
+    aput v1, v0, v4
 
-    aput-object v1, v0, v6
+    sget v1, Lcom/google/zxing/c/a/e;->d:I
 
-    sget-object v1, Lcom/google/zxing/c/a/e;->e:Lcom/google/zxing/c/a/e;
+    aput v1, v0, v5
 
-    aput-object v1, v0, v7
+    sget v1, Lcom/google/zxing/c/a/e;->e:I
 
-    const/4 v1, 0x5
+    aput v1, v0, v6
 
-    sget-object v2, Lcom/google/zxing/c/a/e;->f:Lcom/google/zxing/c/a/e;
+    sget v1, Lcom/google/zxing/c/a/e;->f:I
 
-    aput-object v2, v0, v1
+    aput v1, v0, v7
 
     const/4 v1, 0x6
 
-    sget-object v2, Lcom/google/zxing/c/a/e;->g:Lcom/google/zxing/c/a/e;
+    sget v2, Lcom/google/zxing/c/a/e;->g:I
 
-    aput-object v2, v0, v1
+    aput v2, v0, v1
 
-    sput-object v0, Lcom/google/zxing/c/a/e;->h:[Lcom/google/zxing/c/a/e;
-
-    return-void
-.end method
-
-.method private constructor <init>(Ljava/lang/String;I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
-
-    .prologue
-    .line 39
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sput-object v0, Lcom/google/zxing/c/a/e;->h:[I
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcom/google/zxing/c/a/e;
+.method public static a()[I
     .locals 1
 
     .prologue
     .line 39
-    const-class v0, Lcom/google/zxing/c/a/e;
+    sget-object v0, Lcom/google/zxing/c/a/e;->h:[I
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/zxing/c/a/e;
-
-    return-object v0
-.end method
-
-.method public static values()[Lcom/google/zxing/c/a/e;
-    .locals 1
-
-    .prologue
-    .line 39
-    sget-object v0, Lcom/google/zxing/c/a/e;->h:[Lcom/google/zxing/c/a/e;
-
-    invoke-virtual {v0}, [Lcom/google/zxing/c/a/e;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, [I->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lcom/google/zxing/c/a/e;
+    check-cast v0, [I
 
     return-object v0
 .end method

@@ -82,7 +82,7 @@
     .line 69
     iget v1, p1, Landroid/view/inputmethod/EditorInfo;->imeOptions:I
 
-    const v2, -0x40000001
+    const v2, -0x40000001    # -1.9999999f
 
     and-int/2addr v1, v2
 

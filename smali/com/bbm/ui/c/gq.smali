@@ -1,110 +1,37 @@
 .class final Lcom/bbm/ui/c/gq;
-.super Lcom/bbm/d/b/f;
-.source "SlideMenuFragment.java"
+.super Ljava/lang/Object;
+.source "StickerDetailsFragment.java"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/d/b/f",
-        "<",
-        "Lcom/bbm/ui/slidingmenu/a;",
-        ">;"
-    }
-.end annotation
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field a:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/ui/slidingmenu/a;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field final synthetic b:Lcom/bbm/ui/c/gj;
+.field final synthetic a:Lcom/bbm/ui/c/fx;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/ui/c/gj;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/c/fx;)V
+    .locals 0
 
     .prologue
-    .line 440
-    iput-object p1, p0, Lcom/bbm/ui/c/gq;->b:Lcom/bbm/ui/c/gj;
+    .line 995
+    iput-object p1, p0, Lcom/bbm/ui/c/gq;->a:Lcom/bbm/ui/c/fx;
 
-    .line 441
-    invoke-direct {p0}, Lcom/bbm/d/b/f;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 438
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/bbm/ui/c/gq;->a:Ljava/util/List;
-
-    .line 442
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()Ljava/util/List;
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/ui/slidingmenu/a;",
-            ">;"
-        }
-    .end annotation
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 0
 
     .prologue
-    .line 456
-    new-instance v1, Ljava/util/ArrayList;
+    .line 998
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    .line 457
-    iget-object v0, p0, Lcom/bbm/ui/c/gq;->a:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :cond_0
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/slidingmenu/a;
-
-    .line 458
-    invoke-static {v0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/g;)V
-
-    iget-boolean v3, v0, Lcom/bbm/ui/slidingmenu/a;->d:Z
-
-    if-eqz v3, :cond_0
-
-    .line 459
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    .line 462
-    :cond_1
-    return-object v1
+    .line 999
+    return-void
 .end method

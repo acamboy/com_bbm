@@ -1,166 +1,145 @@
-.class public Lcom/bbm/l/d/b/x;
+.class public final Lcom/bbm/l/d/b/x;
 .super Ljava/lang/Object;
-.source "Purchase.java"
-
-# interfaces
-.implements Lcom/bbm/l/d/c;
+.source "IabResult.java"
 
 
 # instance fields
-.field h:Ljava/lang/String;
+.field public a:I
 
-.field i:Ljava/lang/String;
-
-.field j:Ljava/lang/String;
-
-.field k:Ljava/lang/String;
-
-.field l:J
-
-.field public m:I
-
-.field n:Ljava/lang/String;
-
-.field o:Ljava/lang/String;
-
-.field p:Ljava/lang/String;
-
-.field q:Ljava/lang/String;
+.field b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 4
+.method public constructor <init>(ILjava/lang/String;)V
+    .locals 2
 
     .prologue
-    .line 39
+    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
-    iput-object p1, p0, Lcom/bbm/l/d/b/x;->h:Ljava/lang/String;
+    .line 34
+    iput p1, p0, Lcom/bbm/l/d/b/x;->a:I
 
-    .line 41
-    iput-object p2, p0, Lcom/bbm/l/d/b/x;->p:Ljava/lang/String;
+    .line 35
+    if-eqz p2, :cond_0
 
-    .line 42
-    new-instance v0, Lorg/json/JSONObject;
-
-    iget-object v1, p0, Lcom/bbm/l/d/b/x;->p:Ljava/lang/String;
-
-    invoke-direct {v0, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
-
-    .line 43
-    const-string v1, "orderId"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/bbm/l/d/b/x;->i:Ljava/lang/String;
-
-    .line 44
-    const-string v1, "packageName"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/bbm/l/d/b/x;->j:Ljava/lang/String;
-
-    .line 45
-    const-string v1, "productId"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/bbm/l/d/b/x;->k:Ljava/lang/String;
-
-    .line 46
-    const-string v1, "purchaseTime"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;)J
-
-    move-result-wide v2
-
-    iput-wide v2, p0, Lcom/bbm/l/d/b/x;->l:J
-
-    .line 47
-    const-string v1, "purchaseState"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
-
-    move-result v1
-
-    iput v1, p0, Lcom/bbm/l/d/b/x;->m:I
-
-    .line 48
-    const-string v1, "developerPayload"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/bbm/l/d/b/x;->n:Ljava/lang/String;
-
-    .line 49
-    const-string v1, "token"
-
-    const-string v2, "purchaseToken"
-
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/l/d/b/x;->o:Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    .line 50
-    iput-object p3, p0, Lcom/bbm/l/d/b/x;->q:Ljava/lang/String;
+    move-result v0
 
-    .line 51
+    if-nez v0, :cond_1
+
+    .line 36
+    :cond_0
+    invoke-static {p1}, Lcom/bbm/l/d/b/q;->a(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/l/d/b/x;->b:Ljava/lang/String;
+
+    .line 40
+    :goto_0
     return-void
+
+    .line 38
+    :cond_1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " (response: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-static {p1}, Lcom/bbm/l/d/b/q;->a(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/l/d/b/x;->b:Ljava/lang/String;
+
+    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public a()Lcom/bbm/l/d/d;
+.method public final a()Z
     .locals 1
 
     .prologue
-    .line 100
-    sget-object v0, Lcom/bbm/l/d/d;->b:Lcom/bbm/l/d/d;
+    .line 57
+    iget v0, p0, Lcom/bbm/l/d/b/x;->a:I
 
-    return-object v0
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
-.method public toString()Ljava/lang/String;
+.method public final b()Z
+    .locals 1
+
+    .prologue
+    .line 62
+    invoke-virtual {p0}, Lcom/bbm/l/d/b/x;->a()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 2
 
     .prologue
-    .line 95
+    .line 67
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "PurchaseInfo(type:"
+    const-string v1, "IabResult: "
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/bbm/l/d/b/x;->h:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "):"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/l/d/b/x;->p:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/l/d/b/x;->b:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

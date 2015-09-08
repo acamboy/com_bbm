@@ -22,14 +22,14 @@
 
     move-result-object v0
 
-    const v1, 0x7f030144
+    const v1, 0x7f030160
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 26
-    const v0, 0x7f0b0666
+    const v0, 0x7f0b0467
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/QuickActionAttachmentsItemView;->findViewById(I)Landroid/view/View;
 
@@ -40,7 +40,7 @@
     iput-object v0, p0, Lcom/bbm/ui/QuickActionAttachmentsItemView;->a:Lcom/bbm/ui/ObservingImageView;
 
     .line 27
-    const v0, 0x7f0b0667
+    const v0, 0x7f0b06dd
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/QuickActionAttachmentsItemView;->findViewById(I)Landroid/view/View;
 
@@ -76,7 +76,7 @@
             "(",
             "Lcom/bbm/j/r",
             "<",
-            "Lcom/bbm/d/ff;",
+            "Lcom/bbm/d/gh;",
             ">;)V"
         }
     .end annotation

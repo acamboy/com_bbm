@@ -1,100 +1,205 @@
-.class final Lcom/bbm/util/dt;
+.class public Lcom/bbm/util/dt;
 .super Ljava/lang/Object;
-.source "TpaUtil.java"
+.source "SearchStringMatcher.java"
 
-# interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+
+# static fields
+.field private static final b:Lcom/bbm/util/dt;
+
+.field private static final c:Lcom/bbm/util/dt;
+
+.field private static final d:[Ljava/lang/String;
 
 
 # instance fields
-.field final synthetic a:Landroid/content/Context;
-
-.field final synthetic b:Lcom/bbm/d/fn;
-
-.field final synthetic c:Ljava/lang/String;
-
-.field final synthetic d:Ljava/lang/String;
+.field private final a:Ljava/util/regex/Pattern;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;Lcom/bbm/d/fn;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 255
-    iput-object p1, p0, Lcom/bbm/util/dt;->a:Landroid/content/Context;
+    .line 21
+    new-instance v0, Lcom/bbm/util/du;
 
-    iput-object p2, p0, Lcom/bbm/util/dt;->b:Lcom/bbm/d/fn;
+    invoke-direct {v0}, Lcom/bbm/util/du;-><init>()V
 
-    iput-object p3, p0, Lcom/bbm/util/dt;->c:Ljava/lang/String;
+    sput-object v0, Lcom/bbm/util/dt;->b:Lcom/bbm/util/dt;
 
-    iput-object p4, p0, Lcom/bbm/util/dt;->d:Ljava/lang/String;
+    .line 28
+    new-instance v0, Lcom/bbm/util/dv;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Lcom/bbm/util/dv;-><init>()V
+
+    sput-object v0, Lcom/bbm/util/dt;->c:Lcom/bbm/util/dt;
+
+    .line 62
+    const/4 v0, 0x5
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    const-string v2, ":)"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x1
+
+    const-string v2, ":D"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x2
+
+    const-string v2, "#=-s"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x3
+
+    const-string v2, "\\=D/"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x4
+
+    const-string v2, ":|"
+
+    aput-object v2, v0, v1
+
+    sput-object v0, Lcom/bbm/util/dt;->d:[Ljava/lang/String;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 5
+.method private constructor <init>()V
+    .locals 1
 
     .prologue
-    .line 257
-    new-instance v0, Lcom/bbm/util/du;
+    .line 12
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, p0}, Lcom/bbm/util/du;-><init>(Lcom/bbm/util/dt;)V
+    .line 13
+    const/4 v0, 0x0
 
-    .line 302
-    invoke-virtual {v0}, Landroid/os/Handler;->obtainMessage()Landroid/os/Message;
+    iput-object v0, p0, Lcom/bbm/util/dt;->a:Ljava/util/regex/Pattern;
+
+    .line 14
+    return-void
+.end method
+
+.method synthetic constructor <init>(B)V
+    .locals 0
+
+    .prologue
+    .line 8
+    invoke-direct {p0}, Lcom/bbm/util/dt;-><init>()V
+
+    return-void
+.end method
+
+.method private constructor <init>(Ljava/lang/String;)V
+    .locals 3
+
+    .prologue
+    .line 16
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 17
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "\\b"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "\\s+"
+
+    const-string v2, " "
+
+    invoke-virtual {p1, v1, v2}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 303
-    new-instance v2, Ljava/util/HashMap;
+    invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
+    move-result-object v1
 
-    .line 304
-    const-string v3, "partnerApp"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/bbm/util/dt;->b:Lcom/bbm/d/fn;
+    move-result-object v0
 
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 305
-    const-string v3, "invokeUrl"
+    move-result-object v0
 
-    iget-object v4, p0, Lcom/bbm/util/dt;->b:Lcom/bbm/d/fn;
+    const/4 v1, 0x2
 
-    iget-object v4, v4, Lcom/bbm/d/fn;->f:Ljava/lang/String;
+    invoke-static {v0, v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
 
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v0
 
-    .line 306
-    const-string v3, "bbmId"
+    iput-object v0, p0, Lcom/bbm/util/dt;->a:Ljava/util/regex/Pattern;
 
-    iget-object v4, p0, Lcom/bbm/util/dt;->c:Ljava/lang/String;
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 307
-    const-string v3, "appContext"
-
-    iget-object v4, p0, Lcom/bbm/util/dt;->d:Ljava/lang/String;
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 309
-    iput-object v2, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    .line 310
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    .line 312
-    invoke-interface {p1}, Landroid/content/DialogInterface;->cancel()V
-
-    .line 313
+    .line 19
     return-void
+.end method
+
+.method public static a(Ljava/lang/String;)Lcom/bbm/util/dt;
+    .locals 1
+
+    .prologue
+    .line 36
+    invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 37
+    sget-object v0, Lcom/bbm/util/dt;->b:Lcom/bbm/util/dt;
+
+    .line 44
+    :goto_0
+    return-object v0
+
+    .line 40
+    :cond_0
+    :try_start_0
+    new-instance v0, Lcom/bbm/util/dt;
+
+    invoke-direct {v0, p0}, Lcom/bbm/util/dt;-><init>(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/util/regex/PatternSyntaxException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    .line 44
+    :catch_0
+    move-exception v0
+
+    sget-object v0, Lcom/bbm/util/dt;->c:Lcom/bbm/util/dt;
+
+    goto :goto_0
+.end method
+
+
+# virtual methods
+.method public b(Ljava/lang/String;)Z
+    .locals 1
+
+    .prologue
+    .line 94
+    iget-object v0, p0, Lcom/bbm/util/dt;->a:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result v0
+
+    return v0
 .end method

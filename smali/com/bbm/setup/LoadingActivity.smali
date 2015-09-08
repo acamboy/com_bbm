@@ -4,10 +4,10 @@
 
 
 # instance fields
-.field private a:Lcom/bbm/util/ct;
+.field private a:Lcom/bbm/util/dc;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/bbm/util/ct",
+            "Lcom/bbm/util/dc",
             "<",
             "Ljava/lang/Boolean;",
             ">;"
@@ -17,7 +17,7 @@
 
 .field private b:Landroid/app/Dialog;
 
-.field private c:Lcom/bbm/c/o;
+.field private c:Lcom/bbm/c/s;
 
 .field private final d:Lcom/bbm/j/k;
 
@@ -27,7 +27,7 @@
 
 .field private final g:[I
 
-.field private h:Lcom/bbm/ag;
+.field private h:Lcom/bbm/an;
 
 .field private i:Landroid/os/Handler;
 
@@ -55,7 +55,7 @@
     invoke-direct {p0}, Lcom/bbm/setup/q;-><init>()V
 
     .line 42
-    new-instance v0, Lcom/bbm/util/ct;
+    new-instance v0, Lcom/bbm/util/dc;
 
     const/4 v1, 0x0
 
@@ -63,9 +63,9 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/bbm/util/ct;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, v1}, Lcom/bbm/util/dc;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lcom/bbm/setup/LoadingActivity;->a:Lcom/bbm/util/ct;
+    iput-object v0, p0, Lcom/bbm/setup/LoadingActivity;->a:Lcom/bbm/util/dc;
 
     .line 47
     new-instance v0, Lcom/bbm/setup/h;
@@ -98,11 +98,11 @@
     iput-object v0, p0, Lcom/bbm/setup/LoadingActivity;->g:[I
 
     .line 129
-    invoke-static {}, Lcom/bbm/Alaska;->l()Lcom/bbm/ag;
+    invoke-static {}, Lcom/bbm/Alaska;->p()Lcom/bbm/an;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/setup/LoadingActivity;->h:Lcom/bbm/ag;
+    iput-object v0, p0, Lcom/bbm/setup/LoadingActivity;->h:Lcom/bbm/an;
 
     .line 130
     new-instance v0, Landroid/os/Handler;
@@ -123,9 +123,9 @@
 
     :array_0
     .array-data 4
-        0x7f0b0301
-        0x7f0b0304
-        0x7f0b0307
+        0x7f0b0353
+        0x7f0b0356
+        0x7f0b0359
     .end array-data
 .end method
 
@@ -172,7 +172,7 @@
     .line 40
     iget-object v0, p0, Lcom/bbm/setup/LoadingActivity;->p:Landroid/widget/TextView;
 
-    const v1, 0x7f0e06c9
+    const v1, 0x7f0e079f
 
     invoke-virtual {p0, v1}, Lcom/bbm/setup/LoadingActivity;->getString(I)Ljava/lang/String;
 
@@ -187,20 +187,20 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/setup/LoadingActivity;Lcom/bbm/c/o;)V
+.method static synthetic a(Lcom/bbm/setup/LoadingActivity;Lcom/bbm/c/s;)V
     .locals 1
 
     .prologue
     .line 40
     if-eqz p1, :cond_0
 
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/bbm/c/c;->a(Lcom/bbm/c/o;)V
+    invoke-virtual {v0, p1}, Lcom/bbm/c/c;->a(Lcom/bbm/c/s;)V
 
-    iput-object p1, p0, Lcom/bbm/setup/LoadingActivity;->c:Lcom/bbm/c/o;
+    iput-object p1, p0, Lcom/bbm/setup/LoadingActivity;->c:Lcom/bbm/c/s;
 
     :cond_0
     return-void
@@ -213,7 +213,7 @@
     .line 40
     iget-object v0, p0, Lcom/bbm/setup/LoadingActivity;->p:Landroid/widget/TextView;
 
-    const v1, 0x7f0e06d6
+    const v1, 0x7f0e07ac
 
     invoke-virtual {p0, v1}, Lcom/bbm/setup/LoadingActivity;->getString(I)Ljava/lang/String;
 
@@ -233,33 +233,33 @@
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/bbm/setup/LoadingActivity;->h:Lcom/bbm/ag;
+    iget-object v0, p0, Lcom/bbm/setup/LoadingActivity;->h:Lcom/bbm/an;
 
-    invoke-virtual {v0}, Lcom/bbm/ag;->j()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/bbm/setup/LoadingActivity;->h:Lcom/bbm/ag;
-
-    invoke-virtual {v0}, Lcom/bbm/ag;->p()Z
+    invoke-virtual {v0}, Lcom/bbm/an;->i()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/bbm/setup/LoadingActivity;->h:Lcom/bbm/ag;
+    iget-object v0, p0, Lcom/bbm/setup/LoadingActivity;->h:Lcom/bbm/an;
 
-    invoke-virtual {v0}, Lcom/bbm/ag;->h()Z
+    invoke-virtual {v0}, Lcom/bbm/an;->o()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/bbm/setup/LoadingActivity;->h:Lcom/bbm/an;
+
+    invoke-virtual {v0}, Lcom/bbm/an;->g()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/bbm/setup/LoadingActivity;->h:Lcom/bbm/ag;
+    iget-object v0, p0, Lcom/bbm/setup/LoadingActivity;->h:Lcom/bbm/an;
 
-    invoke-virtual {v0}, Lcom/bbm/ag;->i()Z
+    invoke-virtual {v0}, Lcom/bbm/an;->h()Z
 
     move-result v0
 
@@ -284,7 +284,7 @@
     .line 40
     iget-object v0, p0, Lcom/bbm/setup/LoadingActivity;->p:Landroid/widget/TextView;
 
-    const v1, 0x7f0e038a
+    const v1, 0x7f0e03ea
 
     invoke-virtual {p0, v1}, Lcom/bbm/setup/LoadingActivity;->getString(I)Ljava/lang/String;
 
@@ -299,12 +299,12 @@
     return-void
 .end method
 
-.method static synthetic e(Lcom/bbm/setup/LoadingActivity;)Lcom/bbm/c/o;
+.method static synthetic e(Lcom/bbm/setup/LoadingActivity;)Lcom/bbm/c/s;
     .locals 1
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/bbm/setup/LoadingActivity;->c:Lcom/bbm/c/o;
+    iget-object v0, p0, Lcom/bbm/setup/LoadingActivity;->c:Lcom/bbm/c/s;
 
     return-object v0
 .end method
@@ -314,13 +314,19 @@
 
     .prologue
     .line 295
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
 
-    invoke-static {}, Lcom/bbm/Alaska;->u()Lcom/bbm/setup/af;
+    sget-object v0, Lcom/bbm/Alaska;->f:Lcom/bbm/setup/z;
+
+    iget-object v0, v0, Lcom/bbm/setup/z;->r:Lcom/bbm/j/a;
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/setup/af;->a:Lcom/bbm/setup/ag;
+    check-cast v0, Lcom/bbm/setup/am;
+
+    iget-object v0, v0, Lcom/bbm/setup/am;->a:Lcom/bbm/setup/an;
 
     .line 296
     const-class v1, Lcom/bbm/setup/ContactListAccessPromptActivity;
@@ -337,7 +343,7 @@
     move-result-object v2
 
     .line 298
-    iget-object v0, v0, Lcom/bbm/setup/ag;->n:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/setup/an;->n:Ljava/lang/String;
 
     .line 300
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -352,9 +358,9 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/bbm/setup/LoadingActivity;->a:Lcom/bbm/util/ct;
+    iget-object v0, p0, Lcom/bbm/setup/LoadingActivity;->a:Lcom/bbm/util/dc;
 
-    invoke-virtual {v0}, Lcom/bbm/util/ct;->e()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/util/dc;->f()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -415,12 +421,12 @@
     return-void
 .end method
 
-.method static synthetic g(Lcom/bbm/setup/LoadingActivity;)Lcom/bbm/util/ct;
+.method static synthetic g(Lcom/bbm/setup/LoadingActivity;)Lcom/bbm/util/dc;
     .locals 1
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/bbm/setup/LoadingActivity;->a:Lcom/bbm/util/ct;
+    iget-object v0, p0, Lcom/bbm/setup/LoadingActivity;->a:Lcom/bbm/util/dc;
 
     return-object v0
 .end method
@@ -430,23 +436,23 @@
 
     .prologue
     .line 363
-    iget-object v0, p0, Lcom/bbm/setup/LoadingActivity;->c:Lcom/bbm/c/o;
+    iget-object v0, p0, Lcom/bbm/setup/LoadingActivity;->c:Lcom/bbm/c/s;
 
     if-eqz v0, :cond_0
 
     .line 364
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/setup/LoadingActivity;->c:Lcom/bbm/c/o;
+    iget-object v1, p0, Lcom/bbm/setup/LoadingActivity;->c:Lcom/bbm/c/s;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->c(Lcom/bbm/c/o;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->c(Lcom/bbm/c/s;)V
 
     .line 365
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/bbm/setup/LoadingActivity;->c:Lcom/bbm/c/o;
+    iput-object v0, p0, Lcom/bbm/setup/LoadingActivity;->c:Lcom/bbm/c/s;
 
     .line 367
     :cond_0
@@ -474,11 +480,11 @@
 
     iget-object v0, p0, Lcom/bbm/setup/LoadingActivity;->e:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
 
     invoke-direct {p0}, Lcom/bbm/setup/LoadingActivity;->g()V
 
-    iget-object v0, p0, Lcom/bbm/setup/LoadingActivity;->a:Lcom/bbm/util/ct;
+    iget-object v0, p0, Lcom/bbm/setup/LoadingActivity;->a:Lcom/bbm/util/dc;
 
     const/4 v1, 0x1
 
@@ -486,7 +492,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
 
     iget-object v0, p0, Lcom/bbm/setup/LoadingActivity;->b:Landroid/app/Dialog;
 
@@ -698,25 +704,25 @@
     :array_0
     .array-data 4
         0x0
-        -0x3d4c0000
+        -0x3d4c0000    # -90.0f
     .end array-data
 
     :array_1
     .array-data 4
-        0x3f800000
+        0x3f800000    # 1.0f
         0x0
     .end array-data
 
     :array_2
     .array-data 4
-        0x42b40000
+        0x42b40000    # 90.0f
         0x0
     .end array-data
 
     :array_3
     .array-data 4
         0x0
-        0x3f800000
+        0x3f800000    # 1.0f
     .end array-data
 .end method
 
@@ -794,12 +800,12 @@
     invoke-super {p0, p1}, Lcom/bbm/setup/q;->onCreate(Landroid/os/Bundle;)V
 
     .line 143
-    const v0, 0x7f03005c
+    const v0, 0x7f030078
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/LoadingActivity;->setContentView(I)V
 
     .line 145
-    const v0, 0x7f0b02fe
+    const v0, 0x7f0b0351
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/LoadingActivity;->findViewById(I)Landroid/view/View;
 
@@ -810,7 +816,7 @@
     iput-object v0, p0, Lcom/bbm/setup/LoadingActivity;->l:Landroid/widget/LinearLayout;
 
     .line 146
-    const v0, 0x7f0b0301
+    const v0, 0x7f0b0353
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/LoadingActivity;->findViewById(I)Landroid/view/View;
 
@@ -821,7 +827,7 @@
     iput-object v0, p0, Lcom/bbm/setup/LoadingActivity;->m:Landroid/widget/LinearLayout;
 
     .line 147
-    const v0, 0x7f0b0304
+    const v0, 0x7f0b0356
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/LoadingActivity;->findViewById(I)Landroid/view/View;
 
@@ -832,7 +838,7 @@
     iput-object v0, p0, Lcom/bbm/setup/LoadingActivity;->n:Landroid/widget/LinearLayout;
 
     .line 148
-    const v0, 0x7f0b0307
+    const v0, 0x7f0b0359
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/LoadingActivity;->findViewById(I)Landroid/view/View;
 
@@ -843,7 +849,7 @@
     iput-object v0, p0, Lcom/bbm/setup/LoadingActivity;->o:Landroid/widget/LinearLayout;
 
     .line 149
-    const v0, 0x7f0b02ff
+    const v0, 0x7f0b0352
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/LoadingActivity;->findViewById(I)Landroid/view/View;
 
@@ -878,7 +884,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a0337
+    const v2, 0x7f0a03a7
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -890,7 +896,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0336
+    const v1, 0x7f0a03a6
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -900,31 +906,31 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0331
+    const v1, 0x7f0a03a1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v6
 
-    const v1, 0x7f0b0302
+    const v1, 0x7f0b0354
 
-    const v2, 0x7f0b0303
-
-    move-object v0, p0
-
-    invoke-direct/range {v0 .. v6}, Lcom/bbm/setup/LoadingActivity;->a(IILandroid/graphics/Typeface;Landroid/graphics/Typeface;FF)V
-
-    const v1, 0x7f0b0305
-
-    const v2, 0x7f0b0306
+    const v2, 0x7f0b0355
 
     move-object v0, p0
 
     invoke-direct/range {v0 .. v6}, Lcom/bbm/setup/LoadingActivity;->a(IILandroid/graphics/Typeface;Landroid/graphics/Typeface;FF)V
 
-    const v1, 0x7f0b0308
+    const v1, 0x7f0b0357
 
-    const v2, 0x7f0b0309
+    const v2, 0x7f0b0358
+
+    move-object v0, p0
+
+    invoke-direct/range {v0 .. v6}, Lcom/bbm/setup/LoadingActivity;->a(IILandroid/graphics/Typeface;Landroid/graphics/Typeface;FF)V
+
+    const v1, 0x7f0b035a
+
+    const v2, 0x7f0b035b
 
     move-object v0, p0
 
@@ -968,12 +974,12 @@
     .line 196
     iget-object v0, p0, Lcom/bbm/setup/LoadingActivity;->e:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
 
     .line 197
     iget-object v0, p0, Lcom/bbm/setup/LoadingActivity;->d:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
 
     .line 201
     invoke-direct {p0}, Lcom/bbm/setup/LoadingActivity;->g()V

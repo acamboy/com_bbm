@@ -1,18 +1,28 @@
 .class final Landroid/support/v4/app/co;
 .super Ljava/lang/Object;
-.source "RemoteInput.java"
+.source "NotificationManagerCompat.java"
 
-# interfaces
-.implements Landroid/support/v4/app/cn;
+
+# instance fields
+.field final a:Landroid/content/ComponentName;
+
+.field final b:Landroid/os/IBinder;
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 0
 
     .prologue
-    .line 240
+    .line 551
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 552
+    iput-object p1, p0, Landroid/support/v4/app/co;->a:Landroid/content/ComponentName;
+
+    .line 553
+    iput-object p2, p0, Landroid/support/v4/app/co;->b:Landroid/os/IBinder;
+
+    .line 554
     return-void
 .end method

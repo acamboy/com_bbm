@@ -3,7 +3,7 @@
 .source "BroadcastActivity.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/text/TextWatcher;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 451
+    .line 244
     iput-object p1, p0, Lcom/bbm/ui/activities/ap;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,15 +25,47 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 0
 
     .prologue
-    .line 454
+    .line 257
+    return-void
+.end method
+
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
+
+    .prologue
+    .line 253
+    return-void
+.end method
+
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 2
+
+    .prologue
+    .line 248
     iget-object v0, p0, Lcom/bbm/ui/activities/ap;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->o(Lcom/bbm/ui/activities/BroadcastActivity;)V
+    iget-object v0, v0, Lcom/bbm/ui/activities/BroadcastActivity;->d:Lcom/bbm/util/dc;
 
-    .line 455
+    iget-object v1, p0, Lcom/bbm/ui/activities/ap;->a:Lcom/bbm/ui/activities/BroadcastActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/BroadcastActivity;->a(Lcom/bbm/ui/activities/BroadcastActivity;)Landroid/widget/EditText;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
+
+    .line 249
     return-void
 .end method

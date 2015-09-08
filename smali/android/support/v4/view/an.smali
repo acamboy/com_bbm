@@ -1,66 +1,144 @@
-.class final Landroid/support/v4/view/an;
-.super Landroid/text/method/SingleLineTransformationMethod;
-.source "PagerTitleStripIcs.java"
+.class public final Landroid/support/v4/view/an;
+.super Ljava/lang/Object;
+.source "MotionEventCompat.java"
 
 
-# instance fields
-.field private a:Ljava/util/Locale;
+# static fields
+.field static final a:Landroid/support/v4/view/aq;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
-
-    .prologue
-    .line 36
-    invoke-direct {p0}, Landroid/text/method/SingleLineTransformationMethod;-><init>()V
-
-    .line 37
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v0
-
-    iget-object v0, v0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
-
-    iput-object v0, p0, Landroid/support/v4/view/an;->a:Ljava/util/Locale;
-
-    .line 38
-    return-void
-.end method
-
-
-# virtual methods
-.method public final getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
+.method static constructor <clinit>()V
     .locals 2
 
     .prologue
-    .line 42
-    invoke-super {p0, p1, p2}, Landroid/text/method/SingleLineTransformationMethod;->getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
+    .line 108
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    move-result-object v0
+    const/4 v1, 0x5
 
-    .line 43
-    if-eqz v0, :cond_0
+    if-lt v0, v1, :cond_0
 
-    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    .line 109
+    new-instance v0, Landroid/support/v4/view/ap;
 
-    move-result-object v0
+    invoke-direct {v0}, Landroid/support/v4/view/ap;-><init>()V
 
-    iget-object v1, p0, Landroid/support/v4/view/an;->a:Ljava/util/Locale;
+    sput-object v0, Landroid/support/v4/view/an;->a:Landroid/support/v4/view/aq;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object v0
-
+    .line 113
     :goto_0
-    return-object v0
+    return-void
 
+    .line 111
     :cond_0
-    const/4 v0, 0x0
+    new-instance v0, Landroid/support/v4/view/ao;
+
+    invoke-direct {v0}, Landroid/support/v4/view/ao;-><init>()V
+
+    sput-object v0, Landroid/support/v4/view/an;->a:Landroid/support/v4/view/aq;
 
     goto :goto_0
+.end method
+
+.method public static a(Landroid/view/MotionEvent;)I
+    .locals 1
+
+    .prologue
+    .line 183
+    invoke-virtual {p0}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v0
+
+    and-int/lit16 v0, v0, 0xff
+
+    return v0
+.end method
+
+.method public static a(Landroid/view/MotionEvent;I)I
+    .locals 1
+
+    .prologue
+    .line 201
+    sget-object v0, Landroid/support/v4/view/an;->a:Landroid/support/v4/view/aq;
+
+    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/aq;->a(Landroid/view/MotionEvent;I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static b(Landroid/view/MotionEvent;)I
+    .locals 2
+
+    .prologue
+    .line 191
+    invoke-virtual {p0}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v0
+
+    const v1, 0xff00
+
+    and-int/2addr v0, v1
+
+    shr-int/lit8 v0, v0, 0x8
+
+    return v0
+.end method
+
+.method public static b(Landroid/view/MotionEvent;I)I
+    .locals 1
+
+    .prologue
+    .line 210
+    sget-object v0, Landroid/support/v4/view/an;->a:Landroid/support/v4/view/aq;
+
+    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/aq;->b(Landroid/view/MotionEvent;I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static c(Landroid/view/MotionEvent;I)F
+    .locals 1
+
+    .prologue
+    .line 219
+    sget-object v0, Landroid/support/v4/view/an;->a:Landroid/support/v4/view/aq;
+
+    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/aq;->c(Landroid/view/MotionEvent;I)F
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static c(Landroid/view/MotionEvent;)I
+    .locals 1
+
+    .prologue
+    .line 236
+    sget-object v0, Landroid/support/v4/view/an;->a:Landroid/support/v4/view/aq;
+
+    invoke-interface {v0, p0}, Landroid/support/v4/view/aq;->a(Landroid/view/MotionEvent;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static d(Landroid/view/MotionEvent;I)F
+    .locals 1
+
+    .prologue
+    .line 228
+    sget-object v0, Landroid/support/v4/view/an;->a:Landroid/support/v4/view/aq;
+
+    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/aq;->d(Landroid/view/MotionEvent;I)F
+
+    move-result v0
+
+    return v0
 .end method

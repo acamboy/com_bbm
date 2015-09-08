@@ -39,8 +39,6 @@
     .line 208
     iget-object v0, p1, Lcom/c/a/a/b;->d:Lcom/c/a/a/a;
 
-    iget-object v0, p1, Lcom/c/a/a/b;->d:Lcom/c/a/a/a;
-
     invoke-static {v0}, Lcom/c/a/a/a;->a(Lcom/c/a/a/a;)Landroid/content/Context;
 
     move-result-object v0
@@ -137,10 +135,6 @@
     aget-object v2, v0, v5
 
     .line 309
-    iget-object v0, p0, Lcom/c/a/a/d;->a:Lcom/c/a/a/b;
-
-    iget-object v0, v0, Lcom/c/a/a/b;->d:Lcom/c/a/a/a;
-
     iget-object v0, p0, Lcom/c/a/a/d;->b:Ljava/lang/String;
 
     iget-object v3, p0, Lcom/c/a/a/d;->c:Ljava/lang/String;
@@ -184,11 +178,11 @@
 
     move-result-object v0
 
-    invoke-static {v0, v4}, Lcom/c/a/a/e;->a(Ljava/lang/String;Ljava/util/List;)Lcom/c/a/a/f;
+    invoke-static {v0, v4}, Lcom/c/a/a/e;->a(Ljava/lang/String;Ljava/util/List;)I
 
-    move-result-object v0
+    move-result v0
 
-    sget-object v5, Lcom/c/a/a/f;->b:Lcom/c/a/a/f;
+    sget v5, Lcom/c/a/a/f;->b:I
 
     if-ne v0, v5, :cond_0
 
@@ -214,13 +208,13 @@
 
     move-result-object v0
 
-    invoke-static {v0, v4}, Lcom/c/a/a/e;->a(Ljava/lang/String;Ljava/util/List;)Lcom/c/a/a/f;
+    invoke-static {v0, v4}, Lcom/c/a/a/e;->a(Ljava/lang/String;Ljava/util/List;)I
 
-    move-result-object v0
+    move-result v0
 
     .line 312
     :cond_0
-    sget-object v3, Lcom/c/a/a/f;->a:Lcom/c/a/a/f;
+    sget v3, Lcom/c/a/a/f;->a:I
 
     if-ne v0, v3, :cond_3
 
@@ -311,7 +305,7 @@
 
     .line 317
     :cond_3
-    sget-object v2, Lcom/c/a/a/f;->b:Lcom/c/a/a/f;
+    sget v2, Lcom/c/a/a/f;->b:I
 
     if-ne v0, v2, :cond_1
 
@@ -812,8 +806,6 @@
 
     .line 259
     monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move v0, v1
 
@@ -822,9 +814,11 @@
     :catchall_0
     move-exception v0
 
-    :try_start_2
     monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    :try_start_2
     throw v0
     :try_end_2
     .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_0
@@ -979,8 +973,6 @@
     const-string v4, "Could not halt looper"
 
     invoke-static {v3, v4, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
     goto :goto_4
 
@@ -989,6 +981,8 @@
     move-exception v0
 
     monitor-exit v2
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
     throw v0
 .end method

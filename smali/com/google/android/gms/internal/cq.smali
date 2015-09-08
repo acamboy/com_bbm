@@ -1,300 +1,472 @@
-.class public Lcom/google/android/gms/internal/cq;
+.class public final Lcom/google/android/gms/internal/cq;
 .super Ljava/lang/Object;
 
 
-# instance fields
-.field private final mg:Ljava/lang/Object;
-
-.field private pA:I
-
-.field private pB:J
-
-.field private pC:J
-
-.field private pD:I
-
-.field private pE:I
-
-.field private final pz:Ljava/lang/String;
-
-
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 4
+.method public static a(Ljava/lang/String;)I
+    .locals 10
 
-    const-wide/16 v2, -0x1
+    const v9, 0x1b873593
+
+    const v8, -0x3361d2af    # -8.2930312E7f
 
     const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/cq;->mg:Ljava/lang/Object;
-
-    iput v1, p0, Lcom/google/android/gms/internal/cq;->pA:I
-
-    iput-wide v2, p0, Lcom/google/android/gms/internal/cq;->pB:J
-
-    iput-wide v2, p0, Lcom/google/android/gms/internal/cq;->pC:J
-
-    iput v1, p0, Lcom/google/android/gms/internal/cq;->pD:I
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lcom/google/android/gms/internal/cq;->pE:I
-
-    iput-object p1, p0, Lcom/google/android/gms/internal/cq;->pz:Ljava/lang/String;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public declared-synchronized aJ()V
-    .locals 2
-
-    monitor-enter p0
-
     :try_start_0
-    iget-object v1, p0, Lcom/google/android/gms/internal/cq;->mg:Ljava/lang/Object;
+    const-string v0, "UTF-8"
 
-    monitor-enter v1
+    invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    :try_start_1
-    iget v0, p0, Lcom/google/android/gms/internal/cq;->pD:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Lcom/google/android/gms/internal/cq;->pD:I
-
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_2
-    monitor-exit v1
-
-    throw v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    :catchall_1
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
-.end method
-
-.method public aK()V
-    .locals 2
-
-    iget-object v1, p0, Lcom/google/android/gms/internal/cq;->mg:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_0
-    iget v0, p0, Lcom/google/android/gms/internal/cq;->pA:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Lcom/google/android/gms/internal/cq;->pA:I
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-
-    throw v0
-.end method
-
-.method public b(Ljava/lang/String;Landroid/content/Context;)Landroid/os/Bundle;
-    .locals 6
-
-    iget-object v1, p0, Lcom/google/android/gms/internal/cq;->mg:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_0
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    const-string v2, "session_id"
-
-    iget-object v3, p0, Lcom/google/android/gms/internal/cq;->pz:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v2, "basets"
-
-    iget-wide v4, p0, Lcom/google/android/gms/internal/cq;->pC:J
-
-    invoke-virtual {v0, v2, v4, v5}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
-
-    const-string v2, "currts"
-
-    iget-wide v4, p0, Lcom/google/android/gms/internal/cq;->pB:J
-
-    invoke-virtual {v0, v2, v4, v5}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
-
-    const-string v2, "seq_num"
-
-    invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v2, "preqs"
-
-    iget v3, p0, Lcom/google/android/gms/internal/cq;->pE:I
-
-    invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-
-    const-string v2, "pclick"
-
-    iget v3, p0, Lcom/google/android/gms/internal/cq;->pA:I
-
-    invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-
-    const-string v2, "pimp"
-
-    iget v3, p0, Lcom/google/android/gms/internal/cq;->pD:I
-
-    invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-
-    new-instance v2, Lcom/google/android/gms/internal/cm;
-
-    invoke-direct {v2, p2}, Lcom/google/android/gms/internal/cm;-><init>(Landroid/content/Context;)V
-
-    const-string v3, "gnt"
-
-    iget v4, v2, Lcom/google/android/gms/internal/cm;->oY:I
-
-    invoke-virtual {v0, v3, v4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-
-    iget v2, v2, Lcom/google/android/gms/internal/cm;->oX:I
-
-    const/4 v3, 0x1
-
-    if-ne v2, v3, :cond_0
-
-    const-string v2, "net"
-
-    const-string v3, "wi"
-
-    invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v0
 
     :goto_0
-    monitor-exit v1
+    array-length v5, v0
 
+    and-int/lit8 v2, v5, -0x4
+
+    add-int/lit8 v6, v2, 0x0
+
+    move v3, v1
+
+    move v2, v1
+
+    :goto_1
+    if-ge v3, v6, :cond_0
+
+    aget-byte v4, v0, v3
+
+    and-int/lit16 v4, v4, 0xff
+
+    add-int/lit8 v7, v3, 0x1
+
+    aget-byte v7, v0, v7
+
+    and-int/lit16 v7, v7, 0xff
+
+    shl-int/lit8 v7, v7, 0x8
+
+    or-int/2addr v4, v7
+
+    add-int/lit8 v7, v3, 0x2
+
+    aget-byte v7, v0, v7
+
+    and-int/lit16 v7, v7, 0xff
+
+    shl-int/lit8 v7, v7, 0x10
+
+    or-int/2addr v4, v7
+
+    add-int/lit8 v7, v3, 0x3
+
+    aget-byte v7, v0, v7
+
+    shl-int/lit8 v7, v7, 0x18
+
+    or-int/2addr v4, v7
+
+    mul-int/2addr v4, v8
+
+    shl-int/lit8 v7, v4, 0xf
+
+    ushr-int/lit8 v4, v4, 0x11
+
+    or-int/2addr v4, v7
+
+    mul-int/2addr v4, v9
+
+    xor-int/2addr v2, v4
+
+    shl-int/lit8 v4, v2, 0xd
+
+    ushr-int/lit8 v2, v2, 0x13
+
+    or-int/2addr v2, v4
+
+    mul-int/lit8 v2, v2, 0x5
+
+    const v4, -0x19ab949c
+
+    add-int/2addr v4, v2
+
+    add-int/lit8 v2, v3, 0x4
+
+    move v3, v2
+
+    move v2, v4
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    and-int/lit8 v3, v5, 0x3
+
+    packed-switch v3, :pswitch_data_0
+
+    move v0, v2
+
+    :goto_2
+    xor-int/2addr v0, v5
+
+    ushr-int/lit8 v1, v0, 0x10
+
+    xor-int/2addr v0, v1
+
+    const v1, -0x7a143595
+
+    mul-int/2addr v0, v1
+
+    ushr-int/lit8 v1, v0, 0xd
+
+    xor-int/2addr v0, v1
+
+    const v1, -0x3d4d51cb
+
+    mul-int/2addr v0, v1
+
+    ushr-int/lit8 v1, v0, 0x10
+
+    xor-int/2addr v0, v1
+
+    return v0
+
+    :pswitch_0
+    add-int/lit8 v1, v6, 0x2
+
+    aget-byte v1, v0, v1
+
+    and-int/lit16 v1, v1, 0xff
+
+    shl-int/lit8 v1, v1, 0x10
+
+    :pswitch_1
+    add-int/lit8 v3, v6, 0x1
+
+    aget-byte v3, v0, v3
+
+    and-int/lit16 v3, v3, 0xff
+
+    shl-int/lit8 v3, v3, 0x8
+
+    or-int/2addr v1, v3
+
+    :pswitch_2
+    aget-byte v0, v0, v6
+
+    and-int/lit16 v0, v0, 0xff
+
+    or-int/2addr v0, v1
+
+    mul-int/2addr v0, v8
+
+    shl-int/lit8 v1, v0, 0xf
+
+    ushr-int/lit8 v0, v0, 0x11
+
+    or-int/2addr v0, v1
+
+    mul-int/2addr v0, v9
+
+    xor-int/2addr v0, v2
+
+    goto :goto_2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static b(Ljava/lang/String;)[Ljava/lang/String;
+    .locals 13
+
+    const/4 v4, 0x1
+
+    const/4 v2, 0x0
+
+    if-nez p0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
     return-object v0
 
     :cond_0
-    const-string v2, "net"
+    new-instance v6, Ljava/util/ArrayList;
 
-    const-string v3, "ed"
+    invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {p0}, Ljava/lang/String;->toCharArray()[C
 
-    goto :goto_0
+    move-result-object v7
 
-    :catchall_0
-    move-exception v0
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    monitor-exit v1
+    move-result v8
 
-    throw v0
-.end method
+    move v3, v2
 
-.method public b(Lcom/google/android/gms/internal/z;J)V
-    .locals 6
+    move v0, v2
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/cq;->mg:Ljava/lang/Object;
+    move v1, v2
 
-    monitor-enter v1
+    :goto_1
+    if-ge v1, v8, :cond_d
 
-    :try_start_0
-    iget-wide v2, p0, Lcom/google/android/gms/internal/cq;->pC:J
+    invoke-static {v7, v1}, Ljava/lang/Character;->codePointAt([CI)I
 
-    const-wide/16 v4, -0x1
+    move-result v9
 
-    cmp-long v0, v2, v4
+    invoke-static {v9}, Ljava/lang/Character;->charCount(I)I
 
-    if-nez v0, :cond_0
+    move-result v10
 
-    iput-wide p2, p0, Lcom/google/android/gms/internal/cq;->pC:J
+    invoke-static {v9}, Ljava/lang/Character;->isLetter(I)Z
 
-    iget-wide v2, p0, Lcom/google/android/gms/internal/cq;->pC:J
+    move-result v5
 
-    iput-wide v2, p0, Lcom/google/android/gms/internal/cq;->pB:J
+    if-eqz v5, :cond_8
 
-    :goto_0
-    iget-object v0, p1, Lcom/google/android/gms/internal/z;->extras:Landroid/os/Bundle;
+    invoke-static {v9}, Ljava/lang/Character$UnicodeBlock;->of(I)Ljava/lang/Character$UnicodeBlock;
 
-    if-eqz v0, :cond_1
+    move-result-object v5
 
-    iget-object v0, p1, Lcom/google/android/gms/internal/z;->extras:Landroid/os/Bundle;
+    sget-object v11, Ljava/lang/Character$UnicodeBlock;->BOPOMOFO:Ljava/lang/Character$UnicodeBlock;
 
-    const-string v2, "gw"
+    if-eq v5, v11, :cond_1
 
-    const/4 v3, 0x2
+    sget-object v11, Ljava/lang/Character$UnicodeBlock;->BOPOMOFO_EXTENDED:Ljava/lang/Character$UnicodeBlock;
 
-    invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
+    if-eq v5, v11, :cond_1
+
+    sget-object v11, Ljava/lang/Character$UnicodeBlock;->CJK_COMPATIBILITY:Ljava/lang/Character$UnicodeBlock;
+
+    if-eq v5, v11, :cond_1
+
+    sget-object v11, Ljava/lang/Character$UnicodeBlock;->CJK_COMPATIBILITY_IDEOGRAPHS:Ljava/lang/Character$UnicodeBlock;
+
+    if-eq v5, v11, :cond_1
+
+    sget-object v11, Ljava/lang/Character$UnicodeBlock;->CJK_COMPATIBILITY_IDEOGRAPHS_SUPPLEMENT:Ljava/lang/Character$UnicodeBlock;
+
+    if-eq v5, v11, :cond_1
+
+    sget-object v11, Ljava/lang/Character$UnicodeBlock;->CJK_UNIFIED_IDEOGRAPHS:Ljava/lang/Character$UnicodeBlock;
+
+    if-eq v5, v11, :cond_1
+
+    sget-object v11, Ljava/lang/Character$UnicodeBlock;->CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A:Ljava/lang/Character$UnicodeBlock;
+
+    if-eq v5, v11, :cond_1
+
+    sget-object v11, Ljava/lang/Character$UnicodeBlock;->CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B:Ljava/lang/Character$UnicodeBlock;
+
+    if-eq v5, v11, :cond_1
+
+    sget-object v11, Ljava/lang/Character$UnicodeBlock;->ENCLOSED_CJK_LETTERS_AND_MONTHS:Ljava/lang/Character$UnicodeBlock;
+
+    if-eq v5, v11, :cond_1
+
+    sget-object v11, Ljava/lang/Character$UnicodeBlock;->HANGUL_JAMO:Ljava/lang/Character$UnicodeBlock;
+
+    if-eq v5, v11, :cond_1
+
+    sget-object v11, Ljava/lang/Character$UnicodeBlock;->HANGUL_SYLLABLES:Ljava/lang/Character$UnicodeBlock;
+
+    if-eq v5, v11, :cond_1
+
+    sget-object v11, Ljava/lang/Character$UnicodeBlock;->HIRAGANA:Ljava/lang/Character$UnicodeBlock;
+
+    if-eq v5, v11, :cond_1
+
+    sget-object v11, Ljava/lang/Character$UnicodeBlock;->KATAKANA:Ljava/lang/Character$UnicodeBlock;
+
+    if-eq v5, v11, :cond_1
+
+    sget-object v11, Ljava/lang/Character$UnicodeBlock;->KATAKANA_PHONETIC_EXTENSIONS:Ljava/lang/Character$UnicodeBlock;
+
+    if-ne v5, v11, :cond_6
+
+    :cond_1
+    move v5, v4
+
+    :goto_2
+    if-nez v5, :cond_4
+
+    const v5, 0xff66
+
+    if-lt v9, v5, :cond_2
+
+    const v5, 0xff9d
+
+    if-le v9, v5, :cond_3
+
+    :cond_2
+    const v5, 0xffa1
+
+    if-lt v9, v5, :cond_7
+
+    const v5, 0xffdc
+
+    if-gt v9, v5, :cond_7
+
+    :cond_3
+    move v5, v4
+
+    :goto_3
+    if-eqz v5, :cond_8
+
+    :cond_4
+    move v5, v4
+
+    :goto_4
+    if-eqz v5, :cond_9
+
+    if-eqz v3, :cond_5
+
+    new-instance v3, Ljava/lang/String;
+
+    sub-int v5, v1, v0
+
+    invoke-direct {v3, v7, v0, v5}, Ljava/lang/String;-><init>([CII)V
+
+    invoke-virtual {v6, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_5
+    new-instance v3, Ljava/lang/String;
+
+    invoke-direct {v3, v7, v1, v10}, Ljava/lang/String;-><init>([CII)V
+
+    invoke-virtual {v6, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    move v3, v0
+
+    move v0, v2
+
+    :goto_5
+    add-int/2addr v1, v10
+
+    move v12, v0
+
+    move v0, v3
+
+    move v3, v12
+
+    goto/16 :goto_1
+
+    :cond_6
+    move v5, v2
+
+    goto :goto_2
+
+    :cond_7
+    move v5, v2
+
+    goto :goto_3
+
+    :cond_8
+    move v5, v2
+
+    goto :goto_4
+
+    :cond_9
+    invoke-static {v9}, Ljava/lang/Character;->isLetterOrDigit(I)Z
+
+    move-result v5
+
+    if-nez v5, :cond_a
+
+    invoke-static {v9}, Ljava/lang/Character;->getType(I)I
+
+    move-result v5
+
+    const/4 v11, 0x6
+
+    if-eq v5, v11, :cond_a
+
+    invoke-static {v9}, Ljava/lang/Character;->getType(I)I
+
+    move-result v5
+
+    const/16 v9, 0x8
+
+    if-ne v5, v9, :cond_c
+
+    :cond_a
+    if-nez v3, :cond_b
+
+    move v0, v1
+
+    :cond_b
+    move v3, v0
+
+    move v0, v4
+
+    goto :goto_5
+
+    :cond_c
+    if-eqz v3, :cond_f
+
+    new-instance v3, Ljava/lang/String;
+
+    sub-int v5, v1, v0
+
+    invoke-direct {v3, v7, v0, v5}, Ljava/lang/String;-><init>([CII)V
+
+    invoke-virtual {v6, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    move v3, v0
+
+    move v0, v2
+
+    goto :goto_5
+
+    :cond_d
+    if-eqz v3, :cond_e
+
+    new-instance v2, Ljava/lang/String;
+
+    sub-int/2addr v1, v0
+
+    invoke-direct {v2, v7, v0, v1}, Ljava/lang/String;-><init>([CII)V
+
+    invoke-virtual {v6, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_e
+    invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    const/4 v2, 0x1
+    new-array v0, v0, [Ljava/lang/String;
 
-    if-ne v0, v2, :cond_1
+    invoke-virtual {v6, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    monitor-exit v1
+    move-result-object v0
 
-    :goto_1
-    return-void
+    check-cast v0, [Ljava/lang/String;
 
-    :cond_0
-    iput-wide p2, p0, Lcom/google/android/gms/internal/cq;->pB:J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    goto/16 :goto_0
 
-    goto :goto_0
+    :cond_f
+    move v12, v3
 
-    :catchall_0
-    move-exception v0
+    move v3, v0
 
-    monitor-exit v1
+    move v0, v12
 
-    throw v0
-
-    :cond_1
-    :try_start_1
-    iget v0, p0, Lcom/google/android/gms/internal/cq;->pE:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Lcom/google/android/gms/internal/cq;->pE:I
-
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_1
+    goto :goto_5
 .end method

@@ -11,7 +11,7 @@
 
 .field private e:Landroid/content/Context;
 
-.field private eL:Lcom/glympse/android/core/GDrawable;
+.field private eO:Lcom/glympse/android/core/GDrawable;
 
 
 # direct methods
@@ -512,7 +512,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/glympse/android/hal/bt;->eL:Lcom/glympse/android/core/GDrawable;
+    iput-object v1, p0, Lcom/glympse/android/hal/bt;->eO:Lcom/glympse/android/core/GDrawable;
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -577,7 +577,7 @@
 
     .prologue
     .line 61
-    iget-object v0, p0, Lcom/glympse/android/hal/bt;->eL:Lcom/glympse/android/core/GDrawable;
+    iget-object v0, p0, Lcom/glympse/android/hal/bt;->eO:Lcom/glympse/android/core/GDrawable;
 
     return-object v0
 .end method

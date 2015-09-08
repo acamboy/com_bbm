@@ -1,77 +1,49 @@
 .class final Landroid/support/v4/widget/ak;
-.super Ljava/lang/Object;
-.source "SlidingPaneLayout.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field final a:Landroid/view/View;
-
-.field final synthetic b:Landroid/support/v4/widget/SlidingPaneLayout;
+.super Landroid/view/animation/AccelerateDecelerateInterpolator;
+.source "MaterialProgressDrawable.java"
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/widget/SlidingPaneLayout;Landroid/view/View;)V
+.method private constructor <init>()V
     .locals 0
 
     .prologue
-    .line 1627
-    iput-object p1, p0, Landroid/support/v4/widget/ak;->b:Landroid/support/v4/widget/SlidingPaneLayout;
+    .line 708
+    invoke-direct {p0}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
 
-    .line 1628
-    iput-object p2, p0, Landroid/support/v4/widget/ak;->a:Landroid/view/View;
+.method synthetic constructor <init>(B)V
+    .locals 0
 
-    .line 1629
+    .prologue
+    .line 708
+    invoke-direct {p0}, Landroid/support/v4/widget/ak;-><init>()V
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final getInterpolation(F)F
+    .locals 2
 
     .prologue
-    .line 1633
-    iget-object v0, p0, Landroid/support/v4/widget/ak;->a:Landroid/view/View;
+    .line 711
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    const/high16 v1, 0x40000000    # 2.0f
 
-    move-result-object v0
+    mul-float/2addr v1, p1
 
-    iget-object v1, p0, Landroid/support/v4/widget/ak;->b:Landroid/support/v4/widget/SlidingPaneLayout;
+    invoke-static {v0, v1}, Ljava/lang/Math;->min(FF)F
 
-    if-ne v0, v1, :cond_0
+    move-result v0
 
-    .line 1634
-    iget-object v0, p0, Landroid/support/v4/widget/ak;->a:Landroid/view/View;
+    invoke-super {p0, v0}, Landroid/view/animation/AccelerateDecelerateInterpolator;->getInterpolation(F)F
 
-    const/4 v1, 0x0
+    move-result v0
 
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Landroid/support/v4/view/as;->a(Landroid/view/View;ILandroid/graphics/Paint;)V
-
-    .line 1635
-    iget-object v0, p0, Landroid/support/v4/widget/ak;->b:Landroid/support/v4/widget/SlidingPaneLayout;
-
-    iget-object v1, p0, Landroid/support/v4/widget/ak;->a:Landroid/view/View;
-
-    invoke-static {v0, v1}, Landroid/support/v4/widget/SlidingPaneLayout;->a(Landroid/support/v4/widget/SlidingPaneLayout;Landroid/view/View;)V
-
-    .line 1637
-    :cond_0
-    iget-object v0, p0, Landroid/support/v4/widget/ak;->b:Landroid/support/v4/widget/SlidingPaneLayout;
-
-    invoke-static {v0}, Landroid/support/v4/widget/SlidingPaneLayout;->g(Landroid/support/v4/widget/SlidingPaneLayout;)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    .line 1638
-    return-void
+    return v0
 .end method

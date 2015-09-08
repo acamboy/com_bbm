@@ -7,11 +7,11 @@
 
 
 # static fields
+.field public static final j:Ljava/lang/String;
+
+.field public static final k:Ljava/lang/String;
+
 .field public static final l:Ljava/lang/String;
-
-.field public static final m:Ljava/lang/String;
-
-.field public static final n:Ljava/lang/String;
 
 .field private static q:Lcom/bbm/n/b;
 
@@ -50,46 +50,15 @@
     .end annotation
 .end field
 
-.field public d:Lcom/bbm/j/t;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/bbm/j/t",
-            "<",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public d:I
 
-.field public e:Lcom/bbm/j/t;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/bbm/j/t",
-            "<",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public e:J
 
-.field public f:Ljava/lang/ref/WeakReference;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/ref/WeakReference",
-            "<",
-            "Lcom/bbm/n/j;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public f:Z
 
-.field public g:I
+.field public g:Landroid/content/Context;
 
-.field public h:Z
-
-.field public i:Landroid/content/Context;
-
-.field public j:Lcom/google/b/a/l;
+.field public h:Lcom/google/b/a/l;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/b/a/l",
@@ -100,9 +69,9 @@
     .end annotation
 .end field
 
-.field public k:Lcom/bbm/util/cz;
+.field public i:Lcom/bbm/util/di;
 
-.field private o:Lcom/bbm/j/t;
+.field private m:Lcom/bbm/j/t;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/bbm/j/t",
@@ -113,19 +82,46 @@
     .end annotation
 .end field
 
-.field private p:J
+.field private n:Lcom/bbm/j/t;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/j/t",
+            "<",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private r:Landroid/app/NotificationManager;
+.field private o:Lcom/bbm/j/t;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/j/t",
+            "<",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private s:Landroid/support/v4/app/bd;
+.field private p:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Lcom/bbm/n/j;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private t:Landroid/os/Handler;
+.field private r:Landroid/os/Handler;
 
-.field private u:Ljava/lang/Runnable;
+.field private s:Ljava/lang/Runnable;
 
-.field private v:Landroid/media/MediaPlayer;
+.field private t:Landroid/media/MediaPlayer;
 
-.field private final w:Lcom/bbm/j/k;
+.field private final u:Lcom/bbm/j/k;
 
 
 # direct methods
@@ -133,12 +129,12 @@
     .locals 2
 
     .prologue
-    .line 76
+    .line 67
     const/4 v0, 0x0
 
     sput-object v0, Lcom/bbm/n/b;->q:Lcom/bbm/n/b;
 
-    .line 90
+    .line 78
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "file://"
@@ -181,9 +177,9 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/bbm/n/b;->l:Ljava/lang/String;
+    sput-object v0, Lcom/bbm/n/b;->j:Ljava/lang/String;
 
-    .line 96
+    .line 84
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "file://"
@@ -226,9 +222,9 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/bbm/n/b;->m:Ljava/lang/String;
+    sput-object v0, Lcom/bbm/n/b;->k:Ljava/lang/String;
 
-    .line 102
+    .line 90
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "file://"
@@ -271,7 +267,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/bbm/n/b;->n:Ljava/lang/String;
+    sput-object v0, Lcom/bbm/n/b;->l:Ljava/lang/String;
 
     return-void
 .end method
@@ -286,10 +282,10 @@
 
     const/4 v4, 0x0
 
-    .line 162
+    .line 165
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 61
+    .line 52
     new-instance v0, Lcom/bbm/j/t;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -300,7 +296,7 @@
 
     iput-object v0, p0, Lcom/bbm/n/b;->a:Lcom/bbm/j/t;
 
-    .line 62
+    .line 53
     new-instance v0, Lcom/bbm/j/t;
 
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -309,16 +305,38 @@
 
     invoke-direct {v0, v1}, Lcom/bbm/j/t;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lcom/bbm/n/b;->o:Lcom/bbm/j/t;
+    iput-object v0, p0, Lcom/bbm/n/b;->m:Lcom/bbm/j/t;
 
-    .line 63
+    .line 54
     new-instance v0, Lcom/bbm/j/t;
 
     invoke-direct {v0}, Lcom/bbm/j/t;-><init>()V
 
     iput-object v0, p0, Lcom/bbm/n/b;->b:Lcom/bbm/j/t;
 
-    .line 64
+    .line 55
+    new-instance v0, Lcom/bbm/j/t;
+
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/bbm/j/t;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lcom/bbm/n/b;->n:Lcom/bbm/j/t;
+
+    .line 56
+    new-instance v0, Lcom/bbm/j/t;
+
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/bbm/j/t;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lcom/bbm/n/b;->o:Lcom/bbm/j/t;
+
+    .line 57
     new-instance v0, Lcom/bbm/j/t;
 
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -329,67 +347,42 @@
 
     iput-object v0, p0, Lcom/bbm/n/b;->c:Lcom/bbm/j/t;
 
-    .line 65
-    new-instance v0, Lcom/bbm/j/t;
-
-    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lcom/bbm/j/t;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lcom/bbm/n/b;->d:Lcom/bbm/j/t;
-
-    .line 66
-    new-instance v0, Lcom/bbm/j/t;
-
-    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lcom/bbm/j/t;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lcom/bbm/n/b;->e:Lcom/bbm/j/t;
-
-    .line 68
+    .line 59
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, v2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lcom/bbm/n/b;->f:Ljava/lang/ref/WeakReference;
+    iput-object v0, p0, Lcom/bbm/n/b;->p:Ljava/lang/ref/WeakReference;
 
-    .line 70
+    .line 61
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/bbm/n/b;->g:I
+    iput v0, p0, Lcom/bbm/n/b;->d:I
 
-    .line 71
-    iput-wide v6, p0, Lcom/bbm/n/b;->p:J
+    .line 62
+    iput-wide v6, p0, Lcom/bbm/n/b;->e:J
 
-    .line 77
-    invoke-static {}, Lcom/google/b/a/l;->d()Lcom/google/b/a/l;
+    .line 68
+    invoke-static {}, Lcom/google/b/a/l;->e()Lcom/google/b/a/l;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/n/b;->j:Lcom/google/b/a/l;
+    iput-object v0, p0, Lcom/bbm/n/b;->h:Lcom/google/b/a/l;
 
-    .line 80
-    iput-object v2, p0, Lcom/bbm/n/b;->s:Landroid/support/v4/app/bd;
+    .line 73
+    iput-object v2, p0, Lcom/bbm/n/b;->i:Lcom/bbm/util/di;
 
-    .line 85
-    iput-object v2, p0, Lcom/bbm/n/b;->k:Lcom/bbm/util/cz;
+    .line 75
+    iput-object v2, p0, Lcom/bbm/n/b;->t:Landroid/media/MediaPlayer;
 
-    .line 87
-    iput-object v2, p0, Lcom/bbm/n/b;->v:Landroid/media/MediaPlayer;
-
-    .line 137
+    .line 140
     new-instance v0, Lcom/bbm/n/c;
 
     invoke-direct {v0, p0}, Lcom/bbm/n/c;-><init>(Lcom/bbm/n/b;)V
 
-    iput-object v0, p0, Lcom/bbm/n/b;->w:Lcom/bbm/j/k;
+    iput-object v0, p0, Lcom/bbm/n/b;->u:Lcom/bbm/j/k;
 
-    .line 163
+    .line 166
     invoke-static {}, Lcom/rim/bbm/BbmMediaCallService;->getInstance()Lcom/rim/bbm/BbmMediaCallService;
 
     move-result-object v0
@@ -398,51 +391,31 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/n/b;->j:Lcom/google/b/a/l;
+    iput-object v0, p0, Lcom/bbm/n/b;->h:Lcom/google/b/a/l;
 
-    .line 164
+    .line 167
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/n/b;->i:Landroid/content/Context;
+    iput-object v0, p0, Lcom/bbm/n/b;->g:Landroid/content/Context;
 
-    .line 166
+    .line 169
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/n/b;->t:Landroid/os/Handler;
-
-    .line 168
-    iget-object v0, p0, Lcom/bbm/n/b;->i:Landroid/content/Context;
-
-    const-string v1, "notification"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/app/NotificationManager;
-
-    iput-object v0, p0, Lcom/bbm/n/b;->r:Landroid/app/NotificationManager;
-
-    .line 169
-    iget-object v0, p0, Lcom/bbm/n/b;->r:Landroid/app/NotificationManager;
-
-    const/16 v1, 0x2328
-
-    invoke-virtual {v0, v1}, Landroid/app/NotificationManager;->cancel(I)V
+    iput-object v0, p0, Lcom/bbm/n/b;->r:Landroid/os/Handler;
 
     .line 171
-    new-instance v0, Lcom/bbm/util/cz;
+    new-instance v0, Lcom/bbm/util/di;
 
-    invoke-direct {v0}, Lcom/bbm/util/cz;-><init>()V
+    invoke-direct {v0}, Lcom/bbm/util/di;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/n/b;->k:Lcom/bbm/util/cz;
+    iput-object v0, p0, Lcom/bbm/n/b;->i:Lcom/bbm/util/di;
 
     .line 172
-    iget-object v0, p0, Lcom/bbm/n/b;->i:Landroid/content/Context;
+    iget-object v0, p0, Lcom/bbm/n/b;->g:Landroid/content/Context;
 
     const-string v1, "phone"
 
@@ -453,36 +426,36 @@
     check-cast v0, Landroid/telephony/TelephonyManager;
 
     .line 173
-    iget-object v1, p0, Lcom/bbm/n/b;->k:Lcom/bbm/util/cz;
+    iget-object v1, p0, Lcom/bbm/n/b;->i:Lcom/bbm/util/di;
 
     const/16 v2, 0x20
 
     invoke-virtual {v0, v1, v2}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
 
     .line 174
-    iget-object v0, p0, Lcom/bbm/n/b;->w:Lcom/bbm/j/k;
+    iget-object v0, p0, Lcom/bbm/n/b;->u:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
     .line 176
-    iget-object v0, p0, Lcom/bbm/n/b;->j:Lcom/google/b/a/l;
+    iget-object v0, p0, Lcom/bbm/n/b;->h:Lcom/google/b/a/l;
 
-    invoke-virtual {v0}, Lcom/google/b/a/l;->a()Z
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 177
-    iget-object v0, p0, Lcom/bbm/n/b;->j:Lcom/google/b/a/l;
+    iget-object v0, p0, Lcom/bbm/n/b;->h:Lcom/google/b/a/l;
 
-    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/rim/bbm/BbmMediaCallService;
 
-    iget-object v1, p0, Lcom/bbm/n/b;->i:Landroid/content/Context;
+    iget-object v1, p0, Lcom/bbm/n/b;->g:Landroid/content/Context;
 
     invoke-static {v1}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
@@ -507,27 +480,17 @@
     .locals 0
 
     .prologue
-    .line 52
-    iput p1, p0, Lcom/bbm/n/b;->g:I
+    .line 45
+    iput p1, p0, Lcom/bbm/n/b;->d:I
 
     return p1
-.end method
-
-.method static synthetic a(Lcom/bbm/n/b;Landroid/support/v4/app/bd;)Landroid/support/v4/app/bd;
-    .locals 0
-
-    .prologue
-    .line 52
-    iput-object p1, p0, Lcom/bbm/n/b;->s:Landroid/support/v4/app/bd;
-
-    return-object p1
 .end method
 
 .method static synthetic a(Lcom/bbm/n/b;)Lcom/bbm/j/t;
     .locals 1
 
     .prologue
-    .line 52
+    .line 45
     iget-object v0, p0, Lcom/bbm/n/b;->a:Lcom/bbm/j/t;
 
     return-object v0
@@ -537,12 +500,12 @@
     .locals 2
 
     .prologue
-    .line 236
+    .line 204
     sget-object v0, Lcom/bbm/n/b;->q:Lcom/bbm/n/b;
 
     if-nez v0, :cond_0
 
-    .line 237
+    .line 205
     new-instance v0, Lcom/bbm/n/b;
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -553,46 +516,20 @@
 
     sput-object v0, Lcom/bbm/n/b;->q:Lcom/bbm/n/b;
 
-    .line 239
+    .line 207
     :cond_0
     sget-object v0, Lcom/bbm/n/b;->q:Lcom/bbm/n/b;
 
     return-object v0
 .end method
 
-.method private a(Lcom/bbm/d/gr;Z)V
-    .locals 3
+.method static synthetic a(Lcom/bbm/n/b;Lcom/bbm/d/ie;)V
+    .locals 0
 
     .prologue
-    .line 187
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    .line 45
+    invoke-direct {p0, p1}, Lcom/bbm/n/b;->c(Lcom/bbm/d/ie;)V
 
-    move-result-object v1
-
-    iget-object v0, p0, Lcom/bbm/n/b;->b:Lcom/bbm/j/t;
-
-    invoke-virtual {v0}, Lcom/bbm/j/t;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->g(Ljava/lang/String;)Lcom/google/b/f/a/l;
-
-    move-result-object v0
-
-    .line 188
-    new-instance v1, Lcom/bbm/n/d;
-
-    invoke-direct {v1, p0, v0, p1, p2}, Lcom/bbm/n/d;-><init>(Lcom/bbm/n/b;Lcom/google/b/f/a/l;Lcom/bbm/d/gr;Z)V
-
-    invoke-static {}, Lcom/google/b/f/a/o;->a()Lcom/google/b/f/a/n;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Lcom/google/b/f/a/l;->a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    .line 233
     return-void
 .end method
 
@@ -600,7 +537,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 45
     iget-object v0, p0, Lcom/bbm/n/b;->b:Lcom/bbm/j/t;
 
     return-object v0
@@ -610,62 +547,142 @@
     .locals 1
 
     .prologue
-    .line 52
-    iget-object v0, p0, Lcom/bbm/n/b;->i:Landroid/content/Context;
+    .line 45
+    iget-object v0, p0, Lcom/bbm/n/b;->g:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method private c(Lcom/bbm/d/gr;)Z
+.method private c(Lcom/bbm/d/ie;)V
+    .locals 3
+
+    .prologue
+    .line 187
+    iget-object v0, p0, Lcom/bbm/n/b;->b:Lcom/bbm/j/t;
+
+    invoke-virtual {v0}, Lcom/bbm/j/t;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/bbm/d/b/a;->e(Ljava/lang/String;)Lcom/google/b/f/a/p;
+
+    move-result-object v0
+
+    .line 188
+    new-instance v1, Lcom/bbm/n/d;
+
+    invoke-direct {v1, p0, v0, p1}, Lcom/bbm/n/d;-><init>(Lcom/bbm/n/b;Lcom/google/b/f/a/p;Lcom/bbm/d/ie;)V
+
+    invoke-static {}, Lcom/google/b/f/a/s;->a()Lcom/google/b/f/a/r;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Lcom/google/b/f/a/p;->a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    .line 201
+    return-void
+.end method
+
+.method private c(Ljava/lang/String;)Z
     .locals 1
 
     .prologue
-    .line 383
-    iget-object v0, p1, Lcom/bbm/d/gr;->B:Ljava/lang/String;
+    .line 347
+    iget-object v0, p0, Lcom/bbm/n/b;->b:Lcom/bbm/j/t;
 
-    invoke-virtual {p0, v0}, Lcom/bbm/n/b;->a(Ljava/lang/String;)Z
+    invoke-virtual {v0}, Lcom/bbm/j/t;->b()Z
 
     move-result v0
 
+    if-eqz v0, :cond_0
+
+    .line 348
+    iget-object v0, p0, Lcom/bbm/n/b;->b:Lcom/bbm/j/t;
+
+    invoke-virtual {v0}, Lcom/bbm/j/t;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    .line 350
+    :goto_0
     return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
-.method static synthetic d(Lcom/bbm/n/b;)Lcom/bbm/util/cz;
+.method static synthetic d(Lcom/bbm/n/b;)Lcom/google/b/a/l;
     .locals 1
 
     .prologue
-    .line 52
-    iget-object v0, p0, Lcom/bbm/n/b;->k:Lcom/bbm/util/cz;
+    .line 45
+    iget-object v0, p0, Lcom/bbm/n/b;->h:Lcom/google/b/a/l;
 
     return-object v0
 .end method
 
-.method static synthetic e(Lcom/bbm/n/b;)I
+.method private d(Lcom/bbm/d/ie;)Z
     .locals 1
 
     .prologue
-    .line 52
-    iget v0, p0, Lcom/bbm/n/b;->g:I
+    .line 354
+    if-eqz p1, :cond_0
 
+    iget-object v0, p1, Lcom/bbm/d/ie;->z:Ljava/lang/String;
+
+    invoke-direct {p0, v0}, Lcom/bbm/n/b;->c(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
     return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
-.method static synthetic f(Lcom/bbm/n/b;)Lcom/google/b/a/l;
+.method static synthetic e(Lcom/bbm/n/b;)Lcom/bbm/util/di;
     .locals 1
 
     .prologue
-    .line 52
-    iget-object v0, p0, Lcom/bbm/n/b;->j:Lcom/google/b/a/l;
+    .line 45
+    iget-object v0, p0, Lcom/bbm/n/b;->i:Lcom/bbm/util/di;
 
     return-object v0
 .end method
 
-.method static synthetic g(Lcom/bbm/n/b;)Landroid/support/v4/app/bd;
+.method static synthetic f(Lcom/bbm/n/b;)I
     .locals 1
 
     .prologue
-    .line 52
-    iget-object v0, p0, Lcom/bbm/n/b;->s:Landroid/support/v4/app/bd;
+    .line 45
+    iget v0, p0, Lcom/bbm/n/b;->d:I
+
+    return v0
+.end method
+
+.method static synthetic g(Lcom/bbm/n/b;)Lcom/bbm/j/t;
+    .locals 1
+
+    .prologue
+    .line 45
+    iget-object v0, p0, Lcom/bbm/n/b;->n:Lcom/bbm/j/t;
 
     return-object v0
 .end method
@@ -674,105 +691,95 @@
     .locals 2
 
     .prologue
-    .line 52
-    iget-wide v0, p0, Lcom/bbm/n/b;->p:J
+    .line 45
+    iget-wide v0, p0, Lcom/bbm/n/b;->e:J
 
     return-wide v0
 .end method
 
-.method static synthetic i(Lcom/bbm/n/b;)Landroid/app/NotificationManager;
+.method static synthetic i(Lcom/bbm/n/b;)Lcom/bbm/j/t;
     .locals 1
 
     .prologue
-    .line 52
-    iget-object v0, p0, Lcom/bbm/n/b;->r:Landroid/app/NotificationManager;
+    .line 45
+    iget-object v0, p0, Lcom/bbm/n/b;->m:Lcom/bbm/j/t;
 
     return-object v0
 .end method
 
-.method static synthetic j(Lcom/bbm/n/b;)Lcom/bbm/j/t;
+.method static synthetic j(Lcom/bbm/n/b;)Landroid/os/Handler;
     .locals 1
 
     .prologue
-    .line 52
-    iget-object v0, p0, Lcom/bbm/n/b;->o:Lcom/bbm/j/t;
+    .line 45
+    iget-object v0, p0, Lcom/bbm/n/b;->r:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method static synthetic k(Lcom/bbm/n/b;)Landroid/os/Handler;
-    .locals 1
-
-    .prologue
-    .line 52
-    iget-object v0, p0, Lcom/bbm/n/b;->t:Landroid/os/Handler;
-
-    return-object v0
-.end method
-
-.method private k()V
+.method private m()V
     .locals 4
 
     .prologue
-    .line 449
-    invoke-direct {p0}, Lcom/bbm/n/b;->l()V
+    .line 422
+    invoke-direct {p0}, Lcom/bbm/n/b;->n()V
 
-    .line 450
+    .line 423
     new-instance v0, Lcom/bbm/n/e;
 
     invoke-direct {v0, p0}, Lcom/bbm/n/e;-><init>(Lcom/bbm/n/b;)V
 
-    iput-object v0, p0, Lcom/bbm/n/b;->u:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/bbm/n/b;->s:Ljava/lang/Runnable;
 
-    .line 462
-    iget-object v0, p0, Lcom/bbm/n/b;->t:Landroid/os/Handler;
+    .line 435
+    iget-object v0, p0, Lcom/bbm/n/b;->r:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/bbm/n/b;->u:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/bbm/n/b;->s:Ljava/lang/Runnable;
 
     const-wide/16 v2, 0x1f4
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 463
+    .line 436
     return-void
 .end method
 
-.method private l()V
+.method private n()V
     .locals 2
 
     .prologue
-    .line 466
-    iget-object v0, p0, Lcom/bbm/n/b;->u:Ljava/lang/Runnable;
+    .line 439
+    iget-object v0, p0, Lcom/bbm/n/b;->s:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
-    .line 467
-    iget-object v0, p0, Lcom/bbm/n/b;->t:Landroid/os/Handler;
+    .line 440
+    iget-object v0, p0, Lcom/bbm/n/b;->r:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/bbm/n/b;->u:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/bbm/n/b;->s:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 468
+    .line 441
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/bbm/n/b;->u:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/bbm/n/b;->s:Ljava/lang/Runnable;
 
-    .line 470
+    .line 443
     :cond_0
     return-void
 .end method
 
-.method private m()V
+.method private o()V
     .locals 1
 
     .prologue
-    .line 580
-    iget-object v0, p0, Lcom/bbm/n/b;->v:Landroid/media/MediaPlayer;
+    .line 540
+    iget-object v0, p0, Lcom/bbm/n/b;->t:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/bbm/n/b;->v:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/bbm/n/b;->t:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->isPlaying()Z
 
@@ -780,22 +787,22 @@
 
     if-eqz v0, :cond_0
 
-    .line 581
-    iget-object v0, p0, Lcom/bbm/n/b;->v:Landroid/media/MediaPlayer;
+    .line 541
+    iget-object v0, p0, Lcom/bbm/n/b;->t:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->stop()V
 
-    .line 582
-    iget-object v0, p0, Lcom/bbm/n/b;->v:Landroid/media/MediaPlayer;
+    .line 542
+    iget-object v0, p0, Lcom/bbm/n/b;->t:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
 
-    .line 583
+    .line 543
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/bbm/n/b;->v:Landroid/media/MediaPlayer;
+    iput-object v0, p0, Lcom/bbm/n/b;->t:Landroid/media/MediaPlayer;
 
-    .line 585
+    .line 545
     :cond_0
     return-void
 .end method
@@ -806,10 +813,10 @@
     .locals 3
 
     .prologue
-    .line 303
+    .line 271
     iget-object v0, p0, Lcom/bbm/n/b;->a:Lcom/bbm/j/t;
 
-    invoke-virtual {v0}, Lcom/bbm/j/t;->e()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/j/t;->f()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -819,7 +826,7 @@
 
     move-result v0
 
-    .line 304
+    .line 272
     const/4 v1, 0x4
 
     if-eq v0, v1, :cond_0
@@ -833,34 +840,41 @@
     if-ne v0, v1, :cond_1
 
     :cond_0
-    iget v0, p0, Lcom/bbm/n/b;->g:I
+    iget v0, p0, Lcom/bbm/n/b;->d:I
 
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_1
 
-    .line 305
-    iget-object v0, p0, Lcom/bbm/n/b;->j:Lcom/google/b/a/l;
+    .line 273
+    iget-object v0, p0, Lcom/bbm/n/b;->h:Lcom/google/b/a/l;
 
-    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/rim/bbm/BbmMediaCallService;
 
-    iget v1, p0, Lcom/bbm/n/b;->g:I
+    iget v1, p0, Lcom/bbm/n/b;->d:I
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v1, v2}, Lcom/rim/bbm/BbmMediaCallService;->endCall(II)I
 
-    .line 309
+    .line 274
+    invoke-static {}, Lcom/bbm/Alaska;->m()Lcom/bbm/ui/f/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/ui/f/a;->b()V
+
+    .line 278
     :goto_0
     return-void
 
-    .line 307
+    .line 276
     :cond_1
-    invoke-virtual {p0}, Lcom/bbm/n/b;->j()V
+    invoke-virtual {p0}, Lcom/bbm/n/b;->l()V
 
     goto :goto_0
 .end method
@@ -869,14 +883,14 @@
     .locals 1
 
     .prologue
-    .line 387
+    .line 358
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lcom/bbm/n/b;->f:Ljava/lang/ref/WeakReference;
+    iput-object v0, p0, Lcom/bbm/n/b;->p:Ljava/lang/ref/WeakReference;
 
-    .line 388
+    .line 359
     return-void
 .end method
 
@@ -884,8 +898,8 @@
     .locals 2
 
     .prologue
-    .line 403
-    iget-object v0, p0, Lcom/bbm/n/b;->c:Lcom/bbm/j/t;
+    .line 374
+    iget-object v0, p0, Lcom/bbm/n/b;->n:Lcom/bbm/j/t;
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -893,39 +907,39 @@
 
     invoke-virtual {v0, v1}, Lcom/bbm/j/t;->a(Ljava/lang/Object;)V
 
-    .line 404
-    iget-object v0, p0, Lcom/bbm/n/b;->j:Lcom/google/b/a/l;
+    .line 375
+    iget-object v0, p0, Lcom/bbm/n/b;->h:Lcom/google/b/a/l;
 
-    invoke-virtual {v0}, Lcom/google/b/a/l;->a()Z
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget v0, p0, Lcom/bbm/n/b;->g:I
+    iget v0, p0, Lcom/bbm/n/b;->d:I
 
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 405
-    iget-object v0, p0, Lcom/bbm/n/b;->j:Lcom/google/b/a/l;
+    .line 376
+    iget-object v0, p0, Lcom/bbm/n/b;->h:Lcom/google/b/a/l;
 
-    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/rim/bbm/BbmMediaCallService;
 
-    iget v1, p0, Lcom/bbm/n/b;->g:I
+    iget v1, p0, Lcom/bbm/n/b;->d:I
 
     invoke-virtual {v0, v1, p1}, Lcom/rim/bbm/BbmMediaCallService;->muteAudio(IZ)I
 
-    .line 407
+    .line 378
     :cond_0
     iget-object v0, p0, Lcom/bbm/n/b;->a:Lcom/bbm/j/t;
 
-    invoke-virtual {v0}, Lcom/bbm/j/t;->e()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/j/t;->f()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -939,28 +953,28 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 408
-    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
+    .line 379
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/f;
 
     move-result-object v0
 
-    iget-object v1, v0, Lcom/bbm/e;->b:Lcom/bbm/d/a;
+    iget-object v1, v0, Lcom/bbm/f;->b:Lcom/bbm/d/a;
 
     iget-object v0, p0, Lcom/bbm/n/b;->b:Lcom/bbm/j/t;
 
-    invoke-virtual {v0}, Lcom/bbm/j/t;->e()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/j/t;->f()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->b(Ljava/lang/String;)Lcom/bbm/d/gr;
+    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->e(Ljava/lang/String;)Lcom/bbm/d/ie;
 
     move-result-object v1
 
-    iget-object v0, p0, Lcom/bbm/n/b;->c:Lcom/bbm/j/t;
+    iget-object v0, p0, Lcom/bbm/n/b;->n:Lcom/bbm/j/t;
 
-    invoke-virtual {v0}, Lcom/bbm/j/t;->e()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/j/t;->f()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -968,23 +982,21 @@
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result v0
+    invoke-direct {p0, v1}, Lcom/bbm/n/b;->c(Lcom/bbm/d/ie;)V
 
-    invoke-direct {p0, v1, v0}, Lcom/bbm/n/b;->a(Lcom/bbm/d/gr;Z)V
-
-    .line 410
+    .line 381
     :cond_1
     return-void
 .end method
 
-.method public final a(Lcom/bbm/d/gr;)Z
+.method public final a(Lcom/bbm/d/ie;)Z
     .locals 2
 
     .prologue
-    .line 340
+    .line 310
     iget-object v0, p0, Lcom/bbm/n/b;->a:Lcom/bbm/j/t;
 
-    invoke-virtual {v0}, Lcom/bbm/j/t;->e()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/j/t;->f()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -994,8 +1006,10 @@
 
     move-result v0
 
-    .line 341
-    invoke-direct {p0, p1}, Lcom/bbm/n/b;->c(Lcom/bbm/d/gr;)Z
+    .line 311
+    if-eqz p1, :cond_1
+
+    invoke-direct {p0, p1}, Lcom/bbm/n/b;->d(Lcom/bbm/d/ie;)Z
 
     move-result v1
 
@@ -1022,36 +1036,44 @@
 .end method
 
 .method public final a(Ljava/lang/String;)Z
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 376
-    iget-object v0, p0, Lcom/bbm/n/b;->b:Lcom/bbm/j/t;
+    .line 317
+    iget-object v0, p0, Lcom/bbm/n/b;->a:Lcom/bbm/j/t;
 
-    invoke-virtual {v0}, Lcom/bbm/j/t;->b()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 377
-    iget-object v0, p0, Lcom/bbm/n/b;->b:Lcom/bbm/j/t;
-
-    invoke-virtual {v0}, Lcom/bbm/j/t;->e()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/j/t;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/String;
+    check-cast v0, Ljava/lang/Integer;
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
-    .line 379
+    .line 318
+    invoke-direct {p0, p1}, Lcom/bbm/n/b;->c(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/4 v1, 0x2
+
+    if-eq v0, v1, :cond_0
+
+    const/4 v1, 0x3
+
+    if-ne v0, v1, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
     :goto_0
     return v0
 
-    :cond_0
+    :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
@@ -1063,10 +1085,10 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 312
+    .line 281
     iget-object v0, p0, Lcom/bbm/n/b;->a:Lcom/bbm/j/t;
 
-    invoke-virtual {v0}, Lcom/bbm/j/t;->e()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/j/t;->f()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1078,44 +1100,129 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 313
-    iget v0, p0, Lcom/bbm/n/b;->g:I
+    .line 282
+    iget v0, p0, Lcom/bbm/n/b;->d:I
 
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_1
 
-    .line 314
-    iget-object v0, p0, Lcom/bbm/n/b;->j:Lcom/google/b/a/l;
+    .line 283
+    iget-object v0, p0, Lcom/bbm/n/b;->h:Lcom/google/b/a/l;
 
-    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/rim/bbm/BbmMediaCallService;
 
-    iget v1, p0, Lcom/bbm/n/b;->g:I
+    iget v1, p0, Lcom/bbm/n/b;->d:I
 
     invoke-virtual {v0, v1, v2}, Lcom/rim/bbm/BbmMediaCallService;->endCall(II)I
 
-    .line 319
+    .line 284
+    invoke-static {}, Lcom/bbm/Alaska;->m()Lcom/bbm/ui/f/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/ui/f/a;->b()V
+
+    .line 289
     :cond_0
     :goto_0
     return-void
 
-    .line 316
+    .line 286
     :cond_1
-    invoke-virtual {p0}, Lcom/bbm/n/b;->j()V
+    invoke-virtual {p0}, Lcom/bbm/n/b;->l()V
 
     goto :goto_0
 .end method
 
-.method public final b(Lcom/bbm/d/gr;)Z
+.method public final b(Lcom/bbm/n/j;)V
     .locals 2
 
     .prologue
-    .line 357
-    invoke-direct {p0, p1}, Lcom/bbm/n/b;->c(Lcom/bbm/d/gr;)Z
+    .line 362
+    iget-object v0, p0, Lcom/bbm/n/b;->p:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/n/j;
+
+    .line 364
+    if-ne v0, p1, :cond_0
+
+    .line 365
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lcom/bbm/n/b;->p:Ljava/lang/ref/WeakReference;
+
+    .line 367
+    :cond_0
+    return-void
+.end method
+
+.method public final b(Z)V
+    .locals 2
+
+    .prologue
+    .line 393
+    iget-object v0, p0, Lcom/bbm/n/b;->o:Lcom/bbm/j/t;
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/j/t;->a(Ljava/lang/Object;)V
+
+    .line 395
+    iget-object v0, p0, Lcom/bbm/n/b;->h:Lcom/google/b/a/l;
+
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lcom/bbm/n/b;->d:I
+
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_0
+
+    .line 396
+    iget-object v0, p0, Lcom/bbm/n/b;->h:Lcom/google/b/a/l;
+
+    invoke-virtual {v0}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/rim/bbm/BbmMediaCallService;
+
+    iget v1, p0, Lcom/bbm/n/b;->d:I
+
+    invoke-virtual {v0, v1, p1}, Lcom/rim/bbm/BbmMediaCallService;->enableSpeakerphone(IZ)I
+
+    .line 398
+    :cond_0
+    return-void
+.end method
+
+.method public final b(Lcom/bbm/d/ie;)Z
+    .locals 2
+
+    .prologue
+    .line 328
+    if-eqz p1, :cond_0
+
+    invoke-direct {p0, p1}, Lcom/bbm/n/b;->d(Lcom/bbm/d/ie;)Z
 
     move-result v0
 
@@ -1123,7 +1230,7 @@
 
     iget-object v0, p0, Lcom/bbm/n/b;->a:Lcom/bbm/j/t;
 
-    invoke-virtual {v0}, Lcom/bbm/j/t;->e()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/j/t;->f()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1148,14 +1255,104 @@
     goto :goto_0
 .end method
 
-.method public final c()J
+.method public final b(Ljava/lang/String;)Z
     .locals 2
 
     .prologue
-    .line 330
-    iget-object v0, p0, Lcom/bbm/n/b;->o:Lcom/bbm/j/t;
+    .line 323
+    invoke-direct {p0, p1}, Lcom/bbm/n/b;->c(Ljava/lang/String;)Z
 
-    invoke-virtual {v0}, Lcom/bbm/j/t;->e()Ljava/lang/Object;
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/bbm/n/b;->a:Lcom/bbm/j/t;
+
+    invoke-virtual {v0}, Lcom/bbm/j/t;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    const/4 v1, 0x4
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final c()V
+    .locals 3
+
+    .prologue
+    .line 292
+    iget-object v0, p0, Lcom/bbm/n/b;->a:Lcom/bbm/j/t;
+
+    invoke-virtual {v0}, Lcom/bbm/j/t;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    .line 293
+    iget-object v0, p0, Lcom/bbm/n/b;->a:Lcom/bbm/j/t;
+
+    const/4 v1, 0x3
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/j/t;->a(Ljava/lang/Object;)V
+
+    .line 294
+    iget-object v0, p0, Lcom/bbm/n/b;->h:Lcom/google/b/a/l;
+
+    invoke-virtual {v0}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/rim/bbm/BbmMediaCallService;
+
+    iget v1, p0, Lcom/bbm/n/b;->d:I
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lcom/rim/bbm/BbmMediaCallService;->answerCall(IZ)I
+
+    .line 296
+    :cond_0
+    return-void
+.end method
+
+.method public final d()J
+    .locals 2
+
+    .prologue
+    .line 300
+    iget-object v0, p0, Lcom/bbm/n/b;->m:Lcom/bbm/j/t;
+
+    invoke-virtual {v0}, Lcom/bbm/j/t;->f()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1168,14 +1365,14 @@
     return-wide v0
 .end method
 
-.method public final d()Ljava/lang/String;
+.method public final e()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 335
+    .line 305
     iget-object v0, p0, Lcom/bbm/n/b;->b:Lcom/bbm/j/t;
 
-    invoke-virtual {v0}, Lcom/bbm/j/t;->e()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/j/t;->f()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1184,14 +1381,14 @@
     return-object v0
 .end method
 
-.method public final e()Z
+.method public final f()Z
     .locals 1
 
     .prologue
-    .line 367
+    .line 338
     iget-object v0, p0, Lcom/bbm/n/b;->a:Lcom/bbm/j/t;
 
-    invoke-virtual {v0}, Lcom/bbm/j/t;->e()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/j/t;->f()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1214,22 +1411,22 @@
     goto :goto_0
 .end method
 
-.method public final f()Z
+.method public final g()Z
     .locals 2
 
     .prologue
-    .line 371
-    iget-object v0, p0, Lcom/bbm/n/b;->j:Lcom/google/b/a/l;
+    .line 342
+    iget-object v0, p0, Lcom/bbm/n/b;->h:Lcom/google/b/a/l;
 
-    invoke-virtual {v0}, Lcom/google/b/a/l;->a()Z
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/bbm/n/b;->j:Lcom/google/b/a/l;
+    iget-object v0, p0, Lcom/bbm/n/b;->h:Lcom/google/b/a/l;
 
-    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1250,34 +1447,14 @@
     goto :goto_0
 .end method
 
-.method public final g()Z
-    .locals 1
-
-    .prologue
-    .line 413
-    iget-object v0, p0, Lcom/bbm/n/b;->c:Lcom/bbm/j/t;
-
-    invoke-virtual {v0}, Lcom/bbm/j/t;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    return v0
-.end method
-
 .method public final h()Z
     .locals 1
 
     .prologue
-    .line 435
-    iget-object v0, p0, Lcom/bbm/n/b;->d:Lcom/bbm/j/t;
+    .line 384
+    iget-object v0, p0, Lcom/bbm/n/b;->n:Lcom/bbm/j/t;
 
-    invoke-virtual {v0}, Lcom/bbm/j/t;->e()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/j/t;->f()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1290,14 +1467,80 @@
     return v0
 .end method
 
-.method public final i()I
+.method public final i()Z
     .locals 1
 
     .prologue
-    .line 445
+    .line 388
+    iget-object v0, p0, Lcom/bbm/n/b;->n:Lcom/bbm/j/t;
+
+    invoke-virtual {v0}, Lcom/bbm/j/t;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    invoke-virtual {p0, v0}, Lcom/bbm/n/b;->a(Z)V
+
+    .line 389
+    iget-object v0, p0, Lcom/bbm/n/b;->n:Lcom/bbm/j/t;
+
+    invoke-virtual {v0}, Lcom/bbm/j/t;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    return v0
+
+    .line 388
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final j()Z
+    .locals 1
+
+    .prologue
+    .line 406
+    iget-object v0, p0, Lcom/bbm/n/b;->o:Lcom/bbm/j/t;
+
+    invoke-virtual {v0}, Lcom/bbm/j/t;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final k()I
+    .locals 1
+
+    .prologue
+    .line 416
     iget-object v0, p0, Lcom/bbm/n/b;->a:Lcom/bbm/j/t;
 
-    invoke-virtual {v0}, Lcom/bbm/j/t;->e()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/j/t;->f()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1310,7 +1553,7 @@
     return v0
 .end method
 
-.method public final j()V
+.method public final l()V
     .locals 6
 
     .prologue
@@ -1318,22 +1561,22 @@
 
     const/4 v2, 0x0
 
-    .line 473
-    invoke-direct {p0}, Lcom/bbm/n/b;->l()V
+    .line 446
+    invoke-direct {p0}, Lcom/bbm/n/b;->n()V
 
-    .line 474
+    .line 447
     iget-object v0, p0, Lcom/bbm/n/b;->b:Lcom/bbm/j/t;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/bbm/j/t;->a(Ljava/lang/Object;)V
 
-    .line 475
+    .line 448
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/bbm/n/b;->g:I
+    iput v0, p0, Lcom/bbm/n/b;->d:I
 
-    .line 476
+    .line 449
     iget-object v0, p0, Lcom/bbm/n/b;->a:Lcom/bbm/j/t;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1342,8 +1585,8 @@
 
     invoke-virtual {v0, v1}, Lcom/bbm/j/t;->a(Ljava/lang/Object;)V
 
-    .line 477
-    iget-object v0, p0, Lcom/bbm/n/b;->o:Lcom/bbm/j/t;
+    .line 450
+    iget-object v0, p0, Lcom/bbm/n/b;->m:Lcom/bbm/j/t;
 
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -1351,8 +1594,8 @@
 
     invoke-virtual {v0, v1}, Lcom/bbm/j/t;->a(Ljava/lang/Object;)V
 
-    .line 478
-    iget-object v0, p0, Lcom/bbm/n/b;->c:Lcom/bbm/j/t;
+    .line 451
+    iget-object v0, p0, Lcom/bbm/n/b;->n:Lcom/bbm/j/t;
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -1360,8 +1603,8 @@
 
     invoke-virtual {v0, v1}, Lcom/bbm/j/t;->a(Ljava/lang/Object;)V
 
-    .line 479
-    iget-object v0, p0, Lcom/bbm/n/b;->d:Lcom/bbm/j/t;
+    .line 452
+    iget-object v0, p0, Lcom/bbm/n/b;->o:Lcom/bbm/j/t;
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -1369,26 +1612,24 @@
 
     invoke-virtual {v0, v1}, Lcom/bbm/j/t;->a(Ljava/lang/Object;)V
 
-    .line 480
-    iput-wide v4, p0, Lcom/bbm/n/b;->p:J
+    .line 453
+    iput-wide v4, p0, Lcom/bbm/n/b;->e:J
 
-    .line 482
-    iget-object v0, p0, Lcom/bbm/n/b;->i:Landroid/content/Context;
-
-    const-string v1, "notification"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    .line 455
+    invoke-static {}, Lcom/bbm/Alaska;->m()Lcom/bbm/ui/f/a;
 
     move-result-object v0
 
-    check-cast v0, Landroid/app/NotificationManager;
+    iget-object v1, v0, Lcom/bbm/ui/f/a;->b:Landroid/support/v4/app/ch;
 
-    const/16 v1, 0x2328
+    const/16 v2, 0x2328
 
-    invoke-virtual {v0, v1}, Landroid/app/NotificationManager;->cancel(I)V
+    invoke-virtual {v1, v2}, Landroid/support/v4/app/ch;->a(I)V
 
-    .line 484
-    iget-object v0, p0, Lcom/bbm/n/b;->f:Ljava/lang/ref/WeakReference;
+    invoke-virtual {v0}, Lcom/bbm/ui/f/a;->b()V
+
+    .line 457
+    iget-object v0, p0, Lcom/bbm/n/b;->p:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -1396,13 +1637,13 @@
 
     check-cast v0, Lcom/bbm/n/j;
 
-    .line 485
+    .line 458
     if-eqz v0, :cond_0
 
-    .line 486
+    .line 459
     invoke-interface {v0}, Lcom/bbm/n/j;->a()V
 
-    .line 488
+    .line 461
     :cond_0
     return-void
 .end method
@@ -1411,8 +1652,8 @@
     .locals 2
 
     .prologue
-    .line 822
-    iget-object v0, p0, Lcom/bbm/n/b;->e:Lcom/bbm/j/t;
+    .line 781
+    iget-object v0, p0, Lcom/bbm/n/b;->c:Lcom/bbm/j/t;
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -1420,7 +1661,7 @@
 
     invoke-virtual {v0, v1}, Lcom/bbm/j/t;->a(Ljava/lang/Object;)V
 
-    .line 823
+    .line 782
     return-void
 .end method
 
@@ -1434,12 +1675,12 @@
 
     const/4 v2, 0x0
 
-    .line 605
+    .line 565
     iget v0, p2, Lcom/rim/bbm/BbmMediaCallService$CallData;->failureReason:I
 
     if-eqz v0, :cond_0
 
-    .line 606
+    .line 566
     iget-object v0, p0, Lcom/bbm/n/b;->b:Lcom/bbm/j/t;
 
     invoke-virtual {v0}, Lcom/bbm/j/t;->a()Ljava/lang/Object;
@@ -1448,17 +1689,17 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 607
+    .line 567
     new-instance v1, Lcom/bbm/n/h;
 
     invoke-direct {v1, p0, p2, v0}, Lcom/bbm/n/h;-><init>(Lcom/bbm/n/b;Lcom/rim/bbm/BbmMediaCallService$CallData;Ljava/lang/String;)V
 
-    .line 716
+    .line 676
     invoke-virtual {v1}, Lcom/bbm/j/u;->c()V
 
-    .line 719
+    .line 679
     :cond_0
-    iget-object v0, p0, Lcom/bbm/n/b;->f:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/bbm/n/b;->p:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -1466,41 +1707,41 @@
 
     check-cast v0, Lcom/bbm/n/j;
 
-    .line 721
+    .line 680
     iget v1, p2, Lcom/rim/bbm/BbmMediaCallService$CallData;->callState:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 788
+    .line 747
     :cond_1
     :goto_0
     return-void
 
-    .line 723
+    .line 682
     :pswitch_0
-    invoke-virtual {p0}, Lcom/bbm/n/b;->j()V
+    invoke-virtual {p0}, Lcom/bbm/n/b;->l()V
 
-    .line 725
+    .line 684
     if-eqz v0, :cond_1
 
-    .line 726
+    .line 685
     invoke-interface {v0}, Lcom/bbm/n/j;->a()V
 
     goto :goto_0
 
-    .line 730
+    .line 689
     :pswitch_1
     if-eqz v0, :cond_1
 
     goto :goto_0
 
-    .line 735
+    .line 694
     :pswitch_2
     if-eqz v0, :cond_1
 
     goto :goto_0
 
-    .line 740
+    .line 699
     :pswitch_3
     iget-object v1, p0, Lcom/bbm/n/b;->a:Lcom/bbm/j/t;
 
@@ -1516,10 +1757,10 @@
 
     if-eq v1, v3, :cond_2
 
-    .line 741
-    invoke-direct {p0}, Lcom/bbm/n/b;->m()V
+    .line 700
+    invoke-direct {p0}, Lcom/bbm/n/b;->o()V
 
-    .line 742
+    .line 701
     iget-object v1, p0, Lcom/bbm/n/b;->a:Lcom/bbm/j/t;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1528,19 +1769,19 @@
 
     invoke-virtual {v1, v2}, Lcom/bbm/j/t;->a(Ljava/lang/Object;)V
 
-    .line 743
+    .line 702
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcom/bbm/n/b;->p:J
+    iput-wide v2, p0, Lcom/bbm/n/b;->e:J
 
-    .line 744
-    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
+    .line 703
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/f;
 
     move-result-object v1
 
-    iget-object v2, v1, Lcom/bbm/e;->b:Lcom/bbm/d/a;
+    iget-object v2, v1, Lcom/bbm/f;->b:Lcom/bbm/d/a;
 
     iget-object v1, p0, Lcom/bbm/n/b;->b:Lcom/bbm/j/t;
 
@@ -1550,11 +1791,11 @@
 
     check-cast v1, Ljava/lang/String;
 
-    invoke-virtual {v2, v1}, Lcom/bbm/d/a;->b(Ljava/lang/String;)Lcom/bbm/d/gr;
+    invoke-virtual {v2, v1}, Lcom/bbm/d/a;->e(Ljava/lang/String;)Lcom/bbm/d/ie;
 
     move-result-object v2
 
-    iget-object v1, p0, Lcom/bbm/n/b;->c:Lcom/bbm/j/t;
+    iget-object v1, p0, Lcom/bbm/n/b;->n:Lcom/bbm/j/t;
 
     invoke-virtual {v1}, Lcom/bbm/j/t;->a()Ljava/lang/Object;
 
@@ -1564,31 +1805,32 @@
 
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result v1
+    invoke-direct {p0, v2}, Lcom/bbm/n/b;->c(Lcom/bbm/d/ie;)V
 
-    invoke-direct {p0, v2, v1}, Lcom/bbm/n/b;->a(Lcom/bbm/d/gr;Z)V
+    .line 704
+    invoke-direct {p0}, Lcom/bbm/n/b;->m()V
 
-    .line 745
-    invoke-direct {p0}, Lcom/bbm/n/b;->k()V
-
-    .line 747
+    .line 706
     :cond_2
     if-eqz v0, :cond_1
 
-    .line 748
+    .line 707
     invoke-interface {v0}, Lcom/bbm/n/j;->b()V
 
     goto :goto_0
 
-    .line 752
+    .line 711
     :pswitch_4
     if-eqz v0, :cond_1
 
+    .line 712
+    invoke-interface {v0}, Lcom/bbm/n/j;->c()V
+
     goto :goto_0
 
-    .line 757
+    .line 716
     :pswitch_5
-    iget-object v1, p0, Lcom/bbm/n/b;->v:Landroid/media/MediaPlayer;
+    iget-object v1, p0, Lcom/bbm/n/b;->t:Landroid/media/MediaPlayer;
 
     if-nez v1, :cond_3
 
@@ -1597,19 +1839,19 @@
 
     invoke-direct {v1}, Landroid/media/MediaPlayer;-><init>()V
 
-    iput-object v1, p0, Lcom/bbm/n/b;->v:Landroid/media/MediaPlayer;
+    iput-object v1, p0, Lcom/bbm/n/b;->t:Landroid/media/MediaPlayer;
 
-    iget-object v1, p0, Lcom/bbm/n/b;->v:Landroid/media/MediaPlayer;
+    iget-object v1, p0, Lcom/bbm/n/b;->t:Landroid/media/MediaPlayer;
 
     const/4 v3, 0x0
 
     invoke-virtual {v1, v3}, Landroid/media/MediaPlayer;->setAudioStreamType(I)V
 
-    iget-object v1, p0, Lcom/bbm/n/b;->v:Landroid/media/MediaPlayer;
+    iget-object v1, p0, Lcom/bbm/n/b;->t:Landroid/media/MediaPlayer;
 
-    iget-object v3, p0, Lcom/bbm/n/b;->i:Landroid/content/Context;
+    iget-object v3, p0, Lcom/bbm/n/b;->g:Landroid/content/Context;
 
-    sget-object v4, Lcom/bbm/n/b;->l:Ljava/lang/String;
+    sget-object v4, Lcom/bbm/n/b;->j:Ljava/lang/String;
 
     invoke-static {v4}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -1617,33 +1859,33 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/media/MediaPlayer;->setDataSource(Landroid/content/Context;Landroid/net/Uri;)V
 
-    iget-object v1, p0, Lcom/bbm/n/b;->v:Landroid/media/MediaPlayer;
+    iget-object v1, p0, Lcom/bbm/n/b;->t:Landroid/media/MediaPlayer;
 
     const/4 v3, 0x1
 
     invoke-virtual {v1, v3}, Landroid/media/MediaPlayer;->setLooping(Z)V
 
-    iget-object v1, p0, Lcom/bbm/n/b;->v:Landroid/media/MediaPlayer;
+    iget-object v1, p0, Lcom/bbm/n/b;->t:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1}, Landroid/media/MediaPlayer;->prepare()V
 
-    iget-object v1, p0, Lcom/bbm/n/b;->v:Landroid/media/MediaPlayer;
+    iget-object v1, p0, Lcom/bbm/n/b;->t:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1}, Landroid/media/MediaPlayer;->start()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 759
+    .line 718
     :cond_3
     :goto_1
     if-eqz v0, :cond_1
 
-    .line 760
-    invoke-interface {v0}, Lcom/bbm/n/j;->c()V
+    .line 719
+    invoke-interface {v0}, Lcom/bbm/n/j;->d()V
 
     goto/16 :goto_0
 
-    .line 757
+    .line 716
     :catch_0
     move-exception v1
 
@@ -1651,25 +1893,25 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-static {v1, v3, v2}, Lcom/bbm/y;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v1, v3, v2}, Lcom/bbm/af;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lcom/bbm/n/b;->v:Landroid/media/MediaPlayer;
+    iput-object v1, p0, Lcom/bbm/n/b;->t:Landroid/media/MediaPlayer;
 
     goto :goto_1
 
-    .line 764
+    .line 723
     :pswitch_6
     if-eqz v0, :cond_1
 
     goto/16 :goto_0
 
-    .line 769
+    .line 728
     :pswitch_7
-    invoke-direct {p0}, Lcom/bbm/n/b;->m()V
+    invoke-direct {p0}, Lcom/bbm/n/b;->o()V
 
-    .line 773
+    .line 732
     iget-object v1, p0, Lcom/bbm/n/b;->a:Lcom/bbm/j/t;
 
     invoke-virtual {v1}, Lcom/bbm/j/t;->a()Ljava/lang/Object;
@@ -1682,20 +1924,20 @@
 
     move-result v1
 
-    .line 775
-    invoke-virtual {p0}, Lcom/bbm/n/b;->j()V
+    .line 734
+    invoke-virtual {p0}, Lcom/bbm/n/b;->l()V
 
-    .line 776
+    .line 735
     if-eqz v0, :cond_4
 
-    .line 777
+    .line 736
     iget-boolean v3, p2, Lcom/rim/bbm/BbmMediaCallService$CallData;->rateCall:Z
 
     invoke-interface {v0, v3}, Lcom/bbm/n/j;->a(Z)V
 
-    .line 784
+    .line 743
     :cond_4
-    iget-boolean v0, p0, Lcom/bbm/n/b;->h:Z
+    iget-boolean v0, p0, Lcom/bbm/n/b;->f:Z
 
     if-eqz v0, :cond_6
 
@@ -1703,9 +1945,9 @@
 
     new-array v1, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcom/bbm/n/b;->i:Landroid/content/Context;
+    iget-object v0, p0, Lcom/bbm/n/b;->g:Landroid/content/Context;
 
     const-string v1, "audio"
 
@@ -1717,14 +1959,14 @@
 
     invoke-virtual {v0, v2}, Landroid/media/AudioManager;->setSpeakerphoneOn(Z)V
 
-    .line 785
+    .line 744
     :cond_5
     :goto_2
-    iput-boolean v2, p0, Lcom/bbm/n/b;->h:Z
+    iput-boolean v2, p0, Lcom/bbm/n/b;->f:Z
 
     goto/16 :goto_0
 
-    .line 784
+    .line 743
     :cond_6
     if-eqz v1, :cond_5
 
@@ -1740,9 +1982,9 @@
     :goto_3
     invoke-virtual {v3, v0}, Landroid/media/MediaPlayer;->setAudioStreamType(I)V
 
-    iget-object v0, p0, Lcom/bbm/n/b;->i:Landroid/content/Context;
+    iget-object v0, p0, Lcom/bbm/n/b;->g:Landroid/content/Context;
 
-    sget-object v1, Lcom/bbm/n/b;->n:Ljava/lang/String;
+    sget-object v1, Lcom/bbm/n/b;->l:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -1779,15 +2021,15 @@
 
     new-array v3, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, v1, v3}, Lcom/bbm/y;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v3}, Lcom/bbm/af;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     const-string v0, "Setting speaker to disabled"
 
     new-array v1, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcom/bbm/n/b;->i:Landroid/content/Context;
+    iget-object v0, p0, Lcom/bbm/n/b;->g:Landroid/content/Context;
 
     const-string v1, "audio"
 
@@ -1806,7 +2048,7 @@
 
     goto :goto_3
 
-    .line 721
+    .line 680
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -1824,19 +2066,19 @@
     .locals 2
 
     .prologue
-    .line 592
-    iget-object v0, p0, Lcom/bbm/n/b;->k:Lcom/bbm/util/cz;
+    .line 552
+    iget-object v0, p0, Lcom/bbm/n/b;->i:Lcom/bbm/util/di;
 
-    invoke-virtual {v0}, Lcom/bbm/util/cz;->a()Z
+    invoke-virtual {v0}, Lcom/bbm/util/di;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 595
-    iget-object v0, p0, Lcom/bbm/n/b;->j:Lcom/google/b/a/l;
+    .line 555
+    iget-object v0, p0, Lcom/bbm/n/b;->h:Lcom/google/b/a/l;
 
-    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1846,30 +2088,30 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/rim/bbm/BbmMediaCallService;->endCall(II)I
 
-    .line 600
+    .line 560
     :goto_0
     return-void
 
-    .line 598
+    .line 558
     :cond_0
     new-instance v0, Lcom/bbm/n/i;
 
     invoke-direct {v0, p0, p2}, Lcom/bbm/n/i;-><init>(Lcom/bbm/n/b;Lcom/rim/bbm/BbmMediaCallService$CallData;)V
 
-    .line 599
+    .line 559
     invoke-virtual {v0}, Lcom/bbm/n/i;->c()V
 
     goto :goto_0
 .end method
 
 .method public final onMediaStateChange(ILcom/rim/bbm/BbmMediaCallService$CallData;)V
-    .locals 4
+    .locals 3
 
     .prologue
     const/4 v2, 0x4
 
-    .line 792
-    iget-object v0, p0, Lcom/bbm/n/b;->f:Ljava/lang/ref/WeakReference;
+    .line 751
+    iget-object v0, p0, Lcom/bbm/n/b;->p:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -1877,109 +2119,100 @@
 
     check-cast v0, Lcom/bbm/n/j;
 
-    .line 794
+    .line 753
     iget v1, p2, Lcom/rim/bbm/BbmMediaCallService$CallData;->audioState:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 818
+    .line 772
     :cond_0
     :goto_0
     return-void
 
-    .line 796
+    .line 755
     :pswitch_0
     if-eqz v0, :cond_0
 
     goto :goto_0
 
-    .line 801
+    .line 760
     :pswitch_1
     if-eqz v0, :cond_0
 
     goto :goto_0
 
-    .line 806
+    .line 765
     :pswitch_2
-    iget-object v1, p0, Lcom/bbm/n/b;->a:Lcom/bbm/j/t;
+    iget-object v0, p0, Lcom/bbm/n/b;->a:Lcom/bbm/j/t;
 
-    invoke-virtual {v1}, Lcom/bbm/j/t;->a()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/j/t;->a()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v0
 
-    check-cast v1, Ljava/lang/Integer;
+    check-cast v0, Ljava/lang/Integer;
 
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    move-result v1
+    move-result v0
 
-    if-eq v1, v2, :cond_1
+    if-eq v0, v2, :cond_0
 
-    .line 807
-    invoke-direct {p0}, Lcom/bbm/n/b;->m()V
+    .line 766
+    invoke-direct {p0}, Lcom/bbm/n/b;->o()V
 
-    .line 808
-    iget-object v1, p0, Lcom/bbm/n/b;->a:Lcom/bbm/j/t;
+    .line 767
+    iget-object v0, p0, Lcom/bbm/n/b;->a:Lcom/bbm/j/t;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v1, v2}, Lcom/bbm/j/t;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/j/t;->a(Ljava/lang/Object;)V
 
-    .line 809
+    .line 768
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v2
+    move-result-wide v0
 
-    iput-wide v2, p0, Lcom/bbm/n/b;->p:J
+    iput-wide v0, p0, Lcom/bbm/n/b;->e:J
 
-    .line 810
-    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
+    .line 769
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/f;
 
-    move-result-object v1
+    move-result-object v0
 
-    iget-object v2, v1, Lcom/bbm/e;->b:Lcom/bbm/d/a;
+    iget-object v1, v0, Lcom/bbm/f;->b:Lcom/bbm/d/a;
 
-    iget-object v1, p0, Lcom/bbm/n/b;->b:Lcom/bbm/j/t;
+    iget-object v0, p0, Lcom/bbm/n/b;->b:Lcom/bbm/j/t;
 
-    invoke-virtual {v1}, Lcom/bbm/j/t;->a()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/j/t;->a()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v0
 
-    check-cast v1, Ljava/lang/String;
+    check-cast v0, Ljava/lang/String;
 
-    invoke-virtual {v2, v1}, Lcom/bbm/d/a;->b(Ljava/lang/String;)Lcom/bbm/d/gr;
-
-    move-result-object v2
-
-    iget-object v1, p0, Lcom/bbm/n/b;->c:Lcom/bbm/j/t;
-
-    invoke-virtual {v1}, Lcom/bbm/j/t;->a()Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->e(Ljava/lang/String;)Lcom/bbm/d/ie;
 
     move-result-object v1
 
-    check-cast v1, Ljava/lang/Boolean;
+    iget-object v0, p0, Lcom/bbm/n/b;->n:Lcom/bbm/j/t;
 
-    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v0}, Lcom/bbm/j/t;->a()Ljava/lang/Object;
 
-    move-result v1
+    move-result-object v0
 
-    invoke-direct {p0, v2, v1}, Lcom/bbm/n/b;->a(Lcom/bbm/d/gr;Z)V
+    check-cast v0, Ljava/lang/Boolean;
 
-    .line 811
-    invoke-direct {p0}, Lcom/bbm/n/b;->k()V
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 813
-    :cond_1
-    if-eqz v0, :cond_0
+    invoke-direct {p0, v1}, Lcom/bbm/n/b;->c(Lcom/bbm/d/ie;)V
 
-    .line 814
-    invoke-interface {v0}, Lcom/bbm/n/j;->d()V
+    .line 770
+    invoke-direct {p0}, Lcom/bbm/n/b;->m()V
 
     goto :goto_0
 
-    .line 794
+    .line 753
     nop
 
     :pswitch_data_0

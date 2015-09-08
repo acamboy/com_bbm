@@ -7,31 +7,31 @@
 
 
 # static fields
-.field public static final bF:I = 0xffff
+.field public static final bI:I = 0xffff
 
-.field private static bG:Ljavax/net/SocketFactory;
+.field private static bJ:Ljavax/net/SocketFactory;
 
-.field private static bH:Ljavax/net/SocketFactory;
+.field private static bK:Ljavax/net/SocketFactory;
 
 
 # instance fields
-.field private bA:Ljava/net/Socket;
+.field private bA:I
 
-.field private bB:Lcom/glympse/android/hal/GlympseThreadPool;
+.field private bB:Z
 
-.field private bC:Z
+.field private bC:Lcom/glympse/android/hal/GSocketListener;
 
-.field private bD:Z
+.field private bD:Ljava/net/Socket;
 
-.field private volatile bE:Z
+.field private bE:Lcom/glympse/android/hal/GlympseThreadPool;
 
-.field private bw:Ljava/lang/String;
+.field private bF:Z
 
-.field private bx:I
+.field private bG:Z
 
-.field private by:Z
+.field private volatile bH:Z
 
-.field private bz:Lcom/glympse/android/hal/GSocketListener;
+.field private bz:Ljava/lang/String;
 
 
 # direct methods
@@ -61,7 +61,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/ai;->bG:Ljavax/net/SocketFactory;
+    sput-object v0, Lcom/glympse/android/hal/ai;->bJ:Ljavax/net/SocketFactory;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
 
@@ -72,7 +72,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/ai;->bH:Ljavax/net/SocketFactory;
+    sput-object v0, Lcom/glympse/android/hal/ai;->bK:Ljavax/net/SocketFactory;
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -101,10 +101,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 37
-    iput-boolean v0, p0, Lcom/glympse/android/hal/ai;->bC:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/ai;->bF:Z
 
     .line 38
-    iput-boolean v0, p0, Lcom/glympse/android/hal/ai;->bD:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/ai;->bG:Z
 
     .line 39
     return-void
@@ -127,7 +127,7 @@
 
     .prologue
     .line 18
-    iput-object p1, p0, Lcom/glympse/android/hal/ai;->bA:Ljava/net/Socket;
+    iput-object p1, p0, Lcom/glympse/android/hal/ai;->bD:Ljava/net/Socket;
 
     return-object p1
 .end method
@@ -137,7 +137,7 @@
 
     .prologue
     .line 18
-    iput-boolean p1, p0, Lcom/glympse/android/hal/ai;->bD:Z
+    iput-boolean p1, p0, Lcom/glympse/android/hal/ai;->bG:Z
 
     return p1
 .end method
@@ -147,7 +147,7 @@
 
     .prologue
     .line 18
-    iget-object v0, p0, Lcom/glympse/android/hal/ai;->bA:Ljava/net/Socket;
+    iget-object v0, p0, Lcom/glympse/android/hal/ai;->bD:Ljava/net/Socket;
 
     return-object v0
 .end method
@@ -169,11 +169,11 @@
     const/4 v0, 0x0
 
     .line 309
-    iget-boolean v1, p0, Lcom/glympse/android/hal/ai;->by:Z
+    iget-boolean v1, p0, Lcom/glympse/android/hal/ai;->bB:Z
 
     if-eqz v1, :cond_0
 
-    sget-object v1, Lcom/glympse/android/hal/ai;->bG:Ljavax/net/SocketFactory;
+    sget-object v1, Lcom/glympse/android/hal/ai;->bJ:Ljavax/net/SocketFactory;
 
     .line 310
     :goto_0
@@ -185,16 +185,16 @@
 
     .line 309
     :cond_0
-    sget-object v1, Lcom/glympse/android/hal/ai;->bH:Ljavax/net/SocketFactory;
+    sget-object v1, Lcom/glympse/android/hal/ai;->bK:Ljavax/net/SocketFactory;
 
     goto :goto_0
 
     .line 318
     :cond_1
     :try_start_0
-    iget-object v2, p0, Lcom/glympse/android/hal/ai;->bw:Ljava/lang/String;
+    iget-object v2, p0, Lcom/glympse/android/hal/ai;->bz:Ljava/lang/String;
 
-    iget v3, p0, Lcom/glympse/android/hal/ai;->bx:I
+    iget v3, p0, Lcom/glympse/android/hal/ai;->bA:I
 
     invoke-virtual {v1, v2, v3}, Ljavax/net/SocketFactory;->createSocket(Ljava/lang/String;I)Ljava/net/Socket;
     :try_end_0
@@ -216,7 +216,7 @@
 
     .prologue
     .line 18
-    iget-object v0, p0, Lcom/glympse/android/hal/ai;->bz:Lcom/glympse/android/hal/GSocketListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/ai;->bC:Lcom/glympse/android/hal/GSocketListener;
 
     return-object v0
 .end method
@@ -226,7 +226,7 @@
 
     .prologue
     .line 18
-    iget-object v0, p0, Lcom/glympse/android/hal/ai;->bB:Lcom/glympse/android/hal/GlympseThreadPool;
+    iget-object v0, p0, Lcom/glympse/android/hal/ai;->bE:Lcom/glympse/android/hal/GlympseThreadPool;
 
     return-object v0
 .end method
@@ -236,7 +236,7 @@
 
     .prologue
     .line 18
-    iget-boolean v0, p0, Lcom/glympse/android/hal/ai;->bD:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/ai;->bG:Z
 
     return v0
 .end method
@@ -271,10 +271,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ai;->bB:Lcom/glympse/android/hal/GlympseThreadPool;
+    iput-object v0, p0, Lcom/glympse/android/hal/ai;->bE:Lcom/glympse/android/hal/GlympseThreadPool;
 
     .line 115
-    iget-object v0, p0, Lcom/glympse/android/hal/ai;->bB:Lcom/glympse/android/hal/GlympseThreadPool;
+    iget-object v0, p0, Lcom/glympse/android/hal/ai;->bE:Lcom/glympse/android/hal/GlympseThreadPool;
 
     new-instance v1, Lcom/glympse/android/hal/aj;
 
@@ -306,16 +306,16 @@
     .line 146
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/glympse/android/hal/ai;->bD:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/ai;->bG:Z
 
     .line 151
     :try_start_0
-    iget-object v0, p0, Lcom/glympse/android/hal/ai;->bA:Ljava/net/Socket;
+    iget-object v0, p0, Lcom/glympse/android/hal/ai;->bD:Ljava/net/Socket;
 
     if-eqz v0, :cond_0
 
     .line 153
-    iget-object v0, p0, Lcom/glympse/android/hal/ai;->bA:Ljava/net/Socket;
+    iget-object v0, p0, Lcom/glympse/android/hal/ai;->bD:Ljava/net/Socket;
 
     invoke-virtual {v0}, Ljava/net/Socket;->close()V
     :try_end_0
@@ -326,7 +326,7 @@
     :goto_0
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ai;->bA:Ljava/net/Socket;
+    iput-object v0, p0, Lcom/glympse/android/hal/ai;->bD:Ljava/net/Socket;
 
     .line 160
     return-void
@@ -343,12 +343,12 @@
     .prologue
     .line 127
     :try_start_0
-    iget-object v0, p0, Lcom/glympse/android/hal/ai;->bB:Lcom/glympse/android/hal/GlympseThreadPool;
+    iget-object v0, p0, Lcom/glympse/android/hal/ai;->bE:Lcom/glympse/android/hal/GlympseThreadPool;
 
     if-eqz v0, :cond_0
 
     .line 129
-    iget-object v0, p0, Lcom/glympse/android/hal/ai;->bB:Lcom/glympse/android/hal/GlympseThreadPool;
+    iget-object v0, p0, Lcom/glympse/android/hal/ai;->bE:Lcom/glympse/android/hal/GlympseThreadPool;
 
     new-instance v1, Lcom/glympse/android/hal/ak;
 
@@ -377,7 +377,7 @@
     .prologue
     .line 334
     :try_start_0
-    iget-object v0, p0, Lcom/glympse/android/hal/ai;->bz:Lcom/glympse/android/hal/GSocketListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/ai;->bC:Lcom/glympse/android/hal/GSocketListener;
 
     invoke-interface {v0, p0}, Lcom/glympse/android/hal/GSocketListener;->failed(Lcom/glympse/android/hal/GSocket;)V
     :try_end_0
@@ -401,7 +401,7 @@
 
     .prologue
     .line 351
-    iget-boolean v0, p0, Lcom/glympse/android/hal/ai;->bE:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/ai;->bH:Z
 
     if-eqz v0, :cond_0
 
@@ -413,11 +413,11 @@
     :cond_0
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/glympse/android/hal/ai;->bE:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/ai;->bH:Z
 
     .line 358
     :try_start_0
-    iget-object v0, p0, Lcom/glympse/android/hal/ai;->bz:Lcom/glympse/android/hal/GSocketListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/ai;->bC:Lcom/glympse/android/hal/GSocketListener;
 
     invoke-interface {v0, p0}, Lcom/glympse/android/hal/GSocketListener;->disconnected(Lcom/glympse/android/hal/GSocket;)V
     :try_end_0
@@ -442,7 +442,7 @@
 
     .prologue
     .line 82
-    iget-boolean v0, p0, Lcom/glympse/android/hal/ai;->bD:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/ai;->bG:Z
 
     if-eqz v0, :cond_0
 
@@ -461,7 +461,7 @@
     const/4 v1, 0x1
 
     .line 44
-    iget-boolean v0, p0, Lcom/glympse/android/hal/ai;->bC:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/ai;->bF:Z
 
     if-eqz v0, :cond_1
 
@@ -472,19 +472,19 @@
 
     .line 48
     :cond_1
-    iput-boolean v1, p0, Lcom/glympse/android/hal/ai;->bC:Z
+    iput-boolean v1, p0, Lcom/glympse/android/hal/ai;->bF:Z
 
     .line 50
     if-eqz p4, :cond_0
 
     .line 55
-    iput-object p4, p0, Lcom/glympse/android/hal/ai;->bz:Lcom/glympse/android/hal/GSocketListener;
+    iput-object p4, p0, Lcom/glympse/android/hal/ai;->bC:Lcom/glympse/android/hal/GSocketListener;
 
     .line 56
-    iput-object p1, p0, Lcom/glympse/android/hal/ai;->bw:Ljava/lang/String;
+    iput-object p1, p0, Lcom/glympse/android/hal/ai;->bz:Ljava/lang/String;
 
     .line 57
-    iput-boolean p3, p0, Lcom/glympse/android/hal/ai;->by:Z
+    iput-boolean p3, p0, Lcom/glympse/android/hal/ai;->bB:Z
 
     .line 60
     invoke-static {}, Lcom/glympse/android/hal/ConnectivityChecker;->isConnected()Z
@@ -514,7 +514,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/glympse/android/hal/ai;->bx:I
+    iput v0, p0, Lcom/glympse/android/hal/ai;->bA:I
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -538,12 +538,12 @@
     .prologue
     .line 93
     :try_start_0
-    iget-boolean v0, p0, Lcom/glympse/android/hal/ai;->bD:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/ai;->bG:Z
 
     if-eqz v0, :cond_0
 
     .line 95
-    iget-object v0, p0, Lcom/glympse/android/hal/ai;->bB:Lcom/glympse/android/hal/GlympseThreadPool;
+    iget-object v0, p0, Lcom/glympse/android/hal/ai;->bE:Lcom/glympse/android/hal/GlympseThreadPool;
 
     new-instance v1, Lcom/glympse/android/hal/am;
 

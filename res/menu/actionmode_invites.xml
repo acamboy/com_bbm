@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_share" android:id="@id/actionmode_menu_invites_share_ad" android:title="@string/share" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_block" android:id="@id/actionmode_menu_invites_block_ad" android:title="@string/button_block" app:showAsAction="never" />
+</menu>

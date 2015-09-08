@@ -332,7 +332,7 @@
     div-float v6, v0, v1
 
     .line 215
-    const/high16 v1, 0x7f800000
+    const/high16 v1, 0x7f800000    # Float.POSITIVE_INFINITY
 
     .line 216
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;

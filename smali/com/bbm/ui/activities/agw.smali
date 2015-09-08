@@ -1,22 +1,26 @@
 .class final Lcom/bbm/ui/activities/agw;
 .super Ljava/lang/Object;
-.source "SettingsActivity.java"
+.source "ViewChannelPostActivity.java"
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
+.field final synthetic a:Lcom/bbm/ui/bw;
+
+.field final synthetic b:Lcom/bbm/ui/activities/ViewChannelPostActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;Lcom/bbm/ui/bw;)V
     .locals 0
 
     .prologue
-    .line 364
-    iput-object p1, p0, Lcom/bbm/ui/activities/agw;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    .line 494
+    iput-object p1, p0, Lcom/bbm/ui/activities/agw;->b:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+
+    iput-object p2, p0, Lcom/bbm/ui/activities/agw;->a:Lcom/bbm/ui/bw;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,43 +29,31 @@
 
 
 # virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+.method public final run()V
     .locals 2
 
     .prologue
-    .line 367
-    iget-object v0, p0, Lcom/bbm/ui/activities/agw;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    .line 497
+    iget-object v0, p0, Lcom/bbm/ui/activities/agw;->b:Lcom/bbm/ui/activities/ViewChannelPostActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->c(Lcom/bbm/ui/activities/SettingsActivity;)Lcom/bbm/d/a;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->b(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/ui/EmoticonInputPanel;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/d/a;->t()Z
+    if-eqz v0, :cond_0
 
-    move-result v0
+    .line 498
+    iget-object v0, p0, Lcom/bbm/ui/activities/agw;->b:Lcom/bbm/ui/activities/ViewChannelPostActivity;
 
-    if-ne p2, v0, :cond_0
+    invoke-static {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->b(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/ui/EmoticonInputPanel;
 
-    .line 372
-    :goto_0
-    return-void
+    move-result-object v0
 
-    .line 370
+    iget-object v1, p0, Lcom/bbm/ui/activities/agw;->a:Lcom/bbm/ui/bw;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/EmoticonInputPanel;->setLowerPanel(Lcom/bbm/ui/bw;)V
+
+    .line 500
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/agw;->a:Lcom/bbm/ui/activities/SettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->p(Lcom/bbm/ui/activities/SettingsActivity;)Z
-
-    .line 371
-    iget-object v0, p0, Lcom/bbm/ui/activities/agw;->a:Lcom/bbm/ui/activities/SettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->c(Lcom/bbm/ui/activities/SettingsActivity;)Lcom/bbm/d/a;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/agw;->a:Lcom/bbm/ui/activities/SettingsActivity;
-
-    invoke-virtual {v0, p2, v1}, Lcom/bbm/d/a;->a(ZLandroid/content/Context;)V
-
-    goto :goto_0
+    return-void
 .end method

@@ -82,7 +82,7 @@
 
     .prologue
     .line 140
-    invoke-static {p0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/bbm/util/ec;->b(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -202,7 +202,7 @@
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
 
     goto :goto_1
 

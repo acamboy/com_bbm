@@ -55,16 +55,16 @@
     iput-boolean v2, p0, Landroid/support/v4/widget/ContentLoadingProgressBar;->d:Z
 
     .line 42
-    new-instance v0, Landroid/support/v4/widget/c;
+    new-instance v0, Landroid/support/v4/widget/f;
 
-    invoke-direct {v0, p0}, Landroid/support/v4/widget/c;-><init>(Landroid/support/v4/widget/ContentLoadingProgressBar;)V
+    invoke-direct {v0, p0}, Landroid/support/v4/widget/f;-><init>(Landroid/support/v4/widget/ContentLoadingProgressBar;)V
 
     iput-object v0, p0, Landroid/support/v4/widget/ContentLoadingProgressBar;->e:Ljava/lang/Runnable;
 
     .line 52
-    new-instance v0, Landroid/support/v4/widget/d;
+    new-instance v0, Landroid/support/v4/widget/g;
 
-    invoke-direct {v0, p0}, Landroid/support/v4/widget/d;-><init>(Landroid/support/v4/widget/ContentLoadingProgressBar;)V
+    invoke-direct {v0, p0}, Landroid/support/v4/widget/g;-><init>(Landroid/support/v4/widget/ContentLoadingProgressBar;)V
 
     iput-object v0, p0, Landroid/support/v4/widget/ContentLoadingProgressBar;->f:Ljava/lang/Runnable;
 

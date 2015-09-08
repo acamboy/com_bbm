@@ -1,31 +1,9 @@
 .class public Lcom/bbm/ui/voice/activities/IncomingCallActivity;
-.super Landroid/app/Activity;
+.super Lcom/bbm/bali/ui/main/a/e;
 .source "IncomingCallActivity.java"
 
 
 # instance fields
-.field private A:Landroid/widget/ImageView;
-
-.field private B:Landroid/graphics/drawable/ClipDrawable;
-
-.field private C:Landroid/graphics/drawable/ClipDrawable;
-
-.field private D:Landroid/widget/LinearLayout;
-
-.field private E:Landroid/animation/AnimatorSet;
-
-.field private F:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
-
-.field private G:Landroid/media/MediaPlayer;
-
-.field private H:Landroid/os/Vibrator;
-
-.field private final I:Lcom/bbm/j/k;
-
-.field private final J:Lcom/bbm/j/k;
-
-.field private final K:Lcom/bbm/n/j;
-
 .field private final a:[J
 
 .field private final b:I
@@ -34,49 +12,25 @@
 
 .field private d:Ljava/lang/String;
 
-.field private e:I
+.field private e:Z
 
-.field private f:Z
+.field private h:Z
 
-.field private g:Z
+.field private i:Lcom/bbm/ui/InlineImageTextView;
 
-.field private h:Landroid/view/View;
+.field private j:Landroid/widget/ImageButton;
 
-.field private i:Landroid/view/View;
+.field private k:Lcom/bbm/ui/AvatarView;
 
-.field private j:Lcom/bbm/ui/InlineImageTextView;
+.field private l:Landroid/media/MediaPlayer;
 
-.field private k:Landroid/widget/ImageView;
+.field private m:Landroid/os/Vibrator;
 
-.field private l:Landroid/widget/ImageView;
+.field private final n:Lcom/bbm/j/k;
 
-.field private m:Landroid/widget/ImageView;
+.field private final o:Lcom/bbm/j/k;
 
-.field private n:Landroid/widget/TextView;
-
-.field private o:Landroid/widget/TextView;
-
-.field private p:Landroid/widget/TextView;
-
-.field private q:Landroid/widget/ImageButton;
-
-.field private r:Landroid/widget/ImageButton;
-
-.field private s:Landroid/widget/ImageButton;
-
-.field private t:Landroid/widget/ImageView;
-
-.field private u:Landroid/widget/ImageView;
-
-.field private v:Landroid/widget/ImageView;
-
-.field private w:Landroid/widget/ImageView;
-
-.field private x:Landroid/widget/ImageView;
-
-.field private y:Landroid/widget/ImageView;
-
-.field private z:Landroid/widget/ImageView;
+.field private final p:Lcom/bbm/n/j;
 
 
 # direct methods
@@ -88,10 +42,10 @@
 
     const/4 v1, 0x0
 
-    .line 49
-    invoke-direct {p0}, Landroid/app/Activity;-><init>()V
+    .line 38
+    invoke-direct {p0}, Lcom/bbm/bali/ui/main/a/e;-><init>()V
 
-    .line 52
+    .line 41
     const/4 v0, 0x2
 
     new-array v0, v0, [J
@@ -100,46 +54,45 @@
 
     iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->a:[J
 
-    .line 53
+    .line 42
     iput v1, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->b:I
 
-    .line 56
+    .line 45
     iput-object v2, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->d:Ljava/lang/String;
 
+    .line 46
+    iput-boolean v1, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->e:Z
+
+    .line 47
+    iput-boolean v1, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->h:Z
+
+    .line 55
+    iput-object v2, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->l:Landroid/media/MediaPlayer;
+
     .line 58
-    iput-boolean v1, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->f:Z
+    new-instance v0, Lcom/bbm/ui/voice/activities/p;
 
-    .line 59
-    iput-boolean v1, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->g:Z
+    invoke-direct {v0, p0}, Lcom/bbm/ui/voice/activities/p;-><init>(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)V
 
-    .line 93
-    iput-object v2, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->G:Landroid/media/MediaPlayer;
+    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->n:Lcom/bbm/j/k;
 
-    .line 96
-    new-instance v0, Lcom/bbm/ui/voice/activities/a;
+    .line 73
+    new-instance v0, Lcom/bbm/ui/voice/activities/q;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/voice/activities/a;-><init>(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/voice/activities/q;-><init>(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->I:Lcom/bbm/j/k;
+    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->o:Lcom/bbm/j/k;
 
-    .line 114
-    new-instance v0, Lcom/bbm/ui/voice/activities/b;
+    .line 82
+    new-instance v0, Lcom/bbm/ui/voice/activities/r;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/voice/activities/b;-><init>(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/voice/activities/r;-><init>(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->J:Lcom/bbm/j/k;
+    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->p:Lcom/bbm/n/j;
 
-    .line 123
-    new-instance v0, Lcom/bbm/ui/voice/activities/c;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/voice/activities/c;-><init>(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->K:Lcom/bbm/n/j;
-
-    .line 489
     return-void
 
-    .line 52
+    .line 41
     nop
 
     :array_0
@@ -149,239 +102,32 @@
     .end array-data
 .end method
 
-.method static synthetic A(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Landroid/widget/TextView;
-    .locals 1
-
-    .prologue
-    .line 49
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->o:Landroid/widget/TextView;
-
-    return-object v0
-.end method
-
-.method static synthetic B(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Landroid/widget/TextView;
-    .locals 1
-
-    .prologue
-    .line 49
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->n:Landroid/widget/TextView;
-
-    return-object v0
-.end method
-
-.method static synthetic C(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Landroid/widget/TextView;
-    .locals 1
-
-    .prologue
-    .line 49
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->p:Landroid/widget/TextView;
-
-    return-object v0
-.end method
-
-.method static synthetic a(Landroid/view/View;F)Landroid/animation/Animator;
-    .locals 4
-
-    .prologue
-    .line 49
-    const-string v0, "alpha"
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [F
-
-    const/4 v2, 0x0
-
-    aput p1, v1, v2
-
-    invoke-static {p0, v0, v1}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v0
-
-    new-instance v1, Landroid/view/animation/DecelerateInterpolator;
-
-    const/high16 v2, 0x3f800000
-
-    invoke-direct {v1, v2}, Landroid/view/animation/DecelerateInterpolator;-><init>(F)V
-
-    invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    const-wide/16 v2, 0x0
-
-    invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
-
-    const-wide/16 v2, 0x64
-
-    invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    return-object v0
-.end method
-
-.method private static a(Landroid/view/View;IIFF)Landroid/animation/Animator;
-    .locals 4
-
-    .prologue
-    .line 472
-    const-string v0, "alpha"
-
-    const/4 v1, 0x2
-
-    new-array v1, v1, [F
-
-    const/4 v2, 0x0
-
-    aput p3, v1, v2
-
-    const/4 v2, 0x1
-
-    aput p4, v1, v2
-
-    invoke-static {p0, v0, v1}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v0
-
-    .line 473
-    new-instance v1, Landroid/view/animation/DecelerateInterpolator;
-
-    const/high16 v2, 0x3f800000
-
-    invoke-direct {v1, v2}, Landroid/view/animation/DecelerateInterpolator;-><init>(F)V
-
-    invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    .line 474
-    int-to-long v2, p1
-
-    invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
-
-    .line 475
-    int-to-long v2, p2
-
-    invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    .line 476
-    return-object v0
-.end method
-
 .method static synthetic a(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 49
+    .line 38
     iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->d:Ljava/lang/String;
 
     return-object v0
-.end method
-
-.method private a()V
-    .locals 2
-
-    .prologue
-    .line 366
-    invoke-direct {p0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->b()V
-
-    .line 367
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->q:Landroid/widget/ImageButton;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setEnabled(Z)V
-
-    .line 368
-    invoke-static {p0}, Lcom/bbm/n/b;->a(Landroid/content/Context;)Lcom/bbm/n/b;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Lcom/bbm/n/b;->h:Z
-
-    .line 369
-    return-void
 .end method
 
 .method static synthetic b(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Lcom/bbm/d/a;
     .locals 1
 
     .prologue
-    .line 49
+    .line 38
     iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->c:Lcom/bbm/d/a;
 
     return-object v0
 .end method
 
-.method private b()V
-    .locals 2
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 400
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->G:Landroid/media/MediaPlayer;
-
-    if-eqz v0, :cond_1
-
-    .line 402
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->G:Landroid/media/MediaPlayer;
-
-    invoke-virtual {v0}, Landroid/media/MediaPlayer;->isPlaying()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 403
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->G:Landroid/media/MediaPlayer;
-
-    invoke-virtual {v0}, Landroid/media/MediaPlayer;->stop()V
-
-    .line 407
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->G:Landroid/media/MediaPlayer;
-
-    invoke-virtual {v0}, Landroid/media/MediaPlayer;->reset()V
-
-    .line 408
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->G:Landroid/media/MediaPlayer;
-
-    invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
-
-    .line 411
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->H:Landroid/os/Vibrator;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->H:Landroid/os/Vibrator;
-
-    invoke-virtual {v0}, Landroid/os/Vibrator;->hasVibrator()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 412
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->H:Landroid/os/Vibrator;
-
-    invoke-virtual {v0}, Landroid/os/Vibrator;->cancel()V
-
-    .line 415
-    :cond_2
-    iput-object v1, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->G:Landroid/media/MediaPlayer;
-
-    .line 416
-    iput-object v1, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->H:Landroid/os/Vibrator;
-
-    .line 417
-    return-void
-.end method
-
-.method static synthetic c(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Landroid/widget/ImageView;
+.method static synthetic c(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Lcom/bbm/ui/AvatarView;
     .locals 1
 
     .prologue
-    .line 49
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->t:Landroid/widget/ImageView;
+    .line 38
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->k:Lcom/bbm/ui/AvatarView;
 
     return-object v0
 .end method
@@ -390,28 +136,121 @@
     .locals 1
 
     .prologue
-    .line 49
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->j:Lcom/bbm/ui/InlineImageTextView;
+    .line 38
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->i:Lcom/bbm/ui/InlineImageTextView;
 
     return-object v0
+.end method
+
+.method private d()V
+    .locals 2
+
+    .prologue
+    .line 292
+    invoke-direct {p0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->e()V
+
+    .line 293
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->j:Landroid/widget/ImageButton;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setEnabled(Z)V
+
+    .line 294
+    invoke-static {p0}, Lcom/bbm/n/b;->a(Landroid/content/Context;)Lcom/bbm/n/b;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lcom/bbm/n/b;->f:Z
+
+    .line 295
+    return-void
 .end method
 
 .method static synthetic e(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Lcom/bbm/n/j;
     .locals 1
 
     .prologue
-    .line 49
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->K:Lcom/bbm/n/j;
+    .line 38
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->p:Lcom/bbm/n/j;
 
     return-object v0
+.end method
+
+.method private e()V
+    .locals 2
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 326
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->l:Landroid/media/MediaPlayer;
+
+    if-eqz v0, :cond_1
+
+    .line 328
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->l:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->isPlaying()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 329
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->l:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->stop()V
+
+    .line 333
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->l:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->reset()V
+
+    .line 334
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->l:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
+
+    .line 337
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->m:Landroid/os/Vibrator;
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->m:Landroid/os/Vibrator;
+
+    invoke-virtual {v0}, Landroid/os/Vibrator;->hasVibrator()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 338
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->m:Landroid/os/Vibrator;
+
+    invoke-virtual {v0}, Landroid/os/Vibrator;->cancel()V
+
+    .line 341
+    :cond_2
+    iput-object v1, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->l:Landroid/media/MediaPlayer;
+
+    .line 342
+    iput-object v1, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->m:Landroid/os/Vibrator;
+
+    .line 343
+    return-void
 .end method
 
 .method static synthetic f(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)V
     .locals 0
 
     .prologue
-    .line 49
-    invoke-direct {p0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->b()V
+    .line 38
+    invoke-direct {p0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->e()V
 
     return-void
 .end method
@@ -420,352 +259,205 @@
     .locals 0
 
     .prologue
-    .line 49
-    invoke-direct {p0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->a()V
+    .line 38
+    invoke-direct {p0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->d()V
 
     return-void
 .end method
 
-.method static synthetic h(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Lcom/bbm/ui/voice/IncomingCallAnswerBar;
-    .locals 1
+.method static synthetic h(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)V
+    .locals 2
 
     .prologue
-    .line 49
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->F:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
+    .line 38
+    const-string v0, "onCallAccepted"
 
-    return-object v0
-.end method
+    const-class v1, Lcom/bbm/ui/voice/activities/IncomingCallActivity;
 
-.method static synthetic i(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Z
-    .locals 1
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .prologue
-    .line 49
+    invoke-direct {p0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->e()V
+
+    invoke-static {p0}, Lcom/bbm/n/b;->a(Landroid/content/Context;)Lcom/bbm/n/b;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/n/b;->c()V
+
+    :try_start_0
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->d:Ljava/lang/String;
+
+    invoke-static {p0, v0}, Lcom/bbm/ui/f/s;->b(Landroid/content/Context;Ljava/lang/String;)Landroid/app/PendingIntent;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/PendingIntent;->send()V
+    :try_end_0
+    .catch Landroid/app/PendingIntent$CanceledException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->f:Z
+    iput-boolean v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->e:Z
 
-    return v0
+    invoke-virtual {p0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->finish()V
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_0
 .end method
 
-.method static synthetic j(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Landroid/widget/LinearLayout;
-    .locals 1
+.method static synthetic i(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)V
+    .locals 2
 
     .prologue
-    .line 49
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->D:Landroid/widget/LinearLayout;
+    .line 38
+    const-string v0, "onCallRejected"
 
-    return-object v0
-.end method
+    const-class v1, Lcom/bbm/ui/voice/activities/IncomingCallActivity;
 
-.method static synthetic k(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)I
-    .locals 1
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .prologue
-    .line 49
-    iget v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->e:I
+    invoke-direct {p0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->e()V
 
-    return v0
-.end method
+    invoke-static {p0}, Lcom/bbm/n/b;->a(Landroid/content/Context;)Lcom/bbm/n/b;
 
-.method static synthetic l(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Landroid/widget/ImageView;
-    .locals 1
+    move-result-object v0
 
-    .prologue
-    .line 49
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->u:Landroid/widget/ImageView;
+    invoke-virtual {v0}, Lcom/bbm/n/b;->b()V
 
-    return-object v0
-.end method
+    const/4 v0, 0x1
 
-.method static synthetic m(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Landroid/view/View;
-    .locals 1
+    iput-boolean v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->e:Z
 
-    .prologue
-    .line 49
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->h:Landroid/view/View;
+    invoke-virtual {p0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->finish()V
 
-    return-object v0
-.end method
-
-.method static synthetic n(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Landroid/view/View;
-    .locals 1
-
-    .prologue
-    .line 49
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->i:Landroid/view/View;
-
-    return-object v0
-.end method
-
-.method static synthetic o(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Landroid/widget/ImageView;
-    .locals 1
-
-    .prologue
-    .line 49
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->w:Landroid/widget/ImageView;
-
-    return-object v0
-.end method
-
-.method static synthetic p(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Landroid/widget/ImageView;
-    .locals 1
-
-    .prologue
-    .line 49
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->x:Landroid/widget/ImageView;
-
-    return-object v0
-.end method
-
-.method static synthetic q(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Landroid/widget/ImageView;
-    .locals 1
-
-    .prologue
-    .line 49
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->z:Landroid/widget/ImageView;
-
-    return-object v0
-.end method
-
-.method static synthetic r(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Landroid/widget/ImageView;
-    .locals 1
-
-    .prologue
-    .line 49
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->A:Landroid/widget/ImageView;
-
-    return-object v0
-.end method
-
-.method static synthetic s(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Landroid/widget/ImageButton;
-    .locals 1
-
-    .prologue
-    .line 49
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->r:Landroid/widget/ImageButton;
-
-    return-object v0
-.end method
-
-.method static synthetic t(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Landroid/widget/ImageView;
-    .locals 1
-
-    .prologue
-    .line 49
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->v:Landroid/widget/ImageView;
-
-    return-object v0
-.end method
-
-.method static synthetic u(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Landroid/widget/ImageButton;
-    .locals 1
-
-    .prologue
-    .line 49
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->s:Landroid/widget/ImageButton;
-
-    return-object v0
-.end method
-
-.method static synthetic v(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Landroid/widget/ImageView;
-    .locals 1
-
-    .prologue
-    .line 49
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->y:Landroid/widget/ImageView;
-
-    return-object v0
-.end method
-
-.method static synthetic w(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Landroid/widget/ImageView;
-    .locals 1
-
-    .prologue
-    .line 49
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->l:Landroid/widget/ImageView;
-
-    return-object v0
-.end method
-
-.method static synthetic x(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Landroid/widget/ImageView;
-    .locals 1
-
-    .prologue
-    .line 49
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->m:Landroid/widget/ImageView;
-
-    return-object v0
-.end method
-
-.method static synthetic y(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Landroid/graphics/drawable/ClipDrawable;
-    .locals 1
-
-    .prologue
-    .line 49
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->B:Landroid/graphics/drawable/ClipDrawable;
-
-    return-object v0
-.end method
-
-.method static synthetic z(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Landroid/graphics/drawable/ClipDrawable;
-    .locals 1
-
-    .prologue
-    .line 49
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->C:Landroid/graphics/drawable/ClipDrawable;
-
-    return-object v0
+    return-void
 .end method
 
 
 # virtual methods
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 13
+    .locals 3
 
     .prologue
-    const/4 v6, 0x0
+    const/4 v0, 0x1
 
-    const/16 v12, 0x258
+    .line 143
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/e;->onCreate(Landroid/os/Bundle;)V
 
-    const/16 v11, 0x190
-
-    const/high16 v10, 0x3f800000
-
-    const/4 v9, 0x0
-
-    .line 184
-    invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
-
-    .line 186
+    .line 145
     invoke-static {p0}, Lcom/bbm/n/b;->a(Landroid/content/Context;)Lcom/bbm/n/b;
 
-    move-result-object v0
+    move-result-object v1
 
-    .line 187
-    iget-object v1, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->K:Lcom/bbm/n/j;
+    .line 146
+    iget-object v2, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->p:Lcom/bbm/n/j;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/n/b;->a(Lcom/bbm/n/j;)V
+    invoke-virtual {v1, v2}, Lcom/bbm/n/b;->a(Lcom/bbm/n/j;)V
 
-    .line 188
-    invoke-virtual {v0}, Lcom/bbm/n/b;->i()I
+    .line 147
+    invoke-virtual {v1}, Lcom/bbm/n/b;->k()I
 
-    move-result v0
+    move-result v1
 
-    const/4 v1, 0x1
+    if-eq v1, v0, :cond_0
 
-    if-eq v0, v1, :cond_0
-
-    .line 192
+    .line 151
     invoke-virtual {p0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->finish()V
 
-    .line 195
+    .line 154
     :cond_0
     invoke-virtual {p0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->getWindow()Landroid/view/Window;
 
-    move-result-object v0
+    move-result-object v1
 
-    const v1, 0x680080
+    const v2, 0x680080
 
-    invoke-virtual {v0, v1}, Landroid/view/Window;->addFlags(I)V
+    invoke-virtual {v1, v2}, Landroid/view/Window;->addFlags(I)V
 
-    .line 200
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    .line 159
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
-    move-result-object v0
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->c:Lcom/bbm/d/a;
+    iput-object v1, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->c:Lcom/bbm/d/a;
 
-    .line 202
+    .line 161
     invoke-virtual {p0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->getIntent()Landroid/content/Intent;
 
-    move-result-object v0
+    move-result-object v1
 
-    const-string v1, "com.bbm.voice.incoming.useruri"
+    const-string v2, "com.bbm.voice.incoming.useruri"
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->d:Ljava/lang/String;
+    iput-object v1, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->d:Ljava/lang/String;
 
-    .line 203
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->d:Ljava/lang/String;
+    .line 162
+    iget-object v1, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->d:Ljava/lang/String;
 
-    if-nez v0, :cond_1
+    if-nez v1, :cond_1
 
     if-eqz p1, :cond_1
 
-    .line 204
-    const-string v0, "com.bbm.voice.incoming.useruri"
+    .line 163
+    const-string v1, "com.bbm.voice.incoming.useruri"
 
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->d:Ljava/lang/String;
+    iput-object v1, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->d:Ljava/lang/String;
 
-    .line 206
+    .line 165
     :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->d:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->d:Ljava/lang/String;
 
-    if-eqz v0, :cond_2
+    if-eqz v1, :cond_2
 
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->d:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->d:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+    invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_2
-
-    const/4 v0, 0x1
+    if-nez v1, :cond_2
 
     :goto_0
     const-string v1, "No URI specified in Intent"
 
-    invoke-static {p0, v0, v1}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;ZLjava/lang/Object;)Z
+    invoke-static {p0, v0, v1}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;ZLjava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 262
+    .line 195
     :goto_1
     return-void
 
+    .line 165
     :cond_2
-    move v0, v6
+    const/4 v0, 0x0
 
-    .line 206
     goto :goto_0
 
-    .line 210
+    .line 169
     :cond_3
-    const v0, 0x7f03003a
+    const v0, 0x7f030055
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->setContentView(I)V
 
-    .line 212
-    const v0, 0x7f0b020c
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->h:Landroid/view/View;
-
-    .line 213
-    const v0, 0x7f0b020d
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->i:Landroid/view/View;
-
-    .line 214
-    const v0, 0x7f0b020b
+    .line 171
+    const v0, 0x7f0b0280
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
 
@@ -773,76 +465,10 @@
 
     check-cast v0, Lcom/bbm/ui/InlineImageTextView;
 
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->j:Lcom/bbm/ui/InlineImageTextView;
+    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->i:Lcom/bbm/ui/InlineImageTextView;
 
-    .line 215
-    const v0, 0x7f0b0221
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->k:Landroid/widget/ImageView;
-
-    .line 216
-    const v0, 0x7f0b0223
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->l:Landroid/widget/ImageView;
-
-    .line 217
-    const v0, 0x7f0b0222
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->m:Landroid/widget/ImageView;
-
-    .line 218
-    const v0, 0x7f0b0224
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->n:Landroid/widget/TextView;
-
-    .line 219
-    const v0, 0x7f0b0226
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->o:Landroid/widget/TextView;
-
-    .line 220
-    const v0, 0x7f0b0225
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->p:Landroid/widget/TextView;
-
-    .line 221
-    const v0, 0x7f0b0220
+    .line 172
+    const v0, 0x7f0b0282
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
 
@@ -850,485 +476,87 @@
 
     check-cast v0, Landroid/widget/ImageButton;
 
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->q:Landroid/widget/ImageButton;
+    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->j:Landroid/widget/ImageButton;
 
-    .line 222
-    const v0, 0x7f0b021a
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageButton;
-
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->r:Landroid/widget/ImageButton;
-
-    .line 223
-    const v0, 0x7f0b021c
+    .line 173
+    const v0, 0x7f0b0283
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/ImageButton;
+    check-cast v0, Lcom/bbm/ui/AvatarView;
 
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->s:Landroid/widget/ImageButton;
+    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->k:Lcom/bbm/ui/AvatarView;
 
-    .line 224
-    const v0, 0x7f0b020a
+    .line 175
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->j:Landroid/widget/ImageButton;
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
+    new-instance v1, Lcom/bbm/ui/voice/activities/s;
 
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->t:Landroid/widget/ImageView;
-
-    .line 225
-    const v0, 0x7f0b020f
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->u:Landroid/widget/ImageView;
-
-    .line 226
-    const v0, 0x7f0b021b
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->v:Landroid/widget/ImageView;
-
-    .line 227
-    const v0, 0x7f0b0218
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->w:Landroid/widget/ImageView;
-
-    .line 228
-    const v0, 0x7f0b0219
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->x:Landroid/widget/ImageView;
-
-    .line 229
-    const v0, 0x7f0b021e
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->z:Landroid/widget/ImageView;
-
-    .line 230
-    const v0, 0x7f0b021f
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->A:Landroid/widget/ImageView;
-
-    .line 231
-    const v0, 0x7f0b021d
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->y:Landroid/widget/ImageView;
-
-    .line 232
-    const v0, 0x7f0b0210
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->D:Landroid/widget/LinearLayout;
-
-    .line 233
-    const v0, 0x7f0b0217
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;
-
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->F:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
-
-    .line 235
-    invoke-virtual {p0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0c0021
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->e:I
-
-    .line 237
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->q:Landroid/widget/ImageButton;
-
-    new-instance v1, Lcom/bbm/ui/voice/activities/d;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/voice/activities/d;-><init>(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/voice/activities/s;-><init>(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 243
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->r:Landroid/widget/ImageButton;
-
-    new-instance v1, Lcom/bbm/ui/voice/activities/e;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/voice/activities/e;-><init>(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 249
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->r:Landroid/widget/ImageButton;
-
-    invoke-virtual {v0, v6}, Landroid/widget/ImageButton;->setSoundEffectsEnabled(Z)V
-
-    .line 250
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->s:Landroid/widget/ImageButton;
-
-    new-instance v1, Lcom/bbm/ui/voice/activities/f;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/voice/activities/f;-><init>(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 256
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->s:Landroid/widget/ImageButton;
-
-    invoke-virtual {v0, v6}, Landroid/widget/ImageButton;->setSoundEffectsEnabled(Z)V
-
-    .line 258
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->w:Landroid/widget/ImageView;
-
-    invoke-virtual {v0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/drawable/ClipDrawable;
-
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->B:Landroid/graphics/drawable/ClipDrawable;
-
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->B:Landroid/graphics/drawable/ClipDrawable;
-
-    const/16 v1, 0x1388
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/ClipDrawable;->setLevel(I)Z
-
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->z:Landroid/widget/ImageView;
-
-    invoke-virtual {v0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/drawable/ClipDrawable;
-
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->C:Landroid/graphics/drawable/ClipDrawable;
-
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->C:Landroid/graphics/drawable/ClipDrawable;
-
-    const/16 v1, 0x1388
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/ClipDrawable;->setLevel(I)Z
-
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->x:Landroid/widget/ImageView;
-
-    invoke-virtual {v0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/drawable/ClipDrawable;
-
-    const/16 v1, 0x1388
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/ClipDrawable;->setLevel(I)Z
-
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->A:Landroid/widget/ImageView;
-
-    invoke-virtual {v0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/drawable/ClipDrawable;
-
-    const/16 v1, 0x1388
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/ClipDrawable;->setLevel(I)Z
-
-    .line 259
-    const v0, 0x7f0b0214
+    .line 182
+    const v0, 0x7f0b0285
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/ImageView;
+    new-instance v1, Lcom/bbm/ui/voice/activities/t;
 
-    const v1, 0x7f0b0215
+    invoke-direct {v1, p0}, Lcom/bbm/ui/voice/activities/t;-><init>(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)V
 
-    invoke-virtual {p0, v1}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    move-result-object v1
+    .line 188
+    const v0, 0x7f0b0286
 
-    check-cast v1, Landroid/widget/ImageView;
-
-    const v2, 0x7f0b0216
-
-    invoke-virtual {p0, v2}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/ImageView;
-
-    const v3, 0x7f0b0213
-
-    invoke-virtual {p0, v3}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/widget/ImageView;
-
-    const v4, 0x7f0b0212
-
-    invoke-virtual {p0, v4}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/widget/ImageView;
-
-    const v5, 0x7f0b0211
-
-    invoke-virtual {p0, v5}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v5
-
-    check-cast v5, Landroid/widget/ImageView;
-
-    const/16 v7, 0xc
-
-    new-array v7, v7, [Landroid/animation/Animator;
-
-    invoke-static {v0, v6, v11, v9, v10}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->a(Landroid/view/View;IIFF)Landroid/animation/Animator;
-
-    move-result-object v8
-
-    aput-object v8, v7, v6
-
-    const/4 v8, 0x1
-
-    invoke-static {v0, v11, v12, v10, v9}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->a(Landroid/view/View;IIFF)Landroid/animation/Animator;
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    aput-object v0, v7, v8
+    new-instance v1, Lcom/bbm/ui/voice/activities/u;
 
-    const/4 v0, 0x2
+    invoke-direct {v1, p0}, Lcom/bbm/ui/voice/activities/u;-><init>(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)V
 
-    invoke-static {v3, v6, v11, v9, v10}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->a(Landroid/view/View;IIFF)Landroid/animation/Animator;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    move-result-object v8
-
-    aput-object v8, v7, v0
-
-    const/4 v0, 0x3
-
-    invoke-static {v3, v11, v12, v10, v9}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->a(Landroid/view/View;IIFF)Landroid/animation/Animator;
-
-    move-result-object v3
-
-    aput-object v3, v7, v0
-
-    const/4 v0, 0x4
-
-    const/16 v3, 0xc8
-
-    invoke-static {v1, v3, v11, v9, v10}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->a(Landroid/view/View;IIFF)Landroid/animation/Animator;
-
-    move-result-object v3
-
-    aput-object v3, v7, v0
-
-    const/4 v0, 0x5
-
-    invoke-static {v1, v12, v12, v10, v9}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->a(Landroid/view/View;IIFF)Landroid/animation/Animator;
-
-    move-result-object v1
-
-    aput-object v1, v7, v0
-
-    const/4 v0, 0x6
-
-    const/16 v1, 0xc8
-
-    invoke-static {v4, v1, v11, v9, v10}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->a(Landroid/view/View;IIFF)Landroid/animation/Animator;
-
-    move-result-object v1
-
-    aput-object v1, v7, v0
-
-    const/4 v0, 0x7
-
-    invoke-static {v4, v12, v12, v10, v9}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->a(Landroid/view/View;IIFF)Landroid/animation/Animator;
-
-    move-result-object v1
-
-    aput-object v1, v7, v0
-
-    const/16 v0, 0x8
-
-    invoke-static {v2, v11, v11, v9, v10}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->a(Landroid/view/View;IIFF)Landroid/animation/Animator;
-
-    move-result-object v1
-
-    aput-object v1, v7, v0
-
-    const/16 v0, 0x9
-
-    const/16 v1, 0x320
-
-    invoke-static {v2, v1, v12, v10, v9}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->a(Landroid/view/View;IIFF)Landroid/animation/Animator;
-
-    move-result-object v1
-
-    aput-object v1, v7, v0
-
-    const/16 v0, 0xa
-
-    invoke-static {v5, v11, v11, v9, v10}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->a(Landroid/view/View;IIFF)Landroid/animation/Animator;
-
-    move-result-object v1
-
-    aput-object v1, v7, v0
-
-    const/16 v0, 0xb
-
-    const/16 v1, 0x320
-
-    invoke-static {v5, v1, v12, v10, v9}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->a(Landroid/view/View;IIFF)Landroid/animation/Animator;
-
-    move-result-object v1
-
-    aput-object v1, v7, v0
-
-    new-instance v0, Landroid/animation/AnimatorSet;
-
-    invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
-
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->E:Landroid/animation/AnimatorSet;
-
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->E:Landroid/animation/AnimatorSet;
-
-    const-wide/16 v2, 0x3e8
-
-    invoke-virtual {v0, v2, v3}, Landroid/animation/AnimatorSet;->setStartDelay(J)V
-
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->E:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {v0, v7}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
-
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->E:Landroid/animation/AnimatorSet;
-
-    new-instance v1, Lcom/bbm/ui/voice/activities/g;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/voice/activities/g;-><init>(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    .line 261
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->F:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
-
-    new-instance v1, Lcom/bbm/ui/voice/activities/h;
-
-    invoke-direct {v1, p0, v6}, Lcom/bbm/ui/voice/activities/h;-><init>(Lcom/bbm/ui/voice/activities/IncomingCallActivity;B)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->setAnswerBarListener(Lcom/bbm/ui/voice/g;)V
-
-    goto/16 :goto_1
+    goto :goto_1
 .end method
 
 .method public onDestroy()V
-    .locals 3
+    .locals 2
 
     .prologue
-    .line 290
+    .line 223
     const-string v0, "onDestroy"
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 292
+    .line 225
     invoke-static {p0}, Lcom/bbm/n/b;->a(Landroid/content/Context;)Lcom/bbm/n/b;
-
-    move-result-object v1
-
-    .line 293
-    iget-object v2, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->K:Lcom/bbm/n/j;
-
-    iget-object v0, v1, Lcom/bbm/n/b;->f:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/n/j;
+    .line 226
+    iget-object v1, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->p:Lcom/bbm/n/j;
 
-    if-ne v0, v2, :cond_0
+    invoke-virtual {v0, v1}, Lcom/bbm/n/b;->b(Lcom/bbm/n/j;)V
 
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    .line 229
+    invoke-direct {p0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->e()V
 
-    const/4 v2, 0x0
+    .line 231
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/e;->onDestroy()V
 
-    invoke-direct {v0, v2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, v1, Lcom/bbm/n/b;->f:Ljava/lang/ref/WeakReference;
-
-    .line 296
-    :cond_0
-    invoke-direct {p0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->b()V
-
-    .line 298
-    invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
-
-    .line 299
+    .line 232
     return-void
 .end method
 
@@ -1336,18 +564,18 @@
     .locals 1
 
     .prologue
-    .line 350
+    .line 276
     sparse-switch p1, :sswitch_data_0
 
-    .line 360
-    invoke-super {p0, p1, p2}, Landroid/app/Activity;->onKeyDown(ILandroid/view/KeyEvent;)Z
+    .line 286
+    invoke-super {p0, p1, p2}, Lcom/bbm/bali/ui/main/a/e;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result v0
 
     :goto_0
     return v0
 
-    .line 354
+    .line 280
     :sswitch_0
     invoke-virtual {p2}, Landroid/view/KeyEvent;->isCanceled()Z
 
@@ -1355,16 +583,16 @@
 
     if-nez v0, :cond_0
 
-    .line 355
-    invoke-direct {p0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->a()V
+    .line 281
+    invoke-direct {p0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->d()V
 
-    .line 357
+    .line 283
     :cond_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 350
+    .line 276
     nop
 
     :sswitch_data_0
@@ -1379,76 +607,56 @@
     .locals 2
 
     .prologue
-    .line 327
+    .line 255
     const-string v0, "onPause"
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 329
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->I:Lcom/bbm/j/k;
+    .line 257
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->n:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
 
-    .line 330
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->J:Lcom/bbm/j/k;
+    .line 258
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->o:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
 
-    .line 331
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->F:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
-
-    iget-object v1, v0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->d:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {v1}, Landroid/animation/AnimatorSet;->end()V
-
-    iget-object v1, v0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->e:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {v1}, Landroid/animation/AnimatorSet;->end()V
-
-    iget-object v0, v0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->f:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->end()V
-
-    .line 332
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->E:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->end()V
-
-    .line 334
-    iget-boolean v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->f:Z
+    .line 260
+    iget-boolean v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->e:Z
 
     if-nez v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->g:Z
+    iget-boolean v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->h:Z
 
     if-eqz v0, :cond_0
 
-    .line 338
+    .line 264
     invoke-static {p0}, Lcom/bbm/n/b;->a(Landroid/content/Context;)Lcom/bbm/n/b;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/bbm/n/b;->b()V
 
-    .line 339
+    .line 265
     invoke-virtual {p0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->isFinishing()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 341
+    .line 267
     invoke-virtual {p0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->finish()V
 
-    .line 345
+    .line 271
     :cond_0
-    invoke-super {p0}, Landroid/app/Activity;->onPause()V
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/e;->onPause()V
 
-    .line 346
+    .line 272
     return-void
 .end method
 
@@ -1456,64 +664,29 @@
     .locals 2
 
     .prologue
-    .line 312
+    .line 245
     const-string v0, "onResume"
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 314
-    invoke-super {p0}, Landroid/app/Activity;->onResume()V
+    .line 247
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/e;->onResume()V
 
-    .line 316
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->I:Lcom/bbm/j/k;
-
-    invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
-
-    .line 317
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->J:Lcom/bbm/j/k;
+    .line 249
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->n:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 319
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->F:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
+    .line 250
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->o:Lcom/bbm/j/k;
 
-    iget-boolean v0, v0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->b:Z
+    invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->F:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
-
-    iget-boolean v0, v0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->c:Z
-
-    if-nez v0, :cond_0
-
-    .line 320
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->E:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
-
-    .line 322
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->F:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
-
-    iget-boolean v1, v0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->b:Z
-
-    if-nez v1, :cond_1
-
-    iget-boolean v1, v0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->c:Z
-
-    if-nez v1, :cond_1
-
-    iget-object v0, v0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->d:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
-
-    .line 323
-    :cond_1
+    .line 251
     return-void
 .end method
 
@@ -1521,22 +694,22 @@
     .locals 2
 
     .prologue
-    .line 303
-    invoke-super {p0, p1}, Landroid/app/Activity;->onSaveInstanceState(Landroid/os/Bundle;)V
+    .line 236
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/e;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 305
+    .line 238
     iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->d:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 306
+    .line 239
     const-string v0, "com.bbm.voice.incoming.useruri"
 
     iget-object v1, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->d:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 308
+    .line 241
     :cond_0
     return-void
 .end method
@@ -1545,19 +718,19 @@
     .locals 2
 
     .prologue
-    .line 266
+    .line 199
     const-string v0, "onStop"
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 268
-    invoke-super {p0}, Landroid/app/Activity;->onStop()V
+    .line 201
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/e;->onStop()V
 
-    .line 269
+    .line 202
     return-void
 .end method
 
@@ -1569,25 +742,25 @@
 
     const/4 v2, 0x0
 
-    .line 273
+    .line 206
     const-string v0, "onWindowFocusChanged"
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 274
-    invoke-super {p0, p1}, Landroid/app/Activity;->onWindowFocusChanged(Z)V
+    .line 207
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/e;->onWindowFocusChanged(Z)V
 
-    .line 275
+    .line 208
     if-eqz p1, :cond_3
 
-    .line 276
-    iput-boolean v3, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->g:Z
+    .line 209
+    iput-boolean v3, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->h:Z
 
-    .line 277
+    .line 210
     const-string v0, "audio"
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1602,15 +775,15 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->q:Landroid/widget/ImageButton;
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->j:Landroid/widget/ImageButton;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageButton;->setEnabled(Z)V
 
-    .line 286
+    .line 219
     :goto_0
     return-void
 
-    .line 277
+    .line 210
     :cond_0
     if-ne v3, v0, :cond_2
 
@@ -1622,13 +795,13 @@
 
     check-cast v0, Landroid/os/Vibrator;
 
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->H:Landroid/os/Vibrator;
+    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->m:Landroid/os/Vibrator;
 
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->H:Landroid/os/Vibrator;
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->m:Landroid/os/Vibrator;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->H:Landroid/os/Vibrator;
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->m:Landroid/os/Vibrator;
 
     invoke-virtual {v0}, Landroid/os/Vibrator;->hasVibrator()Z
 
@@ -1636,7 +809,7 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->H:Landroid/os/Vibrator;
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->m:Landroid/os/Vibrator;
 
     iget-object v1, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->a:[J
 
@@ -1645,7 +818,7 @@
     goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->q:Landroid/widget/ImageButton;
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->j:Landroid/widget/ImageButton;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageButton;->setEnabled(Z)V
 
@@ -1657,17 +830,17 @@
 
     invoke-direct {v0}, Landroid/media/MediaPlayer;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->G:Landroid/media/MediaPlayer;
+    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->l:Landroid/media/MediaPlayer;
 
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->G:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->l:Landroid/media/MediaPlayer;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setAudioStreamType(I)V
 
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->G:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->l:Landroid/media/MediaPlayer;
 
-    sget-object v1, Lcom/bbm/n/b;->m:Ljava/lang/String;
+    sget-object v1, Lcom/bbm/n/b;->k:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -1675,17 +848,17 @@
 
     invoke-virtual {v0, p0, v1}, Landroid/media/MediaPlayer;->setDataSource(Landroid/content/Context;Landroid/net/Uri;)V
 
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->G:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->l:Landroid/media/MediaPlayer;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setLooping(Z)V
 
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->G:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->l:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->prepare()V
 
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->G:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->l:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->start()V
     :try_end_0
@@ -1700,17 +873,17 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, v1, v2}, Lcom/bbm/y;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/bbm/af;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->G:Landroid/media/MediaPlayer;
+    iput-object v0, p0, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->l:Landroid/media/MediaPlayer;
 
     goto :goto_0
 
-    .line 284
+    .line 217
     :cond_3
-    invoke-direct {p0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->b()V
+    invoke-direct {p0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->e()V
 
     goto :goto_0
 .end method

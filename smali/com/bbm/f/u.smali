@@ -12,7 +12,7 @@
     .locals 3
 
     .prologue
-    .line 932
+    .line 1013
     invoke-static {}, Lcom/blackberry/ids/UserAuthState$AuthState;->values()[Lcom/blackberry/ids/UserAuthState$AuthState;
 
     move-result-object v0

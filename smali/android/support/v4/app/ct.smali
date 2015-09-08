@@ -1,20 +1,18 @@
-.class public abstract Landroid/support/v4/app/ct;
+.class final Landroid/support/v4/app/ct;
 .super Ljava/lang/Object;
-.source "RemoteInputCompatBase.java"
+.source "RemoteInput.java"
+
+# interfaces
+.implements Landroid/support/v4/app/dc;
 
 
-# virtual methods
-.method protected abstract a()Ljava/lang/String;
-.end method
+# direct methods
+.method constructor <init>()V
+    .locals 0
 
-.method protected abstract b()Ljava/lang/CharSequence;
-.end method
+    .prologue
+    .line 263
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method protected abstract c()[Ljava/lang/CharSequence;
-.end method
-
-.method protected abstract d()Z
-.end method
-
-.method protected abstract e()Landroid/os/Bundle;
+    return-void
 .end method

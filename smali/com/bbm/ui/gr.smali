@@ -1,26 +1,26 @@
 .class final Lcom/bbm/ui/gr;
 .super Ljava/lang/Object;
-.source "StickerPicker.java"
+.source "StickerItemView.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemLongClickListener;
+.implements Lcom/bbm/ui/gv;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/gw;
+.field final synthetic a:Z
 
-.field final synthetic b:Lcom/bbm/ui/StickerPicker;
+.field final synthetic b:Lcom/bbm/ui/StickerItemView;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/StickerPicker;Lcom/bbm/ui/gw;)V
+.method constructor <init>(Lcom/bbm/ui/StickerItemView;Z)V
     .locals 0
 
     .prologue
-    .line 148
-    iput-object p1, p0, Lcom/bbm/ui/gr;->b:Lcom/bbm/ui/StickerPicker;
+    .line 201
+    iput-object p1, p0, Lcom/bbm/ui/gr;->b:Lcom/bbm/ui/StickerItemView;
 
-    iput-object p2, p0, Lcom/bbm/ui/gr;->a:Lcom/bbm/ui/gw;
+    iput-boolean p2, p0, Lcom/bbm/ui/gr;->a:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,52 +29,67 @@
 
 
 # virtual methods
-.method public final onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
+.method public final a(Lcom/bbm/d/gh;Ljava/lang/String;)V
     .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)Z"
-        }
-    .end annotation
 
     .prologue
-    .line 152
-    iget-object v0, p0, Lcom/bbm/ui/gr;->b:Lcom/bbm/ui/StickerPicker;
+    .line 204
+    iget-object v0, p0, Lcom/bbm/ui/gr;->b:Lcom/bbm/ui/StickerItemView;
 
-    invoke-static {v0}, Lcom/bbm/ui/StickerPicker;->b(Lcom/bbm/ui/StickerPicker;)Lcom/bbm/ui/gu;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p3}, Lcom/bbm/ui/gu;->getItem(I)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/bbm/ui/StickerItemView;->a(Lcom/bbm/ui/StickerItemView;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/d/gh;
+    invoke-static {v0, p2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
-    .line 153
-    iget-object v1, p0, Lcom/bbm/ui/gr;->a:Lcom/bbm/ui/gw;
+    move-result v0
 
-    invoke-interface {v1, v0}, Lcom/bbm/ui/gw;->a(Lcom/bbm/d/gh;)V
+    if-eqz v0, :cond_0
 
-    .line 156
-    iget-object v0, p0, Lcom/bbm/ui/gr;->b:Lcom/bbm/ui/StickerPicker;
+    .line 205
+    if-nez p1, :cond_1
 
-    invoke-static {v0}, Lcom/bbm/ui/StickerPicker;->e(Lcom/bbm/ui/StickerPicker;)Landroid/widget/GridView;
+    .line 206
+    iget-object v0, p0, Lcom/bbm/ui/gr;->b:Lcom/bbm/ui/StickerItemView;
+
+    invoke-static {v0}, Lcom/bbm/ui/StickerItemView;->b(Lcom/bbm/ui/StickerItemView;)Landroid/widget/ImageView;
 
     move-result-object v0
 
-    new-instance v1, Lcom/bbm/ui/gs;
+    const/4 v1, 0x0
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/gs;-><init>(Lcom/bbm/ui/gr;)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/GridView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+    .line 216
+    :cond_0
+    :goto_0
+    return-void
 
-    .line 171
-    const/4 v0, 0x1
+    .line 209
+    :cond_1
+    iget-object v0, p1, Lcom/bbm/d/gh;->b:Landroid/graphics/drawable/Drawable;
 
-    return v0
+    .line 210
+    iget-boolean v1, p0, Lcom/bbm/ui/gr;->a:Z
+
+    if-eqz v1, :cond_2
+
+    .line 211
+    iget-object v1, p0, Lcom/bbm/ui/gr;->b:Lcom/bbm/ui/StickerItemView;
+
+    invoke-static {v1, v0}, Lcom/bbm/ui/StickerItemView;->a(Lcom/bbm/ui/StickerItemView;Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_0
+
+    .line 213
+    :cond_2
+    iget-object v1, p0, Lcom/bbm/ui/gr;->b:Lcom/bbm/ui/StickerItemView;
+
+    invoke-static {v1}, Lcom/bbm/ui/StickerItemView;->b(Lcom/bbm/ui/StickerItemView;)Landroid/widget/ImageView;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_0
 .end method

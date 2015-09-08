@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:orientation="vertical" android:id="@id/viewRoot" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<LinearLayout android:orientation="vertical" android:id="@id/viewRoot" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/group_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/toolbar_groups" />
     <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/add_new_list_item_layout" android:background="@drawable/group_list_item_add_new_item_background" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
         <com.bbm.ui.InlineImageEditText android:id="@id/add_item_edit" android:nextFocusLeft="@id/add_new_list_item_layout" android:nextFocusRight="@id/add_new_list_item_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="@dimen/group_list_items_add_margin" android:hint="@string/group_list_items_add_new_item" android:layout_weight="1.0" android:inputType="textPersonName" android:imeOptions="actionDone" style="@style/BB10Edit" />
-        <Button android:id="@id/add_new_list_item_button" android:paddingLeft="@dimen/group_list_items_add_padding" android:paddingRight="@dimen/group_list_items_add_padding" android:layout_height="@dimen/cascades_narrow_button_height" android:layout_marginTop="@dimen/group_list_items_add_margin" android:layout_marginRight="@dimen/group_list_items_add_margin" android:layout_marginBottom="@dimen/group_list_items_add_margin" android:drawableLeft="@drawable/ic_plus" style="@style/CascadesButton.Narrow" />
+        <ImageView android:id="@id/add_new_list_item_button" android:background="@drawable/ic_plus" android:paddingLeft="@dimen/group_list_items_add_padding" android:paddingRight="@dimen/group_list_items_add_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/group_list_items_add_margin" android:layout_marginRight="@dimen/group_list_items_add_margin" android:layout_marginBottom="@dimen/group_list_items_add_margin" />
     </LinearLayout>
-    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false" android:layout_above="@id/footer_action_bar" android:layout_below="@id/add_new_list_item_layout">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false">
         <ListView android:id="@id/list_items_list" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@color/white" android:divider="@drawable/list_item_default_divider" />
-        <RelativeLayout android:orientation="vertical" android:id="@id/list_items_empty_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <TextView android:textSize="@dimen/group_status_text_size" android:textColor="@color/message" android:layout_gravity="center_vertical" android:id="@id/list_items_status" android:paddingTop="@dimen/group_status_padding" android:paddingBottom="@dimen/group_status_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/group_list_items_status_text" android:layout_centerInParent="true" />
-            <ImageView android:id="@id/list_items_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/no_lists" android:layout_above="@id/list_items_status" android:layout_centerHorizontal="true" android:contentDescription="@string/blank" />
-            <Button android:id="@id/add_list_item_button" android:text="@string/group_add_list_item_button" android:layout_below="@id/list_items_status" android:layout_centerHorizontal="true" style="@style/EmptyViewButton" />
-        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/list_items_empty_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/list_items_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/no_lists" android:contentDescription="@string/blank" />
+            <TextView android:textSize="@dimen/group_status_text_size" android:textColor="@color/message" android:id="@id/list_items_status" android:paddingTop="@dimen/group_status_padding" android:paddingBottom="@dimen/group_status_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/group_list_items_status_text" />
+            <Button android:id="@id/add_list_item_button" android:text="@string/group_add_list_item_button" style="@style/EmptyViewButton" />
+        </LinearLayout>
     </LinearLayout>
-    <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
-</RelativeLayout>
+</LinearLayout>

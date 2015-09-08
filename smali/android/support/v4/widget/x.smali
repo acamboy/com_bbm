@@ -1,27 +1,17 @@
 .class final Landroid/support/v4/widget/x;
 .super Ljava/lang/Object;
-.source "MaterialProgressDrawable.java"
+.source "DrawerLayoutCompatApi21.java"
 
 # interfaces
-.implements Landroid/view/animation/Animation$AnimationListener;
-
-
-# instance fields
-.field final synthetic a:Landroid/support/v4/widget/ac;
-
-.field final synthetic b:Landroid/support/v4/widget/v;
+.implements Landroid/view/View$OnApplyWindowInsetsListener;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/widget/v;Landroid/support/v4/widget/ac;)V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 313
-    iput-object p1, p0, Landroid/support/v4/widget/x;->b:Landroid/support/v4/widget/v;
-
-    iput-object p2, p0, Landroid/support/v4/widget/x;->a:Landroid/support/v4/widget/ac;
-
+    .line 86
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,58 +19,35 @@
 
 
 # virtual methods
-.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
-    .locals 2
+.method public final onApplyWindowInsets(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+    .locals 1
 
     .prologue
-    .line 321
-    iget-object v0, p0, Landroid/support/v4/widget/x;->a:Landroid/support/v4/widget/ac;
+    .line 89
+    check-cast p1, Landroid/support/v4/widget/y;
 
-    invoke-virtual {v0}, Landroid/support/v4/widget/ac;->a()V
+    .line 90
+    invoke-virtual {p2}, Landroid/view/WindowInsets;->getSystemWindowInsetTop()I
 
-    .line 322
-    iget-object v0, p0, Landroid/support/v4/widget/x;->a:Landroid/support/v4/widget/ac;
+    move-result v0
 
-    invoke-virtual {v0}, Landroid/support/v4/widget/ac;->b()V
+    if-lez v0, :cond_0
 
-    .line 323
-    iget-object v0, p0, Landroid/support/v4/widget/x;->a:Landroid/support/v4/widget/ac;
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    :goto_0
+    invoke-interface {p1, p2, v0}, Landroid/support/v4/widget/y;->setChildInsets(Ljava/lang/Object;Z)V
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/widget/ac;->a(Z)V
-
-    .line 324
-    iget-object v0, p0, Landroid/support/v4/widget/x;->b:Landroid/support/v4/widget/v;
-
-    invoke-static {v0}, Landroid/support/v4/widget/v;->b(Landroid/support/v4/widget/v;)Landroid/view/View;
+    .line 91
+    invoke-virtual {p2}, Landroid/view/WindowInsets;->consumeSystemWindowInsets()Landroid/view/WindowInsets;
 
     move-result-object v0
 
-    iget-object v1, p0, Landroid/support/v4/widget/x;->b:Landroid/support/v4/widget/v;
+    return-object v0
 
-    invoke-static {v1}, Landroid/support/v4/widget/v;->a(Landroid/support/v4/widget/v;)Landroid/view/animation/Animation;
+    .line 90
+    :cond_0
+    const/4 v0, 0x0
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
-
-    .line 325
-    return-void
-.end method
-
-.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
-    .locals 0
-
-    .prologue
-    .line 329
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/view/animation/Animation;)V
-    .locals 0
-
-    .prologue
-    .line 317
-    return-void
+    goto :goto_0
 .end method

@@ -1,29 +1,38 @@
 .class final Lcom/bbm/ui/activities/ly;
-.super Ljava/lang/Object;
-.source "GroupChatListActivity.java"
+.super Lcom/bbm/j/k;
+.source "GroupEventDetailsActivity.java"
 
 
 # instance fields
-.field a:Lcom/bbm/ui/InlineImageTextView;
-
-.field b:Lcom/bbm/ui/InlineImageTextView;
-
-.field c:Landroid/widget/TextView;
-
-.field d:Landroid/widget/ImageView;
-
-.field final synthetic e:Lcom/bbm/ui/activities/lx;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupEventDetailsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/lx;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/activities/GroupEventDetailsActivity;)V
+    .locals 1
 
     .prologue
-    .line 238
-    iput-object p1, p0, Lcom/bbm/ui/activities/ly;->e:Lcom/bbm/ui/activities/lx;
+    .line 39
+    iput-object p1, p0, Lcom/bbm/ui/activities/ly;->a:Lcom/bbm/ui/activities/GroupEventDetailsActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected final a()V
+    .locals 1
+
+    .prologue
+    .line 43
+    iget-object v0, p0, Lcom/bbm/ui/activities/ly;->a:Lcom/bbm/ui/activities/GroupEventDetailsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupEventDetailsActivity;->a(Lcom/bbm/ui/activities/GroupEventDetailsActivity;)V
+
+    .line 44
     return-void
 .end method

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@id/menu_channels_details">
+        <item android:icon="@drawable/qrcode" android:id="@id/button_channel_barcode" android:visible="false" android:title="@string/showbarcode" app:showAsAction="always|collapseActionView" />
+    </group>
+</menu>

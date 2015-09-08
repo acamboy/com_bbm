@@ -4,6 +4,6 @@
 
 
 # static fields
-.field public static final hlv_overscroll_edge:I = 0x7f0201e5
+.field public static final hlv_overscroll_edge:I = 0x7f020193
 
-.field public static final hlv_overscroll_glow:I = 0x7f0201e6
+.field public static final hlv_overscroll_glow:I = 0x7f020194

@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field final synthetic br:Lcom/glympse/android/hal/ae;
+.field final synthetic bt:Lcom/glympse/android/hal/ae;
 
 
 # direct methods
@@ -15,8 +15,8 @@
     .locals 0
 
     .prologue
-    .line 384
-    iput-object p1, p0, Lcom/glympse/android/hal/af;->br:Lcom/glympse/android/hal/ae;
+    .line 421
+    iput-object p1, p0, Lcom/glympse/android/hal/af;->bt:Lcom/glympse/android/hal/ae;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,7 +27,7 @@
     .locals 0
 
     .prologue
-    .line 384
+    .line 421
     invoke-direct {p0, p1}, Lcom/glympse/android/hal/af;-><init>(Lcom/glympse/android/hal/ae;)V
 
     return-void
@@ -39,11 +39,11 @@
     .locals 1
 
     .prologue
-    .line 388
-    iget-object v0, p0, Lcom/glympse/android/hal/af;->br:Lcom/glympse/android/hal/ae;
+    .line 425
+    iget-object v0, p0, Lcom/glympse/android/hal/af;->bt:Lcom/glympse/android/hal/ae;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/ae;->close()V
 
-    .line 389
+    .line 426
     return-void
 .end method

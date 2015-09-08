@@ -1,94 +1,102 @@
 .class final Lcom/bbm/ui/activities/ui;
-.super Ljava/lang/Object;
-.source "GroupsIconActivity.java"
-
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.super Lcom/bbm/j/k;
+.source "MainActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupsIconActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupsIconActivity;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
+    .locals 1
 
     .prologue
-    .line 97
-    iput-object p1, p0, Lcom/bbm/ui/activities/ui;->a:Lcom/bbm/ui/activities/GroupsIconActivity;
+    .line 254
+    iput-object p1, p0, Lcom/bbm/ui/activities/ui;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method protected final a()V
+    .locals 3
 
     .prologue
-    .line 100
-    iget-object v0, p0, Lcom/bbm/ui/activities/ui;->a:Lcom/bbm/ui/activities/GroupsIconActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupsIconActivity;->getIntent()Landroid/content/Intent;
+    .line 257
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/f;
 
     move-result-object v0
 
-    .line 101
-    iget-object v1, p0, Lcom/bbm/ui/activities/ui;->a:Lcom/bbm/ui/activities/GroupsIconActivity;
+    invoke-virtual {v0}, Lcom/bbm/f;->a()Lcom/bbm/j/a;
 
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/GroupsIconActivity;->getResources()Landroid/content/res/Resources;
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/i/b;
+
+    .line 258
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/f;
 
     move-result-object v1
 
-    const v2, 0x7f070007
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
+    invoke-virtual {v1}, Lcom/bbm/f;->b()Lcom/bbm/j/a;
 
     move-result-object v1
 
-    .line 102
-    const-string v2, "group_icon_resource_id"
+    invoke-virtual {v1}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
-    const/4 v3, 0x0
+    move-result-object v1
 
-    invoke-virtual {v1, p3, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
+    check-cast v1, Lcom/bbm/i/b;
 
-    move-result v3
+    .line 260
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    if-eqz v1, :cond_1
 
-    .line 103
-    const-string v2, "group_icon_position"
+    .line 261
+    iget-object v2, p0, Lcom/bbm/ui/activities/ui;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    invoke-virtual {v0, v2, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    iget-boolean v0, v0, Lcom/bbm/i/b;->a:Z
 
-    .line 104
-    invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
+    if-nez v0, :cond_0
 
-    .line 105
-    iget-object v1, p0, Lcom/bbm/ui/activities/ui;->a:Lcom/bbm/ui/activities/GroupsIconActivity;
+    invoke-static {}, Lcom/bbm/ui/activities/MainActivity;->l()Lcom/bbm/d/a;
 
-    const/16 v2, 0xc8
+    move-result-object v0
 
-    invoke-virtual {v1, v2, v0}, Lcom/bbm/ui/activities/GroupsIconActivity;->setResult(ILandroid/content/Intent;)V
+    invoke-virtual {v0}, Lcom/bbm/d/a;->P()Z
 
-    .line 106
-    iget-object v0, p0, Lcom/bbm/ui/activities/ui;->a:Lcom/bbm/ui/activities/GroupsIconActivity;
+    move-result v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupsIconActivity;->finish()V
+    if-eqz v0, :cond_2
 
-    .line 107
+    iget-boolean v0, v1, Lcom/bbm/i/b;->a:Z
+
+    if-eqz v0, :cond_2
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :goto_0
+    invoke-virtual {v2, v0}, Lcom/bbm/ui/activities/MainActivity;->a(Z)V
+
+    .line 263
+    :cond_1
     return-void
+
+    .line 261
+    :cond_2
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

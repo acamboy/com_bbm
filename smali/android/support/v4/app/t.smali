@@ -8,10 +8,10 @@
 
 .field b:Ljava/lang/Object;
 
-.field c:Landroid/support/v4/b/n;
+.field c:Landroid/support/v4/e/q;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroid/support/v4/b/n",
+            "Landroid/support/v4/e/q",
             "<",
             "Ljava/lang/String;",
             "Ljava/lang/Object;",
@@ -31,13 +31,13 @@
     .end annotation
 .end field
 
-.field e:Landroid/support/v4/b/n;
+.field e:Landroid/support/v4/e/q;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroid/support/v4/b/n",
+            "Landroid/support/v4/e/q",
             "<",
             "Ljava/lang/String;",
-            "Landroid/support/v4/app/as;",
+            "Landroid/support/v4/app/at;",
             ">;"
         }
     .end annotation

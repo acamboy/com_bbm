@@ -152,19 +152,19 @@
     :cond_4
     iget-object v0, p0, Lcom/mapquest/android/maps/f;->b:Lcom/mapquest/android/maps/b;
 
-    invoke-static {v0, p2}, Lcom/mapquest/android/maps/cv;->a(Lcom/mapquest/android/maps/b;Lcom/mapquest/android/maps/MapView;)Landroid/graphics/Rect;
+    invoke-static {v0, p2}, Lcom/mapquest/android/maps/cu;->a(Lcom/mapquest/android/maps/b;Lcom/mapquest/android/maps/MapView;)Landroid/graphics/Rect;
 
     move-result-object v1
 
     .line 80
-    invoke-virtual {p2}, Lcom/mapquest/android/maps/MapView;->getProjection()Lcom/mapquest/android/maps/bq;
+    invoke-virtual {p2}, Lcom/mapquest/android/maps/MapView;->getProjection()Lcom/mapquest/android/maps/bp;
 
     move-result-object v0
 
-    check-cast v0, Lcom/mapquest/android/maps/bs;
+    check-cast v0, Lcom/mapquest/android/maps/br;
 
     .line 81
-    invoke-virtual {v0, v1}, Lcom/mapquest/android/maps/bs;->b(Landroid/graphics/Rect;)Landroid/graphics/Rect;
+    invoke-virtual {v0, v1}, Lcom/mapquest/android/maps/br;->b(Landroid/graphics/Rect;)Landroid/graphics/Rect;
 
     .line 82
     invoke-static {v1, v7}, Landroid/graphics/Rect;->intersects(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z
@@ -267,7 +267,7 @@
     if-eqz v0, :cond_0
 
     .line 170
-    invoke-virtual {p2}, Lcom/mapquest/android/maps/MapView;->getProjection()Lcom/mapquest/android/maps/bq;
+    invoke-virtual {p2}, Lcom/mapquest/android/maps/MapView;->getProjection()Lcom/mapquest/android/maps/bp;
 
     move-result-object v0
 
@@ -283,7 +283,7 @@
 
     float-to-int v2, v2
 
-    invoke-interface {v0, v1, v2}, Lcom/mapquest/android/maps/bq;->a(II)Lcom/mapquest/android/maps/s;
+    invoke-interface {v0, v1, v2}, Lcom/mapquest/android/maps/bp;->a(II)Lcom/mapquest/android/maps/s;
 
     move-result-object v0
 
@@ -297,9 +297,6 @@
     if-eqz v0, :cond_0
 
     .line 172
-    iget-object v0, p0, Lcom/mapquest/android/maps/f;->i:Lcom/mapquest/android/maps/bj;
-
-    .line 173
     const/4 v0, 0x1
 
     .line 176

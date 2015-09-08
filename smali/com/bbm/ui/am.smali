@@ -4,16 +4,16 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/ai;
+.field final synthetic a:Lcom/bbm/ui/aj;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/ai;)V
+.method constructor <init>(Lcom/bbm/ui/aj;)V
     .locals 0
 
     .prologue
-    .line 174
-    iput-object p1, p0, Lcom/bbm/ui/am;->a:Lcom/bbm/ui/ai;
+    .line 184
+    iput-object p1, p0, Lcom/bbm/ui/am;->a:Lcom/bbm/ui/aj;
 
     invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
@@ -23,44 +23,62 @@
 
 # virtual methods
 .method protected final b()Z
-    .locals 2
+    .locals 3
 
     .prologue
-    .line 178
-    iget-object v0, p0, Lcom/bbm/ui/am;->a:Lcom/bbm/ui/ai;
+    const/4 v1, 0x1
 
-    invoke-static {v0}, Lcom/bbm/ui/ai;->b(Lcom/bbm/ui/ai;)Lcom/bbm/j/a;
+    .line 188
+    iget-object v0, p0, Lcom/bbm/ui/am;->a:Lcom/bbm/ui/aj;
 
-    move-result-object v0
+    invoke-static {v0}, Lcom/bbm/ui/aj;->h(Lcom/bbm/ui/aj;)Z
 
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
+    move-result v0
 
-    move-result-object v0
+    if-nez v0, :cond_0
 
-    check-cast v0, Ljava/lang/String;
+    move v0, v1
 
-    .line 180
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 181
-    const/4 v0, 0x0
-
-    .line 184
+    .line 198
     :goto_0
     return v0
 
-    .line 183
+    .line 192
     :cond_0
-    iget-object v1, p0, Lcom/bbm/ui/am;->a:Lcom/bbm/ui/ai;
+    iget-object v0, p0, Lcom/bbm/ui/am;->a:Lcom/bbm/ui/aj;
 
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/ai;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/bbm/ui/aj;->b(Lcom/bbm/ui/aj;)Lcom/bbm/j/a;
 
-    .line 184
-    const/4 v0, 0x1
+    move-result-object v0
 
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/ie;
+
+    iget-object v0, v0, Lcom/bbm/d/ie;->z:Ljava/lang/String;
+
+    .line 194
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 195
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    .line 197
+    :cond_1
+    iget-object v2, p0, Lcom/bbm/ui/am;->a:Lcom/bbm/ui/aj;
+
+    invoke-virtual {v2, v0}, Lcom/bbm/ui/aj;->a(Ljava/lang/String;)V
+
+    move v0, v1
+
+    .line 198
     goto :goto_0
 .end method

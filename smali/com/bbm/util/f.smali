@@ -1,69 +1,98 @@
-.class final synthetic Lcom/bbm/util/f;
+.class final Lcom/bbm/util/f;
 .super Ljava/lang/Object;
-.source "AsyncTask.java"
+.source "AdWebView.java"
+
+# interfaces
+.implements Lcom/bbm/j/s;
 
 
-# static fields
-.field static final synthetic a:[I
+# instance fields
+.field final synthetic a:Lcom/bbm/util/AdWebView;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/bbm/util/AdWebView;)V
+    .locals 0
 
     .prologue
-    .line 543
-    invoke-static {}, Lcom/bbm/util/k;->values()[Lcom/bbm/util/k;
+    .line 336
+    iput-object p1, p0, Lcom/bbm/util/f;->a:Lcom/bbm/util/AdWebView;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Z
+    .locals 4
+
+    .prologue
+    .line 339
+    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/b/x;
 
     move-result-object v0
 
-    array-length v0, v0
+    iget-object v1, p0, Lcom/bbm/util/f;->a:Lcom/bbm/util/AdWebView;
 
-    new-array v0, v0, [I
+    iget-object v1, v1, Lcom/bbm/util/AdWebView;->a:Ljava/lang/String;
 
-    sput-object v0, Lcom/bbm/util/f;->a:[I
+    invoke-virtual {v0, v1}, Lcom/bbm/b/x;->b(Ljava/lang/String;)Lcom/bbm/b/a;
 
-    :try_start_0
-    sget-object v0, Lcom/bbm/util/f;->a:[I
+    move-result-object v0
 
-    sget-object v1, Lcom/bbm/util/k;->b:Lcom/bbm/util/k;
+    .line 342
+    iget-object v1, v0, Lcom/bbm/b/a;->C:Lcom/bbm/util/bo;
 
-    invoke-virtual {v1}, Lcom/bbm/util/k;->ordinal()I
+    sget-object v2, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
 
-    move-result v1
+    if-ne v1, v2, :cond_0
 
-    const/4 v2, 0x1
+    .line 343
+    const/4 v0, 0x0
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_1
-
+    .line 350
     :goto_0
-    :try_start_1
-    sget-object v0, Lcom/bbm/util/f;->a:[I
+    return v0
 
-    sget-object v1, Lcom/bbm/util/k;->c:Lcom/bbm/util/k;
+    .line 346
+    :cond_0
+    iget-object v1, v0, Lcom/bbm/b/a;->C:Lcom/bbm/util/bo;
 
-    invoke-virtual {v1}, Lcom/bbm/util/k;->ordinal()I
+    sget-object v2, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
 
-    move-result v1
+    if-ne v1, v2, :cond_1
 
-    const/4 v2, 0x2
+    .line 347
+    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/b/x;
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_0
+    move-result-object v1
 
-    :goto_1
-    return-void
+    iget-object v1, v1, Lcom/bbm/b/x;->g:Lcom/bbm/b/n;
 
-    :catch_0
-    move-exception v0
+    sget-object v2, Lcom/bbm/b/ax;->a:Lcom/bbm/b/ax;
 
-    goto :goto_1
+    sget-object v3, Lcom/bbm/b/ay;->a:Lcom/bbm/b/ay;
 
-    :catch_1
-    move-exception v0
+    invoke-virtual {v1, v0, v2, v3}, Lcom/bbm/b/n;->a(Lcom/bbm/b/a;Lcom/bbm/b/ax;Lcom/bbm/b/ay;)V
+
+    .line 348
+    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/b/x;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/bbm/b/x;->g:Lcom/bbm/b/n;
+
+    sget-object v2, Lcom/bbm/b/ax;->b:Lcom/bbm/b/ax;
+
+    sget-object v3, Lcom/bbm/b/ay;->a:Lcom/bbm/b/ay;
+
+    invoke-virtual {v1, v0, v2, v3}, Lcom/bbm/b/n;->a(Lcom/bbm/b/a;Lcom/bbm/b/ax;Lcom/bbm/b/ay;)V
+
+    .line 350
+    :cond_1
+    const/4 v0, 0x1
 
     goto :goto_0
 .end method

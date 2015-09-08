@@ -36,7 +36,7 @@
 
     iput-boolean v1, v0, Lcom/bbm/j/k;->j:Z
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e_()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d_()V
 
     .line 59
     return-void

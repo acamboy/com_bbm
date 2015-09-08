@@ -1,44 +1,144 @@
-.class final Lcom/bbm/ui/ff;
-.super Ljava/lang/Object;
-.source "QuickShareGlympseView.java"
-
-# interfaces
-.implements Lcom/glympse/android/controls/GTimerView$TimeProvider;
+.class public final Lcom/bbm/ui/ff;
+.super Ljava/lang/Enum;
+.source "ProfilePinView.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/QuickShareGlympseView;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/bbm/ui/ff;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final enum a:I
+
+.field public static final enum b:I
+
+.field public static final enum c:I
+
+.field public static final enum d:I
+
+.field public static final enum e:I
+
+.field public static final enum f:I
+
+.field public static final enum g:I
+
+.field public static final enum h:I
+
+.field private static final synthetic i:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/QuickShareGlympseView;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 8
 
     .prologue
-    .line 358
-    iput-object p1, p0, Lcom/bbm/ui/ff;->a:Lcom/bbm/ui/QuickShareGlympseView;
+    const/4 v7, 0x5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v6, 0x4
+
+    const/4 v5, 0x3
+
+    const/4 v4, 0x2
+
+    const/4 v3, 0x1
+
+    .line 37
+    sput v3, Lcom/bbm/ui/ff;->a:I
+
+    .line 38
+    sput v4, Lcom/bbm/ui/ff;->b:I
+
+    .line 39
+    sput v5, Lcom/bbm/ui/ff;->c:I
+
+    .line 40
+    sput v6, Lcom/bbm/ui/ff;->d:I
+
+    .line 41
+    sput v7, Lcom/bbm/ui/ff;->e:I
+
+    .line 42
+    const/4 v0, 0x6
+
+    sput v0, Lcom/bbm/ui/ff;->f:I
+
+    .line 43
+    const/4 v0, 0x7
+
+    sput v0, Lcom/bbm/ui/ff;->g:I
+
+    .line 44
+    const/16 v0, 0x8
+
+    sput v0, Lcom/bbm/ui/ff;->h:I
+
+    .line 36
+    const/16 v0, 0x8
+
+    new-array v0, v0, [I
+
+    const/4 v1, 0x0
+
+    sget v2, Lcom/bbm/ui/ff;->a:I
+
+    aput v2, v0, v1
+
+    sget v1, Lcom/bbm/ui/ff;->b:I
+
+    aput v1, v0, v3
+
+    sget v1, Lcom/bbm/ui/ff;->c:I
+
+    aput v1, v0, v4
+
+    sget v1, Lcom/bbm/ui/ff;->d:I
+
+    aput v1, v0, v5
+
+    sget v1, Lcom/bbm/ui/ff;->e:I
+
+    aput v1, v0, v6
+
+    sget v1, Lcom/bbm/ui/ff;->f:I
+
+    aput v1, v0, v7
+
+    const/4 v1, 0x6
+
+    sget v2, Lcom/bbm/ui/ff;->g:I
+
+    aput v2, v0, v1
+
+    const/4 v1, 0x7
+
+    sget v2, Lcom/bbm/ui/ff;->h:I
+
+    aput v2, v0, v1
+
+    sput-object v0, Lcom/bbm/ui/ff;->i:[I
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final getTime()J
-    .locals 2
+.method public static a()[I
+    .locals 1
 
     .prologue
-    .line 362
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
+    .line 36
+    sget-object v0, Lcom/bbm/ui/ff;->i:[I
+
+    invoke-virtual {v0}, [I->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/p;->a:Lcom/glympse/android/api/GGlympse;
+    check-cast v0, [I
 
-    invoke-interface {v0}, Lcom/glympse/android/api/GGlympse;->getTime()J
-
-    move-result-wide v0
-
-    return-wide v0
+    return-object v0
 .end method

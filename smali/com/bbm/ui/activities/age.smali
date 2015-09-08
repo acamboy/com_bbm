@@ -1,22 +1,26 @@
 .class final Lcom/bbm/ui/activities/age;
 .super Ljava/lang/Object;
-.source "SetAsActivity.java"
+.source "UpdateStatusActivity.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SetAsActivity;
+.field final synthetic a:Lcom/bbm/d/hs;
+
+.field final synthetic b:Lcom/bbm/ui/activities/afz;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SetAsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/afz;Lcom/bbm/d/hs;)V
     .locals 0
 
     .prologue
-    .line 74
-    iput-object p1, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/activities/SetAsActivity;
+    .line 261
+    iput-object p1, p0, Lcom/bbm/ui/activities/age;->b:Lcom/bbm/ui/activities/afz;
+
+    iput-object p2, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/d/hs;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,227 +29,145 @@
 
 
 # virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public final onClick(Landroid/view/View;)V
+    .locals 6
 
     .prologue
-    const/4 v4, 0x0
+    .line 266
+    const-string v0, "busyButton Clicked"
 
-    .line 79
-    iget-object v0, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/activities/SetAsActivity;
+    const-class v1, Lcom/bbm/ui/activities/UpdateStatusActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/SetAsActivity;->a(Lcom/bbm/ui/activities/SetAsActivity;)Lcom/bbm/ui/activities/agg;
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    move-result-object v0
+    .line 267
+    iget-object v0, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/d/hs;
 
-    invoke-virtual {v0, p3}, Lcom/bbm/ui/activities/agg;->a(I)Lcom/bbm/ui/activities/agi;
+    iget-wide v2, v0, Lcom/bbm/d/hs;->a:J
 
-    move-result-object v0
+    .line 268
+    iget-object v0, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/d/hs;
 
-    iget v0, v0, Lcom/bbm/ui/activities/agi;->a:I
+    iget-boolean v0, v0, Lcom/bbm/d/hs;->c:Z
 
-    packed-switch v0, :pswitch_data_0
+    if-nez v0, :cond_1
 
-    .line 121
-    :cond_0
+    const/4 v0, 0x1
+
+    .line 270
     :goto_0
+    iget-object v1, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/d/hs;
+
+    iget-object v1, v1, Lcom/bbm/d/hs;->d:Ljava/lang/String;
+
+    iget-object v4, p0, Lcom/bbm/ui/activities/age;->b:Lcom/bbm/ui/activities/afz;
+
+    iget-object v4, v4, Lcom/bbm/ui/activities/afz;->b:Lcom/bbm/ui/activities/UpdateStatusActivity;
+
+    invoke-virtual {v4}, Lcom/bbm/ui/activities/UpdateStatusActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    const v5, 0x7f0e0580
+
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/d/hs;
+
+    iget-object v1, v1, Lcom/bbm/d/hs;->d:Ljava/lang/String;
+
+    iget-object v4, p0, Lcom/bbm/ui/activities/age;->b:Lcom/bbm/ui/activities/afz;
+
+    iget-object v4, v4, Lcom/bbm/ui/activities/afz;->b:Lcom/bbm/ui/activities/UpdateStatusActivity;
+
+    invoke-virtual {v4}, Lcom/bbm/ui/activities/UpdateStatusActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    const v5, 0x7f0e0581
+
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    .line 283
+    :cond_0
+    :goto_1
     return-void
 
-    .line 82
-    :pswitch_0
-    const-string v0, "set as bbm pic OnItemClick"
-
-    const-class v1, Lcom/bbm/ui/activities/SetAsActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 83
-    :try_start_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/activities/SetAsActivity;
-
-    const/4 v1, 0x1
-
-    new-instance v2, Ljava/io/File;
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/activities/SetAsActivity;
-
-    invoke-static {v3}, Lcom/bbm/ui/activities/SetAsActivity;->b(Lcom/bbm/ui/activities/SetAsActivity;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v2}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    invoke-static {v0, v1, v2, v3}, Lcom/bbm/ui/es;->a(Landroid/app/Activity;ILandroid/net/Uri;Z)Z
-
-    move-result v0
-
-    .line 89
-    if-eqz v0, :cond_0
-
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/activities/SetAsActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/SetAsActivity;->finish()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .line 268
+    :cond_1
+    const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 92
+    .line 274
+    :cond_2
+    new-instance v1, Lorg/json/JSONObject;
+
+    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+
+    .line 275
+    new-instance v4, Ljava/util/LinkedList;
+
+    invoke-direct {v4}, Ljava/util/LinkedList;-><init>()V
+
+    .line 277
+    :try_start_0
+    const-string v5, "id"
+
+    invoke-virtual {v1, v5, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    const-string v2, "showBusy"
+
+    invoke-virtual {v1, v2, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 278
+    iget-object v0, p0, Lcom/bbm/ui/activities/age;->b:Lcom/bbm/ui/activities/afz;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/afz;->b:Lcom/bbm/ui/activities/UpdateStatusActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/UpdateStatusActivity;->c(Lcom/bbm/ui/activities/UpdateStatusActivity;)Lcom/bbm/d/a;
+
+    move-result-object v0
+
+    const-string v1, "status"
+
+    invoke-static {v4, v1}, Lcom/bbm/d/aj;->c(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/d/dw;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ez;)V
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    .line 280
     :catch_0
     move-exception v0
 
-    .line 93
-    iget-object v1, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/activities/SetAsActivity;
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
 
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/SetAsActivity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/activities/SetAsActivity;
-
-    invoke-virtual {v2}, Lcom/bbm/ui/activities/SetAsActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    const v3, 0x7f0e0123
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2, v4}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;I)V
-
-    .line 94
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    .line 100
-    :pswitch_1
-    const-string v0, "set contact picture onClick"
-
-    const-class v1, Lcom/bbm/ui/activities/SetAsActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 101
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v1, "android.intent.action.PICK"
-
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    .line 102
-    const-string v1, "vnd.android.cursor.dir/contact"
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 103
-    iget-object v1, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/activities/SetAsActivity;
-
-    const/4 v2, 0x2
-
-    invoke-virtual {v1, v0, v2}, Lcom/bbm/ui/activities/SetAsActivity;->startActivityForResult(Landroid/content/Intent;I)V
-
-    goto :goto_0
-
-    .line 108
-    :pswitch_2
-    :try_start_1
-    const-string v0, "set as wallpaper OnItemClick"
-
-    const-class v1, Lcom/bbm/ui/activities/SetAsActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 109
-    iget-object v0, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/activities/SetAsActivity;
-
-    invoke-static {v0}, Landroid/app/WallpaperManager;->getInstance(Landroid/content/Context;)Landroid/app/WallpaperManager;
-
-    move-result-object v0
-
-    .line 110
-    new-instance v1, Ljava/io/File;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/activities/SetAsActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/SetAsActivity;->b(Lcom/bbm/ui/activities/SetAsActivity;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    .line 111
-    new-instance v2, Ljava/io/FileInputStream;
-
-    invoke-direct {v2, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
-
-    .line 113
-    invoke-virtual {v0, v2}, Landroid/app/WallpaperManager;->setStream(Ljava/io/InputStream;)V
-
-    .line 114
-    iget-object v0, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/activities/SetAsActivity;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/activities/SetAsActivity;
-
-    const v2, 0x7f0e06b0
-
-    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/SetAsActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;)V
-
-    .line 115
-    iget-object v0, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/activities/SetAsActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/SetAsActivity;->finish()V
-    :try_end_1
-    .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
-
-    goto/16 :goto_0
-
-    .line 116
-    :catch_1
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
-
-    goto/16 :goto_0
-
-    .line 118
-    :catch_2
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
-
-    goto/16 :goto_0
-
-    .line 79
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-    .end packed-switch
+    goto :goto_1
 .end method

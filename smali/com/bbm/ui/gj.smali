@@ -1,45 +1,47 @@
-.class final Lcom/bbm/ui/gj;
-.super Ljava/lang/Object;
-.source "StickerItemView.java"
-
-# interfaces
-.implements Landroid/view/View$OnTouchListener;
-
-
-# instance fields
-.field final synthetic a:Landroid/view/GestureDetector;
-
-.field final synthetic b:Lcom/bbm/ui/StickerItemView;
+.class public final Lcom/bbm/ui/gj;
+.super Lcom/bbm/ui/d/a;
+.source "SheetActivityLifeCycleListener.java"
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/StickerItemView;Landroid/view/GestureDetector;)V
+.method public constructor <init>()V
     .locals 0
 
     .prologue
-    .line 129
-    iput-object p1, p0, Lcom/bbm/ui/gj;->b:Lcom/bbm/ui/StickerItemView;
-
-    iput-object p2, p0, Lcom/bbm/ui/gj;->a:Landroid/view/GestureDetector;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 8
+    invoke-direct {p0}, Lcom/bbm/ui/d/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 1
+.method public final a(Landroid/app/Activity;)V
+    .locals 2
 
     .prologue
-    .line 133
-    iget-object v0, p0, Lcom/bbm/ui/gj;->a:Landroid/view/GestureDetector;
+    .line 12
+    const v0, 0x7f040006
 
-    invoke-virtual {v0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    const v1, 0x7f040021
 
-    .line 134
-    const/4 v0, 0x1
+    invoke-virtual {p1, v0, v1}, Landroid/app/Activity;->overridePendingTransition(II)V
 
-    return v0
+    .line 13
+    return-void
+.end method
+
+.method public final c(Landroid/app/Activity;)V
+    .locals 2
+
+    .prologue
+    .line 17
+    const v0, 0x7f040020
+
+    const v1, 0x7f04001e
+
+    invoke-virtual {p1, v0, v1}, Landroid/app/Activity;->overridePendingTransition(II)V
+
+    .line 18
+    return-void
 .end method

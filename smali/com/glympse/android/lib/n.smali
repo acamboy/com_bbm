@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field private hf:Ljava/lang/String;
+.field private hn:Ljava/lang/String;
 
-.field private hk:Lcom/glympse/android/lib/m;
+.field private hs:Lcom/glympse/android/lib/m;
 
-.field private hl:Lcom/glympse/android/api/GApiStatusListener;
+.field private ht:Lcom/glympse/android/api/GApiStatusListener;
 
 
 # direct methods
@@ -16,16 +16,16 @@
     .locals 0
 
     .prologue
-    .line 101
+    .line 102
     invoke-direct {p0}, Lcom/glympse/android/lib/HttpJob;-><init>()V
 
-    .line 102
-    iput-object p1, p0, Lcom/glympse/android/lib/n;->hk:Lcom/glympse/android/lib/m;
-
     .line 103
-    iput-object p2, p0, Lcom/glympse/android/lib/n;->hl:Lcom/glympse/android/api/GApiStatusListener;
+    iput-object p1, p0, Lcom/glympse/android/lib/n;->hs:Lcom/glympse/android/lib/m;
 
     .line 104
+    iput-object p2, p0, Lcom/glympse/android/lib/n;->ht:Lcom/glympse/android/api/GApiStatusListener;
+
+    .line 105
     return-void
 .end method
 
@@ -39,11 +39,11 @@
     invoke-super {p0}, Lcom/glympse/android/lib/HttpJob;->onAbort()V
 
     .line 186
-    iget-object v0, p0, Lcom/glympse/android/lib/n;->hk:Lcom/glympse/android/lib/m;
+    iget-object v0, p0, Lcom/glympse/android/lib/n;->hs:Lcom/glympse/android/lib/m;
 
     const/4 v1, 0x0
 
-    iget-object v2, p0, Lcom/glympse/android/lib/n;->hl:Lcom/glympse/android/api/GApiStatusListener;
+    iget-object v2, p0, Lcom/glympse/android/lib/n;->ht:Lcom/glympse/android/api/GApiStatusListener;
 
     invoke-static {v0, v1, v2}, Lcom/glympse/android/lib/m;->a(Lcom/glympse/android/lib/m;ZLcom/glympse/android/api/GApiStatusListener;)V
 
@@ -76,11 +76,11 @@
     invoke-virtual {p0}, Lcom/glympse/android/lib/n;->abort()V
 
     .line 169
-    iget-object v0, p0, Lcom/glympse/android/lib/n;->hk:Lcom/glympse/android/lib/m;
+    iget-object v0, p0, Lcom/glympse/android/lib/n;->hs:Lcom/glympse/android/lib/m;
 
     const/4 v1, 0x0
 
-    iget-object v2, p0, Lcom/glympse/android/lib/n;->hl:Lcom/glympse/android/api/GApiStatusListener;
+    iget-object v2, p0, Lcom/glympse/android/lib/n;->ht:Lcom/glympse/android/api/GApiStatusListener;
 
     invoke-static {v0, v1, v2}, Lcom/glympse/android/lib/m;->a(Lcom/glympse/android/lib/m;ZLcom/glympse/android/api/GApiStatusListener;)V
 
@@ -91,9 +91,9 @@
 
     .line 177
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/n;->hk:Lcom/glympse/android/lib/m;
+    iget-object v0, p0, Lcom/glympse/android/lib/n;->hs:Lcom/glympse/android/lib/m;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/n;->hf:Ljava/lang/String;
+    iget-object v1, p0, Lcom/glympse/android/lib/n;->hn:Ljava/lang/String;
 
     const-string v2, "ok"
 
@@ -101,7 +101,7 @@
 
     move-result v1
 
-    iget-object v2, p0, Lcom/glympse/android/lib/n;->hl:Lcom/glympse/android/api/GApiStatusListener;
+    iget-object v2, p0, Lcom/glympse/android/lib/n;->ht:Lcom/glympse/android/api/GApiStatusListener;
 
     invoke-static {v0, v1, v2}, Lcom/glympse/android/lib/m;->a(Lcom/glympse/android/lib/m;ZLcom/glympse/android/api/GApiStatusListener;)V
 
@@ -112,22 +112,22 @@
     .locals 2
 
     .prologue
-    .line 108
+    .line 109
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x100
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 109
+    .line 110
     invoke-static {}, Lcom/glympse/android/lib/StaticConfig;->HTTPS()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 110
-    iget-object v1, p0, Lcom/glympse/android/lib/n;->hk:Lcom/glympse/android/lib/m;
+    .line 111
+    iget-object v1, p0, Lcom/glympse/android/lib/n;->hs:Lcom/glympse/android/lib/m;
 
     invoke-static {v1}, Lcom/glympse/android/lib/m;->a(Lcom/glympse/android/lib/m;)Ljava/lang/String;
 
@@ -135,21 +135,21 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 111
+    .line 112
     invoke-static {}, Lcom/glympse/android/lib/StaticConfig;->BASE_URL_SUFFIX()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 112
+    .line 113
     invoke-static {}, Lcom/glympse/android/lib/StaticConfig;->API_STATUS_URL_PATH()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 114
+    .line 115
     iget-object v1, p0, Lcom/glympse/android/lib/n;->_httpConnection:Lcom/glympse/android/hal/GHttpConnection;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -157,13 +157,6 @@
     move-result-object v0
 
     invoke-interface {v1, v0}, Lcom/glympse/android/hal/GHttpConnection;->setUrl(Ljava/lang/String;)V
-
-    .line 115
-    iget-object v0, p0, Lcom/glympse/android/lib/n;->_httpConnection:Lcom/glympse/android/hal/GHttpConnection;
-
-    const/4 v1, 0x0
-
-    invoke-interface {v0, v1}, Lcom/glympse/android/hal/GHttpConnection;->setRequestMethod(Z)V
 
     .line 116
     return-void
@@ -211,10 +204,10 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/glympse/android/lib/n;->hf:Ljava/lang/String;
+    iput-object v1, p0, Lcom/glympse/android/lib/n;->hn:Ljava/lang/String;
 
     .line 133
-    iget-object v1, p0, Lcom/glympse/android/lib/n;->hf:Ljava/lang/String;
+    iget-object v1, p0, Lcom/glympse/android/lib/n;->hn:Ljava/lang/String;
 
     invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
 
@@ -223,7 +216,7 @@
     if-nez v1, :cond_2
 
     .line 135
-    iget-object v1, p0, Lcom/glympse/android/lib/n;->hf:Ljava/lang/String;
+    iget-object v1, p0, Lcom/glympse/android/lib/n;->hn:Ljava/lang/String;
 
     const-string v2, "ok"
 
@@ -258,11 +251,11 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/n;->hf:Ljava/lang/String;
+    iput-object v0, p0, Lcom/glympse/android/lib/n;->hn:Ljava/lang/String;
 
     .line 147
     :cond_2
-    iget-object v0, p0, Lcom/glympse/android/lib/n;->hf:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/n;->hn:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
 
@@ -277,7 +270,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/n;->hf:Ljava/lang/String;
+    iput-object v0, p0, Lcom/glympse/android/lib/n;->hn:Ljava/lang/String;
 
     goto :goto_0
 .end method

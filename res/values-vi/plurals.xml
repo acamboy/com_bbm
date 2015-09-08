@@ -35,28 +35,28 @@
         <item quantity="one">1 kết quả</item>
     </plurals>
     <plurals name="slide_menu_active_chats">
-        <item quantity="other">%1$s cuộc trò chuyện đang diễn ra</item>
-        <item quantity="one">1 cuộc trò chuyện đang diễn ra</item>
+        <item quantity="other">Trò chuyện đang diễn ra %1$s</item>
+        <item quantity="one">Trò chuyện đang diễn ra %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_channelupdates">
-        <item quantity="other">%1$s thông báo mới</item>
-        <item quantity="one">1 thông báo mới</item>
+        <item quantity="other">Mục Kênh mới %1$s</item>
+        <item quantity="one">Mục Kênh mới %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_invites">
-        <item quantity="other">%1$s thư mời mới</item>
-        <item quantity="one">1 thư mời mới</item>
+        <item quantity="other">Thư mời mới %1$s</item>
+        <item quantity="one">Thư mời mới %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_updates">
-        <item quantity="other">%1$s mục mới</item>
-        <item quantity="one">1 mục mới</item>
+        <item quantity="other">Nguồn tin mới %1$s</item>
+        <item quantity="one">Nguồn tin mới %1$s</item>
     </plurals>
     <plurals name="slide_menu_total_contacts">
         <item quantity="other">%1$s liên lạc</item>
-        <item quantity="one">1 liên lạc</item>
+        <item quantity="one">%1$s liên lạc</item>
     </plurals>
     <plurals name="slide_menu_total_groups">
         <item quantity="other">%1$s nhóm</item>
-        <item quantity="one">1 nhóm</item>
+        <item quantity="one">%1$s nhóm</item>
     </plurals>
     <plurals name="update_channel_stats_comments">
         <item quantity="other">%1$s nhận xét</item>

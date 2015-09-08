@@ -1,85 +1,89 @@
 .class final Lcom/bbm/ui/dg;
-.super Lcom/bbm/j/u;
-.source "InlineImageEditText.java"
+.super Ljava/lang/Object;
+.source "IncrementalListAdapter.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/InlineImageEditText;
+.field final synthetic a:Lcom/bbm/ui/df;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/InlineImageEditText;)V
+.method constructor <init>(Lcom/bbm/ui/df;)V
     .locals 0
 
     .prologue
-    .line 60
-    iput-object p1, p0, Lcom/bbm/ui/dg;->a:Lcom/bbm/ui/InlineImageEditText;
+    .line 96
+    iput-object p1, p0, Lcom/bbm/ui/dg;->a:Lcom/bbm/ui/df;
 
-    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final b()Z
+.method public final run()V
     .locals 2
 
     .prologue
-    .line 63
-    iget-object v0, p0, Lcom/bbm/ui/dg;->a:Lcom/bbm/ui/InlineImageEditText;
+    .line 101
+    iget-object v0, p0, Lcom/bbm/ui/dg;->a:Lcom/bbm/ui/df;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/InlineImageEditText;->isInEditMode()Z
+    invoke-static {v0}, Lcom/bbm/ui/df;->a(Lcom/bbm/ui/df;)I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    const/4 v1, 0x2
 
-    .line 64
-    iget-object v0, p0, Lcom/bbm/ui/dg;->a:Lcom/bbm/ui/InlineImageEditText;
+    if-ne v0, v1, :cond_0
 
-    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
+    .line 102
+    iget-object v0, p0, Lcom/bbm/ui/dg;->a:Lcom/bbm/ui/df;
 
-    move-result-object v1
+    const/4 v1, 0x1
 
-    iget-object v1, v1, Lcom/bbm/e;->b:Lcom/bbm/d/a;
+    invoke-static {v0, v1}, Lcom/bbm/ui/df;->a(Lcom/bbm/ui/df;I)I
 
-    invoke-virtual {v1}, Lcom/bbm/d/a;->i()Ljava/lang/String;
+    .line 103
+    iget-object v0, p0, Lcom/bbm/ui/dg;->a:Lcom/bbm/ui/df;
 
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/InlineImageEditText;->a(Lcom/bbm/ui/InlineImageEditText;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 66
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/dg;->a:Lcom/bbm/ui/InlineImageEditText;
-
-    invoke-static {v0}, Lcom/bbm/ui/InlineImageEditText;->a(Lcom/bbm/ui/InlineImageEditText;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/bbm/ui/df;->c(Lcom/bbm/ui/df;)Landroid/os/Handler;
 
     move-result-object v0
 
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    iget-object v1, p0, Lcom/bbm/ui/dg;->a:Lcom/bbm/ui/df;
 
-    move-result v0
+    invoke-static {v1}, Lcom/bbm/ui/df;->b(Lcom/bbm/ui/df;)Ljava/lang/Runnable;
 
-    if-eqz v0, :cond_1
+    move-result-object v1
 
-    iget-object v0, p0, Lcom/bbm/ui/dg;->a:Lcom/bbm/ui/InlineImageEditText;
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    invoke-virtual {v0}, Lcom/bbm/ui/InlineImageEditText;->isInEditMode()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    :cond_1
-    const/4 v0, 0x1
-
+    .line 108
     :goto_0
-    return v0
+    return-void
 
-    :cond_2
-    const/4 v0, 0x0
+    .line 105
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/dg;->a:Lcom/bbm/ui/df;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/df;->a(Lcom/bbm/ui/df;I)I
+
+    .line 106
+    iget-object v0, p0, Lcom/bbm/ui/dg;->a:Lcom/bbm/ui/df;
+
+    invoke-static {v0}, Lcom/bbm/ui/df;->d(Lcom/bbm/ui/df;)Lcom/bbm/ui/af;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/bbm/ui/af;->a:Landroid/util/SparseArray;
+
+    invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
     goto :goto_0
 .end method

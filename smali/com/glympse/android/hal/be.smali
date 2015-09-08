@@ -13,9 +13,11 @@
 # instance fields
 .field private D:Landroid/app/PendingIntent;
 
-.field private cL:Lcom/glympse/android/core/GProximityListener;
+.field private cA:Lcom/glympse/android/hal/gms/location/LocationClient;
 
-.field private cM:Ljava/util/Hashtable;
+.field private cO:Lcom/glympse/android/core/GProximityListener;
+
+.field private cP:Ljava/util/Hashtable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Hashtable",
@@ -27,9 +29,7 @@
     .end annotation
 .end field
 
-.field private cP:Lcom/glympse/android/hal/bf;
-
-.field private cx:Lcom/glympse/android/hal/gms/location/LocationClient;
+.field private cS:Lcom/glympse/android/hal/bf;
 
 .field private e:Landroid/content/Context;
 
@@ -54,7 +54,7 @@
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/be;->cM:Ljava/util/Hashtable;
+    iput-object v0, p0, Lcom/glympse/android/hal/be;->cP:Ljava/util/Hashtable;
 
     .line 61
     const/4 v0, 0x0
@@ -86,7 +86,7 @@
 
     .prologue
     .line 286
-    iget-object v0, p0, Lcom/glympse/android/hal/be;->cM:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/hal/be;->cP:Ljava/util/Hashtable;
 
     invoke-virtual {v0}, Ljava/util/Hashtable;->size()I
 
@@ -106,7 +106,7 @@
     invoke-direct {v1, v0}, Ljava/util/Vector;-><init>(I)V
 
     .line 294
-    iget-object v0, p0, Lcom/glympse/android/hal/be;->cM:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/hal/be;->cP:Ljava/util/Hashtable;
 
     invoke-virtual {v0}, Ljava/util/Hashtable;->values()Ljava/util/Collection;
 
@@ -141,7 +141,7 @@
 
     .line 301
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/hal/be;->cx:Lcom/glympse/android/hal/gms/location/LocationClient;
+    iget-object v0, p0, Lcom/glympse/android/hal/be;->cA:Lcom/glympse/android/hal/gms/location/LocationClient;
 
     iget-object v2, p0, Lcom/glympse/android/hal/be;->D:Landroid/app/PendingIntent;
 
@@ -155,7 +155,7 @@
 
     .prologue
     .line 31
-    iget-object v0, p0, Lcom/glympse/android/hal/be;->cL:Lcom/glympse/android/core/GProximityListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/be;->cO:Lcom/glympse/android/core/GProximityListener;
 
     return-object v0
 .end method
@@ -216,7 +216,7 @@
 
     .prologue
     .line 31
-    iget-object v0, p0, Lcom/glympse/android/hal/be;->cM:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/hal/be;->cP:Ljava/util/Hashtable;
 
     return-object v0
 .end method
@@ -226,7 +226,7 @@
 
     .prologue
     .line 226
-    iget-object v0, p0, Lcom/glympse/android/hal/be;->cx:Lcom/glympse/android/hal/gms/location/LocationClient;
+    iget-object v0, p0, Lcom/glympse/android/hal/be;->cA:Lcom/glympse/android/hal/gms/location/LocationClient;
 
     if-nez v0, :cond_0
 
@@ -237,16 +237,16 @@
 
     invoke-direct {v0, v1, p0, p0}, Lcom/glympse/android/hal/gms/location/LocationClient;-><init>(Landroid/content/Context;Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$ConnectionCallbacks;Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$OnConnectionFailedListener;)V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/be;->cx:Lcom/glympse/android/hal/gms/location/LocationClient;
+    iput-object v0, p0, Lcom/glympse/android/hal/be;->cA:Lcom/glympse/android/hal/gms/location/LocationClient;
 
     .line 229
-    iget-object v0, p0, Lcom/glympse/android/hal/be;->cx:Lcom/glympse/android/hal/gms/location/LocationClient;
+    iget-object v0, p0, Lcom/glympse/android/hal/be;->cA:Lcom/glympse/android/hal/gms/location/LocationClient;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/gms/location/LocationClient;->connect()V
 
     .line 233
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/hal/be;->cP:Lcom/glympse/android/hal/bf;
+    iget-object v0, p0, Lcom/glympse/android/hal/be;->cS:Lcom/glympse/android/hal/bf;
 
     if-nez v0, :cond_1
 
@@ -255,12 +255,12 @@
 
     invoke-direct {v0, p0}, Lcom/glympse/android/hal/bf;-><init>(Lcom/glympse/android/hal/be;)V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/be;->cP:Lcom/glympse/android/hal/bf;
+    iput-object v0, p0, Lcom/glympse/android/hal/be;->cS:Lcom/glympse/android/hal/bf;
 
     .line 236
     iget-object v0, p0, Lcom/glympse/android/hal/be;->e:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/be;->cP:Lcom/glympse/android/hal/bf;
+    iget-object v1, p0, Lcom/glympse/android/hal/be;->cS:Lcom/glympse/android/hal/bf;
 
     new-instance v2, Landroid/content/IntentFilter;
 
@@ -282,33 +282,33 @@
     const/4 v2, 0x0
 
     .line 243
-    iget-object v0, p0, Lcom/glympse/android/hal/be;->cP:Lcom/glympse/android/hal/bf;
+    iget-object v0, p0, Lcom/glympse/android/hal/be;->cS:Lcom/glympse/android/hal/bf;
 
     if-eqz v0, :cond_0
 
     .line 245
     iget-object v0, p0, Lcom/glympse/android/hal/be;->e:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/be;->cP:Lcom/glympse/android/hal/bf;
+    iget-object v1, p0, Lcom/glympse/android/hal/be;->cS:Lcom/glympse/android/hal/bf;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 246
-    iput-object v2, p0, Lcom/glympse/android/hal/be;->cP:Lcom/glympse/android/hal/bf;
+    iput-object v2, p0, Lcom/glympse/android/hal/be;->cS:Lcom/glympse/android/hal/bf;
 
     .line 250
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/hal/be;->cx:Lcom/glympse/android/hal/gms/location/LocationClient;
+    iget-object v0, p0, Lcom/glympse/android/hal/be;->cA:Lcom/glympse/android/hal/gms/location/LocationClient;
 
     if-eqz v0, :cond_1
 
     .line 252
-    iget-object v0, p0, Lcom/glympse/android/hal/be;->cx:Lcom/glympse/android/hal/gms/location/LocationClient;
+    iget-object v0, p0, Lcom/glympse/android/hal/be;->cA:Lcom/glympse/android/hal/gms/location/LocationClient;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/gms/location/LocationClient;->disconnect()V
 
     .line 253
-    iput-object v2, p0, Lcom/glympse/android/hal/be;->cx:Lcom/glympse/android/hal/gms/location/LocationClient;
+    iput-object v2, p0, Lcom/glympse/android/hal/be;->cA:Lcom/glympse/android/hal/gms/location/LocationClient;
 
     .line 254
     const/4 v0, 0x0
@@ -421,7 +421,7 @@
     .line 141
     new-instance v1, Lcom/glympse/android/hal/GVector;
 
-    iget-object v0, p0, Lcom/glympse/android/hal/be;->cM:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/hal/be;->cP:Ljava/util/Hashtable;
 
     invoke-virtual {v0}, Ljava/util/Hashtable;->size()I
 
@@ -430,7 +430,7 @@
     invoke-direct {v1, v0}, Lcom/glympse/android/hal/GVector;-><init>(I)V
 
     .line 142
-    iget-object v0, p0, Lcom/glympse/android/hal/be;->cM:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/hal/be;->cP:Ljava/util/Hashtable;
 
     invoke-virtual {v0}, Ljava/util/Hashtable;->values()Ljava/util/Collection;
 
@@ -562,7 +562,7 @@
 
     .prologue
     .line 75
-    iput-object p1, p0, Lcom/glympse/android/hal/be;->cL:Lcom/glympse/android/core/GProximityListener;
+    iput-object p1, p0, Lcom/glympse/android/hal/be;->cO:Lcom/glympse/android/core/GProximityListener;
 
     .line 76
     return-void
@@ -614,7 +614,7 @@
 
     .prologue
     .line 80
-    iget-object v0, p0, Lcom/glympse/android/hal/be;->cM:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/hal/be;->cP:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->contains(Ljava/lang/Object;)Z
 
@@ -629,7 +629,7 @@
 
     .line 87
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/hal/be;->cM:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/hal/be;->cP:Ljava/util/Hashtable;
 
     invoke-interface {p1}, Lcom/glympse/android/core/GRegion;->getId()Ljava/lang/String;
 
@@ -660,7 +660,7 @@
     invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 99
-    iget-object v1, p0, Lcom/glympse/android/hal/be;->cx:Lcom/glympse/android/hal/gms/location/LocationClient;
+    iget-object v1, p0, Lcom/glympse/android/hal/be;->cA:Lcom/glympse/android/hal/gms/location/LocationClient;
 
     iget-object v2, p0, Lcom/glympse/android/hal/be;->D:Landroid/app/PendingIntent;
 
@@ -693,13 +693,13 @@
     invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 119
-    iget-object v1, p0, Lcom/glympse/android/hal/be;->cx:Lcom/glympse/android/hal/gms/location/LocationClient;
+    iget-object v1, p0, Lcom/glympse/android/hal/be;->cA:Lcom/glympse/android/hal/gms/location/LocationClient;
 
     invoke-virtual {v1, v0, p0}, Lcom/glympse/android/hal/gms/location/LocationClient;->removeGeofences(Ljava/util/List;Lcom/glympse/android/hal/gms/location/LocationClient$OnRemoveGeofencesResultListener;)V
 
     .line 123
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/hal/be;->cM:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/hal/be;->cP:Ljava/util/Hashtable;
 
     invoke-interface {p1}, Lcom/glympse/android/core/GRegion;->getId()Ljava/lang/String;
 
@@ -708,7 +708,7 @@
     invoke-virtual {v0, v1}, Ljava/util/Hashtable;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 126
-    iget-object v0, p0, Lcom/glympse/android/hal/be;->cM:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/hal/be;->cP:Ljava/util/Hashtable;
 
     invoke-virtual {v0}, Ljava/util/Hashtable;->size()I
 

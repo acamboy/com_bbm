@@ -31,7 +31,7 @@
 
     .line 56
     :pswitch_0
-    iget-object v0, p0, Lcom/glympse/android/lib/l;->hd:Lcom/glympse/android/lib/json/GJsonHandlerStack;
+    iget-object v0, p0, Lcom/glympse/android/lib/l;->hl:Lcom/glympse/android/lib/json/GJsonHandlerStack;
 
     invoke-interface {v0}, Lcom/glympse/android/lib/json/GJsonHandlerStack;->popHandler()V
 
@@ -62,7 +62,7 @@
 
     .line 24
     :pswitch_0
-    iget-object v0, p0, Lcom/glympse/android/lib/l;->he:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/l;->hm:Ljava/lang/String;
 
     const-string v1, "result"
 
@@ -77,13 +77,13 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/l;->hf:Ljava/lang/String;
+    iput-object v0, p0, Lcom/glympse/android/lib/l;->hn:Ljava/lang/String;
 
     goto :goto_0
 
     .line 32
     :pswitch_1
-    iget-object v0, p0, Lcom/glympse/android/lib/l;->he:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/l;->hm:Ljava/lang/String;
 
     const-string v1, "time"
 
@@ -104,7 +104,7 @@
 
     .line 36
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/l;->he:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/l;->hm:Ljava/lang/String;
 
     const-string v1, "error"
 
@@ -119,13 +119,13 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/l;->hg:Ljava/lang/String;
+    iput-object v0, p0, Lcom/glympse/android/lib/l;->ho:Ljava/lang/String;
 
     goto :goto_0
 
     .line 40
     :cond_2
-    iget-object v0, p0, Lcom/glympse/android/lib/l;->he:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/l;->hm:Ljava/lang/String;
 
     const-string v1, "error_detail"
 
@@ -140,7 +140,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/l;->hh:Ljava/lang/String;
+    iput-object v0, p0, Lcom/glympse/android/lib/l;->hp:Ljava/lang/String;
 
     goto :goto_0
 

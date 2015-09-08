@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 1018
+    .line 1021
     invoke-direct {p0}, Ljava/util/AbstractQueue;-><init>()V
 
     return-void
@@ -40,8 +40,8 @@
     .end annotation
 
     .prologue
-    .line 1041
-    invoke-static {}, Lcom/google/b/c/m;->a()Lcom/google/b/c/by;
+    .line 1044
+    invoke-static {}, Lcom/google/b/c/m;->a()Lcom/google/b/c/bz;
 
     move-result-object v0
 
@@ -52,7 +52,7 @@
     .locals 1
 
     .prologue
-    .line 1021
+    .line 1024
     const/4 v0, 0x1
 
     return v0
@@ -62,7 +62,7 @@
     .locals 1
 
     .prologue
-    .line 1026
+    .line 1029
     const/4 v0, 0x0
 
     return-object v0
@@ -72,7 +72,7 @@
     .locals 1
 
     .prologue
-    .line 1031
+    .line 1034
     const/4 v0, 0x0
 
     return-object v0
@@ -82,7 +82,7 @@
     .locals 1
 
     .prologue
-    .line 1036
+    .line 1039
     const/4 v0, 0x0
 
     return v0

@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/ws;
 .super Ljava/lang/Object;
-.source "MainActivity.java"
+.source "NewListItemActivity.java"
 
 # interfaces
-.implements Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/NewListItemActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
     .locals 0
 
     .prologue
-    .line 1300
-    iput-object p1, p0, Lcom/bbm/ui/activities/ws;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 286
+    iput-object p1, p0, Lcom/bbm/ui/activities/ws;->a:Lcom/bbm/ui/activities/NewListItemActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,38 +25,29 @@
 
 
 # virtual methods
-.method public final onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 1303
-    const-string v0, "store_last_viewed_time"
+    .line 290
+    const-string v0, "mButtonToolbar NegativeButton Clicked"
 
-    invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-class v1, Lcom/bbm/ui/activities/NewListItemActivity;
 
-    move-result v0
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    if-nez v0, :cond_0
+    .line 292
+    iget-object v0, p0, Lcom/bbm/ui/activities/ws;->a:Lcom/bbm/ui/activities/NewListItemActivity;
 
-    const-string v0, "store_newest_publish_time"
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/NewListItemActivity;->finish()V
 
-    invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 293
+    iget-object v0, p0, Lcom/bbm/ui/activities/ws;->a:Lcom/bbm/ui/activities/NewListItemActivity;
 
-    move-result v0
+    const/4 v1, 0x0
 
-    if-eqz v0, :cond_1
+    invoke-static {v0, v1}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;Z)V
 
-    .line 1305
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ws;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/MainActivity;->p(Lcom/bbm/ui/activities/MainActivity;)Lcom/bbm/ui/activities/yd;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/yd;->a()V
-
-    .line 1307
-    :cond_1
+    .line 294
     return-void
 .end method

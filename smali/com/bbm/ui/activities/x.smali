@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/activities/x;
 .super Ljava/lang/Object;
-.source "AvatarViewerActivity.java"
+.source "BbidErrorActivity.java"
 
 # interfaces
-.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Landroid/widget/RelativeLayout;
-
-.field final synthetic b:Lcom/bbm/ui/activities/AvatarViewerActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/BbidErrorActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/AvatarViewerActivity;Landroid/widget/RelativeLayout;)V
+.method constructor <init>(Lcom/bbm/ui/activities/BbidErrorActivity;)V
     .locals 0
 
     .prologue
-    .line 59
-    iput-object p1, p0, Lcom/bbm/ui/activities/x;->b:Lcom/bbm/ui/activities/AvatarViewerActivity;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/x;->a:Landroid/widget/RelativeLayout;
+    .line 152
+    iput-object p1, p0, Lcom/bbm/ui/activities/x;->a:Lcom/bbm/ui/activities/BbidErrorActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,28 +25,46 @@
 
 
 # virtual methods
-.method public final onGlobalLayout()V
-    .locals 2
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 3
 
     .prologue
-    .line 62
-    iget-object v0, p0, Lcom/bbm/ui/activities/x;->a:Landroid/widget/RelativeLayout;
+    .line 157
+    iget-object v0, p0, Lcom/bbm/ui/activities/x;->a:Lcom/bbm/ui/activities/BbidErrorActivity;
 
-    invoke-virtual {v0}, Landroid/widget/RelativeLayout;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    invoke-static {v0}, Lcom/bbm/ui/activities/BbidErrorActivity;->b(Lcom/bbm/ui/activities/BbidErrorActivity;)Landroid/app/AlertDialog;
 
-    move-result-object v0
+    .line 158
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+    .line 160
+    packed-switch p2, :pswitch_data_0
 
-    .line 63
-    iget-object v0, p0, Lcom/bbm/ui/activities/x;->b:Lcom/bbm/ui/activities/AvatarViewerActivity;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/x;->b:Lcom/bbm/ui/activities/AvatarViewerActivity;
-
-    iget-object v1, v1, Lcom/bbm/ui/activities/ey;->A:Lcom/bbm/ui/c/gj;
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/AvatarViewerActivity;->a(Lcom/bbm/ui/activities/AvatarViewerActivity;Lcom/bbm/ui/c/gj;)V
-
-    .line 64
+    .line 169
+    :goto_0
+    :pswitch_0
     return-void
+
+    .line 166
+    :pswitch_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/x;->a:Lcom/bbm/ui/activities/BbidErrorActivity;
+
+    new-instance v1, Landroid/content/Intent;
+
+    const-string v2, "android.settings.SETTINGS"
+
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/BbidErrorActivity;->startActivity(Landroid/content/Intent;)V
+
+    goto :goto_0
+
+    .line 160
+    nop
+
+    :pswitch_data_0
+    .packed-switch -0x2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

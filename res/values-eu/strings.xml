@@ -234,10 +234,10 @@
     <string name="activity_replace_display_picture">BBMko pantailako argazkia</string>
     <string name="activity_select_new_admin_title">Hautatu administratzaile berria</string>
     <string name="activity_select_new_admin_title_selection">+%1$d administratzaile</string>
-    <string name="activity_tap_to_invite_dialog_info">NFC aktibatu nahi duzu? ?</string>
-    <string name="activity_tap_to_invite_dialog_no">Ez</string>
+    <string name="activity_tap_to_invite_dialog_info">NFC aktibatu nahi duzu?</string>
+    <string name="activity_tap_to_invite_dialog_no">@string/no</string>
     <string name="activity_tap_to_invite_dialog_title">NFC irratia desaktibatuta dago</string>
-    <string name="activity_tap_to_invite_dialog_yes">Bai</string>
+    <string name="activity_tap_to_invite_dialog_yes">@string/yes</string>
     <string name="activity_tap_to_invite_info">Lerrokatu uneko gailuen atzealdeak. Bi gailuek NFC aktibatuta izan behar dute.</string>
     <string name="ad_block_channel">Kanala blokeatzen baduzu, ez duzu \"%1$s\" kanalaren babestutako edukirik ikusiko. Ekintza hau ezin da desegin.</string>
     <string name="ad_block_sponsor">Ez duzu honek babestutako edukirik ikusiko: \"%1$s\". Ekintza hau ezin da desegin.</string>
@@ -263,13 +263,26 @@
     <string name="allow_comments_on_posts">Baimendu argitalpenetan iruzkinak egitea</string>
     <string name="app_name">BBM</string>
     <string name="app_picker_name">Aplikazioak</string>
+    <string name="app_store_app_subscribe_notification_dialog_line">BBM harpidetza-paketeen %1$s erabiltzaile bihurtu zarela jakinaraz diezaiokezu kontaktuei.</string>
+    <string name="app_store_app_subscribe_notification_message">Iepa, BBM harpidetza-paketeen %1$s erabiltzaile naiz orain! Zu ere izan zaitezke!!!</string>
+    <string name="app_store_confirmation_screen_feature_offered_line">Zure harpidetzak eskainitako eginbideak:</string>
     <string name="app_store_details_screen_install_button">Instalatu</string>
     <string name="app_store_details_screen_inventory_not_found">"Ezin da aplikazioa ireki.
  Saiatu berriro geroago."</string>
     <string name="app_store_details_screen_open_button">Ireki</string>
+    <string name="app_store_details_screen_renew_button">BERRITU</string>
+    <string name="app_store_details_screen_subscribe_button">Harpidetu</string>
+    <string name="app_store_details_screen_subscribed_button">Harpidetuta</string>
     <string name="app_store_invalid_app_id">Elementua ez dago erabilgarri</string>
+    <string name="app_store_subscribed_app_no_ads_description">Ezkutatu babestutako iragarkiak eta gonbidapenak BBMn harpidetza honekin.</string>
+    <string name="app_store_subscribed_app_vanity_pin_description">PIN pertsonalizatua beste erabiltzaile batzuk gonbidatzeko eta profilaren pantailan bistaratzeko erabil dezakezu. PIN pertsonalizatua definitu ostean, erabiltzaileak denbora-tarte jakin batean edita dezake. Aldatu PINa</string>
+    <string name="app_subscription_thank_you">Eskerrik asko. BBMra harpidetuta zaude orain.</string>
     <string name="approve_comments">Onartu iruzkinak</string>
     <string name="approve_comments_description">Aukera kanalen webgunean alda dezakezu.</string>
+    <string name="archiving_disabled_message">Administratzaileak artxibatzeko eginbidea desaktibatu du. Berriketak dagoeneko ez daude gailuan gordeta, eta aurrez gordetako berriketak ez daude gailuan gordeta. Informazio gehiago lortzeko, jarri harremanetan administratzailearekin.</string>
+    <string name="archiving_disabled_title">Artxibatzea desaktibatuta dago</string>
+    <string name="archiving_enabled_message">Administratzaileak artxibatzeko eginbidea aktibatu du. Berriketak gailuan gordeta daude. Informazio gehiago lortzeko, jarri harremanetan administratzailearekin.</string>
+    <string name="archiving_enabled_title">Artxibatzea aktibatuta dago</string>
     <string name="arrived_at_destination">Glympse: Helmugara iritsi da</string>
     <string name="asterisk">*</string>
     <string name="attach">Erantsi</string>
@@ -286,9 +299,15 @@
     <string name="attach_list_voicenote">Ahots-oharra</string>
     <string name="audio_player_pause">Pausatu</string>
     <string name="audio_player_play">Erreproduzitu</string>
+    <string name="autopassphrase_completed">Berriketa hau BBM Protected da orain.</string>
+    <string name="autopassphrase_failed">Ezin izan da BBM Protected konfiguratu.</string>
+    <string name="autopassphrase_initiated">BBM Protected berriketa bat sortzen.</string>
+    <string name="autopassphrase_retry">Saiatu berriro</string>
     <string name="avatar_file_not_support">Fitxategia ez da onartzen.</string>
     <string name="back">Atzera</string>
     <string name="backup_file_is_not_valid">Babeskopia ez da baliozkoa. BlackBerry Desktop Software softwareko BBMren konfiguraziotik eta Gailuz aldatu utilitatetik irten behar duzu.</string>
+    <string name="badge_on_your_avatar">Zure avatarreko txapa</string>
+    <string name="badge_on_your_avatar_description">BBM harpidetza aktibo bihurtu bezain laster, txapa bat izango duzu zure avatarrean...</string>
     <string name="barcode_info">Kontaktu batek zure barra-kodea eskaneatu dezake zu BBMn gehitzeko.</string>
     <string name="bbm_account_name">BBM</string>
     <string name="bbm_account_user_name">BBM Groups</string>
@@ -304,7 +323,9 @@
     <string name="bbm_service_running">Konektatuta</string>
     <string name="bbm_setup">BBM konfigurazioa</string>
     <string name="bbm_share_with_pin_uri">http://www.bbm.com/share/?BBMID=%1$s</string>
-    <string name="bbm_voice_ongoing_call">Dei batean</string>
+    <string name="bbm_voice_ongoing_call">BBM dei batean</string>
+    <string name="billing_google_error_message_body">Elementu hau dagoeneko beste BlackBerry ID batekin erosi da zure dendako kontuan. Saiatu beste dendako kontu bat erabiltzen.</string>
+    <string name="billing_google_error_message_title">Ezin da erosi</string>
     <string name="blackberry_channels"><b>BBM Channels</b></string>
     <string name="blackberry_id">BBIDa</string>
     <string name="blackberry_id_is_not_responding">BlackBerry IDak ez du erantzuten.</string>
@@ -567,6 +588,7 @@
     <string name="chat_history_missed_video_chat">Honen bideo-dei galdua: &lt;b>%1$s&lt;/b></string>
     <string name="chat_history_missed_voice_chat">Honen ahots-dei galdua: &lt;b>%1$s&lt;/b></string>
     <string name="chats">Berriketak</string>
+    <string name="chats_block_chat">Blokeatu berriketa hau</string>
     <string name="chats_empty_chat">Berriketa hutsa</string>
     <string name="chats_end_chat">Amaitu berriketa</string>
     <string name="chats_end_discussion">Amaitu eztabaida</string>
@@ -575,12 +597,21 @@
     <string name="chats_open_group">Ireki taldea</string>
     <string name="chats_select_more">Hautatu gehiago</string>
     <string name="chats_start_video">Hasi bideo-berriketa</string>
-    <string name="chats_status_no_chats">Berriketa bat hasteko, kolpatu goiko ertza.</string>
+    <string name="chats_status_no_chats">Berriketa bat hasteko, kolpatu pantailaren behealdean dagoen berriketa botoia.</string>
+    <string name="chats_status_no_chats_widget">Berriketa bat hasteko, kolpatu goiko ertza.</string>
     <string name="chats_view_bbm_profile">Ikusi BBM profila</string>
     <string name="click_to_expire">Sakatu hau, zure Glympse hori iraungitzeko</string>
     <string name="click_to_reply">Sakatu hau, erakusteko...</string>
     <string name="click_to_view">Sakatu hau, ikusteko...</string>
     <string name="close">Itxi</string>
+    <string name="cloud_directory_contact_add_coworkers">Bilatu lankideak</string>
+    <string name="cloud_directory_contact_chat_failed">Ezin izan da BBM berriketarik hasi zure lankidearekin. Saiatu berriro geroago.</string>
+    <string name="cloud_directory_fields_info">Lankideek izen hau ikusiko dute BBMn bilaketak egiten dituztenean.</string>
+    <string name="cloud_directory_pin_lookup">Kontaktuaren informazioa eskatzen.</string>
+    <string name="cloud_directory_search_failed">Ezin izan dira lankideak bilatu. Saiatu berriro geroago.</string>
+    <string name="cloud_directory_search_more_results">Bilaketa emaitza gehiegi itzuli ditu. Saiatu bilaketa estutzen.</string>
+    <string name="cloud_directory_search_text_min_length">Zure lankideen bilaketak gutxienez 2 karaktere izan behar ditu.</string>
+    <string name="cloud_directory_service_hint">Derrigorrezko eremuak. Ziurtatu benetako izena idatzi duzula. Lankideek izenaren arabera bila zaitzakete eta zurekin BBM berriketak has ditzakete.</string>
     <string name="coming_soon">"Eginbidea ez dago erabilgarri une honetan.
 Laster izango da"</string>
     <string name="coming_soon_title">Laster!</string>
@@ -592,8 +623,10 @@ Laster izango da"</string>
     <string name="contact_add_category">Gehitu kategoria</string>
     <string name="contact_add_category_already_exists">Dagoeneko bada kategoria hori.</string>
     <string name="contact_add_category_hint">Idatzi kategoriaren izenburua</string>
-    <string name="contact_add_notification">Erabiltzailea gehitu da</string>
+    <string name="contact_add_notification">Kontaktua gehitu da</string>
     <string name="contact_delete_category">Ezabatu kategoria</string>
+    <string name="contact_delete_notification">Kontaktua ezabatu da</string>
+    <string name="contact_delete_notification_multiple">%1$d kontaktu ezabatu dira</string>
     <string name="contact_details">Kontaktuaren xehetasunak</string>
     <string name="contact_details_description">Gehitu telefono-zenbakia, helbide elektronikoa edo webgunea.</string>
     <string name="contact_is_blocked">Kontaktua blokeatuta dago</string>
@@ -605,6 +638,8 @@ Laster izango da"</string>
     <string name="contacts_are_blocked">Kontaktuak blokeatuta daude</string>
     <string name="contacts_count">0</string>
     <string name="contacts_delete_contact">Ezabatu %1$s</string>
+    <string name="contacts_dialog_delete_and_block_info">%1$s(r)en etorkizuneko gonbidapen eta berriketa guztiak blokeatuko dira. %1$s ezabatu eta blokeatu nahi duzu?</string>
+    <string name="contacts_dialog_delete_and_block_title">Ezabatu eta blokeatu %1$s</string>
     <string name="contacts_dialog_delete_block_info">%1$s blokeatuen zerrendan gehituko da</string>
     <string name="contacts_dialog_delete_block_label">Blokeatu etorkizuneko gonbidapenak</string>
     <string name="contacts_dialog_delete_multi_block_info">Kontaktuak blokeatuen zerrendan gehituko dira</string>
@@ -629,20 +664,24 @@ Laster izango da"</string>
     <string name="contents_sms">SMS helbidea</string>
     <string name="contents_text">Testu laua</string>
     <string name="context_menu_copy_message">Kopiatu mezua</string>
+    <string name="context_menu_quote_message">Aipatu mezua</string>
     <string name="context_menu_recall_message">Erretiratu mezua</string>
     <string name="context_menu_resend_message">Bidali mezua berriro</string>
+    <string name="conversation_activity_block_chat_warning_message">Berriketa hau blokeatzen baduzu, berriketa honetan bidalitako mezu berriak jasotzeari utziko diozu.</string>
+    <string name="conversation_activity_block_chat_warning_title">Berriketa blokeatu?</string>
     <string name="conversation_activity_end_chat_on_voice_warning_message">Deia amaitu egingo da eta edozein berriketa-mezu ezabatuko da.</string>
     <string name="conversation_activity_end_chat_warning_message">Berriketa amaitzen baduzu, mezu guztiak ezabatu egingo dira.</string>
-    <string name="conversation_activity_end_chat_warning_title">Berriketa amaitu?</string>
+    <string name="conversation_activity_leave_chat_warning_message">Berriketa uzten baduzu, mezu guztiak ezabatuko dira.</string>
+    <string name="conversation_activity_leave_chat_warning_title">Berriketa utzi?</string>
     <string name="conversation_activity_reinvite_accepted">Gonbidapena onartu da</string>
     <string name="conversation_activity_reinvite_sent">Gonbidapena bidali da.</string>
-    <string name="conversation_are_already_in_the_chat">&lt;b>%1$s&lt;/b> dagoeneko berriketan daude</string>
+    <string name="conversation_are_already_in_the_chat">%1$s dagoeneko berriketan daude</string>
     <string name="conversation_bubble_dropbox_caption">Hona hemen %1$s(e)rako esteka nire Dropbox-en</string>
     <string name="conversation_button_dropbox_download">Deskargatu</string>
     <string name="conversation_button_toast_attachment_deleted">Eranskina ezabatu da</string>
     <string name="conversation_button_toast_ref_content_deleted">Aipatutako edukia ezabatu da</string>
     <string name="conversation_button_toast_undo">Desegin</string>
-    <string name="conversation_button_view_glympse">Ikusi mapa</string>
+    <string name="conversation_button_view_glympse">IKUSI MAPA</string>
     <string name="conversation_email_chat_subject_multiple_participants">Jardun berriketan %1$s, %2$s eta jende gehiagorekin hemen: %3$s</string>
     <string name="conversation_email_chat_subject_three_participants">Jardun berriketan %1$s eta %2$s erabiltzaileekin hemen: %3$s</string>
     <string name="conversation_email_chat_subject_two_participants">Jardun berriketan %1$s erabiltzailearekin hemen: %2$s</string>
@@ -652,30 +691,36 @@ Laster izango da"</string>
     <string name="conversation_file_transfert">Fitxategia jaso da</string>
     <string name="conversation_file_transfert_canceled_dialog_title">Fitxategiaren transferentzia bertan behera utzi da</string>
     <string name="conversation_file_transfert_canceled_dialog_too_large">%1$s handiegia da. Fitxategiaren gehienezko tamaina 16 MB da.</string>
-    <string name="conversation_incoming_invite_req">&lt;b>%1$s&lt;/b>(e)k &lt;b>%2$s&lt;/b>(e)ra gonbidatu nahi zaitu berriketan jarduteko</string>
+    <string name="conversation_groups_alt_picture_sent">Argazkia partekatu du</string>
+    <string name="conversation_groups_alt_sticker_sent">Pegatina partekatu du</string>
+    <string name="conversation_incoming_invite_req">%1$s(e)k %2$s(e)ra gonbidatu nahi zaitu berriketan jarduteko</string>
     <string name="conversation_incoming_invite_req_accepted"><b>%1$s</b> gehitu duzu</string>
-    <string name="conversation_incoming_invite_req_denied">&lt;b>%1$s&lt;/b>(e)k &lt;b>%2$s&lt;/b>(e)ra gonbidatzeko eskaera ukatu duzu</string>
-    <string name="conversation_invite_accept_button">Baimendu</string>
-    <string name="conversation_invite_reject_button">Ukatu</string>
-    <string name="conversation_invited">&lt;b>%1$s&lt;/b>(e)k &lt;b>%2$s&lt;/b> gonbidatzeko eskaera onartu du</string>
-    <string name="conversation_is_already_in_the_chat">&lt;b>%1$s&lt;/b> dagoeneko berriketan dago</string>
+    <string name="conversation_incoming_invite_req_denied">%2$s gonbidatzeko %1$s(r)en gonbidapena</string>
+    <string name="conversation_invite_accept_button">BAIMENDU</string>
+    <string name="conversation_invite_reject_button">UKATU</string>
+    <string name="conversation_invited">%1$s(e)k %2$s gonbidatzeko eskaera onartu du</string>
+    <string name="conversation_is_already_in_the_chat">%1$s dagoeneko berriketan dago</string>
     <string name="conversation_is_writing_a_message">mezu bat idazten ari da...</string>
-    <string name="conversation_joined_the_chat">&lt;b>%1$s&lt;/b>(e)k berriketarekin bat egin du</string>
-    <string name="conversation_left_the_chat">&lt;b>%1$s&lt;/b>(e)k berriketa utzi du</string>
+    <string name="conversation_joined_the_chat">%1$s(e)k berriketarekin bat egin du</string>
+    <string name="conversation_left_the_chat">%1$s(e)k berriketa utzi du</string>
     <string name="conversation_location_message_accurace_within">Doitu %1$s m barruan</string>
     <string name="conversation_location_received">Kokapena jaso du</string>
     <string name="conversation_location_sent">Kokapena bidali du</string>
+    <string name="conversation_message_edit_title">Editatu mezua</string>
+    <string name="conversation_message_editing">Editatzen: %1$s</string>
+    <string name="conversation_message_editing_removed">Editatutako mezua ezabatu da</string>
     <string name="conversation_message_recall_failed">Ezin izan da mezua erretiratu</string>
     <string name="conversation_message_recall_pending">Mezua erretiratzen</string>
     <string name="conversation_message_recalled">Mezua erretiratu da</string>
+    <string name="conversation_mpc_header">Berriketa</string>
     <string name="conversation_must_reinvite">%1$s(e)k ez zaitu kontaktu gisa. %1$s berriro gonbidatu nahi duzu?</string>
     <string name="conversation_notification_calendar_received">Hitzordua jaso du</string>
     <string name="conversation_notification_calendar_sent">Hitzordua bidali du</string>
-    <string name="conversation_notification_conf_incoming_invite_req">&lt;b>%1$s&lt;/b>(e)k baten bat berriketara gonbidatzea eskatu du</string>
-    <string name="conversation_notification_conf_invited">&lt;b>%1$s&lt;/b> berriketara gonbidatu da</string>
-    <string name="conversation_notification_conf_outgoing_invite_req">&lt;b>%1$s&lt;/b> berriketara gonbidatu duzu</string>
-    <string name="conversation_notification_conf_outgoing_invite_req_denied">&lt;b>%1$s&lt;/b> gonbidatzeko eskaerari uko egin zaio</string>
-    <string name="conversation_notification_conf_we_joined">&lt;b>%1$s&lt;/b>(e)k berriketara gonbidatu zaitu</string>
+    <string name="conversation_notification_conf_incoming_invite_req">%1$s(e)k baten bat berriketara gonbidatzea eskatu du</string>
+    <string name="conversation_notification_conf_invited">%1$s berriketara gonbidatu da</string>
+    <string name="conversation_notification_conf_outgoing_invite_req">%1$s berriketara gonbidatu duzu</string>
+    <string name="conversation_notification_conf_outgoing_invite_req_denied">%1$s gonbidatzeko eskaerari uko egin zaio</string>
+    <string name="conversation_notification_conf_we_joined">%1$s(e)k berriketara gonbidatu zaitu</string>
     <string name="conversation_notification_contact_card_received">Kontaktu-txartela jaso du</string>
     <string name="conversation_notification_contact_card_sent">Kontaktu-txartela bidali du</string>
     <string name="conversation_notification_default_incomming">Mezua jaso da</string>
@@ -693,16 +738,17 @@ Laster izango da"</string>
     <string name="conversation_notification_sticker_sent">Pegatina bidali da</string>
     <string name="conversation_notification_voice_note_received">Ahots-oharra jaso da</string>
     <string name="conversation_notification_voice_note_sent">Ahots-oharra bidali da</string>
-    <string name="conversation_outgoing_invite_req">&lt;b>%1$s&lt;/b> gonbidatzeko eskaera bidali zaio &lt;b>%2$s&lt;/b>(r)i</string>
-    <string name="conversation_outgoing_invite_req_denied">&lt;b>%1$s&lt;/b>(e)k &lt;b>%2$s&lt;/b> gonbidatzeko eskaera ukatu du</string>
+    <string name="conversation_outgoing_invite_req">%1$s gonbidatzeko eskaera bidali zaio %2$s(r)i</string>
+    <string name="conversation_outgoing_invite_req_denied">%1$s(e)k %2$s gonbidatzeko eskaera ukatu du</string>
     <string name="conversation_picture">Argazkia jaso du</string>
     <string name="conversation_ping">PING!!!</string>
-    <string name="conversation_reinvite_accept_button">Berriz gonbidatu</string>
-    <string name="conversation_reinvite_reject_button">Ezabatu kontaktua</string>
+    <string name="conversation_reinvite_accept_button">GONBIDATU BERRIRO</string>
+    <string name="conversation_reinvite_reject_button">EZABATU KONTAKTUA</string>
     <string name="conversation_send_button">Bidali</string>
     <string name="conversation_share_max_participants">Partaide gehiegi daude berriketan (gehienez %1$s egon daitezke).</string>
     <string name="conversation_successfully_saved_picture">Argazkia ondo gorde da</string>
     <string name="conversation_successfully_saved_voice_note">Ahots oharra behar bezala gorde da</string>
+    <string name="conversation_toast_blocked_chat">Berriketa blokeatu duzu. Mezu guztiak ezabatu dira.</string>
     <string name="conversation_toast_ended_chat">Berriketa amaitu da</string>
     <string name="conversation_toast_ended_chat_no_history">Berriketa amaitu da. Mezu guztiak ezabatu dira.</string>
     <string name="conversation_toast_left_chat">Berriketa utzi duzu</string>
@@ -710,7 +756,7 @@ Laster izango da"</string>
     <string name="conversation_unable_to_save_picture">Ezin izan da argazkia gorde</string>
     <string name="conversation_unable_to_save_voice_note">Ezin izan da ahots-oharra gorde</string>
     <string name="conversation_voice_note_transfert">Ahots-oharra jaso da</string>
-    <string name="conversation_you_invited">&lt;b>%1$s&lt;/b> berriketara gonbidatu duzu</string>
+    <string name="conversation_you_invited">%1$s berriketara gonbidatu duzu</string>
     <string name="conversation_you_joined_the_chat">Berriketarekin bat egin duzu</string>
     <string name="copied_group_passphrase">Ezkutuko esaldia kopiatu da</string>
     <string name="copied_group_passphrase_toast">Arbelean kopiatu da</string>
@@ -725,6 +771,26 @@ Laster izango da"</string>
     <string name="creating_channel_toast_string">Kanala sortzen</string>
     <string name="creating_private_channel_confirmation">Ekintza hau ezin da desegin. Ziur kanala pribatu egin nahi duzula?</string>
     <string name="current">Une honetan</string>
+    <string name="custom_pin_activity_title">PIN pertsonal.</string>
+    <string name="custom_pin_already_set">Dagoeneko sortu duzu PIN pertsonalizatu bat.</string>
+    <string name="custom_pin_confirm_postivie_text">Zuzena da</string>
+    <string name="custom_pin_confirm_text">Testu hau izango da BBMrako PIN pertsonalizatua. Zuzena al da?</string>
+    <string name="custom_pin_friends_ad_link">Bisitatu BBM denda</string>
+    <string name="custom_pin_friends_ad_text">Lortu PIN pertsonalizatua BBMn gaur:</string>
+    <string name="custom_pin_get_your_custom_pin">Lortu PIN pertsonalizatua BBMn orain: bisitatu BBM denda</string>
+    <string name="custom_pin_hint_text">Idatzi PIN pertsonalizatua</string>
+    <string name="custom_pin_legal">"Iritsi da PIN pertsonalizatua sortzeko garaia. Hartu behar duzun denbora guztia, ezin baita geroago aldatu. PIN pertsonalizatua BBMrekin lotuta egongo da harpidetzak aktibo dirauen bitartean.
+
+Gidalerroak:
+* 6 eta 8 karaktere izan behar ditu
+* Zenbakiak, letrak, azpimarrak eta marratxoak izan ditzakete
+* Azpimarra, marratxo edo Gtik Zra arteko letra bat izan behar du"</string>
+    <string name="custom_pin_not_subscribed">Pertsonalizatu nire PINa</string>
+    <string name="custom_pin_share_to_feed_body">PIN pertsonalizatua lortu berri duzula jakinaraz diezaiekezu kontaktuei: %1$s</string>
+    <string name="custom_pin_shared_feed_item">PIN pertsonalizatu berri bat lortu berri dut: %1$s. PINa pertsonalizatzeko, kolpatu http://shop.bbm.com/item/custom_pin</string>
+    <string name="custom_pin_terms_conditions">&lt;p>&lt;b>BBM PIN pertsonalizatuaren gidalerroak&lt;/b>&lt;/p> &lt;p>PIN pertsonalizatua zure BBM kontua pertsonalizatzeko era dibertitu bat da. PIN pertsonalizatuak ez du uneko PINa ordezten (ohiko PINei buruzko informazio gehiago lortzeko, ikusi \"Zer da PIN bat?\" www.bbm.com helbideko ohiko galderak atalean), baina zure BBM profilean agertzen den bigarren PIN bat da eta beste BBM erabiltzaile batzuk gonbidatzeko edo horien gonbidapenak jasotzeko erabil daiteke.&lt;/p> &lt;p>Jarraian, PIN pertsonalizatu bat sortzean kontuan hartu beharreko gauza batzuk zerrendatzen dira:&lt;/p> &lt;p>&amp;#8226 Ezin duzu beste bat erabiltzen ari den PIN pertsonalizatua zuretzat hartu.&lt;/p> &lt;p>&amp;#8226 Harpidetza iraungi baino lehen berritzen ez bada, ezingo duzu PIN pertsonalizatua erabiltzen jarraitu eta baliteke beste erabiltzaile batek beretzat hartzea.&lt;/p> &lt;p>&amp;#8226 Aukeratu arretaz PIN pertsonalizatua. PIN pertsonalizatua sortu ostean, ezin da aldatu zure harpidetza indarrean dagoen bitartean.&lt;/p> &lt;p>&amp;#8226 PIN pertsonalizatua BBMren PIN arruntetik bereizteko, PIN pertsonalizatuek baldintza hauek bete behar dituzte: &lt;/p> &lt;p> - 6 eta 8 karaktere artean izan behar ditu;&lt;/p> &lt;p> - zenbakiak, letrak, azpimarrak eta marratxoak izan ditzakete;&lt;/p> &lt;p> - azpimarra, marratxo edo Gtik Zra arteko letra bat izan behar du;&lt;/p> &lt;p>&amp;#8226 PIN pertsonalizatuek ezin dute hizkuntza iraingarririk, difamaziozkorik, lizunik, profanorik, legez kanpokorik edo iruzurtirik erabili eta ezingo dira legez kanpoko xedeetarako erabili.&lt;/p> &lt;p>&amp;#8226 PIN pertsonalizatuak ezingo dira beste norbanako, marka, erakunde edo gertaera baten itxurarik egiteko erabili, ezta gainerakoak beste era batera engainatu, nahastu edo ziria sartzeko ere.&lt;/p> &lt;p>&amp;#8226 PIN pertsonalizatuek ez dute edozein norbanako, marka, erakunde edo gertaera batekin lotutako baimenik urratu behar, ezta jabetza intelektualaren eskubiderik ere. Adibidez, zure PIN pertsonalizatuak ezin du beste pertsona edo entitate baten marka komertzialen eskubiderik urratu.&lt;/p> &lt;p>&amp;#8226 BlackBerry-k edonoiz eta edozein arrazoirengatik PIN pertsonalizatuak baztertzeko, kentzeko eta/edo erreklamatzeko eskubidea gordetzen du. Hori guztia erosketa-baldintzen edo dirua itzultzeko gidalerroen arabera egingo da.&lt;/p></string>
+    <string name="custom_pin_title">PIN pertsonalizatua:</string>
+    <string name="custom_pin_warning_on_repurchase">Uneko PIN pertsonalizatua mantentzeko, baliteke harpidetza berri bat erosi behar izatea eta, ondoren, lehendik duzun harpidetza bertan behera utzi behar izatea. Informazio gehiago lortzeko, bisitatu: %1$s</string>
     <string name="date">Data</string>
     <string name="date_of_birth"><b>Jaioteguna</b></string>
     <string name="date_of_birth_fail_age_limit">Gazteegia zara BBM Channels erabiltzeko.</string>
@@ -751,6 +817,7 @@ Laster izango da"</string>
     <string name="dialog_invite_security_question_tip">Aholkua: Erantzunak maiuskulak/minuskulak bereizten dituzte.</string>
     <string name="dialog_invite_security_question_title">Segurtasun-galdera</string>
     <string name="did_you_know">Bazenekien?</string>
+    <string name="different_platform_string">Automatikoki berritzen den harpidetza duzu. Harpidetza hori beste gailu batean erosi zen. Gailu honetan harpidetu?</string>
     <string name="discard">Baztertu</string>
     <string name="display_name"><i>Pantailako izena</i></string>
     <string name="do_you_want_to_switch_your_bbm_information_to_your_current_device">BBM informazioa uneko gailura aldatu nahi duzu?</string>
@@ -767,10 +834,19 @@ Laster izango da"</string>
     <string name="enter_an_address">Idatzi helbide bat</string>
     <string name="enter_comment"><i>Idatzi iruzkina</i></string>
     <string name="enter_date_of_birth">BBM Channels erabiltzeko, idatzi jaioteguna.</string>
-    <string name="enter_passphrase">Idatzi ezkutu esaldia</string>
+    <string name="enter_passphrase">IDATZI EZKUTUKO ESALDIA</string>
     <string name="enter_passphrase_hint"><i>Idatzi ezkutuko esaldia</i></string>
     <string name="enter_text"><i>Idatzi testua</i></string>
     <string name="entered_passphrase_incorrect">Idatzi duzun ezkutuko esaldia okerra da.</string>
+    <string name="entitlement_dialog_title">Harpidetza behar da</string>
+    <string name="entitlement_edit_dialogue">"Mezuak editatzeko probako muga erdietsi duzu.
+Eginbidearen sarbide mugagabea lortzeko, harpidetza eros dezakezu."</string>
+    <string name="entitlement_privateconv_dialogue">"Berriketa pribatuen probako muga erdietsi duzu.
+Eginbidearen sarbide mugagabea lortzeko, harpidetza eros dezakezu."</string>
+    <string name="entitlement_retracted_dialogue">"Mezuak erretiratzeko probako muga erdietsi duzu.
+Eginbidearen sarbide mugagabea lortzeko, harpidetza eros dezakezu."</string>
+    <string name="entitlement_timed_dialogue">"Iraupen zehatzeko mezuak probatzeko muga erdietsi duzu.
+Eginbidearen sarbide mugagabea lortzeko, harpidetza eros dezakezu."</string>
     <string name="ephemeral_hint_received">Iraupen zehatzeko mezua jaso da. Eduki ukituta ikusteko.</string>
     <string name="ephemeral_hint_sent">Iraupen zehatzeko mezua.</string>
     <string name="ephemeral_hint_viewed">Iraupen zehatzeko mezua jaso da. Iraungi da</string>
@@ -782,7 +858,8 @@ Laster izango da"</string>
     <string name="ephemeral_picture_sent">Iraupen zehatzeko argazkia.</string>
     <string name="ephemeral_setting">Iraupen zehatzeko mezuak</string>
     <string name="ephemeral_tech_tip_body">Ezarri tenporizadore bat mezua edo argazkia suntsitu baino lehen noiz arte ikus dezaketen kontrolatzeko.</string>
-    <string name="ephemeral_tech_tip_title">Iraupen zehatzeko mezuak</string>
+    <string name="ephemeral_tech_tip_title">Iraupen zehatzekoak</string>
+    <string name="ephemeral_unsupport_toast">Tenporizadorea kendu da. Eranskin motak ez du eginbide hau onartzen.</string>
     <string name="error_network_failure"><i>Sarearen hutsegitea</i></string>
     <string name="exit">Irten</string>
     <string name="feature_glympse">Glympse</string>
@@ -869,15 +946,17 @@ Laster izango da"</string>
     <string name="filter_by">Iragazi honela</string>
     <string name="find_friend_allow_upload_dialog_double_check_text">Ziur zaude? BBMk kontaktuak atzitzea onartu nahi ez baduzu, BBM kontaktuak eskuz gehitu beharko dituzu.</string>
     <string name="find_friend_allow_upload_dialog_double_check_title">Ez da gomendatzen</string>
-    <string name="find_friend_allow_upload_dialog_title">Bilatu lagunak BBMn</string>
-    <string name="find_friend_allow_upload_text">Onartu BBMk kontaktuak atzitzea, lagunak bilatzen eta gehitzen laguntzeko.</string>
+    <string name="find_friend_allow_upload_dialog_title">Bilatu lagunak</string>
+    <string name="find_friend_allow_upload_text">Onartu BBMk zure lagunak atzitzea, lagunak bilatzen laguntzeko. BBMn zein lagun gehitu aukera dezakezu.</string>
     <string name="find_friend_category_get_bbm">Gonbidatu deskargatzera</string>
     <string name="find_friend_category_invite">Kolpatu gehitzeko</string>
     <string name="find_friends">Bilatu lagunak BBMn</string>
-    <string name="find_more_friends">Bilatu lagun gehiago</string>
-    <string name="first_launch_after_upgrade_privacy_terms">&lt;b>&lt;a href=http://www.blackberry.com/legal/privacy>Pribatutasun-politika&lt;/a>&lt;/b> eta &lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>Zerbitzuaren baldintzak&lt;/a>&lt;/b> onartzen ditut</string>
-    <string name="first_launch_after_upgrade_subtitle">Egin BBM berriketak dibertigarriago pegatinekin. Erabilgarri orain.</string>
-    <string name="first_launch_after_upgrade_title">Pegatinak bidali dira</string>
+    <string name="find_more_friends">Bilatu lagunak</string>
+    <string name="first_launch_after_upgrade_privacy_terms">&lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>Zerbitzuaren baldintzak&lt;/a>&lt;/b> eguneratu ditugu. “Jarraitu” sakatuz gero &lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>Zerbitzuaren baldintzak&lt;/a>&lt;/b> eta &lt;b>&lt;a href=http://www.blackberry.com/legal/privacy>Pribatutasun-politika&lt;/a>&lt;/b> onartzen dituzu.</string>
+    <string name="first_launch_after_upgrade_subtitle">Sortu zuretzat esklusiboa den BBM PIN bat! Eskatu gaur bertan zure PIN pertsonalizatua.</string>
+    <string name="first_launch_after_upgrade_title">Esklusiboa zarelako</string>
+    <string name="first_name">Izena</string>
+    <string name="first_name_hint">Idatzi izena</string>
     <string name="flagged_comments_header">Iruzkinak</string>
     <string name="flagged_posts_header">Argitalpen</string>
     <string name="format_not_supported_for_cropping">Formatu honek ez du moztea onartzen</string>
@@ -885,6 +964,7 @@ Laster izango da"</string>
     <string name="general">Orokorra</string>
     <string name="glympse">Glympse</string>
     <string name="glympse_attach">Erantsi Glympse</string>
+    <string name="glympse_duration_hourminutes">%1$d:%2$02d geratzen dira</string>
     <string name="glympse_duration_minutes">Iraupena: %1$d min</string>
     <string name="glympse_expired">Iraungi da</string>
     <string name="glympse_expires_at">Partekatu %1$s arte</string>
@@ -919,6 +999,7 @@ Laster izango da"</string>
     <string name="glympse_update">Eguneratu Glympse</string>
     <string name="glympse_user_selector_item_all_user_currently_sharing">Une honetan partekatzen ari diren erabiltzaile guztiak</string>
     <string name="glympse_user_selector_item_speed">Abiadura (km/h): %1$s</string>
+    <string name="glympse_user_selector_item_speed_na">Abiadura (km/h): E/E</string>
     <string name="glympse_user_selector_item_updated_d_ago">Azken eguneratze-data: duela %1$d egun</string>
     <string name="glympse_user_selector_item_updated_h_m">Azken eguneratze-data: duela %1$d:%2$s</string>
     <string name="glympse_user_selector_item_updated_m_ago">Azken eguneratze-data: duela %1$d minutu</string>
@@ -952,9 +1033,11 @@ Laster izango da"</string>
     <string name="group_add_list_title_hint"><i>Zerrendaren izenburua</i></string>
     <string name="group_admin_about">Talde-administratzaileei buruz</string>
     <string name="group_admin_text">Administratzaileak ezin ditu ekintza hauek egin:</string>
+    <string name="group_autopassphrase_details">Ezkutuko esaldi automatikoa gaituta</string>
     <string name="group_barcode_info">Kontaktu batek barra-kodea eskanea dezake, zure taldearekin bat egiteko.</string>
     <string name="group_barcode_scan_rejected_user_not_protected">Ez duzu talde honekin bat egiteko baimenik.</string>
     <string name="group_cancel">Utzi</string>
+    <string name="group_cannot_delete_conversation">Ezin da berriketa hau ezabatu</string>
     <string name="group_chat_exists">Lehendik bada berriketa-gai hori</string>
     <string name="group_chat_general_discussion">Eztabaida orokorra</string>
     <string name="group_chat_history_days_1">1 egun</string>
@@ -973,6 +1056,8 @@ Laster izango da"</string>
     <string name="group_conversation_email_chat_message_header">Talde honetakoa: %1$s</string>
     <string name="group_conversation_email_chat_subject">%1$s(r)en berriketa: %2$s</string>
     <string name="group_conversation_is_writing_a_message">" idazten ari da..."</string>
+    <string name="group_conversation_picture_loading">Argazkia kargatzen...</string>
+    <string name="group_conversation_picture_not_available">Argazkia ez dago erabilgarri</string>
     <string name="group_conversation_slide_menu_chat_history">Berriketa-historia</string>
     <string name="group_conversation_slide_menu_clear_chat">Garbitu berriketa</string>
     <string name="group_conversation_slide_menu_copy_chat">Kopiatu berriketa</string>
@@ -982,6 +1067,7 @@ Laster izango da"</string>
     <string name="group_delete_picture">Ezabatu argazkia</string>
     <string name="group_delete_q">Ezabatu taldea?</string>
     <string name="group_done">Eginda</string>
+    <string name="group_edit_admin_cannot_remove_self">Ezin duzu zeure buru administratzaile funtziotik kendu</string>
     <string name="group_edit_caption">Editatu epigrafea</string>
     <string name="group_edit_list_title">Elementuaren xehetasunak</string>
     <string name="group_event_all_day">Egun osoa</string>
@@ -1004,15 +1090,15 @@ Laster izango da"</string>
     <string name="group_events_time_notice">Amaiera-orduak hasiera-orduak baino geroago izan behar du</string>
     <string name="group_invitation_was_received">Glympse talde batera gonbidatu zaituzte</string>
     <string name="group_invite_bbg_uri">%1$s</string>
-    <string name="group_invite_email_message">"-----\ufffc----
-%1$s izeneko nire taldearekin bat egitera gonbidatu nahi zaitut.
+    <string name="group_invite_email_message">"\"%1$s\" izeneko nire taldearekin bat egitera gonbidatu nahi zaitut. Gailu mugikorretik taldearekin bat egiteko, sakatu: 
+%2$s
 
-Android edo iPhone gailuetan, sakatu %2$s, taldearekin bat egiteko edo BBM deskargatzeko.
 
 %3$s"</string>
-    <string name="group_invite_email_subject">Egin bat nire BlackBerry Group-ekin</string>
+    <string name="group_invite_email_subject">%1$s(r)en BBM Group-en gonbidapena</string>
     <string name="group_invite_enter_passphrase">Talde honekin bat egiteko, idatzi taldeko kide batek eman dizun ezkutuko esaldia.</string>
     <string name="group_invite_enter_passphrase_multi_attempts">Ezkutuko esaldi okerra. Talde honekin bat egiteko, idatzi taldeko kide batek eman dizun ezkutuko esaldia. (%1$d/%2$d)</string>
+    <string name="group_invite_expired">Talde-gonbidapena iraungi da</string>
     <string name="group_invite_message_default">Izen hau duen nire taldearekin bat egitera gonbidatu nahi zaitut: %1$s</string>
     <string name="group_invite_status_enter_passphrase_max_attempts_reached">Ezkutuko esaldi okerra. Talde honekin bat egiteko, berriro gonbidatu behar zaituzte.</string>
     <string name="group_invite_status_enter_passphrase_multi_attempts">Ezkutuko esaldi okerra. Talde honekin bat egiteko, idatzi taldeko kide batek eman dizun ezkutuko esaldia.</string>
@@ -1055,6 +1141,11 @@ Android edo iPhone gailuetan, sakatu %2$s, taldearekin bat egiteko edo BBM deska
     <string name="group_passphrase_info">Taldera gonbidatzen dituzun pertsonek bat egitean idatzi behar duten ezkutuko esaldia parteka dezakezu.</string>
     <string name="group_passphrase_missing">Ezkutu esaldia e/e</string>
     <string name="group_picture_add">Gehitu argazkia</string>
+    <string name="group_picture_add_failed__wrong_picture_type">@string/avatar_file_not_support</string>
+    <string name="group_picture_add_failed_file_access_error">@string/filetransfer_abort_filenotfound</string>
+    <string name="group_picture_add_failed_file_does_not_exist">@string/filetransfer_abort_filenotfound</string>
+    <string name="group_picture_add_failed_picture_too_big">@string/conversation_file_image_transfer_canceled_dialog_too_large</string>
+    <string name="group_picture_add_failed_resize_error">@string/conversation_unable_to_save_picture</string>
     <string name="group_picture_added_days">%2$s(e)k duela %1$d egun gehitu zuen</string>
     <string name="group_picture_added_today">%2$s(e)k gaur, %1$s(e)tan, gehitu du</string>
     <string name="group_picture_added_yesterday">%1$s(e)k atzo gehitu zuen</string>
@@ -1129,7 +1220,7 @@ Android edo iPhone gailuetan, sakatu %2$s, taldearekin bat egiteko edo BBM deska
     <string name="hdimage_prompt_message">Etorkizuneko HD eskaerak automatikoki onartu nahi dituzu?</string>
     <string name="hdimage_prompt_title">Onartu beti eskaerak</string>
     <string name="help">Laguntza</string>
-    <string name="help_url">http://docs.blackberry.com/bbm/25/android/eu-es</string>
+    <string name="help_url">http://help.blackberry.com/detectLang/bbm-for-android/current/</string>
     <string name="high_priority">Lehentasun handia</string>
     <string name="hint_protected_enabled_chat"><i>Babestua. Idatzi mezu bat</i></string>
     <string name="history_clear_one_history_text">Garbitu</string>
@@ -1158,6 +1249,7 @@ Android edo iPhone gailuetan, sakatu %2$s, taldearekin bat egiteko edo BBM deska
     <string name="introducing_channels_second_part">Harpidedunek BBMri buruzko informazio berriena jasotzen dute eta beren ideiak parteka ditzakete.</string>
     <string name="introducing_channels_title">BBM Channels-en aurkezpena</string>
     <string name="invalid_passphrase_toast">Ezkutuko esaldi baliogabea</string>
+    <string name="invitation_received">Gonbidapena jaso da</string>
     <string name="invitation_rejected_invitee_not_protected_message">%1$s(e)k ezin du talde honekin bat egin. BBM Protected kontaktuek soilik egin dezakete bat.</string>
     <string name="invitation_rejected_invitee_not_protected_title">Ezin da erabiltzailerik gonbidatu bat egiteko</string>
     <string name="invitation_sent">Gonbidapena bidali da.</string>
@@ -1165,10 +1257,8 @@ Android edo iPhone gailuetan, sakatu %2$s, taldearekin bat egiteko edo BBM deska
     <string name="invite_activity_category">Kategoria</string>
     <string name="invite_activity_lookup">Bilatu...</string>
     <string name="invite_activity_mail">Posta elektronikoa: %1$s</string>
-    <string name="invite_activity_mail_body">"BBMn berriketan jardutera gonbidatu nahi zaitut.
-
-Nirekin BBMn bat egiteko, sakatu
-%1s
+    <string name="invite_activity_mail_body">"BBM bidez berriketan jardutera gonbidatu nahi zaitut. Gailu mugikorretik BBMrekin bat egiteko, sakatu:
+%1$s
 "</string>
     <string name="invite_activity_mail_subject">Honen BBMrako gonbidapena: %1$s</string>
     <string name="invite_activity_phone">Telefonoa: %1$s</string>
@@ -1176,12 +1266,12 @@ Nirekin BBMn bat egiteko, sakatu
     <string name="invite_activity_security_custom_question">Idatzi galdera</string>
     <string name="invite_activity_security_custom_response">Idatzi erantzuna</string>
     <string name="invite_activity_security_label">Segurtasun-galdera</string>
-    <string name="invite_activity_sms_body">Gehi nazazu BBMn! BlackBerry gailuan, sakatu PINa:%1$s eta hautatu \"Gonbidatu BBMra\". Android edo iPhone batean, sakatu www.pin.bbm.com/%1$s, ni gehitzeko edo BBM deskargatzeko.</string>
+    <string name="invite_activity_sms_body">Gehi nazazu BBMn! Sakatu www.pin.bbm.com/%1$s</string>
     <string name="invite_activity_to">Nori:</string>
     <string name="invite_bbm_contact">Gehitu BBM kontaktua</string>
     <string name="invite_bbm_invites">BBM gonbidapenak</string>
-    <string name="invite_button_join">Egin bat</string>
-    <string name="invite_button_preview">Aurreikusi</string>
+    <string name="invite_button_join">EGIN BAT</string>
+    <string name="invite_button_preview">AURREIKUSI</string>
     <string name="invite_by_barcode">Gonbidatu barra-kodearen bidez</string>
     <string name="invite_by_email">Gonbidatu posta elektroniko bidez</string>
     <string name="invite_by_other">Gonbidatu SMS edo PIN bidez</string>
@@ -1245,6 +1335,8 @@ Nirekin BBMn bat egiteko, sakatu
     <string name="key_exchange_hint_waiting_to_enter_passphrase">Idatzi bat egiteko ezkutuko esaldia</string>
     <string name="key_exchange_hint_waiting_to_join">%1$s(e)k bat egin zain</string>
     <string name="key_exchange_status_accepted">Ezkutu esaldia onartu da</string>
+    <string name="last_name">Abizena</string>
+    <string name="last_name_hint">Idatzi abizena</string>
     <string name="learn_more_about_bbm_pins">Eskuratu BBM PINei buruzko informazio gehiago</string>
     <string name="learn_more_about_restoring_bbm_data">BBM datuak berrezartzeari buruzko informazio gehiago.</string>
     <string name="leave_channel">Utzi kanala</string>
@@ -1266,6 +1358,8 @@ Nirekin BBMn bat egiteko, sakatu
     <string name="location_service_failed">Ezin izan da kokapena lortu</string>
     <string name="low_battey_warning">Bateria gutxi dagoela-eta pausatu da, sakatu berrekiteko.</string>
     <string name="low_priority">Lehentasun txikia</string>
+    <string name="main_drawer_close">Itxi tiradera</string>
+    <string name="main_drawer_open">Ireki tiradera</string>
     <string name="main_mood_status_format">%1$s - %2$s</string>
     <string name="main_status_available">Erabilgarri</string>
     <string name="main_status_busy">Okupatuta</string>
@@ -1277,13 +1371,15 @@ Nirekin BBMn bat egiteko, sakatu
     <string name="menu_end_chat">Amaitu berriketa</string>
     <string name="menu_help">Laguntza</string>
     <string name="menu_history">Historia</string>
+    <string name="menu_leave_chat">Utzi berriketa</string>
     <string name="menu_settings">Ezarpenak</string>
     <string name="menu_share">Partekatu</string>
-    <string name="message_button_accept">Onartu</string>
-    <string name="message_button_allow">Baimendu</string>
-    <string name="message_button_cancel">Utzi</string>
-    <string name="message_button_decline">Ukatu</string>
-    <string name="message_button_deny">Ukatu</string>
+    <string name="message">Mezua</string>
+    <string name="message_button_accept">ONARTU</string>
+    <string name="message_button_allow">BAIMENDU</string>
+    <string name="message_button_cancel">UTZI</string>
+    <string name="message_button_decline">BAZTERTU</string>
+    <string name="message_button_deny">UKATU</string>
     <string name="message_copied">Mezua kopiatu da</string>
     <string name="message_recall_tech_tip_body">"Ez zenuen mezu hori bidali nahi?
 Eduki ukituta mezua bestearen BBM berriketatik kentzeko."</string>
@@ -1296,6 +1392,7 @@ Eduki ukituta mezua bestearen BBM berriketatik kentzeko."</string>
     <string name="message_with_context_new_contact">Kontaktu berriari buruz:</string>
     <string name="message_with_context_now_playing">Orain erreproduzitzen-i buruz:</string>
     <string name="message_with_context_personal_message">Mezu pertsonalari buruz:</string>
+    <string name="message_with_context_quote">%1$s(e)k idatzi du: \"%2$s\"</string>
     <string name="message_with_context_real_time_location">Zure kokapenari buruz:</string>
     <string name="more">Gehiago</string>
     <string name="msg_bulk_mode_scanned">Handizkako modua: barra-kodea eskaneatuta eta gordeta</string>
@@ -1333,6 +1430,11 @@ Eduki ukituta mezua bestearen BBM berriketatik kentzeko."</string>
     <string name="my_channels_fragment_mark_favorite">Markatu gogoko gisa</string>
     <string name="my_channels_fragment_remove_favorite">Kendu gogokoetatik</string>
     <string name="mybbmbarcode">Nire BBM barra-kodea</string>
+    <string name="nav_chats">BBM berriketak</string>
+    <string name="nav_contacts">BBM kontaktuak</string>
+    <string name="nav_feeds">BBM iturriak</string>
+    <string name="nav_feeds_all">BBM iturri guztiak</string>
+    <string name="nav_groups">BBM Groups</string>
     <string name="network_settings_dialog_text">Jarraitzeko, konektatu Wi-Fi edo sare mugikor batera.</string>
     <string name="network_settings_dialog_title">Ez dago sare-konexiorik</string>
     <string name="new_channel_email_addresss">Helbide elektronikoa</string>
@@ -1341,6 +1443,7 @@ Eduki ukituta mezua bestearen BBM berriketatik kentzeko."</string>
     <string name="new_chat_topic">Berriketa-gai berria</string>
     <string name="new_string">BERRIA</string>
     <string name="next">Hurrengoa</string>
+    <string name="no">Ez</string>
     <string name="no_active_glympses">Ez dago Glympse aktiborik</string>
     <string name="no_blackberry_data">Ez dago BlackBerry daturik</string>
     <string name="no_blocked_invites">Gonbidapen bat ezikusita edo kontaktu bat ezabatuta gehi ditzakezu kontaktuan zerrenda honetan.</string>
@@ -1351,6 +1454,7 @@ Eduki ukituta mezua bestearen BBM berriketatik kentzeko."</string>
     <string name="no_connection_found">Ez da konexiorik aurkitu</string>
     <string name="no_current_chat">Ez dago berriketarik</string>
     <string name="no_network_connection">Ez dago sare-konexiorik.</string>
+    <string name="no_picture">Ez dago argazkirik erabilgarri</string>
     <string name="no_pictures">Ez dago argazkirik</string>
     <string name="no_posts">Ezin dira argitalpen guztiak erakutsi.</string>
     <string name="no_updates">Ez dago elementurik.</string>
@@ -1365,7 +1469,7 @@ Eduki ukituta mezua bestearen BBM berriketatik kentzeko."</string>
     <string name="notification_content_comment_on_comment_single">%1$s(e)k zure iruzkinari erantzun dio.</string>
     <string name="notification_content_comment_on_post_multiple">%1$d lagunek zure argitalpenean iruzkindu dute.</string>
     <string name="notification_content_comment_on_post_single">%1$s(e)k zure argitalpenean iruzkindu du.</string>
-    <string name="notification_content_favourite_multiple">%1$s(e)k 2$d argitalpen gehitu ditu.</string>
+    <string name="notification_content_favourite_multiple">%1$s(e)k %2$d argitalpen gehitu ditu.</string>
     <string name="notification_content_favourite_single">%1$s(e)k argitalpen bat gehitu du.</string>
     <string name="notification_group_invite">Talde-gonbidapena</string>
     <string name="notification_group_message_ticker_format">%1$s (%2$s): %3$s</string>
@@ -1401,6 +1505,19 @@ Eduki ukituta mezua bestearen BBM berriketatik kentzeko."</string>
 BlackBerry gailuetan, kolpatu pina:%2$s eta idatzi ezkutuko esaldia."</string>
     <string name="out_of_band_passphrase_message_sms">BBM Protected berriketa bat hasi nahi dut zurekin. BlackBerry gailuan, kolpatu %1$s. Idatzi %2$s ezkutuko esaldia.</string>
     <string name="out_of_band_passphrase_subject">BBM Protected berriketa</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_dialog_body">Eginbide hau BBM kontaktuekin soilik dago erabilgarri. %1$s BBM kontaktuetan gehitu nahi duzu?</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_dialog_title">BBM kontaktuetan gehitu da</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_toast">Aukera hau erabiltzeko, pertsona hau BBM kontaktu gisa gehitu behar duzu.</string>
+    <string name="outer_circle_category_bbm_contacts">BBM kontaktuak</string>
+    <string name="outer_circle_category_phone_contacts">@string/outer_circle_category_phone_contacts_v1</string>
+    <string name="outer_circle_category_phone_contacts_v1">Kontaktuak</string>
+    <string name="outer_circle_category_phone_contacts_v2">Telefonoko kontaktuak</string>
+    <string name="outer_circle_category_phone_contacts_v3">Gailuko kontaktuak</string>
+    <string name="outer_circle_contact_add_more_friends">Gehitu lagunak</string>
+    <string name="outer_circle_contact_menu_add_as_contact">BBM kontaktuetan gehitu da</string>
+    <string name="outer_circle_contact_menu_delete_and_block">Ezabatu eta blokeatu</string>
+    <string name="outer_circle_find_other_bbm_user_body">Ezagut ditzakezun BBM erabiltzaileak aurkitzeko, gailuko kontaktuak automatikoki bila ditzakezu. BBMri Kontaktuak aplikazioa atzitzen utzi nahi diozu?</string>
+    <string name="outer_circle_find_other_bbm_user_title">Bilatu beste BBM erabiltzaile batzuk</string>
     <string name="overlay_bbm_ongoing_notification_reason">"Zergatik ikusten dut BBM ikonoa pantailaren goialdean?
 
 BBM ikonoa egoera-barran agertzen da; izan ere, BBM beti aktibo dago, beti konektatuta egon zaitezen."</string>
@@ -1434,13 +1551,13 @@ BBM ikonoa egoera-barran agertzen da; izan ere, BBM beti aktibo dago, beti konek
     <string name="partner_app_register_failed_dialog_outage_message">Ez da sare-konexiorik detektatu</string>
     <string name="partner_app_register_failed_dialog_title">Erregistratu BBMn</string>
     <string name="passphrase">Ezkutuko esaldia</string>
-    <string name="passphrase_creation_details">Berriketarekin bat egiteko, ezkutuko esaldi bat partekatu behar da BBM kontaktuekin. Gutxienez lau maiuskula izan behar ditu.</string>
+    <string name="passphrase_creation_details">Berriketarekin bat egiteko, ezkutuko esaldi bat partekatu behar da BBM kontaktuekin. Gutxienez 4 karaktere izan behar ditu. Erabili letrak, zenbakiak ala biak. Adibideak: TGRS, 2905, TIG8.</string>
     <string name="passphrase_incorrect">&lt;b>%1$s&lt;/b> erabiltzaileak ez du ezkutuko esaldi zuzena idatzi.</string>
     <string name="passphrase_initiated">&lt;b>%1$s&lt;/b> ezkutuko esaldia partekatu duzu honekin: &lt;b>%2$s&lt;/b>.</string>
-    <string name="passphrase_message_email">"BBM Protected berriketa bat hasiko nahi nuke zurekin.
+    <string name="passphrase_message_email">"BBM Protected berriketa bat egin nahi dut zurekin.
 ---o---
-Idatzi \"%1$s\" ezkutuko esaldia, pina:%2$s edo %3$s sakatu ostean."</string>
-    <string name="passphrase_message_sms">Egin bat nire BBM Protected berriketarekin! Idatzi \"%1$s\" ezkutuko esaldia, pina:%2$s edo %3$s sakatu ostean.</string>
+Berriketa honekin bat egiteko, sakatu pina:%1$s edo %2$s. Ezkutuko esaldia eskatuz gero, idatzi \"%3$s\"."</string>
+    <string name="passphrase_message_sms">Egin bat nire BBM Protected berriketarekin! Sakatu pina:%1$s edo %2$s. Ezkutuko esaldia eskatuz gero, idatzi \"%3$s\".</string>
     <string name="passphrase_rules_details">Hiru letra multzo izan behar dira eta multzo bakoitzak lau eta zazpi maiuskula artean izan behar ditu. Gainera, multzo bakoitza zuriune batekin bereiziko da. Adibidez: LEHOI MARROI ILUNAK</string>
     <string name="passphrase_share_details">Nola partekatu nahi duzu %1$s(r)ako ezkutuko esaldia?</string>
     <string name="passphrase_wait_to_join">&lt;b>%1$s&lt;/b>(e)k bat egin zain.</string>
@@ -1464,12 +1581,38 @@ Idatzi \"%1$s\" ezkutuko esaldia, pina:%2$s edo %3$s sakatu ostean."</string>
     <string name="pending_invite_group_too_many_members">Ukatu da: Talde hau dagoeneko beteta dago.</string>
     <string name="pending_invite_pending">Zain</string>
     <string name="pending_invite_protected_group_invites_you_to">%1$s(e)k \"%2$s\" izeneko taldera gonbidatu nahi zaitu. BBM Protected talde honekin bat egiteko, taldeko kide batek emandako ezkutuko esaldia idatzi behar duzu.</string>
+    <string name="people">Jendea</string>
     <string name="personalize_profile_dialog_message">BBM profila irekitzeko, iragarki-banda kolpa dezakezu.</string>
     <string name="personalize_profile_dialog_title">Pertsonalizatu zure profila</string>
+    <string name="phone_contact_add">@string/phone_contact_add_v1</string>
+    <string name="phone_contact_add_v1">Gehitu BBM kontaktua</string>
+    <string name="phone_contact_add_v2">Gehitu BBMn</string>
+    <string name="phone_contact_add_v3">BBM kontaktuetan gehitu da</string>
+    <string name="phone_contact_block">Blokeatu</string>
+    <string name="phone_contact_block_from_conversation_description">%1$s(r)en etorkizuneko gonbidapen eta berriketa guztiak blokeatuko dira. %1$s blokeatu nahi duzu?</string>
+    <string name="phone_contact_block_from_conversation_title">Blokeatu %1$s</string>
+    <string name="phone_contact_invitationsent">Gonbidapena bidali da.</string>
+    <string name="phone_contact_not_a_contact">BBM eginbide guztiak erabili ahal izateko, gehitu pertsona hau BBM kontaktuetan.</string>
+    <string name="phone_contact_reinvite_message">@string/phone_contact_reinvite_message_v1</string>
+    <string name="phone_contact_reinvite_message_v1">%1$s zure kontaktuetan gehitzeko, kolpatu %2$s.</string>
+    <string name="phone_contact_reinvite_message_v2">Berriketa bat hasteko, %1$s zure kontaktuetan gehitu behar duzu. %1$s zure kontaktuetan gehitzeko, kolpatu berriketaren goialdean dagoen %2$s.</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_1">Batzuk &lt;b>&lt;i>Kontaktuak&lt;/i>&lt;/b> dira, beste batzuk, berriz, &lt;b>&lt;i>BBM kontaktuak&lt;/i>&lt;/b> dira.</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_2">&lt;b>&lt;i>Kontaktuak&lt;/i>&lt;/b> BBM erabiltzen duten eta gailuan dituzun jendea da.&lt;br/>&lt;br/> * Jardun berriketan kontaktuekin berehala&lt;br/> * Ez duzu gonbidapenik behar</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_3">&lt;b>&lt;i>BBM kontaktuek&lt;/i>&lt;/b> gonbidapena behar dute gonbidatu behar. BBM kontaktuek soilik egin dezakete hau:&lt;br/>&lt;br/> * BBMko pantailako argazkia ikusi&lt;br/> * BBM egoera-eguneratzeak ikusi&lt;br/> *BBM Voice erabiliz deia egin edo jaso.</string>
+    <string name="phone_contact_tutorial_conversation_section_1">Batzuk &lt;b>&lt;i>Kontaktuak&lt;/i>&lt;/b> dira, beste batzuk, berriz, &lt;b>&lt;i>BBM kontaktuak&lt;/i>&lt;/b> dira.</string>
+    <string name="phone_contact_tutorial_conversation_section_2">&lt;b>&lt;i>Kontaktu&lt;/i>&lt;/b> batekin ari zara berriketan. Pertsona horrek ezin du hau ikusi:&lt;br/>&lt;br/> * BBMko pantailako argazkia&lt;br/> * BBMko egoeren eguneratzeak</string>
+    <string name="phone_contact_tutorial_conversation_section_3">Berriketa abiarazteko, pertsona horrek BBMren bertsio berriena erabili behar du. Pertsona hau &lt;b>&lt;i>BBM kontaktu&lt;/i>&lt;/b> gisa gehi dezakezu, edo edonoiz blokea dezakezu.</string>
+    <string name="phone_contact_tutorial_profile_click_section_1">Batzuk &lt;b>&lt;i>Kontaktuak&lt;/i>&lt;/b> dira, beste batzuk, berriz, &lt;b>&lt;i>BBM kontaktuak&lt;/i>&lt;/b> dira.</string>
+    <string name="phone_contact_tutorial_profile_click_section_2">&lt;b>&lt;i>BBM kontaktuek&lt;/i>&lt;/b> gonbidapen bat behar dute eta hau egin dezakete: &lt;br/>&lt;br/> * BBMko pantailako argazkia, egoera-eguneratzeak eta profila ikusi&lt;br/> * BBM Voice erabiliz deitu&lt;br/> * Difusio-mezuak bidali</string>
+    <string name="phone_contact_tutorial_profile_click_section_3">BBM erabiltzen ari diren telefono kontaktuak dira &lt;b>&lt;i>Kontaktuak&lt;/i>&lt;/b>. Kontaktuek ez dute gonbidapenik behar, baina BBMren berriketa-eginbideez goza dezakezu, hala nola: &lt;br/>&lt;br/> &amp;#8226; D eta R jakinarazpenak mezuetan&lt;br/> &amp;#8226; Argazkiak, bideoak eta fitxategiak bidali&lt;br/> &amp;#8226; Zure kokapena partekatu Glympse-rekin</string>
     <string name="pic_caption_hint"><i>Sartu epigrafe bat</i></string>
+    <string name="picture">Argazkia</string>
     <string name="picture_deleted">Argazkia ezabatu da</string>
+    <string name="picture_selection_limit_toast">Fitxategi gehiegi (gehienez 10 onartzen dira).</string>
+    <string name="picture_selection_type_toast">Hainbat partekatzeetan onartutako irudi mota soilik.</string>
     <string name="pin_copied">PINa kopiatu da</string>
     <string name="please_ensure_the_device_time_is_correctly_set">Ziurtatu gailuaren ordua ondo ezarrita dagoela eta saiatu berriro.</string>
+    <string name="policy_change_title">Politika aldatu da</string>
     <string name="post_removed">Argitalpena ezabatu da.</string>
     <string name="posts_caption">Argitalpen</string>
     <string name="pref_add_contact_on_tap">Gehitu kontaktuak kolpatuta</string>
@@ -1530,49 +1673,90 @@ Idatzi \"%1$s\" ezkutuko esaldia, pina:%2$s edo %3$s sakatu ostean."</string>
     <string name="preferences_vibrate_title">Bibratu</string>
     <string name="private_channel">Kanal pribatua</string>
     <string name="private_channel_description">Ezkutatu kanala bilaketatik eta gonbidatzen dituzunei soilik erakutsi.</string>
+    <string name="private_chat">Berriketa pribatua</string>
+    <string name="private_chat_back_out_dialog_dont_ask_me_again">Ez galdetu berriro.</string>
+    <string name="private_chat_back_out_dialog_text">%1$d minutu barru ez bazara berriketara itzultzen, berriketa pribatua amaitu egingo da.</string>
+    <string name="private_chat_conversation_notification_title">%1$s(e)k berriketa bat hasi nahi du zurekin.</string>
+    <string name="private_chat_end_menu">Amaitu berriketa pribatua</string>
+    <string name="private_chat_entry_subtitle">Kolpatu itzultzeko</string>
+    <string name="private_chat_menu">Hasi berriketa pribatua</string>
+    <string name="private_chat_message_notification_title">Berriketa pribatuko mezu berria.</string>
+    <string name="private_chat_other_party_not_support">Kontaktuak berriketa pribatuak onartzen ez dituen BBMren bertsio zaharragoa du.</string>
+    <string name="private_chat_request_incoming_subtitle">Berriketa pribatuko eskaera</string>
+    <string name="private_chat_request_invite_bubble_message">"Berriketa pribatua hasi nahi dut zurekin. Berriketa pribatuarekin bat egiteko, BBMren bertsio berriena deskargatu behar duzu.
+
+Bisitatu http://bbm.com/upgrade helbidea, BBMren bertsio berriena lortzeko."</string>
+    <string name="private_chat_request_outgoing_subtitle">Berriketa pribatuko eskaera</string>
+    <string name="private_chat_stop_reason_busy">Une honetan, %1$s ez dago libre berriketa pribatu bat izateko.</string>
+    <string name="private_chat_stop_reason_cancelled">%1$s(e)k berriketa pribatua bertan behera utzi du.</string>
+    <string name="private_chat_stop_reason_declined">%1$s(e)k berriketa pribatua baztertu du.</string>
+    <string name="private_chat_stop_reason_inactivity">Berriketa pribatua automatikoki amaitu da, inaktibo zegoelako.</string>
+    <string name="private_chat_stop_reason_localended">Berriketa pribatua amaitu duzu.</string>
+    <string name="private_chat_stop_reason_noresponse">%1$s(e)k ez dio egin diozun berriketa pribatuko eskaerari erantzun.</string>
+    <string name="private_chat_stop_reason_remoteended">%1$s(e)k berriketa pribatua amaitu du.</string>
+    <string name="private_chat_stop_reason_unknown">Berriketa pribatua deskonektatuta dago. Hasi berriketa pribatua berriro.</string>
+    <string name="private_chat_tutorial_description">"Izenak eta profileko izenak ezkutatuko dira.
+
+Berriketak amaitzen direnean edo inaktibo daudenean, automatikoki ezabatuko dira bi gailuetatik.
+
+Berriketa pribatuko mezu berrien jakinarazpenak ez dira batere nabarmenak."</string>
     <string name="profile_barcode">Barra-kodea</string>
+    <string name="profile_bbm_pin_label">BBM PINa</string>
     <string name="profile_copy_pin">Kopiatu PINa</string>
     <string name="profile_copypin">Kopiatu PINa</string>
     <string name="profile_default_pin">PINa: 00000000</string>
     <string name="profile_display_name_invalid">Ezin da pantailako izenean bi punturik edo komarik jarri</string>
+    <string name="profile_display_name_invalid_empty">Pantailako izenak ezin du hutsik egon</string>
     <string name="profile_icon_source_camera">Kamera</string>
     <string name="profile_icon_source_picture">Argazkia</string>
     <string name="profile_icon_source_sample_picture">Lagin-argazkia</string>
-    <string name="profile_location_label">Kokapena/Ordu-zona:</string>
+    <string name="profile_location_label">Kokapena/Ordu-zona</string>
     <string name="profile_mood_hint"><i>Zer ari zara pentsatzen?</i></string>
+    <string name="profile_name">Profilaren izena</string>
     <string name="profile_no_status_message">Ez dago egoera-mezurik</string>
     <string name="profile_own_status_label">Egoera</string>
-    <string name="profile_pin">%1$s</string>
     <string name="profile_pin_copied">PINa kopiatu da</string>
-    <string name="profile_pin_label">PINa:</string>
-    <string name="profile_pinlabel">PIN:</string>
+    <string name="profile_pinlabel">PINa:</string>
     <string name="profile_revert_display_name">Leheneratu pantailako izena</string>
     <string name="profile_selector_apps">Aplikazioak</string>
     <string name="profile_selector_details">Xehetasunak</string>
     <string name="profile_selector_members">Kideak</string>
     <string name="profile_selector_updates">Iturriak</string>
     <string name="profile_share_pin">Partekatu nire PINa</string>
+    <string name="profile_status_delete">Ezabatu egoera</string>
+    <string name="profile_status_delete_info">Ziur egoera hau ezabatu nahi duzula?</string>
     <string name="profile_status_edit">Editatu egoera-mezuak</string>
-    <string name="profile_status_label">Egoera:</string>
+    <string name="profile_user_has_subscription">Pertsona honek harpidetza bat du.</string>
+    <string name="profile_user_view_all_sub">Ikusi BBM harpidetza guztiak</string>
     <string name="prompt_change_bbm_picture">BBM argazkia aldatu?</string>
     <string name="prompted_after_rate_call">Eskerrik asko</string>
     <string name="prompted_before_rate_call">Balora ezazu deiaren kalitatea</string>
     <string name="protected_group_invite_message_default">Izen hau duen nire taldearekin bat egitera gonbidatu nahi zaitut: \"%1$s\". BBM Protected talde honekin bat egiteko, taldeko kide batek emandako ezkutuko esaldia idatzi behar duzu.</string>
     <string name="protected_group_requires_join">Ezkutu esaldiaren berrespenaren zain, babestutako taldea berrezartzeko</string>
     <string name="protected_mode_disabled_header">BBM Protected desaktibatuta dago</string>
-    <string name="protected_mode_disabled_message">Kontaktuak eta berriketak gorde dira, baina BBM Protected erabiltzen duten pertsona anitzeko berriketetatik eta taldetatik kendu zaituzte.</string>
+    <string name="protected_mode_disabled_message">Zure kontaktuak eta berriketak gorde dira, baina BBM Protected erabiltzen duten taldeetatik atera zara.</string>
     <string name="protected_mode_disabled_title">Administratzaileak BBM Protected desaktibatu du</string>
     <string name="protected_mode_enabled_header">BBM Protected</string>
     <string name="protected_mode_enabled_message">"BBM Protected-ek beste enkriptatze-geruza gehitzen du BBM berriketetan, fitxategien transferentzietan eta taldeetan. BBM Protected kontaktu batekin berriketa hasten duzun hurrengo aldian, beste erabiltzaileak bat egiteko idatzi behar duen ezkutuko esaldia zehaztuko duzu. Ezkutuko esaldia behin bakarrik zehaztu behar duzu BBM Protected kontaktu bakoitzeko. 
  
  BBM Groups-etarako, bazkidetza BBM Protected kontaktuetara mugatu nahi ote duzun aukera dezakezu. BBM Protected talde bat sortzen baduzu, jendeak bat egiteko erabili behar duen ezkutuko esaldia parteka dezakezu."</string>
     <string name="protected_mode_enabled_title">Administratzaileak BBM Protected aktibatu du zure gailuan.</string>
+    <string name="protected_preferred_details">Zure kontaktuak BBM Protected berriketa bat behar du.</string>
+    <string name="protected_preferred_dialog">Kontaktu hau Protected Plus erabiltzen ari da. Zure eta zure kontaktuaren arteko berriketak BBM Protected berriketak izango dira. <a href="http://blackberry.com/bbmprotected">Informazio gehiago</a></string>
+    <string name="protected_preferred_dialog_dismiss">Ez erakutsi berriro</string>
+    <string name="protected_preferred_mode_disabled_message">Administratzaileak Protected Plus desaktibatu du.</string>
+    <string name="protected_preferred_mode_disabled_title">Protected Plus desaktibatua dago</string>
+    <string name="protected_preferred_mode_enabled_message">Administratzaileak Protected Plus aktibatu du, BBM Protected aplikazioko eginbide bat. Zu eta zure kontaktuen arteko berriketak BBM Protected berriketak izango dira.</string>
+    <string name="protected_preferred_mode_enabled_title">Protected Plus aktibatuta dago</string>
+    <string name="protected_rejected_message_body">Baliteke ezkutuko esaldia berriro partekatzea, BBM Protected berriketa berrezartzeko. Ezkutuko esaldia partekatzeko, kolpatu pantailaren goi-eskuin ertzean dagoen menua ikonoa. Kolpatu &lt;b>%1$s&lt;/b>.</string>
+    <string name="protected_rejected_message_status">Partekatu ezkutuko esaldia berriro</string>
     <string name="purchase_failed_message">Ezin izan da ordainketa prozesatu. Beste ordainketa-metodo bat hautatu nahi duzu?</string>
     <string name="purchase_options">Ordainketa-aukerak</string>
     <string name="purchase_success_message">Elementua behar bezala erosi da</string>
     <string name="purchase_unexpected_error_message">Erosketa eten egin da. Saiatu berriro.</string>
     <string name="pyk_empty_invites_allow_upload_hint">Bilatu dagoeneko BBM darabilten lagunak</string>
     <string name="qr_description">Erabiltzaileen QRa</string>
+    <string name="quick_reply">Erantzun eta amaitu</string>
     <string name="quick_share_glympse_first_experience_overlay_infos">Bidali Glympse bat BBM kontaktu batek zure kokapena jarrai dezan mapan, aukeratzen duzun denbora-tarte batean. Ezin hobea da elkartzeko edo berandu zabiltzanean.</string>
     <string name="quick_share_glympse_first_experience_overlay_note"><i>Oharra: Eginbidea erabiltzen duzunean, GPS koordenatuak Glympse Inc. enpresarekin partekatuko dira eta bere <a href="http://glympse.com/privacy">pribatutasun-politika</a>aplikatuko zaio</i></string>
     <string name="quick_share_glympse_first_experience_overlay_title">Partekatu kokapena.</string>
@@ -1582,8 +1766,11 @@ Idatzi \"%1$s\" ezkutuko esaldia, pina:%2$s edo %3$s sakatu ostean."</string>
     <string name="quick_share_voice_note_label_busy">Ezin da grabatu. Multimedia-erreproduzitzailea edo multimedia-zerbitzua dagoeneko erabiltzen ari da.</string>
     <string name="quick_share_voice_note_label_default">Eduki ukituta grabatzeko</string>
     <string name="quick_share_voice_note_label_delete">Askatu ezabatzeko</string>
+    <string name="quick_share_voice_note_label_rec">GRABATU</string>
     <string name="quick_share_voice_note_label_send">Askatu bidaltzeko edo irristatu uzteko</string>
     <string name="quick_share_voice_note_tost_message">Istanteko ahots-oharra bidaltzeko, eduki sakatuta grabatzeko botoia</string>
+    <string name="quote_at_user_name">\@%1$s</string>
+    <string name="quote_message_label">\"%1$s\"</string>
     <string name="rate_limited">Glympse indize-muga erdietsi da.</string>
     <string name="rate_my_app_ignore">Ez eskerrik asko</string>
     <string name="rate_my_app_message">BBM gustura badarabilzu, hartu ezazu une bat baloratzeko. Eskerrik asko!</string>
@@ -1602,6 +1789,8 @@ Idatzi \"%1$s\" ezkutuko esaldia, pina:%2$s edo %3$s sakatu ostean."</string>
     <string name="remaining_title_glympse">Glympse</string>
     <string name="remove">Kendu</string>
     <string name="replace_picture">Ordeztu argazkia</string>
+    <string name="reply">Erantzun</string>
+    <string name="reply_with_voice">Erantzun ahotsarekin</string>
     <string name="report_channel">Salatu kanala</string>
     <string name="report_problem_activity_choose_email_client">Aukeratu posta elektronikoa</string>
     <string name="report_problem_activity_email_button">Bidali txostena posta elektroniko bidez</string>
@@ -1628,10 +1817,12 @@ http://blackberry.com/support/bbm"</string>
     <string name="report_problem_activity_your_report_info_is_secured">Txostenaren informazioa enprikatuta dago, garraiatzen denean babesteko.</string>
     <string name="report_problem_activity_your_report_info_was_secured">Txostenaren informazioa enprikatu da, garraiatzen denean babesteko.</string>
     <string name="reports_caption">Salatuta (%1d)</string>
-    <string name="reports_caption_none">Salatuta</string>
+    <string name="reports_caption_none">Salaketak</string>
     <string name="request_was_received">Glympse eskaera bat jaso duzu</string>
     <string name="required_fields">Beharrezko eremuak*</string>
-    <string name="resend_passphrase">Bidali berriro ezkutuko esaldia</string>
+    <string name="resend_passphrase">BIDALI EZKUTUKO ESALDIA BERRIRO</string>
+    <string name="reset_protected_chat">Berrezarri berriketa hau</string>
+    <string name="resolve_vanitypin_not_found">PINa ez dago erabilgarri.</string>
     <string name="restore_sticker_purchases">Berrezarri</string>
     <string name="restore_using_device_switch">Berrezarri gailuz aldatzea erabiliz</string>
     <string name="restore_using_email">Berrezarri posta elektronikoa erabiliz</string>
@@ -1684,6 +1875,8 @@ http://blackberry.com/support/bbm"</string>
     <string name="select_contacts_to_move">Hautatu \"%1$s\" atalera eramateko kontaktuak:</string>
     <string name="select_group">Hautatu taldea</string>
     <string name="select_group_activity_title">{0,choice,0#Hautatu taldea|1#+1 talde|1&lt;+{0} talde}</string>
+    <string name="select_group_discussion">Hautatu eztabaida</string>
+    <string name="select_pictures">{0,choice,0#Haut. argazkiak|1#+1 argazki|1&lt;+{0} argazki}</string>
     <string name="send">Bidali</string>
     <string name="send_comment">Bidali iruzkina</string>
     <string name="send_decline_response">Bidali ukatze-erantzuna</string>
@@ -1692,6 +1885,11 @@ http://blackberry.com/support/bbm"</string>
     <string name="sent_pending_invite_message_label">Mezua:</string>
     <string name="sent_pending_invite_sent_label">Bidaltze-data:</string>
     <string name="set_as">Ezarri honela</string>
+    <string name="set_vanitypin_result_invalid">PINa ez dago erabilgarri.</string>
+    <string name="set_vanitypin_result_refused">PINa ez dago erabilgarri.</string>
+    <string name="set_vanitypin_result_reserved">PINa ez dago erabilgarri.</string>
+    <string name="set_vanitypin_result_success">PINa sortu da.</string>
+    <string name="set_vanitypin_result_used">PINa ez dago erabilgarri.</string>
     <string name="setas_activity_bbm_picture_updated">BBM argazkia eguneratu da</string>
     <string name="setas_activity_item_bbm_picture">BBM argazkia</string>
     <string name="setas_activity_item_contact_picture">Kontaktuaren argazkia</string>
@@ -1701,6 +1899,7 @@ http://blackberry.com/support/bbm"</string>
     <string name="setas_activity_title">Ezarri honela</string>
     <string name="settings">Ezarpenak</string>
     <string name="settings_activity_allow_hq_pictures">Onartu beti HD argazkien eskaerak</string>
+    <string name="settings_activity_backup_chat_history_now">Egin babeskopia orain</string>
     <string name="settings_activity_blackberry_id_edit">Editatu</string>
     <string name="settings_activity_blackberry_id_generic_error">Une honetan, ezin izan dugu BlackBerry IDa editatu. Saiatu berriro geroago</string>
     <string name="settings_activity_blocked_contacts">Blokeatutako kontaktuak eta iturriak</string>
@@ -1714,6 +1913,7 @@ http://blackberry.com/support/bbm"</string>
     <string name="settings_activity_deleting_chat_history_info">Kontaktu guztiekin izandako berriketa-historia ezabatuko da. Ekintza hau ezin da desegin.</string>
     <string name="settings_activity_deleting_chat_history_title">Ezabatu berriketa-historia</string>
     <string name="settings_activity_hide_keyboard_on_enter_conversation">Erakutsi teklatua beti</string>
+    <string name="settings_activity_keyboard_enter_as_new_line">Teklatuko Sartu teklarekin errenkada berria gehitzen da</string>
     <string name="settings_activity_legal">Lege-oharra</string>
     <string name="settings_activity_report_a_problem">Eman arazo baten berri</string>
     <string name="settings_activity_save_chat_history">Gorde berriketen historia</string>
@@ -1752,6 +1952,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="share_passphrase_other">Aurrez aurre esango diet</string>
     <string name="share_passphrase_sms">Testu-mezua</string>
     <string name="share_passphrase_title">Partekatu ezkutuko esaldia</string>
+    <string name="share_to_feed_title">Iturria eguneratu nahi duzu?</string>
     <string name="sharead_sponsored_invite">Babestutako gonbidapen partekatua</string>
     <string name="sharead_sponsored_post">Partekatutako babestutako argitalpena</string>
     <string name="shared_channel_post_default_text">Kanalaren argitalpena partekatu du</string>
@@ -1759,6 +1960,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="shared_channel_post_sent">Kanalaren argitalpena bidali du</string>
     <string name="shared_sponsored_content">Babestutako eduki partekatua</string>
     <string name="shop">Denda</string>
+    <string name="shop_subscriptions">Harpidetzak</string>
     <string name="show">Erakutsi</string>
     <string name="show_channel_preview">Aurreikusi</string>
     <string name="show_map">Erakutsi mapa</string>
@@ -1767,6 +1969,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="sign_in_to_bbm">Hasi saioa BBMn</string>
     <string name="slide_menu_add_event">Gehitu gertaera</string>
     <string name="slide_menu_add_list">Gehitu zerrenda</string>
+    <string name="slide_menu_block_chat">Blokeatu berriketa</string>
     <string name="slide_menu_copy_chat">Kopiatu berriketa</string>
     <string name="slide_menu_delete_item">Ezabatu elementua</string>
     <string name="slide_menu_edit">Editatu</string>
@@ -1782,6 +1985,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="slide_menu_new_chat">Hasi berriketa berria</string>
     <string name="slide_menu_open_bbm_chat">Ireki BBM berriketa</string>
     <string name="slide_menu_ping">Pinga</string>
+    <string name="slide_menu_play_in_media_player">Errepr. erreproduzigailuan</string>
     <string name="slide_menu_remove_deleted_item">Kendu ezabatutako elementua</string>
     <string name="slide_menu_remove_from_group">Kendu taldetik</string>
     <string name="slide_menu_reply_by_voice_note">Erantzun ahots-ohar bidez</string>
@@ -1800,18 +2004,22 @@ www.pin.bbm.com/%1$s"</string>
     <string name="sms_activity_title">Idatzi</string>
     <string name="sort_by">Ordenatzeko irizpidea</string>
     <string name="stacked_notification_format"><Data>&lt;b>%1$s&lt;/b>: %2$s</Data></string>
+    <string name="stale_user_reinvite_message">%1$s ez da linean egon %2$s(e)tik</string>
+    <string name="stale_user_reinvite_title">Berriz gonbidatu</string>
     <string name="start_chat">Hasi berriketa</string>
     <string name="start_chat_failed">Ezin izan da berriketa sortu</string>
     <string name="start_meeting">Abiarazi BBM Meetings</string>
-    <string name="start_meeting_confirmation_dialog">Deia amaitu eta beste bilera bat hasi nahi duzu?</string>
-    <string name="start_meeting_confirmation_title">BBM Meeting hasi nahi duzu?</string>
+    <string name="start_meeting_confirmation_dialog">Une honetan, BBM dei batean zaude. Zure deia amaitu eta BBM bilera bat hasi nahi duzu?</string>
+    <string name="start_meeting_confirmation_title">Abiarazi BBM Meetings</string>
     <string name="start_multiperson_chat">Hasi pertsona anitzeko berriketa</string>
+    <string name="start_pin_chat">Idatzi PIN bat, berriketa bat hasteko</string>
     <string name="starts">Hasiera</string>
     <string name="stats_caption">Estatistikak</string>
     <string name="stay_in_touch_like_never_before_with_blackberry_messenger">Egon harremanetan inoiz ez bezala BBM Messenger aplikazioarekin.</string>
     <string name="sticker_picker_no_stickers_purchased">Ez da pegatinarik erosi.</string>
     <string name="sticker_picker_preview_hint">Aurreikusteko, eduki ukituta pegatina bat.</string>
-    <string name="sticker_store_collection_heading">Pegatina Bildumak</string>
+    <string name="sticker_settings">Pegatinen ezarpenak</string>
+    <string name="sticker_store_collection_heading">Pegatinak</string>
     <string name="sticker_store_details_artist_channel">Kanala</string>
     <string name="sticker_store_details_artist_website">Webgunea</string>
     <string name="sticker_store_details_promo_text">IKUSI HEMEN</string>
@@ -1835,6 +2043,7 @@ Aholkua: Pantai hau utz dezakezu, instalatzen jarraitzen duen bitartean."</strin
     <string name="sticker_store_sticker_purchase_notification_dialog_line">Pegatina berriak eskuratu dituzula jakinaraz diezaiekezu zure kontaktuei.</string>
     <string name="sticker_store_sticker_purchase_notification_message">Begiratu nire pegatina berriak! http://shop.bbm.com/stickers/%1$s</string>
     <string name="sticker_store_store_loading">Kargatzen...</string>
+    <string name="store_generic_billing_error">Ezin izan da elementua erosi.</string>
     <string name="store_title">BBM denda</string>
     <string name="submit_button">Bidali</string>
     <string name="submit_passphrase">Bidali</string>
@@ -1844,6 +2053,44 @@ Aholkua: Pantai hau utz dezakezu, instalatzen jarraitzen duen bitartean."</strin
     <string name="subscribed_channel_invite_default_message">Izen hau duen kanalarekin bat egitera gonbidatu nahi zaitut: \"%1$s\".</string>
     <string name="subscribed_channels">Harpidetutako kanalak</string>
     <string name="subscribers_caption">Harpidedun</string>
+    <string name="subscriptino_pin_promo">Zuk eta zure lagunak erraz gogoratuko duten PIN pertsonalizatu bat sor dezakezu.</string>
+    <string name="subscription_already_exists_bb10">Automatikoki berritzen den harpidetza duzu. Harpidetza hori beste gailu batean erosi zen.</string>
+    <string name="subscription_app_type_no_ads">no_ads</string>
+    <string name="subscription_app_type_vanity_pin">custom_pin</string>
+    <string name="subscription_auto_renewing">Automatikoki berritzen den harpidetza duzu.</string>
+    <string name="subscription_bbid_conflict">Elementu hau beste BlackBerry ID batentzat erosi zen zure dendako kontuarekin. Saiatu beste dendako kontu bat erabiltzen.</string>
+    <string name="subscription_custom_pin_description">Zuk eta zure lagunak erraz gogoratuko duten PIN pertsonalizatu bat nahi duzu? Sortu zurea bakarrik den BBM PIN bat. Ez ezazu galdu; eskatu zure PIN pertsonalizatua gaur bertan.</string>
+    <string name="subscription_dialog_duration_monthly">Hilero: %1$s</string>
+    <string name="subscription_dialog_duration_title">Aukeratu harpidetza bat</string>
+    <string name="subscription_dialog_duration_yearly">Urtero: %1$s</string>
+    <string name="subscription_edit_messages_description">Mezuan akatsen bat egin baduzu, mezua erretiratu, akatsa zuzendu eta berriro bidal dezakezu.</string>
+    <string name="subscription_exclusive_badge">Txapa esklusiboak</string>
+    <string name="subscription_exclusive_descritpion_pin">Erakutsi harro zure BBM egoera berezia txapa batekin. Txapa hau harpidetza aktiboa duten pantailako argazkietan agertzen da.</string>
+    <string name="subscription_expired">Harpidetza iraungi da. Berriro harpidetu?</string>
+    <string name="subscription_exsits_ios_72hours">Harpidetza iraungitzeko zorian dago. Eginbide hau erabiltzen hasi baino lehen, harpidetu hemen %1$s baino lehen.</string>
+    <string name="subscription_exsits_on_ios">Elementu hau beste gailu batean erosi da. Eginbide hau erabiltzen hasi baino lehen, harpidetu hemen %1$s baino lehen.</string>
+    <string name="subscription_generic_guidelines">BBMren PIN pertsonalizatuaren gidalerroak</string>
+    <string name="subscription_generic_learn_more">Informazio gehiago</string>
+    <string name="subscription_learn_more">Harpidetzei buruzko informazio gehiago lortzeko, bisitatu <a href="http://bbm.com/FAQ">bbm.com/FAQ</a>.</string>
+    <string name="subscription_no_adds_share">BBMn iragarkiak desaktibatu dituzula jakinaraz diezaiekezu zure kontaktuei.</string>
+    <string name="subscription_no_adds_status_message">BBMko iragarkiak desaktibatu berri ditut. Zure gailuan iragarkiak ezkutatzeko, kolpatu http://shop.bbm.com/item/no_ads</string>
+    <string name="subscription_no_ads">Iragarkirik gabe</string>
+    <string name="subscription_no_ads_description">Iragarkiak ikusteari utzi nahi diozu? Ezkutatu iragarkiak BBMn, harpidetza honekin.</string>
+    <string name="subscription_no_ads_promo">"Iragarkirik gabe
+Ezkutatu babestutako iragarkiak eta babestutako gonbidapenak BBMn, harpidetza honekin."</string>
+    <string name="subscription_no_ads_title">Iragarkirik gabe</string>
+    <string name="subscription_pin_before_share">PIN pertsonalizatu bat sortu dut BBM. PINa pertsonalizatzeko, kolpatu http://shop.bbm.com/item/custom_pin</string>
+    <string name="subscription_pin_before_share_prompt">PIN pertsonalizatu bat sortu duzula jakinaraz diezaiekezu zure kontaktuei.</string>
+    <string name="subscription_pin_feautres">Barne dituen eginbideak:</string>
+    <string name="subscription_private_chat_description">Berriketa pribatu batean, zure kontaktuaren izena ezkutatuko da eta mezu berrien jakinarazpenak desaktibatuko dira. Berriketak automatikoki ezabatuko dira denbora-tarte labur bat igaro ostean, edo berriketa pribatua amaitzen duzunean.</string>
+    <string name="subscription_reactiviate">Harpidetu</string>
+    <string name="subscription_retracted_messages_description">Ez bazenuen mezu bat bidali nahi, erretiratu egin dezakezu berriketan ager ez dadin.</string>
+    <string name="subscription_retracted_messages_title">Erretiratutako mezuak</string>
+    <string name="subscription_status_active_subscription">Automatikoki berritzen den harpidetza duzu.</string>
+    <string name="subscription_timed_messages_description">Iraupen zehatz batez ikus daitezkeen mezuak eta argazkiak bidal ditzakezu. Mezua ezkutatuta dago berriketan, eta hartzaileak mezua ukituta mantendu behar du ikusteko. Tenporizadorea iraungi ostean, mezua ezin da ikusi.</string>
+    <string name="subscription_timed_messages_title">Iraupen zehatzeko mezuak</string>
+    <string name="subscriptions_not_entitled">Eginbide hau erabiltzeko, harpidetu behar duzu.</string>
+    <string name="subscriptions_restoring">Harpidetzak egiaztatzen</string>
     <string name="suggestion_i_invite_you">%1$s(e)k BBMn berriketan jardutera gonbida zaitzadan iradoki dit.</string>
     <string name="suggestion_sent">Iradokizuna bidali da</string>
     <string name="suggestion_want_to_invite_bbm_contact">BBM kontaktu hau gonbidatu nahi duzu?</string>
@@ -1869,7 +2116,7 @@ Aholkua: Pantai hau utz dezakezu, instalatzen jarraitzen duen bitartean."</strin
     <string name="timestamp_format_today_at">Gaur, %1$s(e)tan</string>
     <string name="timestamp_format_yesterday_at">Atzo, %1$s(e)tan</string>
     <string name="title_activity_category">Kategoria</string>
-    <string name="title_activity_change_status">Aldatu egoera</string>
+    <string name="title_activity_change_status">Egoera</string>
     <string name="title_activity_channels_lobby">Norbere kanalaren lobbya</string>
     <string name="title_activity_group_event_details">Talde-gertaeraren xehetasunak</string>
     <string name="title_activity_group_events">Talde-gertaerak</string>
@@ -1902,6 +2149,9 @@ Aholkua: Pantai hau utz dezakezu, instalatzen jarraitzen duen bitartean."</strin
     <string name="update_fragment_hide_updates">Ezkutatu</string>
     <string name="update_fragment_view_channel">Ikusi kanala</string>
     <string name="update_fragment_view_post">Ikusi argitalpenak</string>
+    <string name="update_list_archiving_disabled_message">Administratzaileak artxibatzeko eginbidea desaktibatu du.</string>
+    <string name="update_list_archiving_enabled_message">Administratzaileak artxibatzeko eginbidea aktibatu du.</string>
+    <string name="update_list_archiving_title">BBM berriketak artxibatzea</string>
     <string name="update_list_avatar">&lt;b>%1$s&lt;/b>(e)k pantailako argazkia aldatu du.</string>
     <string name="update_list_changed_event_sub_title">Aldatutako gertaera</string>
     <string name="update_list_comment_sub_title">Gehitutako iruzkina</string>
@@ -1957,18 +2207,30 @@ Aholkua: Pantai hau utz dezakezu, instalatzen jarraitzen duen bitartean."</strin
     <string name="update_list_new_contact_sub_title">BBM kontaktua</string>
     <string name="update_list_new_event_sub_title">Gertaera berria</string>
     <string name="update_list_new_list_item_sub_title">Zerrendako elementu berria</string>
+    <string name="update_list_new_status_hint">Idatzi egoeraren izena</string>
     <string name="update_list_new_status_message">\"%1$s\"</string>
     <string name="update_list_new_status_sub_title">Egoera berria</string>
     <string name="update_list_newcontact">&lt;b>%1$s&lt;/b> kontaktua da orain.</string>
     <string name="update_list_now_playing_message">\"%1$s\" entzuten</string>
     <string name="update_list_nowplayingmessage">&lt;b>%1$s&lt;/b> \"%2$s\" entzuten ari da.</string>
     <string name="update_list_personalmessage">&lt;b>%1$s&lt;/b>(e)k \"%2$s\" esan du</string>
+    <string name="update_list_protected_disabled_message">Administratzaileak BBM Protected desaktibatu du. BBM Protected erabiltzen duten taldeetatik kendu zaituzte.</string>
+    <string name="update_list_protected_enabled_message">Administratzaileak BBM Protected aktibatu du. Enkriptatzeko aparteko geruza bat erabiliko da BBM Protected duten kontaktuekin izandako BBM berriketetan, fitxategi-transferentzietan eta taldeetan.</string>
+    <string name="update_list_protected_preferred_disabled_message">Administratzaileak Protected Plus desaktibatu du.</string>
+    <string name="update_list_protected_preferred_enabled_message">Administratzaileak Protected Plus aktibatu du. Zu eta zure kontaktuen arteko berriketak BBM Protected berriketak izango dira.</string>
+    <string name="update_list_protected_status_sub_title">Politika aldatu da</string>
+    <string name="update_list_protected_title">BBM Protected</string>
     <string name="update_list_you">Zu</string>
+    <string name="update_popular_channels_subtitle">Ukitu arakatzeko</string>
+    <string name="update_popular_channels_title">Kanal ezagunak</string>
     <string name="update_removed_from_blocked_list">Blokeatutakoen zerrendatik kendu da.</string>
     <string name="update_sponsored_content">Babestutako edukia</string>
     <string name="update_sponsored_post">Babestutako argitalpena</string>
+    <string name="update_your_subscription">Eguneratu harpidetza</string>
     <string name="updates">Iturriak</string>
     <string name="upload">Kargatu</string>
+    <string name="user_status_stale">Azkena ikusia: %1$s</string>
+    <string name="vanity_pin">PIN pertsonalizatua</string>
     <string name="verify_date_of_birth">Jaioteguna egiaztatzen.</string>
     <string name="verify_passphrase">Ezkutuko esaldia egiaztatzen</string>
     <string name="version">Bertsioa</string>
@@ -1976,6 +2238,7 @@ Aholkua: Pantai hau utz dezakezu, instalatzen jarraitzen duen bitartean."</strin
     <string name="view_channel_info">Aurreikusi</string>
     <string name="view_channel_profile">Ikusi kanalaren profila</string>
     <string name="visits_caption">Bisita</string>
+    <string name="voice_note_duration">%1$02d:%2$02d</string>
     <string name="voice_rating_bad">Txarra</string>
     <string name="voice_rating_excellent">Bikaina</string>
     <string name="voice_rating_fair">Dezentekoa</string>
@@ -1983,11 +2246,31 @@ Aholkua: Pantai hau utz dezakezu, instalatzen jarraitzen duen bitartean."</strin
     <string name="voice_rating_poor">Kaxkarra</string>
     <string name="voice_rating_title">Nola baloratuko zenuke dei honen kalitatea?</string>
     <string name="voicecall_already_in_call">Dagoeneko BBM dei batean zaude. Kontaktuari deitzeko, amaitu beste deia eta saiatu berriro.</string>
+    <string name="voicecall_must_add_as_contact">Eginbide hau erabiltzeko, pertsona hau BBM kontaktuetan gehitu behar duzu.</string>
+    <string name="voicecall_must_add_as_contact_title">BBM kontaktuetan gehitu da</string>
     <string name="voicecall_status_calling">Deitzen</string>
     <string name="voicecall_status_connecting">Konektatzen</string>
     <string name="voicecall_status_duration">Ahots-deia: %1$s</string>
     <string name="voicecall_status_duration_while_mute">%1$s mututu da</string>
+    <string name="voicenote">Ahots-oharra</string>
     <string name="wait_passphrase_confirmation">Ezkutuko esaldia berretsi zain.</string>
+    <string name="warning_on_repurchase">Harpidetza honen eginbideak ez direla eteten ziurtatzeko, baliteke beste harpidetza bat erosi izatea eta, ondoren, lehendik duzun harpidetza bertan behera utzi behar izatea. Informazio gehiago lortzeko, bisitatu: %1$s</string>
+    <string name="wear_quick_call_shortly">Laster deituko dizut bueltan.</string>
+    <string name="wear_quick_cant_take">Okupatuta nago eta ezin dut deia hartu.</string>
+    <string name="wear_quick_im_on_my_way">Banoa.</string>
+    <string name="wear_quick_response_1">Ados.</string>
+    <string name="wear_quick_response_2">Ulertu dut!</string>
+    <string name="wear_quick_response_3">Une honetan okupatuta nago, ahal dudanean erantzungo dizut.</string>
+    <string name="wear_quick_response_appreciation">Eskerrik asko</string>
+    <string name="wear_quick_response_confirmation">Bai</string>
+    <string name="wear_quick_response_disagree">Ez</string>
+    <string name="wear_quick_response_haha">Kar kar kar</string>
+    <string name="wear_quick_response_lol">LOL</string>
+    <string name="wear_quick_response_on_my_way">Banoa</string>
+    <string name="wear_quick_response_see_you_soon">Laster arte</string>
+    <string name="wear_quick_response_talk_later">Ezin dut hitz egin orain</string>
+    <string name="wear_quick_response_understood">Ados</string>
+    <string name="wearable_support">Eramangarriaren laguntza</string>
     <string name="widget_back_to_chat_previews">Itzuli berriketen aurrebistetara</string>
     <string name="widget_change_my_status_message">Aldatu nire egoera-mezua</string>
     <string name="widget_edit_status">Editatu egoera</string>
@@ -2003,6 +2286,7 @@ Aholkua: Pantai hau utz dezakezu, instalatzen jarraitzen duen bitartean."</strin
     <string name="wifi_changing_network">Sarerako konexioa eskatzen…</string>
     <string name="wifi_ssid_label">Sarearen Izena</string>
     <string name="wifi_type_label">Mota</string>
+    <string name="yes">Bai</string>
     <string name="you_are_signed_in_with_the_following_blackberry_id">BlackBerry ID honetan saioa hasita zaude: %1$s</string>
     <string name="you_can_choose_another_restore_option_or_delete_your_device_data">Berrezartzeko beste aukera bat aukera dezakezu, edo gailuko datuak ezabatu eta babeskopia-fitxategiarekin lotutako BlackBerry IDarekin has dezakezu saioa.</string>
     <string name="you_can_now_start_video_and_voice_chats">Orain BBMtik has ditzakezu bideoak eta ahots-berriketak (onartzen bada).</string>

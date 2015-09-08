@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.bbm.ui.CheckableLinearLayout android:orientation="vertical" android:background="@drawable/list_item_default_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <com.bbm.ui.ObservingImageView android:layout_gravity="center_vertical" android:id="@id/contact_avatar" android:scaleType="centerCrop" style="@style/ListItemAvatar" />
+        <com.bbm.ui.AvatarView android:layout_gravity="center_vertical" android:id="@id/contact_avatar" app:show_busy="true" style="@style/ListItemAvatar" />
         <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingRight="@dimen/contact_list_item_padding_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
             <com.bbm.ui.InlineImageTextView android:id="@id/contact_name" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ListItemTitleField" />
             <com.bbm.ui.InlineImageTextView android:id="@id/contact_message" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ListItemSubtitleField" />
         </LinearLayout>
-        <ImageView android:layout_gravity="center_vertical" android:id="@id/invite_icon" android:background="@color/transparent" android:layout_width="@dimen/find_friend_button_size" android:layout_height="@dimen/find_friend_button_size" android:layout_marginRight="@dimen/find_friend_button_padding_right" android:src="@drawable/selector_find_friend_bbm" android:scaleType="centerInside" />
     </LinearLayout>
-    <View android:id="@id/divider" android:background="@drawable/list_item_default_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:contentDescription="@string/blank" />
+    <include layout="@layout/view_list_divider" />
 </com.bbm.ui.CheckableLinearLayout>

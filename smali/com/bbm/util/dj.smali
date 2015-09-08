@@ -1,205 +1,79 @@
-.class public Lcom/bbm/util/dj;
+.class public final Lcom/bbm/util/dj;
 .super Ljava/lang/Object;
-.source "SearchStringMatcher.java"
-
-
-# static fields
-.field private static final b:Lcom/bbm/util/dj;
-
-.field private static final c:Lcom/bbm/util/dj;
-
-.field private static final d:[Ljava/lang/String;
-
-
-# instance fields
-.field private final a:Ljava/util/regex/Pattern;
+.source "PhvUtil.java"
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public static a(Ljava/lang/String;)V
+    .locals 4
 
     .prologue
-    .line 21
-    new-instance v0, Lcom/bbm/util/dk;
+    .line 27
+    :try_start_0
+    const-string v0, "MD5"
 
-    invoke-direct {v0}, Lcom/bbm/util/dk;-><init>()V
+    invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
-    sput-object v0, Lcom/bbm/util/dj;->b:Lcom/bbm/util/dj;
+    move-result-object v0
 
     .line 28
-    new-instance v0, Lcom/bbm/util/dl;
-
-    invoke-direct {v0}, Lcom/bbm/util/dl;-><init>()V
-
-    sput-object v0, Lcom/bbm/util/dj;->c:Lcom/bbm/util/dj;
-
-    .line 62
-    const/4 v0, 0x5
-
-    new-array v0, v0, [Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    const-string v2, ":)"
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x1
-
-    const-string v2, ":D"
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x2
-
-    const-string v2, "#=-s"
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x3
-
-    const-string v2, "\\=D/"
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x4
-
-    const-string v2, ":|"
-
-    aput-object v2, v0, v1
-
-    sput-object v0, Lcom/bbm/util/dj;->d:[Ljava/lang/String;
-
-    return-void
-.end method
-
-.method private constructor <init>()V
-    .locals 1
-
-    .prologue
-    .line 12
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 13
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/bbm/util/dj;->a:Ljava/util/regex/Pattern;
-
-    .line 14
-    return-void
-.end method
-
-.method synthetic constructor <init>(B)V
-    .locals 0
-
-    .prologue
-    .line 8
-    invoke-direct {p0}, Lcom/bbm/util/dj;-><init>()V
-
-    return-void
-.end method
-
-.method private constructor <init>(Ljava/lang/String;)V
-    .locals 3
-
-    .prologue
-    .line 16
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 17
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "\\b"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v1, "\\s+"
-
-    const-string v2, " "
-
-    invoke-virtual {p1, v1, v2}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
+    const/4 v2, 0x0
 
-    move-result-object v1
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v3
+
+    invoke-virtual {v0, v1, v2, v3}, Ljava/security/MessageDigest;->update([BII)V
+
+    .line 29
+    new-instance v1, Ljava/math/BigInteger;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v1, v2, v0}, Ljava/math/BigInteger;-><init>(I[B)V
+
+    const/16 v0, 0x10
+
+    invoke-virtual {v1, v0}, Ljava/math/BigInteger;->toString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    const/4 v1, 0x2
+    .line 30
+    const-string v1, "28674fae9ed9848c16584761b96161fe"
 
-    invoke-static {v0, v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/util/dj;->a:Ljava/util/regex/Pattern;
-
-    .line 19
-    return-void
-.end method
-
-.method public static a(Ljava/lang/String;)Lcom/bbm/util/dj;
-    .locals 1
-
-    .prologue
-    .line 36
-    invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    .line 37
-    sget-object v0, Lcom/bbm/util/dj;->b:Lcom/bbm/util/dj;
+    .line 31
+    invoke-static {}, Landroid/os/Process;->myPid()I
 
-    .line 44
-    :goto_0
-    return-object v0
+    move-result v0
 
-    .line 40
-    :cond_0
-    :try_start_0
-    new-instance v0, Lcom/bbm/util/dj;
-
-    invoke-direct {v0, p0}, Lcom/bbm/util/dj;-><init>(Ljava/lang/String;)V
+    invoke-static {v0}, Landroid/os/Process;->killProcess(I)V
     :try_end_0
-    .catch Ljava/util/regex/PatternSyntaxException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    .line 36
+    :cond_0
+    :goto_0
+    return-void
 
-    .line 44
+    .line 33
     :catch_0
     move-exception v0
 
-    sget-object v0, Lcom/bbm/util/dj;->c:Lcom/bbm/util/dj;
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
-.end method
-
-
-# virtual methods
-.method public b(Ljava/lang/String;)Z
-    .locals 1
-
-    .prologue
-    .line 94
-    iget-object v0, p0, Lcom/bbm/util/dj;->a:Ljava/util/regex/Pattern;
-
-    invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
-
-    move-result v0
-
-    return v0
 .end method

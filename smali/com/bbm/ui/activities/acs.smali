@@ -1,66 +1,91 @@
 .class final Lcom/bbm/ui/activities/acs;
-.super Lcom/bbm/d/b/m;
-.source "ProfileActivity.java"
+.super Ljava/lang/Object;
+.source "SelectGroupDiscussionActivity.java"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/d/b/m",
-        "<",
-        "Lcom/bbm/d/et;",
-        ">;"
-    }
-.end annotation
+# interfaces
+.implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Lcom/bbm/ui/activities/ProfileActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SelectGroupDiscussionActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ProfileActivity;Lcom/bbm/j/r;Ljava/lang/String;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SelectGroupDiscussionActivity;)V
     .locals 0
 
     .prologue
-    .line 268
-    iput-object p1, p0, Lcom/bbm/ui/activities/acs;->b:Lcom/bbm/ui/activities/ProfileActivity;
+    .line 65
+    iput-object p1, p0, Lcom/bbm/ui/activities/acs;->a:Lcom/bbm/ui/activities/SelectGroupDiscussionActivity;
 
-    iput-object p3, p0, Lcom/bbm/ui/activities/acs;->a:Ljava/lang/String;
-
-    invoke-direct {p0, p2}, Lcom/bbm/d/b/m;-><init>(Lcom/bbm/j/r;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final synthetic a(Ljava/lang/Object;)Z
-    .locals 2
+.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
-    .line 268
-    check-cast p1, Lcom/bbm/d/et;
+    .line 68
+    iget-object v0, p0, Lcom/bbm/ui/activities/acs;->a:Lcom/bbm/ui/activities/SelectGroupDiscussionActivity;
 
-    iget-object v0, p1, Lcom/bbm/d/et;->a:Ljava/lang/String;
+    invoke-static {v0}, Lcom/bbm/ui/activities/SelectGroupDiscussionActivity;->a(Lcom/bbm/ui/activities/SelectGroupDiscussionActivity;)Lcom/bbm/ui/activities/acu;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/acs;->a:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v0, p3}, Lcom/bbm/ui/activities/acu;->getItem(I)Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    check-cast v0, Lcom/bbm/g/s;
 
-    const/4 v0, 0x1
+    .line 69
+    new-instance v1, Landroid/content/Intent;
 
-    :goto_0
-    return v0
+    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    :cond_0
-    const/4 v0, 0x0
+    .line 70
+    const-string v2, "com.bbm.group_uri"
 
-    goto :goto_0
+    iget-object v3, p0, Lcom/bbm/ui/activities/acs;->a:Lcom/bbm/ui/activities/SelectGroupDiscussionActivity;
+
+    invoke-static {v3}, Lcom/bbm/ui/activities/SelectGroupDiscussionActivity;->b(Lcom/bbm/ui/activities/SelectGroupDiscussionActivity;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 71
+    const-string v2, "com.bbm.group_conversation_uri"
+
+    iget-object v0, v0, Lcom/bbm/g/s;->m:Ljava/lang/String;
+
+    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 72
+    iget-object v0, p0, Lcom/bbm/ui/activities/acs;->a:Lcom/bbm/ui/activities/SelectGroupDiscussionActivity;
+
+    const/4 v2, -0x1
+
+    invoke-virtual {v0, v2, v1}, Lcom/bbm/ui/activities/SelectGroupDiscussionActivity;->setResult(ILandroid/content/Intent;)V
+
+    .line 73
+    iget-object v0, p0, Lcom/bbm/ui/activities/acs;->a:Lcom/bbm/ui/activities/SelectGroupDiscussionActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/SelectGroupDiscussionActivity;->finish()V
+
+    .line 74
+    return-void
 .end method

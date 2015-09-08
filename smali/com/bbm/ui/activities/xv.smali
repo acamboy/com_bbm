@@ -1,22 +1,26 @@
 .class final Lcom/bbm/ui/activities/xv;
 .super Ljava/lang/Object;
-.source "MainActivity.java"
+.source "OwnedChannelLobbyActivity.java"
 
 # interfaces
 .implements Lcom/bbm/j/s;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
+.field final synthetic a:Landroid/view/Menu;
+
+.field final synthetic b:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;Landroid/view/Menu;)V
     .locals 0
 
     .prologue
-    .line 2808
-    iput-object p1, p0, Lcom/bbm/ui/activities/xv;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 203
+    iput-object p1, p0, Lcom/bbm/ui/activities/xv;->b:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
+
+    iput-object p2, p0, Lcom/bbm/ui/activities/xv;->a:Landroid/view/Menu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,89 +30,118 @@
 
 # virtual methods
 .method public final a()Z
-    .locals 4
+    .locals 3
 
     .prologue
     const/4 v1, 0x1
 
-    .line 2811
-    iget-object v0, p0, Lcom/bbm/ui/activities/xv;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 206
+    iget-object v0, p0, Lcom/bbm/ui/activities/xv;->b:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/MainActivity;->b(Lcom/bbm/ui/activities/MainActivity;)Lcom/bbm/e;
+    iget-object v0, v0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->b:Lcom/bbm/j/a;
 
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/bbm/e;->b:Lcom/bbm/d/a;
-
-    invoke-virtual {v0}, Lcom/bbm/d/a;->O()Lcom/bbm/j/w;
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 2812
-    invoke-interface {v0}, Lcom/bbm/j/w;->b()Z
+    check-cast v0, Lcom/bbm/d/ff;
 
-    move-result v2
+    iget-object v0, v0, Lcom/bbm/d/ff;->R:Lcom/bbm/util/bo;
 
-    if-eqz v2, :cond_0
+    sget-object v2, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
 
-    .line 2813
+    if-ne v0, v2, :cond_0
+
+    .line 207
     const/4 v0, 0x0
 
-    .line 2824
+    .line 236
     :goto_0
     return v0
 
-    .line 2815
+    .line 211
     :cond_0
-    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+    iget-object v0, p0, Lcom/bbm/ui/activities/xv;->a:Landroid/view/Menu;
+
+    const v2, 0x7f0b074e
+
+    invoke-interface {v0, v2}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/List;
+    .line 212
+    if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    .line 213
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
-    move-result v0
+    .line 215
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/xv;->a:Landroid/view/Menu;
 
-    if-nez v0, :cond_1
+    const v2, 0x7f0b0753
 
-    .line 2816
-    iget-object v0, p0, Lcom/bbm/ui/activities/xv;->a:Lcom/bbm/ui/activities/MainActivity;
+    invoke-interface {v0, v2}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
-    const v2, 0x7f0b0063
+    move-result-object v0
 
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/activities/MainActivity;->b(I)V
+    .line 216
+    if-eqz v0, :cond_2
 
-    :goto_1
+    .line 217
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    .line 221
+    :cond_2
+    iget-object v0, p0, Lcom/bbm/ui/activities/xv;->a:Landroid/view/Menu;
+
+    const v2, 0x7f0b074f
+
+    invoke-interface {v0, v2}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    .line 222
+    if-eqz v0, :cond_3
+
+    .line 223
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    .line 225
+    :cond_3
+    iget-object v0, p0, Lcom/bbm/ui/activities/xv;->a:Landroid/view/Menu;
+
+    const v2, 0x7f0b0754
+
+    invoke-interface {v0, v2}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    .line 226
+    if-eqz v0, :cond_4
+
+    .line 227
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    .line 231
+    :cond_4
+    iget-object v0, p0, Lcom/bbm/ui/activities/xv;->a:Landroid/view/Menu;
+
+    const v2, 0x7f0b0757
+
+    invoke-interface {v0, v2}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    .line 232
+    if-eqz v0, :cond_5
+
+    .line 233
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    :cond_5
     move v0, v1
 
-    .line 2824
+    .line 236
     goto :goto_0
-
-    .line 2818
-    :cond_1
-    new-instance v0, Landroid/content/Intent;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/xv;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    const-class v3, Lcom/bbm/ui/activities/SelectContactActivity;
-
-    invoke-direct {v0, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 2819
-    const-string v2, "com.bbm.onlyone"
-
-    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    .line 2821
-    const-string v2, "com.bbm.showfindmore"
-
-    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    .line 2822
-    iget-object v2, p0, Lcom/bbm/ui/activities/xv;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-virtual {v2, v0, v1}, Lcom/bbm/ui/activities/MainActivity;->startActivityForResult(Landroid/content/Intent;I)V
-
-    goto :goto_1
 .end method

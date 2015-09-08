@@ -1,230 +1,401 @@
-.class public final Lcom/bbm/ui/f/r;
-.super Ljava/lang/Object;
-.source "IntentUtils.java"
+.class final Lcom/bbm/ui/f/r;
+.super Lcom/bbm/j/u;
+.source "GroupPictureNotificationItem.java"
+
+# interfaces
+.implements Lcom/bbm/ui/f/e;
+
+
+# instance fields
+.field private final a:Landroid/content/Context;
+
+.field private final b:Lcom/bbm/g/an;
+
+.field private final c:Lcom/bbm/ui/f/p;
+
+.field private final d:Lcom/bbm/g/ah;
+
+.field private final e:Ljava/lang/String;
+
+.field private f:Lcom/bbm/g/a;
+
+.field private g:Lcom/bbm/g/q;
 
 
 # direct methods
-.method static a(Landroid/content/Context;I)Landroid/app/PendingIntent;
-    .locals 3
+.method public constructor <init>(Lcom/bbm/ui/f/p;Lcom/bbm/g/ah;)V
+    .locals 1
 
     .prologue
-    .line 41
-    new-instance v0, Landroid/content/Intent;
+    .line 32
+    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
-    const-class v1, Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 42
-    const-string v1, "active_section"
-
-    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 43
-    const-string v1, "com.bbm.ui.activities.action.SECTION_CHANGED"
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 44
-    const/high16 v1, 0x4000000
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
-
-    .line 46
-    const/4 v1, 0x0
-
-    const/high16 v2, 0x10000000
-
-    invoke-static {p0, v1, v0, v2}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+    .line 33
+    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/g/an;
 
     move-result-object v0
 
-    return-object v0
+    iput-object v0, p0, Lcom/bbm/ui/f/r;->b:Lcom/bbm/g/an;
+
+    .line 34
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/f/r;->a:Landroid/content/Context;
+
+    .line 35
+    iput-object p1, p0, Lcom/bbm/ui/f/r;->c:Lcom/bbm/ui/f/p;
+
+    .line 37
+    iput-object p2, p0, Lcom/bbm/ui/f/r;->d:Lcom/bbm/g/ah;
+
+    .line 38
+    iget-object v0, p0, Lcom/bbm/ui/f/r;->d:Lcom/bbm/g/ah;
+
+    iget-object v0, v0, Lcom/bbm/g/ah;->m:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/bbm/aw;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/f/r;->e:Ljava/lang/String;
+
+    .line 39
+    return-void
 .end method
 
-.method public static a(Landroid/content/Context;Ljava/lang/String;)Landroid/app/PendingIntent;
-    .locals 5
+
+# virtual methods
+.method protected final b()Z
+    .locals 4
 
     .prologue
-    const/high16 v4, 0x4000000
+    const/4 v1, 0x1
 
-    .line 70
-    if-eqz p1, :cond_0
+    const/4 v0, 0x0
 
-    .line 71
-    new-instance v0, Landroid/content/Intent;
+    .line 91
+    iget-object v2, p0, Lcom/bbm/ui/f/r;->b:Lcom/bbm/g/an;
 
-    const-class v1, Lcom/bbm/ui/activities/ConversationActivity;
+    iget-object v3, p0, Lcom/bbm/ui/f/r;->e:Ljava/lang/String;
 
-    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 72
-    const-string v1, "conversation_uri"
-
-    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 73
-    invoke-virtual {v0, v4}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
-
-    .line 75
-    new-instance v1, Landroid/content/Intent;
-
-    const-class v2, Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 76
-    const-string v2, "active_section"
-
-    const v3, 0x7f0b005f
-
-    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 77
-    const-string v2, "com.bbm.ui.activities.action.SECTION_CHANGED"
-
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 78
-    invoke-virtual {v1, v4}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
-
-    .line 80
-    invoke-static {p0}, Landroid/support/v4/app/cy;->a(Landroid/content/Context;)Landroid/support/v4/app/cy;
+    invoke-virtual {v2, v3}, Lcom/bbm/g/an;->w(Ljava/lang/String;)Lcom/bbm/g/a;
 
     move-result-object v2
 
-    .line 81
-    invoke-virtual {v2, v1}, Landroid/support/v4/app/cy;->a(Landroid/content/Intent;)Landroid/support/v4/app/cy;
+    iput-object v2, p0, Lcom/bbm/ui/f/r;->f:Lcom/bbm/g/a;
 
-    .line 82
-    invoke-virtual {v2, v0}, Landroid/support/v4/app/cy;->a(Landroid/content/Intent;)Landroid/support/v4/app/cy;
+    .line 92
+    iget-object v2, p0, Lcom/bbm/ui/f/r;->f:Lcom/bbm/g/a;
 
-    .line 84
-    invoke-virtual {v2}, Landroid/support/v4/app/cy;->a()Landroid/app/PendingIntent;
+    iget-object v2, v2, Lcom/bbm/g/a;->w:Lcom/bbm/util/bo;
 
-    move-result-object v0
+    sget-object v3, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
 
-    .line 86
-    :goto_0
-    return-object v0
+    if-eq v2, v3, :cond_1
 
+    .line 109
     :cond_0
-    const/4 v0, 0x0
+    :goto_0
+    return v0
 
+    .line 99
+    :cond_1
+    iget-object v2, p0, Lcom/bbm/ui/f/r;->f:Lcom/bbm/g/a;
+
+    iget-boolean v2, v2, Lcom/bbm/g/a;->u:Z
+
+    if-nez v2, :cond_2
+
+    move v0, v1
+
+    .line 100
+    goto :goto_0
+
+    .line 103
+    :cond_2
+    iget-object v2, p0, Lcom/bbm/ui/f/r;->b:Lcom/bbm/g/an;
+
+    iget-object v3, p0, Lcom/bbm/ui/f/r;->d:Lcom/bbm/g/ah;
+
+    iget-object v3, v3, Lcom/bbm/g/ah;->d:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Lcom/bbm/g/an;->s(Ljava/lang/String;)Lcom/bbm/g/q;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcom/bbm/ui/f/r;->g:Lcom/bbm/g/q;
+
+    .line 104
+    iget-object v2, p0, Lcom/bbm/ui/f/r;->g:Lcom/bbm/g/q;
+
+    iget-object v2, v2, Lcom/bbm/g/q;->h:Lcom/bbm/util/bo;
+
+    sget-object v3, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
+
+    if-ne v2, v3, :cond_0
+
+    .line 108
+    iget-object v0, p0, Lcom/bbm/ui/f/r;->c:Lcom/bbm/ui/f/p;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v3, p0, Lcom/bbm/ui/f/r;->d:Lcom/bbm/g/ah;
+
+    iget-object v3, v3, Lcom/bbm/g/ah;->m:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, "picture"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Lcom/bbm/ui/f/p;->b(Ljava/lang/String;)V
+
+    move v0, v1
+
+    .line 109
     goto :goto_0
 .end method
 
-.method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/app/PendingIntent;
-    .locals 7
+.method public final b_()Ljava/lang/String;
+    .locals 6
 
     .prologue
-    const/high16 v6, 0x4000000
-
-    .line 119
-    if-eqz p1, :cond_0
-
-    if-eqz p2, :cond_0
-
-    .line 120
-    new-instance v0, Landroid/content/Intent;
-
-    const-class v1, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 121
-    const-string v1, "groupUri"
-
-    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 122
-    const-string v1, "pictureUri"
-
-    invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 123
-    invoke-virtual {v0, v6}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
-
-    .line 125
-    new-instance v1, Landroid/content/Intent;
-
-    const-class v2, Lcom/bbm/ui/activities/GroupPictureActivity;
-
-    invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 126
-    const-string v2, "groupUri"
-
-    invoke-virtual {v1, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 127
-    invoke-virtual {v1, v6}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
-
-    .line 129
-    new-instance v2, Landroid/content/Intent;
-
-    const-class v3, Lcom/bbm/ui/activities/GroupLobbyActivity;
-
-    invoke-direct {v2, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 130
-    const-string v3, "groupUri"
-
-    invoke-virtual {v2, v3, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 131
-    invoke-virtual {v2, v6}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
-
-    .line 133
-    new-instance v3, Landroid/content/Intent;
-
-    const-class v4, Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-direct {v3, p0, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 134
-    const-string v4, "active_section"
-
-    const v5, 0x7f0b0062
-
-    invoke-virtual {v3, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 135
-    const-string v4, "com.bbm.ui.activities.action.SECTION_CHANGED"
-
-    invoke-virtual {v3, v4}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 136
-    invoke-virtual {v3, v6}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
-
-    .line 138
-    invoke-static {p0}, Landroid/support/v4/app/cy;->a(Landroid/content/Context;)Landroid/support/v4/app/cy;
-
-    move-result-object v4
-
-    .line 139
-    invoke-virtual {v4, v3}, Landroid/support/v4/app/cy;->a(Landroid/content/Intent;)Landroid/support/v4/app/cy;
-
-    .line 140
-    invoke-virtual {v4, v2}, Landroid/support/v4/app/cy;->a(Landroid/content/Intent;)Landroid/support/v4/app/cy;
-
-    .line 141
-    invoke-virtual {v4, v1}, Landroid/support/v4/app/cy;->a(Landroid/content/Intent;)Landroid/support/v4/app/cy;
-
-    .line 142
-    invoke-virtual {v4, v0}, Landroid/support/v4/app/cy;->a(Landroid/content/Intent;)Landroid/support/v4/app/cy;
-
-    .line 144
-    invoke-virtual {v4}, Landroid/support/v4/app/cy;->a()Landroid/app/PendingIntent;
+    .line 43
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
 
     move-result-object v0
 
-    .line 146
-    :goto_0
-    return-object v0
+    invoke-virtual {v0}, Lcom/bbm/Alaska;->getResources()Landroid/content/res/Resources;
 
-    :cond_0
+    move-result-object v0
+
+    const v1, 0x7f0e05f2
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcom/bbm/Alaska;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    const v5, 0x7f0e05ef
+
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x1
+
+    iget-object v4, p0, Lcom/bbm/ui/f/r;->f:Lcom/bbm/g/a;
+
+    iget-object v4, v4, Lcom/bbm/g/a;->r:Ljava/lang/String;
+
+    aput-object v4, v2, v3
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final c_()Ljava/lang/String;
+    .locals 5
+
+    .prologue
+    .line 50
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/Alaska;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f0e05f1
+
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    iget-object v4, p0, Lcom/bbm/ui/f/r;->g:Lcom/bbm/g/q;
+
+    iget-object v4, v4, Lcom/bbm/g/q;->c:Ljava/lang/String;
+
+    aput-object v4, v2, v3
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final e()Landroid/graphics/Bitmap;
+    .locals 4
+
+    .prologue
+    .line 60
     const/4 v0, 0x0
 
-    goto :goto_0
+    .line 62
+    invoke-static {}, Lcom/bbm/util/b/i;->a()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 63
+    iget-object v0, p0, Lcom/bbm/ui/f/r;->d:Lcom/bbm/g/ah;
+
+    iget-object v0, v0, Lcom/bbm/g/ah;->k:Ljava/lang/String;
+
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/bbm/Alaska;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x1050005
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v1
+
+    float-to-int v1, v1
+
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/bbm/Alaska;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v3, 0x1050006
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v2
+
+    float-to-int v2, v2
+
+    invoke-static {v0, v1, v2}, Lcom/bbm/util/b/h;->a(Ljava/lang/String;II)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    .line 68
+    :cond_0
+    if-nez v0, :cond_1
+
+    .line 69
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/Alaska;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f0200aa
+
+    invoke-static {v0, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    .line 71
+    :cond_1
+    return-object v0
+.end method
+
+.method public final f()I
+    .locals 1
+
+    .prologue
+    .line 55
+    const/4 v0, -0x1
+
+    return v0
+.end method
+
+.method public final g()Ljava/lang/Long;
+    .locals 2
+
+    .prologue
+    .line 76
+    iget-object v0, p0, Lcom/bbm/ui/f/r;->d:Lcom/bbm/g/ah;
+
+    iget-wide v0, v0, Lcom/bbm/g/ah;->l:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final h()Landroid/app/PendingIntent;
+    .locals 3
+
+    .prologue
+    .line 81
+    iget-object v0, p0, Lcom/bbm/ui/f/r;->a:Landroid/content/Context;
+
+    iget-object v1, p0, Lcom/bbm/ui/f/r;->e:Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/bbm/ui/f/r;->d:Lcom/bbm/g/ah;
+
+    iget-object v2, v2, Lcom/bbm/g/ah;->m:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lcom/bbm/ui/f/s;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/app/PendingIntent;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final i()Lcom/bbm/ui/f/f;
+    .locals 1
+
+    .prologue
+    .line 86
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final j()I
+    .locals 1
+
+    .prologue
+    .line 114
+    const/16 v0, 0x10
+
+    return v0
 .end method

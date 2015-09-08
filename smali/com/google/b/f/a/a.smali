@@ -3,7 +3,7 @@
 .source "AbstractFuture.java"
 
 # interfaces
-.implements Lcom/google/b/f/a/l;
+.implements Lcom/google/b/f/a/p;
 
 
 # annotations
@@ -13,14 +13,14 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/google/b/f/a/l",
+        "Lcom/google/b/f/a/p",
         "<TV;>;"
     }
 .end annotation
 
 
 # instance fields
-.field private final a:Lcom/google/b/f/a/b;
+.field final a:Lcom/google/b/f/a/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/b/f/a/b",
@@ -62,15 +62,15 @@
     .locals 1
 
     .prologue
-    .line 399
+    .line 392
     new-instance v0, Ljava/util/concurrent/CancellationException;
 
     invoke-direct {v0, p0}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
 
-    .line 400
+    .line 393
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CancellationException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    .line 401
+    .line 394
     return-object v0
 .end method
 
@@ -126,10 +126,10 @@
     .locals 4
 
     .prologue
-    .line 201
+    .line 200
     iget-object v1, p0, Lcom/google/b/f/a/a;->a:Lcom/google/b/f/a/b;
 
-    invoke-static {p1}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -143,27 +143,16 @@
 
     move-result v0
 
-    .line 202
+    .line 201
     if-eqz v0, :cond_0
 
-    .line 203
+    .line 202
     iget-object v1, p0, Lcom/google/b/f/a/a;->b:Lcom/google/b/f/a/e;
 
     invoke-virtual {v1}, Lcom/google/b/f/a/e;->a()V
 
-    .line 208
+    .line 204
     :cond_0
-    instance-of v1, p1, Ljava/lang/Error;
-
-    if-eqz v1, :cond_1
-
-    .line 209
-    check-cast p1, Ljava/lang/Error;
-
-    throw p1
-
-    .line 211
-    :cond_1
     return v0
 .end method
 

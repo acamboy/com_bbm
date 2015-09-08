@@ -30,55 +30,55 @@
     .locals 1
 
     .prologue
-    .line 385
+    .line 382
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 387
+    .line 384
     const-string v0, ""
 
     iput-object v0, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->username:Ljava/lang/String;
 
-    .line 388
+    .line 385
     const-string v0, ""
 
     iput-object v0, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->email:Ljava/lang/String;
 
-    .line 389
+    .line 386
     const-string v0, ""
 
     iput-object v0, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->screenname:Ljava/lang/String;
 
-    .line 390
+    .line 387
     const-string v0, ""
 
     iput-object v0, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->firstname:Ljava/lang/String;
 
-    .line 391
+    .line 388
     const-string v0, ""
 
     iput-object v0, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->lastname:Ljava/lang/String;
 
-    .line 392
+    .line 389
     const-string v0, ""
 
     iput-object v0, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->ecoid:Ljava/lang/String;
 
-    .line 393
+    .line 390
     const-string v0, ""
 
     iput-object v0, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->swguid:Ljava/lang/String;
 
-    .line 394
+    .line 391
     const-string v0, ""
 
     iput-object v0, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->dateofbirth:Ljava/lang/String;
 
-    .line 395
+    .line 392
     const-string v0, ""
 
     iput-object v0, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->countrycode:Ljava/lang/String;
 
-    .line 396
+    .line 393
     sget-object v0, Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;->GET_PENDING:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
     iput-object v0, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->getter_state:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
@@ -96,15 +96,15 @@
 
     const/4 v1, 0x0
 
-    .line 400
+    .line 397
     if-ne p0, p1, :cond_1
 
-    .line 416
+    .line 413
     :cond_0
     :goto_0
     return v0
 
-    .line 401
+    .line 398
     :cond_1
     if-eqz p1, :cond_2
 
@@ -123,11 +123,11 @@
 
     goto :goto_0
 
-    .line 403
+    .line 400
     :cond_3
     check-cast p1, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;
 
-    .line 405
+    .line 402
     iget-object v2, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->countrycode:Ljava/lang/String;
 
     iget-object v3, p1, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->countrycode:Ljava/lang/String;
@@ -142,7 +142,7 @@
 
     goto :goto_0
 
-    .line 406
+    .line 403
     :cond_4
     iget-object v2, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->dateofbirth:Ljava/lang/String;
 
@@ -158,7 +158,7 @@
 
     goto :goto_0
 
-    .line 407
+    .line 404
     :cond_5
     iget-object v2, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->ecoid:Ljava/lang/String;
 
@@ -174,7 +174,7 @@
 
     goto :goto_0
 
-    .line 408
+    .line 405
     :cond_6
     iget-object v2, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->email:Ljava/lang/String;
 
@@ -190,7 +190,7 @@
 
     goto :goto_0
 
-    .line 409
+    .line 406
     :cond_7
     iget-object v2, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->firstname:Ljava/lang/String;
 
@@ -206,7 +206,7 @@
 
     goto :goto_0
 
-    .line 410
+    .line 407
     :cond_8
     iget-object v2, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->getter_state:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
@@ -218,7 +218,7 @@
 
     goto :goto_0
 
-    .line 411
+    .line 408
     :cond_9
     iget-object v2, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->lastname:Ljava/lang/String;
 
@@ -234,7 +234,7 @@
 
     goto :goto_0
 
-    .line 412
+    .line 409
     :cond_a
     iget-object v2, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->screenname:Ljava/lang/String;
 
@@ -250,7 +250,7 @@
 
     goto :goto_0
 
-    .line 413
+    .line 410
     :cond_b
     iget-object v2, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->swguid:Ljava/lang/String;
 
@@ -266,7 +266,7 @@
 
     goto :goto_0
 
-    .line 414
+    .line 411
     :cond_c
     iget-object v2, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->username:Ljava/lang/String;
 
@@ -287,14 +287,14 @@
     .locals 2
 
     .prologue
-    .line 421
+    .line 418
     iget-object v0, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->username:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    .line 422
+    .line 419
     mul-int/lit8 v0, v0, 0x1f
 
     iget-object v1, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->email:Ljava/lang/String;
@@ -305,7 +305,7 @@
 
     add-int/2addr v0, v1
 
-    .line 423
+    .line 420
     mul-int/lit8 v0, v0, 0x1f
 
     iget-object v1, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->screenname:Ljava/lang/String;
@@ -316,7 +316,7 @@
 
     add-int/2addr v0, v1
 
-    .line 424
+    .line 421
     mul-int/lit8 v0, v0, 0x1f
 
     iget-object v1, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->firstname:Ljava/lang/String;
@@ -327,7 +327,7 @@
 
     add-int/2addr v0, v1
 
-    .line 425
+    .line 422
     mul-int/lit8 v0, v0, 0x1f
 
     iget-object v1, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->lastname:Ljava/lang/String;
@@ -338,7 +338,7 @@
 
     add-int/2addr v0, v1
 
-    .line 426
+    .line 423
     mul-int/lit8 v0, v0, 0x1f
 
     iget-object v1, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->ecoid:Ljava/lang/String;
@@ -349,7 +349,7 @@
 
     add-int/2addr v0, v1
 
-    .line 427
+    .line 424
     mul-int/lit8 v0, v0, 0x1f
 
     iget-object v1, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->swguid:Ljava/lang/String;
@@ -360,7 +360,7 @@
 
     add-int/2addr v0, v1
 
-    .line 428
+    .line 425
     mul-int/lit8 v0, v0, 0x1f
 
     iget-object v1, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->dateofbirth:Ljava/lang/String;
@@ -371,7 +371,7 @@
 
     add-int/2addr v0, v1
 
-    .line 429
+    .line 426
     mul-int/lit8 v0, v0, 0x1f
 
     iget-object v1, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->countrycode:Ljava/lang/String;
@@ -382,7 +382,7 @@
 
     add-int/2addr v0, v1
 
-    .line 430
+    .line 427
     mul-int/lit8 v0, v0, 0x1f
 
     iget-object v1, p0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->getter_state:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
@@ -393,6 +393,6 @@
 
     add-int/2addr v0, v1
 
-    .line 431
+    .line 428
     return v0
 .end method

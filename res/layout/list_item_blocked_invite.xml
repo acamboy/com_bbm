@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:background="@drawable/list_item_default_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.bbm.ui.SquaredObservingImageView android:id="@id/item_avatar" android:scaleType="centerCrop" style="@style/ListItemAvatar" />
+    <com.bbm.ui.AvatarView android:id="@id/item_avatar" style="@style/ListItemAvatar" />
     <com.bbm.ui.InlineImageTextView android:id="@id/item_name" android:layout_toRightOf="@id/item_avatar" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="@style/ListItemTitleField" />
     <TextView android:id="@id/item_subtitle" android:layout_toRightOf="@id/item_avatar" android:layout_below="@id/item_name" style="@style/ListItemSubtitleField" />
 </RelativeLayout>

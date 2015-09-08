@@ -1793,8 +1793,6 @@
 
     invoke-virtual {v0}, Lcom/blackberry/ids/BBIDStorage;->g()V
 
-    sget-object v0, Lcom/blackberry/ids/IDS;->k:Lcom/blackberry/ids/TokenTempCache;
-
     invoke-static {p0}, Lcom/blackberry/ids/TokenTempCache;->d(Ljava/lang/String;)V
 
     invoke-virtual {p3}, Lcom/blackberry/ids/RequestId;->getRequestId()I
@@ -1878,8 +1876,6 @@
 
     .line 1224
     monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 1458
     :cond_1
@@ -1889,6 +1885,8 @@
     .line 1226
     :cond_2
     monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 1228
     invoke-static {}, Lcom/blackberry/ids/Entropy;->a()Ljava/lang/String;
@@ -2387,7 +2385,10 @@
     :catchall_0
     move-exception v0
 
+    :try_start_5
     monitor-exit v2
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
     throw v0
 
@@ -2395,13 +2396,16 @@
     :catchall_1
     move-exception v0
 
+    :try_start_6
     monitor-exit v7
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
     throw v0
 
     .line 1283
     :cond_3
-    :try_start_5
+    :try_start_7
     const-string v2, "do_az_request - request_id=%d - SSLContext Init -- No Trust factory found!"
 
     const/4 v7, 0x1
@@ -2421,11 +2425,11 @@
     aput-object v10, v7, v9
 
     invoke-static {v2, v7}, Lcom/blackberry/ids/Ln;->w(Ljava/lang/Object;[Ljava/lang/Object;)V
-    :try_end_5
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_5 .. :try_end_5} :catch_0
-    .catch Ljava/security/KeyManagementException; {:try_start_5 .. :try_end_5} :catch_2
-    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_1
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+    :try_end_7
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_7 .. :try_end_7} :catch_0
+    .catch Ljava/security/KeyManagementException; {:try_start_7 .. :try_end_7} :catch_2
+    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_1
+    .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
     goto/16 :goto_1
 
@@ -2434,7 +2438,7 @@
     move-exception v2
 
     .line 1287
-    :try_start_6
+    :try_start_8
     const-string v2, "do_az_request - request_id=%d - SSLContext Init -- NoSuchAlgorithm Exception !"
 
     const/4 v7, 0x1
@@ -2454,9 +2458,9 @@
     aput-object v10, v7, v9
 
     invoke-static {v2, v7}, Lcom/blackberry/ids/Ln;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
-    :try_end_6
-    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_1
-    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+    :try_end_8
+    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_1
+    .catchall {:try_start_8 .. :try_end_8} :catchall_2
 
     goto/16 :goto_1
 
@@ -2472,7 +2476,7 @@
 
     .line 1447
     :goto_2
-    :try_start_7
+    :try_start_9
     const-string v2, "IOException in %s request_id=%s, %s"
 
     const/4 v3, 0x3
@@ -2511,8 +2515,8 @@
     const/4 v4, -0x1
 
     invoke-interface {p2, v2, v3, v0, v4}, Lcom/blackberry/ids/IDS$AzRequestHelper;->failure(IILjava/lang/String;I)V
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_3
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_3
 
     .line 1454
     if-eqz v1, :cond_1
@@ -2527,7 +2531,7 @@
     move-exception v2
 
     .line 1290
-    :try_start_8
+    :try_start_a
     const-string v2, "do_az_request - request_id=%d - SSLContext Init -- KeyManagement Exception !"
 
     const/4 v7, 0x1
@@ -2547,9 +2551,9 @@
     aput-object v10, v7, v9
 
     invoke-static {v2, v7}, Lcom/blackberry/ids/Ln;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
-    :try_end_8
-    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_1
-    .catchall {:try_start_8 .. :try_end_8} :catchall_2
+    :try_end_a
+    .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_1
+    .catchall {:try_start_a .. :try_end_a} :catchall_2
 
     goto/16 :goto_1
 
@@ -2574,7 +2578,7 @@
 
     .line 1296
     :cond_5
-    :try_start_9
+    :try_start_b
     const-string v1, "do_az_request - request_id=%d - SSLContext Init -- Failed, Failing request as CA pinning cannot be completed"
 
     const/4 v2, 0x1
@@ -2607,9 +2611,9 @@
     const/4 v4, -0x1
 
     invoke-interface {p2, v1, v2, v3, v4}, Lcom/blackberry/ids/IDS$AzRequestHelper;->failure(IILjava/lang/String;I)V
-    :try_end_9
-    .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_1
-    .catchall {:try_start_9 .. :try_end_9} :catchall_2
+    :try_end_b
+    .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_1
+    .catchall {:try_start_b .. :try_end_b} :catchall_2
 
     .line 1454
     if-eqz v0, :cond_1
@@ -2621,11 +2625,11 @@
 
     .line 1372
     :cond_6
-    :try_start_a
+    :try_start_c
     invoke-interface {p2, v4, v5}, Lcom/blackberry/ids/IDS$AzRequestHelper;->success(Ljava/lang/String;Ljava/util/Map;)V
-    :try_end_a
-    .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_1
-    .catchall {:try_start_a .. :try_end_a} :catchall_2
+    :try_end_c
+    .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_1
+    .catchall {:try_start_c .. :try_end_c} :catchall_2
 
     .line 1454
     if-eqz v0, :cond_1
@@ -2642,7 +2646,7 @@
     if-ne v2, v1, :cond_8
 
     .line 1377
-    :try_start_b
+    :try_start_d
     const-string v1, "Location"
 
     invoke-virtual {v0, v1}, Ljavax/net/ssl/HttpsURLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
@@ -2694,9 +2698,9 @@
     const/4 v4, -0x1
 
     invoke-interface {p2, v2, v3, v1, v4}, Lcom/blackberry/ids/IDS$AzRequestHelper;->failure(IILjava/lang/String;I)V
-    :try_end_b
-    .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_1
-    .catchall {:try_start_b .. :try_end_b} :catchall_2
+    :try_end_d
+    .catch Ljava/io/IOException; {:try_start_d .. :try_end_d} :catch_1
+    .catchall {:try_start_d .. :try_end_d} :catchall_2
 
     .line 1454
     if-eqz v0, :cond_1
@@ -2722,7 +2726,7 @@
 
     .line 1385
     :cond_9
-    :try_start_c
+    :try_start_e
     sget-object v1, Lcom/blackberry/ids/IDS;->m:Lcom/blackberry/ids/BlockedTokenList;
 
     invoke-virtual {p1}, Lcom/blackberry/ids/RequestId;->getRequestId()I
@@ -2801,9 +2805,9 @@
     const/4 v4, -0x1
 
     invoke-interface {p2, v1, v3, v2, v4}, Lcom/blackberry/ids/IDS$AzRequestHelper;->failure(IILjava/lang/String;I)V
-    :try_end_c
-    .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_1
-    .catchall {:try_start_c .. :try_end_c} :catchall_2
+    :try_end_e
+    .catch Ljava/io/IOException; {:try_start_e .. :try_end_e} :catch_1
+    .catchall {:try_start_e .. :try_end_e} :catchall_2
 
     .line 1454
     if-eqz v0, :cond_1
@@ -2815,17 +2819,17 @@
 
     .line 1403
     :cond_b
-    :try_start_d
+    :try_start_f
     invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-    :try_end_d
-    .catch Ljava/lang/NumberFormatException; {:try_start_d .. :try_end_d} :catch_3
-    .catch Ljava/io/IOException; {:try_start_d .. :try_end_d} :catch_1
-    .catchall {:try_start_d .. :try_end_d} :catchall_2
+    :try_end_f
+    .catch Ljava/lang/NumberFormatException; {:try_start_f .. :try_end_f} :catch_3
+    .catch Ljava/io/IOException; {:try_start_f .. :try_end_f} :catch_1
+    .catchall {:try_start_f .. :try_end_f} :catchall_2
 
     move-result v3
 
     .line 1413
-    :try_start_e
+    :try_start_10
     new-instance v4, Ljava/lang/StringBuilder;
 
     const-string v5, "HTTP-status "
@@ -2895,9 +2899,9 @@
     const v4, 0xc35c
 
     invoke-interface {p2, v2, v4, v1, v3}, Lcom/blackberry/ids/IDS$AzRequestHelper;->failure(IILjava/lang/String;I)V
-    :try_end_e
-    .catch Ljava/io/IOException; {:try_start_e .. :try_end_e} :catch_1
-    .catchall {:try_start_e .. :try_end_e} :catchall_2
+    :try_end_10
+    .catch Ljava/io/IOException; {:try_start_10 .. :try_end_10} :catch_1
+    .catchall {:try_start_10 .. :try_end_10} :catchall_2
 
     .line 1454
     :goto_5
@@ -2912,7 +2916,7 @@
     :catch_3
     move-exception v1
 
-    :try_start_f
+    :try_start_11
     invoke-virtual {p1}, Lcom/blackberry/ids/RequestId;->getRequestId()I
 
     move-result v1
@@ -2956,9 +2960,9 @@
     const/4 v3, -0x1
 
     invoke-interface {p2, v1, v4, v2, v3}, Lcom/blackberry/ids/IDS$AzRequestHelper;->failure(IILjava/lang/String;I)V
-    :try_end_f
-    .catch Ljava/io/IOException; {:try_start_f .. :try_end_f} :catch_1
-    .catchall {:try_start_f .. :try_end_f} :catchall_2
+    :try_end_11
+    .catch Ljava/io/IOException; {:try_start_11 .. :try_end_11} :catch_1
+    .catchall {:try_start_11 .. :try_end_11} :catchall_2
 
     .line 1454
     if-eqz v0, :cond_1
@@ -2970,7 +2974,7 @@
 
     .line 1413
     :cond_c
-    :try_start_10
+    :try_start_12
     const-string v1, "no error description"
 
     goto :goto_4
@@ -2996,9 +3000,9 @@
     const v4, 0xc3ec
 
     invoke-interface {p2, v2, v4, v1, v3}, Lcom/blackberry/ids/IDS$AzRequestHelper;->failure(IILjava/lang/String;I)V
-    :try_end_10
-    .catch Ljava/io/IOException; {:try_start_10 .. :try_end_10} :catch_1
-    .catchall {:try_start_10 .. :try_end_10} :catchall_2
+    :try_end_12
+    .catch Ljava/io/IOException; {:try_start_12 .. :try_end_12} :catch_1
+    .catchall {:try_start_12 .. :try_end_12} :catchall_2
 
     goto :goto_5
 
@@ -3108,8 +3112,6 @@
     monitor-enter v1
 
     :try_start_0
-    sget-object v2, Lcom/blackberry/ids/IDS;->k:Lcom/blackberry/ids/TokenTempCache;
-
     invoke-static {p1}, Lcom/blackberry/ids/TokenTempCache;->a(Ljava/lang/String;)Z
 
     move-result v2
@@ -3132,13 +3134,9 @@
 
     invoke-static {v2, v3}, Lcom/blackberry/ids/Ln;->i(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    sget-object v2, Lcom/blackberry/ids/IDS;->k:Lcom/blackberry/ids/TokenTempCache;
-
     invoke-static {p1}, Lcom/blackberry/ids/TokenTempCache;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
-
-    sget-object v3, Lcom/blackberry/ids/IDS;->k:Lcom/blackberry/ids/TokenTempCache;
 
     invoke-static {p1}, Lcom/blackberry/ids/TokenTempCache;->c(Ljava/lang/String;)[Lcom/blackberry/ids/TokenParam;
 
@@ -3155,8 +3153,6 @@
     invoke-interface {p2, v0, v2, v3}, Lcom/blackberry/ids/IGetTokenCallback;->call(ILjava/lang/String;[Lcom/blackberry/ids/TokenParam;)V
 
     monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
@@ -3164,6 +3160,8 @@
     move-exception v0
 
     monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
 
@@ -3184,8 +3182,6 @@
     aput-object v0, v3, v4
 
     invoke-static {v2, v3}, Lcom/blackberry/ids/Ln;->w(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    sget-object v2, Lcom/blackberry/ids/IDS;->k:Lcom/blackberry/ids/TokenTempCache;
 
     invoke-static {p1}, Lcom/blackberry/ids/TokenTempCache;->d(Ljava/lang/String;)V
 
@@ -3517,8 +3513,6 @@
     aput-object v5, v3, v4
 
     invoke-static {v2, v3}, Lcom/blackberry/ids/Ln;->i(Ljava/lang/Object;[Ljava/lang/Object;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_2
 
@@ -3526,6 +3520,8 @@
     move-exception v0
 
     monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw v0
 
@@ -6625,8 +6621,6 @@
     .line 966
     :cond_0
     const-string v0, "null"
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_1
 
@@ -6635,6 +6629,8 @@
     move-exception v0
 
     monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
 
@@ -6862,8 +6858,6 @@
     .line 948
     :goto_2
     monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
@@ -6871,6 +6865,8 @@
     move-exception v0
 
     monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
 
@@ -6981,8 +6977,6 @@
 
     .line 671
     :try_start_0
-    sget-object v4, Lcom/blackberry/ids/IDS;->k:Lcom/blackberry/ids/TokenTempCache;
-
     invoke-static {p2}, Lcom/blackberry/ids/TokenTempCache;->a(Ljava/lang/String;)Z
 
     move-result v4
@@ -7007,15 +7001,11 @@
     invoke-static {v4, v5}, Lcom/blackberry/ids/Ln;->i(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 674
-    sget-object v4, Lcom/blackberry/ids/IDS;->k:Lcom/blackberry/ids/TokenTempCache;
-
     invoke-static {p2}, Lcom/blackberry/ids/TokenTempCache;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     .line 675
-    sget-object v5, Lcom/blackberry/ids/IDS;->k:Lcom/blackberry/ids/TokenTempCache;
-
     invoke-static {p2}, Lcom/blackberry/ids/TokenTempCache;->c(Ljava/lang/String;)[Lcom/blackberry/ids/TokenParam;
 
     move-result-object v5
@@ -7062,8 +7052,6 @@
     invoke-static {v4, v5}, Lcom/blackberry/ids/Ln;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 686
-    sget-object v4, Lcom/blackberry/ids/IDS;->k:Lcom/blackberry/ids/TokenTempCache;
-
     invoke-static {p2}, Lcom/blackberry/ids/TokenTempCache;->d(Ljava/lang/String;)V
 
     .line 687
@@ -7094,7 +7082,10 @@
     :catchall_0
     move-exception v0
 
+    :try_start_1
     monitor-exit v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw v0
 .end method
@@ -8152,50 +8143,36 @@
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->w(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 312
-    sget-object v0, Lcom/blackberry/ids/IDS;->k:Lcom/blackberry/ids/TokenTempCache;
-
     const-string v0, "urn:bbid:v1:bbmalaska"
 
     invoke-static {v0}, Lcom/blackberry/ids/TokenTempCache;->d(Ljava/lang/String;)V
 
     .line 313
-    sget-object v0, Lcom/blackberry/ids/IDS;->k:Lcom/blackberry/ids/TokenTempCache;
-
     const-string v0, "urn:bbid:v1:sipalaska"
 
     invoke-static {v0}, Lcom/blackberry/ids/TokenTempCache;->d(Ljava/lang/String;)V
 
     .line 314
-    sget-object v0, Lcom/blackberry/ids/IDS;->k:Lcom/blackberry/ids/TokenTempCache;
-
     const-string v0, "urn:bbid:v1:bbmchannels-alaska"
 
     invoke-static {v0}, Lcom/blackberry/ids/TokenTempCache;->d(Ljava/lang/String;)V
 
     .line 315
-    sget-object v0, Lcom/blackberry/ids/IDS;->k:Lcom/blackberry/ids/TokenTempCache;
-
     const-string v0, "urn:bbid:v1:dreams-ad-alaska"
 
     invoke-static {v0}, Lcom/blackberry/ids/TokenTempCache;->d(Ljava/lang/String;)V
 
     .line 316
-    sget-object v0, Lcom/blackberry/ids/IDS;->k:Lcom/blackberry/ids/TokenTempCache;
-
     const-string v0, "urn:bbid:v1:dreams-tag-alaska"
 
     invoke-static {v0}, Lcom/blackberry/ids/TokenTempCache;->d(Ljava/lang/String;)V
 
     .line 317
-    sget-object v0, Lcom/blackberry/ids/IDS;->k:Lcom/blackberry/ids/TokenTempCache;
-
     const-string v0, "urn:bbid:v1:icrs-xplatform"
 
     invoke-static {v0}, Lcom/blackberry/ids/TokenTempCache;->d(Ljava/lang/String;)V
 
     .line 318
-    sget-object v0, Lcom/blackberry/ids/IDS;->k:Lcom/blackberry/ids/TokenTempCache;
-
     const-string v0, "urn:bbid:v1:gist-xplatform"
 
     invoke-static {v0}, Lcom/blackberry/ids/TokenTempCache;->d(Ljava/lang/String;)V
@@ -8351,50 +8328,36 @@
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 2406
-    sget-object v0, Lcom/blackberry/ids/IDS;->k:Lcom/blackberry/ids/TokenTempCache;
-
     const-string v0, "urn:bbid:v1:bbmalaska"
 
     invoke-static {v0}, Lcom/blackberry/ids/TokenTempCache;->d(Ljava/lang/String;)V
 
     .line 2407
-    sget-object v0, Lcom/blackberry/ids/IDS;->k:Lcom/blackberry/ids/TokenTempCache;
-
     const-string v0, "urn:bbid:v1:sipalaska"
 
     invoke-static {v0}, Lcom/blackberry/ids/TokenTempCache;->d(Ljava/lang/String;)V
 
     .line 2408
-    sget-object v0, Lcom/blackberry/ids/IDS;->k:Lcom/blackberry/ids/TokenTempCache;
-
     const-string v0, "urn:bbid:v1:bbmchannels-alaska"
 
     invoke-static {v0}, Lcom/blackberry/ids/TokenTempCache;->d(Ljava/lang/String;)V
 
     .line 2409
-    sget-object v0, Lcom/blackberry/ids/IDS;->k:Lcom/blackberry/ids/TokenTempCache;
-
     const-string v0, "urn:bbid:v1:dreams-ad-alaska"
 
     invoke-static {v0}, Lcom/blackberry/ids/TokenTempCache;->d(Ljava/lang/String;)V
 
     .line 2410
-    sget-object v0, Lcom/blackberry/ids/IDS;->k:Lcom/blackberry/ids/TokenTempCache;
-
     const-string v0, "urn:bbid:v1:dreams-tag-alaska"
 
     invoke-static {v0}, Lcom/blackberry/ids/TokenTempCache;->d(Ljava/lang/String;)V
 
     .line 2411
-    sget-object v0, Lcom/blackberry/ids/IDS;->k:Lcom/blackberry/ids/TokenTempCache;
-
     const-string v0, "urn:bbid:v1:icrs-xplatform"
 
     invoke-static {v0}, Lcom/blackberry/ids/TokenTempCache;->d(Ljava/lang/String;)V
 
     .line 2412
-    sget-object v0, Lcom/blackberry/ids/IDS;->k:Lcom/blackberry/ids/TokenTempCache;
-
     const-string v0, "urn:bbid:v1:gist-xplatform"
 
     invoke-static {v0}, Lcom/blackberry/ids/TokenTempCache;->d(Ljava/lang/String;)V
@@ -8444,21 +8407,24 @@
 
     :try_start_4
     monitor-exit v2
-
-    throw v0
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    :try_start_5
+    throw v0
 
     .line 2418
     :catchall_1
     move-exception v0
 
-    :try_start_5
     monitor-exit v1
-
-    throw v0
     :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    :try_start_6
+    throw v0
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
     .line 2419
     :catchall_2

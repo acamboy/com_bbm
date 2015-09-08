@@ -43,7 +43,7 @@
 
     .prologue
     .line 346
-    invoke-static {p0}, Lcom/mapquest/android/maps/cv;->a(Landroid/os/Handler;)Z
+    invoke-static {p0}, Lcom/mapquest/android/maps/cu;->a(Landroid/os/Handler;)Z
 
     move-result v0
 

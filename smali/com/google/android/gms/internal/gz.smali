@@ -1,521 +1,97 @@
-.class public final Lcom/google/android/gms/internal/gz;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable;
-.implements Lcom/google/android/gms/games/request/GameRequest;
-
-
-# static fields
-.field public static final CREATOR:Lcom/google/android/gms/internal/ha;
+.class final Lcom/google/android/gms/internal/gz;
+.super Ljava/util/TimerTask;
 
 
 # instance fields
-.field private final IG:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/google/android/gms/games/request/GameRequestEntity;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field final synthetic a:Lcom/google/android/gms/internal/bo;
 
-.field private final wj:I
+.field final synthetic b:Lcom/google/android/gms/internal/gt;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lcom/google/android/gms/internal/ha;
-
-    invoke-direct {v0}, Lcom/google/android/gms/internal/ha;-><init>()V
-
-    sput-object v0, Lcom/google/android/gms/internal/gz;->CREATOR:Lcom/google/android/gms/internal/ha;
-
-    return-void
-.end method
-
-.method constructor <init>(ILjava/util/ArrayList;)V
+.method constructor <init>(Lcom/google/android/gms/internal/gt;Lcom/google/android/gms/internal/bo;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/google/android/gms/games/request/GameRequestEntity;",
-            ">;)V"
-        }
-    .end annotation
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcom/google/android/gms/internal/gz;->b:Lcom/google/android/gms/internal/gt;
 
-    iput p1, p0, Lcom/google/android/gms/internal/gz;->wj:I
+    iput-object p2, p0, Lcom/google/android/gms/internal/gz;->a:Lcom/google/android/gms/internal/bo;
 
-    iput-object p2, p0, Lcom/google/android/gms/internal/gz;->IG:Ljava/util/ArrayList;
+    invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
 
-    invoke-direct {p0}, Lcom/google/android/gms/internal/gz;->fR()V
-
-    return-void
-.end method
-
-.method private fR()V
-    .locals 8
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/gz;->IG:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    move v0, v2
-
-    :goto_0
-    invoke-static {v0}, Lcom/google/android/gms/internal/ed;->v(Z)V
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/gz;->IG:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/android/gms/games/request/GameRequest;
-
-    iget-object v1, p0, Lcom/google/android/gms/internal/gz;->IG:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v6
-
-    move v5, v2
-
-    :goto_1
-    if-ge v5, v6, :cond_2
-
-    iget-object v1, p0, Lcom/google/android/gms/internal/gz;->IG:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/google/android/gms/games/request/GameRequest;
-
-    invoke-interface {v0}, Lcom/google/android/gms/games/request/GameRequest;->getType()I
-
-    move-result v4
-
-    invoke-interface {v1}, Lcom/google/android/gms/games/request/GameRequest;->getType()I
-
-    move-result v7
-
-    if-ne v4, v7, :cond_1
-
-    move v4, v2
-
-    :goto_2
-    const-string v7, "All the requests must be of the same type"
-
-    invoke-static {v4, v7}, Lcom/google/android/gms/internal/ed;->a(ZLjava/lang/Object;)V
-
-    invoke-interface {v0}, Lcom/google/android/gms/games/request/GameRequest;->getSender()Lcom/google/android/gms/games/Player;
-
-    move-result-object v4
-
-    invoke-interface {v1}, Lcom/google/android/gms/games/request/GameRequest;->getSender()Lcom/google/android/gms/games/Player;
-
-    move-result-object v1
-
-    invoke-virtual {v4, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    const-string v4, "All the requests must be from the same sender"
-
-    invoke-static {v1, v4}, Lcom/google/android/gms/internal/ed;->a(ZLjava/lang/Object;)V
-
-    add-int/lit8 v1, v5, 0x1
-
-    move v5, v1
-
-    goto :goto_1
-
-    :cond_0
-    move v0, v3
-
-    goto :goto_0
-
-    :cond_1
-    move v4, v3
-
-    goto :goto_2
-
-    :cond_2
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final run()V
+    .locals 3
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcom/google/android/gms/internal/gz;->b:Lcom/google/android/gms/internal/gt;
 
-    return v0
-.end method
+    iget-object v0, v0, Lcom/google/android/gms/internal/gt;->b:Lcom/google/android/gms/internal/gs;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
+    iget-object v1, v0, Lcom/google/android/gms/internal/gs;->a:Ljava/lang/Object;
 
-    const/4 v3, 0x1
+    monitor-enter v1
 
-    const/4 v2, 0x0
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/gz;->b:Lcom/google/android/gms/internal/gt;
 
-    instance-of v0, p1, Lcom/google/android/gms/internal/gz;
+    iget-object v0, v0, Lcom/google/android/gms/internal/gt;->a:Lcom/google/android/gms/internal/hk;
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/hk;->e()I
 
-    move v0, v2
+    move-result v0
 
-    :goto_0
-    return v0
+    const/4 v2, -0x1
+
+    if-eq v0, v2, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/gz;->b:Lcom/google/android/gms/internal/gt;
+
+    iget-object v0, v0, Lcom/google/android/gms/internal/gt;->a:Lcom/google/android/gms/internal/hk;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/hk;->e()I
+
+    move-result v0
+
+    const/4 v2, 0x1
+
+    if-ne v0, v2, :cond_1
 
     :cond_0
-    if-ne p0, p1, :cond_1
+    monitor-exit v1
 
-    move v0, v3
-
-    goto :goto_0
+    :goto_0
+    return-void
 
     :cond_1
-    check-cast p1, Lcom/google/android/gms/internal/gz;
+    iget-object v0, p0, Lcom/google/android/gms/internal/gz;->b:Lcom/google/android/gms/internal/gt;
 
-    iget-object v0, p1, Lcom/google/android/gms/internal/gz;->IG:Ljava/util/ArrayList;
+    iget-object v0, v0, Lcom/google/android/gms/internal/gt;->a:Lcom/google/android/gms/internal/hk;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/hk;->d()V
 
-    move-result v0
+    new-instance v0, Lcom/google/android/gms/internal/ha;
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/gz;->IG:Ljava/util/ArrayList;
+    invoke-direct {v0, p0}, Lcom/google/android/gms/internal/ha;-><init>(Lcom/google/android/gms/internal/gz;)V
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+    invoke-static {v0}, Lcom/google/android/gms/internal/nz;->a(Ljava/lang/Runnable;)V
 
-    move-result v1
+    const-string v0, "Could not receive loaded message in a timely manner. Rejecting."
 
-    if-eq v0, v1, :cond_2
+    invoke-static {v0}, Lcom/google/android/gms/ads/internal/util/client/b;->d(Ljava/lang/String;)V
 
-    move v0, v2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lcom/google/android/gms/internal/gz;->IG:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v5
-
-    move v4, v2
-
-    :goto_1
-    if-ge v4, v5, :cond_4
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/gz;->IG:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/android/gms/games/request/GameRequest;
-
-    iget-object v1, p1, Lcom/google/android/gms/internal/gz;->IG:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/google/android/gms/games/request/GameRequest;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    move v0, v2
+    monitor-exit v1
 
     goto :goto_0
 
-    :cond_3
-    add-int/lit8 v0, v4, 0x1
+    :catchall_0
+    move-exception v0
 
-    move v4, v0
-
-    goto :goto_1
-
-    :cond_4
-    move v0, v3
-
-    goto :goto_0
-.end method
-
-.method public final fT()Ljava/util/ArrayList;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/google/android/gms/games/request/GameRequest;",
-            ">;"
-        }
-    .end annotation
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    iget-object v1, p0, Lcom/google/android/gms/internal/gz;->IG:Ljava/util/ArrayList;
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    return-object v0
-.end method
-
-.method public final fU()Ljava/util/ArrayList;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/google/android/gms/games/Player;",
-            ">;"
-        }
-    .end annotation
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "Method not supported on a cluster"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
-.end method
-
-.method public final freeze()Lcom/google/android/gms/games/request/GameRequest;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final bridge synthetic freeze()Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/gz;->freeze()Lcom/google/android/gms/games/request/GameRequest;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getCreationTimestamp()J
-    .locals 2
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "Method not supported on a cluster"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final getData()[B
-    .locals 2
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "Method not supported on a cluster"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final getExpirationTimestamp()J
-    .locals 2
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "Method not supported on a cluster"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final getGame()Lcom/google/android/gms/games/Game;
-    .locals 2
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "Method not supported on a cluster"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final getRecipient()Lcom/google/android/gms/games/Player;
-    .locals 2
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "Method not supported on a cluster"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final getRecipientStatus()I
-    .locals 2
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "Method not supported on a cluster"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final getRecipientStatus(Ljava/lang/String;)I
-    .locals 2
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "Method not supported on a cluster"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final getRequestId()Ljava/lang/String;
-    .locals 2
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/gz;->IG:Ljava/util/ArrayList;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/android/gms/games/request/GameRequestEntity;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/games/request/GameRequestEntity;->getRequestId()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getSender()Lcom/google/android/gms/games/Player;
-    .locals 2
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/gz;->IG:Ljava/util/ArrayList;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/android/gms/games/request/GameRequestEntity;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/games/request/GameRequestEntity;->getSender()Lcom/google/android/gms/games/Player;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getType()I
-    .locals 2
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/gz;->IG:Ljava/util/ArrayList;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/android/gms/games/request/GameRequestEntity;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/games/request/GameRequestEntity;->getType()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final getVersionCode()I
-    .locals 1
-
-    iget v0, p0, Lcom/google/android/gms/internal/gz;->wj:I
-
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/gz;->IG:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->toArray()[Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/ep;->hashCode([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final isConsumed()Z
-    .locals 2
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "Method not supported on a cluster"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final isDataValid()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/gms/internal/ha;->a(Lcom/google/android/gms/internal/gz;Landroid/os/Parcel;I)V
-
-    return-void
 .end method

@@ -1,6 +1,6 @@
 .class Lcom/glympse/android/rpc/af;
 .super Ljava/lang/Object;
-.source "MethodPhoneFavoritesList.java"
+.source "MethodGetUsers.java"
 
 # interfaces
 .implements Lcom/glympse/android/rpc/GRpcMethod;
@@ -20,7 +20,7 @@
 
 # virtual methods
 .method public call(Lcom/glympse/android/rpc/GMessageGateway;Lcom/glympse/android/rpc/GConnection;Lcom/glympse/android/core/GArray;)V
-    .locals 7
+    .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -34,112 +34,72 @@
     .end annotation
 
     .prologue
-    const/4 v6, 0x1
-
     .line 26
-    invoke-interface {p3, v6}, Lcom/glympse/android/core/GArray;->at(I)Ljava/lang/Object;
+    const/4 v0, 0x0
+
+    invoke-interface {p3, v0}, Lcom/glympse/android/core/GArray;->at(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/glympse/android/core/GArray;
+    check-cast v0, Lcom/glympse/android/core/GPrimitive;
 
-    .line 29
-    invoke-interface {v0}, Lcom/glympse/android/core/GArray;->length()I
+    .line 27
+    const/4 v1, 0x1
 
-    move-result v4
+    invoke-interface {p3, v1}, Lcom/glympse/android/core/GArray;->at(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/glympse/android/core/GPrimitive;
 
     .line 30
-    new-instance v5, Lcom/glympse/android/hal/GVector;
-
-    invoke-direct {v5, v4}, Lcom/glympse/android/hal/GVector;-><init>(I)V
-
-    .line 31
-    const/4 v1, 0x0
-
-    move v3, v1
-
-    :goto_0
-    if-ge v3, v4, :cond_0
-
-    .line 33
-    invoke-interface {v0, v3}, Lcom/glympse/android/core/GArray;->at(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/glympse/android/lib/GPhoneFavorite;
-
-    .line 34
-    invoke-interface {v1}, Lcom/glympse/android/lib/GPhoneFavorite;->toTicket()Lcom/glympse/android/api/GTicket;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/glympse/android/lib/GTicketPrivate;
-
-    .line 35
-    invoke-interface {v1}, Lcom/glympse/android/lib/GPhoneFavorite;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-interface {v2, v1}, Lcom/glympse/android/lib/GTicketPrivate;->setName(Ljava/lang/String;)V
-
-    .line 36
-    const v1, 0x1b7740
-
-    invoke-interface {v2, v1}, Lcom/glympse/android/lib/GTicketPrivate;->setDuration(I)V
-
-    .line 37
-    invoke-virtual {v5, v2}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V
-
-    .line 31
-    add-int/lit8 v1, v3, 0x1
-
-    move v3, v1
-
-    goto :goto_0
-
-    .line 40
-    :cond_0
-    invoke-virtual {v5}, Lcom/glympse/android/hal/GVector;->length()I
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 53
-    :goto_1
-    return-void
-
-    .line 46
-    :cond_1
     invoke-virtual {p0}, Lcom/glympse/android/rpc/af;->getName()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-static {v0}, Lcom/glympse/android/rpc/RpcMessages;->createMessage(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
-
-    move-result-object v0
-
-    .line 47
-    invoke-static {v6}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(I)Lcom/glympse/android/core/GPrimitive;
-
-    move-result-object v1
-
-    .line 48
-    invoke-static {v5, v1}, Lcom/glympse/android/rpc/d;->a(Lcom/glympse/android/core/GArray;Lcom/glympse/android/core/GPrimitive;)V
-
-    .line 49
-    const-string v2, "body"
-
-    invoke-static {v2}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/glympse/android/rpc/RpcMessages;->createMessage(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v2
 
-    invoke-interface {v0, v2, v1}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
+    .line 31
+    const/4 v3, 0x2
 
-    .line 52
-    invoke-interface {p1, p2, v0}, Lcom/glympse/android/rpc/GMessageGateway;->sendData(Lcom/glympse/android/rpc/GConnection;Lcom/glympse/android/core/GPrimitive;)V
+    invoke-static {v3}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(I)Lcom/glympse/android/core/GPrimitive;
 
-    goto :goto_1
+    move-result-object v3
+
+    .line 32
+    const-string v4, "collection"
+
+    invoke-static {v4}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-interface {v3, v4, v0}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
+
+    .line 33
+    const-string v0, "expired"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v3, v0, v1}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
+
+    .line 34
+    const-string v0, "arguments"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v2, v0, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
+
+    .line 37
+    invoke-interface {p1, p2, v2}, Lcom/glympse/android/rpc/GMessageGateway;->sendData(Lcom/glympse/android/rpc/GConnection;Lcom/glympse/android/core/GPrimitive;)V
+
+    .line 38
+    return-void
 .end method
 
 .method public getName()Ljava/lang/String;
@@ -147,7 +107,7 @@
 
     .prologue
     .line 20
-    const-string v0, "phone_favorites_list"
+    const-string v0, "get_users"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -157,7 +117,7 @@
 .end method
 
 .method public handle(Lcom/glympse/android/rpc/GMessageGateway;Lcom/glympse/android/rpc/GConnection;Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GArray;)V
-    .locals 5
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -172,39 +132,92 @@
     .end annotation
 
     .prologue
-    .line 58
-    invoke-static {p4}, Lcom/glympse/android/rpc/RpcMessages;->consumerUnpackSink(Lcom/glympse/android/core/GArray;)Lcom/glympse/android/api/GEventSink;
+    const/4 v0, 0x0
+
+    .line 43
+    invoke-static {p4}, Lcom/glympse/android/rpc/RpcMessages;->providerUnpackGlympse(Lcom/glympse/android/core/GArray;)Lcom/glympse/android/lib/GGlympsePrivate;
+
+    move-result-object v2
+
+    .line 48
+    const-string v1, "arguments"
+
+    invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {p3, v1}, Lcom/glympse/android/core/GPrimitive;->get(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+
+    move-result-object v3
+
+    .line 49
+    if-eqz v3, :cond_2
+
+    .line 51
+    const-string v0, "collection"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 61
-    new-instance v1, Lcom/glympse/android/hal/GVector;
+    invoke-interface {v3, v0}, Lcom/glympse/android/core/GPrimitive;->get(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
 
-    invoke-direct {v1}, Lcom/glympse/android/hal/GVector;-><init>()V
+    move-result-object v1
 
-    .line 62
-    const-string v2, "body"
+    .line 52
+    const-string v0, "expired"
 
-    invoke-static {v2}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-interface {p3, v2}, Lcom/glympse/android/core/GPrimitive;->get(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+    invoke-interface {v3, v0}, Lcom/glympse/android/core/GPrimitive;->get(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
 
-    move-result-object v2
+    move-result-object v0
 
-    .line 63
-    invoke-static {v1, v2}, Lcom/glympse/android/rpc/d;->a(Lcom/glympse/android/hal/GVector;Lcom/glympse/android/core/GPrimitive;)V
+    .line 54
+    :goto_0
+    if-nez v1, :cond_0
 
-    .line 66
-    const/4 v2, 0x0
+    .line 56
+    const-string v1, "standalone"
 
-    const/4 v3, 0x2
+    invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v4, 0x4
+    move-result-object v1
 
-    invoke-interface {v0, v2, v3, v4, v1}, Lcom/glympse/android/api/GEventSink;->eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
+    invoke-static {v1}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
 
-    .line 67
+    move-result-object v1
+
+    .line 58
+    :cond_0
+    if-nez v0, :cond_1
+
+    .line 60
+    const/4 v0, 0x1
+
+    invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(Z)Lcom/glympse/android/core/GPrimitive;
+
+    move-result-object v0
+
+    .line 64
+    :cond_1
+    new-instance v3, Lcom/glympse/android/rpc/bd;
+
+    invoke-direct {v3}, Lcom/glympse/android/rpc/bd;-><init>()V
+
+    invoke-static {v2, v1, v0}, Lcom/glympse/android/rpc/RpcMessages;->packParameters(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/glympse/android/core/GArray;
+
+    move-result-object v0
+
+    invoke-virtual {v3, p1, p2, v0}, Lcom/glympse/android/rpc/bd;->call(Lcom/glympse/android/rpc/GMessageGateway;Lcom/glympse/android/rpc/GConnection;Lcom/glympse/android/core/GArray;)V
+
+    .line 65
     return-void
+
+    :cond_2
+    move-object v1, v0
+
+    goto :goto_0
 .end method

@@ -309,38 +309,31 @@
     .line 919
     iget-object v0, p0, Lit/sephiroth/android/library/widget/AdapterView;->ag:Lit/sephiroth/android/library/widget/x;
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
-    .line 930
+    .line 927
+    :cond_0
     :goto_0
     return-void
 
     .line 922
-    :cond_0
+    :cond_1
     invoke-virtual {p0}, Lit/sephiroth/android/library/widget/AdapterView;->getSelectedItemPosition()I
 
     move-result v0
 
     .line 923
-    if-ltz v0, :cond_1
+    if-ltz v0, :cond_0
 
     .line 924
     invoke-virtual {p0}, Lit/sephiroth/android/library/widget/AdapterView;->getSelectedView()Landroid/view/View;
 
     .line 925
-    iget-object v1, p0, Lit/sephiroth/android/library/widget/AdapterView;->ag:Lit/sephiroth/android/library/widget/x;
-
     invoke-virtual {p0}, Lit/sephiroth/android/library/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
 
     move-result-object v1
 
     invoke-interface {v1, v0}, Landroid/widget/Adapter;->getItemId(I)J
-
-    goto :goto_0
-
-    .line 928
-    :cond_1
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/AdapterView;->ag:Lit/sephiroth/android/library/widget/x;
 
     goto :goto_0
 .end method
@@ -655,7 +648,7 @@
     :cond_0
     iget-object v1, p0, Lit/sephiroth/android/library/widget/AdapterView;->ah:Lit/sephiroth/android/library/widget/v;
 
-    invoke-interface {v1, p2}, Lit/sephiroth/android/library/widget/v;->a(I)V
+    invoke-interface {v1, p0, p2}, Lit/sephiroth/android/library/widget/v;->a(Lit/sephiroth/android/library/widget/AdapterView;I)V
 
     .line 303
     :goto_0
@@ -826,7 +819,35 @@
     return-void
 .end method
 
-.method public final f(I)J
+.method public final f(I)Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 777
+    invoke-virtual {p0}, Lit/sephiroth/android/library/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
+
+    move-result-object v0
+
+    .line 778
+    if-eqz v0, :cond_0
+
+    if-gez p1, :cond_1
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+
+    :cond_1
+    invoke-interface {v0, p1}, Landroid/widget/Adapter;->getItem(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method public final g(I)J
     .locals 2
 
     .prologue
@@ -2090,7 +2111,7 @@
     iput p1, p0, Lit/sephiroth/android/library/widget/AdapterView;->ak:I
 
     .line 1211
-    invoke-virtual {p0, p1}, Lit/sephiroth/android/library/widget/AdapterView;->f(I)J
+    invoke-virtual {p0, p1}, Lit/sephiroth/android/library/widget/AdapterView;->g(I)J
 
     move-result-wide v0
 
@@ -2188,7 +2209,7 @@
     iput p1, p0, Lit/sephiroth/android/library/widget/AdapterView;->am:I
 
     .line 1200
-    invoke-virtual {p0, p1}, Lit/sephiroth/android/library/widget/AdapterView;->f(I)J
+    invoke-virtual {p0, p1}, Lit/sephiroth/android/library/widget/AdapterView;->g(I)J
 
     move-result-wide v0
 

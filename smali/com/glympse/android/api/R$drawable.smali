@@ -4,37 +4,37 @@
 
 
 # static fields
-.field public static final bg_wru:I = 0x7f020047
+.field public static final bg_wru:I = 0x7f02005c
 
-.field public static final glogo_v2:I = 0x7f02012b
+.field public static final glogo_v2:I = 0x7f0200e5
 
-.field public static final notification_00:I = 0x7f020344
+.field public static final notification_00:I = 0x7f020321
 
-.field public static final notification_01:I = 0x7f020345
+.field public static final notification_01:I = 0x7f020322
 
-.field public static final notification_02:I = 0x7f020346
+.field public static final notification_02:I = 0x7f020323
 
-.field public static final notification_03:I = 0x7f020347
+.field public static final notification_03:I = 0x7f020324
 
-.field public static final notification_04:I = 0x7f020348
+.field public static final notification_04:I = 0x7f020325
 
-.field public static final notification_05:I = 0x7f020349
+.field public static final notification_05:I = 0x7f020326
 
-.field public static final notification_06:I = 0x7f02034a
+.field public static final notification_06:I = 0x7f020327
 
-.field public static final notification_07:I = 0x7f02034b
+.field public static final notification_07:I = 0x7f020328
 
-.field public static final notification_08:I = 0x7f02034c
+.field public static final notification_08:I = 0x7f020329
 
-.field public static final notification_09:I = 0x7f02034d
+.field public static final notification_09:I = 0x7f02032a
 
-.field public static final notification_arrived:I = 0x7f02034e
+.field public static final notification_arrived:I = 0x7f02032b
 
-.field public static final notification_low_battery:I = 0x7f02034f
+.field public static final notification_low_battery:I = 0x7f02032c
 
-.field public static final notification_received:I = 0x7f020350
+.field public static final notification_received:I = 0x7f02032d
 
-.field public static final notification_warning:I = 0x7f020351
+.field public static final notification_warning:I = 0x7f02032e
 
 
 # direct methods

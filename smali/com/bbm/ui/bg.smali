@@ -1,132 +1,94 @@
-.class final synthetic Lcom/bbm/ui/bg;
+.class final Lcom/bbm/ui/bg;
 .super Ljava/lang/Object;
 .source "EmoticonInputPanel.java"
 
+# interfaces
+.implements Landroid/view/View$OnKeyListener;
 
-# static fields
-.field static final synthetic a:[I
+
+# instance fields
+.field final synthetic a:Lcom/bbm/ui/EmoticonInputPanel;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/bbm/ui/EmoticonInputPanel;)V
+    .locals 0
 
     .prologue
-    .line 548
-    invoke-static {}, Lcom/bbm/ui/bp;->values()[Lcom/bbm/ui/bp;
+    .line 299
+    iput-object p1, p0, Lcom/bbm/ui/bg;->a:Lcom/bbm/ui/EmoticonInputPanel;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
+    .locals 2
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 303
+    const/16 v1, 0x42
+
+    if-ne p2, v1, :cond_0
+
+    .line 304
+    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    .line 305
+    iget-object v1, p0, Lcom/bbm/ui/bg;->a:Lcom/bbm/ui/EmoticonInputPanel;
+
+    invoke-static {v1}, Lcom/bbm/ui/EmoticonInputPanel;->g(Lcom/bbm/ui/EmoticonInputPanel;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-static {}, Lcom/bbm/Alaska;->p()Lcom/bbm/an;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/bbm/an;->t()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 317
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 310
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/bg;->a:Lcom/bbm/ui/EmoticonInputPanel;
+
+    invoke-static {v0}, Lcom/bbm/ui/EmoticonInputPanel;->b(Lcom/bbm/ui/EmoticonInputPanel;)Lcom/bbm/ui/bx;
 
     move-result-object v0
 
-    array-length v0, v0
+    if-eqz v0, :cond_2
 
-    new-array v0, v0, [I
+    .line 311
+    iget-object v0, p0, Lcom/bbm/ui/bg;->a:Lcom/bbm/ui/EmoticonInputPanel;
 
-    sput-object v0, Lcom/bbm/ui/bg;->a:[I
+    invoke-static {v0}, Lcom/bbm/ui/EmoticonInputPanel;->b(Lcom/bbm/ui/EmoticonInputPanel;)Lcom/bbm/ui/bx;
 
-    :try_start_0
-    sget-object v0, Lcom/bbm/ui/bg;->a:[I
+    move-result-object v0
 
-    sget-object v1, Lcom/bbm/ui/bp;->a:Lcom/bbm/ui/bp;
+    invoke-interface {v0}, Lcom/bbm/ui/bx;->h()V
 
-    invoke-virtual {v1}, Lcom/bbm/ui/bp;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_4
-
-    :goto_0
-    :try_start_1
-    sget-object v0, Lcom/bbm/ui/bg;->a:[I
-
-    sget-object v1, Lcom/bbm/ui/bp;->b:Lcom/bbm/ui/bp;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/bp;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_3
-
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/bbm/ui/bg;->a:[I
-
-    sget-object v1, Lcom/bbm/ui/bp;->d:Lcom/bbm/ui/bp;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/bp;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :goto_2
-    :try_start_3
-    sget-object v0, Lcom/bbm/ui/bg;->a:[I
-
-    sget-object v1, Lcom/bbm/ui/bp;->c:Lcom/bbm/ui/bp;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/bp;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_1
-
-    :goto_3
-    :try_start_4
-    sget-object v0, Lcom/bbm/ui/bg;->a:[I
-
-    sget-object v1, Lcom/bbm/ui/bp;->e:Lcom/bbm/ui/bp;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/bp;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_0
-
-    :goto_4
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_4
-
-    :catch_1
-    move-exception v0
-
-    goto :goto_3
-
-    :catch_2
-    move-exception v0
-
-    goto :goto_2
-
-    :catch_3
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_4
-    move-exception v0
+    .line 315
+    :cond_2
+    const/4 v0, 0x1
 
     goto :goto_0
 .end method

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_edit_glympse" android:id="@id/glympse_modify" android:visible="false" android:title="@string/glympse_modify" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_glympse" android:id="@id/glympse_reply" android:visible="true" android:title="@string/glympse_reply" app:showAsAction="always" />
+</menu>

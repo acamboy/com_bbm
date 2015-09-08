@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/uz;
 .super Ljava/lang/Object;
-.source "InviteActivity.java"
+.source "NewChannelActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/view/View$OnFocusChangeListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/InviteActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/NewChannelActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/InviteActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/NewChannelActivity;)V
     .locals 0
 
     .prologue
-    .line 483
-    iput-object p1, p0, Lcom/bbm/ui/activities/uz;->a:Lcom/bbm/ui/activities/InviteActivity;
+    .line 453
+    iput-object p1, p0, Lcom/bbm/ui/activities/uz;->a:Lcom/bbm/ui/activities/NewChannelActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,95 +25,23 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 5
+.method public final onFocusChange(Landroid/view/View;Z)V
+    .locals 1
 
     .prologue
-    const/4 v4, 0x0
+    .line 456
+    if-eqz p2, :cond_0
 
-    .line 487
-    const-string v0, "mPinSuggestion Clicked"
+    .line 457
+    iget-object v0, p0, Lcom/bbm/ui/activities/uz;->a:Lcom/bbm/ui/activities/NewChannelActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 489
-    iget-object v0, p0, Lcom/bbm/ui/activities/uz;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->r(Lcom/bbm/ui/activities/InviteActivity;)Landroid/widget/EditText;
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->n(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/Spinner;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    invoke-virtual {v0}, Landroid/widget/Spinner;->performClick()Z
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 490
-    iget-object v1, p0, Lcom/bbm/ui/activities/uz;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/InviteActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x7f0e04ae
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    aput-object v0, v2, v4
-
-    invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 491
-    invoke-static {}, Lcom/bbm/ui/activities/InviteActivity;->a()Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    new-instance v3, Lcom/bbm/ui/activities/fk;
-
-    invoke-direct {v3, v1, v0, v4}, Lcom/bbm/ui/activities/fk;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
-
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 492
-    iget-object v0, p0, Lcom/bbm/ui/activities/uz;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->r(Lcom/bbm/ui/activities/InviteActivity;)Landroid/widget/EditText;
-
-    move-result-object v0
-
-    const-string v1, ""
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-
-    .line 493
-    iget-object v0, p0, Lcom/bbm/ui/activities/uz;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->e(Lcom/bbm/ui/activities/InviteActivity;)V
-
-    .line 494
-    iget-object v0, p0, Lcom/bbm/ui/activities/uz;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->s(Lcom/bbm/ui/activities/InviteActivity;)V
-
-    .line 495
+    .line 459
+    :cond_0
     return-void
 .end method

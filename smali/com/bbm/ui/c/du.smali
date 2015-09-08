@@ -1,69 +1,67 @@
-.class public final Lcom/bbm/ui/c/du;
-.super Ljava/lang/Object;
-.source "GroupMembersFragment.java"
+.class final Lcom/bbm/ui/c/du;
+.super Lcom/bbm/j/k;
+.source "DiscoverChannelsFragment.java"
 
 
 # instance fields
-.field final a:Lcom/bbm/ui/c/dv;
-
-.field final b:Ljava/lang/String;
-
-.field final c:Lcom/bbm/d/a/a;
-
-.field final d:Ljava/lang/String;
+.field final synthetic a:Lcom/bbm/ui/c/dr;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/g/ac;Ljava/lang/String;)V
+.method constructor <init>(Lcom/bbm/ui/c/dr;)V
     .locals 1
 
     .prologue
-    .line 263
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 237
+    iput-object p1, p0, Lcom/bbm/ui/c/du;->a:Lcom/bbm/ui/c/dr;
 
-    .line 264
-    sget-object v0, Lcom/bbm/ui/c/dv;->a:Lcom/bbm/ui/c/dv;
+    const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/bbm/ui/c/du;->a:Lcom/bbm/ui/c/dv;
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
-    .line 265
-    iput-object p1, p0, Lcom/bbm/ui/c/du;->c:Lcom/bbm/d/a/a;
-
-    .line 266
-    iput-object p2, p0, Lcom/bbm/ui/c/du;->b:Ljava/lang/String;
-
-    .line 267
-    iget-object v0, p1, Lcom/bbm/g/ac;->c:Ljava/lang/String;
-
-    iput-object v0, p0, Lcom/bbm/ui/c/du;->d:Ljava/lang/String;
-
-    .line 268
     return-void
 .end method
 
-.method public constructor <init>(Lcom/bbm/g/p;Ljava/lang/String;)V
-    .locals 1
+
+# virtual methods
+.method protected final a()V
+    .locals 2
 
     .prologue
-    .line 270
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 240
+    iget-object v0, p0, Lcom/bbm/ui/c/du;->a:Lcom/bbm/ui/c/dr;
 
-    .line 271
-    sget-object v0, Lcom/bbm/ui/c/dv;->b:Lcom/bbm/ui/c/dv;
+    iget-object v1, p0, Lcom/bbm/ui/c/du;->a:Lcom/bbm/ui/c/dr;
 
-    iput-object v0, p0, Lcom/bbm/ui/c/du;->a:Lcom/bbm/ui/c/dv;
+    invoke-static {v1}, Lcom/bbm/ui/c/dr;->d(Lcom/bbm/ui/c/dr;)Lcom/bbm/d/a;
 
-    .line 272
-    iput-object p1, p0, Lcom/bbm/ui/c/du;->c:Lcom/bbm/d/a/a;
+    move-result-object v1
 
-    .line 273
-    iput-object p2, p0, Lcom/bbm/ui/c/du;->b:Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/bbm/d/a;->ac()Lcom/bbm/j/w;
 
-    .line 274
-    iget-object v0, p1, Lcom/bbm/g/p;->b:Ljava/lang/String;
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/bbm/ui/c/du;->d:Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/bbm/ui/c/dr;->a(Lcom/bbm/ui/c/dr;Lcom/bbm/j/w;)Lcom/bbm/j/w;
 
-    .line 276
+    .line 241
+    iget-object v0, p0, Lcom/bbm/ui/c/du;->a:Lcom/bbm/ui/c/dr;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/dr;->b(Lcom/bbm/ui/c/dr;)Lcom/bbm/j/w;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/bbm/j/w;->b()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 242
+    iget-object v0, p0, Lcom/bbm/ui/c/du;->a:Lcom/bbm/ui/c/dr;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/dr;->e(Lcom/bbm/ui/c/dr;)V
+
+    .line 244
+    :cond_0
     return-void
 .end method

@@ -45,24 +45,24 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 13
-    new-instance v0, Lcom/bbm/util/ct;
+    new-instance v0, Lcom/bbm/util/dc;
 
     new-instance v1, Lcom/bbm/f/ae;
 
     invoke-direct {v1}, Lcom/bbm/f/ae;-><init>()V
 
-    invoke-direct {v0, v1}, Lcom/bbm/util/ct;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, v1}, Lcom/bbm/util/dc;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/bbm/f/ar;->d:Lcom/bbm/j/r;
 
     .line 14
-    new-instance v0, Lcom/bbm/util/ct;
+    new-instance v0, Lcom/bbm/util/dc;
 
     new-instance v1, Lcom/bbm/f/ag;
 
     invoke-direct {v1}, Lcom/bbm/f/ag;-><init>()V
 
-    invoke-direct {v0, v1}, Lcom/bbm/util/ct;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, v1}, Lcom/bbm/util/dc;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/bbm/f/ar;->e:Lcom/bbm/j/r;
 
@@ -104,7 +104,7 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 27
     iget-object v0, p0, Lcom/bbm/f/ar;->a:Lcom/bbm/f/ai;
@@ -125,6 +125,14 @@
     return-void
 .end method
 
+.method public final a(Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 85
+    return-void
+.end method
+
 .method public final b()V
     .locals 2
 
@@ -136,7 +144,7 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 35
     iget-object v0, p0, Lcom/bbm/f/ar;->b:Lcom/bbm/f/ai;
@@ -243,7 +251,15 @@
     return-void
 .end method
 
-.method public final j()Z
+.method public final j()V
+    .locals 0
+
+    .prologue
+    .line 76
+    return-void
+.end method
+
+.method public final k()Z
     .locals 1
 
     .prologue

@@ -8,126 +8,100 @@
 
 
 # static fields
-.field private static final wg:I = 0x0
+.field private static final xa:I = 0x0
 
-.field private static final wh:I = 0x1
+.field private static final xb:I = 0x1
 
-.field private static final wi:I = 0x2
+.field private static final xc:I = 0x2
 
-.field private static final wj:I = 0x3
+.field private static final xd:I = 0x3
 
-.field private static final wk:I = 0x4
+.field private static final xe:I = 0x4
 
-.field public static final wl:I = 0x3e8
+.field public static final xf:I = 0x3e8
 
-.field public static final wm:I = 0x3ea
+.field public static final xg:I = 0x3ea
 
-.field public static final wn:I = 0x3ef
+.field public static final xh:I = 0x3ef
 
-.field public static final wo:I = 0x3f0
+.field public static final xi:I = 0x3f0
 
-.field private static final wp:I = 0x6400000
+.field private static final xj:I = 0x6400000
 
-.field private static final wq:I = 0x20000
+.field private static final xk:I = 0x20000
 
-.field public static final wr:I = 0x2
+.field public static final xl:I = 0x2
 
 
 # instance fields
-.field private cb:I
+.field private ce:I
 
 .field private h:Ljava/lang/String;
 
-.field private jL:Lcom/glympse/android/hal/GMutex;
+.field private kp:Lcom/glympse/android/hal/GMutex;
 
-.field private qK:Z
+.field private ry:Z
 
-.field private qL:Lcom/glympse/android/ws/GWebSocketListener;
+.field private rz:Lcom/glympse/android/ws/GWebSocketListener;
 
-.field private tA:Ljava/lang/String;
+.field private um:Ljava/lang/String;
 
 .field private v:Z
 
-.field private vT:Lcom/glympse/android/hal/GSocket;
+.field private wN:Lcom/glympse/android/hal/GSocket;
 
-.field private vU:Lcom/glympse/android/lib/GUri;
+.field private wO:Lcom/glympse/android/lib/GUri;
 
-.field private vV:Lcom/glympse/android/hal/GByteVector;
+.field private wP:Lcom/glympse/android/hal/GByteVector;
 
-.field private vW:Lcom/glympse/android/hal/GByteVector;
+.field private wQ:Lcom/glympse/android/hal/GByteVector;
 
-.field private vX:Z
+.field private wR:Z
 
-.field private vY:Lcom/glympse/android/core/GHandler;
+.field private wS:Lcom/glympse/android/core/GHandler;
 
-.field private vZ:Lcom/glympse/android/core/GHandler;
+.field private wT:Lcom/glympse/android/core/GHandler;
 
-.field private wa:Lcom/glympse/android/hal/GByteVector;
+.field private wU:Lcom/glympse/android/hal/GByteVector;
 
-.field private wb:I
+.field private wV:I
 
-.field private wc:I
+.field private wW:I
 
-.field private wd:I
+.field private wX:I
 
-.field private we:Z
+.field private wY:Z
 
-.field private wf:Z
+.field private wZ:Z
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 2
+    .locals 1
 
     .prologue
-    const/4 v1, 0x0
-
     const/4 v0, 0x0
 
-    .line 73
+    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 20
-    iput-object v0, p0, Lcom/glympse/android/ws/a;->qL:Lcom/glympse/android/ws/GWebSocketListener;
-
-    .line 21
-    iput-object v0, p0, Lcom/glympse/android/ws/a;->vT:Lcom/glympse/android/hal/GSocket;
-
-    .line 22
-    iput-object v0, p0, Lcom/glympse/android/ws/a;->tA:Ljava/lang/String;
-
-    .line 23
-    iput-object v0, p0, Lcom/glympse/android/ws/a;->vU:Lcom/glympse/android/lib/GUri;
-
-    .line 24
-    iput-object v0, p0, Lcom/glympse/android/ws/a;->h:Ljava/lang/String;
-
-    .line 25
-    iput-boolean v1, p0, Lcom/glympse/android/ws/a;->v:Z
-
-    .line 26
-    iput-boolean v1, p0, Lcom/glympse/android/ws/a;->qK:Z
-
-    .line 28
-    iput-object v0, p0, Lcom/glympse/android/ws/a;->vV:Lcom/glympse/android/hal/GByteVector;
-
-    .line 29
-    iput-object v0, p0, Lcom/glympse/android/ws/a;->vW:Lcom/glympse/android/hal/GByteVector;
-
-    .line 30
-    iput-boolean v1, p0, Lcom/glympse/android/ws/a;->vX:Z
-
-    .line 35
-    iput-object v0, p0, Lcom/glympse/android/ws/a;->wa:Lcom/glympse/android/hal/GByteVector;
+    .line 73
+    iput-boolean v0, p0, Lcom/glympse/android/ws/a;->v:Z
 
     .line 74
+    iput-boolean v0, p0, Lcom/glympse/android/ws/a;->ry:Z
+
+    .line 75
+    iput-boolean v0, p0, Lcom/glympse/android/ws/a;->wR:Z
+
+    .line 76
     invoke-static {}, Lcom/glympse/android/hal/HalFactory;->createMutex()Lcom/glympse/android/hal/GMutex;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/ws/a;->jL:Lcom/glympse/android/hal/GMutex;
+    iput-object v0, p0, Lcom/glympse/android/ws/a;->kp:Lcom/glympse/android/hal/GMutex;
 
-    .line 75
+    .line 77
     return-void
 .end method
 
@@ -135,27 +109,27 @@
     .locals 2
 
     .prologue
-    .line 554
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->jL:Lcom/glympse/android/hal/GMutex;
+    .line 557
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->kp:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->block()V
 
-    .line 557
+    .line 560
     :try_start_0
     iget-boolean v0, p0, Lcom/glympse/android/ws/a;->v:Z
 
     if-nez v0, :cond_0
 
-    .line 559
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->jL:Lcom/glympse/android/hal/GMutex;
+    .line 562
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->kp:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->unblock()V
 
-    .line 569
+    .line 572
     :goto_0
     return-void
 
-    .line 562
+    .line 565
     :cond_0
     invoke-interface {p1}, Lcom/glympse/android/hal/GByteVector;->getBytes()[B
 
@@ -167,16 +141,16 @@
 
     move-result-object v0
 
-    .line 563
-    iget-object v1, p0, Lcom/glympse/android/ws/a;->vT:Lcom/glympse/android/hal/GSocket;
+    .line 566
+    iget-object v1, p0, Lcom/glympse/android/ws/a;->wN:Lcom/glympse/android/hal/GSocket;
 
     invoke-interface {v1, v0}, Lcom/glympse/android/hal/GSocket;->write([B)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 568
+    .line 571
     :goto_1
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->jL:Lcom/glympse/android/hal/GMutex;
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->kp:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->unblock()V
 
@@ -192,38 +166,38 @@
     .locals 2
 
     .prologue
-    .line 141
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->jL:Lcom/glympse/android/hal/GMutex;
+    .line 143
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->kp:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->block()V
 
-    .line 144
+    .line 146
     :try_start_0
     iget-boolean v0, p0, Lcom/glympse/android/ws/a;->v:Z
 
     if-nez v0, :cond_1
 
-    .line 146
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vT:Lcom/glympse/android/hal/GSocket;
+    .line 148
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wN:Lcom/glympse/android/hal/GSocket;
 
     if-eqz v0, :cond_0
 
-    .line 148
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vT:Lcom/glympse/android/hal/GSocket;
+    .line 150
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wN:Lcom/glympse/android/hal/GSocket;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GSocket;->close()V
 
-    .line 150
+    .line 152
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->jL:Lcom/glympse/android/hal/GMutex;
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->kp:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->unblock()V
 
-    .line 163
+    .line 165
     :goto_0
     return-void
 
-    .line 153
+    .line 155
     :cond_1
     const/16 v0, 0x8
 
@@ -231,31 +205,31 @@
 
     move-result-object v0
 
-    .line 154
-    iget-object v1, p0, Lcom/glympse/android/ws/a;->vT:Lcom/glympse/android/hal/GSocket;
+    .line 156
+    iget-object v1, p0, Lcom/glympse/android/ws/a;->wN:Lcom/glympse/android/hal/GSocket;
 
     invoke-interface {v1, v0}, Lcom/glympse/android/hal/GSocket;->write([B)V
 
-    .line 155
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vT:Lcom/glympse/android/hal/GSocket;
+    .line 157
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wN:Lcom/glympse/android/hal/GSocket;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GSocket;->close()V
 
-    .line 156
+    .line 158
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/glympse/android/ws/a;->cb:I
+    iput v0, p0, Lcom/glympse/android/ws/a;->ce:I
 
-    .line 157
+    .line 159
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/glympse/android/ws/a;->v:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 162
+    .line 164
     :goto_1
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->jL:Lcom/glympse/android/hal/GMutex;
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->kp:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->unblock()V
 
@@ -267,96 +241,70 @@
     goto :goto_1
 .end method
 
-.method private dB()Ljava/lang/String;
-    .locals 5
+.method private dG()Ljava/lang/String;
+    .locals 3
 
     .prologue
-    const/4 v4, 0x0
+    .line 517
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wU:Lcom/glympse/android/hal/GByteVector;
 
-    .line 514
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->wa:Lcom/glympse/android/hal/GByteVector;
-
-    const-string v1, "UTF-8"
-
-    invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lcom/glympse/android/hal/GByteVector;->stringEncode(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/glympse/android/ws/WebSocketParser;->parseHandshakeResponse(Lcom/glympse/android/hal/GByteVector;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 515
-    const-string v1, "\r\n\r\n"
-
-    invoke-virtual {v0, v1, v4}, Ljava/lang/String;->indexOf(Ljava/lang/String;I)I
-
-    move-result v1
-
-    .line 516
-    if-gez v1, :cond_0
-
-    .line 518
-    const/4 v0, 0x0
+    .line 519
+    if-eqz v0, :cond_0
 
     .line 522
-    :goto_0
-    return-object v0
+    iget-object v1, p0, Lcom/glympse/android/ws/a;->wU:Lcom/glympse/android/hal/GByteVector;
 
-    .line 521
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    invoke-interface {v1, v2}, Lcom/glympse/android/hal/GByteVector;->removeFront(I)V
+
+    .line 525
     :cond_0
-    iget-object v2, p0, Lcom/glympse/android/ws/a;->wa:Lcom/glympse/android/hal/GByteVector;
-
-    add-int/lit8 v3, v1, 0x4
-
-    invoke-interface {v2, v3}, Lcom/glympse/android/hal/GByteVector;->removeFront(I)V
-
-    .line 522
-    add-int/lit8 v1, v1, 0x4
-
-    invoke-static {v0, v4, v1}, Lcom/glympse/android/hal/Helpers;->substrlen(Ljava/lang/String;II)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
+    return-object v0
 .end method
 
-.method private dC()I
+.method private dH()I
     .locals 2
 
     .prologue
-    .line 527
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->wa:Lcom/glympse/android/hal/GByteVector;
+    .line 530
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wU:Lcom/glympse/android/hal/GByteVector;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GByteVector;->size()I
 
     move-result v0
 
-    iget v1, p0, Lcom/glympse/android/ws/a;->wb:I
+    iget v1, p0, Lcom/glympse/android/ws/a;->wV:I
 
     sub-int/2addr v0, v1
 
     return v0
 .end method
 
-.method private dD()V
+.method private dI()V
     .locals 4
 
     .prologue
-    .line 534
+    .line 537
     invoke-static {}, Lcom/glympse/android/ws/WebSocketParser;->generateSecret()[B
 
     move-result-object v0
 
-    .line 535
+    .line 538
     invoke-static {v0}, Lcom/glympse/android/hal/utils/Base64;->encodeBytes([B)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/glympse/android/ws/a;->h:Ljava/lang/String;
 
-    .line 537
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vU:Lcom/glympse/android/lib/GUri;
+    .line 540
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wO:Lcom/glympse/android/lib/GUri;
 
     invoke-interface {v0}, Lcom/glympse/android/lib/GUri;->getPath()Ljava/lang/String;
 
@@ -374,9 +322,9 @@
 
     move-result-object v0
 
-    .line 538
+    .line 541
     :goto_0
-    iget-object v1, p0, Lcom/glympse/android/ws/a;->vU:Lcom/glympse/android/lib/GUri;
+    iget-object v1, p0, Lcom/glympse/android/ws/a;->wO:Lcom/glympse/android/lib/GUri;
 
     invoke-interface {v1}, Lcom/glympse/android/lib/GUri;->getQuery()Ljava/lang/String;
 
@@ -388,7 +336,7 @@
 
     if-nez v1, :cond_0
 
-    .line 540
+    .line 543
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -407,7 +355,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/glympse/android/ws/a;->vU:Lcom/glympse/android/lib/GUri;
+    iget-object v1, p0, Lcom/glympse/android/ws/a;->wO:Lcom/glympse/android/lib/GUri;
 
     invoke-interface {v1}, Lcom/glympse/android/lib/GUri;->getQuery()Ljava/lang/String;
 
@@ -421,9 +369,9 @@
 
     move-result-object v0
 
-    .line 543
+    .line 546
     :cond_0
-    iget-object v1, p0, Lcom/glympse/android/ws/a;->vU:Lcom/glympse/android/lib/GUri;
+    iget-object v1, p0, Lcom/glympse/android/ws/a;->wO:Lcom/glympse/android/lib/GUri;
 
     invoke-interface {v1}, Lcom/glympse/android/lib/GUri;->getPort()Ljava/lang/String;
 
@@ -437,13 +385,13 @@
 
     move-result-object v1
 
-    .line 544
+    .line 547
     :goto_1
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v3, p0, Lcom/glympse/android/ws/a;->vU:Lcom/glympse/android/lib/GUri;
+    iget-object v3, p0, Lcom/glympse/android/ws/a;->wO:Lcom/glympse/android/lib/GUri;
 
     invoke-interface {v3}, Lcom/glympse/android/lib/GUri;->getHost()Ljava/lang/String;
 
@@ -461,7 +409,7 @@
 
     move-result-object v1
 
-    .line 545
+    .line 548
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "http://"
@@ -476,24 +424,24 @@
 
     move-result-object v2
 
-    .line 548
+    .line 551
     iget-object v3, p0, Lcom/glympse/android/ws/a;->h:Ljava/lang/String;
 
     invoke-static {v0, v1, v2, v3}, Lcom/glympse/android/ws/WebSocketParser;->generateHandshake(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)[B
 
     move-result-object v0
 
-    .line 549
-    iget-object v1, p0, Lcom/glympse/android/ws/a;->vT:Lcom/glympse/android/hal/GSocket;
+    .line 552
+    iget-object v1, p0, Lcom/glympse/android/ws/a;->wN:Lcom/glympse/android/hal/GSocket;
 
     invoke-interface {v1, v0}, Lcom/glympse/android/hal/GSocket;->write([B)V
 
-    .line 550
+    .line 553
     return-void
 
-    .line 537
+    .line 540
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vU:Lcom/glympse/android/lib/GUri;
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wO:Lcom/glympse/android/lib/GUri;
 
     invoke-interface {v0}, Lcom/glympse/android/lib/GUri;->getPath()Ljava/lang/String;
 
@@ -501,7 +449,7 @@
 
     goto :goto_0
 
-    .line 543
+    .line 546
     :cond_2
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -517,7 +465,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/glympse/android/ws/a;->vU:Lcom/glympse/android/lib/GUri;
+    iget-object v2, p0, Lcom/glympse/android/ws/a;->wO:Lcom/glympse/android/lib/GUri;
 
     invoke-interface {v2}, Lcom/glympse/android/lib/GUri;->getPort()Ljava/lang/String;
 
@@ -534,11 +482,11 @@
     goto :goto_1
 .end method
 
-.method private dE()Ljava/lang/String;
+.method private dJ()Ljava/lang/String;
     .locals 2
 
     .prologue
-    .line 575
+    .line 578
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -559,7 +507,7 @@
 
     move-result-object v0
 
-    .line 576
+    .line 579
     invoke-static {v0}, Lcom/glympse/android/hal/Platform;->sha1(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -573,7 +521,7 @@
     .locals 1
 
     .prologue
-    .line 136
+    .line 138
     const/16 v0, 0x3e8
 
     invoke-static {v0}, Lcom/glympse/android/ws/WebSocketParser;->prepareReasonCode(I)[B
@@ -582,7 +530,7 @@
 
     invoke-direct {p0, v0}, Lcom/glympse/android/ws/a;->b([B)V
 
-    .line 137
+    .line 139
     return-void
 .end method
 
@@ -590,29 +538,29 @@
     .locals 1
 
     .prologue
-    .line 226
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->jL:Lcom/glympse/android/hal/GMutex;
+    .line 228
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->kp:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->block()V
 
-    .line 230
+    .line 232
     const/4 v0, 0x1
 
     :try_start_0
     iput-boolean v0, p0, Lcom/glympse/android/ws/a;->v:Z
 
-    .line 233
-    invoke-direct {p0}, Lcom/glympse/android/ws/a;->dD()V
+    .line 235
+    invoke-direct {p0}, Lcom/glympse/android/ws/a;->dI()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 238
+    .line 240
     :goto_0
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->jL:Lcom/glympse/android/hal/GMutex;
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->kp:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->unblock()V
 
-    .line 239
+    .line 241
     return-void
 
     :catch_0
@@ -625,18 +573,18 @@
     .locals 3
 
     .prologue
-    .line 243
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->jL:Lcom/glympse/android/hal/GMutex;
+    .line 245
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->kp:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->block()V
 
-    .line 246
+    .line 248
     const/4 v0, 0x0
 
     :try_start_0
     iput-boolean v0, p0, Lcom/glympse/android/ws/a;->v:Z
 
-    .line 248
+    .line 250
     new-instance v1, Lcom/glympse/android/ws/d;
 
     invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
@@ -645,24 +593,24 @@
 
     check-cast v0, Lcom/glympse/android/ws/GWebSocket;
 
-    iget-object v2, p0, Lcom/glympse/android/ws/a;->qL:Lcom/glympse/android/ws/GWebSocketListener;
+    iget-object v2, p0, Lcom/glympse/android/ws/a;->rz:Lcom/glympse/android/ws/GWebSocketListener;
 
     invoke-direct {v1, v0, v2}, Lcom/glympse/android/ws/d;-><init>(Lcom/glympse/android/ws/GWebSocket;Lcom/glympse/android/ws/GWebSocketListener;)V
 
-    .line 249
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vZ:Lcom/glympse/android/core/GHandler;
+    .line 251
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wT:Lcom/glympse/android/core/GHandler;
 
     invoke-interface {v0, v1}, Lcom/glympse/android/core/GHandler;->post(Ljava/lang/Runnable;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 254
+    .line 256
     :goto_0
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->jL:Lcom/glympse/android/hal/GMutex;
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->kp:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->unblock()V
 
-    .line 255
+    .line 257
     return-void
 
     :catch_0
@@ -675,7 +623,7 @@
     .locals 4
 
     .prologue
-    .line 259
+    .line 261
     new-instance v1, Lcom/glympse/android/ws/e;
 
     invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
@@ -684,18 +632,18 @@
 
     check-cast v0, Lcom/glympse/android/ws/GWebSocket;
 
-    iget-object v2, p0, Lcom/glympse/android/ws/a;->qL:Lcom/glympse/android/ws/GWebSocketListener;
+    iget-object v2, p0, Lcom/glympse/android/ws/a;->rz:Lcom/glympse/android/ws/GWebSocketListener;
 
     const/4 v3, 0x0
 
     invoke-direct {v1, v0, v2, v3}, Lcom/glympse/android/ws/e;-><init>(Lcom/glympse/android/ws/GWebSocket;Lcom/glympse/android/ws/GWebSocketListener;I)V
 
-    .line 260
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vZ:Lcom/glympse/android/core/GHandler;
+    .line 262
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wT:Lcom/glympse/android/core/GHandler;
 
     invoke-interface {v0, v1}, Lcom/glympse/android/core/GHandler;->post(Ljava/lang/Runnable;)V
 
-    .line 261
+    .line 263
     return-void
 .end method
 
@@ -713,70 +661,70 @@
 
     const/4 v1, 0x1
 
-    .line 265
+    .line 267
     iget-boolean v0, p0, Lcom/glympse/android/ws/a;->v:Z
 
     if-nez v0, :cond_1
 
-    .line 502
+    .line 504
     :cond_0
     :goto_0
     return-void
 
-    .line 269
+    .line 271
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->wa:Lcom/glympse/android/hal/GByteVector;
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wU:Lcom/glympse/android/hal/GByteVector;
 
     if-nez v0, :cond_2
 
-    .line 271
+    .line 273
     new-instance v0, Lcom/glympse/android/hal/ByteVector;
 
     invoke-direct {v0, p3}, Lcom/glympse/android/hal/ByteVector;-><init>(I)V
 
-    iput-object v0, p0, Lcom/glympse/android/ws/a;->wa:Lcom/glympse/android/hal/GByteVector;
+    iput-object v0, p0, Lcom/glympse/android/ws/a;->wU:Lcom/glympse/android/hal/GByteVector;
 
-    .line 275
+    .line 277
     :cond_2
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->wa:Lcom/glympse/android/hal/GByteVector;
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wU:Lcom/glympse/android/hal/GByteVector;
 
     invoke-interface {v0, p2, v2, p3}, Lcom/glympse/android/hal/GByteVector;->appendRange([BII)V
 
-    .line 277
-    iget v0, p0, Lcom/glympse/android/ws/a;->cb:I
+    .line 279
+    iget v0, p0, Lcom/glympse/android/ws/a;->ce:I
 
     if-nez v0, :cond_5
 
-    .line 279
-    invoke-direct {p0}, Lcom/glympse/android/ws/a;->dB()Ljava/lang/String;
+    .line 281
+    invoke-direct {p0}, Lcom/glympse/android/ws/a;->dG()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 280
+    .line 282
     if-eqz v0, :cond_0
 
-    .line 286
-    invoke-direct {p0}, Lcom/glympse/android/ws/a;->dE()Ljava/lang/String;
+    .line 288
+    invoke-direct {p0}, Lcom/glympse/android/ws/a;->dJ()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 287
-    iget-object v6, p0, Lcom/glympse/android/ws/a;->jL:Lcom/glympse/android/hal/GMutex;
+    .line 289
+    iget-object v6, p0, Lcom/glympse/android/ws/a;->kp:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v6}, Lcom/glympse/android/hal/GMutex;->block()V
 
-    .line 288
+    .line 290
     if-nez v5, :cond_3
 
-    .line 290
-    iget-object v6, p0, Lcom/glympse/android/ws/a;->vT:Lcom/glympse/android/hal/GSocket;
+    .line 292
+    iget-object v6, p0, Lcom/glympse/android/ws/a;->wN:Lcom/glympse/android/hal/GSocket;
 
     invoke-virtual {p0, v6}, Lcom/glympse/android/ws/a;->failed(Lcom/glympse/android/hal/GSocket;)V
 
-    .line 291
+    .line 293
     invoke-virtual {p0}, Lcom/glympse/android/ws/a;->close()V
 
-    .line 295
+    .line 297
     :cond_3
     invoke-static {v0, v5}, Lcom/glympse/android/ws/WebSocketParser;->checkHandshakeResponse(Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -784,10 +732,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 297
-    iput v1, p0, Lcom/glympse/android/ws/a;->cb:I
+    .line 299
+    iput v1, p0, Lcom/glympse/android/ws/a;->ce:I
 
-    .line 300
+    .line 302
     new-instance v5, Lcom/glympse/android/ws/c;
 
     invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
@@ -796,47 +744,47 @@
 
     check-cast v0, Lcom/glympse/android/ws/GWebSocket;
 
-    iget-object v6, p0, Lcom/glympse/android/ws/a;->qL:Lcom/glympse/android/ws/GWebSocketListener;
+    iget-object v6, p0, Lcom/glympse/android/ws/a;->rz:Lcom/glympse/android/ws/GWebSocketListener;
 
     invoke-direct {v5, v0, v6}, Lcom/glympse/android/ws/c;-><init>(Lcom/glympse/android/ws/GWebSocket;Lcom/glympse/android/ws/GWebSocketListener;)V
 
-    .line 301
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vZ:Lcom/glympse/android/core/GHandler;
+    .line 303
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wT:Lcom/glympse/android/core/GHandler;
 
     invoke-interface {v0, v5}, Lcom/glympse/android/core/GHandler;->post(Ljava/lang/Runnable;)V
 
-    .line 303
+    .line 305
     :cond_4
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->jL:Lcom/glympse/android/hal/GMutex;
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->kp:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->unblock()V
 
-    .line 307
+    .line 309
     :cond_5
     :goto_1
-    iget v0, p0, Lcom/glympse/android/ws/a;->cb:I
+    iget v0, p0, Lcom/glympse/android/ws/a;->ce:I
 
     if-eqz v0, :cond_0
 
-    .line 309
-    iget v0, p0, Lcom/glympse/android/ws/a;->cb:I
+    .line 311
+    iget v0, p0, Lcom/glympse/android/ws/a;->ce:I
 
     packed-switch v0, :pswitch_data_0
 
     goto :goto_1
 
-    .line 313
+    .line 315
     :pswitch_0
-    invoke-direct {p0}, Lcom/glympse/android/ws/a;->dC()I
+    invoke-direct {p0}, Lcom/glympse/android/ws/a;->dH()I
 
     move-result v0
 
     if-lez v0, :cond_0
 
-    .line 317
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->wa:Lcom/glympse/android/hal/GByteVector;
+    .line 319
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wU:Lcom/glympse/android/hal/GByteVector;
 
-    iget v5, p0, Lcom/glympse/android/ws/a;->wb:I
+    iget v5, p0, Lcom/glympse/android/ws/a;->wV:I
 
     invoke-interface {v0, v5}, Lcom/glympse/android/hal/GByteVector;->getByte(I)B
 
@@ -846,12 +794,12 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/glympse/android/ws/a;->wd:I
+    iput v0, p0, Lcom/glympse/android/ws/a;->wX:I
 
-    .line 318
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->wa:Lcom/glympse/android/hal/GByteVector;
+    .line 320
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wU:Lcom/glympse/android/hal/GByteVector;
 
-    iget v5, p0, Lcom/glympse/android/ws/a;->wb:I
+    iget v5, p0, Lcom/glympse/android/ws/a;->wV:I
 
     invoke-interface {v0, v5}, Lcom/glympse/android/hal/GByteVector;->getByte(I)B
 
@@ -861,12 +809,12 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/glympse/android/ws/a;->we:Z
+    iput-boolean v0, p0, Lcom/glympse/android/ws/a;->wY:Z
 
-    .line 319
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->wa:Lcom/glympse/android/hal/GByteVector;
+    .line 321
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wU:Lcom/glympse/android/hal/GByteVector;
 
-    iget v5, p0, Lcom/glympse/android/ws/a;->wb:I
+    iget v5, p0, Lcom/glympse/android/ws/a;->wV:I
 
     invoke-interface {v0, v5}, Lcom/glympse/android/hal/GByteVector;->getByte(I)B
 
@@ -878,7 +826,7 @@
 
     if-eqz v0, :cond_6
 
-    .line 322
+    .line 324
     invoke-static {v10}, Lcom/glympse/android/ws/WebSocketParser;->prepareReasonCode(I)[B
 
     move-result-object v0
@@ -887,32 +835,32 @@
 
     goto/16 :goto_0
 
-    .line 325
+    .line 327
     :cond_6
-    iget v0, p0, Lcom/glympse/android/ws/a;->wd:I
+    iget v0, p0, Lcom/glympse/android/ws/a;->wX:I
 
     if-lt v0, v3, :cond_7
 
-    iget v0, p0, Lcom/glympse/android/ws/a;->wd:I
+    iget v0, p0, Lcom/glympse/android/ws/a;->wX:I
 
     const/4 v5, 0x7
 
     if-le v0, v5, :cond_8
 
     :cond_7
-    iget v0, p0, Lcom/glympse/android/ws/a;->wd:I
+    iget v0, p0, Lcom/glympse/android/ws/a;->wX:I
 
     const/16 v5, 0xb
 
     if-lt v0, v5, :cond_9
 
-    iget v0, p0, Lcom/glympse/android/ws/a;->wd:I
+    iget v0, p0, Lcom/glympse/android/ws/a;->wX:I
 
     const/16 v5, 0x10
 
     if-gt v0, v5, :cond_9
 
-    .line 328
+    .line 330
     :cond_8
     invoke-static {v10}, Lcom/glympse/android/ws/WebSocketParser;->prepareReasonCode(I)[B
 
@@ -922,33 +870,33 @@
 
     goto/16 :goto_0
 
-    .line 332
+    .line 334
     :cond_9
-    iget v0, p0, Lcom/glympse/android/ws/a;->wd:I
+    iget v0, p0, Lcom/glympse/android/ws/a;->wX:I
 
     if-ge v0, v3, :cond_a
 
-    .line 334
-    iget v0, p0, Lcom/glympse/android/ws/a;->wd:I
+    .line 336
+    iget v0, p0, Lcom/glympse/android/ws/a;->wX:I
 
     if-nez v0, :cond_b
 
-    iget-boolean v0, p0, Lcom/glympse/android/ws/a;->vX:Z
+    iget-boolean v0, p0, Lcom/glympse/android/ws/a;->wR:Z
 
     :goto_2
-    iput-boolean v0, p0, Lcom/glympse/android/ws/a;->vX:Z
+    iput-boolean v0, p0, Lcom/glympse/android/ws/a;->wR:Z
 
-    .line 338
+    .line 340
     :cond_a
-    iget v0, p0, Lcom/glympse/android/ws/a;->wd:I
+    iget v0, p0, Lcom/glympse/android/ws/a;->wX:I
 
     if-nez v0, :cond_d
 
-    iget-boolean v0, p0, Lcom/glympse/android/ws/a;->wf:Z
+    iget-boolean v0, p0, Lcom/glympse/android/ws/a;->wZ:Z
 
     if-nez v0, :cond_d
 
-    .line 341
+    .line 343
     invoke-static {v10}, Lcom/glympse/android/ws/WebSocketParser;->prepareReasonCode(I)[B
 
     move-result-object v0
@@ -957,9 +905,9 @@
 
     goto/16 :goto_0
 
-    .line 334
+    .line 336
     :cond_b
-    iget v0, p0, Lcom/glympse/android/ws/a;->wd:I
+    iget v0, p0, Lcom/glympse/android/ws/a;->wX:I
 
     if-ne v0, v1, :cond_c
 
@@ -972,67 +920,67 @@
 
     goto :goto_2
 
-    .line 345
+    .line 347
     :cond_d
-    iget v0, p0, Lcom/glympse/android/ws/a;->wd:I
+    iget v0, p0, Lcom/glympse/android/ws/a;->wX:I
 
     if-eq v0, v1, :cond_e
 
-    iget v0, p0, Lcom/glympse/android/ws/a;->wd:I
+    iget v0, p0, Lcom/glympse/android/ws/a;->wX:I
 
     if-ne v0, v4, :cond_f
 
     :cond_e
-    iget-boolean v0, p0, Lcom/glympse/android/ws/a;->wf:Z
+    iget-boolean v0, p0, Lcom/glympse/android/ws/a;->wZ:Z
 
     if-eqz v0, :cond_f
 
-    .line 348
+    .line 350
     invoke-static {v10}, Lcom/glympse/android/ws/WebSocketParser;->prepareReasonCode(I)[B
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/glympse/android/ws/a;->b([B)V
 
-    .line 350
+    .line 352
     :cond_f
-    iget v0, p0, Lcom/glympse/android/ws/a;->wd:I
+    iget v0, p0, Lcom/glympse/android/ws/a;->wX:I
 
     if-eq v0, v1, :cond_10
 
-    iget v0, p0, Lcom/glympse/android/ws/a;->wd:I
+    iget v0, p0, Lcom/glympse/android/ws/a;->wX:I
 
     if-ne v0, v4, :cond_11
 
-    .line 352
-    :cond_10
-    iput-boolean v1, p0, Lcom/glympse/android/ws/a;->wf:Z
-
     .line 354
+    :cond_10
+    iput-boolean v1, p0, Lcom/glympse/android/ws/a;->wZ:Z
+
+    .line 356
     :cond_11
-    iget v0, p0, Lcom/glympse/android/ws/a;->wb:I
+    iget v0, p0, Lcom/glympse/android/ws/a;->wV:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/glympse/android/ws/a;->wb:I
+    iput v0, p0, Lcom/glympse/android/ws/a;->wV:I
 
-    .line 355
-    iput v4, p0, Lcom/glympse/android/ws/a;->cb:I
+    .line 357
+    iput v4, p0, Lcom/glympse/android/ws/a;->ce:I
 
     goto/16 :goto_1
 
-    .line 360
+    .line 362
     :pswitch_1
-    invoke-direct {p0}, Lcom/glympse/android/ws/a;->dC()I
+    invoke-direct {p0}, Lcom/glympse/android/ws/a;->dH()I
 
     move-result v0
 
     if-lez v0, :cond_0
 
-    .line 364
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->wa:Lcom/glympse/android/hal/GByteVector;
+    .line 366
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wU:Lcom/glympse/android/hal/GByteVector;
 
-    iget v5, p0, Lcom/glympse/android/ws/a;->wb:I
+    iget v5, p0, Lcom/glympse/android/ws/a;->wV:I
 
     invoke-interface {v0, v5}, Lcom/glympse/android/hal/GByteVector;->getByte(I)B
 
@@ -1042,17 +990,17 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/glympse/android/ws/a;->wc:I
+    iput v0, p0, Lcom/glympse/android/ws/a;->wW:I
 
-    .line 366
-    iget v0, p0, Lcom/glympse/android/ws/a;->wb:I
+    .line 368
+    iget v0, p0, Lcom/glympse/android/ws/a;->wV:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/glympse/android/ws/a;->wb:I
+    iput v0, p0, Lcom/glympse/android/ws/a;->wV:I
 
-    .line 367
-    iget v0, p0, Lcom/glympse/android/ws/a;->wc:I
+    .line 369
+    iget v0, p0, Lcom/glympse/android/ws/a;->wW:I
 
     const/16 v5, 0x7e
 
@@ -1061,7 +1009,7 @@
     const/4 v0, 0x4
 
     :goto_3
-    iput v0, p0, Lcom/glympse/android/ws/a;->cb:I
+    iput v0, p0, Lcom/glympse/android/ws/a;->ce:I
 
     goto/16 :goto_1
 
@@ -1070,9 +1018,9 @@
 
     goto :goto_3
 
-    .line 372
+    .line 374
     :pswitch_2
-    iget v0, p0, Lcom/glympse/android/ws/a;->wc:I
+    iget v0, p0, Lcom/glympse/android/ws/a;->wW:I
 
     const/16 v5, 0x7e
 
@@ -1080,31 +1028,31 @@
 
     move v0, v4
 
-    .line 373
+    .line 375
     :goto_4
-    invoke-direct {p0}, Lcom/glympse/android/ws/a;->dC()I
+    invoke-direct {p0}, Lcom/glympse/android/ws/a;->dH()I
 
     move-result v5
 
     if-lt v5, v0, :cond_0
 
-    .line 377
-    iget-object v5, p0, Lcom/glympse/android/ws/a;->wa:Lcom/glympse/android/hal/GByteVector;
+    .line 379
+    iget-object v5, p0, Lcom/glympse/android/ws/a;->wU:Lcom/glympse/android/hal/GByteVector;
 
-    iget v6, p0, Lcom/glympse/android/ws/a;->wb:I
+    iget v6, p0, Lcom/glympse/android/ws/a;->wV:I
 
     invoke-static {v5, v0, v6}, Lcom/glympse/android/ws/WebSocketParser;->parseExtendedPayloadLength(Lcom/glympse/android/hal/GByteVector;II)J
 
     move-result-wide v6
 
-    .line 378
+    .line 380
     const-wide/32 v8, 0x6400000
 
     cmp-long v5, v6, v8
 
     if-lez v5, :cond_14
 
-    .line 381
+    .line 383
     const/16 v0, 0x3f0
 
     invoke-static {v0}, Lcom/glympse/android/ws/WebSocketParser;->prepareReasonCode(I)[B
@@ -1115,70 +1063,70 @@
 
     goto/16 :goto_0
 
-    .line 372
+    .line 374
     :cond_13
     const/16 v0, 0x8
 
     goto :goto_4
 
-    .line 386
+    .line 388
     :cond_14
     long-to-int v5, v6
 
-    iput v5, p0, Lcom/glympse/android/ws/a;->wc:I
+    iput v5, p0, Lcom/glympse/android/ws/a;->wW:I
 
-    .line 388
-    iget v5, p0, Lcom/glympse/android/ws/a;->wb:I
+    .line 390
+    iget v5, p0, Lcom/glympse/android/ws/a;->wV:I
 
     add-int/2addr v0, v5
 
-    iput v0, p0, Lcom/glympse/android/ws/a;->wb:I
+    iput v0, p0, Lcom/glympse/android/ws/a;->wV:I
 
-    .line 389
+    .line 391
     const/4 v0, 0x4
 
-    iput v0, p0, Lcom/glympse/android/ws/a;->cb:I
+    iput v0, p0, Lcom/glympse/android/ws/a;->ce:I
 
     goto/16 :goto_1
 
-    .line 394
+    .line 396
     :pswitch_3
-    invoke-direct {p0}, Lcom/glympse/android/ws/a;->dC()I
+    invoke-direct {p0}, Lcom/glympse/android/ws/a;->dH()I
 
     move-result v0
 
-    iget v5, p0, Lcom/glympse/android/ws/a;->wc:I
+    iget v5, p0, Lcom/glympse/android/ws/a;->wW:I
 
     if-lt v0, v5, :cond_0
 
-    .line 400
-    iget v0, p0, Lcom/glympse/android/ws/a;->wd:I
+    .line 402
+    iget v0, p0, Lcom/glympse/android/ws/a;->wX:I
 
     const/16 v5, 0x8
 
     if-eq v0, v5, :cond_15
 
-    iget v0, p0, Lcom/glympse/android/ws/a;->wd:I
+    iget v0, p0, Lcom/glympse/android/ws/a;->wX:I
 
     const/16 v5, 0x9
 
     if-eq v0, v5, :cond_15
 
-    iget v0, p0, Lcom/glympse/android/ws/a;->wd:I
+    iget v0, p0, Lcom/glympse/android/ws/a;->wX:I
 
     const/16 v5, 0xa
 
     if-ne v0, v5, :cond_21
 
-    .line 402
+    .line 404
     :cond_15
-    iget v0, p0, Lcom/glympse/android/ws/a;->wc:I
+    iget v0, p0, Lcom/glympse/android/ws/a;->wW:I
 
     const/16 v5, 0x7d
 
     if-le v0, v5, :cond_16
 
-    .line 405
+    .line 407
     invoke-static {v10}, Lcom/glympse/android/ws/WebSocketParser;->prepareReasonCode(I)[B
 
     move-result-object v0
@@ -1187,13 +1135,13 @@
 
     goto/16 :goto_0
 
-    .line 408
+    .line 410
     :cond_16
-    iget-boolean v0, p0, Lcom/glympse/android/ws/a;->we:Z
+    iget-boolean v0, p0, Lcom/glympse/android/ws/a;->wY:Z
 
     if-nez v0, :cond_17
 
-    .line 411
+    .line 413
     invoke-static {v10}, Lcom/glympse/android/ws/WebSocketParser;->prepareReasonCode(I)[B
 
     move-result-object v0
@@ -1202,57 +1150,57 @@
 
     goto/16 :goto_0
 
-    .line 415
+    .line 417
     :cond_17
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vW:Lcom/glympse/android/hal/GByteVector;
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wQ:Lcom/glympse/android/hal/GByteVector;
 
     if-nez v0, :cond_18
 
-    .line 417
+    .line 419
     new-instance v0, Lcom/glympse/android/hal/ByteVector;
 
-    iget v5, p0, Lcom/glympse/android/ws/a;->wc:I
+    iget v5, p0, Lcom/glympse/android/ws/a;->wW:I
 
     invoke-direct {v0, v5}, Lcom/glympse/android/hal/ByteVector;-><init>(I)V
 
-    iput-object v0, p0, Lcom/glympse/android/ws/a;->vW:Lcom/glympse/android/hal/GByteVector;
+    iput-object v0, p0, Lcom/glympse/android/ws/a;->wQ:Lcom/glympse/android/hal/GByteVector;
 
-    .line 419
+    .line 421
     :cond_18
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vW:Lcom/glympse/android/hal/GByteVector;
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wQ:Lcom/glympse/android/hal/GByteVector;
 
-    iget-object v5, p0, Lcom/glympse/android/ws/a;->wa:Lcom/glympse/android/hal/GByteVector;
+    iget-object v5, p0, Lcom/glympse/android/ws/a;->wU:Lcom/glympse/android/hal/GByteVector;
 
     invoke-interface {v5}, Lcom/glympse/android/hal/GByteVector;->getBytes()[B
 
     move-result-object v5
 
-    iget v6, p0, Lcom/glympse/android/ws/a;->wb:I
+    iget v6, p0, Lcom/glympse/android/ws/a;->wV:I
 
-    iget v7, p0, Lcom/glympse/android/ws/a;->wc:I
+    iget v7, p0, Lcom/glympse/android/ws/a;->wW:I
 
     invoke-interface {v0, v5, v6, v7}, Lcom/glympse/android/hal/GByteVector;->appendRange([BII)V
 
-    .line 421
-    iget v0, p0, Lcom/glympse/android/ws/a;->wd:I
+    .line 423
+    iget v0, p0, Lcom/glympse/android/ws/a;->wX:I
 
     const/16 v5, 0x8
 
     if-ne v0, v5, :cond_20
 
-    .line 424
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vW:Lcom/glympse/android/hal/GByteVector;
+    .line 426
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wQ:Lcom/glympse/android/hal/GByteVector;
 
-    iget-boolean v5, p0, Lcom/glympse/android/ws/a;->qK:Z
+    iget-boolean v5, p0, Lcom/glympse/android/ws/a;->ry:Z
 
     invoke-static {v0, v5}, Lcom/glympse/android/ws/WebSocketParser;->parseReasonString(Lcom/glympse/android/hal/GByteVector;Z)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 425
+    .line 427
     if-nez v0, :cond_19
 
-    .line 427
+    .line 429
     const/16 v0, 0x3ef
 
     invoke-static {v0}, Lcom/glympse/android/ws/WebSocketParser;->prepareReasonCode(I)[B
@@ -1261,15 +1209,15 @@
 
     invoke-direct {p0, v0}, Lcom/glympse/android/ws/a;->b([B)V
 
-    .line 430
+    .line 432
     :cond_19
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vW:Lcom/glympse/android/hal/GByteVector;
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wQ:Lcom/glympse/android/hal/GByteVector;
 
     invoke-static {v0}, Lcom/glympse/android/ws/WebSocketParser;->parseReasonCode(Lcom/glympse/android/hal/GByteVector;)I
 
     move-result v0
 
-    .line 431
+    .line 433
     const/16 v5, 0x3e8
 
     if-lt v0, v5, :cond_1c
@@ -1296,7 +1244,7 @@
 
     if-le v0, v5, :cond_1d
 
-    .line 436
+    .line 438
     :cond_1c
     invoke-static {v10}, Lcom/glympse/android/ws/WebSocketParser;->prepareReasonCode(I)[B
 
@@ -1304,9 +1252,9 @@
 
     invoke-direct {p0, v0}, Lcom/glympse/android/ws/a;->b([B)V
 
-    .line 439
+    .line 441
     :cond_1d
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vW:Lcom/glympse/android/hal/GByteVector;
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wQ:Lcom/glympse/android/hal/GByteVector;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GByteVector;->getBytes()[B
 
@@ -1314,24 +1262,24 @@
 
     invoke-direct {p0, v0}, Lcom/glympse/android/ws/a;->b([B)V
 
-    .line 446
+    .line 448
     :cond_1e
     :goto_5
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vW:Lcom/glympse/android/hal/GByteVector;
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wQ:Lcom/glympse/android/hal/GByteVector;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GByteVector;->clearBytes()V
 
-    .line 485
+    .line 487
     :cond_1f
     :goto_6
-    iget v0, p0, Lcom/glympse/android/ws/a;->wb:I
+    iget v0, p0, Lcom/glympse/android/ws/a;->wV:I
 
-    iget v5, p0, Lcom/glympse/android/ws/a;->wc:I
+    iget v5, p0, Lcom/glympse/android/ws/a;->wW:I
 
     add-int/2addr v0, v5
 
-    .line 486
-    iget-object v5, p0, Lcom/glympse/android/ws/a;->wa:Lcom/glympse/android/hal/GByteVector;
+    .line 488
+    iget-object v5, p0, Lcom/glympse/android/ws/a;->wU:Lcom/glympse/android/hal/GByteVector;
 
     invoke-interface {v5}, Lcom/glympse/android/hal/GByteVector;->size()I
 
@@ -1339,87 +1287,87 @@
 
     if-ge v0, v5, :cond_26
 
-    .line 488
-    iget-object v5, p0, Lcom/glympse/android/ws/a;->wa:Lcom/glympse/android/hal/GByteVector;
+    .line 490
+    iget-object v5, p0, Lcom/glympse/android/ws/a;->wU:Lcom/glympse/android/hal/GByteVector;
 
     invoke-interface {v5, v0}, Lcom/glympse/android/hal/GByteVector;->removeFront(I)V
 
-    .line 495
-    :goto_7
-    iput v2, p0, Lcom/glympse/android/ws/a;->wb:I
-
-    .line 496
-    iput v2, p0, Lcom/glympse/android/ws/a;->wc:I
-
     .line 497
-    iput v1, p0, Lcom/glympse/android/ws/a;->cb:I
+    :goto_7
+    iput v2, p0, Lcom/glympse/android/ws/a;->wV:I
+
+    .line 498
+    iput v2, p0, Lcom/glympse/android/ws/a;->wW:I
+
+    .line 499
+    iput v1, p0, Lcom/glympse/android/ws/a;->ce:I
 
     goto/16 :goto_1
 
-    .line 441
+    .line 443
     :cond_20
-    iget v0, p0, Lcom/glympse/android/ws/a;->wd:I
+    iget v0, p0, Lcom/glympse/android/ws/a;->wX:I
 
     const/16 v5, 0x9
 
     if-ne v0, v5, :cond_1e
 
-    .line 443
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vW:Lcom/glympse/android/hal/GByteVector;
+    .line 445
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wQ:Lcom/glympse/android/hal/GByteVector;
 
     invoke-direct {p0, v0}, Lcom/glympse/android/ws/a;->a(Lcom/glympse/android/hal/GByteVector;)V
 
     goto :goto_5
 
-    .line 450
+    .line 452
     :cond_21
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vV:Lcom/glympse/android/hal/GByteVector;
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wP:Lcom/glympse/android/hal/GByteVector;
 
     if-nez v0, :cond_22
 
-    .line 452
-    iget-boolean v0, p0, Lcom/glympse/android/ws/a;->we:Z
+    .line 454
+    iget-boolean v0, p0, Lcom/glympse/android/ws/a;->wY:Z
 
     if-eqz v0, :cond_23
 
-    iget v0, p0, Lcom/glympse/android/ws/a;->wc:I
+    iget v0, p0, Lcom/glympse/android/ws/a;->wW:I
 
-    .line 453
+    .line 455
     :goto_8
     new-instance v5, Lcom/glympse/android/hal/ByteVector;
 
     invoke-direct {v5, v0}, Lcom/glympse/android/hal/ByteVector;-><init>(I)V
 
-    iput-object v5, p0, Lcom/glympse/android/ws/a;->vV:Lcom/glympse/android/hal/GByteVector;
+    iput-object v5, p0, Lcom/glympse/android/ws/a;->wP:Lcom/glympse/android/hal/GByteVector;
 
-    .line 455
+    .line 457
     :cond_22
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vV:Lcom/glympse/android/hal/GByteVector;
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wP:Lcom/glympse/android/hal/GByteVector;
 
-    iget-object v5, p0, Lcom/glympse/android/ws/a;->wa:Lcom/glympse/android/hal/GByteVector;
+    iget-object v5, p0, Lcom/glympse/android/ws/a;->wU:Lcom/glympse/android/hal/GByteVector;
 
     invoke-interface {v5}, Lcom/glympse/android/hal/GByteVector;->getBytes()[B
 
     move-result-object v5
 
-    iget v6, p0, Lcom/glympse/android/ws/a;->wb:I
+    iget v6, p0, Lcom/glympse/android/ws/a;->wV:I
 
-    iget v7, p0, Lcom/glympse/android/ws/a;->wc:I
+    iget v7, p0, Lcom/glympse/android/ws/a;->wW:I
 
     invoke-interface {v0, v5, v6, v7}, Lcom/glympse/android/hal/GByteVector;->appendRange([BII)V
 
-    .line 456
-    iget-boolean v0, p0, Lcom/glympse/android/ws/a;->we:Z
+    .line 458
+    iget-boolean v0, p0, Lcom/glympse/android/ws/a;->wY:Z
 
     if-eqz v0, :cond_1f
 
-    .line 459
-    iget-boolean v0, p0, Lcom/glympse/android/ws/a;->vX:Z
+    .line 461
+    iget-boolean v0, p0, Lcom/glympse/android/ws/a;->wR:Z
 
     if-eqz v0, :cond_25
 
-    .line 461
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vV:Lcom/glympse/android/hal/GByteVector;
+    .line 463
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wP:Lcom/glympse/android/hal/GByteVector;
 
     const-string v5, "UTF-8"
 
@@ -1427,16 +1375,16 @@
 
     move-result-object v5
 
-    iget-boolean v6, p0, Lcom/glympse/android/ws/a;->qK:Z
+    iget-boolean v6, p0, Lcom/glympse/android/ws/a;->ry:Z
 
     invoke-interface {v0, v5, v6}, Lcom/glympse/android/hal/GByteVector;->stringEncode(Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 463
+    .line 465
     if-nez v5, :cond_24
 
-    .line 466
+    .line 468
     const/16 v0, 0x3ef
 
     invoke-static {v0}, Lcom/glympse/android/ws/WebSocketParser;->prepareReasonCode(I)[B
@@ -1447,13 +1395,13 @@
 
     goto/16 :goto_0
 
-    .line 452
+    .line 454
     :cond_23
     const/high16 v0, 0x20000
 
     goto :goto_8
 
-    .line 470
+    .line 472
     :cond_24
     new-instance v6, Lcom/glympse/android/ws/f;
 
@@ -1463,30 +1411,30 @@
 
     check-cast v0, Lcom/glympse/android/ws/GWebSocket;
 
-    iget-object v7, p0, Lcom/glympse/android/ws/a;->qL:Lcom/glympse/android/ws/GWebSocketListener;
+    iget-object v7, p0, Lcom/glympse/android/ws/a;->rz:Lcom/glympse/android/ws/GWebSocketListener;
 
     invoke-direct {v6, v0, v7, v5}, Lcom/glympse/android/ws/f;-><init>(Lcom/glympse/android/ws/GWebSocket;Lcom/glympse/android/ws/GWebSocketListener;Ljava/lang/String;)V
 
-    .line 471
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vY:Lcom/glympse/android/core/GHandler;
+    .line 473
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wS:Lcom/glympse/android/core/GHandler;
 
     invoke-interface {v0, v6}, Lcom/glympse/android/core/GHandler;->post(Ljava/lang/Runnable;)V
 
-    .line 479
+    .line 481
     :goto_9
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vV:Lcom/glympse/android/hal/GByteVector;
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wP:Lcom/glympse/android/hal/GByteVector;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GByteVector;->clearBytes()V
 
-    .line 480
-    iput-boolean v2, p0, Lcom/glympse/android/ws/a;->vX:Z
+    .line 482
+    iput-boolean v2, p0, Lcom/glympse/android/ws/a;->wR:Z
 
-    .line 481
-    iput-boolean v2, p0, Lcom/glympse/android/ws/a;->wf:Z
+    .line 483
+    iput-boolean v2, p0, Lcom/glympse/android/ws/a;->wZ:Z
 
     goto/16 :goto_6
 
-    .line 475
+    .line 477
     :cond_25
     new-instance v5, Lcom/glympse/android/ws/b;
 
@@ -1496,9 +1444,9 @@
 
     check-cast v0, Lcom/glympse/android/ws/GWebSocket;
 
-    iget-object v6, p0, Lcom/glympse/android/ws/a;->qL:Lcom/glympse/android/ws/GWebSocketListener;
+    iget-object v6, p0, Lcom/glympse/android/ws/a;->rz:Lcom/glympse/android/ws/GWebSocketListener;
 
-    iget-object v7, p0, Lcom/glympse/android/ws/a;->vV:Lcom/glympse/android/hal/GByteVector;
+    iget-object v7, p0, Lcom/glympse/android/ws/a;->wP:Lcom/glympse/android/hal/GByteVector;
 
     invoke-interface {v7}, Lcom/glympse/android/hal/GByteVector;->getBytes()[B
 
@@ -1506,22 +1454,22 @@
 
     invoke-direct {v5, v0, v6, v7}, Lcom/glympse/android/ws/b;-><init>(Lcom/glympse/android/ws/GWebSocket;Lcom/glympse/android/ws/GWebSocketListener;[B)V
 
-    .line 476
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vY:Lcom/glympse/android/core/GHandler;
+    .line 478
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wS:Lcom/glympse/android/core/GHandler;
 
     invoke-interface {v0, v5}, Lcom/glympse/android/core/GHandler;->post(Ljava/lang/Runnable;)V
 
     goto :goto_9
 
-    .line 492
+    .line 494
     :cond_26
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->wa:Lcom/glympse/android/hal/GByteVector;
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wU:Lcom/glympse/android/hal/GByteVector;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GByteVector;->clearBytes()V
 
     goto/16 :goto_7
 
-    .line 309
+    .line 311
     nop
 
     :pswitch_data_0
@@ -1539,40 +1487,40 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 83
-    iget-object v1, p0, Lcom/glympse/android/ws/a;->jL:Lcom/glympse/android/hal/GMutex;
+    .line 85
+    iget-object v1, p0, Lcom/glympse/android/ws/a;->kp:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v1}, Lcom/glympse/android/hal/GMutex;->block()V
 
-    .line 86
-    :try_start_0
-    iput-object p2, p0, Lcom/glympse/android/ws/a;->qL:Lcom/glympse/android/ws/GWebSocketListener;
-
-    .line 87
-    iput-object p1, p0, Lcom/glympse/android/ws/a;->tA:Ljava/lang/String;
-
     .line 88
-    const/4 v1, 0x0
-
-    iput-boolean v1, p0, Lcom/glympse/android/ws/a;->wf:Z
+    :try_start_0
+    iput-object p2, p0, Lcom/glympse/android/ws/a;->rz:Lcom/glympse/android/ws/GWebSocketListener;
 
     .line 89
-    iget-object v1, p0, Lcom/glympse/android/ws/a;->tA:Ljava/lang/String;
+    iput-object p1, p0, Lcom/glympse/android/ws/a;->um:Ljava/lang/String;
+
+    .line 90
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Lcom/glympse/android/ws/a;->wZ:Z
+
+    .line 91
+    iget-object v1, p0, Lcom/glympse/android/ws/a;->um:Ljava/lang/String;
 
     invoke-static {v1}, Lcom/glympse/android/lib/LibFactory;->createUri(Ljava/lang/String;)Lcom/glympse/android/lib/GUri;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/glympse/android/ws/a;->vU:Lcom/glympse/android/lib/GUri;
+    iput-object v1, p0, Lcom/glympse/android/ws/a;->wO:Lcom/glympse/android/lib/GUri;
 
-    .line 90
-    iget-object v1, p0, Lcom/glympse/android/ws/a;->vU:Lcom/glympse/android/lib/GUri;
+    .line 92
+    iget-object v1, p0, Lcom/glympse/android/ws/a;->wO:Lcom/glympse/android/lib/GUri;
 
     invoke-interface {v1}, Lcom/glympse/android/lib/GUri;->getScheme()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 91
+    .line 93
     if-eqz v1, :cond_5
 
     const-string v2, "https"
@@ -1596,18 +1544,18 @@
 
     move v2, v0
 
-    .line 93
+    .line 95
     :goto_0
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vU:Lcom/glympse/android/lib/GUri;
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wO:Lcom/glympse/android/lib/GUri;
 
     invoke-interface {v0}, Lcom/glympse/android/lib/GUri;->getPort()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 94
+    .line 96
     if-nez v0, :cond_7
 
-    .line 96
+    .line 98
     if-eqz v2, :cond_6
 
     const-string v0, "443"
@@ -1619,91 +1567,91 @@
     :goto_1
     move-object v1, v0
 
-    .line 100
+    .line 102
     :goto_2
     invoke-static {}, Lcom/glympse/android/hal/HalFactory;->createHandler()Lcom/glympse/android/core/GHandler;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/ws/a;->vY:Lcom/glympse/android/core/GHandler;
+    iput-object v0, p0, Lcom/glympse/android/ws/a;->wS:Lcom/glympse/android/core/GHandler;
 
-    .line 101
+    .line 103
     invoke-static {}, Lcom/glympse/android/hal/HalFactory;->createHandler()Lcom/glympse/android/core/GHandler;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/ws/a;->vZ:Lcom/glympse/android/core/GHandler;
-
-    .line 104
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/glympse/android/ws/a;->cb:I
-
-    .line 105
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/glympse/android/ws/a;->wb:I
+    iput-object v0, p0, Lcom/glympse/android/ws/a;->wT:Lcom/glympse/android/core/GHandler;
 
     .line 106
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->wa:Lcom/glympse/android/hal/GByteVector;
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/glympse/android/ws/a;->ce:I
+
+    .line 107
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/glympse/android/ws/a;->wV:I
+
+    .line 108
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wU:Lcom/glympse/android/hal/GByteVector;
 
     if-eqz v0, :cond_1
 
-    .line 108
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->wa:Lcom/glympse/android/hal/GByteVector;
+    .line 110
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wU:Lcom/glympse/android/hal/GByteVector;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GByteVector;->clearBytes()V
 
-    .line 110
+    .line 112
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vW:Lcom/glympse/android/hal/GByteVector;
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wQ:Lcom/glympse/android/hal/GByteVector;
 
     if-eqz v0, :cond_2
 
-    .line 112
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vW:Lcom/glympse/android/hal/GByteVector;
+    .line 114
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wQ:Lcom/glympse/android/hal/GByteVector;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GByteVector;->clearBytes()V
 
-    .line 114
+    .line 116
     :cond_2
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vV:Lcom/glympse/android/hal/GByteVector;
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wP:Lcom/glympse/android/hal/GByteVector;
 
     if-eqz v0, :cond_3
 
-    .line 116
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vV:Lcom/glympse/android/hal/GByteVector;
+    .line 118
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wP:Lcom/glympse/android/hal/GByteVector;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GByteVector;->clearBytes()V
 
-    .line 120
+    .line 122
     :cond_3
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vT:Lcom/glympse/android/hal/GSocket;
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wN:Lcom/glympse/android/hal/GSocket;
 
     if-eqz v0, :cond_4
 
-    .line 122
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vT:Lcom/glympse/android/hal/GSocket;
+    .line 124
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wN:Lcom/glympse/android/hal/GSocket;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GSocket;->close()V
 
-    .line 123
+    .line 125
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/ws/a;->vT:Lcom/glympse/android/hal/GSocket;
+    iput-object v0, p0, Lcom/glympse/android/ws/a;->wN:Lcom/glympse/android/hal/GSocket;
 
-    .line 125
+    .line 127
     :cond_4
     invoke-static {}, Lcom/glympse/android/hal/HalFactory;->createSocket()Lcom/glympse/android/hal/GSocket;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/ws/a;->vT:Lcom/glympse/android/hal/GSocket;
+    iput-object v0, p0, Lcom/glympse/android/ws/a;->wN:Lcom/glympse/android/hal/GSocket;
 
-    .line 126
-    iget-object v3, p0, Lcom/glympse/android/ws/a;->vT:Lcom/glympse/android/hal/GSocket;
+    .line 128
+    iget-object v3, p0, Lcom/glympse/android/ws/a;->wN:Lcom/glympse/android/hal/GSocket;
 
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->vU:Lcom/glympse/android/lib/GUri;
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->wO:Lcom/glympse/android/lib/GUri;
 
     invoke-interface {v0}, Lcom/glympse/android/lib/GUri;->getHost()Ljava/lang/String;
 
@@ -1719,22 +1667,22 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 131
+    .line 133
     :goto_3
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->jL:Lcom/glympse/android/hal/GMutex;
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->kp:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->unblock()V
 
-    .line 132
+    .line 134
     return-void
 
     :cond_5
     move v2, v0
 
-    .line 91
+    .line 93
     goto :goto_0
 
-    .line 96
+    .line 98
     :cond_6
     :try_start_1
     const-string v0, "80"
@@ -1762,27 +1710,27 @@
     .locals 2
 
     .prologue
-    .line 167
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->jL:Lcom/glympse/android/hal/GMutex;
+    .line 169
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->kp:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->block()V
 
-    .line 170
+    .line 172
     :try_start_0
     iget-boolean v0, p0, Lcom/glympse/android/ws/a;->v:Z
 
     if-nez v0, :cond_0
 
-    .line 172
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->jL:Lcom/glympse/android/hal/GMutex;
+    .line 174
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->kp:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->unblock()V
 
-    .line 183
+    .line 185
     :goto_0
     return-void
 
-    .line 176
+    .line 178
     :cond_0
     invoke-static {p1}, Lcom/glympse/android/hal/Helpers;->toByteArray(Ljava/lang/String;)[B
 
@@ -1794,16 +1742,16 @@
 
     move-result-object v0
 
-    .line 177
-    iget-object v1, p0, Lcom/glympse/android/ws/a;->vT:Lcom/glympse/android/hal/GSocket;
+    .line 179
+    iget-object v1, p0, Lcom/glympse/android/ws/a;->wN:Lcom/glympse/android/hal/GSocket;
 
     invoke-interface {v1, v0}, Lcom/glympse/android/hal/GSocket;->write([B)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 182
+    .line 184
     :goto_1
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->jL:Lcom/glympse/android/hal/GMutex;
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->kp:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->unblock()V
 
@@ -1819,27 +1767,27 @@
     .locals 2
 
     .prologue
-    .line 187
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->jL:Lcom/glympse/android/hal/GMutex;
+    .line 189
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->kp:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->block()V
 
-    .line 190
+    .line 192
     :try_start_0
     iget-boolean v0, p0, Lcom/glympse/android/ws/a;->v:Z
 
     if-nez v0, :cond_0
 
-    .line 192
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->jL:Lcom/glympse/android/hal/GMutex;
+    .line 194
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->kp:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->unblock()V
 
-    .line 203
+    .line 205
     :goto_0
     return-void
 
-    .line 196
+    .line 198
     :cond_0
     const/4 v0, 0x2
 
@@ -1847,16 +1795,16 @@
 
     move-result-object v0
 
-    .line 197
-    iget-object v1, p0, Lcom/glympse/android/ws/a;->vT:Lcom/glympse/android/hal/GSocket;
+    .line 199
+    iget-object v1, p0, Lcom/glympse/android/ws/a;->wN:Lcom/glympse/android/hal/GSocket;
 
     invoke-interface {v1, v0}, Lcom/glympse/android/hal/GSocket;->write([B)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 202
+    .line 204
     :goto_1
-    iget-object v0, p0, Lcom/glympse/android/ws/a;->jL:Lcom/glympse/android/hal/GMutex;
+    iget-object v0, p0, Lcom/glympse/android/ws/a;->kp:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->unblock()V
 
@@ -1872,10 +1820,10 @@
     .locals 0
 
     .prologue
-    .line 212
-    iput-object p1, p0, Lcom/glympse/android/ws/a;->vY:Lcom/glympse/android/core/GHandler;
+    .line 214
+    iput-object p1, p0, Lcom/glympse/android/ws/a;->wS:Lcom/glympse/android/core/GHandler;
 
-    .line 213
+    .line 215
     return-void
 .end method
 
@@ -1883,10 +1831,10 @@
     .locals 0
 
     .prologue
-    .line 207
-    iput-object p1, p0, Lcom/glympse/android/ws/a;->vZ:Lcom/glympse/android/core/GHandler;
+    .line 209
+    iput-object p1, p0, Lcom/glympse/android/ws/a;->wT:Lcom/glympse/android/core/GHandler;
 
-    .line 208
+    .line 210
     return-void
 .end method
 
@@ -1894,9 +1842,9 @@
     .locals 0
 
     .prologue
-    .line 217
-    iput-boolean p1, p0, Lcom/glympse/android/ws/a;->qK:Z
+    .line 219
+    iput-boolean p1, p0, Lcom/glympse/android/ws/a;->ry:Z
 
-    .line 218
+    .line 220
     return-void
 .end method

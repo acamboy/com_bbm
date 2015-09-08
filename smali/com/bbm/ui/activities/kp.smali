@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/kp;
 .super Ljava/lang/Object;
-.source "GlympseViewerActivity.java"
+.source "GroupChatListActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/cs;
+.implements Lcom/bbm/bali/ui/main/groups/e;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GlympseViewerActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupChatListActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GlympseViewerActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupChatListActivity;)V
     .locals 0
 
     .prologue
-    .line 69
-    iput-object p1, p0, Lcom/bbm/ui/activities/kp;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
+    .line 356
+    iput-object p1, p0, Lcom/bbm/ui/activities/kp;->a:Lcom/bbm/ui/activities/GroupChatListActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,84 +26,26 @@
 
 # virtual methods
 .method public final a()V
-    .locals 2
+    .locals 4
 
     .prologue
-    .line 82
-    iget-object v0, p0, Lcom/bbm/ui/activities/kp;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
+    .line 359
+    iget-object v0, p0, Lcom/bbm/ui/activities/kp;->a:Lcom/bbm/ui/activities/GroupChatListActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->a(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/glympse/map/lib/Map;
+    new-instance v1, Landroid/content/Intent;
 
-    move-result-object v0
+    const-class v2, Lcom/bbm/ui/activities/GroupProfileActivity;
 
-    const/4 v1, 0x2
+    invoke-direct {v1, v0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    invoke-virtual {v0, v1}, Lcom/glympse/map/lib/Map;->setFollowMode(I)V
+    const-string v2, "groupUri"
 
-    .line 83
-    iget-object v0, p0, Lcom/bbm/ui/activities/kp;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
+    iget-object v3, v0, Lcom/bbm/bali/ui/main/a/d;->a:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->a(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/glympse/map/lib/Map;
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/GroupChatListActivity;->startActivity(Landroid/content/Intent;)V
 
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/glympse/map/lib/Map;->center(Z)V
-
-    .line 84
-    return-void
-.end method
-
-.method public final a(Lcom/glympse/android/api/GUser;)V
-    .locals 2
-
-    .prologue
-    .line 73
-    iget-object v0, p0, Lcom/bbm/ui/activities/kp;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->a(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/glympse/map/lib/Map;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 74
-    iget-object v0, p0, Lcom/bbm/ui/activities/kp;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->a(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/glympse/map/lib/Map;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, p1, v1}, Lcom/glympse/map/lib/Map;->centerOnUser(Lcom/glympse/android/api/GUser;Z)V
-
-    .line 75
-    iget-object v0, p0, Lcom/bbm/ui/activities/kp;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->a(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/glympse/map/lib/Map;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcom/glympse/map/lib/Map;->setFollowMode(I)V
-
-    .line 76
-    iget-object v0, p0, Lcom/bbm/ui/activities/kp;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->a(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/glympse/map/lib/Map;
-
-    move-result-object v0
-
-    invoke-interface {p1}, Lcom/glympse/android/api/GUser;->getActive()Lcom/glympse/android/api/GTicket;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/glympse/map/lib/Map;->trackTicket(Lcom/glympse/android/api/GTicket;)V
-
-    .line 78
-    :cond_0
+    .line 360
     return-void
 .end method

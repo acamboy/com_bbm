@@ -29,22 +29,28 @@
 
     .prologue
     .line 103
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
 
-    invoke-static {}, Lcom/bbm/Alaska;->u()Lcom/bbm/setup/af;
+    sget-object v0, Lcom/bbm/Alaska;->f:Lcom/bbm/setup/z;
+
+    iget-object v0, v0, Lcom/bbm/setup/z;->r:Lcom/bbm/j/a;
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, v0, Lcom/bbm/setup/af;->a:Lcom/bbm/setup/ag;
+    check-cast v0, Lcom/bbm/setup/am;
+
+    iget-object v1, v0, Lcom/bbm/setup/am;->a:Lcom/bbm/setup/an;
 
     .line 105
     iget-object v0, p0, Lcom/bbm/setup/i;->a:Lcom/bbm/setup/LoadingActivity;
 
-    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->g(Lcom/bbm/setup/LoadingActivity;)Lcom/bbm/util/ct;
+    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->g(Lcom/bbm/setup/LoadingActivity;)Lcom/bbm/util/dc;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/util/ct;->e()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/util/dc;->f()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -56,7 +62,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, v1, Lcom/bbm/setup/ag;->n:Ljava/lang/String;
+    iget-object v0, v1, Lcom/bbm/setup/an;->n:Ljava/lang/String;
 
     const-class v1, Lcom/bbm/setup/ContactListAccessPromptActivity;
 

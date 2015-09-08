@@ -10,5 +10,14 @@
 .method public abstract cache(Lcom/glympse/android/api/GImage;Ljava/lang/String;)Z
 .end method
 
+.method public abstract cache(Lcom/glympse/android/api/GImage;Ljava/lang/String;Z)Z
+.end method
+
 .method public abstract extract(Lcom/glympse/android/api/GImage;Ljava/lang/String;)Z
+.end method
+
+.method public abstract onLowMemory()V
+.end method
+
+.method public abstract remove(Ljava/lang/String;)Z
 .end method

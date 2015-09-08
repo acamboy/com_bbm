@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/aa;
 .super Ljava/lang/Object;
-.source "AvatarViewerActivity.java"
+.source "BroadcastActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/c/gn;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/AvatarViewerActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/BroadcastActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/AvatarViewerActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/BroadcastActivity;)V
     .locals 0
 
     .prologue
-    .line 146
-    iput-object p1, p0, Lcom/bbm/ui/activities/aa;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
+    .line 304
+    iput-object p1, p0, Lcom/bbm/ui/activities/aa;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,33 +25,33 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
     .prologue
-    .line 149
-    const-string v0, "slide menu onItemClick"
+    .line 308
+    const-string v0, "on click broadcast message edit text"
 
-    const-class v1, Lcom/bbm/ui/activities/AvatarViewerActivity;
+    const-class v1, Lcom/bbm/ui/activities/BroadcastActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 150
-    iget-object v0, p0, Lcom/bbm/ui/activities/aa;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
+    .line 309
+    iget-object v0, p0, Lcom/bbm/ui/activities/aa;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->k(Lcom/bbm/ui/activities/BroadcastActivity;)V
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+    .line 310
+    iget-object v0, p0, Lcom/bbm/ui/activities/aa;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
-    const/4 v1, 0x1
+    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->l(Lcom/bbm/ui/activities/BroadcastActivity;)Landroid/widget/LinearLayout;
 
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
+    move-result-object v0
 
-    .line 151
-    iget-object v0, p0, Lcom/bbm/ui/activities/aa;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
+    const/4 v1, 0x0
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/AvatarViewerActivity;->c(Lcom/bbm/ui/activities/AvatarViewerActivity;)V
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 152
+    .line 311
     return-void
 .end method

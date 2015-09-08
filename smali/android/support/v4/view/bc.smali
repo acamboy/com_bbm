@@ -1,68 +1,44 @@
-.class interface abstract Landroid/support/v4/view/bc;
+.class final Landroid/support/v4/view/bc;
 .super Ljava/lang/Object;
-.source "ViewCompat.java"
+.source "VelocityTrackerCompat.java"
+
+# interfaces
+.implements Landroid/support/v4/view/be;
+
+
+# direct methods
+.method constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 37
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a(Landroid/view/View;F)V
+.method public final a(Landroid/view/VelocityTracker;I)F
+    .locals 1
+
+    .prologue
+    .line 40
+    invoke-virtual {p1}, Landroid/view/VelocityTracker;->getXVelocity()F
+
+    move-result v0
+
+    return v0
 .end method
 
-.method public abstract a(Landroid/view/View;IIII)V
-.end method
+.method public final b(Landroid/view/VelocityTracker;I)F
+    .locals 1
 
-.method public abstract a(Landroid/view/View;ILandroid/graphics/Paint;)V
-.end method
+    .prologue
+    .line 44
+    invoke-virtual {p1}, Landroid/view/VelocityTracker;->getYVelocity()F
 
-.method public abstract a(Landroid/view/View;Landroid/graphics/Paint;)V
-.end method
+    move-result v0
 
-.method public abstract a(Landroid/view/View;Landroid/support/v4/view/a;)V
-.end method
-
-.method public abstract a(Landroid/view/View;Ljava/lang/Runnable;)V
-.end method
-
-.method public abstract a(Landroid/view/ViewGroup;)V
-.end method
-
-.method public abstract a(Landroid/view/View;)Z
-.end method
-
-.method public abstract a(Landroid/view/View;I)Z
-.end method
-
-.method public abstract b(Landroid/view/View;)I
-.end method
-
-.method public abstract b(Landroid/view/View;F)V
-.end method
-
-.method public abstract b(Landroid/view/View;I)V
-.end method
-
-.method public abstract c(Landroid/view/View;)V
-.end method
-
-.method public abstract c(Landroid/view/View;F)V
-.end method
-
-.method public abstract d(Landroid/view/View;)I
-.end method
-
-.method public abstract e(Landroid/view/View;)I
-.end method
-
-.method public abstract f(Landroid/view/View;)I
-.end method
-
-.method public abstract g(Landroid/view/View;)Landroid/view/ViewParent;
-.end method
-
-.method public abstract h(Landroid/view/View;)Z
-.end method
-
-.method public abstract i(Landroid/view/View;)F
-.end method
-
-.method public abstract j(Landroid/view/View;)Z
+    return v0
 .end method

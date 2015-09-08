@@ -1,65 +1,88 @@
 .class final Lcom/bbm/util/c;
 .super Ljava/lang/Object;
-.source "AsyncTask.java"
+.source "AdWebView.java"
 
 # interfaces
-.implements Ljava/util/concurrent/ThreadFactory;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field private final a:Ljava/util/concurrent/atomic/AtomicInteger;
+.field final synthetic a:Lcom/bbm/util/b;
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 2
+.method constructor <init>(Lcom/bbm/util/b;)V
+    .locals 0
 
     .prologue
-    .line 184
+    .line 189
+    iput-object p1, p0, Lcom/bbm/util/c;->a:Lcom/bbm/util/b;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 185
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object v0, p0, Lcom/bbm/util/c;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
-    .locals 3
+.method public final run()V
+    .locals 4
 
     .prologue
-    .line 189
-    new-instance v0, Ljava/lang/Thread;
+    .line 192
+    iget-object v0, p0, Lcom/bbm/util/c;->a:Lcom/bbm/util/b;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object v0, v0, Lcom/bbm/util/b;->a:Lcom/bbm/util/AdWebView;
 
-    const-string v2, "AsyncTask #"
+    invoke-static {v0}, Lcom/bbm/util/AdWebView;->a(Lcom/bbm/util/AdWebView;)J
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-wide v0
 
-    iget-object v2, p0, Lcom/bbm/util/c;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+    const-wide/32 v2, 0x1d4c0
 
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    add-long/2addr v0, v2
 
-    move-result v2
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-wide v2
 
-    move-result-object v1
+    cmp-long v0, v0, v2
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-gez v0, :cond_1
 
-    move-result-object v1
+    .line 193
+    invoke-static {}, Lcom/bbm/af;->a()V
 
-    invoke-direct {v0, p1, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+    .line 194
+    iget-object v0, p0, Lcom/bbm/util/c;->a:Lcom/bbm/util/b;
 
-    return-object v0
+    iget-object v0, v0, Lcom/bbm/util/b;->a:Lcom/bbm/util/AdWebView;
+
+    invoke-static {v0}, Lcom/bbm/util/AdWebView;->b(Lcom/bbm/util/AdWebView;)V
+
+    .line 202
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 198
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/util/c;->a:Lcom/bbm/util/b;
+
+    iget-object v0, v0, Lcom/bbm/util/b;->a:Lcom/bbm/util/AdWebView;
+
+    iget-object v0, v0, Lcom/bbm/util/AdWebView;->g:Lcom/bbm/j/k;
+
+    if-eqz v0, :cond_0
+
+    .line 200
+    iget-object v0, p0, Lcom/bbm/util/c;->a:Lcom/bbm/util/b;
+
+    iget-object v0, v0, Lcom/bbm/util/b;->a:Lcom/bbm/util/AdWebView;
+
+    iget-object v0, v0, Lcom/bbm/util/AdWebView;->g:Lcom/bbm/j/k;
+
+    invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
+
+    goto :goto_0
 .end method

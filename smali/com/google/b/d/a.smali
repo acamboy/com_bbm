@@ -12,7 +12,7 @@
     .locals 1
 
     .prologue
-    .line 577
+    .line 620
     new-instance v0, Lcom/google/b/d/b;
 
     invoke-direct {v0}, Lcom/google/b/d/b;-><init>()V
@@ -26,45 +26,45 @@
     .locals 6
 
     .prologue
-    .line 202
-    invoke-static {p0}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 170
+    invoke-static {p0}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 203
-    invoke-static {p1}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 171
+    invoke-static {p1}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 204
+    .line 172
     const/16 v0, 0x1000
 
     new-array v2, v0, [B
 
-    .line 205
+    .line 173
     const-wide/16 v0, 0x0
 
-    .line 207
+    .line 175
     :goto_0
     invoke-virtual {p0, v2}, Ljava/io/InputStream;->read([B)I
 
     move-result v3
 
-    .line 208
+    .line 176
     const/4 v4, -0x1
 
     if-eq v3, v4, :cond_0
 
-    .line 209
+    .line 177
     const/4 v4, 0x0
 
     invoke-virtual {p1, v2, v4, v3}, Ljava/io/OutputStream;->write([BII)V
 
-    .line 212
+    .line 180
     int-to-long v4, v3
 
     add-long/2addr v0, v4
 
-    .line 213
+    .line 181
     goto :goto_0
 
-    .line 214
+    .line 182
     :cond_0
     return-wide v0
 .end method
@@ -73,15 +73,15 @@
     .locals 1
 
     .prologue
-    .line 251
+    .line 219
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 252
+    .line 220
     invoke-static {p0, v0}, Lcom/google/b/d/a;->a(Ljava/io/InputStream;Ljava/io/OutputStream;)J
 
-    .line 253
+    .line 221
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v0

@@ -1,101 +1,112 @@
 .class final Lcom/bbm/ai;
-.super Lcom/bbm/ak;
-.source "Settings.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/ak",
-        "<",
-        "Ljava/lang/Boolean;",
-        ">;"
-    }
-.end annotation
+.super Ljava/util/TimerTask;
+.source "LocationSynchronizer.java"
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Z
-
-.field final synthetic c:Lcom/bbm/ag;
+.field final synthetic a:Lcom/bbm/ag;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ag;Ljava/lang/Boolean;Ljava/lang/String;Z)V
+.method constructor <init>(Lcom/bbm/ag;)V
     .locals 0
 
     .prologue
-    .line 232
-    iput-object p1, p0, Lcom/bbm/ai;->c:Lcom/bbm/ag;
+    .line 95
+    iput-object p1, p0, Lcom/bbm/ai;->a:Lcom/bbm/ag;
 
-    iput-object p3, p0, Lcom/bbm/ai;->a:Ljava/lang/String;
-
-    iput-boolean p4, p0, Lcom/bbm/ai;->b:Z
-
-    invoke-direct {p0, p1, p2}, Lcom/bbm/ak;-><init>(Lcom/bbm/ag;Ljava/lang/Object;)V
+    invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 3
+.method public final run()V
+    .locals 8
 
     .prologue
-    .line 240
-    iget-object v0, p0, Lcom/bbm/ai;->c:Lcom/bbm/ag;
+    .line 98
+    iget-object v0, p0, Lcom/bbm/ai;->a:Lcom/bbm/ag;
 
-    iget-object v0, v0, Lcom/bbm/ag;->b:Landroid/content/SharedPreferences;
+    iget-object v0, v0, Lcom/bbm/ag;->f:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/bbm/ai;->a:Ljava/lang/String;
+    const-string v1, "passive"
 
-    iget-boolean v2, p0, Lcom/bbm/ai;->b:Z
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v0, v1}, Lcom/bbm/ag;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/location/Location;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ai;->c(Ljava/lang/Object;)V
+    .line 101
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    .line 241
+    move-result-wide v2
+
+    .line 102
+    if-eqz v0, :cond_0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/location/Location;->getTime()J
+
+    move-result-wide v4
+
+    sub-long v4, v2, v4
+
+    const-wide/32 v6, 0xdbba0
+
+    cmp-long v1, v4, v6
+
+    if-lez v1, :cond_1
+
+    .line 103
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ai;->a:Lcom/bbm/ag;
+
+    iget-object v0, v0, Lcom/bbm/ag;->f:Landroid/content/Context;
+
+    const-string v1, "network"
+
+    invoke-static {v0, v1}, Lcom/bbm/ag;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/location/Location;
+
+    move-result-object v0
+
+    .line 104
+    if-nez v0, :cond_1
+
+    .line 105
+    iget-object v0, p0, Lcom/bbm/ai;->a:Lcom/bbm/ag;
+
+    iget-object v0, v0, Lcom/bbm/ag;->f:Landroid/content/Context;
+
+    const-string v1, "gps"
+
+    invoke-static {v0, v1}, Lcom/bbm/ag;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/location/Location;
+
+    move-result-object v0
+
+    .line 109
+    :cond_1
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Landroid/location/Location;->getProvider()Ljava/lang/String;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_2
+
+    .line 110
+    iget-object v1, p0, Lcom/bbm/ai;->a:Lcom/bbm/ag;
+
+    iget-object v1, v1, Lcom/bbm/ag;->g:Landroid/os/Handler;
+
+    new-instance v4, Lcom/bbm/aj;
+
+    invoke-direct {v4, p0, v0, v2, v3}, Lcom/bbm/aj;-><init>(Lcom/bbm/ai;Landroid/location/Location;J)V
+
+    invoke-virtual {v1, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 138
+    :cond_2
     return-void
-.end method
-
-.method public final synthetic a(Ljava/lang/Object;)Z
-    .locals 3
-
-    .prologue
-    .line 232
-    check-cast p1, Ljava/lang/Boolean;
-
-    iget-object v0, p0, Lcom/bbm/ai;->c:Lcom/bbm/ag;
-
-    iget-object v0, v0, Lcom/bbm/ag;->b:Landroid/content/SharedPreferences;
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/ai;->a:Ljava/lang/String;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v2
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    move-result v0
-
-    return v0
 .end method

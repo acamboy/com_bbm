@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/view_bali_toolbar" />
     <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/footer_action_bar">
-        <com.bbm.ui.SegmentedControl android:layout_gravity="center_horizontal" android:id="@id/blocked_contacts_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:leftOption="@string/invites" custom:rightOption="@string/updates" />
+        <com.bbm.ui.SegmentedControl android:layout_gravity="center_horizontal" android:id="@id/blocked_contacts_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:leftOption="@string/people" custom:rightOption="@string/updates" />
         <ImageView android:id="@id/greyDividingLine" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/grey_divider_line" android:scaleType="fitXY" android:contentDescription="@string/blank">
             <requestFocus android:layout_width="fill_parent" android:layout_height="wrap_content" />
         </ImageView>
         <FrameLayout android:id="@id/blocked_contacts_fragment_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
     </LinearLayout>
-    <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
-</RelativeLayout>
+</LinearLayout>

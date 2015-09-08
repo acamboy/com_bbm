@@ -1,41 +1,61 @@
-.class Lcom/glympse/android/lib/au;
+.class abstract Lcom/glympse/android/lib/au;
 .super Ljava/lang/Object;
-.source "Debug.java"
+.source "ContentProvider.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/glympse/android/lib/GContentProvider;
+
+
+# instance fields
+.field private jK:Ljava/lang/String;
 
 
 # direct methods
-.method private constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 678
+    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcom/glympse/android/lib/Debug$1;)V
-    .locals 0
-
-    .prologue
-    .line 678
-    invoke-direct {p0}, Lcom/glympse/android/lib/au;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
+.method public isMatches(Lcom/glympse/android/lib/GUri;)Z
+    .locals 2
+
+    .prologue
+    .line 34
+    iget-object v0, p0, Lcom/glympse/android/lib/au;->jK:Ljava/lang/String;
+
+    invoke-interface {p1}, Lcom/glympse/android/lib/GUri;->getScheme()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/glympse/android/hal/Helpers;->safeEquals(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method protected q(Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 682
-    invoke-static {}, Lcom/glympse/android/lib/Debug;->uploadLogsOnCurrentThread()V
+    .line 25
+    iput-object p1, p0, Lcom/glympse/android/lib/au;->jK:Ljava/lang/String;
 
-    .line 683
+    .line 26
+    return-void
+.end method
+
+.method public stop()V
+    .locals 0
+
+    .prologue
+    .line 39
     return-void
 .end method

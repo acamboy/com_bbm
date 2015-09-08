@@ -24,11 +24,11 @@
     const/4 v8, 0x2
 
     .line 58
-    invoke-interface {p0}, Lcom/glympse/android/lib/GGlympsePrivate;->getFavoritesManager()Lcom/glympse/android/lib/GFavoritesManager;
+    invoke-interface {p0}, Lcom/glympse/android/lib/GGlympsePrivate;->getFavoritesManager()Lcom/glympse/android/api/GFavoritesManager;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/glympse/android/lib/GFavoritesManager;->getFavorites()Lcom/glympse/android/core/GArray;
+    invoke-interface {v0}, Lcom/glympse/android/api/GFavoritesManager;->getFavorites()Lcom/glympse/android/core/GArray;
 
     move-result-object v2
 
@@ -191,7 +191,7 @@
     move-result-object v3
 
     .line 102
-    invoke-static {v3}, Lcom/glympse/android/rpc/c;->R(Ljava/lang/String;)Lcom/glympse/android/core/GDrawable;
+    invoke-static {v3}, Lcom/glympse/android/rpc/c;->V(Ljava/lang/String;)Lcom/glympse/android/core/GDrawable;
 
     move-result-object v3
 

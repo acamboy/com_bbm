@@ -154,7 +154,7 @@
     return-object v0
 .end method
 
-.method private a(I)Lcom/mapquest/android/maps/q;
+.method private b(I)Lcom/mapquest/android/maps/q;
     .locals 1
 
     .prologue
@@ -167,7 +167,7 @@
     return-object v0
 .end method
 
-.method private e(Lcom/mapquest/android/maps/ca;)Ljava/io/File;
+.method private e(Lcom/mapquest/android/maps/bz;)Ljava/io/File;
     .locals 4
 
     .prologue
@@ -180,7 +180,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v3, p1, Lcom/mapquest/android/maps/ca;->i:Ljava/lang/String;
+    iget-object v3, p1, Lcom/mapquest/android/maps/bz;->i:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -221,7 +221,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/mapquest/android/maps/p;)Lcom/mapquest/android/maps/q;
+.method public final a(I)Lcom/mapquest/android/maps/q;
     .locals 3
 
     .prologue
@@ -231,9 +231,7 @@
     .line 222
     sget-object v1, Lcom/mapquest/android/maps/n;->a:[I
 
-    invoke-virtual {p1}, Lcom/mapquest/android/maps/p;->ordinal()I
-
-    move-result v2
+    add-int/lit8 v2, p1, -0x1
 
     aget v1, v1, v2
 
@@ -263,7 +261,7 @@
     :pswitch_2
     const/high16 v0, 0x6400000
 
-    invoke-direct {p0, v0}, Lcom/mapquest/android/maps/h;->a(I)Lcom/mapquest/android/maps/q;
+    invoke-direct {p0, v0}, Lcom/mapquest/android/maps/h;->b(I)Lcom/mapquest/android/maps/q;
 
     move-result-object v0
 
@@ -273,7 +271,7 @@
     :pswitch_3
     const/high16 v0, 0xa00000
 
-    invoke-direct {p0, v0}, Lcom/mapquest/android/maps/h;->a(I)Lcom/mapquest/android/maps/q;
+    invoke-direct {p0, v0}, Lcom/mapquest/android/maps/h;->b(I)Lcom/mapquest/android/maps/q;
 
     move-result-object v0
 
@@ -413,7 +411,7 @@
     goto :goto_1
 .end method
 
-.method public final a(Lcom/mapquest/android/maps/ca;)V
+.method public final a(Lcom/mapquest/android/maps/bz;)V
     .locals 6
 
     .prologue
@@ -422,13 +420,13 @@
     const/4 v2, 0x1
 
     .line 79
-    invoke-virtual {p1}, Lcom/mapquest/android/maps/ca;->a()Z
+    invoke-virtual {p1}, Lcom/mapquest/android/maps/bz;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p1, Lcom/mapquest/android/maps/ca;->h:[B
+    iget-object v0, p1, Lcom/mapquest/android/maps/bz;->h:[B
 
     if-nez v0, :cond_1
 
@@ -439,7 +437,7 @@
 
     .line 81
     :cond_1
-    iget-object v0, p1, Lcom/mapquest/android/maps/ca;->h:[B
+    iget-object v0, p1, Lcom/mapquest/android/maps/bz;->h:[B
 
     if-eqz v0, :cond_0
 
@@ -451,11 +449,11 @@
     .line 84
     new-instance v0, Ljava/io/File;
 
-    invoke-direct {p0, p1}, Lcom/mapquest/android/maps/h;->e(Lcom/mapquest/android/maps/ca;)Ljava/io/File;
+    invoke-direct {p0, p1}, Lcom/mapquest/android/maps/h;->e(Lcom/mapquest/android/maps/bz;)Ljava/io/File;
 
     move-result-object v2
 
-    iget-object v3, p1, Lcom/mapquest/android/maps/ca;->k:Ljava/lang/String;
+    iget-object v3, p1, Lcom/mapquest/android/maps/bz;->k:Ljava/lang/String;
 
     invoke-direct {v0, v2, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
@@ -471,7 +469,7 @@
 
     .line 88
     :try_start_1
-    iget-object v0, p1, Lcom/mapquest/android/maps/ca;->h:[B
+    iget-object v0, p1, Lcom/mapquest/android/maps/bz;->h:[B
 
     invoke-virtual {v2, v0}, Ljava/io/FileOutputStream;->write([B)V
 
@@ -678,7 +676,7 @@
     goto :goto_0
 .end method
 
-.method public final b(Lcom/mapquest/android/maps/ca;)Lcom/mapquest/android/maps/ca;
+.method public final b(Lcom/mapquest/android/maps/bz;)Lcom/mapquest/android/maps/bz;
     .locals 6
 
     .prologue
@@ -687,11 +685,11 @@
     .line 109
     new-instance v1, Ljava/io/File;
 
-    invoke-direct {p0, p1}, Lcom/mapquest/android/maps/h;->e(Lcom/mapquest/android/maps/ca;)Ljava/io/File;
+    invoke-direct {p0, p1}, Lcom/mapquest/android/maps/h;->e(Lcom/mapquest/android/maps/bz;)Ljava/io/File;
 
     move-result-object v2
 
-    iget-object v3, p1, Lcom/mapquest/android/maps/ca;->k:Ljava/lang/String;
+    iget-object v3, p1, Lcom/mapquest/android/maps/bz;->k:Ljava/lang/String;
 
     invoke-direct {v1, v2, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
@@ -705,7 +703,7 @@
     .line 112
     const-wide/16 v0, -0x1
 
-    iput-wide v0, p1, Lcom/mapquest/android/maps/ca;->c:J
+    iput-wide v0, p1, Lcom/mapquest/android/maps/bz;->c:J
 
     .line 144
     :goto_0
@@ -792,7 +790,7 @@
 
     move-result-object v1
 
-    iput-object v1, p1, Lcom/mapquest/android/maps/ca;->h:[B
+    iput-object v1, p1, Lcom/mapquest/android/maps/bz;->h:[B
 
     .line 127
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
@@ -976,7 +974,7 @@
     goto :goto_0
 .end method
 
-.method public final c(Lcom/mapquest/android/maps/ca;)V
+.method public final c(Lcom/mapquest/android/maps/bz;)V
     .locals 3
 
     .prologue
@@ -985,7 +983,7 @@
 
     iget-object v1, p0, Lcom/mapquest/android/maps/h;->e:Ljava/io/File;
 
-    iget-object v2, p1, Lcom/mapquest/android/maps/ca;->k:Ljava/lang/String;
+    iget-object v2, p1, Lcom/mapquest/android/maps/bz;->k:Ljava/lang/String;
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
@@ -995,7 +993,7 @@
     return-void
 .end method
 
-.method public final d(Lcom/mapquest/android/maps/ca;)Z
+.method public final d(Lcom/mapquest/android/maps/bz;)Z
     .locals 3
 
     .prologue
@@ -1004,7 +1002,7 @@
 
     iget-object v1, p0, Lcom/mapquest/android/maps/h;->e:Ljava/io/File;
 
-    iget-object v2, p1, Lcom/mapquest/android/maps/ca;->k:Ljava/lang/String;
+    iget-object v2, p1, Lcom/mapquest/android/maps/bz;->k:Ljava/lang/String;
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 

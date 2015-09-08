@@ -1,120 +1,167 @@
-.class public final enum Lcom/google/a/c;
-.super Ljava/lang/Enum;
+.class public final Lcom/google/a/c;
+.super Ljava/lang/Object;
 
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum",
-        "<",
-        "Lcom/google/a/c;",
-        ">;"
-    }
+.annotation runtime Ljava/lang/Deprecated;
 .end annotation
 
 
 # static fields
-.field public static final enum a:Lcom/google/a/c;
+.field public static final b:Lcom/google/a/c;
 
-.field public static final enum b:Lcom/google/a/c;
+.field public static final c:Lcom/google/a/c;
 
-.field public static final enum c:Lcom/google/a/c;
+.field public static final d:Lcom/google/a/c;
 
-.field private static final synthetic d:[Lcom/google/a/c;
+.field public static final e:Lcom/google/a/c;
+
+.field public static final f:Lcom/google/a/c;
+
+.field public static final g:Lcom/google/a/c;
+
+
+# instance fields
+.field public final a:Lcom/google/android/gms/ads/f;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
-
-    const/4 v4, 0x2
-
-    const/4 v3, 0x1
-
-    const/4 v2, 0x0
+    .locals 3
 
     new-instance v0, Lcom/google/a/c;
 
-    const-string v1, "UNKNOWN"
+    const/4 v1, -0x1
 
-    invoke-direct {v0, v1, v2}, Lcom/google/a/c;-><init>(Ljava/lang/String;I)V
+    const/4 v2, -0x2
 
-    sput-object v0, Lcom/google/a/c;->a:Lcom/google/a/c;
-
-    new-instance v0, Lcom/google/a/c;
-
-    const-string v1, "MALE"
-
-    invoke-direct {v0, v1, v3}, Lcom/google/a/c;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2}, Lcom/google/a/c;-><init>(II)V
 
     sput-object v0, Lcom/google/a/c;->b:Lcom/google/a/c;
 
     new-instance v0, Lcom/google/a/c;
 
-    const-string v1, "FEMALE"
+    const/16 v1, 0x140
 
-    invoke-direct {v0, v1, v4}, Lcom/google/a/c;-><init>(Ljava/lang/String;I)V
+    const/16 v2, 0x32
+
+    invoke-direct {v0, v1, v2}, Lcom/google/a/c;-><init>(II)V
 
     sput-object v0, Lcom/google/a/c;->c:Lcom/google/a/c;
 
-    const/4 v0, 0x3
+    new-instance v0, Lcom/google/a/c;
 
-    new-array v0, v0, [Lcom/google/a/c;
+    const/16 v1, 0x12c
 
-    sget-object v1, Lcom/google/a/c;->a:Lcom/google/a/c;
+    const/16 v2, 0xfa
 
-    aput-object v1, v0, v2
+    invoke-direct {v0, v1, v2}, Lcom/google/a/c;-><init>(II)V
 
-    sget-object v1, Lcom/google/a/c;->b:Lcom/google/a/c;
+    sput-object v0, Lcom/google/a/c;->d:Lcom/google/a/c;
 
-    aput-object v1, v0, v3
+    new-instance v0, Lcom/google/a/c;
 
-    sget-object v1, Lcom/google/a/c;->c:Lcom/google/a/c;
+    const/16 v1, 0x1d4
 
-    aput-object v1, v0, v4
+    const/16 v2, 0x3c
 
-    sput-object v0, Lcom/google/a/c;->d:[Lcom/google/a/c;
+    invoke-direct {v0, v1, v2}, Lcom/google/a/c;-><init>(II)V
+
+    sput-object v0, Lcom/google/a/c;->e:Lcom/google/a/c;
+
+    new-instance v0, Lcom/google/a/c;
+
+    const/16 v1, 0x2d8
+
+    const/16 v2, 0x5a
+
+    invoke-direct {v0, v1, v2}, Lcom/google/a/c;-><init>(II)V
+
+    sput-object v0, Lcom/google/a/c;->f:Lcom/google/a/c;
+
+    new-instance v0, Lcom/google/a/c;
+
+    const/16 v1, 0xa0
+
+    const/16 v2, 0x258
+
+    invoke-direct {v0, v1, v2}, Lcom/google/a/c;-><init>(II)V
+
+    sput-object v0, Lcom/google/a/c;->g:Lcom/google/a/c;
 
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;I)V
+.method private constructor <init>(II)V
+    .locals 1
+
+    new-instance v0, Lcom/google/android/gms/ads/f;
+
+    invoke-direct {v0, p1, p2}, Lcom/google/android/gms/ads/f;-><init>(II)V
+
+    invoke-direct {p0, v0}, Lcom/google/a/c;-><init>(Lcom/google/android/gms/ads/f;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/google/android/gms/ads/f;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/a/c;->a:Lcom/google/android/gms/ads/f;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcom/google/a/c;
-    .locals 1
 
-    const-class v0, Lcom/google/a/c;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    instance-of v0, p1, Lcom/google/a/c;
 
-    move-result-object v0
+    if-nez v0, :cond_0
 
-    check-cast v0, Lcom/google/a/c;
+    const/4 v0, 0x0
 
-    return-object v0
+    :goto_0
+    return v0
+
+    :cond_0
+    check-cast p1, Lcom/google/a/c;
+
+    iget-object v0, p0, Lcom/google/a/c;->a:Lcom/google/android/gms/ads/f;
+
+    iget-object v1, p1, Lcom/google/a/c;->a:Lcom/google/android/gms/ads/f;
+
+    invoke-virtual {v0, v1}, Lcom/google/android/gms/ads/f;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    goto :goto_0
 .end method
 
-.method public static values()[Lcom/google/a/c;
+.method public final hashCode()I
     .locals 1
 
-    sget-object v0, Lcom/google/a/c;->d:[Lcom/google/a/c;
+    iget-object v0, p0, Lcom/google/a/c;->a:Lcom/google/android/gms/ads/f;
 
-    invoke-virtual {v0}, [Lcom/google/a/c;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/f;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/a/c;->a:Lcom/google/android/gms/ads/f;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/f;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    check-cast v0, [Lcom/google/a/c;
 
     return-object v0
 .end method

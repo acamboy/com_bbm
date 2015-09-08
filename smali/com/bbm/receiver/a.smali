@@ -52,7 +52,7 @@
 
     new-array v6, v6, [Ljava/lang/Object;
 
-    invoke-static {v5, v6}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v5, v6}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 31
     invoke-virtual {v4, v0, v8, v7}, Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName;II)V

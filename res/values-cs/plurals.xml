@@ -15,6 +15,10 @@
         <item quantity="one">%1$d člen</item>
         <item quantity="few">%1$d členové</item>
     </plurals>
+    <plurals name="common_days_1d">
+        <item quantity="other">%1$d dní</item>
+        <item quantity="one">%1$d den</item>
+    </plurals>
     <plurals name="ephemeral_picker_seconds">
         <item quantity="other">s</item>
         <item quantity="one">s</item>
@@ -37,37 +41,41 @@
         <item quantity="one">1 výsledek</item>
     </plurals>
     <plurals name="slide_menu_active_chats">
-        <item quantity="other">Počet aktivních chatů: %1$s</item>
-        <item quantity="one">1 aktivní chat</item>
+        <item quantity="one">%1$s aktivní chat</item>
+        <item quantity="few">%1$s aktivní chaty</item>
+        <item quantity="many">%1$s aktivních chatů</item>
     </plurals>
     <plurals name="slide_menu_new_channelupdates">
-        <item quantity="other">Počet nových oznámení: %1$s</item>
-        <item quantity="one">1 nové oznámení</item>
+        <item quantity="one">%1$s položka kanálů</item>
+        <item quantity="few">%1$s položky kanálů</item>
+        <item quantity="many">%1$s položek kanálů</item>
     </plurals>
     <plurals name="slide_menu_new_invites">
-        <item quantity="other">Počet nových pozvání: %1$s</item>
-        <item quantity="one">1 nové pozvání</item>
+        <item quantity="one">%1$s nové pozvání</item>
+        <item quantity="few">%1$s nová pozvání</item>
+        <item quantity="many">%1$s nových pozvání</item>
     </plurals>
     <plurals name="slide_menu_new_updates">
-        <item quantity="other">Počet nových položek: %1$s</item>
-        <item quantity="one">1 nová položka</item>
+        <item quantity="one">%1$s nová aktualizace</item>
+        <item quantity="few">%1$s nové aktualizace</item>
+        <item quantity="many">%1$s nových aktualizací</item>
     </plurals>
     <plurals name="slide_menu_total_contacts">
         <item quantity="other">Počet kontaktů: %1$s</item>
-        <item quantity="one">1 kontakt</item>
+        <item quantity="one">Počet kontaktů: %1$s</item>
     </plurals>
     <plurals name="slide_menu_total_groups">
         <item quantity="other">Počet skupin: %1$s</item>
-        <item quantity="one">1 skupina</item>
+        <item quantity="one">Počet skupin: %1$s</item>
     </plurals>
     <plurals name="update_channel_stats_comments">
-        <item quantity="other">%1$s komentářů</item>
-        <item quantity="one">1 komentář</item>
-        <item quantity="few">%1$s komentáře</item>
+        <item quantity="other">Komentáře: %1$s</item>
+        <item quantity="one">Komentáře: 1</item>
+        <item quantity="few">Komentáře: %1$s</item>
     </plurals>
     <plurals name="update_channel_stats_likes">
-        <item quantity="other">%1$s označení To se mi líbí,</item>
-        <item quantity="one">1 označení To se mi líbí,</item>
-        <item quantity="few">%1$s označení To se mi líbí,</item>
+        <item quantity="other">To se mi líbí: %1$s</item>
+        <item quantity="one">To se mi líbí: 1</item>
+        <item quantity="few">To se mi líbí: %1$s</item>
     </plurals>
 </resources>

@@ -160,7 +160,7 @@
     .line 377
     add-float/2addr v0, v1
 
-    const/high16 v1, 0x42080000
+    const/high16 v1, 0x42080000    # 34.0f
 
     div-float/2addr v0, v1
 
@@ -193,14 +193,14 @@
     .line 380
     add-float/2addr v1, v2
 
-    const/high16 v2, 0x42100000
+    const/high16 v2, 0x42100000    # 36.0f
 
     div-float/2addr v1, v2
 
     .line 381
     add-float/2addr v0, v1
 
-    const/high16 v1, 0x40000000
+    const/high16 v1, 0x40000000    # 2.0f
 
     div-float/2addr v0, v1
 
@@ -211,7 +211,7 @@
     .locals 3
 
     .prologue
-    const/high16 v2, 0x3f000000
+    const/high16 v2, 0x3f000000    # 0.5f
 
     .line 400
     invoke-static {p0, p1}, Lcom/google/zxing/o;->a(Lcom/google/zxing/o;Lcom/google/zxing/o;)F
@@ -409,7 +409,7 @@
 
     .line 313
     :cond_0
-    const/high16 v9, 0x40400000
+    const/high16 v9, 0x40400000    # 3.0f
 
     cmpl-float v9, v0, v9
 
@@ -521,7 +521,7 @@
 
     .line 342
     :cond_2
-    const/high16 v9, 0x40400000
+    const/high16 v9, 0x40400000    # 3.0f
 
     cmpl-float v9, v0, v9
 
@@ -573,7 +573,7 @@
     :cond_4
     neg-float v0, v0
 
-    const/high16 v1, 0x40400000
+    const/high16 v1, 0x40400000    # 3.0f
 
     cmpl-float v0, v0, v1
 
@@ -622,7 +622,7 @@
     :cond_5
     neg-float v0, v0
 
-    const/high16 v1, 0x40400000
+    const/high16 v1, 0x40400000    # 3.0f
 
     cmpl-float v0, v0, v1
 
@@ -1257,7 +1257,7 @@
     .locals 3
 
     .prologue
-    const/high16 v2, 0x3f000000
+    const/high16 v2, 0x3f000000    # 0.5f
 
     .line 421
     invoke-static {p0, p2}, Lcom/google/zxing/o;->a(Lcom/google/zxing/o;Lcom/google/zxing/o;)F

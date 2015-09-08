@@ -3,120 +3,207 @@
 .source "ConversationActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/e/bq;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field a:Lcom/bbm/d/fi;
-
-.field final synthetic b:Lcom/bbm/ui/activities/ConversationActivity;
-
-.field private final c:Lcom/bbm/j/u;
+.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
 
 
 # direct methods
 .method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 1147
-    iput-object p1, p0, Lcom/bbm/ui/activities/ga;->b:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 2798
+    iput-object p1, p0, Lcom/bbm/ui/activities/ga;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 1151
-    new-instance v0, Lcom/bbm/ui/activities/gb;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/gb;-><init>(Lcom/bbm/ui/activities/ga;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ga;->c:Lcom/bbm/j/u;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/bbm/d/fi;)V
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 5
 
     .prologue
-    .line 1188
-    iput-object p1, p0, Lcom/bbm/ui/activities/ga;->a:Lcom/bbm/d/fi;
+    .line 2802
+    iget-object v0, p0, Lcom/bbm/ui/activities/ga;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    .line 1189
-    iget-object v0, p0, Lcom/bbm/ui/activities/ga;->c:Lcom/bbm/j/u;
+    iget-object v0, v0, Lcom/bbm/ui/activities/ConversationActivity;->x:Lcom/bbm/j/a;
 
-    invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
-
-    .line 1190
-    return-void
-.end method
-
-.method public final b(Lcom/bbm/d/fi;)V
-    .locals 0
-
-    .prologue
-    .line 1194
-    invoke-virtual {p0, p1}, Lcom/bbm/ui/activities/ga;->c(Lcom/bbm/d/fi;)V
-
-    .line 1195
-    return-void
-.end method
-
-.method public final c(Lcom/bbm/d/fi;)V
-    .locals 3
-
-    .prologue
-    .line 1199
-    iget-object v0, p1, Lcom/bbm/d/fi;->h:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 1200
-    iget-object v0, p0, Lcom/bbm/ui/activities/ga;->b:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->j(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/a;
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p1, Lcom/bbm/d/fi;->h:Ljava/lang/String;
+    check-cast v0, Lcom/google/b/a/l;
 
-    new-instance v2, Lcom/bbm/d/bn;
+    .line 2803
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Z
 
-    invoke-direct {v2, v1}, Lcom/bbm/d/bn;-><init>(Ljava/lang/String;)V
+    move-result v1
 
-    invoke-virtual {v0, v2}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
+    if-eqz v1, :cond_2
 
-    .line 1202
+    .line 2804
+    invoke-virtual {v0}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/gr;
+
+    .line 2805
+    iget-object v1, v0, Lcom/bbm/d/gr;->g:Ljava/lang/String;
+
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 2806
+    iget-object v1, p0, Lcom/bbm/ui/activities/ga;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->g(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/a;
+
+    move-result-object v1
+
+    iget-object v0, v0, Lcom/bbm/d/gr;->c:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/bbm/d/aj;->b(Ljava/lang/String;)Lcom/bbm/d/by;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ez;)V
+
+    .line 2824
     :cond_0
-    iget-object v0, p1, Lcom/bbm/d/fi;->m:Ljava/lang/String;
+    :goto_0
+    return-void
 
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+    .line 2808
+    :cond_1
+    new-instance v1, Landroid/content/Intent;
 
-    move-result v0
+    iget-object v2, p0, Lcom/bbm/ui/activities/ga;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    if-nez v0, :cond_1
+    const-class v3, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;
 
-    .line 1203
-    iget-object v0, p0, Lcom/bbm/ui/activities/ga;->b:Lcom/bbm/ui/activities/ConversationActivity;
+    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->j(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/a;
+    .line 2809
+    const-string v2, "pending_contact_id"
+
+    iget-object v0, v0, Lcom/bbm/d/gr;->c:Ljava/lang/String;
+
+    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 2810
+    iget-object v0, p0, Lcom/bbm/ui/activities/ga;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/ConversationActivity;->startActivity(Landroid/content/Intent;)V
+
+    goto :goto_0
+
+    .line 2815
+    :cond_2
+    iget-object v0, p0, Lcom/bbm/ui/activities/ga;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/ConversationActivity;->u:Lcom/bbm/j/a;
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p1, Lcom/bbm/d/fi;->m:Ljava/lang/String;
+    check-cast v0, Lcom/google/b/a/l;
 
-    new-instance v2, Lcom/bbm/d/cm;
+    .line 2816
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Z
 
-    invoke-direct {v2, v1}, Lcom/bbm/d/cm;-><init>(Ljava/lang/String;)V
+    move-result v1
 
-    invoke-virtual {v0, v2}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
+    if-eqz v1, :cond_3
 
-    .line 1205
-    :cond_1
-    return-void
+    .line 2817
+    iget-object v1, p0, Lcom/bbm/ui/activities/ga;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v1}, Lcom/bbm/invite/o;->a(Landroid/content/Context;)Lcom/bbm/invite/o;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/iceberg/m;
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/ga;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-virtual {v1, v0, v2}, Lcom/bbm/invite/o;->a(Lcom/bbm/iceberg/m;Landroid/app/Activity;)V
+
+    goto :goto_0
+
+    .line 2819
+    :cond_3
+    iget-object v0, p0, Lcom/bbm/ui/activities/ga;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/ConversationActivity;->t:Lcom/bbm/j/a;
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/b/a/l;
+
+    .line 2820
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 2821
+    iget-object v1, p0, Lcom/bbm/ui/activities/ga;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v1}, Lcom/bbm/invite/o;->a(Landroid/content/Context;)Lcom/bbm/invite/o;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/ie;
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-static {v0}, Lcom/bbm/d/b/a;->a(Lcom/bbm/d/ie;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object v3, v1, Lcom/bbm/invite/o;->a:Landroid/content/Context;
+
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    const v4, 0x7f0e053b
+
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v0}, Lcom/bbm/d/b/a;->d(Lcom/bbm/d/ie;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v3, v2, v0}, Lcom/bbm/invite/o;->a(Ljava/lang/String;Ljava/util/List;Ljava/lang/String;)V
+
+    goto :goto_0
 .end method

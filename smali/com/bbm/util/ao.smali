@@ -3,34 +3,28 @@
 .source "ChannelUtil.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/b/o;
+.field final synthetic a:Ljava/lang/String;
 
-.field final synthetic b:Lcom/bbm/d/ee;
+.field final synthetic b:Ljava/lang/String;
 
-.field final synthetic c:Landroid/app/Activity;
-
-.field final synthetic d:Z
+.field final synthetic c:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/b/o;Lcom/bbm/d/ee;Landroid/app/Activity;)V
-    .locals 1
+.method constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
     .prologue
-    .line 258
-    iput-object p1, p0, Lcom/bbm/util/ao;->a:Lcom/bbm/ui/b/o;
+    .line 1089
+    iput-object p1, p0, Lcom/bbm/util/ao;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lcom/bbm/util/ao;->b:Lcom/bbm/d/ee;
+    iput-object p2, p0, Lcom/bbm/util/ao;->b:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/bbm/util/ao;->c:Landroid/app/Activity;
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/bbm/util/ao;->d:Z
+    iput-object p3, p0, Lcom/bbm/util/ao;->c:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,26 +33,30 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 5
 
     .prologue
-    .line 261
-    iget-object v0, p0, Lcom/bbm/util/ao;->a:Lcom/bbm/ui/b/o;
+    .line 1093
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->dismiss()V
+    .line 1094
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
-    .line 262
-    iget-object v0, p0, Lcom/bbm/util/ao;->b:Lcom/bbm/d/ee;
+    move-result-object v0
 
-    const/4 v1, 0x0
+    iget-object v1, p0, Lcom/bbm/util/ao;->a:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/bbm/util/ao;->c:Landroid/app/Activity;
+    iget-object v2, p0, Lcom/bbm/util/ao;->b:Ljava/lang/String;
 
-    iget-boolean v3, p0, Lcom/bbm/util/ao;->d:Z
+    iget-object v3, p0, Lcom/bbm/util/ao;->c:Ljava/lang/String;
 
-    invoke-static {v0, v1, v2, v3}, Lcom/bbm/util/s;->a(Lcom/bbm/d/ee;Landroid/widget/ImageView;Landroid/app/Activity;Z)V
+    new-instance v4, Lcom/bbm/d/cj;
 
-    .line 263
+    invoke-direct {v4, v1, v2, v3}, Lcom/bbm/d/cj;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0, v4}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ez;)V
+
+    .line 1095
     return-void
 .end method

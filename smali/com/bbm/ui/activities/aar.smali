@@ -1,85 +1,68 @@
 .class final Lcom/bbm/ui/activities/aar;
-.super Ljava/lang/Object;
-.source "OpenInBbmActivity.java"
+.super Lcom/bbm/j/a;
+.source "ReceivedPendingGroupInviteActivity.java"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/j/a",
+        "<",
+        "Ljava/lang/Integer;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Lcom/bbm/ui/activities/OpenInBbmActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/OpenInBbmActivity;Ljava/lang/String;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;)V
     .locals 0
 
     .prologue
-    .line 276
-    iput-object p1, p0, Lcom/bbm/ui/activities/aar;->b:Lcom/bbm/ui/activities/OpenInBbmActivity;
+    .line 273
+    iput-object p1, p0, Lcom/bbm/ui/activities/aar;->a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
 
-    iput-object p2, p0, Lcom/bbm/ui/activities/aar;->a:Ljava/lang/String;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method protected final synthetic a()Ljava/lang/Object;
+    .locals 1
 
     .prologue
-    .line 278
-    iget-object v0, p0, Lcom/bbm/ui/activities/aar;->b:Lcom/bbm/ui/activities/OpenInBbmActivity;
+    .line 273
+    iget-object v0, p0, Lcom/bbm/ui/activities/aar;->a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->isFinishing()Z
+    invoke-static {v0}, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;->a(Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;)Lcom/bbm/f;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/bbm/f;->c:Lcom/bbm/g/an;
+
+    invoke-virtual {v0}, Lcom/bbm/g/an;->f()Lcom/bbm/j/w;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/bbm/j/w;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/aar;->b:Lcom/bbm/ui/activities/OpenInBbmActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a(Lcom/bbm/ui/activities/OpenInBbmActivity;)Lcom/bbm/f/ac;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
-
-    .line 279
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/bbm/d/ac;->h:Lcom/bbm/d/a/f;
-
-    iget-object v0, v0, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/aar;->b:Lcom/bbm/ui/activities/OpenInBbmActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a(Lcom/bbm/ui/activities/OpenInBbmActivity;)Lcom/bbm/f/ac;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lcom/bbm/f/a;->b(Lcom/bbm/f/ac;)V
-
-    .line 280
-    iget-object v0, p0, Lcom/bbm/ui/activities/aar;->b:Lcom/bbm/ui/activities/OpenInBbmActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->b(Lcom/bbm/ui/activities/OpenInBbmActivity;)Lcom/bbm/f/ac;
-
-    .line 281
-    iget-object v0, p0, Lcom/bbm/ui/activities/aar;->b:Lcom/bbm/ui/activities/OpenInBbmActivity;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/aar;->a:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a(Lcom/bbm/ui/activities/OpenInBbmActivity;Ljava/lang/String;)V
-
-    .line 283
-    :cond_0
-    return-void
+    return-object v0
 .end method

@@ -26,9 +26,9 @@
 
     .prologue
     .line 1464
-    new-instance v0, Landroid/support/v4/widget/ao;
+    new-instance v0, Landroid/support/v4/widget/ba;
 
-    invoke-direct {v0}, Landroid/support/v4/widget/ao;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/widget/ba;-><init>()V
 
     sput-object v0, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 

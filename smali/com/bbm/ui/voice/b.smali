@@ -1,66 +1,88 @@
 .class final Lcom/bbm/ui/voice/b;
-.super Landroid/animation/AnimatorListenerAdapter;
-.source "IncomingCallAnswerBar.java"
+.super Lcom/bbm/j/k;
+.source "VolumeControlLifeCycleListener.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
+.field final synthetic a:Lcom/bbm/ui/voice/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/voice/a;)V
+    .locals 1
 
     .prologue
-    .line 292
-    iput-object p1, p0, Lcom/bbm/ui/voice/b;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
+    .line 22
+    iput-object p1, p0, Lcom/bbm/ui/voice/b;->a:Lcom/bbm/ui/voice/a;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
+.method protected final a()V
+    .locals 3
 
     .prologue
-    .line 295
-    iget-object v0, p0, Lcom/bbm/ui/voice/b;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
+    .line 25
+    iget-object v0, p0, Lcom/bbm/ui/voice/b;->a:Lcom/bbm/ui/voice/a;
 
-    invoke-static {v0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->a(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Z
+    iget v0, v0, Lcom/bbm/ui/voice/a;->a:I
 
-    move-result v0
+    .line 27
+    iget-object v1, p0, Lcom/bbm/ui/voice/b;->a:Lcom/bbm/ui/voice/a;
 
-    if-nez v0, :cond_0
+    iget-object v1, v1, Lcom/bbm/ui/voice/a;->b:Landroid/app/Activity;
 
-    iget-object v0, p0, Lcom/bbm/ui/voice/b;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
+    invoke-static {v1}, Lcom/bbm/n/b;->a(Landroid/content/Context;)Lcom/bbm/n/b;
 
-    invoke-static {v0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->b(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Z
+    move-result-object v1
 
-    move-result v0
+    invoke-virtual {v1}, Lcom/bbm/n/b;->k()I
 
-    if-nez v0, :cond_0
+    move-result v1
 
-    iget-object v0, p0, Lcom/bbm/ui/voice/b;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
+    .line 28
+    const/4 v2, 0x2
 
-    invoke-static {v0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->c(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Z
+    if-eq v2, v1, :cond_0
 
-    move-result v0
+    const/4 v2, 0x3
 
-    if-nez v0, :cond_0
+    if-eq v2, v1, :cond_0
 
-    .line 296
-    iget-object v0, p0, Lcom/bbm/ui/voice/b;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
+    const/4 v2, 0x4
 
-    invoke-static {v0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->d(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Landroid/animation/AnimatorSet;
+    if-ne v2, v1, :cond_1
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
-
-    .line 298
+    .line 30
     :cond_0
+    const/4 v0, 0x0
+
+    .line 33
+    :cond_1
+    iget-object v1, p0, Lcom/bbm/ui/voice/b;->a:Lcom/bbm/ui/voice/a;
+
+    iget-object v1, v1, Lcom/bbm/ui/voice/a;->b:Landroid/app/Activity;
+
+    invoke-virtual {v1}, Landroid/app/Activity;->getVolumeControlStream()I
+
+    move-result v1
+
+    if-eq v0, v1, :cond_2
+
+    .line 34
+    iget-object v1, p0, Lcom/bbm/ui/voice/b;->a:Lcom/bbm/ui/voice/a;
+
+    iget-object v1, v1, Lcom/bbm/ui/voice/a;->b:Landroid/app/Activity;
+
+    invoke-virtual {v1, v0}, Landroid/app/Activity;->setVolumeControlStream(I)V
+
+    .line 36
+    :cond_2
     return-void
 .end method

@@ -13,6 +13,10 @@
         <item quantity="other">%1$d Üye</item>
         <item quantity="one">%1$d Üye</item>
     </plurals>
+    <plurals name="common_days_1d">
+        <item quantity="other">%1$d gün</item>
+        <item quantity="one">%1$d gün</item>
+    </plurals>
     <plurals name="ephemeral_picker_seconds">
         <item quantity="other">saniye</item>
         <item quantity="one">saniye</item>
@@ -35,28 +39,28 @@
         <item quantity="one">1 Sonuç</item>
     </plurals>
     <plurals name="slide_menu_active_chats">
-        <item quantity="other">%1$s Etkin Sohbet</item>
-        <item quantity="one">1 Etkin Sohbet</item>
+        <item quantity="other">Etkin Sohbet: %1$s</item>
+        <item quantity="one">Etkin Sohbet: %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_channelupdates">
-        <item quantity="other">%1$s Yeni Bildirim</item>
-        <item quantity="one">1 Yeni Bildirim</item>
+        <item quantity="other">Yeni Kanal öğeleri %1$s</item>
+        <item quantity="one">Yeni Kanal öğesi %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_invites">
-        <item quantity="other">%1$s Yeni Davet</item>
-        <item quantity="one">1 Yeni Davet</item>
+        <item quantity="other">Yeni Davetler %1$s</item>
+        <item quantity="one">Yeni Davet %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_updates">
-        <item quantity="other">%1$s Yeni Öğe</item>
-        <item quantity="one">1 Yeni Öğe</item>
+        <item quantity="other">Yeni Akışlar %1$s</item>
+        <item quantity="one">Yeni Akış %1$s</item>
     </plurals>
     <plurals name="slide_menu_total_contacts">
         <item quantity="other">%1$s Kişi</item>
-        <item quantity="one">1 Kişi</item>
+        <item quantity="one">%1$s Kişi</item>
     </plurals>
     <plurals name="slide_menu_total_groups">
         <item quantity="other">%1$s Grup</item>
-        <item quantity="one">1 Grup</item>
+        <item quantity="one">%1$s Grup</item>
     </plurals>
     <plurals name="update_channel_stats_comments">
         <item quantity="other">%1$s Yorum</item>

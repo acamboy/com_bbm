@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 121
+    .line 129
     iput-object p1, p0, Lcom/bbm/a;->a:Lcom/bbm/Alaska;
 
     invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
@@ -37,10 +37,10 @@
     .locals 1
 
     .prologue
-    .line 121
+    .line 129
     iget-object v0, p0, Lcom/bbm/a;->a:Lcom/bbm/Alaska;
 
-    invoke-static {v0}, Lcom/bbm/Alaska;->a(Lcom/bbm/Alaska;)Lcom/bbm/j;
+    invoke-static {v0}, Lcom/bbm/Alaska;->a(Lcom/bbm/Alaska;)Lcom/bbm/r;
 
     move-result-object v0
 
@@ -48,11 +48,11 @@
 
     iget-object v0, p0, Lcom/bbm/a;->a:Lcom/bbm/Alaska;
 
-    invoke-static {v0}, Lcom/bbm/Alaska;->a(Lcom/bbm/Alaska;)Lcom/bbm/j;
+    invoke-static {v0}, Lcom/bbm/Alaska;->a(Lcom/bbm/Alaska;)Lcom/bbm/r;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/j;->a:Lcom/bbm/BbmService;
+    iget-object v0, v0, Lcom/bbm/r;->a:Lcom/bbm/BbmService;
 
     invoke-static {v0}, Lcom/bbm/BbmService;->a(Lcom/bbm/BbmService;)Lcom/bbm/f/ad;
 

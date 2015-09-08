@@ -1,82 +1,1094 @@
-.class final Landroid/support/v4/app/at;
-.super Ljava/lang/Object;
+.class public final Landroid/support/v4/app/at;
+.super Landroid/support/v4/app/ar;
 .source "LoaderManager.java"
 
-# interfaces
-.implements Landroid/support/v4/content/e;
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/support/v4/content/e",
-        "<",
-        "Ljava/lang/Object;",
-        ">;"
-    }
-.end annotation
+# static fields
+.field public static a:Z
 
 
 # instance fields
-.field final a:I
-
-.field final b:Landroid/os/Bundle;
-
-.field c:Landroid/support/v4/app/ar;
+.field final b:Landroid/support/v4/e/r;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroid/support/v4/app/ar",
+            "Landroid/support/v4/e/r",
             "<",
-            "Ljava/lang/Object;",
+            "Landroid/support/v4/app/au;",
             ">;"
         }
     .end annotation
 .end field
 
-.field d:Landroid/support/v4/content/d;
+.field final c:Landroid/support/v4/e/r;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroid/support/v4/content/d",
+            "Landroid/support/v4/e/r",
             "<",
-            "Ljava/lang/Object;",
+            "Landroid/support/v4/app/au;",
             ">;"
         }
     .end annotation
 .end field
 
-.field e:Z
+.field final d:Ljava/lang/String;
+
+.field e:Landroid/support/v4/app/q;
 
 .field f:Z
 
-.field g:Ljava/lang/Object;
+.field g:Z
 
 .field h:Z
 
-.field i:Z
 
-.field j:Z
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.field k:Z
+    .prologue
+    .line 189
+    const/4 v0, 0x0
 
-.field l:Z
+    sput-boolean v0, Landroid/support/v4/app/at;->a:Z
 
-.field m:Z
+    return-void
+.end method
 
-.field n:Landroid/support/v4/app/at;
+.method constructor <init>(Ljava/lang/String;Landroid/support/v4/app/q;Z)V
+    .locals 1
 
-.field final synthetic o:Landroid/support/v4/app/as;
+    .prologue
+    .line 477
+    invoke-direct {p0}, Landroid/support/v4/app/ar;-><init>()V
+
+    .line 194
+    new-instance v0, Landroid/support/v4/e/r;
+
+    invoke-direct {v0}, Landroid/support/v4/e/r;-><init>()V
+
+    iput-object v0, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
+
+    .line 200
+    new-instance v0, Landroid/support/v4/e/r;
+
+    invoke-direct {v0}, Landroid/support/v4/e/r;-><init>()V
+
+    iput-object v0, p0, Landroid/support/v4/app/at;->c:Landroid/support/v4/e/r;
+
+    .line 478
+    iput-object p1, p0, Landroid/support/v4/app/at;->d:Ljava/lang/String;
+
+    .line 479
+    iput-object p2, p0, Landroid/support/v4/app/at;->e:Landroid/support/v4/app/q;
+
+    .line 480
+    iput-boolean p3, p0, Landroid/support/v4/app/at;->f:Z
+
+    .line 481
+    return-void
+.end method
+
+.method private c(ILandroid/support/v4/app/as;)Landroid/support/v4/app/au;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Landroid/support/v4/app/as",
+            "<",
+            "Ljava/lang/Object;",
+            ">;)",
+            "Landroid/support/v4/app/au;"
+        }
+    .end annotation
+
+    .prologue
+    .line 489
+    new-instance v0, Landroid/support/v4/app/au;
+
+    invoke-direct {v0, p0, p1, p2}, Landroid/support/v4/app/au;-><init>(Landroid/support/v4/app/at;ILandroid/support/v4/app/as;)V
+
+    .line 490
+    invoke-interface {p2, p1}, Landroid/support/v4/app/as;->a(I)Landroid/support/v4/content/i;
+
+    move-result-object v1
+
+    .line 491
+    iput-object v1, v0, Landroid/support/v4/app/au;->d:Landroid/support/v4/content/i;
+
+    .line 492
+    return-object v0
+.end method
+
+.method private d(ILandroid/support/v4/app/as;)Landroid/support/v4/app/au;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Landroid/support/v4/app/as",
+            "<",
+            "Ljava/lang/Object;",
+            ">;)",
+            "Landroid/support/v4/app/au;"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 498
+    const/4 v0, 0x1
+
+    :try_start_0
+    iput-boolean v0, p0, Landroid/support/v4/app/at;->h:Z
+
+    .line 499
+    invoke-direct {p0, p1, p2}, Landroid/support/v4/app/at;->c(ILandroid/support/v4/app/as;)Landroid/support/v4/app/au;
+
+    move-result-object v0
+
+    .line 500
+    invoke-virtual {p0, v0}, Landroid/support/v4/app/at;->a(Landroid/support/v4/app/au;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 501
+    iput-boolean v1, p0, Landroid/support/v4/app/at;->h:Z
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    iput-boolean v1, p0, Landroid/support/v4/app/at;->h:Z
+
+    throw v0
+.end method
 
 
 # virtual methods
-.method final a()V
+.method public final a(ILandroid/support/v4/app/as;)Landroid/support/v4/content/i;
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<D:",
+            "Ljava/lang/Object;",
+            ">(I",
+            "Landroid/support/v4/app/as",
+            "<TD;>;)",
+            "Landroid/support/v4/content/i",
+            "<TD;>;"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v4, 0x0
+
+    .line 543
+    iget-boolean v0, p0, Landroid/support/v4/app/at;->h:Z
+
+    if-eqz v0, :cond_0
+
+    .line 544
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Called while creating a loader"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 547
+    :cond_0
+    iget-object v0, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
+
+    invoke-virtual {v0, p1, v4}, Landroid/support/v4/e/r;->a(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v4/app/au;
+
+    .line 549
+    sget-boolean v1, Landroid/support/v4/app/at;->a:Z
+
+    if-eqz v1, :cond_1
+
+    const-string v1, "LoaderManager"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "initLoader in "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ": args="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 551
+    :cond_1
+    if-nez v0, :cond_4
+
+    .line 553
+    invoke-direct {p0, p1, p2}, Landroid/support/v4/app/at;->d(ILandroid/support/v4/app/as;)Landroid/support/v4/app/au;
+
+    move-result-object v0
+
+    .line 554
+    sget-boolean v1, Landroid/support/v4/app/at;->a:Z
+
+    if-eqz v1, :cond_2
+
+    const-string v1, "LoaderManager"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "  Created new loader "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 560
+    :cond_2
+    :goto_0
+    iget-boolean v1, v0, Landroid/support/v4/app/au;->e:Z
+
+    if-eqz v1, :cond_3
+
+    iget-boolean v1, p0, Landroid/support/v4/app/at;->f:Z
+
+    if-eqz v1, :cond_3
+
+    .line 562
+    iget-object v1, v0, Landroid/support/v4/app/au;->d:Landroid/support/v4/content/i;
+
+    iget-object v2, v0, Landroid/support/v4/app/au;->g:Ljava/lang/Object;
+
+    invoke-virtual {v0, v1, v2}, Landroid/support/v4/app/au;->b(Landroid/support/v4/content/i;Ljava/lang/Object;)V
+
+    .line 565
+    :cond_3
+    iget-object v0, v0, Landroid/support/v4/app/au;->d:Landroid/support/v4/content/i;
+
+    return-object v0
+
+    .line 556
+    :cond_4
+    sget-boolean v1, Landroid/support/v4/app/at;->a:Z
+
+    if-eqz v1, :cond_5
+
+    const-string v1, "LoaderManager"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "  Re-using existing loader "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 557
+    :cond_5
+    iput-object p2, v0, Landroid/support/v4/app/au;->c:Landroid/support/v4/app/as;
+
+    goto :goto_0
+.end method
+
+.method public final a(I)V
+    .locals 3
+
+    .prologue
+    .line 658
+    iget-boolean v0, p0, Landroid/support/v4/app/at;->h:Z
+
+    if-eqz v0, :cond_0
+
+    .line 659
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Called while creating a loader"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 662
+    :cond_0
+    sget-boolean v0, Landroid/support/v4/app/at;->a:Z
+
+    if-eqz v0, :cond_1
+
+    const-string v0, "LoaderManager"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "destroyLoader in "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " of "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 663
+    :cond_1
+    iget-object v0, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
+
+    invoke-virtual {v0, p1}, Landroid/support/v4/e/r;->d(I)I
+
+    move-result v1
+
+    .line 664
+    if-ltz v1, :cond_2
+
+    .line 665
+    iget-object v0, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/e/r;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v4/app/au;
+
+    .line 666
+    iget-object v2, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
+
+    invoke-virtual {v2, v1}, Landroid/support/v4/e/r;->a(I)V
+
+    .line 667
+    invoke-virtual {v0}, Landroid/support/v4/app/au;->c()V
+
+    .line 669
+    :cond_2
+    iget-object v0, p0, Landroid/support/v4/app/at;->c:Landroid/support/v4/e/r;
+
+    invoke-virtual {v0, p1}, Landroid/support/v4/e/r;->d(I)I
+
+    move-result v1
+
+    .line 670
+    if-ltz v1, :cond_3
+
+    .line 671
+    iget-object v0, p0, Landroid/support/v4/app/at;->c:Landroid/support/v4/e/r;
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/e/r;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v4/app/au;
+
+    .line 672
+    iget-object v2, p0, Landroid/support/v4/app/at;->c:Landroid/support/v4/e/r;
+
+    invoke-virtual {v2, v1}, Landroid/support/v4/e/r;->a(I)V
+
+    .line 673
+    invoke-virtual {v0}, Landroid/support/v4/app/au;->c()V
+
+    .line 675
+    :cond_3
+    iget-object v0, p0, Landroid/support/v4/app/at;->e:Landroid/support/v4/app/q;
+
+    if-eqz v0, :cond_4
+
+    invoke-virtual {p0}, Landroid/support/v4/app/at;->a()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    .line 676
+    iget-object v0, p0, Landroid/support/v4/app/at;->e:Landroid/support/v4/app/q;
+
+    iget-object v0, v0, Landroid/support/v4/app/q;->mFragments:Landroid/support/v4/app/w;
+
+    invoke-virtual {v0}, Landroid/support/v4/app/w;->d()V
+
+    .line 678
+    :cond_4
+    return-void
+.end method
+
+.method final a(Landroid/support/v4/app/au;)V
+    .locals 2
+
+    .prologue
+    .line 508
+    iget-object v0, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
+
+    iget v1, p1, Landroid/support/v4/app/au;->a:I
+
+    invoke-virtual {v0, v1, p1}, Landroid/support/v4/e/r;->b(ILjava/lang/Object;)V
+
+    .line 509
+    iget-boolean v0, p0, Landroid/support/v4/app/at;->f:Z
+
+    if-eqz v0, :cond_0
+
+    .line 513
+    invoke-virtual {p1}, Landroid/support/v4/app/au;->a()V
+
+    .line 515
+    :cond_0
+    return-void
+.end method
+
+.method public final a(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
+    .locals 5
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 801
+    iget-object v0, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
+
+    invoke-virtual {v0}, Landroid/support/v4/e/r;->c()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    .line 802
+    invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    const-string v0, "Active Loaders:"
+
+    invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    .line 803
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "    "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    move v1, v2
+
+    .line 804
+    :goto_0
+    iget-object v0, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
+
+    invoke-virtual {v0}, Landroid/support/v4/e/r;->c()I
+
+    move-result v0
+
+    if-ge v1, v0, :cond_0
+
+    .line 805
+    iget-object v0, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/e/r;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v4/app/au;
+
+    .line 806
+    invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    const-string v4, "  #"
+
+    invoke-virtual {p3, v4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    iget-object v4, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
+
+    invoke-virtual {v4, v1}, Landroid/support/v4/e/r;->b(I)I
+
+    move-result v4
+
+    invoke-virtual {p3, v4}, Ljava/io/PrintWriter;->print(I)V
+
+    .line 807
+    const-string v4, ": "
+
+    invoke-virtual {p3, v4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Landroid/support/v4/app/au;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {p3, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    .line 808
+    invoke-virtual {v0, v3, p2, p3, p4}, Landroid/support/v4/app/au;->a(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
+
+    .line 804
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_0
+
+    .line 811
+    :cond_0
+    iget-object v0, p0, Landroid/support/v4/app/at;->c:Landroid/support/v4/e/r;
+
+    invoke-virtual {v0}, Landroid/support/v4/e/r;->c()I
+
+    move-result v0
+
+    if-lez v0, :cond_1
+
+    .line 812
+    invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    const-string v0, "Inactive Loaders:"
+
+    invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    .line 813
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "    "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 814
+    :goto_1
+    iget-object v0, p0, Landroid/support/v4/app/at;->c:Landroid/support/v4/e/r;
+
+    invoke-virtual {v0}, Landroid/support/v4/e/r;->c()I
+
+    move-result v0
+
+    if-ge v2, v0, :cond_1
+
+    .line 815
+    iget-object v0, p0, Landroid/support/v4/app/at;->c:Landroid/support/v4/e/r;
+
+    invoke-virtual {v0, v2}, Landroid/support/v4/e/r;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v4/app/au;
+
+    .line 816
+    invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    const-string v3, "  #"
+
+    invoke-virtual {p3, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    iget-object v3, p0, Landroid/support/v4/app/at;->c:Landroid/support/v4/e/r;
+
+    invoke-virtual {v3, v2}, Landroid/support/v4/e/r;->b(I)I
+
+    move-result v3
+
+    invoke-virtual {p3, v3}, Ljava/io/PrintWriter;->print(I)V
+
+    .line 817
+    const-string v3, ": "
+
+    invoke-virtual {p3, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Landroid/support/v4/app/au;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {p3, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    .line 818
+    invoke-virtual {v0, v1, p2, p3, p4}, Landroid/support/v4/app/au;->a(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
+
+    .line 814
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_1
+
+    .line 821
+    :cond_1
+    return-void
+.end method
+
+.method public final a()Z
+    .locals 6
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 825
+    .line 826
+    iget-object v0, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
+
+    invoke-virtual {v0}, Landroid/support/v4/e/r;->c()I
+
+    move-result v4
+
+    move v2, v1
+
+    move v3, v1
+
+    .line 827
+    :goto_0
+    if-ge v2, v4, :cond_1
+
+    .line 828
+    iget-object v0, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
+
+    invoke-virtual {v0, v2}, Landroid/support/v4/e/r;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v4/app/au;
+
+    .line 829
+    iget-boolean v5, v0, Landroid/support/v4/app/au;->h:Z
+
+    if-eqz v5, :cond_0
+
+    iget-boolean v0, v0, Landroid/support/v4/app/au;->f:Z
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_1
+    or-int/2addr v3, v0
+
+    .line 827
+    add-int/lit8 v0, v2, 0x1
+
+    move v2, v0
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    .line 829
+    goto :goto_1
+
+    .line 831
+    :cond_1
+    return v3
+.end method
+
+.method public final b(I)Landroid/support/v4/content/i;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<D:",
+            "Ljava/lang/Object;",
+            ">(I)",
+            "Landroid/support/v4/content/i",
+            "<TD;>;"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 686
+    iget-boolean v0, p0, Landroid/support/v4/app/at;->h:Z
+
+    if-eqz v0, :cond_0
+
+    .line 687
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Called while creating a loader"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 690
+    :cond_0
+    iget-object v0, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
+
+    invoke-virtual {v0, p1, v1}, Landroid/support/v4/e/r;->a(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v4/app/au;
+
+    .line 691
+    if-eqz v0, :cond_2
+
+    .line 692
+    iget-object v1, v0, Landroid/support/v4/app/au;->n:Landroid/support/v4/app/au;
+
+    if-eqz v1, :cond_1
+
+    .line 693
+    iget-object v0, v0, Landroid/support/v4/app/au;->n:Landroid/support/v4/app/au;
+
+    iget-object v0, v0, Landroid/support/v4/app/au;->d:Landroid/support/v4/content/i;
+
+    .line 697
+    :goto_0
+    return-object v0
+
+    .line 695
+    :cond_1
+    iget-object v0, v0, Landroid/support/v4/app/au;->d:Landroid/support/v4/content/i;
+
+    goto :goto_0
+
+    :cond_2
+    move-object v0, v1
+
+    .line 697
+    goto :goto_0
+.end method
+
+.method public final b(ILandroid/support/v4/app/as;)Landroid/support/v4/content/i;
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<D:",
+            "Ljava/lang/Object;",
+            ">(I",
+            "Landroid/support/v4/app/as",
+            "<TD;>;)",
+            "Landroid/support/v4/content/i",
+            "<TD;>;"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v4, 0x0
+
+    .line 593
+    iget-boolean v0, p0, Landroid/support/v4/app/at;->h:Z
+
+    if-eqz v0, :cond_0
+
+    .line 594
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Called while creating a loader"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 597
+    :cond_0
+    iget-object v0, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
+
+    invoke-virtual {v0, p1, v4}, Landroid/support/v4/e/r;->a(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v4/app/au;
+
+    .line 598
+    sget-boolean v1, Landroid/support/v4/app/at;->a:Z
+
+    if-eqz v1, :cond_1
+
+    const-string v1, "LoaderManager"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "restartLoader in "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ": args="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 599
+    :cond_1
+    if-eqz v0, :cond_4
+
+    .line 600
+    iget-object v1, p0, Landroid/support/v4/app/at;->c:Landroid/support/v4/e/r;
+
+    invoke-virtual {v1, p1, v4}, Landroid/support/v4/e/r;->a(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/support/v4/app/au;
+
+    .line 601
+    if-eqz v1, :cond_b
+
+    .line 602
+    iget-boolean v2, v0, Landroid/support/v4/app/au;->e:Z
+
+    if-eqz v2, :cond_5
+
+    .line 607
+    sget-boolean v2, Landroid/support/v4/app/at;->a:Z
+
+    if-eqz v2, :cond_2
+
+    const-string v2, "LoaderManager"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "  Removing last inactive loader: "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 608
+    :cond_2
+    const/4 v2, 0x0
+
+    iput-boolean v2, v1, Landroid/support/v4/app/au;->f:Z
+
+    .line 609
+    invoke-virtual {v1}, Landroid/support/v4/app/au;->c()V
+
+    .line 641
+    :cond_3
+    :goto_0
+    iget-object v1, v0, Landroid/support/v4/app/au;->d:Landroid/support/v4/content/i;
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, v1, Landroid/support/v4/content/i;->e:Z
+
+    .line 642
+    iget-object v1, p0, Landroid/support/v4/app/at;->c:Landroid/support/v4/e/r;
+
+    invoke-virtual {v1, p1, v0}, Landroid/support/v4/e/r;->b(ILjava/lang/Object;)V
+
+    .line 646
+    :cond_4
+    :goto_1
+    invoke-direct {p0, p1, p2}, Landroid/support/v4/app/at;->d(ILandroid/support/v4/app/as;)Landroid/support/v4/app/au;
+
+    move-result-object v0
+
+    .line 647
+    iget-object v0, v0, Landroid/support/v4/app/au;->d:Landroid/support/v4/content/i;
+
+    :goto_2
+    return-object v0
+
+    .line 615
+    :cond_5
+    iget-boolean v1, v0, Landroid/support/v4/app/au;->h:Z
+
+    if-nez v1, :cond_7
+
+    .line 619
+    sget-boolean v1, Landroid/support/v4/app/at;->a:Z
+
+    if-eqz v1, :cond_6
+
+    const-string v1, "LoaderManager"
+
+    const-string v2, "  Current loader is stopped; replacing"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 620
+    :cond_6
+    iget-object v1, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
+
+    invoke-virtual {v1, p1, v4}, Landroid/support/v4/e/r;->b(ILjava/lang/Object;)V
+
+    .line 621
+    invoke-virtual {v0}, Landroid/support/v4/app/au;->c()V
+
+    goto :goto_1
+
+    .line 626
+    :cond_7
+    iget-object v1, v0, Landroid/support/v4/app/au;->n:Landroid/support/v4/app/au;
+
+    if-eqz v1, :cond_9
+
+    .line 627
+    sget-boolean v1, Landroid/support/v4/app/at;->a:Z
+
+    if-eqz v1, :cond_8
+
+    const-string v1, "LoaderManager"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "  Removing pending loader: "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v3, v0, Landroid/support/v4/app/au;->n:Landroid/support/v4/app/au;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 628
+    :cond_8
+    iget-object v1, v0, Landroid/support/v4/app/au;->n:Landroid/support/v4/app/au;
+
+    invoke-virtual {v1}, Landroid/support/v4/app/au;->c()V
+
+    .line 629
+    iput-object v4, v0, Landroid/support/v4/app/au;->n:Landroid/support/v4/app/au;
+
+    .line 631
+    :cond_9
+    sget-boolean v1, Landroid/support/v4/app/at;->a:Z
+
+    if-eqz v1, :cond_a
+
+    const-string v1, "LoaderManager"
+
+    const-string v2, "  Enqueuing as new pending loader"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 632
+    :cond_a
+    invoke-direct {p0, p1, p2}, Landroid/support/v4/app/at;->c(ILandroid/support/v4/app/as;)Landroid/support/v4/app/au;
+
+    move-result-object v1
+
+    iput-object v1, v0, Landroid/support/v4/app/au;->n:Landroid/support/v4/app/au;
+
+    .line 634
+    iget-object v0, v0, Landroid/support/v4/app/au;->n:Landroid/support/v4/app/au;
+
+    iget-object v0, v0, Landroid/support/v4/app/au;->d:Landroid/support/v4/content/i;
+
+    goto :goto_2
+
+    .line 640
+    :cond_b
+    sget-boolean v1, Landroid/support/v4/app/at;->a:Z
+
+    if-eqz v1, :cond_3
+
+    const-string v1, "LoaderManager"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "  Making last loader inactive: "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+.end method
+
+.method final b()V
     .locals 4
 
     .prologue
-    const/4 v3, 0x0
-
-    .line 314
-    sget-boolean v0, Landroid/support/v4/app/as;->a:Z
+    .line 701
+    sget-boolean v0, Landroid/support/v4/app/at;->a:Z
 
     if-eqz v0, :cond_0
 
@@ -84,7 +1096,7 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v2, "  Stopping: "
+    const-string v2, "Starting in "
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -98,136 +1110,32 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 315
+    .line 702
     :cond_0
-    iput-boolean v3, p0, Landroid/support/v4/app/at;->h:Z
-
-    .line 316
-    iget-boolean v0, p0, Landroid/support/v4/app/at;->i:Z
-
-    if-nez v0, :cond_1
-
-    .line 317
-    iget-object v0, p0, Landroid/support/v4/app/at;->d:Landroid/support/v4/content/d;
-
-    if-eqz v0, :cond_1
-
-    iget-boolean v0, p0, Landroid/support/v4/app/at;->m:Z
-
-    if-eqz v0, :cond_1
-
-    .line 319
-    iput-boolean v3, p0, Landroid/support/v4/app/at;->m:Z
-
-    .line 320
-    iget-object v0, p0, Landroid/support/v4/app/at;->d:Landroid/support/v4/content/d;
-
-    invoke-virtual {v0, p0}, Landroid/support/v4/content/d;->a(Landroid/support/v4/content/e;)V
-
-    .line 321
-    iget-object v0, p0, Landroid/support/v4/app/at;->d:Landroid/support/v4/content/d;
-
-    iput-boolean v3, v0, Landroid/support/v4/content/d;->c:Z
-
-    .line 324
-    :cond_1
-    return-void
-.end method
-
-.method final a(Landroid/support/v4/content/d;Ljava/lang/Object;)V
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/support/v4/content/d",
-            "<",
-            "Ljava/lang/Object;",
-            ">;",
-            "Ljava/lang/Object;",
-            ")V"
-        }
-    .end annotation
-
-    .prologue
-    .line 418
-    iget-object v0, p0, Landroid/support/v4/app/at;->c:Landroid/support/v4/app/ar;
+    iget-boolean v0, p0, Landroid/support/v4/app/at;->f:Z
 
     if-eqz v0, :cond_2
 
-    .line 419
-    const/4 v0, 0x0
+    .line 703
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    .line 420
-    iget-object v1, p0, Landroid/support/v4/app/at;->o:Landroid/support/v4/app/as;
+    const-string v1, "here"
 
-    iget-object v1, v1, Landroid/support/v4/app/as;->e:Landroid/support/v4/app/q;
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    if-eqz v1, :cond_4
+    .line 704
+    invoke-virtual {v0}, Ljava/lang/RuntimeException;->fillInStackTrace()Ljava/lang/Throwable;
 
-    .line 421
-    iget-object v0, p0, Landroid/support/v4/app/at;->o:Landroid/support/v4/app/as;
-
-    iget-object v0, v0, Landroid/support/v4/app/as;->e:Landroid/support/v4/app/q;
-
-    iget-object v0, v0, Landroid/support/v4/app/q;->mFragments:Landroid/support/v4/app/w;
-
-    iget-object v0, v0, Landroid/support/v4/app/w;->u:Ljava/lang/String;
-
-    .line 422
-    iget-object v1, p0, Landroid/support/v4/app/at;->o:Landroid/support/v4/app/as;
-
-    iget-object v1, v1, Landroid/support/v4/app/as;->e:Landroid/support/v4/app/q;
-
-    iget-object v1, v1, Landroid/support/v4/app/q;->mFragments:Landroid/support/v4/app/w;
-
-    const-string v2, "onLoadFinished"
-
-    iput-object v2, v1, Landroid/support/v4/app/w;->u:Ljava/lang/String;
-
-    move-object v1, v0
-
-    .line 425
-    :goto_0
-    :try_start_0
-    sget-boolean v0, Landroid/support/v4/app/as;->a:Z
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "LoaderManager"
+    .line 705
+    const-string v1, "LoaderManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v3, "  onLoadFinished in "
+    const-string v3, "Called doStart when already started: "
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, ": "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const/16 v4, 0x40
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    invoke-static {p2, v3}, Landroid/support/v4/b/d;->a(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
-
-    const-string v4, "}"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -235,389 +1143,57 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 427
-    :cond_0
-    iget-object v0, p0, Landroid/support/v4/app/at;->c:Landroid/support/v4/app/ar;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 429
-    iget-object v0, p0, Landroid/support/v4/app/at;->o:Landroid/support/v4/app/as;
-
-    iget-object v0, v0, Landroid/support/v4/app/as;->e:Landroid/support/v4/app/q;
-
-    if-eqz v0, :cond_1
-
-    .line 430
-    iget-object v0, p0, Landroid/support/v4/app/at;->o:Landroid/support/v4/app/as;
-
-    iget-object v0, v0, Landroid/support/v4/app/as;->e:Landroid/support/v4/app/q;
-
-    iget-object v0, v0, Landroid/support/v4/app/q;->mFragments:Landroid/support/v4/app/w;
-
-    iput-object v1, v0, Landroid/support/v4/app/w;->u:Ljava/lang/String;
-
-    .line 433
+    .line 716
     :cond_1
+    return-void
+
+    .line 709
+    :cond_2
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/v4/app/at;->f:Z
 
-    .line 435
-    :cond_2
-    return-void
+    .line 713
+    iget-object v0, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
 
-    .line 429
-    :catchall_0
-    move-exception v0
+    invoke-virtual {v0}, Landroid/support/v4/e/r;->c()I
 
-    iget-object v2, p0, Landroid/support/v4/app/at;->o:Landroid/support/v4/app/as;
+    move-result v0
 
-    iget-object v2, v2, Landroid/support/v4/app/as;->e:Landroid/support/v4/app/q;
+    add-int/lit8 v0, v0, -0x1
 
-    if-eqz v2, :cond_3
+    move v1, v0
 
-    .line 430
-    iget-object v2, p0, Landroid/support/v4/app/at;->o:Landroid/support/v4/app/as;
+    :goto_0
+    if-ltz v1, :cond_1
 
-    iget-object v2, v2, Landroid/support/v4/app/as;->e:Landroid/support/v4/app/q;
+    .line 714
+    iget-object v0, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
 
-    iget-object v2, v2, Landroid/support/v4/app/q;->mFragments:Landroid/support/v4/app/w;
+    invoke-virtual {v0, v1}, Landroid/support/v4/e/r;->c(I)Ljava/lang/Object;
 
-    iput-object v1, v2, Landroid/support/v4/app/w;->u:Ljava/lang/String;
+    move-result-object v0
 
-    :cond_3
-    throw v0
+    check-cast v0, Landroid/support/v4/app/au;
 
-    :cond_4
-    move-object v1, v0
+    invoke-virtual {v0}, Landroid/support/v4/app/au;->a()V
+
+    .line 713
+    add-int/lit8 v0, v1, -0x1
+
+    move v1, v0
 
     goto :goto_0
 .end method
 
-.method public final a(Ljava/lang/String;Ljava/io/PrintWriter;)V
-    .locals 3
+.method final c()V
+    .locals 4
 
     .prologue
-    .line 451
-    :goto_0
-    invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    const-string v0, "mId="
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget v0, p0, Landroid/support/v4/app/at;->a:I
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(I)V
-
-    .line 452
-    const-string v0, " mArgs="
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget-object v0, p0, Landroid/support/v4/app/at;->b:Landroid/os/Bundle;
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
-
-    .line 453
-    invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    const-string v0, "mCallbacks="
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget-object v0, p0, Landroid/support/v4/app/at;->c:Landroid/support/v4/app/ar;
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
-
-    .line 454
-    invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    const-string v0, "mLoader="
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget-object v0, p0, Landroid/support/v4/app/at;->d:Landroid/support/v4/content/d;
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
-
-    .line 455
-    iget-object v0, p0, Landroid/support/v4/app/at;->d:Landroid/support/v4/content/d;
-
-    if-eqz v0, :cond_3
-
-    .line 456
-    iget-object v0, p0, Landroid/support/v4/app/at;->d:Landroid/support/v4/content/d;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "  "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    const-string v2, "mId="
-
-    invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget v2, v0, Landroid/support/v4/content/d;->a:I
-
-    invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(I)V
-
-    const-string v2, " mListener="
-
-    invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget-object v2, v0, Landroid/support/v4/content/d;->b:Landroid/support/v4/content/e;
-
-    invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
-
-    iget-boolean v2, v0, Landroid/support/v4/content/d;->c:Z
-
-    if-nez v2, :cond_0
-
-    iget-boolean v2, v0, Landroid/support/v4/content/d;->f:Z
-
-    if-nez v2, :cond_0
-
-    iget-boolean v2, v0, Landroid/support/v4/content/d;->g:Z
-
-    if-eqz v2, :cond_1
-
-    :cond_0
-    invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    const-string v2, "mStarted="
-
-    invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget-boolean v2, v0, Landroid/support/v4/content/d;->c:Z
-
-    invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Z)V
-
-    const-string v2, " mContentChanged="
-
-    invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget-boolean v2, v0, Landroid/support/v4/content/d;->f:Z
-
-    invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Z)V
-
-    const-string v2, " mProcessingChange="
-
-    invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget-boolean v2, v0, Landroid/support/v4/content/d;->g:Z
-
-    invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Z)V
-
-    :cond_1
-    iget-boolean v2, v0, Landroid/support/v4/content/d;->d:Z
-
-    if-nez v2, :cond_2
-
-    iget-boolean v2, v0, Landroid/support/v4/content/d;->e:Z
-
-    if-eqz v2, :cond_3
-
-    :cond_2
-    invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    const-string v1, "mAbandoned="
-
-    invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget-boolean v1, v0, Landroid/support/v4/content/d;->d:Z
-
-    invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->print(Z)V
-
-    const-string v1, " mReset="
-
-    invoke-virtual {p2, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget-boolean v0, v0, Landroid/support/v4/content/d;->e:Z
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Z)V
-
-    .line 458
-    :cond_3
-    iget-boolean v0, p0, Landroid/support/v4/app/at;->e:Z
-
-    if-nez v0, :cond_4
-
-    iget-boolean v0, p0, Landroid/support/v4/app/at;->f:Z
-
-    if-eqz v0, :cond_5
-
-    .line 459
-    :cond_4
-    invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    const-string v0, "mHaveData="
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget-boolean v0, p0, Landroid/support/v4/app/at;->e:Z
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Z)V
-
-    .line 460
-    const-string v0, "  mDeliveredData="
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget-boolean v0, p0, Landroid/support/v4/app/at;->f:Z
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Z)V
-
-    .line 461
-    invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    const-string v0, "mData="
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget-object v0, p0, Landroid/support/v4/app/at;->g:Ljava/lang/Object;
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
-
-    .line 463
-    :cond_5
-    invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    const-string v0, "mStarted="
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget-boolean v0, p0, Landroid/support/v4/app/at;->h:Z
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Z)V
-
-    .line 464
-    const-string v0, " mReportNextStart="
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget-boolean v0, p0, Landroid/support/v4/app/at;->k:Z
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Z)V
-
-    .line 465
-    const-string v0, " mDestroyed="
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget-boolean v0, p0, Landroid/support/v4/app/at;->l:Z
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Z)V
-
-    .line 466
-    invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    const-string v0, "mRetaining="
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget-boolean v0, p0, Landroid/support/v4/app/at;->i:Z
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Z)V
-
-    .line 467
-    const-string v0, " mRetainingStarted="
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget-boolean v0, p0, Landroid/support/v4/app/at;->j:Z
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Z)V
-
-    .line 468
-    const-string v0, " mListenerRegistered="
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    iget-boolean v0, p0, Landroid/support/v4/app/at;->m:Z
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Z)V
-
-    .line 469
-    iget-object v0, p0, Landroid/support/v4/app/at;->n:Landroid/support/v4/app/at;
-
-    if-eqz v0, :cond_6
-
-    .line 470
-    invoke-virtual {p2, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    const-string v0, "Pending Loader "
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    .line 471
-    iget-object v0, p0, Landroid/support/v4/app/at;->n:Landroid/support/v4/app/at;
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
-
-    const-string v0, ":"
-
-    invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    .line 472
-    iget-object p0, p0, Landroid/support/v4/app/at;->n:Landroid/support/v4/app/at;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "  "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    goto/16 :goto_0
-
-    .line 474
-    :cond_6
-    return-void
-.end method
-
-.method final b()V
-    .locals 6
-
-    .prologue
-    const/4 v5, 0x1
-
-    const/4 v2, 0x0
-
-    const/4 v4, 0x0
-
-    .line 327
-    :goto_0
-    sget-boolean v0, Landroid/support/v4/app/as;->a:Z
+    .line 719
+    sget-boolean v0, Landroid/support/v4/app/at;->a:Z
 
     if-eqz v0, :cond_0
 
@@ -625,9 +1201,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v3, "  Destroying: "
+    const-string v2, "Stopping in "
 
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -639,43 +1215,107 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 328
+    .line 720
     :cond_0
-    iput-boolean v5, p0, Landroid/support/v4/app/at;->l:Z
-
-    .line 329
     iget-boolean v0, p0, Landroid/support/v4/app/at;->f:Z
 
-    .line 330
-    iput-boolean v4, p0, Landroid/support/v4/app/at;->f:Z
+    if-nez v0, :cond_1
 
-    .line 331
-    iget-object v1, p0, Landroid/support/v4/app/at;->c:Landroid/support/v4/app/ar;
+    .line 721
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    if-eqz v1, :cond_2
+    const-string v1, "here"
 
-    iget-object v1, p0, Landroid/support/v4/app/at;->d:Landroid/support/v4/content/d;
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    if-eqz v1, :cond_2
+    .line 722
+    invoke-virtual {v0}, Ljava/lang/RuntimeException;->fillInStackTrace()Ljava/lang/Throwable;
 
-    iget-boolean v1, p0, Landroid/support/v4/app/at;->e:Z
+    .line 723
+    const-string v1, "LoaderManager"
 
-    if-eqz v1, :cond_2
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_2
+    const-string v3, "Called doStop when not started: "
 
-    .line 332
-    sget-boolean v0, Landroid/support/v4/app/as;->a:Z
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 731
+    :goto_0
+    return-void
+
+    .line 727
+    :cond_1
+    iget-object v0, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
+
+    invoke-virtual {v0}, Landroid/support/v4/e/r;->c()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    move v1, v0
+
+    :goto_1
+    if-ltz v1, :cond_2
+
+    .line 728
+    iget-object v0, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/e/r;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v4/app/au;
+
+    invoke-virtual {v0}, Landroid/support/v4/app/au;->b()V
+
+    .line 727
+    add-int/lit8 v0, v1, -0x1
+
+    move v1, v0
+
+    goto :goto_1
+
+    .line 730
+    :cond_2
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Landroid/support/v4/app/at;->f:Z
+
+    goto :goto_0
+.end method
+
+.method final d()V
+    .locals 7
+
+    .prologue
+    const/4 v6, 0x1
+
+    const/4 v5, 0x0
+
+    .line 734
+    sget-boolean v0, Landroid/support/v4/app/at;->a:Z
+
+    if-eqz v0, :cond_0
 
     const-string v0, "LoaderManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v3, "  Reseting: "
+    const-string v2, "Retaining in "
 
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -687,163 +1327,378 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 334
+    .line 735
+    :cond_0
+    iget-boolean v0, p0, Landroid/support/v4/app/at;->f:Z
+
+    if-nez v0, :cond_2
+
+    .line 736
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    const-string v1, "here"
+
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    .line 737
+    invoke-virtual {v0}, Ljava/lang/RuntimeException;->fillInStackTrace()Ljava/lang/Throwable;
+
+    .line 738
+    const-string v1, "LoaderManager"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Called doRetain when not started: "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 747
     :cond_1
-    iget-object v0, p0, Landroid/support/v4/app/at;->o:Landroid/support/v4/app/as;
+    return-void
 
-    iget-object v0, v0, Landroid/support/v4/app/as;->e:Landroid/support/v4/app/q;
-
-    if-eqz v0, :cond_7
-
-    .line 335
-    iget-object v0, p0, Landroid/support/v4/app/at;->o:Landroid/support/v4/app/as;
-
-    iget-object v0, v0, Landroid/support/v4/app/as;->e:Landroid/support/v4/app/q;
-
-    iget-object v0, v0, Landroid/support/v4/app/q;->mFragments:Landroid/support/v4/app/w;
-
-    iget-object v0, v0, Landroid/support/v4/app/w;->u:Ljava/lang/String;
-
-    .line 336
-    iget-object v1, p0, Landroid/support/v4/app/at;->o:Landroid/support/v4/app/as;
-
-    iget-object v1, v1, Landroid/support/v4/app/as;->e:Landroid/support/v4/app/q;
-
-    iget-object v1, v1, Landroid/support/v4/app/q;->mFragments:Landroid/support/v4/app/w;
-
-    const-string v3, "onLoaderReset"
-
-    iput-object v3, v1, Landroid/support/v4/app/w;->u:Ljava/lang/String;
-
-    move-object v1, v0
-
-    .line 339
-    :goto_1
-    :try_start_0
-    iget-object v0, p0, Landroid/support/v4/app/at;->c:Landroid/support/v4/app/ar;
-
-    iget-object v0, p0, Landroid/support/v4/app/at;->d:Landroid/support/v4/content/d;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 341
-    iget-object v0, p0, Landroid/support/v4/app/at;->o:Landroid/support/v4/app/as;
-
-    iget-object v0, v0, Landroid/support/v4/app/as;->e:Landroid/support/v4/app/q;
-
-    if-eqz v0, :cond_2
-
-    .line 342
-    iget-object v0, p0, Landroid/support/v4/app/at;->o:Landroid/support/v4/app/as;
-
-    iget-object v0, v0, Landroid/support/v4/app/as;->e:Landroid/support/v4/app/q;
-
-    iget-object v0, v0, Landroid/support/v4/app/q;->mFragments:Landroid/support/v4/app/w;
-
-    iput-object v1, v0, Landroid/support/v4/app/w;->u:Ljava/lang/String;
-
-    .line 346
+    .line 742
     :cond_2
-    iput-object v2, p0, Landroid/support/v4/app/at;->c:Landroid/support/v4/app/ar;
+    iput-boolean v6, p0, Landroid/support/v4/app/at;->g:Z
 
-    .line 347
-    iput-object v2, p0, Landroid/support/v4/app/at;->g:Ljava/lang/Object;
+    .line 743
+    iput-boolean v5, p0, Landroid/support/v4/app/at;->f:Z
 
-    .line 348
-    iput-boolean v4, p0, Landroid/support/v4/app/at;->e:Z
+    .line 744
+    iget-object v0, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
 
-    .line 349
-    iget-object v0, p0, Landroid/support/v4/app/at;->d:Landroid/support/v4/content/d;
+    invoke-virtual {v0}, Landroid/support/v4/e/r;->c()I
 
-    if-eqz v0, :cond_4
+    move-result v0
 
-    .line 350
-    iget-boolean v0, p0, Landroid/support/v4/app/at;->m:Z
+    add-int/lit8 v0, v0, -0x1
+
+    move v1, v0
+
+    :goto_0
+    if-ltz v1, :cond_1
+
+    .line 745
+    iget-object v0, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/e/r;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v4/app/au;
+
+    sget-boolean v2, Landroid/support/v4/app/at;->a:Z
+
+    if-eqz v2, :cond_3
+
+    const-string v2, "LoaderManager"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "  Retaining: "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_3
+    iput-boolean v6, v0, Landroid/support/v4/app/au;->i:Z
+
+    iget-boolean v2, v0, Landroid/support/v4/app/au;->h:Z
+
+    iput-boolean v2, v0, Landroid/support/v4/app/au;->j:Z
+
+    iput-boolean v5, v0, Landroid/support/v4/app/au;->h:Z
+
+    const/4 v2, 0x0
+
+    iput-object v2, v0, Landroid/support/v4/app/au;->c:Landroid/support/v4/app/as;
+
+    .line 744
+    add-int/lit8 v0, v1, -0x1
+
+    move v1, v0
+
+    goto :goto_0
+.end method
+
+.method final e()V
+    .locals 3
+
+    .prologue
+    .line 761
+    iget-object v0, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
+
+    invoke-virtual {v0}, Landroid/support/v4/e/r;->c()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    move v1, v0
+
+    :goto_0
+    if-ltz v1, :cond_0
+
+    .line 762
+    iget-object v0, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/e/r;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v4/app/au;
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, v0, Landroid/support/v4/app/au;->k:Z
+
+    .line 761
+    add-int/lit8 v0, v1, -0x1
+
+    move v1, v0
+
+    goto :goto_0
+
+    .line 764
+    :cond_0
+    return-void
+.end method
+
+.method final f()V
+    .locals 4
+
+    .prologue
+    .line 767
+    iget-object v0, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
+
+    invoke-virtual {v0}, Landroid/support/v4/e/r;->c()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    move v1, v0
+
+    :goto_0
+    if-ltz v1, :cond_1
+
+    .line 768
+    iget-object v0, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/e/r;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v4/app/au;
+
+    iget-boolean v2, v0, Landroid/support/v4/app/au;->h:Z
+
+    if-eqz v2, :cond_0
+
+    iget-boolean v2, v0, Landroid/support/v4/app/au;->k:Z
+
+    if-eqz v2, :cond_0
+
+    const/4 v2, 0x0
+
+    iput-boolean v2, v0, Landroid/support/v4/app/au;->k:Z
+
+    iget-boolean v2, v0, Landroid/support/v4/app/au;->e:Z
+
+    if-eqz v2, :cond_0
+
+    iget-object v2, v0, Landroid/support/v4/app/au;->d:Landroid/support/v4/content/i;
+
+    iget-object v3, v0, Landroid/support/v4/app/au;->g:Ljava/lang/Object;
+
+    invoke-virtual {v0, v2, v3}, Landroid/support/v4/app/au;->b(Landroid/support/v4/content/i;Ljava/lang/Object;)V
+
+    .line 767
+    :cond_0
+    add-int/lit8 v0, v1, -0x1
+
+    move v1, v0
+
+    goto :goto_0
+
+    .line 770
+    :cond_1
+    return-void
+.end method
+
+.method final g()V
+    .locals 3
+
+    .prologue
+    .line 773
+    iget-boolean v0, p0, Landroid/support/v4/app/at;->g:Z
+
+    if-nez v0, :cond_2
+
+    .line 774
+    sget-boolean v0, Landroid/support/v4/app/at;->a:Z
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "LoaderManager"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Destroying Active in "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 775
+    :cond_0
+    iget-object v0, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
+
+    invoke-virtual {v0}, Landroid/support/v4/e/r;->c()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    move v1, v0
+
+    :goto_0
+    if-ltz v1, :cond_1
+
+    .line 776
+    iget-object v0, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/e/r;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v4/app/au;
+
+    invoke-virtual {v0}, Landroid/support/v4/app/au;->c()V
+
+    .line 775
+    add-int/lit8 v0, v1, -0x1
+
+    move v1, v0
+
+    goto :goto_0
+
+    .line 778
+    :cond_1
+    iget-object v0, p0, Landroid/support/v4/app/at;->b:Landroid/support/v4/e/r;
+
+    invoke-virtual {v0}, Landroid/support/v4/e/r;->d()V
+
+    .line 781
+    :cond_2
+    sget-boolean v0, Landroid/support/v4/app/at;->a:Z
 
     if-eqz v0, :cond_3
 
-    .line 351
-    iput-boolean v4, p0, Landroid/support/v4/app/at;->m:Z
+    const-string v0, "LoaderManager"
 
-    .line 352
-    iget-object v0, p0, Landroid/support/v4/app/at;->d:Landroid/support/v4/content/d;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p0}, Landroid/support/v4/content/d;->a(Landroid/support/v4/content/e;)V
+    const-string v2, "Destroying Inactive in "
 
-    .line 354
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 782
     :cond_3
-    iget-object v0, p0, Landroid/support/v4/app/at;->d:Landroid/support/v4/content/d;
+    iget-object v0, p0, Landroid/support/v4/app/at;->c:Landroid/support/v4/e/r;
 
-    iput-boolean v5, v0, Landroid/support/v4/content/d;->e:Z
+    invoke-virtual {v0}, Landroid/support/v4/e/r;->c()I
 
-    iput-boolean v4, v0, Landroid/support/v4/content/d;->c:Z
+    move-result v0
 
-    iput-boolean v4, v0, Landroid/support/v4/content/d;->d:Z
+    add-int/lit8 v0, v0, -0x1
 
-    iput-boolean v4, v0, Landroid/support/v4/content/d;->f:Z
+    move v1, v0
 
-    iput-boolean v4, v0, Landroid/support/v4/content/d;->g:Z
+    :goto_1
+    if-ltz v1, :cond_4
 
-    .line 356
-    :cond_4
-    iget-object v0, p0, Landroid/support/v4/app/at;->n:Landroid/support/v4/app/at;
+    .line 783
+    iget-object v0, p0, Landroid/support/v4/app/at;->c:Landroid/support/v4/e/r;
 
-    if-eqz v0, :cond_6
+    invoke-virtual {v0, v1}, Landroid/support/v4/e/r;->c(I)Ljava/lang/Object;
 
-    .line 357
-    iget-object p0, p0, Landroid/support/v4/app/at;->n:Landroid/support/v4/app/at;
+    move-result-object v0
 
-    goto/16 :goto_0
+    check-cast v0, Landroid/support/v4/app/au;
 
-    .line 341
-    :catchall_0
-    move-exception v0
+    invoke-virtual {v0}, Landroid/support/v4/app/au;->c()V
 
-    iget-object v2, p0, Landroid/support/v4/app/at;->o:Landroid/support/v4/app/as;
+    .line 782
+    add-int/lit8 v0, v1, -0x1
 
-    iget-object v2, v2, Landroid/support/v4/app/as;->e:Landroid/support/v4/app/q;
-
-    if-eqz v2, :cond_5
-
-    .line 342
-    iget-object v2, p0, Landroid/support/v4/app/at;->o:Landroid/support/v4/app/as;
-
-    iget-object v2, v2, Landroid/support/v4/app/as;->e:Landroid/support/v4/app/q;
-
-    iget-object v2, v2, Landroid/support/v4/app/q;->mFragments:Landroid/support/v4/app/w;
-
-    iput-object v1, v2, Landroid/support/v4/app/w;->u:Ljava/lang/String;
-
-    :cond_5
-    throw v0
-
-    .line 359
-    :cond_6
-    return-void
-
-    :cond_7
-    move-object v1, v2
+    move v1, v0
 
     goto :goto_1
+
+    .line 785
+    :cond_4
+    iget-object v0, p0, Landroid/support/v4/app/at;->c:Landroid/support/v4/e/r;
+
+    invoke-virtual {v0}, Landroid/support/v4/e/r;->d()V
+
+    .line 786
+    return-void
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 2
 
     .prologue
-    .line 439
+    .line 790
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x40
+    const/16 v1, 0x80
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 440
-    const-string v1, "LoaderInfo{"
+    .line 791
+    const-string v1, "LoaderManager{"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 441
+    .line 792
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -854,32 +1709,22 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 442
-    const-string v1, " #"
+    .line 793
+    const-string v1, " in "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 443
-    iget v1, p0, Landroid/support/v4/app/at;->a:I
+    .line 794
+    iget-object v1, p0, Landroid/support/v4/app/at;->e:Landroid/support/v4/app/q;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {v1, v0}, Landroid/support/v4/e/d;->a(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
 
-    .line 444
-    const-string v1, " : "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 445
-    iget-object v1, p0, Landroid/support/v4/app/at;->d:Landroid/support/v4/content/d;
-
-    invoke-static {v1, v0}, Landroid/support/v4/b/d;->a(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
-
-    .line 446
+    .line 795
     const-string v1, "}}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 447
+    .line 796
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0

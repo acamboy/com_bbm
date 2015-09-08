@@ -3,7 +3,7 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <com.bbm.ui.SquaredObservingImageView android:id="@id/channel_reports_post_image" android:layout_width="@dimen/channel_reports_photo_size" android:layout_height="@dimen/channel_reports_photo_size" android:layout_marginLeft="5.0dip" android:src="@drawable/ic_navigationbar_channel" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
     <LinearLayout android:orientation="horizontal" android:id="@id/channel_reports_flagcount" android:layout_width="@dimen/channel_reports_flagcount_size" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
-        <ImageView android:layout_gravity="center_vertical" android:id="@id/channel_reports_post_number_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/report_pressed" android:scaleType="fitCenter" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/channel_reports_post_number_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_channel_report" android:scaleType="fitCenter" />
         <TextView android:layout_gravity="center_vertical" android:id="@id/channel_reports_post_number_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
     </LinearLayout>
     <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_toLeftOf="@id/channel_reports_flagcount" android:layout_toRightOf="@id/channel_reports_post_image">

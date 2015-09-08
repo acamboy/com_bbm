@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/sk;
 .super Ljava/lang/Object;
-.source "GroupPictureCommentsActivity.java"
+.source "InviteActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/c/gn;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/InviteActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/InviteActivity;)V
     .locals 0
 
     .prologue
-    .line 849
-    iput-object p1, p0, Lcom/bbm/ui/activities/sk;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    .line 559
+    iput-object p1, p0, Lcom/bbm/ui/activities/sk;->a:Lcom/bbm/ui/activities/InviteActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,52 +25,22 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 852
-    packed-switch p2, :pswitch_data_0
+    .line 563
+    const-string v0, "mButtonToolbar onNegative button Clicked"
 
-    .line 856
-    :goto_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/sk;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    const-class v1, Lcom/bbm/ui/activities/InviteActivity;
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+    .line 565
+    iget-object v0, p0, Lcom/bbm/ui/activities/sk;->a:Lcom/bbm/ui/activities/InviteActivity;
 
-    const/4 v1, 0x1
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/InviteActivity;->finish()V
 
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
-
-    .line 861
+    .line 566
     return-void
-
-    .line 854
-    :pswitch_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/sk;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->A(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
-
-    .line 855
-    iget-object v0, p0, Lcom/bbm/ui/activities/sk;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/sk;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    const v2, 0x7f0e024b
-
-    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 852
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

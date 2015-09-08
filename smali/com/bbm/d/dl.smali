@@ -1,58 +1,51 @@
 .class public final Lcom/bbm/d/dl;
-.super Lcom/bbm/d/dy;
+.super Lcom/bbm/d/ez;
 .source "BbmdsProtocol.java"
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/util/List;)V
+.method public constructor <init>()V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Ljava/util/List",
-            "<",
-            "Ljava/lang/String;",
-            ">;)V"
-        }
-    .end annotation
 
     .prologue
-    .line 4970
-    const-string v0, "startConference"
+    .line 3808
+    const-string v0, "profileChange"
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/d/ez;-><init>(Ljava/lang/String;)V
 
-    .line 4972
-    const-string v0, "conversationUri"
-
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/dl;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 4973
-    const-string v0, "invitees"
-
-    invoke-virtual {p0, v0, p2}, Lcom/bbm/d/dl;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 4974
+    .line 3810
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Z)Lcom/bbm/d/dl;
-    .locals 2
+.method public final a(J)Lcom/bbm/d/dl;
+    .locals 3
 
     .prologue
-    .line 4984
-    const-string v0, "protect"
+    .line 3820
+    const-string v0, "dateOfBirth"
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {p1, p2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p0, v0, v1}, Lcom/bbm/d/dl;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 4985
+    .line 3821
+    return-object p0
+.end method
+
+.method public final a(Ljava/lang/String;)Lcom/bbm/d/dl;
+    .locals 1
+
+    .prologue
+    .line 3868
+    const-string v0, "location"
+
+    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/dl;->a(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 3869
     return-object p0
 .end method
 
@@ -60,8 +53,8 @@
     .locals 1
 
     .prologue
-    .line 4968
-    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
+    .line 3806
+    invoke-super {p0}, Lcom/bbm/d/ez;->a()Lcom/bbm/f/ab;
 
     move-result-object v0
 

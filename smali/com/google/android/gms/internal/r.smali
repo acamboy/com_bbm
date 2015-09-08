@@ -1,116 +1,1131 @@
-.class public Lcom/google/android/gms/internal/r;
-.super Ljava/lang/Object;
+.class public final Lcom/google/android/gms/internal/r;
+.super Lcom/google/android/gms/internal/vf;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/google/android/gms/internal/vf",
+        "<",
+        "Lcom/google/android/gms/internal/r;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field private static volatile m:[Lcom/google/android/gms/internal/r;
+
+
+# instance fields
+.field public a:I
+
+.field public b:Ljava/lang/String;
+
+.field public c:[Lcom/google/android/gms/internal/r;
+
+.field public d:[Lcom/google/android/gms/internal/r;
+
+.field public e:[Lcom/google/android/gms/internal/r;
+
+.field public f:Ljava/lang/String;
+
+.field public g:Ljava/lang/String;
+
+.field public h:J
+
+.field public i:Z
+
+.field public j:[Lcom/google/android/gms/internal/r;
+
+.field public k:[I
+
+.field public l:Z
 
 
 # direct methods
-.method public static A()Ljava/lang/String;
-    .locals 1
+.method public constructor <init>()V
+    .locals 3
 
-    const-string v0, "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"
+    const/4 v2, 0x0
 
-    return-object v0
+    invoke-direct {p0}, Lcom/google/android/gms/internal/vf;-><init>()V
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lcom/google/android/gms/internal/r;->a:I
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/r;->b:Ljava/lang/String;
+
+    invoke-static {}, Lcom/google/android/gms/internal/r;->b()[Lcom/google/android/gms/internal/r;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/r;->c:[Lcom/google/android/gms/internal/r;
+
+    invoke-static {}, Lcom/google/android/gms/internal/r;->b()[Lcom/google/android/gms/internal/r;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/r;->d:[Lcom/google/android/gms/internal/r;
+
+    invoke-static {}, Lcom/google/android/gms/internal/r;->b()[Lcom/google/android/gms/internal/r;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/r;->e:[Lcom/google/android/gms/internal/r;
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/r;->f:Ljava/lang/String;
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/r;->g:Ljava/lang/String;
+
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lcom/google/android/gms/internal/r;->h:J
+
+    iput-boolean v2, p0, Lcom/google/android/gms/internal/r;->i:Z
+
+    invoke-static {}, Lcom/google/android/gms/internal/r;->b()[Lcom/google/android/gms/internal/r;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/r;->j:[Lcom/google/android/gms/internal/r;
+
+    sget-object v0, Lcom/google/android/gms/internal/vn;->a:[I
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/r;->k:[I
+
+    iput-boolean v2, p0, Lcom/google/android/gms/internal/r;->l:Z
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/r;->r:Lcom/google/android/gms/internal/vh;
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcom/google/android/gms/internal/r;->s:I
+
+    return-void
 .end method
 
-.method public static B()Ljava/lang/String;
-    .locals 1
+.method public static b()[Lcom/google/android/gms/internal/r;
+    .locals 2
 
-    const-string v0, "iJkf7Oi+A1kM/Uo7c1/aRZ8QWS9UVlE/WL/MFqAJx1e1JiM4/Gaeo4sQTSPvKVmT"
+    sget-object v0, Lcom/google/android/gms/internal/r;->m:[Lcom/google/android/gms/internal/r;
+
+    if-nez v0, :cond_1
+
+    sget-object v1, Lcom/google/android/gms/internal/vj;->a:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
+    sget-object v0, Lcom/google/android/gms/internal/r;->m:[Lcom/google/android/gms/internal/r;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Lcom/google/android/gms/internal/r;
+
+    sput-object v0, Lcom/google/android/gms/internal/r;->m:[Lcom/google/android/gms/internal/r;
+
+    :cond_0
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :cond_1
+    sget-object v0, Lcom/google/android/gms/internal/r;->m:[Lcom/google/android/gms/internal/r;
 
     return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
 .end method
 
-.method public static C()Ljava/lang/String;
-    .locals 1
 
-    const-string v0, "7Kebxr/m40lXaqZ3f0vkkYGrrvm187cU3AS/kEduZcU="
+# virtual methods
+.method protected final a()I
+    .locals 6
 
-    return-object v0
+    const/4 v1, 0x0
+
+    invoke-super {p0}, Lcom/google/android/gms/internal/vf;->a()I
+
+    move-result v0
+
+    const/4 v2, 0x1
+
+    iget v3, p0, Lcom/google/android/gms/internal/r;->a:I
+
+    invoke-static {v2, v3}, Lcom/google/android/gms/internal/vd;->b(II)I
+
+    move-result v2
+
+    add-int/2addr v0, v2
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/r;->b:Ljava/lang/String;
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const/4 v2, 0x2
+
+    iget-object v3, p0, Lcom/google/android/gms/internal/r;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Lcom/google/android/gms/internal/vd;->b(ILjava/lang/String;)I
+
+    move-result v2
+
+    add-int/2addr v0, v2
+
+    :cond_0
+    iget-object v2, p0, Lcom/google/android/gms/internal/r;->c:[Lcom/google/android/gms/internal/r;
+
+    if-eqz v2, :cond_3
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/r;->c:[Lcom/google/android/gms/internal/r;
+
+    array-length v2, v2
+
+    if-lez v2, :cond_3
+
+    move v2, v0
+
+    move v0, v1
+
+    :goto_0
+    iget-object v3, p0, Lcom/google/android/gms/internal/r;->c:[Lcom/google/android/gms/internal/r;
+
+    array-length v3, v3
+
+    if-ge v0, v3, :cond_2
+
+    iget-object v3, p0, Lcom/google/android/gms/internal/r;->c:[Lcom/google/android/gms/internal/r;
+
+    aget-object v3, v3, v0
+
+    if-eqz v3, :cond_1
+
+    const/4 v4, 0x3
+
+    invoke-static {v4, v3}, Lcom/google/android/gms/internal/vd;->b(ILcom/google/android/gms/internal/vk;)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    :cond_1
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    move v0, v2
+
+    :cond_3
+    iget-object v2, p0, Lcom/google/android/gms/internal/r;->d:[Lcom/google/android/gms/internal/r;
+
+    if-eqz v2, :cond_6
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/r;->d:[Lcom/google/android/gms/internal/r;
+
+    array-length v2, v2
+
+    if-lez v2, :cond_6
+
+    move v2, v0
+
+    move v0, v1
+
+    :goto_1
+    iget-object v3, p0, Lcom/google/android/gms/internal/r;->d:[Lcom/google/android/gms/internal/r;
+
+    array-length v3, v3
+
+    if-ge v0, v3, :cond_5
+
+    iget-object v3, p0, Lcom/google/android/gms/internal/r;->d:[Lcom/google/android/gms/internal/r;
+
+    aget-object v3, v3, v0
+
+    if-eqz v3, :cond_4
+
+    const/4 v4, 0x4
+
+    invoke-static {v4, v3}, Lcom/google/android/gms/internal/vd;->b(ILcom/google/android/gms/internal/vk;)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    :cond_4
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    :cond_5
+    move v0, v2
+
+    :cond_6
+    iget-object v2, p0, Lcom/google/android/gms/internal/r;->e:[Lcom/google/android/gms/internal/r;
+
+    if-eqz v2, :cond_9
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/r;->e:[Lcom/google/android/gms/internal/r;
+
+    array-length v2, v2
+
+    if-lez v2, :cond_9
+
+    move v2, v0
+
+    move v0, v1
+
+    :goto_2
+    iget-object v3, p0, Lcom/google/android/gms/internal/r;->e:[Lcom/google/android/gms/internal/r;
+
+    array-length v3, v3
+
+    if-ge v0, v3, :cond_8
+
+    iget-object v3, p0, Lcom/google/android/gms/internal/r;->e:[Lcom/google/android/gms/internal/r;
+
+    aget-object v3, v3, v0
+
+    if-eqz v3, :cond_7
+
+    const/4 v4, 0x5
+
+    invoke-static {v4, v3}, Lcom/google/android/gms/internal/vd;->b(ILcom/google/android/gms/internal/vk;)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    :cond_7
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_2
+
+    :cond_8
+    move v0, v2
+
+    :cond_9
+    iget-object v2, p0, Lcom/google/android/gms/internal/r;->f:Ljava/lang/String;
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_a
+
+    const/4 v2, 0x6
+
+    iget-object v3, p0, Lcom/google/android/gms/internal/r;->f:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Lcom/google/android/gms/internal/vd;->b(ILjava/lang/String;)I
+
+    move-result v2
+
+    add-int/2addr v0, v2
+
+    :cond_a
+    iget-object v2, p0, Lcom/google/android/gms/internal/r;->g:Ljava/lang/String;
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_b
+
+    const/4 v2, 0x7
+
+    iget-object v3, p0, Lcom/google/android/gms/internal/r;->g:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Lcom/google/android/gms/internal/vd;->b(ILjava/lang/String;)I
+
+    move-result v2
+
+    add-int/2addr v0, v2
+
+    :cond_b
+    iget-wide v2, p0, Lcom/google/android/gms/internal/r;->h:J
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v2, v2, v4
+
+    if-eqz v2, :cond_c
+
+    const/16 v2, 0x8
+
+    iget-wide v4, p0, Lcom/google/android/gms/internal/r;->h:J
+
+    invoke-static {v2, v4, v5}, Lcom/google/android/gms/internal/vd;->b(IJ)I
+
+    move-result v2
+
+    add-int/2addr v0, v2
+
+    :cond_c
+    iget-boolean v2, p0, Lcom/google/android/gms/internal/r;->l:Z
+
+    if-eqz v2, :cond_d
+
+    const/16 v2, 0x9
+
+    invoke-static {v2}, Lcom/google/android/gms/internal/vd;->c(I)I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    add-int/2addr v0, v2
+
+    :cond_d
+    iget-object v2, p0, Lcom/google/android/gms/internal/r;->k:[I
+
+    if-eqz v2, :cond_f
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/r;->k:[I
+
+    array-length v2, v2
+
+    if-lez v2, :cond_f
+
+    move v2, v1
+
+    move v3, v1
+
+    :goto_3
+    iget-object v4, p0, Lcom/google/android/gms/internal/r;->k:[I
+
+    array-length v4, v4
+
+    if-ge v2, v4, :cond_e
+
+    iget-object v4, p0, Lcom/google/android/gms/internal/r;->k:[I
+
+    aget v4, v4, v2
+
+    invoke-static {v4}, Lcom/google/android/gms/internal/vd;->a(I)I
+
+    move-result v4
+
+    add-int/2addr v3, v4
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_3
+
+    :cond_e
+    add-int/2addr v0, v3
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/r;->k:[I
+
+    array-length v2, v2
+
+    mul-int/lit8 v2, v2, 0x1
+
+    add-int/2addr v0, v2
+
+    :cond_f
+    iget-object v2, p0, Lcom/google/android/gms/internal/r;->j:[Lcom/google/android/gms/internal/r;
+
+    if-eqz v2, :cond_11
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/r;->j:[Lcom/google/android/gms/internal/r;
+
+    array-length v2, v2
+
+    if-lez v2, :cond_11
+
+    :goto_4
+    iget-object v2, p0, Lcom/google/android/gms/internal/r;->j:[Lcom/google/android/gms/internal/r;
+
+    array-length v2, v2
+
+    if-ge v1, v2, :cond_11
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/r;->j:[Lcom/google/android/gms/internal/r;
+
+    aget-object v2, v2, v1
+
+    if-eqz v2, :cond_10
+
+    const/16 v3, 0xb
+
+    invoke-static {v3, v2}, Lcom/google/android/gms/internal/vd;->b(ILcom/google/android/gms/internal/vk;)I
+
+    move-result v2
+
+    add-int/2addr v0, v2
+
+    :cond_10
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_4
+
+    :cond_11
+    iget-boolean v1, p0, Lcom/google/android/gms/internal/r;->i:Z
+
+    if-eqz v1, :cond_12
+
+    const/16 v1, 0xc
+
+    invoke-static {v1}, Lcom/google/android/gms/internal/vd;->c(I)I
+
+    move-result v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    add-int/2addr v0, v1
+
+    :cond_12
+    return v0
 .end method
 
-.method public static D()Ljava/lang/String;
-    .locals 1
+.method public final a(Lcom/google/android/gms/internal/vd;)V
+    .locals 6
 
-    const-string v0, "V3Tb3wwZBH/MkprkkeKqg6pDa5tFOcttcgEaQ29QFMh2oue8xFqholngd6DkHA46"
+    const/4 v1, 0x0
 
-    return-object v0
+    const/4 v0, 0x1
+
+    iget v2, p0, Lcom/google/android/gms/internal/r;->a:I
+
+    invoke-virtual {p1, v0, v2}, Lcom/google/android/gms/internal/vd;->a(II)V
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/r;->b:Ljava/lang/String;
+
+    const-string v2, ""
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x2
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/r;->b:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v2}, Lcom/google/android/gms/internal/vd;->a(ILjava/lang/String;)V
+
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/r;->c:[Lcom/google/android/gms/internal/r;
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/r;->c:[Lcom/google/android/gms/internal/r;
+
+    array-length v0, v0
+
+    if-lez v0, :cond_2
+
+    move v0, v1
+
+    :goto_0
+    iget-object v2, p0, Lcom/google/android/gms/internal/r;->c:[Lcom/google/android/gms/internal/r;
+
+    array-length v2, v2
+
+    if-ge v0, v2, :cond_2
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/r;->c:[Lcom/google/android/gms/internal/r;
+
+    aget-object v2, v2, v0
+
+    if-eqz v2, :cond_1
+
+    const/4 v3, 0x3
+
+    invoke-virtual {p1, v3, v2}, Lcom/google/android/gms/internal/vd;->a(ILcom/google/android/gms/internal/vk;)V
+
+    :cond_1
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lcom/google/android/gms/internal/r;->d:[Lcom/google/android/gms/internal/r;
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/r;->d:[Lcom/google/android/gms/internal/r;
+
+    array-length v0, v0
+
+    if-lez v0, :cond_4
+
+    move v0, v1
+
+    :goto_1
+    iget-object v2, p0, Lcom/google/android/gms/internal/r;->d:[Lcom/google/android/gms/internal/r;
+
+    array-length v2, v2
+
+    if-ge v0, v2, :cond_4
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/r;->d:[Lcom/google/android/gms/internal/r;
+
+    aget-object v2, v2, v0
+
+    if-eqz v2, :cond_3
+
+    const/4 v3, 0x4
+
+    invoke-virtual {p1, v3, v2}, Lcom/google/android/gms/internal/vd;->a(ILcom/google/android/gms/internal/vk;)V
+
+    :cond_3
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    :cond_4
+    iget-object v0, p0, Lcom/google/android/gms/internal/r;->e:[Lcom/google/android/gms/internal/r;
+
+    if-eqz v0, :cond_6
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/r;->e:[Lcom/google/android/gms/internal/r;
+
+    array-length v0, v0
+
+    if-lez v0, :cond_6
+
+    move v0, v1
+
+    :goto_2
+    iget-object v2, p0, Lcom/google/android/gms/internal/r;->e:[Lcom/google/android/gms/internal/r;
+
+    array-length v2, v2
+
+    if-ge v0, v2, :cond_6
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/r;->e:[Lcom/google/android/gms/internal/r;
+
+    aget-object v2, v2, v0
+
+    if-eqz v2, :cond_5
+
+    const/4 v3, 0x5
+
+    invoke-virtual {p1, v3, v2}, Lcom/google/android/gms/internal/vd;->a(ILcom/google/android/gms/internal/vk;)V
+
+    :cond_5
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_2
+
+    :cond_6
+    iget-object v0, p0, Lcom/google/android/gms/internal/r;->f:Ljava/lang/String;
+
+    const-string v2, ""
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    const/4 v0, 0x6
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/r;->f:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v2}, Lcom/google/android/gms/internal/vd;->a(ILjava/lang/String;)V
+
+    :cond_7
+    iget-object v0, p0, Lcom/google/android/gms/internal/r;->g:Ljava/lang/String;
+
+    const-string v2, ""
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    const/4 v0, 0x7
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/r;->g:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v2}, Lcom/google/android/gms/internal/vd;->a(ILjava/lang/String;)V
+
+    :cond_8
+    iget-wide v2, p0, Lcom/google/android/gms/internal/r;->h:J
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v0, v2, v4
+
+    if-eqz v0, :cond_9
+
+    const/16 v0, 0x8
+
+    iget-wide v2, p0, Lcom/google/android/gms/internal/r;->h:J
+
+    invoke-virtual {p1, v0, v2, v3}, Lcom/google/android/gms/internal/vd;->a(IJ)V
+
+    :cond_9
+    iget-boolean v0, p0, Lcom/google/android/gms/internal/r;->l:Z
+
+    if-eqz v0, :cond_a
+
+    const/16 v0, 0x9
+
+    iget-boolean v2, p0, Lcom/google/android/gms/internal/r;->l:Z
+
+    invoke-virtual {p1, v0, v2}, Lcom/google/android/gms/internal/vd;->a(IZ)V
+
+    :cond_a
+    iget-object v0, p0, Lcom/google/android/gms/internal/r;->k:[I
+
+    if-eqz v0, :cond_b
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/r;->k:[I
+
+    array-length v0, v0
+
+    if-lez v0, :cond_b
+
+    move v0, v1
+
+    :goto_3
+    iget-object v2, p0, Lcom/google/android/gms/internal/r;->k:[I
+
+    array-length v2, v2
+
+    if-ge v0, v2, :cond_b
+
+    const/16 v2, 0xa
+
+    iget-object v3, p0, Lcom/google/android/gms/internal/r;->k:[I
+
+    aget v3, v3, v0
+
+    invoke-virtual {p1, v2, v3}, Lcom/google/android/gms/internal/vd;->a(II)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_3
+
+    :cond_b
+    iget-object v0, p0, Lcom/google/android/gms/internal/r;->j:[Lcom/google/android/gms/internal/r;
+
+    if-eqz v0, :cond_d
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/r;->j:[Lcom/google/android/gms/internal/r;
+
+    array-length v0, v0
+
+    if-lez v0, :cond_d
+
+    :goto_4
+    iget-object v0, p0, Lcom/google/android/gms/internal/r;->j:[Lcom/google/android/gms/internal/r;
+
+    array-length v0, v0
+
+    if-ge v1, v0, :cond_d
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/r;->j:[Lcom/google/android/gms/internal/r;
+
+    aget-object v0, v0, v1
+
+    if-eqz v0, :cond_c
+
+    const/16 v2, 0xb
+
+    invoke-virtual {p1, v2, v0}, Lcom/google/android/gms/internal/vd;->a(ILcom/google/android/gms/internal/vk;)V
+
+    :cond_c
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_4
+
+    :cond_d
+    iget-boolean v0, p0, Lcom/google/android/gms/internal/r;->i:Z
+
+    if-eqz v0, :cond_e
+
+    const/16 v0, 0xc
+
+    iget-boolean v1, p0, Lcom/google/android/gms/internal/r;->i:Z
+
+    invoke-virtual {p1, v0, v1}, Lcom/google/android/gms/internal/vd;->a(IZ)V
+
+    :cond_e
+    invoke-super {p0, p1}, Lcom/google/android/gms/internal/vf;->a(Lcom/google/android/gms/internal/vd;)V
+
+    return-void
 .end method
 
-.method public static E()Ljava/lang/String;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
-    const-string v0, "a7sqqI6lRQtagq0yU9TL4NZ7huWSqCHa/L531Ub273o="
+    const/4 v0, 0x0
 
-    return-object v0
+    if-ne p1, p0, :cond_1
+
+    const/4 v0, 0x1
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    instance-of v1, p1, Lcom/google/android/gms/internal/r;
+
+    if-eqz v1, :cond_0
+
+    check-cast p1, Lcom/google/android/gms/internal/r;
+
+    iget v1, p0, Lcom/google/android/gms/internal/r;->a:I
+
+    iget v2, p1, Lcom/google/android/gms/internal/r;->a:I
+
+    if-ne v1, v2, :cond_0
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/r;->b:Ljava/lang/String;
+
+    if-nez v1, :cond_5
+
+    iget-object v1, p1, Lcom/google/android/gms/internal/r;->b:Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    :cond_2
+    iget-object v1, p0, Lcom/google/android/gms/internal/r;->c:[Lcom/google/android/gms/internal/r;
+
+    iget-object v2, p1, Lcom/google/android/gms/internal/r;->c:[Lcom/google/android/gms/internal/r;
+
+    invoke-static {v1, v2}, Lcom/google/android/gms/internal/vj;->a([Ljava/lang/Object;[Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/r;->d:[Lcom/google/android/gms/internal/r;
+
+    iget-object v2, p1, Lcom/google/android/gms/internal/r;->d:[Lcom/google/android/gms/internal/r;
+
+    invoke-static {v1, v2}, Lcom/google/android/gms/internal/vj;->a([Ljava/lang/Object;[Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/r;->e:[Lcom/google/android/gms/internal/r;
+
+    iget-object v2, p1, Lcom/google/android/gms/internal/r;->e:[Lcom/google/android/gms/internal/r;
+
+    invoke-static {v1, v2}, Lcom/google/android/gms/internal/vj;->a([Ljava/lang/Object;[Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/r;->f:Ljava/lang/String;
+
+    if-nez v1, :cond_6
+
+    iget-object v1, p1, Lcom/google/android/gms/internal/r;->f:Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    :cond_3
+    iget-object v1, p0, Lcom/google/android/gms/internal/r;->g:Ljava/lang/String;
+
+    if-nez v1, :cond_7
+
+    iget-object v1, p1, Lcom/google/android/gms/internal/r;->g:Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    :cond_4
+    iget-wide v2, p0, Lcom/google/android/gms/internal/r;->h:J
+
+    iget-wide v4, p1, Lcom/google/android/gms/internal/r;->h:J
+
+    cmp-long v1, v2, v4
+
+    if-nez v1, :cond_0
+
+    iget-boolean v1, p0, Lcom/google/android/gms/internal/r;->i:Z
+
+    iget-boolean v2, p1, Lcom/google/android/gms/internal/r;->i:Z
+
+    if-ne v1, v2, :cond_0
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/r;->j:[Lcom/google/android/gms/internal/r;
+
+    iget-object v2, p1, Lcom/google/android/gms/internal/r;->j:[Lcom/google/android/gms/internal/r;
+
+    invoke-static {v1, v2}, Lcom/google/android/gms/internal/vj;->a([Ljava/lang/Object;[Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/r;->k:[I
+
+    iget-object v2, p1, Lcom/google/android/gms/internal/r;->k:[I
+
+    invoke-static {v1, v2}, Lcom/google/android/gms/internal/vj;->a([I[I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-boolean v1, p0, Lcom/google/android/gms/internal/r;->l:Z
+
+    iget-boolean v2, p1, Lcom/google/android/gms/internal/r;->l:Z
+
+    if-ne v1, v2, :cond_0
+
+    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/r;->a(Lcom/google/android/gms/internal/vf;)Z
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_5
+    iget-object v1, p0, Lcom/google/android/gms/internal/r;->b:Ljava/lang/String;
+
+    iget-object v2, p1, Lcom/google/android/gms/internal/r;->b:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    goto :goto_0
+
+    :cond_6
+    iget-object v1, p0, Lcom/google/android/gms/internal/r;->f:Ljava/lang/String;
+
+    iget-object v2, p1, Lcom/google/android/gms/internal/r;->f:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    goto/16 :goto_0
+
+    :cond_7
+    iget-object v1, p0, Lcom/google/android/gms/internal/r;->g:Ljava/lang/String;
+
+    iget-object v2, p1, Lcom/google/android/gms/internal/r;->g:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    goto/16 :goto_0
 .end method
 
-.method public static F()Ljava/lang/String;
-    .locals 1
+.method public final hashCode()I
+    .locals 8
 
-    const-string v0, "VSSWx/l6VwxyGcOtodSBdwbU3HNiBwMWuimDu0c2EPWrn/zcOJzth/9+/Qy0j39d"
+    const/16 v3, 0x4d5
 
-    return-object v0
-.end method
+    const/16 v2, 0x4cf
 
-.method public static G()Ljava/lang/String;
-    .locals 1
+    const/4 v1, 0x0
 
-    const-string v0, "PXKtpEOwUKSYQwobOd9LzM63iwGUroqnoqPL7HLAkwA="
+    iget v0, p0, Lcom/google/android/gms/internal/r;->a:I
 
-    return-object v0
-.end method
+    add-int/lit16 v0, v0, 0x20f
 
-.method public static H()Ljava/lang/String;
-    .locals 1
+    mul-int/lit8 v4, v0, 0x1f
 
-    const-string v0, "DOrHUrlPAyNSeU+NvnrdUjcvyLXFYbygCQievG8bnnQ6HGThBdBkI9mrKGQjm39O"
+    iget-object v0, p0, Lcom/google/android/gms/internal/r;->b:Ljava/lang/String;
 
-    return-object v0
-.end method
+    if-nez v0, :cond_0
 
-.method public static I()Ljava/lang/String;
-    .locals 1
+    move v0, v1
 
-    const-string v0, "bmksOiX7ckGJ44MHrSqSV7mO7PRFCiyl+RZbwT1Bv0k="
+    :goto_0
+    add-int/2addr v0, v4
 
-    return-object v0
-.end method
+    mul-int/lit8 v0, v0, 0x1f
 
-.method public static J()Ljava/lang/String;
-    .locals 1
+    iget-object v4, p0, Lcom/google/android/gms/internal/r;->c:[Lcom/google/android/gms/internal/r;
 
-    const-string v0, "j4P2NZaGK6yZNP+XTUyWiXWJgkAL02JK2VGVbrzucp2hianTo+ZgBPr3yFUnt+1x"
+    invoke-static {v4}, Lcom/google/android/gms/internal/vj;->a([Ljava/lang/Object;)I
 
-    return-object v0
-.end method
+    move-result v4
 
-.method public static K()Ljava/lang/String;
-    .locals 1
+    add-int/2addr v0, v4
 
-    const-string v0, "ESnf6G2jUk6mqOv2P5Rlce2hoauGd+ogk4106OMMF9g="
+    mul-int/lit8 v0, v0, 0x1f
 
-    return-object v0
-.end method
+    iget-object v4, p0, Lcom/google/android/gms/internal/r;->d:[Lcom/google/android/gms/internal/r;
 
-.method public static L()Ljava/lang/String;
-    .locals 1
+    invoke-static {v4}, Lcom/google/android/gms/internal/vj;->a([Ljava/lang/Object;)I
 
-    const-string v0, "Ti3TvLpZz2b8sl8dGeICn4bYAUnGHyad7ShT92+gKCKZsyMRYG3KmvUcB5cToip2"
+    move-result v4
 
-    return-object v0
-.end method
+    add-int/2addr v0, v4
 
-.method public static M()Ljava/lang/String;
-    .locals 1
+    mul-int/lit8 v0, v0, 0x1f
 
-    const-string v0, "JzpLluqkhgPQ/w1TkrMPy9chUBDDjch5PM8hF9zAwuU="
+    iget-object v4, p0, Lcom/google/android/gms/internal/r;->e:[Lcom/google/android/gms/internal/r;
 
-    return-object v0
-.end method
+    invoke-static {v4}, Lcom/google/android/gms/internal/vj;->a([Ljava/lang/Object;)I
 
-.method public static getKey()Ljava/lang/String;
-    .locals 1
+    move-result v4
 
-    const-string v0, "lbxVRZn959z8Mby5/xIR5GY5qeai5a6plNW9YXQVEvQ="
+    add-int/2addr v0, v4
 
-    return-object v0
+    mul-int/lit8 v4, v0, 0x1f
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/r;->f:Ljava/lang/String;
+
+    if-nez v0, :cond_1
+
+    move v0, v1
+
+    :goto_1
+    add-int/2addr v0, v4
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v4, p0, Lcom/google/android/gms/internal/r;->g:Ljava/lang/String;
+
+    if-nez v4, :cond_2
+
+    :goto_2
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v4, p0, Lcom/google/android/gms/internal/r;->h:J
+
+    iget-wide v6, p0, Lcom/google/android/gms/internal/r;->h:J
+
+    const/16 v1, 0x20
+
+    ushr-long/2addr v6, v1
+
+    xor-long/2addr v4, v6
+
+    long-to-int v1, v4
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v1, v0, 0x1f
+
+    iget-boolean v0, p0, Lcom/google/android/gms/internal/r;->i:Z
+
+    if-eqz v0, :cond_3
+
+    move v0, v2
+
+    :goto_3
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/r;->j:[Lcom/google/android/gms/internal/r;
+
+    invoke-static {v1}, Lcom/google/android/gms/internal/vj;->a([Ljava/lang/Object;)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/r;->k:[I
+
+    invoke-static {v1}, Lcom/google/android/gms/internal/vj;->a([I)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lcom/google/android/gms/internal/r;->l:Z
+
+    if-eqz v1, :cond_4
+
+    :goto_4
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/r;->c()I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    return v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/r;->b:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lcom/google/android/gms/internal/r;->f:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    goto :goto_1
+
+    :cond_2
+    iget-object v1, p0, Lcom/google/android/gms/internal/r;->g:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    goto :goto_2
+
+    :cond_3
+    move v0, v3
+
+    goto :goto_3
+
+    :cond_4
+    move v2, v3
+
+    goto :goto_4
 .end method

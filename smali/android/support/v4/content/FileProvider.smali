@@ -177,14 +177,14 @@
     invoke-direct {v1, v2, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     throw v1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 544
     :catchall_0
     move-exception v0
 
     monitor-exit v3
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     throw v0
 
@@ -721,7 +721,7 @@
 
     if-eqz v0, :cond_5
 
-    const/high16 v0, 0x3c000000
+    const/high16 v0, 0x3c000000    # 0.0078125f
 
     goto :goto_0
 

@@ -1,27 +1,23 @@
 .class Lcom/glympse/android/lib/by;
 .super Ljava/lang/Object;
-.source "GeoTrigger.java"
+.source "ForceableHandoffProvider.java"
 
 # interfaces
-.implements Lcom/glympse/android/api/GGeoTrigger;
+.implements Lcom/glympse/android/lib/GHandoffProviderPrivate;
 
 
 # instance fields
-.field private _name:Ljava/lang/String;
+.field private _glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-.field private _type:I
+.field private _jobQueue:Lcom/glympse/android/lib/GJobQueue;
 
-.field private cN:Lcom/glympse/android/core/GRegion;
+.field protected gJ:Lcom/glympse/android/core/GPrimitive;
 
-.field private hm:Ljava/lang/String;
+.field private lA:Lcom/glympse/android/core/GPrimitive;
 
-.field private jy:Lcom/glympse/android/api/GTicket;
+.field private lB:Lcom/glympse/android/lib/GTicketDetector;
 
-.field private kN:Lcom/glympse/android/api/GTimeConstraint;
-
-.field private kO:Z
-
-.field private kP:I
+.field private lC:Z
 
 
 # direct methods
@@ -29,476 +25,371 @@
     .locals 1
 
     .prologue
-    const/4 v0, 0x1
-
-    .line 35
+    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
-    iput v0, p0, Lcom/glympse/android/lib/by;->_type:I
-
-    .line 37
-    iput-boolean v0, p0, Lcom/glympse/android/lib/by;->kO:Z
-
-    .line 38
-    const/4 v0, 0x2
-
-    iput v0, p0, Lcom/glympse/android/lib/by;->kP:I
-
     .line 39
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/glympse/android/lib/by;->lC:Z
+
+    .line 40
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;ZLcom/glympse/android/api/GTicket;Lcom/glympse/android/core/GLatLng;DI)V
-    .locals 7
+.method private br()V
+    .locals 2
 
     .prologue
-    .line 42
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 43
-    invoke-static {}, Lcom/glympse/android/hal/Platform;->generateDeviceId()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/glympse/android/lib/by;->hm:Ljava/lang/String;
-
-    .line 44
-    iput-object p1, p0, Lcom/glympse/android/lib/by;->_name:Ljava/lang/String;
-
-    .line 45
+    .line 146
     const/4 v0, 0x1
 
-    iput v0, p0, Lcom/glympse/android/lib/by;->_type:I
+    const-string v1, "[ForceableHandoffProvider.startHandoffSessionIfPossible]"
 
-    .line 46
-    iput-boolean p2, p0, Lcom/glympse/android/lib/by;->kO:Z
+    invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
-    .line 47
-    iput-object p3, p0, Lcom/glympse/android/lib/by;->jy:Lcom/glympse/android/api/GTicket;
+    .line 149
+    invoke-virtual {p0}, Lcom/glympse/android/lib/by;->isEnabled()Z
 
-    .line 48
-    invoke-interface {p4}, Lcom/glympse/android/core/GLatLng;->getLatitude()D
+    move-result v0
 
-    move-result-wide v0
+    if-eqz v0, :cond_0
 
-    invoke-interface {p4}, Lcom/glympse/android/core/GLatLng;->getLongitude()D
+    invoke-virtual {p0}, Lcom/glympse/android/lib/by;->isHandoffAvailable()Z
 
-    move-result-wide v2
+    move-result v0
 
-    iget-object v6, p0, Lcom/glympse/android/lib/by;->hm:Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    move-wide v4, p5
+    invoke-virtual {p0}, Lcom/glympse/android/lib/by;->isHandoffAllowed()Z
 
-    invoke-static/range {v0 .. v6}, Lcom/glympse/android/core/CoreFactory;->createRegion(DDDLjava/lang/String;)Lcom/glympse/android/core/GRegion;
+    move-result v0
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/by;->cN:Lcom/glympse/android/core/GRegion;
+    .line 152
+    invoke-direct {p0}, Lcom/glympse/android/lib/by;->bs()V
 
-    .line 49
-    iput p7, p0, Lcom/glympse/android/lib/by;->kP:I
-
-    .line 50
+    .line 154
+    :cond_0
     return-void
+.end method
+
+.method private bs()V
+    .locals 6
+
+    .prologue
+    const/4 v5, 0x1
+
+    .line 158
+    iget-object v0, p0, Lcom/glympse/android/lib/by;->lB:Lcom/glympse/android/lib/GTicketDetector;
+
+    if-eqz v0, :cond_0
+
+    .line 173
+    :goto_0
+    return-void
+
+    .line 163
+    :cond_0
+    const-string v0, "[ForceableHandoffProvider.startHandoffSession]"
+
+    invoke-static {v5, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
+
+    .line 167
+    new-instance v0, Lcom/glympse/android/lib/TicketDetector;
+
+    iget-object v1, p0, Lcom/glympse/android/lib/by;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    iget-object v2, p0, Lcom/glympse/android/lib/by;->gJ:Lcom/glympse/android/core/GPrimitive;
+
+    invoke-virtual {p0}, Lcom/glympse/android/lib/by;->bq()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {p0}, Lcom/glympse/android/lib/by;->getProviderId()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/glympse/android/lib/TicketDetector;-><init>(Lcom/glympse/android/lib/GGlympsePrivate;Lcom/glympse/android/core/GPrimitive;Ljava/lang/String;Ljava/lang/String;)V
+
+    iput-object v0, p0, Lcom/glympse/android/lib/by;->lB:Lcom/glympse/android/lib/GTicketDetector;
+
+    .line 168
+    iget-object v0, p0, Lcom/glympse/android/lib/by;->lB:Lcom/glympse/android/lib/GTicketDetector;
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GTicketDetector;->start()V
+
+    .line 169
+    iget-object v0, p0, Lcom/glympse/android/lib/by;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    iget-object v1, p0, Lcom/glympse/android/lib/by;->lB:Lcom/glympse/android/lib/GTicketDetector;
+
+    invoke-interface {v0, v1}, Lcom/glympse/android/lib/GGlympsePrivate;->addListener(Lcom/glympse/android/api/GEventListener;)Z
+
+    .line 171
+    iput-boolean v5, p0, Lcom/glympse/android/lib/by;->lC:Z
+
+    goto :goto_0
+.end method
+
+.method private bt()V
+    .locals 2
+
+    .prologue
+    .line 177
+    iget-object v0, p0, Lcom/glympse/android/lib/by;->lB:Lcom/glympse/android/lib/GTicketDetector;
+
+    if-nez v0, :cond_0
+
+    .line 192
+    :goto_0
+    return-void
+
+    .line 182
+    :cond_0
+    const/4 v0, 0x1
+
+    const-string v1, "[ForceableHandoffProvider.stopHandoffSession]"
+
+    invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
+
+    .line 185
+    iget-object v0, p0, Lcom/glympse/android/lib/by;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    iget-object v1, p0, Lcom/glympse/android/lib/by;->lB:Lcom/glympse/android/lib/GTicketDetector;
+
+    invoke-interface {v0, v1}, Lcom/glympse/android/lib/GGlympsePrivate;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
+
+    .line 186
+    iget-object v0, p0, Lcom/glympse/android/lib/by;->lB:Lcom/glympse/android/lib/GTicketDetector;
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GTicketDetector;->stop()V
+
+    .line 187
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/glympse/android/lib/by;->lB:Lcom/glympse/android/lib/GTicketDetector;
+
+    .line 189
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/glympse/android/lib/by;->lC:Z
+
+    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public autoSend()Z
-    .locals 1
+.method public activateProvider()V
+    .locals 0
 
     .prologue
-    .line 78
-    iget-boolean v0, p0, Lcom/glympse/android/lib/by;->kO:Z
-
-    return v0
-.end method
-
-.method public decode(Lcom/glympse/android/core/GPrimitive;)V
-    .locals 8
-
-    .prologue
-    const/4 v6, 0x0
-
-    const-wide/high16 v0, 0x7ff8000000000000L
-
-    .line 140
-    const-string v2, "type"
-
-    invoke-static {v2}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {p1, v2}, Lcom/glympse/android/core/GPrimitive;->getLong(Ljava/lang/String;)J
-
-    move-result-wide v2
-
-    long-to-int v2, v2
-
-    iput v2, p0, Lcom/glympse/android/lib/by;->_type:I
-
-    .line 141
-    const-string v2, "asnd"
-
-    invoke-static {v2}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {p1, v2}, Lcom/glympse/android/core/GPrimitive;->getBool(Ljava/lang/String;)Z
-
-    move-result v2
-
-    iput-boolean v2, p0, Lcom/glympse/android/lib/by;->kO:Z
-
-    .line 142
-    const-string v2, "id"
-
-    invoke-static {v2}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {p1, v2}, Lcom/glympse/android/core/GPrimitive;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, p0, Lcom/glympse/android/lib/by;->hm:Ljava/lang/String;
-
-    .line 143
-    const-string v2, "name"
-
-    invoke-static {v2}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {p1, v2}, Lcom/glympse/android/core/GPrimitive;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, p0, Lcom/glympse/android/lib/by;->_name:Ljava/lang/String;
-
-    .line 144
-    const-string v2, "tmc"
-
-    invoke-static {v2}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {p1, v2}, Lcom/glympse/android/core/GPrimitive;->get(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
-
-    .line 145
-    const-string v2, "tckt"
-
-    invoke-static {v2}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {p1, v2}, Lcom/glympse/android/core/GPrimitive;->get(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
-
-    move-result-object v3
-
-    .line 150
-    if-eqz v3, :cond_0
-
-    .line 152
-    const/4 v2, 0x0
-
-    invoke-static {v2, v6, v6}, Lcom/glympse/android/api/GlympseFactory;->createTicket(ILjava/lang/String;Lcom/glympse/android/api/GPlace;)Lcom/glympse/android/api/GTicket;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/glympse/android/lib/GTicketPrivate;
-
-    .line 153
-    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->decode(Lcom/glympse/android/core/GPrimitive;)V
-
-    .line 154
-    iput-object v2, p0, Lcom/glympse/android/lib/by;->jy:Lcom/glympse/android/api/GTicket;
-
-    .line 156
-    :cond_0
-    const-string v2, "rgn"
-
-    invoke-static {v2}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {p1, v2}, Lcom/glympse/android/core/GPrimitive;->get(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
-
-    move-result-object v7
-
-    .line 157
-    if-eqz v7, :cond_1
-
-    move-wide v2, v0
-
-    move-wide v4, v0
-
-    .line 159
-    invoke-static/range {v0 .. v6}, Lcom/glympse/android/core/CoreFactory;->createRegion(DDDLjava/lang/String;)Lcom/glympse/android/core/GRegion;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/glympse/android/lib/by;->cN:Lcom/glympse/android/core/GRegion;
-
-    .line 160
-    iget-object v0, p0, Lcom/glympse/android/lib/by;->cN:Lcom/glympse/android/core/GRegion;
-
-    invoke-interface {v0, v7}, Lcom/glympse/android/core/GRegion;->decode(Lcom/glympse/android/core/GPrimitive;)V
-
-    .line 162
-    :cond_1
-    const-string v0, "trns"
-
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {p1, v0}, Lcom/glympse/android/core/GPrimitive;->getLong(Ljava/lang/String;)J
-
-    move-result-wide v0
-
-    long-to-int v0, v0
-
-    iput v0, p0, Lcom/glympse/android/lib/by;->kP:I
-
-    .line 163
-    return-void
-.end method
-
-.method public encode(Lcom/glympse/android/core/GPrimitive;I)V
-    .locals 5
-
-    .prologue
-    const/4 v4, 0x2
-
-    .line 106
-    const-string v0, "type"
-
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iget v1, p0, Lcom/glympse/android/lib/by;->_type:I
-
-    int-to-long v2, v1
-
-    invoke-interface {p1, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;J)V
-
-    .line 107
-    const-string v0, "asnd"
-
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-boolean v1, p0, Lcom/glympse/android/lib/by;->kO:Z
-
-    invoke-interface {p1, v0, v1}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Z)V
-
-    .line 108
-    iget-object v0, p0, Lcom/glympse/android/lib/by;->hm:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 110
-    const-string v0, "id"
-
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/glympse/android/lib/by;->hm:Ljava/lang/String;
-
-    invoke-interface {p1, v0, v1}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 112
-    :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/by;->_name:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 114
-    const-string v0, "name"
-
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/glympse/android/lib/by;->_name:Ljava/lang/String;
-
-    invoke-interface {p1, v0, v1}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 116
-    :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/by;->kN:Lcom/glympse/android/api/GTimeConstraint;
-
-    if-eqz v0, :cond_2
+    .line 117
+    invoke-direct {p0}, Lcom/glympse/android/lib/by;->br()V
 
     .line 118
-    invoke-static {v4}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(I)Lcom/glympse/android/core/GPrimitive;
-
-    move-result-object v0
-
-    .line 119
-    iget-object v1, p0, Lcom/glympse/android/lib/by;->kN:Lcom/glympse/android/api/GTimeConstraint;
-
-    invoke-interface {v1, v0, p2}, Lcom/glympse/android/api/GTimeConstraint;->encode(Lcom/glympse/android/core/GPrimitive;I)V
-
-    .line 120
-    const-string v1, "tmc"
-
-    invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-interface {p1, v1, v0}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
-
-    .line 122
-    :cond_2
-    iget-object v0, p0, Lcom/glympse/android/lib/by;->jy:Lcom/glympse/android/api/GTicket;
-
-    if-eqz v0, :cond_3
-
-    .line 124
-    iget-object v0, p0, Lcom/glympse/android/lib/by;->jy:Lcom/glympse/android/api/GTicket;
-
-    check-cast v0, Lcom/glympse/android/lib/GTicketPrivate;
-
-    .line 125
-    invoke-static {v4}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(I)Lcom/glympse/android/core/GPrimitive;
-
-    move-result-object v1
-
-    .line 126
-    invoke-interface {v0, v1, p2}, Lcom/glympse/android/lib/GTicketPrivate;->encode(Lcom/glympse/android/core/GPrimitive;I)V
-
-    .line 127
-    const-string v0, "tckt"
-
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {p1, v0, v1}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
-
-    .line 129
-    :cond_3
-    iget-object v0, p0, Lcom/glympse/android/lib/by;->cN:Lcom/glympse/android/core/GRegion;
-
-    if-eqz v0, :cond_4
-
-    .line 131
-    invoke-static {v4}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(I)Lcom/glympse/android/core/GPrimitive;
-
-    move-result-object v0
-
-    .line 132
-    iget-object v1, p0, Lcom/glympse/android/lib/by;->cN:Lcom/glympse/android/core/GRegion;
-
-    invoke-interface {v1, v0, p2}, Lcom/glympse/android/core/GRegion;->encode(Lcom/glympse/android/core/GPrimitive;I)V
-
-    .line 133
-    const-string v1, "rgn"
-
-    invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-interface {p1, v1, v0}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
-
-    .line 135
-    :cond_4
-    const-string v0, "trns"
-
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iget v1, p0, Lcom/glympse/android/lib/by;->kP:I
-
-    int-to-long v2, v1
-
-    invoke-interface {p1, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;J)V
-
-    .line 136
     return-void
 .end method
 
-.method public getId()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 58
-    iget-object v0, p0, Lcom/glympse/android/lib/by;->hm:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getName()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 63
-    iget-object v0, p0, Lcom/glympse/android/lib/by;->_name:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getRegion()Lcom/glympse/android/core/GRegion;
-    .locals 1
-
-    .prologue
-    .line 92
-    iget-object v0, p0, Lcom/glympse/android/lib/by;->cN:Lcom/glympse/android/core/GRegion;
-
-    return-object v0
-.end method
-
-.method public getTicket()Lcom/glympse/android/api/GTicket;
-    .locals 1
+.method public allowHandoff()V
+    .locals 0
 
     .prologue
     .line 83
-    iget-object v0, p0, Lcom/glympse/android/lib/by;->jy:Lcom/glympse/android/api/GTicket;
+    return-void
+.end method
+
+.method public bq()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 53
+    const/4 v0, 0x0
 
     return-object v0
 .end method
 
-.method public getTimeConstraint()Lcom/glympse/android/api/GTimeConstraint;
+.method public deactivateProvider()V
+    .locals 0
+
+    .prologue
+    .line 122
+    invoke-direct {p0}, Lcom/glympse/android/lib/by;->bt()V
+
+    .line 123
+    return-void
+.end method
+
+.method public getActionUri(I)Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/glympse/android/lib/by;->kN:Lcom/glympse/android/api/GTimeConstraint;
+    const/4 v0, 0x0
 
     return-object v0
 .end method
 
-.method public getTransition()I
+.method public getConfig()Lcom/glympse/android/core/GPrimitive;
     .locals 1
 
     .prologue
-    .line 97
-    iget v0, p0, Lcom/glympse/android/lib/by;->kP:I
+    .line 137
+    iget-object v0, p0, Lcom/glympse/android/lib/by;->lA:Lcom/glympse/android/core/GPrimitive;
+
+    return-object v0
+.end method
+
+.method public getDisabledTicketFields()I
+    .locals 1
+
+    .prologue
+    .line 78
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public getType()I
+.method public getProviderId()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 58
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public isEnabled()Z
+    .locals 1
+
+    .prologue
+    .line 48
+    iget-object v0, p0, Lcom/glympse/android/lib/by;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public isForceable()Z
     .locals 1
 
     .prologue
     .line 68
-    iget v0, p0, Lcom/glympse/android/lib/by;->_type:I
+    const/4 v0, 0x1
 
     return v0
+.end method
+
+.method public isHandoffAllowed()Z
+    .locals 1
+
+    .prologue
+    .line 88
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public isHandoffAvailable()Z
+    .locals 1
+
+    .prologue
+    .line 63
+    iget-object v0, p0, Lcom/glympse/android/lib/by;->gJ:Lcom/glympse/android/core/GPrimitive;
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public setActive(Z)V
+    .locals 2
+
+    .prologue
+    .line 127
+    const/4 v0, 0x1
+
+    const-string v1, "[ForceableHandoffProvider.setActive]"
+
+    invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
+
+    .line 128
+    return-void
+.end method
+
+.method public setProfile(Lcom/glympse/android/core/GPrimitive;)V
+    .locals 0
+
+    .prologue
+    .line 132
+    iput-object p1, p0, Lcom/glympse/android/lib/by;->gJ:Lcom/glympse/android/core/GPrimitive;
+
+    .line 133
+    return-void
+.end method
+
+.method public start(Lcom/glympse/android/lib/GGlympsePrivate;)V
+    .locals 2
+
+    .prologue
+    .line 97
+    const/4 v0, 0x1
+
+    const-string v1, "[ForceableHandoffProvider.start]"
+
+    invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
+
+    .line 98
+    iput-object p1, p0, Lcom/glympse/android/lib/by;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    .line 99
+    return-void
+.end method
+
+.method public stop()V
+    .locals 2
+
+    .prologue
+    .line 103
+    const/4 v0, 0x1
+
+    const-string v1, "[ForceableHandoffProvider.stop]"
+
+    invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
+
+    .line 107
+    iget-boolean v0, p0, Lcom/glympse/android/lib/by;->lC:Z
+
+    if-eqz v0, :cond_0
+
+    .line 109
+    invoke-direct {p0}, Lcom/glympse/android/lib/by;->bt()V
+
+    .line 112
+    :cond_0
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/glympse/android/lib/by;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    .line 113
+    return-void
 .end method

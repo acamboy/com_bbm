@@ -14,7 +14,7 @@
     return-void
 .end method
 
-.method public static Q(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+.method public static U(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
     .locals 3
 
     .prologue
@@ -160,7 +160,7 @@
     goto :goto_0
 .end method
 
-.method public static c(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
+.method public static e(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
     .locals 1
 
     .prologue
@@ -177,7 +177,7 @@
     return-void
 .end method
 
-.method public static d(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
+.method public static f(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
     .locals 1
 
     .prologue
@@ -194,7 +194,7 @@
     return-void
 .end method
 
-.method public static e(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
+.method public static g(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
     .locals 1
 
     .prologue
@@ -211,7 +211,7 @@
     return-void
 .end method
 
-.method public static f(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
+.method public static h(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
     .locals 1
 
     .prologue
@@ -233,7 +233,7 @@
     return-void
 .end method
 
-.method public static k(Lcom/glympse/android/lib/GGlympsePrivate;)Lcom/glympse/android/core/GPrimitive;
+.method public static j(Lcom/glympse/android/lib/GGlympsePrivate;)Lcom/glympse/android/core/GPrimitive;
     .locals 5
 
     .prologue
@@ -244,7 +244,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/glympse/android/rdbg/i;->P(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+    invoke-static {v0}, Lcom/glympse/android/rdbg/i;->T(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v0
 
@@ -265,7 +265,7 @@
     invoke-static {v0, v1}, Lcom/glympse/android/rdbg/i;->e(Lcom/glympse/android/core/GPrimitive;Ljava/lang/String;)V
 
     .line 95
-    invoke-static {v0}, Lcom/glympse/android/rdbg/j;->m(Lcom/glympse/android/core/GPrimitive;)Lcom/glympse/android/core/GPrimitive;
+    invoke-static {v0}, Lcom/glympse/android/rdbg/j;->r(Lcom/glympse/android/core/GPrimitive;)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v2
 
@@ -325,12 +325,12 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/glympse/android/rdbg/j;->Q(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+    invoke-static {v0}, Lcom/glympse/android/rdbg/j;->U(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v0
 
     .line 106
-    invoke-static {v2, v0}, Lcom/glympse/android/rdbg/j;->f(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
+    invoke-static {v2, v0}, Lcom/glympse/android/rdbg/j;->h(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
 
     .line 100
     :cond_0
@@ -345,7 +345,7 @@
     return-object v2
 .end method
 
-.method public static m(Lcom/glympse/android/core/GPrimitive;)Lcom/glympse/android/core/GPrimitive;
+.method public static r(Lcom/glympse/android/core/GPrimitive;)Lcom/glympse/android/core/GPrimitive;
     .locals 2
 
     .prologue
@@ -357,7 +357,7 @@
     move-result-object v0
 
     .line 54
-    invoke-static {v0, p0}, Lcom/glympse/android/rdbg/j;->c(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
+    invoke-static {v0, p0}, Lcom/glympse/android/rdbg/j;->e(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
 
     .line 55
     const/4 v1, 0x1
@@ -367,7 +367,7 @@
     move-result-object v1
 
     .line 56
-    invoke-static {v0, v1}, Lcom/glympse/android/rdbg/j;->e(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
+    invoke-static {v0, v1}, Lcom/glympse/android/rdbg/j;->g(Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GPrimitive;)V
 
     .line 57
     return-object v0

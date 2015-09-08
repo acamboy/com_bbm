@@ -1,452 +1,290 @@
-.class public final Lcom/bbm/ui/cp;
-.super Landroid/graphics/drawable/Drawable;
-.source "GifDrawable.java"
+.class final Lcom/bbm/ui/cp;
+.super Landroid/support/v4/view/as;
+.source "EmoticonStickerPager.java"
 
 
 # instance fields
-.field protected a:Lcom/bbm/util/b/b;
+.field a:Lcom/bbm/j/u;
 
-.field protected b:Landroid/graphics/Bitmap;
+.field final synthetic b:Lcom/bbm/ui/EmoticonStickerPager;
 
-.field protected c:I
+.field private final c:Ljava/util/HashSet;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashSet",
+            "<",
+            "Lcom/bbm/ui/StickerPicker;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field protected d:J
-
-.field protected e:J
+.field private final d:Lcom/bbm/j/k;
 
 
 # direct methods
-.method private constructor <init>(Lcom/bbm/util/b/b;)V
-    .locals 3
+.method public constructor <init>(Lcom/bbm/ui/EmoticonStickerPager;)V
+    .locals 1
 
     .prologue
-    const-wide/16 v0, 0x0
+    .line 392
+    iput-object p1, p0, Lcom/bbm/ui/cp;->b:Lcom/bbm/ui/EmoticonStickerPager;
 
-    .line 20
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
+    invoke-direct {p0}, Landroid/support/v4/view/as;-><init>()V
 
-    .line 17
-    iput-wide v0, p0, Lcom/bbm/ui/cp;->d:J
+    .line 390
+    new-instance v0, Ljava/util/HashSet;
 
-    .line 18
-    iput-wide v0, p0, Lcom/bbm/ui/cp;->e:J
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 21
-    iput-object p1, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/util/b/b;
+    iput-object v0, p0, Lcom/bbm/ui/cp;->c:Ljava/util/HashSet;
 
-    .line 23
+    .line 396
+    new-instance v0, Lcom/bbm/ui/cq;
+
+    invoke-direct {v0, p0}, Lcom/bbm/ui/cq;-><init>(Lcom/bbm/ui/cp;)V
+
+    iput-object v0, p0, Lcom/bbm/ui/cp;->d:Lcom/bbm/j/k;
+
+    .line 415
     const/4 v0, 0x0
 
+    iput-object v0, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/j/u;
+
+    .line 393
+    iget-object v0, p0, Lcom/bbm/ui/cp;->d:Lcom/bbm/j/k;
+
+    invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
+
+    .line 394
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Landroid/view/ViewGroup;I)Ljava/lang/Object;
+    .locals 2
+
+    .prologue
+    .line 450
+    new-instance v1, Lcom/bbm/ui/StickerPicker;
+
+    iget-object v0, p0, Lcom/bbm/ui/cp;->b:Lcom/bbm/ui/EmoticonStickerPager;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonStickerPager;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Lcom/bbm/ui/StickerPicker;-><init>(Landroid/content/Context;)V
+
+    .line 451
+    iget-object v0, p0, Lcom/bbm/ui/cp;->b:Lcom/bbm/ui/EmoticonStickerPager;
+
+    invoke-static {v0}, Lcom/bbm/ui/EmoticonStickerPager;->s(Lcom/bbm/ui/EmoticonStickerPager;)Lcom/bbm/ui/hd;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/StickerPicker;->setStickerPreviewListener(Lcom/bbm/ui/hd;)V
+
+    .line 454
+    iget-object v0, p0, Lcom/bbm/ui/cp;->c:Ljava/util/HashSet;
+
+    invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    .line 455
+    iget-object v0, p0, Lcom/bbm/ui/cp;->b:Lcom/bbm/ui/EmoticonStickerPager;
+
+    invoke-static {v0}, Lcom/bbm/ui/EmoticonStickerPager;->j(Lcom/bbm/ui/EmoticonStickerPager;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    .line 456
+    iget-object v0, p0, Lcom/bbm/ui/cp;->b:Lcom/bbm/ui/EmoticonStickerPager;
+
+    invoke-static {v0}, Lcom/bbm/ui/EmoticonStickerPager;->j(Lcom/bbm/ui/EmoticonStickerPager;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/StickerPicker;->setStickerPackId(Ljava/lang/String;)V
+
+    .line 457
+    iget-object v0, p0, Lcom/bbm/ui/cp;->b:Lcom/bbm/ui/EmoticonStickerPager;
+
+    invoke-static {v0}, Lcom/bbm/ui/EmoticonStickerPager;->n(Lcom/bbm/ui/EmoticonStickerPager;)Lcom/bbm/ui/hc;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/StickerPicker;->setStickerPickerListener(Lcom/bbm/ui/hc;)V
+
+    .line 464
     :goto_0
-    iget-object v1, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/util/b/b;
+    const/4 v0, 0x0
 
-    invoke-virtual {v1}, Lcom/bbm/util/b/b;->c()I
+    invoke-virtual {p1, v1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
 
-    move-result v1
+    .line 465
+    return-object v1
 
-    if-ge v0, v1, :cond_0
+    .line 461
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/cp;->b:Lcom/bbm/ui/EmoticonStickerPager;
 
-    .line 24
-    iget v1, p0, Lcom/bbm/ui/cp;->c:I
-
-    invoke-direct {p0, v0}, Lcom/bbm/ui/cp;->a(I)I
-
-    move-result v2
-
-    add-int/2addr v1, v2
-
-    iput v1, p0, Lcom/bbm/ui/cp;->c:I
-
-    .line 23
-    add-int/lit8 v0, v0, 0x1
+    invoke-static {v0, v1}, Lcom/bbm/ui/EmoticonStickerPager;->a(Lcom/bbm/ui/EmoticonStickerPager;Lcom/bbm/ui/StickerPicker;)Lcom/bbm/ui/StickerPicker;
 
     goto :goto_0
+.end method
 
-    .line 27
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/util/b/b;
+.method public final a(Landroid/view/ViewGroup;ILjava/lang/Object;)V
+    .locals 1
 
-    invoke-virtual {v0}, Lcom/bbm/util/b/b;->c()I
+    .prologue
+    .line 470
+    iget-object v0, p0, Lcom/bbm/ui/cp;->c:Ljava/util/HashSet;
+
+    invoke-virtual {v0, p3}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
+
+    .line 471
+    check-cast p3, Landroid/view/View;
+
+    invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+
+    .line 472
+    return-void
+.end method
+
+.method public final a(Z)V
+    .locals 2
+
+    .prologue
+    .line 486
+    if-eqz p1, :cond_0
+
+    .line 487
+    iget-object v0, p0, Lcom/bbm/ui/cp;->d:Lcom/bbm/j/k;
+
+    invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
+
+    .line 492
+    :goto_0
+    iget-object v0, p0, Lcom/bbm/ui/cp;->c:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 28
-    invoke-virtual {p0}, Lcom/bbm/ui/cp;->b()V
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 30
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/StickerPicker;
+
+    .line 493
+    invoke-virtual {v0, p1}, Lcom/bbm/ui/StickerPicker;->setMonitorState(Z)V
+
+    goto :goto_1
+
+    .line 489
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/cp;->d:Lcom/bbm/j/k;
+
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
+
+    goto :goto_0
+
+    .line 495
     :cond_1
     return-void
 .end method
 
-.method private a(I)I
-    .locals 2
+.method public final a(Landroid/view/View;Ljava/lang/Object;)Z
+    .locals 1
 
     .prologue
-    .line 72
-    iget-object v0, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/util/b/b;
-
-    invoke-virtual {v0, p1}, Lcom/bbm/util/b/b;->a(I)I
+    .line 476
+    invoke-static {p1, p2}, Lcom/bbm/util/bn;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 73
-    const/16 v1, 0x14
-
-    if-ge v0, v1, :cond_0
-
-    const/16 v0, 0x64
-
-    :cond_0
     return v0
 .end method
 
-.method public static a(Ljava/lang/String;)Lcom/bbm/ui/cp;
-    .locals 1
+.method public final b(Ljava/lang/Object;)I
+    .locals 2
 
     .prologue
-    .line 102
-    invoke-static {p0}, Lcom/bbm/util/bk;->f(Ljava/lang/String;)[B
+    .line 410
+    check-cast p1, Lcom/bbm/ui/StickerPicker;
+
+    invoke-virtual {p1}, Lcom/bbm/ui/StickerPicker;->getPackId()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/bbm/ui/cp;->a([B)Lcom/bbm/ui/cp;
+    .line 411
+    iget-object v1, p0, Lcom/bbm/ui/cp;->b:Lcom/bbm/ui/EmoticonStickerPager;
 
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static a([B)Lcom/bbm/ui/cp;
-    .locals 4
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 106
-    if-eqz p0, :cond_0
-
-    array-length v1, p0
-
-    if-nez v1, :cond_1
-
-    .line 132
-    :cond_0
-    :goto_0
-    return-object v0
-
-    .line 110
-    :cond_1
-    :try_start_0
-    new-instance v2, Lcom/bbm/util/b/b;
-
-    invoke-direct {v2}, Lcom/bbm/util/b/b;-><init>()V
-
-    .line 111
-    invoke-virtual {v2, p0}, Lcom/bbm/util/b/b;->a([B)I
-
-    move-result v1
-
-    .line 112
-    if-nez v1, :cond_0
-
-    .line 117
-    invoke-virtual {v2}, Lcom/bbm/util/b/b;->c()I
-
-    move-result v1
-
-    const/4 v3, 0x1
-
-    if-le v1, v3, :cond_0
-
-    .line 118
-    new-instance v1, Lcom/bbm/ui/cp;
-
-    invoke-direct {v1, v2}, Lcom/bbm/ui/cp;-><init>(Lcom/bbm/util/b/b;)V
-
-    .line 119
-    iget v2, v1, Lcom/bbm/ui/cp;->c:I
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_1
-
-    if-lez v2, :cond_0
-
-    move-object v0, v1
-
-    .line 121
-    goto :goto_0
-
-    .line 126
-    :catch_0
-    move-exception v1
-
-    invoke-static {v1}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    .line 128
-    :catch_1
-    move-exception v1
-
-    invoke-static {v1}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_0
-.end method
-
-
-# virtual methods
-.method public final a(J)V
-    .locals 1
-
-    .prologue
-    .line 141
-    iput-wide p1, p0, Lcom/bbm/ui/cp;->d:J
-
-    .line 142
-    return-void
-.end method
-
-.method public final a()[B
-    .locals 1
-
-    .prologue
-    .line 33
-    iget-object v0, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/util/b/b;
-
-    invoke-virtual {v0}, Lcom/bbm/util/b/b;->f()[B
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final b()V
-    .locals 3
-
-    .prologue
-    const/4 v2, 0x1
-
-    .line 44
-    iget-object v0, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/util/b/b;
-
-    invoke-virtual {v0}, Lcom/bbm/util/b/b;->c()I
-
-    move-result v0
-
-    if-lt v2, v0, :cond_0
-
-    .line 46
-    iget-object v0, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/util/b/b;
-
-    invoke-virtual {v0}, Lcom/bbm/util/b/b;->b()V
-
-    .line 48
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-gt v0, v2, :cond_1
-
-    .line 49
-    iget-object v1, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/util/b/b;
-
-    invoke-virtual {v1}, Lcom/bbm/util/b/b;->a()V
-
-    .line 50
-    iget-object v1, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/util/b/b;
-
-    invoke-virtual {v1}, Lcom/bbm/util/b/b;->e()Landroid/graphics/Bitmap;
+    invoke-static {v1}, Lcom/bbm/ui/EmoticonStickerPager;->j(Lcom/bbm/ui/EmoticonStickerPager;)Ljava/util/ArrayList;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/bbm/ui/cp;->b:Landroid/graphics/Bitmap;
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
 
-    .line 48
-    add-int/lit8 v0, v0, 0x1
+    move-result v0
+
+    .line 412
+    if-ltz v0, :cond_0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, -0x2
 
     goto :goto_0
-
-    .line 52
-    :cond_1
-    return-void
 .end method
 
-.method public final b(J)V
+.method public final b()Landroid/os/Parcelable;
     .locals 1
 
     .prologue
-    .line 149
-    iput-wide p1, p0, Lcom/bbm/ui/cp;->e:J
-
-    .line 150
-    return-void
-.end method
-
-.method public final c()V
-    .locals 1
-
-    .prologue
-    .line 55
-    iget-object v0, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/util/b/b;
-
-    invoke-virtual {v0}, Lcom/bbm/util/b/b;->a()V
-
-    .line 56
-    iget-object v0, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/util/b/b;
-
-    invoke-virtual {v0}, Lcom/bbm/util/b/b;->e()Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/cp;->b:Landroid/graphics/Bitmap;
-
-    .line 57
-    return-void
-.end method
-
-.method public final d()Landroid/graphics/Bitmap;
-    .locals 1
-
-    .prologue
-    .line 60
-    iget-object v0, p0, Lcom/bbm/ui/cp;->b:Landroid/graphics/Bitmap;
+    .line 481
+    const/4 v0, 0x0
 
     return-object v0
 .end method
 
-.method public final draw(Landroid/graphics/Canvas;)V
-    .locals 3
-
-    .prologue
-    const/4 v2, 0x0
-
-    .line 38
-    iget-object v0, p0, Lcom/bbm/ui/cp;->b:Landroid/graphics/Bitmap;
-
-    if-eqz v0, :cond_0
-
-    .line 39
-    iget-object v0, p0, Lcom/bbm/ui/cp;->b:Landroid/graphics/Bitmap;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v2, v2, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
-
-    .line 41
-    :cond_0
-    return-void
-.end method
-
-.method public final e()I
+.method public final c()I
     .locals 1
 
     .prologue
-    .line 68
-    iget-object v0, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/util/b/b;
+    .line 444
+    iget-object v0, p0, Lcom/bbm/ui/cp;->b:Lcom/bbm/ui/EmoticonStickerPager;
 
-    invoke-virtual {v0}, Lcom/bbm/util/b/b;->d()I
+    invoke-static {v0}, Lcom/bbm/ui/EmoticonStickerPager;->j(Lcom/bbm/ui/EmoticonStickerPager;)Ljava/util/ArrayList;
 
-    move-result v0
+    move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/bbm/ui/cp;->a(I)I
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
     return v0
-.end method
-
-.method public final f()J
-    .locals 2
-
-    .prologue
-    .line 145
-    iget-wide v0, p0, Lcom/bbm/ui/cp;->d:J
-
-    return-wide v0
-.end method
-
-.method public final g()J
-    .locals 2
-
-    .prologue
-    .line 153
-    iget-wide v0, p0, Lcom/bbm/ui/cp;->e:J
-
-    return-wide v0
-.end method
-
-.method public final getIntrinsicHeight()I
-    .locals 1
-
-    .prologue
-    .line 98
-    iget-object v0, p0, Lcom/bbm/ui/cp;->b:Landroid/graphics/Bitmap;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, -0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/cp;->b:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v0
-
-    goto :goto_0
-.end method
-
-.method public final getIntrinsicWidth()I
-    .locals 1
-
-    .prologue
-    .line 93
-    iget-object v0, p0, Lcom/bbm/ui/cp;->b:Landroid/graphics/Bitmap;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, -0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/cp;->b:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v0
-
-    goto :goto_0
-.end method
-
-.method public final getOpacity()I
-    .locals 1
-
-    .prologue
-    .line 88
-    const/4 v0, -0x3
-
-    return v0
-.end method
-
-.method public final setAlpha(I)V
-    .locals 0
-
-    .prologue
-    .line 79
-    return-void
-.end method
-
-.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
-    .locals 0
-
-    .prologue
-    .line 84
-    return-void
 .end method

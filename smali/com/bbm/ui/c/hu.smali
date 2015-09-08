@@ -1,46 +1,103 @@
-.class final Lcom/bbm/ui/c/hu;
+.class final synthetic Lcom/bbm/ui/c/hu;
 .super Ljava/lang/Object;
-.source "StickerDetailsFragment.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "StoreHomeFragment.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/c/gr;
+# static fields
+.field static final synthetic a:[I
+
+.field static final synthetic b:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/gr;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 556
-    iput-object p1, p0, Lcom/bbm/ui/c/hu;->a:Lcom/bbm/ui/c/gr;
+    .line 711
+    invoke-static {}, Lcom/bbm/l/j;->values()[Lcom/bbm/l/j;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/c/hu;->b:[I
+
+    :try_start_0
+    sget-object v0, Lcom/bbm/ui/c/hu;->b:[I
+
+    sget-object v1, Lcom/bbm/l/j;->b:Lcom/bbm/l/j;
+
+    invoke-virtual {v1}, Lcom/bbm/l/j;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_2
+
+    .line 145
+    :goto_0
+    invoke-static {}, Lcom/bbm/util/bo;->values()[Lcom/bbm/util/bo;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/c/hu;->a:[I
+
+    :try_start_1
+    sget-object v0, Lcom/bbm/ui/c/hu;->a:[I
+
+    sget-object v1, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
+
+    invoke-virtual {v1}, Lcom/bbm/util/bo;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/bbm/ui/c/hu;->a:[I
+
+    sget-object v1, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
+
+    invoke-virtual {v1}, Lcom/bbm/util/bo;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_0
+
+    :goto_2
     return-void
-.end method
 
+    :catch_0
+    move-exception v0
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+    goto :goto_2
 
-    .prologue
-    .line 560
-    const-string v0, "Full sticker clicked=close"
+    :catch_1
+    move-exception v0
 
-    const-class v1, Lcom/bbm/ui/c/gr;
+    goto :goto_1
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    :catch_2
+    move-exception v0
 
-    .line 561
-    iget-object v0, p0, Lcom/bbm/ui/c/hu;->a:Lcom/bbm/ui/c/gr;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/gr;->b(Lcom/bbm/ui/c/gr;)V
-
-    .line 562
-    return-void
+    goto :goto_0
 .end method

@@ -14,13 +14,13 @@
 
 .field public c:Z
 
-.field private d:I
+.field public d:Lcom/bbm/l/b/a;
 
-.field private e:J
+.field private e:I
 
-.field private f:I
+.field private f:J
 
-.field private g:Lcom/bbm/l/b/a;
+.field private g:I
 
 
 # direct methods
@@ -47,13 +47,13 @@
     iput-boolean p1, p0, Lcom/bbm/l/b/c;->a:Z
 
     .line 76
-    iput p2, p0, Lcom/bbm/l/b/c;->d:I
+    iput p2, p0, Lcom/bbm/l/b/c;->e:I
 
     .line 77
-    iput-wide p3, p0, Lcom/bbm/l/b/c;->e:J
+    iput-wide p3, p0, Lcom/bbm/l/b/c;->f:J
 
     .line 78
-    iput p5, p0, Lcom/bbm/l/b/c;->f:I
+    iput p5, p0, Lcom/bbm/l/b/c;->g:I
 
     .line 79
     iput-object p6, p0, Lcom/bbm/l/b/c;->b:Ljava/lang/String;
@@ -69,7 +69,7 @@
     iput-boolean v0, p0, Lcom/bbm/l/b/c;->c:Z
 
     .line 81
-    iput-object p7, p0, Lcom/bbm/l/b/c;->g:Lcom/bbm/l/b/a;
+    iput-object p7, p0, Lcom/bbm/l/b/c;->d:Lcom/bbm/l/b/a;
 
     .line 82
     return-void
@@ -164,7 +164,7 @@
     if-eqz v1, :cond_1
 
     .line 41
-    invoke-static {p1}, Lcom/bbm/util/cv;->b(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/bbm/util/de;->b(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -273,7 +273,7 @@
 
     new-array v2, v9, [Ljava/lang/Object;
 
-    invoke-static {v1, v2}, Lcom/bbm/y;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v1, v2}, Lcom/bbm/af;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     move-object v1, v0
 

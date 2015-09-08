@@ -1,10 +1,24 @@
-.class public interface abstract Lcom/google/android/gms/internal/hd;
+.class final Lcom/google/android/gms/internal/hd;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/os/IInterface;
+
+# static fields
+.field static a:I
+
+.field static b:I
 
 
-# virtual methods
-.method public abstract c(ILandroid/os/Bundle;)V
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    const v0, 0xea60
+
+    sput v0, Lcom/google/android/gms/internal/hd;->a:I
+
+    const/16 v0, 0x2710
+
+    sput v0, Lcom/google/android/gms/internal/hd;->b:I
+
+    return-void
 .end method

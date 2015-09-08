@@ -17,7 +17,7 @@
     .locals 0
 
     .prologue
-    .line 1027
+    .line 1037
     iput-object p1, p0, Landroid/support/v4/app/z;->b:Landroid/support/v4/app/w;
 
     iput-object p2, p0, Landroid/support/v4/app/z;->a:Landroid/support/v4/app/Fragment;
@@ -35,21 +35,21 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1030
+    .line 1040
     iget-object v0, p0, Landroid/support/v4/app/z;->a:Landroid/support/v4/app/Fragment;
 
     iget-object v0, v0, Landroid/support/v4/app/Fragment;->mAnimatingAway:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 1031
+    .line 1041
     iget-object v0, p0, Landroid/support/v4/app/z;->a:Landroid/support/v4/app/Fragment;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Landroid/support/v4/app/Fragment;->mAnimatingAway:Landroid/view/View;
 
-    .line 1032
+    .line 1042
     iget-object v0, p0, Landroid/support/v4/app/z;->b:Landroid/support/v4/app/w;
 
     iget-object v1, p0, Landroid/support/v4/app/z;->a:Landroid/support/v4/app/Fragment;
@@ -64,7 +64,7 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/support/v4/app/w;->a(Landroid/support/v4/app/Fragment;IIIZ)V
 
-    .line 1035
+    .line 1045
     :cond_0
     return-void
 .end method
@@ -73,7 +73,7 @@
     .locals 0
 
     .prologue
-    .line 1038
+    .line 1048
     return-void
 .end method
 
@@ -81,6 +81,6 @@
     .locals 0
 
     .prologue
-    .line 1041
+    .line 1051
     return-void
 .end method

@@ -1,39 +1,39 @@
 .class final Lcom/bbm/ui/activities/agf;
 .super Ljava/lang/Object;
-.source "SetAsActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "UpdateStatusActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SetAsActivity;
+.field a:Landroid/widget/LinearLayout;
+
+.field b:Landroid/widget/TextView;
+
+.field c:Landroid/widget/ImageView;
+
+.field d:Landroid/widget/ImageView;
+
+.field final synthetic e:Lcom/bbm/ui/activities/afz;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SetAsActivity;)V
+.method private constructor <init>(Lcom/bbm/ui/activities/afz;)V
     .locals 0
 
     .prologue
-    .line 160
-    iput-object p1, p0, Lcom/bbm/ui/activities/agf;->a:Lcom/bbm/ui/activities/SetAsActivity;
+    .line 287
+    iput-object p1, p0, Lcom/bbm/ui/activities/agf;->e:Lcom/bbm/ui/activities/afz;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
+.method synthetic constructor <init>(Lcom/bbm/ui/activities/afz;B)V
+    .locals 0
 
     .prologue
-    .line 164
-    iget-object v0, p0, Lcom/bbm/ui/activities/agf;->a:Lcom/bbm/ui/activities/SetAsActivity;
+    .line 287
+    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/agf;-><init>(Lcom/bbm/ui/activities/afz;)V
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/SetAsActivity;->finish()V
-
-    .line 165
     return-void
 .end method

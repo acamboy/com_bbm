@@ -1,81 +1,98 @@
-.class final Lcom/bbm/ui/de;
+.class public Lcom/bbm/ui/de;
 .super Ljava/lang/Object;
-.source "IncrementalListAdapter.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.source "HeaderView.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/dd;
+.field protected a:Lcom/google/b/a/l;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/b/a/l",
+            "<",
+            "Landroid/support/v7/app/a;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field protected b:Lcom/google/b/a/l;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/b/a/l",
+            "<",
+            "Landroid/widget/ImageView;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/dd;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .prologue
-    .line 160
-    iput-object p1, p0, Lcom/bbm/ui/de;->a:Lcom/bbm/ui/dd;
-
+    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 15
+    invoke-static {}, Lcom/google/b/a/l;->e()Lcom/google/b/a/l;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/de;->b:Lcom/google/b/a/l;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public a()V
+    .locals 0
 
     .prologue
-    .line 163
-    iget-object v0, p0, Lcom/bbm/ui/de;->a:Lcom/bbm/ui/dd;
+    .line 40
+    return-void
+.end method
 
-    const/4 v1, 0x0
+.method public final b()Landroid/view/View;
+    .locals 2
 
-    iput-boolean v1, v0, Lcom/bbm/ui/dd;->b:Z
+    .prologue
+    .line 32
+    iget-object v0, p0, Lcom/bbm/ui/de;->a:Lcom/google/b/a/l;
 
-    .line 164
-    iget-object v0, p0, Lcom/bbm/ui/de;->a:Lcom/bbm/ui/dd;
-
-    iget-object v0, v0, Lcom/bbm/ui/dd;->g:Lcom/bbm/ui/cx;
-
-    invoke-static {v0}, Lcom/bbm/ui/cx;->e(Lcom/bbm/ui/cx;)Z
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 165
-    iget-object v0, p0, Lcom/bbm/ui/de;->a:Lcom/bbm/ui/dd;
+    .line 33
+    iget-object v0, p0, Lcom/bbm/ui/de;->a:Lcom/google/b/a/l;
 
-    const/high16 v1, 0x3f800000
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/dd;->a(F)V
-
-    .line 166
-    iget-object v0, p0, Lcom/bbm/ui/de;->a:Lcom/bbm/ui/dd;
-
-    iget-object v0, v0, Lcom/bbm/ui/dd;->f:Lcom/google/b/a/l;
-
-    invoke-static {v0}, Lcom/bbm/ui/dd;->b(Lcom/google/b/a/l;)Lcom/bbm/ui/dc;
+    invoke-virtual {v0}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
 
     move-result-object v0
 
-    const-wide/16 v2, -0x1
+    check-cast v0, Landroid/support/v7/app/a;
 
-    iput-wide v2, v0, Lcom/bbm/ui/dc;->c:J
+    invoke-virtual {v0}, Landroid/support/v7/app/a;->b()Landroid/view/View;
 
-    .line 170
+    move-result-object v0
+
+    const v1, 0x7f0b0609
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    .line 35
     :goto_0
-    return-void
+    return-object v0
 
-    .line 169
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/de;->a:Lcom/bbm/ui/dd;
-
-    invoke-static {v0}, Lcom/bbm/ui/dd;->a(Lcom/bbm/ui/dd;)V
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method

@@ -1,181 +1,70 @@
 .class final Lcom/bbm/ui/views/v;
-.super Landroid/widget/BaseAdapter;
+.super Ljava/lang/Object;
 .source "QuickActionAttachmentsView.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/views/QuickActionAttachmentsView;
+.field final synthetic a:I
+
+.field final synthetic b:Landroid/view/View;
+
+.field final synthetic c:Lcom/bbm/ui/views/u;
 
 
 # direct methods
-.method private constructor <init>(Lcom/bbm/ui/views/QuickActionAttachmentsView;)V
+.method constructor <init>(Lcom/bbm/ui/views/u;ILandroid/view/View;)V
     .locals 0
 
     .prologue
-    .line 80
-    iput-object p1, p0, Lcom/bbm/ui/views/v;->a:Lcom/bbm/ui/views/QuickActionAttachmentsView;
+    .line 111
+    iput-object p1, p0, Lcom/bbm/ui/views/v;->c:Lcom/bbm/ui/views/u;
 
-    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
+    iput p2, p0, Lcom/bbm/ui/views/v;->a:I
 
-    return-void
-.end method
+    iput-object p3, p0, Lcom/bbm/ui/views/v;->b:Landroid/view/View;
 
-.method synthetic constructor <init>(Lcom/bbm/ui/views/QuickActionAttachmentsView;B)V
-    .locals 0
-
-    .prologue
-    .line 80
-    invoke-direct {p0, p1}, Lcom/bbm/ui/views/v;-><init>(Lcom/bbm/ui/views/QuickActionAttachmentsView;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)Lcom/bbm/ui/views/x;
-    .locals 1
-
-    .prologue
-    .line 89
-    iget-object v0, p0, Lcom/bbm/ui/views/v;->a:Lcom/bbm/ui/views/QuickActionAttachmentsView;
-
-    invoke-static {v0}, Lcom/bbm/ui/views/QuickActionAttachmentsView;->a(Lcom/bbm/ui/views/QuickActionAttachmentsView;)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/views/x;
-
-    return-object v0
-.end method
-
-.method public final getCount()I
-    .locals 1
-
-    .prologue
-    .line 84
-    iget-object v0, p0, Lcom/bbm/ui/views/v;->a:Lcom/bbm/ui/views/QuickActionAttachmentsView;
-
-    invoke-static {v0}, Lcom/bbm/ui/views/QuickActionAttachmentsView;->a(Lcom/bbm/ui/views/QuickActionAttachmentsView;)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final synthetic getItem(I)Ljava/lang/Object;
-    .locals 1
-
-    .prologue
-    .line 80
-    invoke-virtual {p0, p1}, Lcom/bbm/ui/views/v;->a(I)Lcom/bbm/ui/views/x;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getItemId(I)J
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
     .prologue
-    .line 94
-    int-to-long v0, p1
+    .line 115
+    const-string v0, "Grid Item Clicked"
 
-    return-wide v0
-.end method
+    const-class v1, Lcom/bbm/ui/views/QuickActionAttachmentsView;
 
-.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 2
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .prologue
-    .line 100
-    new-instance v0, Lcom/bbm/ui/QuickActionAttachmentsItemView;
+    .line 117
+    iget-object v0, p0, Lcom/bbm/ui/views/v;->c:Lcom/bbm/ui/views/u;
 
-    iget-object v1, p0, Lcom/bbm/ui/views/v;->a:Lcom/bbm/ui/views/QuickActionAttachmentsView;
+    iget-object v0, v0, Lcom/bbm/ui/views/u;->a:Lcom/bbm/ui/views/QuickActionAttachmentsView;
 
-    invoke-virtual {v1}, Lcom/bbm/ui/views/QuickActionAttachmentsView;->getContext()Landroid/content/Context;
+    invoke-static {v0}, Lcom/bbm/ui/views/QuickActionAttachmentsView;->b(Lcom/bbm/ui/views/QuickActionAttachmentsView;)Lcom/bbm/ui/views/u;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Lcom/bbm/ui/QuickActionAttachmentsItemView;-><init>(Landroid/content/Context;)V
+    iget v1, p0, Lcom/bbm/ui/views/v;->a:I
 
-    .line 101
-    invoke-virtual {p0, p1}, Lcom/bbm/ui/views/v;->a(I)Lcom/bbm/ui/views/x;
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/views/u;->a(I)Lcom/bbm/ui/views/w;
 
-    move-result-object v1
+    move-result-object v0
 
-    iget-object v1, v1, Lcom/bbm/ui/views/x;->c:Lcom/bbm/j/r;
+    iget-object v0, v0, Lcom/bbm/ui/views/w;->e:Landroid/view/View$OnClickListener;
 
-    if-eqz v1, :cond_0
+    iget-object v1, p0, Lcom/bbm/ui/views/v;->b:Landroid/view/View;
 
-    .line 102
-    invoke-virtual {p0, p1}, Lcom/bbm/ui/views/v;->a(I)Lcom/bbm/ui/views/x;
+    invoke-interface {v0, v1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
-    move-result-object v1
-
-    iget-object v1, v1, Lcom/bbm/ui/views/x;->c:Lcom/bbm/j/r;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/QuickActionAttachmentsItemView;->setIcon(Lcom/bbm/j/r;)V
-
-    .line 106
-    :goto_0
-    invoke-virtual {p0, p1}, Lcom/bbm/ui/views/v;->a(I)Lcom/bbm/ui/views/x;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lcom/bbm/ui/views/x;->d:Ljava/lang/String;
-
-    if-eqz v1, :cond_1
-
-    .line 107
-    invoke-virtual {p0, p1}, Lcom/bbm/ui/views/v;->a(I)Lcom/bbm/ui/views/x;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lcom/bbm/ui/views/x;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/QuickActionAttachmentsItemView;->setLabel(Ljava/lang/String;)V
-
-    .line 111
-    :goto_1
-    new-instance v1, Lcom/bbm/ui/views/w;
-
-    invoke-direct {v1, p0, p1, p2}, Lcom/bbm/ui/views/w;-><init>(Lcom/bbm/ui/views/v;ILandroid/view/View;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/QuickActionAttachmentsItemView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 121
-    return-object v0
-
-    .line 104
-    :cond_0
-    invoke-virtual {p0, p1}, Lcom/bbm/ui/views/v;->a(I)Lcom/bbm/ui/views/x;
-
-    move-result-object v1
-
-    iget v1, v1, Lcom/bbm/ui/views/x;->a:I
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/QuickActionAttachmentsItemView;->setIcon(I)V
-
-    goto :goto_0
-
-    .line 109
-    :cond_1
-    invoke-virtual {p0, p1}, Lcom/bbm/ui/views/v;->a(I)Lcom/bbm/ui/views/x;
-
-    move-result-object v1
-
-    iget v1, v1, Lcom/bbm/ui/views/x;->b:I
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/QuickActionAttachmentsItemView;->setLabel(I)V
-
-    goto :goto_1
+    .line 118
+    return-void
 .end method

@@ -1,70 +1,116 @@
 .class public final Lcom/d/a/b/a/i;
-.super Ljava/lang/Object;
-.source "MemoryCacheUtil.java"
-
-# interfaces
-.implements Ljava/util/Comparator;
+.super Ljava/lang/Enum;
+.source "ViewScaleType.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
+        "Ljava/lang/Enum",
         "<",
-        "Ljava/lang/String;",
+        "Lcom/d/a/b/a/i;",
         ">;"
     }
 .end annotation
 
 
+# static fields
+.field public static final enum a:I
+
+.field public static final enum b:I
+
+.field private static final synthetic c:[I
+
+
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
     .prologue
-    .line 49
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x2
+
+    const/4 v3, 0x1
+
+    .line 32
+    sput v3, Lcom/d/a/b/a/i;->a:I
+
+    .line 37
+    sput v0, Lcom/d/a/b/a/i;->b:I
+
+    .line 27
+    new-array v0, v0, [I
+
+    const/4 v1, 0x0
+
+    sget v2, Lcom/d/a/b/a/i;->a:I
+
+    aput v2, v0, v1
+
+    sget v1, Lcom/d/a/b/a/i;->b:I
+
+    aput v1, v0, v3
+
+    sput-object v0, Lcom/d/a/b/a/i;->c:[I
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 3
+.method public static a(Landroid/widget/ImageView;)I
+    .locals 2
 
     .prologue
-    const/4 v2, 0x0
+    .line 59
+    sget-object v0, Lcom/d/a/b/a/j;->a:[I
 
-    .line 49
-    check-cast p1, Ljava/lang/String;
-
-    check-cast p2, Ljava/lang/String;
-
-    const-string v0, "_"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
-
-    move-result v0
-
-    invoke-virtual {p1, v2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "_"
-
-    invoke-virtual {p2, v1}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
-
-    move-result v1
-
-    invoke-virtual {p2, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/widget/ImageView;->getScaleType()Landroid/widget/ImageView$ScaleType;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+    invoke-virtual {v1}, Landroid/widget/ImageView$ScaleType;->ordinal()I
 
-    move-result v0
+    move-result v1
 
+    aget v0, v0, v1
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 70
+    sget v0, Lcom/d/a/b/a/i;->b:I
+
+    :goto_0
     return v0
+
+    .line 65
+    :pswitch_0
+    sget v0, Lcom/d/a/b/a/i;->a:I
+
+    goto :goto_0
+
+    .line 59
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static a()[I
+    .locals 1
+
+    .prologue
+    .line 27
+    sget-object v0, Lcom/d/a/b/a/i;->c:[I
+
+    invoke-virtual {v0}, [I->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [I
+
+    return-object v0
 .end method

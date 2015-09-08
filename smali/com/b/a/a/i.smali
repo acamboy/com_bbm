@@ -4,15 +4,15 @@
 
 
 # static fields
-.field private static final c:[Ljava/lang/String;
+.field private static final a:[Ljava/lang/String;
 
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field private b:Ljava/lang/String;
 
-.field public final b:Ljava/lang/String;
+.field private c:Z
 
-.field private d:Z
+.field private final d:Ljava/lang/String;
 
 
 # direct methods
@@ -43,7 +43,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/b/a/a/i;->c:[Ljava/lang/String;
+    sput-object v0, Lcom/b/a/a/i;->a:[Ljava/lang/String;
 
     return-void
 .end method
@@ -60,12 +60,12 @@
 
     iget-object v0, v0, Lcom/b/a/a/l;->d:Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/b/a/a/i;->a:Ljava/lang/String;
+    iput-object v0, p0, Lcom/b/a/a/i;->b:Ljava/lang/String;
 
     .line 68
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/b/a/a/i;->d:Z
+    iput-boolean v0, p0, Lcom/b/a/a/i;->c:Z
 
     .line 74
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -85,25 +85,13 @@
 
     .line 77
     :cond_0
-    iput-object p1, p0, Lcom/b/a/a/i;->b:Ljava/lang/String;
+    iput-object p1, p0, Lcom/b/a/a/i;->d:Ljava/lang/String;
 
     .line 78
     return-void
 .end method
 
-.method static synthetic a()[Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 39
-    sget-object v0, Lcom/b/a/a/i;->c:[Ljava/lang/String;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final a(Landroid/content/pm/PackageManager;)Z
+.method private a(Landroid/content/pm/PackageManager;)Z
     .locals 7
 
     .prologue
@@ -114,7 +102,7 @@
     const/4 v0, 0x0
 
     .line 93
-    iget-boolean v2, p0, Lcom/b/a/a/i;->d:Z
+    iget-boolean v2, p0, Lcom/b/a/a/i;->c:Z
 
     if-eqz v2, :cond_1
 
@@ -169,4 +157,168 @@
     move v0, v1
 
     goto :goto_0
+.end method
+
+.method static synthetic a()[Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 39
+    sget-object v0, Lcom/b/a/a/i;->a:[Ljava/lang/String;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final a(Lcom/b/a/a/l;)Lcom/b/a/a/i;
+    .locals 2
+
+    .prologue
+    .line 106
+    if-nez p1, :cond_0
+
+    .line 107
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "An app key must be supplied."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 109
+    :cond_0
+    iget-object v0, p1, Lcom/b/a/a/l;->d:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/b/a/a/i;->b:Ljava/lang/String;
+
+    .line 110
+    return-object p0
+.end method
+
+.method public final a(Landroid/app/Activity;)V
+    .locals 4
+
+    .prologue
+    .line 135
+    new-instance v0, Lcom/b/a/a/j;
+
+    invoke-direct {v0, p0, p1}, Lcom/b/a/a/j;-><init>(Lcom/b/a/a/i;Landroid/app/Activity;)V
+
+    .line 178
+    invoke-interface {v0}, Lcom/b/a/a/a;->c()Landroid/support/v4/app/v;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    invoke-interface {v0}, Lcom/b/a/a/a;->b()Landroid/app/FragmentManager;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Dropbox Chooser requires Fragments. If below API level 11, pass in a FragmentActivity from the support library."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
+    invoke-interface {v0}, Lcom/b/a/a/a;->a()Landroid/content/pm/PackageManager;
+
+    move-result-object v1
+
+    if-nez v1, :cond_1
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "DbxChooser\'s launch() must be called when there is an Activity available"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    invoke-interface {v0}, Lcom/b/a/a/a;->a()Landroid/content/pm/PackageManager;
+
+    move-result-object v1
+
+    invoke-direct {p0, v1}, Lcom/b/a/a/i;->a(Landroid/content/pm/PackageManager;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    invoke-interface {v0}, Lcom/b/a/a/a;->c()Landroid/support/v4/app/v;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_2
+
+    invoke-static {}, Lcom/b/a/a/f;->a()Lcom/b/a/a/f;
+
+    move-result-object v1
+
+    invoke-interface {v0}, Lcom/b/a/a/a;->c()Landroid/support/v4/app/v;
+
+    move-result-object v0
+
+    const-string v2, "com.dropbox.chooser.android.DIALOG"
+
+    invoke-virtual {v1, v0, v2}, Lcom/b/a/a/f;->show(Landroid/support/v4/app/v;Ljava/lang/String;)V
+
+    :goto_0
+    return-void
+
+    :cond_2
+    invoke-static {}, Lcom/b/a/a/c;->a()Lcom/b/a/a/c;
+
+    move-result-object v1
+
+    invoke-interface {v0}, Lcom/b/a/a/a;->b()Landroid/app/FragmentManager;
+
+    move-result-object v0
+
+    const-string v2, "com.dropbox.chooser.android.DIALOG"
+
+    invoke-virtual {v1, v0, v2}, Lcom/b/a/a/c;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_3
+    new-instance v1, Landroid/content/Intent;
+
+    iget-object v2, p0, Lcom/b/a/a/i;->b:Ljava/lang/String;
+
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v2, "EXTRA_APP_KEY"
+
+    iget-object v3, p0, Lcom/b/a/a/i;->d:Ljava/lang/String;
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object v1
+
+    const-string v2, "EXTRA_SDK_VERSION"
+
+    const/4 v3, 0x2
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    :try_start_0
+    invoke-interface {v0, v1}, Lcom/b/a/a/a;->a(Landroid/content/Intent;)V
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    throw v0
 .end method

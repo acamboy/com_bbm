@@ -1,19 +1,19 @@
 .class final Lcom/bbm/ui/activities/ks;
 .super Lcom/bbm/j/k;
-.source "GlympseViewerActivity.java"
+.source "GroupConversationActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GlympseViewerActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GlympseViewerActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
     .locals 1
 
     .prologue
-    .line 129
-    iput-object p1, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
+    .line 146
+    iput-object p1, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
     const/4 v0, 0x0
 
@@ -28,117 +28,48 @@
     .locals 4
 
     .prologue
-    .line 133
-    iget-object v0, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
+    .line 149
+    iget-object v1, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
+    iget-boolean v2, v1, Lcom/bbm/ui/activities/GroupConversationActivity;->l:Z
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/GlympseViewerActivity;->b(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/bbm/d/a;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/GlympseViewerActivity;->c(Lcom/bbm/ui/activities/GlympseViewerActivity;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lcom/bbm/d/a;->K(Ljava/lang/String;)Lcom/bbm/d/eu;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/GlympseViewerActivity;->a(Lcom/bbm/ui/activities/GlympseViewerActivity;Lcom/bbm/d/eu;)Lcom/bbm/d/eu;
-
-    .line 134
-    iget-object v0, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->d(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/bbm/d/eu;
+    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/g/an;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/d/eu;->u:Lcom/bbm/util/bi;
+    iget-object v3, v1, Lcom/bbm/bali/ui/main/a/d;->a:Ljava/lang/String;
 
-    sget-object v1, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
-
-    if-ne v0, v1, :cond_0
-
-    .line 135
-    iget-object v0, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->b(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/bbm/d/a;
+    invoke-virtual {v0, v3}, Lcom/bbm/g/an;->w(Ljava/lang/String;)Lcom/bbm/g/a;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/d/ac;->h:Lcom/bbm/d/a/f;
+    iget-boolean v3, v0, Lcom/bbm/g/a;->a:Z
 
-    iget-object v0, v0, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
+    if-nez v3, :cond_0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
+    iget-boolean v0, v0, Lcom/bbm/g/a;->j:Z
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/GlympseViewerActivity;->e(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/bbm/f/ac;
+    if-eqz v0, :cond_2
 
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lcom/bbm/f/a;->a(Lcom/bbm/f/ac;)V
-
-    .line 136
-    iget-object v0, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->b(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/bbm/d/a;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/bbm/d/gp;->e:Lcom/bbm/d/gp;
-
-    invoke-virtual {v1}, Lcom/bbm/d/gp;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/GlympseViewerActivity;->c(Lcom/bbm/ui/activities/GlympseViewerActivity;)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, ""
-
-    invoke-static {v1, v2, v3}, Lcom/bbm/d/aa;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/d/df;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
-
-    .line 137
-    iget-object v0, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->a(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/glympse/map/lib/Map;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/GlympseViewerActivity;->d(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/bbm/d/eu;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/glympse/map/lib/Map;->attachConversation(Lcom/bbm/d/eu;)V
-
-    .line 138
-    iget-object v0, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->f(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/bbm/ui/GlympseUserSelector;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/GlympseViewerActivity;->d(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/bbm/d/eu;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/GlympseUserSelector;->a(Lcom/bbm/d/eu;)V
-
-    .line 140
     :cond_0
+    const/4 v0, 0x1
+
+    :goto_0
+    iput-boolean v0, v1, Lcom/bbm/ui/activities/GroupConversationActivity;->l:Z
+
+    iget-boolean v0, v1, Lcom/bbm/ui/activities/GroupConversationActivity;->l:Z
+
+    if-eq v2, v0, :cond_1
+
+    invoke-virtual {v1}, Lcom/bbm/ui/activities/GroupConversationActivity;->invalidateOptionsMenu()V
+
+    .line 150
+    :cond_1
     return-void
+
+    .line 149
+    :cond_2
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

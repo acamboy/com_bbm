@@ -86,8 +86,6 @@
 
     const/4 v2, 0x2
 
-    iget-object v3, p0, Lcom/blackberry/ids/LoginActivity$2;->c:Lcom/blackberry/ids/LoginActivity;
-
     invoke-static {p4}, Lcom/blackberry/ids/LoginActivity;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -203,8 +201,6 @@
 
     iget-object v0, v0, Lcom/blackberry/ids/LoginActivity;->e:Lcom/blackberry/ids/WebActivity$CookieTracker;
 
-    iget-object v1, p0, Lcom/blackberry/ids/LoginActivity$2;->c:Lcom/blackberry/ids/LoginActivity;
-
     invoke-static {p2}, Lcom/blackberry/ids/LoginActivity;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -262,8 +258,6 @@
     iget-object v0, p0, Lcom/blackberry/ids/LoginActivity$2;->c:Lcom/blackberry/ids/LoginActivity;
 
     iget-object v0, v0, Lcom/blackberry/ids/LoginActivity;->e:Lcom/blackberry/ids/WebActivity$CookieTracker;
-
-    iget-object v1, p0, Lcom/blackberry/ids/LoginActivity$2;->c:Lcom/blackberry/ids/LoginActivity;
 
     invoke-static {p2}, Lcom/blackberry/ids/LoginActivity;->a(Ljava/lang/String;)Ljava/lang/String;
 

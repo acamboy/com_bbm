@@ -1,10 +1,19 @@
 .class public interface abstract Lcom/google/android/gms/internal/hv;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/os/IInterface;
-
 
 # virtual methods
-.method public abstract I(Lcom/google/android/gms/common/data/DataHolder;)V
+.method public abstract s()V
+.end method
+
+.method public abstract t()V
+.end method
+
+.method public abstract u()V
+.end method
+
+.method public abstract v()V
+.end method
+
+.method public abstract w()V
 .end method

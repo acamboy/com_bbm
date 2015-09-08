@@ -17,7 +17,7 @@
     .locals 0
 
     .prologue
-    .line 807
+    .line 810
     iput p1, p0, Lcom/rim/bbm/BbmPlatformService$4;->val$status:I
 
     iput p2, p0, Lcom/rim/bbm/BbmPlatformService$4;->val$reason:I
@@ -33,22 +33,22 @@
     .locals 2
 
     .prologue
-    .line 812
+    .line 815
     new-instance v0, Lcom/rim/bbm/BbmPlatformService$ConnectionStatus;
 
     invoke-direct {v0}, Lcom/rim/bbm/BbmPlatformService$ConnectionStatus;-><init>()V
 
-    .line 813
+    .line 816
     iget v1, p0, Lcom/rim/bbm/BbmPlatformService$4;->val$status:I
 
     iput v1, v0, Lcom/rim/bbm/BbmPlatformService$ConnectionStatus;->status:I
 
-    .line 814
+    .line 817
     iget v1, p0, Lcom/rim/bbm/BbmPlatformService$4;->val$reason:I
 
     iput v1, v0, Lcom/rim/bbm/BbmPlatformService$ConnectionStatus;->reason:I
 
-    .line 816
+    .line 819
     # getter for: Lcom/rim/bbm/BbmPlatformService;->mPlatformDelegate:Lcom/rim/bbm/BbmPlatformService$PlatformDelegate;
     invoke-static {}, Lcom/rim/bbm/BbmPlatformService;->access$100()Lcom/rim/bbm/BbmPlatformService$PlatformDelegate;
 
@@ -56,6 +56,6 @@
 
     invoke-interface {v1, v0}, Lcom/rim/bbm/BbmPlatformService$PlatformDelegate;->connectionStatusChanged(Lcom/rim/bbm/BbmPlatformService$ConnectionStatus;)V
 
-    .line 817
+    .line 820
     return-void
 .end method

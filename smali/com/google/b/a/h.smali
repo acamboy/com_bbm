@@ -14,7 +14,7 @@
     .locals 1
 
     .prologue
-    .line 266
+    .line 219
     iput-object p1, p0, Lcom/google/b/a/h;->b:Lcom/google/b/a/g;
 
     iput-object p3, p0, Lcom/google/b/a/h;->a:Ljava/lang/String;
@@ -32,7 +32,7 @@
     .locals 1
 
     .prologue
-    .line 268
+    .line 221
     if-nez p1, :cond_0
 
     iget-object v0, p0, Lcom/google/b/a/h;->a:Ljava/lang/String;
@@ -54,10 +54,7 @@
     .locals 2
 
     .prologue
-    .line 272
-    invoke-static {p1}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 273
+    .line 225
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "already specified useForNull"

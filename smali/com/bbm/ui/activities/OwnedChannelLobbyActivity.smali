@@ -1,22 +1,29 @@
 .class public Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
-.super Lcom/bbm/ui/activities/cq;
+.super Lcom/bbm/bali/ui/channels/a;
 .source "OwnedChannelLobbyActivity.java"
 
 
 # instance fields
-.field private a:Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;
+.field a:Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;
 
-.field private b:Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;
+.field protected final b:Lcom/bbm/j/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/j/a",
+            "<",
+            "Lcom/bbm/d/ff;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private c:Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
+.field private h:Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;
 
-.field private d:Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;
+.field private i:Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;
 
-.field private e:Lcom/bbm/ui/FooterActionBar;
+.field private j:Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
 
-.field private final f:Lcom/bbm/ui/cn;
-
-.field private final g:Lcom/bbm/ui/c/gn;
+.field private k:Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;
 
 
 # direct methods
@@ -24,368 +31,210 @@
     .locals 1
 
     .prologue
-    .line 98
+    .line 42
     const-class v0, Lcom/bbm/ui/activities/MainActivity;
 
-    invoke-direct {p0, v0}, Lcom/bbm/ui/activities/cq;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/bbm/bali/ui/channels/a;-><init>(Ljava/lang/Class;)V
 
-    .line 44
-    new-instance v0, Lcom/bbm/ui/activities/abq;
+    .line 186
+    new-instance v0, Lcom/bbm/ui/activities/xu;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/abq;-><init>(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/xu;-><init>(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->f:Lcom/bbm/ui/cn;
+    iput-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->b:Lcom/bbm/j/a;
 
-    .line 64
-    new-instance v0, Lcom/bbm/ui/activities/abr;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/abr;-><init>(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->g:Lcom/bbm/ui/c/gn;
-
-    .line 99
+    .line 43
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;
+.method static synthetic a(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 32
-    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->a:Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;
-
-    return-object v0
-.end method
-
-.method static synthetic a(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;I)V
-    .locals 3
-
-    .prologue
-    const/4 v1, 0x1
-
-    .line 32
-    sparse-switch p1, :sswitch_data_0
-
-    :goto_0
-    return-void
-
-    :sswitch_0
-    iget-object v0, p0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
-
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
-
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
-
-    new-instance v0, Landroid/content/Intent;
-
-    const-class v1, Lcom/bbm/ui/activities/ChannelDetailsActivity;
-
-    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v1, "bbm_channel_uri"
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->b()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->startActivity(Landroid/content/Intent;)V
-
-    goto :goto_0
-
-    :sswitch_1
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->b()Ljava/lang/String;
+    .line 31
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/bbm/util/ac;->c(Landroid/content/Context;Ljava/lang/String;)V
+    return-object v0
+.end method
 
-    iget-object v0, p0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+.method static synthetic b(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;
+    .locals 1
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+    .prologue
+    .line 31
+    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->h:Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;
 
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
+    return-object v0
+.end method
 
-    goto :goto_0
+.method static synthetic c(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Ljava/lang/String;
+    .locals 1
 
-    :sswitch_2
-    iget-object v0, p0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
-
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
-
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->b()Ljava/lang/String;
+    .prologue
+    .line 31
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0, p0}, Lcom/bbm/util/ac;->b(Ljava/lang/String;Landroid/app/Activity;)V
-
-    goto :goto_0
-
-    :sswitch_3
-    iget-object v0, p0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
-
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
-
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
-
-    new-instance v0, Landroid/content/Intent;
-
-    const-class v1, Lcom/bbm/ui/activities/AddChannelPostActivity;
-
-    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v1, "channelURI"
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->b()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->startActivity(Landroid/content/Intent;)V
-
-    goto :goto_0
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        0x7f0b0014 -> :sswitch_3
-        0x7f0b0016 -> :sswitch_2
-        0x7f0b0017 -> :sswitch_1
-        0x7f0b0033 -> :sswitch_0
-    .end sparse-switch
-.end method
-
-.method static synthetic a(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;Lcom/bbm/ui/c/gj;)V
-    .locals 0
-
-    .prologue
-    .line 32
-    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->b(Lcom/bbm/ui/c/gj;)V
-
-    return-void
-.end method
-
-.method static synthetic b(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;
-    .locals 1
-
-    .prologue
-    .line 32
-    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->b:Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;
-
     return-object v0
 .end method
 
-.method private b(Lcom/bbm/ui/c/gj;)V
-    .locals 6
-
-    .prologue
-    const/4 v5, 0x0
-
-    .line 245
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    .line 247
-    new-instance v1, Lcom/bbm/ui/slidingmenu/a;
-
-    const v2, 0x7f0b0033
-
-    const v3, 0x7f0202e2
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    const v4, 0x7f0e07c2
-
-    invoke-virtual {p0, v4}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-direct {v1, v2, v3, v4, v5}, Lcom/bbm/ui/slidingmenu/a;-><init>(ILjava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 250
-    new-instance v1, Lcom/bbm/ui/slidingmenu/a;
-
-    const v2, 0x7f0b0017
-
-    const v3, 0x7f02025c
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    const v4, 0x7f0e01fe
-
-    invoke-virtual {p0, v4}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-direct {v1, v2, v3, v4, v5}, Lcom/bbm/ui/slidingmenu/a;-><init>(ILjava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 253
-    new-instance v1, Lcom/bbm/ui/slidingmenu/a;
-
-    const v2, 0x7f0b0016
-
-    const v3, 0x7f02021c
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    const v4, 0x7f0e04d8
-
-    invoke-virtual {p0, v4}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-direct {v1, v2, v3, v4, v5}, Lcom/bbm/ui/slidingmenu/a;-><init>(ILjava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 256
-    new-instance v1, Lcom/bbm/ui/slidingmenu/a;
-
-    const v2, 0x7f0b0014
-
-    const v3, 0x7f0201e9
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    const v4, 0x7f0e00f6
-
-    invoke-virtual {p0, v4}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-direct {v1, v2, v3, v4, v5}, Lcom/bbm/ui/slidingmenu/a;-><init>(ILjava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 259
-    new-instance v1, Lcom/bbm/ui/slidingmenu/a;
-
-    const v2, 0x7f02026d
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    const v4, 0x7f0e02fb
-
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-direct {v1, v2, v3, v5}, Lcom/bbm/ui/slidingmenu/a;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 261
-    invoke-virtual {p1, v0, v5, v1}, Lcom/bbm/ui/c/gj;->a(Ljava/util/List;Lcom/bbm/ui/slidingmenu/a;Lcom/bbm/ui/slidingmenu/a;)V
-
-    .line 263
-    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->g:Lcom/bbm/ui/c/gn;
-
-    iput-object v0, p1, Lcom/bbm/ui/c/gj;->b:Lcom/bbm/ui/c/gn;
-
-    .line 265
-    new-instance v0, Lcom/bbm/ui/activities/abx;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/abx;-><init>(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)V
-
-    invoke-virtual {p1, v0}, Lcom/bbm/ui/c/gj;->a(Landroid/view/View$OnClickListener;)V
-
-    .line 271
-    return-void
-.end method
-
-.method static synthetic c(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
+.method static synthetic d(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 32
-    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->c:Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
-
-    return-object v0
-.end method
-
-.method static synthetic d(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;
-    .locals 1
-
-    .prologue
-    .line 32
-    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d:Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;
-
-    return-object v0
-.end method
-
-.method static synthetic e(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)V
-    .locals 2
-
-    .prologue
-    .line 32
-    iget-object v0, p0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
-
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->b()Ljava/lang/String;
+    .line 31
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0, p0}, Lcom/bbm/util/ac;->a(Ljava/lang/String;Landroid/app/Activity;)V
+    return-object v0
+.end method
 
-    return-void
+.method static synthetic e(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 31
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic f(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 31
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic g(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 31
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic h(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 31
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic i(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 31
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic j(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 31
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic k(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 31
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic l(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;
+    .locals 1
+
+    .prologue
+    .line 31
+    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->i:Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;
+
+    return-object v0
+.end method
+
+.method static synthetic m(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
+    .locals 1
+
+    .prologue
+    .line 31
+    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->j:Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
+
+    return-object v0
+.end method
+
+.method static synthetic n(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;
+    .locals 1
+
+    .prologue
+    .line 31
+    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->k:Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;
+
+    return-object v0
+.end method
+
+.method static synthetic o(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 31
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method protected final a(Lcom/bbm/ui/c/gj;)Z
-    .locals 1
-
-    .prologue
-    .line 280
-    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->b(Lcom/bbm/ui/c/gj;)V
-
-    .line 281
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 4
+    .locals 3
 
     .prologue
-    .line 103
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/cq;->onCreate(Landroid/os/Bundle;)V
+    .line 47
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/channels/a;->onCreate(Landroid/os/Bundle;)V
 
-    .line 104
-    const v0, 0x7f030045
+    .line 48
+    const v0, 0x7f030060
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->setContentView(I)V
 
-    .line 107
-    const v0, 0x7f0b025c
+    .line 51
+    const v0, 0x7f0b02bb
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->findViewById(I)Landroid/view/View;
 
@@ -393,28 +242,28 @@
 
     check-cast v0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->a:Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->h:Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;
 
-    .line 108
-    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->a:Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;
+    .line 52
+    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->h:Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;
 
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->b()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->setChannel(Ljava/lang/String;)V
 
-    .line 109
-    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->a:Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;
+    .line 53
+    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->h:Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;
 
-    new-instance v1, Lcom/bbm/ui/activities/abs;
+    new-instance v1, Lcom/bbm/ui/activities/xp;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/abs;-><init>(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/xp;-><init>(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)V
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 129
-    const v0, 0x7f0b025d
+    .line 73
+    const v0, 0x7f0b02bc
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->findViewById(I)Landroid/view/View;
 
@@ -422,28 +271,28 @@
 
     check-cast v0, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->b:Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->i:Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;
 
-    .line 130
-    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->b:Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;
+    .line 74
+    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->i:Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;
 
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->b()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->setChannel(Ljava/lang/String;)V
 
-    .line 131
-    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->b:Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;
+    .line 75
+    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->i:Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;
 
-    new-instance v1, Lcom/bbm/ui/activities/abt;
+    new-instance v1, Lcom/bbm/ui/activities/xq;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/abt;-><init>(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/xq;-><init>(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)V
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 145
-    const v0, 0x7f0b025e
+    .line 89
+    const v0, 0x7f0b02bd
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->findViewById(I)Landroid/view/View;
 
@@ -451,33 +300,33 @@
 
     check-cast v0, Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->c:Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->j:Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
 
-    .line 146
-    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->c:Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
+    .line 90
+    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->j:Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
 
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->b()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;->setChannel(Ljava/lang/String;)V
 
-    .line 147
-    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->c:Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
+    .line 91
+    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->j:Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
 
     invoke-virtual {v0, p0}, Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;->setActivity(Landroid/app/Activity;)V
 
-    .line 148
-    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->c:Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
+    .line 92
+    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->j:Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
 
-    new-instance v1, Lcom/bbm/ui/activities/abu;
+    new-instance v1, Lcom/bbm/ui/activities/xr;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/abu;-><init>(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/xr;-><init>(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)V
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 160
-    const v0, 0x7f0b025f
+    .line 104
+    const v0, 0x7f0b02be
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->findViewById(I)Landroid/view/View;
 
@@ -485,199 +334,316 @@
 
     check-cast v0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d:Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->k:Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;
 
-    .line 161
-    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d:Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;
+    .line 105
+    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->k:Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;
 
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->b()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->setChannel(Ljava/lang/String;)V
 
-    .line 162
-    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d:Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;
+    .line 106
+    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->k:Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;
 
-    new-instance v1, Lcom/bbm/ui/activities/abv;
+    new-instance v1, Lcom/bbm/ui/activities/xs;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/abv;-><init>(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/xs;-><init>(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)V
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 174
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->getActionBar()Landroid/app/ActionBar;
-
-    move-result-object v0
-
-    .line 175
-    new-instance v1, Lcom/bbm/ui/aa;
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->b()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v1, p0, v0, v2}, Lcom/bbm/ui/aa;-><init>(Landroid/app/Activity;Landroid/app/ActionBar;Ljava/lang/String;)V
-
-    .line 176
-    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->a(Lcom/bbm/ui/activities/alb;)V
-
-    .line 177
-    invoke-virtual {v0}, Landroid/app/ActionBar;->getCustomView()Landroid/view/View;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/bbm/util/az;
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->b()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v1, p0, v2}, Lcom/bbm/util/az;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 180
-    const v0, 0x7f0b00bf
+    .line 118
+    const v0, 0x7f0b05ee
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/FooterActionBar;
+    check-cast v0, Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->e:Lcom/bbm/ui/FooterActionBar;
+    iput-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->a:Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;
 
-    .line 181
-    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->e:Lcom/bbm/ui/FooterActionBar;
+    .line 119
+    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->a:Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;
 
-    new-instance v1, Lcom/bbm/ui/ActionBarItem;
+    const-string v1, ""
 
-    const v2, 0x7f020015
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->a(Landroid/support/v7/widget/Toolbar;Ljava/lang/String;)V
 
-    const v3, 0x7f0e00f6
+    .line 120
+    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->a:Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;
 
-    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;II)V
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d()Ljava/lang/String;
 
-    const v2, 0x7f0b0014
+    move-result-object v1
 
-    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/FooterActionBar;->a(Lcom/bbm/ui/ActionBarItem;I)V
+    invoke-virtual {v0, p0, v1}, Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;->setChannelUri(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 182
-    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->e:Lcom/bbm/ui/FooterActionBar;
-
-    new-instance v1, Lcom/bbm/ui/ActionBarItem;
-
-    const v2, 0x7f02021d
-
-    const v3, 0x7f0e00f4
-
-    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;II)V
-
-    const v2, 0x7f0b0016
-
-    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/FooterActionBar;->a(Lcom/bbm/ui/ActionBarItem;I)V
-
-    .line 183
-    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->e:Lcom/bbm/ui/FooterActionBar;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setOverflowEnabled(Z)V
-
-    .line 184
-    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->e:Lcom/bbm/ui/FooterActionBar;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->f:Lcom/bbm/ui/cn;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
-
-    .line 186
-    const v0, 0x7f0b025b
+    .line 122
+    const v0, 0x7f0b02ba
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 187
+    .line 123
     invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v1
 
-    .line 188
-    new-instance v2, Lcom/bbm/ui/activities/abw;
+    .line 124
+    new-instance v2, Lcom/bbm/ui/activities/xt;
 
-    invoke-direct {v2, p0, v0}, Lcom/bbm/ui/activities/abw;-><init>(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;Landroid/view/View;)V
+    invoke-direct {v2, p0, v0}, Lcom/bbm/ui/activities/xt;-><init>(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;Landroid/view/View;)V
 
     invoke-virtual {v1, v2}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 224
+    .line 160
     return-void
+.end method
+
+.method public onCreateOptionsMenu(Landroid/view/Menu;)Z
+    .locals 2
+
+    .prologue
+    .line 196
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->getMenuInflater()Landroid/view/MenuInflater;
+
+    move-result-object v0
+
+    const v1, 0x7f100016
+
+    invoke-virtual {v0, v1, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
+
+    .line 197
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/channels/a;->onCreateOptionsMenu(Landroid/view/Menu;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    .locals 4
+
+    .prologue
+    const/4 v0, 0x1
+
+    .line 247
+    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
+
+    move-result v1
+
+    packed-switch v1, :pswitch_data_0
+
+    .line 270
+    :pswitch_0
+    const-string v0, "Unexpected other menu selected"
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 274
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/channels/a;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    .line 249
+    :pswitch_1
+    new-instance v1, Landroid/content/Intent;
+
+    const-class v2, Lcom/bbm/ui/activities/ChannelDetailsActivity;
+
+    invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 250
+    const-string v2, "bbm_channel_uri"
+
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 251
+    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->startActivity(Landroid/content/Intent;)V
+
+    goto :goto_0
+
+    .line 254
+    :pswitch_2
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {p0, v1}, Lcom/bbm/util/af;->a(Landroid/content/Context;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 258
+    :pswitch_3
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1, p0}, Lcom/bbm/util/af;->a(Ljava/lang/String;Landroid/app/Activity;)V
+
+    goto :goto_0
+
+    .line 262
+    :pswitch_4
+    new-instance v1, Landroid/content/Intent;
+
+    const-class v2, Lcom/bbm/ui/activities/AddChannelPostActivity;
+
+    invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 263
+    const-string v2, "channelURI"
+
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 264
+    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->startActivity(Landroid/content/Intent;)V
+
+    goto :goto_0
+
+    .line 267
+    :pswitch_5
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1, p0, v0}, Lcom/bbm/util/af;->a(Ljava/lang/String;Landroid/app/Activity;Z)V
+
+    goto :goto_0
+
+    .line 247
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x7f0b074e
+        :pswitch_3
+        :pswitch_4
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+        :pswitch_4
+        :pswitch_0
+        :pswitch_0
+        :pswitch_5
+    .end packed-switch
 .end method
 
 .method protected onPause()V
     .locals 2
 
     .prologue
-    .line 237
-    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->onPause()V
+    .line 176
+    invoke-super {p0}, Lcom/bbm/bali/ui/channels/a;->onPause()V
 
-    .line 238
-    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->a:Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;
+    .line 178
+    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->a:Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;
+
+    invoke-virtual {v0}, Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;->h()V
+
+    .line 180
+    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->h:Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;
 
     iget-object v0, v0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->b:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
 
-    .line 239
-    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->b:Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;
+    .line 181
+    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->i:Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;
 
     iget-object v0, v0, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->b:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
 
-    .line 240
-    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->c:Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
+    .line 182
+    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->j:Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
 
     iget-object v1, v0, Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;->a:Lcom/bbm/j/k;
 
-    invoke-virtual {v1}, Lcom/bbm/j/k;->e()V
+    invoke-virtual {v1}, Lcom/bbm/j/k;->d()V
 
     iget-object v1, v0, Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;->b:Lcom/bbm/j/k;
 
-    invoke-virtual {v1}, Lcom/bbm/j/k;->e()V
+    invoke-virtual {v1}, Lcom/bbm/j/k;->d()V
 
     iget-object v0, v0, Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;->c:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
 
-    .line 241
-    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d:Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;
+    .line 183
+    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->k:Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;
 
     iget-object v0, v0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->c:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
 
-    .line 242
+    .line 184
     return-void
+.end method
+
+.method public onPrepareOptionsMenu(Landroid/view/Menu;)Z
+    .locals 1
+
+    .prologue
+    .line 202
+    if-eqz p1, :cond_0
+
+    .line 203
+    new-instance v0, Lcom/bbm/ui/activities/xv;
+
+    invoke-direct {v0, p0, p1}, Lcom/bbm/ui/activities/xv;-><init>(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;Landroid/view/Menu;)V
+
+    invoke-static {v0}, Lcom/bbm/j/u;->a(Lcom/bbm/j/s;)V
+
+    .line 241
+    :cond_0
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/channels/a;->onPrepareOptionsMenu(Landroid/view/Menu;)Z
+
+    move-result v0
+
+    return v0
 .end method
 
 .method protected onResume()V
     .locals 2
 
     .prologue
-    .line 228
-    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->onResume()V
+    .line 164
+    invoke-super {p0}, Lcom/bbm/bali/ui/channels/a;->onResume()V
 
-    .line 229
-    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->a:Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;
+    .line 166
+    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->a:Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;
+
+    invoke-virtual {v0}, Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;->g()V
+
+    .line 168
+    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->h:Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;
 
     iget-object v0, v0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->b:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 230
-    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->b:Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;
+    .line 169
+    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->i:Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;
 
     iget-object v1, v0, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->b:Lcom/bbm/j/k;
 
@@ -685,10 +651,10 @@
 
     iget-object v0, v0, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->a:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/cg;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/bbm/ui/activities/bj;->a(Ljava/lang/String;)V
 
-    .line 231
-    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->c:Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
+    .line 170
+    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->j:Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
 
     iget-object v1, v0, Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;->a:Lcom/bbm/j/k;
 
@@ -702,13 +668,13 @@
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 232
-    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d:Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;
+    .line 171
+    iget-object v0, p0, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->k:Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;
 
     iget-object v0, v0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->c:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 233
+    .line 172
     return-void
 .end method

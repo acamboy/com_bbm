@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@drawable/list_item_default_background" android:paddingRight="10.0dip" android:paddingBottom="1.0px" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+<LinearLayout android:orientation="horizontal" android:background="@drawable/list_item_default_background" android:paddingRight="10.0dip" android:paddingBottom="1.0px" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <CheckBox android:id="@id/listitem_completed_checkbox" android:layout_width="wrap_content" android:layout_height="@dimen/avatar_size" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:button="@drawable/selector_checkbox" />
-    <ImageView android:id="@id/listitem_priority" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:layout_toRightOf="@id/listitem_completed_checkbox" android:layout_alignTop="@id/listitem_name" />
-    <TextView android:textSize="@dimen/contact_list_date_text_size" android:textColor="@color/listItemDate" android:gravity="center_vertical" android:id="@id/listitem_due_date" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/contact_list_item_title_height" android:layout_marginLeft="@dimen/contact_list_date_margin_left" android:layout_marginTop="@dimen/contact_list_date_margin_top" android:layout_alignParentRight="true" android:textIsSelectable="false" />
-    <com.bbm.ui.InlineImageTextView android:ellipsize="marquee" android:id="@id/listitem_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/listitem_due_date" android:layout_toRightOf="@id/listitem_priority" android:layout_alignWithParentIfMissing="true" style="@style/ListItemTitleField" />
-    <com.bbm.ui.InlineImageTextView android:id="@id/listitem_assigned_to" android:layout_toRightOf="@id/listitem_completed_checkbox" android:layout_below="@id/listitem_name" style="@style/ListItemSubtitleField" />
-</RelativeLayout>
+    <CheckBox android:id="@id/listitem_completed_checkbox" android:layout_width="wrap_content" android:layout_height="@dimen/avatar_size" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="1.0" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="bottom" android:id="@id/listitem_priority" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" />
+            <com.bbm.ui.InlineImageTextView android:ellipsize="marquee" android:layout_gravity="bottom" android:id="@id/listitem_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/ListItemTitleField" />
+            <TextView android:textSize="@dimen/contact_list_date_text_size" android:textColor="@color/listItemDate" android:gravity="center_vertical" android:layout_gravity="top" android:id="@id/listitem_due_date" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/contact_list_date_margin_left" android:layout_marginTop="@dimen/contact_list_date_margin_top" android:layout_marginRight="@dimen/contact_list_date_margin_left" android:layout_weight="1.0" android:textIsSelectable="false" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.bbm.ui.InlineImageTextView android:layout_gravity="top" android:id="@id/listitem_assigned_to" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ListItemSubtitleField" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:layout_gravity="center" android:id="@id/delete_item" android:background="@drawable/ic_delete_cross" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

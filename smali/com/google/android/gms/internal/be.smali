@@ -1,196 +1,128 @@
-.class public final Lcom/google/android/gms/internal/be;
-.super Lcom/google/android/gms/internal/bf$a;
+.class final Lcom/google/android/gms/internal/be;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcom/google/android/gms/internal/pi;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/google/android/gms/internal/pi",
+        "<",
+        "Lcom/google/android/gms/internal/ca;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field private mQ:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map",
-            "<",
-            "Ljava/lang/Class",
-            "<+",
-            "Lcom/google/android/gms/ads/mediation/NetworkExtras;",
-            ">;",
-            "Lcom/google/android/gms/ads/mediation/NetworkExtras;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field final synthetic a:Lcom/google/android/gms/internal/bb;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcom/google/android/gms/internal/bb;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/google/android/gms/internal/bf$a;-><init>()V
+    iput-object p1, p0, Lcom/google/android/gms/internal/be;->a:Lcom/google/android/gms/internal/bb;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-.method private n(Ljava/lang/String;)Lcom/google/android/gms/internal/bg;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<NETWORK_EXTRAS::",
-            "Lcom/google/a/a/h;",
-            "SERVER_PARAMETERS:",
-            "Lcom/google/a/a/e;",
-            ">(",
-            "Ljava/lang/String;",
-            ")",
-            "Lcom/google/android/gms/internal/bg;"
-        }
-    .end annotation
-
-    const/4 v0, 0x0
-
-    :try_start_0
-    const-class v1, Lcom/google/android/gms/internal/be;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v1
-
-    invoke-static {p1, v0, v1}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
-
-    move-result-object v0
-
-    const-class v1, Lcom/google/a/a/b;
-
-    invoke-virtual {v1, v0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Could not instantiate mediation adapter: "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "."
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->w(Ljava/lang/String;)V
-
-    new-instance v0, Landroid/os/RemoteException;
-
-    invoke-direct {v0}, Landroid/os/RemoteException;-><init>()V
-
-    throw v0
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Could not instantiate mediation adapter: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ". "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->w(Ljava/lang/String;)V
-
-    new-instance v0, Landroid/os/RemoteException;
-
-    invoke-direct {v0}, Landroid/os/RemoteException;-><init>()V
-
-    throw v0
-
-    :cond_0
-    :try_start_1
-    invoke-virtual {v0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/a/a/b;
-
-    iget-object v1, p0, Lcom/google/android/gms/internal/be;->mQ:Ljava/util/Map;
-
-    invoke-interface {v0}, Lcom/google/a/a/b;->a()Ljava/lang/Class;
-
-    move-result-object v2
-
-    invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/google/a/a/h;
-
-    new-instance v2, Lcom/google/android/gms/internal/bi;
-
-    invoke-direct {v2, v0, v1}, Lcom/google/android/gms/internal/bi;-><init>(Lcom/google/a/a/b;Lcom/google/a/a/h;)V
-    :try_end_1
-    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
-
-    return-object v2
 .end method
 
 
 # virtual methods
-.method public final c(Ljava/util/Map;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Map",
-            "<",
-            "Ljava/lang/Class",
-            "<+",
-            "Lcom/google/android/gms/ads/mediation/NetworkExtras;",
-            ">;",
-            "Lcom/google/android/gms/ads/mediation/NetworkExtras;",
-            ">;)V"
-        }
-    .end annotation
+.method public final synthetic a(Ljava/lang/Object;)V
+    .locals 4
 
-    iput-object p1, p0, Lcom/google/android/gms/internal/be;->mQ:Ljava/util/Map;
+    check-cast p1, Lcom/google/android/gms/internal/ca;
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/be;->a:Lcom/google/android/gms/internal/bb;
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/bb;->a(Lcom/google/android/gms/internal/bb;)Z
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/be;->a:Lcom/google/android/gms/internal/bb;
+
+    const-string v1, "/updateActiveView"
+
+    iget-object v2, v0, Lcom/google/android/gms/internal/bb;->f:Lcom/google/android/gms/internal/fv;
+
+    invoke-interface {p1, v1, v2}, Lcom/google/android/gms/internal/ca;->a(Ljava/lang/String;Lcom/google/android/gms/internal/fv;)V
+
+    const-string v1, "/untrackActiveViewUnit"
+
+    iget-object v2, v0, Lcom/google/android/gms/internal/bb;->g:Lcom/google/android/gms/internal/fv;
+
+    invoke-interface {p1, v1, v2}, Lcom/google/android/gms/internal/ca;->a(Ljava/lang/String;Lcom/google/android/gms/internal/fv;)V
+
+    const-string v1, "/visibilityChanged"
+
+    iget-object v0, v0, Lcom/google/android/gms/internal/bb;->h:Lcom/google/android/gms/internal/fv;
+
+    invoke-interface {p1, v1, v0}, Lcom/google/android/gms/internal/ca;->a(Ljava/lang/String;Lcom/google/android/gms/internal/fv;)V
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/be;->a:Lcom/google/android/gms/internal/bb;
+
+    iget-object v1, v0, Lcom/google/android/gms/internal/bb;->a:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v2, v0, Lcom/google/android/gms/internal/bb;->d:Landroid/content/BroadcastReceiver;
+
+    if-eqz v2, :cond_0
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :goto_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/be;->a:Lcom/google/android/gms/internal/bb;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/google/android/gms/internal/bb;->a(Z)V
 
     return-void
-.end method
 
-.method public final m(Ljava/lang/String;)Lcom/google/android/gms/internal/bg;
-    .locals 1
+    :cond_0
+    :try_start_1
+    new-instance v2, Landroid/content/IntentFilter;
 
-    invoke-direct {p0, p1}, Lcom/google/android/gms/internal/be;->n(Ljava/lang/String;)Lcom/google/android/gms/internal/bg;
+    invoke-direct {v2}, Landroid/content/IntentFilter;-><init>()V
 
-    move-result-object v0
+    const-string v3, "android.intent.action.SCREEN_ON"
 
-    return-object v0
+    invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    const-string v3, "android.intent.action.SCREEN_OFF"
+
+    invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    new-instance v3, Lcom/google/android/gms/internal/bg;
+
+    invoke-direct {v3, v0}, Lcom/google/android/gms/internal/bg;-><init>(Lcom/google/android/gms/internal/bb;)V
+
+    iput-object v3, v0, Lcom/google/android/gms/internal/bb;->d:Landroid/content/BroadcastReceiver;
+
+    iget-object v3, v0, Lcom/google/android/gms/internal/bb;->b:Landroid/content/Context;
+
+    iget-object v0, v0, Lcom/google/android/gms/internal/bb;->d:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {v3, v0, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    monitor-exit v1
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
 .end method

@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field final synthetic cv:Lcom/glympse/android/hal/at;
+.field final synthetic cy:Lcom/glympse/android/hal/at;
 
 
 # direct methods
@@ -16,7 +16,7 @@
 
     .prologue
     .line 715
-    iput-object p1, p0, Lcom/glympse/android/hal/au;->cv:Lcom/glympse/android/hal/at;
+    iput-object p1, p0, Lcom/glympse/android/hal/au;->cy:Lcom/glympse/android/hal/at;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,21 +47,21 @@
     invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
     .line 722
-    iget-object v0, p0, Lcom/glympse/android/hal/au;->cv:Lcom/glympse/android/hal/at;
+    iget-object v0, p0, Lcom/glympse/android/hal/au;->cy:Lcom/glympse/android/hal/at;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/glympse/android/hal/at;->a(Lcom/glympse/android/hal/at;Lcom/glympse/android/hal/au;)Lcom/glympse/android/hal/au;
 
     .line 726
-    iget-object v0, p0, Lcom/glympse/android/hal/au;->cv:Lcom/glympse/android/hal/at;
+    iget-object v0, p0, Lcom/glympse/android/hal/au;->cy:Lcom/glympse/android/hal/at;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/glympse/android/hal/at;->a(Lcom/glympse/android/hal/at;Z)Z
 
     .line 727
-    iget-object v0, p0, Lcom/glympse/android/hal/au;->cv:Lcom/glympse/android/hal/at;
+    iget-object v0, p0, Lcom/glympse/android/hal/au;->cy:Lcom/glympse/android/hal/at;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/at;->B()V
 

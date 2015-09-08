@@ -1,675 +1,128 @@
-.class public final Lcom/google/android/gms/internal/bj;
+.class final Lcom/google/android/gms/internal/bj;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Lcom/google/android/gms/internal/fv;
 
 
 # instance fields
-.field private final mT:Lcom/google/android/gms/internal/bh;
+.field final synthetic a:Lcom/google/android/gms/internal/bb;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/internal/bh;)V
+.method constructor <init>(Lcom/google/android/gms/internal/bb;)V
     .locals 0
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/bj;->a:Lcom/google/android/gms/internal/bb;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/gms/internal/bj;->mT:Lcom/google/android/gms/internal/bh;
-
     return-void
-.end method
-
-.method static synthetic a(Lcom/google/android/gms/internal/bj;)Lcom/google/android/gms/internal/bh;
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/bj;->mT:Lcom/google/android/gms/internal/bh;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final onClick(Lcom/google/a/a/c;)V
-    .locals 2
+.method public final a(Lcom/google/android/gms/internal/pp;Ljava/util/Map;)V
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/google/a/a/c",
-            "<**>;)V"
+            "Lcom/google/android/gms/internal/pp;",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;)V"
         }
     .end annotation
 
-    const-string v0, "Adapter called onClick."
+    iget-object v0, p0, Lcom/google/android/gms/internal/bj;->a:Lcom/google/android/gms/internal/bb;
 
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->s(Ljava/lang/String;)V
-
-    invoke-static {}, Lcom/google/android/gms/internal/cz;->aX()Z
+    invoke-virtual {v0, p2}, Lcom/google/android/gms/internal/bb;->a(Ljava/util/Map;)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
-
-    const-string v0, "onClick must be called on the main UI thread."
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->w(Ljava/lang/String;)V
-
-    sget-object v0, Lcom/google/android/gms/internal/cz;->pT:Landroid/os/Handler;
-
-    new-instance v1, Lcom/google/android/gms/internal/bj$1;
-
-    invoke-direct {v1, p0}, Lcom/google/android/gms/internal/bj$1;-><init>(Lcom/google/android/gms/internal/bj;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :goto_0
-    return-void
+    if-nez v0, :cond_1
 
     :cond_0
-    :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/internal/bj;->mT:Lcom/google/android/gms/internal/bh;
+    return-void
 
-    invoke-interface {v0}, Lcom/google/android/gms/internal/bh;->O()V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    :cond_1
+    const-string v0, "isVisible"
 
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "Could not call onAdClicked."
-
-    invoke-static {v1, v0}, Lcom/google/android/gms/internal/da;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-.end method
-
-.method public final onDismissScreen(Lcom/google/a/a/c;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/a/a/c",
-            "<**>;)V"
-        }
-    .end annotation
-
-    const-string v0, "Adapter called onDismissScreen."
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->s(Ljava/lang/String;)V
-
-    invoke-static {}, Lcom/google/android/gms/internal/cz;->aX()Z
+    invoke-interface {p2, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    const-string v0, "onDismissScreen must be called on the main UI thread."
+    const-string v0, "1"
 
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->w(Ljava/lang/String;)V
+    const-string v1, "isVisible"
 
-    sget-object v0, Lcom/google/android/gms/internal/cz;->pT:Landroid/os/Handler;
+    invoke-interface {p2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v1, Lcom/google/android/gms/internal/bj$4;
+    move-result-object v1
 
-    invoke-direct {v1, p0}, Lcom/google/android/gms/internal/bj$4;-><init>(Lcom/google/android/gms/internal/bj;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :goto_0
-    return-void
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/internal/bj;->mT:Lcom/google/android/gms/internal/bh;
-
-    invoke-interface {v0}, Lcom/google/android/gms/internal/bh;->onAdClosed()V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "Could not call onAdClosed."
-
-    invoke-static {v1, v0}, Lcom/google/android/gms/internal/da;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-.end method
-
-.method public final onDismissScreen(Lcom/google/a/a/d;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/a/a/d",
-            "<**>;)V"
-        }
-    .end annotation
-
-    const-string v0, "Adapter called onDismissScreen."
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->s(Ljava/lang/String;)V
-
-    invoke-static {}, Lcom/google/android/gms/internal/cz;->aX()Z
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_2
 
-    const-string v0, "onDismissScreen must be called on the main UI thread."
+    const-string v0, "true"
 
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->w(Ljava/lang/String;)V
+    const-string v1, "isVisible"
 
-    sget-object v0, Lcom/google/android/gms/internal/cz;->pT:Landroid/os/Handler;
+    invoke-interface {p2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v1, Lcom/google/android/gms/internal/bj$9;
+    move-result-object v1
 
-    invoke-direct {v1, p0}, Lcom/google/android/gms/internal/bj$9;-><init>(Lcom/google/android/gms/internal/bj;)V
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    :cond_2
+    const/4 v0, 0x1
 
     :goto_0
-    return-void
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/internal/bj;->mT:Lcom/google/android/gms/internal/bh;
-
-    invoke-interface {v0}, Lcom/google/android/gms/internal/bh;->onAdClosed()V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "Could not call onAdClosed."
-
-    invoke-static {v1, v0}, Lcom/google/android/gms/internal/da;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-.end method
-
-.method public final onFailedToReceiveAd(Lcom/google/a/a/c;Lcom/google/a/b;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/a/a/c",
-            "<**>;",
-            "Lcom/google/a/b;",
-            ")V"
-        }
-    .end annotation
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Adapter called onFailedToReceiveAd with error. "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v1, p0, Lcom/google/android/gms/internal/bj;->a:Lcom/google/android/gms/internal/bb;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    iget-object v0, v1, Lcom/google/android/gms/internal/bb;->e:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->s(Ljava/lang/String;)V
+    check-cast v0, Lcom/google/android/gms/internal/ay;
 
-    invoke-static {}, Lcom/google/android/gms/internal/cz;->aX()Z
+    invoke-interface {v0, v2}, Lcom/google/android/gms/internal/ay;->a(Z)V
 
-    move-result v0
+    goto :goto_1
 
-    if-nez v0, :cond_0
-
-    const-string v0, "onFailedToReceiveAd must be called on the main UI thread."
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->w(Ljava/lang/String;)V
-
-    sget-object v0, Lcom/google/android/gms/internal/cz;->pT:Landroid/os/Handler;
-
-    new-instance v1, Lcom/google/android/gms/internal/bj$5;
-
-    invoke-direct {v1, p0, p2}, Lcom/google/android/gms/internal/bj$5;-><init>(Lcom/google/android/gms/internal/bj;Lcom/google/a/b;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :goto_0
-    return-void
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/internal/bj;->mT:Lcom/google/android/gms/internal/bh;
-
-    invoke-static {p2}, Lcom/google/android/gms/internal/bk;->a(Lcom/google/a/b;)I
-
-    move-result v1
-
-    invoke-interface {v0, v1}, Lcom/google/android/gms/internal/bh;->onAdFailedToLoad(I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "Could not call onAdFailedToLoad."
-
-    invoke-static {v1, v0}, Lcom/google/android/gms/internal/da;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-.end method
-
-.method public final onFailedToReceiveAd(Lcom/google/a/a/d;Lcom/google/a/b;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/a/a/d",
-            "<**>;",
-            "Lcom/google/a/b;",
-            ")V"
-        }
-    .end annotation
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Adapter called onFailedToReceiveAd with error "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "."
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->s(Ljava/lang/String;)V
-
-    invoke-static {}, Lcom/google/android/gms/internal/cz;->aX()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, "onFailedToReceiveAd must be called on the main UI thread."
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->w(Ljava/lang/String;)V
-
-    sget-object v0, Lcom/google/android/gms/internal/cz;->pT:Landroid/os/Handler;
-
-    new-instance v1, Lcom/google/android/gms/internal/bj$10;
-
-    invoke-direct {v1, p0, p2}, Lcom/google/android/gms/internal/bj$10;-><init>(Lcom/google/android/gms/internal/bj;Lcom/google/a/b;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :goto_0
-    return-void
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/internal/bj;->mT:Lcom/google/android/gms/internal/bh;
-
-    invoke-static {p2}, Lcom/google/android/gms/internal/bk;->a(Lcom/google/a/b;)I
-
-    move-result v1
-
-    invoke-interface {v0, v1}, Lcom/google/android/gms/internal/bh;->onAdFailedToLoad(I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "Could not call onAdFailedToLoad."
-
-    invoke-static {v1, v0}, Lcom/google/android/gms/internal/da;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-.end method
-
-.method public final onLeaveApplication(Lcom/google/a/a/c;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/a/a/c",
-            "<**>;)V"
-        }
-    .end annotation
-
-    const-string v0, "Adapter called onLeaveApplication."
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->s(Ljava/lang/String;)V
-
-    invoke-static {}, Lcom/google/android/gms/internal/cz;->aX()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, "onLeaveApplication must be called on the main UI thread."
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->w(Ljava/lang/String;)V
-
-    sget-object v0, Lcom/google/android/gms/internal/cz;->pT:Landroid/os/Handler;
-
-    new-instance v1, Lcom/google/android/gms/internal/bj$6;
-
-    invoke-direct {v1, p0}, Lcom/google/android/gms/internal/bj$6;-><init>(Lcom/google/android/gms/internal/bj;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :goto_0
-    return-void
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/internal/bj;->mT:Lcom/google/android/gms/internal/bh;
-
-    invoke-interface {v0}, Lcom/google/android/gms/internal/bh;->onAdLeftApplication()V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "Could not call onAdLeftApplication."
-
-    invoke-static {v1, v0}, Lcom/google/android/gms/internal/da;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-.end method
-
-.method public final onLeaveApplication(Lcom/google/a/a/d;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/a/a/d",
-            "<**>;)V"
-        }
-    .end annotation
-
-    const-string v0, "Adapter called onLeaveApplication."
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->s(Ljava/lang/String;)V
-
-    invoke-static {}, Lcom/google/android/gms/internal/cz;->aX()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, "onLeaveApplication must be called on the main UI thread."
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->w(Ljava/lang/String;)V
-
-    sget-object v0, Lcom/google/android/gms/internal/cz;->pT:Landroid/os/Handler;
-
-    new-instance v1, Lcom/google/android/gms/internal/bj$11;
-
-    invoke-direct {v1, p0}, Lcom/google/android/gms/internal/bj$11;-><init>(Lcom/google/android/gms/internal/bj;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :goto_0
-    return-void
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/internal/bj;->mT:Lcom/google/android/gms/internal/bh;
-
-    invoke-interface {v0}, Lcom/google/android/gms/internal/bh;->onAdLeftApplication()V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "Could not call onAdLeftApplication."
-
-    invoke-static {v1, v0}, Lcom/google/android/gms/internal/da;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-.end method
-
-.method public final onPresentScreen(Lcom/google/a/a/c;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/a/a/c",
-            "<**>;)V"
-        }
-    .end annotation
-
-    const-string v0, "Adapter called onPresentScreen."
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->s(Ljava/lang/String;)V
-
-    invoke-static {}, Lcom/google/android/gms/internal/cz;->aX()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, "onPresentScreen must be called on the main UI thread."
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->w(Ljava/lang/String;)V
-
-    sget-object v0, Lcom/google/android/gms/internal/cz;->pT:Landroid/os/Handler;
-
-    new-instance v1, Lcom/google/android/gms/internal/bj$7;
-
-    invoke-direct {v1, p0}, Lcom/google/android/gms/internal/bj$7;-><init>(Lcom/google/android/gms/internal/bj;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :goto_0
-    return-void
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/internal/bj;->mT:Lcom/google/android/gms/internal/bh;
-
-    invoke-interface {v0}, Lcom/google/android/gms/internal/bh;->onAdOpened()V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "Could not call onAdOpened."
-
-    invoke-static {v1, v0}, Lcom/google/android/gms/internal/da;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-.end method
-
-.method public final onPresentScreen(Lcom/google/a/a/d;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/a/a/d",
-            "<**>;)V"
-        }
-    .end annotation
-
-    const-string v0, "Adapter called onPresentScreen."
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->s(Ljava/lang/String;)V
-
-    invoke-static {}, Lcom/google/android/gms/internal/cz;->aX()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, "onPresentScreen must be called on the main UI thread."
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->w(Ljava/lang/String;)V
-
-    sget-object v0, Lcom/google/android/gms/internal/cz;->pT:Landroid/os/Handler;
-
-    new-instance v1, Lcom/google/android/gms/internal/bj$2;
-
-    invoke-direct {v1, p0}, Lcom/google/android/gms/internal/bj$2;-><init>(Lcom/google/android/gms/internal/bj;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :goto_0
-    return-void
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/internal/bj;->mT:Lcom/google/android/gms/internal/bh;
-
-    invoke-interface {v0}, Lcom/google/android/gms/internal/bh;->onAdOpened()V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "Could not call onAdOpened."
-
-    invoke-static {v1, v0}, Lcom/google/android/gms/internal/da;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-.end method
-
-.method public final onReceivedAd(Lcom/google/a/a/c;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/a/a/c",
-            "<**>;)V"
-        }
-    .end annotation
-
-    const-string v0, "Adapter called onReceivedAd."
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->s(Ljava/lang/String;)V
-
-    invoke-static {}, Lcom/google/android/gms/internal/cz;->aX()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, "onReceivedAd must be called on the main UI thread."
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->w(Ljava/lang/String;)V
-
-    sget-object v0, Lcom/google/android/gms/internal/cz;->pT:Landroid/os/Handler;
-
-    new-instance v1, Lcom/google/android/gms/internal/bj$8;
-
-    invoke-direct {v1, p0}, Lcom/google/android/gms/internal/bj$8;-><init>(Lcom/google/android/gms/internal/bj;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :goto_0
-    return-void
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/internal/bj;->mT:Lcom/google/android/gms/internal/bh;
-
-    invoke-interface {v0}, Lcom/google/android/gms/internal/bh;->onAdLoaded()V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "Could not call onAdLoaded."
-
-    invoke-static {v1, v0}, Lcom/google/android/gms/internal/da;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-.end method
-
-.method public final onReceivedAd(Lcom/google/a/a/d;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/a/a/d",
-            "<**>;)V"
-        }
-    .end annotation
-
-    const-string v0, "Adapter called onReceivedAd."
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->s(Ljava/lang/String;)V
-
-    invoke-static {}, Lcom/google/android/gms/internal/cz;->aX()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, "onReceivedAd must be called on the main UI thread."
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/da;->w(Ljava/lang/String;)V
-
-    sget-object v0, Lcom/google/android/gms/internal/cz;->pT:Landroid/os/Handler;
-
-    new-instance v1, Lcom/google/android/gms/internal/bj$3;
-
-    invoke-direct {v1, p0}, Lcom/google/android/gms/internal/bj$3;-><init>(Lcom/google/android/gms/internal/bj;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :goto_0
-    return-void
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/internal/bj;->mT:Lcom/google/android/gms/internal/bh;
-
-    invoke-interface {v0}, Lcom/google/android/gms/internal/bh;->onAdLoaded()V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "Could not call onAdLoaded."
-
-    invoke-static {v1, v0}, Lcom/google/android/gms/internal/da;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
+    :cond_3
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method

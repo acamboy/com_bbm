@@ -1,8 +1,11 @@
-.class interface abstract Landroid/support/v4/view/aj;
+.class public interface abstract Landroid/support/v4/view/aj;
 .super Ljava/lang/Object;
-.source "PagerTitleStrip.java"
+.source "MenuItemCompat.java"
 
 
 # virtual methods
-.method public abstract a(Landroid/widget/TextView;)V
+.method public abstract a(Landroid/view/MenuItem;)Z
+.end method
+
+.method public abstract b(Landroid/view/MenuItem;)Z
 .end method

@@ -1,22 +1,26 @@
 .class final Lcom/bbm/ui/activities/ahc;
 .super Ljava/lang/Object;
-.source "SettingsActivity.java"
+.source "ViewOwnedChannelActivity.java"
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Lcom/bbm/j/s;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
+.field final synthetic a:Landroid/view/Menu;
+
+.field final synthetic b:Lcom/bbm/ui/activities/ViewOwnedChannelActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ViewOwnedChannelActivity;Landroid/view/Menu;)V
     .locals 0
 
     .prologue
-    .line 425
-    iput-object p1, p0, Lcom/bbm/ui/activities/ahc;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    .line 162
+    iput-object p1, p0, Lcom/bbm/ui/activities/ahc;->b:Lcom/bbm/ui/activities/ViewOwnedChannelActivity;
+
+    iput-object p2, p0, Lcom/bbm/ui/activities/ahc;->a:Landroid/view/Menu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,86 +29,116 @@
 
 
 # virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 2
+.method public final a()Z
+    .locals 4
 
     .prologue
-    .line 428
-    iget-object v0, p0, Lcom/bbm/ui/activities/ahc;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    const/4 v1, 0x0
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->c(Lcom/bbm/ui/activities/SettingsActivity;)Lcom/bbm/d/a;
+    const/4 v2, 0x1
+
+    .line 165
+    iget-object v0, p0, Lcom/bbm/ui/activities/ahc;->b:Lcom/bbm/ui/activities/ViewOwnedChannelActivity;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/ViewOwnedChannelActivity;->h:Lcom/bbm/j/a;
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/d/a;->d()Z
+    check-cast v0, Lcom/bbm/d/ff;
 
-    move-result v0
+    iget-object v0, v0, Lcom/bbm/d/ff;->R:Lcom/bbm/util/bo;
 
-    if-ne p2, v0, :cond_0
+    sget-object v3, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
 
-    .line 464
+    if-ne v0, v3, :cond_0
+
+    move v0, v1
+
+    .line 191
     :goto_0
-    return-void
+    return v0
 
-    .line 431
+    .line 170
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ahc;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ahc;->a:Landroid/view/Menu;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->s(Lcom/bbm/ui/activities/SettingsActivity;)Z
+    const v3, 0x7f0b0753
 
-    .line 432
-    if-eqz p2, :cond_1
+    invoke-interface {v0, v3}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
-    .line 434
-    new-instance v0, Lcom/bbm/ui/b/o;
+    move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ahc;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    .line 171
+    if-eqz v0, :cond_1
 
-    invoke-direct {v0, v1}, Lcom/bbm/ui/b/o;-><init>(Landroid/content/Context;)V
+    .line 172
+    invoke-interface {v0, v2}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
-    .line 435
-    const v1, 0x7f0e06b8
+    .line 176
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/ahc;->a:Landroid/view/Menu;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->setTitle(I)V
+    const v3, 0x7f0b074f
 
-    .line 436
-    const v1, 0x7f0e06ba
+    invoke-interface {v0, v3}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->e(I)V
+    move-result-object v0
 
-    .line 437
-    const v1, 0x7f0e014e
+    .line 177
+    if-eqz v0, :cond_2
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->a(I)V
+    .line 178
+    invoke-interface {v0, v2}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
-    .line 439
-    new-instance v1, Lcom/bbm/ui/activities/ahd;
+    .line 180
+    :cond_2
+    iget-object v0, p0, Lcom/bbm/ui/activities/ahc;->a:Landroid/view/Menu;
 
-    invoke-direct {v1, p0, v0}, Lcom/bbm/ui/activities/ahd;-><init>(Lcom/bbm/ui/activities/ahc;Lcom/bbm/ui/b/o;)V
+    const v3, 0x7f0b0754
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->b(Landroid/view/View$OnClickListener;)V
+    invoke-interface {v0, v3}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
-    .line 449
-    new-instance v1, Lcom/bbm/ui/activities/ahe;
+    move-result-object v0
 
-    invoke-direct {v1, p0, v0}, Lcom/bbm/ui/activities/ahe;-><init>(Lcom/bbm/ui/activities/ahc;Lcom/bbm/ui/b/o;)V
+    .line 181
+    if-eqz v0, :cond_3
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->a(Landroid/view/View$OnClickListener;)V
+    .line 182
+    invoke-interface {v0, v2}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
-    .line 459
-    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->show()V
+    .line 186
+    :cond_3
+    iget-object v0, p0, Lcom/bbm/ui/activities/ahc;->b:Lcom/bbm/ui/activities/ViewOwnedChannelActivity;
 
+    iget-object v0, v0, Lcom/bbm/ui/activities/ViewOwnedChannelActivity;->h:Lcom/bbm/j/a;
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/ff;
+
+    iget-boolean v0, v0, Lcom/bbm/d/ff;->q:Z
+
+    if-eqz v0, :cond_4
+
+    .line 187
+    iget-object v0, p0, Lcom/bbm/ui/activities/ahc;->a:Landroid/view/Menu;
+
+    const v3, 0x7f0b074d
+
+    invoke-interface {v0, v3, v1}, Landroid/view/Menu;->setGroupEnabled(IZ)V
+
+    move v0, v2
+
+    .line 188
     goto :goto_0
 
-    .line 462
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/ahc;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    :cond_4
+    move v0, v2
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->c(Lcom/bbm/ui/activities/SettingsActivity;)Lcom/bbm/d/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p2}, Lcom/bbm/d/a;->a(Z)V
-
+    .line 191
     goto :goto_0
 .end method

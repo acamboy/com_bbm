@@ -1,265 +1,255 @@
 .class final Lcom/bbm/ui/c/x;
-.super Lcom/bbm/j/u;
-.source "BlockedContactsFragment.java"
+.super Ljava/lang/Object;
+.source "AppDetailsFragment.java"
+
+# interfaces
+.implements Lcom/bbm/l/c/e;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/v;
+.field final synthetic a:Lcom/bbm/ui/c/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/v;)V
+.method constructor <init>(Lcom/bbm/ui/c/a;)V
     .locals 0
 
     .prologue
-    .line 207
-    iput-object p1, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/v;
+    .line 401
+    iput-object p1, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/a;
 
-    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final b()Z
-    .locals 7
+.method public final a(I)V
+    .locals 3
 
     .prologue
-    const/4 v3, 0x0
+    .line 434
+    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/a;
 
-    const/4 v2, 0x1
-
-    .line 210
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/v;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/v;->a(Lcom/bbm/ui/c/v;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/bbm/ui/c/a;->u(Lcom/bbm/ui/c/a;)Landroid/view/View;
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    const/16 v1, 0x8
 
-    move v0, v2
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 257
+    .line 435
+    packed-switch p1, :pswitch_data_0
+
+    .line 442
+    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/a;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/a;->v(Lcom/bbm/ui/c/a;)Landroid/view/View;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 445
     :goto_0
-    return v0
+    return-void
 
-    .line 214
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/v;
+    .line 437
+    :pswitch_0
+    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/a;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/c/v;->isAdded()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    move v0, v2
-
-    .line 215
-    goto :goto_0
-
-    .line 218
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/v;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/c/v;->getActivity()Landroid/app/Activity;
+    invoke-static {v0}, Lcom/bbm/ui/c/a;->i(Lcom/bbm/ui/c/a;)Landroid/content/Context;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/activities/BlockedContactsActivity;
-
-    .line 219
-    iget-object v4, v0, Lcom/bbm/ui/activities/ey;->B:Lcom/bbm/ui/c/gj;
-
-    .line 220
-    iget-object v1, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/v;
-
-    iget-object v5, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/v;
-
-    invoke-static {v5}, Lcom/bbm/ui/c/v;->a(Lcom/bbm/ui/c/v;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    invoke-virtual {v1, v5}, Lcom/bbm/ui/c/v;->c(Ljava/lang/Object;)Lcom/bbm/d/a/a;
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
 
     move-result-object v1
 
-    .line 222
-    instance-of v5, v1, Lcom/bbm/d/gu;
+    const v2, 0x7f0e0121
 
-    if-eqz v5, :cond_3
-
-    .line 223
-    iget-object v5, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/v;
-
-    iget-object v5, v5, Lcom/bbm/ui/c/v;->a:Lcom/bbm/d/a;
-
-    check-cast v1, Lcom/bbm/d/gu;
-
-    iget-object v1, v1, Lcom/bbm/d/gu;->c:Ljava/lang/String;
-
-    invoke-virtual {v5, v1}, Lcom/bbm/d/a;->b(Ljava/lang/String;)Lcom/bbm/d/gr;
+    invoke-virtual {v1, v2}, Lcom/bbm/Alaska;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 224
-    sget-object v5, Lcom/bbm/ui/c/aa;->a:[I
+    invoke-static {v0, v1}, Lcom/bbm/util/eu;->a(Landroid/content/Context;Ljava/lang/String;)V
 
-    iget-object v6, v1, Lcom/bbm/d/gr;->C:Lcom/bbm/util/bi;
+    .line 438
+    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/a;
 
-    invoke-virtual {v6}, Lcom/bbm/util/bi;->ordinal()I
+    invoke-static {v0}, Lcom/bbm/ui/c/a;->h(Lcom/bbm/ui/c/a;)V
 
-    move-result v6
-
-    aget v5, v5, v6
-
-    packed-switch v5, :pswitch_data_0
-
-    .line 255
-    :cond_2
-    :goto_1
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/BlockedContactsActivity;->o()V
-
-    .line 256
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/v;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/v;->b(Lcom/bbm/ui/c/v;)Ljava/lang/Object;
-
-    move v0, v2
-
-    .line 257
     goto :goto_0
 
-    :pswitch_0
-    move v0, v3
-
-    .line 226
-    goto :goto_0
-
-    .line 229
-    :pswitch_1
-    const-string v0, "No user found for Uri %s"
-
-    new-array v4, v2, [Ljava/lang/Object;
-
-    iget-object v1, v1, Lcom/bbm/d/gr;->B:Ljava/lang/String;
-
-    aput-object v1, v4, v3
-
-    invoke-static {v0, v4}, Lcom/bbm/y;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 230
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/v;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/v;->b(Lcom/bbm/ui/c/v;)Ljava/lang/Object;
-
-    move v0, v2
-
-    .line 231
-    goto :goto_0
-
-    .line 234
-    :pswitch_2
-    invoke-static {v1}, Lcom/bbm/d/b/a;->a(Lcom/bbm/d/gr;)Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 235
-    iget-object v5, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/v;
-
-    iget-object v1, v1, Lcom/bbm/d/gr;->d:Ljava/lang/String;
-
-    invoke-static {v5, v4, v1, v3}, Lcom/bbm/ui/c/v;->a(Lcom/bbm/ui/c/v;Lcom/bbm/ui/c/gj;Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_1
-
-    .line 238
-    :cond_3
-    instance-of v5, v1, Lcom/bbm/g/a;
-
-    if-eqz v5, :cond_2
-
-    .line 239
-    check-cast v1, Lcom/bbm/g/a;
-
-    .line 240
-    sget-object v5, Lcom/bbm/ui/c/aa;->a:[I
-
-    iget-object v6, v1, Lcom/bbm/g/a;->w:Lcom/bbm/util/bi;
-
-    invoke-virtual {v6}, Lcom/bbm/util/bi;->ordinal()I
-
-    move-result v6
-
-    aget v5, v5, v6
-
-    packed-switch v5, :pswitch_data_1
-
-    goto :goto_1
-
-    :pswitch_3
-    move v0, v3
-
-    .line 242
-    goto :goto_0
-
-    .line 245
-    :pswitch_4
-    const-string v0, "No group found for Uri %s"
-
-    new-array v4, v2, [Ljava/lang/Object;
-
-    iget-object v1, v1, Lcom/bbm/g/a;->v:Ljava/lang/String;
-
-    aput-object v1, v4, v3
-
-    invoke-static {v0, v4}, Lcom/bbm/y;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 246
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/v;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/v;->b(Lcom/bbm/ui/c/v;)Ljava/lang/Object;
-
-    move v0, v2
-
-    .line 247
-    goto/16 :goto_0
-
-    .line 250
-    :pswitch_5
-    iget-object v3, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/v;
-
-    iget-object v1, v1, Lcom/bbm/g/a;->r:Ljava/lang/String;
-
-    iget-object v5, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/v;
-
-    const v6, 0x7f0e013d
-
-    invoke-virtual {v5, v6}, Lcom/bbm/ui/c/v;->getString(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v3, v4, v1, v5}, Lcom/bbm/ui/c/v;->a(Lcom/bbm/ui/c/v;Lcom/bbm/ui/c/gj;Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_1
-
-    .line 224
+    .line 435
     nop
 
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
-        :pswitch_1
-        :pswitch_2
     .end packed-switch
+.end method
 
-    .line 240
-    :pswitch_data_1
-    .packed-switch 0x1
-        :pswitch_3
-        :pswitch_4
-        :pswitch_5
-    .end packed-switch
+.method public final a(Lcom/bbm/l/b/f;)V
+    .locals 3
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 404
+    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/a;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/a;->u(Lcom/bbm/ui/c/a;)Landroid/view/View;
+
+    move-result-object v0
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 405
+    if-nez p1, :cond_0
+
+    .line 407
+    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/a;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/a;->v(Lcom/bbm/ui/c/a;)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+
+    .line 430
+    :goto_0
+    return-void
+
+    .line 412
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/a;
+
+    invoke-static {v0, p1}, Lcom/bbm/ui/c/a;->a(Lcom/bbm/ui/c/a;Lcom/bbm/l/b/f;)Lcom/bbm/l/b/f;
+
+    .line 415
+    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/a;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/c/a;->isAdded()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/a;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/c/a;->isDetached()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 416
+    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/a;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/a;->w(Lcom/bbm/ui/c/a;)V
+
+    .line 417
+    const-string v0, "SUB"
+
+    iget-object v1, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/a;
+
+    invoke-static {v1}, Lcom/bbm/ui/c/a;->e(Lcom/bbm/ui/c/a;)Lcom/bbm/l/b/f;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/bbm/l/b/f;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 418
+    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/a;
+
+    const v1, 0x7f0e011f
+
+    invoke-static {v0, v1, v2}, Lcom/bbm/ui/c/a;->a(Lcom/bbm/ui/c/a;IZ)V
+
+    .line 419
+    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/a;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/a;->a(Lcom/bbm/ui/c/a;)Landroid/widget/LinearLayout;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 420
+    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/a;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/a;->b(Lcom/bbm/ui/c/a;)Landroid/widget/ProgressBar;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Landroid/widget/ProgressBar;->setVisibility(I)V
+
+    .line 421
+    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/a;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/a;->e(Lcom/bbm/ui/c/a;)Lcom/bbm/l/b/f;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/bbm/l/b/t;->k:Ljava/lang/String;
+
+    const-string v1, "custom_pin"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 422
+    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/a;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/a;->x(Lcom/bbm/ui/c/a;)Landroid/widget/TextView;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 428
+    :cond_1
+    :goto_1
+    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/a;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/a;->y(Lcom/bbm/ui/c/a;)V
+
+    .line 429
+    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/a;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/a;->z(Lcom/bbm/ui/c/a;)Lcom/bbm/j/u;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
+
+    goto :goto_0
+
+    .line 425
+    :cond_2
+    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/a;
+
+    const v1, 0x7f0e011d
+
+    const/4 v2, 0x1
+
+    invoke-static {v0, v1, v2}, Lcom/bbm/ui/c/a;->a(Lcom/bbm/ui/c/a;IZ)V
+
+    goto :goto_1
 .end method

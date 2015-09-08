@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/vl;
 .super Ljava/lang/Object;
-.source "InviteActivity.java"
+.source "NewChannelActivity.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemSelectedListener;
+.implements Landroid/view/View$OnFocusChangeListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/InviteActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/NewChannelActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/InviteActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/NewChannelActivity;)V
     .locals 0
 
     .prologue
-    .line 389
-    iput-object p1, p0, Lcom/bbm/ui/activities/vl;->a:Lcom/bbm/ui/activities/InviteActivity;
+    .line 367
+    iput-object p1, p0, Lcom/bbm/ui/activities/vl;->a:Lcom/bbm/ui/activities/NewChannelActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,183 +25,113 @@
 
 
 # virtual methods
-.method public final onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public final onFocusChange(Landroid/view/View;Z)V
+    .locals 4
 
     .prologue
-    const/16 v1, 0x8
+    const/16 v3, 0xa
 
-    const/4 v2, 0x0
+    .line 371
+    if-nez p2, :cond_1
 
-    .line 393
-    iget-object v0, p0, Lcom/bbm/ui/activities/vl;->a:Lcom/bbm/ui/activities/InviteActivity;
+    .line 372
+    iget-object v0, p0, Lcom/bbm/ui/activities/vl;->a:Lcom/bbm/ui/activities/NewChannelActivity;
 
-    invoke-static {v0, p3}, Lcom/bbm/ui/activities/InviteActivity;->a(Lcom/bbm/ui/activities/InviteActivity;I)I
-
-    .line 394
-    iget-object v0, p0, Lcom/bbm/ui/activities/vl;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->m(Lcom/bbm/ui/activities/InviteActivity;)Landroid/widget/LinearLayout;
-
-    move-result-object v3
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/vl;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->l(Lcom/bbm/ui/activities/InviteActivity;)Lcom/bbm/ui/activities/vo;
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->m(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/EditText;
 
     move-result-object v0
 
-    invoke-virtual {v0, p3}, Lcom/bbm/ui/activities/vo;->a(I)Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
     move-result-object v0
 
-    const-string v4, "None"
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/bbm/util/ec;->b(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    move v0, v1
+    .line 373
+    iget-object v0, p0, Lcom/bbm/ui/activities/vl;->a:Lcom/bbm/ui/activities/NewChannelActivity;
 
-    :goto_0
-    invoke-virtual {v3, v0}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    .line 397
-    iget-object v0, p0, Lcom/bbm/ui/activities/vl;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->o(Lcom/bbm/ui/activities/InviteActivity;)Landroid/widget/TextView;
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->m(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/EditText;
 
     move-result-object v0
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/vl;->a:Lcom/bbm/ui/activities/InviteActivity;
+    const-string v1, ""
 
-    invoke-static {v3}, Lcom/bbm/ui/activities/InviteActivity;->n(Lcom/bbm/ui/activities/InviteActivity;)[Ljava/lang/String;
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    move-result-object v3
+    .line 374
+    iget-object v0, p0, Lcom/bbm/ui/activities/vl;->a:Lcom/bbm/ui/activities/NewChannelActivity;
 
-    aget-object v3, v3, p3
-
-    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 398
-    iget-object v0, p0, Lcom/bbm/ui/activities/vl;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->o(Lcom/bbm/ui/activities/InviteActivity;)Landroid/widget/TextView;
-
-    move-result-object v3
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/vl;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->l(Lcom/bbm/ui/activities/InviteActivity;)Lcom/bbm/ui/activities/vo;
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->m(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/EditText;
 
     move-result-object v0
 
-    invoke-virtual {v0, p3}, Lcom/bbm/ui/activities/vo;->a(I)Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/activities/vl;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/activities/NewChannelActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f0e0371
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
+
+    .line 375
+    iget-object v0, p0, Lcom/bbm/ui/activities/vl;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->m(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/EditText;
 
     move-result-object v0
 
-    const-string v4, "None"
+    const v1, 0x7f0200c9
 
-    invoke-virtual {v0, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setBackgroundResource(I)V
 
-    move-result v0
+    .line 376
+    iget-object v0, p0, Lcom/bbm/ui/activities/vl;->a:Lcom/bbm/ui/activities/NewChannelActivity;
 
-    if-eqz v0, :cond_1
-
-    move v0, v1
-
-    :goto_1
-    invoke-virtual {v3, v0}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 401
-    iget-object v0, p0, Lcom/bbm/ui/activities/vl;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->p(Lcom/bbm/ui/activities/InviteActivity;)Landroid/widget/EditText;
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->m(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/EditText;
 
     move-result-object v0
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/vl;->a:Lcom/bbm/ui/activities/InviteActivity;
+    invoke-virtual {v0, v3, v3, v3, v3}, Landroid/widget/EditText;->setPadding(IIII)V
 
-    invoke-static {v3}, Lcom/bbm/ui/activities/InviteActivity;->l(Lcom/bbm/ui/activities/InviteActivity;)Lcom/bbm/ui/activities/vo;
-
-    move-result-object v3
-
-    invoke-virtual {v3, p3}, Lcom/bbm/ui/activities/vo;->a(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "Custom"
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    :goto_2
-    invoke-virtual {v0, v2}, Landroid/widget/EditText;->setVisibility(I)V
-
-    .line 404
-    iget-object v0, p0, Lcom/bbm/ui/activities/vl;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->e(Lcom/bbm/ui/activities/InviteActivity;)V
-
-    .line 405
-    return-void
-
+    .line 382
     :cond_0
-    move v0, v2
-
-    .line 394
-    goto :goto_0
-
-    :cond_1
-    move v0, v2
-
-    .line 398
-    goto :goto_1
-
-    :cond_2
-    move v2, v1
-
-    .line 401
-    goto :goto_2
-.end method
-
-.method public final onNothingSelected(Landroid/widget/AdapterView;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;)V"
-        }
-    .end annotation
-
-    .prologue
-    .line 409
-    iget-object v0, p0, Lcom/bbm/ui/activities/vl;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/InviteActivity;->a(Lcom/bbm/ui/activities/InviteActivity;I)I
-
-    .line 410
-    iget-object v0, p0, Lcom/bbm/ui/activities/vl;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->e(Lcom/bbm/ui/activities/InviteActivity;)V
-
-    .line 411
+    :goto_0
     return-void
+
+    .line 379
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/vl;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->m(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/EditText;
+
+    move-result-object v0
+
+    const v1, 0x7f0200c7
+
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setBackgroundResource(I)V
+
+    .line 380
+    iget-object v0, p0, Lcom/bbm/ui/activities/vl;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->m(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/EditText;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3, v3, v3, v3}, Landroid/widget/EditText;->setPadding(IIII)V
+
+    goto :goto_0
 .end method

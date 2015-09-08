@@ -1,79 +1,43 @@
 .class final Lcom/bbm/ui/activities/uc;
-.super Lcom/bbm/j/k;
-.source "GroupSettingsActivity.java"
+.super Lcom/bbm/j/u;
+.source "MainActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupSettingsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupSettingsActivity;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
+    .locals 0
 
     .prologue
-    .line 119
-    iput-object p1, p0, Lcom/bbm/ui/activities/uc;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
+    .line 203
+    iput-object p1, p0, Lcom/bbm/ui/activities/uc;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 3
+.method protected final b()Z
+    .locals 1
 
     .prologue
-    .line 122
-    iget-object v0, p0, Lcom/bbm/ui/activities/uc;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/uc;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/GroupSettingsActivity;->b(Lcom/bbm/ui/activities/GroupSettingsActivity;)Lcom/bbm/g/al;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/uc;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
-
-    iget-object v2, v2, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Lcom/bbm/g/al;->t(Ljava/lang/String;)Lcom/bbm/g/a;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/GroupSettingsActivity;->a(Lcom/bbm/ui/activities/GroupSettingsActivity;Lcom/bbm/g/a;)Lcom/bbm/g/a;
-
-    .line 123
-    iget-object v0, p0, Lcom/bbm/ui/activities/uc;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupSettingsActivity;->c(Lcom/bbm/ui/activities/GroupSettingsActivity;)Lcom/bbm/g/a;
+    .line 206
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/g/a;->w:Lcom/bbm/util/bi;
+    invoke-virtual {v0}, Lcom/bbm/d/a;->l()Lcom/bbm/d/ao;
 
-    sget-object v1, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
+    .line 207
+    invoke-static {}, Lcom/bbm/ui/activities/MainActivity;->m()Z
 
-    if-eq v0, v1, :cond_0
+    .line 208
+    const/4 v0, 0x1
 
-    .line 129
-    :goto_0
-    return-void
-
-    .line 127
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/uc;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupSettingsActivity;->d(Lcom/bbm/ui/activities/GroupSettingsActivity;)V
-
-    .line 128
-    iget-object v0, p0, Lcom/bbm/ui/activities/uc;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupSettingsActivity;->e(Lcom/bbm/ui/activities/GroupSettingsActivity;)V
-
-    goto :goto_0
+    return v0
 .end method

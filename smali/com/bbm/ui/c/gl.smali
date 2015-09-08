@@ -1,9 +1,9 @@
 .class final Lcom/bbm/ui/c/gl;
 .super Ljava/lang/Object;
-.source "SlideMenuFragment.java"
+.source "StickerDetailsFragment.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 83
+    .line 939
     iput-object p1, p0, Lcom/bbm/ui/c/gl;->a:Lcom/bbm/ui/c/gj;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,132 +25,54 @@
 
 
 # virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
     .prologue
-    .line 87
+    .line 942
     iget-object v0, p0, Lcom/bbm/ui/c/gl;->a:Lcom/bbm/ui/c/gj;
 
-    invoke-static {v0}, Lcom/bbm/ui/c/gj;->b(Lcom/bbm/ui/c/gj;)Landroid/widget/ListView;
+    invoke-virtual {v0}, Lcom/bbm/ui/c/gj;->dismiss()V
 
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 88
+    .line 943
     iget-object v0, p0, Lcom/bbm/ui/c/gl;->a:Lcom/bbm/ui/c/gj;
 
-    invoke-static {v0}, Lcom/bbm/ui/c/gj;->b(Lcom/bbm/ui/c/gj;)Landroid/widget/ListView;
+    iget-object v0, v0, Lcom/bbm/ui/c/gj;->a:Lcom/bbm/ui/c/fx;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/fx;->k(Lcom/bbm/ui/c/fx;)Landroid/os/Handler;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/ListView;->getHeaderViewsCount()I
+    iget-object v1, p0, Lcom/bbm/ui/c/gl;->a:Lcom/bbm/ui/c/gj;
 
-    move-result v0
+    iget-object v1, v1, Lcom/bbm/ui/c/gj;->a:Lcom/bbm/ui/c/fx;
 
-    .line 90
-    sub-int v1, p3, v0
+    invoke-static {v1}, Lcom/bbm/ui/c/fx;->j(Lcom/bbm/ui/c/fx;)Ljava/lang/Runnable;
 
-    .line 91
-    if-ltz v1, :cond_0
+    move-result-object v1
 
+    const-wide/16 v2, 0x7530
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    .line 944
     iget-object v0, p0, Lcom/bbm/ui/c/gl;->a:Lcom/bbm/ui/c/gj;
 
-    invoke-static {v0}, Lcom/bbm/ui/c/gj;->c(Lcom/bbm/ui/c/gj;)Lcom/bbm/ui/c/go;
+    iget-object v0, v0, Lcom/bbm/ui/c/gj;->a:Lcom/bbm/ui/c/fx;
 
-    move-result-object v0
+    invoke-virtual {v0}, Lcom/bbm/ui/c/fx;->getActivity()Landroid/support/v4/app/q;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/c/go;->getCount()I
+    invoke-static {}, Lcom/bbm/l/a;->c()V
 
-    move-result v0
-
-    if-ge v1, v0, :cond_0
-
-    .line 92
+    .line 948
     iget-object v0, p0, Lcom/bbm/ui/c/gl;->a:Lcom/bbm/ui/c/gj;
 
-    invoke-static {v0}, Lcom/bbm/ui/c/gj;->c(Lcom/bbm/ui/c/gj;)Lcom/bbm/ui/c/go;
+    iget-object v0, v0, Lcom/bbm/ui/c/gj;->a:Lcom/bbm/ui/c/fx;
 
-    move-result-object v0
+    sget v1, Lcom/bbm/ui/c/hc;->c:I
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/c/go;->getItem(I)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/bbm/ui/c/fx;->b(Lcom/bbm/ui/c/fx;I)V
 
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/slidingmenu/a;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/slidingmenu/a;->g()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 93
-    iget-object v0, p0, Lcom/bbm/ui/c/gl;->a:Lcom/bbm/ui/c/gj;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/gj;->d(Lcom/bbm/ui/c/gj;)Lcom/bbm/ui/c/gn;
-
-    move-result-object v2
-
-    iget-object v0, p0, Lcom/bbm/ui/c/gl;->a:Lcom/bbm/ui/c/gj;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/gj;->c(Lcom/bbm/ui/c/gj;)Lcom/bbm/ui/c/go;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/c/go;->getItem(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/slidingmenu/a;
-
-    invoke-interface {v2, v0, v1}, Lcom/bbm/ui/c/gn;->a(Lcom/bbm/ui/slidingmenu/a;I)V
-
-    .line 99
-    :cond_0
-    :goto_0
+    .line 949
     return-void
-
-    .line 94
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/c/gl;->a:Lcom/bbm/ui/c/gj;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/gj;->e(Lcom/bbm/ui/c/gj;)Lcom/bbm/ui/c/gn;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 95
-    iget-object v0, p0, Lcom/bbm/ui/c/gl;->a:Lcom/bbm/ui/c/gj;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/gj;->e(Lcom/bbm/ui/c/gj;)Lcom/bbm/ui/c/gn;
-
-    move-result-object v2
-
-    iget-object v0, p0, Lcom/bbm/ui/c/gl;->a:Lcom/bbm/ui/c/gj;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/gj;->c(Lcom/bbm/ui/c/gj;)Lcom/bbm/ui/c/go;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/c/go;->getItem(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/slidingmenu/a;
-
-    invoke-interface {v2, v0, v1}, Lcom/bbm/ui/c/gn;->a(Lcom/bbm/ui/slidingmenu/a;I)V
-
-    goto :goto_0
 .end method

@@ -1,65 +1,100 @@
-.class final Lcom/bbm/util/bv;
+.class public final Lcom/bbm/util/bv;
 .super Ljava/lang/Object;
-.source "HttpLoader.java"
+.source "HandlerScheduler.java"
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Lcom/bbm/util/ds;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
-        "<",
-        "Lcom/bbm/util/bu;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field private final a:Landroid/os/Handler;
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>(Landroid/os/Handler;)V
     .locals 0
 
     .prologue
-    .line 279
+    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 14
+    iput-object p1, p0, Lcom/bbm/util/bv;->a:Landroid/os/Handler;
+
+    .line 15
     return-void
+.end method
+
+.method public static a()Lcom/bbm/util/bv;
+    .locals 3
+
+    .prologue
+    .line 33
+    new-instance v0, Lcom/bbm/util/bv;
+
+    new-instance v1, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    invoke-direct {v0, v1}, Lcom/bbm/util/bv;-><init>(Landroid/os/Handler;)V
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 4
+.method public final a(Ljava/lang/Runnable;)V
+    .locals 1
 
     .prologue
-    .line 279
-    check-cast p1, Lcom/bbm/util/bu;
+    .line 19
+    iget-object v0, p0, Lcom/bbm/util/bv;->a:Landroid/os/Handler;
 
-    check-cast p2, Lcom/bbm/util/bu;
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    iget-object v0, p1, Lcom/bbm/util/bu;->d:Lcom/bbm/util/bt;
+    .line 20
+    return-void
+.end method
 
-    iget-object v1, p2, Lcom/bbm/util/bu;->d:Lcom/bbm/util/bt;
+.method public final a(Ljava/lang/Runnable;J)V
+    .locals 2
 
-    invoke-virtual {v0, v1}, Lcom/bbm/util/bt;->compareTo(Ljava/lang/Enum;)I
+    .prologue
+    .line 24
+    iget-object v0, p0, Lcom/bbm/util/bv;->a:Landroid/os/Handler;
 
-    move-result v0
+    invoke-virtual {v0, p1, p2, p3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    if-nez v0, :cond_0
+    .line 25
+    return-void
+.end method
 
-    iget-wide v0, p1, Lcom/bbm/util/bu;->b:J
+.method public final b(Ljava/lang/Runnable;)V
+    .locals 1
 
-    iget-wide v2, p2, Lcom/bbm/util/bu;->b:J
+    .prologue
+    .line 29
+    iget-object v0, p0, Lcom/bbm/util/bv;->a:Landroid/os/Handler;
 
-    sub-long/2addr v0, v2
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    invoke-static {v0, v1}, Lcom/bbm/util/fh;->a(J)I
+    .line 30
+    return-void
+.end method
 
-    move-result v0
+.method public final c(Ljava/lang/Runnable;)V
+    .locals 1
 
-    :cond_0
-    return v0
+    .prologue
+    .line 42
+    iget-object v0, p0, Lcom/bbm/util/bv;->a:Landroid/os/Handler;
+
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
+
+    .line 43
+    return-void
 .end method

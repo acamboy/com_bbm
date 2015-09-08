@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/aft;
 .super Ljava/lang/Object;
-.source "SelectContactActivity.java"
+.source "TypingNotificationHelper.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SelectContactActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/afs;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/afs;)V
     .locals 0
 
     .prologue
-    .line 360
-    iput-object p1, p0, Lcom/bbm/ui/activities/aft;->a:Lcom/bbm/ui/activities/SelectContactActivity;
+    .line 32
+    iput-object p1, p0, Lcom/bbm/ui/activities/aft;->a:Lcom/bbm/ui/activities/afs;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,35 +25,82 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final run()V
+    .locals 4
 
     .prologue
-    .line 364
-    const-string v0, "mSearchCancel Clicked"
+    .line 36
+    iget-object v0, p0, Lcom/bbm/ui/activities/aft;->a:Lcom/bbm/ui/activities/afs;
 
-    const-class v1, Lcom/bbm/ui/activities/SelectContactActivity;
+    iget-object v0, v0, Lcom/bbm/ui/activities/afs;->b:Landroid/os/Handler;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    iget-object v1, p0, Lcom/bbm/ui/activities/aft;->a:Lcom/bbm/ui/activities/afs;
 
-    .line 366
-    iget-object v0, p0, Lcom/bbm/ui/activities/aft;->a:Lcom/bbm/ui/activities/SelectContactActivity;
+    iget-object v1, v1, Lcom/bbm/ui/activities/afs;->g:Ljava/lang/Runnable;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/SelectContactActivity;->q(Lcom/bbm/ui/activities/SelectContactActivity;)Landroid/widget/EditText;
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    move-result-object v0
+    .line 38
+    iget-object v0, p0, Lcom/bbm/ui/activities/aft;->a:Lcom/bbm/ui/activities/afs;
 
-    const-string v1, ""
+    iget v0, v0, Lcom/bbm/ui/activities/afs;->e:I
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    if-nez v0, :cond_0
 
-    .line 367
-    iget-object v0, p0, Lcom/bbm/ui/activities/aft;->a:Lcom/bbm/ui/activities/SelectContactActivity;
+    .line 39
+    iget-object v0, p0, Lcom/bbm/ui/activities/aft;->a:Lcom/bbm/ui/activities/afs;
 
-    const/4 v1, 0x1
+    iget-object v0, v0, Lcom/bbm/ui/activities/afs;->a:Lcom/bbm/f;
 
-    invoke-static {v0, v1}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;Z)V
+    iget-object v0, v0, Lcom/bbm/f;->b:Lcom/bbm/d/a;
 
-    .line 368
+    iget-object v1, p0, Lcom/bbm/ui/activities/aft;->a:Lcom/bbm/ui/activities/afs;
+
+    iget-object v1, v1, Lcom/bbm/ui/activities/afs;->d:Ljava/lang/String;
+
+    new-instance v2, Lcom/bbm/d/es;
+
+    invoke-direct {v2, v1}, Lcom/bbm/d/es;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v2}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ez;)V
+
+    .line 43
+    :goto_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/aft;->a:Lcom/bbm/ui/activities/afs;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    iput-wide v2, v0, Lcom/bbm/ui/activities/afs;->f:J
+
+    .line 44
+    iget-object v0, p0, Lcom/bbm/ui/activities/aft;->a:Lcom/bbm/ui/activities/afs;
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Lcom/bbm/ui/activities/afs;->c:Z
+
+    .line 45
     return-void
+
+    .line 41
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/aft;->a:Lcom/bbm/ui/activities/afs;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/afs;->a:Lcom/bbm/f;
+
+    iget-object v0, v0, Lcom/bbm/f;->c:Lcom/bbm/g/an;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/aft;->a:Lcom/bbm/ui/activities/afs;
+
+    iget-object v1, v1, Lcom/bbm/ui/activities/afs;->d:Ljava/lang/String;
+
+    new-instance v2, Lcom/bbm/g/bo;
+
+    invoke-direct {v2, v1}, Lcom/bbm/g/bo;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v2}, Lcom/bbm/g/an;->a(Lcom/bbm/g/db;)V
+
+    goto :goto_0
 .end method

@@ -1,118 +1,74 @@
-.class final Lcom/bbm/ab;
-.super Ljava/util/TimerTask;
-.source "LocationSynchronizer.java"
+.class public final Lcom/bbm/ab;
+.super Ljava/lang/Object;
+.source "LayoutTimer.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/z;
+.field public final a:Landroid/os/Handler;
+
+.field public b:J
+
+.field public c:J
+
+.field public d:J
+
+.field final e:Ljava/lang/String;
+
+.field public f:Z
+
+.field public final g:Ljava/lang/Runnable;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/z;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 4
 
     .prologue
-    .line 95
-    iput-object p1, p0, Lcom/bbm/ab;->a:Lcom/bbm/z;
+    const-wide/16 v2, 0x0
 
-    invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
+    .line 41
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    .line 18
+    new-instance v0, Landroid/os/Handler;
 
-
-# virtual methods
-.method public final run()V
-    .locals 8
-
-    .prologue
-    .line 98
-    iget-object v0, p0, Lcom/bbm/ab;->a:Lcom/bbm/z;
-
-    iget-object v0, p0, Lcom/bbm/ab;->a:Lcom/bbm/z;
-
-    iget-object v0, v0, Lcom/bbm/z;->f:Landroid/content/Context;
-
-    const-string v1, "passive"
-
-    invoke-static {v0, v1}, Lcom/bbm/z;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/location/Location;
-
-    move-result-object v0
-
-    .line 101
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    .line 102
-    if-eqz v0, :cond_0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroid/location/Location;->getTime()J
-
-    move-result-wide v4
-
-    sub-long v4, v2, v4
-
-    const-wide/32 v6, 0xdbba0
-
-    cmp-long v1, v4, v6
-
-    if-lez v1, :cond_1
-
-    .line 103
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ab;->a:Lcom/bbm/z;
-
-    iget-object v0, p0, Lcom/bbm/ab;->a:Lcom/bbm/z;
-
-    iget-object v0, v0, Lcom/bbm/z;->f:Landroid/content/Context;
-
-    const-string v1, "network"
-
-    invoke-static {v0, v1}, Lcom/bbm/z;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/location/Location;
-
-    move-result-object v0
-
-    .line 104
-    if-nez v0, :cond_1
-
-    .line 105
-    iget-object v0, p0, Lcom/bbm/ab;->a:Lcom/bbm/z;
-
-    iget-object v0, p0, Lcom/bbm/ab;->a:Lcom/bbm/z;
-
-    iget-object v0, v0, Lcom/bbm/z;->f:Landroid/content/Context;
-
-    const-string v1, "gps"
-
-    invoke-static {v0, v1}, Lcom/bbm/z;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/location/Location;
-
-    move-result-object v0
-
-    .line 109
-    :cond_1
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Landroid/location/Location;->getProvider()Ljava/lang/String;
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    if-eqz v1, :cond_2
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 110
-    iget-object v1, p0, Lcom/bbm/ab;->a:Lcom/bbm/z;
+    iput-object v0, p0, Lcom/bbm/ab;->a:Landroid/os/Handler;
 
-    iget-object v1, v1, Lcom/bbm/z;->g:Landroid/os/Handler;
+    .line 19
+    iput-wide v2, p0, Lcom/bbm/ab;->b:J
 
-    new-instance v4, Lcom/bbm/ac;
+    .line 20
+    iput-wide v2, p0, Lcom/bbm/ab;->c:J
 
-    invoke-direct {v4, p0, v0, v2, v3}, Lcom/bbm/ac;-><init>(Lcom/bbm/ab;Landroid/location/Location;J)V
+    .line 21
+    iput-wide v2, p0, Lcom/bbm/ab;->d:J
 
-    invoke-virtual {v1, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    .line 23
+    const/4 v0, 0x0
 
-    .line 138
-    :cond_2
+    iput-boolean v0, p0, Lcom/bbm/ab;->f:Z
+
+    .line 24
+    new-instance v0, Lcom/bbm/ac;
+
+    invoke-direct {v0, p0}, Lcom/bbm/ac;-><init>(Lcom/bbm/ab;)V
+
+    iput-object v0, p0, Lcom/bbm/ab;->g:Ljava/lang/Runnable;
+
+    .line 42
+    const-wide/16 v0, 0x3e8
+
+    iput-wide v0, p0, Lcom/bbm/ab;->d:J
+
+    .line 43
+    iput-object p1, p0, Lcom/bbm/ab;->e:Ljava/lang/String;
+
+    .line 44
     return-void
 .end method

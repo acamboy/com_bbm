@@ -1,9 +1,5 @@
-version: 2.0.0-RC3
-<<<<<<< HEAD
-apkFileName: com.bbm-2.6.0.30.apk
-=======
-apkFileName: 83D7BD.apk
->>>>>>> 6b1cf3e09f98d020488e56a8acee88793cc7ea03
+version: 2.0.1
+apkFileName: BBM_2.9.0.51.apk
 isFrameworkApk: false
 usesFramework:
   ids:
@@ -14,11 +10,11 @@ sdkInfo:
 packageInfo:
   forced-package-id: '127'
 versionInfo:
-  versionCode: '880'
-  versionName: 2.6.0.30
+  versionCode: '1301'
+  versionName: 2.9.0.51
 compressionType: true
+sharedLibrary: false
 unknownFiles:
-  manifest: '8'
   com/mapquest/android/maps/icn_compass_bg_hdpi.png: '0'
   com/mapquest/android/maps/icn_compass_bg_mdpi.png: '0'
   com/mapquest/android/maps/icn_compass_needle_hdpi.png: '0'

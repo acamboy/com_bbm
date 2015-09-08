@@ -7,16 +7,7 @@
 
 
 # virtual methods
-.method public abstract checkMotd(Z)V
-.end method
-
-.method public abstract completeMotd(Z)V
-.end method
-
 .method public abstract requestCompleted(Z)V
-.end method
-
-.method public abstract setInitialDataReceived(Z)V
 .end method
 
 .method public abstract start(Lcom/glympse/android/lib/GGlympsePrivate;)V

@@ -1,12 +1,12 @@
 .class public Lcom/bbm/ui/activities/ChannelPickerActivity;
-.super Lcom/bbm/ui/activities/akz;
+.super Lcom/bbm/bali/ui/main/a/e;
 .source "ChannelPickerActivity.java"
 
 
 # instance fields
 .field private a:Landroid/widget/ListView;
 
-.field private b:Lcom/bbm/ui/HeaderButtonActionBar;
+.field private b:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
 .field private final c:Lcom/bbm/d/a;
 
@@ -15,7 +15,7 @@
         value = {
             "Lcom/bbm/j/w",
             "<",
-            "Lcom/bbm/d/fg;",
+            "Lcom/bbm/d/gi;",
             ">;"
         }
     .end annotation
@@ -28,13 +28,13 @@
             "<",
             "Ljava/util/List",
             "<",
-            "Lcom/bbm/d/ee;",
+            "Lcom/bbm/d/ff;",
             ">;>;"
         }
     .end annotation
 .end field
 
-.field private f:Lcom/bbm/ui/activities/dj;
+.field private h:Lcom/bbm/ui/activities/cg;
 
 
 # direct methods
@@ -42,49 +42,49 @@
     .locals 1
 
     .prologue
-    .line 62
-    invoke-direct {p0}, Lcom/bbm/ui/activities/akz;-><init>()V
+    .line 61
+    invoke-direct {p0}, Lcom/bbm/bali/ui/main/a/e;-><init>()V
 
-    .line 40
-    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
+    .line 39
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/f;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/e;->b:Lcom/bbm/d/a;
+    iget-object v0, v0, Lcom/bbm/f;->b:Lcom/bbm/d/a;
 
     iput-object v0, p0, Lcom/bbm/ui/activities/ChannelPickerActivity;->c:Lcom/bbm/d/a;
 
-    .line 41
+    .line 40
     iget-object v0, p0, Lcom/bbm/ui/activities/ChannelPickerActivity;->c:Lcom/bbm/d/a;
 
-    invoke-virtual {v0}, Lcom/bbm/d/a;->C()Lcom/bbm/j/w;
+    invoke-virtual {v0}, Lcom/bbm/d/a;->w()Lcom/bbm/j/w;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bbm/ui/activities/ChannelPickerActivity;->d:Lcom/bbm/j/w;
 
-    .line 45
-    new-instance v0, Lcom/bbm/ui/activities/dg;
+    .line 44
+    new-instance v0, Lcom/bbm/ui/activities/cd;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/dg;-><init>(Lcom/bbm/ui/activities/ChannelPickerActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/cd;-><init>(Lcom/bbm/ui/activities/ChannelPickerActivity;)V
 
     iput-object v0, p0, Lcom/bbm/ui/activities/ChannelPickerActivity;->e:Lcom/bbm/j/r;
 
+    .line 62
+    new-instance v0, Lcom/bbm/ui/gj;
+
+    invoke-direct {v0}, Lcom/bbm/ui/gj;-><init>()V
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelPickerActivity;->a(Lcom/bbm/ui/d/b;)V
+
     .line 63
-    new-instance v0, Lcom/bbm/ui/gc;
+    new-instance v0, Lcom/bbm/ui/voice/a;
 
-    invoke-direct {v0}, Lcom/bbm/ui/gc;-><init>()V
+    invoke-direct {v0}, Lcom/bbm/ui/voice/a;-><init>()V
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelPickerActivity;->a(Lcom/bbm/ui/activities/alb;)V
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelPickerActivity;->a(Lcom/bbm/ui/d/b;)V
 
     .line 64
-    new-instance v0, Lcom/bbm/ui/voice/o;
-
-    invoke-direct {v0}, Lcom/bbm/ui/voice/o;-><init>()V
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelPickerActivity;->a(Lcom/bbm/ui/activities/alb;)V
-
-    .line 65
     return-void
 .end method
 
@@ -92,7 +92,7 @@
     .locals 1
 
     .prologue
-    .line 36
+    .line 35
     iget-object v0, p0, Lcom/bbm/ui/activities/ChannelPickerActivity;->d:Lcom/bbm/j/w;
 
     return-object v0
@@ -102,18 +102,18 @@
     .locals 1
 
     .prologue
-    .line 36
+    .line 35
     iget-object v0, p0, Lcom/bbm/ui/activities/ChannelPickerActivity;->c:Lcom/bbm/d/a;
 
     return-object v0
 .end method
 
-.method static synthetic c(Lcom/bbm/ui/activities/ChannelPickerActivity;)Lcom/bbm/ui/activities/dj;
+.method static synthetic c(Lcom/bbm/ui/activities/ChannelPickerActivity;)Lcom/bbm/ui/activities/cg;
     .locals 1
 
     .prologue
-    .line 36
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelPickerActivity;->f:Lcom/bbm/ui/activities/dj;
+    .line 35
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelPickerActivity;->h:Lcom/bbm/ui/activities/cg;
 
     return-object v0
 .end method
@@ -121,21 +121,19 @@
 
 # virtual methods
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 5
+    .locals 3
 
     .prologue
-    const/4 v4, -0x1
+    .line 110
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/e;->onCreate(Landroid/os/Bundle;)V
 
     .line 111
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/akz;->onCreate(Landroid/os/Bundle;)V
-
-    .line 112
-    const v0, 0x7f030013
+    const v0, 0x7f030029
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelPickerActivity;->setContentView(I)V
 
-    .line 114
-    const v0, 0x7f0b0118
+    .line 113
+    const v0, 0x7f0b0172
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelPickerActivity;->findViewById(I)Landroid/view/View;
 
@@ -145,97 +143,95 @@
 
     iput-object v0, p0, Lcom/bbm/ui/activities/ChannelPickerActivity;->a:Landroid/widget/ListView;
 
-    .line 116
-    new-instance v0, Lcom/bbm/ui/activities/dj;
+    .line 115
+    new-instance v0, Lcom/bbm/ui/activities/cg;
 
     iget-object v1, p0, Lcom/bbm/ui/activities/ChannelPickerActivity;->e:Lcom/bbm/j/r;
 
-    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/activities/dj;-><init>(Lcom/bbm/ui/activities/ChannelPickerActivity;Lcom/bbm/j/r;)V
+    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/activities/cg;-><init>(Lcom/bbm/ui/activities/ChannelPickerActivity;Lcom/bbm/j/r;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelPickerActivity;->f:Lcom/bbm/ui/activities/dj;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelPickerActivity;->h:Lcom/bbm/ui/activities/cg;
+
+    .line 116
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelPickerActivity;->a:Landroid/widget/ListView;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelPickerActivity;->h:Lcom/bbm/ui/activities/cg;
+
+    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 117
     iget-object v0, p0, Lcom/bbm/ui/activities/ChannelPickerActivity;->a:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelPickerActivity;->f:Lcom/bbm/ui/activities/dj;
+    new-instance v1, Lcom/bbm/ui/activities/ce;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
-
-    .line 118
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelPickerActivity;->a:Landroid/widget/ListView;
-
-    new-instance v1, Lcom/bbm/ui/activities/dh;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/dh;-><init>(Lcom/bbm/ui/activities/ChannelPickerActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/ce;-><init>(Lcom/bbm/ui/activities/ChannelPickerActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 128
-    new-instance v0, Lcom/bbm/ui/HeaderButtonActionBar;
+    .line 127
+    const v0, 0x7f0b05e8
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelPickerActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelPickerActivity;->b:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelPickerActivity;->b:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelPickerActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0e01c7
+    const v2, 0x7f0e01e9
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelPickerActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setTitle(Ljava/lang/String;)V
 
-    move-result-object v2
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelPickerActivity;->b:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
-    const v3, 0x7f0e0177
+    sget v1, Lcom/bbm/bali/ui/toolbar/b;->c:I
 
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setDisplayOption$58d310a4(I)V
 
-    move-result-object v2
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelPickerActivity;->b:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
-    invoke-direct {v0, p0, v1, v2}, Lcom/bbm/ui/HeaderButtonActionBar;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    new-instance v1, Lcom/bbm/ui/activities/cf;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelPickerActivity;->b:Lcom/bbm/ui/HeaderButtonActionBar;
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/cf;-><init>(Lcom/bbm/ui/activities/ChannelPickerActivity;)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelPickerActivity;->b:Lcom/bbm/ui/HeaderButtonActionBar;
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setNegativeButtonOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    new-instance v1, Lcom/bbm/ui/activities/di;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelPickerActivity;->b:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/di;-><init>(Lcom/bbm/ui/activities/ChannelPickerActivity;)V
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/HeaderButtonActionBar;->setNegativeButtonOnClickListener(Landroid/view/View$OnClickListener;)V
+    const/4 v2, 0x0
 
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelPickerActivity;->getActionBar()Landroid/app/ActionBar;
+    invoke-virtual {p0, v0, v1, v2}, Lcom/bbm/bali/ui/main/a/e;->a(Landroid/support/v7/widget/Toolbar;ZLandroid/view/View$OnClickListener;)V
 
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelPickerActivity;->b:Lcom/bbm/ui/HeaderButtonActionBar;
-
-    new-instance v2, Landroid/app/ActionBar$LayoutParams;
-
-    invoke-direct {v2, v4, v4}, Landroid/app/ActionBar$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v1, v2}, Landroid/app/ActionBar;->setCustomView(Landroid/view/View;Landroid/app/ActionBar$LayoutParams;)V
-
-    const/16 v1, 0x10
-
-    invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setDisplayOptions(I)V
-
-    .line 129
+    .line 128
     return-void
 .end method
 
 .method protected onPause()V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 155
-    invoke-static {p0}, Lcom/bbm/util/fh;->b(Landroid/app/Activity;)V
+    .line 151
+    const/4 v0, 0x0
 
-    .line 156
-    invoke-super {p0}, Lcom/bbm/ui/activities/akz;->onPause()V
+    invoke-static {p0, v0}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;Z)V
 
-    .line 157
+    .line 152
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/e;->onPause()V
+
+    .line 153
     return-void
 .end method
 
@@ -243,9 +239,9 @@
     .locals 0
 
     .prologue
-    .line 150
-    invoke-super {p0}, Lcom/bbm/ui/activities/akz;->onResume()V
+    .line 146
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/e;->onResume()V
 
-    .line 151
+    .line 147
     return-void
 .end method

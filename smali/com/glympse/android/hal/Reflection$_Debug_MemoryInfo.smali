@@ -4,13 +4,13 @@
 
 
 # static fields
-.field private static cR:Z
+.field private static cU:Z
 
-.field private static ds:Ljava/lang/reflect/Method;
+.field private static dv:Ljava/lang/reflect/Method;
 
-.field private static dt:Ljava/lang/reflect/Method;
+.field private static dw:Ljava/lang/reflect/Method;
 
-.field private static du:Ljava/lang/reflect/Method;
+.field private static dx:Ljava/lang/reflect/Method;
 
 
 # direct methods
@@ -23,16 +23,16 @@
     .line 1662
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->cR:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->cU:Z
 
     .line 1663
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->ds:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->dv:Ljava/lang/reflect/Method;
 
     .line 1664
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->dt:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->dw:Ljava/lang/reflect/Method;
 
     .line 1665
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->du:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->dx:Ljava/lang/reflect/Method;
 
     return-void
 .end method
@@ -52,14 +52,14 @@
 
     .prologue
     .line 1670
-    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->cR:Z
+    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->cU:Z
 
     if-nez v0, :cond_0
 
     .line 1672
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->cR:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->cU:Z
 
     .line 1676
     :try_start_0
@@ -73,7 +73,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->ds:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->dv:Ljava/lang/reflect/Method;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_2
 
@@ -90,7 +90,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->dt:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->dw:Ljava/lang/reflect/Method;
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -107,7 +107,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->du:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->dx:Ljava/lang/reflect/Method;
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
 
@@ -142,13 +142,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->Load()V
 
     .line 1725
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->ds:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->dv:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 1729
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->ds:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->dv:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
 
@@ -191,13 +191,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->Load()V
 
     .line 1705
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->dt:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->dw:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 1709
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->dt:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->dw:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
 
@@ -240,13 +240,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->Load()V
 
     .line 1745
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->du:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->dx:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 1749
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->du:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Debug_MemoryInfo;->dx:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
 

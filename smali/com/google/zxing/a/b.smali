@@ -150,7 +150,7 @@
 
     float-to-double v12, v11
 
-    const-wide/high16 v14, 0x3fe8000000000000L
+    const-wide/high16 v14, 0x3fe8000000000000L    # 0.75
 
     cmpg-double v12, v12, v14
 
@@ -158,7 +158,7 @@
 
     float-to-double v12, v11
 
-    const-wide/high16 v14, 0x3ff4000000000000L
+    const-wide/high16 v14, 0x3ff4000000000000L    # 1.25
 
     cmpl-double v11, v12, v14
 
@@ -334,7 +334,7 @@
 
     iput-boolean v2, v0, Lcom/google/zxing/a/b/a;->b:Z
 
-    const/high16 v2, 0x3fc00000
+    const/high16 v2, 0x3fc00000    # 1.5f
 
     move-object/from16 v0, v22
 
@@ -370,7 +370,7 @@
 
     sub-float/2addr v8, v10
 
-    const/high16 v10, 0x3f000000
+    const/high16 v10, 0x3f000000    # 0.5f
 
     add-float/2addr v8, v10
 
@@ -386,7 +386,7 @@
 
     sub-float/2addr v5, v10
 
-    const/high16 v10, 0x3f000000
+    const/high16 v10, 0x3f000000    # 0.5f
 
     add-float/2addr v5, v10
 
@@ -402,7 +402,7 @@
 
     add-float/2addr v4, v10
 
-    const/high16 v10, 0x3f000000
+    const/high16 v10, 0x3f000000    # 0.5f
 
     add-float/2addr v4, v10
 
@@ -418,7 +418,7 @@
 
     add-float/2addr v6, v9
 
-    const/high16 v9, 0x3f000000
+    const/high16 v9, 0x3f000000    # 0.5f
 
     add-float/2addr v6, v9
 
@@ -446,7 +446,7 @@
 
     sub-float/2addr v11, v12
 
-    const/high16 v12, 0x3f000000
+    const/high16 v12, 0x3f000000    # 0.5f
 
     add-float/2addr v11, v12
 
@@ -462,7 +462,7 @@
 
     sub-float/2addr v3, v12
 
-    const/high16 v12, 0x3f000000
+    const/high16 v12, 0x3f000000    # 0.5f
 
     add-float/2addr v3, v12
 
@@ -478,7 +478,7 @@
 
     add-float/2addr v9, v12
 
-    const/high16 v12, 0x3f000000
+    const/high16 v12, 0x3f000000    # 0.5f
 
     add-float/2addr v9, v12
 
@@ -494,7 +494,7 @@
 
     add-float/2addr v2, v7
 
-    const/high16 v7, 0x3f000000
+    const/high16 v7, 0x3f000000    # 0.5f
 
     add-float/2addr v2, v7
 
@@ -1272,7 +1272,7 @@
 
     int-to-float v2, v2
 
-    const/high16 v3, 0x40000000
+    const/high16 v3, 0x40000000    # 2.0f
 
     move-object/from16 v0, v22
 
@@ -1340,7 +1340,7 @@
 
     sub-float/2addr v5, v6
 
-    const/high16 v6, 0x3f000000
+    const/high16 v6, 0x3f000000    # 0.5f
 
     add-float/2addr v5, v6
 
@@ -1360,7 +1360,7 @@
 
     sub-float/2addr v6, v7
 
-    const/high16 v7, 0x3f000000
+    const/high16 v7, 0x3f000000    # 0.5f
 
     add-float/2addr v6, v7
 
@@ -1380,7 +1380,7 @@
 
     add-float/2addr v4, v7
 
-    const/high16 v7, 0x3f000000
+    const/high16 v7, 0x3f000000    # 0.5f
 
     add-float/2addr v4, v7
 
@@ -1400,7 +1400,7 @@
 
     add-float/2addr v2, v7
 
-    const/high16 v7, 0x3f000000
+    const/high16 v7, 0x3f000000    # 0.5f
 
     add-float/2addr v2, v7
 
@@ -1462,7 +1462,7 @@
 
     sub-float/2addr v10, v11
 
-    const/high16 v11, 0x3f000000
+    const/high16 v11, 0x3f000000    # 0.5f
 
     add-float/2addr v10, v11
 
@@ -1482,7 +1482,7 @@
 
     sub-float/2addr v11, v12
 
-    const/high16 v12, 0x3f000000
+    const/high16 v12, 0x3f000000    # 0.5f
 
     add-float/2addr v11, v12
 
@@ -1502,7 +1502,7 @@
 
     add-float/2addr v9, v12
 
-    const/high16 v12, 0x3f000000
+    const/high16 v12, 0x3f000000    # 0.5f
 
     add-float/2addr v9, v12
 
@@ -1522,7 +1522,7 @@
 
     add-float/2addr v2, v8
 
-    const/high16 v3, 0x3f000000
+    const/high16 v3, 0x3f000000    # 0.5f
 
     add-float/2addr v2, v3
 
@@ -1708,35 +1708,35 @@
 
     move-result-object v2
 
-    const/high16 v6, 0x3f000000
+    const/high16 v6, 0x3f000000    # 0.5f
 
-    const/high16 v7, 0x3f000000
+    const/high16 v7, 0x3f000000    # 0.5f
 
     int-to-float v8, v4
 
-    const/high16 v9, 0x3f000000
+    const/high16 v9, 0x3f000000    # 0.5f
 
     sub-float/2addr v8, v9
 
-    const/high16 v9, 0x3f000000
+    const/high16 v9, 0x3f000000    # 0.5f
 
     int-to-float v10, v4
 
-    const/high16 v11, 0x3f000000
+    const/high16 v11, 0x3f000000    # 0.5f
 
     sub-float/2addr v10, v11
 
     int-to-float v11, v4
 
-    const/high16 v12, 0x3f000000
+    const/high16 v12, 0x3f000000    # 0.5f
 
     sub-float/2addr v11, v12
 
-    const/high16 v12, 0x3f000000
+    const/high16 v12, 0x3f000000    # 0.5f
 
     int-to-float v13, v4
 
-    const/high16 v14, 0x3f000000
+    const/high16 v14, 0x3f000000    # 0.5f
 
     sub-float/2addr v13, v14
 
@@ -2205,9 +2205,9 @@
     throw v2
 
     :cond_2f
-    sget-object v8, Lcom/google/zxing/a/a/c;->a:Lcom/google/zxing/a/a/c;
+    sget v8, Lcom/google/zxing/a/a/c;->a:I
 
-    sget-object v7, Lcom/google/zxing/a/a/c;->a:Lcom/google/zxing/a/a/c;
+    sget v7, Lcom/google/zxing/a/a/c;->a:I
 
     const/4 v6, 0x0
 
@@ -2229,7 +2229,7 @@
 
     move v10, v6
 
-    move-object v4, v8
+    move v4, v8
 
     move v8, v2
 
@@ -2244,7 +2244,7 @@
 
     move v5, v3
 
-    move-object v6, v4
+    move v6, v4
 
     :goto_1e
     if-eqz v8, :cond_34
@@ -2304,7 +2304,7 @@
 
     move v8, v4
 
-    move-object v4, v7
+    move v4, v7
 
     move v7, v2
 
@@ -2323,18 +2323,18 @@
 
     move v8, v2
 
-    move-object v4, v6
+    move v4, v6
 
     move v2, v7
 
-    move-object v7, v6
+    move v7, v6
 
     goto :goto_1d
 
     :cond_32
     move v5, v3
 
-    move-object v6, v7
+    move v6, v7
 
     goto :goto_1e
 
@@ -2356,7 +2356,7 @@
     goto :goto_1f
 
     :cond_34
-    sget-object v3, Lcom/google/zxing/a/a/c;->f:Lcom/google/zxing/a/a/c;
+    sget v3, Lcom/google/zxing/a/a/c;->f:I
 
     if-ne v7, v3, :cond_35
 
@@ -2378,7 +2378,7 @@
 
     invoke-virtual {v14, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    move-object v4, v7
+    move v4, v7
 
     move v7, v2
 
@@ -2393,7 +2393,7 @@
     :cond_35
     const/4 v3, 0x5
 
-    sget-object v4, Lcom/google/zxing/a/a/c;->d:Lcom/google/zxing/a/a/c;
+    sget v4, Lcom/google/zxing/a/a/c;->d:I
 
     if-ne v7, v4, :cond_36
 
@@ -2410,7 +2410,7 @@
 
     add-int/2addr v3, v10
 
-    invoke-static {v7, v4}, Lcom/google/zxing/a/a/a;->a(Lcom/google/zxing/a/a/c;I)Ljava/lang/String;
+    invoke-static {v7, v4}, Lcom/google/zxing/a/a/a;->a(II)Ljava/lang/String;
 
     move-result-object v4
 
@@ -2428,9 +2428,9 @@
 
     move-result v7
 
-    invoke-static {v7}, Lcom/google/zxing/a/a/a;->a(C)Lcom/google/zxing/a/a/c;
+    invoke-static {v7}, Lcom/google/zxing/a/a/a;->a(C)I
 
-    move-result-object v7
+    move-result v7
 
     const/4 v10, 0x6
 
@@ -2456,7 +2456,7 @@
 
     const/4 v8, 0x1
 
-    move-object v4, v7
+    move v4, v7
 
     move v7, v2
 
@@ -2472,7 +2472,7 @@
     invoke-virtual {v14, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_38
-    move-object v4, v7
+    move v4, v7
 
     move v7, v2
 
@@ -2548,9 +2548,9 @@
 
     move v2, v7
 
-    move-object v7, v4
+    move v7, v4
 
-    move-object v4, v6
+    move v4, v6
 
     goto/16 :goto_1d
 .end method

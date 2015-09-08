@@ -19,7 +19,7 @@
     .locals 1
 
     .prologue
-    .line 526
+    .line 528
     iput-object p1, p0, Landroid/support/v4/app/y;->c:Landroid/support/v4/app/w;
 
     iput p2, p0, Landroid/support/v4/app/y;->a:I
@@ -39,14 +39,12 @@
     .locals 3
 
     .prologue
-    .line 528
+    .line 530
     iget-object v0, p0, Landroid/support/v4/app/y;->c:Landroid/support/v4/app/w;
 
     iget-object v1, p0, Landroid/support/v4/app/y;->c:Landroid/support/v4/app/w;
 
     iget-object v1, v1, Landroid/support/v4/app/w;->o:Landroid/support/v4/app/q;
-
-    iget-object v1, v1, Landroid/support/v4/app/q;->mHandler:Landroid/os/Handler;
 
     iget v1, p0, Landroid/support/v4/app/y;->a:I
 
@@ -54,6 +52,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/support/v4/app/w;->a(II)Z
 
-    .line 529
+    .line 531
     return-void
 .end method

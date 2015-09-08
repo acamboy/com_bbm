@@ -36,7 +36,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/bbm/util/fh;->c(Landroid/app/Activity;)Landroid/content/Intent;
+    invoke-static {v0}, Lcom/bbm/util/eu;->d(Landroid/app/Activity;)Landroid/content/Intent;
 
     move-result-object v1
 

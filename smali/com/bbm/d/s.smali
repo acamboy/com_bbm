@@ -1,17 +1,15 @@
 .class final Lcom/bbm/d/s;
-.super Lcom/bbm/j/a;
+.super Lcom/bbm/d/b/ab;
 .source "BbmdsModel.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/bbm/j/a",
+        "Lcom/bbm/d/b/ab",
         "<",
-        "Ljava/util/List",
-        "<",
-        "Ljava/lang/String;",
-        ">;>;"
+        "Lcom/bbm/d/hl;",
+        ">;"
     }
 .end annotation
 
@@ -21,64 +19,57 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/d/a;)V
+.method constructor <init>(Lcom/bbm/d/a;Lcom/bbm/j/r;)V
     .locals 0
 
     .prologue
-    .line 184
+    .line 1718
     iput-object p1, p0, Lcom/bbm/d/s;->a:Lcom/bbm/d/a;
 
-    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
+    invoke-direct {p0, p2}, Lcom/bbm/d/b/ab;-><init>(Lcom/bbm/j/r;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final synthetic a()Ljava/lang/Object;
-    .locals 3
+.method public final bridge synthetic a(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 4
 
     .prologue
-    .line 184
-    new-instance v1, Ljava/util/ArrayList;
+    .line 1718
+    check-cast p1, Lcom/bbm/d/hl;
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+    check-cast p2, Lcom/bbm/d/hl;
 
-    iget-object v0, p0, Lcom/bbm/d/s;->a:Lcom/bbm/d/a;
+    iget-wide v0, p1, Lcom/bbm/d/hl;->f:J
 
-    invoke-virtual {v0}, Lcom/bbm/d/a;->O()Lcom/bbm/j/w;
+    iget-wide v2, p2, Lcom/bbm/d/hl;->f:J
 
-    move-result-object v0
+    cmp-long v0, v0, v2
 
-    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+    if-gez v0, :cond_0
 
-    move-result-object v0
-
-    check-cast v0, Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
+    const/4 v0, 0x1
 
     :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    return v0
 
-    move-result v0
+    :cond_0
+    iget-wide v0, p1, Lcom/bbm/d/hl;->f:J
 
-    if-eqz v0, :cond_0
+    iget-wide v2, p2, Lcom/bbm/d/hl;->f:J
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    cmp-long v0, v0, v2
 
-    move-result-object v0
+    if-lez v0, :cond_1
 
-    check-cast v0, Lcom/bbm/d/et;
-
-    iget-object v0, v0, Lcom/bbm/d/et;->a:Ljava/lang/String;
-
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    const/4 v0, -0x1
 
     goto :goto_0
 
-    :cond_0
-    return-object v1
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

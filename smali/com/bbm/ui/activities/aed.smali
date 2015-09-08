@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/aed;
 .super Ljava/lang/Object;
-.source "ReportProblemActivity.java"
+.source "SettingsActivity.java"
 
 # interfaces
-.implements Landroid/text/TextWatcher;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ReportProblemActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ReportProblemActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
     .locals 0
 
     .prologue
-    .line 253
-    iput-object p1, p0, Lcom/bbm/ui/activities/aed;->a:Lcom/bbm/ui/activities/ReportProblemActivity;
+    .line 201
+    iput-object p1, p0, Lcom/bbm/ui/activities/aed;->a:Lcom/bbm/ui/activities/SettingsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,38 +25,30 @@
 
 
 # virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
     .prologue
-    .line 264
-    const-string v0, "afterTextChanged"
+    .line 204
+    const-string v0, "mReportProblemButton Clicked"
 
-    const-class v1, Lcom/bbm/ui/activities/ReportProblemActivity;
+    const-class v1, Lcom/bbm/ui/activities/SettingsActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 265
-    iget-object v0, p0, Lcom/bbm/ui/activities/aed;->a:Lcom/bbm/ui/activities/ReportProblemActivity;
+    .line 206
+    iget-object v0, p0, Lcom/bbm/ui/activities/aed;->a:Lcom/bbm/ui/activities/SettingsActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ReportProblemActivity;->e(Lcom/bbm/ui/activities/ReportProblemActivity;)V
+    new-instance v1, Landroid/content/Intent;
 
-    .line 266
-    return-void
-.end method
+    iget-object v2, p0, Lcom/bbm/ui/activities/aed;->a:Lcom/bbm/ui/activities/SettingsActivity;
 
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
+    const-class v3, Lcom/bbm/ui/activities/ReportProblemActivity;
 
-    .prologue
-    .line 260
-    return-void
-.end method
+    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/SettingsActivity;->startActivity(Landroid/content/Intent;)V
 
-    .prologue
-    .line 256
+    .line 207
     return-void
 .end method

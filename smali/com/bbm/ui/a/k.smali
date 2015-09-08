@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/a/k;
 .super Ljava/lang/Object;
-.source "ChannelPostAdapter.java"
+.source "ChannelPostCommentListAdapter.java"
 
 # interfaces
-.implements Lcom/bbm/ui/c/gn;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/a/f;
+.field final synthetic a:Lcom/bbm/ui/a/j;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/a/f;)V
+.method constructor <init>(Lcom/bbm/ui/a/j;)V
     .locals 0
 
     .prologue
-    .line 379
-    iput-object p1, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/f;
+    .line 74
+    iput-object p1, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/j;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,282 +25,153 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
-    .locals 5
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
     .prologue
-    .line 383
-    iget v0, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
+    .line 77
+    iget-object v0, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/j;
 
-    sparse-switch v0, :sswitch_data_0
-
-    .line 411
-    :goto_0
-    iget-object v0, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/f;
-
-    invoke-static {v0}, Lcom/bbm/ui/a/f;->a(Lcom/bbm/ui/a/f;)Lcom/bbm/ui/activities/cq;
+    invoke-static {v0}, Lcom/bbm/ui/a/j;->a(Lcom/bbm/ui/a/j;)Landroid/content/Context;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+    check-cast v0, Lcom/bbm/ui/activities/ViewChannelPostActivity;
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+    .line 78
+    const v1, 0x7f0b001f
 
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
-
-    .line 412
-    return-void
-
-    .line 386
-    :sswitch_0
-    iget-object v0, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/f;
-
-    invoke-static {v0}, Lcom/bbm/ui/a/f;->a(Lcom/bbm/ui/a/f;)Lcom/bbm/ui/activities/cq;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/f;
-
-    invoke-static {v1}, Lcom/bbm/ui/a/f;->a(Lcom/bbm/ui/a/f;)Lcom/bbm/ui/activities/cq;
+    invoke-virtual {p1, v1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/f;
+    check-cast v1, Lcom/bbm/d/fo;
 
-    invoke-static {v2}, Lcom/bbm/ui/a/f;->g(Lcom/bbm/ui/a/f;)Lcom/bbm/d/em;
+    .line 79
+    iget-boolean v2, v1, Lcom/bbm/d/fo;->c:Z
 
-    move-result-object v2
+    if-eqz v2, :cond_0
 
-    iget-object v2, v2, Lcom/bbm/d/em;->d:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lcom/bbm/util/ac;->a(Landroid/app/Activity;Landroid/content/Context;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 390
-    :sswitch_1
-    iget-object v0, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/f;
-
-    invoke-static {v0}, Lcom/bbm/ui/a/f;->g(Lcom/bbm/ui/a/f;)Lcom/bbm/d/em;
-
-    move-result-object v0
-
-    iget-object v1, v0, Lcom/bbm/d/em;->k:Ljava/util/List;
-
-    .line 391
-    iget-object v0, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/f;
-
-    invoke-static {v0}, Lcom/bbm/ui/a/f;->h(Lcom/bbm/ui/a/f;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/f;
-
-    invoke-static {v2}, Lcom/bbm/ui/a/f;->g(Lcom/bbm/ui/a/f;)Lcom/bbm/d/em;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->d()Ljava/lang/String;
 
     move-result-object v2
 
-    iget-object v2, v2, Lcom/bbm/d/em;->j:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/util/o;
-
-    .line 392
-    if-nez v0, :cond_0
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    invoke-static {v2}, Lcom/bbm/util/ec;->b(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-lez v2, :cond_0
+    if-nez v2, :cond_0
 
-    .line 393
-    iget-object v0, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/f;
+    .line 80
+    new-instance v1, Landroid/content/Intent;
 
-    invoke-static {v0}, Lcom/bbm/ui/a/f;->e(Lcom/bbm/ui/a/f;)Lcom/bbm/d/ee;
+    iget-object v2, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/j;
 
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/bbm/d/ee;->O:Ljava/lang/String;
-
-    iget-object v2, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/f;
-
-    invoke-static {v2}, Lcom/bbm/ui/a/f;->g(Lcom/bbm/ui/a/f;)Lcom/bbm/d/em;
+    invoke-static {v2}, Lcom/bbm/ui/a/j;->a(Lcom/bbm/ui/a/j;)Landroid/content/Context;
 
     move-result-object v2
 
-    iget-object v2, v2, Lcom/bbm/d/em;->j:Ljava/lang/String;
+    const-class v3, Lcom/bbm/ui/activities/ChannelDetailsActivity;
 
-    invoke-static {v1, v0, v2}, Lcom/bbm/util/r;->a(Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/util/o;
+    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 81
+    const-string v2, "bbm_channel_uri"
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->d()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 394
-    if-eqz v0, :cond_0
+    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 395
-    iget-object v1, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/f;
+    .line 82
+    iget-object v0, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/j;
 
-    invoke-static {v1}, Lcom/bbm/ui/a/f;->h(Lcom/bbm/ui/a/f;)Ljava/util/HashMap;
+    invoke-static {v0}, Lcom/bbm/ui/a/j;->a(Lcom/bbm/ui/a/j;)Landroid/content/Context;
 
-    move-result-object v1
+    move-result-object v0
 
-    iget-object v2, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/f;
+    invoke-virtual {v0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    invoke-static {v2}, Lcom/bbm/ui/a/f;->g(Lcom/bbm/ui/a/f;)Lcom/bbm/d/em;
+    .line 97
+    :goto_0
+    return-void
 
-    move-result-object v2
-
-    iget-object v2, v2, Lcom/bbm/d/em;->j:Ljava/lang/String;
-
-    invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 398
+    .line 84
     :cond_0
-    iget-object v1, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/f;
+    new-instance v2, Landroid/content/Intent;
 
-    invoke-static {v1}, Lcom/bbm/ui/a/f;->a(Lcom/bbm/ui/a/f;)Lcom/bbm/ui/activities/cq;
+    iget-object v0, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/j;
 
-    move-result-object v1
+    invoke-static {v0}, Lcom/bbm/ui/a/j;->a(Lcom/bbm/ui/a/j;)Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/f;
+    move-result-object v0
 
-    invoke-static {v2}, Lcom/bbm/ui/a/f;->g(Lcom/bbm/ui/a/f;)Lcom/bbm/d/em;
+    const-class v3, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;
 
-    move-result-object v2
+    invoke-direct {v2, v0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    iget-object v2, v2, Lcom/bbm/d/em;->s:Ljava/lang/String;
+    .line 85
+    const-string v0, "userUri"
 
-    iget-object v3, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/f;
+    iget-object v3, v1, Lcom/bbm/d/fo;->o:Ljava/lang/String;
 
-    invoke-static {v3}, Lcom/bbm/ui/a/f;->g(Lcom/bbm/ui/a/f;)Lcom/bbm/d/em;
+    invoke-virtual {v2, v0, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    move-result-object v3
+    .line 87
+    iget-object v3, v1, Lcom/bbm/d/fo;->b:Ljava/util/List;
 
-    iget-object v3, v3, Lcom/bbm/d/em;->d:Ljava/lang/String;
+    .line 88
+    invoke-interface {v3}, Ljava/util/List;->size()I
 
-    if-nez v0, :cond_1
+    move-result v0
 
-    const/4 v0, 0x0
+    if-lez v0, :cond_1
 
-    :goto_1
-    iget-object v4, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/f;
+    .line 89
+    iget-object v0, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/j;
 
-    invoke-static {v4}, Lcom/bbm/ui/a/f;->g(Lcom/bbm/ui/a/f;)Lcom/bbm/d/em;
+    invoke-static {v0}, Lcom/bbm/ui/a/j;->a(Lcom/bbm/ui/a/j;)Landroid/content/Context;
 
-    move-result-object v4
+    move-result-object v0
 
-    iget-object v4, v4, Lcom/bbm/d/em;->j:Ljava/lang/String;
+    check-cast v0, Lcom/bbm/ui/activities/ViewChannelPostActivity;
 
-    invoke-static {v1, v2, v3, v0, v4}, Lcom/bbm/util/ac;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/bbm/util/b/i;->a(Landroid/app/Activity;)Landroid/graphics/Point;
 
-    goto/16 :goto_0
+    move-result-object v0
 
+    .line 90
+    iget v0, v0, Landroid/graphics/Point;->x:I
+
+    .line 91
+    invoke-static {v3, v0}, Lcom/bbm/util/n;->a(Ljava/util/List;I)Lcom/bbm/util/n;
+
+    move-result-object v0
+
+    .line 92
+    const-string v3, "imageUri"
+
+    iget-object v0, v0, Lcom/bbm/util/n;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 94
     :cond_1
-    iget-object v0, v0, Lcom/bbm/util/o;->c:Ljava/lang/String;
+    const-string v0, "userName"
 
-    goto :goto_1
+    iget-object v1, v1, Lcom/bbm/d/fo;->f:Ljava/lang/String;
 
-    .line 402
-    :sswitch_2
-    iget-object v0, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/f;
+    invoke-virtual {v2, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-static {v0}, Lcom/bbm/ui/a/f;->a(Lcom/bbm/ui/a/f;)Lcom/bbm/ui/activities/cq;
+    .line 95
+    iget-object v0, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/j;
 
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/f;
-
-    invoke-static {v1}, Lcom/bbm/ui/a/f;->e(Lcom/bbm/ui/a/f;)Lcom/bbm/d/ee;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lcom/bbm/d/ee;->O:Ljava/lang/String;
-
-    iget-object v2, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/f;
-
-    invoke-static {v2}, Lcom/bbm/ui/a/f;->g(Lcom/bbm/ui/a/f;)Lcom/bbm/d/em;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lcom/bbm/d/em;->j:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lcom/bbm/util/ac;->a(Lcom/bbm/ui/activities/ey;Ljava/lang/String;Ljava/lang/String;)V
-
-    goto/16 :goto_0
-
-    .line 405
-    :sswitch_3
-    iget-object v0, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/f;
-
-    invoke-static {v0}, Lcom/bbm/ui/a/f;->a(Lcom/bbm/ui/a/f;)Lcom/bbm/ui/activities/cq;
+    invoke-static {v0}, Lcom/bbm/ui/a/j;->a(Lcom/bbm/ui/a/j;)Landroid/content/Context;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/f;
+    invoke-virtual {v0, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    invoke-static {v1}, Lcom/bbm/ui/a/f;->e(Lcom/bbm/ui/a/f;)Lcom/bbm/d/ee;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lcom/bbm/d/ee;->O:Ljava/lang/String;
-
-    iget-object v2, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/f;
-
-    invoke-static {v2}, Lcom/bbm/ui/a/f;->g(Lcom/bbm/ui/a/f;)Lcom/bbm/d/em;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lcom/bbm/d/em;->j:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lcom/bbm/util/ac;->b(Lcom/bbm/ui/activities/ey;Ljava/lang/String;Ljava/lang/String;)V
-
-    goto/16 :goto_0
-
-    .line 408
-    :sswitch_4
-    iget-object v0, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/f;
-
-    invoke-static {v0}, Lcom/bbm/ui/a/f;->a(Lcom/bbm/ui/a/f;)Lcom/bbm/ui/activities/cq;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/f;
-
-    invoke-static {v1}, Lcom/bbm/ui/a/f;->e(Lcom/bbm/ui/a/f;)Lcom/bbm/d/ee;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lcom/bbm/d/ee;->O:Ljava/lang/String;
-
-    iget-object v2, p0, Lcom/bbm/ui/a/k;->a:Lcom/bbm/ui/a/f;
-
-    invoke-static {v2}, Lcom/bbm/ui/a/f;->g(Lcom/bbm/ui/a/f;)Lcom/bbm/d/em;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lcom/bbm/d/em;->j:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lcom/bbm/util/ac;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V
-
-    goto/16 :goto_0
-
-    .line 383
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        0x7f0b0018 -> :sswitch_0
-        0x7f0b0026 -> :sswitch_3
-        0x7f0b002a -> :sswitch_2
-        0x7f0b002c -> :sswitch_1
-        0x7f0b0031 -> :sswitch_4
-    .end sparse-switch
+    goto :goto_0
 .end method

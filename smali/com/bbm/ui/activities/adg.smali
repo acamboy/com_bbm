@@ -1,6 +1,6 @@
-.class final enum Lcom/bbm/ui/activities/adg;
+.class final Lcom/bbm/ui/activities/adg;
 .super Ljava/lang/Enum;
-.source "ProfileIconSourceActivity.java"
+.source "SetChannelAvatarActivity.java"
 
 
 # annotations
@@ -15,101 +15,47 @@
 
 
 # static fields
-.field public static final enum a:Lcom/bbm/ui/activities/adg;
+.field public static final enum a:I
 
-.field public static final enum b:Lcom/bbm/ui/activities/adg;
-
-.field private static final synthetic c:[Lcom/bbm/ui/activities/adg;
+.field private static final synthetic b:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 3
 
     .prologue
-    const/4 v3, 0x1
+    const/4 v0, 0x1
 
-    const/4 v2, 0x0
+    .line 171
+    sput v0, Lcom/bbm/ui/activities/adg;->a:I
 
-    .line 227
-    new-instance v0, Lcom/bbm/ui/activities/adg;
+    .line 170
+    new-array v0, v0, [I
 
-    const-string v1, "PICTURE"
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v1, v2}, Lcom/bbm/ui/activities/adg;-><init>(Ljava/lang/String;I)V
+    sget v2, Lcom/bbm/ui/activities/adg;->a:I
 
-    sput-object v0, Lcom/bbm/ui/activities/adg;->a:Lcom/bbm/ui/activities/adg;
+    aput v2, v0, v1
 
-    .line 228
-    new-instance v0, Lcom/bbm/ui/activities/adg;
-
-    const-string v1, "SAMPLE_PICTURE"
-
-    invoke-direct {v0, v1, v3}, Lcom/bbm/ui/activities/adg;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/ui/activities/adg;->b:Lcom/bbm/ui/activities/adg;
-
-    .line 226
-    const/4 v0, 0x2
-
-    new-array v0, v0, [Lcom/bbm/ui/activities/adg;
-
-    sget-object v1, Lcom/bbm/ui/activities/adg;->a:Lcom/bbm/ui/activities/adg;
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lcom/bbm/ui/activities/adg;->b:Lcom/bbm/ui/activities/adg;
-
-    aput-object v1, v0, v3
-
-    sput-object v0, Lcom/bbm/ui/activities/adg;->c:[Lcom/bbm/ui/activities/adg;
+    sput-object v0, Lcom/bbm/ui/activities/adg;->b:[I
 
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
-
-    .prologue
-    .line 226
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lcom/bbm/ui/activities/adg;
+.method public static a()[I
     .locals 1
 
     .prologue
-    .line 226
-    const-class v0, Lcom/bbm/ui/activities/adg;
+    .line 170
+    sget-object v0, Lcom/bbm/ui/activities/adg;->b:[I
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/activities/adg;
-
-    return-object v0
-.end method
-
-.method public static values()[Lcom/bbm/ui/activities/adg;
-    .locals 1
-
-    .prologue
-    .line 226
-    sget-object v0, Lcom/bbm/ui/activities/adg;->c:[Lcom/bbm/ui/activities/adg;
-
-    invoke-virtual {v0}, [Lcom/bbm/ui/activities/adg;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, [I->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lcom/bbm/ui/activities/adg;
+    check-cast v0, [I
 
     return-object v0
 .end method

@@ -1,28 +1,19 @@
 .class public Lcom/bbm/ui/activities/AppStoreActivity;
-.super Lcom/bbm/ui/activities/ey;
+.super Lcom/bbm/bali/ui/main/a/a;
 .source "AppStoreActivity.java"
 
 
 # instance fields
-.field private a:Lcom/bbm/ui/c/l;
-
-.field private final b:Lcom/bbm/ui/cn;
+.field private a:Lcom/bbm/ui/c/aa;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 21
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ey;-><init>()V
-
-    .line 84
-    new-instance v0, Lcom/bbm/ui/activities/q;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/q;-><init>(Lcom/bbm/ui/activities/AppStoreActivity;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/AppStoreActivity;->b:Lcom/bbm/ui/cn;
+    .line 14
+    invoke-direct {p0}, Lcom/bbm/bali/ui/main/a/a;-><init>()V
 
     return-void
 .end method
@@ -33,36 +24,100 @@
     .locals 4
 
     .prologue
-    const/4 v3, 0x0
+    .line 21
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onCreate(Landroid/os/Bundle;)V
 
-    .line 28
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/ey;->onCreate(Landroid/os/Bundle;)V
-
-    .line 30
-    const v0, 0x7f03003c
+    .line 23
+    const v0, 0x7f030057
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/AppStoreActivity;->setContentView(I)V
 
-    .line 32
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/AppStoreActivity;->getActionBar()Landroid/app/ActionBar;
+    .line 25
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/AppStoreActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 33
-    invoke-virtual {v0, v3}, Landroid/app/ActionBar;->setDisplayShowHomeEnabled(Z)V
+    const v1, 0x7f0e07c3
 
-    .line 34
-    invoke-virtual {v0, v3}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 35
-    invoke-virtual {v0, v3}, Landroid/app/ActionBar;->setDisplayUseLogoEnabled(Z)V
+    move-result-object v0
 
-    .line 37
+    .line 26
     invoke-virtual {p0}, Lcom/bbm/ui/activities/AppStoreActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
     const-string v2, "collection_name"
+
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    .line 27
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/AppStoreActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string v1, "collection_name"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    .line 30
+    :goto_0
+    const v0, 0x7f0b013c
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/AppStoreActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v7/widget/Toolbar;
+
+    .line 31
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/activities/AppStoreActivity;->a(Landroid/support/v7/widget/Toolbar;Ljava/lang/String;)V
+
+    .line 33
+    new-instance v0, Lcom/bbm/ui/c/aa;
+
+    invoke-direct {v0}, Lcom/bbm/ui/c/aa;-><init>()V
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/AppStoreActivity;->a:Lcom/bbm/ui/c/aa;
+
+    .line 35
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 36
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/AppStoreActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v1
+
+    const-string v2, "appUpdateAfterPurchase"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    .line 37
+    const-string v2, "appUpdateAfterPurchase"
+
+    invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+
+    .line 38
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/AppStoreActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v1
+
+    const-string v2, "collection_id"
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
 
@@ -70,63 +125,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 38
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/AppStoreActivity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v1
-
-    const-string v2, "collection_name"
-
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
     .line 39
-    invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
-
-    .line 42
-    :cond_0
-    new-instance v0, Lcom/bbm/ui/c/l;
-
-    invoke-direct {v0}, Lcom/bbm/ui/c/l;-><init>()V
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/AppStoreActivity;->a:Lcom/bbm/ui/c/l;
-
-    .line 44
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    .line 45
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/AppStoreActivity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v1
-
-    const-string v2, "updateAfterPurchase"
-
-    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
-    move-result v1
-
-    .line 46
-    const-string v2, "updateAfterPurchase"
-
-    invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
-
-    .line 47
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/AppStoreActivity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v1
-
-    const-string v2, "collection_id"
-
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 48
     invoke-virtual {p0}, Lcom/bbm/ui/activities/AppStoreActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
@@ -137,69 +136,37 @@
 
     move-result-object v1
 
-    .line 49
+    .line 40
     const-string v2, "collection_id"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 51
-    :cond_1
-    iget-object v1, p0, Lcom/bbm/ui/activities/AppStoreActivity;->a:Lcom/bbm/ui/c/l;
+    .line 42
+    :cond_0
+    iget-object v1, p0, Lcom/bbm/ui/activities/AppStoreActivity;->a:Lcom/bbm/ui/c/aa;
 
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/c/l;->setArguments(Landroid/os/Bundle;)V
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/c/aa;->setArguments(Landroid/os/Bundle;)V
 
-    .line 53
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/AppStoreActivity;->getFragmentManager()Landroid/app/FragmentManager;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
+    .line 44
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/AppStoreActivity;->getSupportFragmentManager()Landroid/support/v4/app/v;
 
     move-result-object v0
 
-    .line 54
-    const v1, 0x7f0b0228
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/AppStoreActivity;->a:Lcom/bbm/ui/c/l;
-
-    invoke-virtual {v0, v1, v2}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
-
-    .line 55
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/AppStoreActivity;->isFinishing()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    .line 56
-    invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commitAllowingStateLoss()I
-
-    .line 59
-    :cond_2
-    const v0, 0x7f0b00bf
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/AppStoreActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0}, Landroid/support/v4/app/v;->a()Landroid/support/v4/app/ag;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/FooterActionBar;
+    .line 45
+    const v1, 0x7f0b0288
 
-    .line 60
-    new-instance v1, Lcom/bbm/ui/activities/p;
+    iget-object v2, p0, Lcom/bbm/ui/activities/AppStoreActivity;->a:Lcom/bbm/ui/c/aa;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/p;-><init>(Lcom/bbm/ui/activities/AppStoreActivity;)V
+    invoke-virtual {v0, v1, v2}, Landroid/support/v4/app/ag;->b(ILandroid/support/v4/app/Fragment;)Landroid/support/v4/app/ag;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
+    .line 46
+    invoke-virtual {v0}, Landroid/support/v4/app/ag;->a()I
 
-    .line 67
-    invoke-virtual {v0, v3}, Lcom/bbm/ui/FooterActionBar;->setOverflowEnabled(Z)V
-
-    .line 68
-    iget-object v1, p0, Lcom/bbm/ui/activities/AppStoreActivity;->b:Lcom/bbm/ui/cn;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
-
-    .line 70
+    .line 48
     invoke-virtual {p0}, Lcom/bbm/ui/activities/AppStoreActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -210,9 +177,9 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_2
 
-    .line 71
+    .line 49
     invoke-virtual {p0}, Lcom/bbm/ui/activities/AppStoreActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -223,26 +190,26 @@
 
     move-result-object v0
 
-    .line 72
+    .line 50
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    if-nez v1, :cond_4
+    if-nez v1, :cond_2
 
-    .line 73
+    .line 51
     new-instance v1, Landroid/content/Intent;
 
     const-class v2, Lcom/bbm/ui/activities/AppDetailsActivity;
 
     invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 75
+    .line 53
     const-string v2, "app_id"
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 76
+    .line 54
     invoke-virtual {p0}, Lcom/bbm/ui/activities/AppStoreActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -253,9 +220,9 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_1
 
-    .line 77
+    .line 55
     const-string v0, "viewSource"
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/AppStoreActivity;->getIntent()Landroid/content/Intent;
@@ -270,28 +237,33 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
-    .line 79
-    :cond_3
+    .line 57
+    :cond_1
     invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/AppStoreActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 82
-    :cond_4
+    .line 60
+    :cond_2
     return-void
+
+    :cond_3
+    move-object v1, v0
+
+    goto/16 :goto_0
 .end method
 
 .method protected onDestroy()V
     .locals 1
 
     .prologue
-    .line 109
+    .line 69
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/AppStoreActivity;->a:Lcom/bbm/ui/c/l;
+    iput-object v0, p0, Lcom/bbm/ui/activities/AppStoreActivity;->a:Lcom/bbm/ui/c/aa;
 
-    .line 110
-    invoke-super {p0}, Lcom/bbm/ui/activities/ey;->onDestroy()V
+    .line 70
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/a;->onDestroy()V
 
-    .line 111
+    .line 71
     return-void
 .end method
 
@@ -299,9 +271,9 @@
     .locals 0
 
     .prologue
-    .line 104
-    invoke-super {p0}, Lcom/bbm/ui/activities/ey;->onResume()V
+    .line 64
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/a;->onResume()V
 
-    .line 105
+    .line 65
     return-void
 .end method

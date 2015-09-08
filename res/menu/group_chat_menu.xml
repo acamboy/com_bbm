@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_bbm_meetings" android:id="@id/group_chat_menu_bbm_meetings" android:title="@string/start_meeting" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_menu_add_group_contact" android:id="@id/group_chat_invite" android:title="@string/slide_menu_invite" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_menu_clear_chat" android:id="@id/group_chat_menu_clear_chat" android:title="@string/group_conversation_slide_menu_clear_chat" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_menu_copy" android:id="@id/group_chat_menu_copy" android:title="@string/group_conversation_slide_menu_copy_chat" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_menu_send_email" android:id="@id/group_chat_menu_email" android:title="@string/group_conversation_slide_menu_email_chat" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_menu_chat_history" android:id="@id/group_chat_menu_history" android:title="@string/menu_history" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_menu_group_settings" android:id="@id/group_chat_menu_setting" android:title="@string/slide_menu_group_settings" app:showAsAction="never" />
+</menu>

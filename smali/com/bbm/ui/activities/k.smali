@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 177
+    .line 180
     iput-object p1, p0, Lcom/bbm/ui/activities/k;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,7 +29,7 @@
     .locals 0
 
     .prologue
-    .line 182
+    .line 185
     return-void
 .end method
 
@@ -37,7 +37,7 @@
     .locals 0
 
     .prologue
-    .line 187
+    .line 190
     return-void
 .end method
 
@@ -49,7 +49,7 @@
 
     const/4 v2, 0x0
 
-    .line 191
+    .line 194
     iget-object v3, p0, Lcom/bbm/ui/activities/k;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     iget-object v0, p0, Lcom/bbm/ui/activities/k;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
@@ -66,7 +66,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/bbm/util/ec;->b(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -77,16 +77,16 @@
     :goto_0
     invoke-static {v3, v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->a(Lcom/bbm/ui/activities/AddChannelPostActivity;Z)Z
 
-    .line 192
+    .line 195
     iget-object v0, p0, Lcom/bbm/ui/activities/k;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->p(Lcom/bbm/ui/activities/AddChannelPostActivity;)Lcom/bbm/ui/HeaderButtonActionBar;
+    invoke-static {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->q(Lcom/bbm/ui/activities/AddChannelPostActivity;)Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
     move-result-object v3
 
     iget-object v0, p0, Lcom/bbm/ui/activities/k;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->n(Lcom/bbm/ui/activities/AddChannelPostActivity;)Z
+    invoke-static {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->o(Lcom/bbm/ui/activities/AddChannelPostActivity;)Z
 
     move-result v0
 
@@ -94,7 +94,7 @@
 
     iget-object v0, p0, Lcom/bbm/ui/activities/k;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->o(Lcom/bbm/ui/activities/AddChannelPostActivity;)Z
+    invoke-static {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->p(Lcom/bbm/ui/activities/AddChannelPostActivity;)Z
 
     move-result v0
 
@@ -103,9 +103,9 @@
     move v0, v1
 
     :goto_1
-    invoke-virtual {v3, v0}, Lcom/bbm/ui/HeaderButtonActionBar;->setPositiveButtonEnabled(Z)V
+    invoke-virtual {v3, v0}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setPositiveButtonEnabled(Z)V
 
-    .line 194
+    .line 197
     iget-object v0, p0, Lcom/bbm/ui/activities/k;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     invoke-static {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->j(Lcom/bbm/ui/activities/AddChannelPostActivity;)Lcom/bbm/ui/InlineImageEditText;
@@ -124,13 +124,13 @@
 
     move-result v0
 
-    .line 195
+    .line 198
     if-ltz v0, :cond_0
 
-    .line 196
+    .line 199
     iget-object v3, p0, Lcom/bbm/ui/activities/k;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
-    invoke-static {v3}, Lcom/bbm/ui/activities/AddChannelPostActivity;->q(Lcom/bbm/ui/activities/AddChannelPostActivity;)Landroid/widget/TextView;
+    invoke-static {v3}, Lcom/bbm/ui/activities/AddChannelPostActivity;->r(Lcom/bbm/ui/activities/AddChannelPostActivity;)Landroid/widget/TextView;
 
     move-result-object v3
 
@@ -140,7 +140,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0e01d5
+    const v5, 0x7f0e01f7
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -160,19 +160,19 @@
 
     invoke-virtual {v3, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 198
+    .line 201
     :cond_0
     return-void
 
     :cond_1
     move v0, v2
 
-    .line 191
+    .line 194
     goto :goto_0
 
     :cond_2
     move v0, v2
 
-    .line 192
+    .line 195
     goto :goto_1
 .end method

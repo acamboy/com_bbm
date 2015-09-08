@@ -1,114 +1,57 @@
-.class public final Lcom/google/android/gms/internal/gc;
+.class final Lcom/google/android/gms/internal/gc;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Lcom/google/android/gms/games/multiplayer/realtime/RealTimeSocket;
 
-
-# static fields
-.field private static final TAG:Ljava/lang/String;
+# annotations
+.annotation runtime Lcom/google/android/gms/internal/mb;
+.end annotation
 
 
 # instance fields
-.field private final AC:Landroid/os/ParcelFileDescriptor;
+.field final a:Ljava/lang/String;
 
-.field private final HA:Ljava/io/OutputStream;
+.field final b:I
 
-.field private final Hz:Ljava/io/InputStream;
+.field final c:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcom/google/android/gms/internal/fz;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field final d:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-class v0, Lcom/google/android/gms/internal/gc;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/google/android/gms/internal/gc;->TAG:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method constructor <init>(Landroid/os/ParcelFileDescriptor;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;ILjava/util/List;Ljava/lang/String;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "I",
+            "Ljava/util/List",
+            "<",
+            "Lcom/google/android/gms/internal/fz;",
+            ">;",
+            "Ljava/lang/String;",
+            ")V"
+        }
+    .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/gms/internal/gc;->AC:Landroid/os/ParcelFileDescriptor;
+    iput-object p1, p0, Lcom/google/android/gms/internal/gc;->a:Ljava/lang/String;
 
-    new-instance v0, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;
+    iput p2, p0, Lcom/google/android/gms/internal/gc;->b:I
 
-    invoke-direct {v0, p1}, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;-><init>(Landroid/os/ParcelFileDescriptor;)V
+    iput-object p3, p0, Lcom/google/android/gms/internal/gc;->c:Ljava/util/List;
 
-    iput-object v0, p0, Lcom/google/android/gms/internal/gc;->Hz:Ljava/io/InputStream;
-
-    new-instance v0, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;
-
-    invoke-direct {v0, p1}, Landroid/os/ParcelFileDescriptor$AutoCloseOutputStream;-><init>(Landroid/os/ParcelFileDescriptor;)V
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/gc;->HA:Ljava/io/OutputStream;
+    iput-object p4, p0, Lcom/google/android/gms/internal/gc;->d:Ljava/lang/String;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final close()V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/gc;->AC:Landroid/os/ParcelFileDescriptor;
-
-    invoke-virtual {v0}, Landroid/os/ParcelFileDescriptor;->close()V
-
-    return-void
-.end method
-
-.method public final getInputStream()Ljava/io/InputStream;
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/gc;->Hz:Ljava/io/InputStream;
-
-    return-object v0
-.end method
-
-.method public final getOutputStream()Ljava/io/OutputStream;
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/gc;->HA:Ljava/io/OutputStream;
-
-    return-object v0
-.end method
-
-.method public final getParcelFileDescriptor()Landroid/os/ParcelFileDescriptor;
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/gc;->AC:Landroid/os/ParcelFileDescriptor;
-
-    return-object v0
-.end method
-
-.method public final isClosed()Z
-    .locals 1
-
-    :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/internal/gc;->Hz:Ljava/io/InputStream;
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->available()I
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-
-    :catch_0
-    move-exception v0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
 .end method

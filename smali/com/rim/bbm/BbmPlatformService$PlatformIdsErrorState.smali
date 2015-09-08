@@ -12,10 +12,10 @@
     .locals 1
 
     .prologue
-    .line 435
+    .line 432
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 440
+    .line 437
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/rim/bbm/BbmPlatformService$PlatformIdsErrorState;->ids_error:I
@@ -33,15 +33,15 @@
 
     const/4 v1, 0x0
 
-    .line 444
+    .line 441
     if-ne p0, p1, :cond_1
 
-    .line 451
+    .line 448
     :cond_0
     :goto_0
     return v0
 
-    .line 445
+    .line 442
     :cond_1
     if-eqz p1, :cond_2
 
@@ -60,11 +60,11 @@
 
     goto :goto_0
 
-    .line 447
+    .line 444
     :cond_3
     check-cast p1, Lcom/rim/bbm/BbmPlatformService$PlatformIdsErrorState;
 
-    .line 449
+    .line 446
     iget v2, p0, Lcom/rim/bbm/BbmPlatformService$PlatformIdsErrorState;->ids_error:I
 
     iget v3, p1, Lcom/rim/bbm/BbmPlatformService$PlatformIdsErrorState;->ids_error:I
@@ -80,7 +80,7 @@
     .locals 1
 
     .prologue
-    .line 456
+    .line 453
     iget v0, p0, Lcom/rim/bbm/BbmPlatformService$PlatformIdsErrorState;->ids_error:I
 
     return v0

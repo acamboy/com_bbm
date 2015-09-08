@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:id="@id/list_item_broadcast_suggestion_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textColor="@drawable/selector_invite_grid_item_text_color" android:gravity="center" android:id="@id/list_item_broadcast_suggestion_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/InviteContactSuggestionStyle" />
+    <com.bbm.ui.InlineImageTextView android:textColor="@drawable/selector_invite_grid_item_text_color" android:gravity="center" android:id="@id/list_item_broadcast_suggestion_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="@style/InviteContactSuggestionStyle" />
 </RelativeLayout>

@@ -1,350 +1,422 @@
 .class public final Lcom/bbm/ui/b/k;
-.super Lcom/bbm/ui/b/o;
-.source "BBInfoAndInputDialog.java"
+.super Lcom/bbm/ui/b/m;
+.source "BBInfoAndRadioButtonDialogFragment.java"
 
 
 # instance fields
-.field private d:Landroid/widget/EditText;
+.field public a:[I
 
-.field private e:Ljava/lang/String;
+.field public b:[Ljava/lang/String;
 
-.field private f:Ljava/lang/String;
+.field public c:[Z
 
-.field private g:I
+.field private d:Landroid/widget/TextView;
 
-.field private h:Lcom/bbm/ui/he;
+.field private e:Landroid/widget/TextView;
 
-.field private final i:Landroid/text/TextWatcher;
+.field private f:Landroid/widget/RadioButton;
+
+.field private g:Landroid/widget/RadioButton;
+
+.field private h:Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
     .prologue
-    .line 53
-    invoke-direct {p0, p1}, Lcom/bbm/ui/b/o;-><init>(Landroid/content/Context;)V
+    const/4 v1, 0x2
 
-    .line 24
-    const/4 v0, -0x1
+    .line 55
+    invoke-direct {p0}, Lcom/bbm/ui/b/m;-><init>()V
 
-    iput v0, p0, Lcom/bbm/ui/b/k;->g:I
+    .line 22
+    new-array v0, v1, [I
 
-    .line 27
+    fill-array-data v0, :array_0
+
+    iput-object v0, p0, Lcom/bbm/ui/b/k;->a:[I
+
+    .line 23
+    new-array v0, v1, [Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/bbm/ui/b/k;->b:[Ljava/lang/String;
+
+    .line 26
+    new-array v0, v1, [Z
+
+    fill-array-data v0, :array_1
+
+    iput-object v0, p0, Lcom/bbm/ui/b/k;->c:[Z
+
+    .line 35
     new-instance v0, Lcom/bbm/ui/b/l;
 
     invoke-direct {v0, p0}, Lcom/bbm/ui/b/l;-><init>(Lcom/bbm/ui/b/k;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/b/k;->i:Landroid/text/TextWatcher;
+    iput-object v0, p0, Lcom/bbm/ui/b/k;->h:Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
-    .line 54
+    .line 56
     return-void
+
+    .line 22
+    :array_0
+    .array-data 4
+        0x8
+        0x8
+    .end array-data
+
+    .line 26
+    :array_1
+    .array-data 1
+        0x0t
+        0x0t
+    .end array-data
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/b/k;)Landroid/widget/EditText;
+.method static synthetic a(Lcom/bbm/ui/b/k;)Landroid/widget/RadioButton;
     .locals 1
 
     .prologue
-    .line 18
-    iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
+    .line 19
+    iget-object v0, p0, Lcom/bbm/ui/b/k;->f:Landroid/widget/RadioButton;
 
     return-object v0
+.end method
+
+.method public static a(Landroid/app/Activity;)Lcom/bbm/ui/b/k;
+    .locals 4
+
+    .prologue
+    const/4 v3, 0x1
+
+    .line 59
+    new-instance v0, Lcom/bbm/ui/b/k;
+
+    invoke-direct {v0}, Lcom/bbm/ui/b/k;-><init>()V
+
+    .line 60
+    invoke-virtual {v0, p0}, Lcom/bbm/ui/b/k;->b(Landroid/app/Activity;)Lcom/bbm/ui/b/m;
+
+    .line 61
+    invoke-virtual {v0, v3}, Lcom/bbm/ui/b/k;->setRetainInstance(Z)V
+
+    .line 64
+    new-instance v1, Landroid/os/Bundle;
+
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+
+    .line 65
+    const-string v2, "showpositivebutton"
+
+    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+
+    .line 66
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/k;->setArguments(Landroid/os/Bundle;)V
+
+    .line 68
+    return-object v0
+.end method
+
+.method static synthetic b(Lcom/bbm/ui/b/k;)Landroid/widget/RadioButton;
+    .locals 1
+
+    .prologue
+    .line 19
+    iget-object v0, p0, Lcom/bbm/ui/b/k;->g:Landroid/widget/RadioButton;
+
+    return-object v0
+.end method
+
+.method static synthetic c(Lcom/bbm/ui/b/k;)[Z
+    .locals 1
+
+    .prologue
+    .line 19
+    iget-object v0, p0, Lcom/bbm/ui/b/k;->c:[Z
+
+    return-object v0
+.end method
+
+.method private d()V
+    .locals 4
+
+    .prologue
+    const/16 v3, 0x8
+
+    const/4 v2, 0x0
+
+    .line 112
+    iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/TextView;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/bbm/ui/b/k;->f:Landroid/widget/RadioButton;
+
+    if-eqz v0, :cond_0
+
+    .line 113
+    iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/TextView;
+
+    iget-object v1, p0, Lcom/bbm/ui/b/k;->b:[Ljava/lang/String;
+
+    aget-object v1, v1, v2
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 114
+    iget-object v0, p0, Lcom/bbm/ui/b/k;->f:Landroid/widget/RadioButton;
+
+    iget-object v1, p0, Lcom/bbm/ui/b/k;->h:Landroid/widget/CompoundButton$OnCheckedChangeListener;
+
+    invoke-virtual {v0, v1}, Landroid/widget/RadioButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+
+    .line 115
+    iget-object v0, p0, Lcom/bbm/ui/b/k;->a:[I
+
+    aget v0, v0, v2
+
+    if-nez v0, :cond_1
+
+    .line 116
+    iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 117
+    iget-object v0, p0, Lcom/bbm/ui/b/k;->f:Landroid/widget/RadioButton;
+
+    invoke-virtual {v0, v2}, Landroid/widget/RadioButton;->setVisibility(I)V
+
+    .line 123
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 119
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 120
+    iget-object v0, p0, Lcom/bbm/ui/b/k;->f:Landroid/widget/RadioButton;
+
+    invoke-virtual {v0, v3}, Landroid/widget/RadioButton;->setVisibility(I)V
+
+    goto :goto_0
 .end method
 
 
 # virtual methods
-.method protected final b()I
-    .locals 1
-
-    .prologue
-    .line 58
-    const v0, 0x7f030078
-
-    return v0
-.end method
-
-.method public final c()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 129
-    iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
-
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final c(I)V
+.method protected final a(Landroid/view/LayoutInflater;)Landroid/view/View;
     .locals 2
 
     .prologue
-    .line 67
-    if-lez p1, :cond_0
+    .line 166
+    invoke-super {p0, p1}, Lcom/bbm/ui/b/m;->a(Landroid/view/LayoutInflater;)Landroid/view/View;
 
-    .line 68
-    invoke-virtual {p0}, Lcom/bbm/ui/b/k;->getContext()Landroid/content/Context;
+    move-result-object v1
 
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/b/k;->e:Ljava/lang/String;
-
-    iget-object v1, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
-
+    .line 167
     if-eqz v1, :cond_0
 
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    .line 169
+    const/4 v0, 0x0
 
-    move-result v0
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/b/k;->a(Z)Lcom/bbm/ui/b/m;
 
-    if-nez v0, :cond_0
+    .line 171
+    const v0, 0x7f0b043c
 
-    iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
-
-    iget-object v1, p0, Lcom/bbm/ui/b/k;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
-
-    .line 70
-    :cond_0
-    return-void
-.end method
-
-.method public final d(I)V
-    .locals 2
-
-    .prologue
-    .line 112
-    iput p1, p0, Lcom/bbm/ui/b/k;->g:I
-
-    .line 113
-    iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
-
-    if-eqz v0, :cond_1
-
-    .line 114
-    iget-object v0, p0, Lcom/bbm/ui/b/k;->h:Lcom/bbm/ui/he;
-
-    if-eqz v0, :cond_0
-
-    .line 115
-    iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
-
-    iget-object v1, p0, Lcom/bbm/ui/b/k;->h:Lcom/bbm/ui/he;
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->removeTextChangedListener(Landroid/text/TextWatcher;)V
-
-    .line 117
-    :cond_0
-    iget v0, p0, Lcom/bbm/ui/b/k;->g:I
-
-    if-ltz v0, :cond_1
-
-    .line 118
-    iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
-
-    iget v1, p0, Lcom/bbm/ui/b/k;->g:I
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/he;->a(Landroid/widget/EditText;I)Lcom/bbm/ui/he;
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/b/k;->h:Lcom/bbm/ui/he;
+    check-cast v0, Landroid/widget/TextView;
 
-    .line 121
-    :cond_1
-    return-void
-.end method
+    iput-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/TextView;
 
-.method public final d(Ljava/lang/String;)V
-    .locals 1
+    .line 172
+    const v0, 0x7f0b043d
 
-    .prologue
-    .line 78
-    iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    check-cast v0, Landroid/widget/RadioButton;
 
-    move-result v0
+    iput-object v0, p0, Lcom/bbm/ui/b/k;->f:Landroid/widget/RadioButton;
 
-    if-nez v0, :cond_0
+    .line 173
+    invoke-direct {p0}, Lcom/bbm/ui/b/k;->d()V
 
-    .line 79
-    iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
+    .line 175
+    const v0, 0x7f0b043e
 
-    invoke-virtual {v0, p1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    .line 83
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/bbm/ui/b/k;->e:Landroid/widget/TextView;
+
+    .line 176
+    const v0, 0x7f0b043f
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RadioButton;
+
+    iput-object v0, p0, Lcom/bbm/ui/b/k;->g:Landroid/widget/RadioButton;
+
+    .line 177
+    invoke-virtual {p0}, Lcom/bbm/ui/b/k;->b()V
+
+    move-object v0, v1
+
+    .line 182
     :goto_0
-    return-void
+    return-object v0
 
-    .line 81
     :cond_0
-    iput-object p1, p0, Lcom/bbm/ui/b/k;->f:Ljava/lang/String;
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method public final e(Ljava/lang/String;)V
-    .locals 1
-
-    .prologue
-    .line 101
-    iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 102
-    iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
-
-    invoke-virtual {v0, p1}, Landroid/widget/EditText;->setError(Ljava/lang/CharSequence;)V
-
-    .line 104
-    :cond_0
-    return-void
-.end method
-
-.method protected final onCreate(Landroid/os/Bundle;)V
+.method public final a()Lcom/bbm/ui/b/k;
     .locals 3
 
     .prologue
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    .line 139
-    invoke-super {p0, p1}, Lcom/bbm/ui/b/o;->onCreate(Landroid/os/Bundle;)V
+    .line 96
+    iget-object v0, p0, Lcom/bbm/ui/b/k;->i:Landroid/app/Activity;
 
-    .line 140
-    const v0, 0x7f0b036a
+    const v1, 0x7f0e0886
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/b/k;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/EditText;
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    iput-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
+    move-result v1
 
-    .line 141
-    iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
+    if-nez v1, :cond_0
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setVisibility(I)V
+    iget-object v1, p0, Lcom/bbm/ui/b/k;->b:[Ljava/lang/String;
+
+    aput-object v0, v1, v2
+
+    iget-object v0, p0, Lcom/bbm/ui/b/k;->a:[I
+
+    aput v2, v0, v2
+
+    invoke-direct {p0}, Lcom/bbm/ui/b/k;->d()V
+
+    :cond_0
+    return-object p0
+.end method
+
+.method public final b()V
+    .locals 5
+
+    .prologue
+    const/16 v4, 0x8
+
+    const/4 v3, 0x1
+
+    const/4 v2, 0x0
 
     .line 142
-    iget-object v0, p0, Lcom/bbm/ui/b/k;->e:Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/ui/b/k;->e:Landroid/widget/TextView;
 
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    if-eqz v0, :cond_0
 
-    move-result v0
+    iget-object v0, p0, Lcom/bbm/ui/b/k;->g:Landroid/widget/RadioButton;
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
     .line 143
-    iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/bbm/ui/b/k;->e:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/bbm/ui/b/k;->e:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/b/k;->b:[Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
+    aget-object v1, v1, v3
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 144
+    iget-object v0, p0, Lcom/bbm/ui/b/k;->g:Landroid/widget/RadioButton;
+
+    iget-object v1, p0, Lcom/bbm/ui/b/k;->h:Landroid/widget/CompoundButton$OnCheckedChangeListener;
+
+    invoke-virtual {v0, v1}, Landroid/widget/RadioButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
     .line 145
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/b/k;->f:Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/ui/b/k;->a:[I
 
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
+    aget v0, v0, v3
 
     if-nez v0, :cond_1
 
     .line 146
-    iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/bbm/ui/b/k;->e:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/bbm/ui/b/k;->f:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Landroid/widget/EditText;->append(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 147
-    iget-object v2, p0, Lcom/bbm/ui/b/k;->c:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/bbm/ui/b/k;->g:Landroid/widget/RadioButton;
 
-    iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
+    invoke-virtual {v0, v2}, Landroid/widget/RadioButton;->setVisibility(I)V
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    const/4 v0, 0x1
-
+    .line 153
+    :cond_0
     :goto_0
-    invoke-virtual {v2, v0}, Landroid/widget/Button;->setEnabled(Z)V
+    return-void
 
     .line 149
     :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/bbm/ui/b/k;->e:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/bbm/ui/b/k;->i:Landroid/text/TextWatcher;
-
-    invoke-virtual {v0, v2}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
+    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 150
-    iget v0, p0, Lcom/bbm/ui/b/k;->g:I
+    iget-object v0, p0, Lcom/bbm/ui/b/k;->g:Landroid/widget/RadioButton;
 
-    if-ltz v0, :cond_2
+    invoke-virtual {v0, v4}, Landroid/widget/RadioButton;->setVisibility(I)V
 
-    .line 151
-    iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
-
-    iget v2, p0, Lcom/bbm/ui/b/k;->g:I
-
-    invoke-static {v0, v2}, Lcom/bbm/ui/he;->a(Landroid/widget/EditText;I)Lcom/bbm/ui/he;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/b/k;->h:Lcom/bbm/ui/he;
-
-    .line 154
-    :cond_2
-    invoke-virtual {p0}, Lcom/bbm/ui/b/k;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-virtual {v0, v2}, Landroid/view/Window;->setSoftInputMode(I)V
-
-    .line 157
-    iget-object v0, p0, Lcom/bbm/ui/b/k;->c:Landroid/widget/Button;
-
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setEnabled(Z)V
-
-    .line 158
-    return-void
-
-    :cond_3
-    move v0, v1
-
-    .line 147
     goto :goto_0
+.end method
+
+.method protected final c()I
+    .locals 1
+
+    .prologue
+    .line 92
+    const v0, 0x7f0300af
+
+    return v0
+.end method
+
+.method public final onAttach(Landroid/app/Activity;)V
+    .locals 1
+
+    .prologue
+    .line 73
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/b/k;->a(Z)Lcom/bbm/ui/b/m;
+
+    .line 75
+    invoke-super {p0, p1}, Lcom/bbm/ui/b/m;->onAttach(Landroid/app/Activity;)V
+
+    .line 76
+    return-void
 .end method

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:padding="@dimen/conversation_chat_bubble_padding" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/message_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/conversation_chat_bubble_incoming_status_margin_R" android:src="@drawable/ic_item_message_read" />
+    <com.bbm.ui.LinkifyTextView android:textSize="@dimen/fontSizeMedium" android:id="@id/message_body" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/conversation_chat_bubble_max_width" android:textIsSelectable="false" />
+</LinearLayout>

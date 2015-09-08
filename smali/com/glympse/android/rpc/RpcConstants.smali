@@ -12,6 +12,10 @@
 
 .field public static final CONSUMER_CACHE_MAXIMUM_CAPACITY:I = 0x18
 
+.field public static final IPC_REGISTER_CLIENT:I = 0x1
+
+.field public static final IPC_UNREGISTER_CLIENT:I = 0x2
+
 .field public static final KEY_FAVORITE_IMAGE:I = 0xf0001
 
 .field public static final KEY_USER_SNAPSHOT_IMAGE:I = 0xf0001
@@ -33,6 +37,8 @@
 .field public static final PHONE_FAV_DEFAULT_DURATION:I = 0x1b7740
 
 .field public static final RECENTS_DEFAULT_DURATION:I = 0x1b7740
+
+.field public static final RPC_MESSAGE:I = 0x3
 
 .field public static final SMS_REQUEST_DEFAULT_DURATION:I = 0x1b7740
 
@@ -71,7 +77,7 @@
 
     .prologue
     .line 34
-    const-string v0, "1.2"
+    const-string v0, "1.3"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -129,7 +135,7 @@
 
     .prologue
     .line 24
-    const-string v0, "1.2"
+    const-string v0, "1.3"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 

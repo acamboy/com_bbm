@@ -17,7 +17,7 @@
     .locals 1
 
     .prologue
-    .line 1144
+    .line 1148
     iput-object p1, p0, Lcom/tonicartos/widget/stickygridheaders/k;->b:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
     const/4 v0, 0x0
@@ -31,7 +31,7 @@
     .locals 0
 
     .prologue
-    .line 1144
+    .line 1148
     invoke-direct {p0, p1}, Lcom/tonicartos/widget/stickygridheaders/k;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;)V
 
     return-void
@@ -43,19 +43,19 @@
     .locals 4
 
     .prologue
-    .line 1151
+    .line 1155
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/k;->b:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
     iget-boolean v0, v0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->g:Z
 
     if-eqz v0, :cond_1
 
-    .line 1165
+    .line 1169
     :cond_0
     :goto_0
     return-void
 
-    .line 1154
+    .line 1158
     :cond_1
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/k;->b:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
@@ -97,7 +97,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1157
+    .line 1161
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/k;->b:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
     iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/k;->a:I
@@ -106,10 +106,10 @@
 
     move-result-object v0
 
-    .line 1161
+    .line 1165
     if-eqz v0, :cond_0
 
-    .line 1162
+    .line 1166
     iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/k;->b:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
     iget-object v2, p0, Lcom/tonicartos/widget/stickygridheaders/k;->b:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
@@ -126,14 +126,11 @@
 
     invoke-virtual {v1, v2}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->playSoundEffect(I)V
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_0
 
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->sendAccessibilityEvent(I)V
-
-    :cond_2
-    iget-object v0, v1, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d:Lcom/tonicartos/widget/stickygridheaders/i;
+    invoke-virtual {v0, v1}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
     goto :goto_0
 .end method

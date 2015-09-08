@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/gl;
 .super Ljava/lang/Object;
-.source "StickerItemView.java"
+.source "SmsActionBarView.java"
 
 # interfaces
-.implements Lcom/bbm/ui/go;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Z
-
-.field final synthetic b:Lcom/bbm/ui/StickerItemView;
+.field final synthetic a:Lcom/bbm/ui/SmsActionBarView;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/StickerItemView;Z)V
+.method constructor <init>(Lcom/bbm/ui/SmsActionBarView;)V
     .locals 0
 
     .prologue
-    .line 222
-    iput-object p1, p0, Lcom/bbm/ui/gl;->b:Lcom/bbm/ui/StickerItemView;
-
-    iput-boolean p2, p0, Lcom/bbm/ui/gl;->a:Z
+    .line 81
+    iput-object p1, p0, Lcom/bbm/ui/gl;->a:Lcom/bbm/ui/SmsActionBarView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,73 +25,61 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/d/ff;Ljava/lang/String;)V
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 225
-    iget-object v0, p0, Lcom/bbm/ui/gl;->b:Lcom/bbm/ui/StickerItemView;
+    .line 84
+    iget-object v0, p0, Lcom/bbm/ui/gl;->a:Lcom/bbm/ui/SmsActionBarView;
 
-    invoke-static {v0}, Lcom/bbm/ui/StickerItemView;->c(Lcom/bbm/ui/StickerItemView;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0, p2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 226
-    if-nez p1, :cond_1
-
-    .line 227
-    iget-object v0, p0, Lcom/bbm/ui/gl;->b:Lcom/bbm/ui/StickerItemView;
-
-    invoke-static {v0}, Lcom/bbm/ui/StickerItemView;->d(Lcom/bbm/ui/StickerItemView;)Landroid/widget/ImageView;
+    invoke-static {v0}, Lcom/bbm/ui/SmsActionBarView;->a(Lcom/bbm/ui/SmsActionBarView;)Landroid/widget/RelativeLayout;
 
     move-result-object v0
+
+    if-ne p1, v0, :cond_1
+
+    .line 85
+    const-string v0, "Back clicked"
+
+    const-class v1, Lcom/bbm/ui/SmsActionBarView;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 86
+    iget-object v0, p0, Lcom/bbm/ui/gl;->a:Lcom/bbm/ui/SmsActionBarView;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/SmsActionBarView;->a(I)V
 
-    .line 237
+    .line 95
     :cond_0
     :goto_0
     return-void
 
-    .line 230
+    .line 91
     :cond_1
-    iget-object v0, p1, Lcom/bbm/d/ff;->b:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/bbm/ui/gl;->a:Lcom/bbm/ui/SmsActionBarView;
 
-    .line 231
-    iget-boolean v1, p0, Lcom/bbm/ui/gl;->a:Z
+    invoke-static {v0}, Lcom/bbm/ui/SmsActionBarView;->b(Lcom/bbm/ui/SmsActionBarView;)Landroid/widget/LinearLayout;
 
-    if-eqz v1, :cond_2
+    move-result-object v0
 
-    .line 232
-    iget-object v1, p0, Lcom/bbm/ui/gl;->b:Lcom/bbm/ui/StickerItemView;
+    if-ne p1, v0, :cond_0
 
-    iget-object v2, p0, Lcom/bbm/ui/gl;->b:Lcom/bbm/ui/StickerItemView;
+    .line 92
+    const-string v0, "Send clicked"
 
-    invoke-static {v2}, Lcom/bbm/ui/StickerItemView;->d(Lcom/bbm/ui/StickerItemView;)Landroid/widget/ImageView;
+    const-class v1, Lcom/bbm/ui/SmsActionBarView;
 
-    move-result-object v2
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-static {v1, v0, v2}, Lcom/bbm/ui/StickerItemView;->a(Lcom/bbm/ui/StickerItemView;Landroid/graphics/drawable/Drawable;Landroid/widget/ImageView;)V
+    .line 93
+    iget-object v0, p0, Lcom/bbm/ui/gl;->a:Lcom/bbm/ui/SmsActionBarView;
 
-    goto :goto_0
+    const/4 v1, 0x1
 
-    .line 234
-    :cond_2
-    iget-object v1, p0, Lcom/bbm/ui/gl;->b:Lcom/bbm/ui/StickerItemView;
-
-    invoke-static {v1}, Lcom/bbm/ui/StickerItemView;->d(Lcom/bbm/ui/StickerItemView;)Landroid/widget/ImageView;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/SmsActionBarView;->a(I)V
 
     goto :goto_0
 .end method

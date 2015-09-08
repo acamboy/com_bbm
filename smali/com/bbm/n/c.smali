@@ -12,7 +12,7 @@
     .locals 1
 
     .prologue
-    .line 137
+    .line 140
     iput-object p1, p0, Lcom/bbm/n/c;->a:Lcom/bbm/n/b;
 
     const/4 v0, 0x0
@@ -30,16 +30,16 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 140
+    .line 143
     iget-object v0, p0, Lcom/bbm/n/c;->a:Lcom/bbm/n/b;
 
-    invoke-static {v0}, Lcom/bbm/n/b;->d(Lcom/bbm/n/b;)Lcom/bbm/util/cz;
+    invoke-static {v0}, Lcom/bbm/n/b;->e(Lcom/bbm/n/b;)Lcom/bbm/util/di;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/util/cz;->a:Lcom/bbm/j/t;
+    iget-object v0, v0, Lcom/bbm/util/di;->a:Lcom/bbm/j/t;
 
-    invoke-virtual {v0}, Lcom/bbm/j/t;->e()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/j/t;->f()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -51,14 +51,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 143
+    .line 146
     iget-object v0, p0, Lcom/bbm/n/c;->a:Lcom/bbm/n/b;
 
     invoke-static {v0}, Lcom/bbm/n/b;->a(Lcom/bbm/n/b;)Lcom/bbm/j/t;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/j/t;->e()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/j/t;->f()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -68,16 +68,16 @@
 
     move-result v0
 
-    .line 144
+    .line 147
     packed-switch v0, :pswitch_data_0
 
     move v1, v2
 
-    .line 155
+    .line 158
     :goto_0
     iget-object v0, p0, Lcom/bbm/n/c;->a:Lcom/bbm/n/b;
 
-    invoke-static {v0}, Lcom/bbm/n/b;->e(Lcom/bbm/n/b;)I
+    invoke-static {v0}, Lcom/bbm/n/b;->f(Lcom/bbm/n/b;)I
 
     move-result v0
 
@@ -85,14 +85,14 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 156
+    .line 159
     iget-object v0, p0, Lcom/bbm/n/c;->a:Lcom/bbm/n/b;
 
-    invoke-static {v0}, Lcom/bbm/n/b;->f(Lcom/bbm/n/b;)Lcom/google/b/a/l;
+    invoke-static {v0}, Lcom/bbm/n/b;->d(Lcom/bbm/n/b;)Lcom/google/b/a/l;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -100,26 +100,26 @@
 
     iget-object v2, p0, Lcom/bbm/n/c;->a:Lcom/bbm/n/b;
 
-    invoke-static {v2}, Lcom/bbm/n/b;->e(Lcom/bbm/n/b;)I
+    invoke-static {v2}, Lcom/bbm/n/b;->f(Lcom/bbm/n/b;)I
 
     move-result v2
 
     invoke-virtual {v0, v2, v1}, Lcom/rim/bbm/BbmMediaCallService;->endCall(II)I
 
-    .line 159
+    .line 162
     :cond_0
     return-void
 
-    .line 148
+    .line 151
     :pswitch_0
     const/4 v0, 0x0
 
     move v1, v0
 
-    .line 149
+    .line 152
     goto :goto_0
 
-    .line 151
+    .line 154
     :pswitch_1
     const/4 v0, 0x1
 
@@ -127,7 +127,7 @@
 
     goto :goto_0
 
-    .line 144
+    .line 147
     nop
 
     :pswitch_data_0

@@ -1,89 +1,90 @@
 .class final Lcom/bbm/ui/c/dq;
-.super Ljava/lang/Object;
-.source "GroupMembersFragment.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.super Ljava/lang/Enum;
+.source "ContactsFragment.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/google/b/f/a/l;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/bbm/ui/c/dq;",
+        ">;"
+    }
+.end annotation
 
-.field final synthetic b:Lcom/bbm/ui/c/dh;
+
+# static fields
+.field public static final enum a:I
+
+.field public static final enum b:I
+
+.field public static final enum c:I
+
+.field public static final enum d:I
+
+.field private static final synthetic e:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/dh;Lcom/google/b/f/a/l;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
     .prologue
-    .line 616
-    iput-object p1, p0, Lcom/bbm/ui/c/dq;->b:Lcom/bbm/ui/c/dh;
+    const/4 v0, 0x4
 
-    iput-object p2, p0, Lcom/bbm/ui/c/dq;->a:Lcom/google/b/f/a/l;
+    const/4 v5, 0x3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v4, 0x2
+
+    const/4 v3, 0x1
+
+    .line 126
+    sput v3, Lcom/bbm/ui/c/dq;->a:I
+
+    sput v4, Lcom/bbm/ui/c/dq;->b:I
+
+    sput v5, Lcom/bbm/ui/c/dq;->c:I
+
+    sput v0, Lcom/bbm/ui/c/dq;->d:I
+
+    new-array v0, v0, [I
+
+    const/4 v1, 0x0
+
+    sget v2, Lcom/bbm/ui/c/dq;->a:I
+
+    aput v2, v0, v1
+
+    sget v1, Lcom/bbm/ui/c/dq;->b:I
+
+    aput v1, v0, v3
+
+    sget v1, Lcom/bbm/ui/c/dq;->c:I
+
+    aput v1, v0, v4
+
+    sget v1, Lcom/bbm/ui/c/dq;->d:I
+
+    aput v1, v0, v5
+
+    sput-object v0, Lcom/bbm/ui/c/dq;->e:[I
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final run()V
-    .locals 4
+.method public static a()[I
+    .locals 1
 
     .prologue
-    .line 621
-    :try_start_0
-    iget-object v0, p0, Lcom/bbm/ui/c/dq;->a:Lcom/google/b/f/a/l;
+    .line 126
+    sget-object v0, Lcom/bbm/ui/c/dq;->e:[I
 
-    invoke-interface {v0}, Lcom/google/b/f/a/l;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, [I->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/String;
+    check-cast v0, [I
 
-    .line 622
-    new-instance v1, Landroid/content/Intent;
-
-    iget-object v2, p0, Lcom/bbm/ui/c/dq;->b:Lcom/bbm/ui/c/dh;
-
-    invoke-virtual {v2}, Lcom/bbm/ui/c/dh;->getActivity()Landroid/app/Activity;
-
-    move-result-object v2
-
-    const-class v3, Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 623
-    const-string v2, "conversation_uri"
-
-    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 624
-    iget-object v0, p0, Lcom/bbm/ui/c/dq;->b:Lcom/bbm/ui/c/dh;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/c/dh;->startActivity(Landroid/content/Intent;)V
-
-    .line 625
-    const-string v0, "open"
-
-    const-string v1, "Conversation"
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->a(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 629
-    :goto_0
-    return-void
-
-    .line 626
-    :catch_0
-    move-exception v0
-
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_0
+    return-object v0
 .end method

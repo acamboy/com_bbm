@@ -39,7 +39,7 @@
 
 
 # virtual methods
-.method protected b(Lcom/glympse/android/api/GImage;)V
+.method protected c(Lcom/glympse/android/api/GImage;)V
     .locals 0
 
     .prologue

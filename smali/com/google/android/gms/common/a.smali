@@ -1,96 +1,97 @@
-.class public Lcom/google/android/gms/common/a;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/content/ServiceConnection;
+.class public final Lcom/google/android/gms/common/a;
+.super Landroid/app/DialogFragment;
 
 
 # instance fields
-.field yG:Z
+.field private a:Landroid/app/Dialog;
 
-.field private final yH:Ljava/util/concurrent/BlockingQueue;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/concurrent/BlockingQueue",
-            "<",
-            "Landroid/os/IBinder;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private b:Landroid/content/DialogInterface$OnCancelListener;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/google/android/gms/common/a;->yG:Z
+    invoke-direct {p0}, Landroid/app/DialogFragment;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
+    iput-object v0, p0, Lcom/google/android/gms/common/a;->a:Landroid/app/Dialog;
 
-    invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
-
-    iput-object v0, p0, Lcom/google/android/gms/common/a;->yH:Ljava/util/concurrent/BlockingQueue;
+    iput-object v0, p0, Lcom/google/android/gms/common/a;->b:Landroid/content/DialogInterface$OnCancelListener;
 
     return-void
+.end method
+
+.method public static a(Landroid/app/Dialog;Landroid/content/DialogInterface$OnCancelListener;)Lcom/google/android/gms/common/a;
+    .locals 3
+
+    const/4 v2, 0x0
+
+    new-instance v1, Lcom/google/android/gms/common/a;
+
+    invoke-direct {v1}, Lcom/google/android/gms/common/a;-><init>()V
+
+    const-string v0, "Cannot display null dialog"
+
+    invoke-static {p0, v0}, Lcom/google/android/gms/common/internal/au;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/Dialog;
+
+    invoke-virtual {v0, v2}, Landroid/app/Dialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
+
+    invoke-virtual {v0, v2}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+
+    iput-object v0, v1, Lcom/google/android/gms/common/a;->a:Landroid/app/Dialog;
+
+    if-eqz p1, :cond_0
+
+    iput-object p1, v1, Lcom/google/android/gms/common/a;->b:Landroid/content/DialogInterface$OnCancelListener;
+
+    :cond_0
+    return-object v1
 .end method
 
 
 # virtual methods
-.method public dm()Landroid/os/IBinder;
+.method public final onCancel(Landroid/content/DialogInterface;)V
     .locals 1
 
-    iget-boolean v0, p0, Lcom/google/android/gms/common/a;->yG:Z
+    iget-object v0, p0, Lcom/google/android/gms/common/a;->b:Landroid/content/DialogInterface$OnCancelListener;
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Ljava/lang/IllegalStateException;
+    iget-object v0, p0, Lcom/google/android/gms/common/a;->b:Landroid/content/DialogInterface$OnCancelListener;
 
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v0
+    invoke-interface {v0, p1}, Landroid/content/DialogInterface$OnCancelListener;->onCancel(Landroid/content/DialogInterface;)V
 
     :cond_0
-    const/4 v0, 0x1
+    return-void
+.end method
 
-    iput-boolean v0, p0, Lcom/google/android/gms/common/a;->yG:Z
+.method public final onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+    .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/common/a;->yH:Ljava/util/concurrent/BlockingQueue;
+    iget-object v0, p0, Lcom/google/android/gms/common/a;->a:Landroid/app/Dialog;
 
-    invoke-interface {v0}, Ljava/util/concurrent/BlockingQueue;->take()Ljava/lang/Object;
+    if-nez v0, :cond_0
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    check-cast v0, Landroid/os/IBinder;
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/common/a;->setShowsDialog(Z)V
+
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/gms/common/a;->a:Landroid/app/Dialog;
 
     return-object v0
 .end method
 
-.method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
-    .locals 1
-
-    :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/common/a;->yH:Ljava/util/concurrent/BlockingQueue;
-
-    invoke-interface {v0, p2}, Ljava/util/concurrent/BlockingQueue;->put(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_0
-.end method
-
-.method public onServiceDisconnected(Landroid/content/ComponentName;)V
+.method public final show(Landroid/app/FragmentManager;Ljava/lang/String;)V
     .locals 0
+
+    invoke-super {p0, p1, p2}, Landroid/app/DialogFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     return-void
 .end method

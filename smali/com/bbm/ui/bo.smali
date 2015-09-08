@@ -1,72 +1,292 @@
-.class final Lcom/bbm/ui/bo;
+.class final synthetic Lcom/bbm/ui/bo;
 .super Ljava/lang/Object;
 .source "EmoticonInputPanel.java"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
+# static fields
+.field static final synthetic a:[I
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/EmoticonInputPanel;
+.field static final synthetic b:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/EmoticonInputPanel;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 489
-    iput-object p1, p0, Lcom/bbm/ui/bo;->a:Lcom/bbm/ui/EmoticonInputPanel;
+    .line 695
+    invoke-static {}, Lcom/bbm/ui/bw;->values()[Lcom/bbm/ui/bw;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/bo;->b:[I
+
+    :try_start_0
+    sget-object v0, Lcom/bbm/ui/bo;->b:[I
+
+    sget-object v1, Lcom/bbm/ui/bw;->a:Lcom/bbm/ui/bw;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/bw;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_b
+
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/ui/bo;->b:[I
+
+    sget-object v1, Lcom/bbm/ui/bw;->b:Lcom/bbm/ui/bw;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/bw;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_a
+
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/bbm/ui/bo;->b:[I
+
+    sget-object v1, Lcom/bbm/ui/bw;->c:Lcom/bbm/ui/bw;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/bw;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_9
+
+    :goto_2
+    :try_start_3
+    sget-object v0, Lcom/bbm/ui/bo;->b:[I
+
+    sget-object v1, Lcom/bbm/ui/bw;->d:Lcom/bbm/ui/bw;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/bw;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_8
+
+    :goto_3
+    :try_start_4
+    sget-object v0, Lcom/bbm/ui/bo;->b:[I
+
+    sget-object v1, Lcom/bbm/ui/bw;->f:Lcom/bbm/ui/bw;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/bw;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_7
+
+    :goto_4
+    :try_start_5
+    sget-object v0, Lcom/bbm/ui/bo;->b:[I
+
+    sget-object v1, Lcom/bbm/ui/bw;->g:Lcom/bbm/ui/bw;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/bw;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x6
+
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_6
+
+    :goto_5
+    :try_start_6
+    sget-object v0, Lcom/bbm/ui/bo;->b:[I
+
+    sget-object v1, Lcom/bbm/ui/bw;->h:Lcom/bbm/ui/bw;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/bw;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x7
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_5
+
+    .line 532
+    :goto_6
+    invoke-static {}, Lcom/bbm/ui/by;->values()[Lcom/bbm/ui/by;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/bo;->a:[I
+
+    :try_start_7
+    sget-object v0, Lcom/bbm/ui/bo;->a:[I
+
+    sget-object v1, Lcom/bbm/ui/by;->a:Lcom/bbm/ui/by;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/by;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_4
+
+    :goto_7
+    :try_start_8
+    sget-object v0, Lcom/bbm/ui/bo;->a:[I
+
+    sget-object v1, Lcom/bbm/ui/by;->b:Lcom/bbm/ui/by;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/by;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_3
+
+    :goto_8
+    :try_start_9
+    sget-object v0, Lcom/bbm/ui/bo;->a:[I
+
+    sget-object v1, Lcom/bbm/ui/by;->c:Lcom/bbm/ui/by;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/by;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_9
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_2
+
+    :goto_9
+    :try_start_a
+    sget-object v0, Lcom/bbm/ui/bo;->a:[I
+
+    sget-object v1, Lcom/bbm/ui/by;->d:Lcom/bbm/ui/by;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/by;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_a
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_1
+
+    :goto_a
+    :try_start_b
+    sget-object v0, Lcom/bbm/ui/bo;->a:[I
+
+    sget-object v1, Lcom/bbm/ui/by;->e:Lcom/bbm/ui/by;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/by;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_b
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_0
+
+    :goto_b
     return-void
-.end method
 
+    :catch_0
+    move-exception v0
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+    goto :goto_b
 
-    .prologue
-    .line 493
-    new-instance v0, Ljava/lang/StringBuilder;
+    :catch_1
+    move-exception v0
 
-    const-string v1, "quickShareAction Clicked: "
+    goto :goto_a
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :catch_2
+    move-exception v0
 
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    goto :goto_9
 
-    move-result-object v1
+    :catch_3
+    move-exception v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    goto :goto_8
 
-    move-result-object v0
+    :catch_4
+    move-exception v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    goto :goto_7
 
-    move-result-object v0
+    :catch_5
+    move-exception v0
 
-    const-class v1, Lcom/bbm/ui/EmoticonInputPanel;
+    goto :goto_6
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    :catch_6
+    move-exception v0
 
-    .line 495
-    iget-object v1, p0, Lcom/bbm/ui/bo;->a:Lcom/bbm/ui/EmoticonInputPanel;
+    goto :goto_5
 
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    :catch_7
+    move-exception v0
 
-    move-result-object v0
+    goto :goto_4
 
-    check-cast v0, Ljava/lang/Integer;
+    :catch_8
+    move-exception v0
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    goto :goto_3
 
-    move-result v0
+    :catch_9
+    move-exception v0
 
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/EmoticonInputPanel;->setSelectedQuickShareAction(I)V
+    goto :goto_2
 
-    .line 496
-    return-void
+    :catch_a
+    move-exception v0
+
+    goto/16 :goto_1
+
+    :catch_b
+    move-exception v0
+
+    goto/16 :goto_0
 .end method

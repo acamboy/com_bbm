@@ -1,111 +1,50 @@
-.class final synthetic Lcom/bbm/util/an;
+.class final Lcom/bbm/util/an;
 .super Ljava/lang/Object;
 .source "ChannelUtil.java"
 
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
 
-# static fields
-.field static final synthetic a:[I
+
+# instance fields
+.field final synthetic a:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method constructor <init>(Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 1067
+    iput-object p1, p0, Lcom/bbm/util/an;->a:Ljava/lang/String;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 3
 
     .prologue
-    .line 1123
-    invoke-static {}, Lcom/bbm/util/ax;->values()[Lcom/bbm/util/ax;
+    .line 1071
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+
+    .line 1072
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v0
 
-    array-length v0, v0
+    iget-object v1, p0, Lcom/bbm/util/an;->a:Ljava/lang/String;
 
-    new-array v0, v0, [I
+    new-instance v2, Lcom/bbm/d/ch;
 
-    sput-object v0, Lcom/bbm/util/an;->a:[I
+    invoke-direct {v2, v1}, Lcom/bbm/d/ch;-><init>(Ljava/lang/String;)V
 
-    :try_start_0
-    sget-object v0, Lcom/bbm/util/an;->a:[I
+    invoke-virtual {v0, v2}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ez;)V
 
-    sget-object v1, Lcom/bbm/util/ax;->a:Lcom/bbm/util/ax;
-
-    invoke-virtual {v1}, Lcom/bbm/util/ax;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_3
-
-    :goto_0
-    :try_start_1
-    sget-object v0, Lcom/bbm/util/an;->a:[I
-
-    sget-object v1, Lcom/bbm/util/ax;->b:Lcom/bbm/util/ax;
-
-    invoke-virtual {v1}, Lcom/bbm/util/ax;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
-
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/bbm/util/an;->a:[I
-
-    sget-object v1, Lcom/bbm/util/ax;->c:Lcom/bbm/util/ax;
-
-    invoke-virtual {v1}, Lcom/bbm/util/ax;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_1
-
-    :goto_2
-    :try_start_3
-    sget-object v0, Lcom/bbm/util/an;->a:[I
-
-    sget-object v1, Lcom/bbm/util/ax;->d:Lcom/bbm/util/ax;
-
-    invoke-virtual {v1}, Lcom/bbm/util/ax;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_0
-
-    :goto_3
+    .line 1073
     return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_3
-
-    :catch_1
-    move-exception v0
-
-    goto :goto_2
-
-    :catch_2
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_3
-    move-exception v0
-
-    goto :goto_0
 .end method

@@ -3,14 +3,14 @@
 .source "CacheBuilder.java"
 
 # interfaces
-.implements Lcom/google/b/a/s;
+.implements Lcom/google/b/a/t;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/google/b/a/s",
+        "Lcom/google/b/a/t",
         "<",
         "Lcom/google/b/b/c;",
         ">;"

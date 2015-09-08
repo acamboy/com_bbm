@@ -1,65 +1,81 @@
 .class Lcom/glympse/android/lib/az;
-.super Lcom/glympse/android/lib/y;
-.source "DiagnosticsManager.java"
+.super Ljava/lang/Object;
+.source "DataEvent.java"
+
+# interfaces
+.implements Lcom/glympse/android/api/GDataEvent;
+
+
+# instance fields
+.field private kc:Lcom/glympse/android/api/GTicket;
+
+.field private kd:Lcom/glympse/android/hal/GVector;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/glympse/android/hal/GVector",
+            "<",
+            "Lcom/glympse/android/api/GDataRow;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/lib/GGlympsePrivate;Lcom/glympse/android/lib/GBatchListener;Lcom/glympse/android/hal/GVector;)V
+.method public constructor <init>(Lcom/glympse/android/api/GTicket;Lcom/glympse/android/hal/GVector;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/glympse/android/lib/GGlympsePrivate;",
-            "Lcom/glympse/android/lib/GBatchListener;",
+            "Lcom/glympse/android/api/GTicket;",
             "Lcom/glympse/android/hal/GVector",
             "<",
-            "Lcom/glympse/android/lib/GApiEndpoint;",
+            "Lcom/glympse/android/api/GDataRow;",
             ">;)V"
         }
     .end annotation
 
     .prologue
-    .line 509
-    invoke-direct {p0, p1, p2, p3}, Lcom/glympse/android/lib/y;-><init>(Lcom/glympse/android/lib/GGlympsePrivate;Lcom/glympse/android/lib/GBatchListener;Lcom/glympse/android/hal/GVector;)V
+    .line 23
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 510
+    .line 24
+    iput-object p1, p0, Lcom/glympse/android/lib/az;->kc:Lcom/glympse/android/api/GTicket;
+
+    .line 25
+    iput-object p2, p0, Lcom/glympse/android/lib/az;->kd:Lcom/glympse/android/hal/GVector;
+
+    .line 26
     return-void
 .end method
 
 
 # virtual methods
-.method public onComplete()V
-    .locals 2
+.method public getProperties()Lcom/glympse/android/core/GArray;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/glympse/android/core/GArray",
+            "<",
+            "Lcom/glympse/android/api/GDataRow;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 514
-    invoke-super {p0}, Lcom/glympse/android/lib/y;->onComplete()V
+    .line 35
+    iget-object v0, p0, Lcom/glympse/android/lib/az;->kd:Lcom/glympse/android/hal/GVector;
 
-    .line 516
-    invoke-virtual {p0}, Lcom/glympse/android/lib/az;->isSucceeded()Z
+    return-object v0
+.end method
 
-    move-result v0
+.method public getTicket()Lcom/glympse/android/api/GTicket;
+    .locals 1
 
-    if-nez v0, :cond_0
+    .prologue
+    .line 30
+    iget-object v0, p0, Lcom/glympse/android/lib/az;->kc:Lcom/glympse/android/api/GTicket;
 
-    .line 520
-    iget v0, p0, Lcom/glympse/android/lib/az;->_failures:I
-
-    const/4 v1, 0x1
-
-    if-le v0, v1, :cond_0
-
-    .line 522
-    invoke-virtual {p0}, Lcom/glympse/android/lib/az;->abort()V
-
-    .line 528
-    iget-object v0, p0, Lcom/glympse/android/lib/az;->hS:Lcom/glympse/android/lib/GBatchListener;
-
-    iget-object v1, p0, Lcom/glympse/android/lib/az;->hT:Lcom/glympse/android/hal/GVector;
-
-    invoke-interface {v0, v1}, Lcom/glympse/android/lib/GBatchListener;->batchFailed(Lcom/glympse/android/hal/GVector;)V
-
-    .line 533
-    :cond_0
-    return-void
+    return-object v0
 .end method

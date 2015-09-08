@@ -43,7 +43,7 @@
 
     const/4 v2, 0x0
 
-    .line 15
+    .line 19
     new-instance v0, Lcom/bbm/f/af;
 
     const-string v1, "AUTHORIZED"
@@ -52,7 +52,7 @@
 
     sput-object v0, Lcom/bbm/f/af;->a:Lcom/bbm/f/af;
 
-    .line 20
+    .line 24
     new-instance v0, Lcom/bbm/f/af;
 
     const-string v1, "NOT_AUTHORIZED"
@@ -61,7 +61,7 @@
 
     sput-object v0, Lcom/bbm/f/af;->b:Lcom/bbm/f/af;
 
-    .line 25
+    .line 29
     new-instance v0, Lcom/bbm/f/af;
 
     const-string v1, "NO_USER_ACCOUNT"
@@ -70,7 +70,7 @@
 
     sput-object v0, Lcom/bbm/f/af;->c:Lcom/bbm/f/af;
 
-    .line 30
+    .line 34
     new-instance v0, Lcom/bbm/f/af;
 
     const-string v1, "PENDING"
@@ -79,7 +79,7 @@
 
     sput-object v0, Lcom/bbm/f/af;->d:Lcom/bbm/f/af;
 
-    .line 35
+    .line 39
     new-instance v0, Lcom/bbm/f/af;
 
     const-string v1, "UNKNOWN"
@@ -88,7 +88,7 @@
 
     sput-object v0, Lcom/bbm/f/af;->e:Lcom/bbm/f/af;
 
-    .line 11
+    .line 15
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/bbm/f/af;
@@ -127,7 +127,7 @@
     .end annotation
 
     .prologue
-    .line 11
+    .line 15
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -137,7 +137,7 @@
     .locals 1
 
     .prologue
-    .line 11
+    .line 15
     const-class v0, Lcom/bbm/f/af;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -153,7 +153,7 @@
     .locals 1
 
     .prologue
-    .line 11
+    .line 15
     sget-object v0, Lcom/bbm/f/af;->f:[Lcom/bbm/f/af;
 
     invoke-virtual {v0}, [Lcom/bbm/f/af;->clone()Ljava/lang/Object;

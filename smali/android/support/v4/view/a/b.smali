@@ -1,6 +1,6 @@
 .class final Landroid/support/v4/view/a/b;
-.super Landroid/support/v4/view/a/g;
-.source "AccessibilityNodeInfoCompat.java"
+.super Landroid/support/v4/view/a/c;
+.source "AccessibilityEventCompat.java"
 
 
 # direct methods
@@ -8,8 +8,8 @@
     .locals 0
 
     .prologue
-    .line 1091
-    invoke-direct {p0}, Landroid/support/v4/view/a/g;-><init>()V
+    .line 52
+    invoke-direct {p0}, Landroid/support/v4/view/a/c;-><init>()V
 
     return-void
 .end method

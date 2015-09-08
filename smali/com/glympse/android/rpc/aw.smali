@@ -1,6 +1,6 @@
 .class Lcom/glympse/android/rpc/aw;
 .super Ljava/lang/Object;
-.source "MethodUserAvatar.java"
+.source "MethodSocialTokensList.java"
 
 # interfaces
 .implements Lcom/glympse/android/rpc/GRpcMethod;
@@ -17,10 +17,59 @@
     return-void
 .end method
 
+.method public static a(Lcom/glympse/android/core/GPrimitive;Ljava/lang/String;ZLjava/lang/String;)V
+    .locals 2
+
+    .prologue
+    .line 65
+    const/4 v0, 0x2
+
+    invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(I)Lcom/glympse/android/core/GPrimitive;
+
+    move-result-object v0
+
+    .line 66
+    const-string v1, "type"
+
+    invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1, p1}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 67
+    const-string v1, "signed_in"
+
+    invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1, p2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Z)V
+
+    .line 68
+    if-eqz p3, :cond_0
+
+    .line 70
+    const-string v1, "account_name"
+
+    invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1, p3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 72
+    :cond_0
+    invoke-interface {p0, v0}, Lcom/glympse/android/core/GPrimitive;->put(Lcom/glympse/android/core/GPrimitive;)V
+
+    .line 73
+    return-void
+.end method
+
 
 # virtual methods
 .method public call(Lcom/glympse/android/rpc/GMessageGateway;Lcom/glympse/android/rpc/GConnection;Lcom/glympse/android/core/GArray;)V
-    .locals 6
+    .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -34,95 +83,106 @@
     .end annotation
 
     .prologue
-    const/4 v5, 0x2
+    const/4 v4, 0x0
 
-    .line 26
-    const/4 v0, 0x1
+    const/4 v10, 0x1
 
-    invoke-interface {p3, v0}, Lcom/glympse/android/core/GArray;->at(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/glympse/android/api/GUser;
-
-    .line 29
-    invoke-interface {v0}, Lcom/glympse/android/api/GUser;->getAvatar()Lcom/glympse/android/api/GImage;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lcom/glympse/android/api/GImage;->getDrawable()Lcom/glympse/android/core/GDrawable;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/glympse/android/rpc/c;->a(Lcom/glympse/android/core/GDrawable;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 30
-    if-nez v1, :cond_0
-
-    .line 46
-    :goto_0
-    return-void
-
-    .line 36
-    :cond_0
+    .line 25
     invoke-virtual {p0}, Lcom/glympse/android/rpc/aw;->getName()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-static {v2}, Lcom/glympse/android/rpc/RpcMessages;->createMessage(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+    invoke-static {v0}, Lcom/glympse/android/rpc/RpcMessages;->createMessage(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
 
-    move-result-object v2
+    move-result-object v5
 
-    .line 37
-    invoke-static {v5}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(I)Lcom/glympse/android/core/GPrimitive;
+    .line 26
+    invoke-static {v10}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(I)Lcom/glympse/android/core/GPrimitive;
 
-    move-result-object v3
+    move-result-object v6
 
-    .line 38
-    const-string v4, "id"
-
-    invoke-static {v4}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v0}, Lcom/glympse/android/api/GUser;->getId()Ljava/lang/String;
+    .line 29
+    invoke-interface {p3, v10}, Lcom/glympse/android/core/GArray;->at(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-interface {v3, v4, v0}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Ljava/lang/String;)V
+    check-cast v0, Lcom/glympse/android/core/GArray;
 
-    .line 39
-    invoke-static {v5}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(I)Lcom/glympse/android/core/GPrimitive;
+    .line 30
+    invoke-interface {v0}, Lcom/glympse/android/core/GArray;->length()I
 
-    move-result-object v0
+    move-result v7
 
-    .line 40
-    invoke-static {v1, v0}, Lcom/glympse/android/rpc/c;->a(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
+    move v3, v4
 
-    .line 41
-    const-string v1, "avatar"
+    .line 31
+    :goto_0
+    if-ge v3, v7, :cond_0
 
-    invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+    .line 33
+    invoke-interface {v0, v3}, Lcom/glympse/android/core/GArray;->at(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-interface {v3, v1, v0}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
+    check-cast v1, Lcom/glympse/android/hal/GVector;
 
-    .line 42
+    .line 34
+    invoke-virtual {v1, v4}, Lcom/glympse/android/hal/GVector;->at(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/glympse/android/core/GPrimitive;
+
+    invoke-interface {v2}, Lcom/glympse/android/core/GPrimitive;->getString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v1, v10}, Lcom/glympse/android/hal/GVector;->at(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/glympse/android/core/GPrimitive;
+
+    invoke-interface {v2}, Lcom/glympse/android/core/GPrimitive;->getBool()Z
+
+    move-result v2
+
+    const/4 v9, 0x2
+
+    invoke-virtual {v1, v9}, Lcom/glympse/android/hal/GVector;->at(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/glympse/android/core/GPrimitive;
+
+    invoke-interface {v1}, Lcom/glympse/android/core/GPrimitive;->getString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v6, v8, v2, v1}, Lcom/glympse/android/rpc/aw;->a(Lcom/glympse/android/core/GPrimitive;Ljava/lang/String;ZLjava/lang/String;)V
+
+    .line 31
+    add-int/lit8 v1, v3, 0x1
+
+    move v3, v1
+
+    goto :goto_0
+
+    .line 37
+    :cond_0
     const-string v0, "body"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {v2, v0, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
+    invoke-interface {v5, v0, v6}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
 
-    .line 45
-    invoke-interface {p1, p2, v2}, Lcom/glympse/android/rpc/GMessageGateway;->sendData(Lcom/glympse/android/rpc/GConnection;Lcom/glympse/android/core/GPrimitive;)V
+    .line 40
+    invoke-interface {p1, p2, v5}, Lcom/glympse/android/rpc/GMessageGateway;->sendData(Lcom/glympse/android/rpc/GConnection;Lcom/glympse/android/core/GPrimitive;)V
 
-    goto :goto_0
+    .line 41
+    return-void
 .end method
 
 .method public getName()Ljava/lang/String;
@@ -130,7 +190,7 @@
 
     .prologue
     .line 20
-    const-string v0, "user_avatar"
+    const-string v0, "social_tokens_list"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -140,7 +200,7 @@
 .end method
 
 .method public handle(Lcom/glympse/android/rpc/GMessageGateway;Lcom/glympse/android/rpc/GConnection;Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GArray;)V
-    .locals 6
+    .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -155,107 +215,38 @@
     .end annotation
 
     .prologue
-    const/4 v5, 0x2
-
-    .line 51
+    .line 46
     invoke-static {p4}, Lcom/glympse/android/rpc/RpcMessages;->consumerUnpackSink(Lcom/glympse/android/core/GArray;)Lcom/glympse/android/api/GEventSink;
+
+    move-result-object v0
+
+    .line 49
+    const-string v1, "body"
+
+    invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 54
-    const-string v0, "body"
+    invoke-interface {p3, v1}, Lcom/glympse/android/core/GPrimitive;->get(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
 
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v0
+    .line 50
+    if-nez v1, :cond_0
 
-    invoke-interface {p3, v0}, Lcom/glympse/android/core/GPrimitive;->get(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
-
-    move-result-object v0
-
-    .line 55
-    if-nez v0, :cond_1
-
-    .line 88
-    :cond_0
+    .line 57
     :goto_0
     return-void
 
-    .line 59
-    :cond_1
-    const-string v2, "id"
+    .line 56
+    :cond_0
+    const/4 v2, 0x0
 
-    invoke-static {v2}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+    const/4 v3, 0x2
 
-    move-result-object v2
+    const/16 v4, 0x10
 
-    invoke-interface {v0, v2}, Lcom/glympse/android/core/GPrimitive;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 60
-    if-eqz v2, :cond_0
-
-    .line 66
-    const-string v3, "avatar"
-
-    invoke-static {v3}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-interface {v0, v3}, Lcom/glympse/android/core/GPrimitive;->get(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
-
-    move-result-object v0
-
-    .line 67
-    if-eqz v0, :cond_0
-
-    .line 71
-    const-string v3, "data"
-
-    invoke-static {v3}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-interface {v0, v3}, Lcom/glympse/android/core/GPrimitive;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 72
-    invoke-static {v0}, Lcom/glympse/android/rpc/c;->R(Ljava/lang/String;)Lcom/glympse/android/core/GDrawable;
-
-    move-result-object v3
-
-    .line 73
-    if-eqz v3, :cond_0
-
-    .line 80
-    invoke-static {}, Lcom/glympse/android/lib/LibFactory;->createUser()Lcom/glympse/android/lib/GUserPrivate;
-
-    move-result-object v4
-
-    .line 81
-    invoke-interface {v4, v2}, Lcom/glympse/android/lib/GUserPrivate;->setId(Ljava/lang/String;)V
-
-    .line 82
-    invoke-interface {v4}, Lcom/glympse/android/lib/GUserPrivate;->getAvatar()Lcom/glympse/android/api/GImage;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/glympse/android/lib/GImagePrivate;
-
-    .line 83
-    invoke-interface {v0, v3}, Lcom/glympse/android/lib/GImagePrivate;->setDrawable(Lcom/glympse/android/core/GDrawable;)V
-
-    .line 84
-    invoke-interface {v0, v5}, Lcom/glympse/android/lib/GImagePrivate;->setState(I)V
-
-    .line 87
-    const/4 v0, 0x0
-
-    const/high16 v2, 0x40000
-
-    invoke-interface {v1, v0, v5, v2, v4}, Lcom/glympse/android/api/GEventSink;->eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
+    invoke-interface {v0, v2, v3, v4, v1}, Lcom/glympse/android/api/GEventSink;->eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
 
     goto :goto_0
 .end method

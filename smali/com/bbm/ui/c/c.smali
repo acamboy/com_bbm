@@ -3,20 +3,24 @@
 .source "AppDetailsFragment.java"
 
 # interfaces
-.implements Lcom/bbm/l/c/g;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/a;
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Lcom/bbm/ui/c/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/a;)V
+.method constructor <init>(Lcom/bbm/ui/c/a;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 543
-    iput-object p1, p0, Lcom/bbm/ui/c/c;->a:Lcom/bbm/ui/c/a;
+    .line 545
+    iput-object p1, p0, Lcom/bbm/ui/c/c;->b:Lcom/bbm/ui/c/a;
+
+    iput-object p2, p0, Lcom/bbm/ui/c/c;->a:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,120 +29,38 @@
 
 
 # virtual methods
-.method public final a(I)V
+.method public final onClick(Landroid/view/View;)V
     .locals 3
 
     .prologue
-    .line 557
-    iget-object v0, p0, Lcom/bbm/ui/c/c;->a:Lcom/bbm/ui/c/a;
+    .line 549
+    const-string v0, "Artist Channel button clicked"
 
-    invoke-static {v0}, Lcom/bbm/ui/c/a;->e(Lcom/bbm/ui/c/a;)Landroid/view/View;
+    const-class v1, Lcom/bbm/ui/c/a;
 
-    move-result-object v0
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    const/16 v1, 0x8
+    .line 550
+    iget-object v0, p0, Lcom/bbm/ui/c/c;->b:Lcom/bbm/ui/c/a;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    .line 558
-    packed-switch p1, :pswitch_data_0
+    const-string v2, "bbmi:///"
 
-    .line 568
-    iget-object v0, p0, Lcom/bbm/ui/c/c;->a:Lcom/bbm/ui/c/a;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/bbm/ui/c/a;->f(Lcom/bbm/ui/c/a;)Landroid/view/View;
+    iget-object v2, p0, Lcom/bbm/ui/c/c;->a:Ljava/lang/String;
 
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    .line 571
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 560
-    :pswitch_0
-    iget-object v0, p0, Lcom/bbm/ui/c/c;->a:Lcom/bbm/ui/c/a;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/a;->g(Lcom/bbm/ui/c/a;)Landroid/content/Context;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/ui/c/c;->a:Lcom/bbm/ui/c/a;
-
-    const v2, 0x7f0e010a
-
-    invoke-virtual {v1, v2}, Lcom/bbm/ui/c/a;->getString(I)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 561
-    iget-object v0, p0, Lcom/bbm/ui/c/c;->a:Lcom/bbm/ui/c/a;
+    move-result-object v1
 
-    invoke-virtual {v0}, Lcom/bbm/ui/c/a;->getActivity()Landroid/app/Activity;
+    invoke-static {v0, v1}, Lcom/bbm/ui/c/a;->a(Lcom/bbm/ui/c/a;Ljava/lang/String;)V
 
-    move-result-object v0
-
-    .line 562
-    if-eqz v0, :cond_0
-
-    .line 563
-    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
-
-    goto :goto_0
-
-    .line 558
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final a(Lcom/bbm/l/b/f;)V
-    .locals 2
-
-    .prologue
-    .line 546
-    iget-object v0, p0, Lcom/bbm/ui/c/c;->a:Lcom/bbm/ui/c/a;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/a;->e(Lcom/bbm/ui/c/a;)Landroid/view/View;
-
-    move-result-object v0
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    .line 547
-    if-nez p1, :cond_0
-
-    .line 549
-    iget-object v0, p0, Lcom/bbm/ui/c/c;->a:Lcom/bbm/ui/c/a;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/a;->f(Lcom/bbm/ui/c/a;)Landroid/view/View;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    .line 553
-    :goto_0
+    .line 551
     return-void
-
-    .line 552
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/c/c;->a:Lcom/bbm/ui/c/a;
-
-    invoke-static {v0, p1}, Lcom/bbm/ui/c/a;->a(Lcom/bbm/ui/c/a;Lcom/bbm/l/b/f;)V
-
-    goto :goto_0
 .end method

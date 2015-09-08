@@ -7,17 +7,17 @@
 
 
 # static fields
-.field public static final hK:J = 0x1388L
+.field public static final hS:J = 0x1388L
 
 
 # instance fields
 .field private _handler:Lcom/glympse/android/core/GHandler;
 
-.field private cL:Lcom/glympse/android/core/GProximityListener;
+.field private cO:Lcom/glympse/android/core/GProximityListener;
 
-.field private hL:Lcom/glympse/android/core/GLocation;
+.field private hT:Lcom/glympse/android/core/GLocation;
 
-.field private hM:Lcom/glympse/android/hal/GVector;
+.field private hU:Lcom/glympse/android/hal/GVector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/glympse/android/hal/GVector",
@@ -28,7 +28,7 @@
     .end annotation
 .end field
 
-.field private hN:Ljava/lang/Runnable;
+.field private hV:Ljava/lang/Runnable;
 
 
 # direct methods
@@ -47,7 +47,7 @@
 
     invoke-direct {v0}, Lcom/glympse/android/hal/GVector;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/lib/v;->hM:Lcom/glympse/android/hal/GVector;
+    iput-object v0, p0, Lcom/glympse/android/lib/v;->hU:Lcom/glympse/android/hal/GVector;
 
     .line 37
     return-void
@@ -65,7 +65,7 @@
     move-result-wide v2
 
     .line 133
-    iget-object v0, p0, Lcom/glympse/android/lib/v;->hM:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/v;->hU:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -80,20 +80,20 @@
     if-ge v1, v4, :cond_3
 
     .line 136
-    iget-object v0, p0, Lcom/glympse/android/lib/v;->hM:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/v;->hU:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, v1}, Lcom/glympse/android/hal/GVector;->elementAt(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/glympse/android/lib/hb;
+    check-cast v0, Lcom/glympse/android/lib/hy;
 
     .line 139
     invoke-interface {p1, v0}, Lcom/glympse/android/core/GLocation;->distanceTo(Lcom/glympse/android/core/GLatLng;)F
 
     move-result v5
 
-    iput v5, v0, Lcom/glympse/android/lib/hb;->rw:F
+    iput v5, v0, Lcom/glympse/android/lib/hy;->sA:F
 
     .line 142
     invoke-interface {p1}, Lcom/glympse/android/core/GLocation;->hasHAccuracy()Z
@@ -103,7 +103,7 @@
     if-eqz v5, :cond_0
 
     .line 144
-    iget v5, v0, Lcom/glympse/android/lib/hb;->rw:F
+    iget v5, v0, Lcom/glympse/android/lib/hy;->sA:F
 
     invoke-interface {p1}, Lcom/glympse/android/core/GLocation;->getHAccuracy()F
 
@@ -111,25 +111,25 @@
 
     add-float/2addr v5, v6
 
-    iput v5, v0, Lcom/glympse/android/lib/hb;->rw:F
+    iput v5, v0, Lcom/glympse/android/lib/hy;->sA:F
 
     .line 148
     :cond_0
-    iget v5, v0, Lcom/glympse/android/lib/hb;->rw:F
+    iget v5, v0, Lcom/glympse/android/lib/hy;->sA:F
 
-    iget v6, v0, Lcom/glympse/android/lib/hb;->rv:F
+    iget v6, v0, Lcom/glympse/android/lib/hy;->sz:F
 
     cmpg-float v5, v5, v6
 
     if-gez v5, :cond_2
 
     .line 151
-    iget v5, v0, Lcom/glympse/android/lib/hb;->rw:F
+    iget v5, v0, Lcom/glympse/android/lib/hy;->sA:F
 
-    iput v5, v0, Lcom/glympse/android/lib/hb;->rv:F
+    iput v5, v0, Lcom/glympse/android/lib/hy;->sz:F
 
     .line 157
-    iget-wide v6, v0, Lcom/glympse/android/lib/hb;->ru:J
+    iget-wide v6, v0, Lcom/glympse/android/lib/hy;->sy:J
 
     sub-long/2addr v6, v2
 
@@ -137,7 +137,7 @@
 
     if-gtz v5, :cond_1
 
-    iget-boolean v5, v0, Lcom/glympse/android/lib/hb;->rz:Z
+    iget-boolean v5, v0, Lcom/glympse/android/lib/hy;->sD:Z
 
     if-nez v5, :cond_2
 
@@ -145,11 +145,11 @@
     :cond_1
     const-wide/16 v6, 0x3e8
 
-    iget v5, v0, Lcom/glympse/android/lib/hb;->rv:F
+    iget v5, v0, Lcom/glympse/android/lib/hy;->sz:F
 
     float-to-double v8, v5
 
-    const-wide/high16 v10, 0x3ff4000000000000L
+    const-wide/high16 v10, 0x3ff4000000000000L    # 1.25
 
     div-double/2addr v8, v10
 
@@ -161,7 +161,7 @@
 
     add-long/2addr v6, v12
 
-    iput-wide v6, v0, Lcom/glympse/android/lib/hb;->ru:J
+    iput-wide v6, v0, Lcom/glympse/android/lib/hy;->sy:J
 
     .line 134
     :cond_2
@@ -185,7 +185,7 @@
 
     .prologue
     .line 295
-    iget-object v0, p0, Lcom/glympse/android/lib/v;->hN:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/glympse/android/lib/v;->hV:Ljava/lang/Runnable;
 
     if-nez v0, :cond_0
 
@@ -200,12 +200,12 @@
 
     invoke-direct {v1, v0}, Lcom/glympse/android/lib/w;-><init>(Lcom/glympse/android/lib/v;)V
 
-    iput-object v1, p0, Lcom/glympse/android/lib/v;->hN:Ljava/lang/Runnable;
+    iput-object v1, p0, Lcom/glympse/android/lib/v;->hV:Ljava/lang/Runnable;
 
     .line 298
     iget-object v0, p0, Lcom/glympse/android/lib/v;->_handler:Lcom/glympse/android/core/GHandler;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/v;->hN:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/glympse/android/lib/v;->hV:Ljava/lang/Runnable;
 
     const-wide/16 v2, 0x1388
 
@@ -221,21 +221,21 @@
 
     .prologue
     .line 304
-    iget-object v0, p0, Lcom/glympse/android/lib/v;->hN:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/glympse/android/lib/v;->hV:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
     .line 306
     iget-object v0, p0, Lcom/glympse/android/lib/v;->_handler:Lcom/glympse/android/core/GHandler;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/v;->hN:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/glympse/android/lib/v;->hV:Ljava/lang/Runnable;
 
     invoke-interface {v0, v1}, Lcom/glympse/android/core/GHandler;->cancel(Ljava/lang/Runnable;)V
 
     .line 307
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/v;->hN:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/glympse/android/lib/v;->hV:Ljava/lang/Runnable;
 
     .line 309
     :cond_0
@@ -249,14 +249,14 @@
 
     .prologue
     .line 313
-    iget-object v0, p0, Lcom/glympse/android/lib/v;->hN:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/glympse/android/lib/v;->hV:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
     .line 315
     iget-object v0, p0, Lcom/glympse/android/lib/v;->_handler:Lcom/glympse/android/core/GHandler;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/v;->hN:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/glympse/android/lib/v;->hV:Ljava/lang/Runnable;
 
     const-wide/16 v2, 0x1388
 
@@ -278,7 +278,7 @@
     const/4 v1, 0x0
 
     .line 179
-    iget-object v0, p0, Lcom/glympse/android/lib/v;->hM:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/v;->hU:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -293,16 +293,16 @@
     if-ge v4, v5, :cond_7
 
     .line 182
-    iget-object v0, p0, Lcom/glympse/android/lib/v;->hM:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/v;->hU:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, v4}, Lcom/glympse/android/hal/GVector;->elementAt(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/glympse/android/lib/hb;
+    check-cast v0, Lcom/glympse/android/lib/hy;
 
     .line 192
-    iget-boolean v3, v0, Lcom/glympse/android/lib/hb;->rz:Z
+    iget-boolean v3, v0, Lcom/glympse/android/lib/hy;->sD:Z
 
     if-nez v3, :cond_1
 
@@ -315,7 +315,7 @@
     if-ge v3, v6, :cond_1
 
     .line 200
-    const v6, 0x48927c00
+    const v6, 0x48927c00    # 300000.0f
 
     int-to-float v7, v3
 
@@ -328,7 +328,7 @@
     float-to-long v6, v6
 
     .line 205
-    const/high16 v8, 0x447a0000
+    const/high16 v8, 0x447a0000    # 1000.0f
 
     int-to-float v9, v3
 
@@ -339,7 +339,7 @@
     sub-float/2addr v8, v9
 
     .line 208
-    iget v9, v0, Lcom/glympse/android/lib/hb;->rw:F
+    iget v9, v0, Lcom/glympse/android/lib/hy;->sA:F
 
     cmpg-float v8, v9, v8
 
@@ -348,7 +348,7 @@
     .line 211
     const-wide/16 v8, 0x0
 
-    iget-object v10, v0, Lcom/glympse/android/lib/hb;->ry:[J
+    iget-object v10, v0, Lcom/glympse/android/lib/hy;->sC:[J
 
     aget-wide v10, v10, v3
 
@@ -357,13 +357,13 @@
     if-nez v8, :cond_0
 
     .line 213
-    iget-object v8, v0, Lcom/glympse/android/lib/hb;->ry:[J
+    iget-object v8, v0, Lcom/glympse/android/lib/hy;->sC:[J
 
     aput-wide p1, v8, v3
 
     .line 218
     :cond_0
-    iget-object v8, v0, Lcom/glympse/android/lib/hb;->ry:[J
+    iget-object v8, v0, Lcom/glympse/android/lib/hy;->sC:[J
 
     aget-wide v8, v8, v3
 
@@ -376,26 +376,26 @@
     .line 220
     const/4 v3, 0x1
 
-    iput-boolean v3, v0, Lcom/glympse/android/lib/hb;->rz:Z
+    iput-boolean v3, v0, Lcom/glympse/android/lib/hy;->sD:Z
 
     .line 237
     :cond_1
-    iget-boolean v3, v0, Lcom/glympse/android/lib/hb;->rz:Z
+    iget-boolean v3, v0, Lcom/glympse/android/lib/hy;->sD:Z
 
     if-eqz v3, :cond_4
 
     .line 243
-    iget-wide v6, v0, Lcom/glympse/android/lib/hb;->ru:J
+    iget-wide v6, v0, Lcom/glympse/android/lib/hy;->sy:J
 
     cmp-long v3, v6, p1
 
     if-lez v3, :cond_2
 
-    iget v3, v0, Lcom/glympse/android/lib/hb;->rw:F
+    iget v3, v0, Lcom/glympse/android/lib/hy;->sA:F
 
-    iget v6, v0, Lcom/glympse/android/lib/hb;->rv:F
+    iget v6, v0, Lcom/glympse/android/lib/hy;->sz:F
 
-    const/high16 v7, 0x43fa0000
+    const/high16 v7, 0x43fa0000    # 500.0f
 
     add-float/2addr v6, v7
 
@@ -407,7 +407,7 @@
     :cond_2
     const/4 v2, 0x1
 
-    iput-boolean v2, v0, Lcom/glympse/android/lib/hb;->rA:Z
+    iput-boolean v2, v0, Lcom/glympse/android/lib/hy;->sE:Z
 
     .line 250
     const/4 v2, 0x1
@@ -438,7 +438,7 @@
 
     .line 230
     :cond_5
-    iget-object v6, v0, Lcom/glympse/android/lib/hb;->ry:[J
+    iget-object v6, v0, Lcom/glympse/android/lib/hy;->sC:[J
 
     const-wide/16 v8, 0x0
 
@@ -475,12 +475,12 @@
     check-cast v0, Lcom/glympse/android/core/GRegion;
 
     .line 279
-    iget-object v5, p0, Lcom/glympse/android/lib/v;->cL:Lcom/glympse/android/core/GProximityListener;
+    iget-object v5, p0, Lcom/glympse/android/lib/v;->cO:Lcom/glympse/android/core/GProximityListener;
 
     if-eqz v5, :cond_8
 
     .line 281
-    iget-object v5, p0, Lcom/glympse/android/lib/v;->cL:Lcom/glympse/android/core/GProximityListener;
+    iget-object v5, p0, Lcom/glympse/android/lib/v;->cO:Lcom/glympse/android/core/GProximityListener;
 
     invoke-interface {v5, v0}, Lcom/glympse/android/core/GProximityListener;->regionEntered(Lcom/glympse/android/core/GRegion;)V
 
@@ -514,14 +514,14 @@
     invoke-direct {p0}, Lcom/glympse/android/lib/v;->al()V
 
     .line 119
-    iget-object v0, p0, Lcom/glympse/android/lib/v;->hM:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/v;->hU:Lcom/glympse/android/hal/GVector;
 
     .line 120
     new-instance v1, Lcom/glympse/android/hal/GVector;
 
     invoke-direct {v1}, Lcom/glympse/android/hal/GVector;-><init>()V
 
-    iput-object v1, p0, Lcom/glympse/android/lib/v;->hM:Lcom/glympse/android/hal/GVector;
+    iput-object v1, p0, Lcom/glympse/android/lib/v;->hU:Lcom/glympse/android/hal/GVector;
 
     .line 121
     return-object v0
@@ -532,15 +532,15 @@
 
     .prologue
     .line 51
-    iput-object p1, p0, Lcom/glympse/android/lib/v;->hL:Lcom/glympse/android/core/GLocation;
+    iput-object p1, p0, Lcom/glympse/android/lib/v;->hT:Lcom/glympse/android/core/GLocation;
 
     .line 53
-    iget-object v0, p0, Lcom/glympse/android/lib/v;->hL:Lcom/glympse/android/core/GLocation;
+    iget-object v0, p0, Lcom/glympse/android/lib/v;->hT:Lcom/glympse/android/core/GLocation;
 
     if-eqz v0, :cond_0
 
     .line 56
-    iget-object v0, p0, Lcom/glympse/android/lib/v;->hL:Lcom/glympse/android/core/GLocation;
+    iget-object v0, p0, Lcom/glympse/android/lib/v;->hT:Lcom/glympse/android/core/GLocation;
 
     invoke-direct {p0, v0}, Lcom/glympse/android/lib/v;->a(Lcom/glympse/android/core/GLocation;)Z
 
@@ -554,7 +554,7 @@
 
     .prologue
     .line 45
-    iput-object p1, p0, Lcom/glympse/android/lib/v;->cL:Lcom/glympse/android/core/GProximityListener;
+    iput-object p1, p0, Lcom/glympse/android/lib/v;->cO:Lcom/glympse/android/core/GProximityListener;
 
     .line 46
     return-void
@@ -594,7 +594,7 @@
     check-cast v0, Lcom/glympse/android/core/GRegion;
 
     .line 84
-    iget-object v3, p0, Lcom/glympse/android/lib/v;->hM:Lcom/glympse/android/hal/GVector;
+    iget-object v3, p0, Lcom/glympse/android/lib/v;->hU:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v3, v0}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V
 
@@ -607,18 +607,18 @@
 
     .line 88
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/v;->hL:Lcom/glympse/android/core/GLocation;
+    iget-object v0, p0, Lcom/glympse/android/lib/v;->hT:Lcom/glympse/android/core/GLocation;
 
     if-eqz v0, :cond_1
 
     .line 90
-    iget-object v0, p0, Lcom/glympse/android/lib/v;->hL:Lcom/glympse/android/core/GLocation;
+    iget-object v0, p0, Lcom/glympse/android/lib/v;->hT:Lcom/glympse/android/core/GLocation;
 
     invoke-direct {p0, v0}, Lcom/glympse/android/lib/v;->a(Lcom/glympse/android/core/GLocation;)Z
 
     .line 94
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/v;->hM:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/v;->hU:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -639,23 +639,23 @@
 
     .prologue
     .line 62
-    iget-object v0, p0, Lcom/glympse/android/lib/v;->hM:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/v;->hU:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V
 
     .line 65
-    iget-object v0, p0, Lcom/glympse/android/lib/v;->hL:Lcom/glympse/android/core/GLocation;
+    iget-object v0, p0, Lcom/glympse/android/lib/v;->hT:Lcom/glympse/android/core/GLocation;
 
     if-eqz v0, :cond_0
 
     .line 67
-    iget-object v0, p0, Lcom/glympse/android/lib/v;->hL:Lcom/glympse/android/core/GLocation;
+    iget-object v0, p0, Lcom/glympse/android/lib/v;->hT:Lcom/glympse/android/core/GLocation;
 
     invoke-direct {p0, v0}, Lcom/glympse/android/lib/v;->a(Lcom/glympse/android/core/GLocation;)Z
 
     .line 71
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/v;->hM:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/v;->hU:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -676,12 +676,12 @@
 
     .prologue
     .line 102
-    iget-object v0, p0, Lcom/glympse/android/lib/v;->hM:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/v;->hU:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/hal/GVector;->removeElement(Ljava/lang/Object;)Z
 
     .line 105
-    iget-object v0, p0, Lcom/glympse/android/lib/v;->hM:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/v;->hU:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 

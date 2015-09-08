@@ -1,6 +1,6 @@
-.class final Landroid/support/v4/view/a/k;
-.super Landroid/support/v4/view/a/o;
-.source "AccessibilityNodeProviderCompat.java"
+.class Landroid/support/v4/view/a/k;
+.super Landroid/support/v4/view/a/j;
+.source "AccessibilityNodeInfoCompat.java"
 
 
 # direct methods
@@ -8,26 +8,24 @@
     .locals 0
 
     .prologue
-    .line 43
-    invoke-direct {p0}, Landroid/support/v4/view/a/o;-><init>()V
+    .line 1041
+    invoke-direct {p0}, Landroid/support/v4/view/a/j;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/support/v4/view/a/i;)Ljava/lang/Object;
-    .locals 2
+.method public final u(Ljava/lang/Object;)Ljava/lang/String;
+    .locals 1
 
     .prologue
-    .line 47
-    new-instance v0, Landroid/support/v4/view/a/l;
+    .line 1045
+    check-cast p1, Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    invoke-direct {v0, p0, p1}, Landroid/support/v4/view/a/l;-><init>(Landroid/support/v4/view/a/k;Landroid/support/v4/view/a/i;)V
+    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->getViewIdResourceName()Ljava/lang/String;
 
-    new-instance v1, Landroid/support/v4/view/a/q;
+    move-result-object v0
 
-    invoke-direct {v1, v0}, Landroid/support/v4/view/a/q;-><init>(Landroid/support/v4/view/a/r;)V
-
-    return-object v1
+    return-object v0
 .end method

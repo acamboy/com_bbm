@@ -3,20 +3,20 @@
 .source "BBProtectedKeyExchangeDialog.java"
 
 # interfaces
-.implements Landroid/text/TextWatcher;
+.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/b/p;
+.field final synthetic a:Lcom/bbm/ui/b/o;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/b/p;)V
+.method constructor <init>(Lcom/bbm/ui/b/o;)V
     .locals 0
 
     .prologue
-    .line 80
-    iput-object p1, p0, Lcom/bbm/ui/b/q;->a:Lcom/bbm/ui/b/p;
+    .line 117
+    iput-object p1, p0, Lcom/bbm/ui/b/q;->a:Lcom/bbm/ui/b/o;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,113 +25,110 @@
 
 
 # virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
-    .locals 0
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 5
 
     .prologue
-    .line 85
-    return-void
-.end method
+    const/4 v4, 0x0
 
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
-
-    .prologue
-    .line 90
-    return-void
-.end method
-
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 4
-
-    .prologue
     const/4 v3, 0x0
 
-    .line 94
-    iget-object v0, p0, Lcom/bbm/ui/b/q;->a:Lcom/bbm/ui/b/p;
+    .line 120
+    iget-object v0, p0, Lcom/bbm/ui/b/q;->a:Lcom/bbm/ui/b/o;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/b/p;->a()Ljava/lang/String;
+    invoke-static {v0}, Lcom/bbm/ui/b/o;->a(Lcom/bbm/ui/b/o;)Landroid/widget/EditText;
 
     move-result-object v0
 
-    .line 95
-    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
+    invoke-virtual {v0}, Landroid/widget/EditText;->getCompoundDrawables()[Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    aget-object v0, v0, v1
+
+    if-nez v0, :cond_1
+
+    .line 130
+    :cond_0
+    :goto_0
+    return v4
+
+    .line 123
+    :cond_1
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    .line 126
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/bbm/ui/b/q;->a:Lcom/bbm/ui/b/o;
+
+    invoke-static {v1}, Lcom/bbm/ui/b/o;->a(Lcom/bbm/ui/b/o;)Landroid/widget/EditText;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/widget/EditText;->getWidth()I
 
     move-result v1
 
-    if-nez v1, :cond_0
+    iget-object v2, p0, Lcom/bbm/ui/b/q;->a:Lcom/bbm/ui/b/o;
 
-    iget-object v1, p0, Lcom/bbm/ui/b/q;->a:Lcom/bbm/ui/b/p;
-
-    invoke-static {v1}, Lcom/bbm/ui/b/p;->a(Lcom/bbm/ui/b/p;)Landroid/widget/EditText;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/widget/EditText;->getCompoundDrawables()[Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    const/4 v2, 0x2
-
-    aget-object v1, v1, v2
-
-    if-nez v1, :cond_0
-
-    .line 96
-    iget-object v1, p0, Lcom/bbm/ui/b/q;->a:Lcom/bbm/ui/b/p;
-
-    invoke-static {v1}, Lcom/bbm/ui/b/p;->a(Lcom/bbm/ui/b/p;)Landroid/widget/EditText;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/ui/b/q;->a:Lcom/bbm/ui/b/p;
-
-    invoke-static {v2}, Lcom/bbm/ui/b/p;->b(Lcom/bbm/ui/b/p;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v2}, Lcom/bbm/ui/b/o;->a(Lcom/bbm/ui/b/o;)Landroid/widget/EditText;
 
     move-result-object v2
 
-    invoke-virtual {v1, v3, v3, v2, v3}, Landroid/widget/EditText;->setCompoundDrawables(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-
-    .line 98
-    :cond_0
-    iget-object v1, p0, Lcom/bbm/ui/b/q;->a:Lcom/bbm/ui/b/p;
-
-    iget-object v2, p0, Lcom/bbm/ui/b/q;->a:Lcom/bbm/ui/b/p;
-
-    invoke-static {v2}, Lcom/bbm/ui/b/p;->c(Lcom/bbm/ui/b/p;)I
+    invoke-virtual {v2}, Landroid/widget/EditText;->getPaddingRight()I
 
     move-result v2
 
-    const/4 v3, 0x3
+    sub-int/2addr v1, v2
 
-    if-ne v2, v3, :cond_2
+    iget-object v2, p0, Lcom/bbm/ui/b/q;->a:Lcom/bbm/ui/b/o;
 
-    if-eqz v0, :cond_1
+    invoke-static {v2}, Lcom/bbm/ui/b/o;->b(Lcom/bbm/ui/b/o;)Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    move-result-object v2
 
-    move-result v0
+    invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
-    if-lez v0, :cond_1
+    move-result v2
 
-    const/4 v0, 0x1
+    sub-int/2addr v1, v2
 
-    :goto_0
-    invoke-static {v1, v0}, Lcom/bbm/ui/b/p;->a(Lcom/bbm/ui/b/p;Z)V
+    int-to-float v1, v1
 
-    .line 99
-    return-void
+    cmpl-float v0, v0, v1
 
-    .line 98
-    :cond_1
-    const/4 v0, 0x0
+    if-lez v0, :cond_0
 
-    goto :goto_0
+    .line 127
+    iget-object v0, p0, Lcom/bbm/ui/b/q;->a:Lcom/bbm/ui/b/o;
 
-    :cond_2
-    invoke-static {v0}, Lcom/bbm/util/db;->a(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/bbm/ui/b/o;->a(Lcom/bbm/ui/b/o;)Landroid/widget/EditText;
 
-    move-result v0
+    move-result-object v0
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+
+    .line 128
+    iget-object v0, p0, Lcom/bbm/ui/b/q;->a:Lcom/bbm/ui/b/o;
+
+    invoke-static {v0}, Lcom/bbm/ui/b/o;->a(Lcom/bbm/ui/b/o;)Landroid/widget/EditText;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3, v3, v3, v3}, Landroid/widget/EditText;->setCompoundDrawables(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 .end method

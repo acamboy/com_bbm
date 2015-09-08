@@ -127,7 +127,7 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, v2}, Lcom/bbm/y;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v2}, Lcom/bbm/af;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     :cond_2
     move-object v0, v1
@@ -145,7 +145,7 @@
 
     .line 137
     :try_start_0
-    invoke-static {p0}, Lcom/bbm/util/cv;->a(I)Ljava/net/InetAddress;
+    invoke-static {p0}, Lcom/bbm/util/de;->a(I)Ljava/net/InetAddress;
 
     move-result-object v1
 
@@ -194,7 +194,7 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-static {v1, v2}, Lcom/bbm/y;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v1, v2}, Lcom/bbm/af;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
@@ -204,7 +204,7 @@
 
     .prologue
     .line 128
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
 
     move-result-object v0
 
@@ -213,14 +213,14 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 130
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
 
     move-result-object v0
 
@@ -246,7 +246,7 @@
 
     const-class v1, Lcom/bbm/receiver/NetworkChangeMonitor;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/String;Ljava/lang/Class;)V
 
     .line 38
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -282,59 +282,47 @@
     move-result-object v5
 
     .line 44
-    if-eqz v5, :cond_9
+    if-eqz v5, :cond_8
 
     invoke-virtual {v5}, Landroid/net/NetworkInfo;->isConnected()Z
 
     move-result v0
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_8
 
     .line 45
-    const-string v0, ""
+    const-string v1, ""
 
-    invoke-static {p1}, Lcom/bbm/util/cv;->b(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/bbm/util/de;->b(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_d
+
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_d
+
+    :goto_1
+    invoke-static {p1}, Lcom/bbm/util/de;->c(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_c
 
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v2
 
-    if-nez v2, :cond_2
+    if-nez v2, :cond_c
 
-    move-object v0, v1
+    const-string v2, ","
 
-    :cond_2
-    invoke-static {p1}, Lcom/bbm/util/cv;->c(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_d
-
-    invoke-virtual {v2}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v3
-
-    if-nez v3, :cond_d
-
-    const-string v3, ","
-
-    invoke-virtual {v0, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
-
-    const-string v3, ","
-
-    invoke-virtual {v1, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
@@ -342,14 +330,14 @@
 
     move-object v1, v0
 
-    :goto_1
+    :goto_2
     const-string v0, "Retrieved MCC and MNC: %s."
 
     new-array v2, v6, [Ljava/lang/Object;
 
     aput-object v1, v2, v7
 
-    invoke-static {v0, v2}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v2}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 46
     const-string v2, ""
@@ -368,27 +356,27 @@
 
     const/4 v4, 0x5
 
-    if-ne v3, v4, :cond_3
+    if-ne v3, v4, :cond_2
 
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;
 
     move-result-object v0
 
-    if-nez v0, :cond_c
+    if-nez v0, :cond_b
 
     const-string v0, ""
 
     move-object v2, v0
 
-    :cond_3
-    :goto_2
+    :cond_2
+    :goto_3
     const-string v0, "Retrieved MSISDN: %s."
 
     new-array v3, v6, [Ljava/lang/Object;
 
     aput-object v2, v3, v7
 
-    invoke-static {v0, v3}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v3}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 47
     const-string v0, "phone"
@@ -403,20 +391,20 @@
 
     move-result-object v0
 
-    if-nez v0, :cond_b
+    if-nez v0, :cond_a
 
     const-string v0, ""
 
     move-object v3, v0
 
-    :goto_3
+    :goto_4
     const-string v0, "Retrieved IMEI: %s."
 
     new-array v4, v6, [Ljava/lang/Object;
 
     aput-object v3, v4, v7
 
-    invoke-static {v0, v4}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v4}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 48
     invoke-virtual {v5}, Landroid/net/NetworkInfo;->getType()I
@@ -424,7 +412,7 @@
     move-result v0
 
     .line 50
-    if-ne v0, v6, :cond_5
+    if-ne v0, v6, :cond_4
 
     .line 51
     const-string v0, "wifi"
@@ -462,7 +450,7 @@
 
     move-result v4
 
-    if-nez v4, :cond_4
+    if-nez v4, :cond_3
 
     .line 62
     sput-object v0, Lcom/bbm/receiver/NetworkChangeMonitor;->b:Ljava/lang/String;
@@ -488,7 +476,7 @@
 
     aput-object v5, v4, v7
 
-    invoke-static {v0, v4}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v4}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 73
     const-string v0, "0.0.0.0"
@@ -505,18 +493,18 @@
     goto/16 :goto_0
 
     .line 78
-    :cond_4
+    :cond_3
     const-string v0, "Ignoring change to Wifi network as IP address is same."
 
     new-array v1, v7, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
     .line 82
-    :cond_5
-    if-nez v0, :cond_7
+    :cond_4
+    if-nez v0, :cond_6
 
     .line 84
     invoke-static {}, Lcom/bbm/receiver/NetworkChangeMonitor;->a()Ljava/lang/String;
@@ -530,7 +518,7 @@
 
     move-result v4
 
-    if-nez v4, :cond_6
+    if-nez v4, :cond_5
 
     .line 90
     sput-object v0, Lcom/bbm/receiver/NetworkChangeMonitor;->a:Ljava/lang/String;
@@ -553,10 +541,10 @@
 
     move-result v5
 
-    if-nez v5, :cond_a
+    if-nez v5, :cond_9
 
     .line 99
-    :goto_4
+    :goto_5
     invoke-static {}, Lcom/rim/bbm/BbmPlatformService;->getInstance()Lcom/rim/bbm/BbmPlatformService;
 
     move-result-object v4
@@ -572,7 +560,7 @@
 
     aput-object v6, v5, v7
 
-    invoke-static {v4, v5}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v4, v5}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 106
     const-string v4, "0.0.0.0"
@@ -587,23 +575,23 @@
     goto/16 :goto_0
 
     .line 111
-    :cond_6
+    :cond_5
     const-string v0, "Ignoring change to Mobile network as IP address is same."
 
     new-array v1, v7, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
     .line 113
-    :cond_7
-    if-ne v0, v6, :cond_8
+    :cond_6
+    if-ne v0, v6, :cond_7
 
     if-eqz v0, :cond_0
 
     .line 115
-    :cond_8
+    :cond_7
     const-string v0, "mixpanel_connection_other_count"
 
     invoke-static {p1, v0}, Lcom/bbm/receiver/NetworkChangeMonitor;->a(Landroid/content/Context;Ljava/lang/String;)V
@@ -611,7 +599,7 @@
     goto/16 :goto_0
 
     .line 118
-    :cond_9
+    :cond_8
     const-string v0, "UNKNOWN"
 
     sput-object v0, Lcom/bbm/receiver/NetworkChangeMonitor;->a:Ljava/lang/String;
@@ -642,27 +630,32 @@
 
     new-array v1, v7, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
-    :cond_a
+    :cond_9
     move-object v0, v4
 
-    goto :goto_4
+    goto :goto_5
+
+    :cond_a
+    move-object v3, v0
+
+    goto/16 :goto_4
 
     :cond_b
-    move-object v3, v0
+    move-object v2, v0
 
     goto/16 :goto_3
 
     :cond_c
-    move-object v2, v0
+    move-object v1, v0
 
     goto/16 :goto_2
 
     :cond_d
-    move-object v1, v0
+    move-object v0, v1
 
     goto/16 :goto_1
 .end method

@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/wj;
 .super Ljava/lang/Object;
-.source "MainActivity.java"
+.source "NewListActivity.java"
 
 # interfaces
 .implements Landroid/text/TextWatcher;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/NewListActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/NewListActivity;)V
     .locals 0
 
     .prologue
-    .line 914
-    iput-object p1, p0, Lcom/bbm/ui/activities/wj;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 32
+    iput-object p1, p0, Lcom/bbm/ui/activities/wj;->a:Lcom/bbm/ui/activities/NewListActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,42 +26,10 @@
 
 # virtual methods
 .method public final afterTextChanged(Landroid/text/Editable;)V
-    .locals 2
+    .locals 0
 
     .prologue
-    .line 927
-    iget-object v0, p0, Lcom/bbm/ui/activities/wj;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    const-class v1, Lcom/bbm/h/l;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/MainActivity;->a(Ljava/lang/Class;)Lcom/google/b/a/l;
-
-    move-result-object v0
-
-    .line 928
-    invoke-virtual {v0}, Lcom/google/b/a/l;->a()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 929
-    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/h/l;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v0, v0, Lcom/bbm/h/l;->a:Lcom/bbm/util/ct;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
-
-    .line 931
-    :cond_0
+    .line 37
     return-void
 .end method
 
@@ -69,14 +37,44 @@
     .locals 0
 
     .prologue
-    .line 918
+    .line 42
     return-void
 .end method
 
 .method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
+    .locals 2
 
     .prologue
-    .line 923
+    .line 46
+    iget-object v0, p0, Lcom/bbm/ui/activities/wj;->a:Lcom/bbm/ui/activities/NewListActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewListActivity;->b(Lcom/bbm/ui/activities/NewListActivity;)Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    move-result-object v1
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/wj;->a:Lcom/bbm/ui/activities/NewListActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewListActivity;->a(Lcom/bbm/ui/activities/NewListActivity;)Landroid/widget/EditText;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/bbm/util/eu;->a(Landroid/widget/EditText;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    invoke-virtual {v1, v0}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setPositiveButtonEnabled(Z)V
+
+    .line 47
     return-void
+
+    .line 46
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

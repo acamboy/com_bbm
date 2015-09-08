@@ -30,11 +30,11 @@
 
     .prologue
     .line 48
-    invoke-static {}, Lcom/bbm/Alaska;->l()Lcom/bbm/ag;
+    invoke-static {}, Lcom/bbm/Alaska;->p()Lcom/bbm/an;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/ag;->w()V
+    invoke-virtual {v0}, Lcom/bbm/an;->v()V
 
     .line 49
     return-void

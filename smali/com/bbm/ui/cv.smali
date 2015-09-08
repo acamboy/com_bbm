@@ -1,56 +1,55 @@
 .class final Lcom/bbm/ui/cv;
-.super Lcom/bbm/j/k;
-.source "GroupedObservableListAdapter.java"
+.super Ljava/lang/Object;
+.source "FpsMeter.java"
+
+# interfaces
+.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/ListHeaderView;
-
-.field final synthetic b:I
-
-.field final synthetic c:Ljava/util/List;
-
-.field final synthetic d:Lcom/bbm/ui/cu;
+.field final synthetic a:Lcom/bbm/ui/FpsMeter;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/cu;Lcom/bbm/ui/ListHeaderView;ILjava/util/List;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/FpsMeter;)V
+    .locals 0
 
     .prologue
-    .line 171
-    iput-object p1, p0, Lcom/bbm/ui/cv;->d:Lcom/bbm/ui/cu;
+    .line 18
+    iput-object p1, p0, Lcom/bbm/ui/cv;->a:Lcom/bbm/ui/FpsMeter;
 
-    iput-object p2, p0, Lcom/bbm/ui/cv;->a:Lcom/bbm/ui/ListHeaderView;
-
-    iput p3, p0, Lcom/bbm/ui/cv;->b:I
-
-    iput-object p4, p0, Lcom/bbm/ui/cv;->c:Ljava/util/List;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 1
 
     .prologue
-    .line 174
-    iget-object v0, p0, Lcom/bbm/ui/cv;->d:Lcom/bbm/ui/cu;
+    .line 22
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
-    iget-object v1, p0, Lcom/bbm/ui/cv;->a:Lcom/bbm/ui/ListHeaderView;
+    move-result v0
 
-    iget v2, p0, Lcom/bbm/ui/cv;->b:I
+    if-nez v0, :cond_0
 
-    iget-object v3, p0, Lcom/bbm/ui/cv;->c:Ljava/util/List;
+    .line 23
+    iget-object v0, p0, Lcom/bbm/ui/cv;->a:Lcom/bbm/ui/FpsMeter;
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/bbm/ui/cu;->a(Lcom/bbm/ui/ListHeaderView;ILjava/util/List;)V
+    invoke-virtual {v0}, Lcom/bbm/ui/FpsMeter;->a()V
 
-    .line 175
-    return-void
+    .line 24
+    const/4 v0, 0x1
+
+    .line 26
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

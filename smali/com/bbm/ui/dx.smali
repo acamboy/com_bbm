@@ -1,8 +1,8 @@
-.class public interface abstract Lcom/bbm/ui/dx;
+.class interface abstract Lcom/bbm/ui/dx;
 .super Ljava/lang/Object;
-.source "ListItemTouchHandler.java"
+.source "LinkifyTextView.java"
 
 
 # virtual methods
-.method public abstract a(Z)V
+.method public abstract a(Ljava/lang/CharSequence;)Landroid/text/Spannable;
 .end method

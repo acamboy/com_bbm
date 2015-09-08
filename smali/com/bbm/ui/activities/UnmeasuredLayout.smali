@@ -77,7 +77,7 @@
     return-object v0
 
     :cond_0
-    invoke-static {}, Lcom/google/b/a/l;->d()Lcom/google/b/a/l;
+    invoke-static {}, Lcom/google/b/a/l;->e()Lcom/google/b/a/l;
 
     move-result-object v0
 
@@ -90,7 +90,7 @@
     .locals 6
 
     .prologue
-    const/high16 v4, 0x40000000
+    const/high16 v4, 0x40000000    # 2.0f
 
     const/4 v5, 0x0
 
@@ -106,14 +106,14 @@
     move-result-object v0
 
     .line 66
-    invoke-virtual {v0}, Lcom/google/b/a/l;->a()Z
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
     .line 67
-    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
 
     move-result-object v0
 

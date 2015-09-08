@@ -1,77 +1,66 @@
 .class final Lcom/bbm/ui/views/t;
-.super Lcom/bbm/j/k;
-.source "EphemeralPickerPagerV2.java"
+.super Ljava/lang/Object;
+.source "EphemeralPickerPin.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
+.field final synthetic a:Lcom/bbm/ui/views/EphemeralPickerPin;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/views/EphemeralPickerPagerV2;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/views/EphemeralPickerPin;)V
+    .locals 0
 
     .prologue
-    .line 134
-    iput-object p1, p0, Lcom/bbm/ui/views/t;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
+    .line 44
+    iput-object p1, p0, Lcom/bbm/ui/views/t;->a:Lcom/bbm/ui/views/EphemeralPickerPin;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
     .prologue
-    .line 137
-    iget-object v0, p0, Lcom/bbm/ui/views/t;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
+    .line 47
+    iget-object v0, p0, Lcom/bbm/ui/views/t;->a:Lcom/bbm/ui/views/EphemeralPickerPin;
 
-    const v1, 0x7f0b05e8
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/views/EphemeralPickerPagerV2;->findViewById(I)Landroid/view/View;
+    invoke-static {v0}, Lcom/bbm/ui/views/EphemeralPickerPin;->a(Lcom/bbm/ui/views/EphemeralPickerPin;)Landroid/widget/ImageView;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/Button;
+    const/4 v1, 0x1
 
-    .line 138
-    iget-object v1, p0, Lcom/bbm/ui/views/t;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setSelected(Z)V
 
-    invoke-static {v1}, Lcom/bbm/ui/views/EphemeralPickerPagerV2;->d(Lcom/bbm/ui/views/EphemeralPickerPagerV2;)Lcom/bbm/j/r;
+    .line 48
+    iget-object v0, p0, Lcom/bbm/ui/views/t;->a:Lcom/bbm/ui/views/EphemeralPickerPin;
 
-    move-result-object v1
+    invoke-static {v0}, Lcom/bbm/ui/views/EphemeralPickerPin;->b(Lcom/bbm/ui/views/EphemeralPickerPin;)Landroid/view/View$OnClickListener;
 
-    invoke-interface {v1}, Lcom/bbm/j/r;->e()Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object v1
+    if-eqz v0, :cond_0
 
-    check-cast v1, Ljava/lang/Boolean;
+    .line 49
+    iget-object v0, p0, Lcom/bbm/ui/views/t;->a:Lcom/bbm/ui/views/EphemeralPickerPin;
 
-    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-static {v0}, Lcom/bbm/ui/views/EphemeralPickerPin;->b(Lcom/bbm/ui/views/EphemeralPickerPin;)Landroid/view/View$OnClickListener;
 
-    move-result v1
+    move-result-object v0
 
-    if-eqz v1, :cond_0
+    iget-object v1, p0, Lcom/bbm/ui/views/t;->a:Lcom/bbm/ui/views/EphemeralPickerPin;
 
-    .line 139
-    const v1, 0x7f0e06a3
+    invoke-interface {v0, v1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
-
-    .line 143
-    :goto_0
-    return-void
-
-    .line 141
+    .line 51
     :cond_0
-    const v1, 0x7f0e0586
-
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
-
-    goto :goto_0
+    return-void
 .end method

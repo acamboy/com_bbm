@@ -3,7 +3,7 @@
 .source "BannerPagerAdapter.java"
 
 # interfaces
-.implements Lcom/bbm/util/bz;
+.implements Lcom/bbm/util/cf;
 
 
 # instance fields
@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 144
+    .line 153
     iput-object p1, p0, Lcom/bbm/ui/a/c;->c:Lcom/bbm/ui/a/a;
 
     iput-object p2, p0, Lcom/bbm/ui/a/c;->a:Ljava/lang/String;
@@ -33,40 +33,40 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/d/ff;)V
+.method public final a(Lcom/bbm/d/gh;)V
     .locals 2
 
     .prologue
-    .line 147
+    .line 156
     iget-object v0, p0, Lcom/bbm/ui/a/c;->c:Lcom/bbm/ui/a/a;
 
-    iget-object v0, v0, Lcom/bbm/ui/a/a;->a:Lcom/bbm/util/b/d;
+    iget-object v0, v0, Lcom/bbm/ui/a/a;->a:Lcom/bbm/util/b/e;
 
     if-eqz v0, :cond_0
 
-    .line 148
+    .line 157
     iget-object v0, p0, Lcom/bbm/ui/a/c;->c:Lcom/bbm/ui/a/a;
 
-    iget-object v0, v0, Lcom/bbm/ui/a/a;->a:Lcom/bbm/util/b/d;
+    iget-object v0, v0, Lcom/bbm/ui/a/a;->a:Lcom/bbm/util/b/e;
 
     iget-object v1, p0, Lcom/bbm/ui/a/c;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, p1}, Lcom/bbm/util/b/d;->a(Ljava/lang/String;Lcom/bbm/d/ff;)V
+    invoke-virtual {v0, v1, p1}, Lcom/bbm/util/b/e;->a(Ljava/lang/String;Lcom/bbm/d/gh;)V
 
-    .line 150
+    .line 159
     :cond_0
     iget-object v0, p0, Lcom/bbm/ui/a/c;->b:Lcom/bbm/ui/a/d;
 
     if-eqz v0, :cond_1
 
-    .line 151
+    .line 160
     iget-object v0, p0, Lcom/bbm/ui/a/c;->b:Lcom/bbm/ui/a/d;
 
     iget-object v1, p0, Lcom/bbm/ui/a/c;->a:Ljava/lang/String;
 
-    invoke-interface {v0, p1, v1}, Lcom/bbm/ui/a/d;->a(Lcom/bbm/d/ff;Ljava/lang/String;)V
+    invoke-interface {v0, p1, v1}, Lcom/bbm/ui/a/d;->a(Lcom/bbm/d/gh;Ljava/lang/String;)V
 
-    .line 153
+    .line 162
     :cond_1
     return-void
 .end method

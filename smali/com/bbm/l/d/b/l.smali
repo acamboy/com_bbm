@@ -1,159 +1,245 @@
 .class final Lcom/bbm/l/d/b/l;
-.super Ljava/lang/Object;
+.super Lcom/bbm/j/u;
 .source "GooglePlayMethod.java"
-
-# interfaces
-.implements Lcom/bbm/l/d/b/r;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/l/d/b/c;
+.field final synthetic a:Ljava/util/List;
+
+.field final synthetic b:Lcom/bbm/l/d/b/y;
+
+.field final synthetic c:Lcom/bbm/l/d/b/k;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/l/d/b/c;)V
+.method constructor <init>(Lcom/bbm/l/d/b/k;Ljava/util/List;Lcom/bbm/l/d/b/y;)V
     .locals 0
 
     .prologue
-    .line 516
-    iput-object p1, p0, Lcom/bbm/l/d/b/l;->a:Lcom/bbm/l/d/b/c;
+    .line 495
+    iput-object p1, p0, Lcom/bbm/l/d/b/l;->c:Lcom/bbm/l/d/b/k;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lcom/bbm/l/d/b/l;->a:Ljava/util/List;
+
+    iput-object p3, p0, Lcom/bbm/l/d/b/l;->b:Lcom/bbm/l/d/b/y;
+
+    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/bbm/l/d/b/u;Lcom/bbm/l/d/b/x;)V
-    .locals 4
+.method protected final b()Z
+    .locals 7
 
     .prologue
-    const/4 v3, 0x0
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    .line 499
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
-    .line 519
-    iget-object v0, p0, Lcom/bbm/l/d/b/l;->a:Lcom/bbm/l/d/b/c;
+    move-result-object v1
 
-    invoke-static {v0}, Lcom/bbm/l/d/b/c;->b(Lcom/bbm/l/d/b/c;)Lcom/bbm/l/d/b;
+    invoke-virtual {v1}, Lcom/bbm/d/a;->n()Lcom/bbm/d/am;
 
-    move-result-object v0
+    move-result-object v1
 
-    if-eqz v0, :cond_0
-
-    .line 520
-    invoke-virtual {p1}, Lcom/bbm/l/d/b/u;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    if-eqz p2, :cond_3
-
-    .line 521
-    iget-object v0, p0, Lcom/bbm/l/d/b/l;->a:Lcom/bbm/l/d/b/c;
-
-    iget-object v2, p2, Lcom/bbm/l/d/b/x;->n:Ljava/lang/String;
-
-    if-nez v2, :cond_1
-
-    move v0, v1
-
-    :goto_0
-    if-eqz v0, :cond_2
-
-    iget v0, p2, Lcom/bbm/l/d/b/x;->m:I
-
-    if-nez v0, :cond_2
-
-    iget-object v0, p2, Lcom/bbm/l/d/b/x;->k:Ljava/lang/String;
-
-    iget-object v2, p0, Lcom/bbm/l/d/b/l;->a:Lcom/bbm/l/d/b/c;
-
-    invoke-static {v2}, Lcom/bbm/l/d/b/c;->c(Lcom/bbm/l/d/b/c;)Ljava/lang/String;
+    .line 500
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+    const-string v3, "revalidateStickers"
+
+    invoke-virtual {v2, v3}, Lcom/bbm/d/a;->I(Ljava/lang/String;)Lcom/bbm/util/bs;
+
+    move-result-object v2
+
+    .line 501
+    iget-object v3, v2, Lcom/bbm/util/bs;->b:Lcom/bbm/util/bo;
+
+    sget-object v4, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
+
+    if-eq v3, v4, :cond_1
+
+    .line 560
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 504
+    :cond_1
+    iget-object v2, v2, Lcom/bbm/util/bs;->a:Lorg/json/JSONObject;
+
+    const-string v3, "value"
+
+    invoke-virtual {v2, v3, v0}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v2
+
+    .line 511
+    sget-object v3, Lcom/bbm/l/d/b/c;->d:Lcom/bbm/d/a;
+
+    invoke-virtual {v3}, Lcom/bbm/d/a;->z()Lcom/bbm/j/w;
+
+    move-result-object v3
+
+    .line 512
+    sget-object v4, Lcom/bbm/d/am;->c:Lcom/bbm/d/am;
+
+    if-ne v1, v4, :cond_0
+
+    invoke-interface {v3}, Lcom/bbm/j/w;->b()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 516
+    invoke-interface {v3}, Lcom/bbm/j/w;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    .line 517
+    new-instance v1, Ljava/util/HashSet;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v3
+
+    invoke-direct {v1, v3}, Ljava/util/HashSet;-><init>(I)V
+
+    .line 518
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :goto_1
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 525
-    iget-object v0, p0, Lcom/bbm/l/d/b/l;->a:Lcom/bbm/l/d/b/c;
-
-    invoke-static {v0}, Lcom/bbm/l/d/b/c;->b(Lcom/bbm/l/d/b/c;)Lcom/bbm/l/d/b;
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    const/4 v1, 0x1
+    check-cast v0, Lcom/bbm/d/hx;
 
-    invoke-interface {v0, v1, p2}, Lcom/bbm/l/d/b;->a(ZLcom/bbm/l/d/b/x;)V
+    .line 519
+    iget-object v0, v0, Lcom/bbm/d/hx;->b:Ljava/lang/String;
 
-    .line 535
-    :cond_0
-    :goto_1
-    return-void
+    invoke-virtual {v1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 521
-    :cond_1
-    iget-object v0, v0, Lcom/bbm/l/d/b/c;->c:Ljava/lang/String;
+    goto :goto_1
 
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 523
+    :cond_2
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+
+    .line 524
+    iget-object v0, p0, Lcom/bbm/l/d/b/l;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v4
+
+    :cond_3
+    :goto_2
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    goto :goto_0
+    if-eqz v0, :cond_4
+
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    .line 526
+    invoke-static {v0}, Lcom/bbm/l/a;->b(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
 
     .line 527
-    :cond_2
-    const-string v0, "Developer payload/sku failed verification"
+    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    new-array v2, v1, [Ljava/lang/Object;
+    move-result v6
 
-    invoke-static {v0, v2}, Lcom/bbm/y;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
+    if-nez v6, :cond_3
+
+    invoke-virtual {v1, v5}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_3
 
     .line 528
-    iget-object v0, p0, Lcom/bbm/l/d/b/l;->a:Lcom/bbm/l/d/b/c;
+    iget-object v5, p0, Lcom/bbm/l/d/b/l;->b:Lcom/bbm/l/d/b/y;
 
-    invoke-static {v0}, Lcom/bbm/l/d/b/c;->b(Lcom/bbm/l/d/b/c;)Lcom/bbm/l/d/b;
+    invoke-virtual {v5, v0}, Lcom/bbm/l/d/b/y;->c(Ljava/lang/String;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    .line 529
+    iget-object v5, p0, Lcom/bbm/l/d/b/l;->b:Lcom/bbm/l/d/b/y;
+
+    invoke-virtual {v5, v0}, Lcom/bbm/l/d/b/y;->b(Ljava/lang/String;)Lcom/bbm/l/d/b/aa;
 
     move-result-object v0
 
-    invoke-interface {v0, v1, v3}, Lcom/bbm/l/d/b;->a(ZLcom/bbm/l/d/b/x;)V
+    .line 530
+    iget v5, v0, Lcom/bbm/l/d/b/aa;->o:I
 
-    goto :goto_1
+    if-nez v5, :cond_3
 
     .line 531
-    :cond_3
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const-string v2, "Purchase did not succeed."
+    goto :goto_2
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 536
+    :cond_4
+    new-instance v0, Lcom/bbm/l/d/b/m;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, p0, v3, v2}, Lcom/bbm/l/d/b/m;-><init>(Lcom/bbm/l/d/b/l;Ljava/util/ArrayList;Z)V
 
-    move-result-object v0
+    invoke-static {v3, v0}, Lcom/bbm/l/a;->a(Ljava/util/List;Lcom/bbm/l/d;)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 556
+    const/4 v0, 0x0
 
-    move-result-object v0
+    invoke-static {v0}, Lcom/bbm/l/d/b/c;->a(Lcom/bbm/j/u;)Lcom/bbm/j/u;
 
-    new-array v2, v1, [Ljava/lang/Object;
+    .line 557
+    invoke-static {}, Lcom/bbm/l/d/b/c;->m()Z
 
-    invoke-static {v0, v2}, Lcom/bbm/y;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
+    move-result v0
 
-    .line 532
-    iget-object v0, p0, Lcom/bbm/l/d/b/l;->a:Lcom/bbm/l/d/b/c;
+    if-eqz v0, :cond_5
 
-    invoke-static {v0}, Lcom/bbm/l/d/b/c;->b(Lcom/bbm/l/d/b/c;)Lcom/bbm/l/d/b;
+    iget-object v0, p0, Lcom/bbm/l/d/b/l;->c:Lcom/bbm/l/d/b/k;
 
-    move-result-object v0
+    iget-object v0, v0, Lcom/bbm/l/d/b/k;->a:Lcom/bbm/l/a;
 
-    invoke-interface {v0, v1, v3}, Lcom/bbm/l/d/b;->a(ZLcom/bbm/l/d/b/x;)V
+    if-eqz v0, :cond_5
 
-    goto :goto_1
+    .line 558
+    invoke-static {}, Lcom/bbm/l/a;->b()V
+
+    .line 560
+    :cond_5
+    const/4 v0, 0x1
+
+    goto/16 :goto_0
 .end method

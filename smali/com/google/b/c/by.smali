@@ -1,47 +1,27 @@
 .class public abstract Lcom/google/b/c/by;
 .super Ljava/lang/Object;
-.source "UnmodifiableIterator.java"
-
-# interfaces
-.implements Ljava/util/Iterator;
+.source "TreeTraverser.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "<E:",
+        "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Ljava/lang/Object;",
-        "Ljava/util/Iterator",
-        "<TE;>;"
+        "Ljava/lang/Object;"
     }
 .end annotation
 
 
 # direct methods
-.method protected constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     .prologue
-    .line 32
+    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 189
     return-void
-.end method
-
-
-# virtual methods
-.method public final remove()V
-    .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .prologue
-    .line 43
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
 .end method

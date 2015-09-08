@@ -1,111 +1,92 @@
-.class public final synthetic Lcom/bbm/ui/activities/bl;
+.class final Lcom/bbm/ui/activities/bl;
 .super Ljava/lang/Object;
-.source "CaptureBarcodeActivity.java"
+.source "ChannelChatListActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
-# static fields
-.field public static final synthetic a:[I
+# instance fields
+.field final synthetic a:Lcom/bbm/ui/activities/ChannelChatListActivity;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method constructor <init>(Lcom/bbm/ui/activities/ChannelChatListActivity;)V
+    .locals 0
+
+    .prologue
+    .line 138
+    iput-object p1, p0, Lcom/bbm/ui/activities/bl;->a:Lcom/bbm/ui/activities/ChannelChatListActivity;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
     .locals 3
 
     .prologue
-    .line 873
-    invoke-static {}, Lcom/google/zxing/client/android/q;->values()[Lcom/google/zxing/client/android/q;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/bbm/ui/activities/bl;->a:[I
-
+    .line 144
     :try_start_0
-    sget-object v0, Lcom/bbm/ui/activities/bl;->a:[I
+    new-instance v0, Lorg/json/JSONObject;
 
-    sget-object v1, Lcom/google/zxing/client/android/q;->a:Lcom/google/zxing/client/android/q;
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    invoke-virtual {v1}, Lcom/google/zxing/client/android/q;->ordinal()I
-
-    move-result v1
+    .line 145
+    const-string v1, "chatEnabled"
 
     const/4 v2, 0x1
 
-    aput v2, v0, v1
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+
+    .line 146
+    const-string v1, "uri"
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/bl;->a:Lcom/bbm/ui/activities/ChannelChatListActivity;
+
+    invoke-static {v2}, Lcom/bbm/ui/activities/ChannelChatListActivity;->d(Lcom/bbm/ui/activities/ChannelChatListActivity;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 147
+    new-instance v1, Ljava/util/LinkedList;
+
+    invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
+
+    .line 148
+    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 149
+    iget-object v0, p0, Lcom/bbm/ui/activities/bl;->a:Lcom/bbm/ui/activities/ChannelChatListActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->b(Lcom/bbm/ui/activities/ChannelChatListActivity;)Lcom/bbm/d/a;
+
+    move-result-object v0
+
+    const-string v2, "channel"
+
+    invoke-static {v1, v2}, Lcom/bbm/d/aj;->c(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/d/dw;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ez;)V
     :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 153
     :goto_0
-    :try_start_1
-    sget-object v0, Lcom/bbm/ui/activities/bl;->a:[I
-
-    sget-object v1, Lcom/google/zxing/client/android/q;->b:Lcom/google/zxing/client/android/q;
-
-    invoke-virtual {v1}, Lcom/google/zxing/client/android/q;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
-
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/bbm/ui/activities/bl;->a:[I
-
-    sget-object v1, Lcom/google/zxing/client/android/q;->c:Lcom/google/zxing/client/android/q;
-
-    invoke-virtual {v1}, Lcom/google/zxing/client/android/q;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_1
-
-    :goto_2
-    :try_start_3
-    sget-object v0, Lcom/bbm/ui/activities/bl;->a:[I
-
-    sget-object v1, Lcom/google/zxing/client/android/q;->d:Lcom/google/zxing/client/android/q;
-
-    invoke-virtual {v1}, Lcom/google/zxing/client/android/q;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_0
-
-    :goto_3
     return-void
 
+    .line 150
     :catch_0
     move-exception v0
 
-    goto :goto_3
-
-    :catch_1
-    move-exception v0
-
-    goto :goto_2
-
-    :catch_2
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_3
-    move-exception v0
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method

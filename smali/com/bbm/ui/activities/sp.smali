@@ -1,146 +1,90 @@
-.class final Lcom/bbm/ui/activities/sp;
-.super Lcom/bbm/util/d/d;
-.source "GroupPictureCommentsActivity.java"
+.class final synthetic Lcom/bbm/ui/activities/sp;
+.super Ljava/lang/Object;
+.source "InviteActivity.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/g/o;
-
-.field final synthetic b:I
-
-.field final synthetic c:Lcom/bbm/ui/activities/so;
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/so;Lcom/bbm/g/o;Lcom/bbm/d/a;Lcom/bbm/g/o;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 238
-    iput-object p1, p0, Lcom/bbm/ui/activities/sp;->c:Lcom/bbm/ui/activities/so;
-
-    iput-object p4, p0, Lcom/bbm/ui/activities/sp;->a:Lcom/bbm/g/o;
-
-    iput p5, p0, Lcom/bbm/ui/activities/sp;->b:I
-
-    invoke-direct {p0, p2, p3}, Lcom/bbm/util/d/d;-><init>(Lcom/bbm/g/o;Lcom/bbm/d/a;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method protected final a(Lcom/google/b/a/l;)V
-    .locals 8
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/b/a/l",
-            "<",
-            "Lcom/bbm/d/gr;",
-            ">;)V"
-        }
-    .end annotation
-
-    .prologue
-    const/4 v7, 0x0
-
-    .line 242
-    iget-object v0, p0, Lcom/bbm/ui/activities/sp;->c:Lcom/bbm/ui/activities/so;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/so;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/sp;->a:Lcom/bbm/g/o;
-
-    invoke-static {p1, v1}, Lcom/bbm/d/b/a;->a(Lcom/google/b/a/l;Lcom/bbm/g/o;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 243
-    iget-object v0, p0, Lcom/bbm/ui/activities/sp;->c:Lcom/bbm/ui/activities/so;
-
-    iget-object v1, v0, Lcom/bbm/ui/activities/so;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/sp;->c:Lcom/bbm/ui/activities/so;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/so;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->f(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/ui/activities/sv;
+    .line 967
+    invoke-static {}, Lcom/bbm/d/al;->values()[Lcom/bbm/d/al;
 
     move-result-object v0
 
-    iget v2, p0, Lcom/bbm/ui/activities/sp;->b:I
+    array-length v0, v0
 
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/activities/sv;->getItem(I)Ljava/lang/Object;
+    new-array v0, v0, [I
 
-    move-result-object v0
+    sput-object v0, Lcom/bbm/ui/activities/sp;->a:[I
 
-    check-cast v0, Lcom/bbm/g/ag;
+    :try_start_0
+    sget-object v0, Lcom/bbm/ui/activities/sp;->a:[I
 
-    iget-object v0, v0, Lcom/bbm/g/ag;->b:Ljava/lang/String;
+    sget-object v1, Lcom/bbm/d/al;->b:Lcom/bbm/d/al;
 
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->b(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/bbm/d/al;->ordinal()I
 
-    .line 245
-    iget-object v0, p0, Lcom/bbm/ui/activities/sp;->c:Lcom/bbm/ui/activities/so;
+    move-result v1
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/so;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    const/4 v2, 0x1
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/sp;->c:Lcom/bbm/ui/activities/so;
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_2
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/so;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/ui/activities/sp;->a:[I
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/ey;->B:Lcom/bbm/ui/c/gj;
+    sget-object v1, Lcom/bbm/d/al;->a:Lcom/bbm/d/al;
 
-    new-instance v2, Lcom/bbm/ui/slidingmenu/a;
+    invoke-virtual {v1}, Lcom/bbm/d/al;->ordinal()I
 
-    iget-object v3, v0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->d:Ljava/lang/String;
+    move-result v1
 
-    iget-object v4, v0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->b:Ljava/lang/String;
+    const/4 v2, 0x2
 
-    invoke-direct {v2, v7, v3, v4}, Lcom/bbm/ui/slidingmenu/a;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    new-instance v3, Ljava/util/ArrayList;
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/bbm/ui/activities/sp;->a:[I
 
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+    sget-object v1, Lcom/bbm/d/al;->c:Lcom/bbm/d/al;
 
-    new-instance v4, Lcom/bbm/ui/slidingmenu/a;
+    invoke-virtual {v1}, Lcom/bbm/d/al;->ordinal()I
 
-    const v5, 0x7f02026b
+    move-result v1
 
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 v2, 0x3
 
-    move-result-object v5
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_0
 
-    const v6, 0x7f0e0440
-
-    invoke-virtual {v0, v6}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-direct {v4, v5, v6, v7}, Lcom/bbm/ui/slidingmenu/a;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {v1, v3, v7, v7}, Lcom/bbm/ui/c/gj;->a(Ljava/util/List;Lcom/bbm/ui/slidingmenu/a;Lcom/bbm/ui/slidingmenu/a;)V
-
-    invoke-virtual {v1, v2}, Lcom/bbm/ui/c/gj;->b(Lcom/bbm/ui/slidingmenu/a;)V
-
-    new-instance v2, Lcom/bbm/ui/activities/sk;
-
-    invoke-direct {v2, v0}, Lcom/bbm/ui/activities/sk;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
-
-    iput-object v2, v1, Lcom/bbm/ui/c/gj;->b:Lcom/bbm/ui/c/gn;
-
-    .line 246
-    iget-object v0, p0, Lcom/bbm/ui/activities/sp;->c:Lcom/bbm/ui/activities/so;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/so;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->o()V
-
-    .line 248
+    :goto_2
     return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_2
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_1
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_0
 .end method

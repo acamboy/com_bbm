@@ -1,16 +1,18 @@
 .class final Lcom/bbm/ui/activities/kn;
 .super Ljava/lang/Object;
-.source "FileSearchActivity.java"
+.source "GroupChatListActivity.java"
 
 
 # instance fields
-.field a:Landroid/widget/ImageView;
+.field a:Lcom/bbm/ui/InlineImageTextView;
 
-.field b:Landroid/widget/TextView;
+.field b:Lcom/bbm/ui/InlineImageTextView;
 
 .field c:Landroid/widget/TextView;
 
-.field final synthetic d:Lcom/bbm/ui/activities/km;
+.field d:Landroid/widget/ImageView;
+
+.field final synthetic e:Lcom/bbm/ui/activities/km;
 
 
 # direct methods
@@ -18,8 +20,8 @@
     .locals 0
 
     .prologue
-    .line 201
-    iput-object p1, p0, Lcom/bbm/ui/activities/kn;->d:Lcom/bbm/ui/activities/km;
+    .line 279
+    iput-object p1, p0, Lcom/bbm/ui/activities/kn;->e:Lcom/bbm/ui/activities/km;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

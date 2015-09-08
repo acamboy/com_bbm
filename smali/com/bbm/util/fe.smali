@@ -1,31 +1,73 @@
-.class public Lcom/bbm/util/fe;
-.super Ljava/lang/Object;
-.source "UpdatesFragmentUtil.java"
+.class final Lcom/bbm/util/fe;
+.super Landroid/content/BroadcastReceiver;
+.source "WifiStatusMonitor.java"
 
 
 # instance fields
-.field public i:Lcom/bbm/ui/ObservingImageView;
-
-.field public j:Lcom/bbm/ui/ObservingImageView;
-
-.field public k:Landroid/widget/TextView;
-
-.field public l:Landroid/widget/TextView;
-
-.field public m:Landroid/widget/TextView;
-
-.field public n:Landroid/widget/TextView;
-
-.field public o:Ljava/lang/String;
+.field final synthetic a:Lcom/bbm/util/fd;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcom/bbm/util/fd;)V
     .locals 0
 
     .prologue
-    .line 225
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 31
+    iput-object p1, p0, Lcom/bbm/util/fe;->a:Lcom/bbm/util/fd;
+
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 3
+
+    .prologue
+    .line 34
+    iget-object v0, p0, Lcom/bbm/util/fe;->a:Lcom/bbm/util/fd;
+
+    iget-object v1, v0, Lcom/bbm/util/fd;->a:Lcom/bbm/j/t;
+
+    iget-object v0, p0, Lcom/bbm/util/fe;->a:Lcom/bbm/util/fd;
+
+    iget-object v0, v0, Lcom/bbm/util/fd;->b:Landroid/content/Context;
+
+    const-string v2, "connectivity"
+
+    invoke-virtual {v0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/net/ConnectivityManager;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v2}, Landroid/net/ConnectivityManager;->getNetworkInfo(I)Landroid/net/NetworkInfo;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnected()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    :goto_0
+    invoke-virtual {v1, v0}, Lcom/bbm/j/t;->a(Ljava/lang/Object;)V
+
+    .line 35
+    return-void
+
+    .line 34
+    :cond_0
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    goto :goto_0
 .end method

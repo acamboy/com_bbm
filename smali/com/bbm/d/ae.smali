@@ -1,58 +1,53 @@
 .class public final Lcom/bbm/d/ae;
-.super Lcom/bbm/d/dy;
-.source "BbmdsProtocol.java"
+.super Ljava/lang/Object;
+.source "BbmdsModel.java"
+
+
+# instance fields
+.field public a:Z
+
+.field public b:Z
+
+.field public c:I
+
+.field final synthetic d:Lcom/bbm/d/a;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
+.method constructor <init>(Lcom/bbm/d/a;Lcom/bbm/d/ag;ZI)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Ljava/util/List",
-            "<",
-            "Ljava/lang/String;",
-            ">;)V"
-        }
-    .end annotation
 
     .prologue
-    .line 173
-    const-string v0, "adSend"
+    .line 601
+    iput-object p1, p0, Lcom/bbm/d/ae;->d:Lcom/bbm/d/a;
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 175
-    const-string v0, "adId"
+    .line 602
+    sget-object v0, Lcom/bbm/d/ag;->a:Lcom/bbm/d/ag;
 
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/ae;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    if-ne p2, v0, :cond_0
 
-    .line 176
-    const-string v0, "text"
+    .line 603
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, v0, p2}, Lcom/bbm/d/ae;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    iput-boolean v0, p0, Lcom/bbm/d/ae;->a:Z
 
-    .line 177
-    const-string v0, "to"
+    .line 607
+    :goto_0
+    iput-boolean p3, p0, Lcom/bbm/d/ae;->b:Z
 
-    invoke-virtual {p0, v0, p3}, Lcom/bbm/d/ae;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    .line 608
+    iput p4, p0, Lcom/bbm/d/ae;->c:I
 
-    .line 178
+    .line 609
     return-void
-.end method
 
+    .line 605
+    :cond_0
+    const/4 v0, 0x0
 
-# virtual methods
-.method public final bridge synthetic a()Lcom/bbm/f/ab;
-    .locals 1
+    iput-boolean v0, p0, Lcom/bbm/d/ae;->a:Z
 
-    .prologue
-    .line 171
-    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
-
-    move-result-object v0
-
-    return-object v0
+    goto :goto_0
 .end method

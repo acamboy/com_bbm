@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 236
+    .line 239
     iput-object p1, p0, Lcom/bbm/ui/activities/b;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,29 +29,29 @@
     .locals 1
 
     .prologue
-    .line 239
+    .line 242
     iget-object v0, p0, Lcom/bbm/ui/activities/b;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->r(Lcom/bbm/ui/activities/AddChannelPostActivity;)Z
+    invoke-static {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->s(Lcom/bbm/ui/activities/AddChannelPostActivity;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 240
+    .line 243
     iget-object v0, p0, Lcom/bbm/ui/activities/b;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->s(Lcom/bbm/ui/activities/AddChannelPostActivity;)V
+    invoke-static {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->t(Lcom/bbm/ui/activities/AddChannelPostActivity;)V
 
-    .line 244
+    .line 247
     :goto_0
     return-void
 
-    .line 242
+    .line 245
     :cond_0
     iget-object v0, p0, Lcom/bbm/ui/activities/b;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->m(Lcom/bbm/ui/activities/AddChannelPostActivity;)V
+    invoke-static {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->n(Lcom/bbm/ui/activities/AddChannelPostActivity;)V
 
     goto :goto_0
 .end method

@@ -1041,6 +1041,62 @@
     return-void
 .end method
 
+.method public static a(C)I
+    .locals 1
+
+    .prologue
+    .line 226
+    sparse-switch p0, :sswitch_data_0
+
+    .line 239
+    sget v0, Lcom/google/zxing/a/a/c;->a:I
+
+    :goto_0
+    return v0
+
+    .line 228
+    :sswitch_0
+    sget v0, Lcom/google/zxing/a/a/c;->b:I
+
+    goto :goto_0
+
+    .line 230
+    :sswitch_1
+    sget v0, Lcom/google/zxing/a/a/c;->e:I
+
+    goto :goto_0
+
+    .line 232
+    :sswitch_2
+    sget v0, Lcom/google/zxing/a/a/c;->c:I
+
+    goto :goto_0
+
+    .line 234
+    :sswitch_3
+    sget v0, Lcom/google/zxing/a/a/c;->d:I
+
+    goto :goto_0
+
+    .line 236
+    :sswitch_4
+    sget v0, Lcom/google/zxing/a/a/c;->f:I
+
+    goto :goto_0
+
+    .line 226
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x42 -> :sswitch_4
+        0x44 -> :sswitch_3
+        0x4c -> :sswitch_0
+        0x4d -> :sswitch_2
+        0x50 -> :sswitch_1
+    .end sparse-switch
+.end method
+
 .method public static a([ZII)I
     .locals 3
 
@@ -1076,62 +1132,6 @@
     .line 469
     :cond_1
     return v0
-.end method
-
-.method public static a(C)Lcom/google/zxing/a/a/c;
-    .locals 1
-
-    .prologue
-    .line 226
-    sparse-switch p0, :sswitch_data_0
-
-    .line 239
-    sget-object v0, Lcom/google/zxing/a/a/c;->a:Lcom/google/zxing/a/a/c;
-
-    :goto_0
-    return-object v0
-
-    .line 228
-    :sswitch_0
-    sget-object v0, Lcom/google/zxing/a/a/c;->b:Lcom/google/zxing/a/a/c;
-
-    goto :goto_0
-
-    .line 230
-    :sswitch_1
-    sget-object v0, Lcom/google/zxing/a/a/c;->e:Lcom/google/zxing/a/a/c;
-
-    goto :goto_0
-
-    .line 232
-    :sswitch_2
-    sget-object v0, Lcom/google/zxing/a/a/c;->c:Lcom/google/zxing/a/a/c;
-
-    goto :goto_0
-
-    .line 234
-    :sswitch_3
-    sget-object v0, Lcom/google/zxing/a/a/c;->d:Lcom/google/zxing/a/a/c;
-
-    goto :goto_0
-
-    .line 236
-    :sswitch_4
-    sget-object v0, Lcom/google/zxing/a/a/c;->f:Lcom/google/zxing/a/a/c;
-
-    goto :goto_0
-
-    .line 226
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        0x42 -> :sswitch_4
-        0x44 -> :sswitch_3
-        0x4c -> :sswitch_0
-        0x4d -> :sswitch_2
-        0x50 -> :sswitch_1
-    .end sparse-switch
 .end method
 
 .method public static a(Lcom/google/zxing/b/b;)Lcom/google/zxing/b/b;
@@ -1243,16 +1243,14 @@
     return-object v5
 .end method
 
-.method public static a(Lcom/google/zxing/a/a/c;I)Ljava/lang/String;
+.method public static a(II)Ljava/lang/String;
     .locals 2
 
     .prologue
     .line 250
     sget-object v0, Lcom/google/zxing/a/a/b;->a:[I
 
-    invoke-virtual {p0}, Lcom/google/zxing/a/a/c;->ordinal()I
-
-    move-result v1
+    add-int/lit8 v1, p0, -0x1
 
     aget v0, v0, v1
 

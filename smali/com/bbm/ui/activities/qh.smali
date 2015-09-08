@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/activities/qh;
 .super Ljava/lang/Object;
-.source "GroupLobbyActivity.java"
+.source "GroupPictureCommentsActivity.java"
 
 # interfaces
-.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+.implements Lcom/bbm/ui/cb;
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Lcom/bbm/ui/activities/GroupLobbyActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupLobbyActivity;Ljava/lang/String;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
     .locals 0
 
     .prologue
-    .line 557
-    iput-object p1, p0, Lcom/bbm/ui/activities/qh;->b:Lcom/bbm/ui/activities/GroupLobbyActivity;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/qh;->a:Ljava/lang/String;
+    .line 274
+    iput-object p1, p0, Lcom/bbm/ui/activities/qh;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,30 +25,41 @@
 
 
 # virtual methods
-.method public final onGlobalLayout()V
+.method public final a(Z)V
     .locals 2
 
     .prologue
-    .line 560
-    iget-object v0, p0, Lcom/bbm/ui/activities/qh;->b:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    .line 277
+    if-eqz p1, :cond_0
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->q(Lcom/bbm/ui/activities/GroupLobbyActivity;)Landroid/widget/LinearLayout;
+    .line 278
+    iget-object v0, p0, Lcom/bbm/ui/activities/qh;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
 
-    move-result-object v0
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->h(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
 
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    .line 279
+    iget-object v0, p0, Lcom/bbm/ui/activities/qh;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->b(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;Z)V
 
-    .line 561
-    iget-object v0, p0, Lcom/bbm/ui/activities/qh;->b:Lcom/bbm/ui/activities/GroupLobbyActivity;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/qh;->a:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/GroupLobbyActivity;->a(Lcom/bbm/ui/activities/GroupLobbyActivity;Ljava/lang/String;)V
-
-    .line 562
+    .line 284
+    :goto_0
     return-void
+
+    .line 281
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/qh;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->b(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;Z)V
+
+    .line 282
+    iget-object v0, p0, Lcom/bbm/ui/activities/qh;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->f(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+
+    goto :goto_0
 .end method

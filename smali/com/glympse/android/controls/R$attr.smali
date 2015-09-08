@@ -4,23 +4,23 @@
 
 
 # static fields
-.field public static final glympseBusyImageStyle:I = 0x7f010026
+.field public static final glympseBusyImageStyle:I = 0x7f010062
 
-.field public static final glympseButtonStyle:I = 0x7f010027
+.field public static final glympseButtonStyle:I = 0x7f010063
 
-.field public static final glympseCheckBoxStyle:I = 0x7f010028
+.field public static final glympseCheckBoxStyle:I = 0x7f010064
 
-.field public static final glympseClearableEditTextStyle:I = 0x7f010029
+.field public static final glympseClearableEditTextStyle:I = 0x7f010065
 
-.field public static final glympseEditTextStyle:I = 0x7f01002a
+.field public static final glympseEditTextStyle:I = 0x7f010066
 
-.field public static final glympsePhotoStyle:I = 0x7f01002b
+.field public static final glympsePhotoStyle:I = 0x7f010067
 
-.field public static final glympseTextViewStyle:I = 0x7f01002c
+.field public static final glympseTextViewStyle:I = 0x7f010068
 
-.field public static final glympseTimerStyle:I = 0x7f01002d
+.field public static final glympseTimerStyle:I = 0x7f010069
 
-.field public static final glympseToggleButtonStyle:I = 0x7f01002e
+.field public static final glympseToggleButtonStyle:I = 0x7f01006a
 
 
 # direct methods

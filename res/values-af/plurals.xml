@@ -35,28 +35,28 @@
         <item quantity="one">1 Resultaat</item>
     </plurals>
     <plurals name="slide_menu_active_chats">
-        <item quantity="other">%1$s Aktiewe kletse</item>
-        <item quantity="one">1 Aktiewe klets</item>
+        <item quantity="other">Aktiewe kletse %1$s</item>
+        <item quantity="one">Aktiewe klets %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_channelupdates">
-        <item quantity="other">%1$s Nuwe kennisgewings</item>
-        <item quantity="one">1 Nuwe kennisgewing</item>
+        <item quantity="other">Nuwe kanaalitems %1$s</item>
+        <item quantity="one">Nuwe kanaalitem %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_invites">
-        <item quantity="other">%1$s Nuwe uitnodigings</item>
-        <item quantity="one">1 Nuwe uitnodiging</item>
+        <item quantity="other">Nuwe uitnodigings %1$s</item>
+        <item quantity="one">Nuwe uitnodiging %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_updates">
-        <item quantity="other">%1$s Nuwe items</item>
-        <item quantity="one">1 Nuwe item</item>
+        <item quantity="other">Nuwe toevoere %1$s</item>
+        <item quantity="one">Nuwe toevoer %1$s</item>
     </plurals>
     <plurals name="slide_menu_total_contacts">
         <item quantity="other">%1$s Kontakte</item>
-        <item quantity="one">1 Kontak</item>
+        <item quantity="one">%1$s Kontak</item>
     </plurals>
     <plurals name="slide_menu_total_groups">
         <item quantity="other">%1$s Groepe</item>
-        <item quantity="one">1 Groep</item>
+        <item quantity="one">%1$s Groep</item>
     </plurals>
     <plurals name="update_channel_stats_comments">
         <item quantity="other">%1$s Kommentaar</item>

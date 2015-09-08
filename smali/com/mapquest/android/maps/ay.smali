@@ -14,7 +14,7 @@
     .prologue
     const/4 v5, 0x1
 
-    const/high16 v8, 0x3f800000
+    const/high16 v8, 0x3f800000    # 1.0f
 
     .line 2240
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
@@ -156,7 +156,7 @@
     .line 2244
     :array_0
     .array-data 4
-        0x40a00000
-        0x40a00000
+        0x40a00000    # 5.0f
+        0x40a00000    # 5.0f
     .end array-data
 .end method

@@ -1,121 +1,122 @@
-.class public final Landroid/support/v4/widget/k;
-.super Landroid/view/ViewGroup$MarginLayoutParams;
-.source "DrawerLayout.java"
+.class final Landroid/support/v4/widget/k;
+.super Landroid/widget/Filter;
+.source "CursorFilter.java"
 
 
 # instance fields
-.field public a:I
-
-.field b:F
-
-.field c:Z
-
-.field d:Z
+.field a:Landroid/support/v4/widget/l;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method constructor <init>(Landroid/support/v4/widget/l;)V
+    .locals 0
 
     .prologue
-    const/4 v0, -0x1
+    .line 39
+    invoke-direct {p0}, Landroid/widget/Filter;-><init>()V
 
-    .line 1782
-    invoke-direct {p0, v0, v0}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
+    .line 40
+    iput-object p1, p0, Landroid/support/v4/widget/k;->a:Landroid/support/v4/widget/l;
 
-    .line 1768
-    const/4 v0, 0x0
-
-    iput v0, p0, Landroid/support/v4/widget/k;->a:I
-
-    .line 1783
+    .line 41
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+# virtual methods
+.method public final convertResultToString(Ljava/lang/Object;)Ljava/lang/CharSequence;
+    .locals 1
+
+    .prologue
+    .line 45
+    iget-object v0, p0, Landroid/support/v4/widget/k;->a:Landroid/support/v4/widget/l;
+
+    check-cast p1, Landroid/database/Cursor;
+
+    invoke-interface {v0, p1}, Landroid/support/v4/widget/l;->b(Landroid/database/Cursor;)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method protected final performFiltering(Ljava/lang/CharSequence;)Landroid/widget/Filter$FilterResults;
+    .locals 3
+
+    .prologue
+    .line 50
+    iget-object v0, p0, Landroid/support/v4/widget/k;->a:Landroid/support/v4/widget/l;
+
+    invoke-interface {v0, p1}, Landroid/support/v4/widget/l;->a(Ljava/lang/CharSequence;)Landroid/database/Cursor;
+
+    move-result-object v0
+
+    .line 52
+    new-instance v1, Landroid/widget/Filter$FilterResults;
+
+    invoke-direct {v1}, Landroid/widget/Filter$FilterResults;-><init>()V
+
+    .line 53
+    if-eqz v0, :cond_0
+
+    .line 54
+    invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
+
+    move-result v2
+
+    iput v2, v1, Landroid/widget/Filter$FilterResults;->count:I
+
+    .line 55
+    iput-object v0, v1, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
+
+    .line 60
+    :goto_0
+    return-object v1
+
+    .line 57
+    :cond_0
+    const/4 v0, 0x0
+
+    iput v0, v1, Landroid/widget/Filter$FilterResults;->count:I
+
+    .line 58
+    const/4 v0, 0x0
+
+    iput-object v0, v1, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
+
+    goto :goto_0
+.end method
+
+.method protected final publishResults(Ljava/lang/CharSequence;Landroid/widget/Filter$FilterResults;)V
     .locals 2
 
     .prologue
-    const/4 v1, 0x0
+    .line 65
+    iget-object v0, p0, Landroid/support/v4/widget/k;->a:Landroid/support/v4/widget/l;
 
-    .line 1774
-    invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    .line 1768
-    iput v1, p0, Landroid/support/v4/widget/k;->a:I
-
-    .line 1776
-    invoke-static {}, Landroid/support/v4/widget/DrawerLayout;->a()[I
+    invoke-interface {v0}, Landroid/support/v4/widget/l;->a()Landroid/database/Cursor;
 
     move-result-object v0
 
-    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    .line 67
+    iget-object v1, p2, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
 
-    move-result-object v0
+    if-eqz v1, :cond_0
 
-    .line 1777
-    invoke-virtual {v0, v1, v1}, Landroid/content/res/TypedArray;->getInt(II)I
+    iget-object v1, p2, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
 
-    move-result v1
+    if-eq v1, v0, :cond_0
 
-    iput v1, p0, Landroid/support/v4/widget/k;->a:I
+    .line 68
+    iget-object v1, p0, Landroid/support/v4/widget/k;->a:Landroid/support/v4/widget/l;
 
-    .line 1778
-    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
+    iget-object v0, p2, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
 
-    .line 1779
-    return-void
-.end method
+    check-cast v0, Landroid/database/Cursor;
 
-.method public constructor <init>(Landroid/support/v4/widget/k;)V
-    .locals 1
+    invoke-interface {v1, v0}, Landroid/support/v4/widget/l;->a(Landroid/database/Cursor;)V
 
-    .prologue
-    .line 1791
-    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
-
-    .line 1768
-    const/4 v0, 0x0
-
-    iput v0, p0, Landroid/support/v4/widget/k;->a:I
-
-    .line 1792
-    iget v0, p1, Landroid/support/v4/widget/k;->a:I
-
-    iput v0, p0, Landroid/support/v4/widget/k;->a:I
-
-    .line 1793
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/view/ViewGroup$LayoutParams;)V
-    .locals 1
-
-    .prologue
-    .line 1796
-    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 1768
-    const/4 v0, 0x0
-
-    iput v0, p0, Landroid/support/v4/widget/k;->a:I
-
-    .line 1797
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
-    .locals 1
-
-    .prologue
-    .line 1800
-    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
-
-    .line 1768
-    const/4 v0, 0x0
-
-    iput v0, p0, Landroid/support/v4/widget/k;->a:I
-
-    .line 1801
+    .line 70
+    :cond_0
     return-void
 .end method

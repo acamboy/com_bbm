@@ -1,12 +1,12 @@
 .class final Lcom/google/b/c/n;
-.super Lcom/google/b/c/bz;
+.super Lcom/google/b/c/ca;
 .source "Iterators.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/google/b/c/bz",
+        "Lcom/google/b/c/ca",
         "<",
         "Ljava/lang/Object;",
         ">;"
@@ -19,8 +19,8 @@
     .locals 0
 
     .prologue
-    .line 70
-    invoke-direct {p0}, Lcom/google/b/c/bz;-><init>()V
+    .line 73
+    invoke-direct {p0}, Lcom/google/b/c/ca;-><init>()V
 
     return-void
 .end method
@@ -31,7 +31,7 @@
     .locals 1
 
     .prologue
-    .line 73
+    .line 76
     const/4 v0, 0x0
 
     return v0
@@ -41,7 +41,7 @@
     .locals 1
 
     .prologue
-    .line 81
+    .line 84
     const/4 v0, 0x0
 
     return v0
@@ -51,7 +51,7 @@
     .locals 1
 
     .prologue
-    .line 77
+    .line 80
     new-instance v0, Ljava/util/NoSuchElementException;
 
     invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
@@ -63,7 +63,7 @@
     .locals 1
 
     .prologue
-    .line 89
+    .line 92
     const/4 v0, 0x0
 
     return v0
@@ -73,7 +73,7 @@
     .locals 1
 
     .prologue
-    .line 85
+    .line 88
     new-instance v0, Ljava/util/NoSuchElementException;
 
     invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
@@ -85,7 +85,7 @@
     .locals 1
 
     .prologue
-    .line 93
+    .line 96
     const/4 v0, -0x1
 
     return v0

@@ -1,5 +1,5 @@
 .class public abstract Lcom/google/b/c/b;
-.super Lcom/google/b/c/by;
+.super Lcom/google/b/c/bz;
 .source "AbstractSequentialIterator.java"
 
 
@@ -9,7 +9,7 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lcom/google/b/c/by",
+        "Lcom/google/b/c/bz",
         "<TT;>;"
     }
 .end annotation
@@ -36,7 +36,7 @@
 
     .prologue
     .line 52
-    invoke-direct {p0}, Lcom/google/b/c/by;-><init>()V
+    invoke-direct {p0}, Lcom/google/b/c/bz;-><init>()V
 
     .line 53
     iput-object p1, p0, Lcom/google/b/c/b;->a:Ljava/lang/Object;

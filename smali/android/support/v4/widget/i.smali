@@ -1,54 +1,52 @@
 .class final Landroid/support/v4/widget/i;
-.super Ljava/lang/Object;
-.source "DrawerLayout.java"
+.super Landroid/database/ContentObserver;
+.source "CursorAdapter.java"
 
-# interfaces
-.implements Landroid/support/v4/widget/g;
+
+# instance fields
+.field final synthetic a:Landroid/support/v4/widget/h;
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method public constructor <init>(Landroid/support/v4/widget/h;)V
+    .locals 1
 
     .prologue
-    .line 263
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 454
+    iput-object p1, p0, Landroid/support/v4/widget/i;->a:Landroid/support/v4/widget/h;
 
+    .line 455
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
+
+    invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
+
+    .line 456
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)I
+.method public final deliverSelfNotifications()Z
     .locals 1
 
     .prologue
-    .line 277
-    const/4 v0, 0x0
+    .line 460
+    const/4 v0, 0x1
 
     return v0
 .end method
 
-.method public final a(Landroid/view/View;)V
-    .locals 0
+.method public final onChange(Z)V
+    .locals 1
 
     .prologue
-    .line 266
-    return-void
-.end method
+    .line 465
+    iget-object v0, p0, Landroid/support/v4/widget/i;->a:Landroid/support/v4/widget/h;
 
-.method public final a(Landroid/view/View;Ljava/lang/Object;I)V
-    .locals 0
+    invoke-virtual {v0}, Landroid/support/v4/widget/h;->b()V
 
-    .prologue
-    .line 270
-    return-void
-.end method
-
-.method public final a(Landroid/view/ViewGroup$MarginLayoutParams;Ljava/lang/Object;I)V
-    .locals 0
-
-    .prologue
-    .line 274
+    .line 466
     return-void
 .end method

@@ -135,7 +135,7 @@
     :cond_2
     int-to-float v7, v7
 
-    const/high16 v9, 0x40c00000
+    const/high16 v9, 0x40c00000    # 6.0f
 
     cmpg-float v7, v7, v9
 
@@ -172,7 +172,7 @@
 
     int-to-float v7, v7
 
-    const/high16 v11, 0x40000000
+    const/high16 v11, 0x40000000    # 2.0f
 
     cmpl-float v7, v7, v11
 

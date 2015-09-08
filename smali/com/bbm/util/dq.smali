@@ -1,169 +1,183 @@
 .class public final Lcom/bbm/util/dq;
 .super Ljava/lang/Object;
-.source "StringUtil.java"
+.source "ProximitySensorUtil.java"
+
+# interfaces
+.implements Landroid/hardware/SensorEventListener;
+.implements Lcom/bbm/util/do;
 
 
-# static fields
-.field private static final a:Ljava/util/regex/Pattern;
+# instance fields
+.field private final a:Landroid/app/Activity;
+
+.field private final b:Landroid/hardware/SensorManager;
+
+.field private final c:Landroid/hardware/Sensor;
+
+.field private d:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    .prologue
-    .line 7
-    const-string v0, "[\r\t\n]+"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/bbm/util/dq;->a:Ljava/util/regex/Pattern;
-
-    return-void
-.end method
-
-.method public static a(Ljava/lang/Object;)Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 27
-    if-eqz p0, :cond_0
-
-    .line 28
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 30
-    :goto_0
-    return-object v0
-
-    :cond_0
-    const-string v0, ""
-
-    goto :goto_0
-.end method
-
-.method public static a(Ljava/lang/String;)Ljava/lang/String;
+.method public constructor <init>(Landroid/app/Activity;Landroid/hardware/SensorManager;Landroid/hardware/Sensor;)V
     .locals 0
 
     .prologue
-    .line 19
-    if-nez p0, :cond_0
+    .line 196
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string p0, ""
+    .line 197
+    iput-object p1, p0, Lcom/bbm/util/dq;->a:Landroid/app/Activity;
 
-    :cond_0
-    return-object p0
+    .line 198
+    iput-object p2, p0, Lcom/bbm/util/dq;->b:Landroid/hardware/SensorManager;
+
+    .line 199
+    iput-object p3, p0, Lcom/bbm/util/dq;->c:Landroid/hardware/Sensor;
+
+    .line 200
+    return-void
 .end method
 
-.method public static a(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+
+# virtual methods
+.method public final a()V
     .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Ljava/lang/String;",
-            ">;",
-            "Ljava/lang/String;",
-            ")",
-            "Ljava/lang/String;"
-        }
-    .end annotation
 
     .prologue
-    .line 51
-    if-nez p0, :cond_0
+    .line 228
+    iget-boolean v0, p0, Lcom/bbm/util/dq;->d:Z
 
-    .line 52
+    if-nez v0, :cond_0
+
+    .line 229
+    iget-object v0, p0, Lcom/bbm/util/dq;->b:Landroid/hardware/SensorManager;
+
+    iget-object v1, p0, Lcom/bbm/util/dq;->c:Landroid/hardware/Sensor;
+
+    const/4 v2, 0x3
+
+    invoke-virtual {v0, p0, v1, v2}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/bbm/util/dq;->d:Z
+
+    .line 232
+    :cond_0
+    return-void
+.end method
+
+.method public final b()V
+    .locals 1
+
+    .prologue
+    .line 236
+    iget-boolean v0, p0, Lcom/bbm/util/dq;->d:Z
+
+    if-eqz v0, :cond_0
+
+    .line 237
+    iget-object v0, p0, Lcom/bbm/util/dq;->b:Landroid/hardware/SensorManager;
+
+    invoke-virtual {v0, p0}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
+
+    .line 238
     const/4 v0, 0x0
 
-    .line 60
-    :goto_0
-    return-object v0
+    iput-boolean v0, p0, Lcom/bbm/util/dq;->d:Z
 
-    .line 55
+    .line 240
     :cond_0
-    new-instance v1, Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+.method public final onAccuracyChanged(Landroid/hardware/Sensor;I)V
+    .locals 0
 
-    .line 56
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    .prologue
+    .line 224
+    return-void
+.end method
 
-    move-result-object v2
+.method public final onSensorChanged(Landroid/hardware/SensorEvent;)V
+    .locals 5
 
-    :goto_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    .prologue
+    const/4 v4, 0x0
 
-    move-result v0
+    const/high16 v3, -0x40800000    # -1.0f
 
-    if-eqz v0, :cond_1
+    .line 204
+    iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/4 v1, 0x0
+
+    aget v0, v0, v1
+
+    .line 205
+    iget-object v1, p0, Lcom/bbm/util/dq;->a:Landroid/app/Activity;
+
+    invoke-virtual {v1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object v1
+
+    .line 207
+    iget-object v2, p0, Lcom/bbm/util/dq;->c:Landroid/hardware/Sensor;
+
+    invoke-virtual {v2}, Landroid/hardware/Sensor;->getMaximumRange()F
+
+    move-result v2
+
+    cmpg-float v0, v0, v2
+
+    if-gez v0, :cond_0
+
+    .line 208
+    invoke-virtual {v1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/String;
+    .line 209
+    iget v2, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 57
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    or-int/lit8 v2, v2, 0x10
 
-    .line 58
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput v2, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    goto :goto_1
+    .line 210
+    iput v4, v0, Landroid/view/WindowManager$LayoutParams;->screenBrightness:F
 
-    .line 60
-    :cond_1
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 211
+    iput v4, v0, Landroid/view/WindowManager$LayoutParams;->buttonBrightness:F
+
+    .line 212
+    invoke-virtual {v1, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
+
+    .line 220
+    :goto_0
+    return-void
+
+    .line 214
+    :cond_0
+    invoke-virtual {v1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v0
+
+    .line 215
+    iget v2, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    and-int/lit8 v2, v2, -0x11
+
+    iput v2, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    .line 216
+    iput v3, v0, Landroid/view/WindowManager$LayoutParams;->screenBrightness:F
+
+    .line 217
+    iput v3, v0, Landroid/view/WindowManager$LayoutParams;->buttonBrightness:F
+
+    .line 218
+    invoke-virtual {v1, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
     goto :goto_0
-.end method
-
-.method public static b(Ljava/lang/String;)Z
-    .locals 2
-
-    .prologue
-    .line 37
-    invoke-static {p0}, Lcom/bbm/util/dq;->a(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, ""
-
-    invoke-static {v0, v1}, Lcom/bbm/util/bh;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static c(Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
-
-    .prologue
-    .line 47
-    sget-object v0, Lcom/bbm/util/dq;->a:Ljava/util/regex/Pattern;
-
-    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object v0
-
-    const-string v1, " "
-
-    invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

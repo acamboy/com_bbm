@@ -1,111 +1,55 @@
-.class final Lcom/bbm/ui/ag;
+.class public final Lcom/bbm/ui/ag;
 .super Ljava/lang/Object;
-.source "ChannelsSegmentedControl.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "CellRecycler.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/ChannelsSegmentedControl;
+.field a:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/view/View;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field b:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/Long;",
+            "Landroid/view/View;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/ChannelsSegmentedControl;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .prologue
-    .line 100
-    iput-object p1, p0, Lcom/bbm/ui/ag;->a:Lcom/bbm/ui/ChannelsSegmentedControl;
-
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 18
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/bbm/ui/ag;->a:Ljava/util/ArrayList;
+
+    .line 22
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/bbm/ui/ag;->b:Ljava/util/Map;
+
+    .line 23
     return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
-
-    .prologue
-    .line 105
-    iget-object v0, p0, Lcom/bbm/ui/ag;->a:Lcom/bbm/ui/ChannelsSegmentedControl;
-
-    invoke-static {v0}, Lcom/bbm/ui/ChannelsSegmentedControl;->a(Lcom/bbm/ui/ChannelsSegmentedControl;)Landroid/widget/ImageView;
-
-    move-result-object v0
-
-    if-ne p1, v0, :cond_1
-
-    .line 106
-    const-string v0, "Discover Clicked"
-
-    const-class v1, Lcom/bbm/ui/ChannelsSegmentedControl;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 108
-    iget-object v0, p0, Lcom/bbm/ui/ag;->a:Lcom/bbm/ui/ChannelsSegmentedControl;
-
-    const v1, 0x7f0b0061
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/ChannelsSegmentedControl;->a(I)V
-
-    .line 118
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 109
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/ag;->a:Lcom/bbm/ui/ChannelsSegmentedControl;
-
-    invoke-static {v0}, Lcom/bbm/ui/ChannelsSegmentedControl;->b(Lcom/bbm/ui/ChannelsSegmentedControl;)Landroid/widget/ImageView;
-
-    move-result-object v0
-
-    if-ne p1, v0, :cond_2
-
-    .line 110
-    const-string v0, "MyChannels Clicked"
-
-    const-class v1, Lcom/bbm/ui/ChannelsSegmentedControl;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 112
-    iget-object v0, p0, Lcom/bbm/ui/ag;->a:Lcom/bbm/ui/ChannelsSegmentedControl;
-
-    const v1, 0x7f0b0064
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/ChannelsSegmentedControl;->a(I)V
-
-    goto :goto_0
-
-    .line 113
-    :cond_2
-    iget-object v0, p0, Lcom/bbm/ui/ag;->a:Lcom/bbm/ui/ChannelsSegmentedControl;
-
-    invoke-static {v0}, Lcom/bbm/ui/ChannelsSegmentedControl;->c(Lcom/bbm/ui/ChannelsSegmentedControl;)Landroid/widget/ImageView;
-
-    move-result-object v0
-
-    if-ne p1, v0, :cond_0
-
-    .line 114
-    const-string v0, "Notificaitons Clicked"
-
-    const-class v1, Lcom/bbm/ui/ChannelsSegmentedControl;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 116
-    iget-object v0, p0, Lcom/bbm/ui/ag;->a:Lcom/bbm/ui/ChannelsSegmentedControl;
-
-    const v1, 0x7f0b005c
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/ChannelsSegmentedControl;->a(I)V
-
-    goto :goto_0
 .end method

@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/zq;
 .super Ljava/lang/Object;
-.source "NewGroupActivity.java"
+.source "PrivateConversationActivity.java"
 
 # interfaces
-.implements Landroid/text/TextWatcher;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/NewGroupActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/NewGroupActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/PrivateConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 213
-    iput-object p1, p0, Lcom/bbm/ui/activities/zq;->a:Lcom/bbm/ui/activities/NewGroupActivity;
+    .line 1856
+    iput-object p1, p0, Lcom/bbm/ui/activities/zq;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,31 +25,27 @@
 
 
 # virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
-    .locals 0
+.method public final run()V
+    .locals 2
 
     .prologue
-    .line 218
-    return-void
-.end method
+    .line 1859
+    iget-object v0, p0, Lcom/bbm/ui/activities/zq;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
+    iget-object v0, v0, Lcom/bbm/ui/activities/PrivateConversationActivity;->a:Lcom/bbm/ui/EmoticonInputPanel;
 
-    .prologue
-    .line 223
-    return-void
-.end method
+    if-eqz v0, :cond_0
 
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 1
+    .line 1860
+    iget-object v0, p0, Lcom/bbm/ui/activities/zq;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    .prologue
-    .line 227
-    iget-object v0, p0, Lcom/bbm/ui/activities/zq;->a:Lcom/bbm/ui/activities/NewGroupActivity;
+    iget-object v0, v0, Lcom/bbm/ui/activities/PrivateConversationActivity;->a:Lcom/bbm/ui/EmoticonInputPanel;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/NewGroupActivity;->a()V
+    sget-object v1, Lcom/bbm/ui/bw;->b:Lcom/bbm/ui/bw;
 
-    .line 228
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/EmoticonInputPanel;->setLowerPanel(Lcom/bbm/ui/bw;)V
+
+    .line 1862
+    :cond_0
     return-void
 .end method

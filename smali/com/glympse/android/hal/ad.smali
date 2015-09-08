@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field private aV:Landroid/os/Handler;
+.field private aW:Landroid/os/Handler;
 
-.field private bk:Ljava/lang/Thread;
+.field private bl:Ljava/lang/Thread;
 
 
 # direct methods
@@ -25,14 +25,14 @@
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ad;->aV:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/glympse/android/hal/ad;->aW:Landroid/os/Handler;
 
     .line 22
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ad;->bk:Ljava/lang/Thread;
+    iput-object v0, p0, Lcom/glympse/android/hal/ad;->bl:Ljava/lang/Thread;
 
     .line 23
     return-void
@@ -46,14 +46,14 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 27
-    iput-object p1, p0, Lcom/glympse/android/hal/ad;->aV:Landroid/os/Handler;
+    iput-object p1, p0, Lcom/glympse/android/hal/ad;->aW:Landroid/os/Handler;
 
     .line 28
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ad;->bk:Ljava/lang/Thread;
+    iput-object v0, p0, Lcom/glympse/android/hal/ad;->bl:Ljava/lang/Thread;
 
     .line 29
     return-void
@@ -66,7 +66,7 @@
 
     .prologue
     .line 43
-    iget-object v0, p0, Lcom/glympse/android/hal/ad;->aV:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/glympse/android/hal/ad;->aW:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
@@ -83,7 +83,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/glympse/android/hal/ad;->bk:Ljava/lang/Thread;
+    iget-object v1, p0, Lcom/glympse/android/hal/ad;->bl:Ljava/lang/Thread;
 
     invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -97,7 +97,7 @@
 
     .prologue
     .line 33
-    iget-object v0, p0, Lcom/glympse/android/hal/ad;->aV:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/glympse/android/hal/ad;->aW:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -110,7 +110,7 @@
 
     .prologue
     .line 38
-    iget-object v0, p0, Lcom/glympse/android/hal/ad;->aV:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/glympse/android/hal/ad;->aW:Landroid/os/Handler;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 

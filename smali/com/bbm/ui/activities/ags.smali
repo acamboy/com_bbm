@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/ags;
 .super Ljava/lang/Object;
-.source "SettingsActivity.java"
+.source "ViewChannelPostActivity.java"
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
     .locals 0
 
     .prologue
-    .line 315
-    iput-object p1, p0, Lcom/bbm/ui/activities/ags;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    .line 228
+    iput-object p1, p0, Lcom/bbm/ui/activities/ags;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,31 +25,33 @@
 
 
 # virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
 
     .prologue
-    .line 319
-    const-string v0, "geolocation switch onCheckedChanged"
+    .line 231
+    iget-object v0, p0, Lcom/bbm/ui/activities/ags;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/SettingsActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->c(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Z
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    move-result v0
 
-    .line 320
-    iget-object v0, p0, Lcom/bbm/ui/activities/ags;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    if-nez v0, :cond_0
 
-    const-string v1, "allow_geolocation_collect"
+    .line 232
+    iget-object v0, p0, Lcom/bbm/ui/activities/ags;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
 
-    invoke-static {v0, v1, p2}, Lcom/bbm/ui/activities/SettingsActivity;->a(Lcom/bbm/ui/activities/SettingsActivity;Ljava/lang/String;Z)V
+    invoke-static {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->d(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
 
-    .line 321
-    iget-object v0, p0, Lcom/bbm/ui/activities/ags;->a:Lcom/bbm/ui/activities/SettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->c(Lcom/bbm/ui/activities/SettingsActivity;)Lcom/bbm/d/a;
-
-    invoke-static {p2}, Lcom/bbm/d/a;->c(Z)V
-
-    .line 322
+    .line 236
+    :goto_0
     return-void
+
+    .line 234
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/ags;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->e(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
+
+    goto :goto_0
 .end method

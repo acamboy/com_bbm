@@ -29,7 +29,7 @@
     .locals 8
 
     .prologue
-    const v7, 0x7f0e0586
+    const v7, 0x7f0e0602
 
     const/4 v3, 0x0
 
@@ -42,13 +42,13 @@
 
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0e0386
+    const v1, 0x7f0e03e6
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f0e0387
+    const v1, 0x7f0e03e7
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
@@ -59,13 +59,13 @@
 
     invoke-direct {v1, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0e0385
+    const v2, 0x7f0e03e5
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object v1
 
-    const v2, 0x7f0e0384
+    const v2, 0x7f0e03e4
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
@@ -111,7 +111,7 @@
     invoke-virtual {v0, v6, v4, v2}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     .line 92
-    const v4, 0x7f0e0162
+    const v4, 0x7f0e0184
 
     invoke-virtual {p0, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -120,7 +120,7 @@
     invoke-virtual {v0, v5, v4, v2}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
     .line 93
-    const v2, 0x7f0e0175
+    const v2, 0x7f0e0197
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -182,7 +182,7 @@
     invoke-direct {v0, p0}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     .line 121
-    const v1, 0x7f090167
+    const v1, 0x7f0901d2
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -223,7 +223,7 @@
     invoke-super {p0}, Lcom/bbm/setup/q;->onResume()V
 
     .line 132
-    invoke-static {}, Lcom/bbm/Alaska;->h()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcom/bbm/Alaska;->l()Landroid/content/SharedPreferences;
 
     move-result-object v0
 

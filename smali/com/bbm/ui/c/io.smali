@@ -1,124 +1,126 @@
-.class final synthetic Lcom/bbm/ui/c/io;
-.super Ljava/lang/Object;
-.source "StoreHomeFragment.java"
+.class final Lcom/bbm/ui/c/io;
+.super Lcom/bbm/d/b/o;
+.source "UpdatesFragment.java"
 
 
-# static fields
-.field static final synthetic a:[I
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/d/b/o",
+        "<",
+        "Lcom/bbm/b/h;",
+        ">;"
+    }
+.end annotation
 
-.field static final synthetic b:[I
+
+# instance fields
+.field final synthetic a:Lcom/bbm/ui/c/ic;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/bbm/ui/c/ic;)V
+    .locals 0
 
     .prologue
-    .line 773
-    invoke-static {}, Lcom/bbm/ui/c/it;->values()[Lcom/bbm/ui/c/it;
+    .line 175
+    iput-object p1, p0, Lcom/bbm/ui/c/io;->a:Lcom/bbm/ui/c/ic;
 
-    move-result-object v0
+    invoke-direct {p0}, Lcom/bbm/d/b/o;-><init>()V
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/bbm/ui/c/io;->b:[I
-
-    :try_start_0
-    sget-object v0, Lcom/bbm/ui/c/io;->b:[I
-
-    sget-object v1, Lcom/bbm/ui/c/it;->b:Lcom/bbm/ui/c/it;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/c/it;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_3
-
-    :goto_0
-    :try_start_1
-    sget-object v0, Lcom/bbm/ui/c/io;->b:[I
-
-    sget-object v1, Lcom/bbm/ui/c/it;->c:Lcom/bbm/ui/c/it;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/c/it;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
-
-    .line 147
-    :goto_1
-    invoke-static {}, Lcom/bbm/util/bi;->values()[Lcom/bbm/util/bi;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/bbm/ui/c/io;->a:[I
-
-    :try_start_2
-    sget-object v0, Lcom/bbm/ui/c/io;->a:[I
-
-    sget-object v1, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
-
-    invoke-virtual {v1}, Lcom/bbm/util/bi;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_1
-
-    :goto_2
-    :try_start_3
-    sget-object v0, Lcom/bbm/ui/c/io;->a:[I
-
-    sget-object v1, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
-
-    invoke-virtual {v1}, Lcom/bbm/util/bi;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_0
-
-    :goto_3
     return-void
+.end method
 
-    :catch_0
-    move-exception v0
 
-    goto :goto_3
+# virtual methods
+.method protected final a()Ljava/util/List;
+    .locals 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/bbm/b/h;",
+            ">;"
+        }
+    .end annotation
 
-    :catch_1
-    move-exception v0
+    .prologue
+    .line 178
+    new-instance v1, Ljava/util/ArrayList;
 
-    goto :goto_2
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    :catch_2
-    move-exception v0
+    .line 179
+    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/b/x;
 
-    goto :goto_1
+    move-result-object v0
 
-    :catch_3
-    move-exception v0
+    iget-object v0, v0, Lcom/bbm/b/x;->h:Lcom/bbm/util/dd;
+
+    .line 180
+    invoke-virtual {v0}, Lcom/bbm/util/dd;->a()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_0
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/b/h;
+
+    .line 181
+    iget-wide v4, v0, Lcom/bbm/b/h;->d:J
+
+    const-wide/16 v6, 0x0
+
+    cmp-long v3, v4, v6
+
+    if-lez v3, :cond_0
+
+    .line 182
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
+
+    .line 185
+    :cond_1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v2, "AdMob positioned list is "
+
+    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v2, 0x0
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {v0, v2}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 186
+    return-object v1
 .end method

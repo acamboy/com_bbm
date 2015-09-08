@@ -1,19 +1,24 @@
-.class public interface abstract Lcom/google/android/gms/internal/jf;
+.class public final Lcom/google/android/gms/internal/jf;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/os/IInterface;
+
+# instance fields
+.field a:Z
+
+.field b:Z
+
+.field c:Z
+
+.field d:Z
+
+.field e:Z
 
 
-# virtual methods
-.method public abstract a(ILcom/google/android/gms/wallet/FullWallet;Landroid/os/Bundle;)V
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract a(ILcom/google/android/gms/wallet/MaskedWallet;Landroid/os/Bundle;)V
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract a(IZLandroid/os/Bundle;)V
-.end method
-
-.method public abstract e(ILandroid/os/Bundle;)V
+    return-void
 .end method

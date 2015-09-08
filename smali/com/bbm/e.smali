@@ -1,33 +1,51 @@
-.class public final Lcom/bbm/e;
+.class final Lcom/bbm/e;
 .super Ljava/lang/Object;
-.source "AppModel.java"
+.source "Alaska.java"
+
+# interfaces
+.implements Ljava/util/concurrent/Executor;
 
 
 # instance fields
-.field public final a:Lcom/bbm/b/w;
-
-.field public final b:Lcom/bbm/d/a;
-
-.field public final c:Lcom/bbm/g/al;
+.field final synthetic a:Lcom/bbm/Alaska;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/d/a;Lcom/bbm/g/al;Lcom/bbm/b/w;)V
+.method private constructor <init>(Lcom/bbm/Alaska;)V
     .locals 0
 
     .prologue
-    .line 16
+    .line 919
+    iput-object p1, p0, Lcom/bbm/e;->a:Lcom/bbm/Alaska;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 17
-    iput-object p3, p0, Lcom/bbm/e;->a:Lcom/bbm/b/w;
+    return-void
+.end method
 
-    .line 18
-    iput-object p1, p0, Lcom/bbm/e;->b:Lcom/bbm/d/a;
+.method synthetic constructor <init>(Lcom/bbm/Alaska;B)V
+    .locals 0
 
-    .line 19
-    iput-object p2, p0, Lcom/bbm/e;->c:Lcom/bbm/g/al;
+    .prologue
+    .line 919
+    invoke-direct {p0, p1}, Lcom/bbm/e;-><init>(Lcom/bbm/Alaska;)V
 
-    .line 20
+    return-void
+.end method
+
+
+# virtual methods
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 1
+
+    .prologue
+    .line 922
+    new-instance v0, Ljava/lang/Thread;
+
+    invoke-direct {v0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+
+    .line 923
     return-void
 .end method

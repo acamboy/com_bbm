@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/afq;
 .super Ljava/lang/Object;
-.source "SelectContactActivity.java"
+.source "TapToInviteActivity.java"
 
 # interfaces
-.implements Landroid/text/TextWatcher;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SelectContactActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/TapToInviteActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/TapToInviteActivity;)V
     .locals 0
 
     .prologue
-    .line 320
-    iput-object p1, p0, Lcom/bbm/ui/activities/afq;->a:Lcom/bbm/ui/activities/SelectContactActivity;
+    .line 85
+    iput-object p1, p0, Lcom/bbm/ui/activities/afq;->a:Lcom/bbm/ui/activities/TapToInviteActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,85 +25,43 @@
 
 
 # virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
-    .locals 0
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 3
 
     .prologue
-    .line 323
-    return-void
-.end method
+    .line 89
+    const-string v0, "NFC State dialog RigthButton Clicked"
 
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
+    const-class v1, Lcom/bbm/ui/activities/TapToInviteActivity;
 
-    .prologue
-    .line 327
-    return-void
-.end method
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 4
+    .line 92
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .prologue
-    const/16 v2, 0x8
+    .line 99
+    :try_start_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/afq;->a:Lcom/bbm/ui/activities/TapToInviteActivity;
 
-    const/4 v1, 0x0
+    new-instance v1, Landroid/content/Intent;
 
-    .line 331
-    iget-object v0, p0, Lcom/bbm/ui/activities/afq;->a:Lcom/bbm/ui/activities/SelectContactActivity;
+    const-string v2, "android.settings.NFC_SETTINGS"
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    move-result-object v3
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/TapToInviteActivity;->startActivity(Landroid/content/Intent;)V
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v0, v3}, Lcom/bbm/ui/activities/SelectContactActivity;->a(Ljava/lang/String;)V
-
-    .line 332
-    iget-object v0, p0, Lcom/bbm/ui/activities/afq;->a:Lcom/bbm/ui/activities/SelectContactActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/SelectContactActivity;->o(Lcom/bbm/ui/activities/SelectContactActivity;)Landroid/widget/Button;
-
-    move-result-object v3
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    move v0, v1
-
+    .line 103
     :goto_0
-    invoke-virtual {v3, v0}, Landroid/widget/Button;->setVisibility(I)V
-
-    .line 333
-    iget-object v0, p0, Lcom/bbm/ui/activities/afq;->a:Lcom/bbm/ui/activities/SelectContactActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/SelectContactActivity;->p(Lcom/bbm/ui/activities/SelectContactActivity;)Landroid/widget/LinearLayout;
-
-    move-result-object v0
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v3
-
-    if-lez v3, :cond_1
-
-    :goto_1
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    .line 334
     return-void
 
-    :cond_0
-    move v0, v2
+    .line 100
+    :catch_0
+    move-exception v0
 
-    .line 332
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
+
     goto :goto_0
-
-    :cond_1
-    move v1, v2
-
-    .line 333
-    goto :goto_1
 .end method

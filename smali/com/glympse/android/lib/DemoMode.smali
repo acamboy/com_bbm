@@ -21,6 +21,7 @@
     .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 397
     return-void
 .end method
 
@@ -219,9 +220,9 @@
     move-result-wide v0
 
     .line 41
-    const-wide v2, 0x4047cee147ae147bL
+    const-wide v2, 0x4047cee147ae147bL    # 47.61625
 
-    const-wide v4, -0x3fa169dc9c4da900L
+    const-wide v4, -0x3fa169dc9c4da900L    # -122.34591
 
     invoke-static/range {v0 .. v5}, Lcom/glympse/android/lib/LibFactory;->createLocation(JDD)Lcom/glympse/android/lib/GLocationPrivate;
 
@@ -232,9 +233,9 @@
 
     move-result-object v3
 
-    new-instance v4, Lcom/glympse/android/lib/aw;
+    new-instance v4, Lcom/glympse/android/lib/bd;
 
-    invoke-direct {v4, v2}, Lcom/glympse/android/lib/aw;-><init>(Lcom/glympse/android/core/GLocation;)V
+    invoke-direct {v4, v2}, Lcom/glympse/android/lib/bd;-><init>(Lcom/glympse/android/core/GLocation;)V
 
     invoke-interface {v3, v4}, Lcom/glympse/android/api/GLocationManager;->setLocationProvider(Lcom/glympse/android/core/GLocationProvider;)V
 
@@ -470,9 +471,9 @@
     invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->setMessage(Ljava/lang/String;)V
 
     .line 78
-    const-wide v2, 0x4042b65a5fc7e6b4L
+    const-wide v2, 0x4042b65a5fc7e6b4L    # 37.424633
 
-    const-wide v4, -0x3fa17564883fd502L
+    const-wide v4, -0x3fa17564883fd502L    # -122.165739
 
     const-string v10, "Stanford"
 
@@ -495,9 +496,9 @@
 
     const/16 v3, 0x898
 
-    const v4, 0x4192d0e5
+    const v4, 0x4192d0e5    # 18.352f
 
-    const/high16 v5, 0x42f00000
+    const/high16 v5, 0x42f00000    # 120.0f
 
     invoke-static/range {v0 .. v5}, Lcom/glympse/android/lib/DemoMode;->populateSylviaTrail(JLcom/glympse/android/lib/GTrackPrivate;IFF)Lcom/glympse/android/lib/GLocationPrivate;
 
@@ -598,9 +599,9 @@
     invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->setMessage(Ljava/lang/String;)V
 
     .line 96
-    const-wide v2, 0x4047cdea4ebdd335L
+    const-wide v2, 0x4047cdea4ebdd335L    # 47.608713
 
-    const-wide v4, -0x3fa16bbc1acde1a0L
+    const-wide v4, -0x3fa16bbc1acde1a0L    # -122.316644
 
     const-string v10, "Java Junction"
 
@@ -623,9 +624,9 @@
 
     const/16 v3, 0x7d0
 
-    const v4, 0x41e2d0e5
+    const v4, 0x41e2d0e5    # 28.352f
 
-    const/high16 v5, 0x43910000
+    const/high16 v5, 0x43910000    # 290.0f
 
     invoke-static/range {v0 .. v5}, Lcom/glympse/android/lib/DemoMode;->populateLukeTrail(JLcom/glympse/android/lib/GTrackPrivate;IFF)Lcom/glympse/android/lib/GLocationPrivate;
 
@@ -639,9 +640,9 @@
     .line 99
     const/16 v3, 0x9f7
 
-    const v4, 0x41e2d0e5
+    const v4, 0x41e2d0e5    # 28.352f
 
-    const/high16 v5, 0x43910000
+    const/high16 v5, 0x43910000    # 290.0f
 
     invoke-static/range {v0 .. v5}, Lcom/glympse/android/lib/DemoMode;->populateLukeTrail(JLcom/glympse/android/lib/GTrackPrivate;IFF)Lcom/glympse/android/lib/GLocationPrivate;
 
@@ -773,9 +774,9 @@
     invoke-interface {v10, v2}, Lcom/glympse/android/lib/GTicketPrivate;->setMessage(Ljava/lang/String;)V
 
     .line 126
-    const-wide v2, 0x4044b3a6e75ff60aL
+    const-wide v2, 0x4044b3a6e75ff60aL    # 41.403531
 
-    const-wide v4, 0x4001658cd20afa2fL
+    const-wide v4, 0x4001658cd20afa2fL    # 2.174585
 
     const-string v11, "Sagrada Familia"
 
@@ -798,9 +799,9 @@
 
     const/4 v3, 0x0
 
-    const v4, 0x41bad0e5
+    const v4, 0x41bad0e5    # 23.352f
 
-    const v5, 0x43ac8000
+    const v5, 0x43ac8000    # 345.0f
 
     invoke-static/range {v0 .. v5}, Lcom/glympse/android/lib/DemoMode;->populateRogerTrail(JLcom/glympse/android/lib/GTrackPrivate;IFF)Lcom/glympse/android/lib/GLocationPrivate;
 
@@ -913,9 +914,9 @@
     invoke-interface {v10, v2}, Lcom/glympse/android/lib/GTicketPrivate;->setMessage(Ljava/lang/String;)V
 
     .line 146
-    const-wide v2, 0x4047cdea4ebdd335L
+    const-wide v2, 0x4047cdea4ebdd335L    # 47.608713
 
-    const-wide v4, -0x3fa16bbc1acde1a0L
+    const-wide v4, -0x3fa16bbc1acde1a0L    # -122.316644
 
     const-string v11, "Java Junction"
 
@@ -938,9 +939,9 @@
 
     const/16 v3, 0x6b6
 
-    const v4, 0x4145a1cb
+    const v4, 0x4145a1cb    # 12.352f
 
-    const v5, 0x43a78000
+    const v5, 0x43a78000    # 335.0f
 
     invoke-static/range {v0 .. v5}, Lcom/glympse/android/lib/DemoMode;->populateCarlTrail(JLcom/glympse/android/lib/GTrackPrivate;IFF)Lcom/glympse/android/lib/GLocationPrivate;
 
@@ -980,11 +981,11 @@
     check-cast v11, Lcom/glympse/android/lib/GHistoryManagerPrivate;
 
     .line 158
-    new-instance v2, Lcom/glympse/android/lib/eh;
+    new-instance v2, Lcom/glympse/android/lib/eu;
 
-    invoke-direct {v2}, Lcom/glympse/android/lib/eh;-><init>()V
+    invoke-direct {v2}, Lcom/glympse/android/lib/eu;-><init>()V
 
-    invoke-interface {v11, v2}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->syncedWithServer(Lcom/glympse/android/lib/eh;)V
+    invoke-interface {v11, v2}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->syncedWithServer(Lcom/glympse/android/lib/eu;)V
 
     .line 161
     const v2, 0x36ee80
@@ -995,9 +996,9 @@
 
     move-result-object v3
 
-    const-wide v4, 0x4047cdea4ebdd335L
+    const-wide v4, 0x4047cdea4ebdd335L    # 47.608713
 
-    const-wide v6, -0x3fa16bbc1acde1a0L
+    const-wide v6, -0x3fa16bbc1acde1a0L    # -122.316644
 
     const-string v8, "Java Junction"
 
@@ -1171,9 +1172,9 @@
 
     move-result-object v3
 
-    const-wide v4, 0x4047cdea4ebdd335L
+    const-wide v4, 0x4047cdea4ebdd335L    # 47.608713
 
-    const-wide v6, -0x3fa16bbc1acde1a0L
+    const-wide v6, -0x3fa16bbc1acde1a0L    # -122.316644
 
     const-string v8, "Fremont Pub"
 
@@ -1286,9 +1287,9 @@
 
     move-result-object v3
 
-    const-wide v4, 0x4047cdea4ebdd335L
+    const-wide v4, 0x4047cdea4ebdd335L    # 47.608713
 
-    const-wide v6, -0x3fa16bbc1acde1a0L
+    const-wide v6, -0x3fa16bbc1acde1a0L    # -122.316644
 
     const-string v8, "Evergreen Junior High"
 
@@ -2237,22 +2238,22 @@
     invoke-interface {v11, v9}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->addTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
 
     .line 283
-    new-instance v0, Lcom/glympse/android/lib/av;
+    new-instance v0, Lcom/glympse/android/lib/bc;
 
-    invoke-direct {v0, p0}, Lcom/glympse/android/lib/av;-><init>(Lcom/glympse/android/lib/GGlympsePrivate;)V
+    invoke-direct {v0, p0}, Lcom/glympse/android/lib/bc;-><init>(Lcom/glympse/android/lib/GGlympsePrivate;)V
 
     .line 284
-    invoke-virtual {v0}, Lcom/glympse/android/lib/av;->run()V
+    invoke-virtual {v0}, Lcom/glympse/android/lib/bc;->run()V
 
     .line 288
-    invoke-interface {p0}, Lcom/glympse/android/lib/GGlympsePrivate;->getFavoritesManager()Lcom/glympse/android/lib/GFavoritesManager;
+    invoke-interface {p0}, Lcom/glympse/android/lib/GGlympsePrivate;->getFavoritesManager()Lcom/glympse/android/api/GFavoritesManager;
 
     move-result-object v7
 
     .line 291
-    const-wide v0, 0x4047cfac81d3aa37L
+    const-wide v0, 0x4047cfac81d3aa37L    # 47.622452
 
-    const-wide v2, -0x3fa16a90795f676fL
+    const-wide v2, -0x3fa16a90795f676fL    # -122.334932
 
     const-string v4, "Glympse Inc."
 
@@ -2359,14 +2360,14 @@
     invoke-interface {v0, v1}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 298
-    invoke-interface {v7, v0}, Lcom/glympse/android/lib/GFavoritesManager;->hasFavorite(Lcom/glympse/android/api/GTicket;)Z
+    invoke-interface {v7, v0}, Lcom/glympse/android/api/GFavoritesManager;->hasFavorite(Lcom/glympse/android/api/GTicket;)Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
     .line 300
-    invoke-interface {v7, v0}, Lcom/glympse/android/lib/GFavoritesManager;->addFavorite(Lcom/glympse/android/api/GTicket;)V
+    invoke-interface {v7, v0}, Lcom/glympse/android/api/GFavoritesManager;->addFavorite(Lcom/glympse/android/api/GTicket;)V
 
     .line 302
     :cond_2
@@ -2465,7 +2466,7 @@
         0x489e12
         -0xba9d3c
         0x489e11
-        -0xba9d60
+        -0xba9d60    # -2.6237E38f
         0x489e11
         -0xba9d84
         0x489e11
@@ -2622,7 +2623,7 @@
         -0xbaa573
         0x48a126
         -0xbaa583
-        0x48a13c
+        0x48a13c    # 6.669996E-39f
         -0xbaa593
         0x48a152
         -0xbaa5a3
@@ -2897,11 +2898,11 @@
         0x48ab8c
         -0xbaaade
         0x48aba4
-        -0xbaaadf
+        -0xbaaadf    # -2.6229993E38f
         0x48abbc
-        -0xbaaae0
+        -0xbaaae0    # -2.622999E38f
         0x48abd3
-        -0xbaaad7
+        -0xbaaad7    # -2.623001E38f
         0x48abe1
         -0xbaaade
         0x48abd6
@@ -3313,7 +3314,7 @@
         0x48b255
         -0xbaa537
         0x48b25c
-        -0xbaa514
+        -0xbaa514    # -2.6233E38f
         0x48b262
         -0xbaa4f2
         0x48b266
@@ -4292,7 +4293,7 @@
         -0xba762f
         0x48a16d
         -0xba7624
-        0x48a13f
+        0x48a13f    # 6.67E-39f
         -0xba760f
         0x48a128
         -0xba7605
@@ -4348,7 +4349,7 @@
         -0xba740a
         0x489e8b
         -0xba73eb
-        0x489e75
+        0x489e75    # 6.669E-39f
         -0xba73db
         0x489e5f
         -0xba73cb
@@ -4862,7 +4863,7 @@
         -0xba7b60
         0x488b0a
         -0xba7b62
-        0x488af2
+        0x488af2    # 6.662E-39f
         -0xba7b63
         0x488ad9
         -0xba7b64
@@ -4914,7 +4915,7 @@
         -0xba7c05
         0x488842
         -0xba7c1e
-        0x488828
+        0x488828    # 6.661E-39f
         -0xba7c5b
         0x48881c
         -0xba7c7a
@@ -4986,7 +4987,7 @@
         -0xba808e
         0x488572
         -0xba808e
-        0x48855a
+        0x48855a    # 6.659993E-39f
         -0xba808a
         0x488542
         -0xba8086
@@ -5014,7 +5015,7 @@
         -0xba81be
         0x48853d
         -0xba81d4
-        0x488565
+        0x488565    # 6.660009E-39f
         -0xba81fc
         0x488579
         -0xba8210
@@ -5877,7 +5878,7 @@
         0x489fc9
         -0xbaa305
         0x489fd0
-        -0xbaa327
+        -0xbaa327    # -2.6234E38f
         0x489fd8
         -0xbaa36d
         0x489fd8
@@ -5905,7 +5906,7 @@
         0x48a016
         -0xbaa510
         0x48a02e
-        -0xbaa514
+        -0xbaa514    # -2.6233E38f
         0x48a046
         -0xbaa518
         0x48a075
@@ -5921,8 +5922,8 @@
         0x48a0ff
         -0xbaa567
         0x48a115
-        -0xbaa577
-        0x48a141
+        -0xbaa577    # -2.62328E38f
+        0x48a141    # 6.670003E-39f
         -0xbaa596
         0x48a156
         -0xbaa5a6
@@ -6145,11 +6146,11 @@
         0x48ab6c
         -0xbaaabc
         0x48ab7a
-        -0xbaaad7
+        -0xbaaad7    # -2.623001E38f
         0x48ab91
         -0xbaaade
         0x48aba9
-        -0xbaaadf
+        -0xbaaadf    # -2.6229993E38f
         0x48abd8
         -0xbaaad5
         0x48abde
@@ -6247,7 +6248,7 @@
         0x48a994
         -0xbab059
         0x48a9a6
-        -0xbab040
+        -0xbab040    # -2.62272E38f
         0x48a9b8
         -0xbab028
         0x48a9e0
@@ -6337,7 +6338,7 @@
         0x48ab53
         -0xbaaafe
         0x48ab52
-        -0xbaaada
+        -0xbaaada    # -2.6230003E38f
         0x48ab5b
         -0xbaaa94
         0x48ab63
@@ -6407,7 +6408,7 @@
         0x48ae0b
         -0xbaa712
         0x48ae20
-        -0xbaa701
+        -0xbaa701    # -2.6232E38f
         0x48ae35
         -0xbaa6f1
         0x48ae4c
@@ -6947,7 +6948,7 @@
         0x48b0ba
         -0xba8878
         0x48b0af
-        -0xba8831
+        -0xba8831    # -2.6248E38f
         0x48b0aa
         -0xba880e
         0x48b0a4
@@ -6993,7 +6994,7 @@
         0x48b021
         -0xba847a
         0x48b01c
-        -0xba8457
+        -0xba8457    # -2.625E38f
         0x48b017
         -0xba8434
         0x48b011
@@ -7133,7 +7134,7 @@
         0x48ae3e
         -0xba7a9b
         0x48ae3e
-        -0xba7a53
+        -0xba7a53    # -2.62552E38f
         0x48ae3e
         -0xba7a2f
         0x48ae3e
@@ -7396,7 +7397,7 @@
         -0xba762d
         0x48a169
         -0xba7622
-        0x48a13a
+        0x48a13a    # 6.669993E-39f
         -0xba760d
         0x48a123
         -0xba7603
@@ -7487,7 +7488,7 @@
         0x489cbc
         -0xba7307
         0x489ca5
-        -0xba7301
+        -0xba7301    # -2.6259E38f
         0x489c8d
         -0xba72fb
         0x489c5e
@@ -7553,7 +7554,7 @@
         0x4899ef
         -0xba7340
         0x4899f2
-        -0xba7364
+        -0xba7364    # -2.62588E38f
         0x4899fa
         -0xba73aa
         0x4899fe
@@ -7695,7 +7696,7 @@
         0x4895f0
         -0xba7a43
         0x4895db
-        -0xba7a53
+        -0xba7a53    # -2.62552E38f
         0x4895ac
         -0xba7a5f
         0x48959a
@@ -8243,7 +8244,7 @@
         0x488a69
         -0xba8489
         0x488a8e
-        -0xba845b
+        -0xba845b    # -2.6249991E38f
         0x488a9e
         -0xba8440
         0x488ab6
@@ -8252,7 +8253,7 @@
         -0xba83e6
         0x488ada
         -0xba83da
-        0x488af2
+        0x488af2    # 6.662E-39f
         -0xba83d1
         0x488b09
         -0xba83c9
@@ -8281,7 +8282,7 @@
         0x488c63
         -0xba8341
         0x488c78
-        -0xba832f
+        -0xba832f    # -2.62506E38f
         0x488c8b
         -0xba831a
         0x488c9f
@@ -8493,7 +8494,7 @@
         0x48967a
         -0xba8329
         0x489692
-        -0xba832f
+        -0xba832f    # -2.62506E38f
         0x4896c0
         -0xba8344
         0x4896d5
@@ -8615,7 +8616,7 @@
         0x489b4c
         -0xba898c
         0x489b7c
-        -0xba898a
+        -0xba898a    # -2.62473E38f
         0x489b94
         -0xba8983
         0x489bab
@@ -9086,7 +9087,7 @@
         -0xbaa57a
         0x48a12f
         -0xbaa58a
-        0x48a145
+        0x48a145    # 6.670008E-39f
         -0xbaa599
         0x48a15b
         -0xbaa5a9
@@ -9158,7 +9159,7 @@
         -0xbaa865
         0x48a3f3
         -0xbaa878
-        0x48a408
+        0x48a408    # 6.670999E-39f
         -0xbaa88b
         0x48a41d
         -0xbaa89e
@@ -9357,13 +9358,13 @@
         0x48ab6e
         -0xbaaac3
         0x48ab7e
-        -0xbaaadc
+        -0xbaaadc    # -2.623E38f
         0x48ab96
         -0xbaaade
         0x48abae
-        -0xbaaadf
+        -0xbaaadf    # -2.6229993E38f
         0x48abc5
-        -0xbaaadd
+        -0xbaaadd    # -2.6229997E38f
         0x48abdd
         -0xbaaad6
         0x48abda
@@ -10185,7 +10186,7 @@
         0x4899de
         -0xba70ef
         0x4899d8
-        -0xba7112
+        -0xba7112    # -2.6260005E38f
         0x4899d1
         -0xba7135
         0x4899cb
@@ -10213,7 +10214,7 @@
         0x4899c9
         -0xba72df
         0x4899d1
-        -0xba7301
+        -0xba7301    # -2.6259E38f
         0x4899d8
         -0xba7324
         0x4899e0
@@ -10605,7 +10606,7 @@
         0x489db6
         -0xba8b53
         0x489db6
-        -0xba8b77
+        -0xba8b77    # -2.62463E38f
         0x489db7
         -0xba8b9b
         0x489db8
@@ -10915,7 +10916,7 @@
         0x489e2f
         -0xbaa11c
         0x489e3d
-        -0xbaa13a
+        -0xbaa13a    # -2.6235E38f
         0x489e4b
         -0xbaa157
         0x489e5a
@@ -11767,7 +11768,7 @@
         0x48981b
         -0xbaa110
         0x489803
-        -0xbaa109
+        -0xbaa109    # -2.62351E38f
         0x4897eb
         -0xbaa102
         0x4897bc
@@ -12141,7 +12142,7 @@
         0x488b0f
         -0xba9f30
         0x488afb
-        -0xba9f1c
+        -0xba9f1c    # -2.62361E38f
         0x488ad2
         -0xba9ef4
         0x488abe
@@ -12250,7 +12251,7 @@
         -0xba9ad4
         0x488588
         -0xba9ac9
-        0x48855a
+        0x48855a    # 6.659993E-39f
         -0xba9ab2
         0x488543
         -0xba9aa6
@@ -12633,7 +12634,7 @@
         0x48722e
         -0xba9280
         0x487201
-        -0xba9266
+        -0xba9266    # -2.62427E38f
         0x4871ea
         -0xba925a
         0x4871d4
@@ -12828,7 +12829,7 @@
         -0xba8934
         0x486c3e
         -0xba8913
-        0x486c48
+        0x486c48    # 6.651E-39f
         -0xba88f3
         0x486c52
         -0xba88d2
@@ -12853,7 +12854,7 @@
         0x486cd5
         -0xba8729
         0x486ce0
-        -0xba8709
+        -0xba8709    # -2.62486E38f
         0x486ceb
         -0xba86e9
         0x486cf6
@@ -12889,7 +12890,7 @@
         0x486da5
         -0xba8479
         0x486dac
-        -0xba8457
+        -0xba8457    # -2.625E38f
         0x486db8
         -0xba8412
         0x486dbb
@@ -13334,7 +13335,7 @@
         -0xba7655
         0x487ceb
         -0xba7660
-        0x487d02
+        0x487d02    # 6.657E-39f
         -0xba766c
         0x487d19
         -0xba7678
@@ -13384,7 +13385,7 @@
         -0xba77b5
         0x487fb4
         -0xba77cc
-        0x487fcb
+        0x487fcb    # 6.657999E-39f
         -0xba77da
         0x487fe1
         -0xba77e9
@@ -13738,7 +13739,7 @@
         -0xba7488
         0x488da2
         -0xba7486
-        0x488dbb
+        0x488dbb    # 6.662999E-39f
         -0xba7483
         0x488dd3
         -0xba7480
@@ -13842,7 +13843,7 @@
         -0xba713f
         0x48931f
         -0xba713b
-        0x48934f
+        0x48934f    # 6.665E-39f
         -0xba7133
         0x489368
         -0xba712f
@@ -13851,7 +13852,7 @@
         0x489397
         -0xba711e
         0x4893ad
-        -0xba7111
+        -0xba7111    # -2.6260007E38f
         0x4893d9
         -0xba70f1
         0x4893ee
@@ -13927,7 +13928,7 @@
         0x4896fa
         -0xba6d46
         0x489710
-        -0xba6d3a
+        -0xba6d3a    # -2.6262E38f
         0x489727
         -0xba6d2d
         0x489754
@@ -14641,7 +14642,7 @@
         0x489e30
         -0xbaa11d
         0x489e3d
-        -0xbaa13a
+        -0xbaa13a    # -2.6235E38f
         0x489e4c
         -0xbaa158
         0x489e5b
@@ -14834,7 +14835,7 @@
         -0xbaa94f
         0x48a6a3
         -0xbaa947
-        0x48a6d2
+        0x48a6d2    # 6.672E-39f
         -0xbaa936
         0x48a6ea
         -0xbaa92e
@@ -15140,7 +15141,7 @@
         -0xbaa3a1
         0x48a6e0
         -0xbaa3c0
-        0x48a6d3
+        0x48a6d3    # 6.672001E-39f
         -0xbaa3df
         0x48a6c6
         -0xbaa3fe
@@ -15407,7 +15408,7 @@
         0x489832
         -0xbaa117
         0x489802
-        -0xbaa109
+        -0xbaa109    # -2.62351E38f
         0x4897ea
         -0xbaa102
         0x4897d3
@@ -15867,7 +15868,7 @@
         0x4886f9
         -0xba9b7f
         0x4886e1
-        -0xba9b73
+        -0xba9b73    # -2.6238E38f
         0x4886b3
         -0xba9b5c
         0x48869c
@@ -15892,7 +15893,7 @@
         -0xba9ad4
         0x488588
         -0xba9ac8
-        0x488559
+        0x488559    # 6.659992E-39f
         -0xba9ab1
         0x488542
         -0xba9aa6
@@ -16277,7 +16278,7 @@
         0x487217
         -0xba9273
         0x487200
-        -0xba9266
+        -0xba9266    # -2.62427E38f
         0x4871ea
         -0xba9259
         0x4871bc
@@ -16484,7 +16485,7 @@
         -0xba8933
         0x486c3e
         -0xba8913
-        0x486c48
+        0x486c48    # 6.651E-39f
         -0xba88f2
         0x486c52
         -0xba88d1
@@ -16557,7 +16558,7 @@
         0x486da5
         -0xba8478
         0x486dad
-        -0xba8456
+        -0xba8456    # -2.6250002E38f
         0x486db3
         -0xba8433
         0x486db8
@@ -17164,7 +17165,7 @@
         -0xba77c1
         0x487fb5
         -0xba77cd
-        0x487fcb
+        0x487fcb    # 6.657999E-39f
         -0xba77da
         0x487fe1
         -0xba77e9
@@ -17300,7 +17301,7 @@
         -0xba780c
         0x488547
         -0xba77f5
-        0x48855a
+        0x48855a    # 6.659993E-39f
         -0xba77de
         0x48856c
         -0xba77c8
@@ -17594,7 +17595,7 @@
         -0xba7488
         0x488da3
         -0xba7485
-        0x488dbb
+        0x488dbb    # 6.662999E-39f
         -0xba7483
         0x488dd3
         -0xba7480
@@ -17866,17 +17867,17 @@
         0x33f2b
         0x3f27bf
         0x33f35
-        0x3f27d6
+        0x3f27d6    # 5.799927E-39f
         0x33f3e
-        0x3f27ed
+        0x3f27ed    # 5.799959E-39f
         0x33f47
-        0x3f2804
+        0x3f2804    # 5.799991E-39f
         0x33f51
-        0x3f281c
+        0x3f281c    # 5.800025E-39f
         0x33f5a
-        0x3f2830
+        0x3f2830    # 5.800053E-39f
         0x33f69
-        0x3f2845
+        0x3f2845    # 5.800082E-39f
         0x33f78
         0x3f285c
         0x33f84
@@ -17908,23 +17909,23 @@
         0x34078
         0x3f285d
         0x3408b
-        0x3f284a
+        0x3f284a    # 5.800089E-39f
         0x3409d
-        0x3f2835
+        0x3f2835    # 5.80006E-39f
         0x340af
-        0x3f2821
+        0x3f2821    # 5.800032E-39f
         0x340c0
-        0x3f280c
+        0x3f280c    # 5.800002E-39f
         0x340d1
-        0x3f27f7
+        0x3f27f7    # 5.799973E-39f
         0x340e2
-        0x3f27e3
+        0x3f27e3    # 5.799945E-39f
         0x340f3
-        0x3f27d3
+        0x3f27d3    # 5.799922E-39f
         0x340f2
-        0x3f27cc
+        0x3f27cc    # 5.799913E-39f
         0x340d3
-        0x3f27c4
+        0x3f27c4    # 5.799901E-39f
         0x340b5
         0x3f27bd
         0x34096
@@ -18072,41 +18073,41 @@
         0x34096
         0x3f27c3
         0x340b4
-        0x3f27cb
+        0x3f27cb    # 5.799911E-39f
         0x340d3
-        0x3f27d2
+        0x3f27d2    # 5.799921E-39f
         0x340f2
-        0x3f27da
+        0x3f27da    # 5.799932E-39f
         0x34110
-        0x3f27e2
+        0x3f27e2    # 5.799944E-39f
         0x3412f
-        0x3f27e9
+        0x3f27e9    # 5.799953E-39f
         0x3414e
-        0x3f27f1
+        0x3f27f1    # 5.799965E-39f
         0x3416d
-        0x3f27f9
+        0x3f27f9    # 5.799976E-39f
         0x3418c
-        0x3f2800
+        0x3f2800    # 5.799986E-39f
         0x341aa
-        0x3f2808
+        0x3f2808    # 5.799997E-39f
         0x341c9
-        0x3f2810
+        0x3f2810    # 5.800008E-39f
         0x341e8
-        0x3f2817
+        0x3f2817    # 5.800018E-39f
         0x34206
-        0x3f281f
+        0x3f281f    # 5.800029E-39f
         0x34225
-        0x3f2827
+        0x3f2827    # 5.80004E-39f
         0x34244
-        0x3f282e
+        0x3f282e    # 5.80005E-39f
         0x34263
-        0x3f2836
+        0x3f2836    # 5.800061E-39f
         0x34282
-        0x3f283d
+        0x3f283d    # 5.800071E-39f
         0x342a0
-        0x3f2845
+        0x3f2845    # 5.800082E-39f
         0x342bf
-        0x3f284d
+        0x3f284d    # 5.800093E-39f
         0x342de
         0x3f2855
         0x342fc
@@ -18127,15 +18128,15 @@
         0x3f2896
         0x343f0
         0x3f289e
-        0x3440f
+        0x3440f    # 2.99921E-40f
         0x3f28a7
-        0x3442e
+        0x3442e    # 2.99965E-40f
         0x3f28af
-        0x3444c
+        0x3444c    # 3.00007E-40f
         0x3f28b7
-        0x3446b
+        0x3446b    # 3.0005E-40f
         0x3f28bf
-        0x34489
+        0x34489    # 3.00092E-40f
         0x3f28c7
         0x344a8
         0x3f28cf
@@ -18280,7 +18281,7 @@
         0x34cd4
         0x3f2acc
         0x34cf3
-        0x3f2ad4
+        0x3f2ad4    # 5.801E-39f
         0x34d12
         0x3f2adc
         0x34d30
@@ -18652,21 +18653,21 @@
         0x34e2a
         0x3f2858
         0x34e3f
-        0x3f2846
+        0x3f2846    # 5.800084E-39f
         0x34e55
-        0x3f2835
+        0x3f2835    # 5.80006E-39f
         0x34e6b
-        0x3f2823
+        0x3f2823    # 5.800035E-39f
         0x34e81
-        0x3f2811
+        0x3f2811    # 5.80001E-39f
         0x34e6c
-        0x3f2800
+        0x3f2800    # 5.799986E-39f
         0x34e55
-        0x3f27ef
+        0x3f27ef    # 5.799962E-39f
         0x34e3e
-        0x3f27de
+        0x3f27de    # 5.799938E-39f
         0x34e27
-        0x3f27cd
+        0x3f27cd    # 5.799914E-39f
         0x34e11
         0x3f27bb
         0x34dfa
@@ -18774,7 +18775,7 @@
         0x34ed4
         0x3f252a
         0x34ec6
-        0x3f2541
+        0x3f2541    # 5.799E-39f
         0x34eba
         0x3f2557
         0x34eae
@@ -18955,9 +18956,9 @@
         0x3f20fc
         0x34f77
         0x3f20e5
-        0x34f6d
+        0x34f6d    # 3.03999E-40f
         0x3f20cd
-        0x34f6d
+        0x34f6d    # 3.03999E-40f
         0x3f20b7
         0x34f61
         0x3f20a4
@@ -19261,19 +19262,19 @@
         0x3f1af4
         0x34495
         0x3f1b0a
-        0x34486
+        0x34486    # 3.00088E-40f
         0x3f1b1f
-        0x34477
+        0x34477    # 3.00067E-40f
         0x3f1b4a
-        0x34458
+        0x34458    # 3.00024E-40f
         0x3f1b5f
-        0x34448
+        0x34448    # 3.00001E-40f
         0x3f1b75
-        0x34439
+        0x34439    # 2.9998E-40f
         0x3f1b8a
-        0x34429
+        0x34429    # 2.99958E-40f
         0x3f1b9f
-        0x3441a
+        0x3441a    # 2.99937E-40f
         0x3f1bca
         0x343fb
         0x3f1bdf
@@ -19496,15 +19497,15 @@
         0x33f2b
         0x3f27bd
         0x33f34
-        0x3f27d5
+        0x3f27d5    # 5.799925E-39f
         0x33f3d
-        0x3f27ec
+        0x3f27ec    # 5.799958E-39f
         0x33f47
-        0x3f2803
+        0x3f2803    # 5.79999E-39f
         0x33f50
-        0x3f282f
+        0x3f282f    # 5.800051E-39f
         0x33f68
-        0x3f2844
+        0x3f2844    # 5.800081E-39f
         0x33f77
         0x3f285b
         0x33f83
@@ -19532,19 +19533,19 @@
         0x34077
         0x3f285f
         0x34089
-        0x3f2836
+        0x3f2836    # 5.800061E-39f
         0x340ae
-        0x3f2822
+        0x3f2822    # 5.800033E-39f
         0x340bf
-        0x3f280d
+        0x3f280d    # 5.800004E-39f
         0x340d0
-        0x3f27f9
+        0x3f27f9    # 5.799976E-39f
         0x340e1
-        0x3f27e4
+        0x3f27e4    # 5.799946E-39f
         0x340f2
-        0x3f27cc
+        0x3f27cc    # 5.799913E-39f
         0x340d6
-        0x3f27c5
+        0x3f27c5    # 5.799903E-39f
         0x340b7
         0x3f27b6
         0x34079
@@ -19666,33 +19667,33 @@
         0x34094
         0x3f27c3
         0x340b2
-        0x3f27d2
+        0x3f27d2    # 5.799921E-39f
         0x340f0
-        0x3f27da
+        0x3f27da    # 5.799932E-39f
         0x3410f
-        0x3f27e1
+        0x3f27e1    # 5.799942E-39f
         0x3412e
-        0x3f27e9
+        0x3f27e9    # 5.799953E-39f
         0x3414c
-        0x3f27f0
+        0x3f27f0    # 5.799963E-39f
         0x3416b
-        0x3f2800
+        0x3f2800    # 5.799986E-39f
         0x341a8
-        0x3f2807
+        0x3f2807    # 5.799995E-39f
         0x341c7
-        0x3f280f
+        0x3f280f    # 5.800007E-39f
         0x341e6
-        0x3f2817
+        0x3f2817    # 5.800018E-39f
         0x34205
-        0x3f281e
+        0x3f281e    # 5.800028E-39f
         0x34224
-        0x3f2826
+        0x3f2826    # 5.800039E-39f
         0x34242
-        0x3f2835
+        0x3f2835    # 5.80006E-39f
         0x34280
-        0x3f283d
+        0x3f283d    # 5.800071E-39f
         0x3429e
-        0x3f284d
+        0x3f284d    # 5.800093E-39f
         0x342dc
         0x3f2855
         0x342fa
@@ -19711,13 +19712,13 @@
         0x3f2896
         0x343ef
         0x3f289e
-        0x3440d
+        0x3440d    # 2.99919E-40f
         0x3f28ae
-        0x3444a
+        0x3444a    # 3.00004E-40f
         0x3f28b6
-        0x34469
+        0x34469    # 3.00047E-40f
         0x3f28be
-        0x34487
+        0x34487    # 3.0009E-40f
         0x3f28c7
         0x344a6
         0x3f28cf
@@ -19836,7 +19837,7 @@
         0x34cd2
         0x3f2acc
         0x34cf1
-        0x3f2ad4
+        0x3f2ad4    # 5.801E-39f
         0x34d10
         0x3f2adb
         0x34d2e
@@ -20142,17 +20143,17 @@
         0x34e28
         0x3f2859
         0x34e3e
-        0x3f2836
+        0x3f2836    # 5.800061E-39f
         0x34e6a
-        0x3f2824
+        0x3f2824    # 5.800036E-39f
         0x34e80
-        0x3f2801
+        0x3f2801    # 5.799987E-39f
         0x34e57
-        0x3f27f0
+        0x3f27f0    # 5.799963E-39f
         0x34e40
-        0x3f27df
+        0x3f27df    # 5.79994E-39f
         0x34e29
-        0x3f27ce
+        0x3f27ce    # 5.799915E-39f
         0x34e12
         0x3f27bc
         0x34dfb
@@ -20240,7 +20241,7 @@
         0x34ee9
         0x3f2514
         0x34ed5
-        0x3f2540
+        0x3f2540    # 5.798999E-39f
         0x34ebb
         0x3f2556
         0x34eaf
@@ -20389,7 +20390,7 @@
         0x3f20fd
         0x34f77
         0x3f20e6
-        0x34f6e
+        0x34f6e    # 3.04E-40f
         0x3f20b8
         0x34f62
         0x3f20a5
@@ -20683,19 +20684,19 @@
         0x3f1af3
         0x34496
         0x3f1b09
-        0x34487
+        0x34487    # 3.0009E-40f
         0x3f1b1e
-        0x34478
+        0x34478    # 3.00068E-40f
         0x3f1b49
-        0x34458
+        0x34458    # 3.00024E-40f
         0x3f1b5e
-        0x34449
+        0x34449    # 3.00003E-40f
         0x3f1b73
-        0x3443a
+        0x3443a    # 2.99982E-40f
         0x3f1b89
-        0x3442a
+        0x3442a    # 2.99959E-40f
         0x3f1b9e
-        0x3441b
+        0x3441b    # 2.99938E-40f
         0x3f1bc9
         0x343fc
         0x3f1bde
@@ -20918,15 +20919,15 @@
         0x33f2a
         0x3f27bc
         0x33f33
-        0x3f27eb
+        0x3f27eb    # 5.799956E-39f
         0x33f46
-        0x3f2802
+        0x3f2802    # 5.799988E-39f
         0x33f50
-        0x3f2819
+        0x3f2819    # 5.80002E-39f
         0x33f59
-        0x3f282e
+        0x3f282e    # 5.80005E-39f
         0x33f67
-        0x3f2843
+        0x3f2843    # 5.80008E-39f
         0x33f76
         0x3f286f
         0x33f90
@@ -20952,21 +20953,21 @@
         0x34076
         0x3f2860
         0x34088
-        0x3f284c
+        0x3f284c    # 5.800092E-39f
         0x3409b
-        0x3f2838
+        0x3f2838    # 5.800064E-39f
         0x340ad
-        0x3f2823
+        0x3f2823    # 5.800035E-39f
         0x340be
-        0x3f27fa
+        0x3f27fa    # 5.799977E-39f
         0x340e0
-        0x3f27e5
+        0x3f27e5    # 5.799948E-39f
         0x340f1
-        0x3f27d4
+        0x3f27d4    # 5.799924E-39f
         0x340f6
-        0x3f27cd
+        0x3f27cd    # 5.799914E-39f
         0x340d7
-        0x3f27c5
+        0x3f27c5    # 5.799903E-39f
         0x340b8
         0x3f27b6
         0x3407b
@@ -21086,35 +21087,35 @@
         0x34091
         0x3f27c2
         0x340b0
-        0x3f27ca
+        0x3f27ca    # 5.79991E-39f
         0x340cf
-        0x3f27d1
+        0x3f27d1    # 5.79992E-39f
         0x340ee
-        0x3f27d9
+        0x3f27d9    # 5.799931E-39f
         0x3410d
-        0x3f27e8
+        0x3f27e8    # 5.799952E-39f
         0x3414a
-        0x3f27f0
+        0x3f27f0    # 5.799963E-39f
         0x34169
         0x3f27f8
         0x34188
-        0x3f27ff
+        0x3f27ff    # 5.799984E-39f
         0x341a7
-        0x3f2807
+        0x3f2807    # 5.799995E-39f
         0x341c6
-        0x3f280f
+        0x3f280f    # 5.800007E-39f
         0x341e4
-        0x3f281e
+        0x3f281e    # 5.800028E-39f
         0x34222
-        0x3f2826
+        0x3f2826    # 5.800039E-39f
         0x34240
-        0x3f282d
+        0x3f282d    # 5.800049E-39f
         0x3425f
-        0x3f2835
+        0x3f2835    # 5.80006E-39f
         0x3427e
-        0x3f283c
+        0x3f283c    # 5.80007E-39f
         0x3429d
-        0x3f284c
+        0x3f284c    # 5.800092E-39f
         0x342da
         0x3f2854
         0x342f9
@@ -21133,11 +21134,11 @@
         0x3f2895
         0x343ed
         0x3f289e
-        0x3440c
+        0x3440c    # 2.99917E-40f
         0x3f28ae
-        0x34449
+        0x34449    # 3.00003E-40f
         0x3f28b6
-        0x34467
+        0x34467    # 3.00045E-40f
         0x3f28c6
         0x344a4
         0x3f28ce
@@ -21562,19 +21563,19 @@
         0x34e27
         0x3f285a
         0x34e3d
-        0x3f2848
+        0x3f2848    # 5.800086E-39f
         0x34e53
-        0x3f2837
+        0x3f2837    # 5.800063E-39f
         0x34e69
-        0x3f2825
+        0x3f2825    # 5.800037E-39f
         0x34e7f
-        0x3f2802
+        0x3f2802    # 5.799988E-39f
         0x34e58
-        0x3f27f1
+        0x3f27f1    # 5.799965E-39f
         0x34e41
-        0x3f27e0
+        0x3f27e0    # 5.799941E-39f
         0x34e2a
-        0x3f27ce
+        0x3f27ce    # 5.799915E-39f
         0x34e13
         0x3f27bd
         0x34dfc
@@ -21811,7 +21812,7 @@
         0x3f20fe
         0x34f78
         0x3f20e8
-        0x34f6e
+        0x34f6e    # 3.04E-40f
         0x3f20ba
         0x34f63
         0x3f20a5
@@ -22103,19 +22104,19 @@
         0x3f1adc
         0x344a7
         0x3f1b08
-        0x34488
+        0x34488    # 3.00091E-40f
         0x3f1b1d
-        0x34478
+        0x34478    # 3.00068E-40f
         0x3f1b32
-        0x34469
+        0x34469    # 3.00047E-40f
         0x3f1b47
-        0x3445a
+        0x3445a    # 3.00026E-40f
         0x3f1b5d
-        0x3444a
+        0x3444a    # 3.00004E-40f
         0x3f1b87
-        0x3442b
+        0x3442b    # 2.9996E-40f
         0x3f1b9d
-        0x3441c
+        0x3441c    # 2.9994E-40f
         0x3f1bc8
         0x343fd
         0x3f1bdd
@@ -22344,15 +22345,15 @@
         0x33f2a
         0x3f27ba
         0x33f33
-        0x3f27e9
+        0x3f27e9    # 5.799953E-39f
         0x33f46
-        0x3f2800
+        0x3f2800    # 5.799986E-39f
         0x33f4f
-        0x3f2818
+        0x3f2818    # 5.800019E-39f
         0x33f58
-        0x3f282d
+        0x3f282d    # 5.800049E-39f
         0x33f65
-        0x3f2842
+        0x3f2842    # 5.800078E-39f
         0x33f75
         0x3f286e
         0x33f90
@@ -22378,19 +22379,19 @@
         0x34075
         0x3f2861
         0x34087
-        0x3f2839
+        0x3f2839    # 5.800065E-39f
         0x340ac
-        0x3f2824
+        0x3f2824    # 5.800036E-39f
         0x340bd
-        0x3f2810
+        0x3f2810    # 5.800008E-39f
         0x340ce
-        0x3f27fb
+        0x3f27fb    # 5.799979E-39f
         0x340df
-        0x3f27e6
+        0x3f27e6    # 5.799949E-39f
         0x340f0
-        0x3f27cd
+        0x3f27cd    # 5.799914E-39f
         0x340d9
-        0x3f27c6
+        0x3f27c6    # 5.799904E-39f
         0x340ba
         0x3f27be
         0x3409b
@@ -22512,35 +22513,35 @@
         0x34090
         0x3f27c2
         0x340af
-        0x3f27c9
+        0x3f27c9    # 5.799908E-39f
         0x340ce
-        0x3f27d9
+        0x3f27d9    # 5.799931E-39f
         0x3410b
-        0x3f27e0
+        0x3f27e0    # 5.799941E-39f
         0x3412a
-        0x3f27e8
+        0x3f27e8    # 5.799952E-39f
         0x34148
-        0x3f27f0
+        0x3f27f0    # 5.799963E-39f
         0x34167
-        0x3f27f7
+        0x3f27f7    # 5.799973E-39f
         0x34186
-        0x3f2807
+        0x3f2807    # 5.799995E-39f
         0x341c4
-        0x3f280e
+        0x3f280e    # 5.800005E-39f
         0x341e2
-        0x3f2816
+        0x3f2816    # 5.800016E-39f
         0x34201
-        0x3f281e
+        0x3f281e    # 5.800028E-39f
         0x34220
-        0x3f2825
+        0x3f2825    # 5.800037E-39f
         0x3423f
-        0x3f2834
+        0x3f2834    # 5.800058E-39f
         0x3427c
-        0x3f283c
+        0x3f283c    # 5.80007E-39f
         0x3429b
-        0x3f2844
+        0x3f2844    # 5.800081E-39f
         0x342ba
-        0x3f284b
+        0x3f284b    # 5.80009E-39f
         0x342d8
         0x3f2854
         0x342f7
@@ -22557,13 +22558,13 @@
         0x3f2895
         0x343eb
         0x3f289d
-        0x3440a
+        0x3440a    # 2.99914E-40f
         0x3f28ad
-        0x34447
+        0x34447    # 3.0E-40f
         0x3f28b6
-        0x34466
+        0x34466    # 3.00043E-40f
         0x3f28be
-        0x34484
+        0x34484    # 3.00085E-40f
         0x3f28c6
         0x344a2
         0x3f28ce
@@ -22988,17 +22989,17 @@
         0x34e26
         0x3f285b
         0x34e3c
-        0x3f2838
+        0x3f2838    # 5.800064E-39f
         0x34e67
-        0x3f2826
+        0x3f2826    # 5.800039E-39f
         0x34e7d
-        0x3f2815
+        0x3f2815    # 5.800015E-39f
         0x34e70
-        0x3f2803
+        0x3f2803    # 5.79999E-39f
         0x34e59
-        0x3f27f2
+        0x3f27f2    # 5.799966E-39f
         0x34e42
-        0x3f27cf
+        0x3f27cf    # 5.799917E-39f
         0x34e15
         0x3f27be
         0x34dfe
@@ -23235,7 +23236,7 @@
         0x3f2100
         0x34f79
         0x3f20e9
-        0x34f6e
+        0x34f6e    # 3.04E-40f
         0x3f20d1
         0x34f6c
         0x3f20bb
@@ -23529,21 +23530,21 @@
         0x3f1adb
         0x344a8
         0x3f1b06
-        0x34489
+        0x34489    # 3.00092E-40f
         0x3f1b1b
-        0x34479
+        0x34479    # 3.0007E-40f
         0x3f1b31
-        0x3446a
+        0x3446a    # 3.00049E-40f
         0x3f1b46
-        0x3445a
+        0x3445a    # 3.00026E-40f
         0x3f1b5c
-        0x3444b
+        0x3444b    # 3.00005E-40f
         0x3f1b86
-        0x3442c
+        0x3442c    # 2.99962E-40f
         0x3f1b9c
-        0x3441c
+        0x3441c    # 2.9994E-40f
         0x3f1bb1
-        0x3440d
+        0x3440d    # 2.99919E-40f
         0x3f1bc6
         0x343fe
         0x3f1bdc
@@ -23766,15 +23767,15 @@
         0x33f29
         0x3f27b9
         0x33f32
-        0x3f27e8
+        0x3f27e8    # 5.799952E-39f
         0x33f45
-        0x3f27ff
+        0x3f27ff    # 5.799984E-39f
         0x33f4e
-        0x3f2816
+        0x3f2816    # 5.800016E-39f
         0x33f58
-        0x3f282c
+        0x3f282c    # 5.800047E-39f
         0x33f64
-        0x3f2840
+        0x3f2840    # 5.800075E-39f
         0x33f75
         0x3f286c
         0x33f8f
@@ -23800,21 +23801,21 @@
         0x34073
         0x3f2862
         0x34086
-        0x3f284e
+        0x3f284e    # 5.800095E-39f
         0x34099
-        0x3f283a
+        0x3f283a    # 5.800067E-39f
         0x340ab
-        0x3f2826
+        0x3f2826    # 5.800039E-39f
         0x340bc
-        0x3f27fc
+        0x3f27fc    # 5.79998E-39f
         0x340de
-        0x3f27e8
+        0x3f27e8    # 5.799952E-39f
         0x340ef
-        0x3f27d5
+        0x3f27d5    # 5.799925E-39f
         0x340f9
-        0x3f27ce
+        0x3f27ce    # 5.799915E-39f
         0x340db
-        0x3f27c6
+        0x3f27c6    # 5.799904E-39f
         0x340bc
         0x3f27b7
         0x3407e
@@ -23934,35 +23935,35 @@
         0x34070
         0x3f27c1
         0x340ad
-        0x3f27c9
+        0x3f27c9    # 5.799908E-39f
         0x340cc
-        0x3f27d1
+        0x3f27d1    # 5.79992E-39f
         0x340ea
-        0x3f27d8
+        0x3f27d8    # 5.79993E-39f
         0x34109
-        0x3f27e0
+        0x3f27e0    # 5.799941E-39f
         0x34128
-        0x3f27ef
+        0x3f27ef    # 5.799962E-39f
         0x34166
-        0x3f27f7
+        0x3f27f7    # 5.799973E-39f
         0x34184
-        0x3f27fe
+        0x3f27fe    # 5.799983E-39f
         0x341a3
-        0x3f2806
+        0x3f2806    # 5.799994E-39f
         0x341c2
-        0x3f280e
+        0x3f280e    # 5.800005E-39f
         0x341e0
-        0x3f281d
+        0x3f281d    # 5.800026E-39f
         0x3421e
-        0x3f2825
+        0x3f2825    # 5.800037E-39f
         0x3423d
-        0x3f282c
+        0x3f282c    # 5.800047E-39f
         0x3425c
-        0x3f2834
+        0x3f2834    # 5.800058E-39f
         0x3427a
-        0x3f283c
+        0x3f283c    # 5.80007E-39f
         0x34299
-        0x3f284b
+        0x3f284b    # 5.80009E-39f
         0x342d7
         0x3f2853
         0x342f5
@@ -23979,13 +23980,13 @@
         0x3f2894
         0x343e9
         0x3f289d
-        0x34408
+        0x34408    # 2.99912E-40f
         0x3f28a5
-        0x34426
+        0x34426    # 2.99954E-40f
         0x3f28ad
-        0x34445
+        0x34445    # 2.99997E-40f
         0x3f28b5
-        0x34463
+        0x34463    # 3.00039E-40f
         0x3f28c5
         0x344a1
         0x3f28cd
@@ -24488,21 +24489,21 @@
         0x34e24
         0x3f285c
         0x34e3a
-        0x3f284b
+        0x3f284b    # 5.80009E-39f
         0x34e50
-        0x3f2839
+        0x3f2839    # 5.800065E-39f
         0x34e66
-        0x3f2827
+        0x3f2827    # 5.80004E-39f
         0x34e7c
-        0x3f2816
+        0x3f2816    # 5.800016E-39f
         0x34e71
-        0x3f2804
+        0x3f2804    # 5.799991E-39f
         0x34e5a
-        0x3f27f3
+        0x3f27f3    # 5.799967E-39f
         0x34e43
-        0x3f27e2
+        0x3f27e2    # 5.799944E-39f
         0x34e2d
-        0x3f27d0
+        0x3f27d0    # 5.799918E-39f
         0x34e16
         0x3f27bf
         0x34dff
@@ -24791,7 +24792,7 @@
         0x3f2101
         0x34f7a
         0x3f20eb
-        0x34f6e
+        0x34f6e    # 3.04E-40f
         0x3f20d3
         0x34f6c
         0x3f20bc
@@ -24988,7 +24989,7 @@
         0x34c2a
         0x3f1cf2
         0x34c15
-        0x3f1ce4
+        0x3f1ce4    # 5.796E-39f
         0x34bfb
         0x3f1cd8
         0x34bdf
@@ -25149,23 +25150,23 @@
         0x3f1af0
         0x34499
         0x3f1b05
-        0x3448a
+        0x3448a    # 3.00094E-40f
         0x3f1b1a
-        0x3447a
+        0x3447a    # 3.00071E-40f
         0x3f1b30
-        0x3446b
+        0x3446b    # 3.0005E-40f
         0x3f1b45
-        0x3445b
+        0x3445b    # 3.00028E-40f
         0x3f1b5a
-        0x3444c
+        0x3444c    # 3.00007E-40f
         0x3f1b70
-        0x3443c
+        0x3443c    # 2.99984E-40f
         0x3f1b85
-        0x3442d
+        0x3442d    # 2.99963E-40f
         0x3f1b9a
-        0x3441d
+        0x3441d    # 2.99941E-40f
         0x3f1bb0
-        0x3440e
+        0x3440e    # 2.9992E-40f
         0x3f1bc5
         0x343ff
         0x3f1bdb
@@ -25467,7 +25468,7 @@
         0x39194b
         -0xba6d52
         0x39193c
-        -0xba6d3a
+        -0xba6d3a    # -2.6262E38f
         0x39192c
         -0xba6d22
         0x39191a
@@ -26429,7 +26430,7 @@
         0x3923a9
         -0xba5790
         0x3923b7
-        -0xba5777
+        -0xba5777    # -2.62733E38f
         0x3923c5
         -0xba575e
         0x3923d3
@@ -26592,7 +26593,7 @@
         -0xba5d7c
         0x392806
         -0xba5d94
-        0x392814
+        0x392814    # 5.249E-39f
         -0xba5dad
         0x392822
         -0xba5dc6
@@ -27528,7 +27529,7 @@
         -0xba7394
         0x392820
         -0xba737a
-        0x392813
+        0x392813    # 5.248999E-39f
         -0xba735f
         0x392806
         -0xba7346
@@ -27925,7 +27926,7 @@
         0x39194b
         -0xba6d52
         0x39193c
-        -0xba6d3a
+        -0xba6d3a    # -2.6262E38f
         0x39192d
         -0xba6d22
         0x391905
@@ -28846,7 +28847,7 @@
         -0xba5d62
         0x3927f7
         -0xba5d7b
-        0x392813
+        0x392813    # 5.248999E-39f
         -0xba5dac
         0x392822
         -0xba5dc5
@@ -28930,7 +28931,7 @@
         -0xba624c
         0x392ad6
         -0xba6264
-        0x392ae4
+        0x392ae4    # 5.25001E-39f
         -0xba627d
         0x392b01
         -0xba62ae
@@ -29234,7 +29235,7 @@
         -0xba7569
         0x393337
         -0xba7587
-        0x39333a
+        0x39333a    # 5.253E-39f
         -0xba75a5
         0x39333e
         -0xba75c3
@@ -29421,7 +29422,7 @@
         0x39339d
         -0xba80af
         0x393384
-        -0xba80ae
+        -0xba80ae    # -2.62519E38f
         0x393354
         -0xba80aa
         0x39333c
@@ -29645,7 +29646,7 @@
         0x392c48
         -0xba7ae2
         0x392c26
-        -0xba7ab6
+        -0xba7ab6    # -2.6255E38f
         0x392c15
         -0xba7aa0
         0x392c04
@@ -29678,7 +29679,7 @@
         -0xba791c
         0x392af1
         -0xba7905
-        0x392ae3
+        0x392ae3    # 5.250008E-39f
         -0xba78ec
         0x392ad5
         -0xba78d3
@@ -29768,7 +29769,7 @@
         -0xba7395
         0x392820
         -0xba737b
-        0x392813
+        0x392813    # 5.248999E-39f
         -0xba7360
         0x392807
         -0xba7347
@@ -31176,7 +31177,7 @@
         -0xba624b
         0x392ad6
         -0xba6264
-        0x392ae4
+        0x392ae4    # 5.25001E-39f
         -0xba627c
         0x392b01
         -0xba62ad
@@ -31336,7 +31337,7 @@
         -0xba6bb6
         0x393063
         -0xba6bce
-        0x393071
+        0x393071    # 5.252001E-39f
         -0xba6be7
         0x393080
         -0xba6c00
@@ -31480,7 +31481,7 @@
         -0xba754a
         0x393333
         -0xba7567
-        0x39333a
+        0x39333a    # 5.253E-39f
         -0xba75a4
         0x39333e
         -0xba75c2
@@ -31667,7 +31668,7 @@
         0x39339e
         -0xba80af
         0x393385
-        -0xba80ae
+        -0xba80ae    # -2.62519E38f
         0x393355
         -0xba80aa
         0x39333c
@@ -31891,7 +31892,7 @@
         0x392da4
         -0xba7cb9
         0x392d94
-        -0xba7ca3
+        -0xba7ca3    # -2.6254E38f
         0x392d84
         -0xba7c8c
         0x392d73
@@ -31974,7 +31975,7 @@
         -0xba791d
         0x392af2
         -0xba7906
-        0x392ae4
+        0x392ae4    # 5.25001E-39f
         -0xba78ed
         0x392ad5
         -0xba78d4
@@ -32084,7 +32085,7 @@
         -0xba7395
         0x392821
         -0xba737c
-        0x392814
+        0x392814    # 5.249E-39f
         -0xba7361
         0x392807
         -0xba7347
@@ -33024,7 +33025,7 @@
 
     int-to-double v4, v4
 
-    const-wide v10, 0x40f86a0000000000L
+    const-wide v10, 0x40f86a0000000000L    # 100000.0
 
     div-double/2addr v4, v10
 
@@ -33034,7 +33035,7 @@
 
     int-to-double v6, v6
 
-    const-wide v10, 0x40f86a0000000000L
+    const-wide v10, 0x40f86a0000000000L    # 100000.0
 
     div-double/2addr v6, v10
 
@@ -33043,7 +33044,7 @@
     move-result-object v2
 
     .line 478
-    const/high16 v3, 0x40400000
+    const/high16 v3, 0x40400000    # 3.0f
 
     invoke-interface {v2, v3}, Lcom/glympse/android/lib/GLocationPrivate;->setHAccuracy(F)V
 

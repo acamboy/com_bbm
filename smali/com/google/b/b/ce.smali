@@ -1,40 +1,53 @@
 .class final Lcom/google/b/b/ce;
-.super Ljava/lang/ThreadLocal;
+.super Ljava/lang/Object;
 .source "Striped64.java"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/ThreadLocal",
-        "<",
-        "Lcom/google/b/b/cd;",
-        ">;"
-    }
-.end annotation
+# static fields
+.field static final a:Ljava/util/Random;
+
+
+# instance fields
+.field b:I
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
     .prologue
-    .line 135
-    invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
+    .line 124
+    new-instance v0, Ljava/util/Random;
+
+    invoke-direct {v0}, Ljava/util/Random;-><init>()V
+
+    sput-object v0, Lcom/google/b/b/ce;->a:Ljava/util/Random;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final synthetic initialValue()Ljava/lang/Object;
+.method constructor <init>()V
     .locals 1
 
     .prologue
-    .line 135
-    new-instance v0, Lcom/google/b/b/cd;
+    .line 126
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lcom/google/b/b/cd;-><init>()V
+    .line 127
+    sget-object v0, Lcom/google/b/b/ce;->a:Ljava/util/Random;
 
-    return-object v0
+    invoke-virtual {v0}, Ljava/util/Random;->nextInt()I
+
+    move-result v0
+
+    .line 128
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :cond_0
+    iput v0, p0, Lcom/google/b/b/ce;->b:I
+
+    .line 129
+    return-void
 .end method

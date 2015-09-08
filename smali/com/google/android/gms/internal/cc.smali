@@ -1,105 +1,173 @@
-.class public Lcom/google/android/gms/internal/cc;
-.super Lcom/google/android/gms/internal/eh;
+.class public final Lcom/google/android/gms/internal/cc;
+.super Ljava/lang/Object;
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/google/android/gms/internal/eh",
-        "<",
-        "Lcom/google/android/gms/internal/ch;",
-        ">;"
-    }
-.end annotation
+# interfaces
+.implements Lcom/google/android/gms/internal/cb;
 
 
 # instance fields
-.field private final oa:I
+.field private final a:Lcom/google/android/gms/internal/ca;
+
+.field private final b:Ljava/util/HashSet;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashSet",
+            "<",
+            "Ljava/util/AbstractMap$SimpleEntry",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/google/android/gms/internal/fv;",
+            ">;>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/google/android/gms/common/GooglePlayServicesClient$ConnectionCallbacks;Lcom/google/android/gms/common/GooglePlayServicesClient$OnConnectionFailedListener;I)V
+.method public constructor <init>(Lcom/google/android/gms/internal/ca;)V
     .locals 1
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v0, v0, [Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/android/gms/internal/cc;->a:Lcom/google/android/gms/internal/ca;
 
-    invoke-direct {p0, p1, p2, p3, v0}, Lcom/google/android/gms/internal/eh;-><init>(Landroid/content/Context;Lcom/google/android/gms/common/GooglePlayServicesClient$ConnectionCallbacks;Lcom/google/android/gms/common/GooglePlayServicesClient$OnConnectionFailedListener;[Ljava/lang/String;)V
+    new-instance v0, Ljava/util/HashSet;
 
-    iput p4, p0, Lcom/google/android/gms/internal/cc;->oa:I
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/cc;->b:Ljava/util/HashSet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected a(Lcom/google/android/gms/internal/en;Lcom/google/android/gms/internal/eh$e;)V
-    .locals 3
+.method public final a()V
+    .locals 4
 
-    new-instance v0, Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/google/android/gms/internal/cc;->b:Ljava/util/HashSet;
 
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    iget v1, p0, Lcom/google/android/gms/internal/cc;->oa:I
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/cc;->getContext()Landroid/content/Context;
+    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result-object v2
+    move-result v0
 
-    invoke-interface {p1, p2, v1, v2, v0}, Lcom/google/android/gms/internal/en;->g(Lcom/google/android/gms/internal/em;ILjava/lang/String;Landroid/os/Bundle;)V
+    if-eqz v0, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/AbstractMap$SimpleEntry;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v1, "Unregistering eventhandler: "
+
+    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/util/AbstractMap$SimpleEntry;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/google/android/gms/internal/fv;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/google/android/gms/ads/internal/util/client/b;->d(Ljava/lang/String;)V
+
+    iget-object v3, p0, Lcom/google/android/gms/internal/cc;->a:Lcom/google/android/gms/internal/ca;
+
+    invoke-virtual {v0}, Ljava/util/AbstractMap$SimpleEntry;->getKey()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/util/AbstractMap$SimpleEntry;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/android/gms/internal/fv;
+
+    invoke-interface {v3, v1, v0}, Lcom/google/android/gms/internal/ca;->b(Ljava/lang/String;Lcom/google/android/gms/internal/fv;)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/cc;->b:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
     return-void
 .end method
 
-.method protected aF()Ljava/lang/String;
-    .locals 1
+.method public final a(Ljava/lang/String;Lcom/google/android/gms/internal/fv;)V
+    .locals 2
 
-    const-string v0, "com.google.android.gms.ads.service.START"
+    iget-object v0, p0, Lcom/google/android/gms/internal/cc;->a:Lcom/google/android/gms/internal/ca;
 
-    return-object v0
+    invoke-interface {v0, p1, p2}, Lcom/google/android/gms/internal/ca;->a(Ljava/lang/String;Lcom/google/android/gms/internal/fv;)V
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/cc;->b:Ljava/util/HashSet;
+
+    new-instance v1, Ljava/util/AbstractMap$SimpleEntry;
+
+    invoke-direct {v1, p1, p2}, Ljava/util/AbstractMap$SimpleEntry;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    return-void
 .end method
 
-.method protected aG()Ljava/lang/String;
+.method public final a(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    const-string v0, "com.google.android.gms.ads.internal.request.IAdRequestService"
+    iget-object v0, p0, Lcom/google/android/gms/internal/cc;->a:Lcom/google/android/gms/internal/ca;
 
-    return-object v0
+    invoke-interface {v0, p1, p2}, Lcom/google/android/gms/internal/ca;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
 .end method
 
-.method public aH()Lcom/google/android/gms/internal/ch;
+.method public final a(Ljava/lang/String;Lorg/json/JSONObject;)V
     .locals 1
 
-    invoke-super {p0}, Lcom/google/android/gms/internal/eh;->eb()Landroid/os/IInterface;
+    iget-object v0, p0, Lcom/google/android/gms/internal/cc;->a:Lcom/google/android/gms/internal/ca;
 
-    move-result-object v0
+    invoke-interface {v0, p1, p2}, Lcom/google/android/gms/internal/ca;->a(Ljava/lang/String;Lorg/json/JSONObject;)V
 
-    check-cast v0, Lcom/google/android/gms/internal/ch;
-
-    return-object v0
+    return-void
 .end method
 
-.method protected o(Landroid/os/IBinder;)Lcom/google/android/gms/internal/ch;
-    .locals 1
+.method public final b(Ljava/lang/String;Lcom/google/android/gms/internal/fv;)V
+    .locals 2
 
-    invoke-static {p1}, Lcom/google/android/gms/internal/ch$a;->q(Landroid/os/IBinder;)Lcom/google/android/gms/internal/ch;
+    iget-object v0, p0, Lcom/google/android/gms/internal/cc;->a:Lcom/google/android/gms/internal/ca;
 
-    move-result-object v0
+    invoke-interface {v0, p1, p2}, Lcom/google/android/gms/internal/ca;->b(Ljava/lang/String;Lcom/google/android/gms/internal/fv;)V
 
-    return-object v0
-.end method
+    iget-object v0, p0, Lcom/google/android/gms/internal/cc;->b:Ljava/util/HashSet;
 
-.method protected synthetic p(Landroid/os/IBinder;)Landroid/os/IInterface;
-    .locals 1
+    new-instance v1, Ljava/util/AbstractMap$SimpleEntry;
 
-    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/cc;->o(Landroid/os/IBinder;)Lcom/google/android/gms/internal/ch;
+    invoke-direct {v1, p1, p2}, Ljava/util/AbstractMap$SimpleEntry;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    return-object v0
+    return-void
 .end method

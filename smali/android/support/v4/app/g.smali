@@ -3,7 +3,7 @@
 .source "BackStackRecord.java"
 
 # interfaces
-.implements Landroid/support/v4/app/am;
+.implements Landroid/support/v4/app/an;
 
 
 # instance fields
@@ -17,7 +17,7 @@
     .locals 0
 
     .prologue
-    .line 1186
+    .line 1183
     iput-object p1, p0, Landroid/support/v4/app/g;->b:Landroid/support/v4/app/f;
 
     iput-object p2, p0, Landroid/support/v4/app/g;->a:Landroid/support/v4/app/Fragment;
@@ -33,7 +33,7 @@
     .locals 1
 
     .prologue
-    .line 1189
+    .line 1186
     iget-object v0, p0, Landroid/support/v4/app/g;->a:Landroid/support/v4/app/Fragment;
 
     invoke-virtual {v0}, Landroid/support/v4/app/Fragment;->getView()Landroid/view/View;

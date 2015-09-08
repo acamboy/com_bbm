@@ -4,9 +4,9 @@
 
 
 # static fields
-.field public static final eq:I = 0x80
+.field public static final et:I = 0x80
 
-.field private static er:Ljava/lang/String;
+.field private static eu:Ljava/lang/String;
 
 
 # direct methods
@@ -39,7 +39,7 @@
 
     .prologue
     .line 36
-    sget-object v0, Lcom/glympse/android/hal/bj;->er:Ljava/lang/String;
+    sget-object v0, Lcom/glympse/android/hal/bj;->eu:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
@@ -135,11 +135,11 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/bj;->er:Ljava/lang/String;
+    sput-object v0, Lcom/glympse/android/hal/bj;->eu:Ljava/lang/String;
 
     .line 57
     :cond_0
-    sget-object v0, Lcom/glympse/android/hal/bj;->er:Ljava/lang/String;
+    sget-object v0, Lcom/glympse/android/hal/bj;->eu:Ljava/lang/String;
 
     return-object v0
 .end method

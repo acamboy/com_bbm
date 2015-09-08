@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="arrived_at_destination">Glympse: Has llegado a tu destino</string>
+    <string name="click_to_expire">Haz clic aquí para que caduque tu Glympse</string>
+    <string name="click_to_reply">Haz clic aquí para responder...</string>
+    <string name="click_to_view">Haz clic aquí para verlo...</string>
     <string name="dbx_install">Instalar Dropbox</string>
     <string name="dbx_install_button_cancel">Cancelar</string>
     <string name="dbx_install_button_ok">Instalar</string>
@@ -9,4 +13,15 @@
     <string name="dbx_update_button_ok">Actualizar</string>
     <string name="dbx_update_main">Actualiza la aplicación de Dropbox</string>
     <string name="dbx_update_sub">Con la nueva aplicación de Dropbox, podrás acceder a todos tus archivos en tus aplicaciones favoritas, como esta.</string>
+    <string name="glympse_was_received">Has recibido un Glympse</string>
+    <string name="group_invitation_was_received">Te han invitado a un grupo Glympse</string>
+    <string name="low_battey_warning">Pausado por batería baja, haz clic para reanudar.</string>
+    <string name="no_active_glympses">No hay Glympses activos</string>
+    <string name="no_network_connection">No hay conexión de red.</string>
+    <string name="rate_limited">Glympse rate limit has been reached.</string>
+    <string name="remaining_details">%2$d visitas, %1$d viéndolo</string>
+    <string name="remaining_title">Glympse: %1$s restantes</string>
+    <string name="remaining_title_glympse">Glympse</string>
+    <string name="reply_with_a_glympse">¿Contestar con un Glympse?</string>
+    <string name="request_was_received">Has recibido una solicitud Glympse</string>
 </resources>

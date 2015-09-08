@@ -58,8 +58,6 @@
 
     .line 2049
     :try_start_0
-    iget-object v0, p0, Lcom/blackberry/ids/IDS$14;->b:Ljava/lang/Object;
-
     iget-object v0, p0, Lcom/blackberry/ids/IDS$14;->c:Lcom/blackberry/ids/IChallengeCallback;
 
     iget-object v1, p0, Lcom/blackberry/ids/IDS$14;->d:Lcom/blackberry/ids/IFailureCallback;

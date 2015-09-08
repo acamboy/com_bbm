@@ -937,7 +937,7 @@
 
     int-to-float v3, v3
 
-    const/high16 v4, 0x40000000
+    const/high16 v4, 0x40000000    # 2.0f
 
     div-float/2addr v3, v4
 
@@ -946,7 +946,7 @@
 
     int-to-float v0, v0
 
-    const/high16 v1, 0x40000000
+    const/high16 v1, 0x40000000    # 2.0f
 
     div-float/2addr v0, v1
 

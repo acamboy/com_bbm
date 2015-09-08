@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/dy;
 .super Ljava/lang/Object;
-.source "MainTabBarView.java"
+.source "ListHeaderView.java"
 
 # interfaces
-.implements Landroid/view/animation/Animation$AnimationListener;
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/MainTabBarView;
+.field final synthetic a:Lcom/bbm/ui/ListHeaderView;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/MainTabBarView;)V
+.method constructor <init>(Lcom/bbm/ui/ListHeaderView;)V
     .locals 0
 
     .prologue
-    .line 340
-    iput-object p1, p0, Lcom/bbm/ui/dy;->a:Lcom/bbm/ui/MainTabBarView;
+    .line 44
+    iput-object p1, p0, Lcom/bbm/ui/dy;->a:Lcom/bbm/ui/ListHeaderView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,33 +25,38 @@
 
 
 # virtual methods
-.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
     .locals 2
 
     .prologue
-    .line 355
-    iget-object v0, p0, Lcom/bbm/ui/dy;->a:Lcom/bbm/ui/MainTabBarView;
+    .line 47
+    const-string v0, "allow contact upload onCheckedChanged"
 
-    const/4 v1, 0x7
+    const-class v1, Lcom/bbm/ui/ListHeaderView;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/MainTabBarView;->setLeftTabVisibility(I)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 356
-    return-void
-.end method
+    .line 48
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
 
-.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
-    .locals 0
+    move-result-object v0
 
-    .prologue
-    .line 351
-    return-void
-.end method
+    invoke-static {v0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
-.method public final onAnimationStart(Landroid/view/animation/Animation;)V
-    .locals 0
+    move-result-object v0
 
-    .prologue
-    .line 345
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    .line 49
+    const-string v1, "icerberg_upload_allowed"
+
+    invoke-interface {v0, v1, p2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    .line 50
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 51
     return-void
 .end method

@@ -74,7 +74,7 @@
     .line 33
     const-string v1, "IDS_ACTIVITY_BBM_IMG"
 
-    const v2, 0x7f020035
+    const v2, 0x7f020054
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
@@ -85,7 +85,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f090167
+    const v3, 0x7f0901d2
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -142,7 +142,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/String;Ljava/lang/Class;)V
 
     .line 82
     sparse-switch p1, :sswitch_data_0

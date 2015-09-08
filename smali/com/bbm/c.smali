@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 170
+    .line 178
     iput-object p1, p0, Lcom/bbm/c;->a:Lcom/bbm/Alaska;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,64 +26,41 @@
 
 # virtual methods
 .method public final onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
-    .locals 3
+    .locals 4
 
     .prologue
-    .line 181
+    const/4 v3, 0x0
+
+    .line 189
     const-string v0, "Alaska onServiceConnected component %s"
 
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    aput-object p1, v1, v3
 
-    aput-object p1, v1, v2
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 182
+    .line 190
     iget-object v0, p0, Lcom/bbm/c;->a:Lcom/bbm/Alaska;
 
-    check-cast p2, Lcom/bbm/j;
+    check-cast p2, Lcom/bbm/r;
 
-    invoke-static {v0, p2}, Lcom/bbm/Alaska;->a(Lcom/bbm/Alaska;Lcom/bbm/j;)Lcom/bbm/j;
+    invoke-static {v0, p2}, Lcom/bbm/Alaska;->a(Lcom/bbm/Alaska;Lcom/bbm/r;)Lcom/bbm/r;
 
-    .line 184
-    invoke-static {}, Lcom/bbm/Alaska;->D()Lcom/bbm/f/c;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/c;->a:Lcom/bbm/Alaska;
-
-    invoke-static {v1}, Lcom/bbm/Alaska;->a(Lcom/bbm/Alaska;)Lcom/bbm/j;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lcom/bbm/j;->a:Lcom/bbm/BbmService;
-
-    invoke-static {v1}, Lcom/bbm/BbmService;->i(Lcom/bbm/BbmService;)Lcom/bbm/f/c;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/google/b/a/l;->b(Ljava/lang/Object;)Lcom/google/b/a/l;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/f/c;->a(Lcom/google/b/a/l;)V
-
-    .line 185
-    invoke-static {}, Lcom/bbm/Alaska;->E()Lcom/bbm/f/c;
+    .line 192
+    invoke-static {}, Lcom/bbm/Alaska;->J()Lcom/bbm/f/c;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/bbm/c;->a:Lcom/bbm/Alaska;
 
-    invoke-static {v1}, Lcom/bbm/Alaska;->a(Lcom/bbm/Alaska;)Lcom/bbm/j;
+    invoke-static {v1}, Lcom/bbm/Alaska;->a(Lcom/bbm/Alaska;)Lcom/bbm/r;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/bbm/j;->a:Lcom/bbm/BbmService;
+    iget-object v1, v1, Lcom/bbm/r;->a:Lcom/bbm/BbmService;
 
     invoke-static {v1}, Lcom/bbm/BbmService;->j(Lcom/bbm/BbmService;)Lcom/bbm/f/c;
 
@@ -95,18 +72,18 @@
 
     invoke-virtual {v0, v1}, Lcom/bbm/f/c;->a(Lcom/google/b/a/l;)V
 
-    .line 186
-    invoke-static {}, Lcom/bbm/Alaska;->F()Lcom/bbm/f/c;
+    .line 193
+    invoke-static {}, Lcom/bbm/Alaska;->K()Lcom/bbm/f/c;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/bbm/c;->a:Lcom/bbm/Alaska;
 
-    invoke-static {v1}, Lcom/bbm/Alaska;->a(Lcom/bbm/Alaska;)Lcom/bbm/j;
+    invoke-static {v1}, Lcom/bbm/Alaska;->a(Lcom/bbm/Alaska;)Lcom/bbm/r;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/bbm/j;->a:Lcom/bbm/BbmService;
+    iget-object v1, v1, Lcom/bbm/r;->a:Lcom/bbm/BbmService;
 
     invoke-static {v1}, Lcom/bbm/BbmService;->k(Lcom/bbm/BbmService;)Lcom/bbm/f/c;
 
@@ -118,18 +95,41 @@
 
     invoke-virtual {v0, v1}, Lcom/bbm/f/c;->a(Lcom/google/b/a/l;)V
 
-    .line 187
-    invoke-static {}, Lcom/bbm/Alaska;->G()Lcom/bbm/j/e;
+    .line 194
+    invoke-static {}, Lcom/bbm/Alaska;->L()Lcom/bbm/f/c;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/bbm/c;->a:Lcom/bbm/Alaska;
 
-    invoke-static {v1}, Lcom/bbm/Alaska;->a(Lcom/bbm/Alaska;)Lcom/bbm/j;
+    invoke-static {v1}, Lcom/bbm/Alaska;->a(Lcom/bbm/Alaska;)Lcom/bbm/r;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/bbm/j;->a:Lcom/bbm/BbmService;
+    iget-object v1, v1, Lcom/bbm/r;->a:Lcom/bbm/BbmService;
+
+    invoke-static {v1}, Lcom/bbm/BbmService;->l(Lcom/bbm/BbmService;)Lcom/bbm/f/c;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/google/b/a/l;->b(Ljava/lang/Object;)Lcom/google/b/a/l;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/f/c;->a(Lcom/google/b/a/l;)V
+
+    .line 195
+    invoke-static {}, Lcom/bbm/Alaska;->M()Lcom/bbm/j/e;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/c;->a:Lcom/bbm/Alaska;
+
+    invoke-static {v1}, Lcom/bbm/Alaska;->a(Lcom/bbm/Alaska;)Lcom/bbm/r;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/bbm/r;->a:Lcom/bbm/BbmService;
 
     invoke-static {v1}, Lcom/bbm/BbmService;->c(Lcom/bbm/BbmService;)Lcom/bbm/j/a;
 
@@ -141,20 +141,20 @@
 
     invoke-virtual {v0, v1}, Lcom/bbm/j/e;->a(Lcom/google/b/a/l;)V
 
-    .line 188
-    invoke-static {}, Lcom/bbm/Alaska;->H()Lcom/bbm/j/e;
+    .line 196
+    invoke-static {}, Lcom/bbm/Alaska;->N()Lcom/bbm/j/e;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/bbm/c;->a:Lcom/bbm/Alaska;
 
-    invoke-static {v1}, Lcom/bbm/Alaska;->a(Lcom/bbm/Alaska;)Lcom/bbm/j;
+    invoke-static {v1}, Lcom/bbm/Alaska;->a(Lcom/bbm/Alaska;)Lcom/bbm/r;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/bbm/j;->a:Lcom/bbm/BbmService;
+    iget-object v1, v1, Lcom/bbm/r;->a:Lcom/bbm/BbmService;
 
-    invoke-static {v1}, Lcom/bbm/BbmService;->l(Lcom/bbm/BbmService;)Lcom/bbm/j/a;
+    invoke-static {v1}, Lcom/bbm/BbmService;->m(Lcom/bbm/BbmService;)Lcom/bbm/j/a;
 
     move-result-object v1
 
@@ -164,7 +164,7 @@
 
     invoke-virtual {v0, v1}, Lcom/bbm/j/e;->a(Lcom/google/b/a/l;)V
 
-    .line 189
+    .line 197
     iget-object v0, p0, Lcom/bbm/c;->a:Lcom/bbm/Alaska;
 
     invoke-static {v0}, Lcom/bbm/Alaska;->b(Lcom/bbm/Alaska;)Lcom/bbm/j/a;
@@ -173,12 +173,33 @@
 
     invoke-virtual {v0}, Lcom/bbm/j/a;->c()V
 
-    .line 190
+    .line 198
     iget-object v0, p0, Lcom/bbm/c;->a:Lcom/bbm/Alaska;
 
-    invoke-virtual {v0}, Lcom/bbm/Alaska;->v()V
+    invoke-virtual {v0}, Lcom/bbm/Alaska;->A()V
 
-    .line 191
+    .line 201
+    iget-object v0, p0, Lcom/bbm/c;->a:Lcom/bbm/Alaska;
+
+    const-string v1, "BBM UI starting Glympse"
+
+    new-array v2, v3, [Ljava/lang/Object;
+
+    invoke-static {v1, v2}, Lcom/bbm/af;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    invoke-static {}, Lcom/bbm/w;->a()Lcom/bbm/w;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/bbm/w;->a(Landroid/content/Context;)V
+
+    const-string v0, "BBM UI done starting Glympse"
+
+    new-array v1, v3, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 202
     return-void
 .end method
 
@@ -186,7 +207,7 @@
     .locals 3
 
     .prologue
-    .line 174
+    .line 182
     const-string v0, "Alaska onServiceDisconnected component %s"
 
     const/4 v1, 0x1
@@ -197,16 +218,16 @@
 
     aput-object p1, v1, v2
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 175
+    .line 183
     iget-object v0, p0, Lcom/bbm/c;->a:Lcom/bbm/Alaska;
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/bbm/Alaska;->a(Lcom/bbm/Alaska;Lcom/bbm/j;)Lcom/bbm/j;
+    invoke-static {v0, v1}, Lcom/bbm/Alaska;->a(Lcom/bbm/Alaska;Lcom/bbm/r;)Lcom/bbm/r;
 
-    .line 176
+    .line 184
     iget-object v0, p0, Lcom/bbm/c;->a:Lcom/bbm/Alaska;
 
     invoke-static {v0}, Lcom/bbm/Alaska;->b(Lcom/bbm/Alaska;)Lcom/bbm/j/a;
@@ -215,6 +236,6 @@
 
     invoke-virtual {v0}, Lcom/bbm/j/a;->c()V
 
-    .line 177
+    .line 185
     return-void
 .end method

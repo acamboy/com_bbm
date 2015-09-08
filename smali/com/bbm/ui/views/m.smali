@@ -1,5 +1,5 @@
 .class final Lcom/bbm/ui/views/m;
-.super Lcom/bbm/ui/d/i;
+.super Lcom/bbm/ui/e/i;
 .source "ChannelLobbyReportsPaneView.java"
 
 
@@ -15,7 +15,7 @@
     .line 225
     iput-object p1, p0, Lcom/bbm/ui/views/m;->a:Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
 
-    invoke-direct {p0}, Lcom/bbm/ui/d/i;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/ui/e/i;-><init>()V
 
     return-void
 .end method
@@ -46,9 +46,11 @@
 
     move-result-object v0
 
-    const/4 v1, 0x1
+    check-cast v0, Landroid/app/Activity;
 
-    invoke-static {v0, p1, v1}, Lcom/bbm/util/fh;->a(Landroid/content/Context;Ljava/lang/String;I)V
+    const/16 v1, 0x1388
+
+    invoke-static {v0, p1, v1}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;Ljava/lang/String;S)V
 
     .line 234
     return-void

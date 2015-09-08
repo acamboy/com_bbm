@@ -29,7 +29,7 @@
 
     const-class v1, Lcom/bbm/receiver/ConnectivityChangeReceiver;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/String;Ljava/lang/Class;)V
 
     .line 24
     sget-wide v0, Lcom/bbm/receiver/ConnectivityChangeReceiver;->a:J

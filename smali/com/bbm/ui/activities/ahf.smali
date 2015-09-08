@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/ahf;
 .super Ljava/lang/Object;
-.source "SettingsActivity.java"
+.source "ViewProfileActivity.java"
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ViewProfileActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ViewProfileActivity;)V
     .locals 0
 
     .prologue
-    .line 469
-    iput-object p1, p0, Lcom/bbm/ui/activities/ahf;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    .line 395
+    iput-object p1, p0, Lcom/bbm/ui/activities/ahf;->a:Lcom/bbm/ui/activities/ViewProfileActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,24 +25,31 @@
 
 
 # virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
     .prologue
-    .line 473
-    const-string v0, "show action bar with keyboard onCheckedChanged"
+    .line 398
+    const-string v0, "mStatusEditButton Clicked"
 
-    const-class v1, Lcom/bbm/ui/activities/SettingsActivity;
+    const-class v1, Lcom/bbm/ui/activities/ViewProfileActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 474
-    iget-object v0, p0, Lcom/bbm/ui/activities/ahf;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    .line 399
+    new-instance v0, Landroid/content/Intent;
 
-    const-string v1, "show_action_bar_with_keyboard_v2.0"
+    iget-object v1, p0, Lcom/bbm/ui/activities/ahf;->a:Lcom/bbm/ui/activities/ViewProfileActivity;
 
-    invoke-static {v0, v1, p2}, Lcom/bbm/ui/activities/SettingsActivity;->a(Lcom/bbm/ui/activities/SettingsActivity;Ljava/lang/String;Z)V
+    const-class v2, Lcom/bbm/ui/activities/UpdateStatusActivity;
 
-    .line 475
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 400
+    iget-object v1, p0, Lcom/bbm/ui/activities/ahf;->a:Lcom/bbm/ui/activities/ViewProfileActivity;
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/ViewProfileActivity;->startActivity(Landroid/content/Intent;)V
+
+    .line 401
     return-void
 .end method

@@ -28,7 +28,7 @@
 
 .field private l:I
 
-.field private m:Lcom/bbm/ui/er;
+.field private m:Lcom/bbm/ui/en;
 
 .field private final n:I
 
@@ -99,21 +99,21 @@
     iput v4, p0, Lcom/bbm/ui/PassphraseEditTextView;->p:I
 
     .line 53
-    new-instance v2, Lcom/bbm/ui/ep;
+    new-instance v2, Lcom/bbm/ui/el;
 
-    invoke-direct {v2, p0}, Lcom/bbm/ui/ep;-><init>(Lcom/bbm/ui/PassphraseEditTextView;)V
+    invoke-direct {v2, p0}, Lcom/bbm/ui/el;-><init>(Lcom/bbm/ui/PassphraseEditTextView;)V
 
     iput-object v2, p0, Lcom/bbm/ui/PassphraseEditTextView;->q:Landroid/view/View$OnTouchListener;
 
     .line 73
-    new-instance v2, Lcom/bbm/ui/eq;
+    new-instance v2, Lcom/bbm/ui/em;
 
-    invoke-direct {v2, p0}, Lcom/bbm/ui/eq;-><init>(Lcom/bbm/ui/PassphraseEditTextView;)V
+    invoke-direct {v2, p0}, Lcom/bbm/ui/em;-><init>(Lcom/bbm/ui/PassphraseEditTextView;)V
 
     iput-object v2, p0, Lcom/bbm/ui/PassphraseEditTextView;->a:Landroid/text/TextWatcher;
 
     .line 132
-    invoke-static {}, Lcom/bbm/util/fh;->i()Z
+    invoke-static {}, Lcom/bbm/util/eu;->g()Z
 
     move-result v2
 
@@ -129,7 +129,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f020290
+    const v2, 0x7f02027e
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -141,7 +141,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f020292
+    const v2, 0x7f020280
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -192,7 +192,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f020290
+    const v2, 0x7f02027e
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -204,7 +204,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f020291
+    const v2, 0x7f02027f
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -255,7 +255,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f020291
+    const v2, 0x7f02027f
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -299,7 +299,7 @@
 
     new-array v0, v0, [Landroid/text/InputFilter;
 
-    sget-object v2, Lcom/bbm/util/db;->a:Landroid/text/InputFilter;
+    sget-object v2, Lcom/bbm/util/dk;->a:Landroid/text/InputFilter;
 
     aput-object v2, v0, v1
 
@@ -451,12 +451,12 @@
     return-object v0
 .end method
 
-.method static synthetic k(Lcom/bbm/ui/PassphraseEditTextView;)Lcom/bbm/ui/er;
+.method static synthetic k(Lcom/bbm/ui/PassphraseEditTextView;)Lcom/bbm/ui/en;
     .locals 1
 
     .prologue
     .line 26
-    iget-object v0, p0, Lcom/bbm/ui/PassphraseEditTextView;->m:Lcom/bbm/ui/er;
+    iget-object v0, p0, Lcom/bbm/ui/PassphraseEditTextView;->m:Lcom/bbm/ui/en;
 
     return-object v0
 .end method
@@ -511,12 +511,12 @@
     return-object v0
 .end method
 
-.method public setPassphraseChangeListener(Lcom/bbm/ui/er;)V
+.method public setPassphraseChangeListener(Lcom/bbm/ui/en;)V
     .locals 0
 
     .prologue
     .line 145
-    iput-object p1, p0, Lcom/bbm/ui/PassphraseEditTextView;->m:Lcom/bbm/ui/er;
+    iput-object p1, p0, Lcom/bbm/ui/PassphraseEditTextView;->m:Lcom/bbm/ui/en;
 
     .line 146
     return-void

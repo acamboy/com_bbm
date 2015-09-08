@@ -27,11 +27,33 @@
 
 .field public static final enum f:Lcom/bbm/c/q;
 
-.field private static final synthetic h:[Lcom/bbm/c/q;
+.field public static final enum g:Lcom/bbm/c/q;
+
+.field public static final enum h:Lcom/bbm/c/q;
+
+.field public static final enum i:Lcom/bbm/c/q;
+
+.field public static final enum j:Lcom/bbm/c/q;
+
+.field public static final enum k:Lcom/bbm/c/q;
+
+.field public static final enum l:Lcom/bbm/c/q;
+
+.field public static final enum m:Lcom/bbm/c/q;
+
+.field public static final enum n:Lcom/bbm/c/q;
+
+.field public static final enum o:Lcom/bbm/c/q;
+
+.field public static final enum p:Lcom/bbm/c/q;
+
+.field public static final enum q:Lcom/bbm/c/q;
+
+.field private static final synthetic s:[Lcom/bbm/c/q;
 
 
 # instance fields
-.field private g:Ljava/lang/String;
+.field private r:Ljava/lang/String;
 
 
 # direct methods
@@ -49,76 +71,219 @@
 
     const/4 v4, 0x0
 
-    .line 392
+    .line 316
     new-instance v0, Lcom/bbm/c/q;
 
-    const-string v1, "FullSticker"
+    const-string v1, "DailyEvent"
 
-    const-string v2, "Full Sticker"
+    const-string v2, "Daily Event"
 
     invoke-direct {v0, v1, v4, v2}, Lcom/bbm/c/q;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/c/q;->a:Lcom/bbm/c/q;
 
-    .line 393
+    .line 317
     new-instance v0, Lcom/bbm/c/q;
 
-    const-string v1, "Store"
+    const-string v1, "StickerActionClickEvent"
 
-    const-string v2, "Store"
+    const-string v2, "Sticker Action Click Event"
 
     invoke-direct {v0, v1, v5, v2}, Lcom/bbm/c/q;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/c/q;->b:Lcom/bbm/c/q;
 
-    .line 394
+    .line 318
     new-instance v0, Lcom/bbm/c/q;
 
-    const-string v1, "StoreHomePage"
+    const-string v1, "StickerPurchaseEvent"
 
-    const-string v2, "Shop Home Page"
+    const-string v2, "Sticker Purchase Event"
 
     invoke-direct {v0, v1, v6, v2}, Lcom/bbm/c/q;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/c/q;->c:Lcom/bbm/c/q;
 
-    .line 395
+    .line 319
     new-instance v0, Lcom/bbm/c/q;
 
-    const-string v1, "PanelTraversal"
+    const-string v1, "SubscriptionPurchaseEvent"
 
-    const-string v2, "Panel Traversal"
+    const-string v2, "Subscription Purchase Event"
 
     invoke-direct {v0, v1, v7, v2}, Lcom/bbm/c/q;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/c/q;->d:Lcom/bbm/c/q;
 
-    .line 396
+    .line 320
     new-instance v0, Lcom/bbm/c/q;
 
-    const-string v1, "Link"
+    const-string v1, "StorePurchaseRestoreEvent"
 
-    const-string v2, "Link"
+    const-string v2, "Store Purchase Restore Event"
 
     invoke-direct {v0, v1, v8, v2}, Lcom/bbm/c/q;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/c/q;->e:Lcom/bbm/c/q;
 
-    .line 397
+    .line 321
     new-instance v0, Lcom/bbm/c/q;
 
-    const-string v1, "ViewAll"
+    const-string v1, "StickerSentEvent"
 
     const/4 v2, 0x5
 
-    const-string v3, "Sticker View All"
+    const-string v3, "Sticker Sent Event"
 
     invoke-direct {v0, v1, v2, v3}, Lcom/bbm/c/q;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/c/q;->f:Lcom/bbm/c/q;
 
-    .line 391
-    const/4 v0, 0x6
+    .line 322
+    new-instance v0, Lcom/bbm/c/q;
+
+    const-string v1, "SignUpEvent"
+
+    const/4 v2, 0x6
+
+    const-string v3, "Sign Up Event"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/c/q;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/c/q;->g:Lcom/bbm/c/q;
+
+    .line 323
+    new-instance v0, Lcom/bbm/c/q;
+
+    const-string v1, "SignInEvent"
+
+    const/4 v2, 0x7
+
+    const-string v3, "Sign In Event"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/c/q;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/c/q;->h:Lcom/bbm/c/q;
+
+    .line 324
+    new-instance v0, Lcom/bbm/c/q;
+
+    const-string v1, "SetupStalled"
+
+    const/16 v2, 0x8
+
+    const-string v3, "Setup Stalled"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/c/q;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/c/q;->i:Lcom/bbm/c/q;
+
+    .line 325
+    new-instance v0, Lcom/bbm/c/q;
+
+    const-string v1, "CallRatingEvent"
+
+    const/16 v2, 0x9
+
+    const-string v3, "Call Rating Event"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/c/q;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/c/q;->j:Lcom/bbm/c/q;
+
+    .line 327
+    new-instance v0, Lcom/bbm/c/q;
+
+    const-string v1, "UnusualError"
+
+    const/16 v2, 0xa
+
+    const-string v3, "Unusual Error"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/c/q;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/c/q;->k:Lcom/bbm/c/q;
+
+    .line 329
+    new-instance v0, Lcom/bbm/c/q;
+
+    const-string v1, "StoreBannerActionClickEvent"
+
+    const/16 v2, 0xb
+
+    const-string v3, "Click Shop Home Page Banner"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/c/q;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/c/q;->l:Lcom/bbm/c/q;
+
+    .line 330
+    new-instance v0, Lcom/bbm/c/q;
+
+    const-string v1, "StoreStickerPackActionClickEvent"
+
+    const/16 v2, 0xc
+
+    const-string v3, "Click Shop Home Page Sticker Pack"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/c/q;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/c/q;->m:Lcom/bbm/c/q;
+
+    .line 331
+    new-instance v0, Lcom/bbm/c/q;
+
+    const-string v1, "StoreVGActionClickEvent"
+
+    const/16 v2, 0xd
+
+    const-string v3, "Click Shop Home Page Virtual Good"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/c/q;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/c/q;->n:Lcom/bbm/c/q;
+
+    .line 332
+    new-instance v0, Lcom/bbm/c/q;
+
+    const-string v1, "StoreVGListActionClickEvent"
+
+    const/16 v2, 0xe
+
+    const-string v3, "Click Shop listing Virtual Good"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/c/q;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/c/q;->o:Lcom/bbm/c/q;
+
+    .line 333
+    new-instance v0, Lcom/bbm/c/q;
+
+    const-string v1, "StoreVGListViewEvent"
+
+    const/16 v2, 0xf
+
+    const-string v3, "View VG  listing Event"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/c/q;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/c/q;->p:Lcom/bbm/c/q;
+
+    .line 334
+    new-instance v0, Lcom/bbm/c/q;
+
+    const-string v1, "StoreVGInvokeEvent"
+
+    const/16 v2, 0x10
+
+    const-string v3, "Click from VG page"
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/c/q;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/c/q;->q:Lcom/bbm/c/q;
+
+    .line 315
+    const/16 v0, 0x11
 
     new-array v0, v0, [Lcom/bbm/c/q;
 
@@ -148,7 +313,73 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/bbm/c/q;->h:[Lcom/bbm/c/q;
+    const/4 v1, 0x6
+
+    sget-object v2, Lcom/bbm/c/q;->g:Lcom/bbm/c/q;
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x7
+
+    sget-object v2, Lcom/bbm/c/q;->h:Lcom/bbm/c/q;
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x8
+
+    sget-object v2, Lcom/bbm/c/q;->i:Lcom/bbm/c/q;
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x9
+
+    sget-object v2, Lcom/bbm/c/q;->j:Lcom/bbm/c/q;
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xa
+
+    sget-object v2, Lcom/bbm/c/q;->k:Lcom/bbm/c/q;
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xb
+
+    sget-object v2, Lcom/bbm/c/q;->l:Lcom/bbm/c/q;
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xc
+
+    sget-object v2, Lcom/bbm/c/q;->m:Lcom/bbm/c/q;
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xd
+
+    sget-object v2, Lcom/bbm/c/q;->n:Lcom/bbm/c/q;
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xe
+
+    sget-object v2, Lcom/bbm/c/q;->o:Lcom/bbm/c/q;
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xf
+
+    sget-object v2, Lcom/bbm/c/q;->p:Lcom/bbm/c/q;
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0x10
+
+    sget-object v2, Lcom/bbm/c/q;->q:Lcom/bbm/c/q;
+
+    aput-object v2, v0, v1
+
+    sput-object v0, Lcom/bbm/c/q;->s:[Lcom/bbm/c/q;
 
     return-void
 .end method
@@ -164,13 +395,13 @@
     .end annotation
 
     .prologue
-    .line 401
+    .line 338
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 402
-    iput-object p3, p0, Lcom/bbm/c/q;->g:Ljava/lang/String;
+    .line 339
+    iput-object p3, p0, Lcom/bbm/c/q;->r:Ljava/lang/String;
 
-    .line 403
+    .line 340
     return-void
 .end method
 
@@ -178,7 +409,7 @@
     .locals 1
 
     .prologue
-    .line 391
+    .line 315
     const-class v0, Lcom/bbm/c/q;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -194,8 +425,8 @@
     .locals 1
 
     .prologue
-    .line 391
-    sget-object v0, Lcom/bbm/c/q;->h:[Lcom/bbm/c/q;
+    .line 315
+    sget-object v0, Lcom/bbm/c/q;->s:[Lcom/bbm/c/q;
 
     invoke-virtual {v0}, [Lcom/bbm/c/q;->clone()Ljava/lang/Object;
 
@@ -212,8 +443,8 @@
     .locals 1
 
     .prologue
-    .line 407
-    iget-object v0, p0, Lcom/bbm/c/q;->g:Ljava/lang/String;
+    .line 348
+    iget-object v0, p0, Lcom/bbm/c/q;->r:Ljava/lang/String;
 
     return-object v0
 .end method

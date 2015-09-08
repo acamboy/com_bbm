@@ -1,6 +1,6 @@
 .class final Landroid/support/v4/media/session/b;
 .super Ljava/lang/Object;
-.source "PlaybackStateCompat.java"
+.source "MediaSessionCompat.java"
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;
@@ -12,7 +12,7 @@
         "Ljava/lang/Object;",
         "Landroid/os/Parcelable$Creator",
         "<",
-        "Landroid/support/v4/media/session/PlaybackStateCompat;",
+        "Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;",
         ">;"
     }
 .end annotation
@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 395
+    .line 874
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,15 +32,13 @@
 
 # virtual methods
 .method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 395
-    new-instance v0, Landroid/support/v4/media/session/PlaybackStateCompat;
+    .line 874
+    new-instance v0, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;
 
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Landroid/support/v4/media/session/PlaybackStateCompat;-><init>(Landroid/os/Parcel;B)V
+    invoke-direct {v0, p1}, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;-><init>(Landroid/os/Parcel;)V
 
     return-object v0
 .end method
@@ -49,8 +47,8 @@
     .locals 1
 
     .prologue
-    .line 395
-    new-array v0, p1, [Landroid/support/v4/media/session/PlaybackStateCompat;
+    .line 874
+    new-array v0, p1, [Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;
 
     return-object v0
 .end method

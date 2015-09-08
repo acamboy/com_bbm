@@ -78,7 +78,7 @@
     invoke-direct {v0, p0}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     .line 60
-    const v1, 0x7f090167
+    const v1, 0x7f0901d2
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -140,20 +140,20 @@
 
     .line 70
     :cond_1
-    new-instance v0, Lcom/bbm/ui/activities/uw;
+    new-instance v0, Lcom/bbm/ui/activities/sh;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/uw;-><init>(Lcom/bbm/ui/activities/InAppUpgradeActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/sh;-><init>(Lcom/bbm/ui/activities/InAppUpgradeActivity;)V
 
     .line 83
-    new-instance v1, Lcom/bbm/ui/activities/uv;
+    new-instance v1, Lcom/bbm/ui/activities/sg;
 
-    invoke-direct {v1, p0, v0}, Lcom/bbm/ui/activities/uv;-><init>(Landroid/content/Context;Landroid/content/DialogInterface$OnClickListener;)V
+    invoke-direct {v1, p0, v0}, Lcom/bbm/ui/activities/sg;-><init>(Landroid/content/Context;Landroid/content/DialogInterface$OnClickListener;)V
 
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0e0499
+    const v2, 0x7f0e0507
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -167,7 +167,7 @@
 
     if-nez v0, :cond_2
 
-    const v0, 0x7f0e0495
+    const v0, 0x7f0e0503
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -176,7 +176,7 @@
     :goto_0
     invoke-virtual {v2, v0}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
-    const v0, 0x7f0e049a
+    const v0, 0x7f0e0508
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -190,7 +190,7 @@
 
     if-nez v0, :cond_3
 
-    const v0, 0x7f0e0498
+    const v0, 0x7f0e0506
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -212,9 +212,9 @@
     .line 84
     iget-object v0, p0, Lcom/bbm/ui/activities/InAppUpgradeActivity;->a:Landroid/app/AlertDialog;
 
-    new-instance v1, Lcom/bbm/ui/activities/ux;
+    new-instance v1, Lcom/bbm/ui/activities/si;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/ux;-><init>(Lcom/bbm/ui/activities/InAppUpgradeActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/si;-><init>(Lcom/bbm/ui/activities/InAppUpgradeActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 

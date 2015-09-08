@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/c/bl;
 .super Ljava/lang/Object;
-.source "ChannelsNotificationsFragment.java"
+.source "ChannelDetailsFragment.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/d/ek;
-
-.field final synthetic b:Lcom/bbm/ui/c/bk;
+.field final synthetic a:Lcom/bbm/ui/c/az;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/bk;Lcom/bbm/d/ek;)V
+.method constructor <init>(Lcom/bbm/ui/c/az;)V
     .locals 0
 
     .prologue
-    .line 291
-    iput-object p1, p0, Lcom/bbm/ui/c/bl;->b:Lcom/bbm/ui/c/bk;
-
-    iput-object p2, p0, Lcom/bbm/ui/c/bl;->a:Lcom/bbm/d/ek;
+    .line 207
+    iput-object p1, p0, Lcom/bbm/ui/c/bl;->a:Lcom/bbm/ui/c/az;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,17 +25,23 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 2
 
     .prologue
-    .line 294
-    iget-object v0, p0, Lcom/bbm/ui/c/bl;->a:Lcom/bbm/d/ek;
+    .line 210
+    iget-object v0, p0, Lcom/bbm/ui/c/bl;->a:Lcom/bbm/ui/c/az;
 
-    iget-object v0, v0, Lcom/bbm/d/ek;->b:Ljava/lang/String;
+    invoke-static {v0}, Lcom/bbm/ui/c/az;->e(Lcom/bbm/ui/c/az;)Lcom/bbm/bali/ui/channels/a;
 
-    invoke-static {v0}, Lcom/bbm/util/ac;->e(Ljava/lang/String;)V
+    move-result-object v0
 
-    .line 295
-    return-void
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;Z)V
+
+    .line 211
+    const/4 v0, 0x1
+
+    return v0
 .end method

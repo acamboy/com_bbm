@@ -43,6 +43,18 @@
     .end annotation
 .end method
 
+.method public abstract getMembers(Z)Lcom/glympse/android/core/GArray;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(Z)",
+            "Lcom/glympse/android/core/GArray",
+            "<",
+            "Lcom/glympse/android/api/GGroupMember;",
+            ">;"
+        }
+    .end annotation
+.end method
+
 .method public abstract getName()Ljava/lang/String;
 .end method
 

@@ -481,7 +481,7 @@
 
     sub-float v15, v15, v16
 
-    const/high16 v16, 0x3f800000
+    const/high16 v16, 0x3f800000    # 1.0f
 
     sub-float v15, v15, v16
 
@@ -518,7 +518,7 @@
 
     sub-float v15, v15, v16
 
-    const/high16 v16, 0x3f800000
+    const/high16 v16, 0x3f800000    # 1.0f
 
     sub-float v15, v15, v16
 
@@ -712,38 +712,18 @@
 
     .line 58
     :catch_0
-    move-exception v1
+    move-exception v0
 
     .line 59
-    if-eqz p2, :cond_1
+    if-eqz p2, :cond_0
 
-    sget-object v0, Lcom/google/zxing/e;->d:Lcom/google/zxing/e;
+    sget-object v1, Lcom/google/zxing/e;->d:Lcom/google/zxing/e;
 
-    invoke-interface {p2, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x1
+    invoke-interface {p2, v1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     .line 60
-    :goto_0
-    if-eqz v0, :cond_0
-
-    iget-object v0, p1, Lcom/google/zxing/c;->a:Lcom/google/zxing/b;
-
-    iget-object v0, v0, Lcom/google/zxing/b;->a:Lcom/google/zxing/g;
-
-    .line 61
     :cond_0
-    throw v1
-
-    .line 59
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
+    throw v0
 .end method
 
 .method public a()V

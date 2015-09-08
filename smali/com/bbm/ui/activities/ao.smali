@@ -1,9 +1,6 @@
 .class final Lcom/bbm/ui/activities/ao;
-.super Ljava/lang/Object;
+.super Lcom/bbm/j/k;
 .source "BroadcastActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -12,57 +9,75 @@
 
 # direct methods
 .method constructor <init>(Lcom/bbm/ui/activities/BroadcastActivity;)V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 404
+    .line 233
     iput-object p1, p0, Lcom/bbm/ui/activities/ao;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method protected final a()V
     .locals 2
 
     .prologue
-    .line 407
-    const-string v0, "mKeyboardButton Clicked"
-
-    const-class v1, Lcom/bbm/ui/activities/BroadcastActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 409
+    .line 237
     iget-object v0, p0, Lcom/bbm/ui/activities/ao;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->n(Lcom/bbm/ui/activities/BroadcastActivity;)Z
+    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->j(Lcom/bbm/ui/activities/BroadcastActivity;)Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    move-result-object v1
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/ao;->a:Lcom/bbm/ui/activities/BroadcastActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->i(Lcom/bbm/ui/activities/BroadcastActivity;)Lcom/bbm/util/dd;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/util/dd;->a()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-lez v0, :cond_0
 
-    .line 410
     iget-object v0, p0, Lcom/bbm/ui/activities/ao;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
-    const/4 v1, 0x0
+    iget-object v0, v0, Lcom/bbm/ui/activities/BroadcastActivity;->d:Lcom/bbm/util/dc;
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/BroadcastActivity;->a(Lcom/bbm/ui/activities/BroadcastActivity;Z)V
+    invoke-virtual {v0}, Lcom/bbm/util/dc;->f()Ljava/lang/Object;
 
-    .line 414
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x1
+
     :goto_0
+    invoke-virtual {v1, v0}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setPositiveButtonEnabled(Z)V
+
+    .line 238
     return-void
 
-    .line 412
+    .line 237
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ao;->a:Lcom/bbm/ui/activities/BroadcastActivity;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/BroadcastActivity;->a(Lcom/bbm/ui/activities/BroadcastActivity;Z)V
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method

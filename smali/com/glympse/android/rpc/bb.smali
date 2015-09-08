@@ -1,572 +1,261 @@
 .class Lcom/glympse/android/rpc/bb;
 .super Ljava/lang/Object;
-.source "RpcProtocol.java"
+.source "MethodUserAvatar.java"
 
 # interfaces
-.implements Lcom/glympse/android/rpc/GRpcProtocol;
-
-
-# instance fields
-.field private vs:Ljava/util/Hashtable;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Hashtable",
-            "<",
-            "Ljava/lang/String;",
-            "Lcom/glympse/android/rpc/GRpcMethod;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Lcom/glympse/android/rpc/GRpcMethod;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method constructor <init>()V
+    .locals 0
 
     .prologue
-    .line 21
+    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
-    new-instance v0, Ljava/util/Hashtable;
-
-    invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
-
-    iput-object v0, p0, Lcom/glympse/android/rpc/bb;->vs:Ljava/util/Hashtable;
-
-    .line 23
     return-void
-.end method
-
-.method public static dn()Lcom/glympse/android/rpc/GRpcProtocol;
-    .locals 2
-
-    .prologue
-    .line 35
-    new-instance v0, Lcom/glympse/android/rpc/bb;
-
-    invoke-direct {v0}, Lcom/glympse/android/rpc/bb;-><init>()V
-
-    .line 36
-    new-instance v1, Lcom/glympse/android/rpc/an;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/an;-><init>()V
-
-    invoke-interface {v0, v1}, Lcom/glympse/android/rpc/GRpcProtocol;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 37
-    new-instance v1, Lcom/glympse/android/rpc/ao;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/ao;-><init>()V
-
-    invoke-interface {v0, v1}, Lcom/glympse/android/rpc/GRpcProtocol;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 38
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-    .locals 2
-
-    .prologue
-    .line 47
-    iget-object v0, p0, Lcom/glympse/android/rpc/bb;->vs:Ljava/util/Hashtable;
-
-    invoke-interface {p1}, Lcom/glympse/android/rpc/GRpcMethod;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1, p1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 48
-    return-void
-.end method
-
-.method public call(Lcom/glympse/android/rpc/GMessageGateway;Lcom/glympse/android/rpc/GConnection;Ljava/lang/String;Lcom/glympse/android/core/GArray;)Z
-    .locals 1
+.method public call(Lcom/glympse/android/rpc/GMessageGateway;Lcom/glympse/android/rpc/GConnection;Lcom/glympse/android/core/GArray;)V
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/glympse/android/rpc/GMessageGateway;",
             "Lcom/glympse/android/rpc/GConnection;",
-            "Ljava/lang/String;",
             "Lcom/glympse/android/core/GArray",
             "<",
             "Ljava/lang/Object;",
-            ">;)Z"
+            ">;)V"
         }
     .end annotation
 
     .prologue
-    .line 123
-    iget-object v0, p0, Lcom/glympse/android/rpc/bb;->vs:Ljava/util/Hashtable;
+    const/4 v5, 0x2
 
-    invoke-virtual {v0, p3}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 26
+    const/4 v0, 0x1
+
+    invoke-interface {p3, v0}, Lcom/glympse/android/core/GArray;->at(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/glympse/android/rpc/GRpcMethod;
+    check-cast v0, Lcom/glympse/android/api/GUser;
 
-    .line 124
-    if-nez v0, :cond_0
+    .line 29
+    invoke-interface {v0}, Lcom/glympse/android/api/GUser;->getAvatar()Lcom/glympse/android/api/GImage;
 
-    .line 126
-    const/4 v0, 0x0
+    move-result-object v1
 
-    .line 132
+    invoke-interface {v1}, Lcom/glympse/android/api/GImage;->getDrawable()Lcom/glympse/android/core/GDrawable;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/glympse/android/rpc/c;->a(Lcom/glympse/android/core/GDrawable;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 30
+    if-nez v1, :cond_0
+
+    .line 46
     :goto_0
-    return v0
+    return-void
 
-    .line 130
+    .line 36
     :cond_0
-    invoke-interface {v0, p1, p2, p4}, Lcom/glympse/android/rpc/GRpcMethod;->call(Lcom/glympse/android/rpc/GMessageGateway;Lcom/glympse/android/rpc/GConnection;Lcom/glympse/android/core/GArray;)V
-
-    .line 132
-    const/4 v0, 0x1
-
-    goto :goto_0
-.end method
-
-.method public handle(Lcom/glympse/android/rpc/GMessageGateway;Lcom/glympse/android/rpc/GConnection;Ljava/lang/String;Lcom/glympse/android/core/GArray;)Z
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/glympse/android/rpc/GMessageGateway;",
-            "Lcom/glympse/android/rpc/GConnection;",
-            "Ljava/lang/String;",
-            "Lcom/glympse/android/core/GArray",
-            "<",
-            "Ljava/lang/Object;",
-            ">;)Z"
-        }
-    .end annotation
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 139
-    invoke-static {p3}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    move v0, v1
-
-    .line 168
-    :goto_0
-    return v0
-
-    .line 145
-    :cond_0
-    invoke-static {p3}, Lcom/glympse/android/lib/json/JsonSerializer;->toPrimitive(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+    invoke-virtual {p0}, Lcom/glympse/android/rpc/bb;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 146
-    if-nez v2, :cond_1
+    invoke-static {v2}, Lcom/glympse/android/rpc/RpcMessages;->createMessage(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
 
-    move v0, v1
+    move-result-object v2
 
-    .line 148
-    goto :goto_0
+    .line 37
+    invoke-static {v5}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(I)Lcom/glympse/android/core/GPrimitive;
 
-    .line 152
-    :cond_1
-    const-string v0, "method"
+    move-result-object v3
+
+    .line 38
+    const-string v4, "id"
+
+    invoke-static {v4}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-interface {v0}, Lcom/glympse/android/api/GUser;->getId()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v3, v4, v0}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 39
+    invoke-static {v5}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(I)Lcom/glympse/android/core/GPrimitive;
+
+    move-result-object v0
+
+    .line 40
+    invoke-static {v1, v0}, Lcom/glympse/android/rpc/c;->a(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
+
+    .line 41
+    const-string v1, "avatar"
+
+    invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v3, v1, v0}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
+
+    .line 42
+    const-string v0, "body"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {v2, v0}, Lcom/glympse/android/core/GPrimitive;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v2, v0, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
 
-    move-result-object v0
-
-    .line 153
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    move v0, v1
-
-    .line 155
-    goto :goto_0
-
-    .line 159
-    :cond_2
-    iget-object v3, p0, Lcom/glympse/android/rpc/bb;->vs:Ljava/util/Hashtable;
-
-    invoke-virtual {v3, v0}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/glympse/android/rpc/GRpcMethod;
-
-    .line 160
-    if-nez v0, :cond_3
-
-    move v0, v1
-
-    .line 162
-    goto :goto_0
-
-    .line 166
-    :cond_3
-    invoke-interface {v0, p1, p2, v2, p4}, Lcom/glympse/android/rpc/GRpcMethod;->handle(Lcom/glympse/android/rpc/GMessageGateway;Lcom/glympse/android/rpc/GConnection;Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GArray;)V
-
-    .line 168
-    const/4 v0, 0x1
+    .line 45
+    invoke-interface {p1, p2, v2}, Lcom/glympse/android/rpc/GMessageGateway;->sendData(Lcom/glympse/android/rpc/GConnection;Lcom/glympse/android/core/GPrimitive;)V
 
     goto :goto_0
 .end method
 
-.method public upgrade(D)Z
-    .locals 7
+.method public getName()Ljava/lang/String;
+    .locals 1
 
     .prologue
-    const-wide v4, 0x3ff199999999999aL
+    .line 20
+    const-string v0, "user_avatar"
 
-    const-wide/high16 v2, 0x3ff0000000000000L
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v0, 0x1
+    move-result-object v0
 
-    .line 52
-    cmpl-double v1, v2, p1
+    return-object v0
+.end method
 
-    if-nez v1, :cond_0
+.method public handle(Lcom/glympse/android/rpc/GMessageGateway;Lcom/glympse/android/rpc/GConnection;Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GArray;)V
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/glympse/android/rpc/GMessageGateway;",
+            "Lcom/glympse/android/rpc/GConnection;",
+            "Lcom/glympse/android/core/GPrimitive;",
+            "Lcom/glympse/android/core/GArray",
+            "<",
+            "Ljava/lang/Object;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v5, 0x2
+
+    .line 51
+    invoke-static {p4}, Lcom/glympse/android/rpc/RpcMessages;->consumerUnpackSink(Lcom/glympse/android/core/GArray;)Lcom/glympse/android/api/GEventSink;
+
+    move-result-object v1
+
+    .line 54
+    const-string v0, "body"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {p3, v0}, Lcom/glympse/android/core/GPrimitive;->get(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+
+    move-result-object v0
 
     .line 55
-    new-instance v1, Lcom/glympse/android/rpc/am;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/am;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 57
-    new-instance v1, Lcom/glympse/android/rpc/p;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/p;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 58
-    new-instance v1, Lcom/glympse/android/rpc/l;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/l;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 59
-    new-instance v1, Lcom/glympse/android/rpc/w;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/w;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 60
-    new-instance v1, Lcom/glympse/android/rpc/ar;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/ar;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 62
-    new-instance v1, Lcom/glympse/android/rpc/m;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/m;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 63
-    new-instance v1, Lcom/glympse/android/rpc/f;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/f;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 64
-    new-instance v1, Lcom/glympse/android/rpc/n;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/n;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 65
-    new-instance v1, Lcom/glympse/android/rpc/g;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/g;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 66
-    new-instance v1, Lcom/glympse/android/rpc/q;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/q;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 67
-    new-instance v1, Lcom/glympse/android/rpc/ad;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/ad;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 69
-    new-instance v1, Lcom/glympse/android/rpc/r;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/r;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 70
-    new-instance v1, Lcom/glympse/android/rpc/i;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/i;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 71
-    new-instance v1, Lcom/glympse/android/rpc/x;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/x;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 72
-    new-instance v1, Lcom/glympse/android/rpc/at;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/at;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 73
-    new-instance v1, Lcom/glympse/android/rpc/ap;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/ap;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 75
-    new-instance v1, Lcom/glympse/android/rpc/u;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/u;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 76
-    new-instance v1, Lcom/glympse/android/rpc/ah;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/ah;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 77
-    new-instance v1, Lcom/glympse/android/rpc/t;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/t;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 78
-    new-instance v1, Lcom/glympse/android/rpc/ag;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/ag;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 79
-    new-instance v1, Lcom/glympse/android/rpc/v;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/v;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 80
-    new-instance v1, Lcom/glympse/android/rpc/aq;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/aq;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 82
-    new-instance v1, Lcom/glympse/android/rpc/al;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/al;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 83
-    new-instance v1, Lcom/glympse/android/rpc/ae;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/ae;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 84
-    new-instance v1, Lcom/glympse/android/rpc/k;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/k;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 86
-    new-instance v1, Lcom/glympse/android/rpc/ak;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/ak;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 87
-    new-instance v1, Lcom/glympse/android/rpc/ai;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/ai;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
+    if-nez v0, :cond_1
 
     .line 88
-    new-instance v1, Lcom/glympse/android/rpc/aj;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/aj;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 90
-    new-instance v1, Lcom/glympse/android/rpc/ac;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/ac;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 91
-    new-instance v1, Lcom/glympse/android/rpc/ay;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/ay;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 92
-    new-instance v1, Lcom/glympse/android/rpc/y;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/y;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 93
-    new-instance v1, Lcom/glympse/android/rpc/aw;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/aw;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 94
-    new-instance v1, Lcom/glympse/android/rpc/aa;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/aa;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 95
-    new-instance v1, Lcom/glympse/android/rpc/ax;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/ax;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 96
-    new-instance v1, Lcom/glympse/android/rpc/au;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/au;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 97
-    new-instance v1, Lcom/glympse/android/rpc/av;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/av;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 116
-    :goto_0
-    return v0
-
-    .line 100
     :cond_0
-    cmpl-double v1, v4, p1
+    :goto_0
+    return-void
 
-    if-nez v1, :cond_1
-
-    .line 102
-    invoke-virtual {p0, v2, v3}, Lcom/glympse/android/rpc/bb;->upgrade(D)Z
-
-    .line 103
-    new-instance v1, Lcom/glympse/android/rpc/j;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/j;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 104
-    new-instance v1, Lcom/glympse/android/rpc/o;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/o;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    .line 105
-    new-instance v1, Lcom/glympse/android/rpc/h;
-
-    invoke-direct {v1}, Lcom/glympse/android/rpc/h;-><init>()V
-
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
-
-    goto :goto_0
-
-    .line 108
+    .line 59
     :cond_1
-    const-wide v2, 0x3ff3333333333333L
+    const-string v2, "id"
 
-    cmpl-double v1, v2, p1
+    invoke-static {v2}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
-    if-nez v1, :cond_2
+    move-result-object v2
 
-    .line 110
-    invoke-virtual {p0, v4, v5}, Lcom/glympse/android/rpc/bb;->upgrade(D)Z
+    invoke-interface {v0, v2}, Lcom/glympse/android/core/GPrimitive;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 111
-    new-instance v1, Lcom/glympse/android/rpc/s;
+    move-result-object v2
 
-    invoke-direct {v1}, Lcom/glympse/android/rpc/s;-><init>()V
+    .line 60
+    if-eqz v2, :cond_0
 
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
+    .line 66
+    const-string v3, "avatar"
 
-    .line 112
-    new-instance v1, Lcom/glympse/android/rpc/af;
+    invoke-static {v3}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-direct {v1}, Lcom/glympse/android/rpc/af;-><init>()V
+    move-result-object v3
 
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
+    invoke-interface {v0, v3}, Lcom/glympse/android/core/GPrimitive;->get(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
 
-    .line 113
-    new-instance v1, Lcom/glympse/android/rpc/as;
+    move-result-object v0
 
-    invoke-direct {v1}, Lcom/glympse/android/rpc/as;-><init>()V
+    .line 67
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0, v1}, Lcom/glympse/android/rpc/bb;->addMethod(Lcom/glympse/android/rpc/GRpcMethod;)V
+    .line 71
+    const-string v3, "data"
 
-    goto :goto_0
+    invoke-static {v3}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 116
-    :cond_2
+    move-result-object v3
+
+    invoke-interface {v0, v3}, Lcom/glympse/android/core/GPrimitive;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 72
+    invoke-static {v0}, Lcom/glympse/android/rpc/c;->V(Ljava/lang/String;)Lcom/glympse/android/core/GDrawable;
+
+    move-result-object v3
+
+    .line 73
+    if-eqz v3, :cond_0
+
+    .line 80
+    invoke-static {}, Lcom/glympse/android/lib/LibFactory;->createUser()Lcom/glympse/android/lib/GUserPrivate;
+
+    move-result-object v4
+
+    .line 81
+    invoke-interface {v4, v2}, Lcom/glympse/android/lib/GUserPrivate;->setId(Ljava/lang/String;)V
+
+    .line 82
+    invoke-interface {v4}, Lcom/glympse/android/lib/GUserPrivate;->getAvatar()Lcom/glympse/android/api/GImage;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/glympse/android/lib/GImagePrivate;
+
+    .line 83
+    invoke-interface {v0, v3}, Lcom/glympse/android/lib/GImagePrivate;->setDrawable(Lcom/glympse/android/core/GDrawable;)V
+
+    .line 84
+    invoke-interface {v0, v5}, Lcom/glympse/android/lib/GImagePrivate;->setState(I)V
+
+    .line 87
     const/4 v0, 0x0
+
+    const/high16 v2, 0x40000
+
+    invoke-interface {v1, v0, v5, v2, v4}, Lcom/glympse/android/api/GEventSink;->eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
 
     goto :goto_0
 .end method

@@ -26,11 +26,11 @@
 
     .prologue
     .line 112
-    new-instance v0, Lcom/glympse/android/lib/dz;
+    new-instance v0, Lcom/glympse/android/lib/en;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1}, Lcom/glympse/android/lib/dz;-><init>(Ljava/lang/String;Lcom/glympse/android/core/GDrawable;)V
+    invoke-direct {v0, p1, v1}, Lcom/glympse/android/lib/en;-><init>(Ljava/lang/String;Lcom/glympse/android/core/GDrawable;)V
 
     .line 113
     invoke-interface {p0}, Lcom/glympse/android/lib/GGlympsePrivate;->getImageCache()Lcom/glympse/android/lib/GImageCache;

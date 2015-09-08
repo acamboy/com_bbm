@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/abp;
 .super Ljava/lang/Object;
-.source "OwnProfileActivity.java"
+.source "SearchResultsChannelsActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/support/v4/view/aj;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/OwnProfileActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/OwnProfileActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)V
     .locals 0
 
     .prologue
-    .line 315
-    iput-object p1, p0, Lcom/bbm/ui/activities/abp;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
+    .line 461
+    iput-object p1, p0, Lcom/bbm/ui/activities/abp;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,46 +25,27 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final a(Landroid/view/MenuItem;)Z
+    .locals 1
 
     .prologue
-    .line 318
-    const-string v0, "mEmoticonButton Clicked"
+    .line 464
+    const/4 v0, 0x1
 
-    const-class v1, Lcom/bbm/ui/activities/OwnProfileActivity;
+    return v0
+.end method
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+.method public final b(Landroid/view/MenuItem;)Z
+    .locals 1
 
-    .line 320
-    invoke-static {}, Lcom/bbm/ui/activities/OwnProfileActivity;->f()Ljava/lang/Boolean;
+    .prologue
+    .line 470
+    iget-object v0, p0, Lcom/bbm/ui/activities/abp;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
 
-    move-result-object v0
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;->finish()V
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    .line 471
+    const/4 v0, 0x0
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 321
-    iget-object v0, p0, Lcom/bbm/ui/activities/abp;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/OwnProfileActivity;->b(Lcom/bbm/ui/activities/OwnProfileActivity;Z)V
-
-    .line 325
-    :goto_0
-    return-void
-
-    .line 323
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/abp;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/OwnProfileActivity;->b(Lcom/bbm/ui/activities/OwnProfileActivity;Z)V
-
-    goto :goto_0
+    return v0
 .end method

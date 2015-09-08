@@ -103,6 +103,9 @@
 .method public abstract isString()Z
 .end method
 
+.method public abstract merge(Lcom/glympse/android/core/GPrimitive;Z)Z
+.end method
+
 .method public abstract put(D)V
 .end method
 
@@ -175,7 +178,13 @@
 .method public abstract set(Z)V
 .end method
 
+.method public abstract setArray()V
+.end method
+
 .method public abstract setNull()V
+.end method
+
+.method public abstract setObject()V
 .end method
 
 .method public abstract size()I

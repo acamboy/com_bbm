@@ -1,27 +1,19 @@
 .class final Lcom/bbm/ui/activities/ahw;
 .super Lcom/bbm/j/u;
-.source "ShareActivity.java"
+.source "ViewSubscribedChannelActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/d/b/n;
-
-.field final synthetic b:Landroid/os/Handler;
-
-.field final synthetic c:Lcom/bbm/ui/activities/ahu;
+.field final synthetic a:Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ahu;Lcom/bbm/d/b/n;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;)V
     .locals 0
 
     .prologue
-    .line 157
-    iput-object p1, p0, Lcom/bbm/ui/activities/ahw;->c:Lcom/bbm/ui/activities/ahu;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/ahw;->a:Lcom/bbm/d/b/n;
-
-    iput-object p3, p0, Lcom/bbm/ui/activities/ahw;->b:Landroid/os/Handler;
+    .line 28
+    iput-object p1, p0, Lcom/bbm/ui/activities/ahw;->a:Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;
 
     invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
@@ -31,144 +23,71 @@
 
 # virtual methods
 .method protected final b()Z
-    .locals 6
+    .locals 3
 
     .prologue
-    const/4 v2, 0x1
+    .line 31
+    iget-object v0, p0, Lcom/bbm/ui/activities/ahw;->a:Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;
 
-    const/4 v1, 0x0
+    iget-object v0, v0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->h:Lcom/bbm/j/a;
 
-    .line 160
-    iget-object v0, p0, Lcom/bbm/ui/activities/ahw;->a:Lcom/bbm/d/b/n;
-
-    invoke-virtual {v0}, Lcom/bbm/d/b/n;->a()Lcom/bbm/d/fn;
-
-    move-result-object v3
-
-    .line 162
-    iget-object v0, p0, Lcom/bbm/ui/activities/ahw;->c:Lcom/bbm/ui/activities/ahu;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/ahu;->b:Lcom/bbm/ui/activities/ShareActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ShareActivity;->b(Lcom/bbm/ui/activities/ShareActivity;)Lcom/bbm/util/ct;
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/util/ct;->e()Ljava/lang/Object;
+    check-cast v0, Lcom/bbm/d/ff;
 
-    move-result-object v0
+    iget-object v0, v0, Lcom/bbm/d/ff;->R:Lcom/bbm/util/bo;
 
-    check-cast v0, Ljava/lang/String;
+    sget-object v1, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
 
-    .line 164
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    if-ne v0, v1, :cond_0
 
-    move-result v4
+    .line 32
+    const/4 v0, 0x0
 
-    if-eqz v4, :cond_0
-
-    move v0, v1
-
-    .line 185
+    .line 37
     :goto_0
     return v0
 
-    .line 168
+    .line 34
     :cond_0
-    iget-object v4, v3, Lcom/bbm/d/fn;->h:Lcom/bbm/util/bi;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ahw;->a:Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;
 
-    sget-object v5, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
+    iget-object v0, v0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->h:Lcom/bbm/j/a;
 
-    if-ne v4, v5, :cond_1
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
-    move v0, v1
+    move-result-object v0
 
-    .line 169
-    goto :goto_0
+    check-cast v0, Lcom/bbm/d/ff;
 
-    .line 170
-    :cond_1
-    iget-object v1, v3, Lcom/bbm/d/fn;->h:Lcom/bbm/util/bi;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ahw;->a:Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;
 
-    sget-object v4, Lcom/bbm/util/bi;->b:Lcom/bbm/util/bi;
+    invoke-static {v0, v1}, Lcom/bbm/util/af;->a(Lcom/bbm/d/ff;Landroid/app/Activity;)Z
 
-    if-ne v1, v4, :cond_2
+    move-result v0
 
-    .line 172
-    iget-object v0, p0, Lcom/bbm/ui/activities/ahw;->c:Lcom/bbm/ui/activities/ahu;
+    if-nez v0, :cond_1
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/ahu;->b:Lcom/bbm/ui/activities/ShareActivity;
+    .line 35
+    iget-object v0, p0, Lcom/bbm/ui/activities/ahw;->a:Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ahw;->c:Lcom/bbm/ui/activities/ahu;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ahw;->a:Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/ahu;->b:Lcom/bbm/ui/activities/ShareActivity;
+    const v2, 0x7f0e07f3
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/ahw;->c:Lcom/bbm/ui/activities/ahu;
-
-    iget-object v3, v3, Lcom/bbm/ui/activities/ahu;->b:Lcom/bbm/ui/activities/ShareActivity;
-
-    const v4, 0x7f0e059a
-
-    invoke-virtual {v3, v4}, Lcom/bbm/ui/activities/ShareActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/bbm/ui/activities/ahw;->c:Lcom/bbm/ui/activities/ahu;
-
-    iget-object v4, v4, Lcom/bbm/ui/activities/ahu;->b:Lcom/bbm/ui/activities/ShareActivity;
-
-    const v5, 0x7f0e0598
-
-    invoke-virtual {v4, v5}, Lcom/bbm/ui/activities/ShareActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v0, v1, v3, v4}, Lcom/bbm/ui/activities/ShareActivity;->a(Lcom/bbm/ui/activities/ShareActivity;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    move v0, v2
-
-    .line 174
-    goto :goto_0
-
-    .line 177
-    :cond_2
-    iget-object v1, p0, Lcom/bbm/ui/activities/ahw;->b:Landroid/os/Handler;
-
-    invoke-virtual {v1}, Landroid/os/Handler;->obtainMessage()Landroid/os/Message;
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 178
-    new-instance v4, Ljava/util/HashMap;
+    const/16 v2, 0x7d0
 
-    invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
+    invoke-static {v0, v1, v2}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;Ljava/lang/String;S)V
 
-    .line 179
-    const-string v5, "partnerApp"
+    .line 37
+    :cond_1
+    const/4 v0, 0x1
 
-    invoke-interface {v4, v5, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 180
-    iget-boolean v3, v3, Lcom/bbm/d/fn;->g:Z
-
-    if-eqz v3, :cond_3
-
-    .line 181
-    const-string v3, "token"
-
-    invoke-interface {v4, v3, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 183
-    :cond_3
-    iput-object v4, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    .line 184
-    iget-object v0, p0, Lcom/bbm/ui/activities/ahw;->b:Landroid/os/Handler;
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    move v0, v2
-
-    .line 185
     goto :goto_0
 .end method

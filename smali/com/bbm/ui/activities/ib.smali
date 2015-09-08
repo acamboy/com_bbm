@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/ib;
 .super Ljava/lang/Object;
-.source "ConversationActivity.java"
+.source "EditProfileNameActivity.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/EditProfileNameActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/EditProfileNameActivity;)V
     .locals 0
 
     .prologue
-    .line 3006
-    iput-object p1, p0, Lcom/bbm/ui/activities/ib;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 231
+    iput-object p1, p0, Lcom/bbm/ui/activities/ib;->a:Lcom/bbm/ui/activities/EditProfileNameActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,30 +29,20 @@
     .locals 2
 
     .prologue
-    .line 3010
-    const-string v0, "quickshare attach picture clicked"
+    .line 235
+    const-string v0, "mEmoticonButtonArea Clicked"
 
-    const-class v1, Lcom/bbm/ui/activities/ConversationActivity;
+    const-class v1, Lcom/bbm/ui/activities/EditProfileNameActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 3011
-    iget-object v0, p0, Lcom/bbm/ui/activities/ib;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 237
+    iget-object v0, p0, Lcom/bbm/ui/activities/ib;->a:Lcom/bbm/ui/activities/EditProfileNameActivity;
 
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ConversationActivity;->g(Lcom/bbm/ui/activities/ConversationActivity;Z)Z
+    invoke-static {v0, v1}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;Z)V
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 3012
-    iget-object v0, p0, Lcom/bbm/ui/activities/ib;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->aK(Lcom/bbm/ui/activities/ConversationActivity;)V
-
-    .line 3014
-    :cond_0
+    .line 238
     return-void
 .end method

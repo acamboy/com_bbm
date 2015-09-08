@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 577
+    .line 588
     iput-object p1, p0, Lcom/bbm/iceberg/j;->c:Lcom/bbm/iceberg/c;
 
     iput-object p2, p0, Lcom/bbm/iceberg/j;->a:Ljava/io/File;
@@ -37,12 +37,12 @@
     .locals 10
 
     .prologue
-    .line 580
+    .line 591
     iget-object v1, p0, Lcom/bbm/iceberg/j;->c:Lcom/bbm/iceberg/c;
 
     monitor-enter v1
 
-    .line 581
+    .line 592
     :try_start_0
     iget-object v0, p0, Lcom/bbm/iceberg/j;->a:Ljava/io/File;
 
@@ -122,7 +122,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-virtual {v2, v0}, Lcom/bbm/iceberg/k;->b(Ljava/lang/String;)Ljava/util/List;
+    invoke-virtual {v2, v0}, Lcom/bbm/iceberg/k;->b(Ljava/lang/String;)Lcom/bbm/iceberg/l;
 
     move-result-object v8
 
@@ -140,18 +140,20 @@
 
     invoke-virtual {v6}, Landroid/util/JsonWriter;->beginArray()Landroid/util/JsonWriter;
 
-    invoke-interface {v8}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    iget-object v0, v8, Lcom/bbm/iceberg/l;->b:Ljava/util/List;
 
-    move-result-object v8
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v9
 
     :goto_1
-    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -207,17 +209,25 @@
 
     invoke-static {v0, v2}, Lcom/blackberry/a/i;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 582
+    .line 593
     monitor-exit v1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     return-void
 
-    .line 581
+    .line 592
     :cond_0
     :try_start_3
     invoke-virtual {v6}, Landroid/util/JsonWriter;->endArray()Landroid/util/JsonWriter;
+
+    const-string v0, "regId"
+
+    invoke-virtual {v6, v0}, Landroid/util/JsonWriter;->name(Ljava/lang/String;)Landroid/util/JsonWriter;
+
+    iget-object v0, v8, Lcom/bbm/iceberg/l;->c:Ljava/lang/String;
+
+    invoke-virtual {v6, v0}, Landroid/util/JsonWriter;->value(Ljava/lang/String;)Landroid/util/JsonWriter;
 
     invoke-virtual {v6}, Landroid/util/JsonWriter;->endObject()Landroid/util/JsonWriter;
     :try_end_3
@@ -226,17 +236,20 @@
 
     goto :goto_0
 
-    .line 582
+    .line 593
     :catchall_0
     move-exception v0
 
+    :try_start_4
     monitor-exit v1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     throw v0
 
-    .line 581
+    .line 592
     :cond_1
-    :try_start_4
+    :try_start_5
     invoke-virtual {v6}, Landroid/util/JsonWriter;->endArray()Landroid/util/JsonWriter;
 
     invoke-virtual {v6}, Landroid/util/JsonWriter;->close()V
@@ -244,9 +257,9 @@
     invoke-virtual {v5}, Ljava/io/BufferedOutputStream;->close()V
 
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+    :try_end_5
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_0
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
     goto :goto_2
 .end method

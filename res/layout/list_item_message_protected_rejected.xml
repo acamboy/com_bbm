@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bbm.ui.ProtectedRejectedMessageView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/message_section" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/conversation_chat_bubble_outgoing_status_margin_left" android:layout_alignParentTop="true">
+        <ImageView android:id="@id/message_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/conversation_chat_bubble_status_margin_top" android:layout_alignParentLeft="true" android:contentDescription="@string/blank" />
+        <com.bbm.ui.LinkifyTextView android:id="@id/message_body" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/message_date" android:layout_toRightOf="@id/message_status" android:textIsSelectable="false" />
+        <TextView android:textSize="@dimen/fontSizeXSmall" android:textColor="@color/brightstyle_timestampTextColor" android:id="@id/message_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:textIsSelectable="false" />
+    </RelativeLayout>
+    <Button android:id="@id/exchange_keys_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/cascades_narrow_button_height" android:layout_marginLeft="@dimen/conversation_message_button_margin" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/reset_protected_chat" android:layout_below="@id/message_section" style="@style/CascadesButton.Narrow" />
+    <include android:id="@id/message_body_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_item_small_padding_top" android:layout_marginBottom="@dimen/settings_item_small_padding_bottom" android:layout_below="@id/exchange_keys_button" layout="@layout/divider_common" />
+</com.bbm.ui.ProtectedRejectedMessageView>

@@ -16,7 +16,7 @@
 .method public abstract getHandler()Lcom/glympse/android/core/GHandler;
 .end method
 
-.method public abstract getRertyQueueLength()I
+.method public abstract getRetryQueueLength()I
 .end method
 
 .method public abstract handleRetry(Lcom/glympse/android/core/GCommon;)V

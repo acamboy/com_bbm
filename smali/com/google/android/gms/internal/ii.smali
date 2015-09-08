@@ -1,159 +1,142 @@
-.class public final Lcom/google/android/gms/internal/ii;
+.class final Lcom/google/android/gms/internal/ii;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/google/android/gms/plus/Account;
+.implements Lcom/google/android/gms/internal/ig;
 
 
 # instance fields
-.field private final Rw:Lcom/google/android/gms/common/api/Api$b;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/Api$b",
-            "<",
-            "Lcom/google/android/gms/plus/internal/e;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private a:Landroid/os/IBinder;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/common/api/Api$b;)V
+.method constructor <init>(Landroid/os/IBinder;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/Api$b",
-            "<",
-            "Lcom/google/android/gms/plus/internal/e;",
-            ">;)V"
-        }
-    .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/gms/internal/ii;->Rw:Lcom/google/android/gms/common/api/Api$b;
+    iput-object p1, p0, Lcom/google/android/gms/internal/ii;->a:Landroid/os/IBinder;
 
     return-void
-.end method
-
-.method private static a(Lcom/google/android/gms/common/api/GoogleApiClient;Lcom/google/android/gms/common/api/Api$b;)Lcom/google/android/gms/plus/internal/e;
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/GoogleApiClient;",
-            "Lcom/google/android/gms/common/api/Api$b",
-            "<",
-            "Lcom/google/android/gms/plus/internal/e;",
-            ">;)",
-            "Lcom/google/android/gms/plus/internal/e;"
-        }
-    .end annotation
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    if-eqz p0, :cond_0
-
-    move v0, v1
-
-    :goto_0
-    const-string v3, "GoogleApiClient parameter is required."
-
-    invoke-static {v0, v3}, Lcom/google/android/gms/internal/er;->b(ZLjava/lang/Object;)V
-
-    invoke-interface {p0}, Lcom/google/android/gms/common/api/GoogleApiClient;->isConnected()Z
-
-    move-result v0
-
-    const-string v3, "GoogleApiClient must be connected."
-
-    invoke-static {v0, v3}, Lcom/google/android/gms/internal/er;->a(ZLjava/lang/Object;)V
-
-    invoke-interface {p0, p1}, Lcom/google/android/gms/common/api/GoogleApiClient;->a(Lcom/google/android/gms/common/api/Api$b;)Lcom/google/android/gms/common/api/Api$a;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/android/gms/plus/internal/e;
-
-    if-eqz v0, :cond_1
-
-    :goto_1
-    const-string v2, "GoogleApiClient is not configured to use the Plus.API Api. Pass this into GoogleApiClient.Builder#addApi() to use this feature."
-
-    invoke-static {v1, v2}, Lcom/google/android/gms/internal/er;->a(ZLjava/lang/Object;)V
-
-    return-object v0
-
-    :cond_0
-    move v0, v2
-
-    goto :goto_0
-
-    :cond_1
-    move v1, v2
-
-    goto :goto_1
 .end method
 
 
 # virtual methods
-.method public final clearDefaultAccount(Lcom/google/android/gms/common/api/GoogleApiClient;)V
-    .locals 1
+.method public final a(Ljava/lang/String;)Lcom/google/android/gms/internal/ij;
+    .locals 5
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/ii;->Rw:Lcom/google/android/gms/common/api/Api$b;
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    invoke-static {p1, v0}, Lcom/google/android/gms/internal/ii;->a(Lcom/google/android/gms/common/api/GoogleApiClient;Lcom/google/android/gms/common/api/Api$b;)Lcom/google/android/gms/plus/internal/e;
+    move-result-object v1
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v2
+
+    :try_start_0
+    const-string v0, "com.google.android.gms.ads.internal.mediation.client.IAdapterCreator"
+
+    invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/ii;->a:Landroid/os/IBinder;
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
+
+    invoke-virtual {v2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/android/gms/plus/internal/e;->clearDefaultAccount()V
+    invoke-static {v0}, Lcom/google/android/gms/internal/ik;->a(Landroid/os/IBinder;)Lcom/google/android/gms/internal/ij;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-void
+    move-result-object v0
+
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    throw v0
 .end method
 
-.method public final getAccountName(Lcom/google/android/gms/common/api/GoogleApiClient;)Ljava/lang/String;
+.method public final asBinder()Landroid/os/IBinder;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/ii;->Rw:Lcom/google/android/gms/common/api/Api$b;
-
-    invoke-static {p1, v0}, Lcom/google/android/gms/internal/ii;->a(Lcom/google/android/gms/common/api/GoogleApiClient;Lcom/google/android/gms/common/api/Api$b;)Lcom/google/android/gms/plus/internal/e;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/google/android/gms/plus/internal/e;->getAccountName()Ljava/lang/String;
-
-    move-result-object v0
+    iget-object v0, p0, Lcom/google/android/gms/internal/ii;->a:Landroid/os/IBinder;
 
     return-object v0
 .end method
 
-.method public final revokeAccessAndDisconnect(Lcom/google/android/gms/common/api/GoogleApiClient;)Lcom/google/android/gms/common/api/PendingResult;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/GoogleApiClient;",
-            ")",
-            "Lcom/google/android/gms/common/api/PendingResult",
-            "<",
-            "Lcom/google/android/gms/common/api/Status;",
-            ">;"
-        }
-    .end annotation
+.method public final b(Ljava/lang/String;)Z
+    .locals 6
 
-    new-instance v0, Lcom/google/android/gms/internal/ii$1;
+    const/4 v0, 0x0
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/ii;->Rw:Lcom/google/android/gms/common/api/Api$b;
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    invoke-direct {v0, p0, v1}, Lcom/google/android/gms/internal/ii$1;-><init>(Lcom/google/android/gms/internal/ii;Lcom/google/android/gms/common/api/Api$b;)V
+    move-result-object v1
 
-    invoke-interface {p1, v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->b(Lcom/google/android/gms/common/api/a$a;)Lcom/google/android/gms/common/api/a$a;
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    move-result-object v0
+    move-result-object v2
 
-    return-object v0
+    :try_start_0
+    const-string v3, "com.google.android.gms.ads.internal.mediation.client.IAdapterCreator"
+
+    invoke-virtual {v1, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object v3, p0, Lcom/google/android/gms/internal/ii;->a:Landroid/os/IBinder;
+
+    const/4 v4, 0x2
+
+    const/4 v5, 0x0
+
+    invoke-interface {v3, v4, v1, v2, v5}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
+
+    invoke-virtual {v2}, Landroid/os/Parcel;->readInt()I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    const/4 v0, 0x1
+
+    :cond_0
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    return v0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    throw v0
 .end method

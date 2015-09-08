@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/aby;
 .super Ljava/lang/Object;
-.source "PaymentSwitcherActivity.java"
+.source "SelectContactActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/PaymentSwitcherActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SelectContactActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/PaymentSwitcherActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
     .locals 0
 
     .prologue
-    .line 24
-    iput-object p1, p0, Lcom/bbm/ui/activities/aby;->a:Lcom/bbm/ui/activities/PaymentSwitcherActivity;
+    .line 143
+    iput-object p1, p0, Lcom/bbm/ui/activities/aby;->a:Lcom/bbm/ui/activities/SelectContactActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,15 +25,41 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 2
 
     .prologue
-    .line 26
-    iget-object v0, p0, Lcom/bbm/ui/activities/aby;->a:Lcom/bbm/ui/activities/PaymentSwitcherActivity;
+    .line 147
+    iget-object v0, p0, Lcom/bbm/ui/activities/aby;->a:Lcom/bbm/ui/activities/SelectContactActivity;
 
-    invoke-virtual {v0, p1}, Lcom/bbm/ui/activities/PaymentSwitcherActivity;->launchCarrierBillingPayment(Landroid/view/View;)V
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/SelectContactActivity;->getWindow()Landroid/view/Window;
 
-    .line 27
-    return-void
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/aby;->a:Lcom/bbm/ui/activities/SelectContactActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/SelectContactActivity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Window;->getCurrentFocus()Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 148
+    iget-object v0, p0, Lcom/bbm/ui/activities/aby;->a:Lcom/bbm/ui/activities/SelectContactActivity;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;Z)V
+
+    .line 150
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method

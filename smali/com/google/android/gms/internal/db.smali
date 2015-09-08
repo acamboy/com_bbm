@@ -1,133 +1,76 @@
-.class public final Lcom/google/android/gms/internal/db;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable;
+.class final Lcom/google/android/gms/internal/db;
+.super Lcom/google/android/gms/internal/cy;
 
 
-# static fields
-.field public static final CREATOR:Lcom/google/android/gms/internal/dc;
-
-
-# instance fields
-.field public pU:Ljava/lang/String;
-
-.field public pV:I
-
-.field public pW:I
-
-.field public pX:Z
-
-.field public final versionCode:I
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/google/android/gms/internal/cy",
+        "<",
+        "Ljava/lang/Long;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method constructor <init>(Ljava/lang/String;Ljava/lang/Long;)V
     .locals 1
 
-    new-instance v0, Lcom/google/android/gms/internal/dc;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Lcom/google/android/gms/internal/dc;-><init>()V
-
-    sput-object v0, Lcom/google/android/gms/internal/db;->CREATOR:Lcom/google/android/gms/internal/dc;
-
-    return-void
-.end method
-
-.method public constructor <init>(IIZ)V
-    .locals 6
-
-    const/4 v1, 0x1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v2, "afma-sdk-a-v"
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v2, "."
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v2, "."
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    if-eqz p3, :cond_0
-
-    const-string v0, "0"
-
-    :goto_0
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    move-object v0, p0
-
-    move v3, p1
-
-    move v4, p2
-
-    move v5, p3
-
-    invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/internal/db;-><init>(ILjava/lang/String;IIZ)V
-
-    return-void
-
-    :cond_0
-    const-string v0, "1"
-
-    goto :goto_0
-.end method
-
-.method constructor <init>(ILjava/lang/String;IIZ)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lcom/google/android/gms/internal/db;->versionCode:I
-
-    iput-object p2, p0, Lcom/google/android/gms/internal/db;->pU:Ljava/lang/String;
-
-    iput p3, p0, Lcom/google/android/gms/internal/db;->pV:I
-
-    iput p4, p0, Lcom/google/android/gms/internal/db;->pW:I
-
-    iput-boolean p5, p0, Lcom/google/android/gms/internal/db;->pX:Z
+    invoke-direct {p0, p1, p2, v0}, Lcom/google/android/gms/internal/cy;-><init>(Ljava/lang/String;Ljava/lang/Object;B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final a()Lcom/google/android/gms/internal/qr;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/google/android/gms/internal/qr",
+            "<",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
 
-    const/4 v0, 0x0
+    iget-object v1, p0, Lcom/google/android/gms/internal/cy;->a:Ljava/lang/String;
 
-    return v0
+    iget-object v0, p0, Lcom/google/android/gms/internal/cy;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Long;
+
+    invoke-static {v1, v0}, Lcom/google/android/gms/internal/qr;->a(Ljava/lang/String;Ljava/lang/Long;)Lcom/google/android/gms/internal/qr;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public final synthetic a(Landroid/content/SharedPreferences;)Ljava/lang/Object;
+    .locals 4
 
-    invoke-static {p0, p1, p2}, Lcom/google/android/gms/internal/dc;->a(Lcom/google/android/gms/internal/db;Landroid/os/Parcel;I)V
+    iget-object v1, p0, Lcom/google/android/gms/internal/cy;->a:Ljava/lang/String;
 
-    return-void
+    iget-object v0, p0, Lcom/google/android/gms/internal/cy;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Long;
+
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    invoke-interface {p1, v1, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    return-object v0
 .end method

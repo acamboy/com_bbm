@@ -3,7 +3,7 @@
 .source "MercatorProjection.java"
 
 # interfaces
-.implements Lcom/mapquest/android/maps/br;
+.implements Lcom/mapquest/android/maps/bq;
 
 
 # static fields
@@ -190,8 +190,6 @@
 
     .line 84
     monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
@@ -199,6 +197,8 @@
     move-exception v0
 
     monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
 
@@ -214,9 +214,9 @@
     .prologue
     const/16 v10, 0x100
 
-    const-wide/high16 v8, 0x3ff0000000000000L
+    const-wide/high16 v8, 0x3ff0000000000000L    # 1.0
 
-    const-wide v6, 0x3eb0c6f7a0b5ed8dL
+    const-wide v6, 0x3eb0c6f7a0b5ed8dL    # 1.0E-6
 
     .line 130
     if-nez p2, :cond_0
@@ -242,11 +242,11 @@
     mul-double/2addr v2, v6
 
     .line 137
-    const-wide v4, 0x4066800000000000L
+    const-wide v4, 0x4066800000000000L    # 180.0
 
     add-double/2addr v2, v4
 
-    const-wide v4, 0x4076800000000000L
+    const-wide v4, 0x4076800000000000L    # 360.0
 
     div-double/2addr v2, v4
 
@@ -277,7 +277,7 @@
     move-result-wide v2
 
     .line 142
-    const-wide/high16 v4, 0x3fe0000000000000L
+    const-wide/high16 v4, 0x3fe0000000000000L    # 0.5
 
     add-double v6, v8, v2
 
@@ -289,7 +289,7 @@
 
     move-result-wide v2
 
-    const-wide v6, 0x402921fb54442d18L
+    const-wide v6, 0x402921fb54442d18L    # 12.566370614359172
 
     div-double/2addr v2, v6
 
@@ -462,7 +462,7 @@
 
     move-result-wide v2
 
-    const-wide/high16 v4, 0x4000000000000000L
+    const-wide/high16 v4, 0x4000000000000000L    # 2.0
 
     invoke-static {v4, v5}, Ljava/lang/Math;->log(D)D
 
@@ -805,7 +805,7 @@
     :goto_0
     int-to-double v2, v1
 
-    const-wide/high16 v6, 0x3fe0000000000000L
+    const-wide/high16 v6, 0x3fe0000000000000L    # 0.5
 
     int-to-double v8, v4
 
@@ -813,17 +813,17 @@
 
     sub-double v2, v6, v2
 
-    const-wide v6, 0x4056800000000000L
+    const-wide v6, 0x4056800000000000L    # 90.0
 
-    const-wide v8, 0x4076800000000000L
+    const-wide v8, 0x4076800000000000L    # 360.0
 
     neg-double v2, v2
 
-    const-wide/high16 v10, 0x4000000000000000L
+    const-wide/high16 v10, 0x4000000000000000L    # 2.0
 
     mul-double/2addr v2, v10
 
-    const-wide v10, 0x400921fb54442d18L
+    const-wide v10, 0x400921fb54442d18L    # Math.PI
 
     mul-double/2addr v2, v10
 
@@ -837,43 +837,43 @@
 
     mul-double/2addr v2, v8
 
-    const-wide v8, 0x400921fb54442d18L
+    const-wide v8, 0x400921fb54442d18L    # Math.PI
 
     div-double/2addr v2, v8
 
     sub-double v2, v6, v2
 
-    const-wide v6, 0x40554345b1a549d6L
+    const-wide v6, 0x40554345b1a549d6L    # 85.05112877980659
 
     cmpl-double v1, v2, v6
 
     if-lez v1, :cond_2
 
-    const-wide v2, 0x40554345b1a549d6L
+    const-wide v2, 0x40554345b1a549d6L    # 85.05112877980659
 
     :cond_0
     :goto_1
     int-to-double v0, v0
 
-    const-wide v6, 0x4076800000000000L
+    const-wide v6, 0x4076800000000000L    # 360.0
 
     int-to-double v4, v4
 
     div-double/2addr v0, v4
 
-    const-wide/high16 v4, 0x3fe0000000000000L
+    const-wide/high16 v4, 0x3fe0000000000000L    # 0.5
 
     sub-double/2addr v0, v4
 
     mul-double/2addr v0, v6
 
-    const-wide v4, 0x412e848000000000L
+    const-wide v4, 0x412e848000000000L    # 1000000.0
 
     mul-double/2addr v0, v4
 
     double-to-int v0, v0
 
-    const-wide v4, 0x412e848000000000L
+    const-wide v4, 0x412e848000000000L    # 1000000.0
 
     mul-double/2addr v2, v4
 
@@ -893,13 +893,13 @@
     goto :goto_0
 
     :cond_2
-    const-wide v6, -0x3faabcba4e5ab62aL
+    const-wide v6, -0x3faabcba4e5ab62aL    # -85.05112877980659
 
     cmpg-double v1, v2, v6
 
     if-gez v1, :cond_0
 
-    const-wide v2, -0x3faabcba4e5ab62aL
+    const-wide v2, -0x3faabcba4e5ab62aL    # -85.05112877980659
 
     goto :goto_1
 .end method

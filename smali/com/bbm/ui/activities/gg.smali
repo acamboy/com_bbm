@@ -1,64 +1,101 @@
 .class final Lcom/bbm/ui/activities/gg;
-.super Lcom/bbm/ui/d/e;
+.super Ljava/lang/Object;
 .source "ConversationActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ge;
+.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ge;Ljava/lang/String;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 1256
-    iput-object p1, p0, Lcom/bbm/ui/activities/gg;->a:Lcom/bbm/ui/activities/ge;
+    .line 2933
+    iput-object p1, p0, Lcom/bbm/ui/activities/gg;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-direct {p0, p2}, Lcom/bbm/ui/d/e;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 0
-
-    .prologue
-    .line 1259
-    return-void
-.end method
-
-.method public final a(I)V
+.method public final onClick(Landroid/view/View;)V
     .locals 3
 
     .prologue
-    .line 1263
-    iget-object v0, p0, Lcom/bbm/ui/activities/gg;->a:Lcom/bbm/ui/activities/ge;
+    .line 2937
+    const-string v0, "quickshare attach location clicked"
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/ge;->c:Lcom/bbm/ui/activities/gd;
+    const-class v1, Lcom/bbm/ui/activities/ConversationActivity;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/gd;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ConversationActivity;->getApplicationContext()Landroid/content/Context;
+    .line 2938
+    iget-object v0, p0, Lcom/bbm/ui/activities/gg;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/ConversationActivity;->v:Lcom/bbm/j/a;
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/gg;->a:Lcom/bbm/ui/activities/ge;
+    check-cast v0, Ljava/lang/Boolean;
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/ge;->c:Lcom/bbm/ui/activities/gd;
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/gd;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    move-result v0
 
-    invoke-virtual {v1, p1}, Lcom/bbm/ui/activities/ConversationActivity;->getString(I)Ljava/lang/String;
+    if-eqz v0, :cond_0
+
+    .line 2939
+    iget-object v0, p0, Lcom/bbm/ui/activities/gg;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/gg;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    const v2, 0x7f0e060d
+
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/ConversationActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    const/4 v2, 0x0
+    invoke-static {v0, v1}, Lcom/bbm/util/eu;->a(Landroid/content/Context;Ljava/lang/String;)V
 
-    invoke-static {v0, v1, v2}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;I)V
-
-    .line 1264
+    .line 2954
+    :goto_0
     return-void
+
+    .line 2942
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/gg;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/util/cu;->a(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 2943
+    iget-object v0, p0, Lcom/bbm/ui/activities/gg;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->m(Lcom/bbm/ui/activities/ConversationActivity;)V
+
+    goto :goto_0
+
+    .line 2945
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/gg;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    new-instance v1, Lcom/bbm/ui/activities/gh;
+
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/gh;-><init>(Lcom/bbm/ui/activities/gg;)V
+
+    invoke-static {v0, v1}, Lcom/bbm/util/cu;->a(Landroid/app/Activity;Landroid/view/View$OnClickListener;)V
+
+    goto :goto_0
 .end method

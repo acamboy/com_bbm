@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/chat_bubble_background_incoming_highlight" />
+            <corners android:radius="@dimen/conversation_chat_background_corner_radius" />
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/chat_bubble_background_incoming_highlight" />
+            <corners android:radius="@dimen/conversation_chat_background_corner_radius" />
+        </shape>
+    </item>
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/chat_bubble_background_incoming_highlight" />
+            <corners android:radius="@dimen/conversation_chat_background_corner_radius" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/chat_bubble_incoming_7" />
+            <corners android:radius="@dimen/conversation_chat_background_corner_radius" />
+        </shape>
+    </item>
+</selector>

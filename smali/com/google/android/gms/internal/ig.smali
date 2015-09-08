@@ -6,5 +6,8 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/google/android/gms/internal/if;Landroid/net/Uri;Landroid/os/Bundle;Z)V
+.method public abstract a(Ljava/lang/String;)Lcom/google/android/gms/internal/ij;
+.end method
+
+.method public abstract b(Ljava/lang/String;)Z
 .end method

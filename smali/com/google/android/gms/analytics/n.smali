@@ -1,24 +1,29 @@
-.class interface abstract Lcom/google/android/gms/analytics/n;
+.class public interface abstract Lcom/google/android/gms/analytics/n;
 .super Ljava/lang/Object;
 
 
-# virtual methods
-.method public abstract A(Ljava/lang/String;)V
-.end method
+# annotations
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
 
-.method public abstract a(Ljava/util/List;Lcom/google/android/gms/analytics/ab;Z)I
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/google/android/gms/analytics/x;",
-            ">;",
-            "Lcom/google/android/gms/analytics/ab;",
-            "Z)I"
-        }
+
+# virtual methods
+.method public abstract a()I
+    .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end method
 
-.method public abstract bA()Z
+.method public abstract a(I)V
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end method
+
+.method public abstract a(Ljava/lang/String;)V
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end method
+
+.method public abstract b(Ljava/lang/String;)V
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 .end method

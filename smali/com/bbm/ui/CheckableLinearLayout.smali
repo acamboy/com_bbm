@@ -50,7 +50,7 @@
     if-eqz p1, :cond_0
 
     .line 33
-    const v0, 0x7f090165
+    const v0, 0x7f0901cf
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/CheckableLinearLayout;->setBackgroundResource(I)V
 
@@ -60,7 +60,7 @@
 
     .line 35
     :cond_0
-    const v0, 0x7f020316
+    const v0, 0x7f020304
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/CheckableLinearLayout;->setBackgroundResource(I)V
 

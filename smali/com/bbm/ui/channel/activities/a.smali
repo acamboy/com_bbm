@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 90
+    .line 87
     iput-object p1, p0, Lcom/bbm/ui/channel/activities/a;->a:Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,14 +26,9 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 93
-    iget-object v0, p0, Lcom/bbm/ui/channel/activities/a;->a:Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;
-
-    invoke-static {v0}, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->a(Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;)V
-
-    .line 94
+    .line 91
     return-void
 .end method

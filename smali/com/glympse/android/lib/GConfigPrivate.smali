@@ -10,6 +10,9 @@
 .method public abstract areAccountsLinked()Z
 .end method
 
+.method public abstract disableInstance()V
+.end method
+
 .method public abstract forgetAccessToken()V
 .end method
 
@@ -37,16 +40,25 @@
 .method public abstract getGetRate()J
 .end method
 
+.method public abstract getLabel()Ljava/lang/String;
+.end method
+
 .method public abstract getLogUrl()Ljava/lang/String;
 .end method
 
-.method public abstract getMotdContext()Ljava/lang/String;
-.end method
-
-.method public abstract getMotdLastRequest()J
-.end method
-
 .method public abstract getRegistrationToken()Ljava/lang/String;
+.end method
+
+.method public abstract getSupportedServersAndSchemes()Lcom/glympse/android/core/GArray;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/glympse/android/core/GArray",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 .end method
 
 .method public abstract getViewerToken()Ljava/lang/String;
@@ -59,6 +71,9 @@
 .end method
 
 .method public abstract isFirstLaunch()Z
+.end method
+
+.method public abstract isInstanceDisabled()Z
 .end method
 
 .method public abstract isServerSupported(Ljava/lang/String;)Z
@@ -79,9 +94,6 @@
 .method public abstract saveCurrentDeviceId(Ljava/lang/String;)V
 .end method
 
-.method public abstract saveMotdContext(JLjava/lang/String;)V
-.end method
-
 .method public abstract saveRegistrationToken(Ljava/lang/String;)V
 .end method
 
@@ -89,6 +101,18 @@
 .end method
 
 .method public abstract setAccountsLinked(Z)V
+.end method
+
+.method public abstract setDebugLevel(Ljava/lang/String;)V
+.end method
+
+.method public abstract setFileLevel(Ljava/lang/String;)V
+.end method
+
+.method public abstract setLabel(Ljava/lang/String;)V
+.end method
+
+.method public abstract setLogUrl(Ljava/lang/String;)V
 .end method
 
 .method public abstract setMaximumNicknameLength(I)V

@@ -2,97 +2,90 @@
 .super Ljava/lang/Object;
 .source "Striped64.java"
 
-
-# static fields
-.field private static final b:Lsun/misc/Unsafe;
-
-.field private static final c:J
+# interfaces
+.implements Ljava/security/PrivilegedExceptionAction;
 
 
-# instance fields
-.field volatile a:J
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/security/PrivilegedExceptionAction",
+        "<",
+        "Lsun/misc/Unsafe;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>()V
+    .locals 0
 
     .prologue
-    .line 108
-    :try_start_0
-    invoke-static {}, Lcom/google/b/b/ca;->c()Lsun/misc/Unsafe;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/google/b/b/cc;->b:Lsun/misc/Unsafe;
-
-    .line 109
-    const-class v0, Lcom/google/b/b/cc;
-
-    .line 110
-    sget-object v1, Lcom/google/b/b/cc;->b:Lsun/misc/Unsafe;
-
-    const-string v2, "value"
-
-    invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
-
-    move-result-wide v0
-
-    sput-wide v0, Lcom/google/b/b/cc;->c:J
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 114
-    return-void
-
-    .line 112
-    :catch_0
-    move-exception v0
-
-    .line 113
-    new-instance v1, Ljava/lang/Error;
-
-    invoke-direct {v1, v0}, Ljava/lang/Error;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-.end method
-
-.method constructor <init>(J)V
-    .locals 1
-
-    .prologue
-    .line 97
+    .line 330
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lcom/google/b/b/cc;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method final a(JJ)Z
-    .locals 9
+.method public final synthetic run()Ljava/lang/Object;
+    .locals 6
 
     .prologue
-    .line 100
-    sget-object v0, Lcom/google/b/b/cc;->b:Lsun/misc/Unsafe;
+    .line 330
+    const-class v1, Lsun/misc/Unsafe;
 
-    sget-wide v2, Lcom/google/b/b/cc;->c:J
+    invoke-virtual {v1}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
-    move-object v1, p0
+    move-result-object v2
 
-    move-wide v4, p1
+    array-length v3, v2
 
-    move-wide v6, p3
+    const/4 v0, 0x0
 
-    invoke-virtual/range {v0 .. v7}, Lsun/misc/Unsafe;->compareAndSwapLong(Ljava/lang/Object;JJJ)Z
+    :goto_0
+    if-ge v0, v3, :cond_1
 
-    move-result v0
+    aget-object v4, v2, v0
 
-    return v0
+    const/4 v5, 0x1
+
+    invoke-virtual {v4, v5}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v4, v5}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v4}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    invoke-virtual {v1, v4}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lsun/misc/Unsafe;
+
+    return-object v0
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v0, Ljava/lang/NoSuchFieldError;
+
+    const-string v1, "the Unsafe"
+
+    invoke-direct {v0, v1}, Ljava/lang/NoSuchFieldError;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

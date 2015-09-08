@@ -47,7 +47,7 @@
 
     .prologue
     .line 54
-    const v0, 0x7f0300f9
+    const v0, 0x7f03011c
 
     invoke-direct {p0, p1, v0}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;I)V
 
@@ -98,7 +98,7 @@
 
     .prologue
     .line 41
-    const v0, 0x7f0300f9
+    const v0, 0x7f03011c
 
     invoke-direct {p0, p1, v0, p3}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;ILjava/util/List;)V
 
@@ -538,14 +538,14 @@
     .line 257
     iget-object v0, p0, Lcom/bbm/ui/p;->c:Landroid/view/LayoutInflater;
 
-    const v3, 0x7f0300fa
+    const v3, 0x7f03011d
 
     invoke-virtual {v0, v3, p3, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p2
 
     .line 258
-    const v0, 0x7f0b0521
+    const v0, 0x7f0b05c6
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -556,7 +556,7 @@
     iput-object v0, v1, Lcom/bbm/ui/v;->a:Lcom/bbm/ui/InlineImageTextView;
 
     .line 259
-    const v0, 0x7f0b0522
+    const v0, 0x7f0b05c7
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -627,13 +627,9 @@
 .end method
 
 .method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 6
+    .locals 5
 
     .prologue
-    const v5, 0x7f09002f
-
-    const v4, 0x7f09002e
-
     const/4 v3, 0x0
 
     .line 156
@@ -647,14 +643,14 @@
     .line 158
     iget-object v0, p0, Lcom/bbm/ui/p;->c:Landroid/view/LayoutInflater;
 
-    const v2, 0x7f0300f9
+    const v2, 0x7f03011c
 
     invoke-virtual {v0, v2, p3, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p2
 
     .line 159
-    const v0, 0x7f0b051f
+    const v0, 0x7f0b05c4
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -665,7 +661,7 @@
     iput-object v0, v1, Lcom/bbm/ui/s;->b:Lcom/bbm/ui/InlineImageTextView;
 
     .line 160
-    const v0, 0x7f0b051e
+    const v0, 0x7f0b05c3
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -676,7 +672,7 @@
     iput-object v0, v1, Lcom/bbm/ui/s;->a:Landroid/widget/TextView;
 
     .line 161
-    const v0, 0x7f0b0520
+    const v0, 0x7f0b05c5
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -732,6 +728,8 @@
 
     move-result-object v2
 
+    const v4, 0x7f090049
+
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v2
@@ -753,6 +751,8 @@
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
+
+    const v4, 0x7f09019a
 
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -798,7 +798,9 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v5}, Landroid/content/res/Resources;->getColor(I)I
+    const v4, 0x7f09004a
+
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v2
 
@@ -814,7 +816,9 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v5}, Landroid/content/res/Resources;->getColor(I)I
+    const v4, 0x7f090199
+
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v2
 

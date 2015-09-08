@@ -1,53 +1,130 @@
-.class final Lcom/bbm/util/ci;
-.super Landroid/text/style/ClickableSpan;
-.source "LinkifyUtil.java"
-
-
-# instance fields
-.field final synthetic a:Landroid/content/Context;
-
-.field final synthetic b:Ljava/lang/String;
+.class public final Lcom/bbm/util/ci;
+.super Ljava/lang/Object;
+.source "IOUtils.java"
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
-    .locals 0
-
-    .prologue
-    .line 172
-    iput-object p1, p0, Lcom/bbm/util/ci;->a:Landroid/content/Context;
-
-    iput-object p2, p0, Lcom/bbm/util/ci;->b:Ljava/lang/String;
-
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public static a(Ljava/io/InputStream;)Ljava/lang/String;
     .locals 2
 
     .prologue
-    .line 175
-    const-string v0, "pinPattern clickableSpan clicked"
+    .line 40
+    new-instance v0, Ljava/util/Scanner;
 
-    const-class v1, Lcom/bbm/util/LinkifyUtil;
+    invoke-direct {v0, p0}, Ljava/util/Scanner;-><init>(Ljava/io/InputStream;)V
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    const-string v1, "\\A"
 
-    .line 176
-    iget-object v0, p0, Lcom/bbm/util/ci;->a:Landroid/content/Context;
+    invoke-virtual {v0, v1}, Ljava/util/Scanner;->useDelimiter(Ljava/lang/String;)Ljava/util/Scanner;
 
-    iget-object v1, p0, Lcom/bbm/util/ci;->b:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-static {v1}, Lcom/bbm/util/ac;->a(Ljava/lang/String;)Ljava/lang/String;
+    .line 46
+    invoke-virtual {v0}, Ljava/util/Scanner;->hasNext()Z
 
-    move-result-object v1
+    move-result v1
 
-    invoke-static {v0, v1}, Lcom/bbm/util/ac;->a(Landroid/content/Context;Ljava/lang/String;)V
+    if-eqz v1, :cond_0
 
-    .line 177
+    invoke-virtual {v0}, Ljava/util/Scanner;->next()Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const-string v0, ""
+
+    goto :goto_0
+.end method
+
+.method public static a(Ljava/io/Closeable;)V
+    .locals 1
+
+    .prologue
+    .line 13
+    if-eqz p0, :cond_0
+
+    .line 14
+    :try_start_0
+    invoke-interface {p0}, Ljava/io/Closeable;->close()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 19
+    :cond_0
+    :goto_0
     return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+.end method
+
+.method public static a(Ljava/io/InputStream;Ljava/io/OutputStream;)V
+    .locals 3
+
+    .prologue
+    .line 51
+    const/16 v0, 0x1000
+
+    new-array v0, v0, [B
+
+    .line 53
+    :goto_0
+    invoke-virtual {p0, v0}, Ljava/io/InputStream;->read([B)I
+
+    move-result v1
+
+    const/4 v2, -0x1
+
+    if-eq v1, v2, :cond_0
+
+    .line 54
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v0, v2, v1}, Ljava/io/OutputStream;->write([BII)V
+
+    goto :goto_0
+
+    .line 56
+    :cond_0
+    invoke-virtual {p1}, Ljava/io/OutputStream;->flush()V
+
+    .line 57
+    return-void
+.end method
+
+.method public static a(Ljava/io/InputStream;I)[B
+    .locals 1
+
+    .prologue
+    const/16 v0, 0x400
+
+    .line 33
+    if-le p1, v0, :cond_0
+
+    .line 34
+    :goto_0
+    new-instance v0, Ljava/io/ByteArrayOutputStream;
+
+    invoke-direct {v0, p1}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
+
+    .line 35
+    invoke-static {p0, v0}, Lcom/bbm/util/ci;->a(Ljava/io/InputStream;Ljava/io/OutputStream;)V
+
+    .line 36
+    invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    move p1, v0
+
+    .line 33
+    goto :goto_0
 .end method

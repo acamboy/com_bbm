@@ -1,5 +1,5 @@
 .class public Lcom/glympse/android/lib/HttpJob;
-.super Lcom/glympse/android/lib/fb;
+.super Lcom/glympse/android/lib/fn;
 .source "HttpJob.java"
 
 
@@ -10,7 +10,7 @@
 # instance fields
 .field protected _abortHttp:Z
 
-.field protected _backOffPolicy:Lcom/glympse/android/lib/bm;
+.field protected _backOffPolicy:Lcom/glympse/android/lib/GBackOffPolicy;
 
 .field protected _failures:I
 
@@ -31,7 +31,7 @@
     const/4 v1, 0x0
 
     .line 38
-    invoke-direct {p0}, Lcom/glympse/android/lib/fb;-><init>()V
+    invoke-direct {p0}, Lcom/glympse/android/lib/fn;-><init>()V
 
     .line 39
     const/4 v0, 0x0
@@ -54,14 +54,180 @@
     iput v1, p0, Lcom/glympse/android/lib/HttpJob;->_failures:I
 
     .line 45
-    new-instance v0, Lcom/glympse/android/lib/bm;
+    invoke-static {}, Lcom/glympse/android/lib/LibFactory;->createExponentialBackOff()Lcom/glympse/android/lib/GBackOffPolicy;
 
-    invoke-direct {v0}, Lcom/glympse/android/lib/bm;-><init>()V
+    move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/HttpJob;->_backOffPolicy:Lcom/glympse/android/lib/bm;
+    iput-object v0, p0, Lcom/glympse/android/lib/HttpJob;->_backOffPolicy:Lcom/glympse/android/lib/GBackOffPolicy;
 
     .line 46
     return-void
+.end method
+
+.method public static httpMethodEnumToString(I)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 84
+    packed-switch p0, :pswitch_data_0
+
+    .line 95
+    const-string v0, "GET"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 99
+    :goto_0
+    return-object v0
+
+    .line 89
+    :pswitch_0
+    const-string v0, "POST"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 84
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static httpMethodStringToEnum(Ljava/lang/String;)I
+    .locals 1
+
+    .prologue
+    .line 107
+    const-string v0, "POST"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 109
+    const/4 v0, 0x2
+
+    .line 113
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    goto :goto_0
+.end method
+
+.method public static pickMethod(ILjava/lang/String;)I
+    .locals 1
+
+    .prologue
+    .line 57
+    invoke-static {p1}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 58
+    :goto_0
+    invoke-static {p0, v0}, Lcom/glympse/android/lib/HttpJob;->pickMethod(IZ)I
+
+    move-result v0
+
+    return v0
+
+    .line 57
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static pickMethod(IZ)I
+    .locals 2
+
+    .prologue
+    const/4 v1, 0x1
+
+    .line 66
+    .line 67
+    if-nez p0, :cond_1
+
+    move v0, v1
+
+    .line 72
+    :goto_0
+    if-eqz p1, :cond_0
+
+    if-ne v1, v0, :cond_0
+
+    .line 74
+    const/4 v0, 0x2
+
+    .line 76
+    :cond_0
+    return v0
+
+    :cond_1
+    move v0, p0
+
+    goto :goto_0
+.end method
+
+.method public static setAuthorization(Lcom/glympse/android/hal/GHttpConnection;Ljava/lang/String;)V
+    .locals 2
+
+    .prologue
+    .line 119
+    if-nez p1, :cond_0
+
+    .line 128
+    :goto_0
+    return-void
+
+    .line 123
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x40
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    .line 124
+    const-string v1, "Bearer "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 125
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 126
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 127
+    const-string v1, "Authorization"
+
+    invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {p0, v1, v0}, Lcom/glympse/android/hal/GHttpConnection;->setRequestHeader(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
 .end method
 
 
@@ -70,13 +236,13 @@
     .locals 0
 
     .prologue
-    .line 211
-    invoke-super {p0}, Lcom/glympse/android/lib/fb;->abort()V
+    .line 298
+    invoke-super {p0}, Lcom/glympse/android/lib/fn;->abort()V
 
-    .line 214
+    .line 301
     invoke-virtual {p0}, Lcom/glympse/android/lib/HttpJob;->cancel()V
 
-    .line 215
+    .line 302
     return-void
 .end method
 
@@ -86,23 +252,23 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 67
+    .line 149
     iput-boolean v0, p0, Lcom/glympse/android/lib/HttpJob;->_abortHttp:Z
 
-    .line 68
+    .line 150
     iput-boolean v0, p0, Lcom/glympse/android/lib/HttpJob;->_success:Z
 
-    .line 69
+    .line 151
     iget-object v0, p0, Lcom/glympse/android/lib/HttpJob;->_httpConnection:Lcom/glympse/android/hal/GHttpConnection;
 
     if-eqz v0, :cond_0
 
-    .line 71
+    .line 153
     iget-object v0, p0, Lcom/glympse/android/lib/HttpJob;->_httpConnection:Lcom/glympse/android/hal/GHttpConnection;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GHttpConnection;->close()V
 
-    .line 73
+    .line 155
     :cond_0
     return-void
 .end method
@@ -111,7 +277,7 @@
     .locals 1
 
     .prologue
-    .line 230
+    .line 317
     if-eqz p1, :cond_0
 
     if-eqz p2, :cond_0
@@ -131,10 +297,10 @@
     .locals 1
 
     .prologue
-    .line 238
-    iget-object v0, p0, Lcom/glympse/android/lib/HttpJob;->_backOffPolicy:Lcom/glympse/android/lib/bm;
+    .line 325
+    iget-object v0, p0, Lcom/glympse/android/lib/HttpJob;->_backOffPolicy:Lcom/glympse/android/lib/GBackOffPolicy;
 
-    invoke-virtual {v0}, Lcom/glympse/android/lib/bm;->aX()I
+    invoke-interface {v0}, Lcom/glympse/android/lib/GBackOffPolicy;->getNextBackOffMillis()I
 
     move-result v0
 
@@ -146,7 +312,7 @@
 
     .prologue
     .line 16
-    invoke-super {p0}, Lcom/glympse/android/lib/fb;->isAborted()Z
+    invoke-super {p0}, Lcom/glympse/android/lib/fn;->isAborted()Z
 
     move-result v0
 
@@ -157,7 +323,7 @@
     .locals 1
 
     .prologue
-    .line 62
+    .line 144
     iget-boolean v0, p0, Lcom/glympse/android/lib/HttpJob;->_success:Z
 
     return v0
@@ -167,10 +333,10 @@
     .locals 0
 
     .prologue
-    .line 198
-    invoke-super {p0}, Lcom/glympse/android/lib/fb;->onAbort()V
+    .line 285
+    invoke-super {p0}, Lcom/glympse/android/lib/fn;->onAbort()V
 
-    .line 199
+    .line 286
     return-void
 .end method
 
@@ -180,10 +346,10 @@
     .prologue
     const/4 v4, 0x4
 
-    .line 168
-    invoke-super {p0}, Lcom/glympse/android/lib/fb;->onComplete()V
+    .line 255
+    invoke-super {p0}, Lcom/glympse/android/lib/fn;->onComplete()V
 
-    .line 171
+    .line 258
     iget-boolean v0, p0, Lcom/glympse/android/lib/HttpJob;->_abortHttp:Z
 
     if-nez v0, :cond_1
@@ -194,7 +360,7 @@
 
     if-nez v0, :cond_1
 
-    .line 174
+    .line 261
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -225,33 +391,33 @@
 
     move-result-object v0
 
-    invoke-static {v4, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
+    invoke-static {v4, v0}, Lcom/glympse/android/hal/Helpers;->log(ILjava/lang/String;)V
 
-    .line 177
+    .line 264
     iget-object v0, p0, Lcom/glympse/android/lib/HttpJob;->_handler:Lcom/glympse/android/core/GHandler;
 
     if-eqz v0, :cond_0
 
-    .line 179
+    .line 266
     iget v0, p0, Lcom/glympse/android/lib/HttpJob;->_failures:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/glympse/android/lib/HttpJob;->_failures:I
 
-    .line 180
+    .line 267
     iget v0, p0, Lcom/glympse/android/lib/HttpJob;->_failures:I
 
     invoke-virtual {p0, v0}, Lcom/glympse/android/lib/HttpJob;->getRetryInterval(I)I
 
     move-result v1
 
-    .line 181
+    .line 268
     const/4 v0, -0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 183
+    .line 270
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -282,9 +448,9 @@
 
     move-result-object v0
 
-    invoke-static {v4, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
+    invoke-static {v4, v0}, Lcom/glympse/android/hal/Helpers;->log(ILjava/lang/String;)V
 
-    .line 185
+    .line 272
     iget-object v2, p0, Lcom/glympse/android/lib/HttpJob;->_jobQueue:Lcom/glympse/android/lib/GJobQueue;
 
     invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
@@ -297,30 +463,40 @@
 
     invoke-interface {v2, v0, v4, v5}, Lcom/glympse/android/lib/GJobQueue;->retryDelayed(Lcom/glympse/android/lib/GJob;J)V
 
-    .line 194
+    .line 281
     :cond_0
     :goto_0
     return-void
 
-    .line 191
+    .line 278
     :cond_1
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/glympse/android/lib/HttpJob;->_failures:I
 
-    .line 192
-    iget-object v0, p0, Lcom/glympse/android/lib/HttpJob;->_backOffPolicy:Lcom/glympse/android/lib/bm;
+    .line 279
+    iget-object v0, p0, Lcom/glympse/android/lib/HttpJob;->_backOffPolicy:Lcom/glympse/android/lib/GBackOffPolicy;
 
-    invoke-virtual {v0}, Lcom/glympse/android/lib/bm;->reset()V
+    invoke-interface {v0}, Lcom/glympse/android/lib/GBackOffPolicy;->reset()V
 
     goto :goto_0
+.end method
+
+.method public bridge synthetic onDetach()V
+    .locals 0
+
+    .prologue
+    .line 16
+    invoke-super {p0}, Lcom/glympse/android/lib/fn;->onDetach()V
+
+    return-void
 .end method
 
 .method public onPreProcess()V
     .locals 0
 
     .prologue
-    .line 54
+    .line 136
     return-void
 .end method
 
@@ -330,23 +506,23 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 87
+    .line 174
     iput-boolean v4, p0, Lcom/glympse/android/lib/HttpJob;->_abortHttp:Z
 
-    .line 88
+    .line 175
     iput-boolean v4, p0, Lcom/glympse/android/lib/HttpJob;->_success:Z
 
-    .line 91
-    invoke-static {}, Lcom/glympse/android/hal/HalFactory;->createHttpConnection()Lcom/glympse/android/hal/GHttpConnection;
+    .line 178
+    invoke-static {}, Lcom/glympse/android/lib/LibFactory;->createHttpConnection()Lcom/glympse/android/hal/GHttpConnection;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/glympse/android/lib/HttpJob;->_httpConnection:Lcom/glympse/android/hal/GHttpConnection;
 
-    .line 94
+    .line 181
     invoke-virtual {p0}, Lcom/glympse/android/lib/HttpJob;->onPreProcess()V
 
-    .line 97
+    .line 184
     iget-boolean v0, p0, Lcom/glympse/android/lib/HttpJob;->_abortHttp:Z
 
     if-nez v0, :cond_0
@@ -355,44 +531,44 @@
 
     if-eqz v0, :cond_1
 
-    .line 164
+    .line 251
     :cond_0
     :goto_0
     return-void
 
-    .line 103
+    .line 190
     :cond_1
     iget-object v0, p0, Lcom/glympse/android/lib/HttpJob;->_httpConnection:Lcom/glympse/android/hal/GHttpConnection;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/HttpJob;->_backOffPolicy:Lcom/glympse/android/lib/bm;
+    iget-object v1, p0, Lcom/glympse/android/lib/HttpJob;->_backOffPolicy:Lcom/glympse/android/lib/GBackOffPolicy;
 
-    invoke-virtual {v1}, Lcom/glympse/android/lib/bm;->aY()I
+    invoke-interface {v1}, Lcom/glympse/android/lib/GBackOffPolicy;->getOsConnectTimeout()I
 
     move-result v1
 
     invoke-interface {v0, v1}, Lcom/glympse/android/hal/GHttpConnection;->setConnectTimeout(I)V
 
-    .line 104
+    .line 191
     iget-object v0, p0, Lcom/glympse/android/lib/HttpJob;->_httpConnection:Lcom/glympse/android/hal/GHttpConnection;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/HttpJob;->_backOffPolicy:Lcom/glympse/android/lib/bm;
+    iget-object v1, p0, Lcom/glympse/android/lib/HttpJob;->_backOffPolicy:Lcom/glympse/android/lib/GBackOffPolicy;
 
-    invoke-virtual {v1}, Lcom/glympse/android/lib/bm;->aZ()I
+    invoke-interface {v1}, Lcom/glympse/android/lib/GBackOffPolicy;->getOsReadTimeout()I
 
     move-result v1
 
     invoke-interface {v0, v1}, Lcom/glympse/android/hal/GHttpConnection;->setReadTimeout(I)V
 
-    .line 107
+    .line 194
     const/4 v0, 0x0
 
-    .line 108
+    .line 195
     iget-object v1, p0, Lcom/glympse/android/lib/HttpJob;->_handler:Lcom/glympse/android/core/GHandler;
 
     if-eqz v1, :cond_4
 
-    .line 110
-    new-instance v1, Lcom/glympse/android/lib/dy;
+    .line 197
+    new-instance v1, Lcom/glympse/android/lib/em;
 
     invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -400,20 +576,20 @@
 
     check-cast v0, Lcom/glympse/android/lib/HttpJob;
 
-    invoke-direct {v1, v0}, Lcom/glympse/android/lib/dy;-><init>(Lcom/glympse/android/lib/HttpJob;)V
+    invoke-direct {v1, v0}, Lcom/glympse/android/lib/em;-><init>(Lcom/glympse/android/lib/HttpJob;)V
 
-    .line 111
+    .line 198
     iget-object v0, p0, Lcom/glympse/android/lib/HttpJob;->_handler:Lcom/glympse/android/core/GHandler;
 
-    iget-object v2, p0, Lcom/glympse/android/lib/HttpJob;->_backOffPolicy:Lcom/glympse/android/lib/bm;
+    iget-object v2, p0, Lcom/glympse/android/lib/HttpJob;->_backOffPolicy:Lcom/glympse/android/lib/GBackOffPolicy;
 
-    invoke-virtual {v2}, Lcom/glympse/android/lib/bm;->ba()J
+    invoke-interface {v2}, Lcom/glympse/android/lib/GBackOffPolicy;->getPlatformTimeout()J
 
     move-result-wide v2
 
     invoke-interface {v0, v1, v2, v3}, Lcom/glympse/android/core/GHandler;->postDelayed(Ljava/lang/Runnable;J)V
 
-    .line 117
+    .line 204
     :goto_1
     :try_start_0
     iget-object v0, p0, Lcom/glympse/android/lib/HttpJob;->_httpConnection:Lcom/glympse/android/hal/GHttpConnection;
@@ -422,19 +598,19 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 125
+    .line 212
     :goto_2
     if-eqz v1, :cond_2
 
-    .line 127
-    invoke-virtual {v1}, Lcom/glympse/android/lib/dy;->abort()V
+    .line 214
+    invoke-virtual {v1}, Lcom/glympse/android/lib/em;->abort()V
 
-    .line 128
+    .line 215
     iget-object v0, p0, Lcom/glympse/android/lib/HttpJob;->_handler:Lcom/glympse/android/core/GHandler;
 
     invoke-interface {v0, v1}, Lcom/glympse/android/core/GHandler;->cancel(Ljava/lang/Runnable;)V
 
-    .line 129
+    .line 216
     :cond_2
     iget-boolean v0, p0, Lcom/glympse/android/lib/HttpJob;->_abortHttp:Z
 
@@ -444,7 +620,7 @@
 
     if-nez v0, :cond_0
 
-    .line 139
+    .line 226
     iget-object v0, p0, Lcom/glympse/android/lib/HttpJob;->_httpConnection:Lcom/glympse/android/hal/GHttpConnection;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GHttpConnection;->getResponseCode()I
@@ -453,14 +629,14 @@
 
     iput v0, p0, Lcom/glympse/android/lib/HttpJob;->_responseCode:I
 
-    .line 140
+    .line 227
     iget-object v0, p0, Lcom/glympse/android/lib/HttpJob;->_httpConnection:Lcom/glympse/android/hal/GHttpConnection;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GHttpConnection;->getResponseDataLength()I
 
     move-result v0
 
-    .line 143
+    .line 230
     iget-boolean v1, p0, Lcom/glympse/android/lib/HttpJob;->_abortHttp:Z
 
     if-nez v1, :cond_0
@@ -469,7 +645,7 @@
 
     if-nez v1, :cond_0
 
-    .line 151
+    .line 238
     iget v1, p0, Lcom/glympse/android/lib/HttpJob;->_responseCode:I
 
     invoke-virtual {p0, v1, v0}, Lcom/glympse/android/lib/HttpJob;->checkResponse(II)Z
@@ -478,7 +654,7 @@
 
     iput-boolean v0, p0, Lcom/glympse/android/lib/HttpJob;->_success:Z
 
-    .line 154
+    .line 241
     iget-boolean v0, p0, Lcom/glympse/android/lib/HttpJob;->_success:Z
 
     if-nez v0, :cond_3
@@ -487,22 +663,22 @@
 
     if-eqz v0, :cond_0
 
-    .line 160
+    .line 247
     :cond_3
     invoke-virtual {p0}, Lcom/glympse/android/lib/HttpJob;->onProcessResponse()V
 
-    .line 163
+    .line 250
     iget-object v0, p0, Lcom/glympse/android/lib/HttpJob;->_httpConnection:Lcom/glympse/android/hal/GHttpConnection;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GHttpConnection;->close()V
 
     goto :goto_0
 
-    .line 119
+    .line 206
     :catch_0
     move-exception v0
 
-    invoke-static {v0, v4}, Lcom/glympse/android/lib/Debug;->ex(Ljava/lang/Throwable;Z)V
+    invoke-static {v0, v4}, Lcom/glympse/android/hal/Helpers;->ex(Ljava/lang/Throwable;Z)V
 
     goto :goto_2
 
@@ -516,7 +692,7 @@
     .locals 0
 
     .prologue
-    .line 58
+    .line 140
     return-void
 .end method
 
@@ -525,7 +701,7 @@
 
     .prologue
     .line 16
-    invoke-super {p0}, Lcom/glympse/android/lib/fb;->onRetry()V
+    invoke-super {p0}, Lcom/glympse/android/lib/fn;->onRetry()V
 
     return-void
 .end method
@@ -535,7 +711,7 @@
 
     .prologue
     .line 16
-    invoke-super {p0, p1, p2}, Lcom/glympse/android/lib/fb;->onSchedule(Lcom/glympse/android/lib/GJobQueue;Lcom/glympse/android/core/GHandler;)V
+    invoke-super {p0, p1, p2}, Lcom/glympse/android/lib/fn;->onSchedule(Lcom/glympse/android/lib/GJobQueue;Lcom/glympse/android/core/GHandler;)V
 
     return-void
 .end method
@@ -544,20 +720,33 @@
     .locals 1
 
     .prologue
-    .line 203
-    invoke-super {p0}, Lcom/glympse/android/lib/fb;->reset()V
+    .line 290
+    invoke-super {p0}, Lcom/glympse/android/lib/fn;->reset()V
 
-    .line 205
+    .line 292
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/glympse/android/lib/HttpJob;->_failures:I
 
-    .line 206
-    iget-object v0, p0, Lcom/glympse/android/lib/HttpJob;->_backOffPolicy:Lcom/glympse/android/lib/bm;
+    .line 293
+    iget-object v0, p0, Lcom/glympse/android/lib/HttpJob;->_backOffPolicy:Lcom/glympse/android/lib/GBackOffPolicy;
 
-    invoke-virtual {v0}, Lcom/glympse/android/lib/bm;->reset()V
+    invoke-interface {v0}, Lcom/glympse/android/lib/GBackOffPolicy;->reset()V
 
-    .line 207
+    .line 294
+    return-void
+.end method
+
+.method public setAuthorization(Ljava/lang/String;)V
+    .locals 1
+
+    .prologue
+    .line 164
+    iget-object v0, p0, Lcom/glympse/android/lib/HttpJob;->_httpConnection:Lcom/glympse/android/hal/GHttpConnection;
+
+    invoke-static {v0, p1}, Lcom/glympse/android/lib/HttpJob;->setAuthorization(Lcom/glympse/android/hal/GHttpConnection;Ljava/lang/String;)V
+
+    .line 165
     return-void
 .end method
 
@@ -565,7 +754,7 @@
     .locals 1
 
     .prologue
-    .line 77
+    .line 159
     const/4 v0, 0x1
 
     return v0

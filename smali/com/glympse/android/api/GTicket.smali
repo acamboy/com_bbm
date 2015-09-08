@@ -77,6 +77,9 @@
 .method public abstract getMessage()Ljava/lang/String;
 .end method
 
+.method public abstract getName()Ljava/lang/String;
+.end method
+
 .method public abstract getOwner()Lcom/glympse/android/api/GAppProfile;
 .end method
 
@@ -129,6 +132,12 @@
 .end method
 
 .method public abstract own()Z
+.end method
+
+.method public abstract setName(Ljava/lang/String;)V
+.end method
+
+.method public abstract setOwnership(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
 .end method
 
 .method public abstract setRequestEndTime(J)V

@@ -1,95 +1,115 @@
 .class final Lcom/bbm/ui/activities/xq;
-.super Lcom/bbm/j/k;
-.source "MainActivity.java"
+.super Ljava/lang/Object;
+.source "OwnedChannelLobbyActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)V
+    .locals 0
 
     .prologue
-    .line 354
-    iput-object p1, p0, Lcom/bbm/ui/activities/xq;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 75
+    iput-object p1, p0, Lcom/bbm/ui/activities/xq;->a:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 4
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
     .prologue
-    .line 357
-    iget-object v0, p0, Lcom/bbm/ui/activities/xq;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 79
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/MainActivity;->getResources()Landroid/content/res/Resources;
+    const-string v1, "Channel URL:"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/xq;->a:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->e(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const v1, 0x7f0c0017
+    const-string v1, " stats clicked"
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v0
+    move-result-object v0
 
-    .line 358
-    iget-object v1, p0, Lcom/bbm/ui/activities/xq;->a:Lcom/bbm/ui/activities/MainActivity;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/MainActivity;->d(Lcom/bbm/ui/activities/MainActivity;)Lcom/bbm/g/al;
+    move-result-object v0
 
-    move-result-object v1
+    const-class v1, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
 
-    const-string v2, "maxGroupsAllowed"
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-virtual {v1, v2}, Lcom/bbm/g/al;->u(Ljava/lang/String;)Lcom/bbm/util/bm;
+    .line 80
+    const-string v0, "sammydm"
 
-    move-result-object v1
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    .line 359
-    iget-object v2, p0, Lcom/bbm/ui/activities/xq;->a:Lcom/bbm/ui/activities/MainActivity;
+    const-string v2, "Click stats frame for channel url: "
 
-    invoke-static {v2, v0}, Lcom/bbm/ui/activities/MainActivity;->a(Lcom/bbm/ui/activities/MainActivity;I)I
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 360
-    iget-object v2, v1, Lcom/bbm/util/bm;->b:Lcom/bbm/util/bi;
+    iget-object v2, p0, Lcom/bbm/ui/activities/xq;->a:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
 
-    sget-object v3, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
+    invoke-static {v2}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->f(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Ljava/lang/String;
 
-    if-ne v2, v3, :cond_0
+    move-result-object v2
 
-    .line 361
-    iget-object v1, v1, Lcom/bbm/util/bm;->a:Lorg/json/JSONObject;
-
-    const-string v2, "value"
-
-    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 362
-    if-eqz v1, :cond_0
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 363
-    iget-object v2, p0, Lcom/bbm/ui/activities/xq;->a:Lcom/bbm/ui/activities/MainActivity;
+    move-result-object v1
 
-    const-string v3, "groupCount"
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v1, v3, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+    .line 81
+    new-instance v0, Landroid/content/Intent;
 
-    move-result v0
+    iget-object v1, p0, Lcom/bbm/ui/activities/xq;->a:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
 
-    invoke-static {v2, v0}, Lcom/bbm/ui/activities/MainActivity;->a(Lcom/bbm/ui/activities/MainActivity;I)I
+    const-class v2, Lcom/bbm/ui/activities/ChannelStatsActivity;
 
-    .line 366
-    :cond_0
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 82
+    const-string v1, "bbm_channel_uri"
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/xq;->a:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
+
+    invoke-static {v2}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->g(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 83
+    iget-object v1, p0, Lcom/bbm/ui/activities/xq;->a:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->startActivity(Landroid/content/Intent;)V
+
+    .line 84
     return-void
 .end method

@@ -1,146 +1,88 @@
 .class final Lcom/bbm/ui/activities/hz;
-.super Ljava/lang/Object;
-.source "ConversationActivity.java"
-
-# interfaces
-.implements Lcom/bbm/ui/fr;
+.super Lcom/bbm/j/u;
+.source "EditProfileNameActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/EditProfileNameActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/EditProfileNameActivity;)V
     .locals 0
 
     .prologue
-    .line 2944
-    iput-object p1, p0, Lcom/bbm/ui/activities/hz;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 53
+    iput-object p1, p0, Lcom/bbm/ui/activities/hz;->a:Lcom/bbm/ui/activities/EditProfileNameActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/google/b/a/l;)V
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/b/a/l",
-            "<",
-            "Ljava/io/File;",
-            ">;)V"
-        }
-    .end annotation
+.method protected final b()Z
+    .locals 3
 
     .prologue
-    const/4 v5, 0x0
+    .line 55
+    iget-object v0, p0, Lcom/bbm/ui/activities/hz;->a:Lcom/bbm/ui/activities/EditProfileNameActivity;
 
-    .line 2949
-    invoke-virtual {p1}, Lcom/google/b/a/l;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 2950
-    invoke-virtual {p1}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+    invoke-static {v0}, Lcom/bbm/ui/activities/EditProfileNameActivity;->a(Lcom/bbm/ui/activities/EditProfileNameActivity;)Lcom/bbm/j/a;
 
     move-result-object v0
 
-    check-cast v0, Ljava/io/File;
-
-    .line 2952
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    .line 2953
-    const-string v1, "Voice note file doesn\'t exist!"
-
-    new-array v2, v5, [Ljava/lang/Object;
-
-    invoke-static {v1, v2}, Lcom/bbm/y;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 2956
-    :cond_0
-    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 2957
-    iget-object v1, p0, Lcom/bbm/ui/activities/hz;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    check-cast v0, Lcom/bbm/d/ie;
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->j(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/a;
+    .line 56
+    iget-object v1, v0, Lcom/bbm/d/ie;->B:Lcom/bbm/util/bo;
 
-    move-result-object v1
+    sget-object v2, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
 
-    const-string v2, ""
+    if-eq v1, v2, :cond_0
 
-    const/4 v3, 0x1
+    .line 57
+    const/4 v0, 0x0
 
-    new-array v3, v3, [Ljava/lang/String;
-
-    iget-object v4, p0, Lcom/bbm/ui/activities/hz;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v4}, Lcom/bbm/ui/activities/ConversationActivity;->k(Lcom/bbm/ui/activities/ConversationActivity;)Ljava/lang/String;
-
-    move-result-object v4
-
-    aput-object v4, v3, v5
-
-    invoke-static {v3}, Lcom/google/b/c/p;->a([Ljava/lang/Object;)Ljava/util/ArrayList;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v2, v0, v3}, Lcom/bbm/d/a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
-
-    .line 2958
-    iget-object v0, p0, Lcom/bbm/ui/activities/hz;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->x(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/widget/ListView;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/hz;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->x(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/widget/ListView;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Landroid/widget/ListAdapter;->getCount()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x1
-
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setSelection(I)V
-
-    .line 2960
-    :cond_1
-    return-void
-.end method
-
-.method public final a(Z)Z
-    .locals 1
-
-    .prologue
-    .line 2969
-    iget-object v0, p0, Lcom/bbm/ui/activities/hz;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0, p1}, Lcom/bbm/ui/activities/ConversationActivity;->h(Lcom/bbm/ui/activities/ConversationActivity;Z)Z
-
-    move-result v0
-
+    .line 62
+    :goto_0
     return v0
+
+    .line 59
+    :cond_0
+    invoke-static {v0}, Lcom/bbm/d/b/a;->d(Lcom/bbm/d/ie;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 60
+    iget-object v1, p0, Lcom/bbm/ui/activities/hz;->a:Lcom/bbm/ui/activities/EditProfileNameActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/EditProfileNameActivity;->b(Lcom/bbm/ui/activities/EditProfileNameActivity;)Lcom/bbm/ui/InlineImageEditText;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/InlineImageEditText;->setText(Ljava/lang/CharSequence;)V
+
+    .line 61
+    iget-object v1, p0, Lcom/bbm/ui/activities/hz;->a:Lcom/bbm/ui/activities/EditProfileNameActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/EditProfileNameActivity;->b(Lcom/bbm/ui/activities/EditProfileNameActivity;)Lcom/bbm/ui/InlineImageEditText;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/InlineImageEditText;->setSelection(I)V
+
+    .line 62
+    const/4 v0, 0x1
+
+    goto :goto_0
 .end method

@@ -27,7 +27,7 @@
 
 
 # virtual methods
-.method public final b()V
+.method public final a()V
     .locals 2
 
     .prologue
@@ -65,7 +65,7 @@
     invoke-super {p0}, Lcom/bbm/ui/MessageView;->onFinishInflate()V
 
     .line 24
-    const v0, 0x7f0b0494
+    const v0, 0x7f0b03d0
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/KeyExchangeMessageView;->findViewById(I)Landroid/view/View;
 
@@ -76,7 +76,7 @@
     iput-object v0, p0, Lcom/bbm/ui/KeyExchangeMessageView;->a:Lcom/bbm/ui/LinkifyTextView;
 
     .line 25
-    const v0, 0x7f0b04d8
+    const v0, 0x7f0b03ff
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/KeyExchangeMessageView;->findViewById(I)Landroid/view/View;
 
@@ -87,7 +87,7 @@
     iput-object v0, p0, Lcom/bbm/ui/KeyExchangeMessageView;->b:Landroid/widget/Button;
 
     .line 26
-    const v0, 0x7f0b04d7
+    const v0, 0x7f0b03fe
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/KeyExchangeMessageView;->findViewById(I)Landroid/view/View;
 
@@ -98,7 +98,7 @@
     iput-object v0, p0, Lcom/bbm/ui/KeyExchangeMessageView;->c:Landroid/widget/Button;
 
     .line 27
-    const v0, 0x7f0b04cb
+    const v0, 0x7f0b03d4
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/KeyExchangeMessageView;->findViewById(I)Landroid/view/View;
 
@@ -110,38 +110,43 @@
     return-void
 .end method
 
-.method public setKeyExchangeInitiator(Ljava/lang/String;)V
+.method public setKeyExchangeInitiator(Ljava/lang/String;Z)V
     .locals 3
 
     .prologue
-    const/4 v2, 0x0
+    const/16 v0, 0x8
+
+    const/4 v1, 0x0
 
     .line 32
-    iget-object v0, p0, Lcom/bbm/ui/KeyExchangeMessageView;->a:Lcom/bbm/ui/LinkifyTextView;
+    iget-object v2, p0, Lcom/bbm/ui/KeyExchangeMessageView;->a:Lcom/bbm/ui/LinkifyTextView;
 
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/LinkifyTextView;->setVisibility(I)V
+    invoke-virtual {v2, v1}, Lcom/bbm/ui/LinkifyTextView;->setVisibility(I)V
 
     .line 33
-    iget-object v0, p0, Lcom/bbm/ui/KeyExchangeMessageView;->a:Lcom/bbm/ui/LinkifyTextView;
+    iget-object v2, p0, Lcom/bbm/ui/KeyExchangeMessageView;->a:Lcom/bbm/ui/LinkifyTextView;
 
-    invoke-virtual {v0, p1}, Lcom/bbm/ui/LinkifyTextView;->setHtmlText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v2, p1}, Lcom/bbm/ui/LinkifyTextView;->setHtmlText(Ljava/lang/CharSequence;)V
 
     .line 34
-    iget-object v0, p0, Lcom/bbm/ui/KeyExchangeMessageView;->b:Landroid/widget/Button;
+    iget-object v2, p0, Lcom/bbm/ui/KeyExchangeMessageView;->b:Landroid/widget/Button;
 
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setVisibility(I)V
+    invoke-virtual {v2, v0}, Landroid/widget/Button;->setVisibility(I)V
 
     .line 35
-    iget-object v0, p0, Lcom/bbm/ui/KeyExchangeMessageView;->c:Landroid/widget/Button;
+    iget-object v2, p0, Lcom/bbm/ui/KeyExchangeMessageView;->c:Landroid/widget/Button;
 
-    invoke-virtual {v0, v2}, Landroid/widget/Button;->setVisibility(I)V
+    if-eqz p2, :cond_0
+
+    move v0, v1
+
+    :cond_0
+    invoke-virtual {v2, v0}, Landroid/widget/Button;->setVisibility(I)V
 
     .line 36
     iget-object v0, p0, Lcom/bbm/ui/KeyExchangeMessageView;->d:Landroid/view/View;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 37
     return-void

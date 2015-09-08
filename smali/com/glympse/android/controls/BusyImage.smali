@@ -215,7 +215,7 @@
     .locals 7
 
     .prologue
-    const/high16 v4, 0x3f000000
+    const/high16 v4, 0x3f000000    # 0.5f
 
     const/4 v3, 0x1
 
@@ -229,7 +229,7 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x470ca000
+    const v2, 0x470ca000    # 36000.0f
 
     move v5, v3
 

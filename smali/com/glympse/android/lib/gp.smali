@@ -1,160 +1,72 @@
 .class Lcom/glympse/android/lib/gp;
 .super Ljava/lang/Object;
-.source "PersonBase.java"
+.source "ModifyWizardListener.java"
 
 # interfaces
-.implements Lcom/glympse/android/lib/gq;
+.implements Lcom/glympse/android/hal/GUiControlListener;
+
+
+# instance fields
+.field private cL:Lcom/glympse/android/api/GGlympse;
+
+.field private rg:Lcom/glympse/android/lite/GTicketLite;
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>(Lcom/glympse/android/lite/GTicketLite;Lcom/glympse/android/api/GGlympse;)V
     .locals 0
 
     .prologue
-    .line 189
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 26
+    iput-object p1, p0, Lcom/glympse/android/lib/gp;->rg:Lcom/glympse/android/lite/GTicketLite;
+
+    .line 27
+    iput-object p2, p0, Lcom/glympse/android/lib/gp;->cL:Lcom/glympse/android/api/GGlympse;
+
+    .line 28
     return-void
-.end method
-
-.method synthetic constructor <init>(Lcom/glympse/android/lib/go$1;)V
-    .locals 0
-
-    .prologue
-    .line 189
-    invoke-direct {p0}, Lcom/glympse/android/lib/gp;-><init>()V
-
-    return-void
-.end method
-
-.method private static t(I)I
-    .locals 1
-
-    .prologue
-    .line 208
-    packed-switch p0, :pswitch_data_0
-
-    .line 215
-    :pswitch_0
-    const/4 v0, 0x4
-
-    :goto_0
-    return v0
-
-    .line 210
-    :pswitch_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    .line 211
-    :pswitch_2
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    .line 212
-    :pswitch_3
-    const/4 v0, 0x2
-
-    goto :goto_0
-
-    .line 213
-    :pswitch_4
-    const/4 v0, 0x3
-
-    goto :goto_0
-
-    .line 208
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_2
-        :pswitch_0
-        :pswitch_4
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_3
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public a(Lcom/glympse/android/lib/GContact;Lcom/glympse/android/lib/GContact;)I
+.method public onCancelled()V
     .locals 3
 
     .prologue
-    .line 194
-    invoke-interface {p1}, Lcom/glympse/android/lib/GContact;->getType()I
+    const/4 v2, 0x0
 
-    move-result v0
+    .line 44
+    iget-object v0, p0, Lcom/glympse/android/lib/gp;->rg:Lcom/glympse/android/lite/GTicketLite;
 
-    invoke-static {v0}, Lcom/glympse/android/lib/gp;->t(I)I
+    iget-object v1, p0, Lcom/glympse/android/lib/gp;->cL:Lcom/glympse/android/api/GGlympse;
 
-    move-result v0
+    invoke-static {v0, v1}, Lcom/glympse/android/lib/ib;->a(Lcom/glympse/android/lite/GTicketLite;Lcom/glympse/android/api/GGlympse;)V
 
-    mul-int/lit8 v0, v0, 0x64
+    .line 47
+    iput-object v2, p0, Lcom/glympse/android/lib/gp;->rg:Lcom/glympse/android/lite/GTicketLite;
 
-    invoke-interface {p1}, Lcom/glympse/android/lib/GContact;->getSortRank()I
+    .line 48
+    iput-object v2, p0, Lcom/glympse/android/lib/gp;->cL:Lcom/glympse/android/api/GGlympse;
 
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    invoke-interface {p2}, Lcom/glympse/android/lib/GContact;->getType()I
-
-    move-result v1
-
-    invoke-static {v1}, Lcom/glympse/android/lib/gp;->t(I)I
-
-    move-result v1
-
-    mul-int/lit8 v1, v1, 0x64
-
-    invoke-interface {p2}, Lcom/glympse/android/lib/GContact;->getSortRank()I
-
-    move-result v2
-
-    add-int/2addr v1, v2
-
-    sub-int/2addr v0, v1
-
-    .line 198
-    if-nez v0, :cond_0
-
-    .line 200
-    invoke-interface {p1}, Lcom/glympse/android/lib/GContact;->getNormalizedAddress()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {p2}, Lcom/glympse/android/lib/GContact;->getNormalizedAddress()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
-
-    move-result v0
-
-    .line 203
-    :cond_0
-    return v0
+    .line 49
+    return-void
 .end method
 
-.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+.method public onCompleted()V
     .locals 1
 
     .prologue
-    .line 189
-    check-cast p1, Lcom/glympse/android/lib/GContact;
+    const/4 v0, 0x0
 
-    check-cast p2, Lcom/glympse/android/lib/GContact;
+    .line 37
+    iput-object v0, p0, Lcom/glympse/android/lib/gp;->rg:Lcom/glympse/android/lite/GTicketLite;
 
-    invoke-virtual {p0, p1, p2}, Lcom/glympse/android/lib/gp;->a(Lcom/glympse/android/lib/GContact;Lcom/glympse/android/lib/GContact;)I
+    .line 38
+    iput-object v0, p0, Lcom/glympse/android/lib/gp;->cL:Lcom/glympse/android/api/GGlympse;
 
-    move-result v0
-
-    return v0
+    .line 39
+    return-void
 .end method

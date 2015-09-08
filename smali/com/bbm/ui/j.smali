@@ -3,7 +3,7 @@
 .source "AppItemView.java"
 
 # interfaces
-.implements Lcom/bbm/util/bz;
+.implements Lcom/bbm/util/cf;
 
 
 # instance fields
@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 188
+    .line 187
     iput-object p1, p0, Lcom/bbm/ui/j;->c:Lcom/bbm/ui/AppItemView;
 
     iput-object p2, p0, Lcom/bbm/ui/j;->a:Ljava/lang/String;
@@ -33,44 +33,44 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/d/ff;)V
+.method public final a(Lcom/bbm/d/gh;)V
     .locals 2
 
     .prologue
-    .line 191
+    .line 190
     iget-object v0, p0, Lcom/bbm/ui/j;->c:Lcom/bbm/ui/AppItemView;
 
-    invoke-static {v0}, Lcom/bbm/ui/AppItemView;->c(Lcom/bbm/ui/AppItemView;)Lcom/bbm/util/b/d;
+    invoke-static {v0}, Lcom/bbm/ui/AppItemView;->c(Lcom/bbm/ui/AppItemView;)Lcom/bbm/util/b/e;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 192
+    .line 191
     iget-object v0, p0, Lcom/bbm/ui/j;->c:Lcom/bbm/ui/AppItemView;
 
-    invoke-static {v0}, Lcom/bbm/ui/AppItemView;->c(Lcom/bbm/ui/AppItemView;)Lcom/bbm/util/b/d;
+    invoke-static {v0}, Lcom/bbm/ui/AppItemView;->c(Lcom/bbm/ui/AppItemView;)Lcom/bbm/util/b/e;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/bbm/ui/j;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, p1}, Lcom/bbm/util/b/d;->a(Ljava/lang/String;Lcom/bbm/d/ff;)V
+    invoke-virtual {v0, v1, p1}, Lcom/bbm/util/b/e;->a(Ljava/lang/String;Lcom/bbm/d/gh;)V
 
-    .line 194
+    .line 193
     :cond_0
     iget-object v0, p0, Lcom/bbm/ui/j;->b:Lcom/bbm/ui/k;
 
     if-eqz v0, :cond_1
 
-    .line 195
+    .line 194
     iget-object v0, p0, Lcom/bbm/ui/j;->b:Lcom/bbm/ui/k;
 
     iget-object v1, p0, Lcom/bbm/ui/j;->a:Ljava/lang/String;
 
-    invoke-interface {v0, p1, v1}, Lcom/bbm/ui/k;->a(Lcom/bbm/d/ff;Ljava/lang/String;)V
+    invoke-interface {v0, p1, v1}, Lcom/bbm/ui/k;->a(Lcom/bbm/d/gh;Ljava/lang/String;)V
 
-    .line 197
+    .line 196
     :cond_1
     return-void
 .end method

@@ -190,7 +190,7 @@
 
     const/4 v3, 0x2
 
-    const/16 v4, 0x4000
+    const v4, 0x8000
 
     invoke-interface {v0, v2, v3, v4, v1}, Lcom/glympse/android/api/GEventSink;->eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
 

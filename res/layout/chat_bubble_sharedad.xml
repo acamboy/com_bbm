@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="@dimen/conversation_chat_bubble_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/status_message_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/message_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/conversation_chat_bubble_outgoing_status_margin_R" android:contentDescription="@string/blank" />
+        <com.bbm.ui.LinkifyTextView android:textSize="@dimen/fontSizeSmall" android:id="@id/message_body" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/conversation_chat_bubble_message_body_top" android:textIsSelectable="false" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/ad_container" android:background="@color/whiteBackground" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.bbm.ui.ObservingImageView android:id="@id/message_adImage" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerInside" />
+        <TextView android:textSize="@dimen/channel_update_name_text_size" android:textStyle="bold" android:textColor="@color/sponsored_ad_name_color" android:id="@id/message_sharedad_sponsorname" android:paddingLeft="@dimen/conversation_chat_bubble_padding" android:paddingRight="@dimen/conversation_chat_bubble_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/message_adImage" />
+        <TextView android:textSize="@dimen/channel_update_post_default_text_size" android:textStyle="bold" android:textColor="@color/brightstyle_secondaryTextColor" android:id="@id/message_sharedad_header" android:paddingLeft="@dimen/conversation_chat_bubble_padding" android:paddingRight="@dimen/conversation_chat_bubble_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/message_sharedad_sponsorname" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/channel_update_post_default_text_size" android:textColor="@color/black" android:id="@id/message_sharedad_description" android:background="@color/whiteBackground" android:paddingLeft="@dimen/conversation_chat_bubble_padding" android:paddingRight="@dimen/conversation_chat_bubble_padding" android:paddingBottom="@dimen/conversation_chat_bubble_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

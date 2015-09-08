@@ -1,29 +1,19 @@
 .class public final Lcom/bbm/d/dd;
-.super Lcom/bbm/d/dy;
+.super Lcom/bbm/d/ez;
 .source "BbmdsProtocol.java"
 
 
 # direct methods
-.method constructor <init>(Lorg/json/JSONObject;Ljava/lang/String;)V
+.method public constructor <init>()V
     .locals 1
 
     .prologue
-    .line 4368
-    const-string v0, "requestListMatching"
+    .line 3400
+    const-string v0, "paymentConfiguration"
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/d/ez;-><init>(Ljava/lang/String;)V
 
-    .line 4370
-    const-string v0, "criteria"
-
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/dd;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 4371
-    const-string v0, "type"
-
-    invoke-virtual {p0, v0, p2}, Lcom/bbm/d/dd;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 4372
+    .line 3402
     return-void
 .end method
 
@@ -33,8 +23,8 @@
     .locals 1
 
     .prologue
-    .line 4366
-    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
+    .line 3398
+    invoke-super {p0}, Lcom/bbm/d/ez;->a()Lcom/bbm/f/ab;
 
     move-result-object v0
 

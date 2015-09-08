@@ -4,16 +4,16 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/iy;
+.field final synthetic a:Lcom/bbm/ui/c/ic;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/iy;)V
+.method constructor <init>(Lcom/bbm/ui/c/ic;)V
     .locals 0
 
     .prologue
-    .line 614
-    iput-object p1, p0, Lcom/bbm/ui/c/jb;->a:Lcom/bbm/ui/c/iy;
+    .line 369
+    iput-object p1, p0, Lcom/bbm/ui/c/jb;->a:Lcom/bbm/ui/c/ic;
 
     invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
@@ -30,351 +30,521 @@
 
     const/4 v2, 0x0
 
-    .line 617
-    invoke-static {}, Lcom/bbm/Alaska;->d()Lcom/bbm/b/w;
+    .line 372
+    const-string v0, "AdMobRequestMonitor running"
+
+    new-array v3, v2, [Ljava/lang/Object;
+
+    invoke-static {v0, v3}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 373
+    iget-object v0, p0, Lcom/bbm/ui/c/jb;->a:Lcom/bbm/ui/c/ic;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/ic;->d(Lcom/bbm/ui/c/ic;)Lcom/bbm/d/b/o;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/d/b/o;->d()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    .line 374
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v3, "AdMob: the size of un-positioned ad is "
+
+    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v3, p0, Lcom/bbm/ui/c/jb;->a:Lcom/bbm/ui/c/ic;
+
+    invoke-static {v3}, Lcom/bbm/ui/c/ic;->d(Lcom/bbm/ui/c/ic;)Lcom/bbm/d/b/o;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/bbm/d/b/o;->d()I
+
+    move-result v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v3, "; ignore requesting AdMob"
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {v0, v2}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    move v0, v1
+
+    .line 406
+    :goto_0
+    return v0
+
+    .line 378
+    :cond_0
+    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/b/x;
 
     move-result-object v0
 
     const-string v3, "adsEnabled"
 
-    invoke-virtual {v0, v3}, Lcom/bbm/b/w;->a(Ljava/lang/String;)Lcom/bbm/util/bm;
+    invoke-virtual {v0, v3}, Lcom/bbm/b/x;->a(Ljava/lang/String;)Lcom/bbm/util/bs;
 
     move-result-object v0
 
-    .line 618
-    invoke-static {}, Lcom/bbm/Alaska;->d()Lcom/bbm/b/w;
+    .line 379
+    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/b/x;
 
     move-result-object v3
 
-    const-string v4, "enablePostAdPrefetch"
+    const-string v4, "adUISettings"
 
-    invoke-virtual {v3, v4}, Lcom/bbm/b/w;->a(Ljava/lang/String;)Lcom/bbm/util/bm;
+    invoke-virtual {v3, v4}, Lcom/bbm/b/x;->a(Ljava/lang/String;)Lcom/bbm/util/bs;
 
     move-result-object v3
 
-    .line 619
-    invoke-static {}, Lcom/bbm/Alaska;->d()Lcom/bbm/b/w;
+    .line 381
+    iget-object v4, v0, Lcom/bbm/util/bs;->b:Lcom/bbm/util/bo;
 
-    move-result-object v4
+    sget-object v5, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
 
-    const-string v5, "postFrequency"
+    if-eq v4, v5, :cond_1
 
-    invoke-virtual {v4, v5}, Lcom/bbm/b/w;->a(Ljava/lang/String;)Lcom/bbm/util/bm;
+    iget-object v4, v3, Lcom/bbm/util/bs;->b:Lcom/bbm/util/bo;
 
-    move-result-object v4
+    sget-object v5, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
 
-    .line 620
-    invoke-static {}, Lcom/bbm/Alaska;->d()Lcom/bbm/b/w;
+    if-ne v4, v5, :cond_2
 
-    move-result-object v5
-
-    const-string v6, "lastRequestedAd"
-
-    invoke-virtual {v5, v6}, Lcom/bbm/b/w;->a(Ljava/lang/String;)Lcom/bbm/util/bm;
-
-    move-result-object v5
-
-    .line 621
-    invoke-static {}, Lcom/bbm/Alaska;->d()Lcom/bbm/b/w;
-
-    move-result-object v6
-
-    const-string v7, "scrollEnabled"
-
-    invoke-virtual {v6, v7}, Lcom/bbm/b/w;->a(Ljava/lang/String;)Lcom/bbm/util/bm;
-
-    move-result-object v6
-
-    .line 623
-    invoke-static {}, Lcom/bbm/Alaska;->d()Lcom/bbm/b/w;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Lcom/bbm/b/w;->b()Lcom/bbm/j/w;
-
-    move-result-object v7
-
-    .line 625
-    iget-object v8, v3, Lcom/bbm/util/bm;->b:Lcom/bbm/util/bi;
-
-    sget-object v9, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
-
-    if-eq v8, v9, :cond_0
-
-    invoke-interface {v7}, Lcom/bbm/j/w;->b()Z
-
-    move-result v8
-
-    if-nez v8, :cond_0
-
-    iget-object v8, v4, Lcom/bbm/util/bm;->b:Lcom/bbm/util/bi;
-
-    sget-object v9, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
-
-    if-eq v8, v9, :cond_0
-
-    iget-object v8, v5, Lcom/bbm/util/bm;->b:Lcom/bbm/util/bi;
-
-    sget-object v9, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
-
-    if-eq v8, v9, :cond_0
-
-    iget-object v8, v0, Lcom/bbm/util/bm;->b:Lcom/bbm/util/bi;
-
-    sget-object v9, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
-
-    if-eq v8, v9, :cond_0
-
-    iget-object v8, v6, Lcom/bbm/util/bm;->b:Lcom/bbm/util/bi;
-
-    sget-object v9, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
-
-    if-ne v8, v9, :cond_1
-
-    :cond_0
-    move v0, v2
-
-    .line 689
-    :goto_0
-    return v0
-
-    .line 635
     :cond_1
-    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
-
-    move-result-object v8
-
-    iget-object v8, v8, Lcom/bbm/e;->a:Lcom/bbm/b/w;
-
-    new-instance v9, Lcom/bbm/b/aj;
-
-    invoke-direct {v9}, Lcom/bbm/b/aj;-><init>()V
-
-    invoke-virtual {v8, v9}, Lcom/bbm/b/w;->a(Lcom/bbm/b/au;)V
-
-    .line 636
-    iget-object v0, v0, Lcom/bbm/util/bm;->a:Lorg/json/JSONObject;
-
-    const-string v8, "value"
-
-    invoke-virtual {v0, v8, v2}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    .line 638
-    if-nez v0, :cond_2
-
-    move v0, v1
-
-    .line 639
-    goto :goto_0
-
-    .line 642
-    :cond_2
-    iget-object v0, v6, Lcom/bbm/util/bm;->a:Lorg/json/JSONObject;
-
-    const-string v6, "value"
-
-    invoke-virtual {v0, v6, v2}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    .line 643
-    if-eqz v0, :cond_3
-
-    move v0, v1
-
-    .line 644
-    goto :goto_0
-
-    .line 646
-    :cond_3
-    iget-object v0, v3, Lcom/bbm/util/bm;->a:Lorg/json/JSONObject;
-
-    const-string v3, "value"
-
-    invoke-virtual {v0, v3, v2}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    .line 647
-    if-eqz v0, :cond_5
-
-    .line 649
-    invoke-interface {v7}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/List;
-
-    invoke-static {v0}, Lcom/bbm/b/j;->a(Ljava/util/List;)Lcom/bbm/b/a;
-
-    move-result-object v0
-
-    .line 650
-    if-eqz v0, :cond_4
-
-    move v0, v1
-
-    .line 652
-    goto :goto_0
-
-    .line 654
-    :cond_4
-    const-string v0, "UpdatesFragment: Could not find an unrendered ad"
-
-    new-array v3, v2, [Ljava/lang/Object;
-
-    invoke-static {v0, v3}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 656
-    iget-object v0, p0, Lcom/bbm/ui/c/jb;->a:Lcom/bbm/ui/c/iy;
-
-    invoke-static {v0, v4, v5}, Lcom/bbm/ui/c/iy;->a(Lcom/bbm/ui/c/iy;Lcom/bbm/util/bm;Lcom/bbm/util/bm;)Lcom/bbm/ui/c/jw;
-
-    move-result-object v0
-
-    .line 657
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "UpdatesFragment: Tried to force an ad request with result="
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    new-array v4, v2, [Ljava/lang/Object;
-
-    invoke-static {v3, v4}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 658
-    sget-object v3, Lcom/bbm/ui/c/jo;->a:[I
-
-    invoke-virtual {v0}, Lcom/bbm/ui/c/jw;->ordinal()I
-
-    move-result v0
-
-    aget v0, v3, v0
-
-    packed-switch v0, :pswitch_data_0
-
-    :goto_1
     move v0, v2
 
-    .line 689
+    .line 383
     goto :goto_0
 
-    :pswitch_0
-    move v0, v1
+    .line 386
+    :cond_2
+    iget-object v0, v0, Lcom/bbm/util/bs;->a:Lorg/json/JSONObject;
 
-    .line 661
-    goto :goto_0
+    const-string v4, "value"
 
-    .line 664
-    :pswitch_1
-    invoke-static {}, Lcom/bbm/b/j;->a()V
+    invoke-virtual {v0, v4, v2}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
 
-    .line 665
-    const-string v0, "UpdatesFragment: Prefetched an ad since no unrendered ads"
+    move-result v0
+
+    .line 387
+    if-nez v0, :cond_3
+
+    .line 388
+    const-string v0, "Ads are disabled; ignore requesting an AdMob"
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, v2}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v2}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     move v0, v1
 
-    .line 667
+    .line 389
     goto :goto_0
 
-    .line 670
-    :pswitch_2
-    invoke-static {}, Lcom/bbm/b/j;->a()V
-
-    .line 671
-    const-string v0, "UpdatesFragment: Prefetched an ad since no unrendered ads"
-
-    new-array v1, v2, [Ljava/lang/Object;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    move v0, v2
-
-    .line 673
-    goto/16 :goto_0
-
-    .line 677
-    :cond_5
-    iget-object v0, p0, Lcom/bbm/ui/c/jb;->a:Lcom/bbm/ui/c/iy;
-
-    invoke-static {v0, v4, v5}, Lcom/bbm/ui/c/iy;->a(Lcom/bbm/ui/c/iy;Lcom/bbm/util/bm;Lcom/bbm/util/bm;)Lcom/bbm/ui/c/jw;
+    .line 392
+    :cond_3
+    invoke-virtual {v3}, Lcom/bbm/util/bs;->e()Lorg/json/JSONObject;
 
     move-result-object v0
 
-    .line 678
-    new-instance v3, Ljava/lang/StringBuilder;
+    const-string v4, "enableAdMob"
 
-    const-string v4, "UpdatesFragment: Tried to force an ad with result="
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    new-array v4, v2, [Ljava/lang/Object;
-
-    invoke-static {v3, v4}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 679
-    sget-object v3, Lcom/bbm/ui/c/jo;->a:[I
-
-    invoke-virtual {v0}, Lcom/bbm/ui/c/jw;->ordinal()I
+    invoke-virtual {v0, v4, v2}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    aget v0, v3, v0
+    .line 393
+    if-nez v0, :cond_4
 
-    packed-switch v0, :pswitch_data_1
+    .line 394
+    const-string v0, "AdMobs are disabled; ignore requesting an AdMob"
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {v0, v2}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    move v0, v1
+
+    .line 395
+    goto :goto_0
+
+    .line 398
+    :cond_4
+    invoke-virtual {v3}, Lcom/bbm/util/bs;->e()Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v3, "adMobPublisherId"
+
+    const-string v4, ""
+
+    invoke-virtual {v0, v3, v4}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 399
+    invoke-virtual {v3}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    .line 400
+    const-string v0, "AdMob: invalid adMobPublisherId; ignore requesting an AdMob"
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {v0, v2}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    move v0, v1
+
+    .line 401
+    goto :goto_0
+
+    .line 404
+    :cond_5
+    iget-object v0, p0, Lcom/bbm/ui/c/jb;->a:Lcom/bbm/ui/c/ic;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/ic;->e(Lcom/bbm/ui/c/ic;)Lcom/bbm/b/j;
+
+    move-result-object v4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v5, Lcom/bbm/b/j;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v5, "RequestNativeAd"
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-array v5, v2, [Ljava/lang/Object;
+
+    invoke-static {v0, v5}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    invoke-static {v3}, Lcom/bbm/util/ec;->b(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v3, Lcom/bbm/b/j;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v3, "Invalid publisher id; ignore requesting AdMob"
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {v0, v2}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    :goto_1
+    move v0, v1
+
+    .line 406
+    goto/16 :goto_0
+
+    .line 404
+    :cond_6
+    iget-boolean v0, v4, Lcom/bbm/b/j;->f:Z
+
+    if-eqz v0, :cond_7
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v3, Lcom/bbm/b/j;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v3, "A request for loading an AdMob is in progress, ignore requesting AdMob"
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {v0, v2}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     goto :goto_1
 
-    :pswitch_3
-    move v0, v1
+    :cond_7
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    .line 683
-    goto/16 :goto_0
+    move-result-wide v6
 
-    :pswitch_4
-    move v0, v2
+    iget-wide v8, v4, Lcom/bbm/b/j;->e:J
 
-    .line 686
-    goto/16 :goto_0
+    cmp-long v0, v8, v6
 
-    .line 658
-    nop
+    if-lez v0, :cond_8
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-    .end packed-switch
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 679
-    :pswitch_data_1
-    .packed-switch 0x1
-        :pswitch_3
-        :pswitch_3
-        :pswitch_4
-    .end packed-switch
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v3, Lcom/bbm/b/j;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v3, "Next time allowed to load a native ad is in "
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-wide v4, v4, Lcom/bbm/b/j;->e:J
+
+    sub-long/2addr v4, v6
+
+    const-wide/16 v6, 0x3e8
+
+    div-long/2addr v4, v6
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v3, "sec"
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {v0, v2}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_8
+    iget-object v0, v4, Lcom/bbm/b/j;->b:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-nez v0, :cond_9
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v3, Lcom/bbm/b/j;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v3, "The user leaves context, ignore requesting AdMob"
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {v0, v2}, Lcom/bbm/af;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_9
+    iput-boolean v1, v4, Lcom/bbm/b/j;->f:Z
+
+    iget-object v0, v4, Lcom/bbm/b/j;->d:Lcom/google/android/gms/ads/b;
+
+    if-eqz v0, :cond_a
+
+    iget-object v0, v4, Lcom/bbm/b/j;->c:Ljava/lang/String;
+
+    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    :cond_a
+    new-instance v5, Lcom/google/android/gms/ads/c;
+
+    iget-object v0, v4, Lcom/bbm/b/j;->b:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/Context;
+
+    invoke-direct {v5, v0, v3}, Lcom/google/android/gms/ads/c;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    new-instance v0, Lcom/bbm/b/m;
+
+    invoke-direct {v0, v4}, Lcom/bbm/b/m;-><init>(Lcom/bbm/b/j;)V
+
+    invoke-virtual {v5, v0}, Lcom/google/android/gms/ads/c;->a(Lcom/google/android/gms/ads/formats/h;)Lcom/google/android/gms/ads/c;
+
+    move-result-object v0
+
+    new-instance v5, Lcom/bbm/b/l;
+
+    invoke-direct {v5, v4}, Lcom/bbm/b/l;-><init>(Lcom/bbm/b/j;)V
+
+    invoke-virtual {v0, v5}, Lcom/google/android/gms/ads/c;->a(Lcom/google/android/gms/ads/formats/f;)Lcom/google/android/gms/ads/c;
+
+    move-result-object v0
+
+    new-instance v5, Lcom/google/android/gms/ads/formats/d;
+
+    invoke-direct {v5}, Lcom/google/android/gms/ads/formats/d;-><init>()V
+
+    iput-boolean v1, v5, Lcom/google/android/gms/ads/formats/d;->a:Z
+
+    iput v2, v5, Lcom/google/android/gms/ads/formats/d;->b:I
+
+    iput-boolean v2, v5, Lcom/google/android/gms/ads/formats/d;->c:Z
+
+    new-instance v6, Lcom/google/android/gms/ads/formats/c;
+
+    invoke-direct {v6, v5, v2}, Lcom/google/android/gms/ads/formats/c;-><init>(Lcom/google/android/gms/ads/formats/d;B)V
+
+    invoke-virtual {v0, v6}, Lcom/google/android/gms/ads/c;->a(Lcom/google/android/gms/ads/formats/c;)Lcom/google/android/gms/ads/c;
+
+    move-result-object v0
+
+    new-instance v5, Lcom/bbm/b/k;
+
+    invoke-direct {v5, v4}, Lcom/bbm/b/k;-><init>(Lcom/bbm/b/j;)V
+
+    invoke-virtual {v0, v5}, Lcom/google/android/gms/ads/c;->a(Lcom/google/android/gms/ads/a;)Lcom/google/android/gms/ads/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/c;->a()Lcom/google/android/gms/ads/b;
+
+    move-result-object v0
+
+    iput-object v0, v4, Lcom/bbm/b/j;->d:Lcom/google/android/gms/ads/b;
+
+    :cond_b
+    iput-object v3, v4, Lcom/bbm/b/j;->c:Ljava/lang/String;
+
+    iget-object v0, v4, Lcom/bbm/b/j;->d:Lcom/google/android/gms/ads/b;
+
+    new-instance v3, Lcom/google/android/gms/ads/doubleclick/d;
+
+    invoke-direct {v3}, Lcom/google/android/gms/ads/doubleclick/d;-><init>()V
+
+    new-instance v4, Lcom/google/android/gms/ads/doubleclick/c;
+
+    invoke-direct {v4, v3, v2}, Lcom/google/android/gms/ads/doubleclick/c;-><init>(Lcom/google/android/gms/ads/doubleclick/d;B)V
+
+    iget-object v3, v4, Lcom/google/android/gms/ads/doubleclick/c;->b:Lcom/google/android/gms/ads/internal/client/av;
+
+    :try_start_0
+    iget-object v4, v0, Lcom/google/android/gms/ads/b;->b:Lcom/google/android/gms/ads/internal/client/v;
+
+    iget-object v0, v0, Lcom/google/android/gms/ads/b;->a:Landroid/content/Context;
+
+    invoke-static {v0, v3}, Lcom/google/android/gms/ads/internal/client/j;->a(Landroid/content/Context;Lcom/google/android/gms/ads/internal/client/av;)Lcom/google/android/gms/ads/internal/client/AdRequestParcel;
+
+    move-result-object v0
+
+    invoke-interface {v4, v0}, Lcom/google/android/gms/ads/internal/client/v;->a(Lcom/google/android/gms/ads/internal/client/AdRequestParcel;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_2
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v3, Lcom/bbm/b/j;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v3, "A Request to Load a Native Ad sent"
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {v0, v2}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    goto/16 :goto_1
+
+    :catch_0
+    move-exception v0
+
+    const-string v3, "Failed to load ad."
+
+    invoke-static {v3, v0}, Lcom/google/android/gms/ads/internal/util/client/b;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_2
 .end method

@@ -1,44 +1,78 @@
 .class final Lcom/bbm/ui/activities/ut;
-.super Ljava/util/TimerTask;
-.source "ImageViewerActivity.java"
+.super Ljava/lang/Enum;
+.source "MpcDetailsActivity.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ImageViewerActivity;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/bbm/ui/activities/ut;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final enum a:I
+
+.field public static final enum b:I
+
+.field public static final enum c:I
+
+.field public static final enum d:I
+
+.field private static final synthetic e:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ImageViewerActivity;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
     .prologue
-    .line 330
-    iput-object p1, p0, Lcom/bbm/ui/activities/ut;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
+    const/4 v0, 0x4
 
-    invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
+    const/4 v5, 0x3
 
-    return-void
-.end method
+    const/4 v4, 0x2
 
+    const/4 v3, 0x1
 
-# virtual methods
-.method public final run()V
-    .locals 2
+    .line 60
+    sput v3, Lcom/bbm/ui/activities/ut;->a:I
 
-    .prologue
-    .line 334
-    iget-object v0, p0, Lcom/bbm/ui/activities/ut;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
+    .line 61
+    sput v4, Lcom/bbm/ui/activities/ut;->b:I
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->h(Lcom/bbm/ui/activities/ImageViewerActivity;)Landroid/os/Handler;
+    .line 62
+    sput v5, Lcom/bbm/ui/activities/ut;->c:I
 
-    move-result-object v0
+    .line 63
+    sput v0, Lcom/bbm/ui/activities/ut;->d:I
 
-    new-instance v1, Lcom/bbm/ui/activities/uu;
+    .line 59
+    new-array v0, v0, [I
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/uu;-><init>(Lcom/bbm/ui/activities/ut;)V
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    sget v2, Lcom/bbm/ui/activities/ut;->a:I
 
-    .line 342
+    aput v2, v0, v1
+
+    sget v1, Lcom/bbm/ui/activities/ut;->b:I
+
+    aput v1, v0, v3
+
+    sget v1, Lcom/bbm/ui/activities/ut;->c:I
+
+    aput v1, v0, v4
+
+    sget v1, Lcom/bbm/ui/activities/ut;->d:I
+
+    aput v1, v0, v5
+
+    sput-object v0, Lcom/bbm/ui/activities/ut;->e:[I
+
     return-void
 .end method

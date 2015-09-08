@@ -375,8 +375,6 @@
     .line 123
     :cond_3
     monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
@@ -385,12 +383,17 @@
     move-exception v0
 
     monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
 
     .line 126
     :cond_4
+    :try_start_1
     monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-object v0, v1
 
@@ -668,17 +671,17 @@
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     monitor-exit p0
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
     goto :goto_2
 
     :catchall_0
     move-exception v0
 
-    :try_start_7
     monitor-exit p0
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
+    :try_start_7
     throw v0
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
@@ -933,17 +936,17 @@
     .line 275
     :cond_0
     monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     goto :goto_0
 
     :catchall_0
     move-exception v0
 
-    :try_start_3
     monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    :try_start_3
     throw v0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
@@ -1440,17 +1443,17 @@
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     monitor-exit p0
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
     goto :goto_1
 
     :catchall_1
     move-exception v0
 
-    :try_start_6
     monitor-exit p0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
+    :try_start_6
     throw v0
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0

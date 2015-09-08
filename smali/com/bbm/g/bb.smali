@@ -1,5 +1,5 @@
 .class public final Lcom/bbm/g/bb;
-.super Lcom/bbm/g/cv;
+.super Lcom/bbm/g/db;
 .source "GroupsProtocol.java"
 
 
@@ -8,16 +8,16 @@
     .locals 1
 
     .prologue
-    .line 618
-    const-string v0, "groupClearSplatPicture"
+    .line 443
+    const-string v0, "groupClearSplatGroupList"
 
-    invoke-direct {p0, v0}, Lcom/bbm/g/cv;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/g/db;-><init>(Ljava/lang/String;)V
 
-    .line 620
-    const-string v0, "pictureUri"
+    .line 445
+    const-string v0, "groupUri"
 
     invoke-virtual {p0, v0, p1}, Lcom/bbm/g/bb;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 621
+    .line 446
     return-void
 .end method

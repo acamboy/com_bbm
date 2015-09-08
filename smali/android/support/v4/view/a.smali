@@ -93,7 +93,7 @@
     return-void
 .end method
 
-.method public static a(Landroid/view/View;)Landroid/support/v4/view/a/i;
+.method public static a(Landroid/view/View;)Landroid/support/v4/view/a/p;
     .locals 2
 
     .prologue
@@ -102,7 +102,7 @@
 
     sget-object v1, Landroid/support/v4/view/a;->c:Ljava/lang/Object;
 
-    invoke-interface {v0, v1, p0}, Landroid/support/v4/view/d;->a(Ljava/lang/Object;Landroid/view/View;)Landroid/support/v4/view/a/i;
+    invoke-interface {v0, v1, p0}, Landroid/support/v4/view/d;->a(Ljava/lang/Object;Landroid/view/View;)Landroid/support/v4/view/a/p;
 
     move-result-object v0
 
@@ -156,7 +156,7 @@
 
 
 # virtual methods
-.method public a(Landroid/view/View;Landroid/support/v4/view/a/a;)V
+.method public a(Landroid/view/View;Landroid/support/v4/view/a/e;)V
     .locals 2
 
     .prologue
@@ -165,7 +165,7 @@
 
     sget-object v1, Landroid/support/v4/view/a;->c:Ljava/lang/Object;
 
-    invoke-interface {v0, v1, p1, p2}, Landroid/support/v4/view/d;->a(Ljava/lang/Object;Landroid/view/View;Landroid/support/v4/view/a/a;)V
+    invoke-interface {v0, v1, p1, p2}, Landroid/support/v4/view/d;->a(Ljava/lang/Object;Landroid/view/View;Landroid/support/v4/view/a/e;)V
 
     .line 439
     return-void

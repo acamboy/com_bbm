@@ -1,10 +1,9 @@
 .class public Lcom/bbm/ui/activities/ChannelChatListActivity;
-.super Lcom/bbm/ui/activities/cq;
+.super Lcom/bbm/bali/ui/channels/a;
 .source "ChannelChatListActivity.java"
 
 # interfaces
 .implements Landroid/widget/AdapterView$OnItemClickListener;
-.implements Landroid/widget/AdapterView$OnItemLongClickListener;
 
 
 # instance fields
@@ -12,14 +11,14 @@
 
 .field private b:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
-.field private c:Landroid/view/View;
+.field private h:Landroid/view/View;
 
-.field private d:Lcom/bbm/ui/gx;
+.field private i:Lcom/bbm/ui/he;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/bbm/ui/gx",
+            "Lcom/bbm/ui/he",
             "<",
-            "Lcom/bbm/ui/activities/ex;",
+            "Lcom/bbm/ui/activities/dp;",
             "Ljava/lang/String;",
             "Ljava/lang/Integer;",
             ">;"
@@ -27,31 +26,21 @@
     .end annotation
 .end field
 
-.field private e:Lcom/bbm/d/b/t;
+.field private j:Lcom/bbm/d/b/ad;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/bbm/d/b/t",
+            "Lcom/bbm/d/b/ad",
             "<",
-            "Lcom/bbm/ui/hc",
+            "Lcom/bbm/ui/hj",
             "<",
-            "Lcom/bbm/ui/activities/ex;",
+            "Lcom/bbm/ui/activities/dp;",
             "Ljava/lang/Integer;",
             ">;>;"
         }
     .end annotation
 .end field
 
-.field private f:Landroid/graphics/drawable/Drawable;
-
-.field private g:Landroid/graphics/drawable/Drawable;
-
-.field private h:Landroid/graphics/drawable/Drawable;
-
-.field private i:Landroid/graphics/drawable/Drawable;
-
-.field private j:Landroid/graphics/drawable/Drawable;
-
-.field private k:Landroid/graphics/drawable/Drawable;
+.field private k:Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;
 
 .field private l:Landroid/graphics/drawable/Drawable;
 
@@ -63,7 +52,17 @@
 
 .field private p:Landroid/graphics/drawable/Drawable;
 
-.field private final q:Lcom/bbm/j/k;
+.field private q:Landroid/graphics/drawable/Drawable;
+
+.field private r:Landroid/graphics/drawable/Drawable;
+
+.field private s:Landroid/graphics/drawable/Drawable;
+
+.field private t:Landroid/graphics/drawable/Drawable;
+
+.field private u:Landroid/graphics/drawable/Drawable;
+
+.field private final v:Lcom/bbm/j/k;
 
 
 # direct methods
@@ -71,157 +70,88 @@
     .locals 1
 
     .prologue
-    .line 60
-    invoke-direct {p0}, Lcom/bbm/ui/activities/cq;-><init>()V
+    .line 54
+    invoke-direct {p0}, Lcom/bbm/bali/ui/channels/a;-><init>()V
 
-    .line 62
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    .line 56
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->a:Lcom/bbm/d/a;
 
-    .line 84
-    new-instance v0, Lcom/bbm/ui/activities/ch;
+    .line 79
+    new-instance v0, Lcom/bbm/ui/activities/bk;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/ch;-><init>(Lcom/bbm/ui/activities/ChannelChatListActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/bk;-><init>(Lcom/bbm/ui/activities/ChannelChatListActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->q:Lcom/bbm/j/k;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->v:Lcom/bbm/j/k;
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/ChannelChatListActivity;)Lcom/bbm/d/a;
+.method static synthetic a(Lcom/bbm/ui/activities/ChannelChatListActivity;)Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 60
+    .line 54
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->d()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic b(Lcom/bbm/ui/activities/ChannelChatListActivity;)Lcom/bbm/d/a;
+    .locals 1
+
+    .prologue
+    .line 54
     iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->a:Lcom/bbm/d/a;
 
     return-object v0
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/ChannelChatListActivity;Lcom/bbm/ui/activities/ex;)V
-    .locals 5
-
-    .prologue
-    .line 60
-    const/4 v0, 0x1
-
-    :try_start_0
-    new-array v0, v0, [Lorg/json/JSONObject;
-
-    const/4 v1, 0x0
-
-    new-instance v2, Lorg/json/JSONObject;
-
-    invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
-
-    const-string v3, "conversationUri"
-
-    iget-object v4, p1, Lcom/bbm/ui/activities/ex;->a:Lcom/bbm/d/eu;
-
-    iget-object v4, v4, Lcom/bbm/d/eu;->b:Ljava/lang/String;
-
-    invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    move-result-object v2
-
-    aput-object v2, v0, v1
-
-    invoke-static {v0}, Lcom/google/b/c/p;->a([Ljava/lang/Object;)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->a:Lcom/bbm/d/a;
-
-    const-string v2, "conversation"
-
-    invoke-static {v0, v2}, Lcom/bbm/d/aa;->d(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/d/de;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_0
-.end method
-
-.method static synthetic b(Lcom/bbm/ui/activities/ChannelChatListActivity;)Landroid/view/View;
+.method static synthetic c(Lcom/bbm/ui/activities/ChannelChatListActivity;)Landroid/view/View;
     .locals 1
 
     .prologue
-    .line 60
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->c:Landroid/view/View;
+    .line 54
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->h:Landroid/view/View;
 
     return-object v0
 .end method
 
-.method static synthetic b(Lcom/bbm/ui/activities/ChannelChatListActivity;Lcom/bbm/ui/activities/ex;)V
-    .locals 3
-
-    .prologue
-    const/4 v2, 0x0
-
-    .line 60
-    new-instance v0, Lcom/bbm/util/d/a;
-
-    new-instance v1, Lcom/bbm/ui/activities/cn;
-
-    invoke-direct {v1, p0, p1}, Lcom/bbm/ui/activities/cn;-><init>(Lcom/bbm/ui/activities/ChannelChatListActivity;Lcom/bbm/ui/activities/ex;)V
-
-    invoke-direct {v0, p0, v2, v2, v1}, Lcom/bbm/util/d/a;-><init>(Landroid/content/Context;ZZLcom/bbm/util/d/c;)V
-
-    invoke-virtual {v0}, Lcom/bbm/util/d/a;->c()V
-
-    return-void
-.end method
-
-.method static synthetic c(Lcom/bbm/ui/activities/ChannelChatListActivity;)Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+.method static synthetic d(Lcom/bbm/ui/activities/ChannelChatListActivity;)Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 60
+    .line 54
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->d()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic e(Lcom/bbm/ui/activities/ChannelChatListActivity;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 54
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->d()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic f(Lcom/bbm/ui/activities/ChannelChatListActivity;)Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+    .locals 1
+
+    .prologue
+    .line 54
     iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->b:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
-
-    return-object v0
-.end method
-
-.method static synthetic d(Lcom/bbm/ui/activities/ChannelChatListActivity;)Landroid/graphics/drawable/Drawable;
-    .locals 1
-
-    .prologue
-    .line 60
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->g:Landroid/graphics/drawable/Drawable;
-
-    return-object v0
-.end method
-
-.method static synthetic e(Lcom/bbm/ui/activities/ChannelChatListActivity;)Landroid/graphics/drawable/Drawable;
-    .locals 1
-
-    .prologue
-    .line 60
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->f:Landroid/graphics/drawable/Drawable;
-
-    return-object v0
-.end method
-
-.method static synthetic f(Lcom/bbm/ui/activities/ChannelChatListActivity;)Landroid/graphics/drawable/Drawable;
-    .locals 1
-
-    .prologue
-    .line 60
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->h:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
@@ -230,8 +160,8 @@
     .locals 1
 
     .prologue
-    .line 60
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->p:Landroid/graphics/drawable/Drawable;
+    .line 54
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->m:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
@@ -240,8 +170,8 @@
     .locals 1
 
     .prologue
-    .line 60
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->i:Landroid/graphics/drawable/Drawable;
+    .line 54
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->l:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
@@ -250,8 +180,8 @@
     .locals 1
 
     .prologue
-    .line 60
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->m:Landroid/graphics/drawable/Drawable;
+    .line 54
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->n:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
@@ -260,8 +190,8 @@
     .locals 1
 
     .prologue
-    .line 60
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->j:Landroid/graphics/drawable/Drawable;
+    .line 54
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->u:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
@@ -270,8 +200,8 @@
     .locals 1
 
     .prologue
-    .line 60
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->k:Landroid/graphics/drawable/Drawable;
+    .line 54
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->o:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
@@ -280,8 +210,8 @@
     .locals 1
 
     .prologue
-    .line 60
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->l:Landroid/graphics/drawable/Drawable;
+    .line 54
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->s:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
@@ -290,8 +220,8 @@
     .locals 1
 
     .prologue
-    .line 60
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->n:Landroid/graphics/drawable/Drawable;
+    .line 54
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->p:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
@@ -300,8 +230,28 @@
     .locals 1
 
     .prologue
-    .line 60
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->o:Landroid/graphics/drawable/Drawable;
+    .line 54
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->q:Landroid/graphics/drawable/Drawable;
+
+    return-object v0
+.end method
+
+.method static synthetic o(Lcom/bbm/ui/activities/ChannelChatListActivity;)Landroid/graphics/drawable/Drawable;
+    .locals 1
+
+    .prologue
+    .line 54
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->r:Landroid/graphics/drawable/Drawable;
+
+    return-object v0
+.end method
+
+.method static synthetic p(Lcom/bbm/ui/activities/ChannelChatListActivity;)Landroid/graphics/drawable/Drawable;
+    .locals 1
+
+    .prologue
+    .line 54
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->t:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
@@ -314,15 +264,15 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 105
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/cq;->onCreate(Landroid/os/Bundle;)V
+    .line 100
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/channels/a;->onCreate(Landroid/os/Bundle;)V
 
-    .line 106
-    const v0, 0x7f03000c
+    .line 101
+    const v0, 0x7f030022
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->setContentView(I)V
 
-    .line 107
+    .line 102
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -331,109 +281,39 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 109
-    const v0, 0x7f0b00bf
+    .line 105
+    const v0, 0x7f0b05ee
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/FooterActionBar;
+    check-cast v0, Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->k:Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;
+
+    .line 106
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->k:Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;
+
+    const-string v1, ""
+
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/activities/ChannelChatListActivity;->a(Landroid/support/v7/widget/Toolbar;Ljava/lang/String;)V
+
+    .line 107
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->k:Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;
+
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->d()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, p0, v1}, Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;->setChannelUri(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 110
-    invoke-virtual {v0, v3}, Lcom/bbm/ui/FooterActionBar;->setOverflowEnabled(Z)V
-
-    .line 111
-    new-instance v1, Lcom/bbm/ui/activities/ci;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/ci;-><init>(Lcom/bbm/ui/activities/ChannelChatListActivity;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
-
-    .line 119
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f020238
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->f:Landroid/graphics/drawable/Drawable;
-
-    .line 120
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f020235
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->g:Landroid/graphics/drawable/Drawable;
-
-    .line 121
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f02022f
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->h:Landroid/graphics/drawable/Drawable;
-
-    .line 122
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f020237
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->i:Landroid/graphics/drawable/Drawable;
-
-    .line 123
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f02022e
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->j:Landroid/graphics/drawable/Drawable;
-
-    .line 124
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f020230
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->k:Landroid/graphics/drawable/Drawable;
-
-    .line 125
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f02022d
+    const v1, 0x7f020211
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -441,12 +321,12 @@
 
     iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->l:Landroid/graphics/drawable/Drawable;
 
-    .line 126
+    .line 111
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f020234
+    const v1, 0x7f02020e
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -454,12 +334,12 @@
 
     iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->m:Landroid/graphics/drawable/Drawable;
 
-    .line 127
+    .line 112
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f02022a
+    const v1, 0x7f020208
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -467,12 +347,12 @@
 
     iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->n:Landroid/graphics/drawable/Drawable;
 
-    .line 128
+    .line 113
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0201ff
+    const v1, 0x7f020210
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -480,12 +360,12 @@
 
     iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->o:Landroid/graphics/drawable/Drawable;
 
-    .line 129
+    .line 114
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f020236
+    const v1, 0x7f020207
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -493,8 +373,73 @@
 
     iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->p:Landroid/graphics/drawable/Drawable;
 
-    .line 131
-    const v0, 0x7f0b00fa
+    .line 115
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f020209
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->q:Landroid/graphics/drawable/Drawable;
+
+    .line 116
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f020206
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->r:Landroid/graphics/drawable/Drawable;
+
+    .line 117
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f02020d
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->s:Landroid/graphics/drawable/Drawable;
+
+    .line 118
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f020203
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->t:Landroid/graphics/drawable/Drawable;
+
+    .line 119
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f02020f
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->u:Landroid/graphics/drawable/Drawable;
+
+    .line 121
+    const v0, 0x7f0b0153
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->findViewById(I)Landroid/view/View;
 
@@ -504,117 +449,80 @@
 
     iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->b:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
-    .line 133
-    const v0, 0x7f0b00f5
+    .line 123
+    const v0, 0x7f0b014e
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->c:Landroid/view/View;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->h:Landroid/view/View;
 
-    .line 135
-    new-instance v0, Lcom/bbm/ui/activities/ck;
+    .line 125
+    new-instance v0, Lcom/bbm/ui/activities/bm;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/ck;-><init>(Lcom/bbm/ui/activities/ChannelChatListActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/bm;-><init>(Lcom/bbm/ui/activities/ChannelChatListActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->e:Lcom/bbm/d/b/t;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->j:Lcom/bbm/d/b/ad;
 
-    .line 137
-    new-instance v0, Lcom/bbm/ui/activities/cl;
+    .line 127
+    new-instance v0, Lcom/bbm/ui/activities/bn;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->e:Lcom/bbm/d/b/t;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->j:Lcom/bbm/d/b/ad;
 
-    invoke-static {}, Lcom/bbm/util/bp;->a()Lcom/bbm/util/bp;
+    invoke-static {}, Lcom/bbm/util/bv;->a()Lcom/bbm/util/bv;
 
     move-result-object v2
 
-    invoke-direct {v0, p0, p0, v1, v2}, Lcom/bbm/ui/activities/cl;-><init>(Lcom/bbm/ui/activities/ChannelChatListActivity;Landroid/content/Context;Lcom/bbm/j/r;Lcom/bbm/util/di;)V
+    invoke-direct {v0, p0, p0, v1, v2}, Lcom/bbm/ui/activities/bn;-><init>(Lcom/bbm/ui/activities/ChannelChatListActivity;Landroid/content/Context;Lcom/bbm/j/r;Lcom/bbm/util/ds;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->d:Lcom/bbm/ui/gx;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->i:Lcom/bbm/ui/he;
 
-    .line 139
+    .line 129
     iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->b:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setNumColumns(I)V
 
-    .line 140
+    .line 130
     iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->b:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
     invoke-virtual {v0, v3}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setHorizontalSpacing(I)V
 
-    .line 141
+    .line 131
     iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->b:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
     invoke-virtual {v0, v3}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setVerticalSpacing(I)V
 
-    .line 142
+    .line 132
     iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->b:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->d:Lcom/bbm/ui/gx;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->i:Lcom/bbm/ui/he;
 
     invoke-virtual {v0, v1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 144
+    .line 134
     iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->b:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
     invoke-virtual {v0, p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 145
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->b:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+    .line 138
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->h:Landroid/view/View;
 
-    invoke-virtual {v0, p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
-
-    .line 148
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->getActionBar()Landroid/app/ActionBar;
-
-    move-result-object v0
-
-    .line 149
-    new-instance v1, Lcom/bbm/ui/aa;
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->b()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v1, p0, v0, v2}, Lcom/bbm/ui/aa;-><init>(Landroid/app/Activity;Landroid/app/ActionBar;Ljava/lang/String;)V
-
-    .line 150
-    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/ChannelChatListActivity;->a(Lcom/bbm/ui/activities/alb;)V
-
-    .line 151
-    invoke-virtual {v0}, Landroid/app/ActionBar;->getCustomView()Landroid/view/View;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/bbm/util/az;
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->b()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v1, p0, v2}, Lcom/bbm/util/az;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 153
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->c:Landroid/view/View;
-
-    const v1, 0x7f0b00f8
+    const v1, 0x7f0b0151
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    new-instance v1, Lcom/bbm/ui/activities/cj;
+    new-instance v1, Lcom/bbm/ui/activities/bl;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/cj;-><init>(Lcom/bbm/ui/activities/ChannelChatListActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/bl;-><init>(Lcom/bbm/ui/activities/ChannelChatListActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 170
+    .line 155
     return-void
 .end method
 
@@ -631,104 +539,73 @@
     .end annotation
 
     .prologue
-    .line 490
+    .line 455
     invoke-virtual {p1, p3}, Landroid/widget/AdapterView;->getItemAtPosition(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/activities/ex;
+    check-cast v0, Lcom/bbm/ui/activities/dp;
 
-    .line 492
+    .line 457
     new-instance v1, Landroid/content/Intent;
 
     const-class v2, Lcom/bbm/ui/activities/ConversationActivity;
 
     invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 493
+    .line 458
     const-string v2, "conversation_uri"
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/ex;->a:Lcom/bbm/d/eu;
+    iget-object v0, v0, Lcom/bbm/ui/activities/dp;->a:Lcom/bbm/d/fv;
 
-    iget-object v0, v0, Lcom/bbm/d/eu;->b:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/d/fv;->b:Ljava/lang/String;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 495
+    .line 460
     invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/ChannelChatListActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 498
+    .line 463
     const-string v0, "open"
 
     const-string v1, "Conversation"
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 499
-    const v0, 0x7f040001
+    .line 464
+    const v0, 0x7f040007
 
-    const v1, 0x7f040004
+    const v1, 0x7f04000a
 
     invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/activities/ChannelChatListActivity;->overridePendingTransition(II)V
 
-    .line 500
+    .line 465
     return-void
-.end method
-
-.method public onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)Z"
-        }
-    .end annotation
-
-    .prologue
-    .line 443
-    invoke-virtual {p1, p3}, Landroid/widget/AdapterView;->getItemAtPosition(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/activities/ex;
-
-    .line 445
-    iget-object v1, v0, Lcom/bbm/ui/activities/ex;->a:Lcom/bbm/d/eu;
-
-    .line 447
-    new-instance v2, Lcom/bbm/ui/activities/co;
-
-    invoke-direct {v2, p0, v1, v0}, Lcom/bbm/ui/activities/co;-><init>(Lcom/bbm/ui/activities/ChannelChatListActivity;Lcom/bbm/d/eu;Lcom/bbm/ui/activities/ex;)V
-
-    invoke-static {v2}, Lcom/bbm/j/u;->a(Lcom/bbm/j/s;)V
-
-    .line 484
-    const/4 v0, 0x1
-
-    return v0
 .end method
 
 .method public onPause()V
     .locals 1
 
     .prologue
-    .line 181
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->d:Lcom/bbm/ui/gx;
+    .line 167
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->k:Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/gx;->e()V
+    invoke-virtual {v0}, Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;->h()V
 
-    .line 182
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->q:Lcom/bbm/j/k;
+    .line 168
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->i:Lcom/bbm/ui/he;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+    invoke-virtual {v0}, Lcom/bbm/ui/he;->f()V
 
-    .line 183
-    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->onPause()V
+    .line 169
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->v:Lcom/bbm/j/k;
 
-    .line 184
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
+
+    .line 170
+    invoke-super {p0}, Lcom/bbm/bali/ui/channels/a;->onPause()V
+
+    .line 171
     return-void
 .end method
 
@@ -736,21 +613,24 @@
     .locals 1
 
     .prologue
-    .line 174
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->d:Lcom/bbm/ui/gx;
+    .line 159
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->k:Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;
 
-    iget-object v0, v0, Lcom/bbm/ui/gx;->d:Lcom/bbm/ui/cx;
+    invoke-virtual {v0}, Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;->g()V
 
-    invoke-virtual {v0}, Lcom/bbm/ui/cx;->c()V
+    .line 160
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->i:Lcom/bbm/ui/he;
 
-    .line 175
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->q:Lcom/bbm/j/k;
+    invoke-virtual {v0}, Lcom/bbm/ui/he;->e()V
+
+    .line 161
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelChatListActivity;->v:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 176
-    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->onResume()V
+    .line 162
+    invoke-super {p0}, Lcom/bbm/bali/ui/channels/a;->onResume()V
 
-    .line 177
+    .line 163
     return-void
 .end method

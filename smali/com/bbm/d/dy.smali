@@ -1,88 +1,55 @@
-.class public Lcom/bbm/d/dy;
-.super Ljava/lang/Object;
+.class public final Lcom/bbm/d/dy;
+.super Lcom/bbm/d/ez;
 .source "BbmdsProtocol.java"
 
 
-# instance fields
-.field a:Lcom/bbm/f/ab;
-
-
 # direct methods
-.method constructor <init>(Ljava/lang/String;)V
-    .locals 2
+.method public constructor <init>(Lorg/json/JSONObject;Ljava/lang/String;)V
+    .locals 1
 
     .prologue
-    .line 97
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 4952
+    const-string v0, "requestListMatching"
 
-    .line 98
-    new-instance v0, Lcom/bbm/f/ab;
+    invoke-direct {p0, v0}, Lcom/bbm/d/ez;-><init>(Ljava/lang/String;)V
 
-    new-instance v1, Lorg/json/JSONObject;
+    .line 4954
+    const-string v0, "criteria"
 
-    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/dy;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    invoke-direct {v0, p1, v1}, Lcom/bbm/f/ab;-><init>(Ljava/lang/String;Lorg/json/JSONObject;)V
+    .line 4955
+    const-string v0, "type"
 
-    iput-object v0, p0, Lcom/bbm/d/dy;->a:Lcom/bbm/f/ab;
+    invoke-virtual {p0, v0, p2}, Lcom/bbm/d/dy;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 99
+    .line 4956
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Lcom/bbm/f/ab;
-    .locals 3
+.method public final a(Ljava/lang/String;)Lcom/bbm/d/dy;
+    .locals 1
 
     .prologue
-    .line 111
-    iget-object v0, p0, Lcom/bbm/d/dy;->a:Lcom/bbm/f/ab;
+    .line 4966
+    const-string v0, "cookie"
 
-    new-instance v1, Lcom/bbm/f/ab;
+    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/dy;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    iget-object v2, v0, Lcom/bbm/f/ab;->b:Ljava/lang/String;
+    .line 4967
+    return-object p0
+.end method
 
-    iget-object v0, v0, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
+.method public final bridge synthetic a()Lcom/bbm/f/ab;
+    .locals 1
 
-    invoke-static {v0}, Lcom/bbm/util/cd;->b(Lorg/json/JSONObject;)Lorg/json/JSONObject;
+    .prologue
+    .line 4950
+    invoke-super {p0}, Lcom/bbm/d/ez;->a()Lcom/bbm/f/ab;
 
     move-result-object v0
 
-    invoke-direct {v1, v2, v0}, Lcom/bbm/f/ab;-><init>(Ljava/lang/String;Lorg/json/JSONObject;)V
-
-    return-object v1
-.end method
-
-.method public final a(Ljava/lang/String;Ljava/lang/Object;)V
-    .locals 2
-
-    .prologue
-    .line 103
-    :try_start_0
-    iget-object v0, p0, Lcom/bbm/d/dy;->a:Lcom/bbm/f/ab;
-
-    iget-object v0, v0, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
-
-    invoke-static {p2}, Lcom/bbm/util/cd;->a(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v0, p1, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 107
-    return-void
-
-    .line 105
-    :catch_0
-    move-exception v0
-
-    .line 106
-    new-instance v1, Lcom/bbm/f/z;
-
-    invoke-direct {v1, v0}, Lcom/bbm/f/z;-><init>(Ljava/lang/Exception;)V
-
-    throw v1
+    return-object v0
 .end method

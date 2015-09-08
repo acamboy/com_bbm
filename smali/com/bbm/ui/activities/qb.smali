@@ -1,19 +1,19 @@
 .class final Lcom/bbm/ui/activities/qb;
 .super Lcom/bbm/j/k;
-.source "GroupLobbyActivity.java"
+.source "GroupPictureCommentsActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupLobbyActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
     .locals 1
 
     .prologue
-    .line 437
-    iput-object p1, p0, Lcom/bbm/ui/activities/qb;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    .line 168
+    iput-object p1, p0, Lcom/bbm/ui/activities/qb;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
 
     const/4 v0, 0x0
 
@@ -28,65 +28,123 @@
     .locals 4
 
     .prologue
-    const/4 v3, 0x0
+    .line 172
+    iget-object v1, p0, Lcom/bbm/ui/activities/qb;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
 
-    .line 440
-    iget-object v0, p0, Lcom/bbm/ui/activities/qb;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/f;
 
-    iget-object v1, v0, Lcom/bbm/ui/activities/GroupLobbyActivity;->a:Lcom/bbm/g/al;
+    move-result-object v0
 
-    iget-object v2, v0, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/f;->c:Lcom/bbm/g/an;
 
-    invoke-virtual {v1, v2}, Lcom/bbm/g/al;->t(Ljava/lang/String;)Lcom/bbm/g/a;
+    iget-object v2, p0, Lcom/bbm/ui/activities/qb;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+
+    invoke-static {v2}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->b(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Lcom/bbm/g/an;->g(Ljava/lang/String;)Lcom/bbm/j/w;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/bbm/j/w;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    invoke-static {v1, v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;I)I
+
+    .line 175
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    .line 176
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/f;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/bbm/f;->c:Lcom/bbm/g/an;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/qb;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->c(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Ljava/lang/String;
 
     move-result-object v1
 
-    iget-boolean v1, v1, Lcom/bbm/g/a;->a:Z
+    invoke-virtual {v0, v1}, Lcom/bbm/g/an;->g(Ljava/lang/String;)Lcom/bbm/j/w;
 
-    if-nez v1, :cond_0
+    move-result-object v0
 
-    iget-object v1, v0, Lcom/bbm/ui/activities/GroupLobbyActivity;->a:Lcom/bbm/g/al;
+    invoke-interface {v0}, Lcom/bbm/j/w;->f()Ljava/lang/Object;
 
-    iget-object v2, v0, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-virtual {v1, v2}, Lcom/bbm/g/al;->t(Ljava/lang/String;)Lcom/bbm/g/a;
+    check-cast v0, Ljava/util/Collection;
 
-    move-result-object v1
+    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    iget-boolean v1, v1, Lcom/bbm/g/a;->j:Z
+    .line 177
+    new-instance v0, Lcom/bbm/ui/activities/qc;
 
-    if-nez v1, :cond_0
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/qc;-><init>(Lcom/bbm/ui/activities/qb;)V
 
-    iput-boolean v3, v0, Lcom/bbm/ui/activities/GroupLobbyActivity;->d:Z
+    invoke-static {v2, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/GroupLobbyActivity;->b:Lcom/bbm/ui/FooterActionBar;
+    .line 184
+    const/4 v0, 0x0
 
-    const/4 v1, 0x4
+    move v1, v0
 
-    invoke-virtual {v0, v3, v1}, Lcom/bbm/ui/FooterActionBar;->setActionVisibility(II)V
-
-    .line 442
     :goto_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/qb;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/qb;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    move-result v0
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/ey;->B:Lcom/bbm/ui/c/gj;
+    if-ge v1, v0, :cond_1
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/GroupLobbyActivity;->a(Lcom/bbm/ui/activities/GroupLobbyActivity;Lcom/bbm/ui/c/gj;)V
+    .line 185
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    .line 443
-    return-void
+    move-result-object v0
 
-    .line 440
+    check-cast v0, Lcom/bbm/g/ah;
+
+    iget-object v0, v0, Lcom/bbm/g/ah;->m:Ljava/lang/String;
+
+    iget-object v3, p0, Lcom/bbm/ui/activities/qb;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+
+    invoke-static {v3}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->d(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v0, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 186
+    iget-object v0, p0, Lcom/bbm/ui/activities/qb;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+
+    add-int/lit8 v3, v1, 0x1
+
+    invoke-static {v0, v3}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->b(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;I)I
+
+    .line 184
     :cond_0
-    const/4 v1, 0x1
+    add-int/lit8 v0, v1, 0x1
 
-    iput-boolean v1, v0, Lcom/bbm/ui/activities/GroupLobbyActivity;->d:Z
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/GroupLobbyActivity;->b:Lcom/bbm/ui/FooterActionBar;
-
-    invoke-virtual {v0, v3, v3}, Lcom/bbm/ui/FooterActionBar;->setActionVisibility(II)V
+    move v1, v0
 
     goto :goto_0
+
+    .line 189
+    :cond_1
+    return-void
 .end method

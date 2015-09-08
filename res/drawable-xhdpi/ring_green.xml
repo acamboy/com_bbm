@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape android:shape="ring" android:useLevel="false" android:innerRadius="@dimen/incoming_call_slider_ring_inner_radius" android:thickness="2.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="#ff00a95c" />
-    <size android:height="@dimen/incoming_call_slider_background_height" android:width="@dimen/incoming_call_slider_background_height" />
-</shape>

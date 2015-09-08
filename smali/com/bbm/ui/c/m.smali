@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/c/m;
 .super Ljava/lang/Object;
-.source "AppStoreFragment.java"
+.source "AppDetailsFragment.java"
 
 # interfaces
-.implements Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
+.implements Landroid/content/DialogInterface$OnCancelListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/l;
+.field final synthetic a:Lcom/bbm/ui/c/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/l;)V
+.method constructor <init>(Lcom/bbm/ui/c/a;)V
     .locals 0
 
     .prologue
-    .line 71
-    iput-object p1, p0, Lcom/bbm/ui/c/m;->a:Lcom/bbm/ui/c/l;
+    .line 143
+    iput-object p1, p0, Lcom/bbm/ui/c/m;->a:Lcom/bbm/ui/c/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,25 +25,34 @@
 
 
 # virtual methods
-.method public final onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
-    .locals 1
+.method public final onCancel(Landroid/content/DialogInterface;)V
+    .locals 3
 
     .prologue
-    .line 74
-    const-string v0, "apps_newest_publish_time"
+    .line 146
+    iget-object v0, p0, Lcom/bbm/ui/c/m;->a:Lcom/bbm/ui/c/a;
 
-    invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const/4 v1, 0x0
 
-    move-result v0
+    invoke-static {v0, v1}, Lcom/bbm/ui/c/a;->a(Lcom/bbm/ui/c/a;Z)V
 
-    if-eqz v0, :cond_0
+    .line 147
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
 
-    .line 75
-    iget-object v0, p0, Lcom/bbm/ui/c/m;->a:Lcom/bbm/ui/c/l;
+    move-result-object v0
 
-    invoke-static {v0}, Lcom/bbm/ui/c/l;->a(Lcom/bbm/ui/c/l;)V
+    iget-object v1, p0, Lcom/bbm/ui/c/m;->a:Lcom/bbm/ui/c/a;
 
-    .line 77
-    :cond_0
+    invoke-static {v1}, Lcom/bbm/ui/c/a;->e(Lcom/bbm/ui/c/a;)Lcom/bbm/l/b/f;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/bbm/l/b/t;->k:Ljava/lang/String;
+
+    sget-object v2, Lcom/bbm/c/p;->c:Lcom/bbm/c/p;
+
+    invoke-virtual {v0, v1, v2}, Lcom/bbm/c/c;->a(Ljava/lang/String;Lcom/bbm/c/p;)V
+
+    .line 148
     return-void
 .end method

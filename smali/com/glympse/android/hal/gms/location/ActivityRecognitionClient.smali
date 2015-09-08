@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static fa:Ljava/lang/Class;
+.field private static fd:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class",
@@ -13,7 +13,7 @@
     .end annotation
 .end field
 
-.field private static fb:Ljava/lang/reflect/Constructor;
+.field private static fe:Ljava/lang/reflect/Constructor;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/reflect/Constructor",
@@ -22,17 +22,17 @@
     .end annotation
 .end field
 
-.field private static fc:Ljava/lang/reflect/Method;
-
-.field private static fd:Ljava/lang/reflect/Method;
-
-.field private static fe:Ljava/lang/reflect/Method;
-
 .field private static ff:Ljava/lang/reflect/Method;
+
+.field private static fg:Ljava/lang/reflect/Method;
+
+.field private static fh:Ljava/lang/reflect/Method;
+
+.field private static fi:Ljava/lang/reflect/Method;
 
 
 # instance fields
-.field private fg:Ljava/lang/Object;
+.field private fj:Ljava/lang/Object;
 
 
 # direct methods
@@ -43,22 +43,22 @@
     const/4 v0, 0x0
 
     .line 19
-    sput-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fa:Ljava/lang/Class;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fd:Ljava/lang/Class;
 
     .line 20
-    sput-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fb:Ljava/lang/reflect/Constructor;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fe:Ljava/lang/reflect/Constructor;
 
     .line 21
-    sput-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fc:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->ff:Ljava/lang/reflect/Method;
 
     .line 22
-    sput-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fd:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fg:Ljava/lang/reflect/Method;
 
     .line 23
-    sput-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fe:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fh:Ljava/lang/reflect/Method;
 
     .line 24
-    sput-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->ff:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fi:Ljava/lang/reflect/Method;
 
     return-void
 .end method
@@ -73,11 +73,11 @@
     .line 26
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fg:Ljava/lang/Object;
+    iput-object v0, p0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fj:Ljava/lang/Object;
 
     .line 34
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fb:Ljava/lang/reflect/Constructor;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fe:Ljava/lang/reflect/Constructor;
 
     const/4 v1, 0x3
 
@@ -107,7 +107,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fg:Ljava/lang/Object;
+    iput-object v0, p0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fj:Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -140,7 +140,7 @@
     move-result-object v0
 
     .line 102
-    sput-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fa:Ljava/lang/Class;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fd:Ljava/lang/Class;
 
     const/4 v1, 0x3
 
@@ -168,10 +168,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fb:Ljava/lang/reflect/Constructor;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fe:Ljava/lang/reflect/Constructor;
 
     .line 106
-    sget-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fa:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fd:Ljava/lang/Class;
 
     const-string v1, "connect"
 
@@ -181,10 +181,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fc:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->ff:Ljava/lang/reflect/Method;
 
     .line 107
-    sget-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fa:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fd:Ljava/lang/Class;
 
     const-string v1, "disconnect"
 
@@ -194,10 +194,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fd:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fg:Ljava/lang/reflect/Method;
 
     .line 108
-    sget-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fa:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fd:Ljava/lang/Class;
 
     const-string v1, "requestActivityUpdates"
 
@@ -221,10 +221,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fe:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fh:Ljava/lang/reflect/Method;
 
     .line 111
-    sget-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fa:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fd:Ljava/lang/Class;
 
     const-string v1, "removeActivityUpdates"
 
@@ -242,7 +242,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->ff:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fi:Ljava/lang/reflect/Method;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -261,7 +261,7 @@
 
     .prologue
     .line 91
-    sget-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fa:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fd:Ljava/lang/Class;
 
     if-eqz v0, :cond_0
 
@@ -284,9 +284,9 @@
     .prologue
     .line 48
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fc:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->ff:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fg:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fj:Ljava/lang/Object;
 
     const/4 v2, 0x0
 
@@ -310,9 +310,9 @@
     .prologue
     .line 59
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fd:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fg:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fg:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fj:Ljava/lang/Object;
 
     const/4 v2, 0x0
 
@@ -336,9 +336,9 @@
     .prologue
     .line 82
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->ff:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fi:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fg:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fj:Ljava/lang/Object;
 
     const/4 v2, 0x1
 
@@ -368,9 +368,9 @@
     .prologue
     .line 70
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fe:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fh:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fg:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->fj:Ljava/lang/Object;
 
     const/4 v2, 0x2
 

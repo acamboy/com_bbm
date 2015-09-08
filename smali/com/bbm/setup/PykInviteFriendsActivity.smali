@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field a:Lcom/bbm/util/di;
+.field a:Lcom/bbm/util/ds;
 
-.field private b:Lcom/bbm/ui/a/w;
+.field private b:Lcom/bbm/ui/a/p;
 
 
 # direct methods
@@ -18,11 +18,11 @@
     invoke-direct {p0}, Lcom/bbm/setup/q;-><init>()V
 
     .line 30
-    invoke-static {}, Lcom/bbm/util/bp;->a()Lcom/bbm/util/bp;
+    invoke-static {}, Lcom/bbm/util/bv;->a()Lcom/bbm/util/bv;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/setup/PykInviteFriendsActivity;->a:Lcom/bbm/util/di;
+    iput-object v0, p0, Lcom/bbm/setup/PykInviteFriendsActivity;->a:Lcom/bbm/util/ds;
 
     return-void
 .end method
@@ -33,92 +33,62 @@
     .locals 0
 
     .prologue
-    .line 122
+    .line 110
     invoke-super {p0}, Lcom/bbm/setup/q;->onBackPressed()V
 
-    .line 123
+    .line 111
     return-void
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .locals 6
+    .locals 5
 
     .prologue
-    const/4 v5, -0x1
-
     const/4 v4, 0x0
 
-    .line 46
-    const v0, 0x7f03005b
+    .line 34
+    invoke-super {p0, p1}, Lcom/bbm/setup/q;->onCreate(Landroid/os/Bundle;)V
+
+    .line 36
+    const v0, 0x7f030077
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/PykInviteFriendsActivity;->setContentView(I)V
 
-    .line 48
-    new-instance v0, Lcom/bbm/i/b;
+    .line 38
+    new-instance v0, Lcom/bbm/h/d;
 
-    invoke-static {}, Lcom/bbm/Alaska;->x()Lcom/bbm/j/r;
+    invoke-static {}, Lcom/bbm/Alaska;->C()Lcom/bbm/j/r;
 
     move-result-object v1
 
-    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/f;
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2}, Lcom/bbm/i/b;-><init>(Lcom/bbm/j/r;Lcom/bbm/e;)V
+    invoke-direct {v0, v1, v2}, Lcom/bbm/h/d;-><init>(Lcom/bbm/j/r;Lcom/bbm/f;)V
 
-    .line 51
-    invoke-virtual {v0}, Lcom/bbm/i/b;->i()V
+    .line 41
+    invoke-virtual {v0}, Lcom/bbm/h/d;->i()V
 
-    .line 53
-    const v1, 0x7f0e0388
+    .line 43
+    new-instance v1, Lcom/bbm/ui/a/p;
 
-    invoke-virtual {p0, v1}, Lcom/bbm/setup/PykInviteFriendsActivity;->getString(I)Ljava/lang/String;
+    iget-object v2, p0, Lcom/bbm/setup/PykInviteFriendsActivity;->a:Lcom/bbm/util/ds;
 
-    move-result-object v1
+    new-instance v3, Lcom/bbm/util/b/g;
 
-    invoke-virtual {p0}, Lcom/bbm/setup/PykInviteFriendsActivity;->getActionBar()Landroid/app/ActionBar;
+    invoke-direct {v3}, Lcom/bbm/util/b/g;-><init>()V
 
-    move-result-object v2
-
-    invoke-virtual {v2, v4}, Landroid/app/ActionBar;->setDisplayShowHomeEnabled(Z)V
-
-    new-instance v2, Lcom/bbm/ui/SimpleCenteredActionBar;
-
-    invoke-direct {v2, p0, v1}, Lcom/bbm/ui/SimpleCenteredActionBar;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lcom/bbm/setup/PykInviteFriendsActivity;->getActionBar()Landroid/app/ActionBar;
-
-    move-result-object v1
-
-    new-instance v3, Landroid/app/ActionBar$LayoutParams;
-
-    invoke-direct {v3, v5, v5}, Landroid/app/ActionBar$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v1, v2, v3}, Landroid/app/ActionBar;->setCustomView(Landroid/view/View;Landroid/app/ActionBar$LayoutParams;)V
-
-    const/16 v2, 0x10
-
-    invoke-virtual {v1, v2}, Landroid/app/ActionBar;->setDisplayOptions(I)V
-
-    .line 55
-    new-instance v1, Lcom/bbm/ui/a/w;
-
-    iget-object v2, p0, Lcom/bbm/setup/PykInviteFriendsActivity;->a:Lcom/bbm/util/di;
-
-    new-instance v3, Lcom/bbm/util/b/f;
-
-    invoke-direct {v3}, Lcom/bbm/util/b/f;-><init>()V
-
-    invoke-static {v3, p0}, Lcom/bbm/util/b/d;->a(Lcom/bbm/util/b/f;Landroid/app/Activity;)Lcom/bbm/util/b/d;
+    invoke-static {v3, p0}, Lcom/bbm/util/b/e;->a(Lcom/bbm/util/b/g;Landroid/app/Activity;)Lcom/bbm/util/b/e;
 
     move-result-object v3
 
-    invoke-direct {v1, p0, v0, v2, v3}, Lcom/bbm/ui/a/w;-><init>(Landroid/content/Context;Lcom/bbm/j/r;Lcom/bbm/util/di;Lcom/bbm/util/b/d;)V
+    invoke-direct {v1, p0, v0, v2, v3}, Lcom/bbm/ui/a/p;-><init>(Landroid/content/Context;Lcom/bbm/j/r;Lcom/bbm/util/ds;Lcom/bbm/util/b/e;)V
 
-    iput-object v1, p0, Lcom/bbm/setup/PykInviteFriendsActivity;->b:Lcom/bbm/ui/a/w;
+    iput-object v1, p0, Lcom/bbm/setup/PykInviteFriendsActivity;->b:Lcom/bbm/ui/a/p;
 
-    .line 57
-    const v0, 0x7f0b02fb
+    .line 45
+    const v0, 0x7f0b034e
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/PykInviteFriendsActivity;->findViewById(I)Landroid/view/View;
 
@@ -126,44 +96,44 @@
 
     check-cast v0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
-    .line 58
+    .line 46
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setNumColumns(I)V
 
-    .line 59
+    .line 47
     invoke-virtual {v0, v4}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setHorizontalSpacing(I)V
 
-    .line 60
+    .line 48
     invoke-virtual {v0, v4}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setVerticalSpacing(I)V
 
-    .line 61
-    iget-object v1, p0, Lcom/bbm/setup/PykInviteFriendsActivity;->b:Lcom/bbm/ui/a/w;
+    .line 49
+    iget-object v1, p0, Lcom/bbm/setup/PykInviteFriendsActivity;->b:Lcom/bbm/ui/a/p;
 
     invoke-virtual {v0, v1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 62
+    .line 50
     new-instance v1, Lcom/bbm/setup/o;
 
     invoke-direct {v1, p0}, Lcom/bbm/setup/o;-><init>(Lcom/bbm/setup/PykInviteFriendsActivity;)V
 
     invoke-virtual {v0, v1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 78
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+    .line 66
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/setup/PykInviteFriendsActivity;->b:Lcom/bbm/ui/a/w;
+    iget-object v1, p0, Lcom/bbm/setup/PykInviteFriendsActivity;->b:Lcom/bbm/ui/a/p;
 
-    invoke-virtual {v1}, Lcom/bbm/ui/a/w;->getCount()I
+    invoke-virtual {v1}, Lcom/bbm/ui/a/p;->getCount()I
 
     move-result v1
 
-    iput v1, v0, Lcom/bbm/c/c;->aj:I
+    iput v1, v0, Lcom/bbm/c/c;->B:I
 
-    .line 81
-    const v0, 0x7f0b02fd
+    .line 69
+    const v0, 0x7f0b0350
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/PykInviteFriendsActivity;->findViewById(I)Landroid/view/View;
 
@@ -171,17 +141,14 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    .line 82
+    .line 70
     new-instance v1, Lcom/bbm/setup/p;
 
     invoke-direct {v1, p0}, Lcom/bbm/setup/p;-><init>(Lcom/bbm/setup/PykInviteFriendsActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 93
-    invoke-super {p0, p1}, Lcom/bbm/setup/q;->onCreate(Landroid/os/Bundle;)V
-
-    .line 94
+    .line 82
     return-void
 .end method
 
@@ -189,24 +156,24 @@
     .locals 2
 
     .prologue
-    .line 113
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+    .line 101
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
 
     move-result-object v0
 
-    sget-object v1, Lcom/bbm/c/o;->aw:Lcom/bbm/c/o;
+    sget-object v1, Lcom/bbm/c/s;->aI:Lcom/bbm/c/s;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->c(Lcom/bbm/c/o;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->c(Lcom/bbm/c/s;)V
 
-    .line 114
+    .line 102
     invoke-super {p0}, Lcom/bbm/setup/q;->onPause()V
 
-    .line 116
-    iget-object v0, p0, Lcom/bbm/setup/PykInviteFriendsActivity;->b:Lcom/bbm/ui/a/w;
+    .line 104
+    iget-object v0, p0, Lcom/bbm/setup/PykInviteFriendsActivity;->b:Lcom/bbm/ui/a/p;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/a/w;->e()V
+    invoke-virtual {v0}, Lcom/bbm/ui/a/p;->f()V
 
-    .line 117
+    .line 105
     return-void
 .end method
 
@@ -214,27 +181,25 @@
     .locals 3
 
     .prologue
-    .line 98
+    .line 86
     invoke-super {p0}, Lcom/bbm/setup/q;->onResume()V
 
-    .line 99
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+    .line 87
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
 
     move-result-object v0
 
-    sget-object v1, Lcom/bbm/c/o;->aw:Lcom/bbm/c/o;
+    sget-object v1, Lcom/bbm/c/s;->aI:Lcom/bbm/c/s;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->a(Lcom/bbm/c/o;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->a(Lcom/bbm/c/s;)V
 
-    .line 101
-    iget-object v0, p0, Lcom/bbm/setup/PykInviteFriendsActivity;->b:Lcom/bbm/ui/a/w;
+    .line 89
+    iget-object v0, p0, Lcom/bbm/setup/PykInviteFriendsActivity;->b:Lcom/bbm/ui/a/p;
 
-    iget-object v0, v0, Lcom/bbm/ui/gx;->d:Lcom/bbm/ui/cx;
+    invoke-virtual {v0}, Lcom/bbm/ui/a/p;->e()V
 
-    invoke-virtual {v0}, Lcom/bbm/ui/cx;->c()V
-
-    .line 106
-    invoke-static {}, Lcom/bbm/Alaska;->h()Landroid/content/SharedPreferences;
+    .line 94
+    invoke-static {}, Lcom/bbm/Alaska;->l()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -252,6 +217,6 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 109
+    .line 97
     return-void
 .end method

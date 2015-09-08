@@ -88,10 +88,6 @@
 
     .line 860
     :try_start_0
-    iget-object v0, p0, Lcom/blackberry/ids/IDS$4;->d:Ljava/lang/Object;
-
-    iget v0, p0, Lcom/blackberry/ids/IDS$4;->b:I
-
     iget-object v0, p0, Lcom/blackberry/ids/IDS$4;->c:[Ljava/lang/String;
 
     iget-object v1, p0, Lcom/blackberry/ids/IDS$4;->e:Lcom/blackberry/ids/IGetPropertiesCallback;

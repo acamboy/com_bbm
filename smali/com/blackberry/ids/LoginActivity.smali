@@ -387,7 +387,10 @@
     :catchall_0
     move-exception v0
 
+    :try_start_1
     monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw v0
 
@@ -446,10 +449,10 @@
 
     .line 566
     :cond_5
-    :try_start_1
+    :try_start_2
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-    :try_end_1
-    .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_0
+    :try_end_2
+    .catch Ljava/lang/NumberFormatException; {:try_start_2 .. :try_end_2} :catch_0
 
     move-result v3
 
@@ -1587,7 +1590,10 @@
     :catchall_0
     move-exception v0
 
+    :try_start_1
     monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw v0
 
@@ -2028,7 +2034,7 @@
     .line 443
     const/4 v4, 0x1
 
-    const/high16 v5, 0x41200000
+    const/high16 v5, 0x41200000    # 10.0f
 
     invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 

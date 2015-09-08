@@ -3,20 +3,20 @@
 .source "AudioPlayerActivity.java"
 
 # interfaces
-.implements Landroid/media/MediaPlayer$OnCompletionListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/AudioPlayerActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/s;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/AudioPlayerActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/s;)V
     .locals 0
 
     .prologue
-    .line 85
-    iput-object p1, p0, Lcom/bbm/ui/activities/t;->a:Lcom/bbm/ui/activities/AudioPlayerActivity;
+    .line 83
+    iput-object p1, p0, Lcom/bbm/ui/activities/t;->a:Lcom/bbm/ui/activities/s;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,23 +25,24 @@
 
 
 # virtual methods
-.method public final onCompletion(Landroid/media/MediaPlayer;)V
-    .locals 2
+.method public final run()V
+    .locals 1
 
     .prologue
+    .line 86
+    iget-object v0, p0, Lcom/bbm/ui/activities/t;->a:Lcom/bbm/ui/activities/s;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/s;->a:Lcom/bbm/ui/activities/AudioPlayerActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/AudioPlayerActivity;->e(Lcom/bbm/ui/activities/AudioPlayerActivity;)V
+
     .line 88
-    iget-object v0, p0, Lcom/bbm/ui/activities/t;->a:Lcom/bbm/ui/activities/AudioPlayerActivity;
+    iget-object v0, p0, Lcom/bbm/ui/activities/t;->a:Lcom/bbm/ui/activities/s;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/AudioPlayerActivity;->e(Lcom/bbm/ui/activities/AudioPlayerActivity;)Landroid/os/Handler;
+    iget-object v0, v0, Lcom/bbm/ui/activities/s;->a:Lcom/bbm/ui/activities/AudioPlayerActivity;
 
-    move-result-object v0
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/AudioPlayerActivity;->finish()V
 
-    new-instance v1, Lcom/bbm/ui/activities/u;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/u;-><init>(Lcom/bbm/ui/activities/t;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 96
+    .line 89
     return-void
 .end method

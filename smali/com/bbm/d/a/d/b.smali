@@ -42,7 +42,7 @@
     move v0, v1
 
     :goto_0
-    invoke-static {v0}, Lcom/google/b/a/o;->b(Z)V
+    invoke-static {v0}, Lcom/google/b/a/m;->b(Z)V
 
     .line 17
     invoke-virtual {p1}, Lcom/bbm/f/ab;->a()Z
@@ -87,7 +87,7 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, v2}, Lcom/bbm/y;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v2}, Lcom/bbm/af;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 22
     iput-boolean v1, p0, Lcom/bbm/d/a/d/b;->a:Z

@@ -1,121 +1,51 @@
-.class public final Lcom/bbm/ui/activities/ku;
+.class final Lcom/bbm/ui/activities/ku;
 .super Ljava/lang/Object;
-.source "GroupActivityHelper.java"
+.source "GroupConversationActivity.java"
+
+# interfaces
+.implements Lcom/bbm/bali/ui/main/groups/e;
+
+
+# instance fields
+.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
 
 # direct methods
-.method public static a(Landroid/app/Activity;Landroid/os/Bundle;)Ljava/lang/String;
-    .locals 2
+.method constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
+    .locals 0
 
     .prologue
-    .line 19
-    const/4 v0, 0x0
+    .line 585
+    iput-object p1, p0, Lcom/bbm/ui/activities/ku;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    .line 20
-    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    .line 21
-    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    const-string v1, "groupUri"
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 25
-    :cond_0
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    if-eqz p1, :cond_1
-
-    .line 26
-    const-string v0, "groupUri"
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 29
-    :cond_1
-    return-object v0
+    return-void
 .end method
 
-.method public static a(Landroid/app/Activity;Landroid/view/View;I)V
+
+# virtual methods
+.method public final a()V
     .locals 4
 
     .prologue
-    const v0, 0x7f0e0437
+    .line 588
+    iget-object v0, p0, Lcom/bbm/ui/activities/ku;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    const/4 v1, 0x1
+    new-instance v1, Landroid/content/Intent;
 
-    const/4 v3, 0x0
+    const-class v2, Lcom/bbm/ui/activities/GroupProfileActivity;
 
-    .line 43
-    if-eqz p1, :cond_0
+    invoke-direct {v1, v0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 44
-    invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    const-string v2, "groupUri"
 
-    move-result-object v0
+    iget-object v3, v0, Lcom/bbm/bali/ui/main/a/d;->a:Ljava/lang/String;
 
-    new-array v1, v1, [Ljava/lang/Object;
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/GroupConversationActivity;->startActivity(Landroid/content/Intent;)V
 
-    move-result-object v2
-
-    aput-object v2, v1, v3
-
-    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const v1, 0x7f0e0586
-
-    invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v2, Lcom/bbm/ui/activities/kv;
-
-    invoke-direct {v2}, Lcom/bbm/ui/activities/kv;-><init>()V
-
-    invoke-static {p1, v0, v1, v2}, Lcom/bbm/util/fh;->a(Landroid/view/View;Ljava/lang/String;Ljava/lang/String;Lcom/bbm/util/fk;)Landroid/widget/PopupWindow;
-
-    .line 55
-    :goto_0
+    .line 589
     return-void
-
-    .line 53
-    :cond_0
-    invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    aput-object v2, v1, v3
-
-    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;)V
-
-    goto :goto_0
 .end method

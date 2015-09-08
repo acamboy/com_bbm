@@ -1,110 +1,97 @@
 .class final Lcom/bbm/ui/activities/aaq;
-.super Lcom/bbm/d/b/f;
-.source "OpenInBbmActivity.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/d/b/f",
-        "<",
-        "Lcom/bbm/d/fn;",
-        ">;"
-    }
-.end annotation
+.super Lcom/bbm/j/k;
+.source "ReceivedPendingGroupInviteActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/OpenInBbmActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;)V
+    .locals 1
 
     .prologue
-    .line 89
-    iput-object p1, p0, Lcom/bbm/ui/activities/aaq;->a:Lcom/bbm/ui/activities/OpenInBbmActivity;
+    .line 258
+    iput-object p1, p0, Lcom/bbm/ui/activities/aaq;->a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
 
-    invoke-direct {p0}, Lcom/bbm/d/b/f;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()Ljava/util/List;
+.method protected final a()V
     .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/d/fn;",
-            ">;"
-        }
-    .end annotation
 
     .prologue
-    .line 92
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    .line 261
+    iget-object v0, p0, Lcom/bbm/ui/activities/aaq;->a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/d/a;->k()Lcom/bbm/j/w;
+    const v1, 0x7f0c001a
 
-    move-result-object v2
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
-    .line 93
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    move-result v0
 
-    move-result-object v0
+    .line 262
+    iget-object v1, p0, Lcom/bbm/ui/activities/aaq;->a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/d/a;->l()Lcom/bbm/j/w;
+    invoke-static {v1}, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;->a(Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;)Lcom/bbm/f;
 
-    move-result-object v3
+    move-result-object v1
 
-    .line 95
-    new-instance v0, Ljava/util/ArrayList;
+    iget-object v1, v1, Lcom/bbm/f;->c:Lcom/bbm/g/an;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    const-string v2, "maxGroupsAllowed"
 
-    .line 96
-    invoke-interface {v2}, Lcom/bbm/j/w;->b()Z
+    invoke-virtual {v1, v2}, Lcom/bbm/g/an;->x(Ljava/lang/String;)Lcom/bbm/util/bs;
 
-    move-result v1
+    move-result-object v1
 
-    if-nez v1, :cond_0
+    .line 263
+    iget-object v2, p0, Lcom/bbm/ui/activities/aaq;->a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
 
-    invoke-interface {v3}, Lcom/bbm/j/w;->b()Z
+    invoke-static {v2, v0}, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;->a(Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;I)I
 
-    move-result v1
+    .line 264
+    iget-object v2, v1, Lcom/bbm/util/bs;->b:Lcom/bbm/util/bo;
 
-    if-nez v1, :cond_0
+    sget-object v3, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
 
-    .line 97
-    new-instance v1, Ljava/util/ArrayList;
+    if-ne v2, v3, :cond_0
 
-    invoke-interface {v2}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+    .line 265
+    iget-object v1, v1, Lcom/bbm/util/bs;->a:Lorg/json/JSONObject;
 
-    move-result-object v0
+    const-string v2, "value"
 
-    check-cast v0, Ljava/util/Collection;
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
-    invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    move-result-object v1
 
-    .line 98
-    invoke-interface {v3}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+    .line 266
+    if-eqz v1, :cond_0
 
-    move-result-object v0
+    .line 267
+    iget-object v2, p0, Lcom/bbm/ui/activities/aaq;->a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
 
-    check-cast v0, Ljava/util/Collection;
+    const-string v3, "groupCount"
 
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+    invoke-virtual {v1, v3, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
 
-    move-object v0, v1
+    move-result v0
 
-    .line 100
+    invoke-static {v2, v0}, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;->a(Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;I)I
+
+    .line 270
     :cond_0
-    return-object v0
+    return-void
 .end method

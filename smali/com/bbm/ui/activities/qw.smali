@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/qw;
 .super Ljava/lang/Object;
-.source "GroupLobbyActivity.java"
+.source "GroupPictureUploadActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupLobbyActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)V
     .locals 0
 
     .prologue
-    .line 320
-    iput-object p1, p0, Lcom/bbm/ui/activities/qw;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    .line 180
+    iput-object p1, p0, Lcom/bbm/ui/activities/qw;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,40 +25,56 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final onGlobalLayout()V
+    .locals 2
 
     .prologue
-    .line 323
-    const-string v0, "mGroupEventsTile Clicked"
+    .line 183
+    iget-object v0, p0, Lcom/bbm/ui/activities/qw;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/GroupLobbyActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->e(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Landroid/widget/ImageView;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    move-result-object v0
 
-    .line 325
-    new-instance v0, Landroid/content/Intent;
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/qw;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    move-result-object v0
 
-    const-class v2, Lcom/bbm/ui/activities/GroupEventsActivity;
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    .line 185
+    iget-object v0, p0, Lcom/bbm/ui/activities/qw;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
 
-    .line 326
-    const-string v1, "groupUri"
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->f(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Ljava/lang/Thread;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/qw;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    move-result-object v0
 
-    iget-object v2, v2, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    iget-object v0, p0, Lcom/bbm/ui/activities/qw;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
 
-    .line 327
-    iget-object v1, p0, Lcom/bbm/ui/activities/qw;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->f(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Ljava/lang/Thread;
 
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->startActivity(Landroid/content/Intent;)V
+    move-result-object v0
 
-    .line 328
+    invoke-virtual {v0}, Ljava/lang/Thread;->getState()Ljava/lang/Thread$State;
+
+    move-result-object v0
+
+    sget-object v1, Ljava/lang/Thread$State;->NEW:Ljava/lang/Thread$State;
+
+    if-ne v0, v1, :cond_0
+
+    .line 186
+    iget-object v0, p0, Lcom/bbm/ui/activities/qw;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->f(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Ljava/lang/Thread;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+
+    .line 188
+    :cond_0
     return-void
 .end method

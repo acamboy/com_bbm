@@ -16,19 +16,19 @@
 
 .field public static final OP_TEXT:I = 0x1
 
-.field private static final wA:I = 0x1
+.field private static final xp:I = 0xff
 
-.field private static final wB:I = 0x2
+.field private static final xq:I = 0x80
 
-.field private static final wv:I = 0xff
+.field private static final xr:I = 0xf
 
-.field private static final ww:I = 0x80
+.field private static final xs:I = 0x80
 
-.field private static final wx:I = 0xf
+.field private static final xt:I = 0x7f
 
-.field private static final wy:I = 0x80
+.field private static final xu:I = 0x1
 
-.field private static final wz:I = 0x7f
+.field private static final xv:I = 0x2
 
 
 # direct methods
@@ -130,7 +130,7 @@
     .locals 4
 
     .prologue
-    .line 329
+    .line 388
     const/4 v0, 0x0
 
     :goto_0
@@ -140,7 +140,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 331
+    .line 390
     add-int v1, p2, v0
 
     add-int v2, p2, v0
@@ -157,12 +157,12 @@
 
     aput-byte v2, p0, v1
 
-    .line 329
+    .line 388
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 334
+    .line 393
     :cond_0
     return-object p0
 .end method
@@ -191,33 +191,33 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 216
+    .line 275
     const-string v1, "101"
 
     invoke-virtual {p0, v1, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 218
+    .line 277
     const-string v2, "\r\n"
 
     invoke-virtual {p0, v2, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 222
+    .line 281
     if-ltz v1, :cond_0
 
     if-ltz v2, :cond_0
 
     if-le v1, v2, :cond_1
 
-    .line 254
+    .line 313
     :cond_0
     :goto_0
     return v0
 
-    .line 229
+    .line 288
     :cond_1
     const-string v1, "Sec-WebSocket-Accept"
 
@@ -225,22 +225,22 @@
 
     move-result-object v1
 
-    .line 230
+    .line 289
     invoke-virtual {p0, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 231
+    .line 290
     if-ltz v2, :cond_0
 
-    .line 236
+    .line 295
     const-string v3, "\r\n"
 
     invoke-virtual {p0, v3, v2}, Ljava/lang/String;->indexOf(Ljava/lang/String;I)I
 
     move-result v3
 
-    .line 237
+    .line 296
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -249,32 +249,32 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    .line 238
+    .line 297
     if-ltz v3, :cond_0
 
     if-lt v3, v1, :cond_0
 
-    .line 243
+    .line 302
     invoke-static {p0, v1, v3}, Lcom/glympse/android/hal/Helpers;->substrend(Ljava/lang/String;II)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 244
+    .line 303
     if-eqz v1, :cond_0
 
-    .line 248
+    .line 307
     invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 249
+    .line 308
     invoke-static {v1, p1}, Lcom/glympse/android/hal/Helpers;->safeEquals(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 254
+    .line 313
     const/4 v0, 0x1
 
     goto :goto_0
@@ -300,27 +300,27 @@
     goto :goto_0
 .end method
 
-.method private static dF()[B
+.method private static dK()[B
     .locals 7
 
     .prologue
     const/4 v6, 0x4
 
-    .line 310
+    .line 369
     new-array v1, v6, [B
 
-    .line 311
+    .line 370
     const/4 v0, 0x0
 
     :goto_0
     if-ge v0, v6, :cond_0
 
-    .line 313
+    .line 372
     invoke-static {}, Lcom/glympse/android/hal/Platform;->random()D
 
     move-result-wide v2
 
-    const-wide/high16 v4, 0x4070000000000000L
+    const-wide/high16 v4, 0x4070000000000000L    # 256.0
 
     mul-double/2addr v2, v4
 
@@ -334,12 +334,12 @@
 
     aput-byte v2, v1, v0
 
-    .line 311
+    .line 370
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 315
+    .line 374
     :cond_0
     return-object v1
 .end method
@@ -499,7 +499,7 @@
 
     move-result-wide v2
 
-    const-wide/high16 v4, 0x4070000000000000L
+    const-wide/high16 v4, 0x4070000000000000L    # 256.0
 
     mul-double/2addr v2, v4
 
@@ -593,6 +593,128 @@
     const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method public static parseHandshakeResponse(Lcom/glympse/android/hal/GByteVector;)Ljava/lang/String;
+    .locals 11
+
+    .prologue
+    const/16 v4, 0xd
+
+    const/16 v2, 0xa
+
+    const/4 v10, 0x4
+
+    const/4 v1, 0x1
+
+    const/4 v3, 0x0
+
+    .line 210
+    invoke-interface {p0}, Lcom/glympse/android/hal/GByteVector;->size()I
+
+    move-result v5
+
+    .line 212
+    new-array v6, v5, [B
+
+    .line 217
+    new-array v7, v10, [B
+
+    .line 219
+    aput-byte v4, v7, v3
+
+    .line 220
+    aput-byte v2, v7, v1
+
+    .line 221
+    const/4 v0, 0x2
+
+    aput-byte v4, v7, v0
+
+    .line 222
+    const/4 v0, 0x3
+
+    aput-byte v2, v7, v0
+
+    move v0, v3
+
+    move v2, v3
+
+    move v4, v3
+
+    .line 226
+    :goto_0
+    if-nez v0, :cond_2
+
+    if-ge v4, v5, :cond_2
+
+    .line 228
+    invoke-interface {p0, v4}, Lcom/glympse/android/hal/GByteVector;->get(I)B
+
+    move-result v8
+
+    .line 231
+    aput-byte v8, v6, v4
+
+    .line 234
+    aget-byte v9, v7, v2
+
+    if-eq v8, v9, :cond_1
+
+    move v2, v3
+
+    .line 250
+    :cond_0
+    :goto_1
+    add-int/lit8 v4, v4, 0x1
+
+    .line 251
+    goto :goto_0
+
+    .line 242
+    :cond_1
+    add-int/lit8 v2, v2, 0x1
+
+    .line 245
+    if-ne v2, v10, :cond_0
+
+    move v0, v1
+
+    .line 247
+    goto :goto_1
+
+    .line 253
+    :cond_2
+    if-nez v0, :cond_3
+
+    .line 256
+    const/4 v0, 0x0
+
+    .line 264
+    :goto_2
+    return-object v0
+
+    .line 262
+    :cond_3
+    new-instance v0, Lcom/glympse/android/hal/ByteVector;
+
+    invoke-direct {v0, v4}, Lcom/glympse/android/hal/ByteVector;-><init>(I)V
+
+    .line 263
+    invoke-interface {v0, v6, v3, v4}, Lcom/glympse/android/hal/GByteVector;->appendRange([BII)V
+
+    .line 264
+    const-string v1, "UTF-8"
+
+    invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lcom/glympse/android/hal/GByteVector;->stringEncode(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_2
 .end method
 
 .method public static parseHeaderIsValid([B)Z
@@ -753,30 +875,30 @@
 
     const/4 v12, 0x0
 
-    const-wide/high16 v10, 0x4000000000000000L
+    const-wide/high16 v10, 0x4000000000000000L    # 2.0
 
-    .line 262
+    .line 321
     array-length v0, p0
 
-    .line 263
+    .line 322
     invoke-static {v0}, Lcom/glympse/android/ws/WebSocketParser;->calculateFrameSize(I)I
 
     move-result v1
 
-    .line 264
+    .line 323
     new-array v1, v1, [B
 
-    .line 265
+    .line 324
     int-to-long v2, v0
 
     invoke-static {v2, v3}, Lcom/glympse/android/ws/WebSocketParser;->getHeaderLengthFromPayloadLength(J)I
 
     move-result v2
 
-    .line 266
+    .line 325
     add-int/lit8 v3, v2, 0x4
 
-    .line 268
+    .line 327
     int-to-byte v4, p1
 
     or-int/lit8 v4, v4, -0x80
@@ -785,53 +907,53 @@
 
     aput-byte v4, v1, v12
 
-    .line 269
+    .line 328
     const/16 v4, 0x7d
 
     if-gt v0, v4, :cond_0
 
-    .line 271
+    .line 330
     or-int/lit16 v4, v0, 0x80
 
     int-to-byte v4, v4
 
     aput-byte v4, v1, v5
 
-    .line 293
+    .line 352
     :goto_0
     invoke-static {p0, v12, v1, v3, v0}, Lcom/glympse/android/hal/Helpers;->copyByteArray([BI[BII)V
 
-    .line 295
-    invoke-static {}, Lcom/glympse/android/ws/WebSocketParser;->dF()[B
+    .line 354
+    invoke-static {}, Lcom/glympse/android/ws/WebSocketParser;->dK()[B
 
     move-result-object v0
 
-    .line 298
+    .line 357
     array-length v4, v0
 
     invoke-static {v0, v12, v1, v2, v4}, Lcom/glympse/android/hal/Helpers;->copyByteArray([BI[BII)V
 
-    .line 300
+    .line 359
     invoke-static {v1, v0, v3}, Lcom/glympse/android/ws/WebSocketParser;->a([B[BI)[B
 
-    .line 302
+    .line 361
     return-object v1
 
-    .line 273
+    .line 332
     :cond_0
     const v4, 0xffff
 
     if-gt v0, v4, :cond_1
 
-    .line 275
+    .line 334
     const/4 v4, -0x2
 
     aput-byte v4, v1, v5
 
-    .line 276
+    .line 335
     int-to-double v4, v0
 
-    const-wide/high16 v6, 0x4070000000000000L
+    const-wide/high16 v6, 0x4070000000000000L    # 256.0
 
     div-double/2addr v4, v6
 
@@ -845,7 +967,7 @@
 
     aput-byte v4, v1, v8
 
-    .line 277
+    .line 336
     and-int/lit16 v4, v0, 0xff
 
     int-to-byte v4, v4
@@ -854,16 +976,16 @@
 
     goto :goto_0
 
-    .line 281
+    .line 340
     :cond_1
     const/4 v4, -0x1
 
     aput-byte v4, v1, v5
 
-    .line 282
+    .line 341
     int-to-double v4, v0
 
-    const-wide/high16 v6, 0x404c000000000000L
+    const-wide/high16 v6, 0x404c000000000000L    # 56.0
 
     invoke-static {v10, v11, v6, v7}, Ljava/lang/Math;->pow(DD)D
 
@@ -883,10 +1005,10 @@
 
     aput-byte v4, v1, v8
 
-    .line 283
+    .line 342
     int-to-double v4, v0
 
-    const-wide/high16 v6, 0x4048000000000000L
+    const-wide/high16 v6, 0x4048000000000000L    # 48.0
 
     invoke-static {v10, v11, v6, v7}, Ljava/lang/Math;->pow(DD)D
 
@@ -906,12 +1028,12 @@
 
     aput-byte v4, v1, v9
 
-    .line 284
+    .line 343
     const/4 v4, 0x4
 
     int-to-double v6, v0
 
-    const-wide/high16 v8, 0x4044000000000000L
+    const-wide/high16 v8, 0x4044000000000000L    # 40.0
 
     invoke-static {v10, v11, v8, v9}, Ljava/lang/Math;->pow(DD)D
 
@@ -931,12 +1053,12 @@
 
     aput-byte v5, v1, v4
 
-    .line 285
+    .line 344
     const/4 v4, 0x5
 
     int-to-double v6, v0
 
-    const-wide/high16 v8, 0x4040000000000000L
+    const-wide/high16 v8, 0x4040000000000000L    # 32.0
 
     invoke-static {v10, v11, v8, v9}, Ljava/lang/Math;->pow(DD)D
 
@@ -956,12 +1078,12 @@
 
     aput-byte v5, v1, v4
 
-    .line 286
+    .line 345
     const/4 v4, 0x6
 
     int-to-double v6, v0
 
-    const-wide/high16 v8, 0x4038000000000000L
+    const-wide/high16 v8, 0x4038000000000000L    # 24.0
 
     invoke-static {v10, v11, v8, v9}, Ljava/lang/Math;->pow(DD)D
 
@@ -981,12 +1103,12 @@
 
     aput-byte v5, v1, v4
 
-    .line 287
+    .line 346
     const/4 v4, 0x7
 
     int-to-double v6, v0
 
-    const-wide/high16 v8, 0x4030000000000000L
+    const-wide/high16 v8, 0x4030000000000000L    # 16.0
 
     invoke-static {v10, v11, v8, v9}, Ljava/lang/Math;->pow(DD)D
 
@@ -1006,12 +1128,12 @@
 
     aput-byte v5, v1, v4
 
-    .line 288
+    .line 347
     const/16 v4, 0x8
 
     int-to-double v6, v0
 
-    const-wide/high16 v8, 0x4020000000000000L
+    const-wide/high16 v8, 0x4020000000000000L    # 8.0
 
     invoke-static {v10, v11, v8, v9}, Ljava/lang/Math;->pow(DD)D
 
@@ -1031,7 +1153,7 @@
 
     aput-byte v5, v1, v4
 
-    .line 289
+    .line 348
     const/16 v4, 0x9
 
     and-int/lit16 v5, v0, 0xff

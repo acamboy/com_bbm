@@ -51,7 +51,7 @@
     .end annotation
 
     .prologue
-    .line 221
+    .line 240
     new-instance v0, Lcom/glympse/android/hal/GLinkedList;
 
     invoke-direct {v0}, Lcom/glympse/android/hal/GLinkedList;-><init>()V
@@ -68,15 +68,15 @@
 
     const-wide/16 v2, 0x0
 
-    const/high16 v8, 0x7fc00000
+    const/high16 v8, 0x7fc00000    # NaNf
 
-    const/high16 v9, 0x7fc00000
+    const/high16 v9, 0x7fc00000    # NaNf
 
-    const/high16 v10, 0x7fc00000
+    const/high16 v10, 0x7fc00000    # NaNf
 
-    const/high16 v11, 0x7fc00000
+    const/high16 v11, 0x7fc00000    # NaNf
 
-    const/high16 v12, 0x7fc00000
+    const/high16 v12, 0x7fc00000    # NaNf
 
     move-wide v4, p0
 
@@ -113,6 +113,20 @@
     invoke-direct/range {v1 .. v12}, Lcom/glympse/android/lib/Location;-><init>(JDDFFFFF)V
 
     return-object v1
+.end method
+
+.method public static createLocationProvider(Ljava/lang/Object;)Lcom/glympse/android/core/GLocationProvider;
+    .locals 1
+
+    .prologue
+    .line 205
+    check-cast p0, Landroid/content/Context;
+
+    invoke-static {p0}, Lcom/glympse/android/hal/HalFactory;->createLocationProvider(Landroid/content/Context;)Lcom/glympse/android/core/GLocationProvider;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method public static createPrimitive()Lcom/glympse/android/core/GPrimitive;
@@ -239,8 +253,20 @@
     .locals 0
 
     .prologue
-    .line 205
+    .line 213
     return-object p0
+.end method
+
+.method public static createStringBuilder(I)Ljava/lang/StringBuilder;
+    .locals 1
+
+    .prologue
+    .line 224
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    return-object v0
 .end method
 
 .method public static createVector()Lcom/glympse/android/hal/GVector;
@@ -256,7 +282,7 @@
     .end annotation
 
     .prologue
-    .line 213
+    .line 232
     new-instance v0, Lcom/glympse/android/hal/GVector;
 
     invoke-direct {v0}, Lcom/glympse/android/hal/GVector;-><init>()V
@@ -268,7 +294,7 @@
     .locals 1
 
     .prologue
-    .line 229
+    .line 248
     invoke-static {}, Lcom/glympse/android/hal/Platform;->getOsName()Ljava/lang/String;
 
     move-result-object v0

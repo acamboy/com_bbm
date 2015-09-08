@@ -1,9 +1,6 @@
 .class final Lcom/bbm/ui/bl;
-.super Ljava/lang/Object;
+.super Lcom/bbm/j/u;
 .source "EmoticonInputPanel.java"
-
-# interfaces
-.implements Lcom/bbm/ui/gv;
 
 
 # instance fields
@@ -15,39 +12,91 @@
     .locals 0
 
     .prologue
-    .line 244
+    .line 567
     iput-object p1, p0, Lcom/bbm/ui/bl;->a:Lcom/bbm/ui/EmoticonInputPanel;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/bbm/d/gh;I)V
-    .locals 1
+.method protected final b()Z
+    .locals 3
 
     .prologue
-    .line 247
-    iget-object v0, p0, Lcom/bbm/ui/bl;->a:Lcom/bbm/ui/EmoticonInputPanel;
+    const/4 v1, 0x0
 
-    invoke-static {v0}, Lcom/bbm/ui/EmoticonInputPanel;->c(Lcom/bbm/ui/EmoticonInputPanel;)Lcom/bbm/ui/gv;
+    .line 570
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v0
+
+    sget-object v2, Lcom/bbm/d/af;->a:Lcom/bbm/d/af;
+
+    invoke-virtual {v2}, Lcom/bbm/d/af;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Lcom/bbm/d/a;->b(Ljava/lang/String;)Lcom/bbm/d/ae;
+
+    move-result-object v0
+
+    .line 571
+    iget-boolean v2, v0, Lcom/bbm/d/ae;->b:Z
+
+    if-eqz v2, :cond_1
+
+    .line 572
+    iget-boolean v0, v0, Lcom/bbm/d/ae;->a:Z
 
     if-eqz v0, :cond_0
 
-    .line 248
+    .line 573
     iget-object v0, p0, Lcom/bbm/ui/bl;->a:Lcom/bbm/ui/EmoticonInputPanel;
 
-    invoke-static {v0}, Lcom/bbm/ui/EmoticonInputPanel;->c(Lcom/bbm/ui/EmoticonInputPanel;)Lcom/bbm/ui/gv;
+    sget-object v1, Lcom/bbm/ui/bw;->c:Lcom/bbm/ui/bw;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/EmoticonInputPanel;->setLowerPanel(Lcom/bbm/ui/bw;)V
+
+    .line 579
+    :goto_0
+    const/4 v0, 0x1
+
+    .line 581
+    :goto_1
+    return v0
+
+    .line 575
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/bl;->a:Lcom/bbm/ui/EmoticonInputPanel;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lcom/bbm/ui/gv;->a(Lcom/bbm/d/gh;I)V
+    check-cast v0, Landroid/app/Activity;
 
-    .line 250
-    :cond_0
-    return-void
+    .line 576
+    sget-object v2, Lcom/bbm/d/af;->a:Lcom/bbm/d/af;
+
+    invoke-static {v2, v0}, Lcom/bbm/l/e;->a(Lcom/bbm/d/af;Landroid/app/Activity;)V
+
+    .line 577
+    iget-object v0, p0, Lcom/bbm/ui/bl;->a:Lcom/bbm/ui/EmoticonInputPanel;
+
+    invoke-static {v0}, Lcom/bbm/ui/EmoticonInputPanel;->f(Lcom/bbm/ui/EmoticonInputPanel;)Lcom/bbm/ui/views/EphemeralPickerPin;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/views/EphemeralPickerPin;->setSelected(Z)V
+
+    goto :goto_0
+
+    :cond_1
+    move v0, v1
+
+    .line 581
+    goto :goto_1
 .end method

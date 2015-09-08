@@ -31,23 +31,11 @@
 
 .field public static final enum h:Lcom/bbm/c/u;
 
-.field public static final enum i:Lcom/bbm/c/u;
-
-.field public static final enum j:Lcom/bbm/c/u;
-
-.field public static final enum k:Lcom/bbm/c/u;
-
-.field public static final enum l:Lcom/bbm/c/u;
-
-.field public static final enum m:Lcom/bbm/c/u;
-
-.field public static final enum n:Lcom/bbm/c/u;
-
-.field private static final synthetic p:[Lcom/bbm/c/u;
+.field private static final synthetic j:[Lcom/bbm/c/u;
 
 
 # instance fields
-.field private o:Ljava/lang/String;
+.field private i:Ljava/lang/String;
 
 
 # direct methods
@@ -65,180 +53,102 @@
 
     const/4 v4, 0x0
 
-    .line 554
+    .line 651
     new-instance v0, Lcom/bbm/c/u;
 
-    const-string v1, "TimedMessageTotal"
+    const-string v1, "RestoreLastFailureCode"
 
-    const-string v2, "Timed Messages - Total"
+    const-string v2, "Restore Last Failure Code"
 
     invoke-direct {v0, v1, v4, v2}, Lcom/bbm/c/u;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/c/u;->a:Lcom/bbm/c/u;
 
-    .line 555
+    .line 652
     new-instance v0, Lcom/bbm/c/u;
 
-    const-string v1, "TimedMessageOneSecond"
+    const-string v1, "RestoreTotalNumber"
 
-    const-string v2, "Timed Messages - 1 Second"
+    const-string v2, "Restore Total Number Of Goods"
 
     invoke-direct {v0, v1, v5, v2}, Lcom/bbm/c/u;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/c/u;->b:Lcom/bbm/c/u;
 
-    .line 556
+    .line 653
     new-instance v0, Lcom/bbm/c/u;
 
-    const-string v1, "TimedMessageThreeSecond"
+    const-string v1, "RestoreStickerSuccessNumber"
 
-    const-string v2, "Timed Messages - 3 Second"
+    const-string v2, "Restore Number of Sticker Successes"
 
     invoke-direct {v0, v1, v6, v2}, Lcom/bbm/c/u;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/c/u;->c:Lcom/bbm/c/u;
 
-    .line 557
+    .line 654
     new-instance v0, Lcom/bbm/c/u;
 
-    const-string v1, "TimedMessageFiveSecond"
+    const-string v1, "RestoreStickerFailureNumber"
 
-    const-string v2, "Timed Messages - 5 Second"
+    const-string v2, "Restore Number of Sticker Failures"
 
     invoke-direct {v0, v1, v7, v2}, Lcom/bbm/c/u;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/c/u;->d:Lcom/bbm/c/u;
 
-    .line 558
+    .line 655
     new-instance v0, Lcom/bbm/c/u;
 
-    const-string v1, "TimedMessageTenSecond"
+    const-string v1, "RestoreSubSuccessNumber"
 
-    const-string v2, "Timed Messages - 10 Second"
+    const-string v2, "Restore  Number of Sub Successes"
 
     invoke-direct {v0, v1, v8, v2}, Lcom/bbm/c/u;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/c/u;->e:Lcom/bbm/c/u;
 
-    .line 559
+    .line 656
     new-instance v0, Lcom/bbm/c/u;
 
-    const-string v1, "TimedMessageTwentyFiveSecond"
+    const-string v1, "RestoreSubFailureNumber"
 
     const/4 v2, 0x5
 
-    const-string v3, "Timed Messages - 25 Second"
+    const-string v3, "Restore Number of Sub Failures"
 
     invoke-direct {v0, v1, v2, v3}, Lcom/bbm/c/u;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/c/u;->f:Lcom/bbm/c/u;
 
-    .line 560
+    .line 657
     new-instance v0, Lcom/bbm/c/u;
 
-    const-string v1, "TimedMessageSixtySecond"
+    const-string v1, "RestoreSuccessNumber"
 
     const/4 v2, 0x6
 
-    const-string v3, "Timed Messages - 60 Second"
+    const-string v3, "Restore Number of Successes"
 
     invoke-direct {v0, v1, v2, v3}, Lcom/bbm/c/u;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/c/u;->g:Lcom/bbm/c/u;
 
-    .line 561
+    .line 658
     new-instance v0, Lcom/bbm/c/u;
 
-    const-string v1, "TimedPictureTotal"
+    const-string v1, "RestoreFailureNumber"
 
     const/4 v2, 0x7
 
-    const-string v3, "Timed File Transfers - Total"
+    const-string v3, "Restore Number of Failures"
 
     invoke-direct {v0, v1, v2, v3}, Lcom/bbm/c/u;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/c/u;->h:Lcom/bbm/c/u;
 
-    .line 562
-    new-instance v0, Lcom/bbm/c/u;
-
-    const-string v1, "TimedPictureOneSecond"
-
-    const/16 v2, 0x8
-
-    const-string v3, "Timed File Transfers - 1 Second"
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/c/u;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/c/u;->i:Lcom/bbm/c/u;
-
-    .line 563
-    new-instance v0, Lcom/bbm/c/u;
-
-    const-string v1, "TimedPictureThreeSecond"
-
-    const/16 v2, 0x9
-
-    const-string v3, "Timed File Transfers - 3 Second"
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/c/u;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/c/u;->j:Lcom/bbm/c/u;
-
-    .line 564
-    new-instance v0, Lcom/bbm/c/u;
-
-    const-string v1, "TimedPictureFiveSecond"
-
-    const/16 v2, 0xa
-
-    const-string v3, "Timed File Transfers - 5 Second"
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/c/u;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/c/u;->k:Lcom/bbm/c/u;
-
-    .line 565
-    new-instance v0, Lcom/bbm/c/u;
-
-    const-string v1, "TimedPictureTenSecond"
-
-    const/16 v2, 0xb
-
-    const-string v3, "Timed File Transfers - 10 Second"
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/c/u;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/c/u;->l:Lcom/bbm/c/u;
-
-    .line 566
-    new-instance v0, Lcom/bbm/c/u;
-
-    const-string v1, "TimedPictureTwentyFiveSecond"
-
-    const/16 v2, 0xc
-
-    const-string v3, "Timed File Transfers - 25 Second"
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/c/u;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/c/u;->m:Lcom/bbm/c/u;
-
-    .line 567
-    new-instance v0, Lcom/bbm/c/u;
-
-    const-string v1, "TimedPictureSixtySecond"
-
-    const/16 v2, 0xd
-
-    const-string v3, "Timed File Transfers - 60 Second"
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/c/u;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/c/u;->n:Lcom/bbm/c/u;
-
-    .line 553
-    const/16 v0, 0xe
+    .line 650
+    const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/bbm/c/u;
 
@@ -280,43 +190,7 @@
 
     aput-object v2, v0, v1
 
-    const/16 v1, 0x8
-
-    sget-object v2, Lcom/bbm/c/u;->i:Lcom/bbm/c/u;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0x9
-
-    sget-object v2, Lcom/bbm/c/u;->j:Lcom/bbm/c/u;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0xa
-
-    sget-object v2, Lcom/bbm/c/u;->k:Lcom/bbm/c/u;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0xb
-
-    sget-object v2, Lcom/bbm/c/u;->l:Lcom/bbm/c/u;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0xc
-
-    sget-object v2, Lcom/bbm/c/u;->m:Lcom/bbm/c/u;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0xd
-
-    sget-object v2, Lcom/bbm/c/u;->n:Lcom/bbm/c/u;
-
-    aput-object v2, v0, v1
-
-    sput-object v0, Lcom/bbm/c/u;->p:[Lcom/bbm/c/u;
+    sput-object v0, Lcom/bbm/c/u;->j:[Lcom/bbm/c/u;
 
     return-void
 .end method
@@ -332,13 +206,13 @@
     .end annotation
 
     .prologue
-    .line 572
+    .line 661
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 573
-    iput-object p3, p0, Lcom/bbm/c/u;->o:Ljava/lang/String;
+    .line 662
+    iput-object p3, p0, Lcom/bbm/c/u;->i:Ljava/lang/String;
 
-    .line 574
+    .line 663
     return-void
 .end method
 
@@ -346,7 +220,7 @@
     .locals 1
 
     .prologue
-    .line 553
+    .line 650
     const-class v0, Lcom/bbm/c/u;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -362,8 +236,8 @@
     .locals 1
 
     .prologue
-    .line 553
-    sget-object v0, Lcom/bbm/c/u;->p:[Lcom/bbm/c/u;
+    .line 650
+    sget-object v0, Lcom/bbm/c/u;->j:[Lcom/bbm/c/u;
 
     invoke-virtual {v0}, [Lcom/bbm/c/u;->clone()Ljava/lang/Object;
 
@@ -380,8 +254,8 @@
     .locals 1
 
     .prologue
-    .line 578
-    iget-object v0, p0, Lcom/bbm/c/u;->o:Ljava/lang/String;
+    .line 667
+    iget-object v0, p0, Lcom/bbm/c/u;->i:Ljava/lang/String;
 
     return-object v0
 .end method

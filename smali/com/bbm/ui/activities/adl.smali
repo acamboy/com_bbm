@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/activities/adl;
 .super Ljava/lang/Object;
-.source "ReceivedPendingGroupInviteActivity.java"
+.source "SettingsActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/b/k;
-
-.field final synthetic b:Lcom/bbm/ui/activities/adk;
+.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/adk;Lcom/bbm/ui/b/k;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
     .locals 0
 
     .prologue
-    .line 76
-    iput-object p1, p0, Lcom/bbm/ui/activities/adl;->b:Lcom/bbm/ui/activities/adk;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/adl;->a:Lcom/bbm/ui/b/k;
+    .line 387
+    iput-object p1, p0, Lcom/bbm/ui/activities/adl;->a:Lcom/bbm/ui/activities/SettingsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,57 +25,29 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 2
 
     .prologue
-    .line 80
-    const-string v0, "mAcceptGroupInviteMonitor Dialog RightButton Clicked"
+    .line 390
+    const-string v0, "sticky notification onCheckedChanged"
 
-    const-class v1, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
+    const-class v1, Lcom/bbm/ui/activities/SettingsActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 81
-    iget-object v0, p0, Lcom/bbm/ui/activities/adl;->b:Lcom/bbm/ui/activities/adk;
+    .line 391
+    iget-object v0, p0, Lcom/bbm/ui/activities/adl;->a:Lcom/bbm/ui/activities/SettingsActivity;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/adk;->a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
+    const-string v1, "sticky_notification"
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;->a(Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;)Lcom/bbm/e;
+    invoke-static {v0, v1, p2}, Lcom/bbm/ui/activities/SettingsActivity;->a(Lcom/bbm/ui/activities/SettingsActivity;Ljava/lang/String;Z)V
 
-    move-result-object v0
+    .line 392
+    iget-object v0, p0, Lcom/bbm/ui/activities/adl;->a:Lcom/bbm/ui/activities/SettingsActivity;
 
-    iget-object v0, v0, Lcom/bbm/e;->c:Lcom/bbm/g/al;
+    invoke-static {v0, p2}, Lcom/bbm/ui/activities/SettingsActivity;->a(Lcom/bbm/ui/activities/SettingsActivity;Z)V
 
-    invoke-static {}, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;->b()Ljava/lang/String;
-
-    move-result-object v1
-
-    sget-object v2, Lcom/bbm/g/bo;->a:Lcom/bbm/g/bo;
-
-    invoke-static {v1, v2}, Lcom/bbm/g/am;->a(Ljava/lang/String;Lcom/bbm/g/bo;)Lcom/bbm/g/bn;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/adl;->a:Lcom/bbm/ui/b/k;
-
-    invoke-virtual {v2}, Lcom/bbm/ui/b/k;->c()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lcom/bbm/g/bn;->a(Ljava/lang/String;)Lcom/bbm/g/bn;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
-
-    .line 85
-    iget-object v0, p0, Lcom/bbm/ui/activities/adl;->b:Lcom/bbm/ui/activities/adk;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/adk;->a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;->finish()V
-
-    .line 86
+    .line 393
     return-void
 .end method

@@ -1,14 +1,22 @@
 .class public Lcom/bbm/ui/EmoticonPanelViewLayout;
-.super Landroid/view/ViewGroup;
+.super Landroid/widget/LinearLayout;
 .source "EmoticonPanelViewLayout.java"
 
 
 # instance fields
-.field private a:Lcom/bbm/ui/EmoticonInputPanel;
+.field private a:Lcom/bbm/ui/ca;
 
-.field private b:Lcom/bbm/ui/bs;
+.field private b:Lcom/bbm/ui/cb;
 
 .field private c:Z
+
+.field private d:Lcom/bbm/ui/bz;
+
+.field private e:I
+
+.field private f:I
+
+.field private g:I
 
 
 # direct methods
@@ -16,12 +24,12 @@
     .locals 1
 
     .prologue
-    .line 26
+    .line 45
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/bbm/ui/EmoticonPanelViewLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 27
+    .line 46
     return-void
 .end method
 
@@ -29,12 +37,12 @@
     .locals 1
 
     .prologue
-    .line 30
+    .line 49
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/bbm/ui/EmoticonPanelViewLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 31
+    .line 50
     return-void
 .end method
 
@@ -42,96 +50,182 @@
     .locals 1
 
     .prologue
-    .line 34
-    invoke-direct {p0, p1, p2, p3}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .line 53
+    invoke-direct {p0, p1, p2, p3}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 19
+    .line 26
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->c:Z
 
-    .line 35
+    .line 54
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/EmoticonPanelViewLayout;->setOrientation(I)V
+
+    .line 55
     return-void
 .end method
 
 
 # virtual methods
-.method protected onLayout(ZIIII)V
-    .locals 9
+.method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
+    .locals 1
 
     .prologue
-    const/high16 v8, 0x40000000
+    .line 113
+    iget-object v0, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->d:Lcom/bbm/ui/bz;
 
-    const/4 v1, 0x1
+    if-eqz v0, :cond_0
 
-    const/4 v2, 0x0
+    .line 114
+    iget-object v0, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->d:Lcom/bbm/ui/bz;
 
-    .line 47
+    invoke-virtual {v0, p0, p1}, Lcom/bbm/ui/bz;->onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+
+    .line 116
+    :cond_0
+    invoke-super {p0, p1}, Landroid/widget/LinearLayout;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method protected onLayout(ZIIII)V
+    .locals 6
+
+    .prologue
+    .line 67
     invoke-virtual {p0}, Lcom/bbm/ui/EmoticonPanelViewLayout;->isInEditMode()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 48
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
+    .line 68
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/Alaska;->i:Lcom/bbm/u;
+    iget-object v0, v0, Lcom/bbm/Alaska;->i:Lcom/bbm/ab;
 
-    iget-wide v4, v0, Lcom/bbm/u;->b:J
+    iget-wide v2, v0, Lcom/bbm/ab;->b:J
 
-    const-wide/16 v6, 0x0
+    const-wide/16 v4, 0x0
 
-    cmp-long v3, v4, v6
+    cmp-long v1, v2, v4
 
-    if-eqz v3, :cond_0
+    if-eqz v1, :cond_0
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v4
+    move-result-wide v2
 
-    iput-wide v4, v0, Lcom/bbm/u;->c:J
+    iput-wide v2, v0, Lcom/bbm/ab;->c:J
 
-    iget-boolean v3, v0, Lcom/bbm/u;->f:Z
+    iget-boolean v1, v0, Lcom/bbm/ab;->f:Z
 
-    if-nez v3, :cond_0
+    if-nez v1, :cond_0
 
-    iput-boolean v1, v0, Lcom/bbm/u;->f:Z
+    const/4 v1, 0x1
 
-    iget-object v3, v0, Lcom/bbm/u;->a:Landroid/os/Handler;
+    iput-boolean v1, v0, Lcom/bbm/ab;->f:Z
 
-    iget-object v4, v0, Lcom/bbm/u;->g:Ljava/lang/Runnable;
+    iget-object v1, v0, Lcom/bbm/ab;->a:Landroid/os/Handler;
 
-    iget-wide v6, v0, Lcom/bbm/u;->d:J
+    iget-object v2, v0, Lcom/bbm/ab;->g:Ljava/lang/Runnable;
 
-    invoke-virtual {v3, v4, v6, v7}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    iget-wide v4, v0, Lcom/bbm/ab;->d:J
 
-    .line 51
+    invoke-virtual {v1, v2, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    .line 70
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->a:Lcom/bbm/ui/EmoticonInputPanel;
+    invoke-super/range {p0 .. p5}, Landroid/widget/LinearLayout;->onLayout(ZIIII)V
 
-    if-eqz v0, :cond_4
+    .line 71
+    return-void
+.end method
 
-    .line 52
-    new-instance v3, Landroid/graphics/Rect;
+.method protected onMeasure(II)V
+    .locals 8
 
-    invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
+    .prologue
+    const/4 v1, 0x1
 
-    .line 53
-    invoke-virtual {p0, v3}, Lcom/bbm/ui/EmoticonPanelViewLayout;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
+    .line 75
+    iget-object v0, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->a:Lcom/bbm/ui/ca;
 
-    .line 55
+    if-eqz v0, :cond_0
+
+    .line 76
+    invoke-virtual {p0}, Lcom/bbm/ui/EmoticonPanelViewLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
+
+    .line 77
+    iget v2, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->e:I
+
+    if-eq v2, v0, :cond_1
+
+    .line 78
+    iput v0, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->e:I
+
+    .line 104
+    :cond_0
+    :goto_0
+    invoke-super {p0, p1, p2}, Landroid/widget/LinearLayout;->onMeasure(II)V
+
+    .line 105
+    return-void
+
+    .line 80
+    :cond_1
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
+
+    move-result v2
+
+    .line 81
+    invoke-virtual {p0}, Lcom/bbm/ui/EmoticonPanelViewLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    iget v3, v0, Landroid/content/res/Configuration;->orientation:I
+
     invoke-virtual {p0}, Lcom/bbm/ui/EmoticonPanelViewLayout;->getRootView()Landroid/view/View;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
     move-result v0
 
-    .line 56
+    invoke-virtual {p0}, Lcom/bbm/ui/EmoticonPanelViewLayout;->getRootView()Landroid/view/View;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/view/View;->getHeight()I
+
+    move-result v4
+
+    if-ne v3, v1, :cond_5
+
+    invoke-static {v0, v4}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    :goto_1
     invoke-virtual {p0}, Lcom/bbm/ui/EmoticonPanelViewLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
@@ -146,10 +240,8 @@
 
     move-result v4
 
-    .line 57
-    if-lez v4, :cond_1
+    if-lez v4, :cond_2
 
-    .line 58
     invoke-virtual {p0}, Lcom/bbm/ui/EmoticonPanelViewLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
@@ -160,183 +252,214 @@
 
     sub-int/2addr v0, v4
 
-    .line 60
-    :cond_1
-    iget v4, v3, Landroid/graphics/Rect;->bottom:I
+    :cond_2
+    if-ne v3, v1, :cond_3
 
-    iget v3, v3, Landroid/graphics/Rect;->top:I
+    invoke-virtual {p0}, Lcom/bbm/ui/EmoticonPanelViewLayout;->getContext()Landroid/content/Context;
 
-    sub-int v3, v4, v3
+    move-result-object v3
+
+    invoke-static {v3}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/view/ViewConfiguration;->hasPermanentMenuKey()Z
+
+    move-result v3
+
+    const/4 v4, 0x4
+
+    invoke-static {v4}, Landroid/view/KeyCharacterMap;->deviceHasKey(I)Z
+
+    move-result v4
+
+    if-nez v3, :cond_3
+
+    if-nez v4, :cond_3
+
+    invoke-virtual {p0}, Lcom/bbm/ui/EmoticonPanelViewLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    const-string v4, "navigation_bar_height"
+
+    const-string v5, "dimen"
+
+    const-string v6, "android"
+
+    invoke-virtual {v3, v4, v5, v6}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v3
+
+    if-lez v3, :cond_3
+
+    invoke-virtual {p0}, Lcom/bbm/ui/EmoticonPanelViewLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
 
     sub-int/2addr v0, v3
 
-    .line 61
-    const/16 v3, 0x64
-
-    if-le v0, v3, :cond_6
-
-    .line 62
-    iget-object v3, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->a:Lcom/bbm/ui/EmoticonInputPanel;
-
-    sget v4, Lcom/bbm/ui/EmoticonInputPanel;->a:I
-
-    if-eq v4, v0, :cond_2
-
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Lcom/bbm/Alaska;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    const v5, 0x7f0a0209
-
-    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimension(I)F
-
-    move-result v4
-
-    float-to-int v4, v4
-
-    if-le v0, v4, :cond_5
-
-    sput v0, Lcom/bbm/ui/EmoticonInputPanel;->a:I
-
-    :goto_0
-    iget-object v0, v3, Lcom/bbm/ui/EmoticonInputPanel;->d:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    sget v4, Lcom/bbm/ui/EmoticonInputPanel;->a:I
-
-    iput v4, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    :cond_2
-    sget-object v0, Lcom/bbm/ui/bp;->b:Lcom/bbm/ui/bp;
-
-    iput-object v0, v3, Lcom/bbm/ui/EmoticonInputPanel;->b:Lcom/bbm/ui/bp;
-
-    iget-object v0, v3, Lcom/bbm/ui/EmoticonInputPanel;->d:Landroid/widget/FrameLayout;
-
-    const/16 v3, 0x8
-
-    invoke-virtual {v0, v3}, Landroid/widget/FrameLayout;->setVisibility(I)V
-
-    .line 66
     :cond_3
-    :goto_1
-    iget-object v0, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->b:Lcom/bbm/ui/bs;
+    sub-int/2addr v0, v2
 
-    if-eqz v0, :cond_4
+    iget v2, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->g:I
 
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->a:Lcom/bbm/ui/EmoticonInputPanel;
+    sub-int/2addr v0, v2
 
-    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->getLowerPanelMode()Lcom/bbm/ui/bp;
+    .line 82
+    iget v2, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->f:I
+
+    if-eq v2, v0, :cond_4
+
+    .line 83
+    iput v0, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->f:I
+
+    .line 85
+    const/16 v2, 0x64
+
+    if-le v0, v2, :cond_6
+
+    .line 86
+    iget-object v2, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->a:Lcom/bbm/ui/ca;
+
+    invoke-interface {v2, v0}, Lcom/bbm/ui/ca;->a(I)V
+
+    .line 94
+    :cond_4
+    :goto_2
+    iget-object v0, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->b:Lcom/bbm/ui/cb;
+
+    if-eqz v0, :cond_0
+
+    .line 95
+    iget-object v0, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->a:Lcom/bbm/ui/ca;
+
+    invoke-interface {v0}, Lcom/bbm/ui/ca;->getLowerPanelMode()Lcom/bbm/ui/bw;
 
     move-result-object v0
 
-    sget-object v3, Lcom/bbm/ui/bp;->e:Lcom/bbm/ui/bp;
+    sget-object v2, Lcom/bbm/ui/bw;->d:Lcom/bbm/ui/bw;
 
-    if-eq v0, v3, :cond_7
+    if-eq v0, v2, :cond_9
 
     move v0, v1
 
-    .line 68
-    :goto_2
+    .line 96
+    :goto_3
     iget-boolean v1, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->c:Z
 
-    if-eq v0, v1, :cond_4
+    if-eq v0, v1, :cond_0
 
-    .line 69
-    iget-object v1, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->b:Lcom/bbm/ui/bs;
+    .line 97
+    iget-object v1, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->b:Lcom/bbm/ui/cb;
 
-    invoke-interface {v1, v0}, Lcom/bbm/ui/bs;->a(Z)V
+    invoke-interface {v1, v0}, Lcom/bbm/ui/cb;->a(Z)V
 
-    .line 70
+    .line 98
     iput-boolean v0, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->c:Z
 
-    .line 75
-    :cond_4
-    invoke-virtual {p0, v2}, Lcom/bbm/ui/EmoticonPanelViewLayout;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v0
-
-    .line 76
-    sub-int v1, p5, p3
-
-    .line 77
-    sub-int v3, p4, p2
-
-    .line 78
-    invoke-static {v3, v8}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result v4
-
-    invoke-static {v1, v8}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result v5
-
-    invoke-virtual {v0, v4, v5}, Landroid/view/View;->measure(II)V
+    goto/16 :goto_0
 
     .line 81
-    invoke-virtual {v0, v2, v2, v3, v1}, Landroid/view/View;->layout(IIII)V
-
-    .line 82
-    return-void
-
-    .line 62
     :cond_5
-    sput v4, Lcom/bbm/ui/EmoticonInputPanel;->a:I
+    invoke-static {v0, v4}, Ljava/lang/Math;->min(II)I
 
-    goto :goto_0
-
-    .line 63
-    :cond_6
-    if-ltz v0, :cond_3
-
-    .line 64
-    iget-object v0, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->a:Lcom/bbm/ui/EmoticonInputPanel;
-
-    iget-object v3, v0, Lcom/bbm/ui/EmoticonInputPanel;->b:Lcom/bbm/ui/bp;
-
-    sget-object v4, Lcom/bbm/ui/bp;->b:Lcom/bbm/ui/bp;
-
-    if-ne v3, v4, :cond_3
-
-    sget-object v3, Lcom/bbm/ui/bp;->e:Lcom/bbm/ui/bp;
-
-    invoke-virtual {v0, v3}, Lcom/bbm/ui/EmoticonInputPanel;->setLowerPanel(Lcom/bbm/ui/bp;)V
+    move-result v0
 
     goto :goto_1
 
-    :cond_7
-    move v0, v2
+    .line 87
+    :cond_6
+    if-ltz v0, :cond_7
 
-    .line 67
+    invoke-virtual {p0}, Lcom/bbm/ui/EmoticonPanelViewLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/content/res/Configuration;->orientation:I
+
+    if-eq v2, v1, :cond_8
+
+    :cond_7
+    if-nez v0, :cond_4
+
+    invoke-virtual {p0}, Lcom/bbm/ui/EmoticonPanelViewLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
+
+    const/4 v2, 0x2
+
+    if-ne v0, v2, :cond_4
+
+    .line 90
+    :cond_8
+    iget-object v0, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->a:Lcom/bbm/ui/ca;
+
+    invoke-interface {v0}, Lcom/bbm/ui/ca;->f()V
+
     goto :goto_2
+
+    .line 95
+    :cond_9
+    const/4 v0, 0x0
+
+    goto :goto_3
 .end method
 
-.method public setEmoticonInputPanel(Lcom/bbm/ui/EmoticonInputPanel;)V
+.method public setEmoticonInputPanel(Lcom/bbm/ui/ca;)V
     .locals 0
 
     .prologue
-    .line 38
-    iput-object p1, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->a:Lcom/bbm/ui/EmoticonInputPanel;
+    .line 58
+    iput-object p1, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->a:Lcom/bbm/ui/ca;
 
-    .line 39
+    .line 59
     return-void
 .end method
 
-.method public setLowerPanelVisibilityListener(Lcom/bbm/ui/bs;)V
+.method public setLowerPanelVisibilityListener(Lcom/bbm/ui/cb;)V
     .locals 0
 
     .prologue
-    .line 42
-    iput-object p1, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->b:Lcom/bbm/ui/bs;
+    .line 62
+    iput-object p1, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->b:Lcom/bbm/ui/cb;
 
-    .line 43
+    .line 63
+    return-void
+.end method
+
+.method public setOnRootTouchListener(Lcom/bbm/ui/bz;)V
+    .locals 0
+
+    .prologue
+    .line 108
+    iput-object p1, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->d:Lcom/bbm/ui/bz;
+
+    .line 109
+    return-void
+.end method
+
+.method public setViewHeightDeduction(I)V
+    .locals 0
+
+    .prologue
+    .line 183
+    iput p1, p0, Lcom/bbm/ui/EmoticonPanelViewLayout;->g:I
+
+    .line 184
     return-void
 .end method

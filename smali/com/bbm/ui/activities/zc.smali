@@ -1,107 +1,152 @@
 .class final Lcom/bbm/ui/activities/zc;
-.super Ljava/lang/Object;
-.source "NewChannelCategoryActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Lcom/bbm/ui/bz;
+.source "PrivateConversationActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/PrivateConversationActivity;Landroid/view/View;)V
     .locals 0
 
     .prologue
-    .line 330
-    iput-object p1, p0, Lcom/bbm/ui/activities/zc;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+    .line 1005
+    iput-object p1, p0, Lcom/bbm/ui/activities/zc;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lcom/bbm/ui/bz;-><init>(Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final a()V
+    .locals 2
 
     .prologue
-    .line 333
-    new-instance v1, Landroid/content/Intent;
+    .line 1009
+    iget-object v0, p0, Lcom/bbm/ui/activities/zc;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/zc;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->z(Lcom/bbm/ui/activities/PrivateConversationActivity;)Lcom/bbm/ui/a/w;
 
-    const-class v2, Lcom/bbm/ui/activities/NewChannelActivity;
+    move-result-object v0
 
-    invoke-direct {v1, v0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    iget-object v0, v0, Lcom/bbm/ui/a/w;->d:Lcom/bbm/ui/messages/n;
 
-    .line 337
-    :try_start_0
-    const-string v2, "subcategory"
+    iget-object v0, v0, Lcom/bbm/ui/messages/n;->c:Lcom/bbm/util/dc;
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/zc;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+    invoke-virtual {v0}, Lcom/bbm/util/dc;->f()Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->m(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)I
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
-    if-gez v0, :cond_0
+    if-nez v0, :cond_0
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcom/bbm/ui/activities/zc;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    :goto_0
-    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->z(Lcom/bbm/ui/activities/PrivateConversationActivity;)Lcom/bbm/ui/a/w;
 
-    .line 338
-    const-string v0, "category"
+    move-result-object v0
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/zc;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+    iget-object v0, v0, Lcom/bbm/ui/a/w;->d:Lcom/bbm/ui/messages/n;
 
-    invoke-static {v2}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->g(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)I
+    iget-object v0, v0, Lcom/bbm/ui/messages/n;->b:Lcom/bbm/util/dc;
 
-    move-result v2
+    invoke-virtual {v0}, Lcom/bbm/util/dc;->f()Ljava/lang/Object;
 
-    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    move-result-object v0
 
-    .line 339
-    iget-object v0, p0, Lcom/bbm/ui/activities/zc;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+    check-cast v0, Ljava/lang/Boolean;
 
-    const/16 v2, 0x2bc
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-virtual {v0, v2, v1}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->setResult(ILandroid/content/Intent;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    move-result v0
 
-    .line 343
-    :goto_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/zc;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->finish()V
-
-    .line 344
-    return-void
-
-    .line 337
+    .line 1010
     :cond_0
-    :try_start_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/zc;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+    iget-object v0, p0, Lcom/bbm/ui/activities/zc;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->m(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)I
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->A(Lcom/bbm/ui/activities/PrivateConversationActivity;)V
+
+    .line 1012
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/zc;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->o(Lcom/bbm/ui/activities/PrivateConversationActivity;)Z
 
     move-result v0
 
-    goto :goto_0
+    if-eqz v0, :cond_2
 
-    .line 340
-    :catch_0
-    move-exception v0
+    .line 1013
+    iget-object v0, p0, Lcom/bbm/ui/activities/zc;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->i(Lcom/bbm/ui/activities/PrivateConversationActivity;)Lcom/bbm/d/a;
 
-    goto :goto_1
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/zc;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/PrivateConversationActivity;->j(Lcom/bbm/ui/activities/PrivateConversationActivity;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->m(Ljava/lang/String;)V
+
+    .line 1015
+    :cond_2
+    return-void
+.end method
+
+.method public final b()V
+    .locals 1
+
+    .prologue
+    .line 1019
+    iget-object v0, p0, Lcom/bbm/ui/activities/zc;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->B(Lcom/bbm/ui/activities/PrivateConversationActivity;)V
+
+    .line 1020
+    return-void
+.end method
+
+.method public final c()V
+    .locals 2
+
+    .prologue
+    .line 1024
+    const-string v0, "ListView tapped to dismiss keyboard"
+
+    const-class v1, Lcom/bbm/ui/activities/PrivateConversationActivity;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 1025
+    iget-object v0, p0, Lcom/bbm/ui/activities/zc;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/PrivateConversationActivity;->a:Lcom/bbm/ui/EmoticonInputPanel;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->e()Z
+
+    .line 1026
+    iget-object v0, p0, Lcom/bbm/ui/activities/zc;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->l(Lcom/bbm/ui/activities/PrivateConversationActivity;)Landroid/widget/EditText;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/EditText;->clearFocus()V
+
+    .line 1027
+    return-void
 .end method

@@ -3,14 +3,14 @@
 .source "LocalCache.java"
 
 # interfaces
-.implements Lcom/google/b/b/ba;
+.implements Lcom/google/b/b/bb;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/google/b/b/ba",
+        "Lcom/google/b/b/bb",
         "<",
         "Ljava/lang/Object;",
         "Ljava/lang/Object;",
@@ -24,7 +24,7 @@
     .locals 0
 
     .prologue
-    .line 687
+    .line 690
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,13 +36,13 @@
     .locals 1
 
     .prologue
-    .line 695
+    .line 698
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final a(Ljava/lang/ref/ReferenceQueue;Ljava/lang/Object;Lcom/google/b/b/am;)Lcom/google/b/b/ba;
+.method public final a(Ljava/lang/ref/ReferenceQueue;Ljava/lang/Object;Lcom/google/b/b/an;)Lcom/google/b/b/bb;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -52,12 +52,12 @@
             "Ljava/lang/Object;",
             ">;",
             "Ljava/lang/Object;",
-            "Lcom/google/b/b/am",
+            "Lcom/google/b/b/an",
             "<",
             "Ljava/lang/Object;",
             "Ljava/lang/Object;",
             ">;)",
-            "Lcom/google/b/b/ba",
+            "Lcom/google/b/b/bb",
             "<",
             "Ljava/lang/Object;",
             "Ljava/lang/Object;",
@@ -66,7 +66,7 @@
     .end annotation
 
     .prologue
-    .line 706
+    .line 709
     return-object p0
 .end method
 
@@ -74,16 +74,16 @@
     .locals 0
 
     .prologue
-    .line 725
+    .line 728
     return-void
 .end method
 
-.method public final b()Lcom/google/b/b/am;
+.method public final b()Lcom/google/b/b/an;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/google/b/b/am",
+            "Lcom/google/b/b/an",
             "<",
             "Ljava/lang/Object;",
             "Ljava/lang/Object;",
@@ -92,7 +92,7 @@
     .end annotation
 
     .prologue
-    .line 700
+    .line 703
     const/4 v0, 0x0
 
     return-object v0
@@ -102,7 +102,7 @@
     .locals 1
 
     .prologue
-    .line 711
+    .line 714
     const/4 v0, 0x0
 
     return v0
@@ -112,7 +112,7 @@
     .locals 1
 
     .prologue
-    .line 716
+    .line 719
     const/4 v0, 0x0
 
     return v0
@@ -122,7 +122,7 @@
     .locals 1
 
     .prologue
-    .line 690
+    .line 693
     const/4 v0, 0x0
 
     return-object v0

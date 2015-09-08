@@ -188,7 +188,7 @@
     .locals 8
 
     .prologue
-    const/high16 v7, 0x3f000000
+    const/high16 v7, 0x3f000000    # 0.5f
 
     .line 244
     invoke-static {p1, p2, p3, p4}, Lcom/google/zxing/b/a/a;->a(FFFF)F
@@ -835,11 +835,11 @@
 
     new-instance v10, Lcom/google/zxing/o;
 
-    const/high16 v11, 0x3f800000
+    const/high16 v11, 0x3f800000    # 1.0f
 
     sub-float/2addr v8, v11
 
-    const/high16 v11, 0x3f800000
+    const/high16 v11, 0x3f800000    # 1.0f
 
     add-float/2addr v3, v11
 
@@ -851,11 +851,11 @@
 
     new-instance v8, Lcom/google/zxing/o;
 
-    const/high16 v9, 0x3f800000
+    const/high16 v9, 0x3f800000    # 1.0f
 
     add-float/2addr v6, v9
 
-    const/high16 v9, 0x3f800000
+    const/high16 v9, 0x3f800000    # 1.0f
 
     add-float/2addr v4, v9
 
@@ -867,11 +867,11 @@
 
     new-instance v4, Lcom/google/zxing/o;
 
-    const/high16 v6, 0x3f800000
+    const/high16 v6, 0x3f800000    # 1.0f
 
     sub-float v6, v7, v6
 
-    const/high16 v7, 0x3f800000
+    const/high16 v7, 0x3f800000    # 1.0f
 
     sub-float/2addr v2, v7
 
@@ -883,11 +883,11 @@
 
     new-instance v3, Lcom/google/zxing/o;
 
-    const/high16 v4, 0x3f800000
+    const/high16 v4, 0x3f800000    # 1.0f
 
     add-float/2addr v1, v4
 
-    const/high16 v4, 0x3f800000
+    const/high16 v4, 0x3f800000    # 1.0f
 
     sub-float v4, v5, v4
 
@@ -907,11 +907,11 @@
 
     new-instance v10, Lcom/google/zxing/o;
 
-    const/high16 v11, 0x3f800000
+    const/high16 v11, 0x3f800000    # 1.0f
 
     add-float/2addr v8, v11
 
-    const/high16 v11, 0x3f800000
+    const/high16 v11, 0x3f800000    # 1.0f
 
     add-float/2addr v3, v11
 
@@ -923,11 +923,11 @@
 
     new-instance v8, Lcom/google/zxing/o;
 
-    const/high16 v9, 0x3f800000
+    const/high16 v9, 0x3f800000    # 1.0f
 
     add-float/2addr v6, v9
 
-    const/high16 v9, 0x3f800000
+    const/high16 v9, 0x3f800000    # 1.0f
 
     sub-float/2addr v4, v9
 
@@ -939,11 +939,11 @@
 
     new-instance v4, Lcom/google/zxing/o;
 
-    const/high16 v6, 0x3f800000
+    const/high16 v6, 0x3f800000    # 1.0f
 
     sub-float v6, v7, v6
 
-    const/high16 v7, 0x3f800000
+    const/high16 v7, 0x3f800000    # 1.0f
 
     add-float/2addr v2, v7
 
@@ -955,11 +955,11 @@
 
     new-instance v3, Lcom/google/zxing/o;
 
-    const/high16 v4, 0x3f800000
+    const/high16 v4, 0x3f800000    # 1.0f
 
     sub-float/2addr v1, v4
 
-    const/high16 v4, 0x3f800000
+    const/high16 v4, 0x3f800000    # 1.0f
 
     sub-float v4, v5, v4
 

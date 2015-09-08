@@ -1,163 +1,171 @@
 .class final Lcom/bbm/ui/activities/bk;
-.super Ljava/lang/Object;
-.source "CaptureBarcodeActivity.java"
-
-# interfaces
-.implements Lcom/bbm/j/s;
+.super Lcom/bbm/j/k;
+.source "ChannelChatListActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ChannelChatListActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/activities/ChannelChatListActivity;)V
+    .locals 1
 
     .prologue
-    .line 560
-    iput-object p1, p0, Lcom/bbm/ui/activities/bk;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+    .line 79
+    iput-object p1, p0, Lcom/bbm/ui/activities/bk;->a:Lcom/bbm/ui/activities/ChannelChatListActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 4
+.method protected final a()V
+    .locals 6
 
     .prologue
-    const/4 v1, 0x1
+    const v5, 0x7f0b0151
 
-    .line 566
-    iget-object v0, p0, Lcom/bbm/ui/activities/bk;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+    const v4, 0x7f0b0150
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->q(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Z
+    const v3, 0x7f0b014f
 
-    move-result v0
+    .line 82
+    iget-object v0, p0, Lcom/bbm/ui/activities/bk;->a:Lcom/bbm/ui/activities/ChannelChatListActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->b(Lcom/bbm/ui/activities/ChannelChatListActivity;)Lcom/bbm/d/a;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/bk;->a:Lcom/bbm/ui/activities/ChannelChatListActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/ChannelChatListActivity;->a(Lcom/bbm/ui/activities/ChannelChatListActivity;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->Y(Ljava/lang/String;)Lcom/bbm/d/ff;
+
+    move-result-object v0
+
+    .line 83
+    iget-object v1, v0, Lcom/bbm/d/ff;->R:Lcom/bbm/util/bo;
+
+    sget-object v2, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
+
+    if-ne v1, v2, :cond_0
+
+    .line 84
+    iget-boolean v0, v0, Lcom/bbm/d/ff;->d:Z
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/bk;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+    .line 85
+    iget-object v0, p0, Lcom/bbm/ui/activities/bk;->a:Lcom/bbm/ui/activities/ChannelChatListActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->i(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Lcom/bbm/util/ct;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/util/ct;->e()Ljava/lang/Object;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->c(Lcom/bbm/ui/activities/ChannelChatListActivity;)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/CharSequence;
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 570
-    iget-object v0, p0, Lcom/bbm/ui/activities/bk;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->a(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Ljava/lang/String;
+    invoke-virtual {v0, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
+    const/4 v1, 0x0
 
-    move-result v0
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    if-nez v0, :cond_0
+    .line 86
+    iget-object v0, p0, Lcom/bbm/ui/activities/bk;->a:Lcom/bbm/ui/activities/ChannelChatListActivity;
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/bk;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->a(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/bk;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->b(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Lcom/bbm/d/a;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->c(Lcom/bbm/ui/activities/ChannelChatListActivity;)Landroid/view/View;
 
     move-result-object v0
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/bk;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->a(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lcom/bbm/d/a;->U(Ljava/lang/String;)Lcom/bbm/d/ee;
+    invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/d/ee;->R:Lcom/bbm/util/bi;
+    check-cast v0, Landroid/widget/TextView;
 
-    sget-object v2, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
+    const v1, 0x7f0e01b0
 
-    if-eq v0, v2, :cond_1
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 572
+    .line 87
+    iget-object v0, p0, Lcom/bbm/ui/activities/bk;->a:Lcom/bbm/ui/activities/ChannelChatListActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->c(Lcom/bbm/ui/activities/ChannelChatListActivity;)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    const v1, 0x7f020066
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    .line 95
     :cond_0
-    iget-object v2, p0, Lcom/bbm/ui/activities/bk;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/bk;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->i(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Lcom/bbm/util/ct;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/util/ct;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-static {v2, v0}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->a(Lcom/bbm/ui/activities/CaptureBarcodeActivity;Ljava/lang/String;)V
-
-    .line 573
-    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/g/al;
-
-    move-result-object v2
-
-    invoke-static {v1}, Lcom/bbm/g/am;->a(Z)Lcom/bbm/g/ch;
-
-    move-result-object v3
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/bk;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->i(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Lcom/bbm/util/ct;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/util/ct;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-virtual {v3, v0}, Lcom/bbm/g/ch;->a(Ljava/lang/String;)Lcom/bbm/g/ch;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
-
-    move v0, v1
-
-    .line 580
     :goto_0
-    return v0
+    return-void
 
+    .line 89
     :cond_1
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcom/bbm/ui/activities/bk;->a:Lcom/bbm/ui/activities/ChannelChatListActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->c(Lcom/bbm/ui/activities/ChannelChatListActivity;)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 90
+    iget-object v0, p0, Lcom/bbm/ui/activities/bk;->a:Lcom/bbm/ui/activities/ChannelChatListActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->c(Lcom/bbm/ui/activities/ChannelChatListActivity;)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    const v1, 0x7f0e01b5
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+
+    .line 91
+    iget-object v0, p0, Lcom/bbm/ui/activities/bk;->a:Lcom/bbm/ui/activities/ChannelChatListActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->c(Lcom/bbm/ui/activities/ChannelChatListActivity;)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    const v1, 0x7f020319
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto :goto_0
 .end method

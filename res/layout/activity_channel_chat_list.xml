@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/channel_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/toolbar_channels" />
     <RelativeLayout android:orientation="vertical" android:id="@id/chats_empty_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
         <TextView android:textSize="@dimen/chats_status_text_size" android:textColor="@color/message" android:layout_gravity="center_vertical" android:id="@id/chats_empty_label" android:paddingTop="@dimen/chats_status_padding" android:paddingBottom="@dimen/chats_status_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/channel_chats_status_no_chats" android:layout_centerInParent="true" />
         <ImageView android:id="@id/chats_empty_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ca_chat_disabled" android:layout_above="@id/chats_empty_label" android:layout_centerHorizontal="true" android:contentDescription="@string/blank" />
         <Button android:id="@id/enable_channel_chat_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/enable_chats_button" android:layout_below="@id/chats_empty_label" android:layout_centerHorizontal="true" style="@style/CascadesButton" />
     </RelativeLayout>
     <ViewStub android:id="@id/channel_removed" android:layout="@layout/activity_channel_child" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <com.tonicartos.widget.stickygridheaders.StickyGridHeadersGridView android:id="@id/channel_chats_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/selection_border" android:layout_above="@id/footer_action_bar" />
-    <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
+    <com.tonicartos.widget.stickygridheaders.StickyGridHeadersGridView android:id="@id/channel_chats_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/selection_border" android:layout_below="@id/channel_toolbar" />
 </RelativeLayout>

@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method static a(Landroid/support/v4/app/cw;)Landroid/support/v4/app/d;
+.method static a(Landroid/support/v4/app/de;)Landroid/support/v4/app/d;
     .locals 1
 
     .prologue
@@ -17,7 +17,7 @@
     .line 212
     new-instance v0, Landroid/support/v4/app/b;
 
-    invoke-direct {v0, p0}, Landroid/support/v4/app/b;-><init>(Landroid/support/v4/app/cw;)V
+    invoke-direct {v0, p0}, Landroid/support/v4/app/b;-><init>(Landroid/support/v4/app/de;)V
 
     .line 214
     :cond_0

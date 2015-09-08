@@ -1,6 +1,6 @@
 .class final Landroid/support/v4/media/a;
 .super Ljava/lang/Object;
-.source "MediaMetadataCompat.java"
+.source "MediaDescriptionCompat.java"
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;
@@ -12,7 +12,7 @@
         "Ljava/lang/Object;",
         "Landroid/os/Parcelable$Creator",
         "<",
-        "Landroid/support/v4/media/MediaMetadataCompat;",
+        "Landroid/support/v4/media/MediaDescriptionCompat;",
         ">;"
     }
 .end annotation
@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 432
+    .line 234
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,22 +35,42 @@
     .locals 2
 
     .prologue
-    .line 432
-    new-instance v0, Landroid/support/v4/media/MediaMetadataCompat;
+    .line 234
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x15
+
+    if-ge v0, v1, :cond_0
+
+    new-instance v0, Landroid/support/v4/media/MediaDescriptionCompat;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1}, Landroid/support/v4/media/MediaMetadataCompat;-><init>(Landroid/os/Parcel;B)V
+    invoke-direct {v0, p1, v1}, Landroid/support/v4/media/MediaDescriptionCompat;-><init>(Landroid/os/Parcel;B)V
 
+    :goto_0
     return-object v0
+
+    :cond_0
+    sget-object v0, Landroid/media/MediaDescription;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/support/v4/media/MediaDescriptionCompat;->a(Ljava/lang/Object;)Landroid/support/v4/media/MediaDescriptionCompat;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method
 
 .method public final bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
     .prologue
-    .line 432
-    new-array v0, p1, [Landroid/support/v4/media/MediaMetadataCompat;
+    .line 234
+    new-array v0, p1, [Landroid/support/v4/media/MediaDescriptionCompat;
 
     return-object v0
 .end method

@@ -2,70 +2,133 @@
 .super Ljava/lang/Object;
 
 
-# static fields
-.field private static final pK:Ljava/util/concurrent/ThreadFactory;
+# annotations
+.annotation runtime Lcom/google/android/gms/internal/mb;
+.end annotation
 
-.field private static final pL:Ljava/util/concurrent/ThreadPoolExecutor;
+
+# instance fields
+.field private final a:Landroid/content/Context;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
 
-    new-instance v0, Lcom/google/android/gms/internal/cu$2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lcom/google/android/gms/internal/cu$2;-><init>()V
+    const-string v0, "Context can not be null"
 
-    sput-object v0, Lcom/google/android/gms/internal/cu;->pK:Ljava/util/concurrent/ThreadFactory;
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/au;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v1, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    const/4 v2, 0x0
-
-    const/16 v3, 0xa
-
-    const-wide/16 v4, 0x41
-
-    sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    new-instance v7, Ljava/util/concurrent/SynchronousQueue;
-
-    const/4 v0, 0x1
-
-    invoke-direct {v7, v0}, Ljava/util/concurrent/SynchronousQueue;-><init>(Z)V
-
-    sget-object v8, Lcom/google/android/gms/internal/cu;->pK:Ljava/util/concurrent/ThreadFactory;
-
-    invoke-direct/range {v1 .. v8}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
-
-    sput-object v1, Lcom/google/android/gms/internal/cu;->pL:Ljava/util/concurrent/ThreadPoolExecutor;
+    iput-object p1, p0, Lcom/google/android/gms/internal/cu;->a:Landroid/content/Context;
 
     return-void
 .end method
 
-.method public static execute(Ljava/lang/Runnable;)V
+
+# virtual methods
+.method public final a()Z
     .locals 2
 
-    :try_start_0
-    sget-object v0, Lcom/google/android/gms/internal/cu;->pL:Ljava/util/concurrent/ThreadPoolExecutor;
+    const-string v0, "mounted"
 
-    new-instance v1, Lcom/google/android/gms/internal/cu$1;
+    invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
-    invoke-direct {v1, p0}, Lcom/google/android/gms/internal/cu$1;-><init>(Ljava/lang/Runnable;)V
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/ThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/cu;->a:Landroid/content/Context;
+
+    const-string v1, "android.permission.WRITE_EXTERNAL_STORAGE"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
 
     :goto_0
-    return-void
+    return v0
 
-    :catch_0
-    move-exception v0
+    :cond_0
+    const/4 v0, 0x0
 
-    const-string v1, "Too many background threads already running. Aborting task."
+    goto :goto_0
+.end method
 
-    invoke-static {v1, v0}, Lcom/google/android/gms/internal/da;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
+.method public final a(Landroid/content/Intent;)Z
+    .locals 2
+
+    const/4 v0, 0x0
+
+    const-string v1, "Intent can not be null"
+
+    invoke-static {p1, v1}, Lcom/google/android/gms/common/internal/au;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/cu;->a:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1, v0}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :cond_0
+    return v0
+.end method
+
+.method public final b()Z
+    .locals 3
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "android.intent.action.INSERT"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "vnd.android.cursor.dir/event"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0xe
+
+    if-lt v1, v2, :cond_0
+
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/cu;->a(Landroid/content/Intent;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method

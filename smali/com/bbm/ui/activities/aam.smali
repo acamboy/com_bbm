@@ -1,229 +1,88 @@
-.class public final enum Lcom/bbm/ui/activities/aam;
-.super Ljava/lang/Enum;
-.source "NewListItemActivity.java"
+.class final Lcom/bbm/ui/activities/aam;
+.super Ljava/lang/Object;
+.source "ReceivedPendingGroupInviteActivity.java"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum",
-        "<",
-        "Lcom/bbm/ui/activities/aam;",
-        ">;"
-    }
-.end annotation
-
-
-# static fields
-.field public static final enum a:Lcom/bbm/ui/activities/aam;
-
-.field public static final enum b:Lcom/bbm/ui/activities/aam;
-
-.field public static final enum c:Lcom/bbm/ui/activities/aam;
-
-.field private static final f:Ljava/util/Hashtable;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Hashtable",
-            "<",
-            "Ljava/lang/String;",
-            "Lcom/bbm/ui/activities/aam;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private static final synthetic g:[Lcom/bbm/ui/activities/aam;
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field public final d:I
+.field final synthetic a:Lcom/bbm/ui/b/i;
 
-.field public final e:Ljava/lang/String;
+.field final synthetic b:Lcom/bbm/ui/activities/aak;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method constructor <init>(Lcom/bbm/ui/activities/aak;Lcom/bbm/ui/b/i;)V
+    .locals 0
 
     .prologue
-    const/4 v6, 0x2
-
-    const/4 v5, 0x1
-
-    const/4 v0, 0x0
-
-    .line 99
-    new-instance v1, Lcom/bbm/ui/activities/aam;
-
-    const-string v2, "LOW"
-
-    const v3, 0x7f0e03d1
-
-    const-string v4, "Low"
-
-    invoke-direct {v1, v2, v0, v3, v4}, Lcom/bbm/ui/activities/aam;-><init>(Ljava/lang/String;IILjava/lang/String;)V
-
-    sput-object v1, Lcom/bbm/ui/activities/aam;->a:Lcom/bbm/ui/activities/aam;
-
     .line 100
-    new-instance v1, Lcom/bbm/ui/activities/aam;
+    iput-object p1, p0, Lcom/bbm/ui/activities/aam;->b:Lcom/bbm/ui/activities/aak;
 
-    const-string v2, "NORMAL"
+    iput-object p2, p0, Lcom/bbm/ui/activities/aam;->a:Lcom/bbm/ui/b/i;
 
-    const v3, 0x7f0e03d2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v4, "Normal"
+    return-void
+.end method
 
-    invoke-direct {v1, v2, v5, v3, v4}, Lcom/bbm/ui/activities/aam;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    sput-object v1, Lcom/bbm/ui/activities/aam;->b:Lcom/bbm/ui/activities/aam;
+# virtual methods
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 3
 
-    .line 101
-    new-instance v1, Lcom/bbm/ui/activities/aam;
+    .prologue
+    .line 104
+    const-string v0, "mAcceptGroupInviteMonitor Dialog RightButton Clicked"
 
-    const-string v2, "HIGH"
+    const-class v1, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
 
-    const v3, 0x7f0e03d0
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    const-string v4, "High"
+    .line 106
+    iget-object v0, p0, Lcom/bbm/ui/activities/aam;->b:Lcom/bbm/ui/activities/aak;
 
-    invoke-direct {v1, v2, v6, v3, v4}, Lcom/bbm/ui/activities/aam;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    iget-object v0, v0, Lcom/bbm/ui/activities/aak;->a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
 
-    sput-object v1, Lcom/bbm/ui/activities/aam;->c:Lcom/bbm/ui/activities/aam;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;->a(Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;)Lcom/bbm/f;
 
-    .line 97
-    const/4 v1, 0x3
+    move-result-object v0
 
-    new-array v1, v1, [Lcom/bbm/ui/activities/aam;
+    iget-object v0, v0, Lcom/bbm/f;->c:Lcom/bbm/g/an;
 
-    sget-object v2, Lcom/bbm/ui/activities/aam;->a:Lcom/bbm/ui/activities/aam;
-
-    aput-object v2, v1, v0
-
-    sget-object v2, Lcom/bbm/ui/activities/aam;->b:Lcom/bbm/ui/activities/aam;
-
-    aput-object v2, v1, v5
-
-    sget-object v2, Lcom/bbm/ui/activities/aam;->c:Lcom/bbm/ui/activities/aam;
-
-    aput-object v2, v1, v6
-
-    sput-object v1, Lcom/bbm/ui/activities/aam;->g:[Lcom/bbm/ui/activities/aam;
-
-    .line 108
-    new-instance v1, Ljava/util/Hashtable;
-
-    invoke-direct {v1}, Ljava/util/Hashtable;-><init>()V
-
-    sput-object v1, Lcom/bbm/ui/activities/aam;->f:Ljava/util/Hashtable;
-
-    .line 109
-    invoke-static {}, Lcom/bbm/ui/activities/aam;->values()[Lcom/bbm/ui/activities/aam;
+    invoke-static {}, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;->d()Ljava/lang/String;
 
     move-result-object v1
 
-    array-length v2, v1
+    sget-object v2, Lcom/bbm/g/bt;->a:Lcom/bbm/g/bt;
 
-    :goto_0
-    if-ge v0, v2, :cond_0
+    invoke-static {v1, v2}, Lcom/bbm/g/ar;->a(Ljava/lang/String;Lcom/bbm/g/bt;)Lcom/bbm/g/bs;
 
-    aget-object v3, v1, v0
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/aam;->a:Lcom/bbm/ui/b/i;
+
+    invoke-virtual {v2}, Lcom/bbm/ui/b/i;->a()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lcom/bbm/g/bs;->a(Ljava/lang/String;)Lcom/bbm/g/bs;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/g/an;->a(Lcom/bbm/g/db;)V
 
     .line 110
-    sget-object v4, Lcom/bbm/ui/activities/aam;->f:Ljava/util/Hashtable;
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    iget-object v5, v3, Lcom/bbm/ui/activities/aam;->e:Ljava/lang/String;
+    .line 111
+    iget-object v0, p0, Lcom/bbm/ui/activities/aam;->b:Lcom/bbm/ui/activities/aak;
 
-    invoke-virtual {v4, v5, v3}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, v0, Lcom/bbm/ui/activities/aak;->a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
 
-    .line 109
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;->finish()V
 
     .line 112
-    :cond_0
     return-void
-.end method
-
-.method private constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I",
-            "Ljava/lang/String;",
-            ")V"
-        }
-    .end annotation
-
-    .prologue
-    .line 114
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    .line 115
-    iput p3, p0, Lcom/bbm/ui/activities/aam;->d:I
-
-    .line 116
-    iput-object p4, p0, Lcom/bbm/ui/activities/aam;->e:Ljava/lang/String;
-
-    .line 117
-    return-void
-.end method
-
-.method public static a(Ljava/lang/String;)Lcom/bbm/ui/activities/aam;
-    .locals 1
-
-    .prologue
-    .line 120
-    sget-object v0, Lcom/bbm/ui/activities/aam;->f:Ljava/util/Hashtable;
-
-    invoke-virtual {v0, p0}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/activities/aam;
-
-    .line 121
-    if-eqz v0, :cond_0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    sget-object v0, Lcom/bbm/ui/activities/aam;->b:Lcom/bbm/ui/activities/aam;
-
-    goto :goto_0
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lcom/bbm/ui/activities/aam;
-    .locals 1
-
-    .prologue
-    .line 97
-    const-class v0, Lcom/bbm/ui/activities/aam;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/activities/aam;
-
-    return-object v0
-.end method
-
-.method public static values()[Lcom/bbm/ui/activities/aam;
-    .locals 1
-
-    .prologue
-    .line 97
-    sget-object v0, Lcom/bbm/ui/activities/aam;->g:[Lcom/bbm/ui/activities/aam;
-
-    invoke-virtual {v0}, [Lcom/bbm/ui/activities/aam;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lcom/bbm/ui/activities/aam;
-
-    return-object v0
 .end method

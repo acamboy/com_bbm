@@ -1,38 +1,24 @@
-.class final Lcom/google/b/a/n;
-.super Ljava/lang/ThreadLocal;
-.source "Platform.java"
+.class public interface abstract Lcom/google/b/a/n;
+.super Ljava/lang/Object;
+.source "Predicate.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ljava/lang/ThreadLocal",
-        "<[C>;"
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
     }
 .end annotation
 
 
-# direct methods
-.method constructor <init>()V
-    .locals 0
-
-    .prologue
-    .line 45
-    invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
-
-    return-void
-.end method
-
-
 # virtual methods
-.method protected final bridge synthetic initialValue()Ljava/lang/Object;
-    .locals 1
-
-    .prologue
-    .line 45
-    const/16 v0, 0x400
-
-    new-array v0, v0, [C
-
-    return-object v0
+.method public abstract a(Ljava/lang/Object;)Z
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)Z"
+        }
+    .end annotation
 .end method

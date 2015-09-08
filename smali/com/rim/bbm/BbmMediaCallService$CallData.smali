@@ -30,6 +30,8 @@
 
 .field public rateCall:Z
 
+.field public secureCall:Z
+
 .field public videoEnabled:Z
 
 .field public videoState:I
@@ -40,7 +42,7 @@
     .locals 0
 
     .prologue
-    .line 259
+    .line 261
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

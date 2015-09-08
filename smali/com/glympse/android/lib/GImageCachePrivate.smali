@@ -16,10 +16,16 @@
 .method public abstract getMemoryCache()Lcom/glympse/android/lib/GMemoryCache;
 .end method
 
-.method public abstract onLowMemory()V
+.method public abstract removeFromCache(Ljava/lang/String;)V
 .end method
 
-.method public abstract saveToCache(Ljava/lang/String;Lcom/glympse/android/hal/GDrawablePrivate;)V
+.method public abstract saveIndex()V
+.end method
+
+.method public abstract saveToCache(Ljava/lang/String;Lcom/glympse/android/hal/GDrawablePrivate;)Z
+.end method
+
+.method public abstract saveToCache(Ljava/lang/String;Lcom/glympse/android/hal/GDrawablePrivate;Z)Z
 .end method
 
 .method public abstract setActive(Z)V

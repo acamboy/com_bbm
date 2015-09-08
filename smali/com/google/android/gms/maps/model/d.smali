@@ -1,38 +1,36 @@
-.class public Lcom/google/android/gms/maps/model/d;
+.class public final Lcom/google/android/gms/maps/model/d;
 .super Ljava/lang/Object;
 
 
+# instance fields
+.field public a:D
+
+.field public b:D
+
+.field public c:D
+
+.field public d:D
+
+
 # direct methods
-.method static a(Lcom/google/android/gms/maps/model/LatLngBounds;Landroid/os/Parcel;I)V
+.method public constructor <init>()V
     .locals 4
 
-    const/4 v3, 0x0
+    const-wide/high16 v2, 0x7ff8000000000000L    # NaN
 
-    invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/b;->p(Landroid/os/Parcel;)I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
+    const-wide/high16 v0, 0x7ff0000000000000L    # Double.POSITIVE_INFINITY
 
-    const/4 v1, 0x1
+    iput-wide v0, p0, Lcom/google/android/gms/maps/model/d;->a:D
 
-    invoke-virtual {p0}, Lcom/google/android/gms/maps/model/LatLngBounds;->getVersionCode()I
+    const-wide/high16 v0, -0x10000000000000L    # Double.NEGATIVE_INFINITY
 
-    move-result v2
+    iput-wide v0, p0, Lcom/google/android/gms/maps/model/d;->b:D
 
-    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/b;->c(Landroid/os/Parcel;II)V
+    iput-wide v2, p0, Lcom/google/android/gms/maps/model/d;->c:D
 
-    const/4 v1, 0x2
-
-    iget-object v2, p0, Lcom/google/android/gms/maps/model/LatLngBounds;->southwest:Lcom/google/android/gms/maps/model/LatLng;
-
-    invoke-static {p1, v1, v2, p2, v3}, Lcom/google/android/gms/common/internal/safeparcel/b;->a(Landroid/os/Parcel;ILandroid/os/Parcelable;IZ)V
-
-    const/4 v1, 0x3
-
-    iget-object v2, p0, Lcom/google/android/gms/maps/model/LatLngBounds;->northeast:Lcom/google/android/gms/maps/model/LatLng;
-
-    invoke-static {p1, v1, v2, p2, v3}, Lcom/google/android/gms/common/internal/safeparcel/b;->a(Landroid/os/Parcel;ILandroid/os/Parcelable;IZ)V
-
-    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/b;->D(Landroid/os/Parcel;I)V
+    iput-wide v2, p0, Lcom/google/android/gms/maps/model/d;->d:D
 
     return-void
 .end method

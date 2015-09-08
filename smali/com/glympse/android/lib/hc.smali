@@ -1,220 +1,78 @@
 .class Lcom/glympse/android/lib/hc;
-.super Lcom/glympse/android/lib/j;
-.source "RegisterDevice.java"
+.super Lcom/glympse/android/lib/au;
+.source "PersonAvatarProvider.java"
 
 
 # instance fields
-.field private _glympse:Lcom/glympse/android/lib/GGlympsePrivate;
-
-.field private jx:Lcom/glympse/android/lib/l;
-
-.field private rB:Ljava/lang/String;
-
-.field private rC:Z
+.field private rE:Lcom/glympse/android/hal/GContactsProvider;
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/lib/GGlympsePrivate;Ljava/lang/String;)V
+.method public constructor <init>(Lcom/glympse/android/hal/GContactsProvider;)V
     .locals 1
 
     .prologue
-    .line 33
-    invoke-direct {p0}, Lcom/glympse/android/lib/j;-><init>()V
+    .line 21
+    invoke-direct {p0}, Lcom/glympse/android/lib/au;-><init>()V
 
-    .line 34
-    iput-object p1, p0, Lcom/glympse/android/lib/hc;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+    .line 22
+    iput-object p1, p0, Lcom/glympse/android/lib/hc;->rE:Lcom/glympse/android/hal/GContactsProvider;
 
-    .line 35
-    iput-object p2, p0, Lcom/glympse/android/lib/hc;->rB:Ljava/lang/String;
+    .line 23
+    invoke-static {}, Lcom/glympse/android/lib/hd;->personSchema()Ljava/lang/String;
 
-    .line 36
-    iget-object v0, p0, Lcom/glympse/android/lib/hc;->rB:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
+    invoke-virtual {p0, v0}, Lcom/glympse/android/lib/hc;->q(Ljava/lang/String;)V
 
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    iput-boolean v0, p0, Lcom/glympse/android/lib/hc;->rC:Z
-
-    .line 37
-    new-instance v0, Lcom/glympse/android/lib/l;
-
-    invoke-direct {v0}, Lcom/glympse/android/lib/l;-><init>()V
-
-    iput-object v0, p0, Lcom/glympse/android/lib/hc;->jx:Lcom/glympse/android/lib/l;
-
-    .line 38
-    iget-object v0, p0, Lcom/glympse/android/lib/hc;->jx:Lcom/glympse/android/lib/l;
-
-    iput-object v0, p0, Lcom/glympse/android/lib/hc;->hc:Lcom/glympse/android/lib/k;
-
-    .line 39
+    .line 24
     return-void
-
-    .line 36
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public cancel()V
-    .locals 1
+.method public load(Lcom/glympse/android/lib/GUri;)Lcom/glympse/android/core/GCommon;
+    .locals 6
 
     .prologue
-    .line 83
-    new-instance v0, Lcom/glympse/android/lib/l;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Lcom/glympse/android/lib/l;-><init>()V
+    .line 35
+    :try_start_0
+    invoke-static {p1}, Lcom/glympse/android/lib/hd;->personIdFromUri(Lcom/glympse/android/lib/GUri;)J
 
-    iput-object v0, p0, Lcom/glympse/android/lib/hc;->jx:Lcom/glympse/android/lib/l;
+    move-result-wide v2
 
-    .line 84
-    iget-object v0, p0, Lcom/glympse/android/lib/hc;->jx:Lcom/glympse/android/lib/l;
+    .line 36
+    const-wide/16 v4, -0x1
 
-    iput-object v0, p0, Lcom/glympse/android/lib/hc;->hc:Lcom/glympse/android/lib/k;
+    cmp-long v1, v4, v2
 
-    .line 85
-    return-void
-.end method
+    if-nez v1, :cond_0
 
-.method public process()Z
-    .locals 5
+    .line 50
+    :goto_0
+    return-object v0
 
-    .prologue
-    .line 61
-    iget-object v0, p0, Lcom/glympse/android/lib/hc;->jx:Lcom/glympse/android/lib/l;
+    .line 42
+    :cond_0
+    iget-object v1, p0, Lcom/glympse/android/lib/hc;->rE:Lcom/glympse/android/hal/GContactsProvider;
 
-    iget-object v0, v0, Lcom/glympse/android/lib/l;->hf:Ljava/lang/String;
-
-    const-string v1, "ok"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 63
-    iget-boolean v0, p0, Lcom/glympse/android/lib/hc;->rC:Z
-
-    if-eqz v0, :cond_0
-
-    .line 66
-    iget-object v0, p0, Lcom/glympse/android/lib/hc;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
-
-    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->getConfig()Lcom/glympse/android/api/GConfig;
+    invoke-interface {v1, v2, v3}, Lcom/glympse/android/hal/GContactsProvider;->loadAvatar(J)Lcom/glympse/android/core/GDrawable;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
-
-    check-cast v0, Lcom/glympse/android/lib/GConfigPrivate;
-
-    .line 67
-    iget-object v1, p0, Lcom/glympse/android/lib/hc;->rB:Ljava/lang/String;
-
-    invoke-interface {v0, v1}, Lcom/glympse/android/lib/GConfigPrivate;->saveRegistrationToken(Ljava/lang/String;)V
-
-    .line 71
-    :cond_0
-    iget-boolean v0, p0, Lcom/glympse/android/lib/hc;->rC:Z
-
-    if-eqz v0, :cond_1
-
-    const/16 v0, 0x200
-
-    .line 72
-    :goto_0
-    iget-object v1, p0, Lcom/glympse/android/lib/hc;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
-
-    iget-object v2, p0, Lcom/glympse/android/lib/hc;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
-
-    const v3, 0x10002
-
-    iget-object v4, p0, Lcom/glympse/android/lib/hc;->rB:Ljava/lang/String;
-
-    invoke-interface {v1, v2, v3, v0, v4}, Lcom/glympse/android/lib/GGlympsePrivate;->eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
-
-    .line 78
-    const/4 v0, 0x1
-
-    :goto_1
-    return v0
-
-    .line 71
-    :cond_1
-    const/16 v0, 0x400
 
     goto :goto_0
 
-    .line 76
-    :cond_2
-    const/4 v0, 0x0
+    .line 44
+    :catch_0
+    move-exception v1
 
-    goto :goto_1
-.end method
+    const/4 v2, 0x0
 
-.method public url(Ljava/lang/StringBuilder;)Z
-    .locals 1
-
-    .prologue
-    .line 47
-    const-string v0, "users/self/"
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 48
-    iget-boolean v0, p0, Lcom/glympse/android/lib/hc;->rC:Z
-
-    if-eqz v0, :cond_1
-
-    const-string v0, "register_device"
-
-    :goto_0
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 49
-    const-string v0, "?provider="
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 50
-    invoke-static {}, Lcom/glympse/android/hal/Platform;->getPushType()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 51
-    iget-boolean v0, p0, Lcom/glympse/android/lib/hc;->rC:Z
-
-    if-eqz v0, :cond_0
-
-    .line 53
-    const-string v0, "&auth_id="
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 54
-    iget-object v0, p0, Lcom/glympse/android/lib/hc;->rB:Ljava/lang/String;
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 56
-    :cond_0
-    const/4 v0, 0x1
-
-    return v0
-
-    .line 48
-    :cond_1
-    const-string v0, "unregister_device"
+    invoke-static {v1, v2}, Lcom/glympse/android/lib/Debug;->ex(Ljava/lang/Throwable;Z)V
 
     goto :goto_0
 .end method

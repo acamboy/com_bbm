@@ -41,11 +41,11 @@
 
     const v5, 0x18000008
 
-    const v4, -0x3ffffff7
+    const v4, -0x3ffffff7    # -2.0000021f
 
-    const v3, -0x3ffffff8
+    const v3, -0x3ffffff8    # -2.000002f
 
-    const/high16 v2, -0x40000000
+    const/high16 v2, -0x40000000    # -2.0f
 
     .line 229
     const-string v0, "v21_generic"
@@ -76,7 +76,7 @@
 
     const-string v1, "v30_generic"
 
-    const v2, -0x3fffffff
+    const v2, -0x3fffffff    # -2.0000002f
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -89,7 +89,7 @@
 
     const-string v1, "v21_europe"
 
-    const v2, -0x3ffffffc
+    const v2, -0x3ffffffc    # -2.000001f
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -102,7 +102,7 @@
 
     const-string v1, "v30_europe"
 
-    const v2, -0x3ffffffb
+    const v2, -0x3ffffffb    # -2.0000012f
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -204,7 +204,7 @@
 
     .prologue
     .line 379
-    const v0, -0x3fffffff
+    const v0, -0x3fffffff    # -2.0000002f
 
     invoke-static {v0}, Lcom/a/a/c;->b(I)Z
 
@@ -342,7 +342,7 @@
 
     .prologue
     .line 403
-    const v0, -0x3fffffff
+    const v0, -0x3fffffff    # -2.0000002f
 
     invoke-static {v0}, Lcom/a/a/c;->b(I)Z
 

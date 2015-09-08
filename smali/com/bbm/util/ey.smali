@@ -1,92 +1,187 @@
-.class public final Lcom/bbm/util/ey;
-.super Ljava/lang/Object;
-.source "UpdatesFragmentUtil.java"
+.class final Lcom/bbm/util/ey;
+.super Landroid/os/AsyncTask;
+.source "VoiceNoteMediaPlayer.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroid/os/AsyncTask",
+        "<",
+        "Ljava/lang/Void;",
+        "Ljava/lang/Integer;",
+        "Ljava/lang/Void;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field a:Ljava/util/Timer;
+.field final synthetic a:I
 
-.field b:Z
-
-.field final c:Lcom/bbm/j/k;
-
-.field final d:Lcom/bbm/b/a;
-
-.field final e:Landroid/os/Handler;
+.field final synthetic b:Lcom/bbm/util/ex;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/b/a;Landroid/view/View;Lcom/bbm/util/ew;Lcom/bbm/j/t;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/bbm/b/a;",
-            "Landroid/view/View;",
-            "Lcom/bbm/util/ew;",
-            "Lcom/bbm/j/t",
-            "<",
-            "Ljava/lang/Boolean;",
-            ">;)V"
-        }
-    .end annotation
+.method constructor <init>(Lcom/bbm/util/ex;I)V
+    .locals 0
 
     .prologue
-    .line 993
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 97
+    iput-object p1, p0, Lcom/bbm/util/ey;->b:Lcom/bbm/util/ex;
 
-    .line 985
-    const/4 v0, 0x0
+    iput p2, p0, Lcom/bbm/util/ey;->a:I
 
-    iput-boolean v0, p0, Lcom/bbm/util/ey;->b:Z
+    invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 989
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
-
-    iput-object v0, p0, Lcom/bbm/util/ey;->e:Landroid/os/Handler;
-
-    .line 994
-    iput-object p1, p0, Lcom/bbm/util/ey;->d:Lcom/bbm/b/a;
-
-    .line 995
-    new-instance v0, Lcom/bbm/util/ez;
-
-    invoke-direct {v0, p0, p4, p3, p2}, Lcom/bbm/util/ez;-><init>(Lcom/bbm/util/ey;Lcom/bbm/j/t;Lcom/bbm/util/ew;Landroid/view/View;)V
-
-    iput-object v0, p0, Lcom/bbm/util/ey;->c:Lcom/bbm/j/k;
-
-    .line 1026
-    iget-object v0, p0, Lcom/bbm/util/ey;->c:Lcom/bbm/j/k;
-
-    invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
-
-    .line 1027
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/util/ey;)V
+.method private varargs a()Ljava/lang/Void;
+    .locals 4
+
+    .prologue
+    const/4 v3, 0x0
+
+    .line 101
+    :goto_0
+    :try_start_0
+    invoke-virtual {p0}, Lcom/bbm/util/ey;->isCancelled()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 107
+    iget-object v0, p0, Lcom/bbm/util/ey;->b:Lcom/bbm/util/ex;
+
+    invoke-virtual {v0}, Lcom/bbm/util/ex;->getCurrentPosition()I
+
+    move-result v0
+
+    .line 108
+    iget v1, p0, Lcom/bbm/util/ey;->a:I
+
+    sub-int/2addr v1, v0
+
+    const/16 v2, 0xfa
+
+    if-ge v1, v2, :cond_1
+
+    .line 109
+    const/4 v0, 0x1
+
+    new-array v0, v0, [Ljava/lang/Integer;
+
+    const/4 v1, 0x0
+
+    iget v2, p0, Lcom/bbm/util/ey;->a:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    aput-object v2, v0, v1
+
+    invoke-virtual {p0, v0}, Lcom/bbm/util/ey;->publishProgress([Ljava/lang/Object;)V
+
+    .line 113
+    :goto_1
+    const-wide/16 v0, 0x64
+
+    invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    .line 116
+    :catch_0
+    move-exception v0
+
+    .line 117
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Error getting voice note runProgressUpdateTask: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/lang/InterruptedException;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-array v1, v3, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 119
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
+
+    .line 111
+    :cond_1
+    const/4 v1, 0x1
+
+    :try_start_1
+    new-array v1, v1, [Ljava/lang/Integer;
+
+    const/4 v2, 0x0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    aput-object v0, v1, v2
+
+    invoke-virtual {p0, v1}, Lcom/bbm/util/ey;->publishProgress([Ljava/lang/Object;)V
+    :try_end_1
+    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_1
+.end method
+
+
+# virtual methods
+.method protected final synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
     .prologue
-    .line 983
-    iget-boolean v0, p0, Lcom/bbm/util/ey;->b:Z
+    .line 97
+    invoke-direct {p0}, Lcom/bbm/util/ey;->a()Ljava/lang/Void;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    iget-object v0, p0, Lcom/bbm/util/ey;->a:Ljava/util/Timer;
+    return-object v0
+.end method
 
-    invoke-virtual {v0}, Ljava/util/Timer;->cancel()V
+.method protected final synthetic onProgressUpdate([Ljava/lang/Object;)V
+    .locals 2
 
-    iget-object v0, p0, Lcom/bbm/util/ey;->a:Ljava/util/Timer;
+    .prologue
+    .line 97
+    check-cast p1, [Ljava/lang/Integer;
 
-    invoke-virtual {v0}, Ljava/util/Timer;->purge()I
+    iget-object v0, p0, Lcom/bbm/util/ey;->b:Lcom/bbm/util/ex;
 
-    const/4 v0, 0x0
+    invoke-static {v0}, Lcom/bbm/util/ex;->a(Lcom/bbm/util/ex;)Lcom/bbm/util/dc;
 
-    iput-boolean v0, p0, Lcom/bbm/util/ey;->b:Z
+    move-result-object v0
 
-    :cond_0
+    const/4 v1, 0x0
+
+    aget-object v1, p1, v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
+
     return-void
 .end method

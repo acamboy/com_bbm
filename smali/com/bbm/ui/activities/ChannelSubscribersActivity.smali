@@ -1,5 +1,5 @@
 .class public Lcom/bbm/ui/activities/ChannelSubscribersActivity;
-.super Lcom/bbm/ui/activities/cq;
+.super Lcom/bbm/bali/ui/channels/a;
 .source "ChannelSubscribersActivity.java"
 
 
@@ -11,43 +11,34 @@
         value = {
             "Lcom/bbm/j/x",
             "<",
-            "Lcom/bbm/d/ge;",
+            "Lcom/bbm/d/hp;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private c:Lcom/bbm/ui/activities/ev;
+.field private h:Lcom/bbm/ui/activities/di;
 
-.field private d:Lcom/bbm/ui/FooterActionBar;
+.field private i:Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;
 
-.field private e:Landroid/widget/TextView;
+.field private j:Landroid/widget/TextView;
 
-.field private f:Landroid/widget/ImageView;
+.field private k:Landroid/widget/ImageView;
 
-.field private g:Landroid/widget/ProgressBar;
+.field private l:Landroid/widget/ProgressBar;
 
-.field private h:Lcom/bbm/j/k;
-
-.field private final i:Lcom/bbm/ui/cn;
+.field private m:Lcom/bbm/j/k;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 34
-    invoke-direct {p0}, Lcom/bbm/ui/activities/cq;-><init>()V
+    .line 31
+    invoke-direct {p0}, Lcom/bbm/bali/ui/channels/a;-><init>()V
 
-    .line 65
-    new-instance v0, Lcom/bbm/ui/activities/et;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/et;-><init>(Lcom/bbm/ui/activities/ChannelSubscribersActivity;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->i:Lcom/bbm/ui/cn;
-
-    .line 73
+    .line 63
     return-void
 .end method
 
@@ -55,7 +46,7 @@
     .locals 1
 
     .prologue
-    .line 34
+    .line 31
     iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->b:Lcom/bbm/j/x;
 
     return-object v0
@@ -67,28 +58,28 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 34
+    .line 31
     iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->a:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->g:Landroid/widget/ProgressBar;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->l:Landroid/widget/ProgressBar;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->f:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->k:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->e:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->j:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f09015e
+    const v2, 0x7f0901c2
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -104,25 +95,25 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->e:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->j:Landroid/widget/TextView;
 
-    const v1, 0x7f0e0330
+    const v1, 0x7f0e0390
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     :goto_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->f:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->k:Landroid/widget/ImageView;
 
-    new-instance v1, Lcom/bbm/ui/activities/eu;
+    new-instance v1, Lcom/bbm/ui/activities/dh;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/eu;-><init>(Lcom/bbm/ui/activities/ChannelSubscribersActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/dh;-><init>(Lcom/bbm/ui/activities/ChannelSubscribersActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->e:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->j:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -135,28 +126,28 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 34
+    .line 31
     iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->a:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->g:Landroid/widget/ProgressBar;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->l:Landroid/widget/ProgressBar;
 
     invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->f:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->k:Landroid/widget/ImageView;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->e:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->j:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0e068f
+    const v2, 0x7f0e075c
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -164,13 +155,13 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->e:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->j:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f090010
+    const v2, 0x7f09001e
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -185,17 +176,17 @@
     .locals 0
 
     .prologue
-    .line 34
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->f()V
+    .line 31
+    invoke-direct {p0}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->j()V
 
     return-void
 .end method
 
-.method private f()V
+.method private j()V
     .locals 2
 
     .prologue
-    .line 168
+    .line 152
     :try_start_0
     iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->b:Lcom/bbm/j/x;
 
@@ -205,7 +196,7 @@
     :try_end_0
     .catch Lcom/bbm/j/z; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 172
+    .line 156
     :goto_0
     return-void
 
@@ -221,16 +212,16 @@
     .locals 3
 
     .prologue
-    .line 139
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/cq;->onCreate(Landroid/os/Bundle;)V
+    .line 129
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/channels/a;->onCreate(Landroid/os/Bundle;)V
 
-    .line 140
-    const v0, 0x7f03001d
+    .line 130
+    const v0, 0x7f030032
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->setContentView(I)V
 
-    .line 142
-    const v0, 0x7f0b0159
+    .line 132
+    const v0, 0x7f0b01ae
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->findViewById(I)Landroid/view/View;
 
@@ -240,8 +231,8 @@
 
     iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->a:Landroid/widget/RelativeLayout;
 
-    .line 143
-    const v0, 0x7f0b015c
+    .line 133
+    const v0, 0x7f0b01b1
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->findViewById(I)Landroid/view/View;
 
@@ -249,10 +240,10 @@
 
     check-cast v0, Landroid/widget/ProgressBar;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->g:Landroid/widget/ProgressBar;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->l:Landroid/widget/ProgressBar;
 
-    .line 144
-    const v0, 0x7f0b015b
+    .line 134
+    const v0, 0x7f0b01b0
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->findViewById(I)Landroid/view/View;
 
@@ -260,10 +251,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->f:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->k:Landroid/widget/ImageView;
 
-    .line 145
-    const v0, 0x7f0b015a
+    .line 135
+    const v0, 0x7f0b01af
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->findViewById(I)Landroid/view/View;
 
@@ -271,14 +262,14 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->e:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->j:Landroid/widget/TextView;
 
-    .line 147
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    .line 137
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->b()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->d()Ljava/lang/String;
 
     move-result-object v1
 
@@ -290,27 +281,27 @@
 
     iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->b:Lcom/bbm/j/x;
 
-    .line 148
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->f()V
+    .line 138
+    invoke-direct {p0}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->j()V
 
-    .line 149
-    new-instance v0, Lcom/bbm/ui/activities/es;
+    .line 139
+    new-instance v0, Lcom/bbm/ui/activities/dg;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/es;-><init>(Lcom/bbm/ui/activities/ChannelSubscribersActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/dg;-><init>(Lcom/bbm/ui/activities/ChannelSubscribersActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->h:Lcom/bbm/j/k;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->m:Lcom/bbm/j/k;
 
-    .line 150
-    new-instance v0, Lcom/bbm/ui/activities/ev;
+    .line 140
+    new-instance v0, Lcom/bbm/ui/activities/di;
 
     iget-object v1, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->b:Lcom/bbm/j/x;
 
-    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/activities/ev;-><init>(Lcom/bbm/ui/activities/ChannelSubscribersActivity;Lcom/bbm/j/x;)V
+    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/activities/di;-><init>(Lcom/bbm/ui/activities/ChannelSubscribersActivity;Lcom/bbm/j/x;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->c:Lcom/bbm/ui/activities/ev;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->h:Lcom/bbm/ui/activities/di;
 
-    .line 151
-    const v0, 0x7f0b0158
+    .line 141
+    const v0, 0x7f0b01ad
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->findViewById(I)Landroid/view/View;
 
@@ -318,68 +309,38 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->c:Lcom/bbm/ui/activities/ev;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->h:Lcom/bbm/ui/activities/di;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 154
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->getActionBar()Landroid/app/ActionBar;
-
-    move-result-object v0
-
-    .line 155
-    new-instance v1, Lcom/bbm/ui/aa;
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->b()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v1, p0, v0, v2}, Lcom/bbm/ui/aa;-><init>(Landroid/app/Activity;Landroid/app/ActionBar;Ljava/lang/String;)V
-
-    .line 156
-    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->a(Lcom/bbm/ui/activities/alb;)V
-
-    .line 157
-    invoke-virtual {v0}, Landroid/app/ActionBar;->getCustomView()Landroid/view/View;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/bbm/util/az;
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->b()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v1, p0, v2}, Lcom/bbm/util/az;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 160
-    const v0, 0x7f0b00bf
+    .line 144
+    const v0, 0x7f0b05ee
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/FooterActionBar;
+    check-cast v0, Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->d:Lcom/bbm/ui/FooterActionBar;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->i:Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;
 
-    .line 161
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->d:Lcom/bbm/ui/FooterActionBar;
+    .line 145
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->i:Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;
 
-    const/4 v1, 0x0
+    const-string v1, ""
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setOverflowEnabled(Z)V
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->a(Landroid/support/v7/widget/Toolbar;Ljava/lang/String;)V
 
-    .line 162
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->d:Lcom/bbm/ui/FooterActionBar;
+    .line 146
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->i:Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->i:Lcom/bbm/ui/cn;
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->d()Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
+    move-result-object v1
 
-    .line 163
+    invoke-virtual {v0, p0, v1}, Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;->setChannelUri(Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 147
     return-void
 .end method
 
@@ -387,20 +348,25 @@
     .locals 1
 
     .prologue
-    .line 215
-    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->onPause()V
+    .line 200
+    invoke-super {p0}, Lcom/bbm/bali/ui/channels/a;->onPause()V
 
-    .line 216
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->h:Lcom/bbm/j/k;
+    .line 201
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->i:Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;
+
+    invoke-virtual {v0}, Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;->h()V
+
+    .line 202
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->m:Lcom/bbm/j/k;
 
     if-eqz v0, :cond_0
 
-    .line 217
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->h:Lcom/bbm/j/k;
+    .line 203
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->m:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
 
-    .line 219
+    .line 205
     :cond_0
     return-void
 .end method
@@ -409,14 +375,19 @@
     .locals 1
 
     .prologue
-    .line 209
-    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->onResume()V
+    .line 193
+    invoke-super {p0}, Lcom/bbm/bali/ui/channels/a;->onResume()V
 
-    .line 210
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->h:Lcom/bbm/j/k;
+    .line 194
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->i:Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;
+
+    invoke-virtual {v0}, Lcom/bbm/bali/ui/channels/ChannelsMainToolbar;->g()V
+
+    .line 195
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSubscribersActivity;->m:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 211
+    .line 196
     return-void
 .end method

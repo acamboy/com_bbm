@@ -3,28 +3,20 @@
 .source "QuickShareVoicenoteView.java"
 
 # interfaces
-.implements Landroid/media/MediaPlayer$OnPreparedListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/fq;
-
-.field final synthetic b:Landroid/media/MediaPlayer;
-
-.field final synthetic c:Lcom/bbm/ui/QuickShareVoicenoteView;
+.field final synthetic a:Lcom/bbm/ui/QuickShareVoicenoteView;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/QuickShareVoicenoteView;Lcom/bbm/ui/fq;Landroid/media/MediaPlayer;)V
+.method constructor <init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
     .locals 0
 
     .prologue
-    .line 282
-    iput-object p1, p0, Lcom/bbm/ui/fo;->c:Lcom/bbm/ui/QuickShareVoicenoteView;
-
-    iput-object p2, p0, Lcom/bbm/ui/fo;->a:Lcom/bbm/ui/fq;
-
-    iput-object p3, p0, Lcom/bbm/ui/fo;->b:Landroid/media/MediaPlayer;
+    .line 83
+    iput-object p1, p0, Lcom/bbm/ui/fo;->a:Lcom/bbm/ui/QuickShareVoicenoteView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -33,26 +25,19 @@
 
 
 # virtual methods
-.method public final onPrepared(Landroid/media/MediaPlayer;)V
-    .locals 1
+.method public final run()V
+    .locals 3
 
     .prologue
-    .line 286
-    iget-object v0, p0, Lcom/bbm/ui/fo;->a:Lcom/bbm/ui/fq;
+    .line 87
+    iget-object v0, p0, Lcom/bbm/ui/fo;->a:Lcom/bbm/ui/QuickShareVoicenoteView;
 
-    if-eqz v0, :cond_0
+    sget v1, Lcom/bbm/ui/fx;->b:I
 
-    .line 287
-    iget-object v0, p0, Lcom/bbm/ui/fo;->a:Lcom/bbm/ui/fq;
+    const/4 v2, 0x0
 
-    invoke-interface {v0}, Lcom/bbm/ui/fq;->a()V
+    invoke-static {v0, v1, v2}, Lcom/bbm/ui/QuickShareVoicenoteView;->a(Lcom/bbm/ui/QuickShareVoicenoteView;IZ)V
 
-    .line 289
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/fo;->b:Landroid/media/MediaPlayer;
-
-    invoke-virtual {v0}, Landroid/media/MediaPlayer;->start()V
-
-    .line 290
+    .line 88
     return-void
 .end method

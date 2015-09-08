@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/c/gb;
 .super Ljava/lang/Object;
-.source "PeopleYouKnowFragment.java"
+.source "StickerDetailsFragment.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/fv;
+.field final synthetic a:Lcom/bbm/ui/c/fx;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/fv;)V
+.method constructor <init>(Lcom/bbm/ui/c/fx;)V
     .locals 0
 
     .prologue
-    .line 218
-    iput-object p1, p0, Lcom/bbm/ui/c/gb;->a:Lcom/bbm/ui/c/fv;
+    .line 664
+    iput-object p1, p0, Lcom/bbm/ui/c/gb;->a:Lcom/bbm/ui/c/fx;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,51 +25,22 @@
 
 
 # virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+.method public final onClick(Landroid/view/View;)V
     .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
 
     .prologue
-    .line 221
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+    .line 667
+    const-string v0, "Purchase (FREE) Button clicked"
 
-    move-result-object v0
+    const-class v1, Lcom/bbm/ui/c/fx;
 
-    invoke-virtual {v0}, Lcom/bbm/c/c;->c()V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 223
-    invoke-virtual {p1}, Landroid/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
+    .line 668
+    iget-object v0, p0, Lcom/bbm/ui/c/gb;->a:Lcom/bbm/ui/c/fx;
 
-    move-result-object v0
+    invoke-virtual {v0}, Lcom/bbm/ui/c/fx;->a()V
 
-    invoke-interface {v0, p3}, Landroid/widget/Adapter;->getItem(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/iceberg/l;
-
-    .line 224
-    iget-object v1, p0, Lcom/bbm/ui/c/gb;->a:Lcom/bbm/ui/c/fv;
-
-    invoke-static {v1}, Lcom/bbm/ui/c/fv;->j(Lcom/bbm/ui/c/fv;)Z
-
-    .line 225
-    iget-object v1, p0, Lcom/bbm/ui/c/gb;->a:Lcom/bbm/ui/c/fv;
-
-    invoke-static {v1}, Lcom/bbm/ui/c/fv;->f(Lcom/bbm/ui/c/fv;)Lcom/bbm/h/aq;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/bbm/h/aq;->a(Lcom/bbm/iceberg/l;)V
-
-    .line 226
+    .line 669
     return-void
 .end method

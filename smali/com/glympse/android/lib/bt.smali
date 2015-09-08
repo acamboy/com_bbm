@@ -1,76 +1,58 @@
-.class interface abstract Lcom/glympse/android/lib/bt;
+.class Lcom/glympse/android/lib/bt;
 .super Ljava/lang/Object;
-.source "GListNode.java"
+.source "Event.java"
 
 # interfaces
-.implements Lcom/glympse/android/core/GCommon;
+.implements Ljava/lang/Runnable;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;",
-        "Lcom/glympse/android/core/GCommon;"
-    }
-.end annotation
+# instance fields
+.field private cL:Lcom/glympse/android/api/GGlympse;
+
+.field private li:Lcom/glympse/android/lib/GEvent;
+
+
+# direct methods
+.method public constructor <init>(Lcom/glympse/android/api/GGlympse;Lcom/glympse/android/lib/GEvent;)V
+    .locals 0
+
+    .prologue
+    .line 56
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 57
+    iput-object p1, p0, Lcom/glympse/android/lib/bt;->cL:Lcom/glympse/android/api/GGlympse;
+
+    .line 58
+    iput-object p2, p0, Lcom/glympse/android/lib/bt;->li:Lcom/glympse/android/lib/GEvent;
+
+    .line 59
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a(Lcom/glympse/android/lib/bt;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/glympse/android/lib/bt",
-            "<TT;>;)V"
-        }
-    .end annotation
-.end method
+.method public run()V
+    .locals 2
 
-.method public abstract b(Lcom/glympse/android/lib/bt;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/glympse/android/lib/bt",
-            "<TT;>;)V"
-        }
-    .end annotation
-.end method
+    .prologue
+    .line 63
+    iget-object v0, p0, Lcom/glympse/android/lib/bt;->cL:Lcom/glympse/android/api/GGlympse;
 
-.method public abstract be()Ljava/lang/Object;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()TT;"
-        }
-    .end annotation
-.end method
+    invoke-interface {v0}, Lcom/glympse/android/api/GGlympse;->isStarted()Z
 
-.method public abstract bf()Lcom/glympse/android/lib/bt;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/glympse/android/lib/bt",
-            "<TT;>;"
-        }
-    .end annotation
-.end method
+    move-result v0
 
-.method public abstract bg()Lcom/glympse/android/lib/bt;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/glympse/android/lib/bt",
-            "<TT;>;"
-        }
-    .end annotation
-.end method
+    if-eqz v0, :cond_0
 
-.method public abstract d(Ljava/lang/Object;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;)V"
-        }
-    .end annotation
+    .line 65
+    iget-object v0, p0, Lcom/glympse/android/lib/bt;->li:Lcom/glympse/android/lib/GEvent;
+
+    iget-object v1, p0, Lcom/glympse/android/lib/bt;->cL:Lcom/glympse/android/api/GGlympse;
+
+    invoke-interface {v0, v1}, Lcom/glympse/android/lib/GEvent;->send(Lcom/glympse/android/api/GGlympse;)V
+
+    .line 67
+    :cond_0
+    return-void
 .end method

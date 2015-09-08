@@ -13,7 +13,7 @@
 
     .prologue
     .line 59
-    invoke-static {}, Lcom/bbm/am;->values()[Lcom/bbm/am;
+    invoke-static {}, Lcom/bbm/av;->values()[Lcom/bbm/av;
 
     move-result-object v0
 
@@ -26,9 +26,9 @@
     :try_start_0
     sget-object v0, Lcom/bbm/setup/y;->a:[I
 
-    sget-object v1, Lcom/bbm/am;->m:Lcom/bbm/am;
+    sget-object v1, Lcom/bbm/av;->m:Lcom/bbm/av;
 
-    invoke-virtual {v1}, Lcom/bbm/am;->ordinal()I
+    invoke-virtual {v1}, Lcom/bbm/av;->ordinal()I
 
     move-result v1
 
@@ -42,9 +42,9 @@
     :try_start_1
     sget-object v0, Lcom/bbm/setup/y;->a:[I
 
-    sget-object v1, Lcom/bbm/am;->i:Lcom/bbm/am;
+    sget-object v1, Lcom/bbm/av;->i:Lcom/bbm/av;
 
-    invoke-virtual {v1}, Lcom/bbm/am;->ordinal()I
+    invoke-virtual {v1}, Lcom/bbm/av;->ordinal()I
 
     move-result v1
 
@@ -58,9 +58,9 @@
     :try_start_2
     sget-object v0, Lcom/bbm/setup/y;->a:[I
 
-    sget-object v1, Lcom/bbm/am;->h:Lcom/bbm/am;
+    sget-object v1, Lcom/bbm/av;->h:Lcom/bbm/av;
 
-    invoke-virtual {v1}, Lcom/bbm/am;->ordinal()I
+    invoke-virtual {v1}, Lcom/bbm/av;->ordinal()I
 
     move-result v1
 
@@ -74,9 +74,9 @@
     :try_start_3
     sget-object v0, Lcom/bbm/setup/y;->a:[I
 
-    sget-object v1, Lcom/bbm/am;->g:Lcom/bbm/am;
+    sget-object v1, Lcom/bbm/av;->g:Lcom/bbm/av;
 
-    invoke-virtual {v1}, Lcom/bbm/am;->ordinal()I
+    invoke-virtual {v1}, Lcom/bbm/av;->ordinal()I
 
     move-result v1
 
@@ -90,9 +90,9 @@
     :try_start_4
     sget-object v0, Lcom/bbm/setup/y;->a:[I
 
-    sget-object v1, Lcom/bbm/am;->f:Lcom/bbm/am;
+    sget-object v1, Lcom/bbm/av;->f:Lcom/bbm/av;
 
-    invoke-virtual {v1}, Lcom/bbm/am;->ordinal()I
+    invoke-virtual {v1}, Lcom/bbm/av;->ordinal()I
 
     move-result v1
 
@@ -106,9 +106,9 @@
     :try_start_5
     sget-object v0, Lcom/bbm/setup/y;->a:[I
 
-    sget-object v1, Lcom/bbm/am;->e:Lcom/bbm/am;
+    sget-object v1, Lcom/bbm/av;->e:Lcom/bbm/av;
 
-    invoke-virtual {v1}, Lcom/bbm/am;->ordinal()I
+    invoke-virtual {v1}, Lcom/bbm/av;->ordinal()I
 
     move-result v1
 
@@ -122,9 +122,9 @@
     :try_start_6
     sget-object v0, Lcom/bbm/setup/y;->a:[I
 
-    sget-object v1, Lcom/bbm/am;->l:Lcom/bbm/am;
+    sget-object v1, Lcom/bbm/av;->l:Lcom/bbm/av;
 
-    invoke-virtual {v1}, Lcom/bbm/am;->ordinal()I
+    invoke-virtual {v1}, Lcom/bbm/av;->ordinal()I
 
     move-result v1
 
@@ -138,9 +138,9 @@
     :try_start_7
     sget-object v0, Lcom/bbm/setup/y;->a:[I
 
-    sget-object v1, Lcom/bbm/am;->d:Lcom/bbm/am;
+    sget-object v1, Lcom/bbm/av;->d:Lcom/bbm/av;
 
-    invoke-virtual {v1}, Lcom/bbm/am;->ordinal()I
+    invoke-virtual {v1}, Lcom/bbm/av;->ordinal()I
 
     move-result v1
 
@@ -154,9 +154,9 @@
     :try_start_8
     sget-object v0, Lcom/bbm/setup/y;->a:[I
 
-    sget-object v1, Lcom/bbm/am;->b:Lcom/bbm/am;
+    sget-object v1, Lcom/bbm/av;->b:Lcom/bbm/av;
 
-    invoke-virtual {v1}, Lcom/bbm/am;->ordinal()I
+    invoke-virtual {v1}, Lcom/bbm/av;->ordinal()I
 
     move-result v1
 
@@ -170,9 +170,9 @@
     :try_start_9
     sget-object v0, Lcom/bbm/setup/y;->a:[I
 
-    sget-object v1, Lcom/bbm/am;->c:Lcom/bbm/am;
+    sget-object v1, Lcom/bbm/av;->c:Lcom/bbm/av;
 
-    invoke-virtual {v1}, Lcom/bbm/am;->ordinal()I
+    invoke-virtual {v1}, Lcom/bbm/av;->ordinal()I
 
     move-result v1
 

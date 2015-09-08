@@ -1,18 +1,22 @@
 .class public Lcom/bbm/ui/activities/GroupPassphraseActivity;
-.super Lcom/bbm/ui/activities/mj;
+.super Lcom/bbm/bali/ui/main/a/d;
 .source "GroupPassphraseActivity.java"
 
 
 # instance fields
-.field protected a:Lcom/bbm/g/al;
+.field protected b:Lcom/bbm/g/an;
 
-.field private b:Landroid/widget/TextView;
+.field private h:Landroid/widget/TextView;
 
-.field private d:Landroid/widget/Button;
+.field private i:Landroid/widget/TextView;
 
-.field private final e:Landroid/view/View$OnClickListener;
+.field private j:Landroid/widget/Button;
 
-.field private final f:Lcom/bbm/j/k;
+.field private k:Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;
+
+.field private final l:Landroid/view/View$OnClickListener;
+
+.field private final m:Lcom/bbm/j/k;
 
 
 # direct methods
@@ -20,22 +24,22 @@
     .locals 1
 
     .prologue
-    .line 22
-    invoke-direct {p0}, Lcom/bbm/ui/activities/mj;-><init>()V
+    .line 19
+    invoke-direct {p0}, Lcom/bbm/bali/ui/main/a/d;-><init>()V
 
-    .line 29
-    new-instance v0, Lcom/bbm/ui/activities/rf;
+    .line 28
+    new-instance v0, Lcom/bbm/ui/activities/pc;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/rf;-><init>(Lcom/bbm/ui/activities/GroupPassphraseActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/pc;-><init>(Lcom/bbm/ui/activities/GroupPassphraseActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->e:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->l:Landroid/view/View$OnClickListener;
 
-    .line 45
-    new-instance v0, Lcom/bbm/ui/activities/rg;
+    .line 44
+    new-instance v0, Lcom/bbm/ui/activities/pd;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/rg;-><init>(Lcom/bbm/ui/activities/GroupPassphraseActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/pd;-><init>(Lcom/bbm/ui/activities/GroupPassphraseActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->f:Lcom/bbm/j/k;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->m:Lcom/bbm/j/k;
 
     return-void
 .end method
@@ -44,8 +48,28 @@
     .locals 1
 
     .prologue
-    .line 22
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->b:Landroid/widget/TextView;
+    .line 19
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->h:Landroid/widget/TextView;
+
+    return-object v0
+.end method
+
+.method static synthetic b(Lcom/bbm/ui/activities/GroupPassphraseActivity;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 19
+    iget-object v0, p0, Lcom/bbm/bali/ui/main/a/d;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic c(Lcom/bbm/ui/activities/GroupPassphraseActivity;)Landroid/widget/TextView;
+    .locals 1
+
+    .prologue
+    .line 19
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->i:Landroid/widget/TextView;
 
     return-object v0
 .end method
@@ -57,22 +81,22 @@
 
     .prologue
     .line 59
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/mj;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/d;->onCreate(Landroid/os/Bundle;)V
 
     .line 60
-    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/g/al;
+    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/g/an;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->a:Lcom/bbm/g/al;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->b:Lcom/bbm/g/an;
 
     .line 61
-    const v0, 0x7f030030
+    const v0, 0x7f03004a
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupPassphraseActivity;->setContentView(I)V
 
     .line 63
-    const v0, 0x7f0b01db
+    const v0, 0x7f0b024b
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupPassphraseActivity;->findViewById(I)Landroid/view/View;
 
@@ -80,10 +104,21 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->b:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->h:Landroid/widget/TextView;
 
     .line 64
-    const v0, 0x7f0b01dc
+    const v0, 0x7f0b024e
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupPassphraseActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->i:Landroid/widget/TextView;
+
+    .line 65
+    const v0, 0x7f0b024c
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupPassphraseActivity;->findViewById(I)Landroid/view/View;
 
@@ -91,74 +126,41 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->d:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->j:Landroid/widget/Button;
 
-    .line 65
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->d:Landroid/widget/Button;
+    .line 66
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->j:Landroid/widget/Button;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->e:Landroid/view/View$OnClickListener;
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->l:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 68
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupPassphraseActivity;->getActionBar()Landroid/app/ActionBar;
-
-    move-result-object v0
-
-    .line 69
-    const v1, 0x7f030119
-
-    invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setCustomView(I)V
-
     .line 70
-    const/16 v1, 0x10
-
-    invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setDisplayOptions(I)V
-
-    .line 71
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupPassphraseActivity;->getActionBar()Landroid/app/ActionBar;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/ActionBar;->getCustomView()Landroid/view/View;
-
-    move-result-object v0
-
-    const v1, 0x7f0b058e
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    .line 72
-    const v1, 0x7f0e0439
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
-
-    .line 75
-    const v0, 0x7f0b00bf
+    const v0, 0x7f0b013c
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupPassphraseActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/FooterActionBar;
+    check-cast v0, Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;
 
-    .line 76
-    const/4 v1, 0x0
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->k:Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setOverflowEnabled(Z)V
+    .line 71
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->k:Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;
 
-    .line 77
-    new-instance v1, Lcom/bbm/ui/activities/rh;
+    const-string v1, ""
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/rh;-><init>(Lcom/bbm/ui/activities/GroupPassphraseActivity;)V
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/activities/GroupPassphraseActivity;->a(Landroid/support/v7/widget/Toolbar;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
+    .line 72
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->k:Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;
 
-    .line 85
+    iget-object v1, p0, Lcom/bbm/bali/ui/main/a/d;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;->setGroupUri(Ljava/lang/String;)V
+
+    .line 74
     return-void
 .end method
 
@@ -166,15 +168,22 @@
     .locals 1
 
     .prologue
-    .line 93
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->f:Lcom/bbm/j/k;
+    .line 82
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->m:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
 
-    .line 94
-    invoke-super {p0}, Lcom/bbm/ui/activities/mj;->onPause()V
+    .line 83
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->k:Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;
 
-    .line 95
+    iget-object v0, v0, Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;->d:Lcom/bbm/j/k;
+
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
+
+    .line 84
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/d;->onPause()V
+
+    .line 85
     return-void
 .end method
 
@@ -182,14 +191,21 @@
     .locals 1
 
     .prologue
-    .line 103
-    invoke-super {p0}, Lcom/bbm/ui/activities/mj;->onResume()V
+    .line 93
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/d;->onResume()V
 
-    .line 104
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->f:Lcom/bbm/j/k;
+    .line 94
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->m:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 105
+    .line 95
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPassphraseActivity;->k:Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;
+
+    iget-object v0, v0, Lcom/bbm/bali/ui/main/groups/GroupsMainToolbar;->d:Lcom/bbm/j/k;
+
+    invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
+
+    .line 96
     return-void
 .end method

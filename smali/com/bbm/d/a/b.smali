@@ -20,7 +20,7 @@
 
     .prologue
     .line 9
-    invoke-static {p1}, Lcom/bbm/util/bc;->a(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/bbm/util/bi;->a(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 

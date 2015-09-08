@@ -1,11 +1,8 @@
-.class interface abstract Landroid/support/v4/view/ar;
+.class public interface abstract Landroid/support/v4/view/ar;
 .super Ljava/lang/Object;
-.source "VelocityTrackerCompat.java"
+.source "OnApplyWindowInsetsListener.java"
 
 
 # virtual methods
-.method public abstract a(Landroid/view/VelocityTracker;I)F
-.end method
-
-.method public abstract b(Landroid/view/VelocityTracker;I)F
+.method public abstract a(Landroid/support/v4/view/dl;)Landroid/support/v4/view/dl;
 .end method

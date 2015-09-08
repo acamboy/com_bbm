@@ -32,7 +32,7 @@
     .line 331
     iget-object v0, p0, Lcom/bbm/setup/m;->a:Lcom/bbm/setup/LoadingActivity;
 
-    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->g(Lcom/bbm/setup/LoadingActivity;)Lcom/bbm/util/ct;
+    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->g(Lcom/bbm/setup/LoadingActivity;)Lcom/bbm/util/dc;
 
     move-result-object v0
 
@@ -42,7 +42,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
 
     .line 332
     iget-object v0, p0, Lcom/bbm/setup/m;->a:Lcom/bbm/setup/LoadingActivity;

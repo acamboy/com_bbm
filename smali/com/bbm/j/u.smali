@@ -78,7 +78,7 @@
     if-eqz v0, :cond_0
 
     .line 14
-    invoke-virtual {p0}, Lcom/bbm/j/u;->e()V
+    invoke-virtual {p0}, Lcom/bbm/j/u;->d()V
 
     .line 16
     :cond_0

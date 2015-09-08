@@ -1,165 +1,67 @@
 .class public Lcom/bbm/ui/activities/StoreHomeActivity;
-.super Lcom/bbm/ui/activities/ey;
+.super Lcom/bbm/bali/ui/main/a/a;
 .source "StoreHomeActivity.java"
 
 
 # instance fields
-.field private final a:Lcom/bbm/ui/c/gn;
-
-.field private final b:Lcom/bbm/ui/cn;
-
-.field private c:Lcom/bbm/ui/c/ig;
+.field private a:Lcom/bbm/ui/c/hn;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .prologue
     .line 22
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ey;-><init>()V
-
-    .line 28
-    new-instance v0, Lcom/bbm/ui/activities/aje;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/aje;-><init>(Lcom/bbm/ui/activities/StoreHomeActivity;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/StoreHomeActivity;->a:Lcom/bbm/ui/c/gn;
-
-    .line 42
-    new-instance v0, Lcom/bbm/ui/activities/ajf;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/ajf;-><init>(Lcom/bbm/ui/activities/StoreHomeActivity;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/StoreHomeActivity;->b:Lcom/bbm/ui/cn;
-
-    return-void
-.end method
-
-.method static synthetic a(Lcom/bbm/ui/activities/StoreHomeActivity;)Lcom/bbm/ui/c/ig;
-    .locals 1
-
-    .prologue
-    .line 22
-    iget-object v0, p0, Lcom/bbm/ui/activities/StoreHomeActivity;->c:Lcom/bbm/ui/c/ig;
-
-    return-object v0
-.end method
-
-.method static synthetic b(Lcom/bbm/ui/activities/StoreHomeActivity;)V
-    .locals 7
-
-    .prologue
-    const/4 v6, 0x0
-
-    .line 22
-    iget-object v0, p0, Lcom/bbm/ui/activities/ey;->B:Lcom/bbm/ui/c/gj;
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    new-instance v2, Lcom/bbm/ui/slidingmenu/a;
-
-    const/4 v3, 0x1
-
-    const v4, 0x7f02025f
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    const v5, 0x7f0e066f
-
-    invoke-virtual {p0, v5}, Lcom/bbm/ui/activities/StoreHomeActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-direct {v2, v3, v4, v5, v6}, Lcom/bbm/ui/slidingmenu/a;-><init>(ILjava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {v0, v1, v6, v6}, Lcom/bbm/ui/c/gj;->a(Ljava/util/List;Lcom/bbm/ui/slidingmenu/a;Lcom/bbm/ui/slidingmenu/a;)V
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/StoreHomeActivity;->a:Lcom/bbm/ui/c/gn;
-
-    iput-object v1, v0, Lcom/bbm/ui/c/gj;->b:Lcom/bbm/ui/c/gn;
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/StoreHomeActivity;->o()V
+    invoke-direct {p0}, Lcom/bbm/bali/ui/main/a/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final e()V
-    .locals 0
-
-    .prologue
-    .line 124
-    return-void
-.end method
-
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 5
 
     .prologue
     const/4 v4, 0x0
 
-    .line 63
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/ey;->onCreate(Landroid/os/Bundle;)V
+    .line 32
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onCreate(Landroid/os/Bundle;)V
 
-    .line 65
-    const v0, 0x7f03003c
+    .line 34
+    const v0, 0x7f030057
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/StoreHomeActivity;->setContentView(I)V
 
-    .line 67
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/StoreHomeActivity;->getActionBar()Landroid/app/ActionBar;
-
-    move-result-object v0
-
-    .line 68
-    invoke-virtual {v0, v4}, Landroid/app/ActionBar;->setDisplayShowHomeEnabled(Z)V
-
-    .line 69
-    invoke-virtual {v0, v4}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
-
-    .line 70
-    invoke-virtual {v0, v4}, Landroid/app/ActionBar;->setDisplayUseLogoEnabled(Z)V
-
-    .line 72
-    const v0, 0x7f0b00bf
+    .line 35
+    const v0, 0x7f0b013c
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/StoreHomeActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/FooterActionBar;
+    check-cast v0, Landroid/support/v7/widget/Toolbar;
 
-    .line 73
-    new-instance v1, Lcom/bbm/ui/activities/ajg;
+    .line 36
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/StoreHomeActivity;->getResources()Landroid/content/res/Resources;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/ajg;-><init>(Lcom/bbm/ui/activities/StoreHomeActivity;)V
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
+    const v2, 0x7f0e0818
 
-    .line 80
-    const/4 v1, 0x1
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setOverflowEnabled(Z)V
+    move-result-object v1
 
-    .line 81
-    iget-object v1, p0, Lcom/bbm/ui/activities/StoreHomeActivity;->b:Lcom/bbm/ui/cn;
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/activities/StoreHomeActivity;->a(Landroid/support/v7/widget/Toolbar;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
+    .line 38
+    new-instance v0, Lcom/bbm/ui/c/hn;
 
-    .line 83
-    new-instance v0, Lcom/bbm/ui/c/ig;
+    invoke-direct {v0}, Lcom/bbm/ui/c/hn;-><init>()V
 
-    invoke-direct {v0}, Lcom/bbm/ui/c/ig;-><init>()V
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/StoreHomeActivity;->c:Lcom/bbm/ui/c/ig;
+    iput-object v0, p0, Lcom/bbm/ui/activities/StoreHomeActivity;->a:Lcom/bbm/ui/c/hn;
 
     new-instance v0, Landroid/os/Bundle;
 
@@ -193,23 +95,23 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/StoreHomeActivity;->c:Lcom/bbm/ui/c/ig;
+    iget-object v1, p0, Lcom/bbm/ui/activities/StoreHomeActivity;->a:Lcom/bbm/ui/c/hn;
 
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/c/ig;->setArguments(Landroid/os/Bundle;)V
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/c/hn;->setArguments(Landroid/os/Bundle;)V
 
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/StoreHomeActivity;->getFragmentManager()Landroid/app/FragmentManager;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/StoreHomeActivity;->getSupportFragmentManager()Landroid/support/v4/app/v;
 
     move-result-object v0
 
-    const v1, 0x7f0b0228
+    invoke-virtual {v0}, Landroid/support/v4/app/v;->a()Landroid/support/v4/app/ag;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/StoreHomeActivity;->c:Lcom/bbm/ui/c/ig;
+    move-result-object v0
 
-    invoke-virtual {v0, v1, v2}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
+    const v1, 0x7f0b0288
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/StoreHomeActivity;->a:Lcom/bbm/ui/c/hn;
+
+    invoke-virtual {v0, v1, v2}, Landroid/support/v4/app/ag;->b(ILandroid/support/v4/app/Fragment;)Landroid/support/v4/app/ag;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/StoreHomeActivity;->isFinishing()Z
 
@@ -217,9 +119,9 @@
 
     if-nez v1, :cond_0
 
-    invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commitAllowingStateLoss()I
+    invoke-virtual {v0}, Landroid/support/v4/app/ag;->b()I
 
-    .line 85
+    .line 40
     :cond_0
     invoke-virtual {p0}, Lcom/bbm/ui/activities/StoreHomeActivity;->getIntent()Landroid/content/Intent;
 
@@ -233,7 +135,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 86
+    .line 41
     invoke-virtual {p0}, Lcom/bbm/ui/activities/StoreHomeActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -244,26 +146,26 @@
 
     move-result-object v0
 
-    .line 87
+    .line 42
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    .line 88
+    .line 43
     new-instance v1, Landroid/content/Intent;
 
     const-class v2, Lcom/bbm/ui/activities/AppDetailsActivity;
 
     invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 89
+    .line 44
     const-string v2, "app_id"
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 90
+    .line 45
     invoke-virtual {p0}, Lcom/bbm/ui/activities/StoreHomeActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -276,7 +178,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 91
+    .line 46
     const-string v0, "viewSource"
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/StoreHomeActivity;->getIntent()Landroid/content/Intent;
@@ -291,11 +193,11 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
-    .line 93
+    .line 48
     :cond_1
     invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/StoreHomeActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 97
+    .line 52
     :cond_2
     invoke-virtual {p0}, Lcom/bbm/ui/activities/StoreHomeActivity;->getIntent()Landroid/content/Intent;
 
@@ -309,7 +211,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 98
+    .line 53
     invoke-virtual {p0}, Lcom/bbm/ui/activities/StoreHomeActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -320,29 +222,29 @@
 
     move-result-object v0
 
-    .line 99
+    .line 54
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    .line 100
+    .line 55
     new-instance v1, Landroid/content/Intent;
 
     const-class v2, Lcom/bbm/ui/activities/AppStoreActivity;
 
     invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 101
+    .line 56
     const-string v2, "collection_id"
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 102
+    .line 57
     invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/StoreHomeActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 106
+    .line 61
     :cond_3
     invoke-virtual {p0}, Lcom/bbm/ui/activities/StoreHomeActivity;->getIntent()Landroid/content/Intent;
 
@@ -356,7 +258,7 @@
 
     if-eqz v0, :cond_5
 
-    .line 107
+    .line 63
     invoke-virtual {p0}, Lcom/bbm/ui/activities/StoreHomeActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -367,26 +269,26 @@
 
     move-result-object v1
 
-    .line 109
+    .line 64
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_6
 
-    .line 110
+    .line 65
     new-instance v0, Landroid/content/Intent;
 
     const-class v2, Lcom/bbm/ui/activities/StickerDetailsActivity;
 
     invoke-direct {v0, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 111
+    .line 66
     const-string v2, "pack_id"
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 112
+    .line 67
     invoke-virtual {p0}, Lcom/bbm/ui/activities/StoreHomeActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
@@ -399,7 +301,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 113
+    .line 68
     const-string v1, "viewSource"
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/StoreHomeActivity;->getIntent()Landroid/content/Intent;
@@ -414,16 +316,16 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
-    .line 118
+    .line 73
     :cond_4
     :goto_0
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/StoreHomeActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 120
+    .line 75
     :cond_5
     return-void
 
-    .line 116
+    .line 71
     :cond_6
     new-instance v0, Landroid/content/Intent;
 
@@ -434,29 +336,88 @@
     goto :goto_0
 .end method
 
+.method public onCreateOptionsMenu(Landroid/view/Menu;)Z
+    .locals 2
+
+    .prologue
+    .line 87
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/StoreHomeActivity;->getMenuInflater()Landroid/view/MenuInflater;
+
+    move-result-object v0
+
+    const v1, 0x7f100042
+
+    invoke-virtual {v0, v1, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
+
+    .line 88
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onCreateOptionsMenu(Landroid/view/Menu;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method protected onDestroy()V
     .locals 1
 
     .prologue
-    .line 133
+    .line 80
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/StoreHomeActivity;->c:Lcom/bbm/ui/c/ig;
+    iput-object v0, p0, Lcom/bbm/ui/activities/StoreHomeActivity;->a:Lcom/bbm/ui/c/hn;
 
-    .line 134
-    invoke-super {p0}, Lcom/bbm/ui/activities/ey;->onDestroy()V
+    .line 81
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/a;->onDestroy()V
 
-    .line 135
+    .line 82
     return-void
 .end method
 
-.method protected onResume()V
-    .locals 0
+.method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    .locals 1
 
     .prologue
-    .line 128
-    invoke-super {p0}, Lcom/bbm/ui/activities/ey;->onResume()V
+    .line 93
+    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
-    .line 129
-    return-void
+    move-result v0
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 101
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    .line 95
+    :pswitch_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/StoreHomeActivity;->a:Lcom/bbm/ui/c/hn;
+
+    if-eqz v0, :cond_0
+
+    .line 96
+    iget-object v0, p0, Lcom/bbm/ui/activities/StoreHomeActivity;->a:Lcom/bbm/ui/c/hn;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/c/hn;->getActivity()Landroid/support/v4/app/q;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/bbm/l/a;->a(Landroid/app/Activity;)V
+
+    .line 98
+    :cond_0
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    .line 93
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x7f0b00b7
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,74 +1,58 @@
 .class final Lcom/bbm/ui/activities/ol;
-.super Ljava/lang/Object;
-.source "GroupListItemsActivity.java"
+.super Lcom/bbm/d/b/v;
+.source "GroupLobbyActivity.java"
 
-# interfaces
-.implements Lcom/bbm/ui/c/gn;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/d/b/v",
+        "<",
+        "Lcom/bbm/g/s;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupListItemsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ok;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupListItemsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ok;Lcom/bbm/j/r;)V
     .locals 0
 
     .prologue
-    .line 408
-    iput-object p1, p0, Lcom/bbm/ui/activities/ol;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
+    .line 130
+    iput-object p1, p0, Lcom/bbm/ui/activities/ol;->a:Lcom/bbm/ui/activities/ok;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lcom/bbm/d/b/v;-><init>(Lcom/bbm/j/r;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
+.method protected final synthetic a(Ljava/lang/Object;)Z
     .locals 2
 
     .prologue
-    .line 411
-    iget-object v0, p0, Lcom/bbm/ui/activities/ol;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
+    .line 130
+    check-cast p1, Lcom/bbm/g/s;
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+    iget-object v0, p1, Lcom/bbm/g/s;->d:Ljava/lang/String;
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ol;->a:Lcom/bbm/ui/activities/ok;
 
-    const/4 v1, 0x1
+    iget-object v1, v1, Lcom/bbm/ui/activities/ok;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupLobbyActivity;->d(Lcom/bbm/ui/activities/GroupLobbyActivity;)Ljava/lang/String;
 
-    .line 413
-    iget v0, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
+    move-result-object v1
 
-    sparse-switch v0, :sswitch_data_0
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
-    .line 422
-    :goto_0
-    return-void
+    move-result v0
 
-    .line 415
-    :sswitch_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ol;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupListItemsActivity;->f(Lcom/bbm/ui/activities/GroupListItemsActivity;)V
-
-    goto :goto_0
-
-    .line 419
-    :sswitch_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/ol;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupListItemsActivity;->c(Lcom/bbm/ui/activities/GroupListItemsActivity;)V
-
-    goto :goto_0
-
-    .line 413
-    :sswitch_data_0
-    .sparse-switch
-        0x7f0b0069 -> :sswitch_1
-        0x7f0b0081 -> :sswitch_0
-    .end sparse-switch
+    return v0
 .end method

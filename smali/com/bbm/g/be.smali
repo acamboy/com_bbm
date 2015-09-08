@@ -1,23 +1,23 @@
 .class public final Lcom/bbm/g/be;
-.super Lcom/bbm/g/cv;
+.super Lcom/bbm/g/db;
 .source "GroupsProtocol.java"
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
     .prologue
-    .line 722
-    const-string v0, "groupConversationClear"
+    .line 542
+    const-string v0, "groupClearSplatList"
 
-    invoke-direct {p0, v0}, Lcom/bbm/g/cv;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/g/db;-><init>(Ljava/lang/String;)V
 
-    .line 724
-    const-string v0, "conversationUri"
+    .line 544
+    const-string v0, "listUri"
 
     invoke-virtual {p0, v0, p1}, Lcom/bbm/g/be;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 725
+    .line 545
     return-void
 .end method

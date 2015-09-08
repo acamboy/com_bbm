@@ -1,9 +1,9 @@
 .class final Lcom/bbm/ui/activities/ra;
 .super Ljava/lang/Object;
-.source "GroupLobbyActivity.java"
+.source "GroupPictureUploadActivity.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnDismissListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 1044
+    .line 257
     iput-object p1, p0, Lcom/bbm/ui/activities/ra;->a:Lcom/bbm/ui/activities/qy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,19 +25,23 @@
 
 
 # virtual methods
-.method public final onDismiss(Landroid/content/DialogInterface;)V
-    .locals 1
+.method public final run()V
+    .locals 2
 
     .prologue
-    .line 1048
+    .line 260
     iget-object v0, p0, Lcom/bbm/ui/activities/ra;->a:Lcom/bbm/ui/activities/qy;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/qy;->c(Lcom/bbm/ui/activities/qy;)Lcom/bbm/j/k;
+    iget-object v0, v0, Lcom/bbm/ui/activities/qy;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->d(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Landroid/widget/EditText;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+    const/4 v1, 0x1
 
-    .line 1049
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setEnabled(Z)V
+
+    .line 261
     return-void
 .end method

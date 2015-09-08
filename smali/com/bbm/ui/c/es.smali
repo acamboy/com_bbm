@@ -1,58 +1,64 @@
 .class final Lcom/bbm/ui/c/es;
-.super Ljava/lang/Object;
-.source "MyChannelsFragment.java"
-
-# interfaces
-.implements Ljava/util/Comparator;
+.super Lcom/bbm/j/a;
+.source "GroupsFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
+        "Lcom/bbm/j/a",
         "<",
-        "Lcom/bbm/d/ee;",
+        "Ljava/lang/Integer;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/er;
+.field final synthetic a:Lcom/bbm/ui/c/ep;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/er;)V
+.method constructor <init>(Lcom/bbm/ui/c/ep;)V
     .locals 0
 
     .prologue
-    .line 114
-    iput-object p1, p0, Lcom/bbm/ui/c/es;->a:Lcom/bbm/ui/c/er;
+    .line 125
+    iput-object p1, p0, Lcom/bbm/ui/c/es;->a:Lcom/bbm/ui/c/ep;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 2
+.method protected final synthetic a()Ljava/lang/Object;
+    .locals 1
 
     .prologue
-    .line 114
-    check-cast p1, Lcom/bbm/d/ee;
+    .line 125
+    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/g/an;
 
-    check-cast p2, Lcom/bbm/d/ee;
+    move-result-object v0
 
-    iget-object v0, p1, Lcom/bbm/d/ee;->k:Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/bbm/g/an;->f()Lcom/bbm/j/w;
 
-    iget-object v1, p2, Lcom/bbm/d/ee;->k:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+    invoke-interface {v0}, Lcom/bbm/j/w;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    return v0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
 .end method

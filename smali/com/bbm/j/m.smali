@@ -48,11 +48,11 @@
 
     if-nez v1, :cond_1
 
-    iget-object v1, v0, Lcom/bbm/j/k;->h:Lcom/bbm/util/di;
+    iget-object v1, v0, Lcom/bbm/j/k;->h:Lcom/bbm/util/ds;
 
     iget-object v0, v0, Lcom/bbm/j/k;->i:Ljava/lang/Runnable;
 
-    invoke-interface {v1, v0}, Lcom/bbm/util/di;->a(Ljava/lang/Runnable;)V
+    invoke-interface {v1, v0}, Lcom/bbm/util/ds;->a(Ljava/lang/Runnable;)V
 
     .line 32
     :cond_0
@@ -61,13 +61,13 @@
 
     .line 31
     :cond_1
-    iget-object v1, v0, Lcom/bbm/j/k;->h:Lcom/bbm/util/di;
+    iget-object v1, v0, Lcom/bbm/j/k;->h:Lcom/bbm/util/ds;
 
     iget-object v2, v0, Lcom/bbm/j/k;->i:Ljava/lang/Runnable;
 
     iget-wide v4, v0, Lcom/bbm/j/k;->l:J
 
-    invoke-interface {v1, v2, v4, v5}, Lcom/bbm/util/di;->a(Ljava/lang/Runnable;J)V
+    invoke-interface {v1, v2, v4, v5}, Lcom/bbm/util/ds;->a(Ljava/lang/Runnable;J)V
 
     goto :goto_0
 .end method

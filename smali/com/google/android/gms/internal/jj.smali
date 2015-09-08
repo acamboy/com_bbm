@@ -1,122 +1,183 @@
 .class public final Lcom/google/android/gms/internal/jj;
-.super Ljava/lang/Object;
+.super Lcom/google/android/gms/a/m;
 
-# interfaces
-.implements Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable;
+
+# annotations
+.annotation runtime Lcom/google/android/gms/internal/mb;
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/google/android/gms/a/m",
+        "<",
+        "Lcom/google/android/gms/internal/jo;",
+        ">;"
+    }
+.end annotation
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator",
-            "<",
-            "Lcom/google/android/gms/internal/jj;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field ZA:Ljava/lang/String;
-
-.field ZB:Ljava/lang/String;
-
-.field ZC:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/google/android/gms/internal/jh;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final wj:I
+.field private static final a:Lcom/google/android/gms/internal/jj;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/gms/internal/jk;
+    new-instance v0, Lcom/google/android/gms/internal/jj;
 
-    invoke-direct {v0}, Lcom/google/android/gms/internal/jk;-><init>()V
+    invoke-direct {v0}, Lcom/google/android/gms/internal/jj;-><init>()V
 
-    sput-object v0, Lcom/google/android/gms/internal/jj;->CREATOR:Landroid/os/Parcelable$Creator;
+    sput-object v0, Lcom/google/android/gms/internal/jj;->a:Lcom/google/android/gms/internal/jj;
 
     return-void
 .end method
 
-.method constructor <init>()V
+.method private constructor <init>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "com.google.android.gms.ads.AdOverlayCreatorImpl"
 
-    const/4 v0, 0x1
+    invoke-direct {p0, v0}, Lcom/google/android/gms/a/m;-><init>(Ljava/lang/String;)V
 
-    iput v0, p0, Lcom/google/android/gms/internal/jj;->wj:I
+    return-void
+.end method
 
-    invoke-static {}, Lcom/google/android/gms/internal/fj;->eH()Ljava/util/ArrayList;
+.method public static a(Landroid/app/Activity;)Lcom/google/android/gms/internal/jl;
+    .locals 3
+
+    :try_start_0
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/android/gms/internal/jj;->ZC:Ljava/util/ArrayList;
+    const-string v1, "com.google.android.gms.ads.internal.overlay.useClientJar"
 
-    return-void
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    new-instance v0, Lcom/google/android/gms/internal/jk;
+
+    const-string v1, "Ad overlay requires the useClientJar flag in intent extras."
+
+    invoke-direct {v0, v1}, Lcom/google/android/gms/internal/jk;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_0
+    .catch Lcom/google/android/gms/internal/jk; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/jk;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/google/android/gms/ads/internal/util/client/b;->e(Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    :try_start_1
+    const-string v1, "com.google.android.gms.ads.internal.overlay.useClientJar"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const-string v0, "Using AdOverlay from the client jar."
+
+    invoke-static {v0}, Lcom/google/android/gms/ads/internal/util/client/b;->a(Ljava/lang/String;)V
+
+    new-instance v0, Lcom/google/android/gms/ads/internal/overlay/c;
+
+    invoke-direct {v0, p0}, Lcom/google/android/gms/ads/internal/overlay/c;-><init>(Landroid/app/Activity;)V
+
+    goto :goto_0
+
+    :cond_1
+    sget-object v0, Lcom/google/android/gms/internal/jj;->a:Lcom/google/android/gms/internal/jj;
+
+    invoke-direct {v0, p0}, Lcom/google/android/gms/internal/jj;->b(Landroid/app/Activity;)Lcom/google/android/gms/internal/jl;
+    :try_end_1
+    .catch Lcom/google/android/gms/internal/jk; {:try_start_1 .. :try_end_1} :catch_0
+
+    move-result-object v0
+
+    goto :goto_0
 .end method
 
-.method constructor <init>(ILjava/lang/String;Ljava/lang/String;Ljava/util/ArrayList;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/google/android/gms/internal/jh;",
-            ">;)V"
-        }
-    .end annotation
+.method private b(Landroid/app/Activity;)Lcom/google/android/gms/internal/jl;
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x0
 
-    iput p1, p0, Lcom/google/android/gms/internal/jj;->wj:I
+    :try_start_0
+    invoke-static {p1}, Lcom/google/android/gms/a/k;->a(Ljava/lang/Object;)Lcom/google/android/gms/a/h;
 
-    iput-object p2, p0, Lcom/google/android/gms/internal/jj;->ZA:Ljava/lang/String;
+    move-result-object v2
 
-    iput-object p3, p0, Lcom/google/android/gms/internal/jj;->ZB:Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/jj;->a(Landroid/content/Context;)Ljava/lang/Object;
 
-    iput-object p4, p0, Lcom/google/android/gms/internal/jj;->ZC:Ljava/util/ArrayList;
+    move-result-object v0
 
-    return-void
+    check-cast v0, Lcom/google/android/gms/internal/jo;
+
+    invoke-interface {v0, v2}, Lcom/google/android/gms/internal/jo;->a(Lcom/google/android/gms/a/h;)Landroid/os/IBinder;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/jm;->a(Landroid/os/IBinder;)Lcom/google/android/gms/internal/jl;
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Lcom/google/android/gms/a/n; {:try_start_0 .. :try_end_0} :catch_1
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    const-string v2, "Could not create remote AdOverlay."
+
+    invoke-static {v2, v0}, Lcom/google/android/gms/ads/internal/util/client/b;->c(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    move-object v0, v1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    const-string v2, "Could not create remote AdOverlay."
+
+    invoke-static {v2, v0}, Lcom/google/android/gms/ads/internal/util/client/b;->c(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    move-object v0, v1
+
+    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method protected final synthetic a(Landroid/os/IBinder;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x0
+    invoke-static {p1}, Lcom/google/android/gms/internal/jp;->a(Landroid/os/IBinder;)Lcom/google/android/gms/internal/jo;
 
-    return v0
-.end method
+    move-result-object v0
 
-.method public final getVersionCode()I
-    .locals 1
-
-    iget v0, p0, Lcom/google/android/gms/internal/jj;->wj:I
-
-    return v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/gms/internal/jk;->a(Lcom/google/android/gms/internal/jj;Landroid/os/Parcel;I)V
-
-    return-void
+    return-object v0
 .end method

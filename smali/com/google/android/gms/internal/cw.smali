@@ -1,108 +1,48 @@
 .class public final Lcom/google/android/gms/internal/cw;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Lcom/google/android/gms/internal/cx;
+
 
 # direct methods
-.method public static a(Landroid/content/Context;Landroid/webkit/WebSettings;)V
-    .locals 4
+.method public constructor <init>()V
+    .locals 0
 
-    const/4 v3, 0x1
-
-    new-instance v0, Ljava/io/File;
-
-    invoke-virtual {p0}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
-
-    move-result-object v1
-
-    const-string v2, "com.google.android.gms.ads.appcache"
-
-    invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/webkit/WebSettings;->setAppCachePath(Ljava/lang/String;)V
-
-    const-wide/16 v0, 0x0
-
-    invoke-virtual {p1, v0, v1}, Landroid/webkit/WebSettings;->setAppCacheMaxSize(J)V
-
-    invoke-virtual {p1, v3}, Landroid/webkit/WebSettings;->setAppCacheEnabled(Z)V
-
-    const-string v0, "com.google.android.gms.ads.db"
-
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getDatabasePath(Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/webkit/WebSettings;->setDatabasePath(Ljava/lang/String;)V
-
-    invoke-virtual {p1, v3}, Landroid/webkit/WebSettings;->setDatabaseEnabled(Z)V
-
-    invoke-virtual {p1, v3}, Landroid/webkit/WebSettings;->setDomStorageEnabled(Z)V
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/webkit/WebSettings;->setDisplayZoomControls(Z)V
-
-    invoke-virtual {p1, v3}, Landroid/webkit/WebSettings;->setBuiltInZoomControls(Z)V
-
-    invoke-virtual {p1, v3}, Landroid/webkit/WebSettings;->setSupportZoom(Z)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Landroid/view/Window;)V
+
+# virtual methods
+.method public final a(Lcom/google/android/gms/ads/internal/request/AdRequestInfoParcel;)Ljava/util/List;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/android/gms/ads/internal/request/AdRequestInfoParcel;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 
-    const/high16 v0, 0x1000000
+    iget-object v0, p1, Lcom/google/android/gms/ads/internal/request/AdRequestInfoParcel;->A:Ljava/util/List;
 
-    invoke-virtual {p0, v0, v0}, Landroid/view/Window;->setFlags(II)V
+    if-nez v0, :cond_0
 
-    return-void
-.end method
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
-.method public static a(Landroid/webkit/WebView;)V
-    .locals 0
+    move-result-object v0
 
-    invoke-virtual {p0}, Landroid/webkit/WebView;->onPause()V
+    :goto_0
+    return-object v0
 
-    return-void
-.end method
+    :cond_0
+    iget-object v0, p1, Lcom/google/android/gms/ads/internal/request/AdRequestInfoParcel;->A:Ljava/util/List;
 
-.method public static b(Landroid/webkit/WebView;)V
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/webkit/WebView;->onResume()V
-
-    return-void
-.end method
-
-.method public static c(Landroid/view/View;)V
-    .locals 2
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
-
-    return-void
-.end method
-
-.method public static d(Landroid/view/View;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
-
-    return-void
+    goto :goto_0
 .end method

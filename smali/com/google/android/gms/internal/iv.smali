@@ -1,257 +1,176 @@
-.class public Lcom/google/android/gms/internal/iv;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/os/Parcelable$Creator;
+.class public final Lcom/google/android/gms/internal/iv;
+.super Lcom/google/android/gms/internal/jh;
 
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/os/Parcelable$Creator",
-        "<",
-        "Lcom/google/android/gms/internal/ir$b$a;",
-        ">;"
-    }
+.annotation runtime Lcom/google/android/gms/internal/mb;
 .end annotation
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+# instance fields
+.field final a:Landroid/content/Context;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field b:Ljava/lang/String;
+
+.field c:J
+
+.field d:J
+
+.field e:Ljava/lang/String;
+
+.field f:Ljava/lang/String;
+
+.field private final g:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/android/gms/internal/pp;Ljava/util/Map;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/android/gms/internal/pp;",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+
+    const-string v0, "createCalendarEvent"
+
+    invoke-direct {p0, p1, v0}, Lcom/google/android/gms/internal/jh;-><init>(Lcom/google/android/gms/internal/pp;Ljava/lang/String;)V
+
+    iput-object p2, p0, Lcom/google/android/gms/internal/iv;->g:Ljava/util/Map;
+
+    invoke-interface {p1}, Lcom/google/android/gms/internal/pp;->c()Landroid/app/Activity;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/iv;->a:Landroid/content/Context;
+
+    const-string v0, "description"
+
+    invoke-direct {p0, v0}, Lcom/google/android/gms/internal/iv;->c(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/iv;->b:Ljava/lang/String;
+
+    const-string v0, "summary"
+
+    invoke-direct {p0, v0}, Lcom/google/android/gms/internal/iv;->c(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/iv;->e:Ljava/lang/String;
+
+    const-string v0, "start_ticks"
+
+    invoke-direct {p0, v0}, Lcom/google/android/gms/internal/iv;->d(Ljava/lang/String;)J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/google/android/gms/internal/iv;->c:J
+
+    const-string v0, "end_ticks"
+
+    invoke-direct {p0, v0}, Lcom/google/android/gms/internal/iv;->d(Ljava/lang/String;)J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/google/android/gms/internal/iv;->d:J
+
+    const-string v0, "location"
+
+    invoke-direct {p0, v0}, Lcom/google/android/gms/internal/iv;->c(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/iv;->f:Ljava/lang/String;
 
     return-void
 .end method
 
-.method static a(Lcom/google/android/gms/internal/ir$b$a;Landroid/os/Parcel;I)V
-    .locals 6
+.method private c(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
 
-    const/4 v5, 0x3
+    iget-object v0, p0, Lcom/google/android/gms/internal/iv;->g:Ljava/util/Map;
 
-    const/4 v4, 0x2
+    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v3, 0x1
+    move-result-object v0
 
-    invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/b;->p(Landroid/os/Parcel;)I
+    check-cast v0, Ljava/lang/CharSequence;
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/ir$b$a;->hB()Ljava/util/Set;
+    if-eqz v0, :cond_0
 
-    move-result-object v1
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-interface {v1, v2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/ir$b$a;->getVersionCode()I
-
-    move-result v2
-
-    invoke-static {p1, v3, v2}, Lcom/google/android/gms/common/internal/safeparcel/b;->c(Landroid/os/Parcel;II)V
-
-    :cond_0
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-interface {v1, v2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/ir$b$a;->getLeftImageOffset()I
-
-    move-result v2
-
-    invoke-static {p1, v4, v2}, Lcom/google/android/gms/common/internal/safeparcel/b;->c(Landroid/os/Parcel;II)V
-
-    :cond_1
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-interface {v1, v2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/ir$b$a;->getTopImageOffset()I
-
-    move-result v1
-
-    invoke-static {p1, v5, v1}, Lcom/google/android/gms/common/internal/safeparcel/b;->c(Landroid/os/Parcel;II)V
-
-    :cond_2
-    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/b;->D(Landroid/os/Parcel;I)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public aL(Landroid/os/Parcel;)Lcom/google/android/gms/internal/ir$b$a;
-    .locals 7
-
-    const/4 v0, 0x0
-
-    invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/a;->o(Landroid/os/Parcel;)I
-
-    move-result v3
-
-    new-instance v4, Ljava/util/HashSet;
-
-    invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
-
-    move v1, v0
-
-    move v2, v0
+    const-string v0, ""
 
     :goto_0
-    invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
-
-    move-result v5
-
-    if-ge v5, v3, :cond_0
-
-    invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/a;->n(Landroid/os/Parcel;)I
-
-    move-result v5
-
-    invoke-static {v5}, Lcom/google/android/gms/common/internal/safeparcel/a;->S(I)I
-
-    move-result v6
-
-    packed-switch v6, :pswitch_data_0
-
-    invoke-static {p1, v5}, Lcom/google/android/gms/common/internal/safeparcel/a;->b(Landroid/os/Parcel;I)V
-
-    goto :goto_0
-
-    :pswitch_0
-    invoke-static {p1, v5}, Lcom/google/android/gms/common/internal/safeparcel/a;->g(Landroid/os/Parcel;I)I
-
-    move-result v2
-
-    const/4 v5, 0x1
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    invoke-interface {v4, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :pswitch_1
-    invoke-static {p1, v5}, Lcom/google/android/gms/common/internal/safeparcel/a;->g(Landroid/os/Parcel;I)I
-
-    move-result v1
-
-    const/4 v5, 0x2
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    invoke-interface {v4, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :pswitch_2
-    invoke-static {p1, v5}, Lcom/google/android/gms/common/internal/safeparcel/a;->g(Landroid/os/Parcel;I)I
-
-    move-result v0
-
-    const/4 v5, 0x3
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    invoke-interface {v4, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
+    return-object v0
 
     :cond_0
-    invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
+    iget-object v0, p0, Lcom/google/android/gms/internal/iv;->g:Ljava/util/Map;
 
-    move-result v5
-
-    if-eq v5, v3, :cond_1
-
-    new-instance v0, Lcom/google/android/gms/common/internal/safeparcel/a$a;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Overread allowed size end="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1, p1}, Lcom/google/android/gms/common/internal/safeparcel/a$a;-><init>(Ljava/lang/String;Landroid/os/Parcel;)V
-
-    throw v0
-
-    :cond_1
-    new-instance v3, Lcom/google/android/gms/internal/ir$b$a;
-
-    invoke-direct {v3, v4, v2, v1, v0}, Lcom/google/android/gms/internal/ir$b$a;-><init>(Ljava/util/Set;III)V
-
-    return-object v3
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-    .end packed-switch
-.end method
-
-.method public bI(I)[Lcom/google/android/gms/internal/ir$b$a;
-    .locals 1
-
-    new-array v0, p1, [Lcom/google/android/gms/internal/ir$b$a;
-
-    return-object v0
-.end method
-
-.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/iv;->aL(Landroid/os/Parcel;)Lcom/google/android/gms/internal/ir$b$a;
+    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Ljava/lang/String;
+
+    goto :goto_0
 .end method
 
-.method public synthetic newArray(I)[Ljava/lang/Object;
-    .locals 1
+.method private d(Ljava/lang/String;)J
+    .locals 4
 
-    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/iv;->bI(I)[Lcom/google/android/gms/internal/ir$b$a;
+    const-wide/16 v2, -0x1
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/iv;->g:Ljava/util/Map;
+
+    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    move-wide v0, v2
+
+    :goto_0
+    return-wide v0
+
+    :cond_0
+    :try_start_0
+    invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-wide v0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    move-wide v0, v2
+
+    goto :goto_0
 .end method

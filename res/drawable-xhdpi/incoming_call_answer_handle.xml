@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<layer-list
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@id/baseThumb" android:drawable="@drawable/incoming_call_answer_handle_base" />
-    <item android:id="@id/acceptThumb" android:drawable="@drawable/incoming_call_answer_bar_handle_green" />
-    <item android:id="@id/rejectThumb" android:drawable="@drawable/incoming_call_answer_bar_handle_red" />
-    <item android:id="@id/acceptMaxThumb" android:drawable="@drawable/handle_green" />
-    <item android:id="@id/rejectMaxThumb" android:drawable="@drawable/handle_red" />
-</layer-list>

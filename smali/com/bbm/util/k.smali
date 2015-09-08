@@ -1,132 +1,111 @@
-.class public final enum Lcom/bbm/util/k;
-.super Ljava/lang/Enum;
-.source "AsyncTask.java"
+.class final Lcom/bbm/util/k;
+.super Ljava/lang/Object;
+.source "AdWebViewPool.java"
+
+# interfaces
+.implements Lcom/bbm/j/s;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum",
-        "<",
-        "Lcom/bbm/util/k;",
-        ">;"
-    }
-.end annotation
-
-
-# static fields
-.field public static final enum a:Lcom/bbm/util/k;
-
-.field public static final enum b:Lcom/bbm/util/k;
-
-.field public static final enum c:Lcom/bbm/util/k;
-
-.field private static final synthetic d:[Lcom/bbm/util/k;
+# instance fields
+.field final synthetic a:Lcom/bbm/util/j;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method constructor <init>(Lcom/bbm/util/j;)V
+    .locals 0
 
     .prologue
-    const/4 v4, 0x2
+    .line 252
+    iput-object p1, p0, Lcom/bbm/util/k;->a:Lcom/bbm/util/j;
 
-    const/4 v3, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v2, 0x0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Z
+    .locals 4
+
+    .prologue
+    .line 256
+    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/b/x;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/util/k;->a:Lcom/bbm/util/j;
+
+    iget-object v1, v1, Lcom/bbm/util/j;->a:Lcom/bbm/b/a;
+
+    iget-object v1, v1, Lcom/bbm/b/a;->j:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/b/x;->b(Ljava/lang/String;)Lcom/bbm/b/a;
+
+    move-result-object v0
+
+    .line 259
+    iget-object v1, v0, Lcom/bbm/b/a;->C:Lcom/bbm/util/bo;
+
+    sget-object v2, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
+
+    if-ne v1, v2, :cond_0
+
+    .line 260
+    const/4 v0, 0x0
+
+    .line 270
+    :goto_0
+    return v0
+
+    .line 263
+    :cond_0
+    iget-object v1, v0, Lcom/bbm/b/a;->C:Lcom/bbm/util/bo;
+
+    sget-object v2, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
+
+    if-ne v1, v2, :cond_1
+
+    .line 264
+    invoke-static {v0}, Lcom/bbm/b/p;->d(Lcom/bbm/b/a;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
 
     .line 265
-    new-instance v0, Lcom/bbm/util/k;
+    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/b/x;
 
-    const-string v1, "PENDING"
+    move-result-object v1
 
-    invoke-direct {v0, v1, v2}, Lcom/bbm/util/k;-><init>(Ljava/lang/String;I)V
+    iget-object v1, v1, Lcom/bbm/b/x;->g:Lcom/bbm/b/n;
 
-    sput-object v0, Lcom/bbm/util/k;->a:Lcom/bbm/util/k;
+    sget-object v2, Lcom/bbm/b/ax;->d:Lcom/bbm/b/ax;
 
-    .line 269
-    new-instance v0, Lcom/bbm/util/k;
+    sget-object v3, Lcom/bbm/b/ay;->a:Lcom/bbm/b/ay;
 
-    const-string v1, "RUNNING"
+    invoke-virtual {v1, v0, v2, v3}, Lcom/bbm/b/n;->b(Lcom/bbm/b/a;Lcom/bbm/b/ax;Lcom/bbm/b/ay;)V
 
-    invoke-direct {v0, v1, v3}, Lcom/bbm/util/k;-><init>(Ljava/lang/String;I)V
+    .line 270
+    :cond_1
+    :goto_1
+    const/4 v0, 0x1
 
-    sput-object v0, Lcom/bbm/util/k;->b:Lcom/bbm/util/k;
+    goto :goto_0
 
-    .line 273
-    new-instance v0, Lcom/bbm/util/k;
+    .line 267
+    :cond_2
+    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/b/x;
 
-    const-string v1, "FINISHED"
+    move-result-object v1
 
-    invoke-direct {v0, v1, v4}, Lcom/bbm/util/k;-><init>(Ljava/lang/String;I)V
+    iget-object v1, v1, Lcom/bbm/b/x;->g:Lcom/bbm/b/n;
 
-    sput-object v0, Lcom/bbm/util/k;->c:Lcom/bbm/util/k;
+    sget-object v2, Lcom/bbm/b/ax;->d:Lcom/bbm/b/ax;
 
-    .line 261
-    const/4 v0, 0x3
+    sget-object v3, Lcom/bbm/b/ay;->a:Lcom/bbm/b/ay;
 
-    new-array v0, v0, [Lcom/bbm/util/k;
+    invoke-virtual {v1, v0, v2, v3}, Lcom/bbm/b/n;->a(Lcom/bbm/b/a;Lcom/bbm/b/ax;Lcom/bbm/b/ay;)V
 
-    sget-object v1, Lcom/bbm/util/k;->a:Lcom/bbm/util/k;
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lcom/bbm/util/k;->b:Lcom/bbm/util/k;
-
-    aput-object v1, v0, v3
-
-    sget-object v1, Lcom/bbm/util/k;->c:Lcom/bbm/util/k;
-
-    aput-object v1, v0, v4
-
-    sput-object v0, Lcom/bbm/util/k;->d:[Lcom/bbm/util/k;
-
-    return-void
-.end method
-
-.method private constructor <init>(Ljava/lang/String;I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
-
-    .prologue
-    .line 261
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lcom/bbm/util/k;
-    .locals 1
-
-    .prologue
-    .line 261
-    const-class v0, Lcom/bbm/util/k;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/util/k;
-
-    return-object v0
-.end method
-
-.method public static values()[Lcom/bbm/util/k;
-    .locals 1
-
-    .prologue
-    .line 261
-    sget-object v0, Lcom/bbm/util/k;->d:[Lcom/bbm/util/k;
-
-    invoke-virtual {v0}, [Lcom/bbm/util/k;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lcom/bbm/util/k;
-
-    return-object v0
+    goto :goto_1
 .end method

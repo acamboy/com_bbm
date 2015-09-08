@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:text="@string/find_friend_category_invite" style="@style/BBMAppTheme.ToolbarTitle" />
     <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
         <TextView android:textSize="@dimen/pyk_find_friends_title_text_size" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/pyk_find_friends_title_margin" android:layout_marginTop="@dimen/pyk_find_friends_title_margin" android:layout_marginRight="@dimen/pyk_find_friends_title_margin" android:layout_marginBottom="@dimen/pyk_find_friends_title_margin" android:text="@string/setup_invite_bbm_people_you_know" />
         <View android:background="@color/pykSeparatorBackground1" android:layout_width="fill_parent" android:layout_height="1.0dip" />
-        <Switch android:id="@id/invite_all_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checked="true" android:text="@string/add_all" style="@style/Common.Switch" />
+        <android.support.v7.widget.SwitchCompat android:id="@id/invite_all_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checked="true" android:textOn="" android:textOff="" android:text="@string/add_all" style="@style/Common.BaliSwitch" />
         <View android:background="@color/pykSeparatorBackground2" android:layout_width="fill_parent" android:layout_height="1.0dip" />
         <View android:background="@color/pykSeparatorBackground" android:layout_width="fill_parent" android:layout_height="7.0dip" />
         <com.tonicartos.widget.stickygridheaders.StickyGridHeadersGridView android:id="@id/find_friends_list" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />

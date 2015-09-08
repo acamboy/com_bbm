@@ -14,7 +14,7 @@
     return-void
 .end method
 
-.method public static R(Ljava/lang/String;)Lcom/glympse/android/core/GDrawable;
+.method public static V(Ljava/lang/String;)Lcom/glympse/android/core/GDrawable;
     .locals 5
 
     .prologue

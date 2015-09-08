@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/xj;
 .super Ljava/lang/Object;
-.source "MainActivity.java"
+.source "OpenInBbmActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/b/ah;
+.implements Lcom/bbm/invite/ae;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/OpenInBbmActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
     .locals 0
 
     .prologue
-    .line 2524
-    iput-object p1, p0, Lcom/bbm/ui/activities/xj;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 371
+    iput-object p1, p0, Lcom/bbm/ui/activities/xj;->a:Lcom/bbm/ui/activities/OpenInBbmActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,11 +29,11 @@
     .locals 1
 
     .prologue
-    .line 2528
-    iget-object v0, p0, Lcom/bbm/ui/activities/xj;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 375
+    iget-object v0, p0, Lcom/bbm/ui/activities/xj;->a:Lcom/bbm/ui/activities/OpenInBbmActivity;
 
-    invoke-static {v0}, Lcom/bbm/h/aq;->d(Landroid/content/Context;)V
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->finish()V
 
-    .line 2529
+    .line 376
     return-void
 .end method

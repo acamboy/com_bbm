@@ -1,28 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<view android:id="@id/activity_group_picture_comments_root" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false" class="com.bbm.ui.EmoticonPanelViewLayout"
+<com.bbm.ui.EmoticonPanelViewLayout android:id="@id/activity_group_picture_comments_root" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
-    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <FrameLayout android:id="@id/pic_to_comment_container" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="@dimen/group_picture_comment_top_comment_container_height">
-            <FrameLayout android:id="@id/pic_roll_count_over_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true">
-                <ImageView android:id="@id/pic_to_comment" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:contentDescription="@string/blank" />
-                <FrameLayout android:id="@id/pic_roll_count_animating" android:layout_width="fill_parent" android:layout_height="fill_parent">
-                    <TextView android:textSize="@dimen/group_picture_comment_roll_count_text_size" android:textColor="@color/white" android:layout_gravity="top|center" android:id="@id/pic_roll_count_text" android:background="@drawable/image_number_bkgd" android:paddingLeft="@dimen/group_picture_comment_roll_count_text_padding_left" android:paddingRight="@dimen/group_picture_comment_roll_count_text_padding_right" android:paddingBottom="@dimen/group_picture_comment_roll_count_text_padding_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/blank" />
-                    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/pic_image_description_layout" android:background="@color/group_picture_comment_image_description_layout_background" android:padding="@dimen/group_picture_comment_image_description_layout_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true">
-                        <com.bbm.ui.InlineImageTextView android:textSize="@dimen/group_picture_comment_caption_text_size" android:textColor="@color/white" android:id="@id/pic_caption_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/blank" android:singleLine="false" />
-                        <com.bbm.ui.InlineImageTextView android:textSize="@dimen/group_picture_comment_date_added_text_size" android:textColor="@color/group_picture_comment_pic_added_timestamp_color" android:id="@id/pic_date_added_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/blank" />
-                    </LinearLayout>
-                </FrameLayout>
-            </FrameLayout>
-            <ImageView android:layout_gravity="top|right|center" android:id="@id/pic_liking" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/group_picture_comment_pic_liking_margin_top" android:layout_marginRight="@dimen/group_picture_comment_pic_liking_margin_right" android:src="@drawable/ic_group_picture_favorite" android:contentDescription="@string/blank" />
-        </FrameLayout>
-        <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
-            <ListView android:id="@id/pic_comment_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@drawable/list_item_default_divider" />
-            <TextView android:textSize="@dimen/group_picture_comment_pic_no_comment_text_size" android:textColor="@color/group_picture_comment_no_comment_color" android:layout_gravity="center" android:id="@id/pic_no_comment_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_comments" />
-        </FrameLayout>
-        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <com.bbm.ui.EmoticonInputPanel android:id="@id/emoticon_input_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:inputHint="@string/enter_comment" />
-            <ImageView android:layout_gravity="bottom" android:id="@id/drop_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/actionbar_drop_shadow" android:scaleType="fitXY" android:contentDescription="@string/blank" />
-        </FrameLayout>
-        <com.bbm.ui.FooterActionBar android:id="@id/footer_action_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-    </LinearLayout>
-</view>
+    <include android:id="@id/group_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/toolbar_groups" />
+    <FrameLayout android:id="@id/pic_to_comment_container" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.bbm.ui.TouchImageView android:id="@id/pic_to_comment" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:contentDescription="@string/blank" />
+        <TextView android:textSize="@dimen/group_picture_comment_roll_count_text_size" android:textColor="@color/white" android:layout_gravity="center|top" android:id="@id/pic_roll_count_text" android:background="@drawable/image_number_bkgd" android:paddingLeft="@dimen/group_picture_comment_roll_count_text_padding_left" android:paddingRight="@dimen/group_picture_comment_roll_count_text_padding_right" android:paddingBottom="@dimen/group_picture_comment_roll_count_text_padding_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/blank" />
+        <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/pic_image_description_layout" android:background="@color/group_picture_comment_image_description_layout_background" android:padding="@dimen/group_picture_comment_image_description_layout_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <com.bbm.ui.InlineImageTextView android:textSize="@dimen/group_picture_comment_caption_text_size" android:textColor="@color/white" android:ellipsize="end" android:id="@id/pic_caption_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/blank" android:singleLine="false" />
+                <com.bbm.ui.InlineImageTextView android:textSize="@dimen/group_picture_comment_date_added_text_size" android:textColor="@color/group_picture_comment_pic_added_timestamp_color" android:id="@id/pic_date_added_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/blank" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/group_picture_comment_count_text_size" android:textColor="@android:color/black" android:gravity="center" android:layout_gravity="bottom" android:id="@id/group_pic_comment_count" android:background="@drawable/group_bubble_comment_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="false" />
+        </LinearLayout>
+        <ImageView android:layout_gravity="end|center|top" android:id="@id/pic_liking" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/group_picture_comment_pic_liking_margin" android:layout_marginRight="@dimen/group_picture_comment_pic_liking_margin" android:src="@drawable/ic_group_picture_favorite" android:contentDescription="@string/blank" />
+    </FrameLayout>
+    <ListView android:id="@id/pic_comment_list" android:background="@color/white" android:visibility="gone" android:longClickable="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" style="@style/ContactListStyle" />
+    <com.bbm.ui.EmoticonInputPanel android:id="@id/emoticon_input_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:inputHint="@string/enter_comment" />
+</com.bbm.ui.EmoticonPanelViewLayout>

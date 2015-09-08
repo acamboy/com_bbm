@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/fa;
 .super Ljava/lang/Object;
-.source "QuickShareGlympseView.java"
+.source "ProfilePinView.java"
 
 # interfaces
-.implements Landroid/view/View$OnTouchListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/QuickShareGlympseView;
+.field final synthetic a:Lcom/bbm/ui/ProfilePinView;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/QuickShareGlympseView;)V
+.method constructor <init>(Lcom/bbm/ui/ProfilePinView;)V
     .locals 0
 
     .prologue
-    .line 158
-    iput-object p1, p0, Lcom/bbm/ui/fa;->a:Lcom/bbm/ui/QuickShareGlympseView;
+    .line 101
+    iput-object p1, p0, Lcom/bbm/ui/fa;->a:Lcom/bbm/ui/ProfilePinView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,55 +25,19 @@
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
 
     .prologue
-    const/4 v2, 0x1
+    .line 104
+    iget-object v0, p0, Lcom/bbm/ui/fa;->a:Lcom/bbm/ui/ProfilePinView;
 
-    const/4 v1, 0x0
-
-    .line 162
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 163
-    iget-object v0, p0, Lcom/bbm/ui/fa;->a:Lcom/bbm/ui/QuickShareGlympseView;
-
-    invoke-static {v0}, Lcom/bbm/ui/QuickShareGlympseView;->f(Lcom/bbm/ui/QuickShareGlympseView;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/bbm/ui/ProfilePinView;->c(Lcom/bbm/ui/ProfilePinView;)Lcom/bbm/j/u;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/activities/ConversationActivity;
+    invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
 
-    iput-boolean v1, v0, Lcom/bbm/ui/activities/ey;->y:Z
-
-    .line 167
-    :cond_0
-    :goto_0
-    return v1
-
-    .line 164
-    :cond_1
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v0
-
-    if-ne v0, v2, :cond_0
-
-    .line 165
-    iget-object v0, p0, Lcom/bbm/ui/fa;->a:Lcom/bbm/ui/QuickShareGlympseView;
-
-    invoke-static {v0}, Lcom/bbm/ui/QuickShareGlympseView;->f(Lcom/bbm/ui/QuickShareGlympseView;)Landroid/content/Context;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/activities/ConversationActivity;
-
-    iput-boolean v2, v0, Lcom/bbm/ui/activities/ey;->y:Z
-
-    goto :goto_0
+    .line 105
+    return-void
 .end method

@@ -1,26 +1,30 @@
 .class final Lcom/bbm/ui/c/y;
 .super Ljava/lang/Object;
-.source "BlockedContactsFragment.java"
+.source "AppDetailsFragment.java"
 
 # interfaces
-.implements Lcom/bbm/ui/c/gn;
+.implements Lcom/bbm/util/cf;
 
 
 # instance fields
-.field final synthetic a:Ljava/util/List;
+.field final synthetic a:Lcom/bbm/util/b/e;
 
-.field final synthetic b:Lcom/bbm/ui/c/v;
+.field final synthetic b:Ljava/lang/String;
+
+.field final synthetic c:Lcom/bbm/ui/c/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/v;Ljava/util/List;)V
+.method constructor <init>(Lcom/bbm/ui/c/a;Lcom/bbm/util/b/e;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 270
-    iput-object p1, p0, Lcom/bbm/ui/c/y;->b:Lcom/bbm/ui/c/v;
+    .line 487
+    iput-object p1, p0, Lcom/bbm/ui/c/y;->c:Lcom/bbm/ui/c/a;
 
-    iput-object p2, p0, Lcom/bbm/ui/c/y;->a:Ljava/util/List;
+    iput-object p2, p0, Lcom/bbm/ui/c/y;->a:Lcom/bbm/util/b/e;
+
+    iput-object p3, p0, Lcom/bbm/ui/c/y;->b:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,61 +33,63 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
+.method public final a(Lcom/bbm/d/gh;)V
     .locals 2
 
     .prologue
-    .line 273
-    iget-object v0, p0, Lcom/bbm/ui/c/y;->b:Lcom/bbm/ui/c/v;
+    .line 490
+    iget-object v0, p0, Lcom/bbm/ui/c/y;->a:Lcom/bbm/util/b/e;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/c/v;->getActivity()Landroid/app/Activity;
+    if-eqz v0, :cond_0
+
+    .line 491
+    iget-object v0, p0, Lcom/bbm/ui/c/y;->a:Lcom/bbm/util/b/e;
+
+    iget-object v1, p0, Lcom/bbm/ui/c/y;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, p1}, Lcom/bbm/util/b/e;->a(Ljava/lang/String;Lcom/bbm/d/gh;)V
+
+    .line 493
+    :cond_0
+    if-eqz p1, :cond_1
+
+    .line 494
+    iget-object v0, p0, Lcom/bbm/ui/c/y;->c:Lcom/bbm/ui/c/a;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/a;->A(Lcom/bbm/ui/c/a;)Landroid/widget/ImageView;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/activities/BlockedContactsActivity;
+    iget-object v1, p1, Lcom/bbm/d/gh;->b:Landroid/graphics/drawable/Drawable;
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+    .line 495
+    iget-object v0, p0, Lcom/bbm/ui/c/y;->c:Lcom/bbm/ui/c/a;
 
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
-
-    .line 275
-    iget-object v0, p0, Lcom/bbm/ui/c/y;->a:Ljava/util/List;
-
-    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/bbm/ui/c/a;->A(Lcom/bbm/ui/c/a;)Landroid/widget/ImageView;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/slidingmenu/a;
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    iget v0, v0, Lcom/bbm/ui/slidingmenu/a;->a:I
+    move-result-object v0
 
-    packed-switch v0, :pswitch_data_0
+    .line 496
+    const/4 v1, -0x2
 
-    .line 280
-    :goto_0
+    iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    .line 497
+    iget-object v1, p0, Lcom/bbm/ui/c/y;->c:Lcom/bbm/ui/c/a;
+
+    invoke-static {v1}, Lcom/bbm/ui/c/a;->A(Lcom/bbm/ui/c/a;)Landroid/widget/ImageView;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 499
+    :cond_1
     return-void
-
-    .line 277
-    :pswitch_0
-    iget-object v0, p0, Lcom/bbm/ui/c/y;->b:Lcom/bbm/ui/c/v;
-
-    iget-object v0, v0, Lcom/bbm/ui/c/v;->c:Lcom/bbm/ui/dr;
-
-    iget-object v1, p0, Lcom/bbm/ui/c/y;->b:Lcom/bbm/ui/c/v;
-
-    iget-object v1, v1, Lcom/bbm/ui/c/v;->b:Landroid/widget/ListView;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/dr;->a(Landroid/widget/AbsListView;)V
-
-    goto :goto_0
-
-    .line 275
-    :pswitch_data_0
-    .packed-switch 0x7f0b003b
-        :pswitch_0
-    .end packed-switch
 .end method

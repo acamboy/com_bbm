@@ -3,7 +3,7 @@
 .source "BBChannelDateOfBirthDialog.java"
 
 # interfaces
-.implements Lcom/bbm/ui/d/c;
+.implements Lcom/bbm/ui/e/c;
 
 
 # instance fields
@@ -59,7 +59,7 @@
     if-eqz v0, :cond_1
 
     .line 234
-    const v0, 0x7f0e02ee
+    const v0, 0x7f0e0347
 
     .line 239
     :goto_0
@@ -88,7 +88,7 @@
 
     .line 236
     :cond_1
-    const v0, 0x7f0e02ef
+    const v0, 0x7f0e0348
 
     goto :goto_0
 .end method

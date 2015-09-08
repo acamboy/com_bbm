@@ -40,7 +40,7 @@
     .line 43
     if-ne p0, p1, :cond_1
 
-    .line 63
+    .line 60
     :cond_0
     :goto_0
     return v0
@@ -117,7 +117,6 @@
 
     move v0, v1
 
-    .line 61
     goto :goto_0
 .end method
 

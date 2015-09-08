@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/sr;
 .super Ljava/lang/Object;
-.source "GroupPictureCommentsActivity.java"
+.source "InviteActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/sq;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/sq;)V
     .locals 0
 
     .prologue
-    .line 264
-    iput-object p1, p0, Lcom/bbm/ui/activities/sr;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    .line 171
+    iput-object p1, p0, Lcom/bbm/ui/activities/sr;->a:Lcom/bbm/ui/activities/sq;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,26 +25,23 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final run()V
     .locals 2
 
     .prologue
-    .line 267
-    const-string v0, "rootView Clicked"
+    .line 174
+    iget-object v0, p0, Lcom/bbm/ui/activities/sr;->a:Lcom/bbm/ui/activities/sq;
 
-    const-class v1, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    iget-object v0, v0, Lcom/bbm/ui/activities/sq;->a:Lcom/bbm/ui/activities/InviteActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 268
-    iget-object v0, p0, Lcom/bbm/ui/activities/sr;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->h(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/ui/EmoticonInputPanel;
+    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->c(Lcom/bbm/ui/activities/InviteActivity;)Landroid/widget/ScrollView;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->d()Z
+    const/16 v1, 0x82
 
-    .line 269
+    invoke-virtual {v0, v1}, Landroid/widget/ScrollView;->fullScroll(I)Z
+
+    .line 175
     return-void
 .end method

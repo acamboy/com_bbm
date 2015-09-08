@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/activities/aej;
 .super Ljava/lang/Object;
-.source "ReportProblemActivity.java"
+.source "SettingsActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/b/o;
-
-.field final synthetic b:Lcom/bbm/ui/activities/aei;
+.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/aei;Lcom/bbm/ui/b/o;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
     .locals 0
 
     .prologue
-    .line 610
-    iput-object p1, p0, Lcom/bbm/ui/activities/aej;->b:Lcom/bbm/ui/activities/aei;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/aej;->a:Lcom/bbm/ui/b/o;
+    .line 341
+    iput-object p1, p0, Lcom/bbm/ui/activities/aej;->a:Lcom/bbm/ui/activities/SettingsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,29 +25,24 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
     .locals 2
 
     .prologue
-    .line 613
-    const-string v0, "errorDialog LeftButton Clicked"
+    .line 344
+    const-string v0, "vibrate enabled onCheckedChanged"
 
-    const-class v1, Lcom/bbm/ui/activities/ReportProblemActivity;
+    const-class v1, Lcom/bbm/ui/activities/SettingsActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 615
-    iget-object v0, p0, Lcom/bbm/ui/activities/aej;->a:Lcom/bbm/ui/b/o;
+    .line 345
+    iget-object v0, p0, Lcom/bbm/ui/activities/aej;->a:Lcom/bbm/ui/activities/SettingsActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->dismiss()V
+    const-string v1, "notification_vibrate_enabled"
 
-    .line 616
-    iget-object v0, p0, Lcom/bbm/ui/activities/aej;->b:Lcom/bbm/ui/activities/aei;
+    invoke-static {v0, v1, p2}, Lcom/bbm/ui/activities/SettingsActivity;->a(Lcom/bbm/ui/activities/SettingsActivity;Ljava/lang/String;Z)V
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/aei;->a:Lcom/bbm/ui/activities/ReportProblemActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ReportProblemActivity;->finish()V
-
-    .line 617
+    .line 346
     return-void
 .end method

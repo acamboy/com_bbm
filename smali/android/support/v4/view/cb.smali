@@ -1,59 +1,30 @@
-.class final Landroid/support/v4/view/cb;
-.super Landroid/database/DataSetObserver;
-.source "ViewPager.java"
-
-
-# instance fields
-.field final synthetic a:Landroid/support/v4/view/ViewPager;
+.class Landroid/support/v4/view/cb;
+.super Landroid/support/v4/view/cf;
+.source "ViewGroupCompat.java"
 
 
 # direct methods
-.method private constructor <init>(Landroid/support/v4/view/ViewPager;)V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 2821
-    iput-object p1, p0, Landroid/support/v4/view/cb;->a:Landroid/support/v4/view/ViewPager;
-
-    invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Landroid/support/v4/view/ViewPager;B)V
-    .locals 0
-
-    .prologue
-    .line 2821
-    invoke-direct {p0, p1}, Landroid/support/v4/view/cb;-><init>(Landroid/support/v4/view/ViewPager;)V
+    .line 87
+    invoke-direct {p0}, Landroid/support/v4/view/cf;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onChanged()V
+.method public final a(Landroid/view/ViewGroup;)V
     .locals 1
 
     .prologue
-    .line 2824
-    iget-object v0, p0, Landroid/support/v4/view/cb;->a:Landroid/support/v4/view/ViewPager;
+    .line 90
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->a()V
+    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->setMotionEventSplittingEnabled(Z)V
 
-    .line 2825
-    return-void
-.end method
-
-.method public final onInvalidated()V
-    .locals 1
-
-    .prologue
-    .line 2828
-    iget-object v0, p0, Landroid/support/v4/view/cb;->a:Landroid/support/v4/view/ViewPager;
-
-    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->a()V
-
-    .line 2829
+    .line 91
     return-void
 .end method

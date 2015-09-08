@@ -186,7 +186,7 @@
 
     int-to-float v2, v2
 
-    const/high16 v3, 0x40e00000
+    const/high16 v3, 0x40e00000    # 7.0f
 
     div-float v4, v2, v3
 
@@ -262,7 +262,7 @@
     throw v2
 
     :cond_9
-    const/high16 v2, 0x40000000
+    const/high16 v2, 0x40000000    # 2.0f
 
     div-float v2, v4, v2
 
@@ -945,7 +945,7 @@
 
     invoke-static {v3, v5}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    const v3, 0x3e4ccccd
+    const v3, 0x3e4ccccd    # 0.2f
 
     mul-float/2addr v3, v4
 

@@ -31,7 +31,7 @@
 
     const/4 v2, 0x0
 
-    .line 12
+    .line 13
     new-instance v0, Lcom/bbm/iceberg/b;
 
     const-string v1, "USER"
@@ -40,7 +40,7 @@
 
     sput-object v0, Lcom/bbm/iceberg/b;->a:Lcom/bbm/iceberg/b;
 
-    .line 13
+    .line 14
     new-instance v0, Lcom/bbm/iceberg/b;
 
     const-string v1, "LOCAL_CONTACT"
@@ -49,7 +49,7 @@
 
     sput-object v0, Lcom/bbm/iceberg/b;->b:Lcom/bbm/iceberg/b;
 
-    .line 11
+    .line 12
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/bbm/iceberg/b;
@@ -76,7 +76,7 @@
     .end annotation
 
     .prologue
-    .line 11
+    .line 12
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -86,7 +86,7 @@
     .locals 1
 
     .prologue
-    .line 11
+    .line 12
     const-class v0, Lcom/bbm/iceberg/b;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -102,7 +102,7 @@
     .locals 1
 
     .prologue
-    .line 11
+    .line 12
     sget-object v0, Lcom/bbm/iceberg/b;->c:[Lcom/bbm/iceberg/b;
 
     invoke-virtual {v0}, [Lcom/bbm/iceberg/b;->clone()Ljava/lang/Object;

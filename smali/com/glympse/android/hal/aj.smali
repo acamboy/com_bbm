@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field final synthetic bI:Lcom/glympse/android/hal/ai;
+.field final synthetic bL:Lcom/glympse/android/hal/ai;
 
 
 # direct methods
@@ -16,7 +16,7 @@
 
     .prologue
     .line 167
-    iput-object p1, p0, Lcom/glympse/android/hal/aj;->bI:Lcom/glympse/android/hal/ai;
+    iput-object p1, p0, Lcom/glympse/android/hal/aj;->bL:Lcom/glympse/android/hal/ai;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,9 +41,9 @@
     .prologue
     .line 174
     :try_start_0
-    iget-object v0, p0, Lcom/glympse/android/hal/aj;->bI:Lcom/glympse/android/hal/ai;
+    iget-object v0, p0, Lcom/glympse/android/hal/aj;->bL:Lcom/glympse/android/hal/ai;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/aj;->bI:Lcom/glympse/android/hal/ai;
+    iget-object v1, p0, Lcom/glympse/android/hal/aj;->bL:Lcom/glympse/android/hal/ai;
 
     invoke-static {v1}, Lcom/glympse/android/hal/ai;->a(Lcom/glympse/android/hal/ai;)Ljava/net/Socket;
 
@@ -52,7 +52,7 @@
     invoke-static {v0, v1}, Lcom/glympse/android/hal/ai;->a(Lcom/glympse/android/hal/ai;Ljava/net/Socket;)Ljava/net/Socket;
 
     .line 177
-    iget-object v0, p0, Lcom/glympse/android/hal/aj;->bI:Lcom/glympse/android/hal/ai;
+    iget-object v0, p0, Lcom/glympse/android/hal/aj;->bL:Lcom/glympse/android/hal/ai;
 
     invoke-static {v0}, Lcom/glympse/android/hal/ai;->b(Lcom/glympse/android/hal/ai;)Ljava/net/Socket;
 
@@ -61,7 +61,7 @@
     if-nez v0, :cond_0
 
     .line 179
-    iget-object v0, p0, Lcom/glympse/android/hal/aj;->bI:Lcom/glympse/android/hal/ai;
+    iget-object v0, p0, Lcom/glympse/android/hal/aj;->bL:Lcom/glympse/android/hal/ai;
 
     invoke-static {v0}, Lcom/glympse/android/hal/ai;->c(Lcom/glympse/android/hal/ai;)V
 
@@ -71,25 +71,25 @@
 
     .line 185
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/hal/aj;->bI:Lcom/glympse/android/hal/ai;
+    iget-object v0, p0, Lcom/glympse/android/hal/aj;->bL:Lcom/glympse/android/hal/ai;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/glympse/android/hal/ai;->a(Lcom/glympse/android/hal/ai;Z)Z
 
     .line 189
-    iget-object v0, p0, Lcom/glympse/android/hal/aj;->bI:Lcom/glympse/android/hal/ai;
+    iget-object v0, p0, Lcom/glympse/android/hal/aj;->bL:Lcom/glympse/android/hal/ai;
 
     invoke-static {v0}, Lcom/glympse/android/hal/ai;->d(Lcom/glympse/android/hal/ai;)Lcom/glympse/android/hal/GSocketListener;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/glympse/android/hal/aj;->bI:Lcom/glympse/android/hal/ai;
+    iget-object v1, p0, Lcom/glympse/android/hal/aj;->bL:Lcom/glympse/android/hal/ai;
 
     invoke-interface {v0, v1}, Lcom/glympse/android/hal/GSocketListener;->connected(Lcom/glympse/android/hal/GSocket;)V
 
     .line 192
-    iget-object v0, p0, Lcom/glympse/android/hal/aj;->bI:Lcom/glympse/android/hal/ai;
+    iget-object v0, p0, Lcom/glympse/android/hal/aj;->bL:Lcom/glympse/android/hal/ai;
 
     invoke-static {v0}, Lcom/glympse/android/hal/ai;->e(Lcom/glympse/android/hal/ai;)Lcom/glympse/android/hal/GlympseThreadPool;
 
@@ -97,7 +97,7 @@
 
     new-instance v1, Lcom/glympse/android/hal/al;
 
-    iget-object v2, p0, Lcom/glympse/android/hal/aj;->bI:Lcom/glympse/android/hal/ai;
+    iget-object v2, p0, Lcom/glympse/android/hal/aj;->bL:Lcom/glympse/android/hal/ai;
 
     const/4 v3, 0x0
 
@@ -113,7 +113,7 @@
     :catch_0
     move-exception v0
 
-    iget-object v0, p0, Lcom/glympse/android/hal/aj;->bI:Lcom/glympse/android/hal/ai;
+    iget-object v0, p0, Lcom/glympse/android/hal/aj;->bL:Lcom/glympse/android/hal/ai;
 
     invoke-static {v0}, Lcom/glympse/android/hal/ai;->c(Lcom/glympse/android/hal/ai;)V
 

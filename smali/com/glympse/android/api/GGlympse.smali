@@ -71,6 +71,9 @@
     .end annotation
 .end method
 
+.method public abstract getAccessToken()Ljava/lang/String;
+.end method
+
 .method public abstract getApiVersion()Ljava/lang/String;
 .end method
 
@@ -93,6 +96,9 @@
 .end method
 
 .method public abstract getEtaMode()I
+.end method
+
+.method public abstract getFavoritesManager()Lcom/glympse/android/api/GFavoritesManager;
 .end method
 
 .method public abstract getGroupManager()Lcom/glympse/android/api/GGroupManager;
@@ -123,6 +129,12 @@
 .end method
 
 .method public abstract getNetworkManager()Lcom/glympse/android/api/GNetworkManager;
+.end method
+
+.method public abstract getPairingManager()Lcom/glympse/android/api/GPairingManager;
+.end method
+
+.method public abstract getPlaceSearchEngine()Lcom/glympse/android/api/GPlaceSearchEngine;
 .end method
 
 .method public abstract getSmsProvider()Lcom/glympse/android/hal/GSmsProvider;

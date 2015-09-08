@@ -1,19 +1,9 @@
-.class public Lcom/google/android/gms/internal/ie;
+.class public final Lcom/google/android/gms/internal/ie;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/os/Parcelable$Creator;
 
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/os/Parcelable$Creator",
-        "<",
-        "Lcom/google/android/gms/internal/id;",
-        ">;"
-    }
+.annotation runtime Lcom/google/android/gms/internal/mb;
 .end annotation
 
 
@@ -26,165 +16,208 @@
     return-void
 .end method
 
-.method static a(Lcom/google/android/gms/internal/id;Landroid/os/Parcel;I)V
+.method public static a(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/util/List;
     .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lorg/json/JSONObject;",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 
-    const/4 v3, 0x0
-
-    invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/b;->p(Landroid/os/Parcel;)I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    iget-object v2, p0, Lcom/google/android/gms/internal/id;->OG:Ljava/lang/String;
-
-    invoke-static {p1, v1, v2, v3}, Lcom/google/android/gms/common/internal/safeparcel/b;->a(Landroid/os/Parcel;ILjava/lang/String;Z)V
-
-    const/16 v1, 0x3e8
-
-    iget v2, p0, Lcom/google/android/gms/internal/id;->versionCode:I
-
-    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/b;->c(Landroid/os/Parcel;II)V
-
-    const/4 v1, 0x2
-
-    iget-object v2, p0, Lcom/google/android/gms/internal/id;->OH:Ljava/lang/String;
-
-    invoke-static {p1, v1, v2, v3}, Lcom/google/android/gms/common/internal/safeparcel/b;->a(Landroid/os/Parcel;ILjava/lang/String;Z)V
-
-    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/b;->D(Landroid/os/Parcel;I)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public aD(Landroid/os/Parcel;)Lcom/google/android/gms/internal/id;
-    .locals 6
-
-    const/4 v0, 0x0
-
-    invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/a;->o(Landroid/os/Parcel;)I
-
-    move-result v3
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    move-object v1, v0
-
-    :goto_0
-    invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
-
-    move-result v4
-
-    if-ge v4, v3, :cond_0
-
-    invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/a;->n(Landroid/os/Parcel;)I
-
-    move-result v4
-
-    invoke-static {v4}, Lcom/google/android/gms/common/internal/safeparcel/a;->S(I)I
-
-    move-result v5
-
-    sparse-switch v5, :sswitch_data_0
-
-    invoke-static {p1, v4}, Lcom/google/android/gms/common/internal/safeparcel/a;->b(Landroid/os/Parcel;I)V
-
-    goto :goto_0
-
-    :sswitch_0
-    invoke-static {p1, v4}, Lcom/google/android/gms/common/internal/safeparcel/a;->m(Landroid/os/Parcel;I)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v1
 
-    goto :goto_0
+    if-eqz v1, :cond_1
 
-    :sswitch_1
-    invoke-static {p1, v4}, Lcom/google/android/gms/common/internal/safeparcel/a;->g(Landroid/os/Parcel;I)I
+    new-instance v2, Ljava/util/ArrayList;
 
-    move-result v2
+    invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
-    goto :goto_0
+    move-result v0
 
-    :sswitch_2
-    invoke-static {p1, v4}, Lcom/google/android/gms/common/internal/safeparcel/a;->m(Landroid/os/Parcel;I)Ljava/lang/String;
+    invoke-direct {v2, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    move-result-object v0
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
+
+    move-result v3
+
+    if-ge v0, v3, :cond_0
+
+    invoke-virtual {v1, v0}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
+    invoke-static {v2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
-    move-result v4
+    move-result-object v0
 
-    if-eq v4, v3, :cond_1
-
-    new-instance v0, Lcom/google/android/gms/common/internal/safeparcel/a$a;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Overread allowed size end="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1, p1}, Lcom/google/android/gms/common/internal/safeparcel/a$a;-><init>(Ljava/lang/String;Landroid/os/Parcel;)V
-
-    throw v0
+    :goto_1
+    return-object v0
 
     :cond_1
-    new-instance v3, Lcom/google/android/gms/internal/id;
+    const/4 v0, 0x0
 
-    invoke-direct {v3, v2, v1, v0}, Lcom/google/android/gms/internal/id;-><init>(ILjava/lang/String;Ljava/lang/String;)V
-
-    return-object v3
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        0x1 -> :sswitch_0
-        0x2 -> :sswitch_2
-        0x3e8 -> :sswitch_1
-    .end sparse-switch
+    goto :goto_1
 .end method
 
-.method public by(I)[Lcom/google/android/gms/internal/id;
-    .locals 1
+.method public static a(Landroid/content/Context;Ljava/lang/String;Lcom/google/android/gms/internal/nb;Ljava/lang/String;ZLjava/util/List;)V
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/lang/String;",
+            "Lcom/google/android/gms/internal/nb;",
+            "Ljava/lang/String;",
+            "Z",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
 
-    new-array v0, p1, [Lcom/google/android/gms/internal/id;
+    if-eqz p5, :cond_0
 
-    return-object v0
-.end method
+    invoke-interface {p5}, Ljava/util/List;->isEmpty()Z
 
-.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 1
+    move-result v0
 
-    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/ie;->aD(Landroid/os/Parcel;)Lcom/google/android/gms/internal/id;
+    if-eqz v0, :cond_1
+
+    :cond_0
+    return-void
+
+    :cond_1
+    if-eqz p4, :cond_3
+
+    const-string v0, "1"
+
+    move-object v1, v0
+
+    :goto_0
+    invoke-interface {p5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_1
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    check-cast v0, Ljava/lang/String;
 
-.method public synthetic newArray(I)[Ljava/lang/Object;
-    .locals 1
+    const-string v3, "@gw_adlocid@"
 
-    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/ie;->by(I)[Lcom/google/android/gms/internal/id;
+    invoke-virtual {v0, v3, p3}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
+    const-string v3, "@gw_adnetrefresh@"
+
+    invoke-virtual {v0, v3, v1}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "@gw_qdata@"
+
+    iget-object v4, p2, Lcom/google/android/gms/internal/nb;->o:Lcom/google/android/gms/internal/hu;
+
+    iget-object v4, v4, Lcom/google/android/gms/internal/hu;->f:Ljava/lang/String;
+
+    invoke-virtual {v0, v3, v4}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "@gw_sdkver@"
+
+    invoke-virtual {v0, v3, p1}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "@gw_sessid@"
+
+    invoke-static {}, Lcom/google/android/gms/ads/internal/z;->h()Lcom/google/android/gms/internal/nf;
+
+    move-result-object v4
+
+    iget-object v4, v4, Lcom/google/android/gms/internal/nf;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v3, v4}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "@gw_seqnum@"
+
+    iget-object v4, p2, Lcom/google/android/gms/internal/nb;->i:Ljava/lang/String;
+
+    invoke-virtual {v0, v3, v4}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v3, p2, Lcom/google/android/gms/internal/nb;->l:Lcom/google/android/gms/internal/ht;
+
+    if-eqz v3, :cond_2
+
+    const-string v3, "@gw_adnetid@"
+
+    iget-object v4, p2, Lcom/google/android/gms/internal/nb;->l:Lcom/google/android/gms/internal/ht;
+
+    iget-object v4, v4, Lcom/google/android/gms/internal/ht;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v3, v4}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "@gw_allocid@"
+
+    iget-object v4, p2, Lcom/google/android/gms/internal/nb;->l:Lcom/google/android/gms/internal/ht;
+
+    iget-object v4, v4, Lcom/google/android/gms/internal/ht;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, v3, v4}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_2
+    new-instance v3, Lcom/google/android/gms/internal/ov;
+
+    invoke-direct {v3, p0, p1, v0}, Lcom/google/android/gms/internal/ov;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v3, Lcom/google/android/gms/internal/nk;->i:Ljava/lang/Runnable;
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/nu;->a(Ljava/lang/Runnable;)Lcom/google/android/gms/internal/pd;
+
+    goto :goto_1
+
+    :cond_3
+    const-string v0, "0"
+
+    move-object v1, v0
+
+    goto :goto_0
 .end method

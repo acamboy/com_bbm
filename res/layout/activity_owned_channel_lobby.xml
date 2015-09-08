@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <ScrollView android:id="@id/pane_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/footer_action_bar">
-        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0px" android:baselineAligned="false" android:layout_weight="1.0">
-                <com.bbm.ui.views.ChannelLobbyPostsPaneView android:id="@id/channel_posts_area" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/channel_lobby_big_padding" android:layout_marginTop="@dimen/channel_lobby_big_padding" android:layout_marginRight="@dimen/channel_lobby_small_padding" android:layout_marginBottom="@dimen/channel_lobby_small_padding" android:layout_weight="1.0" />
-                <com.bbm.ui.views.ChannelLobbyStatsPaneView android:id="@id/channel_stats_area" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/channel_lobby_small_padding" android:layout_marginTop="@dimen/channel_lobby_big_padding" android:layout_marginRight="@dimen/channel_lobby_big_padding" android:layout_marginBottom="@dimen/channel_lobby_small_padding" android:layout_weight="1.0" />
-            </LinearLayout>
-            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0px" android:baselineAligned="false" android:layout_weight="1.0">
-                <com.bbm.ui.views.ChannelLobbyReportsPaneView android:id="@id/channel_reports_area" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/channel_lobby_big_padding" android:layout_marginTop="@dimen/channel_lobby_small_padding" android:layout_marginRight="@dimen/channel_lobby_small_padding" android:layout_marginBottom="@dimen/channel_lobby_big_padding" android:layout_weight="1.0" />
-                <com.bbm.ui.views.ChannelLobbyChatsPaneView android:id="@id/channel_chats_area" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/channel_lobby_small_padding" android:layout_marginTop="@dimen/channel_lobby_small_padding" android:layout_marginRight="@dimen/channel_lobby_big_padding" android:layout_marginBottom="@dimen/channel_lobby_big_padding" android:layout_weight="1.0" />
-            </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/pane_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/channel_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/toolbar_channels" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0px" android:baselineAligned="false" android:layout_weight="1.0">
+            <com.bbm.ui.views.ChannelLobbyPostsPaneView android:id="@id/channel_posts_area" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/channel_lobby_big_padding" android:layout_marginTop="@dimen/channel_lobby_big_padding" android:layout_marginRight="@dimen/channel_lobby_small_padding" android:layout_marginBottom="@dimen/channel_lobby_small_padding" android:layout_weight="1.0" />
+            <com.bbm.ui.views.ChannelLobbyStatsPaneView android:id="@id/channel_stats_area" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/channel_lobby_small_padding" android:layout_marginTop="@dimen/channel_lobby_big_padding" android:layout_marginRight="@dimen/channel_lobby_big_padding" android:layout_marginBottom="@dimen/channel_lobby_small_padding" android:layout_weight="1.0" />
         </LinearLayout>
-    </ScrollView>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0px" android:baselineAligned="false" android:layout_weight="1.0">
+            <com.bbm.ui.views.ChannelLobbyReportsPaneView android:id="@id/channel_reports_area" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/channel_lobby_big_padding" android:layout_marginTop="@dimen/channel_lobby_small_padding" android:layout_marginRight="@dimen/channel_lobby_small_padding" android:layout_marginBottom="@dimen/channel_lobby_big_padding" android:layout_weight="1.0" />
+            <com.bbm.ui.views.ChannelLobbyChatsPaneView android:id="@id/channel_chats_area" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/channel_lobby_small_padding" android:layout_marginTop="@dimen/channel_lobby_small_padding" android:layout_marginRight="@dimen/channel_lobby_big_padding" android:layout_marginBottom="@dimen/channel_lobby_big_padding" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
     <ViewStub android:id="@id/channel_removed" android:layout="@layout/activity_channel_child" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
 </RelativeLayout>

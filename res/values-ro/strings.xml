@@ -225,6 +225,21 @@
     <string name="a_newer_version_of_bbm_is_required">Este necesară o nouă versiune de BBM.</string>
     <string name="a_problem_has_occurred_in_bbm">A survenit o problemă în BBM. Încercaţi din nou mai târziu.</string>
     <string name="a_temporary_server_error_has_occurred">A survenit o eroare temporară de server. Încercaţi din nou.</string>
+    <string name="abc_action_bar_home_description">Navigați la ecranul de pornire</string>
+    <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
+    <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
+    <string name="abc_action_bar_up_description">Navigați în sus</string>
+    <string name="abc_action_menu_overflow_description">Mai multe opțiuni</string>
+    <string name="abc_action_mode_done">Terminat</string>
+    <string name="abc_activity_chooser_view_see_all">Afișați-le pe toate</string>
+    <string name="abc_activitychooserview_choose_application">Alegeți o aplicaţie</string>
+    <string name="abc_searchview_description_clear">Ștergeți interogarea</string>
+    <string name="abc_searchview_description_query">Interogare de căutare</string>
+    <string name="abc_searchview_description_search">Căutați</string>
+    <string name="abc_searchview_description_submit">Trimiteți interogarea</string>
+    <string name="abc_searchview_description_voice">Căutare vocală</string>
+    <string name="abc_shareactionprovider_share_with">Trimiteți la</string>
+    <string name="abc_shareactionprovider_share_with_application">Trimiteți la %s</string>
     <string name="about">Despre</string>
     <string name="about_bbm_pins_message">Un PIN vă identifică în mod unic în BBM. Alte persoane vă pot invita să deveniţi contacte BBM dacă le comunicaţi PIN-ul BBM sau codul de bare.</string>
     <string name="about_bbm_pins_title">Despre PIN-urile BBM</string>
@@ -235,9 +250,9 @@
     <string name="activity_select_new_admin_title">Selectare administrator nou</string>
     <string name="activity_select_new_admin_title_selection">+%1$d administratori</string>
     <string name="activity_tap_to_invite_dialog_info">Doriţi să porniţi NFC?</string>
-    <string name="activity_tap_to_invite_dialog_no">Nu</string>
+    <string name="activity_tap_to_invite_dialog_no">@string/no</string>
     <string name="activity_tap_to_invite_dialog_title">Radio NFC este oprit</string>
-    <string name="activity_tap_to_invite_dialog_yes">Da</string>
+    <string name="activity_tap_to_invite_dialog_yes">@string/yes</string>
     <string name="activity_tap_to_invite_info">Aliniaţi părţile din spate ale dispozitivelor dvs. Pe ambele dispozitive trebuie să fie activată tehnologia NFC.</string>
     <string name="ad_block_channel">Dacă blocaţi canalul, nu veţi mai vedea conţinuturi sponsorizate de pe canalul \"%1$s\". Această acţiune nu este reversibilă.</string>
     <string name="ad_block_sponsor">Nu veţi mai vedea conţinut sponsorizat de la \"%1$s\". Această acţiune nu este reversibilă.</string>
@@ -245,7 +260,7 @@
     <string name="ad_notpresent_message">Anunţul nu mai este disponibil</string>
     <string name="ad_sponsor_label">Sponsor</string>
     <string name="add">Adăugare</string>
-    <string name="add_all">Adăugare toate</string>
+    <string name="add_all">Adăugare toţi</string>
     <string name="add_channel_post">Adăugare postare</string>
     <string name="add_contacts">Invitare</string>
     <string name="add_contacts_category_add_to_bbm">Atingeţi pentru a adăuga</string>
@@ -263,13 +278,26 @@
     <string name="allow_comments_on_posts">Permitere comentarii la postări</string>
     <string name="app_name">BBM</string>
     <string name="app_picker_name">Aplicaţii</string>
+    <string name="app_store_app_subscribe_notification_dialog_line">Vă puteţi anunţa contactele despre faptul că aţi devenit un utilizator %1$s al pachetelor de abonamente BBM</string>
+    <string name="app_store_app_subscribe_notification_message">Acum sunt un utilizator %1$s al pachetelor de abonamente BBM! Puteţi fi şi dvs.!</string>
+    <string name="app_store_confirmation_screen_feature_offered_line">Caracteristicile oferite de abonamentul dvs. sunt următoarele:</string>
     <string name="app_store_details_screen_install_button">Instalare</string>
     <string name="app_store_details_screen_inventory_not_found">"Aplicaţia nu poate fi deschisă.
  Încercaţi din nou mai târziu."</string>
     <string name="app_store_details_screen_open_button">Deschidere</string>
+    <string name="app_store_details_screen_renew_button">REÎNNOIRE</string>
+    <string name="app_store_details_screen_subscribe_button">Abonare</string>
+    <string name="app_store_details_screen_subscribed_button">Abonați</string>
     <string name="app_store_invalid_app_id">Acest element nu este disponibil</string>
+    <string name="app_store_subscribed_app_no_ads_description">Ascundeţi reclamele şi invitaţiile sponsorizate din BBM cu acest abonament.</string>
+    <string name="app_store_subscribed_app_vanity_pin_description">PIN-ul personalizat este utilizat pentru a invita alt utilizator şi pentru afişarea profilului. După definirea PIN-ului personalizat, utilizatorul îl poate edita într-o perioadă de timp definită. Schimbare PIN</string>
+    <string name="app_subscription_thank_you">Vă mulţumim. Acum sunteţi abonat la BBM.</string>
     <string name="approve_comments">Aprobare comentarii</string>
     <string name="approve_comments_description">Puteţi schimba această opţiune de pe site-ul web BBM Channels.</string>
+    <string name="archiving_disabled_message">Administratorul dvs. a dezactivat funcţionalitatea de arhivare. Chaturile nu mai subt salvate pe dispozitiv, iar chaturile salvate anterior nu mai sunt disponibile. Pentru informaţii suplimentare, contactaţi administratorul.</string>
+    <string name="archiving_disabled_title">Arhivare dezactivată</string>
+    <string name="archiving_enabled_message">Administratorul dvs. a activat funcţionalitatea de arhivare. Chaturile sunt salvate pe dispozitivul dvs. Pentru informaţii suplimentare, contactaţi administratorul.</string>
+    <string name="archiving_enabled_title">Arhivare activată</string>
     <string name="arrived_at_destination">Glympse: Ajuns la destinaţie</string>
     <string name="asterisk">*</string>
     <string name="attach">Ataşare</string>
@@ -286,15 +314,15 @@
     <string name="attach_list_voicenote">Notă vocală</string>
     <string name="audio_player_pause">Pauză</string>
     <string name="audio_player_play">Redare</string>
-    <string name="auth_client_needs_enabling_title">O aplicație necesită activarea Serviciilor Google Play.</string>
-    <string name="auth_client_needs_installation_title">O aplicație necesită instalarea Serviciilor Google Play.</string>
-    <string name="auth_client_needs_update_title">O aplicație necesită o actualizare pentru Servicii Google Play.</string>
-    <string name="auth_client_play_services_err_notification_msg">Eroare Servicii Google Play</string>
-    <string name="auth_client_requested_by_msg">Solicitată de %1$s</string>
-    <string name="auth_client_using_bad_version_title">Aplicația a încercat să utilizeze o vers. Servicii Google Play greșită</string>
+    <string name="autopassphrase_completed">Acest chat este acum BBM Protected.</string>
+    <string name="autopassphrase_failed">Tehnologia BBM Protected nu a putut fi configurată.</string>
+    <string name="autopassphrase_initiated">Se creează un chat BBM Protected.</string>
+    <string name="autopassphrase_retry">Reîncercare</string>
     <string name="avatar_file_not_support">Fişier neacceptat.</string>
     <string name="back">Înapoi</string>
     <string name="backup_file_is_not_valid">Fişierul de backup nu este valid; părăsiţi configurarea BBM şi lansaţi utilitarul Comutare dispozitive din BlackBerry Desktop Software.</string>
+    <string name="badge_on_your_avatar">Insignă pe avatar</string>
+    <string name="badge_on_your_avatar_description">După ce abonamentul BBM devine activ, veţi primi insigna pe avatarul dvs....</string>
     <string name="barcode_info">Un contact vă poate scana codul de bare pentru a vă adăuga la BBM</string>
     <string name="bbm_account_name">BBM</string>
     <string name="bbm_account_user_name">BBM Groups</string>
@@ -310,7 +338,9 @@
     <string name="bbm_service_running">Conectat</string>
     <string name="bbm_setup">Configurare BBM</string>
     <string name="bbm_share_with_pin_uri">http://www.bbm.com/share/?BBMID=%1$s</string>
-    <string name="bbm_voice_ongoing_call">Într-un apel</string>
+    <string name="bbm_voice_ongoing_call">Apel BBM în curs</string>
+    <string name="billing_google_error_message_body">Acest articol a fost achiziţionat deja pentru un alt BlackBerry ID conectat la contul dvs. din magazin. Încercaţi să utilizaţi un alt cont pentru magazin.</string>
+    <string name="billing_google_error_message_title">Nu se poate achiziţiona</string>
     <string name="blackberry_channels"><b>BBM Channels</b></string>
     <string name="blackberry_id">BBID</string>
     <string name="blackberry_id_is_not_responding">BlackBerry ID nu răspunde.</string>
@@ -570,9 +600,10 @@
     <string name="chat_history_disconnected_voice_chat">Apel vocal deconectat. Durată: %1$s</string>
     <string name="chat_history_ended_video_chat">Apel video încheiat. Durată: %1$s</string>
     <string name="chat_history_ended_voice_chat">Apel vocal încheiat. Durată: %1$s</string>
-    <string name="chat_history_missed_video_chat">Apel video ratat de la &lt;b>%1$s&lt;/b></string>
-    <string name="chat_history_missed_voice_chat">Apel vocal ratat de la &lt;b>%1$s&lt;/b></string>
+    <string name="chat_history_missed_video_chat">Apel video nepreluat de la &lt;b>%1$s&lt;/b></string>
+    <string name="chat_history_missed_voice_chat">Apel vocal nepreluat de la &lt;b>%1$s&lt;/b></string>
     <string name="chats">Chaturi</string>
+    <string name="chats_block_chat">Blocare chat curent</string>
     <string name="chats_empty_chat">Chat gol</string>
     <string name="chats_end_chat">Încheiere chat</string>
     <string name="chats_end_discussion">Terminare discuţie</string>
@@ -581,35 +612,56 @@
     <string name="chats_open_group">Deschidere grup</string>
     <string name="chats_select_more">Selectare mai multe</string>
     <string name="chats_start_video">Iniţiere chat video</string>
-    <string name="chats_status_no_chats">Atingeţi colţul de sus pentru a începe un chat.</string>
+    <string name="chats_status_no_chats">Pentru a începe un chat, atingeţi butonul de chat din partea de jos a ecranului.</string>
+    <string name="chats_status_no_chats_widget">Atingeţi colţul de sus pentru a începe un chat.</string>
     <string name="chats_view_bbm_profile">Vizualizare profil BBM</string>
     <string name="click_to_expire">Faceţi clic aici pentru a determina expirarea glympse-ului</string>
     <string name="click_to_reply">Faceţi clic aici pentru a răspunde...</string>
     <string name="click_to_view">Faceţi clic aici pentru a vizualiza...</string>
     <string name="close">Închidere</string>
+    <string name="cloud_directory_contact_add_coworkers">Căutare colegi</string>
+    <string name="cloud_directory_contact_chat_failed">Nu poate fi iniţiat chatul BBM cu acest coleg. Încercaţi din nou mai târziu.</string>
+    <string name="cloud_directory_fields_info">Colegii dvs. pot vedea acest nume atunci când caută persoane în BBM.</string>
+    <string name="cloud_directory_pin_lookup">Solicitare informaţii de contact.</string>
+    <string name="cloud_directory_search_failed">Nu este posibilă căutarea colegilor. Încercaţi din nou mai târziu.</string>
+    <string name="cloud_directory_search_more_results">Căutarea dvs. a returnat prea multe rezultate. Încercaţi să restrângeţi căutarea.</string>
+    <string name="cloud_directory_search_text_min_length">Termenul de căutare pentru colegi trebuie să aibă cel puţin 2 caractere.</string>
+    <string name="cloud_directory_service_hint">Câmpuri obligatorii. Vă rugăm să introduceţi numele real. Colegii dvs. vă pot căuta după nume şi pot iniţia chaturi BBM cu dvs.</string>
     <string name="coming_soon">"Această caracteristică nu este disponibilă momentan.
 În curând"</string>
     <string name="coming_soon_title">În curând!</string>
     <string name="comment_copied">Comentariu copiat</string>
     <string name="comments_disabled_label">Comentarii dezactivate</string>
+    <string name="common_android_wear_notification_needs_update_text">%1$s necesită o actualizare a aplicației Android Wear.</string>
+    <string name="common_android_wear_update_text">%1$s nu va rula decât dacă actualizați aplicația Android Wear.</string>
+    <string name="common_android_wear_update_title">Actualizați Android Wear</string>
+    <string name="common_google_play_services_api_unavailable_text">%1$s necesită unul sau mai multe servicii Google Play, care momentan nu sunt disponibile. Contactați dezvoltatorul pentru asistență.</string>
     <string name="common_google_play_services_enable_button">Activaţi Servicii Google Play</string>
-    <string name="common_google_play_services_enable_text">Această aplicaţie nu va funcţiona decât dacă activaţi Servicii Google Play.</string>
+    <string name="common_google_play_services_enable_text">%1$s nu va funcționa decât dacă activați serviciile Google Play.</string>
     <string name="common_google_play_services_enable_title">Activaţi Servicii Google Play</string>
+    <string name="common_google_play_services_error_notification_requested_by_msg">Solicitată de %1$s</string>
     <string name="common_google_play_services_install_button">Obţineţi Servicii Google Play</string>
-    <string name="common_google_play_services_install_text_phone">Această aplicaţie nu poate rula fără Servicii Google Play, care lipsesc de pe telefon.</string>
-    <string name="common_google_play_services_install_text_tablet">Această aplicaţie nu poate rula fără Servicii Google Play, care lipsesc de pe tabletă.</string>
+    <string name="common_google_play_services_install_text_phone">%1$s nu va rula fără serviciile Google Play, care lipsesc de pe telefon.</string>
+    <string name="common_google_play_services_install_text_tablet">%1$s nu va rula fără serviciile Google Play, care lipsesc de pe tabletă.</string>
     <string name="common_google_play_services_install_title">Descărcaţi Servicii Google Play</string>
     <string name="common_google_play_services_invalid_account_text">Contul menționat nu există pe acest dispozitiv. Alegeți alt cont.</string>
     <string name="common_google_play_services_invalid_account_title">Cont nevalid</string>
+    <string name="common_google_play_services_needs_enabling_title">O aplicație necesită activarea serviciilor Google Play.</string>
     <string name="common_google_play_services_network_error_text">Este necesară o conexiune de date pentru a vă conecta la serviciile Google Play.</string>
     <string name="common_google_play_services_network_error_title">Eroare de reţea</string>
+    <string name="common_google_play_services_notification_needs_update_title">O aplicație necesită o actualizare pentru serviciile Google Play.</string>
+    <string name="common_google_play_services_notification_ticker">Eroare a serviciilor Google Play</string>
+    <string name="common_google_play_services_sign_in_failed_text">Eroare la conectarea la contul specificat. Alegeți alt cont.</string>
+    <string name="common_google_play_services_sign_in_failed_title">Conectarea nu a reușit</string>
     <string name="common_google_play_services_unknown_issue">Problemă necunoscută privind Servicii Google Play.</string>
-    <string name="common_google_play_services_unsupported_date_text">Data de pe dispozitiv pare să fie incorectă. Verificați data de pe dispozitiv.</string>
-    <string name="common_google_play_services_unsupported_text">Gadgetul nu acceptă serviciile Google Play, pe care se bazează unele dintre aplicații. Pentru asistență, contactați producătorul gadgetului.</string>
+    <string name="common_google_play_services_unsupported_text">%1$s se bazează pe serviciile Google Play, care nu sunt acceptate de dispozitiv. Contactați producătorul pentru asistență.</string>
     <string name="common_google_play_services_unsupported_title">Servicii Google Play</string>
     <string name="common_google_play_services_update_button">Actualizaţi</string>
-    <string name="common_google_play_services_update_text">Această aplicaţie nu poate rula decât dacă actualizaţi Servicii Google Play.</string>
+    <string name="common_google_play_services_update_text">%1$s nu va rula decât dacă actualizați serviciile Google Play.</string>
     <string name="common_google_play_services_update_title">Actualizaţi Servicii Google Play</string>
+    <string name="common_google_play_services_updating_text">%1$s nu va rula fără serviciile Google Play, care momentan se actualizează.</string>
+    <string name="common_google_play_services_updating_title">Se actualizează serviciile Google Play</string>
+    <string name="common_open_on_phone">Deschideți pe telefon</string>
     <string name="common_signin_button_text">Conectați</string>
     <string name="common_signin_button_text_long">Conectați-vă cu Google</string>
     <string name="complete">Încheiată</string>
@@ -618,8 +670,10 @@
     <string name="contact_add_category">Adăugare categorie</string>
     <string name="contact_add_category_already_exists">Categoria există deja.</string>
     <string name="contact_add_category_hint">Introduceţi un titlu de categorie</string>
-    <string name="contact_add_notification">A fost adăugat un utilizator</string>
+    <string name="contact_add_notification">Contactul a fost adăugat</string>
     <string name="contact_delete_category">Ştergere categorie</string>
+    <string name="contact_delete_notification">Contactul a fost şters</string>
+    <string name="contact_delete_notification_multiple">%1$d contacte au fost şterse</string>
     <string name="contact_details">Detalii contact</string>
     <string name="contact_details_description">Includeţi un număr de telefon, o adresă de e-mail sau un site web.</string>
     <string name="contact_is_blocked">Contactul este blocat</string>
@@ -631,6 +685,8 @@
     <string name="contacts_are_blocked">Contactele sunt blocate</string>
     <string name="contacts_count">0</string>
     <string name="contacts_delete_contact">Ştergere %1$s</string>
+    <string name="contacts_dialog_delete_and_block_info">Toate invitaţiile şi chaturile viitoare de la %1$s vor fi blocate. Doriţi să ştergeţi şi să blocaţi contactul %1$s?</string>
+    <string name="contacts_dialog_delete_and_block_title">Ştergere şi blocare %1$s</string>
     <string name="contacts_dialog_delete_block_info">%1$s va fi adăugat(ă) la lista de contacte blocate</string>
     <string name="contacts_dialog_delete_block_label">Blocare invitaţii viitoare</string>
     <string name="contacts_dialog_delete_multi_block_info">Contactele vor fi adăugate în lista dvs. de contacte blocate</string>
@@ -655,20 +711,25 @@
     <string name="contents_sms">Adresă SMS</string>
     <string name="contents_text">Text simplu</string>
     <string name="context_menu_copy_message">Copiere mesaj</string>
+    <string name="context_menu_quote_message">Citare mesaj</string>
     <string name="context_menu_recall_message">Retragere mesaj</string>
     <string name="context_menu_resend_message">Retrimitere mesaj</string>
+    <string name="conversation_activity_block_chat_warning_message">Dacă blocaţi acest chat, veţi înceta să mai primiţi mesajele noi trimise în acest chat.</string>
+    <string name="conversation_activity_block_chat_warning_title">Blocare chat?</string>
     <string name="conversation_activity_end_chat_on_voice_warning_message">Apelul dvs. se va încheia, iar mesajele de chat vor fi şterse.</string>
     <string name="conversation_activity_end_chat_warning_message">Dacă încheiaţi chatul, toate mesajele vor fi şterse.</string>
     <string name="conversation_activity_end_chat_warning_title">Încheiaţi chatul?</string>
+    <string name="conversation_activity_leave_chat_warning_message">Dacă părăsiţi chatul, toate mesajele vor fi şterse.</string>
+    <string name="conversation_activity_leave_chat_warning_title">Părăsiţi chatul?</string>
     <string name="conversation_activity_reinvite_accepted">Invitaţie acceptată</string>
     <string name="conversation_activity_reinvite_sent">Invitaţie trimisă</string>
-    <string name="conversation_are_already_in_the_chat">&lt;b>%1$s&lt;/b> participă deja la chat</string>
+    <string name="conversation_are_already_in_the_chat">%1$s participă deja la chat</string>
     <string name="conversation_bubble_dropbox_caption">Iată un lik către %1$s din Dropbox-ul meu</string>
     <string name="conversation_button_dropbox_download">Descărcare</string>
     <string name="conversation_button_toast_attachment_deleted">Ataşament şters</string>
     <string name="conversation_button_toast_ref_content_deleted">Conţinutul referit a fost şters</string>
     <string name="conversation_button_toast_undo">Anulare</string>
-    <string name="conversation_button_view_glympse">Vizualizare hartă</string>
+    <string name="conversation_button_view_glympse">VIZUALIZARE HARTĂ</string>
     <string name="conversation_email_chat_subject_multiple_participants">Chat cu %1$s, %2$s şi alţii pe %3$s</string>
     <string name="conversation_email_chat_subject_three_participants">Chat cu %1$s şi %2$s pe %3$s</string>
     <string name="conversation_email_chat_subject_two_participants">Chat cu %1$s pe %2$s</string>
@@ -678,30 +739,36 @@
     <string name="conversation_file_transfert">Fişier primit</string>
     <string name="conversation_file_transfert_canceled_dialog_title">Transferul fişierului a fost anulat</string>
     <string name="conversation_file_transfert_canceled_dialog_too_large">%1$s este prea mare. Dimensiunea maximă a fişierului este de 16 MB</string>
-    <string name="conversation_incoming_invite_req">&lt;b>%1$s&lt;/b> doreşte să invite pe &lt;b>%2$s&lt;/b> la chat.</string>
+    <string name="conversation_groups_alt_picture_sent">Imagine partajată</string>
+    <string name="conversation_groups_alt_sticker_sent">Autocolant partajat</string>
+    <string name="conversation_incoming_invite_req">%1$s doreşte să invite pe %2$s la chat.</string>
     <string name="conversation_incoming_invite_req_accepted">Aţi adăugat <b>%1$s</b></string>
-    <string name="conversation_incoming_invite_req_denied">Aţi respins solicitarea lui &lt;b>%1$s&lt;/b> de a invita pe &lt;b>%2$s&lt;/b></string>
-    <string name="conversation_invite_accept_button">Se permite</string>
-    <string name="conversation_invite_reject_button">Respingere</string>
-    <string name="conversation_invited">&lt;b>%1$s&lt;/b> a acceptat solicitarea dvs. de a invita pe &lt;b>%2$s&lt;/b></string>
-    <string name="conversation_is_already_in_the_chat">&lt;b>%1$s&lt;/b> participă deja la chat</string>
+    <string name="conversation_incoming_invite_req_denied">Aţi respins solicitarea lui %1$s de a invita pe %2$s</string>
+    <string name="conversation_invite_accept_button">ACCEPTARE</string>
+    <string name="conversation_invite_reject_button">RESPINGERE</string>
+    <string name="conversation_invited">%1$s a acceptat solicitarea dvs. de a invita pe %2$s</string>
+    <string name="conversation_is_already_in_the_chat">%1$s participă deja la chat</string>
     <string name="conversation_is_writing_a_message">scrie un mesaj...</string>
-    <string name="conversation_joined_the_chat">&lt;b>%1$s&lt;/b> s-a alăturat chatului</string>
-    <string name="conversation_left_the_chat">&lt;b>%1$s&lt;/b> a părăsit chatul</string>
+    <string name="conversation_joined_the_chat">%1$s s-a alăturat chatului</string>
+    <string name="conversation_left_the_chat">%1$s a părăsit chatul</string>
     <string name="conversation_location_message_accurace_within">Precis în limita a %1$sm</string>
     <string name="conversation_location_received">Locaţie primită</string>
     <string name="conversation_location_sent">Locaţie trimisă</string>
+    <string name="conversation_message_edit_title">Editare mesaj</string>
+    <string name="conversation_message_editing">Editare: %1$s</string>
+    <string name="conversation_message_editing_removed">Editare mesaj ştearsă</string>
     <string name="conversation_message_recall_failed">Mesajul nu a putut fi retras.</string>
     <string name="conversation_message_recall_pending">Retragere mesaj</string>
     <string name="conversation_message_recalled">Mesaj retras</string>
+    <string name="conversation_mpc_header">Chat</string>
     <string name="conversation_must_reinvite">Nu sunteţi în lista de contacte a lui %1$s. Doriţi să trimiteţi din nou invitaţia către %1$s?</string>
     <string name="conversation_notification_calendar_received">Întâlnire primită</string>
     <string name="conversation_notification_calendar_sent">Întâlnire trimisă</string>
-    <string name="conversation_notification_conf_incoming_invite_req">&lt;b>%1$s&lt;/b> doreşte să invite pe cineva la chat</string>
-    <string name="conversation_notification_conf_invited">&lt;b>%1$s&lt;/b> a fost invitat la chat</string>
-    <string name="conversation_notification_conf_outgoing_invite_req">Aţi invitat pe &lt;b>%1$s&lt;/b> la chat</string>
-    <string name="conversation_notification_conf_outgoing_invite_req_denied">Solicitarea dvs. de a invita pe &lt;b>%1$s&lt;/b> a fost respinsă</string>
-    <string name="conversation_notification_conf_we_joined">&lt;b>%1$s&lt;/b> v-a invitat la chat</string>
+    <string name="conversation_notification_conf_incoming_invite_req">%1$s doreşte să invite pe cineva la chat</string>
+    <string name="conversation_notification_conf_invited">%1$s a fost invitat la chat</string>
+    <string name="conversation_notification_conf_outgoing_invite_req">Aţi invitat pe %1$s la chat</string>
+    <string name="conversation_notification_conf_outgoing_invite_req_denied">Solicitarea dvs. de a invita pe %1$s a fost respinsă</string>
+    <string name="conversation_notification_conf_we_joined">%1$s v-a invitat la chat</string>
     <string name="conversation_notification_contact_card_received">Carte de vizită primită</string>
     <string name="conversation_notification_contact_card_sent">Carte de vizită trimisă</string>
     <string name="conversation_notification_default_incomming">Mesaj primit</string>
@@ -719,16 +786,17 @@
     <string name="conversation_notification_sticker_sent">Etichetă adezivă trimisă</string>
     <string name="conversation_notification_voice_note_received">Notă vocală primită</string>
     <string name="conversation_notification_voice_note_sent">Notă vocală trimisă</string>
-    <string name="conversation_outgoing_invite_req">Solicitarea dvs. de a invita pe &lt;b>%1$s&lt;/b> a fost trimisă către &lt;b>%2$s&lt;/b></string>
-    <string name="conversation_outgoing_invite_req_denied">&lt;b>%1$s&lt;/b> a respins solicitarea dvs. de a invita pe &lt;b>%2$s&lt;/b></string>
+    <string name="conversation_outgoing_invite_req">Solicitarea dvs. de a invita pe %1$s a fost trimisă către %2$s</string>
+    <string name="conversation_outgoing_invite_req_denied">%1$s a respins solicitarea dvs. de a invita pe %2$s</string>
     <string name="conversation_picture">Imagine primită</string>
     <string name="conversation_ping">PING!!!</string>
-    <string name="conversation_reinvite_accept_button">Reinvitare</string>
-    <string name="conversation_reinvite_reject_button">Ştergere contact</string>
+    <string name="conversation_reinvite_accept_button">REINVITARE</string>
+    <string name="conversation_reinvite_reject_button">ŞTERGERE CONTACT</string>
     <string name="conversation_send_button">Trimitere</string>
     <string name="conversation_share_max_participants">Prea mulţi participanţi la chat (numărul maxim este de %1$s).</string>
     <string name="conversation_successfully_saved_picture">Imaginea a fost salvată cu succes</string>
     <string name="conversation_successfully_saved_voice_note">Notă vocală salvată cu succes</string>
+    <string name="conversation_toast_blocked_chat">Aţi blocat acest chat. Toate mesajele au fost şterse.</string>
     <string name="conversation_toast_ended_chat">Chat încheiat</string>
     <string name="conversation_toast_ended_chat_no_history">Chat încheiat. Toate mesajele au fost şterse.</string>
     <string name="conversation_toast_left_chat">Aţi părăsit chatul</string>
@@ -736,7 +804,7 @@
     <string name="conversation_unable_to_save_picture">Imaginea nu poate fi salvată</string>
     <string name="conversation_unable_to_save_voice_note">Nota vocală nu se poate salva</string>
     <string name="conversation_voice_note_transfert">Notă vocală primită</string>
-    <string name="conversation_you_invited">Aţi invitat pe &lt;b>%1$s&lt;/b> la chat</string>
+    <string name="conversation_you_invited">Aţi invitat pe %1$s la chat</string>
     <string name="conversation_you_joined_the_chat">V-aţi alăturat chatului</string>
     <string name="copied_group_passphrase">Frază de acces copiată</string>
     <string name="copied_group_passphrase_toast">Copiat(e) în clipboard</string>
@@ -751,6 +819,26 @@
     <string name="creating_channel_toast_string">Se creează canalul</string>
     <string name="creating_private_channel_confirmation">Această acţiune nu este reversibilă. Sunteţi sigur că doriţi ca acest canal să devină privat?</string>
     <string name="current">Curent</string>
+    <string name="custom_pin_activity_title">PIN personalizat</string>
+    <string name="custom_pin_already_set">Aţi creat deja un PIN personalizat.</string>
+    <string name="custom_pin_confirm_postivie_text">Este corect</string>
+    <string name="custom_pin_confirm_text">Acest text va fi PIN-ul dvs. personalizat pentru BBM. Este corect?</string>
+    <string name="custom_pin_friends_ad_link">Accesaţi Magazinul BBM</string>
+    <string name="custom_pin_friends_ad_text">Revendicaţi PIN-ul personalizat pentru BBM chiar acum:</string>
+    <string name="custom_pin_get_your_custom_pin">Revendicaţi-vă PIN-ul personalizat pentru BBM chiar acum: vizitaţi magazinul BBM</string>
+    <string name="custom_pin_hint_text">Introduceţi un PIN personalizat</string>
+    <string name="custom_pin_legal">"A sosit momentul să creaţi un PIN personalizat. Nu vă grăbiţi, pentru că nu îl puteţi modifica ulterior. PIN-ul dvs. personalizat este asociat la BBM atâta timp cât este activ abonamentul.
+
+Instrucţiuni:
+* trebuie să fie format din 6 până la 8 caractere
+* poate include numere, litere, caractere de subliniere, cratime
+* trebuie să includă un caracter de subliniere, o cratimă sau o literă între G şi Z"</string>
+    <string name="custom_pin_not_subscribed">Personalizare PIN</string>
+    <string name="custom_pin_share_to_feed_body">Vă puteţi anunţa contactele despre faptul că aţi primit PIN-ul personalizat: %1$s</string>
+    <string name="custom_pin_shared_feed_item">Tocmai am primit un PIN personalizat nou pentru BBM: %1$s. Pentru a vă personaliza PIN-ul, atingeţi http://shop.bbm.com/item/custom_pin</string>
+    <string name="custom_pin_terms_conditions">&lt;p>&lt;b>Instrucţiuni pentru PIN-ul BBM personalizat&lt;/b>&lt;/p> &lt;p>Un PIN personalizat este un mod amuzant de a vă personaliza contul BBM. Un PIN personalizat nu înlocuieşte PIN-ul curent (consultaţi \"Ce este un PIN?\" din secţiunea de întrebări frecvente de pe www.bbm.com pentru informaţii suplimentare despre PIN-urile obişnuite). Acesta este un al doilea PIN care este afişat în profilul dvs. BBM şi poate fi utilizat pentru a invita şi pentru a primi invitaţii de la alţi utilizatori BBM.&lt;/p> &lt;p>Mai jos veţi găsi câteva elemente de reţinut atunci când creaţi un PIN personalizat:&lt;/p> &lt;p>&amp;#8226 nu puteţi revendica un PIN personalizat care este utilizat de altcineva;&lt;/p> &lt;p>&amp;#8226 dacă nu reînnoiţi abonamentul înainte de expirarea acestuia, nu veţi mai putea utiliza PIN-ul personalizat şi acesta ar putea fi revendicat de către un alt abonat;&lt;/p> &lt;p>&amp;#8226 alegeţi cu atenţie PIN-ul personalizat. După ce a fost creat, acesta nu mai poate fi modificat pe durata abonamentului.&lt;/p> &lt;p>&amp;#8226 pentru ca PIN-ul dvs. personalizat să fie uşor de deosebit de un PIN BBM standard, acesta trebuie să respecte următoarele cerinţe: &lt;/p> &lt;p> - trebuie să conţină între 6 şi 8 caractere;&lt;/p> &lt;p> - poate include numere, litere, caractere de subliniere, cratime;&lt;/p> &lt;p> - trebuie să includă un caracter de subliniere, o cratimă sau o literă între G şi Z;&lt;/p> &lt;p>&amp;#8226 PIN-urile personalizate nu trebuie să conţină limbaj abuziv, denigrant, calomnios, obscen, profan, ilegal sau înşelător sau să fie utilizate în scopuri ilegale;&lt;/p> &lt;p>&amp;#8226 PIN-urile personalizate nu pot fi utilizate pentru a imita o persoană, o marcă, o organizaţie sau un eveniment sau pentru a induce în eroare, confuza sau înşela alte persoane;&lt;/p> &lt;p>&amp;#8226 PIN-urile personalizate nu trebuie să încalce drepturile, inclusiv drepturile de proprietate intelectuală, ale altor persoane, mărci, organizaţii sau evenimente. De exemplu, PIN-ul dvs. personalizat nu poate încălca drepturile de marcă comercială ale altei persoane sau entităţi.&lt;/p> &lt;p>&amp;#8226 BlackBerry îşi rezervă dreptul de a respinge, elimina şi/sau recupera orice PIN personalizat în orice moment, indiferent de motiv, în baza oricăror termeni de achiziţie/oricărei politici de rambursare aplicabili(ă).&lt;/p></string>
+    <string name="custom_pin_title">PIN personalizat:</string>
+    <string name="custom_pin_warning_on_repurchase">Pentru a vă păstra PIN-ul personalizat curent, poate fi necesar să achiziţionaţi un abonament nou, apoi să anulaţi abonamentul vechi. Pentru informaţii suplimentare, vizitaţi: %1$s</string>
     <string name="date">Dată</string>
     <string name="date_of_birth"><b>Data naşterii</b></string>
     <string name="date_of_birth_fail_age_limit">Nu sunteţi suficient de în vârstă pentru a utiliza BBM Channels.</string>
@@ -777,6 +865,7 @@
     <string name="dialog_invite_security_question_tip">Sugestie: În cadrul răspunsurilor se ţine cont de litere mari/mici.</string>
     <string name="dialog_invite_security_question_title">Întrebare de securitate</string>
     <string name="did_you_know">Ştiaţi că?</string>
+    <string name="different_platform_string">Aveţi un abonament cu opţiune de reînnoire automată, care a fost achiziţionat de pe un alt dispozitiv. Doriţi să vă abonaţi de pe acest dispozitiv?</string>
     <string name="discard">Renunţare</string>
     <string name="display_name"><i>Nume afişat</i></string>
     <string name="do_you_want_to_switch_your_bbm_information_to_your_current_device">Doriţi să comutaţi informaţiile dvs. BBM pe dispozitivul curent?</string>
@@ -793,10 +882,19 @@
     <string name="enter_an_address">Introduceţi o adresă</string>
     <string name="enter_comment"><i>Introduceţi un comentariu</i></string>
     <string name="enter_date_of_birth">Introduceţi data naşterii pentru a putea accesa BBM Channels</string>
-    <string name="enter_passphrase">Introduceţi fraza de acces</string>
+    <string name="enter_passphrase">INTRODUCEŢI FRAZA DE ACCES</string>
     <string name="enter_passphrase_hint"><i>Introduceţi fraza de acces</i></string>
     <string name="enter_text"><i>Introduceţi textul</i></string>
     <string name="entered_passphrase_incorrect">Fraza de acces introdusă este incorectă.</string>
+    <string name="entitlement_dialog_title">Abonare necesară</string>
+    <string name="entitlement_edit_dialogue">"S-a încheiat perioada de încercare pentru caracteristica de editare a mesajelor. 
+Pentru a beneficia de acces nelimitat la această caracteristică, puteţi achiziţiona un abonament."</string>
+    <string name="entitlement_privateconv_dialogue">"S-a încheiat perioada de încercare pentru caracteristica Chat privat. 
+Pentru a beneficia de acces nelimitat la această caracteristică, puteţi achiziţiona un abonament."</string>
+    <string name="entitlement_retracted_dialogue">"S-a încheiat perioada de încercare pentru funcţionalitatea de retragere a mesajelor. 
+Pentru a beneficia de acces nelimitat la această fundcţionalitate, puteţi achiziţiona un abonament."</string>
+    <string name="entitlement_timed_dialogue">"S-a încheiat perioada de încercare pentru mesajele cu limită de timp. 
+Pentru a beneficia de acces nelimitat la această caracteristică, puteţi achiziţiona un abonament."</string>
     <string name="ephemeral_hint_received">A fost primit un mesaj cu limită de timp. Atingeţi lung pentru vizualizare.</string>
     <string name="ephemeral_hint_sent">Mesaj cu limită de timp.</string>
     <string name="ephemeral_hint_viewed">A fost primit un mesaj cu limită de timp. Expirat</string>
@@ -808,7 +906,7 @@
     <string name="ephemeral_picture_sent">Imagine cu limită de timp.</string>
     <string name="ephemeral_setting">Mesaje cu limită de timp</string>
     <string name="ephemeral_tech_tip_body">Setaţi un cronometru pentru a stabili cât timp vor putea vizualiza contactele mesajul sau imaginea dvs. înainte de autodistrugere.</string>
-    <string name="ephemeral_tech_tip_title">Mesaje cu limită de timp</string>
+    <string name="ephemeral_tech_tip_title">Mesaje cu lim. de timp</string>
     <string name="ephemeral_unsupport_toast">Limita de timp a fost eliminată. Acest tip de ataşament nu este compatibil cu această caracteristică.</string>
     <string name="error_network_failure"><i>Eroare de reţea</i></string>
     <string name="exit">Ieşire</string>
@@ -896,15 +994,17 @@
     <string name="filter_by">Filtrare după</string>
     <string name="find_friend_allow_upload_dialog_double_check_text">Sunteţi sigur? Dacă nu permiteţi BBM să vă acceseze contactele, va trebui să adăugaţi contactele BBM manual.</string>
     <string name="find_friend_allow_upload_dialog_double_check_title">Nerecomandat</string>
-    <string name="find_friend_allow_upload_dialog_title">Căutare prieteni în BBM</string>
-    <string name="find_friend_allow_upload_text">Permiteţi BBM să acceseze periodic contactele pentru a vă ajuta să găsiţi şi să adăugaţi prieteni.</string>
+    <string name="find_friend_allow_upload_dialog_title">Căutare prieteni</string>
+    <string name="find_friend_allow_upload_text">BBM poate accesa contactele pentru a vă ajuta să vă găsiţi prietenii. Puteţi decide ce prieteni doriţi să adăugaţi la BBM.</string>
     <string name="find_friend_category_get_bbm">Invitaţie la descărcare</string>
     <string name="find_friend_category_invite">Atingeţi pentru a adăuga</string>
     <string name="find_friends">Căutare prieteni în BBM</string>
-    <string name="find_more_friends">Căutaţi mai mulţi prieteni</string>
-    <string name="first_launch_after_upgrade_privacy_terms">Sunt de acord cu &lt;b>&lt;a href=http://www.blackberry.com/legal/privacy>Politica de confidenţialitate&lt;/a>&lt;/b> şi &lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>Termenii de utlizare&lt;/a>&lt;/b></string>
-    <string name="first_launch_after_upgrade_subtitle">Adăugaţi un plus de amuzament chat-urilor prin BBM cu ajutorul autocolantelor. Disponibil acum.</string>
-    <string name="first_launch_after_upgrade_title">Trimiteţi autocolante!</string>
+    <string name="find_more_friends">Găsire prieteni</string>
+    <string name="first_launch_after_upgrade_privacy_terms">Am actualizat &lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>Condiţiile de utilizare&lt;/a>&lt;/b>. Făcând clic pe Continuare, sunteţi de acord cu &lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>Condiţiile de utilizare&lt;/a>&lt;/b> şi &lt;b>&lt;a href=http://www.blackberry.com/legal/privacy>Politica de confidenţialitate&lt;/a>&lt;/b></string>
+    <string name="first_launch_after_upgrade_subtitle">Creaţi-vă un PIN BBM care să vă caracterizeze. Revendicaţi-vă PIN-ul personalizat chiar azi.</string>
+    <string name="first_launch_after_upgrade_title">La fel de unic ca şi dvs.</string>
+    <string name="first_name">Prenume</string>
+    <string name="first_name_hint">Introduceţi prenumele</string>
     <string name="flagged_comments_header">Comentarii</string>
     <string name="flagged_posts_header">Postări</string>
     <string name="format_not_supported_for_cropping">Acest format nu este acceptat pentru decupare</string>
@@ -912,6 +1012,7 @@
     <string name="general">Generalităţi</string>
     <string name="glympse">Glympse</string>
     <string name="glympse_attach">Ataşare glympse</string>
+    <string name="glympse_duration_hourminutes">%1$d:%2$02d rămase</string>
     <string name="glympse_duration_minutes">Durată: %1$d min.</string>
     <string name="glympse_expired">Expirat</string>
     <string name="glympse_expires_at">Partajare până la %1$s</string>
@@ -946,6 +1047,7 @@
     <string name="glympse_update">Actualizare glympse</string>
     <string name="glympse_user_selector_item_all_user_currently_sharing">Toţi utilizatorii care partajează în acest moment</string>
     <string name="glympse_user_selector_item_speed">Viteză (km/h): %1$s</string>
+    <string name="glympse_user_selector_item_speed_na">Viteză (km/h): N/A</string>
     <string name="glympse_user_selector_item_updated_d_ago">Ultima actualizare: cu %1$d zile în urmă</string>
     <string name="glympse_user_selector_item_updated_h_m">Ultima actualizare: %1$d: cu %2$s în urmă</string>
     <string name="glympse_user_selector_item_updated_m_ago">Ultima actualizare: cu %1$d minute în urmă</string>
@@ -979,9 +1081,11 @@
     <string name="group_add_list_title_hint"><i>Titlu listă</i></string>
     <string name="group_admin_about">Despre administratorii de grup</string>
     <string name="group_admin_text">Administratorii pot:</string>
+    <string name="group_autopassphrase_details">Frază de acces automată activată</string>
     <string name="group_barcode_info">Un contact poate scana acest cod de bare pentru a se alătura grupului dvs.</string>
     <string name="group_barcode_scan_rejected_user_not_protected">Nu vă este permis să vă alăturaţi acestui grup.</string>
     <string name="group_cancel">Anulare</string>
+    <string name="group_cannot_delete_conversation">Această conversaţie nu poate fi ştearsă</string>
     <string name="group_chat_exists">Subiectul de chat există deja</string>
     <string name="group_chat_general_discussion">Discuţie generală</string>
     <string name="group_chat_history_days_1">1 zi</string>
@@ -1000,6 +1104,8 @@
     <string name="group_conversation_email_chat_message_header">De la grupul: %1$s</string>
     <string name="group_conversation_email_chat_subject">Chat-ul lui %1$s: %2$s</string>
     <string name="group_conversation_is_writing_a_message">" scrie…"</string>
+    <string name="group_conversation_picture_loading">Încărcare imagine...</string>
+    <string name="group_conversation_picture_not_available">Imaginea nu este disponibilă</string>
     <string name="group_conversation_slide_menu_chat_history">Istoric chaturi</string>
     <string name="group_conversation_slide_menu_clear_chat">Golire chat</string>
     <string name="group_conversation_slide_menu_copy_chat">Copiere chat</string>
@@ -1009,6 +1115,7 @@
     <string name="group_delete_picture">Ştergere imagine</string>
     <string name="group_delete_q">Ştergeţi grupul?</string>
     <string name="group_done">Finalizare</string>
+    <string name="group_edit_admin_cannot_remove_self">Nu vă puteţi auto-elimina ca administrator</string>
     <string name="group_edit_caption">Editare legendă</string>
     <string name="group_edit_list_title">Detalii element</string>
     <string name="group_event_all_day">Toată ziua</string>
@@ -1031,15 +1138,15 @@
     <string name="group_events_time_notice">Ora de terminare trebuie să fie ulterioară orei de începere</string>
     <string name="group_invitation_was_received">Aţi fost invitat la un grup cu glympse-uri</string>
     <string name="group_invite_bbg_uri">%1$s</string>
-    <string name="group_invite_email_message">"-----\ufffc----
-Doresc să vă invit să vă alăturaţi grupului meu denumit %1$s.
+    <string name="group_invite_email_message">"Doresc să vă invit să vă alăturaţi grupului meu denumit \"%1$s\". Pentru a vă alătura grupului de pe un dispozitiv mobil, faceți clic pe:
+%2$s
 
-Pe Android sau iPhone, faceţi clic pe %2$s pentru a vă alătura grupului sau pentru a descărca BBM.
 
 %3$s"</string>
-    <string name="group_invite_email_subject">Alăturaţi-vă grupului meu BlackBerry!</string>
+    <string name="group_invite_email_subject">Invitaţie la BBM Group de la %1$s</string>
     <string name="group_invite_enter_passphrase">Pentru a vă alătura acestui grup, introduceţi fraza de acces furnizată de un membru al grupului.</string>
     <string name="group_invite_enter_passphrase_multi_attempts">Frază de acces incorectă. Pentru a vă alătura acestui grup, introduceţi fraza de acces furnizată de un membru al grupului. (%1$d/%2$d)</string>
+    <string name="group_invite_expired">Invitaţia la grup a expirat</string>
     <string name="group_invite_message_default">Doresc să vă invit să vă alăturaţi grupului meu denumit: %1$s</string>
     <string name="group_invite_status_enter_passphrase_max_attempts_reached">Frază de acces incorectă. Pentru a vă alătura la acest grup, trebuie să fiţi invitat din nou.</string>
     <string name="group_invite_status_enter_passphrase_multi_attempts">Frază de acces incorectă. Pentru a vă alătura acestui grup, introduceţi fraza de acces furnizată de un membru al grupului.</string>
@@ -1082,6 +1189,11 @@ Pe Android sau iPhone, faceţi clic pe %2$s pentru a vă alătura grupului sau p
     <string name="group_passphrase_info">Puteţi comunica o frază de acces pe care persoanele invitate vor trebui să o introducă în momentul alăturării la grup.</string>
     <string name="group_passphrase_missing">Frază de acces indisponibilă</string>
     <string name="group_picture_add">Adăugare imagine</string>
+    <string name="group_picture_add_failed__wrong_picture_type">@string/avatar_file_not_support</string>
+    <string name="group_picture_add_failed_file_access_error">@string/filetransfer_abort_filenotfound</string>
+    <string name="group_picture_add_failed_file_does_not_exist">@string/filetransfer_abort_filenotfound</string>
+    <string name="group_picture_add_failed_picture_too_big">@string/conversation_file_image_transfer_canceled_dialog_too_large</string>
+    <string name="group_picture_add_failed_resize_error">@string/conversation_unable_to_save_picture</string>
     <string name="group_picture_added_days">Adăugată acum %1$d zile de %2$s</string>
     <string name="group_picture_added_today">Adăugată astăzi la %1$s de %2$s</string>
     <string name="group_picture_added_yesterday">Adăugată ieri de către %1$s</string>
@@ -1156,7 +1268,7 @@ Pe Android sau iPhone, faceţi clic pe %2$s pentru a vă alătura grupului sau p
     <string name="hdimage_prompt_message">Doriţi să acceptaţi în mod automat solicitările viitoare de imagini HD?</string>
     <string name="hdimage_prompt_title">Se acceptă întotdeauna solicitările</string>
     <string name="help">Asistenţă</string>
-    <string name="help_url">http://docs.blackberry.com/bbm/25/android/ro</string>
+    <string name="help_url">http://help.blackberry.com/detectLang/bbm-for-android/current/</string>
     <string name="high_priority">Prioritate ridicată</string>
     <string name="hint_protected_enabled_chat"><i>Protected. Introduceţi un mesaj</i></string>
     <string name="history_clear_one_history_text">Golire</string>
@@ -1185,6 +1297,7 @@ Pe Android sau iPhone, faceţi clic pe %2$s pentru a vă alătura grupului sau p
     <string name="introducing_channels_second_part">Abonaţii dvs. primesc ultimele informaţii prin BBM şi îşi pot împărtăşi gândurile.</string>
     <string name="introducing_channels_title">Prezentare BBM Channels</string>
     <string name="invalid_passphrase_toast">Frază de acces nevalidă</string>
+    <string name="invitation_received">Invitaţie primită</string>
     <string name="invitation_rejected_invitee_not_protected_message">%1$s nu se poate alătura acestui grup. Nu se pot alătura decât contacte BBM Protected.</string>
     <string name="invitation_rejected_invitee_not_protected_title">Utilizatorul nu poate fi invitat să se alăture</string>
     <string name="invitation_sent">Invitaţie trimisă</string>
@@ -1192,10 +1305,8 @@ Pe Android sau iPhone, faceţi clic pe %2$s pentru a vă alătura grupului sau p
     <string name="invite_activity_category">Categorie</string>
     <string name="invite_activity_lookup">Căutare...</string>
     <string name="invite_activity_mail">E-mail: %1$s</string>
-    <string name="invite_activity_mail_body">"Doresc să vă invit la chat pe BBM.
-
-Pentru a ne conecta pe BBM, faceţi clic pe
-%1s
+    <string name="invite_activity_mail_body">"Doresc să vă invit la chat pe BBM. Pentru a ne conecta pe BBM de pe dispozitivul mobil, faceţi clic pe:
+%1$s
 "</string>
     <string name="invite_activity_mail_subject">Invitaţie BBM de la %1$s</string>
     <string name="invite_activity_phone">Telefon: %1$s</string>
@@ -1203,12 +1314,12 @@ Pentru a ne conecta pe BBM, faceţi clic pe
     <string name="invite_activity_security_custom_question">Introduceţi o întrebare</string>
     <string name="invite_activity_security_custom_response">Introduceţi un răspuns</string>
     <string name="invite_activity_security_label">Întrebare de securitate</string>
-    <string name="invite_activity_sms_body">Adaugaţi-mă la BBM! Pe BlackBerry, faceţi clic pe PIN: %1$s şi selectaţi \"Invitare la BBM\". Pe dispozitive Android sau iPhone, faceţi clic pe www.pin.bbm.com/%1$s pentru a mă adăuga sau pentru a descărca BBM.</string>
+    <string name="invite_activity_sms_body">Adăugaţi-mă la BBM! Faceți clic pe www.pin.bbm.com/%1$s</string>
     <string name="invite_activity_to">Către:</string>
     <string name="invite_bbm_contact">Adăugare contact BBM</string>
     <string name="invite_bbm_invites">Invitaţii BBM</string>
-    <string name="invite_button_join">Participare</string>
-    <string name="invite_button_preview">Previzualizare</string>
+    <string name="invite_button_join">PARTICIPARE</string>
+    <string name="invite_button_preview">PREVIZUALIZARE</string>
     <string name="invite_by_barcode">Invitare prin cod de bare</string>
     <string name="invite_by_email">Invitaţie prin e-mail</string>
     <string name="invite_by_other">Invitaţie prin SMS sau PIN</string>
@@ -1272,6 +1383,8 @@ Pentru a ne conecta pe BBM, faceţi clic pe
     <string name="key_exchange_hint_waiting_to_enter_passphrase">Introduceţi fraza de acces pentru a vă alătura</string>
     <string name="key_exchange_hint_waiting_to_join">Se aşteaptă alăturarea utilizatorului %1$s</string>
     <string name="key_exchange_status_accepted">Frază de acces acceptată</string>
+    <string name="last_name">Nume de familie</string>
+    <string name="last_name_hint">Introduceţi numele de familie</string>
     <string name="learn_more_about_bbm_pins">Aflaţi mai multe despre PIN-urile BBM</string>
     <string name="learn_more_about_restoring_bbm_data">Mai multe despre restaurarea datelor BBM.</string>
     <string name="leave_channel">Părăsire canal</string>
@@ -1293,6 +1406,8 @@ Pentru a ne conecta pe BBM, faceţi clic pe
     <string name="location_service_failed">Locaţia nu a putut fi preluată</string>
     <string name="low_battey_warning">Pauză din cauza bateriei descărcate. Faceţi clic pentru reluare.</string>
     <string name="low_priority">Prioritate scăzută</string>
+    <string name="main_drawer_close">Închidere sertar</string>
+    <string name="main_drawer_open">Deschidere sertar</string>
     <string name="main_mood_status_format">%1$s - %2$s</string>
     <string name="main_status_available">Disponibil</string>
     <string name="main_status_busy">Ocupat</string>
@@ -1304,13 +1419,15 @@ Pentru a ne conecta pe BBM, faceţi clic pe
     <string name="menu_end_chat">Încheiere chat</string>
     <string name="menu_help">Asistenţă</string>
     <string name="menu_history">Istoric</string>
+    <string name="menu_leave_chat">Părăsire chat</string>
     <string name="menu_settings">Setări</string>
     <string name="menu_share">Partajare</string>
-    <string name="message_button_accept">Acceptare</string>
-    <string name="message_button_allow">Acceptare</string>
-    <string name="message_button_cancel">Anulare</string>
-    <string name="message_button_decline">Refuz</string>
-    <string name="message_button_deny">Respingere</string>
+    <string name="message">Mesaj</string>
+    <string name="message_button_accept">ACCEPTARE</string>
+    <string name="message_button_allow">ACCEPTARE</string>
+    <string name="message_button_cancel">ANULARE</string>
+    <string name="message_button_decline">REFUZ</string>
+    <string name="message_button_deny">RESPINGERE</string>
     <string name="message_copied">Mesaj copiat</string>
     <string name="message_recall_tech_tip_body">"Nu aţi intenţionat să trimiteţi mesajul?
 Atingeţi lung mesajul pentru a-l retrage din chatul BBM al celeilalte persoane."</string>
@@ -1323,6 +1440,7 @@ Atingeţi lung mesajul pentru a-l retrage din chatul BBM al celeilalte persoane.
     <string name="message_with_context_new_contact">Despre noul dvs. contact:</string>
     <string name="message_with_context_now_playing">Despre ceea ce se redă acum:</string>
     <string name="message_with_context_personal_message">Despre mesajul dvs. personal:</string>
+    <string name="message_with_context_quote">%1$s a scris: \"%2$s\"</string>
     <string name="message_with_context_real_time_location">Despre locaţia dvs.:</string>
     <string name="more">Mai multe</string>
     <string name="msg_bulk_mode_scanned">Mod grup: cod de bare scanat şi salvat</string>
@@ -1360,6 +1478,11 @@ Atingeţi lung mesajul pentru a-l retrage din chatul BBM al celeilalte persoane.
     <string name="my_channels_fragment_mark_favorite">Marcare ca Preferinţă</string>
     <string name="my_channels_fragment_remove_favorite">Eliminare din Preferinţe</string>
     <string name="mybbmbarcode">Codul meu de bare BBM</string>
+    <string name="nav_chats">Chaturi BBM</string>
+    <string name="nav_contacts">Contacte BBM</string>
+    <string name="nav_feeds">Fluxuri BBM</string>
+    <string name="nav_feeds_all">Toate fluxurile BBM</string>
+    <string name="nav_groups">Grupuri BBM</string>
     <string name="network_settings_dialog_text">Pentru a continua, conectaţi-vă la o reţea Wi-Fi sau mobilă.</string>
     <string name="network_settings_dialog_title">Nicio conexiune la reţea</string>
     <string name="new_channel_email_addresss">Adresă de e-mail</string>
@@ -1368,6 +1491,7 @@ Atingeţi lung mesajul pentru a-l retrage din chatul BBM al celeilalte persoane.
     <string name="new_chat_topic">Subiect nou de chat</string>
     <string name="new_string">NOU</string>
     <string name="next">Următorul</string>
+    <string name="no">Nu</string>
     <string name="no_active_glympses">Niciun glympse activ</string>
     <string name="no_blackberry_data">Nu există date BlackBerry</string>
     <string name="no_blocked_invites">Contactele pot fi adăugate în această listă atunci când ignoraţi o invitaţie sau ştergeţi un contact.</string>
@@ -1378,6 +1502,7 @@ Atingeţi lung mesajul pentru a-l retrage din chatul BBM al celeilalte persoane.
     <string name="no_connection_found">Nicio conexiune găsită</string>
     <string name="no_current_chat">Nu există chaturi</string>
     <string name="no_network_connection">Lipsă conexiune la reţea</string>
+    <string name="no_picture">Nicio imagine disponibilă</string>
     <string name="no_pictures">Nicio imagine</string>
     <string name="no_posts">Nu pot fi afişate toate postările.</string>
     <string name="no_updates">Nu există elemente noi.</string>
@@ -1393,7 +1518,7 @@ Atingeţi lung mesajul pentru a-l retrage din chatul BBM al celeilalte persoane.
     <string name="notification_content_comment_on_post_multiple">%1$d persoane au comentat la postarea dvs.</string>
     <string name="notification_content_comment_on_post_single">%1$s a comentat la postarea dvs.</string>
     <string name="notification_content_favourite_multiple">%1$s a adăugat %2$d postări.</string>
-    <string name="notification_content_favourite_single">%1$s a adăugat %2$d postări.</string>
+    <string name="notification_content_favourite_single">%1$s a adăugat postări.</string>
     <string name="notification_group_invite">Invitaţie la grup</string>
     <string name="notification_group_message_ticker_format">%1$s (%2$s): %3$s</string>
     <string name="notification_group_picture">Imagini</string>
@@ -1428,6 +1553,19 @@ Atingeţi lung mesajul pentru a-l retrage din chatul BBM al celeilalte persoane.
 Pe dispozitivele BlackBerry, atingeţi pin:%2$s şi introduceţi fraza de acces."</string>
     <string name="out_of_band_passphrase_message_sms">Doresc să încep un chat BBM Protected cu dvs. Pe un dispozitiv BlackBerry, atingeţi %1$s. Introduceţi fraza de acces%2$s.</string>
     <string name="out_of_band_passphrase_subject">Chat BBM Protected</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_dialog_body">Această caracteristică este disponibilă doar pentru contactele BBM. Doriţi să adăugaţi contactul %1$s la Contacte BBM acum?</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_dialog_title">Adăugare la Contacte BBM</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_toast">Pentru a putea utiliza această opţiune, trebuie să adăugaţi această persoană la Contacte BBM.</string>
+    <string name="outer_circle_category_bbm_contacts">Contacte BBM</string>
+    <string name="outer_circle_category_phone_contacts">@string/outer_circle_category_phone_contacts_v1</string>
+    <string name="outer_circle_category_phone_contacts_v1">Contacte</string>
+    <string name="outer_circle_category_phone_contacts_v2">Contacte telefon</string>
+    <string name="outer_circle_category_phone_contacts_v3">Contacte dispozitiv</string>
+    <string name="outer_circle_contact_add_more_friends">Adăugare prieteni</string>
+    <string name="outer_circle_contact_menu_add_as_contact">Adăugare la Contacte BBM</string>
+    <string name="outer_circle_contact_menu_delete_and_block">Ştergere şi blocare</string>
+    <string name="outer_circle_find_other_bbm_user_body">Puteţi căuta automat utilizatori BBM pe care aţi putea să-i cunoaşteţi. Doriţi să permiteţi aplicaţiei BBM să acceseze aplicaţia Contacte?</string>
+    <string name="outer_circle_find_other_bbm_user_title">Căutare utilizatori BBM</string>
     <string name="overlay_bbm_ongoing_notification_reason">"De ce văd o pictogramă BBM în partea de sus a ecranului?
 
 Pictograma BBM apare în bara de stare deoarece BBM este întotdeauna pornit, deci sunteţi întotdeauna conectat."</string>
@@ -1461,13 +1599,13 @@ Pictograma BBM apare în bara de stare deoarece BBM este întotdeauna pornit, de
     <string name="partner_app_register_failed_dialog_outage_message">Nu a fost detectată nicio conexiune la reţea</string>
     <string name="partner_app_register_failed_dialog_title">Înregistrare în BBM</string>
     <string name="passphrase">Frază de acces</string>
-    <string name="passphrase_creation_details">Fraza de acces trebuie comunicată contactului dvs. BBM pentru ca acesta să poată alătura grupului. Trebuie să aibă cel puţin 4 majuscule.</string>
+    <string name="passphrase_creation_details">Fraza de acces trebuie comunicată contactului dvs. BBM pentru ca acesta să poată alătura grupului. Trebuie să aibă cel puţin 4 caractere. Utilizaţi litere, cifre sau ambele. Exemplu: TGRS, 2905, TIG8.</string>
     <string name="passphrase_incorrect">&lt;b>%1$s&lt;/b> nu a introdus fraza de acces corectă.</string>
     <string name="passphrase_initiated">Aţi comunicat fraza de acces &lt;b>%1$s&lt;/b> utilizatorului &lt;b>%2$s&lt;/b>.</string>
     <string name="passphrase_message_email">"Doresc să încep un chat BBM Protected cu dvs.
 ---o---
-Introduceţi fraza de acces \"%1$s\" după ce faceţi clic pe PIN-ul:%2$s sau %3$s"</string>
-    <string name="passphrase_message_sms">Alăturaţi-vă chatului meu BBM Protected! Introduceţi fraza de acces \"%1$s\" după ce faceţi clic pe PIN-ul:%2$s sau %3$s</string>
+Pentru a vă alătura acestui chat, faceţi clic pe PIN-ul: %1$s or %2$s. Dacă vi se solicită o frază de acces, introduceţi \"%3$s\"."</string>
+    <string name="passphrase_message_sms">Alăturaţi-vă chatului meu BBM Protected! Faceţi clic pe PIN-ul: %1$s sau %2$s. Dacă vi se solicită o frază de acces, introduceţi \"%3$s\".</string>
     <string name="passphrase_rules_details">Trebuie să fie formată din trei seturi a câte 4-7 majuscule, iar seturile trebuie separate prin spații. Exemplu: TIGRI MARO ÎNCHIS</string>
     <string name="passphrase_share_details">Cum doriţi să îi comunicaţi fraza de acces lui %1$s?</string>
     <string name="passphrase_wait_to_join">Se aşteaptă alăturarea utilizatorului &lt;b>%1$s&lt;/b></string>
@@ -1491,12 +1629,38 @@ Introduceţi fraza de acces \"%1$s\" după ce faceţi clic pe PIN-ul:%2$s sau %3
     <string name="pending_invite_group_too_many_members">Respins: Acest grup este deja plin.</string>
     <string name="pending_invite_pending">În curs</string>
     <string name="pending_invite_protected_group_invites_you_to">%1$s doreşte să vă invite la grupul numit \"%2$s\". Pentru a vă alătura acestui grup BBM Protected, trebuie să introduceţi fraza de acces furnizată de un membru al grupului.</string>
+    <string name="people">Persoane</string>
     <string name="personalize_profile_dialog_message">Atingeţi banner-ul pentru a deschide profilul BBM.</string>
     <string name="personalize_profile_dialog_title">Personalizare profil</string>
+    <string name="phone_contact_add">@string/phone_contact_add_v1</string>
+    <string name="phone_contact_add_v1">Adăugare contact BBM</string>
+    <string name="phone_contact_add_v2">Adăugare în BBM</string>
+    <string name="phone_contact_add_v3">Adăugare la Contacte BBM</string>
+    <string name="phone_contact_block">Blocare</string>
+    <string name="phone_contact_block_from_conversation_description">Toate invitaţiile şi chaturile viitoare de la %1$s vor fi blocate. Doriţi să blocaţi contactul %1$s?</string>
+    <string name="phone_contact_block_from_conversation_title">Blocare %1$s</string>
+    <string name="phone_contact_invitationsent">Invitaţie trimisă</string>
+    <string name="phone_contact_not_a_contact">Pentru a utiliza integral caracteristicile aplicaţiei BBM, trebuie să adăugaţi această persoană la Contacte BBM.</string>
+    <string name="phone_contact_reinvite_message">@string/phone_contact_reinvite_message_v1</string>
+    <string name="phone_contact_reinvite_message_v1">Pentru a adăuga contactul %1$s la Contacte BBM, atingeţi %2$s.</string>
+    <string name="phone_contact_reinvite_message_v2">Pentru a începe un chat, trebuie să adăugaţi contactul %1$s la Contacte BBM. Pentru a adăuga contactul %1$s la Contacte BBM, atingeţi %2$s din partea de sus a ferestrei de chat.</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_1">Există &lt;b>&lt;i>Contacte&lt;/i>&lt;/b> şi &lt;b>&lt;i>Contacte BBM&lt;/i>&lt;/b>.</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_2">&lt;b>&lt;i>Contactele&lt;/i>&lt;/b> sunt persoane din lista de contacte a dispozitivului dvs. care utilizează BBM.&lt;br/>&lt;br/> * Puteţi începe imediat chaturi cu contacte&lt;br/> * Nu sunt necesare invitaţii</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_3">&lt;b>&lt;i>Contactele BBM&lt;/i>&lt;/b> necesită invitaţii. Doar contactele BBM pot face următoarele:&lt;br/>&lt;br/> * Pot vedea imaginea dvs. afişată în BBM&lt;br/> * Pot vedea actualizările dvs. de status BBM&lt;br/> * Pot primi şi efectua apeluri prin BBM Voice.</string>
+    <string name="phone_contact_tutorial_conversation_section_1">Există &lt;b>&lt;i>Contacte&lt;/i>&lt;/b> şi &lt;b>&lt;i>Contacte BBM&lt;/i>&lt;/b>.</string>
+    <string name="phone_contact_tutorial_conversation_section_2">Acesta este un chat cu un &lt;b>&lt;i>contact&lt;/i>&lt;/b>. Această persoană nu poate vedea următoarele:&lt;br/>&lt;br/> * Imaginea dvs. afişată în BBM&lt;br/> * Actualizările dvs. de status BBM</string>
+    <string name="phone_contact_tutorial_conversation_section_3">Această persoană trebuie să utilizeze cea mai recentă versiune BBM pentru a conversa prin chat. Puteţi adăuga această persoană la &lt;b>&lt;i>Contacte BBM&lt;/i>&lt;/b> sau o puteţi bloca în orice moment.</string>
+    <string name="phone_contact_tutorial_profile_click_section_1">Există &lt;b>&lt;i>Contacte&lt;/i>&lt;/b> şi &lt;b>&lt;i>Contacte BBM&lt;/i>&lt;/b>.</string>
+    <string name="phone_contact_tutorial_profile_click_section_2">&lt;b>&lt;i>Contactele BBM&lt;/i>&lt;/b> necesită invitaţii şi pot face următoarele: &lt;br/>&lt;br/> * Vă pot vedea imaginea afişată, actualizările de status şi profilul BBM&lt;br/> * Vă pot apela prin BBM Voice&lt;br/> * Vă pot trimite mesaje difuzate</string>
+    <string name="phone_contact_tutorial_profile_click_section_3">&lt;b>&lt;i>Contactele&lt;/i>&lt;/b> sunt persoane din lista de contacte a dispozitivului dvs. care utilizează BBM. Pentru contacte nu sunt necesare invitaţii, dacă utilizează ultima versiune a BBM. În plus, puteţi utiliza caracteristicile de chat ale BBM, inclusiv: &lt;br/>&lt;br/> &amp;#8226; Notificări de livrare şi citire a mesajelor&lt;br/> &amp;#8226; Trimitere de imagini şi fişiere&lt;br/> &amp;#8226; Partajare a locaţiei prin Glympse.&lt;/html></string>
     <string name="pic_caption_hint"><i>Introduceţi o legendă</i></string>
+    <string name="picture">Imagine</string>
     <string name="picture_deleted">Imagine ştearsă</string>
+    <string name="picture_selection_limit_toast">Prea multe fişiere (numărul maxim este de 10).</string>
+    <string name="picture_selection_type_toast">La partajarea multiplă, este acceptat doar tipul Imagine.</string>
     <string name="pin_copied">PIN copiat</string>
     <string name="please_ensure_the_device_time_is_correctly_set">Asiguraţi-vă că ora dispozitivului este configurată corect şi încercaţi din nou.</string>
+    <string name="policy_change_title">Schimbare politică</string>
     <string name="post_removed">Această postare a fost ştearsă.</string>
     <string name="posts_caption">Postări</string>
     <string name="pref_add_contact_on_tap">Adăugare contacte la atingere</string>
@@ -1557,21 +1721,49 @@ Introduceţi fraza de acces \"%1$s\" după ce faceţi clic pe PIN-ul:%2$s sau %3
     <string name="preferences_vibrate_title">Vibraţii</string>
     <string name="private_channel">Canal privat</string>
     <string name="private_channel_description">Ascundeţi canalul din rezultatele de căutare pentru a fi disponibil exclusiv persoanelor pe care le invitaţi.</string>
+    <string name="private_chat">Chat privat</string>
+    <string name="private_chat_back_out_dialog_dont_ask_me_again">Nu doresc să fiu întrebat din nou.</string>
+    <string name="private_chat_back_out_dialog_text">Chatul dvs. privat se va încheia dacă nu reveniţi la chat în %1$d minut(e).</string>
+    <string name="private_chat_conversation_notification_title">%1$s doreşte să înceapă un chat cu dvs.</string>
+    <string name="private_chat_end_menu">Încheiere chat privat</string>
+    <string name="private_chat_entry_subtitle">Atingeţi pentru a reveni</string>
+    <string name="private_chat_menu">Începere chat privat</string>
+    <string name="private_chat_message_notification_title">Mesaj privat nou.</string>
+    <string name="private_chat_other_party_not_support">Acest contact are o versiune mai veche de BBM care nu este compatibilă cu chaturile private.</string>
+    <string name="private_chat_request_incoming_subtitle">Solicitare de chat privat</string>
+    <string name="private_chat_request_invite_bubble_message">"Doresc să încep un chat privat cu dvs. Pentru a vă alătura chatului privat, trebuie să descărcaţi cea mai recentă versiune a BBM. 
+
+Vizitaţi http://bbm.com/upgrade pentru a face upgrade la ultima versiune de BBM."</string>
+    <string name="private_chat_request_outgoing_subtitle">Solicitare de chat privat</string>
+    <string name="private_chat_stop_reason_busy">%1$s nu este disponibil pentru chat privat în acest moment.</string>
+    <string name="private_chat_stop_reason_cancelled">%1$s a anulat chatul privat.</string>
+    <string name="private_chat_stop_reason_declined">%1$s a refuzat chatul privat.</string>
+    <string name="private_chat_stop_reason_inactivity">Chatul dvs. privat s-a încheiat automat deoarece a devenit inactiv.</string>
+    <string name="private_chat_stop_reason_localended">Aţi încheiat chatul privat.</string>
+    <string name="private_chat_stop_reason_noresponse">%1$s nu a răspuns la solicitarea dvs. de chat privat.</string>
+    <string name="private_chat_stop_reason_remoteended">%1$s a încheiat chatul privat.</string>
+    <string name="private_chat_stop_reason_unknown">Chatul dvs. privat a fost deconectat. Vă rugăm să începeţi din nou chatul privat.</string>
+    <string name="private_chat_tutorial_description">"Numele şi imaginile de profil sunt ascunse.
+
+Chatul este şters automat de pe ambele dispozitive atunci când se încheie sau se devine inactiv.
+
+Notificările pentru mesaje private sunt discrete."</string>
     <string name="profile_barcode">Cod de bare</string>
+    <string name="profile_bbm_pin_label">PIN BBM</string>
     <string name="profile_copy_pin">Copiere PIN</string>
     <string name="profile_copypin">Copiere PIN</string>
     <string name="profile_default_pin">PIN: 00000000</string>
     <string name="profile_display_name_invalid">Semnele două puncte şi virgulă nu sunt acceptate în numele afişat</string>
+    <string name="profile_display_name_invalid_empty">Numele afişat nu poate fi necompletat</string>
     <string name="profile_icon_source_camera">Cameră foto</string>
     <string name="profile_icon_source_picture">Imagine</string>
     <string name="profile_icon_source_sample_picture">Imagine probă</string>
-    <string name="profile_location_label">Locaţie/fus orar:</string>
-    <string name="profile_mood_hint"><i>La ce te gândeşti?</i></string>
+    <string name="profile_location_label">Locaţie/fus orar</string>
+    <string name="profile_mood_hint"><i>La ce vă gândiţi?</i></string>
+    <string name="profile_name">Nume profil</string>
     <string name="profile_no_status_message">Niciun mesaj de status</string>
     <string name="profile_own_status_label">Status</string>
-    <string name="profile_pin">%1$s</string>
     <string name="profile_pin_copied">PIN copiat</string>
-    <string name="profile_pin_label">PIN:</string>
     <string name="profile_pinlabel">PIN:</string>
     <string name="profile_revert_display_name">Restaurare nume afişat</string>
     <string name="profile_selector_apps">Aplicaţii</string>
@@ -1579,27 +1771,40 @@ Introduceţi fraza de acces \"%1$s\" după ce faceţi clic pe PIN-ul:%2$s sau %3
     <string name="profile_selector_members">Membri</string>
     <string name="profile_selector_updates">Fluxuri</string>
     <string name="profile_share_pin">Partajare PIN</string>
+    <string name="profile_status_delete">Ştergere status</string>
+    <string name="profile_status_delete_info">Confirmaţi ştergerea acestui status?</string>
     <string name="profile_status_edit">Editare mesaje de status</string>
-    <string name="profile_status_label">Status:</string>
+    <string name="profile_user_has_subscription">Această persoană are un abonament.</string>
+    <string name="profile_user_view_all_sub">Vizualizare toate abonamentele BBM</string>
     <string name="prompt_change_bbm_picture">Schimbare imagine BBM?</string>
     <string name="prompted_after_rate_call">Vă mulţumim.</string>
     <string name="prompted_before_rate_call">Evaluaţi calitatea apelului</string>
     <string name="protected_group_invite_message_default">Doresc să vă invit să vă alăturaţi grupului meu denumit: \"%1$s\". Pentru a vă alătura acestui grup BBM Protected, trebuie să introduceţi fraza de acces furnizată de un membru al grupului.</string>
     <string name="protected_group_requires_join">Se aşteaptă confirmarea frazei de acces pentru restaurarea grupului protejat</string>
     <string name="protected_mode_disabled_header">BBM Protected dezactivat</string>
-    <string name="protected_mode_disabled_message">Contactele şi chaturile au fost salvate, dar aţi fost exclus din chaturile multipersoană şi grupurile BBM Protected.</string>
+    <string name="protected_mode_disabled_message">Contactele şi chaturile dvs. au fost salvate, dar aţi fost exclus din grupurile BBM Protected.</string>
     <string name="protected_mode_disabled_title">Administratorul dvs. a dezactivat tehnologia BBM Protected.</string>
     <string name="protected_mode_enabled_header">BBM Protected</string>
     <string name="protected_mode_enabled_message">"BBM Protected adaugă un nivel de criptare suplimentar pentru chaturile, transferurile de fişiere şi grupurile dvs. BBM. Data viitoare când veţi începe un chat cu un contact BBM Protected, va trebui să specificaţi o frază de acces pe care cealaltă persoană va trebui să o introducă pentru a se alătura chatului. Fraza de acces trebuie specificată câte o singură dată pentru fiecare contact BBM Protected. 
  
  Pentru BBM Groups, puteţi alege dacă doriţi sau nu să restricţionaţi accesul la contactele BBM Protected. În cazul unui grup BBM Protected, trebuie să le comunicaţi celorlalţi utilizatori fraza de acces care trebuie introdusă pentru a se alătura grupului."</string>
     <string name="protected_mode_enabled_title">Administratorul dvs. a activat tehnologia BBM Protected pe dispozitivul dvs.</string>
+    <string name="protected_preferred_details">Contactul dvs. necesită un chat BBM Protected.</string>
+    <string name="protected_preferred_dialog">Acest contact foloseşte caracteristica Protected Plus. Chaturile dintre dvs. şi acest contact vor fi chaturi BBM Protected. <a href="http://blackberry.com/bbmprotected">Aflaţi mai multe</a></string>
+    <string name="protected_preferred_dialog_dismiss">Nu mai afişa</string>
+    <string name="protected_preferred_mode_disabled_message">Administratorul dvs. a dezactivat caracteristica Protected Plus.</string>
+    <string name="protected_preferred_mode_disabled_title">Tehnologia Protejat Plus este oprită</string>
+    <string name="protected_preferred_mode_enabled_message">Administratorul dvs. a activat Protected Plus, o caracteristică a BBM Protected. Chaturile dintre dvs. şi contactele dvs. vor fi chaturi BBM.</string>
+    <string name="protected_preferred_mode_enabled_title">Tehnologia Protejat Plus este pornită</string>
+    <string name="protected_rejected_message_body">Poate fi necesar să partajaţi din nou fraza de acces pentru a reseta acest chat BBM Protected. Pentru a partaja o frază de acces, atingeţi pictograma meniului din colţul din dreapta sus al ecranului. Atingeţi &lt;b>%1$s&lt;/b>.</string>
+    <string name="protected_rejected_message_status">Partajare frază de acces din nou</string>
     <string name="purchase_failed_message">Plata dvs. nu a putut fi procesată. Doriţi să alegeţi altă metodă de plată?</string>
     <string name="purchase_options">Opţiuni de plată</string>
     <string name="purchase_success_message">Aţi achiziţionat acest element cu succes.</string>
     <string name="purchase_unexpected_error_message">Achiziţia dvs. a fost întreruptă. Încercaţi din nou.</string>
     <string name="pyk_empty_invites_allow_upload_hint">Căutaţi prieteni care utilizează deja BBM.</string>
     <string name="qr_description">UsersQR</string>
+    <string name="quick_reply">Răspuns şi încheiere</string>
     <string name="quick_share_glympse_first_experience_overlay_infos">Trimiteţi un glympse pentru a anunţa un contact BBM să vă urmărească locaţia pe hartă pentru o perioadă la alegerea dvs. Perfect pentru întâlniri sau pentru momentele în care sunteţi în întârziere.</string>
     <string name="quick_share_glympse_first_experience_overlay_note"><i>Notă: La utilizarea acestei caracteristici, coordonatele dvs. GPS sunt transmise către Glympse Inc. şi fac obiectul <a href="http://glympse.com/privacy">politică de confidenţialitate</a></i></string>
     <string name="quick_share_glympse_first_experience_overlay_title">Partajaţi locaţia dvs.</string>
@@ -1607,10 +1812,13 @@ Introduceţi fraza de acces \"%1$s\" după ce faceţi clic pe PIN-ul:%2$s sau %3
     <string name="quick_share_glympse_location_services_overlay_title">Activaţi serviciile de localizare.</string>
     <string name="quick_share_glympse_sending_glympse">Trimitere glympse</string>
     <string name="quick_share_voice_note_label_busy">Înregistrarea nu este posibilă. Playerul media sau serviciul media este deja utilizat.</string>
-    <string name="quick_share_voice_note_label_default">Atingeţi şi menţineţi apăsat pentru a înregistra</string>
+    <string name="quick_share_voice_note_label_default">Ţineţi apăsat pentru a înregistra</string>
     <string name="quick_share_voice_note_label_delete">Eliberaţi pentru ştergere</string>
+    <string name="quick_share_voice_note_label_rec">ÎNREGISTRARE</string>
     <string name="quick_share_voice_note_label_send">Eliberaţi pentru trimitere sau glisaţi pentru anulare</string>
     <string name="quick_share_voice_note_tost_message">Pentru a trimite o notă vocală instantanee, apăsaţi şi ţineţi apăsat butonul de înregistrare</string>
+    <string name="quote_at_user_name">\@%1$s</string>
+    <string name="quote_message_label">\"%1$s\"</string>
     <string name="rate_limited">A fost atinsă limita pentru rata glympse-urilor</string>
     <string name="rate_my_app_ignore">Nu, mulţumesc</string>
     <string name="rate_my_app_message">Dacă v-a plăcut BBM, vă rugăm să ne acordaţi o clipă şi să evaluaţi aplicaţia. Vă mulţumim.</string>
@@ -1629,6 +1837,8 @@ Introduceţi fraza de acces \"%1$s\" după ce faceţi clic pe PIN-ul:%2$s sau %3
     <string name="remaining_title_glympse">Glympse</string>
     <string name="remove">Eliminare</string>
     <string name="replace_picture">Înlocuire imagine</string>
+    <string name="reply">Răspuns</string>
+    <string name="reply_with_voice">Răspuns vocal</string>
     <string name="report_channel">Raportare canal</string>
     <string name="report_problem_activity_choose_email_client">Selectare e-mail</string>
     <string name="report_problem_activity_email_button">Trimitere raport prin e-mail</string>
@@ -1658,7 +1868,9 @@ http://blackberry.com/support/bbm"</string>
     <string name="reports_caption_none">Raportări</string>
     <string name="request_was_received">Aţi primit o solicitare de glympse-uri</string>
     <string name="required_fields">Câmpuri obligatorii*</string>
-    <string name="resend_passphrase">Retrimitere frază de acces</string>
+    <string name="resend_passphrase">RETRIMITERE FRAZĂ DE ACCES</string>
+    <string name="reset_protected_chat">Resetare chat</string>
+    <string name="resolve_vanitypin_not_found">Acest PIN nu este disponibil.</string>
     <string name="restore_sticker_purchases">Restaurare</string>
     <string name="restore_using_device_switch">Restaurare utilizând Comutare dispozitive</string>
     <string name="restore_using_email">Restaurare utilizând e-mailul</string>
@@ -1711,6 +1923,8 @@ http://blackberry.com/support/bbm"</string>
     <string name="select_contacts_to_move">Selectare contacte de mutat în \"%1$s\":</string>
     <string name="select_group">Selectare grup</string>
     <string name="select_group_activity_title">{0,choice,0#Selectare grup|1#+1 grup|1&lt;+{0} grupuri}</string>
+    <string name="select_group_discussion">Selectare discuţie</string>
+    <string name="select_pictures">{0,choice,0#Selec. imagini|1#+1 imagine|1&lt;+{0} imagini}</string>
     <string name="send">Trimitere</string>
     <string name="send_comment">Trimitere comentariu</string>
     <string name="send_decline_response">Trimitere răspuns de refuz</string>
@@ -1719,6 +1933,11 @@ http://blackberry.com/support/bbm"</string>
     <string name="sent_pending_invite_message_label">Mesaj:</string>
     <string name="sent_pending_invite_sent_label">Trimis:</string>
     <string name="set_as">Setare ca</string>
+    <string name="set_vanitypin_result_invalid">Acest PIN nu este disponibil.</string>
+    <string name="set_vanitypin_result_refused">Acest PIN nu este disponibil.</string>
+    <string name="set_vanitypin_result_reserved">Acest PIN nu este disponibil.</string>
+    <string name="set_vanitypin_result_success">PIN-ul dvs. a fost creat.</string>
+    <string name="set_vanitypin_result_used">Acest PIN nu este disponibil.</string>
     <string name="setas_activity_bbm_picture_updated">Imagine BBM actualizată</string>
     <string name="setas_activity_item_bbm_picture">Imagine BBM</string>
     <string name="setas_activity_item_contact_picture">Imagine contact</string>
@@ -1728,6 +1947,7 @@ http://blackberry.com/support/bbm"</string>
     <string name="setas_activity_title">Setare ca</string>
     <string name="settings">Setări</string>
     <string name="settings_activity_allow_hq_pictures">Se acceptă întotdeauna solicitările de imagini HD</string>
+    <string name="settings_activity_backup_chat_history_now">Realizare backup acum</string>
     <string name="settings_activity_blackberry_id_edit">Editare</string>
     <string name="settings_activity_blackberry_id_generic_error">Momentan, BlackBerry ID-ul dvs. nu poate fi editat. Încercaţi din nou mai târziu.</string>
     <string name="settings_activity_blocked_contacts">Contacte şi fluxuri blocate</string>
@@ -1741,6 +1961,7 @@ http://blackberry.com/support/bbm"</string>
     <string name="settings_activity_deleting_chat_history_info">Istoricul dvs. de chaturi cu toate contactele va fi şters. Această acţiune nu este reversibilă.</string>
     <string name="settings_activity_deleting_chat_history_title">Ştergere istoric chaturi</string>
     <string name="settings_activity_hide_keyboard_on_enter_conversation">Afişare tastatură întotdeauna</string>
+    <string name="settings_activity_keyboard_enter_as_new_line">Tasta Enter introduce un rând nou</string>
     <string name="settings_activity_legal">Informaţii juridice</string>
     <string name="settings_activity_report_a_problem">Raportare problemă</string>
     <string name="settings_activity_save_chat_history">Salvare istoric chaturi</string>
@@ -1756,7 +1977,7 @@ http://blackberry.com/support/bbm"</string>
     <string name="setup_find_friends">Căutare prieteni în &lt;b>BBM&lt;/b></string>
     <string name="setup_found_contact_invite_by_pin">Am găsit acest contact în BBM, aşa că îl vom invita direct.</string>
     <string name="setup_if_you_already_have_a_blackberry_id">Dacă aveţi deja un BlackBerry ID, conectaţi-vă acum. Dacă nu aţi mai utilizat BlackBerry până acum, trebuie să creaţi un BlackBerry ID.</string>
-    <string name="setup_invite_bbm_people_you_know">Aflaţi cine utilizează deja BBM Doriţi să îi adăugaţi drept contacte BBM?</string>
+    <string name="setup_invite_bbm_people_you_know">Aflaţi cine utilizează deja BBM. Doriţi să îi adăugaţi drept contacte BBM?</string>
     <string name="setup_invite_friends_to_bbm">Aduceţi mai mulţi prieteni în conversaţie. Invitaţi-vă prietenii să vi se alăture în cadrul BBM.</string>
     <string name="setup_learn_more_about_blackberry_id">Aflaţi mai multe despre BlackBerry ID</string>
     <string name="setup_not_completed">Configurarea &lt;b>BBM&lt;/b> este aproape gata.</string>
@@ -1779,6 +2000,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="share_passphrase_other">Prin comunicare directă, în persoană</string>
     <string name="share_passphrase_sms">Mesaj text</string>
     <string name="share_passphrase_title">Partajare frază de acces</string>
+    <string name="share_to_feed_title">Doriţi să vă actualizaţi fluxul?</string>
     <string name="sharead_sponsored_invite">Invitaţie sponsorizată partajată</string>
     <string name="sharead_sponsored_post">Postare sponsorizată partajată</string>
     <string name="shared_channel_post_default_text">Postare pe canal partajată</string>
@@ -1786,6 +2008,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="shared_channel_post_sent">Postare pe canal trimisă</string>
     <string name="shared_sponsored_content">Conţinut sponsorizat partajat</string>
     <string name="shop">Magazin</string>
+    <string name="shop_subscriptions">Abonamente</string>
     <string name="show">Afişare</string>
     <string name="show_channel_preview">Previzualizare</string>
     <string name="show_map">Afişare hartă</string>
@@ -1794,6 +2017,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="sign_in_to_bbm">Conectare la BBM</string>
     <string name="slide_menu_add_event">Adăugare eveniment</string>
     <string name="slide_menu_add_list">Adăugare listă</string>
+    <string name="slide_menu_block_chat">Blocare chat</string>
     <string name="slide_menu_copy_chat">Copiere chat</string>
     <string name="slide_menu_delete_item">Ştergere element</string>
     <string name="slide_menu_edit">Editare</string>
@@ -1809,6 +2033,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="slide_menu_new_chat">Iniţiere chat nou</string>
     <string name="slide_menu_open_bbm_chat">Deschidere chat BBM</string>
     <string name="slide_menu_ping">Ping</string>
+    <string name="slide_menu_play_in_media_player">Redare în player media</string>
     <string name="slide_menu_remove_deleted_item">Eliminare element şters</string>
     <string name="slide_menu_remove_from_group">Eliminare din grup</string>
     <string name="slide_menu_reply_by_voice_note">Răspuns prin notă vocală</string>
@@ -1819,7 +2044,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="slide_menu_send">Trimitere</string>
     <string name="slide_menu_set_as_bbm_display">Setare ca imagine afişată BBM</string>
     <string name="slide_menu_share">Partajare</string>
-    <string name="slide_menu_suggest_contact">Sugeraţi un contact</string>
+    <string name="slide_menu_suggest_contact">Sugerare contact</string>
     <string name="slide_menu_view_group_profile">Vizualizare profil de grup</string>
     <string name="slide_menu_view_pending_invitation">Vizualizare invitaţii în curs</string>
     <string name="slide_menu_view_profile">Vizualizare profil %1$s</string>
@@ -1827,19 +2052,23 @@ www.pin.bbm.com/%1$s"</string>
     <string name="sms_activity_title">Redactare</string>
     <string name="sort_by">Sortare după</string>
     <string name="stacked_notification_format"><Data>&lt;b>%1$s&lt;/b>: %2$s</Data></string>
+    <string name="stale_user_reinvite_message">%1$s nu a mai apărut online din ziua de %2$s</string>
+    <string name="stale_user_reinvite_title">Reinvitare</string>
     <string name="start_chat">Începere chat</string>
     <string name="start_chat_failed">Chat-ul nu a putut fi creat</string>
-    <string name="start_meeting">Începere întâlniri BBM</string>
-    <string name="start_meeting_confirmation_dialog">Încheiaţi apelul şi începeţi o întâlnire nouă?</string>
-    <string name="start_meeting_confirmation_title">Începere întâlnire BBM?</string>
+    <string name="start_meeting">Începere BBM Meetings</string>
+    <string name="start_meeting_confirmation_dialog">Aveţi un apel BBM în curs. Doriţi să întrerupeţi apelul şi să începeţi o întâlnire BBM?</string>
+    <string name="start_meeting_confirmation_title">Începere BBM Meetings</string>
     <string name="start_multiperson_chat">Chat cu mai multe persoane</string>
+    <string name="start_pin_chat">Introduceţi un PIN pentru a iniţia un chat</string>
     <string name="starts">Începe</string>
     <string name="stats_caption">Statistică</string>
     <string name="stay_in_touch_like_never_before_with_blackberry_messenger">Ţineţi legătura într-un mod inedit cu BlackBerry Messenger.</string>
     <string name="sticker_picker_no_stickers_purchased">Niciun autocolant achiziţionat.</string>
     <string name="sticker_picker_preview_hint">Pentru previzualizare, atingeţi lung un autocolant.</string>
-    <string name="sticker_store_collection_heading">Colecții autocolant</string>
-    <string name="sticker_store_details_artist_channel">Canal</string>
+    <string name="sticker_settings">Setări autocolante</string>
+    <string name="sticker_store_collection_heading">Autocolante</string>
+    <string name="sticker_store_details_artist_channel">BBM Channels</string>
     <string name="sticker_store_details_artist_website">Site web</string>
     <string name="sticker_store_details_promo_text">VIZUALIZARE AICI</string>
     <string name="sticker_store_details_screen_about">Despre</string>
@@ -1862,6 +2091,7 @@ Sfat: Între timp, puteţi părăsi acest ecran."</string>
     <string name="sticker_store_sticker_purchase_notification_dialog_line">Vă puteţi anunţa contactele despre faptul că aveţi autocolante noi.</string>
     <string name="sticker_store_sticker_purchase_notification_message">Iată ce autocolante noi am! http://shop.bbm.com/stickers/%1$s</string>
     <string name="sticker_store_store_loading">Încărcare...</string>
+    <string name="store_generic_billing_error">Acest articol nu poate fi achiziţionat.</string>
     <string name="store_title">Magazin BBM</string>
     <string name="submit_button">Trimitere</string>
     <string name="submit_passphrase">Trimitere</string>
@@ -1871,6 +2101,44 @@ Sfat: Între timp, puteţi părăsi acest ecran."</string>
     <string name="subscribed_channel_invite_default_message">Doresc să vă invit să vă alăturaţi canalului denumit: \"%1$s\".</string>
     <string name="subscribed_channels">Canale la care sunteţi abonat</string>
     <string name="subscribers_caption">Abonaţi</string>
+    <string name="subscriptino_pin_promo">Puteţi crea un PIN BBM personalizat, uşor de reţinut pentru dvs. şi prietenii dvs.</string>
+    <string name="subscription_already_exists_bb10">Aveţi un abonament cu opţiune de reînnoire automată, care a fost achiziţionat de pe un alt dispozitiv.</string>
+    <string name="subscription_app_type_no_ads">fără_reclame</string>
+    <string name="subscription_app_type_vanity_pin">pin_personalizat</string>
+    <string name="subscription_auto_renewing">Aveţi un abonament cu opţiune de reînnoire automată.</string>
+    <string name="subscription_bbid_conflict">Acest articol a fost achiziţionat pentru un alt BlackBerry ID conectat la contul dvs. din magazin. Încercaţi să utilizaţi un alt cont pentru magazin.</string>
+    <string name="subscription_custom_pin_description">Vă doriţi un PIN personalizat, uşor de reţinut pentru dvs. şi prietenii dvs.? Creaţi un PIN BBM cu totul personal. Nu rataţi ocazia, revendicaţi-vă PIN-ul personalizat chiar azi.</string>
+    <string name="subscription_dialog_duration_monthly">Lunar: %1$s</string>
+    <string name="subscription_dialog_duration_title">Alegeţi un abonament</string>
+    <string name="subscription_dialog_duration_yearly">Anual: %1$s</string>
+    <string name="subscription_edit_messages_description">Dacă aţi trimis din greşeală un mesaj cu greşeli, îl puteţi retrage, corecta şi retrimite.</string>
+    <string name="subscription_exclusive_badge">Banderolă exclusivă</string>
+    <string name="subscription_exclusive_descritpion_pin">Arătaţi statutul dvs. BBM special cu ajutorul unei banderole. Această banderolă apare şi pe imaginile afişate ale utilizatorilor cu un abonament activ.</string>
+    <string name="subscription_expired">Abonamentul dvs. a expirat. Doriţi să vă abonaţi din nou?</string>
+    <string name="subscription_exsits_ios_72hours">Abonamentul dvs. este pe cale să expire. Pentru a utiliza în continuare această caracteristică, abonaţi-vă aici înainte de %1$s.</string>
+    <string name="subscription_exsits_on_ios">Acest articol a fost achiziţionat de pe un alt dispozitiv. Pentru a utiliza în continuare această caracteristică, abonaţi-vă aici înainte de %1$s.</string>
+    <string name="subscription_generic_guidelines">Îndrumări pentru obţinerea unui PIN BBM personalizat</string>
+    <string name="subscription_generic_learn_more">Aflaţi mai multe</string>
+    <string name="subscription_learn_more">Pentru a afla mai multe despre abonamente, vizitaţi <a href="http://bbm.com/FAQ">bbm.com/FAQ</a>.</string>
+    <string name="subscription_no_adds_share">Vă puteţi anunţa contactele despre faptul că aţi dezactivat reclamele în BBM.</string>
+    <string name="subscription_no_adds_status_message">Tocmai am dezactivat reclamele în BBM. Pentru a ascunde anunţuri de pe dispozitiv, atingeţi http://shop.bbm.com/item/no_ads</string>
+    <string name="subscription_no_ads">Fără reclame</string>
+    <string name="subscription_no_ads_description">Nu vreţi să vedeţi reclame? Ascundeţi reclamele cu acest abonament BBM.</string>
+    <string name="subscription_no_ads_promo">"Fără reclame
+Ascundeţi reclamele şi invitaţiile sponsorizate din BBM cu acest abonament."</string>
+    <string name="subscription_no_ads_title">Fără reclame</string>
+    <string name="subscription_pin_before_share">Îmi voi crea un PIN personalizat pe BBM. Pentru a vă personaliza PIN-ul, atingeţi http://shop.bbm.com/item/custom_pin</string>
+    <string name="subscription_pin_before_share_prompt">Vă puteţi anunţa contactele despre faptul că vă veţi crea un PIN personalizat.</string>
+    <string name="subscription_pin_feautres">Caracteristici incluse:</string>
+    <string name="subscription_private_chat_description">Într-un chat privat, numele contactului dvs. este ascuns, iar notificările pentru mesaje noi sunt dezactivate. Chatul dvs. va fi şters automat după o scurtă perioadă de timp sau la încheierea acestuia.</string>
+    <string name="subscription_reactiviate">Abonare</string>
+    <string name="subscription_retracted_messages_description">Dacă nu aţi dorit să trimiteţi un mesaj, îl puteţi retrage, astfel încât să nu mai apară în chat.</string>
+    <string name="subscription_retracted_messages_title">Mesaje retrase</string>
+    <string name="subscription_status_active_subscription">Aveţi un abonament cu opţiune de reînnoire automată.</string>
+    <string name="subscription_timed_messages_description">Puteţi trimite mesaje şi imagini care vor putea fi vizualizate doar o anumită perioadă de timp. Mesajul este ascuns în chat, iar destinatarul trebuie să-l atingă lung pentru a-l deschide. După expirarea timpului limită, mesajul nu va mai putea fi vizualizat.</string>
+    <string name="subscription_timed_messages_title">Mesaje cu limită de timp</string>
+    <string name="subscriptions_not_entitled">Trebuie să vă abonaţi pentru a putea utiliza această caracteristică.</string>
+    <string name="subscriptions_restoring">Se verifică abonamentele…</string>
     <string name="suggestion_i_invite_you">%1$s mi-a sugerat să vă invit la chat prin BBM.</string>
     <string name="suggestion_sent">Sugestie trimisă</string>
     <string name="suggestion_want_to_invite_bbm_contact">Doriţi să trimiteţi din nou invitaţia către acest contact BBM?</string>
@@ -1896,7 +2164,7 @@ Sfat: Între timp, puteţi părăsi acest ecran."</string>
     <string name="timestamp_format_today_at">Astăzi la %1$s</string>
     <string name="timestamp_format_yesterday_at">Ieri la %1$s</string>
     <string name="title_activity_category">Categorie</string>
-    <string name="title_activity_change_status">Modificare status</string>
+    <string name="title_activity_change_status">Status</string>
     <string name="title_activity_channels_lobby">Lobby pentru propriul canal</string>
     <string name="title_activity_group_event_details">Detalii eveniment grup</string>
     <string name="title_activity_group_events">Evenimente grup</string>
@@ -1929,6 +2197,9 @@ Sfat: Între timp, puteţi părăsi acest ecran."</string>
     <string name="update_fragment_hide_updates">Ascundere</string>
     <string name="update_fragment_view_channel">Vizualizare canal</string>
     <string name="update_fragment_view_post">Vizualizare postare</string>
+    <string name="update_list_archiving_disabled_message">Administratorul dvs. a dezactivat funcţionalitatea de arhivare.</string>
+    <string name="update_list_archiving_enabled_message">Administratorul dvs. a activat funcţionalitatea de arhivare.</string>
+    <string name="update_list_archiving_title">Arhivare chaturi BBM</string>
     <string name="update_list_avatar">&lt;b>%1$s&lt;/b> şi-a modificat imaginea afişată.</string>
     <string name="update_list_changed_event_sub_title">Eveniment modificat</string>
     <string name="update_list_comment_sub_title">Comentariu adăugat</string>
@@ -1984,18 +2255,30 @@ Sfat: Între timp, puteţi părăsi acest ecran."</string>
     <string name="update_list_new_contact_sub_title">Contact BBM</string>
     <string name="update_list_new_event_sub_title">Eveniment nou</string>
     <string name="update_list_new_list_item_sub_title">Element nou din listă</string>
+    <string name="update_list_new_status_hint">Introduceţi un nume pentru status</string>
     <string name="update_list_new_status_message">\"%1$s\"</string>
     <string name="update_list_new_status_sub_title">Status nou</string>
     <string name="update_list_newcontact">&lt;b>%1$s&lt;/b> este acum un contact.</string>
     <string name="update_list_now_playing_message">Ascultaţi \"%1$s\"</string>
     <string name="update_list_nowplayingmessage">&lt;b>%1$s&lt;/b> ascultă \"%2$s\".</string>
     <string name="update_list_personalmessage">&lt;b>%1$s&lt;/b> a spus \"%2$s\"</string>
+    <string name="update_list_protected_disabled_message">Administratorul dvs. a dezactivat tehnologia BBM Protected. Aţi fost exclus din grupurile BBM Protected.</string>
+    <string name="update_list_protected_enabled_message">Administratorul dvs. a activat tehnologia BBM Protected. Pentru contactele BBM Protected este utilizat un nivel de criptare suplimentar pentru chaturile, transferurile de fişiere şi grupurile BBM.</string>
+    <string name="update_list_protected_preferred_disabled_message">Administratorul dvs. a dezactivat caracteristica Protected Plus.</string>
+    <string name="update_list_protected_preferred_enabled_message">Administratorul dvs. a activat caracteristica Protected Plus. Chaturile dintre dvs. şi contactele dvs. vor fi chaturi BBM.</string>
+    <string name="update_list_protected_status_sub_title">Schimbare politică</string>
+    <string name="update_list_protected_title">BBM Protected</string>
     <string name="update_list_you">Dvs.</string>
+    <string name="update_popular_channels_subtitle">Atingeţi pentru a explora</string>
+    <string name="update_popular_channels_title">Canale populare</string>
     <string name="update_removed_from_blocked_list">Eliminat din lista de blocare</string>
     <string name="update_sponsored_content">Conţinut sponsorizat</string>
     <string name="update_sponsored_post">Postare sponsorizată</string>
+    <string name="update_your_subscription">Actualizarea abonamentului</string>
     <string name="updates">Fluxuri</string>
     <string name="upload">Încărcare</string>
+    <string name="user_status_stale">Ultima apariţie %1$s</string>
+    <string name="vanity_pin">PIN personalizat</string>
     <string name="verify_date_of_birth">Verificare dată de naştere.</string>
     <string name="verify_passphrase">Verificare frază de acces.</string>
     <string name="version">Versiune</string>
@@ -2003,6 +2286,7 @@ Sfat: Între timp, puteţi părăsi acest ecran."</string>
     <string name="view_channel_info">Previzualizare</string>
     <string name="view_channel_profile">Vizualizare profil canal</string>
     <string name="visits_caption">Vizite</string>
+    <string name="voice_note_duration">%1$02d:%2$02d</string>
     <string name="voice_rating_bad">Foarte slabă</string>
     <string name="voice_rating_excellent">Excelentă</string>
     <string name="voice_rating_fair">Acceptabilă</string>
@@ -2010,11 +2294,31 @@ Sfat: Între timp, puteţi părăsi acest ecran."</string>
     <string name="voice_rating_poor">Slabă</string>
     <string name="voice_rating_title">Cum aţi evalua calitatea acestui apel?</string>
     <string name="voicecall_already_in_call">Sunteţi deja angajat într-un apel BBM. Pentru a apela acest contact, încheiaţi celălalt apel şi încercaţi din nou.</string>
+    <string name="voicecall_must_add_as_contact">Pentru a putea utiliza această caracteristică trebuie să adăugaţi această persoană la Contacte BBM.</string>
+    <string name="voicecall_must_add_as_contact_title">Adăugare la Contacte BBM</string>
     <string name="voicecall_status_calling">Apelare</string>
     <string name="voicecall_status_connecting">Conectare</string>
     <string name="voicecall_status_duration">Apel vocal %1$s</string>
     <string name="voicecall_status_duration_while_mute">Mut - %1$s</string>
+    <string name="voicenote">Notă vocală</string>
     <string name="wait_passphrase_confirmation">Se aşteaptă confirmarea frazei de acces.</string>
+    <string name="warning_on_repurchase">Pentru a nu pierde caracteristicile abonamentului curent, poate fi necesar să achiziţionaţi un abonament nou, apoi să anulaţi abonamentul vechi. Pentru informaţii suplimentare, vizitaţi: %1$s</string>
+    <string name="wear_quick_call_shortly">Vă sun eu înapoi imediat.</string>
+    <string name="wear_quick_cant_take">Sunt ocupat şi nu pot să răspund.</string>
+    <string name="wear_quick_im_on_my_way">Sunt pe drum.</string>
+    <string name="wear_quick_response_1">„Ok.“</string>
+    <string name="wear_quick_response_2">„Am înţeles!“</string>
+    <string name="wear_quick_response_3">„Momentan sunt ocupat(ă), voi răspunde când pot.“</string>
+    <string name="wear_quick_response_appreciation">Mulţumesc</string>
+    <string name="wear_quick_response_confirmation">Da</string>
+    <string name="wear_quick_response_disagree">Nu</string>
+    <string name="wear_quick_response_haha">Haha</string>
+    <string name="wear_quick_response_lol">LOL</string>
+    <string name="wear_quick_response_on_my_way">Sunt pe drum</string>
+    <string name="wear_quick_response_see_you_soon">Ne mai vedem</string>
+    <string name="wear_quick_response_talk_later">Îmi pare rău, nu pot să vorbesc acum</string>
+    <string name="wear_quick_response_understood">OK</string>
+    <string name="wearable_support">Suport purtabil</string>
     <string name="widget_back_to_chat_previews">Înapoi la previzualizări chat</string>
     <string name="widget_change_my_status_message">Schimbare mesaj de status</string>
     <string name="widget_edit_status">Editare stare</string>
@@ -2030,6 +2334,7 @@ Sfat: Între timp, puteţi părăsi acest ecran."</string>
     <string name="wifi_changing_network">Solicitare conectare la reţea…</string>
     <string name="wifi_ssid_label">Nume reţea</string>
     <string name="wifi_type_label">Tip</string>
+    <string name="yes">Da</string>
     <string name="you_are_signed_in_with_the_following_blackberry_id">Sunteţi conectat(ă) cu următorul BlackBerry ID: %1$s</string>
     <string name="you_can_choose_another_restore_option_or_delete_your_device_data">Puteţi alege altă opţiune de restaurare sau puteţi şterge datele dispozitivului şi vă puteţi conecta cu BlackBerry ID-ul asociat fişierului de backup.</string>
     <string name="you_can_now_start_video_and_voice_chats">Acum puteţi iniţia chaturi video şi de voce din BBM (dacă sunt acceptate).</string>

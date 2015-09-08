@@ -1,283 +1,136 @@
 .class final Lcom/bbm/ui/hh;
-.super Ljava/lang/Object;
-.source "TouchImageView.java"
-
-# interfaces
-.implements Landroid/view/View$OnTouchListener;
+.super Lcom/bbm/ui/ea;
+.source "StickyHeaderHelper.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/TouchImageView;
+.field final synthetic b:Lcom/bbm/ui/he;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/TouchImageView;)V
+.method constructor <init>(Lcom/bbm/ui/he;)V
     .locals 0
 
     .prologue
-    .line 58
-    iput-object p1, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
+    .line 56
+    iput-object p1, p0, Lcom/bbm/ui/hh;->b:Lcom/bbm/ui/he;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/ui/ea;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 7
+.method protected final a(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 2
 
     .prologue
-    const/16 v4, 0xf
+    .line 91
+    iget-object v0, p0, Lcom/bbm/ui/hh;->b:Lcom/bbm/ui/he;
 
-    const/4 v3, 0x0
-
-    const/4 v6, 0x1
-
-    .line 62
-    iget-object v0, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
-
-    iget-object v0, v0, Lcom/bbm/ui/TouchImageView;->r:Landroid/view/ScaleGestureDetector;
-
-    invoke-virtual {v0, p2}, Landroid/view/ScaleGestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    .line 63
-    new-instance v0, Landroid/graphics/PointF;
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
+    invoke-virtual {p0, p1}, Lcom/bbm/ui/hh;->getItemViewType(I)I
 
     move-result v1
 
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
+    invoke-virtual {v0, p3, v1}, Lcom/bbm/ui/he;->a(Landroid/view/ViewGroup;I)Landroid/view/View;
 
-    move-result v2
+    move-result-object v0
 
-    invoke-direct {v0, v1, v2}, Landroid/graphics/PointF;-><init>(FF)V
+    return-object v0
+.end method
 
-    .line 65
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+.method protected final a(Landroid/view/View;Ljava/lang/Object;)V
+    .locals 1
 
-    move-result v1
-
-    packed-switch v1, :pswitch_data_0
-
-    .line 98
-    :cond_0
-    :goto_0
-    :pswitch_0
-    iget-object v0, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
-
-    iget-object v1, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
-
-    iget-object v1, v1, Lcom/bbm/ui/TouchImageView;->a:Landroid/graphics/Matrix;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/TouchImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
-
-    .line 99
-    iget-object v0, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/TouchImageView;->invalidate()V
-
-    .line 100
-    return v6
-
-    .line 67
-    :pswitch_1
-    iget-object v1, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
-
-    iget-object v1, v1, Lcom/bbm/ui/TouchImageView;->f:Landroid/graphics/PointF;
-
-    invoke-virtual {v1, v0}, Landroid/graphics/PointF;->set(Landroid/graphics/PointF;)V
-
-    .line 68
-    iget-object v0, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
-
-    iget-object v0, v0, Lcom/bbm/ui/TouchImageView;->g:Landroid/graphics/PointF;
-
-    iget-object v1, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
-
-    iget-object v1, v1, Lcom/bbm/ui/TouchImageView;->f:Landroid/graphics/PointF;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/PointF;->set(Landroid/graphics/PointF;)V
-
-    .line 69
-    iget-object v0, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
-
-    iput v6, v0, Lcom/bbm/ui/TouchImageView;->e:I
-
-    goto :goto_0
-
-    .line 73
-    :pswitch_2
-    iget-object v1, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
-
-    iget v1, v1, Lcom/bbm/ui/TouchImageView;->e:I
-
-    if-ne v1, v6, :cond_0
-
-    .line 74
-    iget v1, v0, Landroid/graphics/PointF;->x:F
-
-    iget-object v2, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
-
-    iget-object v2, v2, Lcom/bbm/ui/TouchImageView;->f:Landroid/graphics/PointF;
-
-    iget v2, v2, Landroid/graphics/PointF;->x:F
-
-    sub-float/2addr v1, v2
-
-    .line 75
-    iget v2, v0, Landroid/graphics/PointF;->y:F
-
-    iget-object v3, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
-
-    iget-object v3, v3, Lcom/bbm/ui/TouchImageView;->f:Landroid/graphics/PointF;
-
-    iget v3, v3, Landroid/graphics/PointF;->y:F
-
-    sub-float/2addr v2, v3
-
+    .prologue
     .line 76
-    iget-object v3, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
+    iget-object v0, p0, Lcom/bbm/ui/hh;->b:Lcom/bbm/ui/he;
 
-    iget-object v3, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
-
-    iget v3, v3, Lcom/bbm/ui/TouchImageView;->k:I
-
-    int-to-float v3, v3
-
-    iget-object v4, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
-
-    iget v4, v4, Lcom/bbm/ui/TouchImageView;->n:F
-
-    iget-object v5, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
-
-    iget v5, v5, Lcom/bbm/ui/TouchImageView;->m:F
-
-    mul-float/2addr v4, v5
-
-    invoke-static {v1, v3, v4}, Lcom/bbm/ui/TouchImageView;->a(FFF)F
-
-    move-result v1
+    invoke-virtual {v0, p1, p2}, Lcom/bbm/ui/he;->b(Landroid/view/View;Ljava/lang/Object;)V
 
     .line 77
-    iget-object v3, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
+    return-void
+.end method
 
-    iget-object v3, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
+.method public final getCount()I
+    .locals 1
 
-    iget v3, v3, Lcom/bbm/ui/TouchImageView;->l:I
+    .prologue
+    .line 60
+    iget-object v0, p0, Lcom/bbm/ui/hh;->b:Lcom/bbm/ui/he;
 
-    int-to-float v3, v3
+    iget-object v0, v0, Lcom/bbm/ui/he;->c:[Ljava/lang/Object;
 
-    iget-object v4, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
+    array-length v0, v0
 
-    iget v4, v4, Lcom/bbm/ui/TouchImageView;->o:F
+    return v0
+.end method
 
-    iget-object v5, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
+.method public final getItem(I)Ljava/lang/Object;
+    .locals 1
 
-    iget v5, v5, Lcom/bbm/ui/TouchImageView;->m:F
+    .prologue
+    .line 65
+    iget-object v0, p0, Lcom/bbm/ui/hh;->b:Lcom/bbm/ui/he;
 
-    mul-float/2addr v4, v5
+    iget-object v0, v0, Lcom/bbm/ui/he;->c:[Ljava/lang/Object;
 
-    invoke-static {v2, v3, v4}, Lcom/bbm/ui/TouchImageView;->a(FFF)F
+    aget-object v0, v0, p1
 
-    move-result v2
+    return-object v0
+.end method
 
-    .line 78
-    iget-object v3, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
+.method public final getItemId(I)J
+    .locals 2
 
-    iget-object v3, v3, Lcom/bbm/ui/TouchImageView;->a:Landroid/graphics/Matrix;
+    .prologue
+    .line 70
+    iget-object v0, p0, Lcom/bbm/ui/hh;->b:Lcom/bbm/ui/he;
 
-    invoke-virtual {v3, v1, v2}, Landroid/graphics/Matrix;->postTranslate(FF)Z
+    iget-object v0, v0, Lcom/bbm/ui/he;->b:Lcom/bbm/ui/gp;
 
-    .line 79
-    iget-object v1, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
+    iget-object v0, v0, Lcom/bbm/ui/gp;->a:[J
 
-    invoke-virtual {v1}, Lcom/bbm/ui/TouchImageView;->a()V
+    aget-wide v0, v0, p1
 
-    .line 80
-    iget-object v1, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
+    return-wide v0
+.end method
 
-    iget-object v1, v1, Lcom/bbm/ui/TouchImageView;->f:Landroid/graphics/PointF;
+.method public final getItemViewType(I)I
+    .locals 1
 
-    iget v2, v0, Landroid/graphics/PointF;->x:F
-
-    iget v0, v0, Landroid/graphics/PointF;->y:F
-
-    invoke-virtual {v1, v2, v0}, Landroid/graphics/PointF;->set(FF)V
-
-    goto :goto_0
-
-    .line 85
-    :pswitch_3
-    iget-object v1, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
-
-    iput v3, v1, Lcom/bbm/ui/TouchImageView;->e:I
-
+    .prologue
     .line 86
-    iget v1, v0, Landroid/graphics/PointF;->x:F
+    iget-object v0, p0, Lcom/bbm/ui/hh;->b:Lcom/bbm/ui/he;
 
-    iget-object v2, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
-
-    iget-object v2, v2, Lcom/bbm/ui/TouchImageView;->g:Landroid/graphics/PointF;
-
-    iget v2, v2, Landroid/graphics/PointF;->x:F
-
-    sub-float/2addr v1, v2
-
-    invoke-static {v1}, Ljava/lang/Math;->abs(F)F
-
-    move-result v1
-
-    float-to-int v1, v1
-
-    .line 87
-    iget v0, v0, Landroid/graphics/PointF;->y:F
-
-    iget-object v2, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
-
-    iget-object v2, v2, Lcom/bbm/ui/TouchImageView;->g:Landroid/graphics/PointF;
-
-    iget v2, v2, Landroid/graphics/PointF;->y:F
-
-    sub-float/2addr v0, v2
-
-    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+    invoke-virtual {v0, p1}, Lcom/bbm/ui/he;->getItemViewType(I)I
 
     move-result v0
 
-    float-to-int v0, v0
+    return v0
+.end method
 
-    .line 88
-    if-ge v1, v4, :cond_0
+.method public final getViewTypeCount()I
+    .locals 1
 
-    if-ge v0, v4, :cond_0
+    .prologue
+    .line 81
+    iget-object v0, p0, Lcom/bbm/ui/hh;->b:Lcom/bbm/ui/he;
 
-    .line 89
-    iget-object v0, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
+    invoke-virtual {v0}, Lcom/bbm/ui/he;->getViewTypeCount()I
 
-    invoke-virtual {v0}, Lcom/bbm/ui/TouchImageView;->performClick()Z
+    move-result v0
 
-    goto/16 :goto_0
+    return v0
+.end method
 
-    .line 94
-    :pswitch_4
-    iget-object v0, p0, Lcom/bbm/ui/hh;->a:Lcom/bbm/ui/TouchImageView;
+.method public final hasStableIds()Z
+    .locals 1
 
-    iput v3, v0, Lcom/bbm/ui/TouchImageView;->e:I
+    .prologue
+    .line 96
+    const/4 v0, 0x1
 
-    goto/16 :goto_0
-
-    .line 65
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_3
-        :pswitch_2
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_4
-    .end packed-switch
+    return v0
 .end method

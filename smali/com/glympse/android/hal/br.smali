@@ -4,11 +4,11 @@
 
 
 # static fields
-.field private static final eH:Ljava/lang/String; = "android.provider.Telephony.SMS_RECEIVED"
+.field private static final eK:Ljava/lang/String; = "android.provider.Telephony.SMS_RECEIVED"
 
 
 # instance fields
-.field final synthetic eI:Lcom/glympse/android/hal/bq;
+.field final synthetic eL:Lcom/glympse/android/hal/bq;
 
 
 # direct methods
@@ -17,7 +17,7 @@
 
     .prologue
     .line 101
-    iput-object p1, p0, Lcom/glympse/android/hal/br;->eI:Lcom/glympse/android/hal/bq;
+    iput-object p1, p0, Lcom/glympse/android/hal/br;->eL:Lcom/glympse/android/hal/bq;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -224,7 +224,7 @@
     move-result-object v5
 
     .line 160
-    iget-object v0, p0, Lcom/glympse/android/hal/br;->eI:Lcom/glympse/android/hal/bq;
+    iget-object v0, p0, Lcom/glympse/android/hal/br;->eL:Lcom/glympse/android/hal/bq;
 
     invoke-static {v0}, Lcom/glympse/android/hal/bq;->a(Lcom/glympse/android/hal/bq;)Lcom/glympse/android/hal/GMessageListener;
 
@@ -233,7 +233,7 @@
     if-eqz v0, :cond_0
 
     .line 162
-    iget-object v0, p0, Lcom/glympse/android/hal/br;->eI:Lcom/glympse/android/hal/bq;
+    iget-object v0, p0, Lcom/glympse/android/hal/br;->eL:Lcom/glympse/android/hal/bq;
 
     invoke-static {v0}, Lcom/glympse/android/hal/bq;->a(Lcom/glympse/android/hal/bq;)Lcom/glympse/android/hal/GMessageListener;
 
@@ -272,7 +272,7 @@
 
     .line 173
     :cond_2
-    iget-object v2, p0, Lcom/glympse/android/hal/br;->eI:Lcom/glympse/android/hal/bq;
+    iget-object v2, p0, Lcom/glympse/android/hal/br;->eL:Lcom/glympse/android/hal/bq;
 
     invoke-static {v2}, Lcom/glympse/android/hal/bq;->a(Lcom/glympse/android/hal/bq;)Lcom/glympse/android/hal/GMessageListener;
 
@@ -287,13 +287,13 @@
     if-eqz v2, :cond_3
 
     .line 175
-    iget-object v2, p0, Lcom/glympse/android/hal/br;->eI:Lcom/glympse/android/hal/bq;
+    iget-object v2, p0, Lcom/glympse/android/hal/br;->eL:Lcom/glympse/android/hal/bq;
 
     invoke-static {v2}, Lcom/glympse/android/hal/bq;->a(Lcom/glympse/android/hal/bq;)Lcom/glympse/android/hal/GMessageListener;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/glympse/android/hal/br;->eI:Lcom/glympse/android/hal/bq;
+    iget-object v3, p0, Lcom/glympse/android/hal/br;->eL:Lcom/glympse/android/hal/bq;
 
     invoke-interface {v2, v3, v0, v1}, Lcom/glympse/android/hal/GMessageListener;->lastMessageFound(Lcom/glympse/android/core/GCommon;J)V
     :try_end_2

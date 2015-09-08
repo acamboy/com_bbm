@@ -1,46 +1,126 @@
 .class final Lcom/bbm/ui/activities/np;
-.super Ljava/lang/Object;
-.source "GroupEventDetailsActivity.java"
+.super Lcom/bbm/j/a;
+.source "GroupLobbyActivity.java"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/j/a",
+        "<",
+        "Lcom/bbm/g/u;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupEventDetailsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupEventDetailsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupLobbyActivity;)V
     .locals 0
 
     .prologue
-    .line 142
-    iput-object p1, p0, Lcom/bbm/ui/activities/np;->a:Lcom/bbm/ui/activities/GroupEventDetailsActivity;
+    .line 215
+    iput-object p1, p0, Lcom/bbm/ui/activities/np;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method protected final synthetic a()Ljava/lang/Object;
+    .locals 10
 
     .prologue
-    .line 146
-    const-string v0, "headerActionBar Positive Button Clicked"
+    .line 215
+    const/4 v1, 0x0
 
-    const-class v1, Lcom/bbm/ui/activities/GroupEventDetailsActivity;
+    iget-object v0, p0, Lcom/bbm/ui/activities/np;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->l(Lcom/bbm/ui/activities/GroupLobbyActivity;)Lcom/bbm/j/a;
 
-    .line 148
-    iget-object v0, p0, Lcom/bbm/ui/activities/np;->a:Lcom/bbm/ui/activities/GroupEventDetailsActivity;
+    move-result-object v0
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupEventDetailsActivity;->e(Lcom/bbm/ui/activities/GroupEventDetailsActivity;)V
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
-    .line 149
-    return-void
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/np;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->k(Lcom/bbm/ui/activities/GroupLobbyActivity;)Lcom/bbm/j/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    const-wide v2, 0x7fffffffffffffffL
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v4
+
+    :goto_0
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/g/u;
+
+    iget-wide v6, v0, Lcom/bbm/g/u;->h:J
+
+    cmp-long v5, v6, v2
+
+    if-gez v5, :cond_1
+
+    iget-wide v2, v0, Lcom/bbm/g/u;->h:J
+
+    move-wide v8, v2
+
+    move-object v2, v0
+
+    move-wide v0, v8
+
+    :goto_1
+    move-wide v8, v0
+
+    move-object v1, v2
+
+    move-wide v2, v8
+
+    goto :goto_0
+
+    :cond_0
+    return-object v1
+
+    :cond_1
+    move-wide v8, v2
+
+    move-object v2, v1
+
+    move-wide v0, v8
+
+    goto :goto_1
 .end method

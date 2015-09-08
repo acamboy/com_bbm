@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dialog_margin_horizontal" android:layout_marginTop="@dimen/dialog_margin_vertical" android:layout_marginRight="@dimen/dialog_margin_horizontal" android:layout_marginBottom="@dimen/dialog_margin_vertical">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dialog_spacing">
+                <TextView android:textSize="@dimen/fontSizeMedium" android:layout_gravity="center_vertical" android:id="@id/dialog_first_checkbox_text" android:visibility="visible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="First radioButton text" android:layout_weight="1.0" android:textIsSelectable="false" />
+                <CheckBox android:layout_gravity="end" android:id="@id/dialog_first_checkbox" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignBaseline="@id/dialog_first_checkbox_text" />
+            </LinearLayout>
+            <com.bbm.ui.InlineImageTextView android:textSize="@dimen/fontSizeMedium" android:textStyle="bold" android:id="@id/dialog_info_first_line" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dialog_spacing" android:textIsSelectable="false" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dialog_spacing">
+                <TextView android:textSize="@dimen/fontSizeMedium" android:layout_gravity="center_vertical" android:id="@id/dialog_second_checkbox_text" android:visibility="visible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Second radioButton text" android:layout_weight="1.0" android:textIsSelectable="false" />
+                <CheckBox android:layout_gravity="end" android:id="@id/dialog_second_checkbox" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignBaseline="@id/dialog_second_checkbox_text" />
+            </LinearLayout>
+            <com.bbm.ui.InlineImageTextView android:textSize="@dimen/fontSizeMedium" android:id="@id/dialog_info_second_line" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:textIsSelectable="false" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

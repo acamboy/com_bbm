@@ -1,51 +1,128 @@
 .class final Landroid/support/v4/widget/ab;
-.super Landroid/view/animation/AccelerateDecelerateInterpolator;
-.source "MaterialProgressDrawable.java"
+.super Ljava/lang/Object;
+.source "EdgeEffectCompat.java"
+
+# interfaces
+.implements Landroid/support/v4/widget/ac;
 
 
 # direct methods
-.method private constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 707
-    invoke-direct {p0}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(B)V
-    .locals 0
-
-    .prologue
-    .line 707
-    invoke-direct {p0}, Landroid/support/v4/widget/ab;-><init>()V
+    .line 90
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getInterpolation(F)F
-    .locals 3
+.method public final a(Landroid/content/Context;)Ljava/lang/Object;
+    .locals 1
 
     .prologue
-    .line 710
-    const/4 v0, 0x0
+    .line 92
+    new-instance v0, Landroid/widget/EdgeEffect;
 
-    const/high16 v1, 0x3f000000
+    invoke-direct {v0, p1}, Landroid/widget/EdgeEffect;-><init>(Landroid/content/Context;)V
 
-    sub-float v1, p1, v1
+    return-object v0
+.end method
 
-    const/high16 v2, 0x40000000
+.method public final a(Ljava/lang/Object;II)V
+    .locals 0
 
-    mul-float/2addr v1, v2
+    .prologue
+    .line 96
+    check-cast p1, Landroid/widget/EdgeEffect;
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->max(FF)F
+    invoke-virtual {p1, p2, p3}, Landroid/widget/EdgeEffect;->setSize(II)V
+
+    .line 97
+    return-void
+.end method
+
+.method public final a(Ljava/lang/Object;)Z
+    .locals 1
+
+    .prologue
+    .line 100
+    check-cast p1, Landroid/widget/EdgeEffect;
+
+    invoke-virtual {p1}, Landroid/widget/EdgeEffect;->isFinished()Z
 
     move-result v0
 
-    invoke-super {p0, v0}, Landroid/view/animation/AccelerateDecelerateInterpolator;->getInterpolation(F)F
+    return v0
+.end method
+
+.method public final a(Ljava/lang/Object;F)Z
+    .locals 1
+
+    .prologue
+    .line 108
+    check-cast p1, Landroid/widget/EdgeEffect;
+
+    invoke-virtual {p1, p2}, Landroid/widget/EdgeEffect;->onPull(F)V
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final a(Ljava/lang/Object;I)Z
+    .locals 1
+
+    .prologue
+    .line 116
+    check-cast p1, Landroid/widget/EdgeEffect;
+
+    invoke-virtual {p1, p2}, Landroid/widget/EdgeEffect;->onAbsorb(I)V
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final a(Ljava/lang/Object;Landroid/graphics/Canvas;)Z
+    .locals 1
+
+    .prologue
+    .line 120
+    check-cast p1, Landroid/widget/EdgeEffect;
+
+    invoke-virtual {p1, p2}, Landroid/widget/EdgeEffect;->draw(Landroid/graphics/Canvas;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final b(Ljava/lang/Object;)V
+    .locals 0
+
+    .prologue
+    .line 104
+    check-cast p1, Landroid/widget/EdgeEffect;
+
+    invoke-virtual {p1}, Landroid/widget/EdgeEffect;->finish()V
+
+    .line 105
+    return-void
+.end method
+
+.method public final c(Ljava/lang/Object;)Z
+    .locals 1
+
+    .prologue
+    .line 112
+    check-cast p1, Landroid/widget/EdgeEffect;
+
+    invoke-virtual {p1}, Landroid/widget/EdgeEffect;->onRelease()V
+
+    invoke-virtual {p1}, Landroid/widget/EdgeEffect;->isFinished()Z
 
     move-result v0
 

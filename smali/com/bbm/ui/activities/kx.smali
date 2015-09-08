@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/kx;
 .super Ljava/lang/Object;
-.source "GroupAdminAddActivity.java"
+.source "GroupConversationActivity.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupAdminAddActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 70
-    iput-object p1, p0, Lcom/bbm/ui/activities/kx;->a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
+    .line 644
+    iput-object p1, p0, Lcom/bbm/ui/activities/kx;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,65 +26,32 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 4
+    .locals 3
 
     .prologue
-    .line 74
-    const-string v0, "mHeaderActionBar Positive Button Clicked"
+    .line 647
+    const-string v0, "clicked on cart"
 
-    const-class v1, Lcom/bbm/ui/activities/GroupAdminAddActivity;
+    const-class v1, Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 76
-    iget-object v0, p0, Lcom/bbm/ui/activities/kx;->a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
+    .line 648
+    new-instance v0, Landroid/content/Intent;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupAdminAddActivity;->a(Lcom/bbm/ui/activities/GroupAdminAddActivity;)Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/bbm/ui/activities/kx;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    move-result-object v0
+    const-class v2, Lcom/bbm/ui/activities/StoreHomeActivity;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    move-result-object v1
+    .line 649
+    iget-object v1, p0, Lcom/bbm/ui/activities/kx;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    const/4 v2, 0x2
 
-    move-result v0
+    invoke-virtual {v1, v0, v2}, Lcom/bbm/ui/activities/GroupConversationActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    if-eqz v0, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    .line 77
-    iget-object v2, p0, Lcom/bbm/ui/activities/kx;->a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/GroupAdminAddActivity;->b(Lcom/bbm/ui/activities/GroupAdminAddActivity;)Lcom/bbm/g/al;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/kx;->a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
-
-    iget-object v3, v3, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
-
-    invoke-static {v0, v3}, Lcom/bbm/g/am;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/cc;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
-
-    goto :goto_0
-
-    .line 79
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/kx;->a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupAdminAddActivity;->finish()V
-
-    .line 80
+    .line 650
     return-void
 .end method

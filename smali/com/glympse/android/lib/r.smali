@@ -9,7 +9,7 @@
 # instance fields
 .field private _glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-.field private hC:Lcom/glympse/android/hal/GVector;
+.field private hK:Lcom/glympse/android/hal/GVector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/glympse/android/hal/GVector",
@@ -20,9 +20,9 @@
     .end annotation
 .end field
 
-.field private hD:Lcom/glympse/android/hal/GInvocationAgent;
+.field private hL:Lcom/glympse/android/hal/GInvocationAgent;
 
-.field private hE:Lcom/glympse/android/lib/CommonSink;
+.field private hM:Lcom/glympse/android/lib/CommonSink;
 
 
 # direct methods
@@ -44,7 +44,7 @@
 
     invoke-direct {v0, v1}, Lcom/glympse/android/lib/CommonSink;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/glympse/android/lib/r;->hE:Lcom/glympse/android/lib/CommonSink;
+    iput-object v0, p0, Lcom/glympse/android/lib/r;->hM:Lcom/glympse/android/lib/CommonSink;
 
     .line 29
     return-void
@@ -318,7 +318,7 @@
 
     move-result v1
 
-    invoke-static {v1}, Lcom/glympse/android/lib/ej;->n(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/glympse/android/lib/ev;->p(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -581,7 +581,7 @@
     return-object v0
 .end method
 
-.method private k(Ljava/lang/String;)Lcom/glympse/android/api/GApplication;
+.method private l(Ljava/lang/String;)Lcom/glympse/android/api/GApplication;
     .locals 5
 
     .prologue
@@ -603,7 +603,7 @@
 
     .line 343
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/r;->hC:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/r;->hK:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -618,7 +618,7 @@
     if-ge v2, v3, :cond_2
 
     .line 346
-    iget-object v0, p0, Lcom/glympse/android/lib/r;->hC:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/r;->hK:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, v2}, Lcom/glympse/android/hal/GVector;->elementAt(I)Ljava/lang/Object;
 
@@ -658,7 +658,7 @@
 
     .prologue
     .line 415
-    iget-object v0, p0, Lcom/glympse/android/lib/r;->hE:Lcom/glympse/android/lib/CommonSink;
+    iget-object v0, p0, Lcom/glympse/android/lib/r;->hM:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/lib/CommonSink;->addListener(Lcom/glympse/android/api/GEventListener;)Z
 
@@ -672,7 +672,7 @@
 
     .prologue
     .line 440
-    iget-object v0, p0, Lcom/glympse/android/lib/r;->hE:Lcom/glympse/android/lib/CommonSink;
+    iget-object v0, p0, Lcom/glympse/android/lib/r;->hM:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/glympse/android/lib/CommonSink;->associateContext(JLjava/lang/Object;)V
 
@@ -754,7 +754,7 @@
     move-result-object v1
 
     .line 95
-    invoke-direct {p0, v1}, Lcom/glympse/android/lib/r;->k(Ljava/lang/String;)Lcom/glympse/android/api/GApplication;
+    invoke-direct {p0, v1}, Lcom/glympse/android/lib/r;->l(Ljava/lang/String;)Lcom/glympse/android/api/GApplication;
 
     move-result-object v1
 
@@ -774,7 +774,7 @@
 
     .prologue
     .line 450
-    iget-object v0, p0, Lcom/glympse/android/lib/r;->hE:Lcom/glympse/android/lib/CommonSink;
+    iget-object v0, p0, Lcom/glympse/android/lib/r;->hM:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0, p1, p2}, Lcom/glympse/android/lib/CommonSink;->clearContext(J)V
 
@@ -805,7 +805,7 @@
     move-result-object v0
 
     .line 219
-    invoke-direct {p0, v0}, Lcom/glympse/android/lib/r;->k(Ljava/lang/String;)Lcom/glympse/android/api/GApplication;
+    invoke-direct {p0, v0}, Lcom/glympse/android/lib/r;->l(Ljava/lang/String;)Lcom/glympse/android/api/GApplication;
 
     move-result-object v1
 
@@ -839,7 +839,7 @@
 
     .prologue
     .line 460
-    iget-object v0, p0, Lcom/glympse/android/lib/r;->hE:Lcom/glympse/android/lib/CommonSink;
+    iget-object v0, p0, Lcom/glympse/android/lib/r;->hM:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/lib/CommonSink;->deriveContext(Lcom/glympse/android/api/GEventSink;)V
 
@@ -852,7 +852,7 @@
 
     .prologue
     .line 430
-    iget-object v0, p0, Lcom/glympse/android/lib/r;->hE:Lcom/glympse/android/lib/CommonSink;
+    iget-object v0, p0, Lcom/glympse/android/lib/r;->hM:Lcom/glympse/android/lib/CommonSink;
 
     invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -888,7 +888,7 @@
 
     .prologue
     .line 37
-    iget-object v0, p0, Lcom/glympse/android/lib/r;->hC:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/r;->hK:Lcom/glympse/android/hal/GVector;
 
     return-object v0
 .end method
@@ -898,7 +898,7 @@
 
     .prologue
     .line 445
-    iget-object v0, p0, Lcom/glympse/android/lib/r;->hE:Lcom/glympse/android/lib/CommonSink;
+    iget-object v0, p0, Lcom/glympse/android/lib/r;->hM:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0, p1, p2}, Lcom/glympse/android/lib/CommonSink;->getContext(J)Ljava/lang/Object;
 
@@ -921,7 +921,7 @@
 
     .prologue
     .line 455
-    iget-object v0, p0, Lcom/glympse/android/lib/r;->hE:Lcom/glympse/android/lib/CommonSink;
+    iget-object v0, p0, Lcom/glympse/android/lib/r;->hM:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0}, Lcom/glympse/android/lib/CommonSink;->getContextKeys()Ljava/util/Enumeration;
 
@@ -944,7 +944,7 @@
 
     .prologue
     .line 425
-    iget-object v0, p0, Lcom/glympse/android/lib/r;->hE:Lcom/glympse/android/lib/CommonSink;
+    iget-object v0, p0, Lcom/glympse/android/lib/r;->hM:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0}, Lcom/glympse/android/lib/CommonSink;->getListeners()Lcom/glympse/android/core/GArray;
 
@@ -958,7 +958,7 @@
 
     .prologue
     .line 435
-    iget-object v0, p0, Lcom/glympse/android/lib/r;->hE:Lcom/glympse/android/lib/CommonSink;
+    iget-object v0, p0, Lcom/glympse/android/lib/r;->hM:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0, p1, p2}, Lcom/glympse/android/lib/CommonSink;->hasContext(J)Z
 
@@ -1010,7 +1010,7 @@
     invoke-interface {v0, v1}, Lcom/glympse/android/hal/GIntent;->setData(Ljava/lang/String;)V
 
     .line 82
-    iget-object v1, p0, Lcom/glympse/android/lib/r;->hD:Lcom/glympse/android/hal/GInvocationAgent;
+    iget-object v1, p0, Lcom/glympse/android/lib/r;->hL:Lcom/glympse/android/hal/GInvocationAgent;
 
     invoke-interface {v1, v0}, Lcom/glympse/android/hal/GInvocationAgent;->install(Lcom/glympse/android/hal/GIntent;)Z
 
@@ -1062,7 +1062,7 @@
     invoke-interface {v0, v1}, Lcom/glympse/android/hal/GIntent;->setData(Ljava/lang/String;)V
 
     .line 52
-    iget-object v1, p0, Lcom/glympse/android/lib/r;->hD:Lcom/glympse/android/hal/GInvocationAgent;
+    iget-object v1, p0, Lcom/glympse/android/lib/r;->hL:Lcom/glympse/android/hal/GInvocationAgent;
 
     invoke-interface {v1, v0}, Lcom/glympse/android/hal/GInvocationAgent;->isInstalled(Lcom/glympse/android/hal/GIntent;)Z
 
@@ -1076,7 +1076,7 @@
 
     .prologue
     .line 420
-    iget-object v0, p0, Lcom/glympse/android/lib/r;->hE:Lcom/glympse/android/lib/CommonSink;
+    iget-object v0, p0, Lcom/glympse/android/lib/r;->hM:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/lib/CommonSink;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
 
@@ -1109,7 +1109,7 @@
     move-result-object v0
 
     .line 150
-    invoke-direct {p0, v0}, Lcom/glympse/android/lib/r;->k(Ljava/lang/String;)Lcom/glympse/android/api/GApplication;
+    invoke-direct {p0, v0}, Lcom/glympse/android/lib/r;->l(Ljava/lang/String;)Lcom/glympse/android/api/GApplication;
 
     move-result-object v0
 
@@ -1155,7 +1155,7 @@
 
     .line 171
     :cond_2
-    iget-object v1, p0, Lcom/glympse/android/lib/r;->hD:Lcom/glympse/android/hal/GInvocationAgent;
+    iget-object v1, p0, Lcom/glympse/android/lib/r;->hL:Lcom/glympse/android/hal/GInvocationAgent;
 
     invoke-interface {v1, v2}, Lcom/glympse/android/hal/GInvocationAgent;->startActivity(Lcom/glympse/android/hal/GIntent;)Z
 
@@ -1208,7 +1208,7 @@
 
     .line 183
     :cond_6
-    iget-object v1, p0, Lcom/glympse/android/lib/r;->hD:Lcom/glympse/android/hal/GInvocationAgent;
+    iget-object v1, p0, Lcom/glympse/android/lib/r;->hL:Lcom/glympse/android/hal/GInvocationAgent;
 
     invoke-interface {v1, v2}, Lcom/glympse/android/hal/GInvocationAgent;->sendBroadcast(Lcom/glympse/android/hal/GIntent;)Z
 
@@ -1243,7 +1243,7 @@
 
     .line 195
     :cond_8
-    iget-object v1, p0, Lcom/glympse/android/lib/r;->hD:Lcom/glympse/android/hal/GInvocationAgent;
+    iget-object v1, p0, Lcom/glympse/android/lib/r;->hL:Lcom/glympse/android/hal/GInvocationAgent;
 
     invoke-interface {v1, v2}, Lcom/glympse/android/hal/GInvocationAgent;->startActivity(Lcom/glympse/android/hal/GIntent;)Z
 
@@ -1286,7 +1286,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/r;->hD:Lcom/glympse/android/hal/GInvocationAgent;
+    iput-object v0, p0, Lcom/glympse/android/lib/r;->hL:Lcom/glympse/android/hal/GInvocationAgent;
 
     .line 122
     iget-object v0, p0, Lcom/glympse/android/lib/r;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
@@ -1295,10 +1295,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/r;->hC:Lcom/glympse/android/hal/GVector;
+    iput-object v0, p0, Lcom/glympse/android/lib/r;->hK:Lcom/glympse/android/hal/GVector;
 
     .line 125
-    iget-object v0, p0, Lcom/glympse/android/lib/r;->hC:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/r;->hK:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -1313,7 +1313,7 @@
     if-ge v1, v2, :cond_0
 
     .line 128
-    iget-object v0, p0, Lcom/glympse/android/lib/r;->hC:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/r;->hK:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, v1}, Lcom/glympse/android/hal/GVector;->elementAt(I)Ljava/lang/Object;
 
@@ -1345,10 +1345,10 @@
     const/4 v0, 0x0
 
     .line 135
-    iput-object v0, p0, Lcom/glympse/android/lib/r;->hC:Lcom/glympse/android/hal/GVector;
+    iput-object v0, p0, Lcom/glympse/android/lib/r;->hK:Lcom/glympse/android/hal/GVector;
 
     .line 136
-    iput-object v0, p0, Lcom/glympse/android/lib/r;->hD:Lcom/glympse/android/hal/GInvocationAgent;
+    iput-object v0, p0, Lcom/glympse/android/lib/r;->hL:Lcom/glympse/android/hal/GInvocationAgent;
 
     .line 137
     iput-object v0, p0, Lcom/glympse/android/lib/r;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;

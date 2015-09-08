@@ -1,84 +1,182 @@
 .class final Lcom/bbm/ui/activities/aaf;
-.super Ljava/lang/Object;
-.source "NewListItemActivity.java"
+.super Landroid/widget/BaseAdapter;
+.source "ProfileIconSourceActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/widget/ListAdapter;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/b/k;
+.field final synthetic a:Lcom/bbm/ui/activities/ProfileIconSourceActivity;
 
-.field final synthetic b:Lcom/bbm/ui/activities/aae;
+.field private final b:Landroid/view/LayoutInflater;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/aae;Lcom/bbm/ui/b/k;)V
-    .locals 0
+.method public constructor <init>(Lcom/bbm/ui/activities/ProfileIconSourceActivity;Landroid/content/Context;)V
+    .locals 1
 
     .prologue
-    .line 432
-    iput-object p1, p0, Lcom/bbm/ui/activities/aaf;->b:Lcom/bbm/ui/activities/aae;
+    .line 243
+    iput-object p1, p0, Lcom/bbm/ui/activities/aaf;->a:Lcom/bbm/ui/activities/ProfileIconSourceActivity;
 
-    iput-object p2, p0, Lcom/bbm/ui/activities/aaf;->a:Lcom/bbm/ui/b/k;
+    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 244
+    invoke-static {p2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/aaf;->b:Landroid/view/LayoutInflater;
+
+    .line 245
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final a(I)Lcom/bbm/ui/activities/aae;
+    .locals 1
+
+    .prologue
+    .line 277
+    iget-object v0, p0, Lcom/bbm/ui/activities/aaf;->a:Lcom/bbm/ui/activities/ProfileIconSourceActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->b(Lcom/bbm/ui/activities/ProfileIconSourceActivity;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/activities/aae;
+
+    return-object v0
+.end method
+
+.method public final getCount()I
+    .locals 1
+
+    .prologue
+    .line 272
+    iget-object v0, p0, Lcom/bbm/ui/activities/aaf;->a:Lcom/bbm/ui/activities/ProfileIconSourceActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->b(Lcom/bbm/ui/activities/ProfileIconSourceActivity;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final synthetic getItem(I)Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 239
+    invoke-virtual {p0, p1}, Lcom/bbm/ui/activities/aaf;->a(I)Lcom/bbm/ui/activities/aae;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getItemId(I)J
     .locals 2
 
     .prologue
-    .line 435
-    const-string v0, "mItemCategory onSpinnerItemClicked Dialog Left Button Clicked"
+    .line 282
+    int-to-long v0, p1
 
-    const-class v1, Lcom/bbm/ui/activities/NewListItemActivity;
+    return-wide v0
+.end method
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 4
 
-    .line 437
-    iget-object v0, p0, Lcom/bbm/ui/activities/aaf;->b:Lcom/bbm/ui/activities/aae;
+    .prologue
+    .line 252
+    if-nez p2, :cond_0
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/aae;->a:Lcom/bbm/ui/activities/NewListItemActivity;
+    .line 253
+    new-instance v1, Lcom/bbm/ui/activities/aah;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/NewListItemActivity;->n:Lcom/bbm/ui/p;
+    iget-object v0, p0, Lcom/bbm/ui/activities/aaf;->a:Lcom/bbm/ui/activities/ProfileIconSourceActivity;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/aaf;->b:Lcom/bbm/ui/activities/aae;
+    invoke-direct {v1, v0}, Lcom/bbm/ui/activities/aah;-><init>(Lcom/bbm/ui/activities/ProfileIconSourceActivity;)V
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/aae;->a:Lcom/bbm/ui/activities/NewListItemActivity;
+    .line 254
+    iget-object v0, p0, Lcom/bbm/ui/activities/aaf;->b:Landroid/view/LayoutInflater;
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/NewListItemActivity;->n:Lcom/bbm/ui/p;
+    const v2, 0x7f0300f0
 
-    iget v1, v1, Lcom/bbm/ui/p;->b:I
+    const/4 v3, 0x0
 
-    iput v1, v0, Lcom/bbm/ui/p;->a:I
+    invoke-virtual {v0, v2, p3, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 438
-    iget-object v0, p0, Lcom/bbm/ui/activities/aaf;->b:Lcom/bbm/ui/activities/aae;
+    move-result-object p2
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/aae;->a:Lcom/bbm/ui/activities/NewListItemActivity;
+    .line 255
+    const v0, 0x7f0b054c
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/NewListItemActivity;->h:Landroid/widget/Spinner;
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/aaf;->b:Lcom/bbm/ui/activities/aae;
+    move-result-object v0
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/aae;->a:Lcom/bbm/ui/activities/NewListItemActivity;
+    check-cast v0, Landroid/widget/ImageView;
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/NewListItemActivity;->n:Lcom/bbm/ui/p;
+    iput-object v0, v1, Lcom/bbm/ui/activities/aah;->a:Landroid/widget/ImageView;
 
-    iget v1, v1, Lcom/bbm/ui/p;->a:I
+    .line 256
+    const v0, 0x7f0b054d
 
-    invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setSelection(I)V
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    .line 439
-    iget-object v0, p0, Lcom/bbm/ui/activities/aaf;->a:Lcom/bbm/ui/b/k;
+    move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/b/k;->dismiss()V
+    check-cast v0, Landroid/widget/TextView;
 
-    .line 440
-    return-void
+    iput-object v0, v1, Lcom/bbm/ui/activities/aah;->b:Landroid/widget/TextView;
+
+    .line 257
+    invoke-virtual {p2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+
+    move-object v0, v1
+
+    .line 262
+    :goto_0
+    invoke-virtual {p0, p1}, Lcom/bbm/ui/activities/aaf;->a(I)Lcom/bbm/ui/activities/aae;
+
+    move-result-object v1
+
+    .line 264
+    iget-object v2, v0, Lcom/bbm/ui/activities/aah;->a:Landroid/widget/ImageView;
+
+    iget v3, v1, Lcom/bbm/ui/activities/aae;->a:I
+
+    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    .line 265
+    iget-object v0, v0, Lcom/bbm/ui/activities/aah;->b:Landroid/widget/TextView;
+
+    iget-object v1, v1, Lcom/bbm/ui/activities/aae;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 267
+    return-object p2
+
+    .line 259
+    :cond_0
+    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/activities/aah;
+
+    goto :goto_0
 .end method

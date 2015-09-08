@@ -1,4 +1,4 @@
-.class public final Lcom/bbm/ui/e;
+.class final Lcom/bbm/ui/e;
 .super Landroid/view/animation/Animation;
 .source "AnimationUtils.java"
 
@@ -12,7 +12,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;I)V
+.method constructor <init>(Landroid/view/View;I)V
     .locals 1
 
     .prologue
@@ -43,7 +43,7 @@
 
     move-result-object v1
 
-    const/high16 v0, 0x3f800000
+    const/high16 v0, 0x3f800000    # 1.0f
 
     cmpl-float v0, p1, v0
 

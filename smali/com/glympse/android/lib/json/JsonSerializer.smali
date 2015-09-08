@@ -11,6 +11,7 @@
     .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 156
     return-void
 .end method
 
@@ -40,7 +41,7 @@
     invoke-interface {v0}, Lcom/glympse/android/lib/json/GJsonParser;->clearStack()V
 
     .line 37
-    invoke-virtual {v1}, Lcom/glympse/android/lib/json/b;->de()Lcom/glympse/android/core/GPrimitive;
+    invoke-virtual {v1}, Lcom/glympse/android/lib/json/b;->di()Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v0
 

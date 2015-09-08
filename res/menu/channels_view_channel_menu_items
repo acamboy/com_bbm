@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@id/menu_view_channel">
+        <item android:icon="@drawable/ic_invite" android:id="@id/button_channel_invite" android:visible="false" android:title="@string/invite_to_bbm" app:showAsAction="always|collapseActionView" />
+        <item android:icon="@drawable/ic_add_post" android:id="@id/button_channel_add_post" android:visible="false" android:title="@string/add_channel_post" app:showAsAction="always|collapseActionView" />
+        <item android:icon="@drawable/ic_start_chat" android:id="@id/button_open_chat" android:visible="false" android:title="@string/openchat" app:showAsAction="always|collapseActionView" app:actionViewClass="android.support.v7.widget.SearchView" />
+        <item android:icon="@drawable/ic_menu_channelprofile" android:id="@id/menu_view_channel_profile" android:title="@string/view_channel_profile" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_channelsettings" android:id="@id/menu_channel_settings" android:title="@string/channel_settings" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_add_contact" android:id="@id/menu_channel_invite" android:title="@string/invite_to_bbm" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_add_post" android:id="@id/menu_channel_add_post" android:visible="false" android:title="@string/add_channel_post" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_start_chat" android:id="@id/menu_open_chat" android:visible="false" android:title="@string/openchat" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_drawer_report" android:id="@id/menu_report_channel" android:visible="false" android:title="@string/report_channel" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_drawer_report" android:id="@id/menu_remove_report_channel" android:visible="false" android:title="@string/channel_report_remove_complaint" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_leave" android:id="@id/menu_leave_channel" android:visible="false" android:title="@string/leave_channel" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_delete" android:id="@id/menu_delete_channel" android:visible="false" android:title="@string/delete_channel" app:showAsAction="never" />
+    </group>
+</menu>

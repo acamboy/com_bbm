@@ -13,6 +13,10 @@
         <item quantity="other">%1$d medlemmer</item>
         <item quantity="one">%1$d medlem</item>
     </plurals>
+    <plurals name="common_days_1d">
+        <item quantity="other">%1$d dage</item>
+        <item quantity="one">%1$d dag</item>
+    </plurals>
     <plurals name="ephemeral_picker_seconds">
         <item quantity="other">sekunder</item>
         <item quantity="one">sekund</item>
@@ -35,28 +39,28 @@
         <item quantity="one">Et resultat</item>
     </plurals>
     <plurals name="slide_menu_active_chats">
-        <item quantity="other">%1$s aktive chat</item>
-        <item quantity="one">1 aktiv chat</item>
+        <item quantity="other">Aktive chats %1$s</item>
+        <item quantity="one">Aktiv chat %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_channelupdates">
-        <item quantity="other">%1$s nye beskeder</item>
-        <item quantity="one">1 ny meddelelse</item>
+        <item quantity="other">Nye kanalelementer %1$s</item>
+        <item quantity="one">Nyt kanalelement %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_invites">
-        <item quantity="other">%1$s nye invitationer</item>
-        <item quantity="one">1 ny invitation</item>
+        <item quantity="other">Nye invitationer %1$s</item>
+        <item quantity="one">Ny invitation %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_updates">
-        <item quantity="other">%1$s nye elementer</item>
-        <item quantity="one">1 nyt element</item>
+        <item quantity="other">Nye feeds %1$s</item>
+        <item quantity="one">Ny feed %1$s</item>
     </plurals>
     <plurals name="slide_menu_total_contacts">
         <item quantity="other">%1$s kontakter</item>
-        <item quantity="one">1 kontakt</item>
+        <item quantity="one">%1$s kontakt</item>
     </plurals>
     <plurals name="slide_menu_total_groups">
         <item quantity="other">%1$s grupper</item>
-        <item quantity="one">1 gruppe</item>
+        <item quantity="one">%1$s gruppe</item>
     </plurals>
     <plurals name="update_channel_stats_comments">
         <item quantity="other">%1$s kommentarer</item>

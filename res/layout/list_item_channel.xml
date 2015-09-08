@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@drawable/list_item_default_background" android:paddingRight="@dimen/contact_list_item_padding_right" android:paddingBottom="@dimen/contact_list_item_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.bbm.ui.ObservingImageView android:id="@id/channel_photo" android:layout_width="@dimen/avatar_size" android:layout_height="@dimen/avatar_size" android:layout_marginRight="@dimen/invites_list_item_avatar_margin" android:scaleType="centerCrop" />
-    <com.bbm.ui.InlineImageTextView android:textSize="@dimen/fontSizeListItemTitle" android:textColor="@color/listItemTitle" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/channel_name" android:layout_width="fill_parent" android:layout_height="@dimen/contact_list_item_title_height" android:layout_marginTop="@dimen/contact_list_item_title_margin_top" android:lines="1" android:layout_toRightOf="@id/channel_photo" android:layout_alignParentTop="true" android:textIsSelectable="false" />
-</RelativeLayout>

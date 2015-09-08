@@ -1,216 +1,201 @@
 .class public final Lcom/d/a/c/e;
 .super Ljava/lang/Object;
-.source "StorageUtils.java"
+.source "L.java"
+
+
+# static fields
+.field private static volatile a:Z
+
+.field private static volatile b:Z
 
 
 # direct methods
-.method public static a(Landroid/content/Context;)Ljava/io/File;
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 1
 
     .prologue
-    const/4 v2, 0x0
-
-    .line 50
+    .line 30
     const/4 v0, 0x0
 
-    .line 51
-    invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
+    sput-boolean v0, Lcom/d/a/c/e;->a:Z
 
-    move-result-object v1
+    .line 31
+    const/4 v0, 0x1
 
-    const-string v3, "mounted"
+    sput-boolean v0, Lcom/d/a/c/e;->b:Z
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const-string v1, "android.permission.WRITE_EXTERNAL_STORAGE"
-
-    invoke-virtual {p0, v1}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    const/4 v1, 0x1
-
-    :goto_0
-    if-eqz v1, :cond_0
-
-    .line 52
-    invoke-static {p0}, Lcom/d/a/c/e;->c(Landroid/content/Context;)Ljava/io/File;
-
-    move-result-object v0
-
-    .line 54
-    :cond_0
-    if-nez v0, :cond_1
-
-    .line 55
-    invoke-virtual {p0}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
-
-    move-result-object v0
-
-    .line 57
-    :cond_1
-    if-nez v0, :cond_2
-
-    .line 58
-    const-string v0, "Can\'t define system cache directory!"
-
-    new-array v1, v2, [Ljava/lang/Object;
-
-    invoke-static {v0, v1}, Lcom/d/a/c/d;->c(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 59
-    invoke-virtual {p0}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
-
-    move-result-object v0
-
-    .line 61
-    :cond_2
-    return-object v0
-
-    :cond_3
-    move v1, v2
-
-    .line 51
-    goto :goto_0
+    return-void
 .end method
 
-.method public static b(Landroid/content/Context;)Ljava/io/File;
-    .locals 3
-
-    .prologue
-    .line 73
-    invoke-static {p0}, Lcom/d/a/c/e;->a(Landroid/content/Context;)Ljava/io/File;
-
-    move-result-object v0
-
-    .line 74
-    new-instance v1, Ljava/io/File;
-
-    const-string v2, "uil-images"
-
-    invoke-direct {v1, v0, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
-
-    .line 75
-    invoke-virtual {v1}, Ljava/io/File;->exists()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    .line 76
-    invoke-virtual {v1}, Ljava/io/File;->mkdir()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    .line 80
-    :goto_0
-    return-object v0
-
-    :cond_0
-    move-object v0, v1
-
-    goto :goto_0
-.end method
-
-.method private static c(Landroid/content/Context;)Ljava/io/File;
+.method private static varargs a(ILjava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 5
 
     .prologue
-    const/4 v4, 0x0
+    .line 98
+    sget-boolean v0, Lcom/d/a/c/e;->b:Z
 
-    .line 103
-    new-instance v1, Ljava/io/File;
+    if-nez v0, :cond_0
 
-    new-instance v0, Ljava/io/File;
+    .line 112
+    :goto_0
+    return-void
 
-    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+    .line 99
+    :cond_0
+    array-length v0, p3
 
-    move-result-object v2
+    if-lez v0, :cond_3
 
-    const-string v3, "Android"
+    .line 100
+    invoke-static {p2, p3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-direct {v0, v2, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
-
-    const-string v2, "data"
-
-    invoke-direct {v1, v0, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+    move-result-object v0
 
     .line 104
-    new-instance v0, Ljava/io/File;
-
-    new-instance v2, Ljava/io/File;
-
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-direct {v2, v1, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
-
-    const-string v1, "cache"
-
-    invoke-direct {v0, v2, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
-
-    .line 105
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    .line 106
-    invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    .line 107
-    const-string v0, "Unable to create external cache directory"
-
-    new-array v1, v4, [Ljava/lang/Object;
-
-    invoke-static {v0, v1}, Lcom/d/a/c/d;->c(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 108
-    const/4 v0, 0x0
-
-    .line 116
-    :cond_0
-    :goto_0
-    return-object v0
+    :goto_1
+    if-nez p1, :cond_1
 
     .line 111
+    :goto_2
+    sget-object v1, Lcom/d/a/b/f;->a:Ljava/lang/String;
+
+    invoke-static {p0, v1, v0}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    .line 107
     :cond_1
-    :try_start_0
-    new-instance v1, Ljava/io/File;
+    if-nez v0, :cond_2
 
-    const-string v2, ".nomedia"
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    invoke-direct {v1, v0, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+    move-result-object v0
 
-    invoke-virtual {v1}, Ljava/io/File;->createNewFile()Z
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .line 108
+    :cond_2
+    invoke-static {p1}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
 
-    goto :goto_0
+    move-result-object v1
 
-    .line 113
-    :catch_0
-    move-exception v1
+    .line 109
+    const-string v2, "%1$s\n%2$s"
 
-    const-string v1, "Can\'t create \".nomedia\" file in application external cache directory"
+    const/4 v3, 0x2
 
-    new-array v2, v4, [Ljava/lang/Object;
+    new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v1, v2}, Lcom/d/a/c/d;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+    const/4 v4, 0x0
 
-    goto :goto_0
+    aput-object v0, v3, v4
+
+    const/4 v0, 0x1
+
+    aput-object v1, v3, v0
+
+    invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_2
+
+    :cond_3
+    move-object v0, p2
+
+    goto :goto_1
+.end method
+
+.method public static varargs a(Ljava/lang/String;[Ljava/lang/Object;)V
+    .locals 2
+
+    .prologue
+    .line 72
+    sget-boolean v0, Lcom/d/a/c/e;->a:Z
+
+    if-eqz v0, :cond_0
+
+    .line 73
+    const/4 v0, 0x3
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1, p0, p1}, Lcom/d/a/c/e;->a(ILjava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 75
+    :cond_0
+    return-void
+.end method
+
+.method public static a(Ljava/lang/Throwable;)V
+    .locals 3
+
+    .prologue
+    .line 86
+    const/4 v0, 0x6
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {v0, p0, v1, v2}, Lcom/d/a/c/e;->a(ILjava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 87
+    return-void
+.end method
+
+.method public static a(Z)V
+    .locals 0
+
+    .prologue
+    .line 63
+    sput-boolean p0, Lcom/d/a/c/e;->a:Z
+
+    .line 64
+    return-void
+.end method
+
+.method public static varargs b(Ljava/lang/String;[Ljava/lang/Object;)V
+    .locals 2
+
+    .prologue
+    .line 78
+    const/4 v0, 0x4
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1, p0, p1}, Lcom/d/a/c/e;->a(ILjava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 79
+    return-void
+.end method
+
+.method public static varargs c(Ljava/lang/String;[Ljava/lang/Object;)V
+    .locals 2
+
+    .prologue
+    .line 82
+    const/4 v0, 0x5
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1, p0, p1}, Lcom/d/a/c/e;->a(ILjava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 83
+    return-void
+.end method
+
+.method public static varargs d(Ljava/lang/String;[Ljava/lang/Object;)V
+    .locals 2
+
+    .prologue
+    .line 90
+    const/4 v0, 0x6
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1, p0, p1}, Lcom/d/a/c/e;->a(ILjava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 91
+    return-void
 .end method

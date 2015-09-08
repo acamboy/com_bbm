@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 87
+    .line 86
     iput-object p1, p0, Lcom/bbm/ui/views/q;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,9 +33,9 @@
 
     const/4 v6, 0x1
 
-    const/high16 v4, 0x40000000
+    const/high16 v4, 0x40000000    # 2.0f
 
-    .line 90
+    .line 89
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -48,18 +48,18 @@
 
     if-ne v0, v7, :cond_1
 
-    .line 92
+    .line 91
     :cond_0
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
-    .line 93
+    .line 92
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
     move-result v1
 
-    .line 94
+    .line 93
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v2
@@ -68,7 +68,7 @@
 
     div-float/2addr v2, v4
 
-    .line 95
+    .line 94
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result v3
@@ -77,7 +77,7 @@
 
     div-float/2addr v3, v4
 
-    .line 96
+    .line 95
     sub-float/2addr v0, v2
 
     float-to-double v4, v0
@@ -90,14 +90,14 @@
 
     move-result-wide v0
 
-    .line 97
-    const-wide v2, -0x3fff3eadc7d28c9bL
+    .line 96
+    const-wide v2, -0x3fff3eadc7d28c9bL    # -2.0943951023931953
 
     cmpg-double v2, v0, v2
 
     if-gez v2, :cond_2
 
-    .line 99
+    .line 98
     iget-object v0, p0, Lcom/bbm/ui/views/q;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
 
     iget-object v1, p0, Lcom/bbm/ui/views/q;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
@@ -112,20 +112,20 @@
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/views/EphemeralPickerPagerV2;->setValue(I)V
 
-    .line 112
+    .line 111
     :cond_1
     :goto_0
     return v6
 
-    .line 100
+    .line 99
     :cond_2
-    const-wide v2, -0x400f3eadc7d28c9bL
+    const-wide v2, -0x400f3eadc7d28c9bL    # -1.0471975511965976
 
     cmpg-double v2, v0, v2
 
     if-gez v2, :cond_3
 
-    .line 101
+    .line 100
     iget-object v0, p0, Lcom/bbm/ui/views/q;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
 
     iget-object v1, p0, Lcom/bbm/ui/views/q;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
@@ -142,7 +142,7 @@
 
     goto :goto_0
 
-    .line 102
+    .line 101
     :cond_3
     const-wide/16 v2, 0x0
 
@@ -150,7 +150,7 @@
 
     if-gez v2, :cond_4
 
-    .line 103
+    .line 102
     iget-object v0, p0, Lcom/bbm/ui/views/q;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
 
     iget-object v1, p0, Lcom/bbm/ui/views/q;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
@@ -167,15 +167,15 @@
 
     goto :goto_0
 
-    .line 104
+    .line 103
     :cond_4
-    const-wide v2, 0x3ff0c152382d7365L
+    const-wide v2, 0x3ff0c152382d7365L    # 1.0471975511965976
 
     cmpg-double v2, v0, v2
 
     if-gez v2, :cond_5
 
-    .line 105
+    .line 104
     iget-object v0, p0, Lcom/bbm/ui/views/q;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
 
     iget-object v1, p0, Lcom/bbm/ui/views/q;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
@@ -192,15 +192,15 @@
 
     goto :goto_0
 
-    .line 106
+    .line 105
     :cond_5
-    const-wide v2, 0x4000c152382d7365L
+    const-wide v2, 0x4000c152382d7365L    # 2.0943951023931953
 
     cmpg-double v2, v0, v2
 
     if-gez v2, :cond_6
 
-    .line 107
+    .line 106
     iget-object v0, p0, Lcom/bbm/ui/views/q;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
 
     iget-object v1, p0, Lcom/bbm/ui/views/q;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
@@ -215,15 +215,15 @@
 
     goto :goto_0
 
-    .line 108
+    .line 107
     :cond_6
-    const-wide v2, 0x400921fb54442d18L
+    const-wide v2, 0x400921fb54442d18L    # Math.PI
 
     cmpg-double v0, v0, v2
 
     if-gez v0, :cond_1
 
-    .line 109
+    .line 108
     iget-object v0, p0, Lcom/bbm/ui/views/q;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
 
     iget-object v1, p0, Lcom/bbm/ui/views/q;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;

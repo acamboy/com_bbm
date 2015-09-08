@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/agx;
 .super Ljava/lang/Object;
-.source "SettingsActivity.java"
+.source "ViewChannelPostActivity.java"
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Lcom/bbm/bali/ui/snackbar/f;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
     .locals 0
 
     .prologue
-    .line 376
-    iput-object p1, p0, Lcom/bbm/ui/activities/agx;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    .line 521
+    iput-object p1, p0, Lcom/bbm/ui/activities/agx;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,54 +25,31 @@
 
 
 # virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 3
+.method public final a()V
+    .locals 2
 
     .prologue
-    .line 379
-    iget-object v0, p0, Lcom/bbm/ui/activities/agx;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    .line 524
+    const-string v0, "Snackbar OndismissListener"
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->c(Lcom/bbm/ui/activities/SettingsActivity;)Lcom/bbm/d/a;
+    const-class v1, Lcom/bbm/ui/activities/ViewChannelPostActivity;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 525
+    iget-object v0, p0, Lcom/bbm/ui/activities/agx;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->h(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Landroid/widget/EditText;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/d/a;->f()Z
+    invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
 
-    move-result v0
+    .line 526
+    iget-object v0, p0, Lcom/bbm/ui/activities/agx;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
 
-    if-ne p2, v0, :cond_0
+    invoke-static {v0}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;)V
 
-    .line 386
-    :goto_0
+    .line 527
     return-void
-
-    .line 383
-    :cond_0
-    const-string v0, "SWILT onCheckedChnaged"
-
-    const-class v1, Lcom/bbm/ui/activities/SettingsActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 384
-    iget-object v0, p0, Lcom/bbm/ui/activities/agx;->a:Lcom/bbm/ui/activities/SettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->q(Lcom/bbm/ui/activities/SettingsActivity;)Z
-
-    .line 385
-    iget-object v0, p0, Lcom/bbm/ui/activities/agx;->a:Lcom/bbm/ui/activities/SettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->c(Lcom/bbm/ui/activities/SettingsActivity;)Lcom/bbm/d/a;
-
-    move-result-object v0
-
-    const-string v1, "nowPlayingMessageEnabled"
-
-    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/bbm/d/a;->a(Ljava/lang/String;Ljava/lang/Boolean;)V
-
-    goto :goto_0
 .end method

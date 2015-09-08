@@ -1,404 +1,163 @@
 .class public final Landroid/support/v4/app/bd;
-.super Ljava/lang/Object;
+.super Landroid/support/v4/app/cb;
 .source "NotificationCompat.java"
 
 
+# static fields
+.field public static final d:Landroid/support/v4/app/cc;
+
+
 # instance fields
-.field A:Landroid/app/Notification;
+.field public a:I
 
-.field public B:Landroid/app/Notification;
+.field public b:Ljava/lang/CharSequence;
 
-.field public C:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList",
-            "<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public c:Landroid/app/PendingIntent;
 
-.field a:Landroid/content/Context;
+.field private final e:Landroid/os/Bundle;
 
-.field b:Ljava/lang/CharSequence;
-
-.field c:Ljava/lang/CharSequence;
-
-.field public d:Landroid/app/PendingIntent;
-
-.field e:Landroid/app/PendingIntent;
-
-.field f:Landroid/widget/RemoteViews;
-
-.field public g:Landroid/graphics/Bitmap;
-
-.field h:Ljava/lang/CharSequence;
-
-.field i:I
-
-.field public j:I
-
-.field k:Z
-
-.field public l:Z
-
-.field m:Landroid/support/v4/app/bo;
-
-.field n:Ljava/lang/CharSequence;
-
-.field o:I
-
-.field p:I
-
-.field q:Z
-
-.field r:Ljava/lang/String;
-
-.field s:Z
-
-.field t:Ljava/lang/String;
-
-.field u:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList",
-            "<",
-            "Landroid/support/v4/app/ay;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public v:Z
-
-.field w:Ljava/lang/String;
-
-.field public x:Landroid/os/Bundle;
-
-.field y:I
-
-.field public z:I
+.field private final f:[Landroid/support/v4/app/cs;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 5
+.method static constructor <clinit>()V
+    .locals 1
 
     .prologue
-    const/4 v4, 0x0
+    .line 2135
+    new-instance v0, Landroid/support/v4/app/be;
 
-    .line 877
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/app/be;-><init>()V
 
-    .line 845
-    const/4 v0, 0x1
+    sput-object v0, Landroid/support/v4/app/bd;->d:Landroid/support/v4/app/cc;
 
-    iput-boolean v0, p0, Landroid/support/v4/app/bd;->k:Z
-
-    .line 855
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Landroid/support/v4/app/bd;->u:Ljava/util/ArrayList;
-
-    .line 856
-    iput-boolean v4, p0, Landroid/support/v4/app/bd;->v:Z
-
-    .line 859
-    iput v4, p0, Landroid/support/v4/app/bd;->y:I
-
-    .line 860
-    iput v4, p0, Landroid/support/v4/app/bd;->z:I
-
-    .line 863
-    new-instance v0, Landroid/app/Notification;
-
-    invoke-direct {v0}, Landroid/app/Notification;-><init>()V
-
-    iput-object v0, p0, Landroid/support/v4/app/bd;->B:Landroid/app/Notification;
-
-    .line 878
-    iput-object p1, p0, Landroid/support/v4/app/bd;->a:Landroid/content/Context;
-
-    .line 881
-    iget-object v0, p0, Landroid/support/v4/app/bd;->B:Landroid/app/Notification;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    iput-wide v2, v0, Landroid/app/Notification;->when:J
-
-    .line 882
-    iget-object v0, p0, Landroid/support/v4/app/bd;->B:Landroid/app/Notification;
-
-    const/4 v1, -0x1
-
-    iput v1, v0, Landroid/app/Notification;->audioStreamType:I
-
-    .line 883
-    iput v4, p0, Landroid/support/v4/app/bd;->j:I
-
-    .line 884
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Landroid/support/v4/app/bd;->C:Ljava/util/ArrayList;
-
-    .line 885
     return-void
 .end method
 
-.method protected static d(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-    .locals 2
+.method public constructor <init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
+    .locals 6
 
     .prologue
-    const/16 v1, 0x1400
+    .line 1791
+    new-instance v4, Landroid/os/Bundle;
 
-    .line 1507
-    if-nez p0, :cond_1
+    invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
 
-    .line 1511
-    :cond_0
-    :goto_0
-    return-object p0
+    const/4 v5, 0x0
 
-    .line 1508
-    :cond_1
-    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
+    move-object v0, p0
 
-    move-result v0
+    move v1, p1
 
-    if-le v0, v1, :cond_0
+    move-object v2, p2
 
-    .line 1509
-    const/4 v0, 0x0
+    move-object v3, p3
 
-    invoke-interface {p0, v0, v1}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+    invoke-direct/range {v0 .. v5}, Landroid/support/v4/app/bd;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroid/support/v4/app/cs;)V
 
-    move-result-object p0
-
-    goto :goto_0
+    .line 1792
+    return-void
 .end method
 
-
-# virtual methods
-.method public final a()Landroid/app/Notification;
+.method private constructor <init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroid/support/v4/app/cs;)V
     .locals 1
 
     .prologue
-    .line 1503
-    invoke-static {}, Landroid/support/v4/app/ax;->a()Landroid/support/v4/app/bf;
+    .line 1795
+    invoke-direct {p0}, Landroid/support/v4/app/cb;-><init>()V
 
-    move-result-object v0
+    .line 1796
+    iput p1, p0, Landroid/support/v4/app/bd;->a:I
 
-    invoke-interface {v0, p0}, Landroid/support/v4/app/bf;->a(Landroid/support/v4/app/bd;)Landroid/app/Notification;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final a(I)Landroid/support/v4/app/bd;
-    .locals 1
-
-    .prologue
-    .line 929
-    iget-object v0, p0, Landroid/support/v4/app/bd;->B:Landroid/app/Notification;
-
-    iput p1, v0, Landroid/app/Notification;->icon:I
-
-    .line 930
-    return-object p0
-.end method
-
-.method public final a(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)Landroid/support/v4/app/bd;
-    .locals 2
-
-    .prologue
-    .line 1403
-    iget-object v0, p0, Landroid/support/v4/app/bd;->u:Ljava/util/ArrayList;
-
-    new-instance v1, Landroid/support/v4/app/ay;
-
-    invoke-direct {v1, p1, p2, p3}, Landroid/support/v4/app/ay;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 1404
-    return-object p0
-.end method
-
-.method public final a(Landroid/net/Uri;)Landroid/support/v4/app/bd;
-    .locals 2
-
-    .prologue
-    .line 1102
-    iget-object v0, p0, Landroid/support/v4/app/bd;->B:Landroid/app/Notification;
-
-    iput-object p1, v0, Landroid/app/Notification;->sound:Landroid/net/Uri;
-
-    .line 1103
-    iget-object v0, p0, Landroid/support/v4/app/bd;->B:Landroid/app/Notification;
-
-    const/4 v1, -0x1
-
-    iput v1, v0, Landroid/app/Notification;->audioStreamType:I
-
-    .line 1104
-    return-object p0
-.end method
-
-.method public final a(Ljava/lang/CharSequence;)Landroid/support/v4/app/bd;
-    .locals 1
-
-    .prologue
-    .line 953
-    invoke-static {p1}, Landroid/support/v4/app/bd;->d(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    .line 1797
+    invoke-static {p2}, Landroid/support/v4/app/bi;->d(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/support/v4/app/bd;->b:Ljava/lang/CharSequence;
 
-    .line 954
-    return-object p0
-.end method
+    .line 1798
+    iput-object p3, p0, Landroid/support/v4/app/bd;->c:Landroid/app/PendingIntent;
 
-.method public final a([J)Landroid/support/v4/app/bd;
-    .locals 1
+    .line 1799
+    if-eqz p4, :cond_0
 
-    .prologue
-    .line 1136
-    iget-object v0, p0, Landroid/support/v4/app/bd;->B:Landroid/app/Notification;
-
-    iput-object p1, v0, Landroid/app/Notification;->vibrate:[J
-
-    .line 1137
-    return-object p0
-.end method
-
-.method public final b(I)Landroid/support/v4/app/bd;
-    .locals 5
-
-    .prologue
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    .line 1146
-    iget-object v0, p0, Landroid/support/v4/app/bd;->B:Landroid/app/Notification;
-
-    iput p1, v0, Landroid/app/Notification;->ledARGB:I
-
-    .line 1147
-    iget-object v0, p0, Landroid/support/v4/app/bd;->B:Landroid/app/Notification;
-
-    const/16 v3, 0x12c
-
-    iput v3, v0, Landroid/app/Notification;->ledOnMS:I
-
-    .line 1148
-    iget-object v0, p0, Landroid/support/v4/app/bd;->B:Landroid/app/Notification;
-
-    const/16 v3, 0x76c
-
-    iput v3, v0, Landroid/app/Notification;->ledOffMS:I
-
-    .line 1149
-    iget-object v0, p0, Landroid/support/v4/app/bd;->B:Landroid/app/Notification;
-
-    iget v0, v0, Landroid/app/Notification;->ledOnMS:I
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v4/app/bd;->B:Landroid/app/Notification;
-
-    iget v0, v0, Landroid/app/Notification;->ledOffMS:I
-
-    if-eqz v0, :cond_0
-
-    move v0, v1
-
-    .line 1150
     :goto_0
-    iget-object v3, p0, Landroid/support/v4/app/bd;->B:Landroid/app/Notification;
+    iput-object p4, p0, Landroid/support/v4/app/bd;->e:Landroid/os/Bundle;
 
-    iget-object v4, p0, Landroid/support/v4/app/bd;->B:Landroid/app/Notification;
+    .line 1800
+    iput-object p5, p0, Landroid/support/v4/app/bd;->f:[Landroid/support/v4/app/cs;
 
-    iget v4, v4, Landroid/app/Notification;->flags:I
+    .line 1801
+    return-void
 
-    and-int/lit8 v4, v4, -0x2
-
-    if-eqz v0, :cond_1
-
-    :goto_1
-    or-int v0, v4, v1
-
-    iput v0, v3, Landroid/app/Notification;->flags:I
-
-    .line 1152
-    return-object p0
-
+    .line 1799
     :cond_0
-    move v0, v2
+    new-instance p4, Landroid/os/Bundle;
 
-    .line 1149
+    invoke-direct {p4}, Landroid/os/Bundle;-><init>()V
+
     goto :goto_0
-
-    :cond_1
-    move v1, v2
-
-    .line 1150
-    goto :goto_1
 .end method
 
-.method public final b(Ljava/lang/CharSequence;)Landroid/support/v4/app/bd;
-    .locals 1
+.method synthetic constructor <init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroid/support/v4/app/cs;B)V
+    .locals 0
 
     .prologue
-    .line 961
-    invoke-static {p1}, Landroid/support/v4/app/bd;->d(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    iput-object v0, p0, Landroid/support/v4/app/bd;->c:Ljava/lang/CharSequence;
-
-    .line 962
-    return-object p0
-.end method
-
-.method public final c(Ljava/lang/CharSequence;)Landroid/support/v4/app/bd;
-    .locals 2
-
-    .prologue
-    .line 1070
-    iget-object v0, p0, Landroid/support/v4/app/bd;->B:Landroid/app/Notification;
-
-    invoke-static {p1}, Landroid/support/v4/app/bd;->d(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    iput-object v1, v0, Landroid/app/Notification;->tickerText:Ljava/lang/CharSequence;
-
-    .line 1071
-    return-object p0
-.end method
-
-.method public final c(I)V
-    .locals 2
-
-    .prologue
-    .line 1233
-    iget-object v0, p0, Landroid/support/v4/app/bd;->B:Landroid/app/Notification;
-
-    iget v1, v0, Landroid/app/Notification;->flags:I
-
-    or-int/2addr v1, p1
-
-    iput v1, v0, Landroid/app/Notification;->flags:I
+    .line 1772
+    invoke-direct/range {p0 .. p5}, Landroid/support/v4/app/bd;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroid/support/v4/app/cs;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method protected final a()I
+    .locals 1
+
+    .prologue
+    .line 1805
+    iget v0, p0, Landroid/support/v4/app/bd;->a:I
+
+    return v0
+.end method
+
+.method protected final b()Ljava/lang/CharSequence;
+    .locals 1
+
+    .prologue
+    .line 1810
+    iget-object v0, p0, Landroid/support/v4/app/bd;->b:Ljava/lang/CharSequence;
+
+    return-object v0
+.end method
+
+.method protected final c()Landroid/app/PendingIntent;
+    .locals 1
+
+    .prologue
+    .line 1815
+    iget-object v0, p0, Landroid/support/v4/app/bd;->c:Landroid/app/PendingIntent;
+
+    return-object v0
+.end method
+
+.method public final d()Landroid/os/Bundle;
+    .locals 1
+
+    .prologue
+    .line 1823
+    iget-object v0, p0, Landroid/support/v4/app/bd;->e:Landroid/os/Bundle;
+
+    return-object v0
+.end method
+
+.method public final bridge synthetic e()[Landroid/support/v4/app/db;
+    .locals 1
+
+    .prologue
+    .line 1772
+    iget-object v0, p0, Landroid/support/v4/app/bd;->f:[Landroid/support/v4/app/cs;
+
+    return-object v0
 .end method

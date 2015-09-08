@@ -1,4 +1,4 @@
-.class public interface abstract Lcom/b/a/a/a;
+.class interface abstract Lcom/b/a/a/a;
 .super Ljava/lang/Object;
 .source "ActivityLike.java"
 

@@ -1,29 +1,46 @@
-.class public final Lcom/bbm/ui/activities/aeh;
+.class final Lcom/bbm/ui/activities/aeh;
 .super Ljava/lang/Object;
-.source "ReportProblemActivity.java"
+.source "SettingsActivity.java"
+
+# interfaces
+.implements Lcom/bbm/ui/t;
 
 
 # instance fields
-.field public a:Ljava/lang/String;
-
-.field public b:Ljava/lang/String;
-
-.field public c:Ljava/lang/String;
-
-.field public d:Ljava/io/File;
-
-.field final synthetic e:Lcom/bbm/ui/activities/ReportProblemActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/ui/activities/ReportProblemActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
     .locals 0
 
     .prologue
-    .line 448
-    iput-object p1, p0, Lcom/bbm/ui/activities/aeh;->e:Lcom/bbm/ui/activities/ReportProblemActivity;
+    .line 276
+    iput-object p1, p0, Lcom/bbm/ui/activities/aeh;->a:Lcom/bbm/ui/activities/SettingsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(I)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 280
+    iget-object v0, p0, Lcom/bbm/ui/activities/aeh;->a:Lcom/bbm/ui/activities/SettingsActivity;
+
+    const-string v1, "notification_led_colour"
+
+    invoke-static {v0, v1, p1}, Lcom/bbm/ui/activities/SettingsActivity;->a(Lcom/bbm/ui/activities/SettingsActivity;Ljava/lang/String;I)V
+
+    .line 281
     return-void
 .end method

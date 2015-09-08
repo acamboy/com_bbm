@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/z;
 .super Ljava/lang/Object;
-.source "AvatarViewerActivity.java"
+.source "BroadcastActivity.java"
 
 # interfaces
-.implements Lcom/slidingmenu/lib/a/b;
+.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/AvatarViewerActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/BroadcastActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/AvatarViewerActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/BroadcastActivity;)V
     .locals 0
 
     .prologue
-    .line 108
-    iput-object p1, p0, Lcom/bbm/ui/activities/z;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
+    .line 97
+    iput-object p1, p0, Lcom/bbm/ui/activities/z;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,50 +25,34 @@
 
 
 # virtual methods
-.method public final a()V
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 2
 
     .prologue
-    .line 112
-    const-string v0, "onHardwareMenuButtonClicked"
+    .line 101
+    const-string v0, "mOnRootTouchListener onTouch"
 
-    const-class v1, Lcom/bbm/ui/activities/AvatarViewerActivity;
+    const-class v1, Lcom/bbm/ui/activities/BroadcastActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 113
-    iget-object v0, p0, Lcom/bbm/ui/activities/z;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
-
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
-
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
-
-    invoke-virtual {v0}, Lcom/slidingmenu/lib/SlidingMenu;->b()Z
+    .line 102
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    .line 114
-    iget-object v0, p0, Lcom/bbm/ui/activities/z;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
-
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
-
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+    .line 103
+    iget-object v0, p0, Lcom/bbm/ui/activities/z;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
+    invoke-static {v0, v1}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;Z)V
 
-    .line 118
-    :goto_0
-    return-void
-
-    .line 116
+    .line 105
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/z;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/AvatarViewerActivity;->o()V
-
-    goto :goto_0
+    return v0
 .end method

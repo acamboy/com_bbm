@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:background="@color/configureable_system_message_backround" android:layout_width="fill_parent" android:layout_height="wrap_content"
+<LinearLayout android:orientation="horizontal" android:background="@drawable/system_message_list_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_gravity="left|center" android:id="@id/system_message_avatar" android:scaleType="centerCrop" style="@style/SystemMessageAvatar" />
+    <ImageView android:layout_gravity="center|left" android:id="@id/system_message_avatar" android:scaleType="centerCrop" style="@style/SystemMessageAvatar" />
     <TextView android:layout_gravity="center_vertical" android:id="@id/system_message_title" android:paddingLeft="@dimen/system_message_item_padding_right" android:paddingRight="@dimen/system_message_item_padding_right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/SystemMessageTitleField" />
-    <ImageView android:layout_gravity="right|center" android:id="@id/system_message_chevron" android:paddingRight="@dimen/system_message_item_padding_right" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/system_message_chevron_selector" />
+    <ImageView android:layout_gravity="center|right" android:id="@id/system_message_chevron" android:paddingRight="@dimen/system_message_item_padding_right" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/system_message_chevron_selector" />
 </LinearLayout>

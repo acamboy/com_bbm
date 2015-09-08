@@ -31,9 +31,9 @@
     .prologue
     const/4 v0, 0x0
 
-    const/high16 v12, 0x42640000
+    const/high16 v12, 0x42640000    # 57.0f
 
-    const/high16 v9, 0x40000000
+    const/high16 v9, 0x40000000    # 2.0f
 
     const/4 v6, 0x0
 
@@ -42,7 +42,7 @@
     .line 752
     new-instance v1, Landroid/view/animation/AlphaAnimation;
 
-    const/high16 v2, 0x3f800000
+    const/high16 v2, 0x3f800000    # 1.0f
 
     invoke-direct {v1, v6, v2}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
@@ -143,7 +143,7 @@
 
     move-result v1
 
-    const/high16 v2, 0x42480000
+    const/high16 v2, 0x42480000    # 50.0f
 
     mul-float/2addr v2, v4
 
@@ -211,7 +211,7 @@
 
     move-result v7
 
-    const/high16 v8, 0x41400000
+    const/high16 v8, 0x41400000    # 12.0f
 
     mul-float/2addr v8, v4
 
@@ -341,7 +341,7 @@
 
     move-result v0
 
-    const/high16 v7, 0x41400000
+    const/high16 v7, 0x41400000    # 12.0f
 
     mul-float/2addr v7, v4
 

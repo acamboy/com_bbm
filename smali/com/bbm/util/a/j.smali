@@ -20,14 +20,14 @@
     return-void
 .end method
 
-.method public static a(Lcom/bbm/d/go;)Ljava/lang/String;
+.method public static a(Lcom/bbm/d/ib;)Ljava/lang/String;
     .locals 3
 
     .prologue
-    .line 45
-    iget-object v0, p0, Lcom/bbm/d/go;->d:Lorg/json/JSONObject;
+    .line 44
+    iget-object v0, p0, Lcom/bbm/d/ib;->e:Lorg/json/JSONObject;
 
-    .line 46
+    .line 45
     const-string v1, "Provider"
 
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
@@ -42,14 +42,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 47
+    .line 46
     const-string v1, "id"
 
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 49
+    .line 48
     :goto_0
     return-object v0
 
@@ -84,37 +84,29 @@
     move-result-object v0
 
     .line 28
-    sget-object v1, Lcom/bbm/d/dq;->b:Lcom/bbm/d/dq;
+    sget-object v1, Lcom/bbm/d/er;->b:Lcom/bbm/d/er;
 
-    invoke-static {p2, p1, v1}, Lcom/bbm/d/aa;->a(Ljava/lang/String;Ljava/lang/String;Lcom/bbm/d/dq;)Lcom/bbm/d/dp;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lcom/bbm/d/dp;->a(Ljava/lang/String;)Lcom/bbm/d/dp;
+    invoke-static {p2, p1, v1}, Lcom/bbm/d/aj;->a(Ljava/lang/String;Ljava/lang/String;Lcom/bbm/d/er;)Lcom/bbm/d/eq;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/bbm/d/dp;->b(Lorg/json/JSONObject;)Lcom/bbm/d/dp;
+    invoke-virtual {v1, v0}, Lcom/bbm/d/eq;->c(Lorg/json/JSONObject;)Lcom/bbm/d/eq;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
+    invoke-virtual {p0, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ez;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 36
+    .line 35
     :goto_0
     return-void
 
-    .line 33
+    .line 32
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method
@@ -123,54 +115,54 @@
     .locals 4
 
     .prologue
-    .line 60
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
+    .line 59
+    invoke-static {}, Lcom/bbm/w;->a()Lcom/bbm/w;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/p;->b:Lcom/bbm/util/a/a;
+    iget-object v0, v0, Lcom/bbm/w;->b:Lcom/bbm/util/a/a;
 
-    .line 61
+    .line 60
     invoke-virtual {v0, p0}, Lcom/bbm/util/a/a;->a(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 62
+    .line 61
     invoke-virtual {v0, p0}, Lcom/bbm/util/a/a;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 63
+    .line 62
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 64
+    .line 63
     invoke-virtual {v0, v1}, Lcom/bbm/util/a/a;->c(Ljava/lang/String;)Lcom/glympse/android/api/GTicket;
 
     move-result-object v2
 
-    .line 65
+    .line 64
     if-eqz v2, :cond_0
 
-    .line 66
+    .line 65
     invoke-interface {v2}, Lcom/glympse/android/api/GTicket;->expire()Z
 
-    .line 67
+    .line 66
     if-eqz p0, :cond_0
 
     if-nez v1, :cond_1
 
-    .line 71
+    .line 70
     :cond_0
     :goto_0
     return-void
 
-    .line 67
+    .line 66
     :cond_1
     iget-object v2, v0, Lcom/bbm/util/a/a;->b:Lcom/glympse/android/core/GPrimitive;
 
@@ -237,7 +229,7 @@
     .locals 2
 
     .prologue
-    .line 81
+    .line 80
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -1,58 +1,633 @@
-.class final Lcom/bbm/ui/activities/ha;
-.super Lcom/bbm/j/a;
+.class final synthetic Lcom/bbm/ui/activities/ha;
+.super Ljava/lang/Object;
 .source "ConversationActivity.java"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/j/a",
-        "<",
-        "Lcom/bbm/d/eu;",
-        ">;"
-    }
-.end annotation
+# static fields
+.field static final synthetic a:[I
 
+.field static final synthetic b:[I
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
+.field static final synthetic c:[I
+
+.field static final synthetic d:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 1977
-    iput-object p1, p0, Lcom/bbm/ui/activities/ha;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 4556
+    invoke-static {}, Lcom/bbm/ui/a/ab;->values()[Lcom/bbm/ui/a/ab;
 
-    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
+    move-result-object v0
 
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/activities/ha;->d:[I
+
+    :try_start_0
+    sget-object v0, Lcom/bbm/ui/activities/ha;->d:[I
+
+    sget-object v1, Lcom/bbm/ui/a/ab;->u:Lcom/bbm/ui/a/ab;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/a/ab;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_1a
+
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/ui/activities/ha;->d:[I
+
+    sget-object v1, Lcom/bbm/ui/a/ab;->v:Lcom/bbm/ui/a/ab;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/a/ab;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_19
+
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/bbm/ui/activities/ha;->d:[I
+
+    sget-object v1, Lcom/bbm/ui/a/ab;->c:Lcom/bbm/ui/a/ab;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/a/ab;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_18
+
+    :goto_2
+    :try_start_3
+    sget-object v0, Lcom/bbm/ui/activities/ha;->d:[I
+
+    sget-object v1, Lcom/bbm/ui/a/ab;->d:Lcom/bbm/ui/a/ab;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/a/ab;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_17
+
+    :goto_3
+    :try_start_4
+    sget-object v0, Lcom/bbm/ui/activities/ha;->d:[I
+
+    sget-object v1, Lcom/bbm/ui/a/ab;->k:Lcom/bbm/ui/a/ab;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/a/ab;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_16
+
+    :goto_4
+    :try_start_5
+    sget-object v0, Lcom/bbm/ui/activities/ha;->d:[I
+
+    sget-object v1, Lcom/bbm/ui/a/ab;->l:Lcom/bbm/ui/a/ab;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/a/ab;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x6
+
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_15
+
+    :goto_5
+    :try_start_6
+    sget-object v0, Lcom/bbm/ui/activities/ha;->d:[I
+
+    sget-object v1, Lcom/bbm/ui/a/ab;->a:Lcom/bbm/ui/a/ab;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/a/ab;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x7
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_14
+
+    :goto_6
+    :try_start_7
+    sget-object v0, Lcom/bbm/ui/activities/ha;->d:[I
+
+    sget-object v1, Lcom/bbm/ui/a/ab;->b:Lcom/bbm/ui/a/ab;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/a/ab;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0x8
+
+    aput v2, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_13
+
+    :goto_7
+    :try_start_8
+    sget-object v0, Lcom/bbm/ui/activities/ha;->d:[I
+
+    sget-object v1, Lcom/bbm/ui/a/ab;->i:Lcom/bbm/ui/a/ab;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/a/ab;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0x9
+
+    aput v2, v0, v1
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_12
+
+    :goto_8
+    :try_start_9
+    sget-object v0, Lcom/bbm/ui/activities/ha;->d:[I
+
+    sget-object v1, Lcom/bbm/ui/a/ab;->j:Lcom/bbm/ui/a/ab;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/a/ab;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0xa
+
+    aput v2, v0, v1
+    :try_end_9
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_11
+
+    :goto_9
+    :try_start_a
+    sget-object v0, Lcom/bbm/ui/activities/ha;->d:[I
+
+    sget-object v1, Lcom/bbm/ui/a/ab;->A:Lcom/bbm/ui/a/ab;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/a/ab;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0xb
+
+    aput v2, v0, v1
+    :try_end_a
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_10
+
+    :goto_a
+    :try_start_b
+    sget-object v0, Lcom/bbm/ui/activities/ha;->d:[I
+
+    sget-object v1, Lcom/bbm/ui/a/ab;->B:Lcom/bbm/ui/a/ab;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/a/ab;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0xc
+
+    aput v2, v0, v1
+    :try_end_b
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_f
+
+    :goto_b
+    :try_start_c
+    sget-object v0, Lcom/bbm/ui/activities/ha;->d:[I
+
+    sget-object v1, Lcom/bbm/ui/a/ab;->F:Lcom/bbm/ui/a/ab;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/a/ab;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0xd
+
+    aput v2, v0, v1
+    :try_end_c
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_c .. :try_end_c} :catch_e
+
+    :goto_c
+    :try_start_d
+    sget-object v0, Lcom/bbm/ui/activities/ha;->d:[I
+
+    sget-object v1, Lcom/bbm/ui/a/ab;->s:Lcom/bbm/ui/a/ab;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/a/ab;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0xe
+
+    aput v2, v0, v1
+    :try_end_d
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_d .. :try_end_d} :catch_d
+
+    :goto_d
+    :try_start_e
+    sget-object v0, Lcom/bbm/ui/activities/ha;->d:[I
+
+    sget-object v1, Lcom/bbm/ui/a/ab;->t:Lcom/bbm/ui/a/ab;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/a/ab;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0xf
+
+    aput v2, v0, v1
+    :try_end_e
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_e .. :try_end_e} :catch_c
+
+    .line 3885
+    :goto_e
+    invoke-static {}, Lcom/bbm/d/go;->values()[Lcom/bbm/d/go;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/activities/ha;->c:[I
+
+    :try_start_f
+    sget-object v0, Lcom/bbm/ui/activities/ha;->c:[I
+
+    sget-object v1, Lcom/bbm/d/go;->e:Lcom/bbm/d/go;
+
+    invoke-virtual {v1}, Lcom/bbm/d/go;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_f
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_f .. :try_end_f} :catch_b
+
+    :goto_f
+    :try_start_10
+    sget-object v0, Lcom/bbm/ui/activities/ha;->c:[I
+
+    sget-object v1, Lcom/bbm/d/go;->d:Lcom/bbm/d/go;
+
+    invoke-virtual {v1}, Lcom/bbm/d/go;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_10
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_10 .. :try_end_10} :catch_a
+
+    :goto_10
+    :try_start_11
+    sget-object v0, Lcom/bbm/ui/activities/ha;->c:[I
+
+    sget-object v1, Lcom/bbm/d/go;->b:Lcom/bbm/d/go;
+
+    invoke-virtual {v1}, Lcom/bbm/d/go;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_11
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_11 .. :try_end_11} :catch_9
+
+    :goto_11
+    :try_start_12
+    sget-object v0, Lcom/bbm/ui/activities/ha;->c:[I
+
+    sget-object v1, Lcom/bbm/d/go;->r:Lcom/bbm/d/go;
+
+    invoke-virtual {v1}, Lcom/bbm/d/go;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_12
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_12 .. :try_end_12} :catch_8
+
+    :goto_12
+    :try_start_13
+    sget-object v0, Lcom/bbm/ui/activities/ha;->c:[I
+
+    sget-object v1, Lcom/bbm/d/go;->t:Lcom/bbm/d/go;
+
+    invoke-virtual {v1}, Lcom/bbm/d/go;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_13
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_13 .. :try_end_13} :catch_7
+
+    .line 2068
+    :goto_13
+    invoke-static {}, Lcom/bbm/b/b;->values()[Lcom/bbm/b/b;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/activities/ha;->b:[I
+
+    :try_start_14
+    sget-object v0, Lcom/bbm/ui/activities/ha;->b:[I
+
+    sget-object v1, Lcom/bbm/b/b;->b:Lcom/bbm/b/b;
+
+    invoke-virtual {v1}, Lcom/bbm/b/b;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_14
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_14 .. :try_end_14} :catch_6
+
+    :goto_14
+    :try_start_15
+    sget-object v0, Lcom/bbm/ui/activities/ha;->b:[I
+
+    sget-object v1, Lcom/bbm/b/b;->a:Lcom/bbm/b/b;
+
+    invoke-virtual {v1}, Lcom/bbm/b/b;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_15
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_15 .. :try_end_15} :catch_5
+
+    .line 597
+    :goto_15
+    invoke-static {}, Lcom/bbm/d/hn;->values()[Lcom/bbm/d/hn;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/activities/ha;->a:[I
+
+    :try_start_16
+    sget-object v0, Lcom/bbm/ui/activities/ha;->a:[I
+
+    sget-object v1, Lcom/bbm/d/hn;->c:Lcom/bbm/d/hn;
+
+    invoke-virtual {v1}, Lcom/bbm/d/hn;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_16
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_16 .. :try_end_16} :catch_4
+
+    :goto_16
+    :try_start_17
+    sget-object v0, Lcom/bbm/ui/activities/ha;->a:[I
+
+    sget-object v1, Lcom/bbm/d/hn;->d:Lcom/bbm/d/hn;
+
+    invoke-virtual {v1}, Lcom/bbm/d/hn;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_17
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_17 .. :try_end_17} :catch_3
+
+    :goto_17
+    :try_start_18
+    sget-object v0, Lcom/bbm/ui/activities/ha;->a:[I
+
+    sget-object v1, Lcom/bbm/d/hn;->e:Lcom/bbm/d/hn;
+
+    invoke-virtual {v1}, Lcom/bbm/d/hn;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_18
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_18 .. :try_end_18} :catch_2
+
+    :goto_18
+    :try_start_19
+    sget-object v0, Lcom/bbm/ui/activities/ha;->a:[I
+
+    sget-object v1, Lcom/bbm/d/hn;->a:Lcom/bbm/d/hn;
+
+    invoke-virtual {v1}, Lcom/bbm/d/hn;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_19
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_19 .. :try_end_19} :catch_1
+
+    :goto_19
+    :try_start_1a
+    sget-object v0, Lcom/bbm/ui/activities/ha;->a:[I
+
+    sget-object v1, Lcom/bbm/d/hn;->b:Lcom/bbm/d/hn;
+
+    invoke-virtual {v1}, Lcom/bbm/d/hn;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_1a
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1a .. :try_end_1a} :catch_0
+
+    :goto_1a
     return-void
-.end method
 
+    :catch_0
+    move-exception v0
 
-# virtual methods
-.method protected final synthetic a()Ljava/lang/Object;
-    .locals 2
+    goto :goto_1a
 
-    .prologue
-    .line 1977
-    iget-object v0, p0, Lcom/bbm/ui/activities/ha;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    :catch_1
+    move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->j(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/a;
+    goto :goto_19
 
-    move-result-object v0
+    :catch_2
+    move-exception v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ha;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    goto :goto_18
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->k(Lcom/bbm/ui/activities/ConversationActivity;)Ljava/lang/String;
+    :catch_3
+    move-exception v0
 
-    move-result-object v1
+    goto :goto_17
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->K(Ljava/lang/String;)Lcom/bbm/d/eu;
+    :catch_4
+    move-exception v0
 
-    move-result-object v0
+    goto :goto_16
 
-    return-object v0
+    :catch_5
+    move-exception v0
+
+    goto :goto_15
+
+    :catch_6
+    move-exception v0
+
+    goto :goto_14
+
+    :catch_7
+    move-exception v0
+
+    goto :goto_13
+
+    :catch_8
+    move-exception v0
+
+    goto :goto_12
+
+    :catch_9
+    move-exception v0
+
+    goto/16 :goto_11
+
+    :catch_a
+    move-exception v0
+
+    goto/16 :goto_10
+
+    :catch_b
+    move-exception v0
+
+    goto/16 :goto_f
+
+    :catch_c
+    move-exception v0
+
+    goto/16 :goto_e
+
+    :catch_d
+    move-exception v0
+
+    goto/16 :goto_d
+
+    :catch_e
+    move-exception v0
+
+    goto/16 :goto_c
+
+    :catch_f
+    move-exception v0
+
+    goto/16 :goto_b
+
+    :catch_10
+    move-exception v0
+
+    goto/16 :goto_a
+
+    :catch_11
+    move-exception v0
+
+    goto/16 :goto_9
+
+    :catch_12
+    move-exception v0
+
+    goto/16 :goto_8
+
+    :catch_13
+    move-exception v0
+
+    goto/16 :goto_7
+
+    :catch_14
+    move-exception v0
+
+    goto/16 :goto_6
+
+    :catch_15
+    move-exception v0
+
+    goto/16 :goto_5
+
+    :catch_16
+    move-exception v0
+
+    goto/16 :goto_4
+
+    :catch_17
+    move-exception v0
+
+    goto/16 :goto_3
+
+    :catch_18
+    move-exception v0
+
+    goto/16 :goto_2
+
+    :catch_19
+    move-exception v0
+
+    goto/16 :goto_1
+
+    :catch_1a
+    move-exception v0
+
+    goto/16 :goto_0
 .end method

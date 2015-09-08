@@ -3,7 +3,7 @@
 .source "AppDetailsFragment.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Lcom/bbm/ui/b/ar;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 392
+    .line 725
     iput-object p1, p0, Lcom/bbm/ui/c/h;->a:Lcom/bbm/ui/c/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,37 +25,47 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 3
+.method public final a(I)V
+    .locals 2
 
     .prologue
-    .line 395
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    .line 728
+    sget-object v0, Lcom/bbm/ui/c/s;->a:[I
 
-    .line 397
-    packed-switch p2, :pswitch_data_0
+    add-int/lit8 v1, p1, -0x1
 
-    .line 401
+    aget v0, v0, v1
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 737
     :goto_0
     return-void
 
-    .line 400
+    .line 730
     :pswitch_0
     iget-object v0, p0, Lcom/bbm/ui/c/h;->a:Lcom/bbm/ui/c/a;
 
-    new-instance v1, Landroid/content/Intent;
+    const/4 v1, 0x1
 
-    const-string v2, "android.settings.SETTINGS"
-
-    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/c/a;->startActivity(Landroid/content/Intent;)V
+    invoke-static {v0, v1}, Lcom/bbm/ui/c/a;->b(Lcom/bbm/ui/c/a;Z)V
 
     goto :goto_0
 
-    .line 397
+    .line 734
+    :pswitch_1
+    iget-object v0, p0, Lcom/bbm/ui/c/h;->a:Lcom/bbm/ui/c/a;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/c/a;->b(Lcom/bbm/ui/c/a;Z)V
+
+    goto :goto_0
+
+    .line 728
     :pswitch_data_0
-    .packed-switch -0x1
+    .packed-switch 0x1
         :pswitch_0
+        :pswitch_1
     .end packed-switch
 .end method

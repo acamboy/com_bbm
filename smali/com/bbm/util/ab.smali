@@ -1,39 +1,57 @@
-.class public final Lcom/bbm/util/ab;
+.class final Lcom/bbm/util/ab;
 .super Ljava/lang/Object;
-.source "ChannelPostCommentUtil.java"
+.source "ChannelJoinUtil.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field final synthetic a:I
+
+.field final synthetic b:Lcom/bbm/util/z;
 
 
 # direct methods
-.method public static a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
+.method constructor <init>(Lcom/bbm/util/z;I)V
+    .locals 0
 
     .prologue
-    const/16 v1, 0x7c
+    .line 149
+    iput-object p1, p0, Lcom/bbm/util/ab;->b:Lcom/bbm/util/z;
 
-    .line 11
-    new-instance v0, Ljava/lang/StringBuffer;
+    iput p2, p0, Lcom/bbm/util/ab;->a:I
 
-    invoke-direct {v0, p0}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
+    return-void
+.end method
 
-    move-result-object v0
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+# virtual methods
+.method public final run()V
+    .locals 3
 
-    move-result-object v0
+    .prologue
+    .line 152
+    iget-object v0, p0, Lcom/bbm/util/ab;->b:Lcom/bbm/util/z;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
+    iget-object v0, v0, Lcom/bbm/util/z;->b:Landroid/app/Activity;
 
-    move-result-object v0
+    iget-object v1, p0, Lcom/bbm/util/ab;->b:Lcom/bbm/util/z;
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    iget-object v1, v1, Lcom/bbm/util/z;->b:Landroid/app/Activity;
 
-    move-result-object v0
+    iget v2, p0, Lcom/bbm/util/ab;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    return-object v0
+    const/4 v2, 0x1
+
+    invoke-static {v0, v1, v2}, Lcom/bbm/util/eu;->a(Landroid/content/Context;Ljava/lang/String;I)V
+
+    .line 153
+    return-void
 .end method

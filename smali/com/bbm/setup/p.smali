@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 82
+    .line 70
     iput-object p1, p0, Lcom/bbm/setup/p;->a:Lcom/bbm/setup/PykInviteFriendsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,8 +29,8 @@
     .locals 3
 
     .prologue
-    .line 85
-    invoke-static {}, Lcom/bbm/Alaska;->h()Landroid/content/SharedPreferences;
+    .line 73
+    invoke-static {}, Lcom/bbm/Alaska;->l()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -48,11 +48,11 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 89
+    .line 77
     iget-object v0, p0, Lcom/bbm/setup/p;->a:Lcom/bbm/setup/PykInviteFriendsActivity;
 
     invoke-virtual {v0}, Lcom/bbm/setup/PykInviteFriendsActivity;->a()V
 
-    .line 90
+    .line 78
     return-void
 .end method

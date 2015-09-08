@@ -8,7 +8,7 @@
     .locals 4
 
     .prologue
-    .line 118
+    .line 121
     new-instance v1, Lcom/google/b/a/j;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -61,7 +61,7 @@
     .locals 1
 
     .prologue
-    .line 55
+    .line 57
     if-eq p0, p1, :cond_0
 
     if-eqz p0, :cond_1
@@ -95,14 +95,14 @@
     .end annotation
 
     .prologue
-    .line 186
+    .line 190
     if-eqz p0, :cond_0
 
     :goto_0
     return-object p0
 
     :cond_0
-    invoke-static {p1}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 

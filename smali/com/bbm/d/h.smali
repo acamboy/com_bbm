@@ -1,60 +1,84 @@
 .class final Lcom/bbm/d/h;
-.super Ljava/lang/Object;
+.super Lcom/bbm/j/a;
 .source "BbmdsModel.java"
-
-# interfaces
-.implements Ljava/util/Comparator;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
+        "Lcom/bbm/j/a",
         "<",
-        "Lcom/bbm/d/fp;",
-        ">;"
+        "Ljava/util/List",
+        "<",
+        "Ljava/lang/String;",
+        ">;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/d/g;
+.field final synthetic a:Lcom/bbm/d/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/d/g;)V
+.method constructor <init>(Lcom/bbm/d/a;)V
     .locals 0
 
     .prologue
-    .line 959
-    iput-object p1, p0, Lcom/bbm/d/h;->a:Lcom/bbm/d/g;
+    .line 1283
+    iput-object p1, p0, Lcom/bbm/d/h;->a:Lcom/bbm/d/a;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 4
+.method protected final synthetic a()Ljava/lang/Object;
+    .locals 3
 
     .prologue
-    .line 959
-    check-cast p1, Lcom/bbm/d/fp;
+    .line 1283
+    new-instance v1, Ljava/util/ArrayList;
 
-    check-cast p2, Lcom/bbm/d/fp;
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    iget-wide v0, p2, Lcom/bbm/d/fp;->i:J
+    iget-object v0, p0, Lcom/bbm/d/h;->a:Lcom/bbm/d/a;
 
-    iget-wide v2, p1, Lcom/bbm/d/fp;->i:J
+    invoke-virtual {v0}, Lcom/bbm/d/a;->ae()Lcom/bbm/j/w;
 
-    sub-long/2addr v0, v2
+    move-result-object v0
 
-    invoke-static {v0, v1}, Lcom/bbm/util/fh;->a(J)I
+    invoke-interface {v0}, Lcom/bbm/j/w;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    return v0
+    if-eqz v0, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/fu;
+
+    iget-object v0, v0, Lcom/bbm/d/fu;->a:Ljava/lang/String;
+
+    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_0
+    return-object v1
 .end method

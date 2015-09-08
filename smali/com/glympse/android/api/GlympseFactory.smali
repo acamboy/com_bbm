@@ -70,7 +70,7 @@
     .locals 2
 
     .prologue
-    .line 294
+    .line 305
     invoke-static/range {p0 .. p6}, Lcom/glympse/android/lib/LibFactory;->createGeoTrigger(Ljava/lang/String;ZLcom/glympse/android/api/GTicket;Lcom/glympse/android/core/GLatLng;DI)Lcom/glympse/android/api/GGeoTrigger;
 
     move-result-object v0
@@ -168,7 +168,7 @@
     .locals 1
 
     .prologue
-    .line 274
+    .line 285
     invoke-static {p0}, Lcom/glympse/android/lib/LinkedAccountsManager;->createGoogleServerAuthorizationProfile(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v0
@@ -206,6 +206,18 @@
     .prologue
     .line 151
     invoke-static {p0, p1, p2, p3}, Lcom/glympse/android/lib/LibFactory;->createInvite(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/glympse/android/api/GInvite;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static createPairingCodeProfile()Lcom/glympse/android/core/GPrimitive;
+    .locals 1
+
+    .prologue
+    .line 263
+    invoke-static {}, Lcom/glympse/android/lib/LinkedAccountsManager;->createPairingCodeProfile()Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v0
 
@@ -268,7 +280,7 @@
     .locals 1
 
     .prologue
-    .line 284
+    .line 295
     invoke-static {}, Lcom/glympse/android/lib/LibFactory;->createTrackBuilder()Lcom/glympse/android/api/GTrackBuilder;
 
     move-result-object v0

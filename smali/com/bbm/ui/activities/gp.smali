@@ -3,7 +3,7 @@
 .source "ConversationActivity.java"
 
 # interfaces
-.implements Lcom/google/android/gms/common/GooglePlayServicesClient$ConnectionCallbacks;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 418
+    .line 3597
     iput-object p1, p0, Lcom/bbm/ui/activities/gp;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,67 +25,21 @@
 
 
 # virtual methods
-.method public final onConnected(Landroid/os/Bundle;)V
+.method public final run()V
     .locals 3
 
     .prologue
-    const/4 v2, 0x0
-
-    .line 427
-    const-string v0, "Location client is connected"
-
-    new-array v1, v2, [Ljava/lang/Object;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 429
+    .line 3600
     iget-object v0, p0, Lcom/bbm/ui/activities/gp;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->f(Lcom/bbm/ui/activities/ConversationActivity;)Z
+    iget-object v0, v0, Lcom/bbm/ui/activities/ConversationActivity;->k:Lcom/bbm/ui/EmoticonInputPanel;
 
-    move-result v0
+    sget-object v1, Lcom/bbm/ui/by;->c:Lcom/bbm/ui/by;
 
-    if-eqz v0, :cond_0
+    const/4 v2, -0x1
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/gp;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/EmoticonInputPanel;->setTimebombState(Lcom/bbm/ui/by;I)V
 
-    invoke-static {v0}, Lcom/bbm/util/cm;->a(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 430
-    iget-object v0, p0, Lcom/bbm/ui/activities/gp;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->g(Lcom/bbm/ui/activities/ConversationActivity;)V
-
-    .line 434
-    :goto_0
-    return-void
-
-    .line 432
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/gp;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0, v2}, Lcom/bbm/ui/activities/ConversationActivity;->a(Lcom/bbm/ui/activities/ConversationActivity;Z)Z
-
-    goto :goto_0
-.end method
-
-.method public final onDisconnected()V
-    .locals 2
-
-    .prologue
-    .line 422
-    const-string v0, "Location client is disconnected"
-
-    const/4 v1, 0x0
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 423
+    .line 3601
     return-void
 .end method

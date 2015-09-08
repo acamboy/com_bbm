@@ -1,218 +1,198 @@
-.class public final enum Lcom/bbm/util/ay;
-.super Ljava/lang/Enum;
+.class final Lcom/bbm/util/ay;
+.super Ljava/lang/Object;
 .source "ChannelUtil.java"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum",
-        "<",
-        "Lcom/bbm/util/ay;",
-        ">;"
-    }
-.end annotation
-
-
-# static fields
-.field public static final enum a:Lcom/bbm/util/ay;
-
-.field public static final enum b:Lcom/bbm/util/ay;
-
-.field public static final enum c:Lcom/bbm/util/ay;
-
-.field public static final enum d:Lcom/bbm/util/ay;
-
-.field private static final synthetic f:[Lcom/bbm/util/ay;
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field private final e:Ljava/lang/String;
+.field final synthetic a:Lcom/google/b/f/a/p;
+
+.field final synthetic b:Landroid/app/Activity;
+
+.field final synthetic c:Ljava/lang/String;
+
+.field final synthetic d:Ljava/lang/String;
+
+.field final synthetic e:Ljava/lang/String;
+
+.field final synthetic f:Ljava/lang/String;
+
+.field final synthetic g:I
+
+.field final synthetic h:Ljava/util/ArrayList;
+
+.field final synthetic i:Ljava/util/ArrayList;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
-
-    .prologue
-    const/4 v6, 0x3
-
-    const/4 v5, 0x2
-
-    const/4 v4, 0x1
-
-    const/4 v3, 0x0
-
-    .line 109
-    new-instance v0, Lcom/bbm/util/ay;
-
-    const-string v1, "STATUS_NOT_ALLOWED"
-
-    const-string v2, "NotAllowed"
-
-    invoke-direct {v0, v1, v3, v2}, Lcom/bbm/util/ay;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/util/ay;->a:Lcom/bbm/util/ay;
-
-    .line 110
-    new-instance v0, Lcom/bbm/util/ay;
-
-    const-string v1, "STATUS_ENABLED"
-
-    const-string v2, "Enabled"
-
-    invoke-direct {v0, v1, v4, v2}, Lcom/bbm/util/ay;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/util/ay;->b:Lcom/bbm/util/ay;
-
-    .line 111
-    new-instance v0, Lcom/bbm/util/ay;
-
-    const-string v1, "STATUS_DISABLED"
-
-    const-string v2, "Disabled"
-
-    invoke-direct {v0, v1, v5, v2}, Lcom/bbm/util/ay;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/util/ay;->c:Lcom/bbm/util/ay;
-
-    .line 112
-    new-instance v0, Lcom/bbm/util/ay;
-
-    const-string v1, "STATUS_INITIALIZING"
-
-    const-string v2, "Initializing"
-
-    invoke-direct {v0, v1, v6, v2}, Lcom/bbm/util/ay;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/util/ay;->d:Lcom/bbm/util/ay;
-
-    .line 108
-    const/4 v0, 0x4
-
-    new-array v0, v0, [Lcom/bbm/util/ay;
-
-    sget-object v1, Lcom/bbm/util/ay;->a:Lcom/bbm/util/ay;
-
-    aput-object v1, v0, v3
-
-    sget-object v1, Lcom/bbm/util/ay;->b:Lcom/bbm/util/ay;
-
-    aput-object v1, v0, v4
-
-    sget-object v1, Lcom/bbm/util/ay;->c:Lcom/bbm/util/ay;
-
-    aput-object v1, v0, v5
-
-    sget-object v1, Lcom/bbm/util/ay;->d:Lcom/bbm/util/ay;
-
-    aput-object v1, v0, v6
-
-    sput-object v0, Lcom/bbm/util/ay;->f:[Lcom/bbm/util/ay;
-
-    return-void
-.end method
-
-.method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method constructor <init>(Lcom/google/b/f/a/p;Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/util/ArrayList;Ljava/util/ArrayList;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            ")V"
-        }
-    .end annotation
 
     .prologue
-    .line 116
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 709
+    iput-object p1, p0, Lcom/bbm/util/ay;->a:Lcom/google/b/f/a/p;
 
-    .line 117
-    iput-object p3, p0, Lcom/bbm/util/ay;->e:Ljava/lang/String;
+    iput-object p2, p0, Lcom/bbm/util/ay;->b:Landroid/app/Activity;
 
-    .line 118
+    iput-object p3, p0, Lcom/bbm/util/ay;->c:Ljava/lang/String;
+
+    iput-object p4, p0, Lcom/bbm/util/ay;->d:Ljava/lang/String;
+
+    iput-object p5, p0, Lcom/bbm/util/ay;->e:Ljava/lang/String;
+
+    iput-object p6, p0, Lcom/bbm/util/ay;->f:Ljava/lang/String;
+
+    iput p7, p0, Lcom/bbm/util/ay;->g:I
+
+    iput-object p8, p0, Lcom/bbm/util/ay;->h:Ljava/util/ArrayList;
+
+    iput-object p9, p0, Lcom/bbm/util/ay;->i:Ljava/util/ArrayList;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;)Lcom/bbm/util/ay;
+
+# virtual methods
+.method public final run()V
     .locals 5
 
     .prologue
-    .line 125
-    if-eqz p0, :cond_1
+    .line 714
+    :try_start_0
+    iget-object v0, p0, Lcom/bbm/util/ay;->a:Lcom/google/b/f/a/p;
 
-    .line 126
-    invoke-static {}, Lcom/bbm/util/ay;->values()[Lcom/bbm/util/ay;
+    invoke-interface {v0}, Lcom/google/b/f/a/p;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    .line 715
+    const-string v1, "Starting chat with shared channel post"
+
+    const/4 v2, 0x0
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {v1, v2}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 716
+    new-instance v1, Landroid/content/Intent;
+
+    iget-object v2, p0, Lcom/bbm/util/ay;->b:Landroid/app/Activity;
+
+    const-class v3, Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 717
+    const-string v2, "conversation_uri"
+
+    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 718
+    iget-object v2, p0, Lcom/bbm/util/ay;->c:Ljava/lang/String;
+
+    if-eqz v2, :cond_2
+
+    .line 719
+    const-string v2, "contextUserUri"
+
+    iget-object v3, p0, Lcom/bbm/util/ay;->c:Ljava/lang/String;
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 723
+    :cond_0
+    :goto_0
+    const-string v2, "contextContentType"
+
+    const-string v3, "contextContentType_sharePost"
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 724
+    const-string v2, "contextContentId"
+
+    iget-object v3, p0, Lcom/bbm/util/ay;->e:Ljava/lang/String;
+
+    iget-object v4, p0, Lcom/bbm/util/ay;->f:Ljava/lang/String;
+
+    invoke-static {v3, v4}, Lcom/bbm/util/af;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 725
+    iget v2, p0, Lcom/bbm/util/ay;->g:I
+
+    if-lez v2, :cond_1
+
+    .line 726
+    iget-object v2, p0, Lcom/bbm/util/ay;->h:Ljava/util/ArrayList;
+
+    iget-object v3, p0, Lcom/bbm/util/ay;->i:Ljava/util/ArrayList;
+
+    invoke-static {v2, v3}, Lcom/bbm/d/b/w;->a(Ljava/util/List;Ljava/util/List;)Ljava/util/List;
 
     move-result-object v2
 
-    array-length v3, v2
+    .line 727
+    invoke-static {v0, v2}, Lcom/bbm/d/aj;->b(Ljava/lang/String;Ljava/util/List;)Lcom/bbm/d/cu;
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    move v1, v0
+    .line 728
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
-    :goto_0
-    if-ge v1, v3, :cond_1
+    move-result-object v2
 
-    aget-object v0, v2, v1
+    invoke-virtual {v2, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ez;)V
 
-    .line 127
-    iget-object v4, v0, Lcom/bbm/util/ay;->e:Ljava/lang/String;
+    .line 730
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/util/ay;->b:Landroid/app/Activity;
 
-    invoke-virtual {p0, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    move-result v4
+    .line 731
+    const-string v0, "open"
 
-    if-eqz v4, :cond_0
+    const-string v1, "Conversation"
 
-    .line 132
+    invoke-static {v0, v1}, Lcom/bbm/af;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 735
     :goto_1
-    return-object v0
+    return-void
 
-    .line 126
-    :cond_0
-    add-int/lit8 v0, v1, 0x1
+    .line 720
+    :cond_2
+    iget-object v2, p0, Lcom/bbm/util/ay;->d:Ljava/lang/String;
 
-    move v1, v0
+    if-eqz v2, :cond_0
+
+    .line 721
+    const-string v2, "contextUserPin"
+
+    iget-object v3, p0, Lcom/bbm/util/ay;->d:Ljava/lang/String;
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 132
-    :cond_1
-    const/4 v0, 0x0
+    .line 732
+    :catch_0
+    move-exception v0
+
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
 
     goto :goto_1
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lcom/bbm/util/ay;
-    .locals 1
-
-    .prologue
-    .line 108
-    const-class v0, Lcom/bbm/util/ay;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/util/ay;
-
-    return-object v0
-.end method
-
-.method public static values()[Lcom/bbm/util/ay;
-    .locals 1
-
-    .prologue
-    .line 108
-    sget-object v0, Lcom/bbm/util/ay;->f:[Lcom/bbm/util/ay;
-
-    invoke-virtual {v0}, [Lcom/bbm/util/ay;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lcom/bbm/util/ay;
-
-    return-object v0
 .end method

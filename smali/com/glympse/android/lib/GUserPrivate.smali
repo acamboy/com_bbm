@@ -18,6 +18,9 @@
 .method public abstract getGlympse()Lcom/glympse/android/lib/GGlympsePrivate;
 .end method
 
+.method public abstract isAvatarSynced()Z
+.end method
+
 .method public abstract isNicknameSynced()Z
 .end method
 

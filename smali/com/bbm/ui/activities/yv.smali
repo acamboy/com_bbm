@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/yv;
 .super Ljava/lang/Object;
-.source "NewChannelActivity.java"
+.source "PrivateConversationActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnFocusChangeListener;
+.implements Lcom/google/android/gms/common/api/l;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/NewChannelActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/NewChannelActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/PrivateConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 369
-    iput-object p1, p0, Lcom/bbm/ui/activities/yv;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+    .line 268
+    iput-object p1, p0, Lcom/bbm/ui/activities/yv;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,113 +25,67 @@
 
 
 # virtual methods
-.method public final onFocusChange(Landroid/view/View;Z)V
-    .locals 4
+.method public final a(I)V
+    .locals 2
 
     .prologue
-    const/16 v3, 0xa
+    .line 272
+    const-string v0, "GoogleApiClient is suspended"
 
-    .line 373
-    if-nez p2, :cond_1
+    const/4 v1, 0x0
 
-    .line 374
-    iget-object v0, p0, Lcom/bbm/ui/activities/yv;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+    new-array v1, v1, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->m(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/EditText;
+    invoke-static {v0, v1}, Lcom/bbm/af;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    move-result-object v0
+    .line 273
+    return-void
+.end method
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+.method public final a(Landroid/os/Bundle;)V
+    .locals 3
 
-    move-result-object v0
+    .prologue
+    const/4 v2, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    .line 277
+    const-string v0, "GoogleApiClient is connected"
 
-    move-result-object v0
+    new-array v1, v2, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
+    invoke-static {v0, v1}, Lcom/bbm/af;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 279
+    iget-object v0, p0, Lcom/bbm/ui/activities/yv;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->e(Lcom/bbm/ui/activities/PrivateConversationActivity;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 375
-    iget-object v0, p0, Lcom/bbm/ui/activities/yv;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+    iget-object v0, p0, Lcom/bbm/ui/activities/yv;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->m(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/EditText;
+    invoke-static {v0}, Lcom/bbm/util/cu;->a(Landroid/content/Context;)Z
 
-    move-result-object v0
+    move-result v0
 
-    const-string v1, ""
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    .line 280
+    iget-object v0, p0, Lcom/bbm/ui/activities/yv;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    .line 376
-    iget-object v0, p0, Lcom/bbm/ui/activities/yv;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->f(Lcom/bbm/ui/activities/PrivateConversationActivity;)V
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->m(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/EditText;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/yv;->a:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/NewChannelActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x7f0e0316
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
-
-    .line 377
-    iget-object v0, p0, Lcom/bbm/ui/activities/yv;->a:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->m(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/EditText;
-
-    move-result-object v0
-
-    const v1, 0x7f0200ff
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setBackgroundResource(I)V
-
-    .line 378
-    iget-object v0, p0, Lcom/bbm/ui/activities/yv;->a:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->m(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/EditText;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3, v3, v3, v3}, Landroid/widget/EditText;->setPadding(IIII)V
-
-    .line 384
-    :cond_0
+    .line 284
     :goto_0
     return-void
 
-    .line 381
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/yv;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+    .line 282
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/yv;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->m(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/EditText;
-
-    move-result-object v0
-
-    const v1, 0x7f0200fd
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setBackgroundResource(I)V
-
-    .line 382
-    iget-object v0, p0, Lcom/bbm/ui/activities/yv;->a:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->m(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/EditText;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3, v3, v3, v3}, Landroid/widget/EditText;->setPadding(IIII)V
+    invoke-static {v0, v2}, Lcom/bbm/ui/activities/PrivateConversationActivity;->a(Lcom/bbm/ui/activities/PrivateConversationActivity;Z)Z
 
     goto :goto_0
 .end method

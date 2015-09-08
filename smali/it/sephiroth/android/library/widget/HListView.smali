@@ -363,7 +363,7 @@
 
     move-result v1
 
-    invoke-direct {p0, v1}, Lit/sephiroth/android/library/widget/HListView;->h(I)V
+    invoke-direct {p0, v1}, Lit/sephiroth/android/library/widget/HListView;->i(I)V
 
     .line 871
     :goto_1
@@ -407,7 +407,7 @@
 
     move-result v1
 
-    invoke-direct {p0, v1}, Lit/sephiroth/android/library/widget/HListView;->i(I)V
+    invoke-direct {p0, v1}, Lit/sephiroth/android/library/widget/HListView;->j(I)V
 
     goto :goto_1
 .end method
@@ -1025,7 +1025,7 @@
     if-lez v0, :cond_1
 
     .line 1195
-    const/high16 v2, 0x40000000
+    const/high16 v2, 0x40000000    # 2.0f
 
     invoke-static {v0, v2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
@@ -1204,7 +1204,7 @@
 
     if-eqz v0, :cond_5
 
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/HListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/HListView;->f:Landroid/support/v4/e/r;
 
     if-eqz v0, :cond_5
 
@@ -1218,7 +1218,7 @@
     .line 1950
     check-cast v0, Landroid/widget/Checkable;
 
-    iget-object v1, p0, Lit/sephiroth/android/library/widget/HListView;->f:Landroid/support/v4/b/o;
+    iget-object v1, p0, Lit/sephiroth/android/library/widget/HListView;->f:Landroid/support/v4/e/r;
 
     const/4 v2, 0x0
 
@@ -1226,7 +1226,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, p2, v2}, Landroid/support/v4/b/o;->a(ILjava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p2, v2}, Landroid/support/v4/e/r;->a(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1269,7 +1269,7 @@
     if-lez v0, :cond_12
 
     .line 1961
-    const/high16 v2, 0x40000000
+    const/high16 v2, 0x40000000    # 2.0f
 
     invoke-static {v0, v2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
@@ -1442,7 +1442,7 @@
     if-lt v0, v1, :cond_5
 
     .line 1952
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/HListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/HListView;->f:Landroid/support/v4/e/r;
 
     const/4 v1, 0x0
 
@@ -1450,7 +1450,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, p2, v1}, Landroid/support/v4/b/o;->a(ILjava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p2, v1}, Landroid/support/v4/e/r;->a(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1676,7 +1676,7 @@
     if-lez v3, :cond_4
 
     .line 2199
-    invoke-direct {p0, v5}, Lit/sephiroth/android/library/widget/HListView;->m(I)Z
+    invoke-direct {p0, v5}, Lit/sephiroth/android/library/widget/HListView;->n(I)Z
 
     move-result v3
 
@@ -1704,7 +1704,7 @@
 
     if-nez v0, :cond_6
 
-    invoke-direct {p0, v5}, Lit/sephiroth/android/library/widget/HListView;->k(I)Z
+    invoke-direct {p0, v5}, Lit/sephiroth/android/library/widget/HListView;->l(I)Z
 
     move-result v0
 
@@ -1745,7 +1745,7 @@
     if-lez v3, :cond_4
 
     .line 2216
-    invoke-direct {p0, v6}, Lit/sephiroth/android/library/widget/HListView;->m(I)Z
+    invoke-direct {p0, v6}, Lit/sephiroth/android/library/widget/HListView;->n(I)Z
 
     move-result v3
 
@@ -1773,7 +1773,7 @@
 
     if-nez v0, :cond_9
 
-    invoke-direct {p0, v6}, Lit/sephiroth/android/library/widget/HListView;->k(I)Z
+    invoke-direct {p0, v6}, Lit/sephiroth/android/library/widget/HListView;->l(I)Z
 
     move-result v0
 
@@ -1798,7 +1798,7 @@
     if-eqz v0, :cond_3
 
     .line 2230
-    invoke-direct {p0, v5}, Lit/sephiroth/android/library/widget/HListView;->l(I)Z
+    invoke-direct {p0, v5}, Lit/sephiroth/android/library/widget/HListView;->m(I)Z
 
     move-result v0
 
@@ -1813,7 +1813,7 @@
     if-eqz v0, :cond_3
 
     .line 2236
-    invoke-direct {p0, v6}, Lit/sephiroth/android/library/widget/HListView;->l(I)Z
+    invoke-direct {p0, v6}, Lit/sephiroth/android/library/widget/HListView;->m(I)Z
 
     move-result v0
 
@@ -1870,7 +1870,7 @@
 
     if-nez v0, :cond_b
 
-    invoke-direct {p0, v6}, Lit/sephiroth/android/library/widget/HListView;->j(I)Z
+    invoke-direct {p0, v6}, Lit/sephiroth/android/library/widget/HListView;->k(I)Z
 
     :cond_b
     :goto_4
@@ -1894,7 +1894,7 @@
 
     if-nez v0, :cond_b
 
-    invoke-direct {p0, v5}, Lit/sephiroth/android/library/widget/HListView;->j(I)Z
+    invoke-direct {p0, v5}, Lit/sephiroth/android/library/widget/HListView;->k(I)Z
 
     goto :goto_4
 
@@ -1913,7 +1913,7 @@
 
     if-nez v0, :cond_d
 
-    invoke-direct {p0, v5}, Lit/sephiroth/android/library/widget/HListView;->j(I)Z
+    invoke-direct {p0, v5}, Lit/sephiroth/android/library/widget/HListView;->k(I)Z
 
     move-result v0
 
@@ -1944,7 +1944,7 @@
 
     if-nez v0, :cond_10
 
-    invoke-direct {p0, v5}, Lit/sephiroth/android/library/widget/HListView;->k(I)Z
+    invoke-direct {p0, v5}, Lit/sephiroth/android/library/widget/HListView;->l(I)Z
 
     move-result v0
 
@@ -1975,7 +1975,7 @@
 
     if-nez v0, :cond_12
 
-    invoke-direct {p0, v6}, Lit/sephiroth/android/library/widget/HListView;->j(I)Z
+    invoke-direct {p0, v6}, Lit/sephiroth/android/library/widget/HListView;->k(I)Z
 
     move-result v0
 
@@ -2006,7 +2006,7 @@
 
     if-nez v0, :cond_15
 
-    invoke-direct {p0, v6}, Lit/sephiroth/android/library/widget/HListView;->k(I)Z
+    invoke-direct {p0, v6}, Lit/sephiroth/android/library/widget/HListView;->l(I)Z
 
     move-result v0
 
@@ -2037,7 +2037,7 @@
 
     if-nez v0, :cond_17
 
-    invoke-direct {p0, v5}, Lit/sephiroth/android/library/widget/HListView;->k(I)Z
+    invoke-direct {p0, v5}, Lit/sephiroth/android/library/widget/HListView;->l(I)Z
 
     move-result v0
 
@@ -2068,7 +2068,7 @@
 
     if-nez v0, :cond_19
 
-    invoke-direct {p0, v6}, Lit/sephiroth/android/library/widget/HListView;->k(I)Z
+    invoke-direct {p0, v6}, Lit/sephiroth/android/library/widget/HListView;->l(I)Z
 
     move-result v0
 
@@ -2297,7 +2297,7 @@
 
     if-lez v0, :cond_1
 
-    const/high16 v3, 0x40000000
+    const/high16 v3, 0x40000000    # 2.0f
 
     invoke-static {v0, v3}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
@@ -2641,10 +2641,6 @@
 
     .line 701
     :cond_1
-    iget v0, p0, Lit/sephiroth/android/library/widget/HListView;->V:I
-
-    iget v0, p0, Lit/sephiroth/android/library/widget/HListView;->V:I
-
     invoke-virtual {p0}, Lit/sephiroth/android/library/widget/HListView;->getChildCount()I
 
     .line 702
@@ -2728,10 +2724,6 @@
     iput v0, p0, Lit/sephiroth/android/library/widget/HListView;->V:I
 
     .line 736
-    iget v0, p0, Lit/sephiroth/android/library/widget/HListView;->V:I
-
-    iget v0, p0, Lit/sephiroth/android/library/widget/HListView;->V:I
-
     invoke-virtual {p0}, Lit/sephiroth/android/library/widget/HListView;->getChildCount()I
 
     .line 737
@@ -2821,7 +2813,7 @@
     if-lez v3, :cond_0
 
     .line 1403
-    invoke-direct {p0, v3}, Lit/sephiroth/android/library/widget/HListView;->h(I)V
+    invoke-direct {p0, v3}, Lit/sephiroth/android/library/widget/HListView;->i(I)V
 
     .line 1416
     :cond_0
@@ -2877,7 +2869,7 @@
     if-lez v3, :cond_0
 
     .line 1412
-    invoke-direct {p0, v3}, Lit/sephiroth/android/library/widget/HListView;->i(I)V
+    invoke-direct {p0, v3}, Lit/sephiroth/android/library/widget/HListView;->j(I)V
 
     goto :goto_1
 
@@ -2897,7 +2889,25 @@
     goto :goto_2
 .end method
 
-.method private g(I)Landroid/view/View;
+.method private getArrowScrollPreviewLength()I
+    .locals 2
+
+    .prologue
+    .line 2684
+    const/4 v0, 0x2
+
+    invoke-virtual {p0}, Lit/sephiroth/android/library/widget/HListView;->getHorizontalFadingEdgeLength()I
+
+    move-result v1
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method private h(I)Landroid/view/View;
     .locals 2
 
     .prologue
@@ -2946,25 +2956,7 @@
     return-object v0
 .end method
 
-.method private getArrowScrollPreviewLength()I
-    .locals 2
-
-    .prologue
-    .line 2684
-    const/4 v0, 0x2
-
-    invoke-virtual {p0}, Lit/sephiroth/android/library/widget/HListView;->getHorizontalFadingEdgeLength()I
-
-    move-result v1
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method private h(I)V
+.method private i(I)V
     .locals 4
 
     .prologue
@@ -3090,7 +3082,7 @@
     return-void
 .end method
 
-.method private i(I)V
+.method private j(I)V
     .locals 6
 
     .prologue
@@ -3232,7 +3224,7 @@
     goto :goto_0
 .end method
 
-.method private j(I)Z
+.method private k(I)Z
     .locals 5
 
     .prologue
@@ -3395,7 +3387,7 @@
     goto :goto_0
 .end method
 
-.method private k(I)Z
+.method private l(I)Z
     .locals 4
 
     .prologue
@@ -3498,7 +3490,7 @@
     goto :goto_0
 .end method
 
-.method private l(I)Z
+.method private m(I)Z
     .locals 3
 
     .prologue
@@ -3640,7 +3632,7 @@
     goto :goto_0
 .end method
 
-.method private m(I)Z
+.method private n(I)Z
     .locals 12
 
     .prologue
@@ -3663,7 +3655,7 @@
 
     iget v0, p0, Lit/sephiroth/android/library/widget/HListView;->am:I
 
-    invoke-direct {p0, p1}, Lit/sephiroth/android/library/widget/HListView;->n(I)I
+    invoke-direct {p0, p1}, Lit/sephiroth/android/library/widget/HListView;->o(I)I
 
     move-result v4
 
@@ -3796,7 +3788,7 @@
 
     if-eq v6, v1, :cond_16
 
-    invoke-direct {p0, p1}, Lit/sephiroth/android/library/widget/HListView;->n(I)I
+    invoke-direct {p0, p1}, Lit/sephiroth/android/library/widget/HListView;->o(I)I
 
     move-result v1
 
@@ -4436,7 +4428,7 @@
     move v1, v2
 
     :goto_12
-    invoke-direct {p0, v1}, Lit/sephiroth/android/library/widget/HListView;->o(I)V
+    invoke-direct {p0, v1}, Lit/sephiroth/android/library/widget/HListView;->p(I)V
 
     const/4 v1, 0x1
 
@@ -4602,7 +4594,7 @@
     goto/16 :goto_0
 .end method
 
-.method private n(I)I
+.method private o(I)I
     .locals 6
 
     .prologue
@@ -4794,7 +4786,119 @@
     goto :goto_4
 .end method
 
-.method private o(I)V
+.method private p()V
+    .locals 5
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 231
+    invoke-virtual {p0}, Lit/sephiroth/android/library/widget/HListView;->getChildCount()I
+
+    move-result v2
+
+    .line 234
+    if-lez v2, :cond_2
+
+    .line 237
+    iget-boolean v1, p0, Lit/sephiroth/android/library/widget/HListView;->K:Z
+
+    if-nez v1, :cond_3
+
+    .line 240
+    invoke-virtual {p0, v0}, Lit/sephiroth/android/library/widget/HListView;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v1
+
+    .line 241
+    invoke-virtual {v1}, Landroid/view/View;->getLeft()I
+
+    move-result v1
+
+    iget-object v2, p0, Lit/sephiroth/android/library/widget/HListView;->u:Landroid/graphics/Rect;
+
+    iget v2, v2, Landroid/graphics/Rect;->left:I
+
+    sub-int/2addr v1, v2
+
+    .line 242
+    iget v2, p0, Lit/sephiroth/android/library/widget/HListView;->V:I
+
+    if-eqz v2, :cond_0
+
+    .line 245
+    iget v2, p0, Lit/sephiroth/android/library/widget/HListView;->av:I
+
+    sub-int/2addr v1, v2
+
+    .line 247
+    :cond_0
+    if-gez v1, :cond_5
+
+    .line 267
+    :cond_1
+    :goto_0
+    if-eqz v0, :cond_2
+
+    .line 268
+    neg-int v0, v0
+
+    invoke-virtual {p0, v0}, Lit/sephiroth/android/library/widget/HListView;->d(I)V
+
+    .line 271
+    :cond_2
+    return-void
+
+    .line 253
+    :cond_3
+    add-int/lit8 v1, v2, -0x1
+
+    invoke-virtual {p0, v1}, Lit/sephiroth/android/library/widget/HListView;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v1
+
+    .line 254
+    invoke-virtual {v1}, Landroid/view/View;->getRight()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Lit/sephiroth/android/library/widget/HListView;->getWidth()I
+
+    move-result v3
+
+    iget-object v4, p0, Lit/sephiroth/android/library/widget/HListView;->u:Landroid/graphics/Rect;
+
+    iget v4, v4, Landroid/graphics/Rect;->right:I
+
+    sub-int/2addr v3, v4
+
+    sub-int/2addr v1, v3
+
+    .line 256
+    iget v3, p0, Lit/sephiroth/android/library/widget/HListView;->V:I
+
+    add-int/2addr v2, v3
+
+    iget v3, p0, Lit/sephiroth/android/library/widget/HListView;->ao:I
+
+    if-ge v2, v3, :cond_4
+
+    .line 259
+    iget v2, p0, Lit/sephiroth/android/library/widget/HListView;->av:I
+
+    add-int/2addr v1, v2
+
+    .line 262
+    :cond_4
+    if-gtz v1, :cond_1
+
+    :cond_5
+    move v0, v1
+
+    goto :goto_0
+.end method
+
+.method private p(I)V
     .locals 12
 
     .prologue
@@ -5169,118 +5273,6 @@
     return-void
 .end method
 
-.method private p()V
-    .locals 5
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 231
-    invoke-virtual {p0}, Lit/sephiroth/android/library/widget/HListView;->getChildCount()I
-
-    move-result v2
-
-    .line 234
-    if-lez v2, :cond_2
-
-    .line 237
-    iget-boolean v1, p0, Lit/sephiroth/android/library/widget/HListView;->K:Z
-
-    if-nez v1, :cond_3
-
-    .line 240
-    invoke-virtual {p0, v0}, Lit/sephiroth/android/library/widget/HListView;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v1
-
-    .line 241
-    invoke-virtual {v1}, Landroid/view/View;->getLeft()I
-
-    move-result v1
-
-    iget-object v2, p0, Lit/sephiroth/android/library/widget/HListView;->u:Landroid/graphics/Rect;
-
-    iget v2, v2, Landroid/graphics/Rect;->left:I
-
-    sub-int/2addr v1, v2
-
-    .line 242
-    iget v2, p0, Lit/sephiroth/android/library/widget/HListView;->V:I
-
-    if-eqz v2, :cond_0
-
-    .line 245
-    iget v2, p0, Lit/sephiroth/android/library/widget/HListView;->av:I
-
-    sub-int/2addr v1, v2
-
-    .line 247
-    :cond_0
-    if-gez v1, :cond_5
-
-    .line 267
-    :cond_1
-    :goto_0
-    if-eqz v0, :cond_2
-
-    .line 268
-    neg-int v0, v0
-
-    invoke-virtual {p0, v0}, Lit/sephiroth/android/library/widget/HListView;->d(I)V
-
-    .line 271
-    :cond_2
-    return-void
-
-    .line 253
-    :cond_3
-    add-int/lit8 v1, v2, -0x1
-
-    invoke-virtual {p0, v1}, Lit/sephiroth/android/library/widget/HListView;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v1
-
-    .line 254
-    invoke-virtual {v1}, Landroid/view/View;->getRight()I
-
-    move-result v1
-
-    invoke-virtual {p0}, Lit/sephiroth/android/library/widget/HListView;->getWidth()I
-
-    move-result v3
-
-    iget-object v4, p0, Lit/sephiroth/android/library/widget/HListView;->u:Landroid/graphics/Rect;
-
-    iget v4, v4, Landroid/graphics/Rect;->right:I
-
-    sub-int/2addr v3, v4
-
-    sub-int/2addr v1, v3
-
-    .line 256
-    iget v3, p0, Lit/sephiroth/android/library/widget/HListView;->V:I
-
-    add-int/2addr v2, v3
-
-    iget v3, p0, Lit/sephiroth/android/library/widget/HListView;->ao:I
-
-    if-ge v2, v3, :cond_4
-
-    .line 259
-    iget v2, p0, Lit/sephiroth/android/library/widget/HListView;->av:I
-
-    add-int/2addr v1, v2
-
-    .line 262
-    :cond_4
-    if-gtz v1, :cond_1
-
-    :cond_5
-    move v0, v1
-
-    goto :goto_0
-.end method
-
 
 # virtual methods
 .method protected final a(IZ)I
@@ -5454,7 +5446,7 @@
 
     move-result v0
 
-    invoke-direct {p0, v0}, Lit/sephiroth/android/library/widget/HListView;->h(I)V
+    invoke-direct {p0, v0}, Lit/sephiroth/android/library/widget/HListView;->i(I)V
 
     .line 668
     :goto_0
@@ -5489,7 +5481,7 @@
 
     move-result v0
 
-    invoke-direct {p0, v0}, Lit/sephiroth/android/library/widget/HListView;->i(I)V
+    invoke-direct {p0, v0}, Lit/sephiroth/android/library/widget/HListView;->j(I)V
 
     goto :goto_0
 
@@ -6052,7 +6044,7 @@
     .line 1706
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v3}, Lit/sephiroth/android/library/widget/HListView;->g(I)Landroid/view/View;
+    invoke-direct {v0, v3}, Lit/sephiroth/android/library/widget/HListView;->h(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -6315,7 +6307,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v2}, Lit/sephiroth/android/library/widget/HListView;->h(I)V
+    invoke-direct {v0, v2}, Lit/sephiroth/android/library/widget/HListView;->i(I)V
 
     :goto_8
     move-object v2, v1
@@ -6331,7 +6323,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v2}, Lit/sephiroth/android/library/widget/HListView;->i(I)V
+    invoke-direct {v0, v2}, Lit/sephiroth/android/library/widget/HListView;->j(I)V
 
     goto :goto_8
 
@@ -6389,7 +6381,7 @@
     .line 1692
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v3}, Lit/sephiroth/android/library/widget/HListView;->g(I)Landroid/view/View;
+    invoke-direct {v0, v3}, Lit/sephiroth/android/library/widget/HListView;->h(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -7642,7 +7634,7 @@
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/HListView;->f:Landroid/support/v4/b/o;
+    iget-object v0, p0, Lit/sephiroth/android/library/widget/HListView;->f:Landroid/support/v4/e/r;
 
     if-eqz v0, :cond_3
 
@@ -7651,10 +7643,10 @@
     if-eqz v0, :cond_3
 
     .line 3595
-    iget-object v5, p0, Lit/sephiroth/android/library/widget/HListView;->f:Landroid/support/v4/b/o;
+    iget-object v5, p0, Lit/sephiroth/android/library/widget/HListView;->f:Landroid/support/v4/e/r;
 
     .line 3596
-    invoke-virtual {v5}, Landroid/support/v4/b/o;->c()I
+    invoke-virtual {v5}, Landroid/support/v4/e/r;->c()I
 
     move-result v6
 
@@ -7673,7 +7665,7 @@
     if-ge v3, v6, :cond_1
 
     .line 3602
-    invoke-virtual {v5, v3}, Landroid/support/v4/b/o;->c(I)Ljava/lang/Object;
+    invoke-virtual {v5, v3}, Landroid/support/v4/e/r;->c(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -7688,7 +7680,7 @@
     .line 3603
     add-int/lit8 v0, v1, 0x1
 
-    invoke-virtual {v5, v3}, Landroid/support/v4/b/o;->b(I)I
+    invoke-virtual {v5, v3}, Landroid/support/v4/e/r;->b(I)I
 
     move-result v8
 
@@ -7801,7 +7793,7 @@
 
     .prologue
     .line 224
-    const v0, 0x3ea8f5c3
+    const v0, 0x3ea8f5c3    # 0.33f
 
     invoke-virtual {p0}, Lit/sephiroth/android/library/widget/HListView;->getRight()I
 
@@ -8636,10 +8628,6 @@
 
     .line 1147
     :cond_1
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lit/sephiroth/android/library/widget/HListView;->p:Lit/sephiroth/android/library/widget/p;
-
     invoke-virtual {v10}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v3
@@ -9541,7 +9529,7 @@
     .line 637
     neg-int v1, v1
 
-    invoke-direct {p0, v1}, Lit/sephiroth/android/library/widget/HListView;->o(I)V
+    invoke-direct {p0, v1}, Lit/sephiroth/android/library/widget/HListView;->p(I)V
 
     .line 638
     const/4 v1, -0x1

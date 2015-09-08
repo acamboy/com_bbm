@@ -256,6 +256,12 @@
         <item>@string/ZM</item>
         <item>@string/ZW</item>
     </string-array>
+    <string-array name="drawer_items">
+        <item>@string/invites</item>
+        <item>@string/channels</item>
+        <item>@string/settings</item>
+        <item>@string/help</item>
+    </string-array>
     <array name="extras_drawables">
         <item>@drawable/bblogo</item>
     </array>

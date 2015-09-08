@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/afu;
 .super Ljava/lang/Object;
-.source "SelectContactActivity.java"
+.source "UpdateStatusActivity.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SelectContactActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/UpdateStatusActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/UpdateStatusActivity;)V
     .locals 0
 
     .prologue
-    .line 371
-    iput-object p1, p0, Lcom/bbm/ui/activities/afu;->a:Lcom/bbm/ui/activities/SelectContactActivity;
+    .line 68
+    iput-object p1, p0, Lcom/bbm/ui/activities/afu;->a:Lcom/bbm/ui/activities/UpdateStatusActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,34 +26,14 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 375
-    const-string v0, "mSearchCancelMark Clicked"
+    .line 71
+    iget-object v0, p0, Lcom/bbm/ui/activities/afu;->a:Lcom/bbm/ui/activities/UpdateStatusActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/SelectContactActivity;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/UpdateStatusActivity;->finish()V
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 377
-    iget-object v0, p0, Lcom/bbm/ui/activities/afu;->a:Lcom/bbm/ui/activities/SelectContactActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/SelectContactActivity;->q(Lcom/bbm/ui/activities/SelectContactActivity;)Landroid/widget/EditText;
-
-    move-result-object v0
-
-    const-string v1, ""
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-
-    .line 378
-    iget-object v0, p0, Lcom/bbm/ui/activities/afu;->a:Lcom/bbm/ui/activities/SelectContactActivity;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;Z)V
-
-    .line 379
+    .line 72
     return-void
 .end method

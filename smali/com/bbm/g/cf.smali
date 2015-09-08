@@ -1,5 +1,5 @@
 .class public final Lcom/bbm/g/cf;
-.super Lcom/bbm/g/cv;
+.super Lcom/bbm/g/db;
 .source "GroupsProtocol.java"
 
 
@@ -8,21 +8,21 @@
     .locals 1
 
     .prologue
-    .line 2137
-    const-string v0, "groupMemberRemove"
+    .line 1963
+    const-string v0, "groupListItemRestore"
 
-    invoke-direct {p0, v0}, Lcom/bbm/g/cv;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/g/db;-><init>(Ljava/lang/String;)V
 
-    .line 2139
-    const-string v0, "contactUri"
+    .line 1965
+    const-string v0, "groupListUri"
 
     invoke-virtual {p0, v0, p1}, Lcom/bbm/g/cf;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 2140
-    const-string v0, "groupUri"
+    .line 1966
+    const-string v0, "itemId"
 
     invoke-virtual {p0, v0, p2}, Lcom/bbm/g/cf;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 2141
+    .line 1967
     return-void
 .end method

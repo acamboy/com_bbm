@@ -66,8 +66,6 @@
 
     .line 607
     :try_start_0
-    iget-object v0, p0, Lcom/blackberry/ids/IDS$2;->b:Ljava/lang/Object;
-
     iget-object v0, p0, Lcom/blackberry/ids/IDS$2;->c:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/blackberry/ids/IDS$2;->d:Ljava/lang/String;

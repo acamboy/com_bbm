@@ -40,27 +40,27 @@
     </plurals>
     <plurals name="slide_menu_active_chats">
         <item quantity="other">%1$s個のアクティブなチャット</item>
-        <item quantity="one">1個のアクティブなチャット</item>
+        <item quantity="one">%1$s個のアクティブなチャット</item>
     </plurals>
     <plurals name="slide_menu_new_channelupdates">
-        <item quantity="other">%1$s件の新着通知</item>
-        <item quantity="one">1件の新着通知</item>
+        <item quantity="other">%1$s個の新しいチャンネルアイテム</item>
+        <item quantity="one">%1$s個の新しいチャンネルアイテム</item>
     </plurals>
     <plurals name="slide_menu_new_invites">
         <item quantity="other">%1$s件の新しい招待</item>
-        <item quantity="one">1件の新しい招待</item>
+        <item quantity="one">%1$s件の新しい招待</item>
     </plurals>
     <plurals name="slide_menu_new_updates">
-        <item quantity="other">%1$s個の新しいアイテム</item>
-        <item quantity="one">1個の新しいアイテム</item>
+        <item quantity="other">%1$s件の新しいフィード</item>
+        <item quantity="one">%1$s件の新しいフィード</item>
     </plurals>
     <plurals name="slide_menu_total_contacts">
         <item quantity="other">%1$s件の連絡先</item>
-        <item quantity="one">1件の連絡先</item>
+        <item quantity="one">%1$s件の連絡先</item>
     </plurals>
     <plurals name="slide_menu_total_groups">
         <item quantity="other">%1$s個のグループ</item>
-        <item quantity="one">1個のグループ</item>
+        <item quantity="one">%1$s個のグループ</item>
     </plurals>
     <plurals name="update_channel_stats_comments">
         <item quantity="other">%1$s件のコメント</item>

@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/ht;
 .super Ljava/lang/Object;
-.source "ConversationActivity.java"
+.source "CustomPinSubscriptionActivity.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/hr;
+.field final synthetic a:Lcom/bbm/ui/activities/CustomPinSubscriptionActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/hr;)V
+.method constructor <init>(Lcom/bbm/ui/activities/CustomPinSubscriptionActivity;)V
     .locals 0
 
     .prologue
-    .line 2757
-    iput-object p1, p0, Lcom/bbm/ui/activities/ht;->a:Lcom/bbm/ui/activities/hr;
+    .line 168
+    iput-object p1, p0, Lcom/bbm/ui/activities/ht;->a:Lcom/bbm/ui/activities/CustomPinSubscriptionActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,21 +25,30 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
     .prologue
-    .line 2760
-    iget-object v0, p0, Lcom/bbm/ui/activities/ht;->a:Lcom/bbm/ui/activities/hr;
+    .line 171
+    new-instance v0, Landroid/content/Intent;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/hr;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ConversationActivity;->getActionBar()Landroid/app/ActionBar;
+    move-result-object v1
 
-    move-result-object v0
+    invoke-virtual {v1}, Lcom/bbm/Alaska;->getApplicationContext()Landroid/content/Context;
 
-    invoke-virtual {v0}, Landroid/app/ActionBar;->show()V
+    move-result-object v1
 
-    .line 2761
+    const-class v2, Lcom/bbm/ui/activities/GenericTextActivity;
+
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 172
+    iget-object v1, p0, Lcom/bbm/ui/activities/ht;->a:Lcom/bbm/ui/activities/CustomPinSubscriptionActivity;
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/CustomPinSubscriptionActivity;->startActivity(Landroid/content/Intent;)V
+
+    .line 173
     return-void
 .end method

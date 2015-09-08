@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private bU:Lcom/glympse/android/hal/GVector;
+.field private bX:Lcom/glympse/android/hal/GVector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/glympse/android/hal/GVector",
@@ -18,7 +18,7 @@
     .end annotation
 .end field
 
-.field private bY:Lcom/glympse/android/hal/ao;
+.field private cb:Lcom/glympse/android/hal/ao;
 
 
 # direct methods
@@ -40,10 +40,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 221
-    iput-object p1, p0, Lcom/glympse/android/hal/aq;->bY:Lcom/glympse/android/hal/ao;
+    iput-object p1, p0, Lcom/glympse/android/hal/aq;->cb:Lcom/glympse/android/hal/ao;
 
     .line 222
-    iput-object p2, p0, Lcom/glympse/android/hal/aq;->bU:Lcom/glympse/android/hal/GVector;
+    iput-object p2, p0, Lcom/glympse/android/hal/aq;->bX:Lcom/glympse/android/hal/GVector;
 
     .line 223
     return-void
@@ -56,9 +56,9 @@
 
     .prologue
     .line 227
-    iget-object v0, p0, Lcom/glympse/android/hal/aq;->bY:Lcom/glympse/android/hal/ao;
+    iget-object v0, p0, Lcom/glympse/android/hal/aq;->cb:Lcom/glympse/android/hal/ao;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/aq;->bU:Lcom/glympse/android/hal/GVector;
+    iget-object v1, p0, Lcom/glympse/android/hal/aq;->bX:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, v1}, Lcom/glympse/android/hal/ao;->complete(Lcom/glympse/android/hal/GVector;)V
 

@@ -41,10 +41,12 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 3
+    .locals 4
 
     .prologue
-    const/high16 v1, 0x3f800000
+    const/4 v3, 0x0
+
+    const/high16 v1, 0x3f800000    # 1.0f
 
     .line 42
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/Button;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -63,14 +65,12 @@
     .line 45
     sget-object v0, Lcom/glympse/android/controls/R$styleable;->GlympseButton:[I
 
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, p2, v0, p3, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+    invoke-virtual {p1, p2, v0, p3, v3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
     .line 47
-    sget v1, Lcom/glympse/android/controls/R$styleable;->GlympseButton_android_endColor:I
+    const/4 v1, 0x3
 
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
 
@@ -79,7 +79,7 @@
     iput-object v1, p0, Lcom/glympse/android/controls/Button;->_shadowColorStateList:Landroid/content/res/ColorStateList;
 
     .line 48
-    sget v1, Lcom/glympse/android/controls/R$styleable;->GlympseButton_android_shadowRadius:I
+    const/4 v1, 0x2
 
     iget v2, p0, Lcom/glympse/android/controls/Button;->_shadowRadius:F
 
@@ -90,18 +90,16 @@
     iput v1, p0, Lcom/glympse/android/controls/Button;->_shadowRadius:F
 
     .line 49
-    sget v1, Lcom/glympse/android/controls/R$styleable;->GlympseButton_android_shadowDx:I
+    iget v1, p0, Lcom/glympse/android/controls/Button;->_shadowDx:F
 
-    iget v2, p0, Lcom/glympse/android/controls/Button;->_shadowDx:F
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
+    invoke-virtual {v0, v3, v1}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v1
 
     iput v1, p0, Lcom/glympse/android/controls/Button;->_shadowDx:F
 
     .line 50
-    sget v1, Lcom/glympse/android/controls/R$styleable;->GlympseButton_android_shadowDy:I
+    const/4 v1, 0x1
 
     iget v2, p0, Lcom/glympse/android/controls/Button;->_shadowDy:F
 

@@ -1,99 +1,178 @@
-.class final Landroid/support/v4/widget/z;
+.class public final Landroid/support/v4/widget/z;
 .super Ljava/lang/Object;
-.source "MaterialProgressDrawable.java"
+.source "EdgeEffectCompat.java"
 
-# interfaces
-.implements Landroid/view/animation/Animation$AnimationListener;
+
+# static fields
+.field private static final b:Landroid/support/v4/widget/ac;
 
 
 # instance fields
-.field final synthetic a:Landroid/support/v4/widget/ac;
-
-.field final synthetic b:Landroid/support/v4/widget/v;
+.field private a:Ljava/lang/Object;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/widget/v;Landroid/support/v4/widget/ac;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
     .prologue
-    .line 365
-    iput-object p1, p0, Landroid/support/v4/widget/z;->b:Landroid/support/v4/widget/v;
+    .line 37
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    iput-object p2, p0, Landroid/support/v4/widget/z;->a:Landroid/support/v4/widget/ac;
+    const/16 v1, 0xe
 
+    if-lt v0, v1, :cond_0
+
+    .line 38
+    new-instance v0, Landroid/support/v4/widget/ab;
+
+    invoke-direct {v0}, Landroid/support/v4/widget/ab;-><init>()V
+
+    sput-object v0, Landroid/support/v4/widget/z;->b:Landroid/support/v4/widget/ac;
+
+    .line 42
+    :goto_0
+    return-void
+
+    .line 40
+    :cond_0
+    new-instance v0, Landroid/support/v4/widget/aa;
+
+    invoke-direct {v0}, Landroid/support/v4/widget/aa;-><init>()V
+
+    sput-object v0, Landroid/support/v4/widget/z;->b:Landroid/support/v4/widget/ac;
+
+    goto :goto_0
+.end method
+
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
+
+    .prologue
+    .line 132
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 133
+    sget-object v0, Landroid/support/v4/widget/z;->b:Landroid/support/v4/widget/ac;
+
+    invoke-interface {v0, p1}, Landroid/support/v4/widget/ac;->a(Landroid/content/Context;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroid/support/v4/widget/z;->a:Ljava/lang/Object;
+
+    .line 134
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
-    .locals 0
-
-    .prologue
-    .line 375
-    return-void
-.end method
-
-.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
-    .locals 3
-
-    .prologue
-    .line 379
-    iget-object v0, p0, Landroid/support/v4/widget/z;->a:Landroid/support/v4/widget/ac;
-
-    invoke-virtual {v0}, Landroid/support/v4/widget/ac;->b()V
-
-    .line 380
-    iget-object v0, p0, Landroid/support/v4/widget/z;->a:Landroid/support/v4/widget/ac;
-
-    invoke-virtual {v0}, Landroid/support/v4/widget/ac;->a()V
-
-    .line 381
-    iget-object v0, p0, Landroid/support/v4/widget/z;->a:Landroid/support/v4/widget/ac;
-
-    iget-object v1, p0, Landroid/support/v4/widget/z;->a:Landroid/support/v4/widget/ac;
-
-    iget v1, v1, Landroid/support/v4/widget/ac;->e:F
-
-    invoke-virtual {v0, v1}, Landroid/support/v4/widget/ac;->a(F)V
-
-    .line 382
-    iget-object v0, p0, Landroid/support/v4/widget/z;->b:Landroid/support/v4/widget/v;
-
-    iget-object v1, p0, Landroid/support/v4/widget/z;->b:Landroid/support/v4/widget/v;
-
-    invoke-static {v1}, Landroid/support/v4/widget/v;->c(Landroid/support/v4/widget/v;)F
-
-    move-result v1
-
-    const/high16 v2, 0x3f800000
-
-    add-float/2addr v1, v2
-
-    const/high16 v2, 0x40a00000
-
-    rem-float/2addr v1, v2
-
-    invoke-static {v0, v1}, Landroid/support/v4/widget/v;->a(Landroid/support/v4/widget/v;F)F
-
-    .line 383
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/view/animation/Animation;)V
+.method public final a(II)V
     .locals 2
 
     .prologue
-    .line 369
-    iget-object v0, p0, Landroid/support/v4/widget/z;->b:Landroid/support/v4/widget/v;
+    .line 143
+    sget-object v0, Landroid/support/v4/widget/z;->b:Landroid/support/v4/widget/ac;
 
-    const/4 v1, 0x0
+    iget-object v1, p0, Landroid/support/v4/widget/z;->a:Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Landroid/support/v4/widget/v;->a(Landroid/support/v4/widget/v;F)F
+    invoke-interface {v0, v1, p1, p2}, Landroid/support/v4/widget/ac;->a(Ljava/lang/Object;II)V
 
-    .line 370
+    .line 144
     return-void
+.end method
+
+.method public final a()Z
+    .locals 2
+
+    .prologue
+    .line 154
+    sget-object v0, Landroid/support/v4/widget/z;->b:Landroid/support/v4/widget/ac;
+
+    iget-object v1, p0, Landroid/support/v4/widget/z;->a:Ljava/lang/Object;
+
+    invoke-interface {v0, v1}, Landroid/support/v4/widget/ac;->a(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final a(F)Z
+    .locals 2
+
+    .prologue
+    .line 177
+    sget-object v0, Landroid/support/v4/widget/z;->b:Landroid/support/v4/widget/ac;
+
+    iget-object v1, p0, Landroid/support/v4/widget/z;->a:Ljava/lang/Object;
+
+    invoke-interface {v0, v1, p1}, Landroid/support/v4/widget/ac;->a(Ljava/lang/Object;F)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final a(I)Z
+    .locals 2
+
+    .prologue
+    .line 204
+    sget-object v0, Landroid/support/v4/widget/z;->b:Landroid/support/v4/widget/ac;
+
+    iget-object v1, p0, Landroid/support/v4/widget/z;->a:Ljava/lang/Object;
+
+    invoke-interface {v0, v1, p1}, Landroid/support/v4/widget/ac;->a(Ljava/lang/Object;I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final a(Landroid/graphics/Canvas;)Z
+    .locals 2
+
+    .prologue
+    .line 218
+    sget-object v0, Landroid/support/v4/widget/z;->b:Landroid/support/v4/widget/ac;
+
+    iget-object v1, p0, Landroid/support/v4/widget/z;->a:Ljava/lang/Object;
+
+    invoke-interface {v0, v1, p1}, Landroid/support/v4/widget/ac;->a(Ljava/lang/Object;Landroid/graphics/Canvas;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final b()V
+    .locals 2
+
+    .prologue
+    .line 162
+    sget-object v0, Landroid/support/v4/widget/z;->b:Landroid/support/v4/widget/ac;
+
+    iget-object v1, p0, Landroid/support/v4/widget/z;->a:Ljava/lang/Object;
+
+    invoke-interface {v0, v1}, Landroid/support/v4/widget/ac;->b(Ljava/lang/Object;)V
+
+    .line 163
+    return-void
+.end method
+
+.method public final c()Z
+    .locals 2
+
+    .prologue
+    .line 189
+    sget-object v0, Landroid/support/v4/widget/z;->b:Landroid/support/v4/widget/ac;
+
+    iget-object v1, p0, Landroid/support/v4/widget/z;->a:Ljava/lang/Object;
+
+    invoke-interface {v0, v1}, Landroid/support/v4/widget/ac;->c(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
 .end method

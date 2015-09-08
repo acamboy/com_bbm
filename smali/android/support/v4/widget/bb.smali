@@ -1,3 +1,8 @@
-.class public interface abstract Landroid/support/v4/widget/bb;
+.class interface abstract Landroid/support/v4/widget/bb;
 .super Ljava/lang/Object;
-.source "SwipeRefreshLayout.java"
+.source "SlidingPaneLayout.java"
+
+
+# virtual methods
+.method public abstract a(Landroid/support/v4/widget/SlidingPaneLayout;Landroid/view/View;)V
+.end method

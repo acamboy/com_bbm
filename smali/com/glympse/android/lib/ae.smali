@@ -1,69 +1,109 @@
 .class Lcom/glympse/android/lib/ae;
 .super Ljava/lang/Object;
-.source "CommonSink.java"
+.source "BatteryManager.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field private cI:Lcom/glympse/android/api/GGlympse;
+.field private _glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-.field private iA:I
+.field private iw:Lcom/glympse/android/lib/GLocationManagerPrivate;
 
-.field private iB:Ljava/lang/Object;
-
-.field private iy:Lcom/glympse/android/api/GEventSink;
-
-.field private iz:I
+.field private ix:Lcom/glympse/android/lib/GHistoryManagerPrivate;
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/api/GEventSink;Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Lcom/glympse/android/lib/GGlympsePrivate;)V
+    .locals 1
 
     .prologue
-    .line 245
+    .line 442
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 246
-    iput-object p1, p0, Lcom/glympse/android/lib/ae;->iy:Lcom/glympse/android/api/GEventSink;
+    .line 443
+    iput-object p1, p0, Lcom/glympse/android/lib/ae;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-    .line 247
-    iput-object p2, p0, Lcom/glympse/android/lib/ae;->cI:Lcom/glympse/android/api/GGlympse;
+    .line 444
+    iget-object v0, p0, Lcom/glympse/android/lib/ae;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-    .line 248
-    iput p3, p0, Lcom/glympse/android/lib/ae;->iz:I
+    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->getLocationManager()Lcom/glympse/android/api/GLocationManager;
 
-    .line 249
-    iput p4, p0, Lcom/glympse/android/lib/ae;->iA:I
+    move-result-object v0
 
-    .line 250
-    iput-object p5, p0, Lcom/glympse/android/lib/ae;->iB:Ljava/lang/Object;
+    check-cast v0, Lcom/glympse/android/lib/GLocationManagerPrivate;
 
-    .line 251
+    iput-object v0, p0, Lcom/glympse/android/lib/ae;->iw:Lcom/glympse/android/lib/GLocationManagerPrivate;
+
+    .line 445
+    iget-object v0, p0, Lcom/glympse/android/lib/ae;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->getHistoryManager()Lcom/glympse/android/api/GHistoryManager;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/glympse/android/lib/GHistoryManagerPrivate;
+
+    iput-object v0, p0, Lcom/glympse/android/lib/ae;->ix:Lcom/glympse/android/lib/GHistoryManagerPrivate;
+
+    .line 446
     return-void
 .end method
 
 
 # virtual methods
 .method public run()V
-    .locals 5
+    .locals 4
 
     .prologue
-    .line 255
-    iget-object v0, p0, Lcom/glympse/android/lib/ae;->iy:Lcom/glympse/android/api/GEventSink;
+    .line 450
+    iget-object v0, p0, Lcom/glympse/android/lib/ae;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/ae;->cI:Lcom/glympse/android/api/GGlympse;
+    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->isStarted()Z
 
-    iget v2, p0, Lcom/glympse/android/lib/ae;->iz:I
+    move-result v0
 
-    iget v3, p0, Lcom/glympse/android/lib/ae;->iA:I
+    if-nez v0, :cond_0
 
-    iget-object v4, p0, Lcom/glympse/android/lib/ae;->iB:Ljava/lang/Object;
-
-    invoke-interface {v0, v1, v2, v3, v4}, Lcom/glympse/android/api/GEventSink;->eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
-
-    .line 256
+    .line 470
+    :goto_0
     return-void
+
+    .line 458
+    :cond_0
+    iget-object v0, p0, Lcom/glympse/android/lib/ae;->ix:Lcom/glympse/android/lib/GHistoryManagerPrivate;
+
+    iget-object v1, p0, Lcom/glympse/android/lib/ae;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    invoke-interface {v1}, Lcom/glympse/android/lib/GGlympsePrivate;->getTime()J
+
+    move-result-wide v2
+
+    invoke-interface {v0, v2, v3}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->updateState(J)V
+
+    .line 461
+    iget-object v0, p0, Lcom/glympse/android/lib/ae;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->isSharing()Z
+
+    move-result v0
+
+    .line 465
+    iget-object v1, p0, Lcom/glympse/android/lib/ae;->iw:Lcom/glympse/android/lib/GLocationManagerPrivate;
+
+    invoke-interface {v1, v0}, Lcom/glympse/android/lib/GLocationManagerPrivate;->startStopLocation(Z)V
+
+    .line 469
+    iget-object v0, p0, Lcom/glympse/android/lib/ae;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->getBatteryManager()Lcom/glympse/android/api/GBatteryManager;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/glympse/android/lib/GBatteryManagerPrivate;
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GBatteryManagerPrivate;->setKeepAwake()V
+
+    goto :goto_0
 .end method

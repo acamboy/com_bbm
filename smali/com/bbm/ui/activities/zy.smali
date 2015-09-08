@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/zy;
 .super Ljava/lang/Object;
-.source "NewListItemActivity.java"
+.source "PrivateConversationActivity.java"
 
 # interfaces
-.implements Landroid/text/TextWatcher;
+.implements Lcom/bbm/ui/messages/cq;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/NewListItemActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/PrivateConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 147
-    iput-object p1, p0, Lcom/bbm/ui/activities/zy;->a:Lcom/bbm/ui/activities/NewListItemActivity;
+    .line 466
+    iput-object p1, p0, Lcom/bbm/ui/activities/zy;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,31 +25,23 @@
 
 
 # virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
-    .locals 0
+.method public final a(Lcom/bbm/ui/messages/cn;)V
+    .locals 2
 
     .prologue
-    .line 152
-    return-void
-.end method
+    .line 469
+    iget-object v0, p0, Lcom/bbm/ui/activities/zy;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
+    iget-object v1, p0, Lcom/bbm/ui/activities/zy;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    .prologue
-    .line 157
-    return-void
-.end method
+    invoke-static {v1}, Lcom/bbm/ui/activities/PrivateConversationActivity;->m(Lcom/bbm/ui/activities/PrivateConversationActivity;)Lcom/bbm/j/a;
 
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 1
+    move-result-object v1
 
-    .prologue
-    .line 161
-    iget-object v0, p0, Lcom/bbm/ui/activities/zy;->a:Lcom/bbm/ui/activities/NewListItemActivity;
+    invoke-virtual {v1}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewListItemActivity;->a(Lcom/bbm/ui/activities/NewListItemActivity;)V
+    invoke-virtual {p1, v0}, Lcom/bbm/ui/messages/cn;->a(Landroid/app/Activity;)V
 
-    .line 162
+    .line 470
     return-void
 .end method

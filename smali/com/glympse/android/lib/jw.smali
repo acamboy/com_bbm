@@ -1,128 +1,75 @@
 .class Lcom/glympse/android/lib/jw;
-.super Lcom/glympse/android/lib/j;
-.source "UserPostMessage.java"
+.super Lcom/glympse/android/lib/k;
+.source "UpdateFavorites.java"
 
 
 # instance fields
-.field private _glympse:Lcom/glympse/android/lib/GGlympsePrivate;
-
-.field private gI:Ljava/lang/String;
-
-.field private jx:Lcom/glympse/android/lib/l;
-
-.field private mB:Ljava/lang/String;
-
-.field private uA:Lcom/glympse/android/core/GPrimitive;
+.field public lH:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/lib/GGlympsePrivate;Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     .prologue
-    .line 26
-    invoke-direct {p0}, Lcom/glympse/android/lib/j;-><init>()V
+    .line 101
+    invoke-direct {p0}, Lcom/glympse/android/lib/k;-><init>()V
 
-    .line 27
-    iput-object p1, p0, Lcom/glympse/android/lib/jw;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
-
-    .line 28
-    iput-object p2, p0, Lcom/glympse/android/lib/jw;->mB:Ljava/lang/String;
-
-    .line 29
-    iput-object p3, p0, Lcom/glympse/android/lib/jw;->uA:Lcom/glympse/android/core/GPrimitive;
-
-    .line 30
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/glympse/android/lib/jw;->gI:Ljava/lang/String;
-
-    .line 31
-    new-instance v0, Lcom/glympse/android/lib/l;
-
-    invoke-direct {v0}, Lcom/glympse/android/lib/l;-><init>()V
-
-    iput-object v0, p0, Lcom/glympse/android/lib/jw;->jx:Lcom/glympse/android/lib/l;
-
-    .line 32
-    iget-object v0, p0, Lcom/glympse/android/lib/jw;->jx:Lcom/glympse/android/lib/l;
-
-    iput-object v0, p0, Lcom/glympse/android/lib/jw;->hc:Lcom/glympse/android/lib/k;
-
-    .line 33
+    .line 102
     return-void
 .end method
 
 
 # virtual methods
-.method public cancel()V
+.method public endObject(I)Z
     .locals 1
 
     .prologue
-    .line 75
-    new-instance v0, Lcom/glympse/android/lib/l;
+    .line 142
+    packed-switch p1, :pswitch_data_0
 
-    invoke-direct {v0}, Lcom/glympse/android/lib/l;-><init>()V
-
-    iput-object v0, p0, Lcom/glympse/android/lib/jw;->jx:Lcom/glympse/android/lib/l;
-
-    .line 76
-    iget-object v0, p0, Lcom/glympse/android/lib/jw;->jx:Lcom/glympse/android/lib/l;
-
-    iput-object v0, p0, Lcom/glympse/android/lib/jw;->hc:Lcom/glympse/android/lib/k;
-
-    .line 77
-    return-void
-.end method
-
-.method public post()Ljava/lang/String;
-    .locals 2
-
-    .prologue
-    .line 49
-    iget-object v0, p0, Lcom/glympse/android/lib/jw;->gI:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 51
-    iget-object v0, p0, Lcom/glympse/android/lib/jw;->gI:Ljava/lang/String;
-
-    .line 55
+    .line 150
     :goto_0
-    return-object v0
+    const/4 v0, 0x1
 
-    .line 54
-    :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/jw;->uA:Lcom/glympse/android/core/GPrimitive;
+    return v0
 
-    const/16 v1, 0x400
+    .line 146
+    :pswitch_0
+    iget-object v0, p0, Lcom/glympse/android/lib/jw;->hl:Lcom/glympse/android/lib/json/GJsonHandlerStack;
 
-    invoke-static {v0, v1}, Lcom/glympse/android/lib/json/JsonSerializer;->toString(Lcom/glympse/android/core/GPrimitive;I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/glympse/android/lib/jw;->gI:Ljava/lang/String;
-
-    .line 55
-    iget-object v0, p0, Lcom/glympse/android/lib/jw;->gI:Ljava/lang/String;
+    invoke-interface {v0}, Lcom/glympse/android/lib/json/GJsonHandlerStack;->popHandler()V
 
     goto :goto_0
+
+    .line 142
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public process()Z
-    .locals 2
+.method public primitive(ILcom/glympse/android/lib/json/GJsonPrimitive;)Z
+    .locals 3
 
     .prologue
-    .line 60
-    iget-object v0, p0, Lcom/glympse/android/lib/jw;->jx:Lcom/glympse/android/lib/l;
+    const/4 v2, 0x1
 
-    iget-object v0, v0, Lcom/glympse/android/lib/l;->hf:Ljava/lang/String;
+    .line 106
+    packed-switch p1, :pswitch_data_0
 
-    const-string v1, "ok"
+    .line 137
+    :cond_0
+    :goto_0
+    return v2
+
+    .line 110
+    :pswitch_0
+    iget-object v0, p0, Lcom/glympse/android/lib/jw;->hm:Ljava/lang/String;
+
+    const-string v1, "result"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -130,51 +77,103 @@
 
     if-eqz v0, :cond_0
 
-    .line 63
-    iget-object v0, p0, Lcom/glympse/android/lib/jw;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
-
-    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->getServerPost()Lcom/glympse/android/lib/GServerPost;
+    .line 112
+    invoke-virtual {p2, v2}, Lcom/glympse/android/lib/json/GJsonPrimitive;->ownString(Z)Ljava/lang/String;
 
     move-result-object v0
 
-    const/16 v1, 0x1000
-
-    invoke-interface {v0, v1}, Lcom/glympse/android/lib/GServerPost;->rememberEvents(I)V
-
-    .line 70
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    .line 68
-    :cond_0
-    const/4 v0, 0x0
+    iput-object v0, p0, Lcom/glympse/android/lib/jw;->hn:Ljava/lang/String;
 
     goto :goto_0
-.end method
 
-.method public url(Ljava/lang/StringBuilder;)Z
-    .locals 1
+    .line 118
+    :pswitch_1
+    iget-object v0, p0, Lcom/glympse/android/lib/jw;->hm:Ljava/lang/String;
 
-    .prologue
-    .line 41
-    const-string v0, "users/"
+    const-string v1, "version"
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 42
-    iget-object v0, p0, Lcom/glympse/android/lib/jw;->mB:Ljava/lang/String;
+    move-result v0
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_1
 
-    .line 43
-    const-string v0, "/post_message"
+    .line 120
+    invoke-virtual {p2, v2}, Lcom/glympse/android/lib/json/GJsonPrimitive;->ownString(Z)Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    .line 44
-    const/4 v0, 0x0
+    iput-object v0, p0, Lcom/glympse/android/lib/jw;->lH:Ljava/lang/String;
 
-    return v0
+    goto :goto_0
+
+    .line 122
+    :cond_1
+    iget-object v0, p0, Lcom/glympse/android/lib/jw;->hm:Ljava/lang/String;
+
+    const-string v1, "time"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 124
+    invoke-virtual {p2}, Lcom/glympse/android/lib/json/GJsonPrimitive;->getLong()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/glympse/android/lib/jw;->_time:J
+
+    goto :goto_0
+
+    .line 126
+    :cond_2
+    iget-object v0, p0, Lcom/glympse/android/lib/jw;->hm:Ljava/lang/String;
+
+    const-string v1, "error"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    .line 128
+    invoke-virtual {p2, v2}, Lcom/glympse/android/lib/json/GJsonPrimitive;->ownString(Z)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/glympse/android/lib/jw;->ho:Ljava/lang/String;
+
+    goto :goto_0
+
+    .line 130
+    :cond_3
+    iget-object v0, p0, Lcom/glympse/android/lib/jw;->hm:Ljava/lang/String;
+
+    const-string v1, "error_detail"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 132
+    invoke-virtual {p2, v2}, Lcom/glympse/android/lib/json/GJsonPrimitive;->ownString(Z)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/glympse/android/lib/jw;->hp:Ljava/lang/String;
+
+    goto :goto_0
+
+    .line 106
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method

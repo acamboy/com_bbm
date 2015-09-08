@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/uy;
 .super Ljava/lang/Object;
-.source "InviteActivity.java"
+.source "NewChannelActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnTouchListener;
+.implements Lcom/bbm/ui/t;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/InviteActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/NewChannelActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/InviteActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/NewChannelActivity;)V
     .locals 0
 
     .prologue
-    .line 131
-    iput-object p1, p0, Lcom/bbm/ui/activities/uy;->a:Lcom/bbm/ui/activities/InviteActivity;
+    .line 436
+    iput-object p1, p0, Lcom/bbm/ui/activities/uy;->a:Lcom/bbm/ui/activities/NewChannelActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,19 +25,15 @@
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 2
+.method public final a(I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)V"
+        }
+    .end annotation
 
     .prologue
-    .line 135
-    iget-object v0, p0, Lcom/bbm/ui/activities/uy;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;Z)V
-
-    .line 136
-    const/4 v0, 0x0
-
-    return v0
+    .line 440
+    return-void
 .end method

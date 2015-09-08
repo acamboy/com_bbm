@@ -4,9 +4,9 @@
 
 
 # static fields
-.field public static final NotificationText:I = 0x7f0f0057
+.field public static final NotificationText:I = 0x7f0f00cc
 
-.field public static final NotificationTitle:I = 0x7f0f0058
+.field public static final NotificationTitle:I = 0x7f0f00cd
 
 
 # direct methods

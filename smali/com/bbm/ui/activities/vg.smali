@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/vg;
 .super Ljava/lang/Object;
-.source "InviteActivity.java"
+.source "NewChannelActivity.java"
 
 # interfaces
-.implements Landroid/widget/TextView$OnEditorActionListener;
+.implements Lcom/bbm/j/s;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/InviteActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/NewChannelActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/InviteActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/NewChannelActivity;)V
     .locals 0
 
     .prologue
-    .line 181
-    iput-object p1, p0, Lcom/bbm/ui/activities/vg;->a:Lcom/bbm/ui/activities/InviteActivity;
+    .line 176
+    iput-object p1, p0, Lcom/bbm/ui/activities/vg;->a:Lcom/bbm/ui/activities/NewChannelActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,119 +25,89 @@
 
 
 # virtual methods
-.method public final onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
-    .locals 6
+.method public final a()Z
+    .locals 3
 
     .prologue
-    const/4 v5, 0x0
+    .line 179
+    iget-object v0, p0, Lcom/bbm/ui/activities/vg;->a:Lcom/bbm/ui/activities/NewChannelActivity;
 
-    .line 185
-    const/4 v0, 0x6
-
-    if-ne p2, v0, :cond_1
-
-    .line 186
-    check-cast p1, Landroid/widget/EditText;
-
-    .line 187
-    invoke-virtual {p1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->d(Lcom/bbm/ui/activities/NewChannelActivity;)Lcom/bbm/d/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    const-string v1, "channelOwnerProfile"
+
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->I(Ljava/lang/String;)Lcom/bbm/util/bs;
 
     move-result-object v0
 
-    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
+    .line 180
+    iget-object v1, v0, Lcom/bbm/util/bs;->b:Lcom/bbm/util/bo;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
+    sget-object v2, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
 
-    move-result-object v0
+    if-ne v1, v2, :cond_0
 
-    .line 188
-    invoke-static {v0}, Lcom/bbm/h/aq;->a(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    .line 189
-    iget-object v1, p0, Lcom/bbm/ui/activities/vg;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/InviteActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x7f0e04ae
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    aput-object v0, v2, v5
-
-    invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 191
-    invoke-static {}, Lcom/bbm/ui/activities/InviteActivity;->a()Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    new-instance v3, Lcom/bbm/ui/activities/fk;
-
-    invoke-direct {v3, v1, v0, v5}, Lcom/bbm/ui/activities/fk;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
-
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 196
-    :cond_0
-    :goto_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/vg;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->e(Lcom/bbm/ui/activities/InviteActivity;)V
-
-    .line 197
-    const-string v0, ""
-
-    invoke-virtual {p1, v0}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-
-    .line 199
-    :cond_1
-    return v5
-
-    .line 192
-    :cond_2
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
+    .line 181
+    const/4 v0, 0x0
 
     .line 193
-    invoke-static {}, Lcom/bbm/ui/activities/InviteActivity;->a()Ljava/util/ArrayList;
+    :goto_0
+    return v0
 
-    move-result-object v1
+    .line 184
+    :cond_0
+    iget-object v0, v0, Lcom/bbm/util/bs;->a:Lorg/json/JSONObject;
 
-    new-instance v2, Lcom/bbm/ui/activities/fk;
+    const-string v1, "value"
 
-    const/4 v3, 0x0
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
-    const/4 v4, -0x1
+    move-result-object v0
 
-    invoke-direct {v2, v0, v3, v4}, Lcom/bbm/ui/activities/fk;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
+    .line 186
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const-string v1, "name"
 
-    .line 194
-    iget-object v0, p0, Lcom/bbm/ui/activities/vg;->a:Lcom/bbm/ui/activities/InviteActivity;
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->d(Lcom/bbm/ui/activities/InviteActivity;)I
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/bbm/util/ec;->b(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 187
+    iget-object v0, p0, Lcom/bbm/ui/activities/vg;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->e(Lcom/bbm/ui/activities/NewChannelActivity;)V
+
+    .line 193
+    :goto_1
+    const/4 v0, 0x1
 
     goto :goto_0
+
+    .line 189
+    :cond_1
+    new-instance v0, Landroid/content/Intent;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/vg;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    const-class v2, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
+
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 191
+    iget-object v1, p0, Lcom/bbm/ui/activities/vg;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    const/4 v2, 0x4
+
+    invoke-virtual {v1, v0, v2}, Lcom/bbm/ui/activities/NewChannelActivity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    goto :goto_1
 .end method

@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/ep;
 .super Ljava/lang/Object;
-.source "ChannelStatsActivity.java"
+.source "ConversationActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/t;
+.implements Lcom/bbm/ui/fm;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/eo;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ChannelStatsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/eo;)V
     .locals 0
 
     .prologue
-    .line 252
-    iput-object p1, p0, Lcom/bbm/ui/activities/ep;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+    .line 394
+    iput-object p1, p0, Lcom/bbm/ui/activities/ep;->a:Lcom/bbm/ui/activities/eo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,53 +25,66 @@
 
 
 # virtual methods
-.method public final a(I)V
+.method public final a()V
     .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I)V"
-        }
-    .end annotation
 
     .prologue
-    .line 256
-    const/4 v0, 0x4
+    .line 405
+    iget-object v0, p0, Lcom/bbm/ui/activities/ep;->a:Lcom/bbm/ui/activities/eo;
 
-    if-le p1, v0, :cond_0
+    iget-object v0, v0, Lcom/bbm/ui/activities/eo;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    .line 257
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+    iget-object v0, v0, Lcom/bbm/ui/activities/ConversationActivity;->k:Lcom/bbm/ui/EmoticonInputPanel;
 
-    const-string v1, "time period spinner position out of range"
+    sget-object v1, Lcom/bbm/ui/bw;->b:Lcom/bbm/ui/bw;
 
-    invoke-direct {v0, v1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/EmoticonInputPanel;->setLowerPanel(Lcom/bbm/ui/bw;)V
 
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
-
-    .line 263
-    :goto_0
+    .line 406
     return-void
+.end method
 
-    .line 260
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ep;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+.method public final a(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
 
-    invoke-static {}, Lcom/bbm/ui/activities/ChannelStatsActivity;->f()[Ljava/lang/String;
+    .prologue
+    .line 398
+    iget-object v0, p0, Lcom/bbm/ui/activities/ep;->a:Lcom/bbm/ui/activities/eo;
 
-    move-result-object v1
+    iget-object v0, v0, Lcom/bbm/ui/activities/eo;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    aget-object v1, v1, p1
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ChannelStatsActivity;->a(Lcom/bbm/ui/activities/ChannelStatsActivity;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 261
-    iget-object v0, p0, Lcom/bbm/ui/activities/ep;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelStatsActivity;->f(Lcom/bbm/ui/activities/ChannelStatsActivity;)Lcom/bbm/j/u;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->g(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
+    iget-object v1, p0, Lcom/bbm/ui/activities/ep;->a:Lcom/bbm/ui/activities/eo;
 
-    goto :goto_0
+    iget-object v1, v1, Lcom/bbm/ui/activities/eo;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->e(Lcom/bbm/ui/activities/ConversationActivity;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1, p2, p1}, Lcom/bbm/util/a/j;->a(Lcom/bbm/d/a;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 399
+    iget-object v0, p0, Lcom/bbm/ui/activities/ep;->a:Lcom/bbm/ui/activities/eo;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/eo;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/ConversationActivity;->k:Lcom/bbm/ui/EmoticonInputPanel;
+
+    sget-object v1, Lcom/bbm/ui/bw;->b:Lcom/bbm/ui/bw;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/EmoticonInputPanel;->setLowerPanel(Lcom/bbm/ui/bw;)V
+
+    .line 400
+    iget-object v0, p0, Lcom/bbm/ui/activities/ep;->a:Lcom/bbm/ui/activities/eo;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/eo;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->h(Lcom/bbm/ui/activities/ConversationActivity;)V
+
+    .line 401
+    return-void
 .end method

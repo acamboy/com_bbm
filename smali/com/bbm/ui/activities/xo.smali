@@ -1,211 +1,166 @@
 .class final Lcom/bbm/ui/activities/xo;
 .super Ljava/lang/Object;
-.source "MainActivity.java"
+.source "OpenInBbmActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/c/gn;
+.implements Lcom/bbm/f/ac;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/OpenInBbmActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
+.method private constructor <init>(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
     .locals 0
 
     .prologue
-    .line 2635
-    iput-object p1, p0, Lcom/bbm/ui/activities/xo;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 770
+    iput-object p1, p0, Lcom/bbm/ui/activities/xo;->a:Lcom/bbm/ui/activities/OpenInBbmActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
-    .locals 4
+.method synthetic constructor <init>(Lcom/bbm/ui/activities/OpenInBbmActivity;B)V
+    .locals 0
 
     .prologue
-    const v2, 0x7f0b03d2
+    .line 770
+    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/xo;-><init>(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
 
-    const/4 v1, 0x1
+    return-void
+.end method
 
-    .line 2638
-    iget v0, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
 
-    .line 2639
-    packed-switch v0, :pswitch_data_0
+# virtual methods
+.method public final a(Lcom/bbm/f/ab;)V
+    .locals 3
 
-    .line 2662
-    :pswitch_0
-    iget-object v1, p0, Lcom/bbm/ui/activities/xo;->a:Lcom/bbm/ui/activities/MainActivity;
+    .prologue
+    .line 773
+    iget-object v0, p1, Lcom/bbm/f/ab;->b:Ljava/lang/String;
 
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/MainActivity;->g(Lcom/bbm/ui/activities/MainActivity;I)Z
+    const-string v1, "listAdd"
 
-    .line 2665
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 774
+    iget-object v0, p1, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
+
+    .line 775
+    const-string v1, "type"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 776
+    const-string v2, "groupInvitation"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 777
+    const-string v1, "Handle groupInvitation"
+
+    const-class v2, Lcom/bbm/ui/activities/OpenInBbmActivity;
+
+    invoke-static {v1, v2}, Lcom/bbm/af;->c(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 778
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/f;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/bbm/f;->c:Lcom/bbm/g/an;
+
+    iget-object v1, v1, Lcom/bbm/g/as;->a:Lcom/bbm/d/a/f;
+
+    iget-object v1, v1, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
+
+    invoke-interface {v1, p0}, Lcom/bbm/f/a;->b(Lcom/bbm/f/ac;)V
+
+    .line 780
+    iget-object v1, p0, Lcom/bbm/ui/activities/xo;->a:Lcom/bbm/ui/activities/OpenInBbmActivity;
+
+    const-string v2, "elements"
+
+    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a(Lcom/bbm/ui/activities/OpenInBbmActivity;Lorg/json/JSONArray;)V
+
+    .line 790
+    :cond_0
     :goto_0
     return-void
 
-    .line 2642
-    :pswitch_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/xo;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
-
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
-
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
-
-    .line 2643
-    iget-object v0, p0, Lcom/bbm/ui/activities/xo;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/MainActivity;->y(Lcom/bbm/ui/activities/MainActivity;)Lcom/bbm/j/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/xo;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/MainActivity;->z(Lcom/bbm/ui/activities/MainActivity;)I
-
-    move-result v1
-
-    if-lt v0, v1, :cond_0
-
-    .line 2644
-    iget-object v1, p0, Lcom/bbm/ui/activities/xo;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/xo;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/activities/MainActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/xo;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/MainActivity;->y(Lcom/bbm/ui/activities/MainActivity;)Lcom/bbm/j/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    invoke-static {v1, v2, v0}, Lcom/bbm/ui/activities/ku;->a(Landroid/app/Activity;Landroid/view/View;I)V
-
-    goto :goto_0
-
-    .line 2647
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/xo;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    new-instance v1, Landroid/content/Intent;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/xo;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    const-class v3, Lcom/bbm/ui/activities/NewGroupActivity;
-
-    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/MainActivity;->startActivity(Landroid/content/Intent;)V
-
-    goto :goto_0
-
-    .line 2653
-    :pswitch_2
-    iget-object v0, p0, Lcom/bbm/ui/activities/xo;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
-
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
-
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
-
-    .line 2654
-    iget-object v0, p0, Lcom/bbm/ui/activities/xo;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/MainActivity;->y(Lcom/bbm/ui/activities/MainActivity;)Lcom/bbm/j/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/xo;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/MainActivity;->z(Lcom/bbm/ui/activities/MainActivity;)I
-
-    move-result v1
-
-    if-lt v0, v1, :cond_1
-
-    .line 2655
-    iget-object v1, p0, Lcom/bbm/ui/activities/xo;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/xo;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/activities/MainActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/xo;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/MainActivity;->y(Lcom/bbm/ui/activities/MainActivity;)Lcom/bbm/j/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    invoke-static {v1, v2, v0}, Lcom/bbm/ui/activities/ku;->a(Landroid/app/Activity;Landroid/view/View;I)V
-
-    goto/16 :goto_0
-
-    .line 2658
+    .line 782
     :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/xo;->a:Lcom/bbm/ui/activities/MainActivity;
+    iget-object v0, p1, Lcom/bbm/f/ab;->b:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/MainActivity;->A(Lcom/bbm/ui/activities/MainActivity;)V
+    const-string v1, "groupQRCodeScannedResponse"
 
-    goto/16 :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 2639
-    :pswitch_data_0
-    .packed-switch 0x7f0b0048
-        :pswitch_1
-        :pswitch_0
-        :pswitch_2
-    .end packed-switch
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 783
+    iget-object v0, p1, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
+
+    .line 784
+    const-string v1, "status"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 785
+    const-string v1, "AlreadyAMember"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 786
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/f;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/bbm/f;->c:Lcom/bbm/g/an;
+
+    iget-object v0, v0, Lcom/bbm/g/as;->a:Lcom/bbm/d/a/f;
+
+    iget-object v0, v0, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
+
+    invoke-interface {v0, p0}, Lcom/bbm/f/a;->b(Lcom/bbm/f/ac;)V
+
+    .line 787
+    iget-object v0, p0, Lcom/bbm/ui/activities/xo;->a:Lcom/bbm/ui/activities/OpenInBbmActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->d(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
+
+    goto :goto_0
+.end method
+
+.method public final a_()V
+    .locals 0
+
+    .prologue
+    .line 794
+    return-void
 .end method

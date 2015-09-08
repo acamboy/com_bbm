@@ -7,11 +7,11 @@
 
 
 # instance fields
-.field private nN:Lcom/glympse/android/api/GImage;
+.field private oA:Lcom/glympse/android/api/GImage;
 
-.field private vu:Landroid/graphics/drawable/BitmapDrawable;
+.field private wo:Landroid/graphics/drawable/BitmapDrawable;
 
-.field private vv:Landroid/graphics/drawable/BitmapDrawable;
+.field private wp:Landroid/graphics/drawable/BitmapDrawable;
 
 
 # direct methods
@@ -55,7 +55,7 @@
 
     .prologue
     .line 111
-    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->nN:Lcom/glympse/android/api/GImage;
+    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->oA:Lcom/glympse/android/api/GImage;
 
     if-ne p1, v0, :cond_0
 
@@ -65,47 +65,47 @@
 
     .line 116
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->nN:Lcom/glympse/android/api/GImage;
+    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->oA:Lcom/glympse/android/api/GImage;
 
     if-eqz v0, :cond_1
 
     .line 118
-    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->nN:Lcom/glympse/android/api/GImage;
+    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->oA:Lcom/glympse/android/api/GImage;
 
     invoke-interface {v0, p0}, Lcom/glympse/android/api/GImage;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
 
     .line 119
-    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->nN:Lcom/glympse/android/api/GImage;
+    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->oA:Lcom/glympse/android/api/GImage;
 
-    invoke-virtual {p0, v0}, Lcom/glympse/android/ui/GLYImageView;->b(Lcom/glympse/android/api/GImage;)V
+    invoke-virtual {p0, v0}, Lcom/glympse/android/ui/GLYImageView;->c(Lcom/glympse/android/api/GImage;)V
 
     .line 123
     :cond_1
     if-nez p1, :cond_2
 
     .line 125
-    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->vu:Landroid/graphics/drawable/BitmapDrawable;
+    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->wo:Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p0, v0}, Lcom/glympse/android/ui/GLYImageView;->setRawImage(Landroid/graphics/drawable/BitmapDrawable;)V
 
     .line 126
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->nN:Lcom/glympse/android/api/GImage;
+    iput-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->oA:Lcom/glympse/android/api/GImage;
 
     goto :goto_0
 
     .line 131
     :cond_2
-    iput-object p1, p0, Lcom/glympse/android/ui/GLYImageView;->nN:Lcom/glympse/android/api/GImage;
+    iput-object p1, p0, Lcom/glympse/android/ui/GLYImageView;->oA:Lcom/glympse/android/api/GImage;
 
     .line 134
-    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->nN:Lcom/glympse/android/api/GImage;
+    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->oA:Lcom/glympse/android/api/GImage;
 
     invoke-interface {v0, p0}, Lcom/glympse/android/api/GImage;->addListener(Lcom/glympse/android/api/GEventListener;)Z
 
     .line 136
-    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->nN:Lcom/glympse/android/api/GImage;
+    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->oA:Lcom/glympse/android/api/GImage;
 
     invoke-interface {v0}, Lcom/glympse/android/api/GImage;->getState()I
 
@@ -117,7 +117,7 @@
     if-ne v1, v0, :cond_3
 
     .line 139
-    invoke-virtual {p0}, Lcom/glympse/android/ui/GLYImageView;->dq()V
+    invoke-virtual {p0}, Lcom/glympse/android/ui/GLYImageView;->dv()V
 
     goto :goto_0
 
@@ -131,7 +131,7 @@
     invoke-virtual {p0}, Lcom/glympse/android/ui/GLYImageView;->onComplete()V
 
     .line 144
-    invoke-virtual {p0}, Lcom/glympse/android/ui/GLYImageView;->dr()V
+    invoke-virtual {p0}, Lcom/glympse/android/ui/GLYImageView;->dw()V
 
     goto :goto_0
 
@@ -143,7 +143,7 @@
     invoke-virtual {p0}, Lcom/glympse/android/ui/GLYImageView;->onComplete()V
 
     .line 151
-    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->nN:Lcom/glympse/android/api/GImage;
+    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->oA:Lcom/glympse/android/api/GImage;
 
     invoke-interface {v0}, Lcom/glympse/android/api/GImage;->load()Z
 
@@ -156,7 +156,7 @@
     goto :goto_0
 .end method
 
-.method protected b(Lcom/glympse/android/api/GImage;)V
+.method protected c(Lcom/glympse/android/api/GImage;)V
     .locals 0
 
     .prologue
@@ -167,12 +167,12 @@
     return-void
 .end method
 
-.method protected dq()V
+.method protected dv()V
     .locals 1
 
     .prologue
     .line 67
-    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->vv:Landroid/graphics/drawable/BitmapDrawable;
+    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->wp:Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p0, v0}, Lcom/glympse/android/ui/GLYImageView;->setRawImage(Landroid/graphics/drawable/BitmapDrawable;)V
 
@@ -180,7 +180,7 @@
     return-void
 .end method
 
-.method protected dr()V
+.method protected dw()V
     .locals 0
 
     .prologue
@@ -203,58 +203,53 @@
     if-eqz v0, :cond_0
 
     .line 220
-    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->nN:Lcom/glympse/android/api/GImage;
+    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->oA:Lcom/glympse/android/api/GImage;
 
     if-nez v0, :cond_1
 
     .line 222
-    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->nN:Lcom/glympse/android/api/GImage;
-
-    invoke-interface {v0, p0}, Lcom/glympse/android/api/GImage;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
-
-    .line 223
     invoke-virtual {p0}, Lcom/glympse/android/ui/GLYImageView;->onComplete()V
 
-    .line 252
+    .line 251
     :cond_0
     :goto_0
     return-void
 
-    .line 227
+    .line 226
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->nN:Lcom/glympse/android/api/GImage;
+    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->oA:Lcom/glympse/android/api/GImage;
 
     invoke-interface {v0}, Lcom/glympse/android/api/GImage;->getState()I
 
     move-result v0
 
-    .line 228
+    .line 227
     const/4 v1, 0x3
 
     if-ne v1, v0, :cond_2
 
-    .line 230
-    invoke-virtual {p0}, Lcom/glympse/android/ui/GLYImageView;->dq()V
+    .line 229
+    invoke-virtual {p0}, Lcom/glympse/android/ui/GLYImageView;->dv()V
 
     goto :goto_0
 
-    .line 232
+    .line 231
     :cond_2
     const/4 v1, 0x1
 
     if-ne v1, v0, :cond_3
 
-    .line 234
-    invoke-virtual {p0}, Lcom/glympse/android/ui/GLYImageView;->dr()V
+    .line 233
+    invoke-virtual {p0}, Lcom/glympse/android/ui/GLYImageView;->dw()V
 
     goto :goto_0
 
-    .line 236
+    .line 235
     :cond_3
     if-nez v0, :cond_4
 
-    .line 240
-    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->nN:Lcom/glympse/android/api/GImage;
+    .line 239
+    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->oA:Lcom/glympse/android/api/GImage;
 
     invoke-interface {v0}, Lcom/glympse/android/api/GImage;->load()Z
 
@@ -262,7 +257,7 @@
 
     if-nez v0, :cond_0
 
-    .line 243
+    .line 242
     :cond_4
     invoke-virtual {p0}, Lcom/glympse/android/ui/GLYImageView;->onComplete()V
 
@@ -274,7 +269,7 @@
 
     .prologue
     .line 161
-    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->nN:Lcom/glympse/android/api/GImage;
+    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->oA:Lcom/glympse/android/api/GImage;
 
     return-object v0
 .end method
@@ -284,12 +279,12 @@
 
     .prologue
     .line 77
-    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->nN:Lcom/glympse/android/api/GImage;
+    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->oA:Lcom/glympse/android/api/GImage;
 
     if-nez v0, :cond_1
 
     .line 79
-    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->vu:Landroid/graphics/drawable/BitmapDrawable;
+    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->wo:Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p0, v0}, Lcom/glympse/android/ui/GLYImageView;->setRawImage(Landroid/graphics/drawable/BitmapDrawable;)V
 
@@ -300,7 +295,7 @@
 
     .line 82
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->nN:Lcom/glympse/android/api/GImage;
+    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->oA:Lcom/glympse/android/api/GImage;
 
     invoke-interface {v0}, Lcom/glympse/android/api/GImage;->getDrawable()Lcom/glympse/android/core/GDrawable;
 
@@ -319,7 +314,7 @@
     if-nez v0, :cond_0
 
     .line 87
-    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->vu:Landroid/graphics/drawable/BitmapDrawable;
+    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->wo:Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p0, v0}, Lcom/glympse/android/ui/GLYImageView;->setRawImage(Landroid/graphics/drawable/BitmapDrawable;)V
 
@@ -342,7 +337,7 @@
     if-nez v0, :cond_0
 
     .line 96
-    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->vu:Landroid/graphics/drawable/BitmapDrawable;
+    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->wo:Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p0, v0}, Lcom/glympse/android/ui/GLYImageView;->setRawImage(Landroid/graphics/drawable/BitmapDrawable;)V
 
@@ -360,24 +355,24 @@
 
     .prologue
     .line 200
-    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->nN:Lcom/glympse/android/api/GImage;
+    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->oA:Lcom/glympse/android/api/GImage;
 
     if-eqz v0, :cond_0
 
     .line 202
-    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->nN:Lcom/glympse/android/api/GImage;
+    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->oA:Lcom/glympse/android/api/GImage;
 
     invoke-interface {v0, p0}, Lcom/glympse/android/api/GImage;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
 
     .line 203
-    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->nN:Lcom/glympse/android/api/GImage;
+    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->oA:Lcom/glympse/android/api/GImage;
 
-    invoke-virtual {p0, v0}, Lcom/glympse/android/ui/GLYImageView;->b(Lcom/glympse/android/api/GImage;)V
+    invoke-virtual {p0, v0}, Lcom/glympse/android/ui/GLYImageView;->c(Lcom/glympse/android/api/GImage;)V
 
     .line 204
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->nN:Lcom/glympse/android/api/GImage;
+    iput-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->oA:Lcom/glympse/android/api/GImage;
 
     .line 206
     :cond_0
@@ -393,7 +388,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/glympse/android/ui/GLYImageView;->vu:Landroid/graphics/drawable/BitmapDrawable;
+    iget-object v1, p0, Lcom/glympse/android/ui/GLYImageView;->wo:Landroid/graphics/drawable/BitmapDrawable;
 
     if-ne v0, v1, :cond_1
 
@@ -401,13 +396,13 @@
 
     .line 170
     :goto_0
-    iput-object p1, p0, Lcom/glympse/android/ui/GLYImageView;->vu:Landroid/graphics/drawable/BitmapDrawable;
+    iput-object p1, p0, Lcom/glympse/android/ui/GLYImageView;->wo:Landroid/graphics/drawable/BitmapDrawable;
 
     .line 173
     if-eqz v0, :cond_0
 
     .line 175
-    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->vu:Landroid/graphics/drawable/BitmapDrawable;
+    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->wo:Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p0, v0}, Lcom/glympse/android/ui/GLYImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
@@ -431,7 +426,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/glympse/android/ui/GLYImageView;->vv:Landroid/graphics/drawable/BitmapDrawable;
+    iget-object v1, p0, Lcom/glympse/android/ui/GLYImageView;->wp:Landroid/graphics/drawable/BitmapDrawable;
 
     if-ne v0, v1, :cond_1
 
@@ -439,13 +434,13 @@
 
     .line 185
     :goto_0
-    iput-object p1, p0, Lcom/glympse/android/ui/GLYImageView;->vv:Landroid/graphics/drawable/BitmapDrawable;
+    iput-object p1, p0, Lcom/glympse/android/ui/GLYImageView;->wp:Landroid/graphics/drawable/BitmapDrawable;
 
     .line 188
     if-eqz v0, :cond_0
 
     .line 190
-    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->vv:Landroid/graphics/drawable/BitmapDrawable;
+    iget-object v0, p0, Lcom/glympse/android/ui/GLYImageView;->wp:Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p0, v0}, Lcom/glympse/android/ui/GLYImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 

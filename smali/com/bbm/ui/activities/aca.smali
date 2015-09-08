@@ -1,142 +1,140 @@
 .class final Lcom/bbm/ui/activities/aca;
-.super Ljava/lang/Object;
-.source "PreviewChannelActivity.java"
+.super Lcom/bbm/d/b/o;
+.source "SelectContactActivity.java"
 
-# interfaces
-.implements Lcom/bbm/ui/fz;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/d/b/o",
+        "<",
+        "Lcom/bbm/iceberg/a;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/PreviewChannelActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SelectContactActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/PreviewChannelActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
     .locals 0
 
     .prologue
-    .line 69
-    iput-object p1, p0, Lcom/bbm/ui/activities/aca;->a:Lcom/bbm/ui/activities/PreviewChannelActivity;
+    .line 509
+    iput-object p1, p0, Lcom/bbm/ui/activities/aca;->a:Lcom/bbm/ui/activities/SelectContactActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/d/b/o;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)V
-    .locals 4
+.method protected final a()Ljava/util/List;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/bbm/iceberg/a;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    const v3, 0x7f0b00fe
+    .line 512
+    new-instance v1, Ljava/util/ArrayList;
 
-    const/4 v2, 0x1
+    iget-object v0, p0, Lcom/bbm/ui/activities/aca;->a:Lcom/bbm/ui/activities/SelectContactActivity;
 
-    .line 74
-    iget-object v0, p0, Lcom/bbm/ui/activities/aca;->a:Lcom/bbm/ui/activities/PreviewChannelActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/SelectContactActivity;->p(Lcom/bbm/ui/activities/SelectContactActivity;)Lcom/bbm/d/b/aa;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/PreviewChannelActivity;->a(Lcom/bbm/ui/activities/PreviewChannelActivity;)I
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/d/b/aa;->g()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    .line 514
+    iget-object v0, p0, Lcom/bbm/ui/activities/aca;->a:Lcom/bbm/ui/activities/SelectContactActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/SelectContactActivity;->A(Lcom/bbm/ui/activities/SelectContactActivity;)Lcom/bbm/util/dc;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/util/dc;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
-    if-ne v0, p1, :cond_0
+    if-eqz v0, :cond_0
 
-    .line 75
-    iget-object v0, p0, Lcom/bbm/ui/activities/aca;->a:Lcom/bbm/ui/activities/PreviewChannelActivity;
+    .line 515
+    new-instance v0, Lcom/bbm/d/ie;
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+    invoke-direct {v0}, Lcom/bbm/d/ie;-><init>()V
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+    .line 516
+    const-string v2, "select_contact_activity_find_more_fake_user_uri"
 
-    invoke-virtual {v0, v2}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
+    iput-object v2, v0, Lcom/bbm/d/ie;->z:Ljava/lang/String;
 
-    .line 99
-    :goto_0
-    return-void
+    .line 517
+    new-instance v2, Lcom/bbm/iceberg/a;
 
-    .line 79
+    invoke-direct {v2, v0}, Lcom/bbm/iceberg/a;-><init>(Lcom/bbm/d/ie;)V
+
+    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 519
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/aca;->a:Lcom/bbm/ui/activities/PreviewChannelActivity;
+    iget-object v0, p0, Lcom/bbm/ui/activities/aca;->a:Lcom/bbm/ui/activities/SelectContactActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/PreviewChannelActivity;->getFragmentManager()Landroid/app/FragmentManager;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
+    invoke-static {v0}, Lcom/bbm/ui/activities/SelectContactActivity;->B(Lcom/bbm/ui/activities/SelectContactActivity;)Lcom/bbm/util/dc;
 
     move-result-object v0
 
-    .line 81
-    iget-object v1, p0, Lcom/bbm/ui/activities/aca;->a:Lcom/bbm/ui/activities/PreviewChannelActivity;
+    invoke-virtual {v0}, Lcom/bbm/util/dc;->f()Ljava/lang/Object;
 
-    iget-object v1, v1, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+    move-result-object v0
 
-    iget-object v1, v1, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+    check-cast v0, Ljava/lang/Boolean;
 
-    invoke-virtual {v1, v2}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 83
-    packed-switch p1, :pswitch_data_0
+    move-result v0
 
-    .line 93
-    :goto_1
-    iget-object v1, p0, Lcom/bbm/ui/activities/aca;->a:Lcom/bbm/ui/activities/PreviewChannelActivity;
+    if-eqz v0, :cond_1
 
-    invoke-static {v1}, Lcom/bbm/util/fh;->b(Landroid/app/Activity;)V
+    .line 520
+    new-instance v0, Lcom/bbm/d/ie;
 
-    .line 94
-    iget-object v1, p0, Lcom/bbm/ui/activities/aca;->a:Lcom/bbm/ui/activities/PreviewChannelActivity;
+    invoke-direct {v0}, Lcom/bbm/d/ie;-><init>()V
 
-    invoke-static {v1, p1}, Lcom/bbm/ui/activities/PreviewChannelActivity;->a(Lcom/bbm/ui/activities/PreviewChannelActivity;I)I
+    .line 521
+    const-string v2, "select_contact_activity_start_chat_from_pin_fake_user_uri"
 
-    .line 95
-    iget-object v1, p0, Lcom/bbm/ui/activities/aca;->a:Lcom/bbm/ui/activities/PreviewChannelActivity;
+    iput-object v2, v0, Lcom/bbm/d/ie;->z:Ljava/lang/String;
 
-    iget-object v1, v1, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+    .line 522
+    new-instance v2, Lcom/bbm/iceberg/a;
 
-    iget-object v1, v1, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+    invoke-direct {v2, v0}, Lcom/bbm/iceberg/a;-><init>(Lcom/bbm/d/ie;)V
 
-    invoke-virtual {v1, v2}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
+    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 96
-    invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commit()I
-
-    .line 98
-    iget-object v0, p0, Lcom/bbm/ui/activities/aca;->a:Lcom/bbm/ui/activities/PreviewChannelActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/PreviewChannelActivity;->invalidateOptionsMenu()V
-
-    goto :goto_0
-
-    .line 85
-    :pswitch_0
-    iget-object v1, p0, Lcom/bbm/ui/activities/aca;->a:Lcom/bbm/ui/activities/PreviewChannelActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/PreviewChannelActivity;->b(Lcom/bbm/ui/activities/PreviewChannelActivity;)Lcom/bbm/ui/c/ag;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v3, v1}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
-
-    goto :goto_1
-
-    .line 89
-    :pswitch_1
-    iget-object v1, p0, Lcom/bbm/ui/activities/aca;->a:Lcom/bbm/ui/activities/PreviewChannelActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/PreviewChannelActivity;->c(Lcom/bbm/ui/activities/PreviewChannelActivity;)Lcom/bbm/ui/c/be;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v3, v1}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
-
-    goto :goto_1
-
-    .line 83
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
+    .line 524
+    :cond_1
+    return-object v1
 .end method

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_menu_add_group_contact" android:id="@id/slide_menu_item_groups_add_group" android:title="@string/slide_menu_invite" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_menu_start_chat" android:id="@id/slide_menu_item_groups_lobby_new_chat" android:title="@string/slide_menu_new_chat" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_menu_add_picture" android:id="@id/slide_menu_item_groups_lobby_add_picture" android:title="@string/add_picture" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_menu_add_list" android:id="@id/slide_menu_item_groups_lobby_add_list" android:title="@string/slide_menu_add_list" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_menu_add_event" android:id="@id/slide_menu_item_groups_lobby_add_event" android:title="@string/slide_menu_add_event" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_menu_view_profile" android:id="@id/slide_menu_item_groups_lobby_view_profile" android:title="@string/slide_menu_view_group_profile" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_menu_group_settings" android:id="@id/slide_menu_item_groups_settings" android:title="@string/slide_menu_group_settings" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_menu_leave_group" android:id="@id/slide_menu_item_groups_lobby_leave_group" android:title="@string/slide_menu_leave_group" app:showAsAction="never" />
+</menu>

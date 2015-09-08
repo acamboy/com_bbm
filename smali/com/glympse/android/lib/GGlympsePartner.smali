@@ -31,9 +31,6 @@
 .method public abstract getDiagnosticsManager()Lcom/glympse/android/lib/GDiagnosticsManager;
 .end method
 
-.method public abstract getFavoritesManager()Lcom/glympse/android/lib/GFavoritesManager;
-.end method
-
 .method public abstract getFileLoggingLevel()I
 .end method
 

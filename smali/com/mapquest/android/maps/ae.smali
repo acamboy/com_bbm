@@ -7,13 +7,13 @@
 
 
 # instance fields
-.field a:Lcom/mapquest/android/maps/bq;
+.field a:Lcom/mapquest/android/maps/bp;
 
 .field final synthetic b:Lcom/mapquest/android/maps/ac;
 
 
 # direct methods
-.method private constructor <init>(Lcom/mapquest/android/maps/ac;Lcom/mapquest/android/maps/bq;)V
+.method private constructor <init>(Lcom/mapquest/android/maps/ac;Lcom/mapquest/android/maps/bp;)V
     .locals 0
 
     .prologue
@@ -23,18 +23,18 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 673
-    iput-object p2, p0, Lcom/mapquest/android/maps/ae;->a:Lcom/mapquest/android/maps/bq;
+    iput-object p2, p0, Lcom/mapquest/android/maps/ae;->a:Lcom/mapquest/android/maps/bp;
 
     .line 674
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/mapquest/android/maps/ac;Lcom/mapquest/android/maps/bq;B)V
+.method synthetic constructor <init>(Lcom/mapquest/android/maps/ac;Lcom/mapquest/android/maps/bp;B)V
     .locals 0
 
     .prologue
     .line 668
-    invoke-direct {p0, p1, p2}, Lcom/mapquest/android/maps/ae;-><init>(Lcom/mapquest/android/maps/ac;Lcom/mapquest/android/maps/bq;)V
+    invoke-direct {p0, p1, p2}, Lcom/mapquest/android/maps/ae;-><init>(Lcom/mapquest/android/maps/ac;Lcom/mapquest/android/maps/bp;)V
 
     return-void
 .end method
@@ -122,7 +122,7 @@
     check-cast v0, Landroid/graphics/Point;
 
     .line 690
-    iget-object v5, p0, Lcom/mapquest/android/maps/ae;->a:Lcom/mapquest/android/maps/bq;
+    iget-object v5, p0, Lcom/mapquest/android/maps/ae;->a:Lcom/mapquest/android/maps/bp;
 
     iget-object v1, p0, Lcom/mapquest/android/maps/ae;->b:Lcom/mapquest/android/maps/ac;
 
@@ -134,7 +134,7 @@
 
     check-cast v1, Lcom/mapquest/android/maps/s;
 
-    invoke-interface {v5, v1, v0}, Lcom/mapquest/android/maps/bq;->a(Lcom/mapquest/android/maps/s;Landroid/graphics/Point;)Landroid/graphics/Point;
+    invoke-interface {v5, v1, v0}, Lcom/mapquest/android/maps/bp;->a(Lcom/mapquest/android/maps/s;Landroid/graphics/Point;)Landroid/graphics/Point;
 
     .line 688
     add-int/lit8 v0, v2, 0x1

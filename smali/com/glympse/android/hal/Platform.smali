@@ -8,7 +8,7 @@
 
 .field public static final GOOGLE_PUSH_TYPE:Ljava/lang/String; = "google"
 
-.field private static cH:Ljava/util/Locale;
+.field private static cK:Ljava/util/Locale;
 
 
 # direct methods
@@ -16,12 +16,12 @@
     .locals 1
 
     .prologue
-    .line 139
+    .line 152
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Platform;->cH:Ljava/util/Locale;
+    sput-object v0, Lcom/glympse/android/hal/Platform;->cK:Ljava/util/Locale;
 
     return-void
 .end method
@@ -40,7 +40,7 @@
     .locals 1
 
     .prologue
-    .line 233
+    .line 246
     invoke-static {}, Ljava/text/Collator;->getInstance()Ljava/text/Collator;
 
     move-result-object v0
@@ -66,6 +66,55 @@
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public static getAppBuildNumber(Landroid/content/Context;)Ljava/lang/String;
+    .locals 3
+
+    .prologue
+    .line 97
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+    move-result-object v0
+
+    .line 98
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget v0, v0, Landroid/content/pm/PackageInfo;->versionCode:I
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    .line 102
+    :goto_0
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    const-string v0, "1"
+
+    goto :goto_0
 .end method
 
 .method public static getAppId(Landroid/content/Context;)Ljava/lang/String;
@@ -211,7 +260,7 @@
     .locals 1
 
     .prologue
-    .line 119
+    .line 132
     sget-object v0, Landroid/os/Build;->BRAND:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->safeStr(Ljava/lang/String;)Ljava/lang/String;
@@ -225,7 +274,7 @@
     .locals 1
 
     .prologue
-    .line 124
+    .line 137
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->safeStr(Ljava/lang/String;)Ljava/lang/String;
@@ -239,7 +288,7 @@
     .locals 1
 
     .prologue
-    .line 129
+    .line 142
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->safeStr(Ljava/lang/String;)Ljava/lang/String;
@@ -253,12 +302,12 @@
     .locals 1
 
     .prologue
-    .line 147
+    .line 160
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
 
-    .line 148
+    .line 161
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Ljava/util/Locale;->toString()Ljava/lang/String;
@@ -278,7 +327,7 @@
     .locals 1
 
     .prologue
-    .line 109
+    .line 122
     const-string v0, "android"
 
     return-object v0
@@ -288,7 +337,7 @@
     .locals 1
 
     .prologue
-    .line 114
+    .line 127
     sget-object v0, Landroid/os/Build$VERSION;->RELEASE:Ljava/lang/String;
 
     return-object v0
@@ -298,7 +347,7 @@
     .locals 2
 
     .prologue
-    .line 98
+    .line 111
     sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
     const-string v1, "Amazon"
@@ -309,10 +358,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 100
+    .line 113
     const-string v0, "kindleadm"
 
-    .line 104
+    .line 117
     :goto_0
     return-object v0
 
@@ -360,12 +409,12 @@
     .locals 1
 
     .prologue
-    .line 153
+    .line 166
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
 
-    .line 154
+    .line 167
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Ljava/util/Locale;->toString()Ljava/lang/String;
@@ -385,8 +434,8 @@
     .locals 1
 
     .prologue
-    .line 142
-    sget-object v0, Lcom/glympse/android/hal/Platform;->cH:Ljava/util/Locale;
+    .line 155
+    sget-object v0, Lcom/glympse/android/hal/Platform;->cK:Ljava/util/Locale;
 
     return-object v0
 .end method
@@ -411,7 +460,7 @@
     .locals 1
 
     .prologue
-    .line 228
+    .line 241
     invoke-virtual {p0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v0
@@ -435,7 +484,7 @@
     .locals 2
 
     .prologue
-    .line 199
+    .line 212
     :try_start_0
     new-instance v0, Lcom/glympse/android/hal/utils/Rsa;
 
@@ -445,37 +494,8 @@
 
     invoke-direct {v0, v1}, Lcom/glympse/android/hal/utils/Rsa;-><init>(Ljava/lang/String;)V
 
-    .line 200
-    invoke-virtual {v0, p0}, Lcom/glympse/android/hal/utils/Rsa;->encrypt(Ljava/lang/String;)Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    .line 204
-    :goto_0
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public static rsa(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 212
-    :try_start_0
-    new-instance v0, Lcom/glympse/android/hal/utils/Rsa;
-
-    invoke-direct {v0, p0}, Lcom/glympse/android/hal/utils/Rsa;-><init>(Ljava/lang/String;)V
-
     .line 213
-    invoke-virtual {v0, p1}, Lcom/glympse/android/hal/utils/Rsa;->encrypt(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, p0}, Lcom/glympse/android/hal/utils/Rsa;->encrypt(Ljava/lang/String;)Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -493,11 +513,40 @@
     goto :goto_0
 .end method
 
+.method public static rsa(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 225
+    :try_start_0
+    new-instance v0, Lcom/glympse/android/hal/utils/Rsa;
+
+    invoke-direct {v0, p0}, Lcom/glympse/android/hal/utils/Rsa;-><init>(Ljava/lang/String;)V
+
+    .line 226
+    invoke-virtual {v0, p1}, Lcom/glympse/android/hal/utils/Rsa;->encrypt(Ljava/lang/String;)Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    .line 230
+    :goto_0
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method public static secondsFromGMT()J
     .locals 4
 
     .prologue
-    .line 135
+    .line 148
     invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
 
     move-result-object v0
@@ -521,7 +570,7 @@
     .locals 1
 
     .prologue
-    .line 223
+    .line 236
     invoke-static {}, Lcom/glympse/android/hal/bj;->Q()Ljava/lang/String;
 
     move-result-object v0
@@ -533,7 +582,7 @@
     .locals 2
 
     .prologue
-    .line 186
+    .line 199
     :try_start_0
     const-string v0, "UTF-8"
 
@@ -541,10 +590,55 @@
 
     move-result-object v0
 
-    .line 187
+    .line 200
     array-length v1, v0
 
     invoke-static {v0, v1}, Lcom/glympse/android/hal/Platform;->sha1([BI)Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    .line 204
+    :goto_0
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static sha1([BI)Ljava/lang/String;
+    .locals 3
+
+    .prologue
+    .line 184
+    :try_start_0
+    const-string v0, "SHA-1"
+
+    invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+
+    move-result-object v0
+
+    .line 185
+    const/4 v1, 0x0
+
+    array-length v2, p0
+
+    invoke-virtual {v0, p0, v1, v2}, Ljava/security/MessageDigest;->update([BII)V
+
+    .line 186
+    invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
+
+    move-result-object v0
+
+    .line 187
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/glympse/android/hal/utils/Base64;->encodeBytes([BI)Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -562,56 +656,11 @@
     goto :goto_0
 .end method
 
-.method public static sha1([BI)Ljava/lang/String;
-    .locals 3
-
-    .prologue
-    .line 171
-    :try_start_0
-    const-string v0, "SHA-1"
-
-    invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
-
-    move-result-object v0
-
-    .line 172
-    const/4 v1, 0x0
-
-    array-length v2, p0
-
-    invoke-virtual {v0, p0, v1, v2}, Ljava/security/MessageDigest;->update([BII)V
-
-    .line 173
-    invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
-
-    move-result-object v0
-
-    .line 174
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcom/glympse/android/hal/utils/Base64;->encodeBytes([BI)Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    .line 178
-    :goto_0
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
 .method public static timeToString(J)Ljava/lang/String;
     .locals 4
 
     .prologue
-    .line 162
+    .line 175
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "yyyy-MM-dd HH:mm:ss.SSS"
@@ -620,7 +669,7 @@
 
     invoke-direct {v0, v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    .line 163
+    .line 176
     const-string v1, "UTC"
 
     invoke-static {v1}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
@@ -629,7 +678,7 @@
 
     invoke-virtual {v0, v1}, Ljava/text/SimpleDateFormat;->setTimeZone(Ljava/util/TimeZone;)V
 
-    .line 164
+    .line 177
     new-instance v1, Ljava/util/Date;
 
     invoke-direct {v1, p0, p1}, Ljava/util/Date;-><init>(J)V

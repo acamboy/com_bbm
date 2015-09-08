@@ -48,7 +48,7 @@
 
     const/4 v1, -0x2
 
-    const/high16 v2, 0x3f800000
+    const/high16 v2, 0x3f800000    # 1.0f
 
     invoke-direct {v0, v3, v1, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(IIF)V
 
@@ -73,7 +73,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0a019b
+    const v4, 0x7f0a021d
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimension(I)F
 

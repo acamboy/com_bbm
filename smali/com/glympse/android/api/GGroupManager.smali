@@ -64,6 +64,9 @@
 .method public abstract isSynced()Z
 .end method
 
+.method public abstract isTracking(Lcom/glympse/android/api/GGroup;)Z
+.end method
+
 .method public abstract isValidGroup(Ljava/lang/String;)Z
 .end method
 

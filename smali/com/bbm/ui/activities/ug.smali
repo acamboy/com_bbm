@@ -1,131 +1,139 @@
 .class final Lcom/bbm/ui/activities/ug;
-.super Ljava/lang/Object;
-.source "GroupSettingsActivity.java"
-
-# interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.super Lcom/bbm/j/u;
+.source "MainActivity.java"
 
 
 # instance fields
-.field final synthetic a:Ljava/util/List;
-
-.field final synthetic b:Lorg/json/JSONObject;
-
-.field final synthetic c:Lcom/bbm/ui/activities/GroupSettingsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupSettingsActivity;Ljava/util/List;Lorg/json/JSONObject;)V
+.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
     .locals 0
 
     .prologue
-    .line 229
-    iput-object p1, p0, Lcom/bbm/ui/activities/ug;->c:Lcom/bbm/ui/activities/GroupSettingsActivity;
+    .line 212
+    iput-object p1, p0, Lcom/bbm/ui/activities/ug;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    iput-object p2, p0, Lcom/bbm/ui/activities/ug;->a:Ljava/util/List;
-
-    iput-object p3, p0, Lcom/bbm/ui/activities/ug;->b:Lorg/json/JSONObject;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 4
+.method protected final b()Z
+    .locals 5
 
     .prologue
-    .line 232
-    iget-object v0, p0, Lcom/bbm/ui/activities/ug;->c:Lcom/bbm/ui/activities/GroupSettingsActivity;
+    const/4 v1, 0x0
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupSettingsActivity;->b(Lcom/bbm/ui/activities/GroupSettingsActivity;)Lcom/bbm/g/al;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    .line 215
+    invoke-static {}, Lcom/bbm/Alaska;->p()Lcom/bbm/an;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ug;->c:Lcom/bbm/ui/activities/GroupSettingsActivity;
+    move-result-object v2
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/bbm/an;->u()Z
 
-    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->t(Ljava/lang/String;)Lcom/bbm/g/a;
+    move-result v2
 
-    move-result-object v0
+    if-eqz v2, :cond_1
 
-    iget-boolean v0, v0, Lcom/bbm/g/a;->a:Z
+    .line 249
+    :cond_0
+    :goto_0
+    return v0
 
-    if-eq p2, v0, :cond_0
+    .line 218
+    :cond_1
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
-    .line 234
-    :try_start_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ug;->a:Ljava/util/List;
+    move-result-object v2
 
-    invoke-interface {v0}, Ljava/util/List;->clear()V
+    invoke-virtual {v2}, Lcom/bbm/d/a;->h()Ljava/lang/String;
 
-    .line 235
-    iget-object v0, p0, Lcom/bbm/ui/activities/ug;->a:Ljava/util/List;
+    move-result-object v2
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ug;->b:Lorg/json/JSONObject;
+    .line 220
+    const-string v3, ""
 
-    const-string v2, "uri"
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/ug;->c:Lcom/bbm/ui/activities/GroupSettingsActivity;
-
-    iget-object v3, v3, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
-
-    invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    move-result-object v1
-
-    const-string v2, "allowNonAdminToInvite"
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/ug;->c:Lcom/bbm/ui/activities/GroupSettingsActivity;
-
-    invoke-static {v3}, Lcom/bbm/ui/activities/GroupSettingsActivity;->g(Lcom/bbm/ui/activities/GroupSettingsActivity;)Landroid/widget/Switch;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/widget/Switch;->isChecked()Z
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
-    invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+    if-nez v3, :cond_4
 
-    move-result-object v1
+    .line 221
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Lcom/bbm/d/a;->e(Ljava/lang/String;)Lcom/bbm/d/ie;
+
+    move-result-object v2
+
+    .line 222
+    iget-object v3, v2, Lcom/bbm/d/ie;->B:Lcom/bbm/util/bo;
+
+    sget-object v4, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
+
+    if-ne v3, v4, :cond_2
+
+    move v0, v1
+
+    .line 223
+    goto :goto_0
+
+    .line 226
+    :cond_2
+    iget-object v1, v2, Lcom/bbm/d/ie;->B:Lcom/bbm/util/bo;
+
+    sget-object v3, Lcom/bbm/util/bo;->b:Lcom/bbm/util/bo;
+
+    if-eq v1, v3, :cond_0
+
+    .line 234
+    iget-object v1, v2, Lcom/bbm/d/ie;->a:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    .line 235
+    new-instance v1, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     .line 236
-    iget-object v0, p0, Lcom/bbm/ui/activities/ug;->c:Lcom/bbm/ui/activities/GroupSettingsActivity;
+    new-instance v2, Lcom/bbm/ui/activities/uh;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupSettingsActivity;->f(Lcom/bbm/ui/activities/GroupSettingsActivity;)Lcom/bbm/e;
+    invoke-direct {v2, p0}, Lcom/bbm/ui/activities/uh;-><init>(Lcom/bbm/ui/activities/ug;)V
 
-    move-result-object v0
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    iget-object v0, v0, Lcom/bbm/e;->c:Lcom/bbm/g/al;
+    goto :goto_0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ug;->a:Ljava/util/List;
-
-    const-string v2, "group"
-
-    invoke-static {v1, v2}, Lcom/bbm/g/am;->a(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/g/ct;
+    .line 245
+    :cond_3
+    invoke-static {}, Lcom/bbm/Alaska;->p()Lcom/bbm/an;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v1}, Lcom/bbm/an;->v()V
 
-    .line 241
-    :cond_0
-    :goto_0
-    return-void
+    goto :goto_0
 
-    .line 237
-    :catch_0
-    move-exception v0
+    :cond_4
+    move v0, v1
 
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
-
+    .line 249
     goto :goto_0
 .end method

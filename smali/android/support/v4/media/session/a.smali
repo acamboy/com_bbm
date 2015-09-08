@@ -12,7 +12,7 @@
         "Ljava/lang/Object;",
         "Landroid/os/Parcelable$Creator",
         "<",
-        "Landroid/support/v4/media/session/MediaSessionCompat$Token;",
+        "Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;",
         ">;"
     }
 .end annotation
@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 451
+    .line 836
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,16 +35,12 @@
     .locals 2
 
     .prologue
-    .line 451
-    new-instance v0, Landroid/support/v4/media/session/MediaSessionCompat$Token;
+    .line 836
+    new-instance v0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;
 
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/support/v4/media/session/MediaSessionCompat$Token;-><init>(Landroid/os/Parcelable;)V
+    invoke-direct {v0, p1, v1}, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;-><init>(Landroid/os/Parcel;B)V
 
     return-object v0
 .end method
@@ -53,8 +49,8 @@
     .locals 1
 
     .prologue
-    .line 451
-    new-array v0, p1, [Landroid/support/v4/media/session/MediaSessionCompat$Token;
+    .line 836
+    new-array v0, p1, [Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;
 
     return-object v0
 .end method

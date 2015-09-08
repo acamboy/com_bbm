@@ -1,24 +1,33 @@
 .class public final Lcom/bbm/d/bn;
-.super Lcom/bbm/d/dy;
+.super Lcom/bbm/d/ez;
 .source "BbmdsProtocol.java"
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>(Ljava/util/List;)V
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lorg/json/JSONObject;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
-    .line 2221
-    const-string v0, "fileTransferCancel"
+    .line 1262
+    const-string v0, "channelRefreshStatsForPosts"
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/d/ez;-><init>(Ljava/lang/String;)V
 
-    .line 2223
-    const-string v0, "id"
+    .line 1264
+    const-string v0, "ids"
 
     invoke-virtual {p0, v0, p1}, Lcom/bbm/d/bn;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 2224
+    .line 1265
     return-void
 .end method
 
@@ -28,8 +37,8 @@
     .locals 1
 
     .prologue
-    .line 2219
-    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
+    .line 1260
+    invoke-super {p0}, Lcom/bbm/d/ez;->a()Lcom/bbm/f/ab;
 
     move-result-object v0
 

@@ -1,111 +1,122 @@
 .class final Lcom/bbm/ui/c/aj;
-.super Ljava/lang/Object;
-.source "ChannelDetailsFragment.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Lcom/bbm/j/u;
+.source "AppSubscriptionConfirmationFragment.java"
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Lcom/bbm/ui/c/ag;
+.field final synthetic a:Lcom/bbm/ui/c/ai;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/ag;Ljava/lang/String;)V
+.method constructor <init>(Lcom/bbm/ui/c/ai;)V
     .locals 0
 
     .prologue
-    .line 436
-    iput-object p1, p0, Lcom/bbm/ui/c/aj;->b:Lcom/bbm/ui/c/ag;
+    .line 76
+    iput-object p1, p0, Lcom/bbm/ui/c/aj;->a:Lcom/bbm/ui/c/ai;
 
-    iput-object p2, p0, Lcom/bbm/ui/c/aj;->a:Ljava/lang/String;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method protected final b()Z
+    .locals 5
 
     .prologue
-    const/16 v3, 0xf
+    const/4 v0, 0x0
 
-    .line 440
-    iget-object v0, p0, Lcom/bbm/ui/c/aj;->b:Lcom/bbm/ui/c/ag;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/ag;->i(Lcom/bbm/ui/c/ag;)Landroid/view/View;
-
-    move-result-object v0
-
-    const v1, 0x7f0b011c
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    .line 442
-    iget-object v0, p0, Lcom/bbm/ui/c/aj;->b:Lcom/bbm/ui/c/ag;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/ag;->i(Lcom/bbm/ui/c/ag;)Landroid/view/View;
-
-    move-result-object v0
-
-    const v1, 0x7f0b0631
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/EditText;
-
-    .line 443
-    const/16 v1, 0x40
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/he;->a(Landroid/widget/EditText;I)Lcom/bbm/ui/he;
-
-    .line 444
-    iget-object v1, p0, Lcom/bbm/ui/c/aj;->b:Lcom/bbm/ui/c/ag;
-
-    iget-object v2, p0, Lcom/bbm/ui/c/aj;->a:Ljava/lang/String;
-
-    invoke-static {v1, v2}, Lcom/bbm/ui/c/ag;->b(Lcom/bbm/ui/c/ag;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 445
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setVisibility(I)V
-
-    .line 446
-    iget-object v1, p0, Lcom/bbm/ui/c/aj;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-
-    .line 447
-    const v1, 0x7f0200fd
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setBackgroundResource(I)V
-
-    .line 448
-    invoke-virtual {v0, v3, v3, v3, v3}, Landroid/widget/EditText;->setPadding(IIII)V
-
-    .line 449
-    iget-object v1, p0, Lcom/bbm/ui/c/aj;->b:Lcom/bbm/ui/c/ag;
-
-    invoke-static {v1}, Lcom/bbm/ui/c/ag;->o(Lcom/bbm/ui/c/ag;)Landroid/view/View$OnFocusChangeListener;
+    .line 79
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
+    invoke-virtual {v1}, Lcom/bbm/d/a;->o()Lcom/bbm/d/ie;
 
-    .line 450
-    return-void
+    move-result-object v1
+
+    .line 80
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/bbm/d/a;->l()Lcom/bbm/d/ao;
+
+    move-result-object v2
+
+    .line 83
+    iget-object v3, v1, Lcom/bbm/d/ie;->B:Lcom/bbm/util/bo;
+
+    sget-object v4, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
+
+    if-eq v3, v4, :cond_0
+
+    .line 84
+    const-string v1, "App Confirmation - checking custom pin user setting - pending"
+
+    new-array v2, v0, [Ljava/lang/Object;
+
+    invoke-static {v1, v2}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 100
+    :goto_0
+    return v0
+
+    .line 89
+    :cond_0
+    sget-object v3, Lcom/bbm/d/ao;->c:Lcom/bbm/d/ao;
+
+    if-ne v2, v3, :cond_1
+
+    .line 90
+    const-string v1, "App Confirmation - checking custom pin user setting - restoring"
+
+    new-array v2, v0, [Ljava/lang/Object;
+
+    invoke-static {v1, v2}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 94
+    :cond_1
+    iget-object v1, v1, Lcom/bbm/d/ie;->A:Ljava/lang/String;
+
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    .line 95
+    const-string v1, "App Confirmation - checking custom pin user setting - not set"
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    invoke-static {v1, v0}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 96
+    new-instance v0, Landroid/content/Intent;
+
+    iget-object v1, p0, Lcom/bbm/ui/c/aj;->a:Lcom/bbm/ui/c/ai;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/c/ai;->getActivity()Landroid/support/v4/app/q;
+
+    move-result-object v1
+
+    const-class v2, Lcom/bbm/ui/activities/CustomPinSubscriptionActivity;
+
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 97
+    iget-object v1, p0, Lcom/bbm/ui/c/aj;->a:Lcom/bbm/ui/c/ai;
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/c/ai;->startActivity(Landroid/content/Intent;)V
+
+    .line 100
+    :cond_2
+    const/4 v0, 0x1
+
+    goto :goto_0
 .end method

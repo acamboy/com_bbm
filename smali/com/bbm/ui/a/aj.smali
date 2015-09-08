@@ -3,20 +3,20 @@
 .source "UpdatesAdapter.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/f/ac;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/a/af;
+.field final synthetic a:Lcom/bbm/ui/a/ai;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/a/af;)V
+.method constructor <init>(Lcom/bbm/ui/a/ai;)V
     .locals 0
 
     .prologue
-    .line 194
-    iput-object p1, p0, Lcom/bbm/ui/a/aj;->a:Lcom/bbm/ui/a/af;
+    .line 142
+    iput-object p1, p0, Lcom/bbm/ui/a/aj;->a:Lcom/bbm/ui/a/ai;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,34 +25,62 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final a(Lcom/bbm/f/ab;)V
     .locals 2
 
     .prologue
-    const v1, 0x7f0b0061
+    .line 145
+    iget-object v0, p1, Lcom/bbm/f/ab;->b:Ljava/lang/String;
 
-    .line 197
-    iget-object v0, p0, Lcom/bbm/ui/a/aj;->a:Lcom/bbm/ui/a/af;
+    const-string v1, "listChange"
 
-    invoke-static {v0}, Lcom/bbm/ui/a/af;->c(Lcom/bbm/ui/a/af;)Landroid/app/Activity;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 146
+    iget-object v0, p1, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
+
+    const-string v1, "type"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/activities/MainActivity;
+    .line 147
+    const-string v1, "recentChannelPosts"
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/MainActivity;->b(I)V
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 198
-    iget-object v0, p0, Lcom/bbm/ui/a/aj;->a:Lcom/bbm/ui/a/af;
+    move-result v0
 
-    invoke-static {v0}, Lcom/bbm/ui/a/af;->c(Lcom/bbm/ui/a/af;)Landroid/app/Activity;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    .line 148
+    const-string v0, "UpdatesAdapter: listChange on recentChannelPosts"
 
-    check-cast v0, Lcom/bbm/ui/activities/MainActivity;
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/MainActivity;->a(I)V
+    new-array v1, v1, [Ljava/lang/Object;
 
-    .line 199
+    invoke-static {v0, v1}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 149
+    iget-object v0, p0, Lcom/bbm/ui/a/aj;->a:Lcom/bbm/ui/a/ai;
+
+    invoke-static {v0}, Lcom/bbm/ui/a/ai;->a(Lcom/bbm/ui/a/ai;)Z
+
+    .line 152
+    :cond_0
+    return-void
+.end method
+
+.method public final a_()V
+    .locals 0
+
+    .prologue
+    .line 157
     return-void
 .end method

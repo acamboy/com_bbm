@@ -1,83 +1,73 @@
 .class final Lcom/bbm/ui/activities/lu;
-.super Ljava/lang/Object;
-.source "GroupChatHistorySettingsActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Lcom/bbm/ui/activities/lw;
+.source "GroupConversationActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ls;
-
-.field final synthetic b:Lcom/bbm/ui/activities/lt;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/lt;Lcom/bbm/ui/activities/ls;)V
+.method private constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
+    .locals 1
+
+    .prologue
+    .line 1162
+    iput-object p1, p0, Lcom/bbm/ui/activities/lu;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Lcom/bbm/ui/activities/lw;-><init>(Lcom/bbm/ui/activities/GroupConversationActivity;B)V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;B)V
     .locals 0
 
     .prologue
-    .line 173
-    iput-object p1, p0, Lcom/bbm/ui/activities/lu;->b:Lcom/bbm/ui/activities/lt;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/lu;->a:Lcom/bbm/ui/activities/ls;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1162
+    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/lu;-><init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method protected final a(Ljava/lang/StringBuilder;)V
+    .locals 3
 
     .prologue
-    .line 176
-    const-string v0, "historyRadioButton Positive Button Clicked"
-
-    const-class v1, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 178
-    iget-object v0, p0, Lcom/bbm/ui/activities/lu;->b:Lcom/bbm/ui/activities/lt;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/lt;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->a(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)Lcom/bbm/g/r;
+    .line 1166
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/lu;->a:Lcom/bbm/ui/activities/ls;
+    .line 1167
+    const-string v1, "simple text"
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/ls;->b:Lcom/bbm/g/r;
-
-    if-eq v0, v1, :cond_0
-
-    .line 179
-    iget-object v0, p0, Lcom/bbm/ui/activities/lu;->b:Lcom/bbm/ui/activities/lt;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/lt;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/lu;->a:Lcom/bbm/ui/activities/ls;
-
-    iget-object v1, v1, Lcom/bbm/ui/activities/ls;->b:Lcom/bbm/g/r;
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->a(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;Lcom/bbm/g/r;)Lcom/bbm/g/r;
-
-    .line 180
-    iget-object v0, p0, Lcom/bbm/ui/activities/lu;->b:Lcom/bbm/ui/activities/lt;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/lt;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->c(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)Lcom/bbm/ui/activities/lt;
+    invoke-static {v1, v0}, Landroid/content/ClipData;->newPlainText(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/content/ClipData;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/lt;->notifyDataSetChanged()V
+    .line 1168
+    iget-object v1, p0, Lcom/bbm/ui/activities/lu;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    .line 182
-    :cond_0
+    invoke-static {v1, v0}, Lcom/bbm/util/eu;->a(Landroid/content/Context;Landroid/content/ClipData;)V
+
+    .line 1169
+    iget-object v0, p0, Lcom/bbm/ui/activities/lu;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/lu;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    const v2, 0x7f0e024e
+
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/GroupConversationActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/util/eu;->a(Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 1170
     return-void
 .end method

@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/status_actionbar_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<LinearLayout android:orientation="horizontal" android:id="@id/status_actionbar_root" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/actionbar_divider_line">
-        <com.bbm.ui.SquaredObservingImageView android:id="@id/actionbar_avatar" android:layout_width="@dimen/avatar_size" android:layout_height="@dimen/avatar_size" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
-        <LinearLayout android:orientation="horizontal" android:id="@id/actionbar_indicator_list" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/top_main_action_bar_indicators_margin_left" android:layout_marginRight="@dimen/top_main_action_bar_indicators_margin_right" android:layout_alignParentRight="true" android:layout_centerVertical="true">
-            <ImageView android:id="@id/glympse_topbar_active" android:background="@null" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/top_main_action_bar_indicators_margin_between" android:src="@drawable/glympse_indicator" android:adjustViewBounds="true" android:contentDescription="@string/blank" style="?android:attr/borderlessButtonStyle" />
-            <ImageButton android:id="@id/actionbar_voice_call_button" android:background="@null" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bbm_voice_call_icon" android:contentDescription="@string/blank" />
-            <ImageButton android:id="@id/actionbar_quick_chat_button" android:background="@null" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quick_chat_button_background" android:contentDescription="@string/blank" />
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/abc_action_bar_default_padding_material" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/actionbar_busy_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_busy_tiny" android:scaleType="center" android:baselineAlignBottom="true" android:contentDescription="@string/blank" />
+            <com.bbm.ui.InlineImageTextView android:textSize="@dimen/conversation_display_name_text_size" android:textColor="@color/white" android:ellipsize="end" android:id="@id/actionbar_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
         </LinearLayout>
-        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/status_action_bar_avatar_title_margin" android:layout_toLeftOf="@id/actionbar_indicator_list" android:layout_toRightOf="@id/actionbar_avatar" android:layout_centerVertical="true">
-            <LinearLayout android:gravity="center" android:id="@id/actionbar_icon_text" android:layout_width="fill_parent" android:layout_height="wrap_content">
-                <ImageView android:id="@id/actionbar_busy_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_busy_tiny" android:scaleType="center" android:contentDescription="@string/blank" />
-                <com.bbm.ui.InlineImageTextView android:ellipsize="end" android:id="@id/actionbar_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:drawablePadding="@dimen/top_main_action_bar_text_drawable_padding" style="@style/ActionBarTitleTextStyle" />
-            </LinearLayout>
-            <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
-                <ImageView android:id="@id/actionbar_music_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_item_message_music" android:scaleType="center" android:contentDescription="@string/blank" />
-                <com.bbm.ui.InlineImageTextView android:textSize="@dimen/top_main_action_bar_subtext_text_size" android:textColor="@color/white" android:ellipsize="end" android:id="@id/actionbar_status_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:layout_weight="1.0" />
-                <ProgressBar android:id="@id/voice_call_progress" android:visibility="gone" android:layout_width="@dimen/voice_in_call_progress_bar_size" android:layout_height="@dimen/voice_in_call_progress_bar_size" android:layout_marginLeft="@dimen/voice_in_call_progress_bar_margin" />
-            </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/actionbar_music_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_item_message_music" android:scaleType="center" android:contentDescription="@string/blank" />
+            <com.bbm.ui.InlineImageTextView android:textSize="@dimen/conversation_display_status_text_size" android:textColor="@color/white" android:ellipsize="end" android:id="@id/actionbar_status_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" />
         </LinearLayout>
-    </RelativeLayout>
-    <include layout="@layout/view_merge_header_actionbar_divider_line" />
-    <ImageView android:id="@id/actionbar_overlay" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/repeat_screen_overlay" android:scaleType="fitXY" android:contentDescription="@string/blank" />
-</RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="right" android:orientation="horizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="0.0">
+        <ProgressBar android:layout_gravity="right" android:id="@id/voice_call_progress" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/voice_in_call_progress_bar_margin" />
+        <ImageButton android:layout_gravity="right" android:id="@id/actionbar_voice_call_button" android:background="@null" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/blank" />
+        <ImageButton android:layout_gravity="right" android:id="@id/actionbar_add_more" android:background="@null" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quick_chat_button_background" />
+        <ImageView android:id="@id/glympse_topbar_active" android:background="@null" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/top_main_action_bar_indicators_margin_between" android:src="@drawable/glympse_indicator" android:adjustViewBounds="true" android:contentDescription="@string/blank" />
+    </LinearLayout>
+</LinearLayout>

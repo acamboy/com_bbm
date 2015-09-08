@@ -1,75 +1,59 @@
 .class final Lcom/bbm/ui/activities/ns;
-.super Lcom/bbm/ui/cn;
-.source "GroupEventDetailsActivity.java"
+.super Lcom/bbm/j/k;
+.source "GroupLobbyActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupEventDetailsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupEventDetailsActivity;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/activities/GroupLobbyActivity;)V
+    .locals 1
 
     .prologue
-    .line 304
-    iput-object p1, p0, Lcom/bbm/ui/activities/ns;->a:Lcom/bbm/ui/activities/GroupEventDetailsActivity;
+    .line 274
+    iput-object p1, p0, Lcom/bbm/ui/activities/ns;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    invoke-direct {p0}, Lcom/bbm/ui/cn;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
-
-    .prologue
-    .line 308
-    iget-object v0, p0, Lcom/bbm/ui/activities/ns;->a:Lcom/bbm/ui/activities/GroupEventDetailsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupEventDetailsActivity;->d(Lcom/bbm/ui/activities/GroupEventDetailsActivity;)Lcom/bbm/j/u;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
-
-    .line 309
-    return-void
-.end method
-
-.method public final a(I)V
+.method protected final a()V
     .locals 2
 
     .prologue
-    .line 313
-    packed-switch p1, :pswitch_data_0
+    .line 278
+    iget-object v0, p0, Lcom/bbm/ui/activities/ns;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    .line 319
-    :goto_0
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->f(Lcom/bbm/ui/activities/GroupLobbyActivity;)Lcom/bbm/j/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    .line 281
+    if-lez v0, :cond_0
+
+    .line 282
+    iget-object v1, p0, Lcom/bbm/ui/activities/ns;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+
+    invoke-static {v1, v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->a(Lcom/bbm/ui/activities/GroupLobbyActivity;I)V
+
+    .line 284
+    :cond_0
     return-void
-
-    .line 315
-    :pswitch_0
-    const-string v0, "footer delete item"
-
-    const-class v1, Lcom/bbm/ui/activities/GroupEventDetailsActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 316
-    iget-object v0, p0, Lcom/bbm/ui/activities/ns;->a:Lcom/bbm/ui/activities/GroupEventDetailsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupEventDetailsActivity;->f(Lcom/bbm/ui/activities/GroupEventDetailsActivity;)V
-
-    goto :goto_0
-
-    .line 313
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

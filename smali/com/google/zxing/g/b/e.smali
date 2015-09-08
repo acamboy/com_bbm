@@ -81,7 +81,7 @@
 
     int-to-float v1, v1
 
-    const/high16 v2, 0x40000000
+    const/high16 v2, 0x40000000    # 2.0f
 
     div-float/2addr v1, v2
 
@@ -382,7 +382,7 @@
 
     .line 484
     :cond_3
-    const v0, 0x3d4ccccd
+    const v0, 0x3d4ccccd    # 0.05f
 
     mul-float/2addr v0, v1
 
@@ -481,7 +481,7 @@
     :cond_0
     if-gez v0, :cond_1
 
-    const/high16 v0, 0x7fc00000
+    const/high16 v0, 0x7fc00000    # NaNf
 
     move v1, v0
 
@@ -572,7 +572,7 @@
     if-le v8, v4, :cond_4
 
     :cond_3
-    const/high16 v0, 0x7fc00000
+    const/high16 v0, 0x7fc00000    # NaNf
 
     move v1, v0
 
@@ -613,7 +613,7 @@
 
     if-le v0, v4, :cond_6
 
-    const/high16 v0, 0x7fc00000
+    const/high16 v0, 0x7fc00000    # NaNf
 
     move v1, v0
 
@@ -646,7 +646,7 @@
     :cond_7
     if-ne v0, v6, :cond_8
 
-    const/high16 v0, 0x7fc00000
+    const/high16 v0, 0x7fc00000    # NaNf
 
     move v1, v0
 
@@ -690,7 +690,7 @@
     if-lt v8, v4, :cond_b
 
     :cond_a
-    const/high16 v0, 0x7fc00000
+    const/high16 v0, 0x7fc00000    # NaNf
 
     move v1, v0
 
@@ -731,7 +731,7 @@
 
     if-lt v1, v4, :cond_d
 
-    const/high16 v0, 0x7fc00000
+    const/high16 v0, 0x7fc00000    # NaNf
 
     move v1, v0
 
@@ -778,7 +778,7 @@
 
     if-lt v1, v4, :cond_e
 
-    const/high16 v0, 0x7fc00000
+    const/high16 v0, 0x7fc00000    # NaNf
 
     move v1, v0
 
@@ -800,7 +800,7 @@
     goto/16 :goto_1
 
     :cond_f
-    const/high16 v0, 0x7fc00000
+    const/high16 v0, 0x7fc00000    # NaNf
 
     move v1, v0
 
@@ -810,7 +810,7 @@
     :cond_10
     if-gez v0, :cond_13
 
-    const/high16 v0, 0x7fc00000
+    const/high16 v0, 0x7fc00000    # NaNf
 
     move v2, v0
 
@@ -825,7 +825,7 @@
     .line 402
     int-to-float v0, v3
 
-    const/high16 v3, 0x40e00000
+    const/high16 v3, 0x40e00000    # 7.0f
 
     div-float v6, v0, v3
 
@@ -888,7 +888,7 @@
 
     move-result v5
 
-    const/high16 v7, 0x3f800000
+    const/high16 v7, 0x3f800000    # 1.0f
 
     cmpg-float v7, v5, v7
 
@@ -1035,7 +1035,7 @@
     if-le v9, v5, :cond_16
 
     :cond_15
-    const/high16 v0, 0x7fc00000
+    const/high16 v0, 0x7fc00000    # NaNf
 
     move v2, v0
 
@@ -1076,7 +1076,7 @@
 
     if-le v0, v5, :cond_18
 
-    const/high16 v0, 0x7fc00000
+    const/high16 v0, 0x7fc00000    # NaNf
 
     move v2, v0
 
@@ -1109,7 +1109,7 @@
     :cond_19
     if-ne v0, v7, :cond_1a
 
-    const/high16 v0, 0x7fc00000
+    const/high16 v0, 0x7fc00000    # NaNf
 
     move v2, v0
 
@@ -1153,7 +1153,7 @@
     if-lt v2, v5, :cond_1d
 
     :cond_1c
-    const/high16 v0, 0x7fc00000
+    const/high16 v0, 0x7fc00000    # NaNf
 
     move v2, v0
 
@@ -1194,7 +1194,7 @@
 
     if-lt v2, v5, :cond_1f
 
-    const/high16 v0, 0x7fc00000
+    const/high16 v0, 0x7fc00000    # NaNf
 
     move v2, v0
 
@@ -1239,7 +1239,7 @@
 
     if-lt v2, v3, :cond_20
 
-    const/high16 v0, 0x7fc00000
+    const/high16 v0, 0x7fc00000    # NaNf
 
     move v2, v0
 
@@ -1261,7 +1261,7 @@
     goto/16 :goto_8
 
     :cond_21
-    const/high16 v0, 0x7fc00000
+    const/high16 v0, 0x7fc00000    # NaNf
 
     move v2, v0
 

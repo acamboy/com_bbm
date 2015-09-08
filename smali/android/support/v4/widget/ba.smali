@@ -1,60 +1,56 @@
 .class final Landroid/support/v4/widget/ba;
-.super Landroid/view/animation/Animation;
-.source "SwipeRefreshLayout.java"
+.super Ljava/lang/Object;
+.source "SlidingPaneLayout.java"
+
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
 
 
-# instance fields
-.field final synthetic a:Landroid/support/v4/widget/SwipeRefreshLayout;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Landroid/support/v4/widget/SlidingPaneLayout$SavedState;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/widget/SwipeRefreshLayout;)V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 880
-    iput-object p1, p0, Landroid/support/v4/widget/ba;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
-
-    invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
+    .line 1465
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final applyTransformation(FLandroid/view/animation/Transformation;)V
+.method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 2
 
     .prologue
-    .line 883
-    iget-object v0, p0, Landroid/support/v4/widget/ba;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
+    .line 1465
+    new-instance v0, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;
 
-    invoke-static {v0}, Landroid/support/v4/widget/SwipeRefreshLayout;->l(Landroid/support/v4/widget/SwipeRefreshLayout;)F
+    const/4 v1, 0x0
 
-    move-result v0
+    invoke-direct {v0, p1, v1}, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;-><init>(Landroid/os/Parcel;B)V
 
-    iget-object v1, p0, Landroid/support/v4/widget/ba;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
+    return-object v0
+.end method
 
-    invoke-static {v1}, Landroid/support/v4/widget/SwipeRefreshLayout;->l(Landroid/support/v4/widget/SwipeRefreshLayout;)F
+.method public final bridge synthetic newArray(I)[Ljava/lang/Object;
+    .locals 1
 
-    move-result v1
+    .prologue
+    .line 1465
+    new-array v0, p1, [Landroid/support/v4/widget/SlidingPaneLayout$SavedState;
 
-    neg-float v1, v1
-
-    mul-float/2addr v1, p1
-
-    add-float/2addr v0, v1
-
-    .line 884
-    iget-object v1, p0, Landroid/support/v4/widget/ba;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
-
-    invoke-static {v1, v0}, Landroid/support/v4/widget/SwipeRefreshLayout;->a(Landroid/support/v4/widget/SwipeRefreshLayout;F)V
-
-    .line 885
-    iget-object v0, p0, Landroid/support/v4/widget/ba;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
-
-    invoke-static {v0, p1}, Landroid/support/v4/widget/SwipeRefreshLayout;->b(Landroid/support/v4/widget/SwipeRefreshLayout;F)V
-
-    .line 886
-    return-void
+    return-object v0
 .end method

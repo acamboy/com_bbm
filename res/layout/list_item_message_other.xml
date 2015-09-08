@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="@android:color/transparent" android:paddingTop="@dimen/conversation_other_message_padding_top" android:paddingBottom="@dimen/conversation_other_message_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/conversation_other_message_padding_horizontal" android:paddingRight="@dimen/conversation_other_message_padding_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <com.bbm.ui.InlineImageTextView android:textSize="@dimen/fontSizeMediumLess" android:textColor="@color/message" android:id="@id/message_body" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/conversation_other_message_text_margin_right" android:layout_weight="1.0" android:textIsSelectable="false" />
-        <TextView android:textSize="@dimen/fontSizeXSmall" android:textColor="@color/message" android:gravity="center_vertical" android:id="@id/message_date" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textIsSelectable="false" />
-    </LinearLayout>
-    <View android:background="@drawable/chat_message_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-</LinearLayout>

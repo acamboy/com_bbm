@@ -1,181 +1,105 @@
-.class public Lcom/google/android/gms/internal/eu;
-.super Ljava/lang/Object;
+.class public abstract Lcom/google/android/gms/internal/eu;
+.super Landroid/os/Binder;
+
+# interfaces
+.implements Lcom/google/android/gms/internal/et;
 
 
 # direct methods
-.method public static a(Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;ZZLjava/lang/String;)Ljava/lang/String;
-    .locals 6
+.method public constructor <init>()V
+    .locals 1
 
-    if-nez p3, :cond_2
+    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    const/4 v0, 0x0
+    const-string v0, "com.google.android.gms.ads.internal.formats.client.IOnAppInstallAdLoadedListener"
+
+    invoke-virtual {p0, p0, v0}, Lcom/google/android/gms/internal/eu;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public asBinder()Landroid/os/IBinder;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    .locals 4
+
+    const/4 v1, 0x1
+
+    sparse-switch p1, :sswitch_data_0
+
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    move-result v0
 
     :goto_0
-    if-eqz v0, :cond_0
+    return v0
 
-    const-string v1, "@string/"
+    :sswitch_0
+    const-string v0, "com.google.android.gms.ads.internal.formats.client.IOnAppInstallAdLoadedListener"
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    if-eqz p4, :cond_0
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v3, Landroid/util/TypedValue;
-
-    invoke-direct {v3}, Landroid/util/TypedValue;-><init>()V
-
-    :try_start_0
-    invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v5, ":string/"
-
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v4, v1, v3, v2}, Landroid/content/res/Resources;->getValue(Ljava/lang/String;Landroid/util/TypedValue;Z)V
-    :try_end_0
-    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_1
-    iget-object v1, v3, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
-
-    if-eqz v1, :cond_3
-
-    iget-object v0, v3, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    :cond_0
-    :goto_2
-    if-eqz p5, :cond_1
-
-    if-nez v0, :cond_1
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Required XML attribute \""
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "\" missing"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {p6, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_1
-    return-object v0
-
-    :cond_2
-    invoke-interface {p3, p0, p1}, Landroid/util/AttributeSet;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    move v0, v1
 
     goto :goto_0
 
-    :catch_0
-    move-exception v1
+    :sswitch_1
+    const-string v0, "com.google.android.gms.ads.internal.formats.client.IOnAppInstallAdLoadedListener"
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    const-string v2, "Could not find resource for "
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v2
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-nez v2, :cond_0
 
-    move-result-object v1
+    const/4 v0, 0x0
 
-    const-string v2, ": "
+    :goto_1
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/eu;->a(Lcom/google/android/gms/internal/ei;)V
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    move-result-object v1
+    move v0, v1
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    move-result-object v1
+    :cond_0
+    const-string v0, "com.google.android.gms.ads.internal.formats.client.INativeAppInstallAd"
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v2, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-static {p6, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    if-eqz v0, :cond_1
+
+    instance-of v3, v0, Lcom/google/android/gms/internal/ei;
+
+    if-eqz v3, :cond_1
+
+    check-cast v0, Lcom/google/android/gms/internal/ei;
 
     goto :goto_1
 
-    :cond_3
-    new-instance v1, Ljava/lang/StringBuilder;
+    :cond_1
+    new-instance v0, Lcom/google/android/gms/internal/ek;
 
-    const-string v2, "Resource "
+    invoke-direct {v0, v2}, Lcom/google/android/gms/internal/ek;-><init>(Landroid/os/IBinder;)V
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    goto :goto_1
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    nop
 
-    move-result-object v1
-
-    const-string v2, " was not a string: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {p6, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_2
+    :sswitch_data_0
+    .sparse-switch
+        0x1 -> :sswitch_1
+        0x5f4e5446 -> :sswitch_0
+    .end sparse-switch
 .end method

@@ -1,68 +1,98 @@
 .class final Lcom/bbm/ui/c/et;
-.super Lcom/bbm/ui/d/a;
-.source "MyChannelsFragment.java"
+.super Lcom/bbm/j/a;
+.source "GroupsFragment.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/j/a",
+        "<",
+        "Ljava/lang/Integer;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/d/al;
-
-.field final synthetic b:Ljava/lang/String;
-
-.field final synthetic c:Lcom/bbm/ui/c/er;
+.field final synthetic a:Lcom/bbm/ui/c/ep;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/er;Lcom/bbm/d/al;Ljava/lang/String;)V
+.method constructor <init>(Lcom/bbm/ui/c/ep;)V
     .locals 0
 
     .prologue
-    .line 441
-    iput-object p1, p0, Lcom/bbm/ui/c/et;->c:Lcom/bbm/ui/c/er;
+    .line 131
+    iput-object p1, p0, Lcom/bbm/ui/c/et;->a:Lcom/bbm/ui/c/ep;
 
-    iput-object p2, p0, Lcom/bbm/ui/c/et;->a:Lcom/bbm/d/al;
-
-    iput-object p3, p0, Lcom/bbm/ui/c/et;->b:Ljava/lang/String;
-
-    invoke-direct {p0}, Lcom/bbm/ui/d/a;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method protected final synthetic a()Ljava/lang/Object;
+    .locals 4
 
     .prologue
-    .line 444
-    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
+    .line 131
+    iget-object v0, p0, Lcom/bbm/ui/c/et;->a:Lcom/bbm/ui/c/ep;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/c/ep;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/e;->b:Lcom/bbm/d/a;
+    const v1, 0x7f0c001a
 
-    iget-object v1, p0, Lcom/bbm/ui/c/et;->a:Lcom/bbm/d/al;
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
+    move-result v0
 
-    .line 445
-    return-void
-.end method
+    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/g/an;
 
-.method public final a(I)V
-    .locals 2
+    move-result-object v1
 
-    .prologue
-    .line 450
-    new-instance v0, Ljava/io/File;
+    const-string v2, "maxGroupsAllowed"
 
-    iget-object v1, p0, Lcom/bbm/ui/c/et;->b:Ljava/lang/String;
+    invoke-virtual {v1, v2}, Lcom/bbm/g/an;->x(Ljava/lang/String;)Lcom/bbm/util/bs;
 
-    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
-    .line 451
-    invoke-virtual {v0}, Ljava/io/File;->delete()Z
+    iget-object v2, v1, Lcom/bbm/util/bs;->b:Lcom/bbm/util/bo;
 
-    .line 452
-    return-void
+    sget-object v3, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
+
+    if-ne v2, v3, :cond_0
+
+    iget-object v1, v1, Lcom/bbm/util/bs;->a:Lorg/json/JSONObject;
+
+    const-string v2, "value"
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    const-string v2, "groupCount"
+
+    invoke-virtual {v1, v2, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method

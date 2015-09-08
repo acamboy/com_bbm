@@ -1,40 +1,40 @@
 .class public Lcom/bbm/ui/activities/NewListItemActivity;
-.super Lcom/bbm/ui/activities/mj;
+.super Lcom/bbm/bali/ui/main/a/d;
 .source "NewListItemActivity.java"
 
 
 # instance fields
-.field private a:Lcom/bbm/ui/FooterActionBar;
+.field private final b:Landroid/text/TextWatcher;
 
-.field private b:Landroid/widget/ImageView;
+.field private final h:Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
-.field protected d:Lcom/bbm/g/al;
+.field protected i:Lcom/bbm/g/an;
 
-.field protected e:Ljava/lang/String;
+.field protected j:Ljava/lang/String;
 
-.field protected f:Lcom/bbm/ui/HeaderButtonActionBar;
+.field protected k:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
-.field protected g:Lcom/bbm/ui/InlineImageEditText;
+.field protected l:Lcom/bbm/ui/InlineImageEditText;
 
-.field protected h:Landroid/widget/Spinner;
+.field protected m:Landroid/widget/Spinner;
 
-.field protected i:Landroid/widget/Spinner;
+.field protected n:Landroid/widget/Spinner;
 
-.field protected j:Landroid/widget/Switch;
+.field protected o:Landroid/support/v7/widget/SwitchCompat;
 
-.field protected k:Lcom/bbm/ui/DateTimePickerView;
+.field protected p:Lcom/bbm/ui/DateTimePickerView;
 
-.field protected l:Landroid/widget/Spinner;
+.field protected q:Landroid/widget/Spinner;
 
-.field protected m:J
+.field protected r:J
 
-.field protected n:Lcom/bbm/ui/p;
+.field protected s:Lcom/bbm/ui/p;
 
-.field protected o:Lcom/bbm/ui/p;
+.field protected t:Lcom/bbm/ui/p;
 
-.field protected p:Lcom/bbm/ui/p;
+.field protected u:Lcom/bbm/ui/p;
 
-.field protected final q:Ljava/util/HashMap;
+.field protected final v:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap",
@@ -46,15 +46,11 @@
     .end annotation
 .end field
 
-.field protected final r:Landroid/view/View$OnTouchListener;
+.field protected final w:Landroid/view/View$OnTouchListener;
 
-.field private final s:Landroid/text/TextWatcher;
+.field private final x:Lcom/bbm/ui/ba;
 
-.field private final t:Landroid/widget/CompoundButton$OnCheckedChangeListener;
-
-.field private final u:Lcom/bbm/ui/be;
-
-.field private final v:Lcom/bbm/j/k;
+.field private final y:Lcom/bbm/j/k;
 
 
 # direct methods
@@ -62,59 +58,59 @@
     .locals 1
 
     .prologue
-    .line 235
-    invoke-direct {p0}, Lcom/bbm/ui/activities/mj;-><init>()V
+    .line 226
+    invoke-direct {p0}, Lcom/bbm/bali/ui/main/a/d;-><init>()V
 
-    .line 80
+    .line 76
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->q:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->v:Ljava/util/HashMap;
 
-    .line 85
-    new-instance v0, Lcom/bbm/ui/activities/zx;
+    .line 81
+    new-instance v0, Lcom/bbm/ui/activities/wn;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/zx;-><init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/wn;-><init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->r:Landroid/view/View$OnTouchListener;
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->w:Landroid/view/View$OnTouchListener;
 
-    .line 147
-    new-instance v0, Lcom/bbm/ui/activities/zy;
+    .line 143
+    new-instance v0, Lcom/bbm/ui/activities/wo;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/zy;-><init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/wo;-><init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->s:Landroid/text/TextWatcher;
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->b:Landroid/text/TextWatcher;
 
-    .line 166
-    new-instance v0, Lcom/bbm/ui/activities/zz;
+    .line 162
+    new-instance v0, Lcom/bbm/ui/activities/wp;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/zz;-><init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/wp;-><init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->t:Landroid/widget/CompoundButton$OnCheckedChangeListener;
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->h:Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
-    .line 177
-    new-instance v0, Lcom/bbm/ui/activities/aaa;
+    .line 173
+    new-instance v0, Lcom/bbm/ui/activities/wq;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/aaa;-><init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/wq;-><init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->u:Lcom/bbm/ui/be;
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->x:Lcom/bbm/ui/ba;
 
-    .line 190
-    new-instance v0, Lcom/bbm/ui/activities/aab;
+    .line 186
+    new-instance v0, Lcom/bbm/ui/activities/wr;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/aab;-><init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/wr;-><init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->v:Lcom/bbm/j/k;
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->y:Lcom/bbm/j/k;
 
-    .line 236
-    new-instance v0, Lcom/bbm/ui/gc;
+    .line 227
+    new-instance v0, Lcom/bbm/ui/gj;
 
-    invoke-direct {v0}, Lcom/bbm/ui/gc;-><init>()V
+    invoke-direct {v0}, Lcom/bbm/ui/gj;-><init>()V
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewListItemActivity;->a(Lcom/bbm/ui/activities/alb;)V
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewListItemActivity;->a(Lcom/bbm/ui/d/b;)V
 
-    .line 237
+    .line 228
     return-void
 .end method
 
@@ -122,7 +118,7 @@
     .locals 2
 
     .prologue
-    .line 559
+    .line 544
     const-wide/16 v0, 0x3e8
 
     div-long v0, p0, v0
@@ -134,25 +130,25 @@
     .locals 2
 
     .prologue
-    .line 53
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->f:Lcom/bbm/ui/HeaderButtonActionBar;
+    .line 52
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->k:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->f:Lcom/bbm/ui/HeaderButtonActionBar;
+    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->k:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->g:Lcom/bbm/ui/InlineImageEditText;
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->l:Lcom/bbm/ui/InlineImageEditText;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/InlineImageEditText;->length()I
+    invoke-static {v0}, Lcom/bbm/util/eu;->a(Landroid/widget/EditText;)Z
 
     move-result v0
 
-    if-lez v0, :cond_1
+    if-nez v0, :cond_1
 
     const/4 v0, 0x1
 
     :goto_0
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/HeaderButtonActionBar;->setPositiveButtonEnabled(Z)V
+    invoke-virtual {v1, v0}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setPositiveButtonEnabled(Z)V
 
     :cond_0
     return-void
@@ -171,8 +167,8 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 333
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->g:Lcom/bbm/ui/InlineImageEditText;
+    .line 316
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->l:Lcom/bbm/ui/InlineImageEditText;
 
     invoke-virtual {v0}, Lcom/bbm/ui/InlineImageEditText;->getText()Landroid/text/Editable;
 
@@ -186,28 +182,28 @@
 
     move-result-object v5
 
-    .line 334
+    .line 317
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_6
 
-    .line 335
-    invoke-static {}, Lcom/bbm/ui/activities/aam;->values()[Lcom/bbm/ui/activities/aam;
+    .line 318
+    invoke-static {}, Lcom/bbm/ui/activities/xc;->values()[Lcom/bbm/ui/activities/xc;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->p:Lcom/bbm/ui/p;
+    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->u:Lcom/bbm/ui/p;
 
     iget v1, v1, Lcom/bbm/ui/p;->a:I
 
     aget-object v6, v0, v1
 
-    .line 336
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->o:Lcom/bbm/ui/p;
+    .line 319
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->t:Lcom/bbm/ui/p;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->o:Lcom/bbm/ui/p;
+    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->t:Lcom/bbm/ui/p;
 
     iget v1, v1, Lcom/bbm/ui/p;->a:I
 
@@ -217,10 +213,10 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 337
-    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->n:Lcom/bbm/ui/p;
+    .line 320
+    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->s:Lcom/bbm/ui/p;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/NewListItemActivity;->n:Lcom/bbm/ui/p;
+    iget-object v2, p0, Lcom/bbm/ui/activities/NewListItemActivity;->s:Lcom/bbm/ui/p;
 
     iget v2, v2, Lcom/bbm/ui/p;->a:I
 
@@ -230,10 +226,10 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 338
-    sget-object v2, Lcom/bbm/ui/activities/aal;->b:Lcom/bbm/ui/activities/aal;
+    .line 321
+    sget-object v2, Lcom/bbm/ui/activities/xb;->b:Lcom/bbm/ui/activities/xb;
 
-    iget v2, v2, Lcom/bbm/ui/activities/aal;->c:I
+    iget v2, v2, Lcom/bbm/ui/activities/xb;->c:I
 
     invoke-virtual {p0, v2}, Lcom/bbm/ui/activities/NewListItemActivity;->getString(I)Ljava/lang/String;
 
@@ -247,11 +243,11 @@
 
     move-object v3, v4
 
-    .line 342
+    .line 325
     :goto_0
-    sget-object v1, Lcom/bbm/ui/activities/aak;->b:Lcom/bbm/ui/activities/aak;
+    sget-object v1, Lcom/bbm/ui/activities/xa;->b:Lcom/bbm/ui/activities/xa;
 
-    iget v1, v1, Lcom/bbm/ui/activities/aak;->c:I
+    iget v1, v1, Lcom/bbm/ui/activities/xa;->c:I
 
     invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/NewListItemActivity;->getString(I)Ljava/lang/String;
 
@@ -263,8 +259,8 @@
 
     if-nez v1, :cond_4
 
-    .line 343
-    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->q:Ljava/util/HashMap;
+    .line 326
+    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->v:Ljava/util/HashMap;
 
     invoke-virtual {v1, v0}, Ljava/util/HashMap;->containsValue(Ljava/lang/Object;)Z
 
@@ -272,8 +268,8 @@
 
     if-eqz v1, :cond_2
 
-    .line 346
-    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->q:Ljava/util/HashMap;
+    .line 329
+    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->v:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
@@ -296,8 +292,8 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 347
-    iget-object v2, p0, Lcom/bbm/ui/activities/NewListItemActivity;->q:Ljava/util/HashMap;
+    .line 330
+    iget-object v2, p0, Lcom/bbm/ui/activities/NewListItemActivity;->v:Ljava/util/HashMap;
 
     invoke-virtual {v2, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -311,89 +307,89 @@
 
     if-eqz v2, :cond_0
 
-    .line 353
+    .line 336
     :goto_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->d:Lcom/bbm/g/al;
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->i:Lcom/bbm/g/an;
 
-    iget-object v2, v6, Lcom/bbm/ui/activities/aam;->e:Ljava/lang/String;
+    iget-object v2, v6, Lcom/bbm/ui/activities/xc;->e:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/bbm/g/bu;->a(Ljava/lang/String;)Lcom/bbm/g/bu;
-
-    move-result-object v2
-
-    sget-object v4, Lcom/bbm/g/bv;->a:Lcom/bbm/g/bv;
-
-    invoke-static {p1, v5, v2, v4}, Lcom/bbm/g/am;->a(Ljava/lang/String;Ljava/lang/String;Lcom/bbm/g/bu;Lcom/bbm/g/bv;)Lcom/bbm/g/bt;
+    invoke-static {v2}, Lcom/bbm/g/bz;->a(Ljava/lang/String;)Lcom/bbm/g/bz;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lcom/bbm/g/bt;->a(Ljava/lang/String;)Lcom/bbm/g/bt;
+    sget-object v4, Lcom/bbm/g/ca;->a:Lcom/bbm/g/ca;
+
+    invoke-static {p1, v5, v2, v4}, Lcom/bbm/g/ar;->a(Ljava/lang/String;Ljava/lang/String;Lcom/bbm/g/bz;Lcom/bbm/g/ca;)Lcom/bbm/g/by;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Lcom/bbm/g/by;->a(Ljava/lang/String;)Lcom/bbm/g/by;
 
     move-result-object v1
 
-    iget-wide v4, p0, Lcom/bbm/ui/activities/NewListItemActivity;->m:J
+    iget-wide v4, p0, Lcom/bbm/ui/activities/NewListItemActivity;->r:J
 
-    invoke-virtual {v1, v4, v5}, Lcom/bbm/g/bt;->a(J)Lcom/bbm/g/bt;
+    invoke-virtual {v1, v4, v5}, Lcom/bbm/g/by;->a(J)Lcom/bbm/g/by;
 
     move-result-object v1
 
     if-eqz v3, :cond_1
 
     :goto_2
-    invoke-virtual {v1, v3}, Lcom/bbm/g/bt;->c(Ljava/lang/String;)Lcom/bbm/g/bt;
+    invoke-virtual {v1, v3}, Lcom/bbm/g/by;->c(Ljava/lang/String;)Lcom/bbm/g/by;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/g/an;->a(Lcom/bbm/g/db;)V
 
-    .line 369
+    .line 352
     :goto_3
     invoke-virtual {p0}, Lcom/bbm/ui/activities/NewListItemActivity;->finish()V
 
-    .line 373
+    .line 356
     :goto_4
     return-void
 
-    .line 353
+    .line 336
     :cond_1
     const-string v3, ""
 
     goto :goto_2
 
-    .line 359
+    .line 342
     :cond_2
-    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->d:Lcom/bbm/g/al;
+    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->i:Lcom/bbm/g/an;
 
-    iget-object v2, v6, Lcom/bbm/ui/activities/aam;->e:Ljava/lang/String;
+    iget-object v2, v6, Lcom/bbm/ui/activities/xc;->e:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/bbm/g/bu;->a(Ljava/lang/String;)Lcom/bbm/g/bu;
-
-    move-result-object v2
-
-    sget-object v4, Lcom/bbm/g/bv;->a:Lcom/bbm/g/bv;
-
-    invoke-static {p1, v5, v2, v4}, Lcom/bbm/g/am;->a(Ljava/lang/String;Ljava/lang/String;Lcom/bbm/g/bu;Lcom/bbm/g/bv;)Lcom/bbm/g/bt;
+    invoke-static {v2}, Lcom/bbm/g/bz;->a(Ljava/lang/String;)Lcom/bbm/g/bz;
 
     move-result-object v2
 
-    invoke-virtual {v2, v0}, Lcom/bbm/g/bt;->b(Ljava/lang/String;)Lcom/bbm/g/bt;
+    sget-object v4, Lcom/bbm/g/ca;->a:Lcom/bbm/g/ca;
+
+    invoke-static {p1, v5, v2, v4}, Lcom/bbm/g/ar;->a(Ljava/lang/String;Ljava/lang/String;Lcom/bbm/g/bz;Lcom/bbm/g/ca;)Lcom/bbm/g/by;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Lcom/bbm/g/by;->b(Ljava/lang/String;)Lcom/bbm/g/by;
 
     move-result-object v0
 
-    iget-wide v4, p0, Lcom/bbm/ui/activities/NewListItemActivity;->m:J
+    iget-wide v4, p0, Lcom/bbm/ui/activities/NewListItemActivity;->r:J
 
-    invoke-virtual {v0, v4, v5}, Lcom/bbm/g/bt;->a(J)Lcom/bbm/g/bt;
+    invoke-virtual {v0, v4, v5}, Lcom/bbm/g/by;->a(J)Lcom/bbm/g/by;
 
     move-result-object v0
 
     if-eqz v3, :cond_3
 
     :goto_5
-    invoke-virtual {v0, v3}, Lcom/bbm/g/bt;->c(Ljava/lang/String;)Lcom/bbm/g/bt;
+    invoke-virtual {v0, v3}, Lcom/bbm/g/by;->c(Ljava/lang/String;)Lcom/bbm/g/by;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
+    invoke-virtual {v1, v0}, Lcom/bbm/g/an;->a(Lcom/bbm/g/db;)V
 
     goto :goto_3
 
@@ -402,36 +398,36 @@
 
     goto :goto_5
 
-    .line 365
+    .line 348
     :cond_4
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->d:Lcom/bbm/g/al;
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->i:Lcom/bbm/g/an;
 
-    iget-object v1, v6, Lcom/bbm/ui/activities/aam;->e:Ljava/lang/String;
+    iget-object v1, v6, Lcom/bbm/ui/activities/xc;->e:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/bbm/g/bu;->a(Ljava/lang/String;)Lcom/bbm/g/bu;
-
-    move-result-object v1
-
-    sget-object v2, Lcom/bbm/g/bv;->a:Lcom/bbm/g/bv;
-
-    invoke-static {p1, v5, v1, v2}, Lcom/bbm/g/am;->a(Ljava/lang/String;Ljava/lang/String;Lcom/bbm/g/bu;Lcom/bbm/g/bv;)Lcom/bbm/g/bt;
+    invoke-static {v1}, Lcom/bbm/g/bz;->a(Ljava/lang/String;)Lcom/bbm/g/bz;
 
     move-result-object v1
 
-    iget-wide v4, p0, Lcom/bbm/ui/activities/NewListItemActivity;->m:J
+    sget-object v2, Lcom/bbm/g/ca;->a:Lcom/bbm/g/ca;
 
-    invoke-virtual {v1, v4, v5}, Lcom/bbm/g/bt;->a(J)Lcom/bbm/g/bt;
+    invoke-static {p1, v5, v1, v2}, Lcom/bbm/g/ar;->a(Ljava/lang/String;Ljava/lang/String;Lcom/bbm/g/bz;Lcom/bbm/g/ca;)Lcom/bbm/g/by;
+
+    move-result-object v1
+
+    iget-wide v4, p0, Lcom/bbm/ui/activities/NewListItemActivity;->r:J
+
+    invoke-virtual {v1, v4, v5}, Lcom/bbm/g/by;->a(J)Lcom/bbm/g/by;
 
     move-result-object v1
 
     if-eqz v3, :cond_5
 
     :goto_6
-    invoke-virtual {v1, v3}, Lcom/bbm/g/bt;->c(Ljava/lang/String;)Lcom/bbm/g/bt;
+    invoke-virtual {v1, v3}, Lcom/bbm/g/by;->c(Ljava/lang/String;)Lcom/bbm/g/by;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/g/an;->a(Lcom/bbm/g/db;)V
 
     goto :goto_3
 
@@ -440,9 +436,9 @@
 
     goto :goto_6
 
-    .line 371
+    .line 354
     :cond_6
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->g:Lcom/bbm/ui/InlineImageEditText;
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->l:Lcom/bbm/ui/InlineImageEditText;
 
     invoke-virtual {v0, v5}, Lcom/bbm/ui/InlineImageEditText;->setText(Ljava/lang/CharSequence;)V
 
@@ -459,49 +455,7 @@
     goto/16 :goto_0
 .end method
 
-.method protected final a(Z)V
-    .locals 4
-
-    .prologue
-    const/16 v2, 0x8
-
-    const/4 v1, 0x0
-
-    .line 230
-    iget-object v3, p0, Lcom/bbm/ui/activities/NewListItemActivity;->a:Lcom/bbm/ui/FooterActionBar;
-
-    if-eqz p1, :cond_0
-
-    move v0, v1
-
-    :goto_0
-    invoke-virtual {v3, v0}, Lcom/bbm/ui/FooterActionBar;->setVisibility(I)V
-
-    .line 231
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->b:Landroid/widget/ImageView;
-
-    if-eqz p1, :cond_1
-
-    :goto_1
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 232
-    return-void
-
-    :cond_0
-    move v0, v2
-
-    .line 230
-    goto :goto_0
-
-    :cond_1
-    move v1, v2
-
-    .line 231
-    goto :goto_1
-.end method
-
-.method protected b()V
+.method protected d()V
     .locals 11
 
     .prologue
@@ -509,42 +463,42 @@
 
     const/4 v2, 0x0
 
-    .line 396
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->d:Lcom/bbm/g/al;
+    .line 379
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->i:Lcom/bbm/g/an;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->e:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->j:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->h(Ljava/lang/String;)Lcom/bbm/j/w;
+    invoke-virtual {v0, v1}, Lcom/bbm/g/an;->j(Ljava/lang/String;)Lcom/bbm/j/w;
 
     move-result-object v3
 
-    .line 399
+    .line 382
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 400
+    .line 383
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 401
+    .line 384
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 404
+    .line 387
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
     move v1, v2
 
-    .line 407
+    .line 390
     :goto_0
     invoke-interface {v3}, Lcom/bbm/j/w;->d()I
 
@@ -552,15 +506,15 @@
 
     if-ge v1, v0, :cond_1
 
-    .line 408
-    invoke-interface {v3, v1}, Lcom/bbm/j/w;->a(I)Ljava/lang/Object;
+    .line 391
+    invoke-interface {v3, v1}, Lcom/bbm/j/w;->b(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/g/y;
+    check-cast v0, Lcom/bbm/g/aa;
 
-    .line 409
-    iget-object v6, v0, Lcom/bbm/g/y;->c:Ljava/lang/String;
+    .line 392
+    iget-object v6, v0, Lcom/bbm/g/aa;->c:Ljava/lang/String;
 
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -568,7 +522,7 @@
 
     if-nez v6, :cond_0
 
-    iget-object v6, v0, Lcom/bbm/g/y;->c:Ljava/lang/String;
+    iget-object v6, v0, Lcom/bbm/g/aa;->c:Ljava/lang/String;
 
     invoke-virtual {v5, v6}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -576,12 +530,12 @@
 
     if-nez v6, :cond_0
 
-    .line 410
-    iget-object v0, v0, Lcom/bbm/g/y;->c:Ljava/lang/String;
+    .line 393
+    iget-object v0, v0, Lcom/bbm/g/aa;->c:Ljava/lang/String;
 
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 407
+    .line 390
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -589,11 +543,11 @@
 
     goto :goto_0
 
-    .line 414
+    .line 397
     :cond_1
-    sget-object v0, Lcom/bbm/ui/activities/aal;->a:Lcom/bbm/ui/activities/aal;
+    sget-object v0, Lcom/bbm/ui/activities/xb;->a:Lcom/bbm/ui/activities/xb;
 
-    iget v0, v0, Lcom/bbm/ui/activities/aal;->c:I
+    iget v0, v0, Lcom/bbm/ui/activities/xb;->c:I
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewListItemActivity;->getString(I)Ljava/lang/String;
 
@@ -601,10 +555,10 @@
 
     invoke-virtual {v5, v2, v0}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 415
-    sget-object v0, Lcom/bbm/ui/activities/aal;->b:Lcom/bbm/ui/activities/aal;
+    .line 398
+    sget-object v0, Lcom/bbm/ui/activities/xb;->b:Lcom/bbm/ui/activities/xb;
 
-    iget v0, v0, Lcom/bbm/ui/activities/aal;->c:I
+    iget v0, v0, Lcom/bbm/ui/activities/xb;->c:I
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewListItemActivity;->getString(I)Ljava/lang/String;
 
@@ -612,17 +566,17 @@
 
     invoke-virtual {v5, v10, v0}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 417
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->n:Lcom/bbm/ui/p;
+    .line 400
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->s:Lcom/bbm/ui/p;
 
     invoke-virtual {v0, v5, v4}, Lcom/bbm/ui/p;->a(Ljava/util/List;Ljava/util/List;)V
 
-    .line 418
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->n:Lcom/bbm/ui/p;
+    .line 401
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->s:Lcom/bbm/ui/p;
 
-    sget-object v1, Lcom/bbm/ui/activities/aal;->b:Lcom/bbm/ui/activities/aal;
+    sget-object v1, Lcom/bbm/ui/activities/xb;->b:Lcom/bbm/ui/activities/xb;
 
-    iget v1, v1, Lcom/bbm/ui/activities/aal;->c:I
+    iget v1, v1, Lcom/bbm/ui/activities/xb;->c:I
 
     invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/NewListItemActivity;->getString(I)Ljava/lang/String;
 
@@ -630,54 +584,54 @@
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/p;->a(Ljava/lang/String;)V
 
-    .line 419
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->h:Landroid/widget/Spinner;
+    .line 402
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->m:Landroid/widget/Spinner;
 
     new-instance v1, Lcom/bbm/ui/u;
 
-    iget-object v5, p0, Lcom/bbm/ui/activities/NewListItemActivity;->n:Lcom/bbm/ui/p;
+    iget-object v5, p0, Lcom/bbm/ui/activities/NewListItemActivity;->s:Lcom/bbm/ui/p;
 
-    new-instance v6, Lcom/bbm/ui/activities/aae;
+    new-instance v6, Lcom/bbm/ui/activities/wu;
 
-    invoke-direct {v6, p0}, Lcom/bbm/ui/activities/aae;-><init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
+    invoke-direct {v6, p0}, Lcom/bbm/ui/activities/wu;-><init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
 
     invoke-direct {v1, v5, v6}, Lcom/bbm/ui/u;-><init>(Lcom/bbm/ui/p;Lcom/bbm/ui/t;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
 
-    .line 469
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->h:Landroid/widget/Spinner;
+    .line 453
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->m:Landroid/widget/Spinner;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->n:Lcom/bbm/ui/p;
+    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->s:Lcom/bbm/ui/p;
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setAdapter(Landroid/widget/SpinnerAdapter;)V
 
-    .line 470
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->h:Landroid/widget/Spinner;
+    .line 454
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->m:Landroid/widget/Spinner;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->n:Lcom/bbm/ui/p;
+    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->s:Lcom/bbm/ui/p;
 
     iget v1, v1, Lcom/bbm/ui/p;->a:I
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setSelection(I)V
 
-    .line 473
+    .line 457
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 476
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->d:Lcom/bbm/g/al;
+    .line 460
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->i:Lcom/bbm/g/an;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/bali/ui/main/a/d;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->g(Ljava/lang/String;)Lcom/bbm/j/w;
+    invoke-virtual {v0, v1}, Lcom/bbm/g/an;->i(Ljava/lang/String;)Lcom/bbm/j/w;
 
     move-result-object v6
 
     move v1, v2
 
-    .line 477
+    .line 461
     :goto_1
     invoke-interface {v6}, Lcom/bbm/j/w;->d()I
 
@@ -685,44 +639,44 @@
 
     if-ge v1, v0, :cond_3
 
-    .line 478
-    invoke-interface {v6, v1}, Lcom/bbm/j/w;->a(I)Ljava/lang/Object;
+    .line 462
+    invoke-interface {v6, v1}, Lcom/bbm/j/w;->b(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/g/ac;
+    check-cast v0, Lcom/bbm/g/ae;
 
-    .line 479
-    iget-object v7, p0, Lcom/bbm/ui/activities/NewListItemActivity;->d:Lcom/bbm/g/al;
+    .line 463
+    iget-object v7, p0, Lcom/bbm/ui/activities/NewListItemActivity;->i:Lcom/bbm/g/an;
 
-    iget-object v8, v0, Lcom/bbm/g/ac;->c:Ljava/lang/String;
+    iget-object v8, v0, Lcom/bbm/g/ae;->c:Ljava/lang/String;
 
-    invoke-virtual {v7, v8}, Lcom/bbm/g/al;->q(Ljava/lang/String;)Lcom/bbm/g/o;
+    invoke-virtual {v7, v8}, Lcom/bbm/g/an;->s(Ljava/lang/String;)Lcom/bbm/g/q;
 
     move-result-object v7
 
-    .line 481
-    iget-object v8, v0, Lcom/bbm/g/ac;->d:Lcom/bbm/util/bi;
+    .line 465
+    iget-object v8, v0, Lcom/bbm/g/ae;->d:Lcom/bbm/util/bo;
 
-    sget-object v9, Lcom/bbm/util/bi;->b:Lcom/bbm/util/bi;
+    sget-object v9, Lcom/bbm/util/bo;->b:Lcom/bbm/util/bo;
 
     if-eq v8, v9, :cond_2
 
-    .line 482
-    iget-object v8, p0, Lcom/bbm/ui/activities/NewListItemActivity;->q:Ljava/util/HashMap;
+    .line 466
+    iget-object v8, p0, Lcom/bbm/ui/activities/NewListItemActivity;->v:Ljava/util/HashMap;
 
-    iget-object v0, v0, Lcom/bbm/g/ac;->c:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/g/ae;->c:Ljava/lang/String;
 
-    iget-object v9, v7, Lcom/bbm/g/o;->c:Ljava/lang/String;
+    iget-object v9, v7, Lcom/bbm/g/q;->c:Ljava/lang/String;
 
     invoke-virtual {v8, v0, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 483
-    iget-object v0, v7, Lcom/bbm/g/o;->c:Ljava/lang/String;
+    .line 467
+    iget-object v0, v7, Lcom/bbm/g/q;->c:Ljava/lang/String;
 
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 477
+    .line 461
     :cond_2
     add-int/lit8 v0, v1, 0x1
 
@@ -733,7 +687,7 @@
     :cond_3
     move v1, v2
 
-    .line 489
+    .line 473
     :goto_2
     invoke-interface {v3}, Lcom/bbm/j/w;->d()I
 
@@ -741,15 +695,15 @@
 
     if-ge v1, v0, :cond_5
 
-    .line 490
-    invoke-interface {v3, v1}, Lcom/bbm/j/w;->a(I)Ljava/lang/Object;
+    .line 474
+    invoke-interface {v3, v1}, Lcom/bbm/j/w;->b(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/g/y;
+    check-cast v0, Lcom/bbm/g/aa;
 
-    .line 491
-    iget-object v6, v0, Lcom/bbm/g/y;->b:Ljava/lang/String;
+    .line 475
+    iget-object v6, v0, Lcom/bbm/g/aa;->b:Ljava/lang/String;
 
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -757,7 +711,7 @@
 
     if-nez v6, :cond_4
 
-    iget-object v6, v0, Lcom/bbm/g/y;->b:Ljava/lang/String;
+    iget-object v6, v0, Lcom/bbm/g/aa;->b:Ljava/lang/String;
 
     invoke-virtual {v5, v6}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -765,12 +719,12 @@
 
     if-nez v6, :cond_4
 
-    .line 492
-    iget-object v0, v0, Lcom/bbm/g/y;->b:Ljava/lang/String;
+    .line 476
+    iget-object v0, v0, Lcom/bbm/g/aa;->b:Ljava/lang/String;
 
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 489
+    .line 473
     :cond_4
     add-int/lit8 v0, v1, 0x1
 
@@ -778,11 +732,11 @@
 
     goto :goto_2
 
-    .line 495
+    .line 479
     :cond_5
-    sget-object v0, Lcom/bbm/ui/activities/aak;->a:Lcom/bbm/ui/activities/aak;
+    sget-object v0, Lcom/bbm/ui/activities/xa;->a:Lcom/bbm/ui/activities/xa;
 
-    iget v0, v0, Lcom/bbm/ui/activities/aak;->c:I
+    iget v0, v0, Lcom/bbm/ui/activities/xa;->c:I
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewListItemActivity;->getString(I)Ljava/lang/String;
 
@@ -790,10 +744,10 @@
 
     invoke-virtual {v5, v2, v0}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 496
-    sget-object v0, Lcom/bbm/ui/activities/aak;->b:Lcom/bbm/ui/activities/aak;
+    .line 480
+    sget-object v0, Lcom/bbm/ui/activities/xa;->b:Lcom/bbm/ui/activities/xa;
 
-    iget v0, v0, Lcom/bbm/ui/activities/aak;->c:I
+    iget v0, v0, Lcom/bbm/ui/activities/xa;->c:I
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewListItemActivity;->getString(I)Ljava/lang/String;
 
@@ -801,17 +755,17 @@
 
     invoke-virtual {v5, v10, v0}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 498
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->o:Lcom/bbm/ui/p;
+    .line 482
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->t:Lcom/bbm/ui/p;
 
     invoke-virtual {v0, v5, v4}, Lcom/bbm/ui/p;->a(Ljava/util/List;Ljava/util/List;)V
 
-    .line 499
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->o:Lcom/bbm/ui/p;
+    .line 483
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->t:Lcom/bbm/ui/p;
 
-    sget-object v1, Lcom/bbm/ui/activities/aak;->b:Lcom/bbm/ui/activities/aak;
+    sget-object v1, Lcom/bbm/ui/activities/xa;->b:Lcom/bbm/ui/activities/xa;
 
-    iget v1, v1, Lcom/bbm/ui/activities/aak;->c:I
+    iget v1, v1, Lcom/bbm/ui/activities/xa;->c:I
 
     invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/NewListItemActivity;->getString(I)Ljava/lang/String;
 
@@ -819,47 +773,52 @@
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/p;->a(Ljava/lang/String;)V
 
-    .line 500
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->i:Landroid/widget/Spinner;
+    .line 484
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->n:Landroid/widget/Spinner;
 
     new-instance v1, Lcom/bbm/ui/u;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/NewListItemActivity;->o:Lcom/bbm/ui/p;
+    iget-object v2, p0, Lcom/bbm/ui/activities/NewListItemActivity;->t:Lcom/bbm/ui/p;
 
-    new-instance v3, Lcom/bbm/ui/activities/aah;
+    new-instance v3, Lcom/bbm/ui/activities/wx;
 
-    invoke-direct {v3, p0}, Lcom/bbm/ui/activities/aah;-><init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
+    invoke-direct {v3, p0}, Lcom/bbm/ui/activities/wx;-><init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
 
     invoke-direct {v1, v2, v3}, Lcom/bbm/ui/u;-><init>(Lcom/bbm/ui/p;Lcom/bbm/ui/t;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
 
-    .line 547
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->i:Landroid/widget/Spinner;
+    .line 531
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->n:Landroid/widget/Spinner;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->o:Lcom/bbm/ui/p;
+    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->t:Lcom/bbm/ui/p;
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setAdapter(Landroid/widget/SpinnerAdapter;)V
 
-    .line 548
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->i:Landroid/widget/Spinner;
+    .line 532
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->n:Landroid/widget/Spinner;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->o:Lcom/bbm/ui/p;
+    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->t:Lcom/bbm/ui/p;
 
     iget v1, v1, Lcom/bbm/ui/p;->a:I
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setSelection(I)V
 
-    .line 549
+    .line 533
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->l:Lcom/bbm/ui/InlineImageEditText;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/InlineImageEditText;->requestFocus()Z
+
+    .line 534
     return-void
 .end method
 
-.method protected f()V
+.method protected j()V
     .locals 2
 
     .prologue
-    .line 273
-    const v0, 0x7f0b016c
+    .line 259
+    const v0, 0x7f0b01cf
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewListItemActivity;->findViewById(I)Landroid/view/View;
 
@@ -867,42 +826,24 @@
 
     check-cast v0, Lcom/bbm/ui/InlineImageEditText;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->g:Lcom/bbm/ui/InlineImageEditText;
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->l:Lcom/bbm/ui/InlineImageEditText;
 
-    .line 274
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->g:Lcom/bbm/ui/InlineImageEditText;
+    .line 260
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->l:Lcom/bbm/ui/InlineImageEditText;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->s:Landroid/text/TextWatcher;
+    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->b:Landroid/text/TextWatcher;
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/InlineImageEditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    .line 275
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->g:Lcom/bbm/ui/InlineImageEditText;
+    .line 261
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->l:Lcom/bbm/ui/InlineImageEditText;
 
     const/16 v1, 0x200
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/he;->a(Landroid/widget/EditText;I)Lcom/bbm/ui/he;
+    invoke-static {v0, v1}, Lcom/bbm/ui/hl;->a(Landroid/widget/EditText;I)Lcom/bbm/ui/hl;
 
-    .line 277
-    const v0, 0x7f0b016d
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewListItemActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/Spinner;
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->h:Landroid/widget/Spinner;
-
-    .line 278
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->h:Landroid/widget/Spinner;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->r:Landroid/view/View$OnTouchListener;
-
-    invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
-
-    .line 280
-    const v0, 0x7f0b016e
+    .line 263
+    const v0, 0x7f0b01d0
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewListItemActivity;->findViewById(I)Landroid/view/View;
 
@@ -910,35 +851,53 @@
 
     check-cast v0, Landroid/widget/Spinner;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->i:Landroid/widget/Spinner;
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->m:Landroid/widget/Spinner;
 
-    .line 281
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->i:Landroid/widget/Spinner;
+    .line 264
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->m:Landroid/widget/Spinner;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->r:Landroid/view/View$OnTouchListener;
+    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->w:Landroid/view/View$OnTouchListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 283
-    const v0, 0x7f0b016f
+    .line 266
+    const v0, 0x7f0b01d1
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewListItemActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/Switch;
+    check-cast v0, Landroid/widget/Spinner;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->j:Landroid/widget/Switch;
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->n:Landroid/widget/Spinner;
 
-    .line 284
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->j:Landroid/widget/Switch;
+    .line 267
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->n:Landroid/widget/Spinner;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->t:Landroid/widget/CompoundButton$OnCheckedChangeListener;
+    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->w:Landroid/view/View$OnTouchListener;
 
-    invoke-virtual {v0, v1}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+    invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 285
-    const v0, 0x7f0b0170
+    .line 269
+    const v0, 0x7f0b01d2
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewListItemActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v7/widget/SwitchCompat;
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->o:Landroid/support/v7/widget/SwitchCompat;
+
+    .line 270
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->o:Landroid/support/v7/widget/SwitchCompat;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->h:Landroid/widget/CompoundButton$OnCheckedChangeListener;
+
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/SwitchCompat;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+
+    .line 271
+    const v0, 0x7f0b01d3
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewListItemActivity;->findViewById(I)Landroid/view/View;
 
@@ -946,17 +905,17 @@
 
     check-cast v0, Lcom/bbm/ui/DateTimePickerView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->k:Lcom/bbm/ui/DateTimePickerView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->p:Lcom/bbm/ui/DateTimePickerView;
 
-    .line 286
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->k:Lcom/bbm/ui/DateTimePickerView;
+    .line 272
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->p:Lcom/bbm/ui/DateTimePickerView;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->u:Lcom/bbm/ui/be;
+    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->x:Lcom/bbm/ui/ba;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/DateTimePickerView;->setOnDateTimePickerViewChangeListener(Lcom/bbm/ui/be;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/DateTimePickerView;->setOnDateTimePickerViewChangeListener(Lcom/bbm/ui/ba;)V
 
-    .line 288
-    const v0, 0x7f0b0171
+    .line 274
+    const v0, 0x7f0b01d4
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewListItemActivity;->findViewById(I)Landroid/view/View;
 
@@ -964,107 +923,97 @@
 
     check-cast v0, Landroid/widget/Spinner;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->l:Landroid/widget/Spinner;
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->q:Landroid/widget/Spinner;
 
-    .line 289
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->l:Landroid/widget/Spinner;
+    .line 275
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->q:Landroid/widget/Spinner;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->r:Landroid/view/View$OnTouchListener;
+    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->w:Landroid/view/View$OnTouchListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 290
+    .line 276
     return-void
 .end method
 
 .method protected k()V
-    .locals 6
+    .locals 4
 
     .prologue
-    const/4 v5, -0x1
+    const/4 v3, 0x0
 
-    .line 296
-    new-instance v0, Lcom/bbm/ui/HeaderButtonActionBar;
+    .line 282
+    const v0, 0x7f0b05e8
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewListItemActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->k:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    .line 283
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->k:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/NewListItemActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0e03ca
+    const v2, 0x7f0e042d
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/NewListItemActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setTitle(Ljava/lang/String;)V
 
-    move-result-object v2
-
-    const v3, 0x7f0e0177
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
+    .line 284
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->k:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/NewListItemActivity;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v3
+    move-result-object v1
 
-    const v4, 0x7f0e00f4
+    const v2, 0x7f0e0105
 
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-direct {v0, p0, v1, v2, v3}, Lcom/bbm/ui/HeaderButtonActionBar;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setPositiveButtonLabel(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->f:Lcom/bbm/ui/HeaderButtonActionBar;
+    .line 285
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->k:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
-    .line 300
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->f:Lcom/bbm/ui/HeaderButtonActionBar;
+    invoke-virtual {v0, v3}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setPositiveButtonEnabled(Z)V
+
+    .line 286
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->k:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    new-instance v1, Lcom/bbm/ui/activities/ws;
+
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/ws;-><init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
+
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setNegativeButtonOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 296
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->k:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    new-instance v1, Lcom/bbm/ui/activities/wt;
+
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/wt;-><init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
+
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setPositiveButtonOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 307
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->k:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/HeaderButtonActionBar;->setPositiveButtonEnabled(Z)V
+    invoke-virtual {p0, v0, v3, v1}, Lcom/bbm/bali/ui/main/a/e;->a(Landroid/support/v7/widget/Toolbar;ZLandroid/view/View$OnClickListener;)V
 
-    .line 301
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->f:Lcom/bbm/ui/HeaderButtonActionBar;
-
-    new-instance v1, Lcom/bbm/ui/activities/aac;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/aac;-><init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/HeaderButtonActionBar;->setNegativeButtonOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 311
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->f:Lcom/bbm/ui/HeaderButtonActionBar;
-
-    new-instance v1, Lcom/bbm/ui/activities/aad;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/aad;-><init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/HeaderButtonActionBar;->setPositiveButtonOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 322
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/NewListItemActivity;->getActionBar()Landroid/app/ActionBar;
-
-    move-result-object v0
-
-    .line 323
-    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->f:Lcom/bbm/ui/HeaderButtonActionBar;
-
-    new-instance v2, Landroid/app/ActionBar$LayoutParams;
-
-    invoke-direct {v2, v5, v5}, Landroid/app/ActionBar$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v1, v2}, Landroid/app/ActionBar;->setCustomView(Landroid/view/View;Landroid/app/ActionBar$LayoutParams;)V
-
-    .line 324
-    const/16 v1, 0x10
-
-    invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setDisplayOptions(I)V
-
-    .line 325
+    .line 308
     return-void
 .end method
 
@@ -1072,30 +1021,28 @@
     .locals 4
 
     .prologue
-    const/4 v1, 0x0
+    .line 232
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/d;->onCreate(Landroid/os/Bundle;)V
 
-    .line 241
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/mj;->onCreate(Landroid/os/Bundle;)V
-
-    .line 242
+    .line 233
     invoke-virtual {p0}, Lcom/bbm/ui/activities/NewListItemActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    const-string v2, "listUri"
+    const-string v1, "listUri"
 
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->e:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->j:Ljava/lang/String;
 
-    .line 243
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->e:Ljava/lang/String;
+    .line 234
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->j:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->e:Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->j:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
@@ -1106,125 +1053,87 @@
     const/4 v0, 0x1
 
     :goto_0
-    const-string v2, "No List URI specified in Intent"
+    const-string v1, "No List URI specified in Intent"
 
-    invoke-static {p0, v0, v2}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;ZLjava/lang/Object;)Z
+    invoke-static {p0, v0, v1}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;ZLjava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 267
+    .line 253
     :goto_1
     return-void
 
+    .line 234
     :cond_0
-    move v0, v1
+    const/4 v0, 0x0
 
-    .line 243
     goto :goto_0
 
-    .line 246
+    .line 237
     :cond_1
-    const v0, 0x7f030020
+    const v0, 0x7f030037
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewListItemActivity;->setContentView(I)V
 
+    .line 239
+    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/g/an;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->i:Lcom/bbm/g/an;
+
+    .line 241
+    new-instance v0, Lcom/bbm/ui/p;
+
+    const v1, 0x7f0e042e
+
+    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/NewListItemActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/p;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->s:Lcom/bbm/ui/p;
+
+    .line 243
+    new-instance v0, Lcom/bbm/ui/p;
+
+    const v1, 0x7f0e042c
+
+    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/NewListItemActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/p;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->t:Lcom/bbm/ui/p;
+
+    .line 245
+    new-instance v0, Lcom/bbm/ui/p;
+
+    const v1, 0x7f0e0432
+
+    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/NewListItemActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/p;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->u:Lcom/bbm/ui/p;
+
     .line 248
-    iput-boolean v1, p0, Lcom/bbm/ui/activities/ey;->y:Z
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/NewListItemActivity;->j()V
 
     .line 249
-    const v0, 0x7f0b00bf
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewListItemActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/FooterActionBar;
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->a:Lcom/bbm/ui/FooterActionBar;
-
-    .line 250
-    const v0, 0x7f0b0137
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewListItemActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->b:Landroid/widget/ImageView;
-
-    .line 251
-    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/NewListItemActivity;->a(Z)V
-
-    .line 253
-    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/g/al;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->d:Lcom/bbm/g/al;
-
-    .line 255
-    new-instance v0, Lcom/bbm/ui/p;
-
-    const v1, 0x7f0e03cb
-
-    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/NewListItemActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/p;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->n:Lcom/bbm/ui/p;
-
-    .line 257
-    new-instance v0, Lcom/bbm/ui/p;
-
-    const v1, 0x7f0e03c9
-
-    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/NewListItemActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/p;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->o:Lcom/bbm/ui/p;
-
-    .line 259
-    new-instance v0, Lcom/bbm/ui/p;
-
-    const v1, 0x7f0e03cf
-
-    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/NewListItemActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/p;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->p:Lcom/bbm/ui/p;
-
-    .line 262
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/NewListItemActivity;->f()V
-
-    .line 263
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sget-object v1, Lcom/bbm/ui/activities/aam;->a:Lcom/bbm/ui/activities/aam;
+    sget-object v1, Lcom/bbm/ui/activities/xc;->a:Lcom/bbm/ui/activities/xc;
 
-    iget v1, v1, Lcom/bbm/ui/activities/aam;->d:I
-
-    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/NewListItemActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    sget-object v1, Lcom/bbm/ui/activities/aam;->b:Lcom/bbm/ui/activities/aam;
-
-    iget v1, v1, Lcom/bbm/ui/activities/aam;->d:I
+    iget v1, v1, Lcom/bbm/ui/activities/xc;->d:I
 
     invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/NewListItemActivity;->getString(I)Ljava/lang/String;
 
@@ -1232,9 +1141,9 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    sget-object v1, Lcom/bbm/ui/activities/aam;->c:Lcom/bbm/ui/activities/aam;
+    sget-object v1, Lcom/bbm/ui/activities/xc;->b:Lcom/bbm/ui/activities/xc;
 
-    iget v1, v1, Lcom/bbm/ui/activities/aam;->d:I
+    iget v1, v1, Lcom/bbm/ui/activities/xc;->d:I
 
     invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/NewListItemActivity;->getString(I)Ljava/lang/String;
 
@@ -1242,25 +1151,35 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->p:Lcom/bbm/ui/p;
+    sget-object v1, Lcom/bbm/ui/activities/xc;->c:Lcom/bbm/ui/activities/xc;
+
+    iget v1, v1, Lcom/bbm/ui/activities/xc;->d:I
+
+    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/NewListItemActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->u:Lcom/bbm/ui/p;
 
     invoke-virtual {v1, v0}, Lcom/bbm/ui/p;->a(Ljava/util/ArrayList;)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->p:Lcom/bbm/ui/p;
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->u:Lcom/bbm/ui/p;
 
-    sget-object v1, Lcom/bbm/ui/activities/aam;->b:Lcom/bbm/ui/activities/aam;
+    sget-object v1, Lcom/bbm/ui/activities/xc;->b:Lcom/bbm/ui/activities/xc;
 
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/aam;->ordinal()I
+    invoke-virtual {v1}, Lcom/bbm/ui/activities/xc;->ordinal()I
 
     move-result v1
 
     iput v1, v0, Lcom/bbm/ui/p;->a:I
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->l:Landroid/widget/Spinner;
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->q:Landroid/widget/Spinner;
 
     new-instance v1, Lcom/bbm/ui/u;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/NewListItemActivity;->p:Lcom/bbm/ui/p;
+    iget-object v2, p0, Lcom/bbm/ui/activities/NewListItemActivity;->u:Lcom/bbm/ui/p;
 
     const/4 v3, 0x0
 
@@ -1268,24 +1187,24 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->l:Landroid/widget/Spinner;
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->q:Landroid/widget/Spinner;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->p:Lcom/bbm/ui/p;
+    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->u:Lcom/bbm/ui/p;
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setAdapter(Landroid/widget/SpinnerAdapter;)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->l:Landroid/widget/Spinner;
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->q:Landroid/widget/Spinner;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->p:Lcom/bbm/ui/p;
+    iget-object v1, p0, Lcom/bbm/ui/activities/NewListItemActivity;->u:Lcom/bbm/ui/p;
 
     iget v1, v1, Lcom/bbm/ui/p;->a:I
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setSelection(I)V
 
-    .line 264
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/NewListItemActivity;->b()V
+    .line 250
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/NewListItemActivity;->d()V
 
-    .line 266
+    .line 252
     invoke-virtual {p0}, Lcom/bbm/ui/activities/NewListItemActivity;->k()V
 
     goto/16 :goto_1
@@ -1295,15 +1214,15 @@
     .locals 1
 
     .prologue
-    .line 216
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->v:Lcom/bbm/j/k;
+    .line 212
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->y:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
 
-    .line 217
-    invoke-super {p0}, Lcom/bbm/ui/activities/mj;->onPause()V
+    .line 213
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/d;->onPause()V
 
-    .line 218
+    .line 214
     return-void
 .end method
 
@@ -1311,14 +1230,14 @@
     .locals 1
 
     .prologue
-    .line 205
-    invoke-super {p0}, Lcom/bbm/ui/activities/mj;->onResume()V
+    .line 201
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/d;->onResume()V
 
-    .line 206
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->v:Lcom/bbm/j/k;
+    .line 202
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListItemActivity;->y:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 207
+    .line 203
     return-void
 .end method

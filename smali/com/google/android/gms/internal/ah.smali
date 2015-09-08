@@ -1,10 +1,16 @@
 .class public interface abstract Lcom/google/android/gms/internal/ah;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/os/IInterface;
-
 
 # virtual methods
-.method public abstract a(Lcom/google/android/gms/dynamic/b;Lcom/google/android/gms/internal/ab;Ljava/lang/String;Lcom/google/android/gms/internal/bf;I)Landroid/os/IBinder;
+.method public abstract a(Landroid/content/Context;)Ljava/lang/String;
+.end method
+
+.method public abstract a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+.end method
+
+.method public abstract a(III)V
+.end method
+
+.method public abstract a(Landroid/view/MotionEvent;)V
 .end method

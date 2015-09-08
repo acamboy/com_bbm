@@ -32,7 +32,7 @@
 
 .field d:Lcom/google/zxing/m;
 
-.field e:Lcom/google/zxing/client/android/q;
+.field e:I
 
 .field f:Ljava/lang/String;
 
@@ -875,9 +875,9 @@
 
     .line 602
     :goto_0
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/q;
+    iget v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:I
 
-    sget-object v1, Lcom/google/zxing/client/android/q;->a:Lcom/google/zxing/client/android/q;
+    sget v1, Lcom/google/zxing/client/android/q;->a:I
 
     if-ne v0, v1, :cond_8
 
@@ -1092,9 +1092,9 @@
 
     .line 639
     :cond_8
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/q;
+    iget v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:I
 
-    sget-object v1, Lcom/google/zxing/client/android/q;->b:Lcom/google/zxing/client/android/q;
+    sget v1, Lcom/google/zxing/client/android/q;->b:I
 
     if-ne v0, v1, :cond_9
 
@@ -1155,9 +1155,9 @@
 
     .line 647
     :cond_9
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/q;
+    iget v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:I
 
-    sget-object v1, Lcom/google/zxing/client/android/q;->c:Lcom/google/zxing/client/android/q;
+    sget v1, Lcom/google/zxing/client/android/q;->c:I
 
     if-ne v0, v1, :cond_7
 
@@ -1607,9 +1607,9 @@
 
     .line 348
     :sswitch_1
-    iget-object v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/q;
+    iget v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:I
 
-    sget-object v2, Lcom/google/zxing/client/android/q;->a:Lcom/google/zxing/client/android/q;
+    sget v2, Lcom/google/zxing/client/android/q;->a:I
 
     if-ne v1, v2, :cond_1
 
@@ -1623,15 +1623,15 @@
 
     .line 353
     :cond_1
-    iget-object v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/q;
+    iget v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:I
 
-    sget-object v2, Lcom/google/zxing/client/android/q;->d:Lcom/google/zxing/client/android/q;
+    sget v2, Lcom/google/zxing/client/android/q;->d:I
 
     if-eq v1, v2, :cond_2
 
-    iget-object v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/q;
+    iget v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:I
 
-    sget-object v2, Lcom/google/zxing/client/android/q;->c:Lcom/google/zxing/client/android/q;
+    sget v2, Lcom/google/zxing/client/android/q;->c:I
 
     if-ne v1, v2, :cond_0
 
@@ -1688,9 +1688,9 @@
     .line 325
     iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->b:Lcom/google/zxing/client/android/d;
 
-    sget-object v1, Lcom/google/zxing/client/android/e;->c:Lcom/google/zxing/client/android/e;
+    sget v1, Lcom/google/zxing/client/android/e;->c:I
 
-    iput-object v1, v0, Lcom/google/zxing/client/android/d;->b:Lcom/google/zxing/client/android/e;
+    iput v1, v0, Lcom/google/zxing/client/android/d;->b:I
 
     iget-object v1, v0, Lcom/google/zxing/client/android/d;->c:Lcom/google/zxing/client/android/a/e;
 
@@ -1873,9 +1873,9 @@
     move-result-object v3
 
     .line 262
-    sget-object v0, Lcom/google/zxing/client/android/q;->d:Lcom/google/zxing/client/android/q;
+    sget v0, Lcom/google/zxing/client/android/q;->d:I
 
-    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/q;
+    iput v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:I
 
     .line 263
     iput-object v4, p0, Lcom/google/zxing/client/android/CaptureActivity;->q:Ljava/util/Collection;
@@ -1906,9 +1906,9 @@
     if-eqz v0, :cond_3
 
     .line 274
-    sget-object v0, Lcom/google/zxing/client/android/q;->a:Lcom/google/zxing/client/android/q;
+    sget v0, Lcom/google/zxing/client/android/q;->a:I
 
-    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/q;
+    iput v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:I
 
     .line 275
     invoke-static {v3}, Lcom/google/zxing/client/android/g;->a(Landroid/content/Intent;)Ljava/util/Collection;
@@ -2005,9 +2005,9 @@
     if-eqz v0, :cond_4
 
     .line 290
-    sget-object v0, Lcom/google/zxing/client/android/q;->b:Lcom/google/zxing/client/android/q;
+    sget v0, Lcom/google/zxing/client/android/q;->b:I
 
-    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/q;
+    iput v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:I
 
     .line 291
     iput-object v4, p0, Lcom/google/zxing/client/android/CaptureActivity;->o:Ljava/lang/String;
@@ -2046,9 +2046,9 @@
     if-eqz v0, :cond_0
 
     .line 298
-    sget-object v0, Lcom/google/zxing/client/android/q;->c:Lcom/google/zxing/client/android/q;
+    sget v0, Lcom/google/zxing/client/android/q;->c:I
 
-    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/q;
+    iput v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:I
 
     .line 299
     iput-object v4, p0, Lcom/google/zxing/client/android/CaptureActivity;->o:Ljava/lang/String;

@@ -1,39 +1,35 @@
 .class final Lcom/bbm/ui/activities/abx;
 .super Ljava/lang/Object;
-.source "OwnedChannelLobbyActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "SelectCategoryActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
+.field a:Landroid/widget/TextView;
+
+.field b:Landroid/widget/TextView;
+
+.field final synthetic c:Lcom/bbm/ui/activities/abw;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)V
+.method private constructor <init>(Lcom/bbm/ui/activities/abw;)V
     .locals 0
 
     .prologue
-    .line 265
-    iput-object p1, p0, Lcom/bbm/ui/activities/abx;->a:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
+    .line 145
+    iput-object p1, p0, Lcom/bbm/ui/activities/abx;->c:Lcom/bbm/ui/activities/abw;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
+.method synthetic constructor <init>(Lcom/bbm/ui/activities/abw;B)V
+    .locals 0
 
     .prologue
-    .line 268
-    iget-object v0, p0, Lcom/bbm/ui/activities/abx;->a:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
+    .line 145
+    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/abx;-><init>(Lcom/bbm/ui/activities/abw;)V
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->e(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)V
-
-    .line 269
     return-void
 .end method

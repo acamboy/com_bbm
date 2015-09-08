@@ -1,109 +1,103 @@
-.class final Lcom/bbm/ui/activities/bc;
+.class public final synthetic Lcom/bbm/ui/activities/bc;
 .super Ljava/lang/Object;
-.source "BroadcastActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "CaptureBarcodeActivity.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/bd;
-
-.field final synthetic b:Ljava/lang/String;
-
-.field final synthetic c:Lcom/bbm/ui/activities/bb;
+# static fields
+.field public static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/bb;Lcom/bbm/ui/activities/bd;Ljava/lang/String;)V
-    .locals 0
-
-    .prologue
-    .line 601
-    iput-object p1, p0, Lcom/bbm/ui/activities/bc;->c:Lcom/bbm/ui/activities/bb;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/bc;->a:Lcom/bbm/ui/activities/bd;
-
-    iput-object p3, p0, Lcom/bbm/ui/activities/bc;->b:Ljava/lang/String;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method static constructor <clinit>()V
     .locals 3
 
     .prologue
-    .line 605
-    const-string v0, "deleteButton Clicked"
-
-    const-class v1, Lcom/bbm/ui/activities/BroadcastActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 607
-    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    .line 832
+    invoke-static {}, Lcom/google/zxing/client/android/q;->a()[I
 
     move-result-object v0
 
-    check-cast v0, Landroid/view/View;
+    array-length v0, v0
 
-    const/4 v1, 0x0
+    new-array v0, v0, [I
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setActivated(Z)V
+    sput-object v0, Lcom/bbm/ui/activities/bc;->a:[I
 
-    .line 608
-    iget-object v0, p0, Lcom/bbm/ui/activities/bc;->a:Lcom/bbm/ui/activities/bd;
+    :try_start_0
+    sget-object v0, Lcom/bbm/ui/activities/bc;->a:[I
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/bd;->a:Landroid/widget/TextView;
+    sget v1, Lcom/google/zxing/client/android/q;->a:I
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/bc;->c:Lcom/bbm/ui/activities/bb;
+    add-int/lit8 v1, v1, -0x1
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/bb;->b:Lcom/bbm/ui/activities/BroadcastActivity;
+    const/4 v2, 0x1
 
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/BroadcastActivity;->getResources()Landroid/content/res/Resources;
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_3
 
-    move-result-object v1
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/ui/activities/bc;->a:[I
 
-    const v2, 0x7f0900fb
+    sget v1, Lcom/google/zxing/client/android/q;->b:I
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+    add-int/lit8 v1, v1, -0x1
 
-    move-result v1
+    const/4 v2, 0x2
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 609
-    iget-object v0, p0, Lcom/bbm/ui/activities/bc;->c:Lcom/bbm/ui/activities/bb;
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/bbm/ui/activities/bc;->a:[I
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/bb;->b:Lcom/bbm/ui/activities/BroadcastActivity;
+    sget v1, Lcom/google/zxing/client/android/q;->c:I
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/bc;->b:Ljava/lang/String;
+    add-int/lit8 v1, v1, -0x1
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/BroadcastActivity;->a:Lcom/bbm/util/cu;
+    const/4 v2, 0x3
 
-    iget-object v2, v0, Lcom/bbm/util/cu;->a:Ljava/util/List;
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_1
 
-    invoke-interface {v2, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+    :goto_2
+    :try_start_3
+    sget-object v0, Lcom/bbm/ui/activities/bc;->a:[I
 
-    invoke-virtual {v0}, Lcom/bbm/util/cu;->c()V
+    sget v1, Lcom/google/zxing/client/android/q;->d:I
 
-    .line 610
-    iget-object v0, p0, Lcom/bbm/ui/activities/bc;->c:Lcom/bbm/ui/activities/bb;
+    add-int/lit8 v1, v1, -0x1
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/bb;->b:Lcom/bbm/ui/activities/BroadcastActivity;
+    const/4 v2, 0x4
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->c(Lcom/bbm/ui/activities/BroadcastActivity;)Lcom/bbm/util/ct;
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_0
 
-    move-result-object v0
-
-    const-string v1, ""
-
-    invoke-virtual {v0, v1}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
-
-    .line 611
+    :goto_3
     return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_3
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_2
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_1
+
+    :catch_3
+    move-exception v0
+
+    goto :goto_0
 .end method

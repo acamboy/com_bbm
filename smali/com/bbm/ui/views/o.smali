@@ -40,7 +40,7 @@
 
     check-cast v0, Lcom/bbm/ui/activities/ViewChannelPostActivity;
 
-    iget v0, v0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->e:I
+    iget v0, v0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->i:I
 
     .line 45
     const-string v1, "sammydm"

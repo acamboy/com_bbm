@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_channels_search" android:id="@id/menu_contact_search" android:orderInCategory="1" android:title="@string/search" app:showAsAction="always|collapseActionView" app:actionViewClass="android.support.v7.widget.SearchView" />
+    <item android:icon="@drawable/ic_menu_start_chat" android:id="@id/menu_start_chat" android:title="@string/start_chat" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_menu_broadcast_msg" android:id="@id/menu_broadcast_message" android:title="@string/broadcast_message" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_menu_add_catagory" android:id="@id/menu_add_category" android:title="@string/contact_add_category" app:showAsAction="never" />
+</menu>

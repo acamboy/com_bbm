@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/c/he;
 .super Ljava/lang/Object;
-.source "StickerDetailsFragment.java"
+.source "StickerStoreFragment.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/hc;
+.field final synthetic a:Lcom/bbm/ui/c/hd;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/hc;)V
+.method constructor <init>(Lcom/bbm/ui/c/hd;)V
     .locals 0
 
     .prologue
-    .line 899
-    iput-object p1, p0, Lcom/bbm/ui/c/he;->a:Lcom/bbm/ui/c/hc;
+    .line 75
+    iput-object p1, p0, Lcom/bbm/ui/c/he;->a:Lcom/bbm/ui/c/hd;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,58 +25,25 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
+    .locals 1
 
     .prologue
-    .line 902
-    iget-object v0, p0, Lcom/bbm/ui/c/he;->a:Lcom/bbm/ui/c/hc;
+    .line 78
+    const-string v0, "stickers_newest_publish_time"
 
-    invoke-virtual {v0}, Lcom/bbm/ui/c/hc;->dismiss()V
+    invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 903
-    iget-object v0, p0, Lcom/bbm/ui/c/he;->a:Lcom/bbm/ui/c/hc;
+    move-result v0
 
-    iget-object v0, v0, Lcom/bbm/ui/c/hc;->a:Lcom/bbm/ui/c/gr;
+    if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lcom/bbm/ui/c/gr;->k(Lcom/bbm/ui/c/gr;)Landroid/os/Handler;
+    .line 79
+    iget-object v0, p0, Lcom/bbm/ui/c/he;->a:Lcom/bbm/ui/c/hd;
 
-    move-result-object v0
+    invoke-static {v0}, Lcom/bbm/ui/c/hd;->a(Lcom/bbm/ui/c/hd;)V
 
-    iget-object v1, p0, Lcom/bbm/ui/c/he;->a:Lcom/bbm/ui/c/hc;
-
-    iget-object v1, v1, Lcom/bbm/ui/c/hc;->a:Lcom/bbm/ui/c/gr;
-
-    invoke-static {v1}, Lcom/bbm/ui/c/gr;->j(Lcom/bbm/ui/c/gr;)Ljava/lang/Runnable;
-
-    move-result-object v1
-
-    const-wide/16 v2, 0x7530
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    .line 904
-    iget-object v0, p0, Lcom/bbm/ui/c/he;->a:Lcom/bbm/ui/c/hc;
-
-    iget-object v0, v0, Lcom/bbm/ui/c/hc;->a:Lcom/bbm/ui/c/gr;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/c/gr;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcom/bbm/l/a;->a(Landroid/app/Activity;Z)V
-
-    .line 908
-    iget-object v0, p0, Lcom/bbm/ui/c/he;->a:Lcom/bbm/ui/c/hc;
-
-    iget-object v0, v0, Lcom/bbm/ui/c/hc;->a:Lcom/bbm/ui/c/gr;
-
-    sget-object v1, Lcom/bbm/ui/c/hv;->c:Lcom/bbm/ui/c/hv;
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/c/gr;->a(Lcom/bbm/ui/c/gr;Lcom/bbm/ui/c/hv;)V
-
-    .line 909
+    .line 81
+    :cond_0
     return-void
 .end method

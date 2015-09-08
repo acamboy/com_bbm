@@ -1,24 +1,24 @@
 .class public final Lcom/bbm/d/dh;
-.super Lcom/bbm/d/dy;
+.super Lcom/bbm/d/ez;
 .source "BbmdsProtocol.java"
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method constructor <init>(Ljava/lang/String;)V
     .locals 1
 
     .prologue
-    .line 4747
-    const-string v0, "setupDeviceSwitch"
+    .line 3543
+    const-string v0, "pictureCancel"
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/d/ez;-><init>(Ljava/lang/String;)V
 
-    .line 4749
-    const-string v0, "migrationMessage"
+    .line 3545
+    const-string v0, "id"
 
     invoke-virtual {p0, v0, p1}, Lcom/bbm/d/dh;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 4750
+    .line 3546
     return-void
 .end method
 
@@ -28,8 +28,8 @@
     .locals 1
 
     .prologue
-    .line 4745
-    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
+    .line 3541
+    invoke-super {p0}, Lcom/bbm/d/ez;->a()Lcom/bbm/f/ab;
 
     move-result-object v0
 

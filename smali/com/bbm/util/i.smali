@@ -1,143 +1,52 @@
 .class final Lcom/bbm/util/i;
 .super Ljava/lang/Object;
-.source "AsyncTask.java"
+.source "AdWebViewPool.java"
 
 # interfaces
-.implements Ljava/util/concurrent/Executor;
-
-
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0xb
-.end annotation
+.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field final a:Ljava/util/ArrayDeque;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayDeque",
-            "<",
-            "Ljava/lang/Runnable;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field b:Ljava/lang/Runnable;
+.field final synthetic a:Lcom/bbm/util/g;
 
 
 # direct methods
-.method private constructor <init>()V
-    .locals 1
-
-    .prologue
-    .line 229
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 230
-    new-instance v0, Ljava/util/ArrayDeque;
-
-    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
-
-    iput-object v0, p0, Lcom/bbm/util/i;->a:Ljava/util/ArrayDeque;
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(B)V
+.method constructor <init>(Lcom/bbm/util/g;)V
     .locals 0
 
     .prologue
-    .line 229
-    invoke-direct {p0}, Lcom/bbm/util/i;-><init>()V
+    .line 224
+    iput-object p1, p0, Lcom/bbm/util/i;->a:Lcom/bbm/util/g;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final declared-synchronized a()V
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 2
 
     .prologue
-    .line 251
-    monitor-enter p0
+    const/4 v1, 0x1
 
-    :try_start_0
-    iget-object v0, p0, Lcom/bbm/util/i;->a:Ljava/util/ArrayDeque;
+    .line 227
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
+    move-result v0
 
-    move-result-object v0
+    if-ne v0, v1, :cond_0
 
-    check-cast v0, Ljava/lang/Runnable;
+    .line 228
+    check-cast p1, Lcom/bbm/util/AdWebView;
 
-    iput-object v0, p0, Lcom/bbm/util/i;->b:Ljava/lang/Runnable;
+    .line 229
+    iput-boolean v1, p1, Lcom/bbm/util/AdWebView;->c:Z
 
-    if-eqz v0, :cond_0
-
-    .line 252
-    sget-object v0, Lcom/bbm/util/b;->g:Ljava/util/concurrent/Executor;
-
-    iget-object v1, p0, Lcom/bbm/util/i;->b:Ljava/lang/Runnable;
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 254
+    .line 231
     :cond_0
-    monitor-exit p0
+    const/4 v0, 0x0
 
-    return-void
-
-    .line 251
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
-.end method
-
-.method public final declared-synchronized execute(Ljava/lang/Runnable;)V
-    .locals 2
-
-    .prologue
-    .line 235
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lcom/bbm/util/i;->a:Ljava/util/ArrayDeque;
-
-    new-instance v1, Lcom/bbm/util/j;
-
-    invoke-direct {v1, p0, p1}, Lcom/bbm/util/j;-><init>(Lcom/bbm/util/i;Ljava/lang/Runnable;)V
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayDeque;->offer(Ljava/lang/Object;)Z
-
-    .line 245
-    iget-object v0, p0, Lcom/bbm/util/i;->b:Ljava/lang/Runnable;
-
-    if-nez v0, :cond_0
-
-    .line 246
-    invoke-virtual {p0}, Lcom/bbm/util/i;->a()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 248
-    :cond_0
-    monitor-exit p0
-
-    return-void
-
-    .line 235
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
+    return v0
 .end method

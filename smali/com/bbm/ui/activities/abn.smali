@@ -1,67 +1,121 @@
 .class final Lcom/bbm/ui/activities/abn;
-.super Ljava/lang/Object;
-.source "OwnProfileActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Lcom/bbm/j/k;
+.source "SearchResultsChannelsActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/OwnProfileActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/OwnProfileActivity;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)V
+    .locals 1
 
     .prologue
-    .line 288
-    iput-object p1, p0, Lcom/bbm/ui/activities/abn;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
+    .line 316
+    iput-object p1, p0, Lcom/bbm/ui/activities/abn;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method protected final a()V
+    .locals 3
 
     .prologue
-    .line 291
-    const-string v0, "mRootView Clicked"
+    const/4 v2, 0x0
 
-    const-class v1, Lcom/bbm/ui/activities/OwnProfileActivity;
+    .line 319
+    iget-object v0, p0, Lcom/bbm/ui/activities/abn;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 293
-    iget-object v0, p0, Lcom/bbm/ui/activities/abn;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
-
-    invoke-static {v0}, Lcom/bbm/util/fh;->b(Landroid/app/Activity;)V
-
-    .line 294
-    iget-object v0, p0, Lcom/bbm/ui/activities/abn;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/OwnProfileActivity;->b()V
-
-    .line 295
-    iget-object v0, p0, Lcom/bbm/ui/activities/abn;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/OwnProfileActivity;->b(Lcom/bbm/ui/activities/OwnProfileActivity;)Landroid/widget/LinearLayout;
+    invoke-static {v0}, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;->g(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)Lcom/bbm/j/x;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->requestFocus()Z
+    invoke-interface {v0}, Lcom/bbm/j/x;->b()Z
 
-    .line 296
-    iget-object v0, p0, Lcom/bbm/ui/activities/abn;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
+    move-result v0
+
+    .line 320
+    iget-object v1, p0, Lcom/bbm/ui/activities/abn;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;->g(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)Lcom/bbm/j/x;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lcom/bbm/j/x;->d()Z
+
+    move-result v1
+
+    .line 322
+    if-eqz v1, :cond_0
+
+    .line 323
+    iget-object v0, p0, Lcom/bbm/ui/activities/abn;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/abn;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;->g(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)Lcom/bbm/j/x;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lcom/bbm/j/x;->e()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;->a(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;Ljava/lang/String;)V
+
+    .line 324
+    iget-object v0, p0, Lcom/bbm/ui/activities/abn;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;Z)V
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;->a(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;Z)Z
 
-    .line 297
+    .line 333
+    :goto_0
     return-void
+
+    .line 325
+    :cond_0
+    if-eqz v0, :cond_1
+
+    .line 326
+    iget-object v0, p0, Lcom/bbm/ui/activities/abn;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;->h(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)V
+
+    .line 327
+    iget-object v0, p0, Lcom/bbm/ui/activities/abn;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
+
+    invoke-static {v0, v2}, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;->a(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;Z)Z
+
+    goto :goto_0
+
+    .line 329
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/abn;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;->a:Landroid/widget/RelativeLayout;
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+
+    .line 330
+    iget-object v0, p0, Lcom/bbm/ui/activities/abn;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;->i(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)V
+
+    .line 331
+    iget-object v0, p0, Lcom/bbm/ui/activities/abn;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
+
+    invoke-static {v0, v2}, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;->a(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;Z)Z
+
+    goto :goto_0
 .end method

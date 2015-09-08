@@ -1,34 +1,22 @@
 .class final Lcom/bbm/ui/c/dm;
 .super Ljava/lang/Object;
-.source "GroupMembersFragment.java"
+.source "ContactsFragment.java"
 
 # interfaces
-.implements Ljava/util/Comparator;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
-        "<",
-        "Lcom/bbm/ui/c/du;",
-        ">;"
-    }
-.end annotation
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/dl;
+.field final synthetic a:Lcom/bbm/ui/c/cw;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/dl;)V
+.method constructor <init>(Lcom/bbm/ui/c/cw;)V
     .locals 0
 
     .prologue
-    .line 314
-    iput-object p1, p0, Lcom/bbm/ui/c/dm;->a:Lcom/bbm/ui/c/dl;
+    .line 437
+    iput-object p1, p0, Lcom/bbm/ui/c/dm;->a:Lcom/bbm/ui/c/cw;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,22 +25,28 @@
 
 
 # virtual methods
-.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
     .prologue
-    .line 314
-    check-cast p1, Lcom/bbm/ui/c/du;
+    .line 440
+    const-string v0, "inviteButton Clicked"
 
-    check-cast p2, Lcom/bbm/ui/c/du;
+    const-class v1, Lcom/bbm/ui/c/cw;
 
-    iget-object v0, p1, Lcom/bbm/ui/c/du;->b:Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    iget-object v1, p2, Lcom/bbm/ui/c/du;->b:Ljava/lang/String;
+    .line 441
+    iget-object v0, p0, Lcom/bbm/ui/c/dm;->a:Lcom/bbm/ui/c/cw;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
+    invoke-virtual {v0}, Lcom/bbm/ui/c/cw;->getActivity()Landroid/support/v4/app/q;
 
-    move-result v0
+    move-result-object v0
 
-    return v0
+    check-cast v0, Lcom/bbm/ui/activities/MainActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/MainActivity;->d()V
+
+    .line 442
+    return-void
 .end method

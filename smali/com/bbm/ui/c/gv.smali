@@ -1,46 +1,230 @@
-.class final Lcom/bbm/ui/c/gv;
+.class final synthetic Lcom/bbm/ui/c/gv;
 .super Ljava/lang/Object;
 .source "StickerDetailsFragment.java"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
+# static fields
+.field static final synthetic a:[I
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/c/gr;
+.field static final synthetic b:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/gr;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 658
-    iput-object p1, p0, Lcom/bbm/ui/c/gv;->a:Lcom/bbm/ui/c/gr;
+    .line 806
+    invoke-static {}, Lcom/bbm/ui/b/as;->a()[I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/c/gv;->b:[I
+
+    :try_start_0
+    sget-object v0, Lcom/bbm/ui/c/gv;->b:[I
+
+    sget v1, Lcom/bbm/ui/b/as;->a:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_9
+
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/ui/c/gv;->b:[I
+
+    sget v1, Lcom/bbm/ui/b/as;->b:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_8
+
+    .line 629
+    :goto_1
+    invoke-static {}, Lcom/bbm/ui/c/hc;->a()[I
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/c/gv;->a:[I
+
+    :try_start_2
+    sget-object v0, Lcom/bbm/ui/c/gv;->a:[I
+
+    sget v1, Lcom/bbm/ui/c/hc;->b:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_7
+
+    :goto_2
+    :try_start_3
+    sget-object v0, Lcom/bbm/ui/c/gv;->a:[I
+
+    sget v1, Lcom/bbm/ui/c/hc;->c:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_6
+
+    :goto_3
+    :try_start_4
+    sget-object v0, Lcom/bbm/ui/c/gv;->a:[I
+
+    sget v1, Lcom/bbm/ui/c/hc;->d:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_5
+
+    :goto_4
+    :try_start_5
+    sget-object v0, Lcom/bbm/ui/c/gv;->a:[I
+
+    sget v1, Lcom/bbm/ui/c/hc;->f:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_4
+
+    :goto_5
+    :try_start_6
+    sget-object v0, Lcom/bbm/ui/c/gv;->a:[I
+
+    sget v1, Lcom/bbm/ui/c/hc;->e:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_3
+
+    :goto_6
+    :try_start_7
+    sget-object v0, Lcom/bbm/ui/c/gv;->a:[I
+
+    sget v1, Lcom/bbm/ui/c/hc;->h:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x6
+
+    aput v2, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_2
+
+    :goto_7
+    :try_start_8
+    sget-object v0, Lcom/bbm/ui/c/gv;->a:[I
+
+    sget v1, Lcom/bbm/ui/c/hc;->g:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x7
+
+    aput v2, v0, v1
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_1
+
+    :goto_8
+    :try_start_9
+    sget-object v0, Lcom/bbm/ui/c/gv;->a:[I
+
+    sget v1, Lcom/bbm/ui/c/hc;->a:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/16 v2, 0x8
+
+    aput v2, v0, v1
+    :try_end_9
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_0
+
+    :goto_9
     return-void
-.end method
 
+    :catch_0
+    move-exception v0
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+    goto :goto_9
 
-    .prologue
-    .line 661
-    const-string v0, "Purchase (FREE) Button clicked"
+    :catch_1
+    move-exception v0
 
-    const-class v1, Lcom/bbm/ui/c/gr;
+    goto :goto_8
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    :catch_2
+    move-exception v0
 
-    .line 662
-    iget-object v0, p0, Lcom/bbm/ui/c/gv;->a:Lcom/bbm/ui/c/gr;
+    goto :goto_7
 
-    invoke-virtual {v0}, Lcom/bbm/ui/c/gr;->a()V
+    :catch_3
+    move-exception v0
 
-    .line 663
-    return-void
+    goto :goto_6
+
+    :catch_4
+    move-exception v0
+
+    goto :goto_5
+
+    :catch_5
+    move-exception v0
+
+    goto :goto_4
+
+    :catch_6
+    move-exception v0
+
+    goto :goto_3
+
+    :catch_7
+    move-exception v0
+
+    goto :goto_2
+
+    :catch_8
+    move-exception v0
+
+    goto :goto_1
+
+    :catch_9
+    move-exception v0
+
+    goto :goto_0
 .end method

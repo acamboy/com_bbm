@@ -19,6 +19,9 @@
 .method public abstract onComplete()V
 .end method
 
+.method public abstract onDetach()V
+.end method
+
 .method public abstract onProcess()V
 .end method
 

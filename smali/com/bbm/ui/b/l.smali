@@ -1,9 +1,9 @@
 .class final Lcom/bbm/ui/b/l;
 .super Ljava/lang/Object;
-.source "BBInfoAndInputDialog.java"
+.source "BBInfoAndRadioButtonDialogFragment.java"
 
 # interfaces
-.implements Landroid/text/TextWatcher;
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 27
+    .line 35
     iput-object p1, p0, Lcom/bbm/ui/b/l;->a:Lcom/bbm/ui/b/k;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,73 +25,90 @@
 
 
 # virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
-    .locals 0
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 3
 
     .prologue
-    .line 44
-    return-void
-.end method
-
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
-
-    .prologue
-    .line 40
-    return-void
-.end method
-
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 2
-
-    .prologue
-    .line 31
-    iget-object v0, p0, Lcom/bbm/ui/b/l;->a:Lcom/bbm/ui/b/k;
-
-    invoke-static {v0}, Lcom/bbm/ui/b/k;->a(Lcom/bbm/ui/b/k;)Landroid/widget/EditText;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 32
-    iget-object v0, p0, Lcom/bbm/ui/b/l;->a:Lcom/bbm/ui/b/k;
-
-    iget-object v0, v0, Lcom/bbm/ui/b/k;->c:Landroid/widget/Button;
+    const/4 v2, 0x1
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setEnabled(Z)V
+    .line 39
+    if-eqz p2, :cond_0
 
-    .line 36
-    :goto_0
-    return-void
-
-    .line 34
-    :cond_0
+    .line 40
     iget-object v0, p0, Lcom/bbm/ui/b/l;->a:Lcom/bbm/ui/b/k;
 
-    iget-object v0, v0, Lcom/bbm/ui/b/k;->c:Landroid/widget/Button;
+    invoke-static {v0}, Lcom/bbm/ui/b/k;->a(Lcom/bbm/ui/b/k;)Landroid/widget/RadioButton;
 
-    const/4 v1, 0x1
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setEnabled(Z)V
+    if-ne p1, v0, :cond_1
+
+    .line 41
+    iget-object v0, p0, Lcom/bbm/ui/b/l;->a:Lcom/bbm/ui/b/k;
+
+    invoke-static {v0}, Lcom/bbm/ui/b/k;->b(Lcom/bbm/ui/b/k;)Landroid/widget/RadioButton;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Landroid/widget/RadioButton;->setChecked(Z)V
+
+    .line 42
+    iget-object v0, p0, Lcom/bbm/ui/b/l;->a:Lcom/bbm/ui/b/k;
+
+    invoke-static {v0}, Lcom/bbm/ui/b/k;->c(Lcom/bbm/ui/b/k;)[Z
+
+    move-result-object v0
+
+    aput-boolean v2, v0, v1
+
+    .line 43
+    iget-object v0, p0, Lcom/bbm/ui/b/l;->a:Lcom/bbm/ui/b/k;
+
+    invoke-static {v0}, Lcom/bbm/ui/b/k;->c(Lcom/bbm/ui/b/k;)[Z
+
+    move-result-object v0
+
+    aput-boolean v1, v0, v2
+
+    .line 49
+    :goto_0
+    iget-object v0, p0, Lcom/bbm/ui/b/l;->a:Lcom/bbm/ui/b/k;
+
+    invoke-virtual {v0, v2}, Lcom/bbm/ui/b/k;->a(Z)Lcom/bbm/ui/b/m;
+
+    .line 51
+    :cond_0
+    return-void
+
+    .line 45
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/b/l;->a:Lcom/bbm/ui/b/k;
+
+    invoke-static {v0}, Lcom/bbm/ui/b/k;->a(Lcom/bbm/ui/b/k;)Landroid/widget/RadioButton;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Landroid/widget/RadioButton;->setChecked(Z)V
+
+    .line 46
+    iget-object v0, p0, Lcom/bbm/ui/b/l;->a:Lcom/bbm/ui/b/k;
+
+    invoke-static {v0}, Lcom/bbm/ui/b/k;->c(Lcom/bbm/ui/b/k;)[Z
+
+    move-result-object v0
+
+    aput-boolean v2, v0, v2
+
+    .line 47
+    iget-object v0, p0, Lcom/bbm/ui/b/l;->a:Lcom/bbm/ui/b/k;
+
+    invoke-static {v0}, Lcom/bbm/ui/b/k;->c(Lcom/bbm/ui/b/k;)[Z
+
+    move-result-object v0
+
+    aput-boolean v1, v0, v1
 
     goto :goto_0
 .end method

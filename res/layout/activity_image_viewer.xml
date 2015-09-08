@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/show_larger_image_root" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<FrameLayout android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:gravity="center" android:id="@id/show_larger_image_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true" android:layout_centerVertical="true">
+    <LinearLayout android:gravity="center" android:id="@id/show_larger_image_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
         <com.bbm.ui.TouchImageView android:id="@id/show_larger_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" android:contentDescription="@string/blank" />
     </LinearLayout>
-    <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
-</RelativeLayout>
+    <include android:layout_gravity="top" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/view_bali_toolbar" />
+</FrameLayout>

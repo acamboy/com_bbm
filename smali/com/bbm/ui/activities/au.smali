@@ -3,20 +3,24 @@
 .source "BroadcastActivity.java"
 
 # interfaces
-.implements Landroid/text/TextWatcher;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/BroadcastActivity;
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Lcom/bbm/ui/activities/at;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/BroadcastActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/at;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 196
-    iput-object p1, p0, Lcom/bbm/ui/activities/au;->a:Lcom/bbm/ui/activities/BroadcastActivity;
+    .line 586
+    iput-object p1, p0, Lcom/bbm/ui/activities/au;->b:Lcom/bbm/ui/activities/at;
+
+    iput-object p2, p0, Lcom/bbm/ui/activities/au;->a:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,56 +29,52 @@
 
 
 # virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
     .prologue
-    .line 210
-    const-string v0, "afterTextChanged"
+    .line 590
+    const-string v0, "deleteButton Clicked"
 
     const-class v1, Lcom/bbm/ui/activities/BroadcastActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 212
-    iget-object v0, p0, Lcom/bbm/ui/activities/au;->a:Lcom/bbm/ui/activities/BroadcastActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->f(Lcom/bbm/ui/activities/BroadcastActivity;)Lcom/bbm/util/ct;
+    .line 592
+    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/au;->a:Lcom/bbm/ui/activities/BroadcastActivity;
+    check-cast v0, Landroid/view/View;
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/BroadcastActivity;->e(Lcom/bbm/ui/activities/BroadcastActivity;)Landroid/widget/EditText;
+    const/4 v1, 0x0
 
-    move-result-object v1
+    invoke-virtual {v0, v1}, Landroid/view/View;->setActivated(Z)V
 
-    invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    .line 593
+    iget-object v0, p0, Lcom/bbm/ui/activities/au;->b:Lcom/bbm/ui/activities/at;
 
-    move-result-object v1
+    iget-object v0, v0, Lcom/bbm/ui/activities/at;->b:Lcom/bbm/ui/activities/BroadcastActivity;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/activities/au;->a:Ljava/lang/String;
 
-    move-result-object v1
+    iget-object v0, v0, Lcom/bbm/ui/activities/BroadcastActivity;->a:Lcom/bbm/util/dd;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/util/dd;->b(Ljava/lang/Object;)V
 
-    .line 213
-    return-void
-.end method
+    .line 594
+    iget-object v0, p0, Lcom/bbm/ui/activities/au;->b:Lcom/bbm/ui/activities/at;
 
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
+    iget-object v0, v0, Lcom/bbm/ui/activities/at;->b:Lcom/bbm/ui/activities/BroadcastActivity;
 
-    .prologue
-    .line 206
-    return-void
-.end method
+    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->c(Lcom/bbm/ui/activities/BroadcastActivity;)Lcom/bbm/util/dc;
 
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
+    move-result-object v0
 
-    .prologue
-    .line 201
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
+
+    .line 595
     return-void
 .end method

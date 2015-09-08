@@ -2538,7 +2538,10 @@
 
     .line 1009
     :cond_2
+    :try_start_1
     monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 1010
     invoke-direct {p0}, Lcom/a/a/z;->f()Z
@@ -2553,7 +2556,10 @@
     :catchall_0
     move-exception v0
 
+    :try_start_2
     monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     throw v0
 

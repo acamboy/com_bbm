@@ -1,48 +1,51 @@
 .class public final Lcom/bbm/d/dv;
-.super Lcom/bbm/d/dy;
+.super Lcom/bbm/d/ez;
 .source "BbmdsProtocol.java"
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;)V
+.method constructor <init>(Ljava/util/List;Ljava/lang/String;)V
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lorg/json/JSONObject;",
+            ">;",
+            "Ljava/lang/String;",
+            ")V"
+        }
+    .end annotation
 
     .prologue
-    .line 5758
-    const-string v0, "validatePurchase"
+    .line 4717
+    const-string v0, "requestListAdd"
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/d/ez;-><init>(Ljava/lang/String;)V
 
-    .line 5760
-    const-string v0, "body"
+    .line 4719
+    const-string v0, "elements"
 
     invoke-virtual {p0, v0, p1}, Lcom/bbm/d/dv;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 5761
+    .line 4720
+    const-string v0, "type"
+
+    invoke-virtual {p0, v0, p2}, Lcom/bbm/d/dv;->a(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 4721
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Lcom/bbm/d/dv;
-    .locals 1
-
-    .prologue
-    .line 5771
-    const-string v0, "cookie"
-
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/dv;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 5772
-    return-object p0
-.end method
-
 .method public final bridge synthetic a()Lcom/bbm/f/ab;
     .locals 1
 
     .prologue
-    .line 5756
-    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
+    .line 4715
+    invoke-super {p0}, Lcom/bbm/d/ez;->a()Lcom/bbm/f/ab;
 
     move-result-object v0
 

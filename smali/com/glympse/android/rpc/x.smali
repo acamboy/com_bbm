@@ -1,6 +1,6 @@
 .class Lcom/glympse/android/rpc/x;
 .super Ljava/lang/Object;
-.source "MethodGetSystemHealth.java"
+.source "MethodGetSelfUser.java"
 
 # interfaces
 .implements Lcom/glympse/android/rpc/GRpcMethod;
@@ -54,7 +54,7 @@
 
     .prologue
     .line 20
-    const-string v0, "get_system_health"
+    const-string v0, "get_self_user"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -80,12 +80,18 @@
 
     .prologue
     .line 32
-    new-instance v0, Lcom/glympse/android/rpc/at;
-
-    invoke-direct {v0}, Lcom/glympse/android/rpc/at;-><init>()V
-
-    invoke-virtual {v0, p1, p2, p4}, Lcom/glympse/android/rpc/at;->call(Lcom/glympse/android/rpc/GMessageGateway;Lcom/glympse/android/rpc/GConnection;Lcom/glympse/android/core/GArray;)V
+    invoke-static {p4}, Lcom/glympse/android/rpc/RpcMessages;->providerUnpackGlympse(Lcom/glympse/android/core/GArray;)Lcom/glympse/android/lib/GGlympsePrivate;
 
     .line 33
+    invoke-static {p4}, Lcom/glympse/android/rpc/RpcMessages;->providerUnpackSink(Lcom/glympse/android/core/GArray;)Lcom/glympse/android/api/GEventSink;
+
+    .line 36
+    new-instance v0, Lcom/glympse/android/rpc/ao;
+
+    invoke-direct {v0}, Lcom/glympse/android/rpc/ao;-><init>()V
+
+    invoke-virtual {v0, p1, p2, p4}, Lcom/glympse/android/rpc/ao;->call(Lcom/glympse/android/rpc/GMessageGateway;Lcom/glympse/android/rpc/GConnection;Lcom/glympse/android/core/GArray;)V
+
+    .line 37
     return-void
 .end method

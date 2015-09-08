@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/c/cj;
 .super Ljava/lang/Object;
-.source "ContactsFragment.java"
+.source "ChatsFragment.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/DialogInterface$OnCancelListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/ch;
+.field final synthetic a:Lcom/bbm/ui/c/ca;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/ch;)V
+.method constructor <init>(Lcom/bbm/ui/c/ca;)V
     .locals 0
 
     .prologue
-    .line 506
-    iput-object p1, p0, Lcom/bbm/ui/c/cj;->a:Lcom/bbm/ui/c/ch;
+    .line 1027
+    iput-object p1, p0, Lcom/bbm/ui/c/cj;->a:Lcom/bbm/ui/c/ca;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,28 +25,15 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final onCancel(Landroid/content/DialogInterface;)V
+    .locals 1
 
     .prologue
-    .line 509
-    const-string v0, "inviteButton Clicked"
+    .line 1030
+    iget-object v0, p0, Lcom/bbm/ui/c/cj;->a:Lcom/bbm/ui/c/ca;
 
-    const-class v1, Lcom/bbm/ui/c/ch;
+    invoke-static {v0}, Lcom/bbm/ui/c/ca;->q(Lcom/bbm/ui/c/ca;)V
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 510
-    iget-object v0, p0, Lcom/bbm/ui/c/cj;->a:Lcom/bbm/ui/c/ch;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/c/ch;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/MainActivity;->f()V
-
-    .line 511
+    .line 1031
     return-void
 .end method

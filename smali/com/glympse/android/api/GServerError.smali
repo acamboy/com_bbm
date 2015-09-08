@@ -13,5 +13,8 @@
 .method public abstract getErrorDetails()Ljava/lang/String;
 .end method
 
+.method public abstract getExtraParam()Ljava/lang/Object;
+.end method
+
 .method public abstract getType()I
 .end method

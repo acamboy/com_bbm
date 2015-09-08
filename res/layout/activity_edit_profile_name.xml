@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/activity_edit_profile_name_root" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:isScrollContainer="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/toolbar_cancel_done_header" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/toolbar_cancel_done_header" />
+    <ScrollView android:orientation="vertical" android:id="@id/broadcast_scroll_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.bbm.ui.InlineImageEditText android:textSize="@dimen/fontSizeLarge" android:textColor="@android:color/black" android:id="@id/profile_display_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:singleLine="true" android:layout_weight="1.0" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@id/emoticon_picker_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/keyboard_button_area" android:background="@color/profile_emoticon_picker_above_keyboard_bar_background" android:focusable="true" android:focusableInTouchMode="true" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageButton android:gravity="center" android:id="@id/keyboard_button" android:background="@null" android:paddingLeft="@dimen/conversation_message_input_box_margin" android:paddingTop="@dimen/conversation_message_input_box_margin" android:paddingRight="@dimen/conversation_keyboard_button_vertical_padding" android:paddingBottom="@dimen/conversation_message_input_box_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_qs_emoticon_plus_selected" android:contentDescription="@string/blank" />
+        </LinearLayout>
+        <com.bbm.ui.EmoticonPicker android:id="@id/emoticon_picker" android:background="@color/quick_share_pane_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/input_panel_emoticon_picker_and_quick_share_pane_height" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/emoticon_button_area" android:background="@color/profile_emoticon_picker_above_keyboard_bar_background" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageButton android:gravity="center" android:id="@id/emoticon_button" android:background="@null" android:paddingLeft="@dimen/conversation_message_input_box_margin" android:paddingTop="@dimen/conversation_message_input_box_margin" android:paddingRight="@dimen/conversation_keyboard_button_vertical_padding" android:paddingBottom="@dimen/conversation_message_input_box_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_qs_emoticon_plus" android:contentDescription="@string/blank" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

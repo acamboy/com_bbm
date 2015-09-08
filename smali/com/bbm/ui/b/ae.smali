@@ -47,7 +47,7 @@
 
     .prologue
     .line 75
-    const v0, 0x7f030139
+    const v0, 0x7f030152
 
     invoke-interface {p2}, Ljava/util/List;->size()I
 
@@ -94,7 +94,7 @@
     if-nez p2, :cond_1
 
     .line 93
-    const v3, 0x7f030139
+    const v3, 0x7f030152
 
     const/4 v4, 0x0
 
@@ -112,7 +112,7 @@
     .line 96
     iget-object v3, p0, Lcom/bbm/ui/b/ae;->c:Lcom/bbm/ui/b/af;
 
-    const v0, 0x7f0b0499
+    const v0, 0x7f0b00fc
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -125,7 +125,7 @@
     .line 97
     iget-object v3, p0, Lcom/bbm/ui/b/ae;->c:Lcom/bbm/ui/b/af;
 
-    const v0, 0x7f0b0602
+    const v0, 0x7f0b00fd
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -138,7 +138,7 @@
     .line 98
     iget-object v3, p0, Lcom/bbm/ui/b/ae;->c:Lcom/bbm/ui/b/af;
 
-    const v0, 0x7f0b0603
+    const v0, 0x7f0b0691
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

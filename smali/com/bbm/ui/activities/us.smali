@@ -1,22 +1,26 @@
 .class final Lcom/bbm/ui/activities/us;
 .super Ljava/lang/Object;
-.source "ImageViewerActivity.java"
+.source "MpcDetailsActivity.java"
 
 # interfaces
-.implements Lcom/slidingmenu/lib/a/b;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ImageViewerActivity;
+.field final synthetic a:Lcom/google/b/f/a/p;
+
+.field final synthetic b:Lcom/bbm/ui/activities/MpcDetailsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ImageViewerActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/MpcDetailsActivity;Lcom/google/b/f/a/p;)V
     .locals 0
 
     .prologue
-    .line 247
-    iput-object p1, p0, Lcom/bbm/ui/activities/us;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
+    .line 320
+    iput-object p1, p0, Lcom/bbm/ui/activities/us;->b:Lcom/bbm/ui/activities/MpcDetailsActivity;
+
+    iput-object p2, p0, Lcom/bbm/ui/activities/us;->a:Lcom/google/b/f/a/p;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,50 +29,57 @@
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final run()V
+    .locals 4
 
     .prologue
-    .line 251
-    const-string v0, "onHardwareMenuButtonClicked"
+    .line 325
+    :try_start_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/us;->a:Lcom/google/b/f/a/p;
 
-    const-class v1, Lcom/bbm/ui/activities/ImageViewerActivity;
+    invoke-interface {v0}, Lcom/google/b/f/a/p;->get()Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    move-result-object v0
 
-    .line 252
-    iget-object v0, p0, Lcom/bbm/ui/activities/us;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
+    check-cast v0, Ljava/lang/String;
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+    .line 326
+    new-instance v1, Landroid/content/Intent;
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+    iget-object v2, p0, Lcom/bbm/ui/activities/us;->b:Lcom/bbm/ui/activities/MpcDetailsActivity;
 
-    invoke-virtual {v0}, Lcom/slidingmenu/lib/SlidingMenu;->b()Z
+    const-class v3, Lcom/bbm/ui/activities/ConversationActivity;
 
-    move-result v0
+    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    if-eqz v0, :cond_0
+    .line 327
+    const-string v2, "conversation_uri"
 
-    .line 253
-    iget-object v0, p0, Lcom/bbm/ui/activities/us;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
+    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+    .line 328
+    iget-object v0, p0, Lcom/bbm/ui/activities/us;->b:Lcom/bbm/ui/activities/MpcDetailsActivity;
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/MpcDetailsActivity;->startActivity(Landroid/content/Intent;)V
 
-    const/4 v1, 0x1
+    .line 329
+    const-string v0, "open"
 
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
+    const-string v1, "Conversation"
 
-    .line 257
+    invoke-static {v0, v1}, Lcom/bbm/af;->a(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 333
     :goto_0
     return-void
 
-    .line 255
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/us;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
+    .line 330
+    :catch_0
+    move-exception v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->o()V
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method

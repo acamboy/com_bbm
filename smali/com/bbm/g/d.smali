@@ -39,7 +39,7 @@
 
     const/4 v3, 0x0
 
-    .line 55
+    .line 59
     new-instance v0, Lcom/bbm/g/d;
 
     const-string v1, "Private"
@@ -50,7 +50,7 @@
 
     sput-object v0, Lcom/bbm/g/d;->a:Lcom/bbm/g/d;
 
-    .line 56
+    .line 60
     new-instance v0, Lcom/bbm/g/d;
 
     const-string v1, "Public"
@@ -61,7 +61,7 @@
 
     sput-object v0, Lcom/bbm/g/d;->b:Lcom/bbm/g/d;
 
-    .line 57
+    .line 65
     new-instance v0, Lcom/bbm/g/d;
 
     const-string v1, "Unspecified"
@@ -72,7 +72,7 @@
 
     sput-object v0, Lcom/bbm/g/d;->c:Lcom/bbm/g/d;
 
-    .line 54
+    .line 58
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/bbm/g/d;
@@ -105,13 +105,13 @@
     .end annotation
 
     .prologue
-    .line 61
+    .line 69
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 62
+    .line 70
     iput-object p3, p0, Lcom/bbm/g/d;->d:Ljava/lang/String;
 
-    .line 63
+    .line 71
     return-void
 .end method
 
@@ -119,7 +119,7 @@
     .locals 1
 
     .prologue
-    .line 66
+    .line 74
     const-string v0, "private"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -128,14 +128,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 67
+    .line 75
     sget-object v0, Lcom/bbm/g/d;->a:Lcom/bbm/g/d;
 
-    .line 72
+    .line 80
     :goto_0
     return-object v0
 
-    .line 69
+    .line 77
     :cond_0
     const-string v0, "public"
 
@@ -145,12 +145,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 70
+    .line 78
     sget-object v0, Lcom/bbm/g/d;->b:Lcom/bbm/g/d;
 
     goto :goto_0
 
-    .line 72
+    .line 80
     :cond_1
     sget-object v0, Lcom/bbm/g/d;->c:Lcom/bbm/g/d;
 
@@ -161,7 +161,7 @@
     .locals 1
 
     .prologue
-    .line 54
+    .line 58
     const-class v0, Lcom/bbm/g/d;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -177,7 +177,7 @@
     .locals 1
 
     .prologue
-    .line 54
+    .line 58
     sget-object v0, Lcom/bbm/g/d;->e:[Lcom/bbm/g/d;
 
     invoke-virtual {v0}, [Lcom/bbm/g/d;->clone()Ljava/lang/Object;
@@ -195,7 +195,7 @@
     .locals 1
 
     .prologue
-    .line 75
+    .line 83
     iget-object v0, p0, Lcom/bbm/g/d;->d:Ljava/lang/String;
 
     return-object v0

@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/ahg;
 .super Ljava/lang/Object;
-.source "SettingsActivity.java"
+.source "ViewProfileActivity.java"
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ViewProfileActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ViewProfileActivity;)V
     .locals 0
 
     .prologue
-    .line 480
-    iput-object p1, p0, Lcom/bbm/ui/activities/ahg;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    .line 405
+    iput-object p1, p0, Lcom/bbm/ui/activities/ahg;->a:Lcom/bbm/ui/activities/ViewProfileActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,35 +25,42 @@
 
 
 # virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
     .prologue
-    .line 484
-    const-string v0, "allow mobile calls onCheckedChanged"
+    .line 408
+    const-string v0, "mEditDisplayNameArea Clicked"
 
-    const-class v1, Lcom/bbm/ui/activities/SettingsActivity;
+    const-class v1, Lcom/bbm/ui/activities/ViewProfileActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 485
-    iget-object v0, p0, Lcom/bbm/ui/activities/ahg;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    .line 409
+    new-instance v0, Landroid/content/Intent;
 
-    const-string v1, "allow_mobile_calls"
+    iget-object v1, p0, Lcom/bbm/ui/activities/ahg;->a:Lcom/bbm/ui/activities/ViewProfileActivity;
 
-    invoke-static {v0, v1, p2}, Lcom/bbm/ui/activities/SettingsActivity;->a(Lcom/bbm/ui/activities/SettingsActivity;Ljava/lang/String;Z)V
+    const-class v2, Lcom/bbm/ui/activities/EditProfileNameActivity;
 
-    .line 487
-    iget-object v0, p0, Lcom/bbm/ui/activities/ahg;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->t(Lcom/bbm/ui/activities/SettingsActivity;)Lcom/rim/bbm/BbmMediaCallService;
+    .line 410
+    const-string v1, "user_uri"
 
-    move-result-object v0
+    iget-object v2, p0, Lcom/bbm/ui/activities/ahg;->a:Lcom/bbm/ui/activities/ViewProfileActivity;
 
-    const/4 v1, 0x0
+    invoke-static {v2}, Lcom/bbm/ui/activities/ViewProfileActivity;->e(Lcom/bbm/ui/activities/ViewProfileActivity;)Ljava/lang/String;
 
-    invoke-virtual {v0, v1, p2}, Lcom/rim/bbm/BbmMediaCallService;->setSetting(IZ)V
+    move-result-object v2
 
-    .line 488
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 411
+    iget-object v1, p0, Lcom/bbm/ui/activities/ahg;->a:Lcom/bbm/ui/activities/ViewProfileActivity;
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/ViewProfileActivity;->startActivity(Landroid/content/Intent;)V
+
+    .line 412
     return-void
 .end method

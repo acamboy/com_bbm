@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field private final a:Ljava/lang/Object;
+.field final a:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TK;"
@@ -30,7 +30,7 @@
     .end annotation
 .end field
 
-.field private final b:Ljava/lang/Object;
+.field final b:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TV;"
@@ -64,7 +64,7 @@
 
 
 # virtual methods
-.method public getKey()Ljava/lang/Object;
+.method public final getKey()Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -79,7 +79,7 @@
     return-object v0
 .end method
 
-.method public getValue()Ljava/lang/Object;
+.method public final getValue()Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {

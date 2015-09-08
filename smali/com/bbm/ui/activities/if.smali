@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/if;
 .super Ljava/lang/Object;
-.source "ConversationActivity.java"
+.source "EditProfileNameActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/view/View$OnFocusChangeListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/EditProfileNameActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/EditProfileNameActivity;)V
     .locals 0
 
     .prologue
-    .line 3052
-    iput-object p1, p0, Lcom/bbm/ui/activities/if;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 77
+    iput-object p1, p0, Lcom/bbm/ui/activities/if;->a:Lcom/bbm/ui/activities/EditProfileNameActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,44 +25,49 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final onFocusChange(Landroid/view/View;Z)V
     .locals 2
 
     .prologue
-    .line 3056
-    const-string v0, "quickshare attach location clicked"
+    .line 81
+    if-nez p2, :cond_0
 
-    const-class v1, Lcom/bbm/ui/activities/ConversationActivity;
+    .line 82
+    iget-object v0, p0, Lcom/bbm/ui/activities/if;->a:Lcom/bbm/ui/activities/EditProfileNameActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0}, Lcom/bbm/ui/activities/EditProfileNameActivity;->c(Lcom/bbm/ui/activities/EditProfileNameActivity;)V
 
-    .line 3057
-    iget-object v0, p0, Lcom/bbm/ui/activities/if;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 83
+    iget-object v0, p0, Lcom/bbm/ui/activities/if;->a:Lcom/bbm/ui/activities/EditProfileNameActivity;
 
-    invoke-static {v0}, Lcom/bbm/util/cm;->a(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/bbm/ui/activities/EditProfileNameActivity;->d(Lcom/bbm/ui/activities/EditProfileNameActivity;)Landroid/widget/LinearLayout;
 
-    move-result v0
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    const/16 v1, 0x8
 
-    .line 3058
-    iget-object v0, p0, Lcom/bbm/ui/activities/if;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->g(Lcom/bbm/ui/activities/ConversationActivity;)V
-
-    .line 3069
+    .line 88
     :goto_0
     return-void
 
-    .line 3060
+    .line 85
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/if;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    iget-object v0, p0, Lcom/bbm/ui/activities/if;->a:Lcom/bbm/ui/activities/EditProfileNameActivity;
 
-    new-instance v1, Lcom/bbm/ui/activities/ig;
+    invoke-static {v0}, Lcom/bbm/ui/activities/EditProfileNameActivity;->d(Lcom/bbm/ui/activities/EditProfileNameActivity;)Landroid/widget/LinearLayout;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/ig;-><init>(Lcom/bbm/ui/activities/if;)V
+    move-result-object v0
 
-    invoke-static {v0, v1}, Lcom/bbm/util/cm;->a(Landroid/app/Activity;Landroid/view/View$OnClickListener;)V
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 86
+    iget-object v0, p0, Lcom/bbm/ui/activities/if;->a:Lcom/bbm/ui/activities/EditProfileNameActivity;
+
+    invoke-static {v0}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;)V
 
     goto :goto_0
 .end method

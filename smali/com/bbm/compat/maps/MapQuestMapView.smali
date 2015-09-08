@@ -19,7 +19,7 @@
             "Ljava/util/Map",
             "<",
             "Ljava/lang/String;",
-            "Lcom/mapquest/android/maps/bp;",
+            "Lcom/mapquest/android/maps/bo;",
             ">;"
         }
     .end annotation
@@ -126,57 +126,21 @@
 
 # virtual methods
 .method public final a()V
-    .locals 2
+    .locals 0
 
     .prologue
-    .line 246
-    invoke-virtual {p0}, Lcom/bbm/compat/maps/MapQuestMapView;->getOverlays()Ljava/util/List;
+    .line 74
+    invoke-super {p0}, Lcom/mapquest/android/maps/MapView;->i()V
 
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/compat/maps/MapQuestMapView;->u:Ljava/util/Map;
-
-    invoke-interface {v1}, Ljava/util/Map;->values()Ljava/util/Collection;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->removeAll(Ljava/util/Collection;)Z
-
-    .line 247
-    iget-object v0, p0, Lcom/bbm/compat/maps/MapQuestMapView;->u:Ljava/util/Map;
-
-    invoke-interface {v0}, Ljava/util/Map;->clear()V
-
-    .line 248
+    .line 75
     return-void
 .end method
 
-.method public final a(DD)V
-    .locals 3
+.method public final a(Landroid/os/Bundle;)V
+    .locals 0
 
     .prologue
-    .line 94
-    new-instance v0, Lcom/mapquest/android/maps/s;
-
-    invoke-direct {v0, p1, p2, p3, p4}, Lcom/mapquest/android/maps/s;-><init>(DD)V
-
-    .line 95
-    invoke-virtual {p0}, Lcom/bbm/compat/maps/MapQuestMapView;->getController()Lcom/mapquest/android/maps/al;
-
-    move-result-object v1
-
-    const/16 v2, 0x12
-
-    invoke-virtual {v1, v2}, Lcom/mapquest/android/maps/al;->a(I)V
-
-    .line 96
-    invoke-virtual {p0}, Lcom/bbm/compat/maps/MapQuestMapView;->getController()Lcom/mapquest/android/maps/al;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/mapquest/android/maps/al;->a(Lcom/mapquest/android/maps/s;)V
-
-    .line 97
+    .line 70
     return-void
 .end method
 
@@ -202,7 +166,7 @@
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
     .line 157
-    const/high16 v0, 0x40400000
+    const/high16 v0, 0x40400000    # 3.0f
 
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
@@ -410,13 +374,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/mapquest/android/maps/bp;
+    check-cast v0, Lcom/mapquest/android/maps/bo;
 
     if-eqz v0, :cond_2
 
     iget-object v2, p0, Lcom/bbm/compat/maps/MapQuestMapView;->v:Lcom/mapquest/android/maps/AnnotationView;
 
-    invoke-virtual {v2, v0}, Lcom/mapquest/android/maps/AnnotationView;->a(Lcom/mapquest/android/maps/bp;)V
+    invoke-virtual {v2, v0}, Lcom/mapquest/android/maps/AnnotationView;->a(Lcom/mapquest/android/maps/bo;)V
 
     goto :goto_0
 .end method
@@ -499,7 +463,7 @@
     invoke-interface {p4}, Lcom/glympse/android/api/GTicket;->getExpireTime()J
 
     .line 127
-    new-instance v3, Lcom/mapquest/android/maps/bp;
+    new-instance v3, Lcom/mapquest/android/maps/bo;
 
     new-instance v4, Lcom/mapquest/android/maps/s;
 
@@ -529,21 +493,17 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/bbm/compat/maps/MapQuestMapView;->getContext()Landroid/content/Context;
+    invoke-static {p5}, Lcom/bbm/util/a/k;->a(Lcom/glympse/android/api/GUser;)Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-static {p5, v5}, Lcom/bbm/util/a/k;->a(Lcom/glympse/android/api/GUser;Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-direct {v3, v4, v0, v5}, Lcom/mapquest/android/maps/bp;-><init>(Lcom/mapquest/android/maps/s;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v3, v4, v0, v5}, Lcom/mapquest/android/maps/bo;-><init>(Lcom/mapquest/android/maps/s;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 128
-    invoke-virtual {v3, v1}, Lcom/mapquest/android/maps/bp;->a(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v3, v1}, Lcom/mapquest/android/maps/bo;->a(Landroid/graphics/drawable/Drawable;)V
 
     .line 129
-    invoke-virtual {v2, v3}, Lcom/mapquest/android/maps/d;->a(Lcom/mapquest/android/maps/bp;)V
+    invoke-virtual {v2, v3}, Lcom/mapquest/android/maps/d;->a(Lcom/mapquest/android/maps/bo;)V
 
     .line 131
     new-instance v0, Lcom/bbm/compat/maps/i;
@@ -575,17 +535,17 @@
     .line 252
     if-eqz p1, :cond_1
 
-    instance-of v0, p1, Lcom/mapquest/android/maps/bp;
+    instance-of v0, p1, Lcom/mapquest/android/maps/bo;
 
     if-eqz v0, :cond_1
 
     .line 253
-    check-cast p1, Lcom/mapquest/android/maps/bp;
+    check-cast p1, Lcom/mapquest/android/maps/bo;
 
     .line 254
     iget-object v0, p0, Lcom/bbm/compat/maps/MapQuestMapView;->v:Lcom/mapquest/android/maps/AnnotationView;
 
-    invoke-virtual {v0, p1}, Lcom/mapquest/android/maps/AnnotationView;->a(Lcom/mapquest/android/maps/bp;)V
+    invoke-virtual {v0, p1}, Lcom/mapquest/android/maps/AnnotationView;->a(Lcom/mapquest/android/maps/bo;)V
 
     .line 255
     iget-object v0, p0, Lcom/bbm/compat/maps/MapQuestMapView;->t:Ljava/util/Map;
@@ -615,7 +575,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/mapquest/android/maps/bp;
+    check-cast v1, Lcom/mapquest/android/maps/bo;
 
     invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -662,9 +622,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/mapquest/android/maps/bp;
+    check-cast v0, Lcom/mapquest/android/maps/bo;
 
-    invoke-virtual {v0}, Lcom/mapquest/android/maps/bp;->a()Lcom/mapquest/android/maps/s;
+    invoke-virtual {v0}, Lcom/mapquest/android/maps/bo;->a()Lcom/mapquest/android/maps/s;
 
     move-result-object v0
 
@@ -735,9 +695,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/mapquest/android/maps/bp;
+    check-cast v0, Lcom/mapquest/android/maps/bo;
 
-    invoke-virtual {v0}, Lcom/mapquest/android/maps/bp;->a()Lcom/mapquest/android/maps/s;
+    invoke-virtual {v0}, Lcom/mapquest/android/maps/bo;->a()Lcom/mapquest/android/maps/s;
 
     move-result-object v0
 
@@ -873,6 +833,56 @@
 .end method
 
 .method public final b()V
+    .locals 0
+
+    .prologue
+    .line 80
+    return-void
+.end method
+
+.method public final c()V
+    .locals 0
+
+    .prologue
+    .line 85
+    return-void
+.end method
+
+.method public final d()V
+    .locals 0
+
+    .prologue
+    .line 90
+    return-void
+.end method
+
+.method public final e()V
+    .locals 2
+
+    .prologue
+    .line 246
+    invoke-virtual {p0}, Lcom/bbm/compat/maps/MapQuestMapView;->getOverlays()Ljava/util/List;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/compat/maps/MapQuestMapView;->u:Ljava/util/Map;
+
+    invoke-interface {v1}, Ljava/util/Map;->values()Ljava/util/Collection;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->removeAll(Ljava/util/Collection;)Z
+
+    .line 247
+    iget-object v0, p0, Lcom/bbm/compat/maps/MapQuestMapView;->u:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->clear()V
+
+    .line 248
+    return-void
+.end method
+
+.method public final f()V
     .locals 1
 
     .prologue
@@ -896,49 +906,6 @@
     .prologue
     .line 64
     return-object p0
-.end method
-
-.method public onCreate(Landroid/os/Bundle;)V
-    .locals 0
-
-    .prologue
-    .line 70
-    return-void
-.end method
-
-.method public onDestroy()V
-    .locals 0
-
-    .prologue
-    .line 74
-    invoke-super {p0}, Lcom/mapquest/android/maps/MapView;->e()V
-
-    .line 75
-    return-void
-.end method
-
-.method public onLowMemory()V
-    .locals 0
-
-    .prologue
-    .line 80
-    return-void
-.end method
-
-.method public onPause()V
-    .locals 0
-
-    .prologue
-    .line 85
-    return-void
-.end method
-
-.method public onResume()V
-    .locals 0
-
-    .prologue
-    .line 90
-    return-void
 .end method
 
 .method public setCompassEnabled(Z)V

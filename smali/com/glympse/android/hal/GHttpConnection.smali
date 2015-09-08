@@ -31,7 +31,7 @@
 .method public abstract getResponseHeader(Ljava/lang/String;)Ljava/lang/String;
 .end method
 
-.method public abstract isPost()Z
+.method public abstract methodType()I
 .end method
 
 .method public abstract setConnectTimeout(I)V
@@ -55,7 +55,7 @@
 .method public abstract setRequestHeader(Ljava/lang/String;Ljava/lang/String;)V
 .end method
 
-.method public abstract setRequestMethod(Z)V
+.method public abstract setRequestMethod(I)V
 .end method
 
 .method public abstract setUrl(Ljava/lang/String;)V

@@ -8,13 +8,8 @@
     value = {
         "Lcom/bbm/j/a",
         "<",
-        "Ljava/util/Map",
-        "<",
-        "Ljava/lang/String;",
-        "Ljava/util/List",
-        "<",
-        "Lcom/bbm/d/gu;",
-        ">;>;>;"
+        "Ljava/lang/Boolean;",
+        ">;"
     }
 .end annotation
 
@@ -28,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 129
+    .line 114
     iput-object p1, p0, Lcom/bbm/d/p;->a:Lcom/bbm/d/a;
 
     invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
@@ -39,64 +34,41 @@
 
 # virtual methods
 .method protected final synthetic a()Ljava/lang/Object;
-    .locals 5
+    .locals 2
 
     .prologue
-    .line 129
-    new-instance v2, Ljava/util/HashMap;
-
-    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
-
+    .line 114
     iget-object v0, p0, Lcom/bbm/d/p;->a:Lcom/bbm/d/a;
 
-    invoke-virtual {v0}, Lcom/bbm/d/a;->x()Lcom/bbm/j/w;
+    sget-object v1, Lcom/bbm/d/af;->b:Lcom/bbm/d/af;
 
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/gu;
-
-    iget-object v4, v0, Lcom/bbm/d/gu;->c:Ljava/lang/String;
-
-    invoke-interface {v2, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1}, Lcom/bbm/d/af;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    check-cast v1, Ljava/util/List;
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->b(Ljava/lang/String;)Lcom/bbm/d/ae;
 
-    if-nez v1, :cond_0
+    move-result-object v0
 
-    new-instance v1, Ljava/util/ArrayList;
+    iget-boolean v1, v0, Lcom/bbm/d/ae;->b:Z
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+    if-eqz v1, :cond_0
 
-    invoke-interface {v2, v4, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-boolean v0, v0, Lcom/bbm/d/ae;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
 
     :cond_0
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
 
     goto :goto_0
-
-    :cond_1
-    return-object v2
 .end method

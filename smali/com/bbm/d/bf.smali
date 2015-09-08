@@ -1,33 +1,29 @@
 .class public final Lcom/bbm/d/bf;
-.super Lcom/bbm/d/dy;
+.super Lcom/bbm/d/ez;
 .source "BbmdsProtocol.java"
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;Lcom/bbm/d/bg;)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
     .prologue
-    .line 1691
-    const-string v0, "conferenceInvitationResponse"
+    .line 917
+    const-string v0, "channelIgnorePostFlag"
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/d/ez;-><init>(Ljava/lang/String;)V
 
-    .line 1693
-    const-string v0, "requestId"
+    .line 919
+    const-string v0, "channelUri"
 
     invoke-virtual {p0, v0, p1}, Lcom/bbm/d/bf;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1694
-    const-string v0, "response"
+    .line 920
+    const-string v0, "id"
 
-    invoke-virtual {p2}, Lcom/bbm/d/bg;->toString()Ljava/lang/String;
+    invoke-virtual {p0, v0, p2}, Lcom/bbm/d/bf;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    move-result-object v1
-
-    invoke-virtual {p0, v0, v1}, Lcom/bbm/d/bf;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 1695
+    .line 921
     return-void
 .end method
 
@@ -37,8 +33,8 @@
     .locals 1
 
     .prologue
-    .line 1664
-    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
+    .line 915
+    invoke-super {p0}, Lcom/bbm/d/ez;->a()Lcom/bbm/f/ab;
 
     move-result-object v0
 

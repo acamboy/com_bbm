@@ -1,45 +1,33 @@
 .class public final Lcom/bbm/d/dm;
-.super Lcom/bbm/d/dy;
+.super Lcom/bbm/d/ez;
 .source "BbmdsProtocol.java"
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Ljava/util/List",
-            "<",
-            "Ljava/lang/String;",
-            ">;)V"
-        }
-    .end annotation
+.method constructor <init>(Ljava/lang/String;J)V
+    .locals 2
 
     .prologue
-    .line 5016
-    const-string v0, "stickerMessage"
+    .line 3946
+    const-string v0, "recallMessage"
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/d/ez;-><init>(Ljava/lang/String;)V
 
-    .line 5018
-    const-string v0, "alternativeText"
+    .line 3948
+    const-string v0, "conversationUri"
 
     invoke-virtual {p0, v0, p1}, Lcom/bbm/d/dm;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 5019
-    const-string v0, "stickerId"
+    .line 3949
+    const-string v0, "id"
 
-    invoke-virtual {p0, v0, p2}, Lcom/bbm/d/dm;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p2, p3}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
-    .line 5020
-    const-string v0, "to"
+    move-result-object v1
 
-    invoke-virtual {p0, v0, p3}, Lcom/bbm/d/dm;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/d/dm;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 5021
+    .line 3950
     return-void
 .end method
 
@@ -49,8 +37,8 @@
     .locals 1
 
     .prologue
-    .line 5014
-    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
+    .line 3944
+    invoke-super {p0}, Lcom/bbm/d/ez;->a()Lcom/bbm/f/ab;
 
     move-result-object v0
 

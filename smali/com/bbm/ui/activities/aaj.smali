@@ -1,84 +1,111 @@
-.class final Lcom/bbm/ui/activities/aaj;
+.class final synthetic Lcom/bbm/ui/activities/aaj;
 .super Ljava/lang/Object;
-.source "NewListItemActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "ProtectedStateActivity.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/b/k;
-
-.field final synthetic b:Lcom/bbm/ui/activities/aah;
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/aah;Lcom/bbm/ui/b/k;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 529
-    iput-object p1, p0, Lcom/bbm/ui/activities/aaj;->b:Lcom/bbm/ui/activities/aah;
+    .line 66
+    invoke-static {}, Lcom/bbm/d/ak;->values()[Lcom/bbm/d/ak;
 
-    iput-object p2, p0, Lcom/bbm/ui/activities/aaj;->a:Lcom/bbm/ui/b/k;
+    move-result-object v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    array-length v0, v0
 
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/activities/aaj;->a:[I
+
+    :try_start_0
+    sget-object v0, Lcom/bbm/ui/activities/aaj;->a:[I
+
+    sget-object v1, Lcom/bbm/d/ak;->d:Lcom/bbm/d/ak;
+
+    invoke-virtual {v1}, Lcom/bbm/d/ak;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_3
+
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/ui/activities/aaj;->a:[I
+
+    sget-object v1, Lcom/bbm/d/ak;->e:Lcom/bbm/d/ak;
+
+    invoke-virtual {v1}, Lcom/bbm/d/ak;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
+
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/bbm/ui/activities/aaj;->a:[I
+
+    sget-object v1, Lcom/bbm/d/ak;->b:Lcom/bbm/d/ak;
+
+    invoke-virtual {v1}, Lcom/bbm/d/ak;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_1
+
+    :goto_2
+    :try_start_3
+    sget-object v0, Lcom/bbm/ui/activities/aaj;->a:[I
+
+    sget-object v1, Lcom/bbm/d/ak;->c:Lcom/bbm/d/ak;
+
+    invoke-virtual {v1}, Lcom/bbm/d/ak;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_0
+
+    :goto_3
     return-void
-.end method
 
+    :catch_0
+    move-exception v0
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+    goto :goto_3
 
-    .prologue
-    .line 533
-    const-string v0, "mItemAssignTo onSpinnerItemClicked Dialog Left Button Clicked"
+    :catch_1
+    move-exception v0
 
-    const-class v1, Lcom/bbm/ui/activities/NewListItemActivity;
+    goto :goto_2
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    :catch_2
+    move-exception v0
 
-    .line 535
-    iget-object v0, p0, Lcom/bbm/ui/activities/aaj;->b:Lcom/bbm/ui/activities/aah;
+    goto :goto_1
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/aah;->a:Lcom/bbm/ui/activities/NewListItemActivity;
+    :catch_3
+    move-exception v0
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/NewListItemActivity;->o:Lcom/bbm/ui/p;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/aaj;->b:Lcom/bbm/ui/activities/aah;
-
-    iget-object v1, v1, Lcom/bbm/ui/activities/aah;->a:Lcom/bbm/ui/activities/NewListItemActivity;
-
-    iget-object v1, v1, Lcom/bbm/ui/activities/NewListItemActivity;->o:Lcom/bbm/ui/p;
-
-    iget v1, v1, Lcom/bbm/ui/p;->b:I
-
-    iput v1, v0, Lcom/bbm/ui/p;->a:I
-
-    .line 536
-    iget-object v0, p0, Lcom/bbm/ui/activities/aaj;->b:Lcom/bbm/ui/activities/aah;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/aah;->a:Lcom/bbm/ui/activities/NewListItemActivity;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/NewListItemActivity;->i:Landroid/widget/Spinner;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/aaj;->b:Lcom/bbm/ui/activities/aah;
-
-    iget-object v1, v1, Lcom/bbm/ui/activities/aah;->a:Lcom/bbm/ui/activities/NewListItemActivity;
-
-    iget-object v1, v1, Lcom/bbm/ui/activities/NewListItemActivity;->o:Lcom/bbm/ui/p;
-
-    iget v1, v1, Lcom/bbm/ui/p;->a:I
-
-    invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setSelection(I)V
-
-    .line 537
-    iget-object v0, p0, Lcom/bbm/ui/activities/aaj;->a:Lcom/bbm/ui/b/k;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/b/k;->dismiss()V
-
-    .line 538
-    return-void
+    goto :goto_0
 .end method

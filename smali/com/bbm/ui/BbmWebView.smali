@@ -21,26 +21,33 @@
 
 .field private d:Z
 
+.field private e:Z
+
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
     .prologue
-    .line 43
+    .line 65
     invoke-direct {p0, p1}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;)V
 
-    .line 35
+    .line 38
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/bbm/ui/BbmWebView;->c:Ljava/util/List;
 
-    .line 44
+    .line 43
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/bbm/ui/BbmWebView;->e:Z
+
+    .line 66
     invoke-direct {p0}, Lcom/bbm/ui/BbmWebView;->a()V
 
-    .line 45
+    .line 67
     return-void
 .end method
 
@@ -48,20 +55,25 @@
     .locals 1
 
     .prologue
-    .line 59
+    .line 81
     invoke-direct {p0, p1, p2}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 35
+    .line 38
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/bbm/ui/BbmWebView;->c:Ljava/util/List;
 
-    .line 60
+    .line 43
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/bbm/ui/BbmWebView;->e:Z
+
+    .line 82
     invoke-direct {p0}, Lcom/bbm/ui/BbmWebView;->a()V
 
-    .line 61
+    .line 83
     return-void
 .end method
 
@@ -69,20 +81,25 @@
     .locals 1
 
     .prologue
-    .line 70
+    .line 92
     invoke-direct {p0, p1, p2, p3}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 35
+    .line 38
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/bbm/ui/BbmWebView;->c:Ljava/util/List;
 
-    .line 71
+    .line 43
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/bbm/ui/BbmWebView;->e:Z
+
+    .line 93
     invoke-direct {p0}, Lcom/bbm/ui/BbmWebView;->a()V
 
-    .line 72
+    .line 94
     return-void
 .end method
 
@@ -90,28 +107,175 @@
     .locals 1
 
     .prologue
-    .line 48
+    .line 70
     invoke-direct {p0, p1}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;)V
 
-    .line 35
+    .line 38
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/bbm/ui/BbmWebView;->c:Ljava/util/List;
 
-    .line 49
+    .line 43
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/bbm/ui/BbmWebView;->e:Z
+
+    .line 71
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/bbm/ui/BbmWebView;->d:Z
 
-    .line 50
+    .line 72
     invoke-direct {p0}, Lcom/bbm/ui/BbmWebView;->a()V
 
-    .line 51
+    .line 73
     return-void
+.end method
+
+.method public static a(Landroid/content/Context;)Ljava/lang/String;
+    .locals 4
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 331
+    invoke-static {}, Lcom/bbm/util/eu;->b()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 333
+    :try_start_0
+    invoke-static {p0}, Landroid/webkit/WebSettings;->getDefaultUserAgent(Landroid/content/Context;)Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    .line 352
+    :goto_0
+    return-object v0
+
+    .line 334
+    :catch_0
+    move-exception v0
+
+    .line 337
+    const-string v1, "getDefaultUserAgent failed: ignoring and trying another method as this is expected on some devices"
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {v1, v2}, Lcom/bbm/af;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 338
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
+
+    .line 343
+    :cond_0
+    :try_start_1
+    const-class v0, Landroid/webkit/WebSettings;
+
+    const/4 v1, 0x2
+
+    new-array v1, v1, [Ljava/lang/Class;
+
+    const/4 v2, 0x0
+
+    const-class v3, Landroid/content/Context;
+
+    aput-object v3, v1, v2
+
+    const/4 v2, 0x1
+
+    const-class v3, Landroid/webkit/WebView;
+
+    aput-object v3, v1, v2
+
+    invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v1
+
+    .line 344
+    const/4 v0, 0x1
+
+    invoke-virtual {v1, v0}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    .line 346
+    const/4 v0, 0x2
+
+    :try_start_2
+    new-array v0, v0, [Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    aput-object p0, v0, v2
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    aput-object v3, v0, v2
+
+    invoke-virtual {v1, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/webkit/WebSettings;
+
+    .line 347
+    invoke-virtual {v0}, Landroid/webkit/WebSettings;->getUserAgentString()Ljava/lang/String;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    move-result-object v0
+
+    .line 349
+    const/4 v2, 0x0
+
+    :try_start_3
+    invoke-virtual {v1, v2}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
+
+    goto :goto_0
+
+    .line 352
+    :catch_1
+    move-exception v0
+
+    new-instance v0, Landroid/webkit/WebView;
+
+    invoke-direct {v0, p0}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/webkit/WebSettings;->getUserAgentString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 349
+    :catchall_0
+    move-exception v0
+
+    const/4 v2, 0x0
+
+    :try_start_4
+    invoke-virtual {v1, v2}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
+
+    throw v0
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
 .end method
 
 .method private a()V
@@ -124,117 +288,117 @@
 
     const/4 v2, 0x0
 
-    .line 79
+    .line 101
     invoke-super {p0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bbm/ui/BbmWebView;->a:Landroid/webkit/WebSettings;
 
-    .line 82
+    .line 104
     iput-boolean v2, p0, Lcom/bbm/ui/BbmWebView;->b:Z
 
-    .line 83
+    .line 105
     iget-object v0, p0, Lcom/bbm/ui/BbmWebView;->c:Ljava/util/List;
 
     const-string v1, "https"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 86
-    new-instance v0, Lcom/bbm/ui/w;
+    .line 108
+    new-instance v0, Lcom/bbm/ui/ac;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/w;-><init>(Lcom/bbm/ui/BbmWebView;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/ac;-><init>(Lcom/bbm/ui/BbmWebView;)V
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/BbmWebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
-    .line 131
+    .line 153
     iget-object v0, p0, Lcom/bbm/ui/BbmWebView;->a:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, v3}, Landroid/webkit/WebSettings;->setAllowContentAccess(Z)V
 
-    .line 135
+    .line 157
     iget-object v0, p0, Lcom/bbm/ui/BbmWebView;->a:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setAllowFileAccess(Z)V
 
-    .line 138
+    .line 160
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-lt v0, v4, :cond_0
 
-    .line 139
+    .line 161
     iget-object v0, p0, Lcom/bbm/ui/BbmWebView;->a:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setAllowFileAccessFromFileURLs(Z)V
 
-    .line 143
+    .line 165
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-lt v0, v4, :cond_1
 
-    .line 144
+    .line 166
     iget-object v0, p0, Lcom/bbm/ui/BbmWebView;->a:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setAllowUniversalAccessFromFileURLs(Z)V
 
-    .line 148
+    .line 170
     :cond_1
     iget-object v0, p0, Lcom/bbm/ui/BbmWebView;->a:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setAppCacheEnabled(Z)V
 
-    .line 151
+    .line 173
     iget-object v0, p0, Lcom/bbm/ui/BbmWebView;->a:Landroid/webkit/WebSettings;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setCacheMode(I)V
 
-    .line 154
+    .line 176
     const/16 v0, 0x64
 
     invoke-virtual {p0, v0, v2}, Lcom/bbm/ui/BbmWebView;->setSetting(IZ)V
 
-    .line 157
+    .line 179
     const/16 v0, 0x6e
 
     invoke-virtual {p0, v0, v2}, Lcom/bbm/ui/BbmWebView;->setSetting(IZ)V
 
-    .line 160
+    .line 182
     const/16 v0, 0x78
 
     invoke-virtual {p0, v0, v3}, Lcom/bbm/ui/BbmWebView;->setSetting(IZ)V
 
-    .line 163
+    .line 185
     iget-object v0, p0, Lcom/bbm/ui/BbmWebView;->a:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setGeolocationEnabled(Z)V
 
-    .line 166
+    .line 188
     iget-object v0, p0, Lcom/bbm/ui/BbmWebView;->a:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setDatabaseEnabled(Z)V
 
-    .line 169
+    .line 191
     const/16 v0, 0x82
 
     invoke-virtual {p0, v0, v3}, Lcom/bbm/ui/BbmWebView;->setSetting(IZ)V
 
-    .line 172
+    .line 194
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x11
 
     if-lt v0, v1, :cond_2
 
-    .line 173
+    .line 195
     iget-object v0, p0, Lcom/bbm/ui/BbmWebView;->a:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, v3}, Landroid/webkit/WebSettings;->setMediaPlaybackRequiresUserGesture(Z)V
 
-    .line 177
+    .line 199
     :cond_2
     iget-object v0, p0, Lcom/bbm/ui/BbmWebView;->a:Landroid/webkit/WebSettings;
 
@@ -242,35 +406,71 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setPluginState(Landroid/webkit/WebSettings$PluginState;)V
 
-    .line 180
+    .line 202
     const/16 v0, 0x8c
 
     invoke-virtual {p0, v0, v2}, Lcom/bbm/ui/BbmWebView;->setSetting(IZ)V
 
-    .line 183
+    .line 205
     const/16 v0, 0x96
 
     invoke-virtual {p0, v0, v2}, Lcom/bbm/ui/BbmWebView;->setSetting(IZ)V
 
-    .line 184
+    .line 206
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/BbmWebView;)Z
-    .locals 1
+.method public static a(Lcom/bbm/ui/BbmWebView;)V
+    .locals 2
 
     .prologue
-    .line 20
-    iget-boolean v0, p0, Lcom/bbm/ui/BbmWebView;->d:Z
+    const/4 v1, 0x1
 
-    return v0
+    .line 47
+    const/16 v0, 0x8c
+
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/BbmWebView;->setSetting(IZ)V
+
+    .line 50
+    const/16 v0, 0xb4
+
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/BbmWebView;->setSetting(IZ)V
+
+    .line 51
+    const/16 v0, 0xbe
+
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/BbmWebView;->setSetting(IZ)V
+
+    .line 54
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/BbmWebView;->setVisibility(I)V
+
+    .line 55
+    invoke-virtual {p0, v1}, Lcom/bbm/ui/BbmWebView;->setFocusable(Z)V
+
+    .line 56
+    invoke-virtual {p0}, Lcom/bbm/ui/BbmWebView;->requestFocus()Z
+
+    .line 57
+    return-void
 .end method
 
 .method static synthetic b(Lcom/bbm/ui/BbmWebView;)Z
     .locals 1
 
     .prologue
-    .line 20
+    .line 23
+    iget-boolean v0, p0, Lcom/bbm/ui/BbmWebView;->d:Z
+
+    return v0
+.end method
+
+.method static synthetic c(Lcom/bbm/ui/BbmWebView;)Z
+    .locals 1
+
+    .prologue
+    .line 23
     iget-boolean v0, p0, Lcom/bbm/ui/BbmWebView;->b:Z
 
     return v0
@@ -282,19 +482,19 @@
     .locals 1
 
     .prologue
-    .line 277
+    .line 303
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 283
+    .line 309
     :cond_0
     :goto_0
     return-void
 
-    .line 280
+    .line 306
     :cond_1
     iget-object v0, p0, Lcom/bbm/ui/BbmWebView;->c:Ljava/util/List;
 
@@ -304,7 +504,7 @@
 
     if-nez v0, :cond_0
 
-    .line 281
+    .line 307
     iget-object v0, p0, Lcom/bbm/ui/BbmWebView;->c:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -316,7 +516,7 @@
     .locals 2
 
     .prologue
-    .line 194
+    .line 220
     new-instance v0, Ljava/lang/SecurityException;
 
     const-string v1, "Javascript Interface disabled"
@@ -339,7 +539,7 @@
     .end annotation
 
     .prologue
-    .line 269
+    .line 295
     iget-object v0, p0, Lcom/bbm/ui/BbmWebView;->c:Ljava/util/List;
 
     return-object v0
@@ -349,24 +549,35 @@
     .locals 1
 
     .prologue
-    .line 188
-    const/4 v0, 0x1
+    .line 210
+    iget-boolean v0, p0, Lcom/bbm/ui/BbmWebView;->e:Z
 
     return v0
+.end method
+
+.method public setIsTextEditor(Z)V
+    .locals 0
+
+    .prologue
+    .line 214
+    iput-boolean p1, p0, Lcom/bbm/ui/BbmWebView;->e:Z
+
+    .line 215
+    return-void
 .end method
 
 .method public setSetting(IZ)V
     .locals 2
 
     .prologue
-    .line 203
+    .line 229
     sparse-switch p1, :sswitch_data_0
 
-    .line 235
+    .line 261
     :goto_0
     return-void
 
-    .line 205
+    .line 231
     :sswitch_0
     iget-object v0, p0, Lcom/bbm/ui/BbmWebView;->a:Landroid/webkit/WebSettings;
 
@@ -374,7 +585,7 @@
 
     goto :goto_0
 
-    .line 208
+    .line 234
     :sswitch_1
     iget-object v0, p0, Lcom/bbm/ui/BbmWebView;->a:Landroid/webkit/WebSettings;
 
@@ -382,7 +593,7 @@
 
     goto :goto_0
 
-    .line 211
+    .line 237
     :sswitch_2
     iget-object v0, p0, Lcom/bbm/ui/BbmWebView;->a:Landroid/webkit/WebSettings;
 
@@ -390,7 +601,7 @@
 
     goto :goto_0
 
-    .line 214
+    .line 240
     :sswitch_3
     iget-object v0, p0, Lcom/bbm/ui/BbmWebView;->a:Landroid/webkit/WebSettings;
 
@@ -398,7 +609,7 @@
 
     goto :goto_0
 
-    .line 217
+    .line 243
     :sswitch_4
     iget-object v0, p0, Lcom/bbm/ui/BbmWebView;->a:Landroid/webkit/WebSettings;
 
@@ -406,7 +617,7 @@
 
     goto :goto_0
 
-    .line 220
+    .line 246
     :sswitch_5
     iget-object v0, p0, Lcom/bbm/ui/BbmWebView;->a:Landroid/webkit/WebSettings;
 
@@ -414,7 +625,7 @@
 
     goto :goto_0
 
-    .line 223
+    .line 249
     :sswitch_6
     iget-object v1, p0, Lcom/bbm/ui/BbmWebView;->a:Landroid/webkit/WebSettings;
 
@@ -432,13 +643,13 @@
 
     goto :goto_1
 
-    .line 226
+    .line 252
     :sswitch_7
     iput-boolean p2, p0, Lcom/bbm/ui/BbmWebView;->b:Z
 
     goto :goto_0
 
-    .line 229
+    .line 255
     :sswitch_8
     iget-object v0, p0, Lcom/bbm/ui/BbmWebView;->a:Landroid/webkit/WebSettings;
 
@@ -446,7 +657,7 @@
 
     goto :goto_0
 
-    .line 232
+    .line 258
     :sswitch_9
     iget-object v0, p0, Lcom/bbm/ui/BbmWebView;->a:Landroid/webkit/WebSettings;
 
@@ -454,7 +665,7 @@
 
     goto :goto_0
 
-    .line 203
+    .line 229
     :sswitch_data_0
     .sparse-switch
         0x64 -> :sswitch_0

@@ -331,7 +331,7 @@
     move-result-object v0
 
     .line 123
-    invoke-static {v0}, Lcom/glympse/android/rpc/c;->R(Ljava/lang/String;)Lcom/glympse/android/core/GDrawable;
+    invoke-static {v0}, Lcom/glympse/android/rpc/c;->V(Ljava/lang/String;)Lcom/glympse/android/core/GDrawable;
 
     move-result-object v1
 

@@ -40,27 +40,27 @@
     </plurals>
     <plurals name="slide_menu_active_chats">
         <item quantity="other">%1$s chats ativos</item>
-        <item quantity="one">1 chat ativo</item>
+        <item quantity="one">%1$s chat ativo</item>
     </plurals>
     <plurals name="slide_menu_new_channelupdates">
-        <item quantity="other">%1$s novas notificações</item>
-        <item quantity="one">1 nova notificação</item>
+        <item quantity="other">%1$s novos itens do Channels</item>
+        <item quantity="one">%1$s novo item do Channels</item>
     </plurals>
     <plurals name="slide_menu_new_invites">
         <item quantity="other">%1$s novos convites</item>
-        <item quantity="one">1 novo convite</item>
+        <item quantity="one">%1$s novo convite</item>
     </plurals>
     <plurals name="slide_menu_new_updates">
-        <item quantity="other">%1$s novos itens</item>
-        <item quantity="one">1 novo item</item>
+        <item quantity="other">%1$s novos feeds</item>
+        <item quantity="one">%1$s novo feed</item>
     </plurals>
     <plurals name="slide_menu_total_contacts">
-        <item quantity="other">%1$s Contactos</item>
-        <item quantity="one">1 Contacto</item>
+        <item quantity="other">%1$s contactos</item>
+        <item quantity="one">%1$s contacto</item>
     </plurals>
     <plurals name="slide_menu_total_groups">
-        <item quantity="other">%1$s Grupos</item>
-        <item quantity="one">1 Grupo</item>
+        <item quantity="other">%1$s grupos</item>
+        <item quantity="one">%1$s grupo</item>
     </plurals>
     <plurals name="update_channel_stats_comments">
         <item quantity="other">%1$s comentários</item>

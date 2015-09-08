@@ -13,7 +13,9 @@
     .end annotation
 .end field
 
-.field private static fs:Ljava/lang/reflect/Constructor;
+.field private static fA:Ljava/lang/reflect/Method;
+
+.field private static fv:Ljava/lang/reflect/Constructor;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/reflect/Constructor",
@@ -22,19 +24,17 @@
     .end annotation
 .end field
 
-.field private static ft:Ljava/lang/reflect/Method;
-
-.field private static fu:Ljava/lang/reflect/Method;
-
-.field private static fv:Ljava/lang/reflect/Method;
-
 .field private static fw:Ljava/lang/reflect/Method;
 
 .field private static fx:Ljava/lang/reflect/Method;
 
+.field private static fy:Ljava/lang/reflect/Method;
+
+.field private static fz:Ljava/lang/reflect/Method;
+
 
 # instance fields
-.field private fr:Ljava/lang/Object;
+.field private fu:Ljava/lang/Object;
 
 
 # direct methods
@@ -45,22 +45,22 @@
     const/4 v0, 0x0
 
     .line 42
-    sput-object v0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fs:Ljava/lang/reflect/Constructor;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fv:Ljava/lang/reflect/Constructor;
 
     .line 43
-    sput-object v0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->ft:Ljava/lang/reflect/Method;
-
-    .line 44
-    sput-object v0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fu:Ljava/lang/reflect/Method;
-
-    .line 45
-    sput-object v0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fv:Ljava/lang/reflect/Method;
-
-    .line 46
     sput-object v0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fw:Ljava/lang/reflect/Method;
 
-    .line 47
+    .line 44
     sput-object v0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fx:Ljava/lang/reflect/Method;
+
+    .line 45
+    sput-object v0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fy:Ljava/lang/reflect/Method;
+
+    .line 46
+    sput-object v0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fz:Ljava/lang/reflect/Method;
+
+    .line 47
+    sput-object v0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fA:Ljava/lang/reflect/Method;
 
     return-void
 .end method
@@ -74,7 +74,7 @@
 
     .line 55
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fs:Ljava/lang/reflect/Constructor;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fv:Ljava/lang/reflect/Constructor;
 
     const/4 v1, 0x0
 
@@ -82,7 +82,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fr:Ljava/lang/Object;
+    iput-object v0, p0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fu:Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -111,7 +111,7 @@
 
     .prologue
     .line 39
-    sput-object p0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fs:Ljava/lang/reflect/Constructor;
+    sput-object p0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fv:Ljava/lang/reflect/Constructor;
 
     return-object p0
 .end method
@@ -121,7 +121,7 @@
 
     .prologue
     .line 39
-    sput-object p0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->ft:Ljava/lang/reflect/Method;
+    sput-object p0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fw:Ljava/lang/reflect/Method;
 
     return-object p0
 .end method
@@ -131,7 +131,7 @@
 
     .prologue
     .line 39
-    sput-object p0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fu:Ljava/lang/reflect/Method;
+    sput-object p0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fx:Ljava/lang/reflect/Method;
 
     return-object p0
 .end method
@@ -151,7 +151,7 @@
 
     .prologue
     .line 39
-    sput-object p0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fv:Ljava/lang/reflect/Method;
+    sput-object p0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fy:Ljava/lang/reflect/Method;
 
     return-object p0
 .end method
@@ -161,7 +161,7 @@
 
     .prologue
     .line 39
-    sput-object p0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fw:Ljava/lang/reflect/Method;
+    sput-object p0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fz:Ljava/lang/reflect/Method;
 
     return-object p0
 .end method
@@ -171,7 +171,7 @@
 
     .prologue
     .line 39
-    sput-object p0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fx:Ljava/lang/reflect/Method;
+    sput-object p0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fA:Ljava/lang/reflect/Method;
 
     return-object p0
 .end method
@@ -188,9 +188,9 @@
     :try_start_0
     new-instance v0, Lcom/glympse/android/hal/gms/location/Geofence;
 
-    sget-object v2, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->ft:Ljava/lang/reflect/Method;
+    sget-object v2, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fw:Ljava/lang/reflect/Method;
 
-    iget-object v3, p0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fr:Ljava/lang/Object;
+    iget-object v3, p0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fu:Ljava/lang/Object;
 
     const/4 v4, 0x0
 
@@ -220,9 +220,9 @@
     .prologue
     .line 78
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fu:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fx:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fr:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fu:Ljava/lang/Object;
 
     const/4 v2, 0x3
 
@@ -272,9 +272,9 @@
     .prologue
     .line 91
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fv:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fy:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fr:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fu:Ljava/lang/Object;
 
     const/4 v2, 0x1
 
@@ -308,9 +308,9 @@
     .prologue
     .line 103
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fw:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fz:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fr:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fu:Ljava/lang/Object;
 
     const/4 v2, 0x1
 
@@ -340,9 +340,9 @@
     .prologue
     .line 115
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fx:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fA:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fr:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/Geofence$Builder;->fu:Ljava/lang/Object;
 
     const/4 v2, 0x1
 

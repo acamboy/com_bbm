@@ -7,11 +7,11 @@
 
 
 # static fields
-.field private static final cG:[Ljava/lang/String;
+.field private static final cJ:[Ljava/lang/String;
 
 
 # instance fields
-.field private cF:J
+.field private cI:J
 
 .field private e:Landroid/content/Context;
 
@@ -38,7 +38,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/glympse/android/hal/PhoneHistoryProvider;->cG:[Ljava/lang/String;
+    sput-object v0, Lcom/glympse/android/hal/PhoneHistoryProvider;->cJ:[Ljava/lang/String;
 
     return-void
 .end method
@@ -56,7 +56,7 @@
     .line 29
     const-wide v0, 0x9a7ec800L
 
-    iput-wide v0, p0, Lcom/glympse/android/hal/PhoneHistoryProvider;->cF:J
+    iput-wide v0, p0, Lcom/glympse/android/hal/PhoneHistoryProvider;->cI:J
 
     .line 30
     return-void
@@ -102,14 +102,14 @@
 
     move-result-wide v2
 
-    iget-wide v6, p0, Lcom/glympse/android/hal/PhoneHistoryProvider;->cF:J
+    iget-wide v6, p0, Lcom/glympse/android/hal/PhoneHistoryProvider;->cI:J
 
     sub-long v6, v2, v6
 
     .line 50
     sget-object v1, Landroid/provider/CallLog$Calls;->CONTENT_URI:Landroid/net/Uri;
 
-    sget-object v2, Lcom/glympse/android/hal/PhoneHistoryProvider;->cG:[Ljava/lang/String;
+    sget-object v2, Lcom/glympse/android/hal/PhoneHistoryProvider;->cJ:[Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -215,7 +215,7 @@
 
     .prologue
     .line 38
-    iput-wide p1, p0, Lcom/glympse/android/hal/PhoneHistoryProvider;->cF:J
+    iput-wide p1, p0, Lcom/glympse/android/hal/PhoneHistoryProvider;->cI:J
 
     .line 39
     return-void

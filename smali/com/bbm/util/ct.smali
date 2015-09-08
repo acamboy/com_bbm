@@ -1,139 +1,131 @@
-.class public Lcom/bbm/util/ct;
+.class public final Lcom/bbm/util/ct;
 .super Ljava/lang/Object;
-.source "Mutable.java"
-
-# interfaces
-.implements Lcom/bbm/j/r;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<V:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;",
-        "Lcom/bbm/j/r",
-        "<TV;>;"
-    }
-.end annotation
-
-
-# instance fields
-.field public e:Ljava/lang/Object;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "TV;"
-        }
-    .end annotation
-.end field
-
-.field public f:Lcom/bbm/j/i;
+.source "LocalContactUtil.java"
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TV;)V"
-        }
-    .end annotation
+.method public static a(Ljava/lang/String;)C
+    .locals 5
 
     .prologue
-    .line 15
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 13
-    new-instance v0, Lcom/bbm/j/i;
-
-    invoke-direct {v0}, Lcom/bbm/j/i;-><init>()V
-
-    iput-object v0, p0, Lcom/bbm/util/ct;->f:Lcom/bbm/j/i;
-
-    .line 16
-    invoke-static {p1}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 17
-    iput-object p1, p0, Lcom/bbm/util/ct;->e:Ljava/lang/Object;
-
-    .line 18
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lcom/bbm/j/h;)V
-    .locals 1
-
-    .prologue
-    .line 35
-    iget-object v0, p0, Lcom/bbm/util/ct;->f:Lcom/bbm/j/i;
-
-    invoke-virtual {v0, p1}, Lcom/bbm/j/i;->a(Lcom/bbm/j/h;)V
-
-    .line 36
-    return-void
-.end method
-
-.method public final b(Lcom/bbm/j/h;)V
-    .locals 1
-
-    .prologue
-    .line 40
-    iget-object v0, p0, Lcom/bbm/util/ct;->f:Lcom/bbm/j/i;
-
-    invoke-virtual {v0, p1}, Lcom/bbm/j/i;->b(Lcom/bbm/j/h;)V
-
-    .line 41
-    return-void
-.end method
-
-.method public b(Ljava/lang/Object;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TV;)V"
-        }
-    .end annotation
-
-    .prologue
-    .line 27
-    iget-object v0, p0, Lcom/bbm/util/ct;->e:Ljava/lang/Object;
-
-    invoke-static {v0, p1}, Lcom/bbm/util/bh;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .line 63
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
-    .line 28
-    iput-object p1, p0, Lcom/bbm/util/ct;->e:Ljava/lang/Object;
+    .line 64
+    invoke-virtual {p0}, Ljava/lang/String;->toCharArray()[C
 
-    .line 29
-    iget-object v0, p0, Lcom/bbm/util/ct;->f:Lcom/bbm/j/i;
+    move-result-object v1
 
-    invoke-virtual {v0}, Lcom/bbm/j/i;->a()V
+    array-length v2, v1
 
-    .line 31
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, v2, :cond_1
+
+    aget-char v3, v1, v0
+
+    .line 65
+    invoke-static {v3}, Ljava/lang/Character;->isLetter(C)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    .line 66
+    invoke-static {v3}, Ljava/lang/Character;->toUpperCase(C)C
+
+    move-result v0
+
+    .line 70
+    :goto_1
+    return v0
+
+    .line 64
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    .line 70
+    :cond_1
+    const/16 v0, 0x20
+
+    goto :goto_1
+.end method
+
+.method public static a(Landroid/content/Context;Landroid/view/View;)V
+    .locals 3
+
+    .prologue
+    .line 103
+    new-instance v0, Lcom/bbm/ui/widget/i;
+
+    const v1, 0x7f030172
+
+    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/widget/i;-><init>(Landroid/content/Context;I)V
+
+    .line 104
+    invoke-virtual {v0, p1}, Lcom/bbm/ui/widget/i;->a(Landroid/view/View;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 105
+    invoke-static {}, Lcom/bbm/Alaska;->l()Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    .line 106
+    const-string v1, "has_shown_outer_circle_contacts_tab_tip"
+
+    const/4 v2, 0x1
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    .line 107
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 109
     :cond_0
     return-void
 .end method
 
-.method public final e()Ljava/lang/Object;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()TV;"
-        }
-    .end annotation
+.method public static b(Ljava/lang/String;)J
+    .locals 3
 
     .prologue
-    .line 22
-    invoke-static {p0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/g;)V
+    .line 118
+    const-wide/16 v0, 0x0
 
-    .line 23
-    iget-object v0, p0, Lcom/bbm/util/ct;->e:Ljava/lang/Object;
+    .line 119
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    return-object v0
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    .line 120
+    invoke-static {p0}, Lcom/bbm/d/b/a;->b(Ljava/lang/String;)Lcom/bbm/iceberg/m;
+
+    move-result-object v2
+
+    .line 121
+    if-eqz v2, :cond_0
+
+    .line 122
+    iget-wide v0, v2, Lcom/bbm/iceberg/m;->d:J
+
+    .line 125
+    :cond_0
+    return-wide v0
 .end method

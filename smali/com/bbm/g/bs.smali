@@ -1,28 +1,47 @@
 .class public final Lcom/bbm/g/bs;
-.super Lcom/bbm/g/cv;
+.super Lcom/bbm/g/db;
 .source "GroupsProtocol.java"
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+.method constructor <init>(Ljava/lang/String;Lcom/bbm/g/bt;)V
+    .locals 2
 
     .prologue
-    .line 1331
-    const-string v0, "groupListDiscuss"
+    .line 1258
+    const-string v0, "groupInvitationResponse"
 
-    invoke-direct {p0, v0}, Lcom/bbm/g/cv;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/g/db;-><init>(Ljava/lang/String;)V
 
-    .line 1333
-    const-string v0, "groupListUri"
+    .line 1260
+    const-string v0, "invitationId"
 
     invoke-virtual {p0, v0, p1}, Lcom/bbm/g/bs;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1334
-    const-string v0, "message"
+    .line 1261
+    const-string v0, "responseType"
 
-    invoke-virtual {p0, v0, p2}, Lcom/bbm/g/bs;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p2}, Lcom/bbm/g/bt;->toString()Ljava/lang/String;
 
-    .line 1335
+    move-result-object v1
+
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/g/bs;->a(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 1262
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/String;)Lcom/bbm/g/bs;
+    .locals 1
+
+    .prologue
+    .line 1272
+    const-string v0, "securityResponse"
+
+    invoke-virtual {p0, v0, p1}, Lcom/bbm/g/bs;->a(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 1273
+    return-object p0
 .end method

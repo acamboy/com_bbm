@@ -50,9 +50,9 @@
     :pswitch_0
     iget-object v0, p0, Lcom/mapquest/android/maps/o;->a:Lcom/mapquest/android/maps/h;
 
-    sget-object v1, Lcom/mapquest/android/maps/p;->a:Lcom/mapquest/android/maps/p;
+    sget v1, Lcom/mapquest/android/maps/p;->a:I
 
-    invoke-virtual {v0, v1}, Lcom/mapquest/android/maps/h;->a(Lcom/mapquest/android/maps/p;)Lcom/mapquest/android/maps/q;
+    invoke-virtual {v0, v1}, Lcom/mapquest/android/maps/h;->a(I)Lcom/mapquest/android/maps/q;
 
     move-result-object v0
 
@@ -120,9 +120,9 @@
     :pswitch_2
     iget-object v0, p0, Lcom/mapquest/android/maps/o;->a:Lcom/mapquest/android/maps/h;
 
-    sget-object v1, Lcom/mapquest/android/maps/p;->d:Lcom/mapquest/android/maps/p;
+    sget v1, Lcom/mapquest/android/maps/p;->d:I
 
-    invoke-virtual {v0, v1}, Lcom/mapquest/android/maps/h;->a(Lcom/mapquest/android/maps/p;)Lcom/mapquest/android/maps/q;
+    invoke-virtual {v0, v1}, Lcom/mapquest/android/maps/h;->a(I)Lcom/mapquest/android/maps/q;
 
     move-result-object v0
 
@@ -182,9 +182,9 @@
     :try_start_0
     iget-object v0, p0, Lcom/mapquest/android/maps/o;->a:Lcom/mapquest/android/maps/h;
 
-    sget-object v1, Lcom/mapquest/android/maps/p;->b:Lcom/mapquest/android/maps/p;
+    sget v1, Lcom/mapquest/android/maps/p;->b:I
 
-    invoke-virtual {v0, v1}, Lcom/mapquest/android/maps/h;->a(Lcom/mapquest/android/maps/p;)Lcom/mapquest/android/maps/q;
+    invoke-virtual {v0, v1}, Lcom/mapquest/android/maps/h;->a(I)Lcom/mapquest/android/maps/q;
 
     move-result-object v0
 
@@ -222,9 +222,9 @@
     :cond_2
     iget-object v0, p0, Lcom/mapquest/android/maps/o;->a:Lcom/mapquest/android/maps/h;
 
-    sget-object v1, Lcom/mapquest/android/maps/p;->c:Lcom/mapquest/android/maps/p;
+    sget v1, Lcom/mapquest/android/maps/p;->c:I
 
-    invoke-virtual {v0, v1}, Lcom/mapquest/android/maps/h;->a(Lcom/mapquest/android/maps/p;)Lcom/mapquest/android/maps/q;
+    invoke-virtual {v0, v1}, Lcom/mapquest/android/maps/h;->a(I)Lcom/mapquest/android/maps/q;
 
     move-result-object v0
 

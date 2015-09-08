@@ -16,17 +16,17 @@
     .locals 1
 
     .prologue
-    .line 532
+    .line 550
     iput-object p1, p0, Lcom/rim/bbm/BbmCoreService$Message;->this$0:Lcom/rim/bbm/BbmCoreService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 533
+    .line 551
     iget v0, p2, Lcom/rim/bbm/BbmCoreService$MessageType;->ordinal:I
 
     iput v0, p0, Lcom/rim/bbm/BbmCoreService$Message;->m_type:I
 
-    .line 534
+    .line 552
     invoke-virtual {p3}, [B->clone()Ljava/lang/Object;
 
     move-result-object v0
@@ -35,6 +35,6 @@
 
     iput-object v0, p0, Lcom/rim/bbm/BbmCoreService$Message;->m_msg:[B
 
-    .line 535
+    .line 553
     return-void
 .end method

@@ -30,14 +30,14 @@
 
     move-result-object v0
 
-    const v1, 0x7f030120
+    const v1, 0x7f030139
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 23
-    const v0, 0x7f0b05a7
+    const v0, 0x7f0b0635
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/AttachmentView;->findViewById(I)Landroid/view/View;
 
@@ -53,7 +53,7 @@
     invoke-virtual {v0, v3}, Lcom/bbm/ui/ObservingImageView;->setVisibility(I)V
 
     .line 26
-    const v0, 0x7f0b05a9
+    const v0, 0x7f0b0637
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/AttachmentView;->findViewById(I)Landroid/view/View;
 
@@ -69,7 +69,7 @@
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 29
-    const v0, 0x7f0b05aa
+    const v0, 0x7f0b0638
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/AttachmentView;->findViewById(I)Landroid/view/View;
 
@@ -85,7 +85,7 @@
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 32
-    const v0, 0x7f0b05ab
+    const v0, 0x7f0b0639
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/AttachmentView;->findViewById(I)Landroid/view/View;
 
@@ -96,7 +96,7 @@
     iput-object v0, p0, Lcom/bbm/ui/AttachmentView;->d:Landroid/widget/ImageButton;
 
     .line 34
-    const v0, 0x7f0b05a8
+    const v0, 0x7f0b0636
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/AttachmentView;->findViewById(I)Landroid/view/View;
 

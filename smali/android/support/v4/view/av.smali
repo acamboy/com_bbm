@@ -1,142 +1,223 @@
-.class Landroid/support/v4/view/av;
-.super Landroid/support/v4/view/au;
-.source "ViewCompat.java"
+.class final Landroid/support/v4/view/av;
+.super Landroid/database/DataSetObserver;
+.source "PagerTitleStrip.java"
+
+# interfaces
+.implements Landroid/support/v4/view/cn;
+.implements Landroid/support/v4/view/co;
+
+
+# instance fields
+.field final synthetic a:Landroid/support/v4/view/PagerTitleStrip;
+
+.field private b:I
 
 
 # direct methods
-.method constructor <init>()V
+.method private constructor <init>(Landroid/support/v4/view/PagerTitleStrip;)V
     .locals 0
 
     .prologue
-    .line 729
-    invoke-direct {p0}, Landroid/support/v4/view/au;-><init>()V
+    .line 470
+    iput-object p1, p0, Landroid/support/v4/view/av;->a:Landroid/support/v4/view/PagerTitleStrip;
+
+    invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Landroid/support/v4/view/PagerTitleStrip;B)V
+    .locals 0
+
+    .prologue
+    .line 470
+    invoke-direct {p0, p1}, Landroid/support/v4/view/av;-><init>(Landroid/support/v4/view/PagerTitleStrip;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/view/ViewGroup;)V
-    .locals 6
+.method public final a(I)V
+    .locals 4
 
     .prologue
-    const/4 v5, 0x1
+    const/4 v0, 0x0
 
-    .line 737
-    sget-object v0, Landroid/support/v4/view/bd;->a:Ljava/lang/reflect/Method;
+    .line 485
+    iget v1, p0, Landroid/support/v4/view/av;->b:I
 
-    if-nez v0, :cond_0
+    if-nez v1, :cond_1
 
-    :try_start_0
-    const-class v0, Landroid/view/ViewGroup;
+    .line 487
+    iget-object v1, p0, Landroid/support/v4/view/av;->a:Landroid/support/v4/view/PagerTitleStrip;
 
-    const-string v1, "setChildrenDrawingOrderEnabled"
+    iget-object v2, p0, Landroid/support/v4/view/av;->a:Landroid/support/v4/view/PagerTitleStrip;
 
-    const/4 v2, 0x1
+    iget-object v2, v2, Landroid/support/v4/view/PagerTitleStrip;->a:Landroid/support/v4/view/ViewPager;
 
-    new-array v2, v2, [Ljava/lang/Class;
+    invoke-virtual {v2}, Landroid/support/v4/view/ViewPager;->getCurrentItem()I
 
-    const/4 v3, 0x0
+    move-result v2
 
-    sget-object v4, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+    iget-object v3, p0, Landroid/support/v4/view/av;->a:Landroid/support/v4/view/PagerTitleStrip;
 
-    aput-object v4, v2, v3
+    iget-object v3, v3, Landroid/support/v4/view/PagerTitleStrip;->a:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-
-    sput-object v0, Landroid/support/v4/view/bd;->a:Ljava/lang/reflect/Method;
-    :try_end_0
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
-    sget-object v0, Landroid/support/v4/view/bd;->a:Ljava/lang/reflect/Method;
-
-    invoke-virtual {v0, v5}, Ljava/lang/reflect/Method;->setAccessible(Z)V
-
-    :cond_0
-    :try_start_1
-    sget-object v0, Landroid/support/v4/view/bd;->a:Ljava/lang/reflect/Method;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {v3}, Landroid/support/v4/view/ViewPager;->getAdapter()Landroid/support/v4/view/as;
 
     move-result-object v3
 
-    aput-object v3, v1, v2
+    invoke-virtual {v1, v2, v3}, Landroid/support/v4/view/PagerTitleStrip;->a(ILandroid/support/v4/view/as;)V
 
-    invoke-virtual {v0, p1, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_1
-    .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_2
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_1 .. :try_end_1} :catch_3
+    .line 489
+    iget-object v1, p0, Landroid/support/v4/view/av;->a:Landroid/support/v4/view/PagerTitleStrip;
 
-    .line 738
-    :goto_1
-    return-void
+    invoke-static {v1}, Landroid/support/v4/view/PagerTitleStrip;->a(Landroid/support/v4/view/PagerTitleStrip;)F
 
-    .line 737
-    :catch_0
-    move-exception v0
+    move-result v1
 
-    const-string v1, "ViewCompat"
+    cmpl-float v1, v1, v0
 
-    const-string v2, "Unable to find childrenDrawingOrderEnabled"
+    if-ltz v1, :cond_0
 
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    iget-object v0, p0, Landroid/support/v4/view/av;->a:Landroid/support/v4/view/PagerTitleStrip;
 
-    goto :goto_0
-
-    :catch_1
-    move-exception v0
-
-    const-string v1, "ViewCompat"
-
-    const-string v2, "Unable to invoke childrenDrawingOrderEnabled"
-
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    goto :goto_1
-
-    :catch_2
-    move-exception v0
-
-    const-string v1, "ViewCompat"
-
-    const-string v2, "Unable to invoke childrenDrawingOrderEnabled"
-
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    goto :goto_1
-
-    :catch_3
-    move-exception v0
-
-    const-string v1, "ViewCompat"
-
-    const-string v2, "Unable to invoke childrenDrawingOrderEnabled"
-
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    goto :goto_1
-.end method
-
-.method public final h(Landroid/view/View;)Z
-    .locals 1
-
-    .prologue
-    .line 732
-    invoke-virtual {p1}, Landroid/view/View;->isOpaque()Z
+    invoke-static {v0}, Landroid/support/v4/view/PagerTitleStrip;->a(Landroid/support/v4/view/PagerTitleStrip;)F
 
     move-result v0
 
-    return v0
+    .line 490
+    :cond_0
+    iget-object v1, p0, Landroid/support/v4/view/av;->a:Landroid/support/v4/view/PagerTitleStrip;
+
+    iget-object v2, p0, Landroid/support/v4/view/av;->a:Landroid/support/v4/view/PagerTitleStrip;
+
+    iget-object v2, v2, Landroid/support/v4/view/PagerTitleStrip;->a:Landroid/support/v4/view/ViewPager;
+
+    invoke-virtual {v2}, Landroid/support/v4/view/ViewPager;->getCurrentItem()I
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v1, v2, v0, v3}, Landroid/support/v4/view/PagerTitleStrip;->a(IFZ)V
+
+    .line 492
+    :cond_1
+    return-void
+.end method
+
+.method public final a(IF)V
+    .locals 2
+
+    .prologue
+    .line 476
+    const/high16 v0, 0x3f000000    # 0.5f
+
+    cmpl-float v0, p2, v0
+
+    if-lez v0, :cond_0
+
+    .line 478
+    add-int/lit8 p1, p1, 0x1
+
+    .line 480
+    :cond_0
+    iget-object v0, p0, Landroid/support/v4/view/av;->a:Landroid/support/v4/view/PagerTitleStrip;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p1, p2, v1}, Landroid/support/v4/view/PagerTitleStrip;->a(IFZ)V
+
+    .line 481
+    return-void
+.end method
+
+.method public final a(Landroid/support/v4/view/as;Landroid/support/v4/view/as;)V
+    .locals 1
+
+    .prologue
+    .line 501
+    iget-object v0, p0, Landroid/support/v4/view/av;->a:Landroid/support/v4/view/PagerTitleStrip;
+
+    invoke-virtual {v0, p1, p2}, Landroid/support/v4/view/PagerTitleStrip;->a(Landroid/support/v4/view/as;Landroid/support/v4/view/as;)V
+
+    .line 502
+    return-void
+.end method
+
+.method public final b(I)V
+    .locals 0
+
+    .prologue
+    .line 496
+    iput p1, p0, Landroid/support/v4/view/av;->b:I
+
+    .line 497
+    return-void
+.end method
+
+.method public final onChanged()V
+    .locals 4
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 506
+    iget-object v1, p0, Landroid/support/v4/view/av;->a:Landroid/support/v4/view/PagerTitleStrip;
+
+    iget-object v2, p0, Landroid/support/v4/view/av;->a:Landroid/support/v4/view/PagerTitleStrip;
+
+    iget-object v2, v2, Landroid/support/v4/view/PagerTitleStrip;->a:Landroid/support/v4/view/ViewPager;
+
+    invoke-virtual {v2}, Landroid/support/v4/view/ViewPager;->getCurrentItem()I
+
+    move-result v2
+
+    iget-object v3, p0, Landroid/support/v4/view/av;->a:Landroid/support/v4/view/PagerTitleStrip;
+
+    iget-object v3, v3, Landroid/support/v4/view/PagerTitleStrip;->a:Landroid/support/v4/view/ViewPager;
+
+    invoke-virtual {v3}, Landroid/support/v4/view/ViewPager;->getAdapter()Landroid/support/v4/view/as;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Landroid/support/v4/view/PagerTitleStrip;->a(ILandroid/support/v4/view/as;)V
+
+    .line 508
+    iget-object v1, p0, Landroid/support/v4/view/av;->a:Landroid/support/v4/view/PagerTitleStrip;
+
+    invoke-static {v1}, Landroid/support/v4/view/PagerTitleStrip;->a(Landroid/support/v4/view/PagerTitleStrip;)F
+
+    move-result v1
+
+    cmpl-float v1, v1, v0
+
+    if-ltz v1, :cond_0
+
+    iget-object v0, p0, Landroid/support/v4/view/av;->a:Landroid/support/v4/view/PagerTitleStrip;
+
+    invoke-static {v0}, Landroid/support/v4/view/PagerTitleStrip;->a(Landroid/support/v4/view/PagerTitleStrip;)F
+
+    move-result v0
+
+    .line 509
+    :cond_0
+    iget-object v1, p0, Landroid/support/v4/view/av;->a:Landroid/support/v4/view/PagerTitleStrip;
+
+    iget-object v2, p0, Landroid/support/v4/view/av;->a:Landroid/support/v4/view/PagerTitleStrip;
+
+    iget-object v2, v2, Landroid/support/v4/view/PagerTitleStrip;->a:Landroid/support/v4/view/ViewPager;
+
+    invoke-virtual {v2}, Landroid/support/v4/view/ViewPager;->getCurrentItem()I
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v1, v2, v0, v3}, Landroid/support/v4/view/PagerTitleStrip;->a(IFZ)V
+
+    .line 510
+    return-void
 .end method

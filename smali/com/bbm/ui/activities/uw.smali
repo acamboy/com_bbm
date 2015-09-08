@@ -1,65 +1,62 @@
-.class final Lcom/bbm/ui/activities/uw;
-.super Ljava/lang/Object;
-.source "InAppUpgradeActivity.java"
-
-# interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
-
-
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/InAppUpgradeActivity;
+.class public final Lcom/bbm/ui/activities/uw;
+.super Lcom/bbm/ui/d/a;
+.source "NFCLifeCycleListener.java"
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/InAppUpgradeActivity;)V
+.method public constructor <init>()V
     .locals 0
 
     .prologue
-    .line 70
-    iput-object p1, p0, Lcom/bbm/ui/activities/uw;->a:Lcom/bbm/ui/activities/InAppUpgradeActivity;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 10
+    invoke-direct {p0}, Lcom/bbm/ui/d/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 4
+.method public final b(Landroid/app/Activity;)V
+    .locals 3
 
     .prologue
-    .line 73
-    iget-object v0, p0, Lcom/bbm/ui/activities/uw;->a:Lcom/bbm/ui/activities/InAppUpgradeActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/InAppUpgradeActivity;->a(Lcom/bbm/ui/activities/InAppUpgradeActivity;)Z
-
-    .line 75
-    invoke-static {}, Lcom/bbm/Alaska;->h()Landroid/content/SharedPreferences;
+    .line 13
+    invoke-virtual {p1}, Landroid/app/Activity;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    const-string v1, "android.hardware.nfc"
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
-    const-string v1, "inapp_upgrade_notification_last_show_timestamp"
+    move-result v0
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    if-nez v0, :cond_1
 
-    move-result-wide v2
-
-    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    .line 79
-    iget-object v0, p0, Lcom/bbm/ui/activities/uw;->a:Lcom/bbm/ui/activities/InAppUpgradeActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/InAppUpgradeActivity;->b(Lcom/bbm/ui/activities/InAppUpgradeActivity;)V
-
-    .line 80
+    .line 22
+    :cond_0
+    :goto_0
     return-void
+
+    .line 16
+    :cond_1
+    invoke-static {p1}, Landroid/nfc/NfcAdapter;->getDefaultAdapter(Landroid/content/Context;)Landroid/nfc/NfcAdapter;
+
+    move-result-object v0
+
+    .line 17
+    if-eqz v0, :cond_0
+
+    .line 21
+    invoke-static {p1}, Lcom/bbm/ui/ed;->b(Landroid/app/Activity;)Lcom/bbm/ui/ed;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    new-array v2, v2, [Landroid/app/Activity;
+
+    invoke-virtual {v0, v1, p1, v2}, Landroid/nfc/NfcAdapter;->setOnNdefPushCompleteCallback(Landroid/nfc/NfcAdapter$OnNdefPushCompleteCallback;Landroid/app/Activity;[Landroid/app/Activity;)V
+
+    goto :goto_0
 .end method

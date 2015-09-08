@@ -27,7 +27,7 @@
     .locals 1
 
     .prologue
-    .line 32
+    .line 30
     new-instance v0, Lcom/google/b/c/bu;
 
     invoke-direct {v0}, Lcom/google/b/c/bu;-><init>()V
@@ -41,7 +41,7 @@
     .locals 0
 
     .prologue
-    .line 71
+    .line 51
     invoke-direct {p0}, Lcom/google/b/c/bv;-><init>()V
 
     return-void
@@ -62,7 +62,7 @@
     .end annotation
 
     .prologue
-    .line 45
+    .line 39
     sget-object v0, Lcom/google/b/c/bw;->a:Lcom/google/b/c/bw;
 
     return-object v0
@@ -72,35 +72,27 @@
     .locals 1
 
     .prologue
-    .line 28
+    .line 26
     check-cast p1, Ljava/lang/Comparable;
 
     check-cast p2, Ljava/lang/Comparable;
 
-    invoke-static {p1}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {p2}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p2}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-ne p1, p2, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-
-    :cond_0
     invoke-interface {p1, p2}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
 
     move-result v0
 
-    goto :goto_0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 68
+    .line 48
     const-string v0, "Ordering.natural()"
 
     return-object v0

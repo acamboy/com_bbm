@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/im;
 .super Ljava/lang/Object;
-.source "ConversationActivity.java"
+.source "EditProfileNameActivity.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/EditProfileNameActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/EditProfileNameActivity;)V
     .locals 0
 
     .prologue
-    .line 3645
-    iput-object p1, p0, Lcom/bbm/ui/activities/im;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 207
+    iput-object p1, p0, Lcom/bbm/ui/activities/im;->a:Lcom/bbm/ui/activities/EditProfileNameActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,17 +25,44 @@
 
 
 # virtual methods
-.method public final run()V
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
     .prologue
-    .line 3648
-    iget-object v0, p0, Lcom/bbm/ui/activities/im;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 210
+    const-string v0, "mEmoticonButton Clicked"
 
-    const/4 v1, 0x2
+    const-class v1, Lcom/bbm/ui/activities/EditProfileNameActivity;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/ConversationActivity;->a(I)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 3649
+    .line 212
+    iget-object v0, p0, Lcom/bbm/ui/activities/im;->a:Lcom/bbm/ui/activities/EditProfileNameActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/EditProfileNameActivity;->f(Lcom/bbm/ui/activities/EditProfileNameActivity;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 213
+    iget-object v0, p0, Lcom/bbm/ui/activities/im;->a:Lcom/bbm/ui/activities/EditProfileNameActivity;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/EditProfileNameActivity;->a(Lcom/bbm/ui/activities/EditProfileNameActivity;Z)V
+
+    .line 217
+    :goto_0
     return-void
+
+    .line 215
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/im;->a:Lcom/bbm/ui/activities/EditProfileNameActivity;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/EditProfileNameActivity;->a(Lcom/bbm/ui/activities/EditProfileNameActivity;Z)V
+
+    goto :goto_0
 .end method

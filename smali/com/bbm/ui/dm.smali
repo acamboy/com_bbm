@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/dm;
 .super Ljava/lang/Object;
-.source "LinkifyTextView.java"
+.source "IncrementalListAdapter.java"
 
 # interfaces
-.implements Lcom/bbm/ui/dq;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/LinkifyTextView;
+.field final synthetic a:Lcom/bbm/ui/dl;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/LinkifyTextView;)V
+.method constructor <init>(Lcom/bbm/ui/dl;)V
     .locals 0
 
     .prologue
-    .line 85
-    iput-object p1, p0, Lcom/bbm/ui/dm;->a:Lcom/bbm/ui/LinkifyTextView;
+    .line 160
+    iput-object p1, p0, Lcom/bbm/ui/dm;->a:Lcom/bbm/ui/dl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,16 +25,57 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/CharSequence;)Landroid/text/Spannable;
-    .locals 1
+.method public final run()V
+    .locals 4
 
     .prologue
-    .line 89
-    iget-object v0, p0, Lcom/bbm/ui/dm;->a:Lcom/bbm/ui/LinkifyTextView;
+    .line 163
+    iget-object v0, p0, Lcom/bbm/ui/dm;->a:Lcom/bbm/ui/dl;
 
-    invoke-static {v0, p1}, Lcom/bbm/ui/LinkifyTextView;->b(Lcom/bbm/ui/LinkifyTextView;Ljava/lang/CharSequence;)Landroid/text/Spannable;
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Lcom/bbm/ui/dl;->b:Z
+
+    .line 164
+    iget-object v0, p0, Lcom/bbm/ui/dm;->a:Lcom/bbm/ui/dl;
+
+    iget-object v0, v0, Lcom/bbm/ui/dl;->g:Lcom/bbm/ui/df;
+
+    invoke-static {v0}, Lcom/bbm/ui/df;->e(Lcom/bbm/ui/df;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 165
+    iget-object v0, p0, Lcom/bbm/ui/dm;->a:Lcom/bbm/ui/dl;
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/dl;->a(F)V
+
+    .line 166
+    iget-object v0, p0, Lcom/bbm/ui/dm;->a:Lcom/bbm/ui/dl;
+
+    iget-object v0, v0, Lcom/bbm/ui/dl;->f:Lcom/google/b/a/l;
+
+    invoke-static {v0}, Lcom/bbm/ui/dl;->b(Lcom/google/b/a/l;)Lcom/bbm/ui/dk;
 
     move-result-object v0
 
-    return-object v0
+    const-wide/16 v2, -0x1
+
+    iput-wide v2, v0, Lcom/bbm/ui/dk;->c:J
+
+    .line 170
+    :goto_0
+    return-void
+
+    .line 169
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/dm;->a:Lcom/bbm/ui/dl;
+
+    invoke-static {v0}, Lcom/bbm/ui/dl;->a(Lcom/bbm/ui/dl;)V
+
+    goto :goto_0
 .end method

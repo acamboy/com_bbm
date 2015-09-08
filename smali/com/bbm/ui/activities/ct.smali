@@ -1,45 +1,25 @@
-.class final Lcom/bbm/ui/activities/ct;
+.class public final Lcom/bbm/ui/activities/ct;
 .super Ljava/lang/Object;
-.source "ChannelOfficeHoursSettingsActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "ChannelReportsActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
+.field a:Lcom/bbm/ui/activities/cv;
+
+.field b:Lcom/bbm/ui/activities/cu;
+
+.field final synthetic c:Lcom/bbm/ui/activities/ChannelReportsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)V
+.method public constructor <init>(Lcom/bbm/ui/activities/ChannelReportsActivity;)V
     .locals 0
 
     .prologue
-    .line 79
-    iput-object p1, p0, Lcom/bbm/ui/activities/ct;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
+    .line 120
+    iput-object p1, p0, Lcom/bbm/ui/activities/ct;->c:Lcom/bbm/ui/activities/ChannelReportsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
-
-    .prologue
-    .line 82
-    iget-object v1, p0, Lcom/bbm/ui/activities/ct;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
-
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/activities/cy;
-
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->a(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;Lcom/bbm/ui/activities/cy;)Lcom/bbm/ui/activities/cy;
-
-    .line 83
     return-void
 .end method

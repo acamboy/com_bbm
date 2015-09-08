@@ -53,7 +53,7 @@
 .end method
 
 .method public final onMapSharedElements(Ljava/util/List;Ljava/util/Map;)V
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -71,16 +71,11 @@
 
     .prologue
     .line 108
-    iget-object v0, p0, Landroid/support/v4/app/e;->a:Landroid/support/v4/app/d;
-
-    invoke-virtual {v0}, Landroid/support/v4/app/d;->d()V
-
-    .line 109
     return-void
 .end method
 
 .method public final onRejectSharedElements(Ljava/util/List;)V
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -93,16 +88,11 @@
 
     .prologue
     .line 103
-    iget-object v0, p0, Landroid/support/v4/app/e;->a:Landroid/support/v4/app/d;
-
-    invoke-virtual {v0}, Landroid/support/v4/app/d;->c()V
-
-    .line 104
     return-void
 .end method
 
 .method public final onSharedElementEnd(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -123,16 +113,11 @@
 
     .prologue
     .line 97
-    iget-object v0, p0, Landroid/support/v4/app/e;->a:Landroid/support/v4/app/d;
-
-    invoke-virtual {v0}, Landroid/support/v4/app/d;->b()V
-
-    .line 99
     return-void
 .end method
 
 .method public final onSharedElementStart(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -153,10 +138,5 @@
 
     .prologue
     .line 90
-    iget-object v0, p0, Landroid/support/v4/app/e;->a:Landroid/support/v4/app/d;
-
-    invoke-virtual {v0}, Landroid/support/v4/app/d;->a()V
-
-    .line 92
     return-void
 .end method

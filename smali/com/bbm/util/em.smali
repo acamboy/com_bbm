@@ -1,22 +1,26 @@
 .class final Lcom/bbm/util/em;
 .super Ljava/lang/Object;
-.source "UpdatesFragmentUtil.java"
+.source "TpaUtil.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/util/el;
+.field final synthetic a:Landroid/content/Context;
+
+.field final synthetic b:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/util/el;)V
+.method constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 711
-    iput-object p1, p0, Lcom/bbm/util/em;->a:Lcom/bbm/util/el;
+    .line 399
+    iput-object p1, p0, Lcom/bbm/util/em;->a:Landroid/content/Context;
+
+    iput-object p2, p0, Lcom/bbm/util/em;->b:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,32 +29,17 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 2
 
     .prologue
-    .line 714
-    invoke-static {}, Lcom/bbm/util/fh;->a()V
+    .line 401
+    iget-object v0, p0, Lcom/bbm/util/em;->a:Landroid/content/Context;
 
-    .line 715
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    iget-object v1, p0, Lcom/bbm/util/em;->b:Ljava/lang/String;
 
-    move-result-object v0
+    invoke-static {v0, v1}, Lcom/bbm/util/eg;->a(Landroid/content/Context;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/bbm/util/em;->a:Lcom/bbm/util/el;
-
-    iget-object v1, v1, Lcom/bbm/util/el;->b:Lcom/bbm/d/ga;
-
-    iget-object v1, v1, Lcom/bbm/d/ga;->b:Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    invoke-static {v1, v2}, Lcom/bbm/d/aa;->a(Ljava/lang/String;Z)Lcom/bbm/d/an;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
-
-    .line 717
+    .line 402
     return-void
 .end method

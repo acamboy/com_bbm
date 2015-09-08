@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="app_store_item_width">50.0dip</dimen>
-    <dimen name="ephemeral_picker_margin">0.0dip</dimen>
-    <dimen name="lobby_chats_message_text_size">12.0sp</dimen>
-    <dimen name="lobby_chats_name_text_size">16.0sp</dimen>
-    <dimen name="store_home_page_app_grid_height">143.0dip</dimen>
-    <dimen name="store_home_page_banner_height">125.0dip</dimen>
-</resources>

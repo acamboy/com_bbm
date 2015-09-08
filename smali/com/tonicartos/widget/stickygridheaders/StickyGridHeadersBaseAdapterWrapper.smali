@@ -657,8 +657,6 @@
     if-ne v1, v2, :cond_1
 
     .line 196
-    iget v1, v0, Lcom/tonicartos/widget/stickygridheaders/c;->a:I
-
     check-cast p2, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper$HeaderFillerView;
 
     if-nez p2, :cond_0

@@ -1,97 +1,56 @@
-.class public Lcom/bbm/util/ew;
-.super Lcom/bbm/d/a/a/a;
-.source "UpdatesFragmentUtil.java"
-
-# interfaces
-.implements Landroid/widget/AbsListView$OnScrollListener;
-
-
-# instance fields
-.field private a:I
-
-.field private b:I
+.class public final Lcom/bbm/util/ew;
+.super Ljava/lang/Object;
+.source "ViewCoordinateUtils.java"
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public static a(IILandroid/view/View;)Z
+    .locals 8
 
     .prologue
-    .line 954
-    invoke-direct {p0}, Lcom/bbm/d/a/a/a;-><init>()V
+    const/4 v7, 0x1
 
-    return-void
-.end method
+    const/4 v6, 0x0
 
-
-# virtual methods
-.method public final a()I
-    .locals 1
-
-    .prologue
-    .line 959
-    invoke-static {p0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/g;)V
-
-    .line 960
-    iget v0, p0, Lcom/bbm/util/ew;->a:I
-
-    return v0
-.end method
-
-.method public final b()I
-    .locals 1
-
-    .prologue
-    .line 964
-    invoke-static {p0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/g;)V
-
-    .line 965
-    iget v0, p0, Lcom/bbm/util/ew;->b:I
-
-    return v0
-.end method
-
-.method public onScroll(Landroid/widget/AbsListView;III)V
-    .locals 2
-
-    .prologue
-    .line 971
+    .line 17
     const/4 v0, 0x2
 
     new-array v0, v0, [I
 
-    .line 972
-    invoke-virtual {p1, v0}, Landroid/widget/AbsListView;->getLocationOnScreen([I)V
+    .line 18
+    invoke-virtual {p2, v0}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 973
-    const/4 v1, 0x1
-
-    aget v0, v0, v1
-
-    iput v0, p0, Lcom/bbm/util/ew;->a:I
-
-    .line 974
-    iget v0, p0, Lcom/bbm/util/ew;->a:I
-
-    invoke-virtual {p1}, Landroid/widget/AbsListView;->getHeight()I
+    .line 20
+    invoke-virtual {p2}, Landroid/view/View;->getWidth()I
 
     move-result v1
 
-    add-int/2addr v0, v1
+    .line 21
+    invoke-virtual {p2}, Landroid/view/View;->getHeight()I
 
-    iput v0, p0, Lcom/bbm/util/ew;->b:I
+    move-result v2
 
-    .line 975
-    invoke-virtual {p0}, Lcom/bbm/util/ew;->c()V
+    .line 23
+    new-instance v3, Landroid/graphics/Rect;
 
-    .line 976
-    return-void
-.end method
+    aget v4, v0, v6
 
-.method public onScrollStateChanged(Landroid/widget/AbsListView;I)V
-    .locals 0
+    aget v5, v0, v7
 
-    .prologue
-    .line 980
-    return-void
+    aget v6, v0, v6
+
+    add-int/2addr v1, v6
+
+    aget v0, v0, v7
+
+    add-int/2addr v0, v2
+
+    invoke-direct {v3, v4, v5, v1, v0}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 26
+    invoke-virtual {v3, p0, p1}, Landroid/graphics/Rect;->contains(II)Z
+
+    move-result v0
+
+    return v0
 .end method

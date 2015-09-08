@@ -1,6 +1,9 @@
 .class final Lcom/bbm/ui/c/gk;
-.super Lcom/bbm/j/k;
-.source "SlideMenuFragment.java"
+.super Ljava/lang/Object;
+.source "StickerDetailsFragment.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -9,55 +12,49 @@
 
 # direct methods
 .method constructor <init>(Lcom/bbm/ui/c/gj;)V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 58
+    .line 931
     iput-object p1, p0, Lcom/bbm/ui/c/gk;->a:Lcom/bbm/ui/c/gj;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
     .prologue
-    .line 63
+    .line 934
     iget-object v0, p0, Lcom/bbm/ui/c/gk;->a:Lcom/bbm/ui/c/gj;
 
-    invoke-static {v0}, Lcom/bbm/ui/c/gj;->b(Lcom/bbm/ui/c/gj;)Landroid/widget/ListView;
+    invoke-virtual {v0}, Lcom/bbm/ui/c/gj;->dismiss()V
+
+    .line 935
+    iget-object v0, p0, Lcom/bbm/ui/c/gk;->a:Lcom/bbm/ui/c/gj;
+
+    iget-object v0, v0, Lcom/bbm/ui/c/gj;->a:Lcom/bbm/ui/c/fx;
+
+    iget-object v1, p0, Lcom/bbm/ui/c/gk;->a:Lcom/bbm/ui/c/gj;
+
+    iget-object v1, v1, Lcom/bbm/ui/c/gj;->a:Lcom/bbm/ui/c/fx;
+
+    invoke-static {v1}, Lcom/bbm/ui/c/fx;->p(Lcom/bbm/ui/c/fx;)Lcom/bbm/l/d/b/aa;
 
     move-result-object v1
 
-    iget-object v0, p0, Lcom/bbm/ui/c/gk;->a:Lcom/bbm/ui/c/gj;
+    const/4 v2, 0x0
 
-    invoke-static {v0}, Lcom/bbm/ui/c/gj;->a(Lcom/bbm/ui/c/gj;)Lcom/bbm/ui/c/gq;
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-virtual {v0}, Lcom/bbm/ui/c/gq;->d()I
+    invoke-static {v0, v1, v2}, Lcom/bbm/ui/c/fx;->a(Lcom/bbm/ui/c/fx;Lcom/bbm/l/d/b/aa;Ljava/lang/Boolean;)V
 
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-virtual {v1, v0}, Landroid/widget/ListView;->setVisibility(I)V
-
-    .line 64
+    .line 936
     return-void
-
-    .line 63
-    :cond_0
-    const/16 v0, 0x8
-
-    goto :goto_0
 .end method

@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/yq;
 .super Ljava/lang/Object;
-.source "NewChannelActivity.java"
+.source "PrivateConversationActivity.java"
 
 # interfaces
-.implements Lcom/bbm/j/s;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/NewChannelActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/NewChannelActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/PrivateConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 178
-    iput-object p1, p0, Lcom/bbm/ui/activities/yq;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+    .line 823
+    iput-object p1, p0, Lcom/bbm/ui/activities/yq;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,89 +25,15 @@
 
 
 # virtual methods
-.method public final a()Z
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
 
     .prologue
-    .line 181
-    iget-object v0, p0, Lcom/bbm/ui/activities/yq;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+    .line 826
+    iget-object v0, p0, Lcom/bbm/ui/activities/yq;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->d(Lcom/bbm/ui/activities/NewChannelActivity;)Lcom/bbm/d/a;
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->t(Lcom/bbm/ui/activities/PrivateConversationActivity;)V
 
-    move-result-object v0
-
-    const-string v1, "channelOwnerProfile"
-
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->E(Ljava/lang/String;)Lcom/bbm/util/bm;
-
-    move-result-object v0
-
-    .line 182
-    iget-object v1, v0, Lcom/bbm/util/bm;->b:Lcom/bbm/util/bi;
-
-    sget-object v2, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
-
-    if-ne v1, v2, :cond_0
-
-    .line 183
-    const/4 v0, 0x0
-
-    .line 195
-    :goto_0
-    return v0
-
-    .line 186
-    :cond_0
-    iget-object v0, v0, Lcom/bbm/util/bm;->a:Lorg/json/JSONObject;
-
-    const-string v1, "value"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    move-result-object v0
-
-    .line 188
-    if-eqz v0, :cond_1
-
-    const-string v1, "name"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 189
-    iget-object v0, p0, Lcom/bbm/ui/activities/yq;->a:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->e(Lcom/bbm/ui/activities/NewChannelActivity;)V
-
-    .line 195
-    :goto_1
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    .line 191
-    :cond_1
-    new-instance v0, Landroid/content/Intent;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/yq;->a:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    const-class v2, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
-
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 193
-    iget-object v1, p0, Lcom/bbm/ui/activities/yq;->a:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    const/4 v2, 0x4
-
-    invoke-virtual {v1, v0, v2}, Lcom/bbm/ui/activities/NewChannelActivity;->startActivityForResult(Landroid/content/Intent;I)V
-
-    goto :goto_1
+    .line 827
+    return-void
 .end method

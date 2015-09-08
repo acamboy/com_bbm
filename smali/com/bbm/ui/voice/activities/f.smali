@@ -1,22 +1,26 @@
 .class final Lcom/bbm/ui/voice/activities/f;
 .super Ljava/lang/Object;
-.source "IncomingCallActivity.java"
+.source "InCallActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/DialogInterface$OnCancelListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/voice/activities/IncomingCallActivity;
+.field final synthetic a:Lcom/bbm/n/a;
+
+.field final synthetic b:Lcom/bbm/ui/voice/activities/InCallActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)V
+.method constructor <init>(Lcom/bbm/ui/voice/activities/InCallActivity;Lcom/bbm/n/a;)V
     .locals 0
 
     .prologue
-    .line 250
-    iput-object p1, p0, Lcom/bbm/ui/voice/activities/f;->a:Lcom/bbm/ui/voice/activities/IncomingCallActivity;
+    .line 397
+    iput-object p1, p0, Lcom/bbm/ui/voice/activities/f;->b:Lcom/bbm/ui/voice/activities/InCallActivity;
+
+    iput-object p2, p0, Lcom/bbm/ui/voice/activities/f;->a:Lcom/bbm/n/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,42 +29,20 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final onCancel(Landroid/content/DialogInterface;)V
+    .locals 1
 
     .prologue
-    .line 253
-    iget-object v0, p0, Lcom/bbm/ui/voice/activities/f;->a:Lcom/bbm/ui/voice/activities/IncomingCallActivity;
+    .line 400
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/f;->a:Lcom/bbm/n/a;
 
-    invoke-static {v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->h(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Lcom/bbm/ui/voice/IncomingCallAnswerBar;
+    invoke-static {v0}, Lcom/bbm/ui/voice/activities/InCallActivity;->a(Lcom/bbm/n/a;)V
 
-    move-result-object v0
+    .line 401
+    iget-object v0, p0, Lcom/bbm/ui/voice/activities/f;->b:Lcom/bbm/ui/voice/activities/InCallActivity;
 
-    iget-boolean v1, v0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->a:Z
+    invoke-virtual {v0}, Lcom/bbm/ui/voice/activities/InCallActivity;->finish()V
 
-    if-nez v1, :cond_0
-
-    iget-boolean v1, v0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->b:Z
-
-    if-nez v1, :cond_0
-
-    iget-boolean v1, v0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->c:Z
-
-    if-nez v1, :cond_0
-
-    iget-object v1, v0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->d:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {v1}, Landroid/animation/AnimatorSet;->cancel()V
-
-    iget-object v1, v0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->e:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {v1}, Landroid/animation/AnimatorSet;->cancel()V
-
-    iget-object v0, v0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->f:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
-
-    .line 254
-    :cond_0
+    .line 402
     return-void
 .end method

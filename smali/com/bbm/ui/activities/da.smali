@@ -1,129 +1,94 @@
-.class final enum Lcom/bbm/ui/activities/da;
-.super Ljava/lang/Enum;
-.source "ChannelOfficeHoursSettingsActivity.java"
+.class final Lcom/bbm/ui/activities/da;
+.super Lcom/bbm/j/u;
+.source "ChannelStatsActivity.java"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum",
-        "<",
-        "Lcom/bbm/ui/activities/da;",
-        ">;"
-    }
-.end annotation
-
-
-# static fields
-.field public static final enum a:Lcom/bbm/ui/activities/da;
-
-.field public static final enum b:Lcom/bbm/ui/activities/da;
-
-.field public static final enum c:Lcom/bbm/ui/activities/da;
-
-.field private static final synthetic d:[Lcom/bbm/ui/activities/da;
+# instance fields
+.field final synthetic a:Lcom/bbm/ui/activities/ChannelStatsActivity;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    .prologue
-    const/4 v4, 0x2
-
-    const/4 v3, 0x1
-
-    const/4 v2, 0x0
-
-    .line 46
-    new-instance v0, Lcom/bbm/ui/activities/da;
-
-    const-string v1, "FROM"
-
-    invoke-direct {v0, v1, v2}, Lcom/bbm/ui/activities/da;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/ui/activities/da;->a:Lcom/bbm/ui/activities/da;
-
-    new-instance v0, Lcom/bbm/ui/activities/da;
-
-    const-string v1, "TO"
-
-    invoke-direct {v0, v1, v3}, Lcom/bbm/ui/activities/da;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/ui/activities/da;->b:Lcom/bbm/ui/activities/da;
-
-    new-instance v0, Lcom/bbm/ui/activities/da;
-
-    const-string v1, "AVAILABLE"
-
-    invoke-direct {v0, v1, v4}, Lcom/bbm/ui/activities/da;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/ui/activities/da;->c:Lcom/bbm/ui/activities/da;
-
-    const/4 v0, 0x3
-
-    new-array v0, v0, [Lcom/bbm/ui/activities/da;
-
-    sget-object v1, Lcom/bbm/ui/activities/da;->a:Lcom/bbm/ui/activities/da;
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lcom/bbm/ui/activities/da;->b:Lcom/bbm/ui/activities/da;
-
-    aput-object v1, v0, v3
-
-    sget-object v1, Lcom/bbm/ui/activities/da;->c:Lcom/bbm/ui/activities/da;
-
-    aput-object v1, v0, v4
-
-    sput-object v0, Lcom/bbm/ui/activities/da;->d:[Lcom/bbm/ui/activities/da;
-
-    return-void
-.end method
-
-.method private constructor <init>(Ljava/lang/String;I)V
+.method constructor <init>(Lcom/bbm/ui/activities/ChannelStatsActivity;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
     .prologue
-    .line 46
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 160
+    iput-object p1, p0, Lcom/bbm/ui/activities/da;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+
+    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcom/bbm/ui/activities/da;
-    .locals 1
+
+# virtual methods
+.method protected final b()Z
+    .locals 4
 
     .prologue
-    .line 46
-    const-class v0, Lcom/bbm/ui/activities/da;
+    .line 163
+    iget-object v0, p0, Lcom/bbm/ui/activities/da;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v1, p0, Lcom/bbm/ui/activities/da;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/ChannelStatsActivity;->d(Lcom/bbm/ui/activities/ChannelStatsActivity;)Lcom/bbm/d/a;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/da;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+
+    invoke-static {v2}, Lcom/bbm/ui/activities/ChannelStatsActivity;->b(Lcom/bbm/ui/activities/ChannelStatsActivity;)Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/bbm/ui/activities/da;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+
+    invoke-static {v3}, Lcom/bbm/ui/activities/ChannelStatsActivity;->c(Lcom/bbm/ui/activities/ChannelStatsActivity;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/bbm/ui/activities/bj;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lcom/bbm/d/a;->U(Ljava/lang/String;)Lcom/bbm/d/fp;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ChannelStatsActivity;->a(Lcom/bbm/ui/activities/ChannelStatsActivity;Lcom/bbm/d/fp;)Lcom/bbm/d/fp;
+
+    .line 164
+    iget-object v0, p0, Lcom/bbm/ui/activities/da;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelStatsActivity;->a(Lcom/bbm/ui/activities/ChannelStatsActivity;)Lcom/bbm/d/fp;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/activities/da;
+    iget-object v0, v0, Lcom/bbm/d/fp;->j:Lcom/bbm/util/bo;
 
-    return-object v0
-.end method
+    sget-object v1, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
 
-.method public static values()[Lcom/bbm/ui/activities/da;
-    .locals 1
+    if-eq v0, v1, :cond_0
 
-    .prologue
-    .line 46
-    sget-object v0, Lcom/bbm/ui/activities/da;->d:[Lcom/bbm/ui/activities/da;
+    .line 166
+    iget-object v0, p0, Lcom/bbm/ui/activities/da;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
 
-    invoke-virtual {v0}, [Lcom/bbm/ui/activities/da;->clone()Ljava/lang/Object;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelStatsActivity;->e(Lcom/bbm/ui/activities/ChannelStatsActivity;)V
 
-    move-result-object v0
+    .line 167
+    iget-object v0, p0, Lcom/bbm/ui/activities/da;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
 
-    check-cast v0, [Lcom/bbm/ui/activities/da;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelStatsActivity;->f(Lcom/bbm/ui/activities/ChannelStatsActivity;)V
 
-    return-object v0
+    .line 168
+    const/4 v0, 0x1
+
+    .line 170
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

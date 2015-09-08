@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 200
+    .line 195
     iput-object p1, p0, Lcom/cropimage/d;->a:Lcom/cropimage/CropImage;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,19 +29,19 @@
     .locals 4
 
     .prologue
-    .line 203
+    .line 198
     const-string v0, "Rotate Right tapped"
 
     const-class v1, Lcom/cropimage/CropImage;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 204
+    .line 199
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
-    .line 205
+    .line 200
     iget-object v1, p0, Lcom/cropimage/d;->a:Lcom/cropimage/CropImage;
 
     invoke-virtual {v1}, Lcom/cropimage/CropImage;->getWindowManager()Landroid/view/WindowManager;
@@ -54,7 +54,7 @@
 
     invoke-virtual {v1, v0}, Landroid/view/Display;->getSize(Landroid/graphics/Point;)V
 
-    .line 206
+    .line 201
     iget-object v1, p0, Lcom/cropimage/d;->a:Lcom/cropimage/CropImage;
 
     iget-object v2, p0, Lcom/cropimage/d;->a:Lcom/cropimage/CropImage;
@@ -63,7 +63,7 @@
 
     move-result-object v2
 
-    const/high16 v3, 0x42b40000
+    const/high16 v3, 0x42b40000    # 90.0f
 
     invoke-static {v2, v0, v3}, Lcom/cropimage/n;->a(Landroid/graphics/Bitmap;Landroid/graphics/Point;F)Landroid/graphics/Bitmap;
 
@@ -71,7 +71,7 @@
 
     invoke-static {v1, v0}, Lcom/cropimage/CropImage;->a(Lcom/cropimage/CropImage;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    .line 207
+    .line 202
     iget-object v0, p0, Lcom/cropimage/d;->a:Lcom/cropimage/CropImage;
 
     invoke-static {v0}, Lcom/cropimage/CropImage;->c(Lcom/cropimage/CropImage;)Lcom/cropimage/CropImageView;
@@ -88,7 +88,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/cropimage/CropImageView;->setImageBitmapResetBase(Landroid/graphics/Bitmap;Z)V
 
-    .line 208
+    .line 203
     iget-object v0, p0, Lcom/cropimage/d;->a:Lcom/cropimage/CropImage;
 
     invoke-static {v0}, Lcom/cropimage/CropImage;->c(Lcom/cropimage/CropImage;)Lcom/cropimage/CropImageView;
@@ -101,11 +101,11 @@
 
     invoke-virtual {v0, v1}, Lcom/cropimage/CropImageView;->a(Lcom/cropimage/g;)V
 
-    .line 209
+    .line 204
     iget-object v0, p0, Lcom/cropimage/d;->a:Lcom/cropimage/CropImage;
 
     invoke-static {v0}, Lcom/cropimage/CropImage;->d(Lcom/cropimage/CropImage;)V
 
-    .line 210
+    .line 205
     return-void
 .end method

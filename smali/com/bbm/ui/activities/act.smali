@@ -1,55 +1,46 @@
 .class final Lcom/bbm/ui/activities/act;
-.super Lcom/bbm/j/k;
-.source "ProfileActivity.java"
+.super Ljava/lang/Object;
+.source "SelectGroupDiscussionActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ProfileActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SelectGroupDiscussionActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ProfileActivity;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/activities/SelectGroupDiscussionActivity;)V
+    .locals 0
 
     .prologue
-    .line 287
-    iput-object p1, p0, Lcom/bbm/ui/activities/act;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    .line 92
+    iput-object p1, p0, Lcom/bbm/ui/activities/act;->a:Lcom/bbm/ui/activities/SelectGroupDiscussionActivity;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
     .prologue
-    .line 290
-    iget-object v0, p0, Lcom/bbm/ui/activities/act;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    .line 95
+    const-string v0, "mButtonToolbar Negative Button Clicked"
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/act;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    const-class v1, Lcom/bbm/ui/activities/SelectGroupDiscussionActivity;
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/ProfileActivity;->c(Lcom/bbm/ui/activities/ProfileActivity;)Lcom/bbm/d/gr;
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    move-result-object v1
+    .line 96
+    iget-object v0, p0, Lcom/bbm/ui/activities/act;->a:Lcom/bbm/ui/activities/SelectGroupDiscussionActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ProfileActivity;->a(Lcom/bbm/ui/activities/ProfileActivity;Lcom/bbm/d/gr;)Lcom/bbm/d/gr;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/SelectGroupDiscussionActivity;->finish()V
 
-    .line 292
-    iget-object v0, p0, Lcom/bbm/ui/activities/act;->a:Lcom/bbm/ui/activities/ProfileActivity;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/act;->a:Lcom/bbm/ui/activities/ProfileActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ProfileActivity;->j(Lcom/bbm/ui/activities/ProfileActivity;)Lcom/bbm/d/gr;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ProfileActivity;->b(Lcom/bbm/ui/activities/ProfileActivity;Lcom/bbm/d/gr;)V
-
-    .line 293
+    .line 97
     return-void
 .end method

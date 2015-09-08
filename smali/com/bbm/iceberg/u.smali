@@ -1,137 +1,89 @@
-.class public final Lcom/bbm/iceberg/u;
-.super Ljava/lang/Object;
-.source "ProgressAmount.java"
+.class final Lcom/bbm/iceberg/u;
+.super Landroid/database/ContentObserver;
+.source "LocalContactList.java"
 
 
 # instance fields
-.field private final a:I
+.field private final a:Landroid/content/ContentResolver;
 
-.field private final b:I
+.field private final b:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Lcom/bbm/iceberg/q;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(II)V
+.method public constructor <init>(Landroid/os/Handler;Lcom/bbm/iceberg/q;Landroid/content/ContentResolver;)V
     .locals 1
 
     .prologue
-    const/4 v0, 0x1
+    .line 83
+    invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 7
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 85
+    new-instance v0, Ljava/lang/ref/WeakReference;
 
-    .line 8
-    if-gtz p2, :cond_0
+    invoke-direct {v0, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    .line 9
-    iput v0, p0, Lcom/bbm/iceberg/u;->a:I
+    iput-object v0, p0, Lcom/bbm/iceberg/u;->b:Ljava/lang/ref/WeakReference;
 
-    .line 10
-    iput v0, p0, Lcom/bbm/iceberg/u;->b:I
+    .line 86
+    iput-object p3, p0, Lcom/bbm/iceberg/u;->a:Landroid/content/ContentResolver;
 
-    .line 15
-    :goto_0
+    .line 87
     return-void
-
-    .line 12
-    :cond_0
-    iput p1, p0, Lcom/bbm/iceberg/u;->a:I
-
-    .line 13
-    iput p2, p0, Lcom/bbm/iceberg/u;->b:I
-
-    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a()V
+    .locals 1
 
     .prologue
-    const/4 v0, 0x1
+    .line 104
+    iget-object v0, p0, Lcom/bbm/iceberg/u;->a:Landroid/content/ContentResolver;
 
-    const/4 v1, 0x0
+    invoke-virtual {v0, p0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 36
-    if-ne p0, p1, :cond_1
-
-    .line 52
-    :cond_0
-    :goto_0
-    return v0
-
-    .line 39
-    :cond_1
-    if-nez p1, :cond_2
-
-    move v0, v1
-
-    .line 40
-    goto :goto_0
-
-    .line 42
-    :cond_2
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_3
-
-    move v0, v1
-
-    .line 43
-    goto :goto_0
-
-    .line 45
-    :cond_3
-    check-cast p1, Lcom/bbm/iceberg/u;
-
-    .line 46
-    iget v2, p0, Lcom/bbm/iceberg/u;->a:I
-
-    iget v3, p1, Lcom/bbm/iceberg/u;->a:I
-
-    if-eq v2, v3, :cond_4
-
-    move v0, v1
-
-    .line 47
-    goto :goto_0
-
-    .line 49
-    :cond_4
-    iget v2, p0, Lcom/bbm/iceberg/u;->b:I
-
-    iget v3, p1, Lcom/bbm/iceberg/u;->b:I
-
-    if-eq v2, v3, :cond_0
-
-    move v0, v1
-
-    .line 50
-    goto :goto_0
+    .line 105
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final onChange(Z)V
+    .locals 1
 
     .prologue
-    .line 27
-    iget v0, p0, Lcom/bbm/iceberg/u;->a:I
+    .line 91
+    invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    add-int/lit8 v0, v0, 0x1f
+    .line 94
+    iget-object v0, p0, Lcom/bbm/iceberg/u;->b:Ljava/lang/ref/WeakReference;
 
-    .line 30
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
-    iget v1, p0, Lcom/bbm/iceberg/u;->b:I
+    move-result-object v0
 
-    add-int/2addr v0, v1
+    check-cast v0, Lcom/bbm/iceberg/q;
 
-    .line 31
-    return v0
+    .line 96
+    if-nez v0, :cond_0
+
+    .line 97
+    invoke-virtual {p0}, Lcom/bbm/iceberg/u;->a()V
+
+    .line 101
+    :goto_0
+    return-void
+
+    .line 99
+    :cond_0
+    invoke-virtual {v0}, Lcom/bbm/iceberg/q;->b()V
+
+    goto :goto_0
 .end method

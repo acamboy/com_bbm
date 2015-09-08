@@ -99,11 +99,11 @@
     .line 597
     iget-object v2, p0, Lcom/mapquest/android/maps/aa;->a:Lcom/mapquest/android/maps/MapView;
 
-    invoke-virtual {v2}, Lcom/mapquest/android/maps/MapView;->getProjection()Lcom/mapquest/android/maps/bq;
+    invoke-virtual {v2}, Lcom/mapquest/android/maps/MapView;->getProjection()Lcom/mapquest/android/maps/bp;
 
     move-result-object v2
 
-    invoke-interface {v2, v0, v1}, Lcom/mapquest/android/maps/bq;->a(II)Lcom/mapquest/android/maps/s;
+    invoke-interface {v2, v0, v1}, Lcom/mapquest/android/maps/bp;->a(II)Lcom/mapquest/android/maps/s;
 
     move-result-object v0
 

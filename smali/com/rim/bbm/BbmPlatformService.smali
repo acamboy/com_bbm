@@ -18,15 +18,21 @@
 
 .field public static final IDS_USER_NO_LONGER_VALID:I = 0x4
 
+.field public static MSDP_MESSAGE_TIMEOUT:I = 0x0
+
+.field public static MSDP_NETWORK_DOWN:I = 0x0
+
+.field public static MSDP_NOT_WHITELISTED:I = 0x0
+
+.field public static MSDP_NO_FAILURE:I = 0x0
+
 .field public static MSDP_STATUS_CONNECTED:I = 0x0
 
 .field public static MSDP_STATUS_DISCONNECTED:I = 0x0
 
 .field public static MSDP_STATUS_UNKNOWN:I = 0x0
 
-.field private static final PLATFORM_WAKEUP_ALARM_ID:I = 0x0
-
-.field private static final WAKE_LOCK_DEFAULT_TIME:I = 0x7d0
+.field private static final WAKE_LOCK_DEFAULT_TIME:I = 0x2
 
 .field private static last_error:I
 
@@ -62,68 +68,75 @@
 
 .field private static registerIntentOnBbidLogin:Z
 
-.field private static releasePowerWakeLock:Ljava/lang/Runnable;
-
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 5
 
     .prologue
-    const/4 v3, 0x1
+    const/4 v4, 0x1
+
+    const/4 v3, -0x1
 
     const/4 v2, 0x0
 
     const/4 v1, 0x0
 
-    .line 24
-    const/4 v0, -0x1
-
-    sput v0, Lcom/rim/bbm/BbmPlatformService;->MSDP_STATUS_DISCONNECTED:I
-
     .line 25
-    sput v2, Lcom/rim/bbm/BbmPlatformService;->MSDP_STATUS_CONNECTED:I
+    sput v3, Lcom/rim/bbm/BbmPlatformService;->MSDP_STATUS_DISCONNECTED:I
 
     .line 26
-    sput v3, Lcom/rim/bbm/BbmPlatformService;->MSDP_STATUS_UNKNOWN:I
+    sput v2, Lcom/rim/bbm/BbmPlatformService;->MSDP_STATUS_CONNECTED:I
+
+    .line 27
+    sput v4, Lcom/rim/bbm/BbmPlatformService;->MSDP_STATUS_UNKNOWN:I
+
+    .line 30
+    const/4 v0, -0x3
+
+    sput v0, Lcom/rim/bbm/BbmPlatformService;->MSDP_NOT_WHITELISTED:I
+
+    .line 31
+    const/4 v0, -0x2
+
+    sput v0, Lcom/rim/bbm/BbmPlatformService;->MSDP_NETWORK_DOWN:I
+
+    .line 32
+    sput v3, Lcom/rim/bbm/BbmPlatformService;->MSDP_MESSAGE_TIMEOUT:I
 
     .line 33
+    sput v2, Lcom/rim/bbm/BbmPlatformService;->MSDP_NO_FAILURE:I
+
+    .line 39
     sput-boolean v2, Lcom/rim/bbm/BbmPlatformService;->mConnected:Z
 
-    .line 36
-    sput-boolean v3, Lcom/rim/bbm/BbmPlatformService;->registerIntentOnBbidLogin:Z
+    .line 42
+    sput-boolean v4, Lcom/rim/bbm/BbmPlatformService;->registerIntentOnBbidLogin:Z
 
-    .line 44
+    .line 50
     sput-object v1, Lcom/rim/bbm/BbmPlatformService;->mPin:Ljava/lang/String;
 
-    .line 45
+    .line 51
     sput-object v1, Lcom/rim/bbm/BbmPlatformService;->mToken:Ljava/lang/String;
 
-    .line 46
+    .line 52
     sput-object v1, Lcom/rim/bbm/BbmPlatformService;->mSecret:Ljava/lang/String;
 
-    .line 47
+    .line 53
     sput-object v1, Lcom/rim/bbm/BbmPlatformService;->mEcoid:Ljava/lang/String;
 
-    .line 48
+    .line 54
     sput-object v1, Lcom/rim/bbm/BbmPlatformService;->mBbid:Ljava/lang/String;
 
-    .line 52
+    .line 58
     sput v2, Lcom/rim/bbm/BbmPlatformService;->last_error:I
 
-    .line 646
+    .line 649
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     sput-object v0, Lcom/rim/bbm/BbmPlatformService;->mHandler:Landroid/os/Handler;
-
-    .line 1006
-    new-instance v0, Lcom/rim/bbm/BbmPlatformService$8;
-
-    invoke-direct {v0}, Lcom/rim/bbm/BbmPlatformService$8;-><init>()V
-
-    sput-object v0, Lcom/rim/bbm/BbmPlatformService;->releasePowerWakeLock:Ljava/lang/Runnable;
 
     return-void
 .end method
@@ -132,10 +145,10 @@
     .locals 0
 
     .prologue
-    .line 54
+    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
+    .line 63
     return-void
 .end method
 
@@ -209,21 +222,31 @@
     return-object v0
 .end method
 
+.method static synthetic access$502(Landroid/os/PowerManager$WakeLock;)Landroid/os/PowerManager$WakeLock;
+    .locals 0
+
+    .prologue
+    .line 21
+    sput-object p0, Lcom/rim/bbm/BbmPlatformService;->mPowerLock:Landroid/os/PowerManager$WakeLock;
+
+    return-object p0
+.end method
+
 .method private static cancelAlarm(Ljava/lang/String;)V
     .locals 3
 
     .prologue
-    .line 942
+    .line 945
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p0}, Lcom/rim/bbm/BbmPlatformService;->getPendingIntent(Landroid/content/Context;Ljava/lang/String;)Landroid/app/PendingIntent;
 
     move-result-object v1
 
-    .line 943
+    .line 946
     if-eqz v1, :cond_0
 
-    .line 944
+    .line 947
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mContext:Landroid/content/Context;
 
     const-string v2, "alarm"
@@ -236,13 +259,13 @@
 
     check-cast v0, Landroid/app/AlarmManager;
 
-    .line 945
+    .line 948
     invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 946
+    .line 949
     invoke-virtual {v1}, Landroid/app/PendingIntent;->cancel()V
 
-    .line 948
+    .line 951
     :cond_0
     return-void
 .end method
@@ -251,7 +274,7 @@
     .locals 1
 
     .prologue
-    .line 575
+    .line 572
     invoke-static {}, Lcom/rim/bbm/BbmPlatformService;->ids_clear_identity()I
 
     move-result v0
@@ -263,7 +286,7 @@
     .locals 1
 
     .prologue
-    .line 873
+    .line 876
     new-instance v0, Lcom/rim/bbm/BbmPlatformService$5;
 
     invoke-direct {v0}, Lcom/rim/bbm/BbmPlatformService$5;-><init>()V
@@ -275,7 +298,7 @@
     .locals 1
 
     .prologue
-    .line 955
+    .line 958
     new-instance v0, Lcom/rim/bbm/BbmPlatformService$7;
 
     invoke-direct {v0}, Lcom/rim/bbm/BbmPlatformService$7;-><init>()V
@@ -287,7 +310,7 @@
     .locals 1
 
     .prologue
-    .line 908
+    .line 911
     new-instance v0, Lcom/rim/bbm/BbmPlatformService$6;
 
     invoke-direct {v0}, Lcom/rim/bbm/BbmPlatformService$6;-><init>()V
@@ -301,115 +324,115 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 215
+    .line 221
     new-instance v0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;
 
     invoke-direct {v0}, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;-><init>()V
 
-    .line 216
+    .line 222
     invoke-static {v0}, Lcom/rim/bbm/BbmPlatformService;->get_bbid_properties_state(Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;)I
 
     move-result v1
 
-    .line 218
+    .line 224
     iget-object v2, v0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->countrycode:Ljava/lang/String;
 
     if-nez v2, :cond_0
 
-    .line 219
+    .line 225
     const-string v2, ""
 
     iput-object v2, v0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->countrycode:Ljava/lang/String;
 
-    .line 221
+    .line 227
     :cond_0
     iget-object v2, v0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->dateofbirth:Ljava/lang/String;
 
     if-nez v2, :cond_1
 
-    .line 222
+    .line 228
     const-string v2, ""
 
     iput-object v2, v0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->dateofbirth:Ljava/lang/String;
 
-    .line 224
+    .line 230
     :cond_1
     iget-object v2, v0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->ecoid:Ljava/lang/String;
 
     if-nez v2, :cond_2
 
-    .line 225
+    .line 231
     const-string v2, ""
 
     iput-object v2, v0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->ecoid:Ljava/lang/String;
 
-    .line 227
+    .line 233
     :cond_2
     iget-object v2, v0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->email:Ljava/lang/String;
 
     if-nez v2, :cond_3
 
-    .line 228
+    .line 234
     const-string v2, ""
 
     iput-object v2, v0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->email:Ljava/lang/String;
 
-    .line 230
+    .line 236
     :cond_3
     iget-object v2, v0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->firstname:Ljava/lang/String;
 
     if-nez v2, :cond_4
 
-    .line 231
+    .line 237
     const-string v2, ""
 
     iput-object v2, v0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->firstname:Ljava/lang/String;
 
-    .line 233
+    .line 239
     :cond_4
     iget-object v2, v0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->lastname:Ljava/lang/String;
 
     if-nez v2, :cond_5
 
-    .line 234
+    .line 240
     const-string v2, ""
 
     iput-object v2, v0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->lastname:Ljava/lang/String;
 
-    .line 236
+    .line 242
     :cond_5
     iget-object v2, v0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->screenname:Ljava/lang/String;
 
     if-nez v2, :cond_6
 
-    .line 237
+    .line 243
     const-string v2, ""
 
     iput-object v2, v0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->screenname:Ljava/lang/String;
 
-    .line 239
+    .line 245
     :cond_6
     iget-object v2, v0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->swguid:Ljava/lang/String;
 
     if-nez v2, :cond_7
 
-    .line 240
+    .line 246
     const-string v2, ""
 
     iput-object v2, v0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->swguid:Ljava/lang/String;
 
-    .line 242
+    .line 248
     :cond_7
     iget-object v2, v0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->username:Ljava/lang/String;
 
     if-nez v2, :cond_8
 
-    .line 243
+    .line 249
     const-string v2, ""
 
     iput-object v2, v0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->username:Ljava/lang/String;
 
-    .line 245
+    .line 251
     :cond_8
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -431,7 +454,7 @@
 
     invoke-static {v2, v3}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 246
+    .line 252
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "get_bbid_properties_state dateofbirth ->"
@@ -452,7 +475,7 @@
 
     invoke-static {v2, v3}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 247
+    .line 253
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "get_bbid_properties_state ecoid ->"
@@ -473,7 +496,7 @@
 
     invoke-static {v2, v3}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 248
+    .line 254
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "get_bbid_properties_state email ->"
@@ -494,7 +517,7 @@
 
     invoke-static {v2, v3}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 249
+    .line 255
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "get_bbid_properties_state firstname ->"
@@ -515,7 +538,7 @@
 
     invoke-static {v2, v3}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 250
+    .line 256
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "get_bbid_properties_state lastname ->"
@@ -536,7 +559,7 @@
 
     invoke-static {v2, v3}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 251
+    .line 257
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "get_bbid_properties_state screenname ->"
@@ -557,7 +580,7 @@
 
     invoke-static {v2, v3}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 252
+    .line 258
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "get_bbid_properties_state swguid ->"
@@ -578,7 +601,7 @@
 
     invoke-static {v2, v3}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 253
+    .line 259
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "get_bbid_properties_state username ->"
@@ -599,7 +622,7 @@
 
     invoke-static {v2, v3}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 254
+    .line 260
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "get_bbid_properties_state rc ->"
@@ -618,39 +641,39 @@
 
     invoke-static {v2, v3}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 256
+    .line 262
     if-nez v1, :cond_a
 
-    .line 257
+    .line 263
     sget-object v1, Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;->GET_SUCCESS:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
     iput-object v1, v0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->getter_state:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
-    .line 264
+    .line 270
     :cond_9
     :goto_0
     return-object v0
 
-    .line 258
+    .line 264
     :cond_a
     const/4 v2, 0x1
 
     if-ne v1, v2, :cond_b
 
-    .line 259
+    .line 265
     sget-object v1, Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;->GET_PENDING:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
     iput-object v1, v0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->getter_state:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
     goto :goto_0
 
-    .line 260
+    .line 266
     :cond_b
     const/4 v2, 0x2
 
     if-ne v1, v2, :cond_9
 
-    .line 261
+    .line 267
     sget-object v1, Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;->GET_FAILURE:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
     iput-object v1, v0, Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;->getter_state:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
@@ -664,38 +687,38 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 179
+    .line 185
     new-instance v0, Lcom/rim/bbm/BbmPlatformService$BbmTokenState;
 
     invoke-direct {v0}, Lcom/rim/bbm/BbmPlatformService$BbmTokenState;-><init>()V
 
-    .line 180
+    .line 186
     invoke-static {v0}, Lcom/rim/bbm/BbmPlatformService;->get_bbm_token_state(Lcom/rim/bbm/BbmPlatformService$BbmTokenState;)I
 
     move-result v1
 
-    .line 182
+    .line 188
     iget-object v2, v0, Lcom/rim/bbm/BbmPlatformService$BbmTokenState;->secret:Ljava/lang/String;
 
     if-nez v2, :cond_0
 
-    .line 183
+    .line 189
     const-string v2, ""
 
     iput-object v2, v0, Lcom/rim/bbm/BbmPlatformService$BbmTokenState;->secret:Ljava/lang/String;
 
-    .line 185
+    .line 191
     :cond_0
     iget-object v2, v0, Lcom/rim/bbm/BbmPlatformService$BbmTokenState;->value:Ljava/lang/String;
 
     if-nez v2, :cond_1
 
-    .line 186
+    .line 192
     const-string v2, ""
 
     iput-object v2, v0, Lcom/rim/bbm/BbmPlatformService$BbmTokenState;->value:Ljava/lang/String;
 
-    .line 189
+    .line 195
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -717,7 +740,7 @@
 
     invoke-static {v2, v3}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 190
+    .line 196
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "get_bbm_token_state value ->"
@@ -738,7 +761,7 @@
 
     invoke-static {v2, v3}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 191
+    .line 197
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "get_bbm_token_state state ->"
@@ -757,39 +780,39 @@
 
     invoke-static {v2, v3}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 193
+    .line 199
     if-nez v1, :cond_3
 
-    .line 194
+    .line 200
     sget-object v1, Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;->GET_SUCCESS:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
     iput-object v1, v0, Lcom/rim/bbm/BbmPlatformService$BbmTokenState;->getter_state:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
-    .line 201
+    .line 207
     :cond_2
     :goto_0
     return-object v0
 
-    .line 195
+    .line 201
     :cond_3
     const/4 v2, 0x1
 
     if-ne v1, v2, :cond_4
 
-    .line 196
+    .line 202
     sget-object v1, Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;->GET_PENDING:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
     iput-object v1, v0, Lcom/rim/bbm/BbmPlatformService$BbmTokenState;->getter_state:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
     goto :goto_0
 
-    .line 197
+    .line 203
     :cond_4
     const/4 v2, 0x2
 
     if-ne v1, v2, :cond_2
 
-    .line 198
+    .line 204
     sget-object v1, Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;->GET_FAILURE:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
     iput-object v1, v0, Lcom/rim/bbm/BbmPlatformService$BbmTokenState;->getter_state:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
@@ -801,15 +824,15 @@
     .locals 3
 
     .prologue
-    .line 124
+    .line 130
     new-instance v0, Lcom/rim/bbm/BbmPlatformService$ConnectionStatus;
 
     invoke-direct {v0}, Lcom/rim/bbm/BbmPlatformService$ConnectionStatus;-><init>()V
 
-    .line 125
+    .line 131
     invoke-static {v0}, Lcom/rim/bbm/BbmPlatformService;->get_connection_status(Lcom/rim/bbm/BbmPlatformService$ConnectionStatus;)V
 
-    .line 127
+    .line 133
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "getConnectionStatus status -> "
@@ -832,7 +855,7 @@
 
     invoke-static {v1, v2}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 129
+    .line 135
     return-object v0
 .end method
 
@@ -840,19 +863,19 @@
     .locals 1
 
     .prologue
-    .line 60
+    .line 66
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mInstance:Lcom/rim/bbm/BbmPlatformService;
 
     if-nez v0, :cond_0
 
-    .line 61
+    .line 67
     new-instance v0, Lcom/rim/bbm/BbmPlatformService;
 
     invoke-direct {v0}, Lcom/rim/bbm/BbmPlatformService;-><init>()V
 
     sput-object v0, Lcom/rim/bbm/BbmPlatformService;->mInstance:Lcom/rim/bbm/BbmPlatformService;
 
-    .line 63
+    .line 69
     :cond_0
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mInstance:Lcom/rim/bbm/BbmPlatformService;
 
@@ -863,14 +886,14 @@
     .locals 3
 
     .prologue
-    .line 987
+    .line 990
     const/16 v0, 0x8a5
 
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const/high16 v2, 0x40000000
+    const/high16 v2, 0x40000000    # 2.0f
 
     invoke-static {p0, v0, v1, v2}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
@@ -885,27 +908,27 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 147
+    .line 153
     new-instance v0, Lcom/rim/bbm/BbmPlatformService$PinState;
 
     invoke-direct {v0}, Lcom/rim/bbm/BbmPlatformService$PinState;-><init>()V
 
-    .line 148
+    .line 154
     invoke-static {v0}, Lcom/rim/bbm/BbmPlatformService;->get_pin_state(Lcom/rim/bbm/BbmPlatformService$PinState;)I
 
     move-result v1
 
-    .line 150
+    .line 156
     iget-object v2, v0, Lcom/rim/bbm/BbmPlatformService$PinState;->pin:Ljava/lang/String;
 
     if-nez v2, :cond_0
 
-    .line 151
+    .line 157
     const-string v2, ""
 
     iput-object v2, v0, Lcom/rim/bbm/BbmPlatformService$PinState;->pin:Ljava/lang/String;
 
-    .line 154
+    .line 160
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -925,7 +948,7 @@
 
     invoke-static {v2, v3}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 155
+    .line 161
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "get_pin_state pin -> "
@@ -946,39 +969,39 @@
 
     invoke-static {v2, v3}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 157
+    .line 163
     if-nez v1, :cond_2
 
-    .line 158
+    .line 164
     sget-object v1, Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;->GET_SUCCESS:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
     iput-object v1, v0, Lcom/rim/bbm/BbmPlatformService$PinState;->getter_state:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
-    .line 165
+    .line 171
     :cond_1
     :goto_0
     return-object v0
 
-    .line 159
+    .line 165
     :cond_2
     const/4 v2, 0x1
 
     if-ne v1, v2, :cond_3
 
-    .line 160
+    .line 166
     sget-object v1, Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;->GET_PENDING:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
     iput-object v1, v0, Lcom/rim/bbm/BbmPlatformService$PinState;->getter_state:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
     goto :goto_0
 
-    .line 161
+    .line 167
     :cond_3
     const/4 v2, 0x2
 
     if-ne v1, v2, :cond_1
 
-    .line 162
+    .line 168
     sget-object v1, Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;->GET_FAILURE:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
     iput-object v1, v0, Lcom/rim/bbm/BbmPlatformService$PinState;->getter_state:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
@@ -990,17 +1013,17 @@
     .locals 4
 
     .prologue
-    .line 462
+    .line 459
     new-instance v0, Lcom/rim/bbm/BbmPlatformService$PlatformIdsErrorState;
 
     invoke-direct {v0}, Lcom/rim/bbm/BbmPlatformService$PlatformIdsErrorState;-><init>()V
 
-    .line 463
+    .line 460
     invoke-static {}, Lcom/rim/bbm/BbmPlatformService;->ids_get_last_result()I
 
     move-result v1
 
-    .line 464
+    .line 461
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "get_last_ids_result: "
@@ -1021,10 +1044,10 @@
 
     invoke-static {v2, v3}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 465
+    .line 462
     iput v1, v0, Lcom/rim/bbm/BbmPlatformService$PlatformIdsErrorState;->ids_error:I
 
-    .line 466
+    .line 463
     return-object v0
 .end method
 
@@ -1074,12 +1097,12 @@
     .locals 2
 
     .prologue
-    .line 806
+    .line 809
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mPlatformDelegate:Lcom/rim/bbm/BbmPlatformService$PlatformDelegate;
 
     if-eqz v0, :cond_0
 
-    .line 807
+    .line 810
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/rim/bbm/BbmPlatformService$4;
@@ -1088,54 +1111,42 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 820
+    .line 823
     :cond_0
     return-void
-.end method
-
-.method public static onTimerExpired(I)J
-    .locals 2
-
-    .prologue
-    .line 801
-    invoke-static {p0}, Lcom/rim/bbm/BbmPlatformService;->on_timer_expired(I)J
-
-    move-result-wide v0
-
-    return-wide v0
 .end method
 
 .method public static onUpdateBbidProperties(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)V
     .locals 12
 
     .prologue
-    .line 742
+    .line 745
     sget v1, Lcom/rim/bbm/BbmPlatformService;->last_error:I
 
     move/from16 v0, p8
 
     if-eq v0, v1, :cond_0
 
-    .line 743
+    .line 746
     sput p8, Lcom/rim/bbm/BbmPlatformService;->last_error:I
 
-    .line 744
+    .line 747
     sget-object v1, Lcom/rim/bbm/BbmPlatformService;->mIDSDelegate:Lcom/rim/bbm/BbmPlatformService$IDSDelegate;
 
     invoke-interface {v1}, Lcom/rim/bbm/BbmPlatformService$IDSDelegate;->onIdsErrorStateChange()V
 
-    .line 745
+    .line 748
     const/4 v1, -0x1
 
     move/from16 v0, p8
 
     if-eq v0, v1, :cond_0
 
-    .line 780
+    .line 783
     :goto_0
     return-void
 
-    .line 750
+    .line 753
     :cond_0
     if-eqz p1, :cond_1
 
@@ -1147,16 +1158,16 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 751
+    .line 754
     sput-object p1, Lcom/rim/bbm/BbmPlatformService;->mEcoid:Ljava/lang/String;
 
-    .line 752
+    .line 755
     sput-object p0, Lcom/rim/bbm/BbmPlatformService;->mBbid:Ljava/lang/String;
 
-    .line 753
+    .line 756
     invoke-static {}, Lcom/rim/bbm/BbmPlatformService;->registerBradcastReceiversIfLoggedInForTheFirstTime()V
 
-    .line 756
+    .line 759
     :cond_1
     sget-object v11, Lcom/rim/bbm/BbmPlatformService;->mHandler:Landroid/os/Handler;
 
@@ -1193,27 +1204,27 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 696
+    .line 699
     sget v0, Lcom/rim/bbm/BbmPlatformService;->last_error:I
 
     if-eq p3, v0, :cond_0
 
-    .line 697
+    .line 700
     sput p3, Lcom/rim/bbm/BbmPlatformService;->last_error:I
 
-    .line 698
+    .line 701
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mIDSDelegate:Lcom/rim/bbm/BbmPlatformService$IDSDelegate;
 
     invoke-interface {v0}, Lcom/rim/bbm/BbmPlatformService$IDSDelegate;->onIdsErrorStateChange()V
 
-    .line 699
+    .line 702
     if-eq p3, v1, :cond_0
 
-    .line 728
+    .line 731
     :goto_0
     return-void
 
-    .line 704
+    .line 707
     :cond_0
     if-eqz p0, :cond_1
 
@@ -1221,16 +1232,16 @@
 
     if-ne p3, v1, :cond_1
 
-    .line 705
+    .line 708
     sput-object p0, Lcom/rim/bbm/BbmPlatformService;->mToken:Ljava/lang/String;
 
-    .line 706
+    .line 709
     sput-object p2, Lcom/rim/bbm/BbmPlatformService;->mSecret:Ljava/lang/String;
 
-    .line 707
+    .line 710
     invoke-static {}, Lcom/rim/bbm/BbmPlatformService;->registerBradcastReceiversIfLoggedInForTheFirstTime()V
 
-    .line 710
+    .line 713
     :cond_1
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mHandler:Landroid/os/Handler;
 
@@ -1249,39 +1260,39 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 655
+    .line 658
     sget v0, Lcom/rim/bbm/BbmPlatformService;->last_error:I
 
     if-eq p2, v0, :cond_0
 
-    .line 656
+    .line 659
     sput p2, Lcom/rim/bbm/BbmPlatformService;->last_error:I
 
-    .line 657
+    .line 660
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mIDSDelegate:Lcom/rim/bbm/BbmPlatformService$IDSDelegate;
 
     invoke-interface {v0}, Lcom/rim/bbm/BbmPlatformService$IDSDelegate;->onIdsErrorStateChange()V
 
-    .line 658
+    .line 661
     if-eq p2, v1, :cond_0
 
-    .line 686
+    .line 689
     :goto_0
     return-void
 
-    .line 663
+    .line 666
     :cond_0
     if-eqz p0, :cond_1
 
     if-ne p2, v1, :cond_1
 
-    .line 664
+    .line 667
     sput-object p0, Lcom/rim/bbm/BbmPlatformService;->mPin:Ljava/lang/String;
 
-    .line 665
+    .line 668
     invoke-static {}, Lcom/rim/bbm/BbmPlatformService;->registerBradcastReceiversIfLoggedInForTheFirstTime()V
 
-    .line 668
+    .line 671
     :cond_1
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mHandler:Landroid/os/Handler;
 
@@ -1294,57 +1305,27 @@
     goto :goto_0
 .end method
 
-.method private static native on_timer_expired(I)J
-.end method
-
 .method public static powerWakeLockAcquire()V
-    .locals 4
+    .locals 1
 
     .prologue
-    .line 996
-    sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mPowerLock:Landroid/os/PowerManager$WakeLock;
+    .line 998
+    const/4 v0, 0x2
 
-    if-nez v0, :cond_0
+    invoke-static {v0}, Lcom/rim/bbm/BbmPlatformService$PlatformWakeLock;->acquireWakelock(I)V
 
-    .line 997
-    const-string v0, "Power Wake Lock is not initialized  Cannot acquire."
-
-    const/4 v1, 0x0
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 1002
-    :goto_0
+    .line 999
     return-void
-
-    .line 1000
-    :cond_0
-    sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mPowerLock:Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
-
-    .line 1001
-    sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mHandler:Landroid/os/Handler;
-
-    sget-object v1, Lcom/rim/bbm/BbmPlatformService;->releasePowerWakeLock:Ljava/lang/Runnable;
-
-    const-wide/16 v2, 0x7d0
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    goto :goto_0
 .end method
 
 .method public static refreshProperties()V
     .locals 0
 
     .prologue
-    .line 584
+    .line 581
     invoke-static {}, Lcom/rim/bbm/BbmPlatformService;->ids_refresh_properties()V
 
-    .line 585
+    .line 582
     return-void
 .end method
 
@@ -1354,7 +1335,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 784
+    .line 787
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mPin:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -1375,27 +1356,27 @@
 
     if-eqz v0, :cond_0
 
-    .line 786
+    .line 789
     const-string v0, "Registering bradcast receivers for the first time"
 
     new-array v1, v2, [Ljava/lang/Object;
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 793
+    .line 796
     sget-boolean v0, Lcom/rim/bbm/BbmPlatformService;->registerIntentOnBbidLogin:Z
 
     if-eqz v0, :cond_0
 
-    .line 794
+    .line 797
     sput-boolean v2, Lcom/rim/bbm/BbmPlatformService;->registerIntentOnBbidLogin:Z
 
-    .line 795
+    .line 798
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/rim/bbm/BbmPlatformService;->registerBroadcastReceivers(Landroid/content/Context;)V
 
-    .line 798
+    .line 801
     :cond_0
     return-void
 .end method
@@ -1404,14 +1385,14 @@
     .locals 1
 
     .prologue
-    .line 951
+    .line 954
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0, p2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p0, p1, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 952
+    .line 955
     return-void
 .end method
 
@@ -1419,7 +1400,7 @@
     .locals 2
 
     .prologue
-    .line 823
+    .line 826
     const-string v0, "Registering broadcast receivers for platform KA"
 
     const/4 v1, 0x0
@@ -1428,47 +1409,47 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 824
+    .line 827
     invoke-static {}, Lcom/rim/bbm/BbmPlatformService;->createScreenBroadcastReceiver()Landroid/content/BroadcastReceiver;
 
     move-result-object v0
 
     sput-object v0, Lcom/rim/bbm/BbmPlatformService;->mScreenActionBR:Landroid/content/BroadcastReceiver;
 
-    .line 825
+    .line 828
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mScreenActionBR:Landroid/content/BroadcastReceiver;
 
     invoke-static {p0, v0}, Lcom/rim/bbm/BbmPlatformService;->registerScreenBroadcastReceiver(Landroid/content/Context;Landroid/content/BroadcastReceiver;)V
 
-    .line 826
+    .line 829
     invoke-static {}, Lcom/rim/bbm/BbmPlatformService;->createPlatformWakeUpAlarmReceiver()Landroid/content/BroadcastReceiver;
 
     move-result-object v0
 
     sput-object v0, Lcom/rim/bbm/BbmPlatformService;->mPlatformWakeUpBR:Landroid/content/BroadcastReceiver;
 
-    .line 827
+    .line 830
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mPlatformWakeUpBR:Landroid/content/BroadcastReceiver;
 
     const-string v1, "com.rim.bbm.ACTION_PLATFORM_WAKEUP_ALARM"
 
     invoke-static {p0, v0, v1}, Lcom/rim/bbm/BbmPlatformService;->registerBroadcastReceiver(Landroid/content/Context;Landroid/content/BroadcastReceiver;Ljava/lang/String;)V
 
-    .line 828
+    .line 831
     invoke-static {}, Lcom/rim/bbm/BbmPlatformService;->createNetworkBroadcastReceiver()Landroid/content/BroadcastReceiver;
 
     move-result-object v0
 
     sput-object v0, Lcom/rim/bbm/BbmPlatformService;->mNetworkBR:Landroid/content/BroadcastReceiver;
 
-    .line 829
+    .line 832
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mNetworkBR:Landroid/content/BroadcastReceiver;
 
     const-string v1, "android.net.conn.CONNECTIVITY_CHANGE"
 
     invoke-static {p0, v0, v1}, Lcom/rim/bbm/BbmPlatformService;->registerNetworkBroadcastReceiver(Landroid/content/Context;Landroid/content/BroadcastReceiver;Ljava/lang/String;)V
 
-    .line 830
+    .line 833
     return-void
 .end method
 
@@ -1476,14 +1457,14 @@
     .locals 1
 
     .prologue
-    .line 904
+    .line 907
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0, p2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p0, p1, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 905
+    .line 908
     return-void
 .end method
 
@@ -1491,7 +1472,7 @@
     .locals 2
 
     .prologue
-    .line 937
+    .line 940
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "android.intent.action.SCREEN_ON"
@@ -1500,7 +1481,7 @@
 
     invoke-virtual {p0, p1, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 938
+    .line 941
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "android.intent.action.SCREEN_OFF"
@@ -1509,7 +1490,7 @@
 
     invoke-virtual {p0, p1, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 939
+    .line 942
     return-void
 .end method
 
@@ -1517,7 +1498,7 @@
     .locals 6
 
     .prologue
-    .line 975
+    .line 978
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "Scheduling timer "
@@ -1554,7 +1535,7 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 976
+    .line 979
     const-wide/16 v0, 0x0
 
     cmp-long v0, p0, v0
@@ -1563,17 +1544,17 @@
 
     if-eqz p2, :cond_0
 
-    .line 977
+    .line 980
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p2}, Lcom/rim/bbm/BbmPlatformService;->getPendingIntent(Landroid/content/Context;Ljava/lang/String;)Landroid/app/PendingIntent;
 
     move-result-object v1
 
-    .line 978
+    .line 981
     if-eqz v1, :cond_0
 
-    .line 979
+    .line 982
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mContext:Landroid/content/Context;
 
     const-string v2, "alarm"
@@ -1586,7 +1567,7 @@
 
     check-cast v0, Landroid/app/AlarmManager;
 
-    .line 980
+    .line 983
     const/4 v2, 0x2
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -1597,20 +1578,38 @@
 
     invoke-virtual {v0, v2, v4, v5, v1}, Landroid/app/AlarmManager;->set(IJLandroid/app/PendingIntent;)V
 
-    .line 984
+    .line 987
     :cond_0
     return-void
+.end method
+
+.method public static sendKeepAlive()J
+    .locals 2
+
+    .prologue
+    .line 804
+    invoke-static {}, Lcom/rim/bbm/BbmPlatformService;->send_keep_alive()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method private static native send_keep_alive()J
 .end method
 
 .method public static setPlatformDelegate(Lcom/rim/bbm/BbmPlatformService$PlatformDelegate;)V
     .locals 0
 
     .prologue
-    .line 133
+    .line 139
     sput-object p0, Lcom/rim/bbm/BbmPlatformService;->mPlatformDelegate:Lcom/rim/bbm/BbmPlatformService$PlatformDelegate;
 
-    .line 134
+    .line 140
     return-void
+.end method
+
+.method public static native setPushToken(Ljava/lang/String;)V
 .end method
 
 .method public static native set_network_interface(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -1623,30 +1622,30 @@
     .locals 1
 
     .prologue
-    .line 532
+    .line 529
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mContext:Landroid/content/Context;
 
     if-eqz v0, :cond_0
 
-    .line 533
+    .line 530
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/blackberry/ids/IDS;->init(Landroid/content/Context;)V
 
-    .line 534
+    .line 531
     sput-object p0, Lcom/rim/bbm/BbmPlatformService;->mIDSDelegate:Lcom/rim/bbm/BbmPlatformService$IDSDelegate;
 
-    .line 535
+    .line 532
     invoke-static {}, Lcom/rim/bbm/BbmPlatformService;->ids_register()V
 
-    .line 536
+    .line 533
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/rim/bbm/BbmPlatformService;->ids_start(Landroid/content/Context;)I
 
     move-result v0
 
-    .line 538
+    .line 535
     :goto_0
     return v0
 
@@ -1660,12 +1659,12 @@
     .locals 2
 
     .prologue
-    .line 555
+    .line 552
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mContext:Landroid/content/Context;
 
     if-eqz v0, :cond_0
 
-    .line 556
+    .line 553
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "ecosystem from UI :: "
@@ -1686,25 +1685,25 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 557
+    .line 554
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p1}, Lcom/blackberry/ids/IDS;->init_with_ecosystem(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 558
+    .line 555
     sput-object p0, Lcom/rim/bbm/BbmPlatformService;->mIDSDelegate:Lcom/rim/bbm/BbmPlatformService$IDSDelegate;
 
-    .line 559
+    .line 556
     invoke-static {}, Lcom/rim/bbm/BbmPlatformService;->ids_register()V
 
-    .line 560
+    .line 557
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/rim/bbm/BbmPlatformService;->ids_start(Landroid/content/Context;)I
 
     move-result v0
 
-    .line 562
+    .line 559
     :goto_0
     return v0
 
@@ -1718,12 +1717,12 @@
     .locals 1
 
     .prologue
-    .line 78
+    .line 84
     const/4 v0, 0x0
 
     invoke-static {p0, p1, p2, p3, v0}, Lcom/rim/bbm/BbmPlatformService;->startPlatform(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 79
+    .line 85
     return-void
 .end method
 
@@ -1733,18 +1732,16 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 95
+    .line 101
     sput-object p0, Lcom/rim/bbm/BbmPlatformService;->mContext:Landroid/content/Context;
 
-    .line 98
+    .line 104
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mPowerLock:Landroid/os/PowerManager$WakeLock;
 
     if-nez v0, :cond_0
 
-    .line 99
+    .line 105
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mContext:Landroid/content/Context;
-
-    sget-object v1, Lcom/rim/bbm/BbmPlatformService;->mContext:Landroid/content/Context;
 
     const-string v1, "power"
 
@@ -1754,19 +1751,19 @@
 
     check-cast v0, Landroid/os/PowerManager;
 
-    .line 100
+    .line 106
     const-string v1, "BbmPlatform"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
     move-result-object v0
 
-    .line 101
+    .line 107
     sput-object v0, Lcom/rim/bbm/BbmPlatformService;->mPowerLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0, v2}, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
 
-    .line 104
+    .line 110
     :cond_0
     sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
@@ -1788,7 +1785,7 @@
 
     invoke-static/range {v0 .. v8}, Lcom/rim/bbm/BbmPlatformService;->msdp_start(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 113
+    .line 119
     return-void
 .end method
 
@@ -1796,43 +1793,10 @@
     .locals 2
 
     .prologue
-    .line 273
-    sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mHandler:Landroid/os/Handler;
-
-    sget-object v1, Lcom/rim/bbm/BbmPlatformService;->releasePowerWakeLock:Ljava/lang/Runnable;
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    .line 277
-    sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mPowerLock:Landroid/os/PowerManager$WakeLock;
-
-    if-eqz v0, :cond_1
-
-    .line 279
-    :goto_0
-    sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mPowerLock:Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
     .line 280
-    sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mPowerLock:Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
-
-    goto :goto_0
+    invoke-static {}, Lcom/rim/bbm/BbmPlatformService$PlatformWakeLock;->destroyAllWakelocks()V
 
     .line 282
-    :cond_0
-    const/4 v0, 0x0
-
-    sput-object v0, Lcom/rim/bbm/BbmPlatformService;->mPowerLock:Landroid/os/PowerManager$WakeLock;
-
-    .line 285
-    :cond_1
     const-string v0, "Cancelling timer because platform is being shutdown"
 
     const/4 v1, 0x0
@@ -1841,20 +1805,20 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->i(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 286
+    .line 283
     const-string v0, "com.rim.bbm.ACTION_PLATFORM_WAKEUP_ALARM"
 
     invoke-static {v0}, Lcom/rim/bbm/BbmPlatformService;->cancelAlarm(Ljava/lang/String;)V
 
-    .line 287
+    .line 284
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/rim/bbm/BbmPlatformService;->unregisterBroadcastReceivers(Landroid/content/Context;)V
 
-    .line 288
+    .line 285
     invoke-static {}, Lcom/rim/bbm/BbmPlatformService;->msdp_stop()V
 
-    .line 289
+    .line 286
     return-void
 .end method
 
@@ -1862,16 +1826,16 @@
     .locals 0
 
     .prologue
-    .line 833
+    .line 836
     invoke-static {p0}, Lcom/rim/bbm/BbmPlatformService;->unregisterScreenBroadcastReceiver(Landroid/content/Context;)V
 
-    .line 834
+    .line 837
     invoke-static {p0}, Lcom/rim/bbm/BbmPlatformService;->unregisterPlatformWakeUpBroacastReceiver(Landroid/content/Context;)V
 
-    .line 836
+    .line 839
     invoke-static {p0}, Lcom/rim/bbm/BbmPlatformService;->unregisterNetworkBroadcastReceiver(Landroid/content/Context;)V
 
-    .line 837
+    .line 840
     return-void
 .end method
 
@@ -1879,30 +1843,30 @@
     .locals 2
 
     .prologue
-    .line 863
+    .line 866
     :try_start_0
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mNetworkBR:Landroid/content/BroadcastReceiver;
 
     if-eqz v0, :cond_0
 
-    .line 864
+    .line 867
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mNetworkBR:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 865
+    .line 868
     const/4 v0, 0x0
 
     sput-object v0, Lcom/rim/bbm/BbmPlatformService;->mNetworkBR:Landroid/content/BroadcastReceiver;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 870
+    .line 873
     :cond_0
     :goto_0
     return-void
 
-    .line 868
+    .line 871
     :catch_0
     move-exception v0
 
@@ -1921,30 +1885,30 @@
     .locals 2
 
     .prologue
-    .line 841
+    .line 844
     :try_start_0
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mPlatformWakeUpBR:Landroid/content/BroadcastReceiver;
 
     if-eqz v0, :cond_0
 
-    .line 842
+    .line 845
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mPlatformWakeUpBR:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 843
+    .line 846
     const/4 v0, 0x0
 
     sput-object v0, Lcom/rim/bbm/BbmPlatformService;->mPlatformWakeUpBR:Landroid/content/BroadcastReceiver;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 848
+    .line 851
     :cond_0
     :goto_0
     return-void
 
-    .line 846
+    .line 849
     :catch_0
     move-exception v0
 
@@ -1963,30 +1927,30 @@
     .locals 2
 
     .prologue
-    .line 852
+    .line 855
     :try_start_0
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mScreenActionBR:Landroid/content/BroadcastReceiver;
 
     if-eqz v0, :cond_0
 
-    .line 853
+    .line 856
     sget-object v0, Lcom/rim/bbm/BbmPlatformService;->mScreenActionBR:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 854
+    .line 857
     const/4 v0, 0x0
 
     sput-object v0, Lcom/rim/bbm/BbmPlatformService;->mScreenActionBR:Landroid/content/BroadcastReceiver;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 859
+    .line 862
     :cond_0
     :goto_0
     return-void
 
-    .line 857
+    .line 860
     :catch_0
     move-exception v0
 

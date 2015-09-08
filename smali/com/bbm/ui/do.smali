@@ -1,76 +1,58 @@
 .class final Lcom/bbm/ui/do;
-.super Landroid/text/style/ClickableSpan;
-.source "LinkifyTextView.java"
+.super Landroid/text/Editable$Factory;
+.source "InlineImageEditText.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/LinkifyTextView;
-
-.field private final b:Landroid/text/style/ClickableSpan;
+.field final synthetic a:Lcom/bbm/ui/InlineImageEditText;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/LinkifyTextView;Landroid/text/style/ClickableSpan;)V
+.method constructor <init>(Lcom/bbm/ui/InlineImageEditText;)V
     .locals 0
 
     .prologue
-    .line 208
-    iput-object p1, p0, Lcom/bbm/ui/do;->a:Lcom/bbm/ui/LinkifyTextView;
+    .line 42
+    iput-object p1, p0, Lcom/bbm/ui/do;->a:Lcom/bbm/ui/InlineImageEditText;
 
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
+    invoke-direct {p0}, Landroid/text/Editable$Factory;-><init>()V
 
-    .line 209
-    iput-object p2, p0, Lcom/bbm/ui/do;->b:Landroid/text/style/ClickableSpan;
-
-    .line 210
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
+.method public final newEditable(Ljava/lang/CharSequence;)Landroid/text/Editable;
+    .locals 4
 
     .prologue
-    .line 216
-    iget-object v0, p0, Lcom/bbm/ui/do;->a:Lcom/bbm/ui/LinkifyTextView;
+    .line 45
+    iget-object v0, p0, Lcom/bbm/ui/do;->a:Lcom/bbm/ui/InlineImageEditText;
 
-    invoke-static {v0}, Lcom/bbm/ui/LinkifyTextView;->b(Lcom/bbm/ui/LinkifyTextView;)Z
+    invoke-virtual {v0}, Lcom/bbm/ui/InlineImageEditText;->getContext()Landroid/content/Context;
 
-    move-result v0
+    move-result-object v0
 
-    if-nez v0, :cond_0
+    invoke-static {v0}, Lcom/bbm/util/d/c;->a(Landroid/content/Context;)Lcom/bbm/util/d/c;
 
-    .line 217
-    iget-object v0, p0, Lcom/bbm/ui/do;->b:Landroid/text/style/ClickableSpan;
+    move-result-object v0
 
-    invoke-virtual {v0, p1}, Landroid/text/style/ClickableSpan;->onClick(Landroid/view/View;)V
+    .line 46
+    new-instance v1, Lcom/bbm/ui/dp;
 
-    .line 221
-    :goto_0
-    return-void
+    iget-object v2, p0, Lcom/bbm/ui/do;->a:Lcom/bbm/ui/InlineImageEditText;
 
-    .line 219
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/do;->a:Lcom/bbm/ui/LinkifyTextView;
+    iget-object v3, p0, Lcom/bbm/ui/do;->a:Lcom/bbm/ui/InlineImageEditText;
 
-    invoke-static {v0}, Lcom/bbm/ui/LinkifyTextView;->c(Lcom/bbm/ui/LinkifyTextView;)Z
+    invoke-virtual {v3}, Lcom/bbm/ui/InlineImageEditText;->getTextSize()F
 
-    goto :goto_0
-.end method
+    move-result v3
 
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 1
+    invoke-virtual {v0, p1, v3}, Lcom/bbm/util/d/c;->a(Ljava/lang/CharSequence;F)Landroid/text/Spannable;
 
-    .prologue
-    .line 225
-    invoke-super {p0, p1}, Landroid/text/style/ClickableSpan;->updateDrawState(Landroid/text/TextPaint;)V
+    move-result-object v0
 
-    .line 226
-    const/4 v0, 0x0
+    invoke-direct {v1, v2, v0}, Lcom/bbm/ui/dp;-><init>(Lcom/bbm/ui/InlineImageEditText;Ljava/lang/CharSequence;)V
 
-    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setUnderlineText(Z)V
-
-    .line 227
-    return-void
+    return-object v1
 .end method

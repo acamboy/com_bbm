@@ -1,66 +1,76 @@
-.class final Lcom/bbm/ui/voice/a;
-.super Landroid/animation/AnimatorListenerAdapter;
-.source "IncomingCallAnswerBar.java"
+.class public final Lcom/bbm/ui/voice/a;
+.super Lcom/bbm/ui/d/a;
+.source "VolumeControlLifeCycleListener.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
+.field a:I
+
+.field b:Landroid/app/Activity;
+
+.field private final c:Lcom/bbm/j/k;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .prologue
-    .line 271
-    iput-object p1, p0, Lcom/bbm/ui/voice/a;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
+    .line 17
+    invoke-direct {p0}, Lcom/bbm/ui/d/a;-><init>()V
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    .line 22
+    new-instance v0, Lcom/bbm/ui/voice/b;
+
+    invoke-direct {v0, p0}, Lcom/bbm/ui/voice/b;-><init>(Lcom/bbm/ui/voice/a;)V
+
+    iput-object v0, p0, Lcom/bbm/ui/voice/a;->c:Lcom/bbm/j/k;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
+.method public final a()V
     .locals 1
 
     .prologue
-    .line 274
-    iget-object v0, p0, Lcom/bbm/ui/voice/a;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
+    .line 47
+    iget-object v0, p0, Lcom/bbm/ui/voice/a;->c:Lcom/bbm/j/k;
 
-    invoke-static {v0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->a(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Z
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
 
-    move-result v0
+    .line 48
+    return-void
+.end method
 
-    if-nez v0, :cond_0
+.method public final a(Landroid/app/Activity;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/bbm/ui/voice/a;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
+    .prologue
+    .line 41
+    iput-object p1, p0, Lcom/bbm/ui/voice/a;->b:Landroid/app/Activity;
 
-    invoke-static {v0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->b(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/ui/voice/a;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
-
-    invoke-static {v0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->c(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Z
+    .line 42
+    invoke-virtual {p1}, Landroid/app/Activity;->getVolumeControlStream()I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    iput v0, p0, Lcom/bbm/ui/voice/a;->a:I
 
-    .line 275
-    iget-object v0, p0, Lcom/bbm/ui/voice/a;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
+    .line 43
+    return-void
+.end method
 
-    invoke-static {v0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->d(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Landroid/animation/AnimatorSet;
+.method public final b(Landroid/app/Activity;)V
+    .locals 1
 
-    move-result-object v0
+    .prologue
+    .line 52
+    iget-object v0, p0, Lcom/bbm/ui/voice/a;->c:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 277
-    :cond_0
+    .line 53
     return-void
 .end method

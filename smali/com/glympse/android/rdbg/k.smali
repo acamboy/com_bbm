@@ -10,15 +10,15 @@
 # instance fields
 .field private _glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-.field private bD:Z
+.field private bG:Z
 
-.field private qO:Lcom/glympse/android/lib/PersistentChannel;
+.field private rD:Lcom/glympse/android/lib/PersistentChannel;
 
-.field private vg:I
+.field private vW:I
 
-.field private vh:Z
+.field private vX:Z
 
-.field private vi:Lcom/glympse/android/rdbg/GRemoteDebugListener;
+.field private vY:Lcom/glympse/android/rdbg/GRemoteDebugListener;
 
 
 # direct methods
@@ -32,7 +32,7 @@
     .line 35
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/glympse/android/rdbg/k;->bD:Z
+    iput-boolean v0, p0, Lcom/glympse/android/rdbg/k;->bG:Z
 
     .line 36
     return-void
@@ -52,7 +52,7 @@
     move-result-object v0
 
     .line 290
-    invoke-static {v0}, Lcom/glympse/android/rdbg/b;->k(Lcom/glympse/android/core/GPrimitive;)Lcom/glympse/android/core/GPrimitive;
+    invoke-static {v0}, Lcom/glympse/android/rdbg/b;->p(Lcom/glympse/android/core/GPrimitive;)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v0
 
@@ -62,7 +62,7 @@
     move-result-object v0
 
     .line 294
-    iget-object v1, p0, Lcom/glympse/android/rdbg/k;->qO:Lcom/glympse/android/lib/PersistentChannel;
+    iget-object v1, p0, Lcom/glympse/android/rdbg/k;->rD:Lcom/glympse/android/lib/PersistentChannel;
 
     invoke-virtual {v1, v0}, Lcom/glympse/android/lib/PersistentChannel;->send(Ljava/lang/String;)V
 
@@ -84,7 +84,7 @@
     move-result-object v0
 
     .line 300
-    invoke-static {v0}, Lcom/glympse/android/rdbg/b;->k(Lcom/glympse/android/core/GPrimitive;)Lcom/glympse/android/core/GPrimitive;
+    invoke-static {v0}, Lcom/glympse/android/rdbg/b;->p(Lcom/glympse/android/core/GPrimitive;)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v0
 
@@ -94,7 +94,7 @@
     move-result-object v0
 
     .line 304
-    iget-object v1, p0, Lcom/glympse/android/rdbg/k;->qO:Lcom/glympse/android/lib/PersistentChannel;
+    iget-object v1, p0, Lcom/glympse/android/rdbg/k;->rD:Lcom/glympse/android/lib/PersistentChannel;
 
     invoke-virtual {v1, v0}, Lcom/glympse/android/lib/PersistentChannel;->send(Ljava/lang/String;)V
 
@@ -111,12 +111,12 @@
     .line 116
     iget-object v0, p0, Lcom/glympse/android/rdbg/k;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-    invoke-static {v0}, Lcom/glympse/android/rdbg/f;->j(Lcom/glympse/android/lib/GGlympsePrivate;)Lcom/glympse/android/core/GPrimitive;
+    invoke-static {v0}, Lcom/glympse/android/rdbg/f;->i(Lcom/glympse/android/lib/GGlympsePrivate;)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v0
 
     .line 117
-    invoke-static {v0}, Lcom/glympse/android/rdbg/g;->l(Lcom/glympse/android/core/GPrimitive;)Lcom/glympse/android/core/GPrimitive;
+    invoke-static {v0}, Lcom/glympse/android/rdbg/g;->q(Lcom/glympse/android/core/GPrimitive;)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v0
 
@@ -126,22 +126,22 @@
     move-result-object v0
 
     .line 121
-    iget-object v1, p0, Lcom/glympse/android/rdbg/k;->qO:Lcom/glympse/android/lib/PersistentChannel;
+    iget-object v1, p0, Lcom/glympse/android/rdbg/k;->rD:Lcom/glympse/android/lib/PersistentChannel;
 
     invoke-virtual {v1, v0}, Lcom/glympse/android/lib/PersistentChannel;->send(Ljava/lang/String;)V
 
     .line 122
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/glympse/android/rdbg/k;->bD:Z
+    iput-boolean v0, p0, Lcom/glympse/android/rdbg/k;->bG:Z
 
     .line 123
-    iget-object v0, p0, Lcom/glympse/android/rdbg/k;->vi:Lcom/glympse/android/rdbg/GRemoteDebugListener;
+    iget-object v0, p0, Lcom/glympse/android/rdbg/k;->vY:Lcom/glympse/android/rdbg/GRemoteDebugListener;
 
     if-eqz v0, :cond_0
 
     .line 125
-    iget-object v0, p0, Lcom/glympse/android/rdbg/k;->vi:Lcom/glympse/android/rdbg/GRemoteDebugListener;
+    iget-object v0, p0, Lcom/glympse/android/rdbg/k;->vY:Lcom/glympse/android/rdbg/GRemoteDebugListener;
 
     invoke-interface {v0}, Lcom/glympse/android/rdbg/GRemoteDebugListener;->connected()V
 
@@ -157,15 +157,15 @@
     .line 131
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/glympse/android/rdbg/k;->bD:Z
+    iput-boolean v0, p0, Lcom/glympse/android/rdbg/k;->bG:Z
 
     .line 132
-    iget-object v0, p0, Lcom/glympse/android/rdbg/k;->vi:Lcom/glympse/android/rdbg/GRemoteDebugListener;
+    iget-object v0, p0, Lcom/glympse/android/rdbg/k;->vY:Lcom/glympse/android/rdbg/GRemoteDebugListener;
 
     if-eqz v0, :cond_0
 
     .line 134
-    iget-object v0, p0, Lcom/glympse/android/rdbg/k;->vi:Lcom/glympse/android/rdbg/GRemoteDebugListener;
+    iget-object v0, p0, Lcom/glympse/android/rdbg/k;->vY:Lcom/glympse/android/rdbg/GRemoteDebugListener;
 
     invoke-interface {v0}, Lcom/glympse/android/rdbg/GRemoteDebugListener;->disconnected()V
 
@@ -183,7 +183,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/glympse/android/rdbg/k;->qO:Lcom/glympse/android/lib/PersistentChannel;
+    iget-object v0, p0, Lcom/glympse/android/rdbg/k;->rD:Lcom/glympse/android/lib/PersistentChannel;
 
     if-nez v0, :cond_1
 
@@ -231,7 +231,7 @@
 
     .line 273
     :cond_3
-    iget-boolean v0, p0, Lcom/glympse/android/rdbg/k;->vh:Z
+    iget-boolean v0, p0, Lcom/glympse/android/rdbg/k;->vX:Z
 
     if-eqz v0, :cond_0
 
@@ -241,7 +241,7 @@
     move-result-object v0
 
     .line 276
-    invoke-static {v0}, Lcom/glympse/android/rdbg/b;->k(Lcom/glympse/android/core/GPrimitive;)Lcom/glympse/android/core/GPrimitive;
+    invoke-static {v0}, Lcom/glympse/android/rdbg/b;->p(Lcom/glympse/android/core/GPrimitive;)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v0
 
@@ -251,7 +251,7 @@
     move-result-object v0
 
     .line 279
-    iget-object v1, p0, Lcom/glympse/android/rdbg/k;->qO:Lcom/glympse/android/lib/PersistentChannel;
+    iget-object v1, p0, Lcom/glympse/android/rdbg/k;->rD:Lcom/glympse/android/lib/PersistentChannel;
 
     invoke-virtual {v1, v0}, Lcom/glympse/android/lib/PersistentChannel;->send(Ljava/lang/String;)V
 
@@ -263,12 +263,12 @@
 
     .prologue
     .line 140
-    iget-object v0, p0, Lcom/glympse/android/rdbg/k;->vi:Lcom/glympse/android/rdbg/GRemoteDebugListener;
+    iget-object v0, p0, Lcom/glympse/android/rdbg/k;->vY:Lcom/glympse/android/rdbg/GRemoteDebugListener;
 
     if-eqz v0, :cond_0
 
     .line 142
-    iget-object v0, p0, Lcom/glympse/android/rdbg/k;->vi:Lcom/glympse/android/rdbg/GRemoteDebugListener;
+    iget-object v0, p0, Lcom/glympse/android/rdbg/k;->vY:Lcom/glympse/android/rdbg/GRemoteDebugListener;
 
     invoke-interface {v0}, Lcom/glympse/android/rdbg/GRemoteDebugListener;->failed()V
 
@@ -282,7 +282,7 @@
 
     .prologue
     .line 85
-    iget-boolean v0, p0, Lcom/glympse/android/rdbg/k;->bD:Z
+    iget-boolean v0, p0, Lcom/glympse/android/rdbg/k;->bG:Z
 
     return v0
 .end method
@@ -292,7 +292,7 @@
 
     .prologue
     .line 100
-    iget v0, p0, Lcom/glympse/android/rdbg/k;->vg:I
+    iget v0, p0, Lcom/glympse/android/rdbg/k;->vW:I
 
     if-lt p1, v0, :cond_1
 
@@ -307,7 +307,7 @@
     move-result-object v0
 
     .line 104
-    invoke-static {v0}, Lcom/glympse/android/rdbg/b;->k(Lcom/glympse/android/core/GPrimitive;)Lcom/glympse/android/core/GPrimitive;
+    invoke-static {v0}, Lcom/glympse/android/rdbg/b;->p(Lcom/glympse/android/core/GPrimitive;)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v0
 
@@ -317,7 +317,7 @@
     move-result-object v0
 
     .line 107
-    iget-object v1, p0, Lcom/glympse/android/rdbg/k;->qO:Lcom/glympse/android/lib/PersistentChannel;
+    iget-object v1, p0, Lcom/glympse/android/rdbg/k;->rD:Lcom/glympse/android/lib/PersistentChannel;
 
     invoke-virtual {v1, v0}, Lcom/glympse/android/lib/PersistentChannel;->send(Ljava/lang/String;)V
 
@@ -339,7 +339,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/glympse/android/rdbg/k;->qO:Lcom/glympse/android/lib/PersistentChannel;
+    iget-object v0, p0, Lcom/glympse/android/rdbg/k;->rD:Lcom/glympse/android/lib/PersistentChannel;
 
     if-eqz v0, :cond_0
 
@@ -576,7 +576,7 @@
     if-eqz v2, :cond_6
 
     .line 190
-    invoke-static {}, Lcom/glympse/android/rdbg/d;->dl()Lcom/glympse/android/core/GPrimitive;
+    invoke-static {}, Lcom/glympse/android/rdbg/d;->dp()Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v0
 
@@ -761,7 +761,7 @@
 
     .prologue
     .line 95
-    iput-boolean p1, p0, Lcom/glympse/android/rdbg/k;->vh:Z
+    iput-boolean p1, p0, Lcom/glympse/android/rdbg/k;->vX:Z
 
     .line 96
     return-void
@@ -772,7 +772,7 @@
 
     .prologue
     .line 90
-    iput p1, p0, Lcom/glympse/android/rdbg/k;->vg:I
+    iput p1, p0, Lcom/glympse/android/rdbg/k;->vW:I
 
     .line 91
     return-void
@@ -783,7 +783,7 @@
 
     .prologue
     .line 80
-    iput-object p1, p0, Lcom/glympse/android/rdbg/k;->vi:Lcom/glympse/android/rdbg/GRemoteDebugListener;
+    iput-object p1, p0, Lcom/glympse/android/rdbg/k;->vY:Lcom/glympse/android/rdbg/GRemoteDebugListener;
 
     .line 81
     return-void
@@ -806,12 +806,12 @@
     :cond_0
     const/4 v0, 0x7
 
-    iput v0, p0, Lcom/glympse/android/rdbg/k;->vg:I
+    iput v0, p0, Lcom/glympse/android/rdbg/k;->vW:I
 
     .line 49
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/glympse/android/rdbg/k;->vh:Z
+    iput-boolean v0, p0, Lcom/glympse/android/rdbg/k;->vX:Z
 
     .line 51
     new-instance v0, Lcom/glympse/android/lib/PersistentChannel;
@@ -822,10 +822,10 @@
 
     invoke-direct {v0, v1}, Lcom/glympse/android/lib/PersistentChannel;-><init>(Lcom/glympse/android/core/GHandler;)V
 
-    iput-object v0, p0, Lcom/glympse/android/rdbg/k;->qO:Lcom/glympse/android/lib/PersistentChannel;
+    iput-object v0, p0, Lcom/glympse/android/rdbg/k;->rD:Lcom/glympse/android/lib/PersistentChannel;
 
     .line 52
-    iget-object v1, p0, Lcom/glympse/android/rdbg/k;->qO:Lcom/glympse/android/lib/PersistentChannel;
+    iget-object v1, p0, Lcom/glympse/android/rdbg/k;->rD:Lcom/glympse/android/lib/PersistentChannel;
 
     invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -863,7 +863,7 @@
     .line 60
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/glympse/android/rdbg/k;->bD:Z
+    iput-boolean v0, p0, Lcom/glympse/android/rdbg/k;->bG:Z
 
     .line 61
     iget-object v0, p0, Lcom/glympse/android/rdbg/k;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
@@ -890,12 +890,12 @@
     iput-object v2, p0, Lcom/glympse/android/rdbg/k;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
     .line 69
-    iget-object v0, p0, Lcom/glympse/android/rdbg/k;->qO:Lcom/glympse/android/lib/PersistentChannel;
+    iget-object v0, p0, Lcom/glympse/android/rdbg/k;->rD:Lcom/glympse/android/lib/PersistentChannel;
 
     invoke-virtual {v0}, Lcom/glympse/android/lib/PersistentChannel;->close()V
 
     .line 70
-    iput-object v2, p0, Lcom/glympse/android/rdbg/k;->qO:Lcom/glympse/android/lib/PersistentChannel;
+    iput-object v2, p0, Lcom/glympse/android/rdbg/k;->rD:Lcom/glympse/android/lib/PersistentChannel;
 
     goto :goto_0
 .end method

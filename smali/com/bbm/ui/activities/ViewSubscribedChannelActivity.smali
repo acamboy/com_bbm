@@ -1,12 +1,12 @@
 .class public Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;
-.super Lcom/bbm/ui/activities/ajm;
+.super Lcom/bbm/ui/activities/agg;
 .source "ViewSubscribedChannelActivity.java"
 
 
 # instance fields
-.field private final j:Lcom/bbm/j/u;
+.field private final i:Lcom/bbm/j/u;
 
-.field private final k:Lcom/bbm/j/k;
+.field private final j:Lcom/bbm/j/k;
 
 
 # direct methods
@@ -14,222 +14,33 @@
     .locals 1
 
     .prologue
-    .line 29
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ajm;-><init>()V
+    .line 22
+    invoke-direct {p0}, Lcom/bbm/ui/activities/agg;-><init>()V
 
-    .line 34
-    new-instance v0, Lcom/bbm/ui/activities/akt;
+    .line 28
+    new-instance v0, Lcom/bbm/ui/activities/ahw;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/akt;-><init>(Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/ahw;-><init>(Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->j:Lcom/bbm/j/u;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->i:Lcom/bbm/j/u;
 
-    .line 47
-    new-instance v0, Lcom/bbm/ui/activities/aku;
+    .line 42
+    new-instance v0, Lcom/bbm/ui/activities/ahx;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/aku;-><init>(Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/ahx;-><init>(Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->k:Lcom/bbm/j/k;
-
-    return-void
-.end method
-
-.method static synthetic a(Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;)V
-    .locals 2
-
-    .prologue
-    .line 29
-    iget-object v0, p0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
-
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
-
-    new-instance v0, Lcom/bbm/ui/activities/aky;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/aky;-><init>(Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;)V
-
-    invoke-static {v0}, Lcom/bbm/j/u;->a(Lcom/bbm/j/s;)V
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->j:Lcom/bbm/j/k;
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a(I)V
-    .locals 2
-
-    .prologue
-    .line 169
-    packed-switch p1, :pswitch_data_0
-
-    .line 175
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/ajm;->a(I)V
-
-    .line 178
-    :goto_0
-    return-void
-
-    .line 171
-    :pswitch_0
-    iget-object v0, p0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
-
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
-
-    .line 172
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->j:Lcom/bbm/j/u;
-
-    invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
-
-    goto :goto_0
-
-    .line 169
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x7f0b0024
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method protected final a(Lcom/bbm/ui/c/gj;)Z
-    .locals 1
-
-    .prologue
-    .line 197
-    invoke-virtual {p0, p1}, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->b(Lcom/bbm/ui/c/gj;)V
-
-    .line 198
-    invoke-static {p0}, Lcom/bbm/util/fh;->b(Landroid/app/Activity;)V
-
-    .line 199
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method protected final b(Lcom/bbm/ui/c/gj;)V
-    .locals 5
-
-    .prologue
-    const/4 v4, 0x0
-
-    .line 123
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/ajm;->b(Lcom/bbm/ui/c/gj;)V
-
-    .line 127
-    new-instance v0, Lcom/bbm/ui/slidingmenu/a;
-
-    const v1, 0x7f0b0024
-
-    const v2, 0x7f020276
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    const v3, 0x7f0e058a
-
-    invoke-virtual {p0, v3}, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/bbm/ui/slidingmenu/a;-><init>(ILjava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 129
-    new-instance v1, Lcom/bbm/ui/activities/akw;
-
-    invoke-direct {v1, p0, v0}, Lcom/bbm/ui/activities/akw;-><init>(Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;Lcom/bbm/ui/slidingmenu/a;)V
-
-    invoke-static {v1}, Lcom/bbm/j/u;->a(Lcom/bbm/j/s;)V
-
-    .line 155
-    new-instance v0, Lcom/bbm/ui/slidingmenu/a;
-
-    const v1, 0x7f02021e
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    const v3, 0x7f0e04f9
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v0, v1, v2, v4}, Lcom/bbm/ui/slidingmenu/a;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->d:Lcom/bbm/ui/slidingmenu/a;
-
-    .line 156
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->c:Ljava/util/List;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->d:Lcom/bbm/ui/slidingmenu/a;
-
-    invoke-virtual {p1, v0, v4, v1}, Lcom/bbm/ui/c/gj;->a(Ljava/util/List;Lcom/bbm/ui/slidingmenu/a;Lcom/bbm/ui/slidingmenu/a;)V
-
-    .line 157
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->g:Lcom/bbm/ui/c/gn;
-
-    iput-object v0, p1, Lcom/bbm/ui/c/gj;->b:Lcom/bbm/ui/c/gn;
-
-    .line 158
-    new-instance v0, Lcom/bbm/ui/activities/akx;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/akx;-><init>(Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;)V
-
-    invoke-virtual {p1, v0}, Lcom/bbm/ui/c/gj;->a(Landroid/view/View$OnClickListener;)V
-
-    .line 165
-    return-void
-.end method
-
-.method protected final d()V
-    .locals 2
-
-    .prologue
-    .line 204
-    invoke-super {p0}, Lcom/bbm/ui/activities/ajm;->d()V
-
-    .line 205
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->k:Lcom/bbm/j/k;
-
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
-
-    .line 206
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->b:Lcom/bbm/ui/FooterActionBar;
-
-    const v1, 0x7f0b0024
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->a(I)V
-
-    .line 207
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->b:Lcom/bbm/ui/FooterActionBar;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setOverflowEnabled(Z)V
-
-    .line 208
-    return-void
-.end method
-
 .method protected onActivityResult(IILandroid/content/Intent;)V
     .locals 1
 
     .prologue
-    .line 212
+    .line 201
     const/4 v0, -0x1
 
     if-ne p2, v0, :cond_0
@@ -238,111 +49,122 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 213
-    invoke-static {p0, p3}, Lcom/bbm/util/ac;->a(Landroid/app/Activity;Landroid/content/Intent;)V
+    .line 202
+    invoke-static {p0, p3}, Lcom/bbm/util/af;->a(Landroid/app/Activity;Landroid/content/Intent;)V
 
-    .line 217
+    .line 206
     :goto_0
     return-void
 
-    .line 215
+    .line 204
     :cond_0
-    invoke-super {p0, p1, p2, p3}, Lcom/bbm/ui/activities/ajm;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/bbm/ui/activities/agg;->onActivityResult(IILandroid/content/Intent;)V
 
     goto :goto_0
 .end method
 
-.method public onCreate(Landroid/os/Bundle;)V
-    .locals 4
+.method protected onDestroy()V
+    .locals 1
 
     .prologue
-    .line 56
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/ajm;->onCreate(Landroid/os/Bundle;)V
+    .line 71
+    new-instance v0, Lcom/bbm/ui/activities/ahy;
 
-    .line 58
-    const v0, 0x7f0b00bf
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/ahy;-><init>(Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;)V
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->findViewById(I)Landroid/view/View;
+    invoke-static {v0}, Lcom/bbm/j/u;->a(Lcom/bbm/j/s;)V
 
-    move-result-object v0
+    .line 72
+    invoke-super {p0}, Lcom/bbm/ui/activities/agg;->onDestroy()V
 
-    check-cast v0, Lcom/bbm/ui/FooterActionBar;
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->b:Lcom/bbm/ui/FooterActionBar;
-
-    .line 60
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->b:Lcom/bbm/ui/FooterActionBar;
-
-    new-instance v1, Lcom/bbm/ui/ActionBarItem;
-
-    const v2, 0x7f0203d0
-
-    const v3, 0x7f0e058a
-
-    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;II)V
-
-    const v2, 0x7f0b0024
-
-    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/FooterActionBar;->a(Lcom/bbm/ui/ActionBarItem;I)V
-
-    .line 62
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->b:Lcom/bbm/ui/FooterActionBar;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setOverflowEnabled(Z)V
-
-    .line 63
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->b:Lcom/bbm/ui/FooterActionBar;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->f:Lcom/bbm/ui/cn;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
-
-    .line 65
+    .line 73
     return-void
 .end method
 
-.method protected onDestroy()V
+.method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
     .locals 2
 
     .prologue
-    .line 86
-    new-instance v0, Ljava/util/ArrayList;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->e:Lcom/bbm/ui/a/f;
+    .line 164
+    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
-    iget-object v1, v1, Lcom/bbm/ui/a/f;->e:Ljava/util/HashSet;
+    move-result v1
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    sparse-switch v1, :sswitch_data_0
 
-    new-instance v1, Lcom/bbm/ui/activities/akv;
+    .line 183
+    invoke-super {p0, p1}, Lcom/bbm/ui/activities/agg;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
-    invoke-direct {v1, p0, v0}, Lcom/bbm/ui/activities/akv;-><init>(Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;Ljava/util/ArrayList;)V
+    move-result v0
+
+    :goto_0
+    return v0
+
+    .line 167
+    :sswitch_0
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->i:Lcom/bbm/j/u;
+
+    invoke-virtual {v1}, Lcom/bbm/j/u;->c()V
+
+    goto :goto_0
+
+    .line 170
+    :sswitch_1
+    new-instance v1, Lcom/bbm/ui/activities/aia;
+
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/aia;-><init>(Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;)V
 
     invoke-static {v1}, Lcom/bbm/j/u;->a(Lcom/bbm/j/s;)V
 
-    .line 87
-    invoke-super {p0}, Lcom/bbm/ui/activities/ajm;->onDestroy()V
+    goto :goto_0
 
-    .line 88
-    return-void
+    .line 173
+    :sswitch_2
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->d()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {p0, v1}, Lcom/bbm/util/af;->a(Landroid/app/Activity;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 176
+    :sswitch_3
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->d()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/bbm/util/af;->d(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 164
+    :sswitch_data_0
+    .sparse-switch
+        0x7f0b074a -> :sswitch_2
+        0x7f0b074b -> :sswitch_3
+        0x7f0b0750 -> :sswitch_0
+        0x7f0b0755 -> :sswitch_0
+        0x7f0b0756 -> :sswitch_1
+    .end sparse-switch
 .end method
 
 .method protected onPause()V
     .locals 2
 
     .prologue
-    .line 69
-    invoke-super {p0}, Lcom/bbm/ui/activities/ajm;->onPause()V
+    .line 54
+    invoke-super {p0}, Lcom/bbm/ui/activities/agg;->onPause()V
 
-    .line 70
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->k:Lcom/bbm/j/k;
+    .line 55
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->j:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
 
-    .line 71
-    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/ui/f/a;
+    .line 56
+    invoke-static {}, Lcom/bbm/Alaska;->m()Lcom/bbm/ui/f/a;
 
     move-result-object v0
 
@@ -350,47 +172,70 @@
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/f/a;->a(Ljava/lang/String;)V
 
-    .line 72
+    .line 57
     return-void
+.end method
+
+.method public onPrepareOptionsMenu(Landroid/view/Menu;)Z
+    .locals 1
+
+    .prologue
+    .line 105
+    if-eqz p1, :cond_0
+
+    .line 106
+    new-instance v0, Lcom/bbm/ui/activities/ahz;
+
+    invoke-direct {v0, p0, p1}, Lcom/bbm/ui/activities/ahz;-><init>(Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;Landroid/view/Menu;)V
+
+    invoke-static {v0}, Lcom/bbm/j/u;->a(Lcom/bbm/j/s;)V
+
+    .line 159
+    :cond_0
+    invoke-super {p0, p1}, Lcom/bbm/ui/activities/agg;->onPrepareOptionsMenu(Landroid/view/Menu;)Z
+
+    move-result v0
+
+    return v0
 .end method
 
 .method protected onResume()V
     .locals 2
 
     .prologue
-    .line 76
-    invoke-super {p0}, Lcom/bbm/ui/activities/ajm;->onResume()V
+    .line 61
+    invoke-super {p0}, Lcom/bbm/ui/activities/agg;->onResume()V
 
-    .line 77
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->k:Lcom/bbm/j/k;
+    .line 62
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->j:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 78
-    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/ui/f/a;
+    .line 63
+    invoke-static {}, Lcom/bbm/Alaska;->m()Lcom/bbm/ui/f/a;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/bbm/ui/f/a;->c()V
 
-    .line 79
-    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/ui/f/a;
+    .line 64
+    invoke-static {}, Lcom/bbm/Alaska;->m()Lcom/bbm/ui/f/a;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/bbm/ui/f/a;->b()V
 
-    .line 80
-    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/ui/f/a;
+    .line 65
+    invoke-static {}, Lcom/bbm/Alaska;->m()Lcom/bbm/ui/f/a;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->b()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->d()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/f/a;->a(Ljava/lang/String;)V
 
-    .line 81
+    .line 66
     return-void
 .end method

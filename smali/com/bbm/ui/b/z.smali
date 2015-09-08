@@ -56,11 +56,11 @@
 
     move-result-object v2
 
-    iput-object v2, v0, Lcom/bbm/ui/activities/MainActivity;->d:Landroid/net/Uri;
+    iput-object v2, v0, Lcom/bbm/ui/activities/MainActivity;->h:Landroid/net/Uri;
 
     const-string v2, "output"
 
-    iget-object v3, v0, Lcom/bbm/ui/activities/MainActivity;->d:Landroid/net/Uri;
+    iget-object v3, v0, Lcom/bbm/ui/activities/MainActivity;->h:Landroid/net/Uri;
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 

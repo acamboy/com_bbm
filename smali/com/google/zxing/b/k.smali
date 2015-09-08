@@ -108,7 +108,7 @@
 
     const/4 v8, 0x0
 
-    const/high16 v9, 0x3f800000
+    const/high16 v9, 0x3f800000    # 1.0f
 
     move v3, p0
 
@@ -185,7 +185,7 @@
 
     add-float/2addr v5, v3
 
-    const/high16 v9, 0x3f800000
+    const/high16 v9, 0x3f800000    # 1.0f
 
     move v3, p0
 

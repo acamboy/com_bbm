@@ -83,7 +83,7 @@
     .line 80
     iget-object v0, p0, Lcom/mapquest/android/maps/al;->a:Lcom/mapquest/android/maps/MapView;
 
-    invoke-virtual {v0}, Lcom/mapquest/android/maps/MapView;->getProjection()Lcom/mapquest/android/maps/bq;
+    invoke-virtual {v0}, Lcom/mapquest/android/maps/MapView;->getProjection()Lcom/mapquest/android/maps/bp;
 
     move-result-object v0
 
@@ -110,7 +110,7 @@
 
     add-int/2addr v3, p2
 
-    invoke-interface {v0, v2, v3}, Lcom/mapquest/android/maps/bq;->a(II)Lcom/mapquest/android/maps/s;
+    invoke-interface {v0, v2, v3}, Lcom/mapquest/android/maps/bp;->a(II)Lcom/mapquest/android/maps/s;
 
     move-result-object v0
 
@@ -255,7 +255,7 @@
 
     float-to-double v2, v2
 
-    invoke-static {v2, v3}, Lcom/mapquest/android/maps/cv;->a(D)D
+    invoke-static {v2, v3}, Lcom/mapquest/android/maps/cu;->a(D)D
 
     move-result-wide v2
 
@@ -275,15 +275,13 @@
     .line 155
     iget-object v0, p0, Lcom/mapquest/android/maps/al;->a:Lcom/mapquest/android/maps/MapView;
 
-    iget-object v2, p0, Lcom/mapquest/android/maps/al;->a:Lcom/mapquest/android/maps/MapView;
+    invoke-virtual {v0}, Lcom/mapquest/android/maps/MapView;->getZoomLevel()I
 
-    invoke-virtual {v2}, Lcom/mapquest/android/maps/MapView;->getZoomLevel()I
+    move-result v0
 
-    move-result v2
+    add-int/lit8 v0, v0, 0x1
 
-    add-int/lit8 v2, v2, 0x1
-
-    invoke-virtual {v0, v2}, Lcom/mapquest/android/maps/MapView;->a(I)Z
+    invoke-static {v0}, Lcom/mapquest/android/maps/MapView;->a(I)Z
 
     move-result v0
 
@@ -335,7 +333,7 @@
 
     float-to-double v2, v2
 
-    invoke-static {v2, v3}, Lcom/mapquest/android/maps/cv;->a(D)D
+    invoke-static {v2, v3}, Lcom/mapquest/android/maps/cu;->a(D)D
 
     move-result-wide v2
 
@@ -355,15 +353,13 @@
     .line 186
     iget-object v0, p0, Lcom/mapquest/android/maps/al;->a:Lcom/mapquest/android/maps/MapView;
 
-    iget-object v2, p0, Lcom/mapquest/android/maps/al;->a:Lcom/mapquest/android/maps/MapView;
+    invoke-virtual {v0}, Lcom/mapquest/android/maps/MapView;->getZoomLevel()I
 
-    invoke-virtual {v2}, Lcom/mapquest/android/maps/MapView;->getZoomLevel()I
+    move-result v0
 
-    move-result v2
+    add-int/lit8 v0, v0, -0x1
 
-    add-int/lit8 v2, v2, -0x1
-
-    invoke-virtual {v0, v2}, Lcom/mapquest/android/maps/MapView;->a(I)Z
+    invoke-static {v0}, Lcom/mapquest/android/maps/MapView;->a(I)Z
 
     move-result v0
 

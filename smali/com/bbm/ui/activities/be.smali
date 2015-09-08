@@ -1,78 +1,139 @@
 .class final Lcom/bbm/ui/activities/be;
-.super Lcom/bbm/j/a;
-.source "CaptureBarcodeActivity.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/j/a",
-        "<",
-        "Ljava/lang/String;",
-        ">;"
-    }
-.end annotation
+.super Landroid/webkit/WebChromeClient;
+.source "CarrierBillingActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/CarrierBillingActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/CarrierBillingActivity;)V
     .locals 0
 
     .prologue
-    .line 222
-    iput-object p1, p0, Lcom/bbm/ui/activities/be;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+    .line 117
+    iput-object p1, p0, Lcom/bbm/ui/activities/be;->a:Lcom/bbm/ui/activities/CarrierBillingActivity;
 
-    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
+    invoke-direct {p0}, Landroid/webkit/WebChromeClient;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final synthetic a()Ljava/lang/Object;
-    .locals 2
+.method public final onProgressChanged(Landroid/webkit/WebView;I)V
+    .locals 5
 
     .prologue
-    .line 222
-    iget-object v0, p0, Lcom/bbm/ui/activities/be;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+    const/4 v1, 0x0
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->a(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Ljava/lang/String;
+    .line 120
+    iget-object v2, p0, Lcom/bbm/ui/activities/be;->a:Lcom/bbm/ui/activities/CarrierBillingActivity;
+
+    const/16 v0, 0x64
+
+    if-ne p2, v0, :cond_0
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/CarrierBillingActivity;->a(Z)V
+
+    invoke-virtual {v2}, Lcom/bbm/ui/activities/CarrierBillingActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
-
-    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
-
-    move-result v0
 
     if-eqz v0, :cond_0
 
-    const-string v0, ""
+    new-instance v3, Landroid/graphics/Rect;
+
+    invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
+
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
+
+    invoke-virtual {v2}, Lcom/bbm/ui/activities/CarrierBillingActivity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object v4
+
+    sget-boolean v0, Lcom/bbm/ui/activities/CarrierBillingActivity;->b:Z
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, -0x2
 
     :goto_0
-    return-object v0
+    iput v0, v4, Landroid/view/WindowManager$LayoutParams;->height:I
 
+    invoke-virtual {v2}, Lcom/bbm/ui/activities/CarrierBillingActivity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v4}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
+
+    iget-object v0, v2, Lcom/bbm/ui/activities/CarrierBillingActivity;->a:Lcom/bbm/ui/BbmWebView;
+
+    if-eqz v0, :cond_0
+
+    iget-object v3, v2, Lcom/bbm/ui/activities/CarrierBillingActivity;->a:Lcom/bbm/ui/BbmWebView;
+
+    sget-boolean v0, Lcom/bbm/ui/activities/CarrierBillingActivity;->b:Z
+
+    if-eqz v0, :cond_2
+
+    const/16 v0, 0x8
+
+    :goto_1
+    invoke-virtual {v3, v0}, Lcom/bbm/ui/BbmWebView;->setVisibility(I)V
+
+    iget-object v0, v2, Lcom/bbm/ui/activities/CarrierBillingActivity;->a:Lcom/bbm/ui/BbmWebView;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/BbmWebView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    sget-boolean v2, Lcom/bbm/ui/activities/CarrierBillingActivity;->b:Z
+
+    if-eqz v2, :cond_3
+
+    :goto_2
+    iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    .line 121
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/be;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+    invoke-super {p0, p1, p2}, Landroid/webkit/WebChromeClient;->onProgressChanged(Landroid/webkit/WebView;I)V
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->b(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Lcom/bbm/d/a;
+    .line 122
+    return-void
 
-    move-result-object v0
+    .line 120
+    :cond_1
+    invoke-virtual {v3}, Landroid/graphics/Rect;->height()I
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/be;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+    move-result v0
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->a(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Ljava/lang/String;
+    int-to-float v0, v0
 
-    move-result-object v1
+    const v3, 0x3f733333    # 0.95f
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->U(Ljava/lang/String;)Lcom/bbm/d/ee;
+    mul-float/2addr v0, v3
 
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/bbm/d/ee;->I:Ljava/lang/String;
+    float-to-int v0, v0
 
     goto :goto_0
+
+    :cond_2
+    move v0, v1
+
+    goto :goto_1
+
+    :cond_3
+    iget v1, v4, Landroid/view/WindowManager$LayoutParams;->height:I
+
+    goto :goto_2
 .end method

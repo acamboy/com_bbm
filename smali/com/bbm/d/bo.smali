@@ -1,56 +1,48 @@
 .class public final Lcom/bbm/d/bo;
-.super Lcom/bbm/d/dy;
+.super Lcom/bbm/d/ez;
 .source "BbmdsProtocol.java"
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
+.method constructor <init>(Ljava/lang/String;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Ljava/util/List",
-            "<",
-            "Ljava/lang/String;",
-            ">;)V"
-        }
-    .end annotation
 
     .prologue
-    .line 2252
-    const-string v0, "fileTransferSend"
+    .line 1337
+    const-string v0, "channelRemoveOwned"
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/d/ez;-><init>(Ljava/lang/String;)V
 
-    .line 2254
-    const-string v0, "description"
+    .line 1339
+    const-string v0, "channelUri"
 
     invoke-virtual {p0, v0, p1}, Lcom/bbm/d/bo;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 2255
-    const-string v0, "path"
-
-    invoke-virtual {p0, v0, p2}, Lcom/bbm/d/bo;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 2256
-    const-string v0, "to"
-
-    invoke-virtual {p0, v0, p3}, Lcom/bbm/d/bo;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 2257
+    .line 1340
     return-void
 .end method
 
 
 # virtual methods
+.method public final a(Ljava/lang/String;)Lcom/bbm/d/bo;
+    .locals 1
+
+    .prologue
+    .line 1350
+    const-string v0, "cookie"
+
+    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/bo;->a(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 1351
+    return-object p0
+.end method
+
 .method public final bridge synthetic a()Lcom/bbm/f/ab;
     .locals 1
 
     .prologue
-    .line 2250
-    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
+    .line 1335
+    invoke-super {p0}, Lcom/bbm/d/ez;->a()Lcom/bbm/f/ab;
 
     move-result-object v0
 

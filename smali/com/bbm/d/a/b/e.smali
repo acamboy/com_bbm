@@ -23,13 +23,13 @@
 
 .field private final c:Lcom/bbm/f/a;
 
-.field private final d:Lcom/bbm/util/di;
+.field private final d:Lcom/bbm/util/ds;
 
 .field private final e:Lcom/bbm/d/a/i;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/f/a;Lcom/bbm/d/a/h;Lcom/bbm/util/di;Lcom/bbm/d/a/i;)V
+.method public constructor <init>(Lcom/bbm/f/a;Lcom/bbm/d/a/h;Lcom/bbm/util/ds;Lcom/bbm/d/a/i;)V
     .locals 1
 
     .prologue
@@ -50,7 +50,7 @@
     iput-object p1, p0, Lcom/bbm/d/a/b/e;->c:Lcom/bbm/f/a;
 
     .line 39
-    iput-object p3, p0, Lcom/bbm/d/a/b/e;->d:Lcom/bbm/util/di;
+    iput-object p3, p0, Lcom/bbm/d/a/b/e;->d:Lcom/bbm/util/ds;
 
     .line 40
     invoke-interface {p1, p0}, Lcom/bbm/f/a;->a(Lcom/bbm/f/ac;)V
@@ -107,7 +107,7 @@
     if-nez v1, :cond_0
 
     .line 63
-    invoke-static {}, Lcom/google/b/a/l;->d()Lcom/google/b/a/l;
+    invoke-static {}, Lcom/google/b/a/l;->e()Lcom/google/b/a/l;
 
     move-result-object v0
 
@@ -121,7 +121,7 @@
 
     iget-object v3, p0, Lcom/bbm/d/a/b/e;->c:Lcom/bbm/f/a;
 
-    iget-object v4, p0, Lcom/bbm/d/a/b/e;->d:Lcom/bbm/util/di;
+    iget-object v4, p0, Lcom/bbm/d/a/b/e;->d:Lcom/bbm/util/ds;
 
     iget-object v5, p0, Lcom/bbm/d/a/b/e;->e:Lcom/bbm/d/a/i;
 
@@ -129,7 +129,7 @@
 
     move-object v6, p2
 
-    invoke-direct/range {v0 .. v6}, Lcom/bbm/d/a/b/a;-><init>(Lcom/bbm/d/a/c;Lcom/bbm/d/a/d;Lcom/bbm/f/a;Lcom/bbm/util/di;Lcom/bbm/d/a/i;Ljava/lang/Class;)V
+    invoke-direct/range {v0 .. v6}, Lcom/bbm/d/a/b/a;-><init>(Lcom/bbm/d/a/c;Lcom/bbm/d/a/d;Lcom/bbm/f/a;Lcom/bbm/util/ds;Lcom/bbm/d/a/i;Ljava/lang/Class;)V
 
     .line 67
     iget-object v1, p0, Lcom/bbm/d/a/b/e;->a:Ljava/util/Map;
@@ -143,52 +143,6 @@
     move-result-object v0
 
     goto :goto_0
-.end method
-
-.method public final a()V
-    .locals 3
-
-    .prologue
-    .line 134
-    iget-object v0, p0, Lcom/bbm/d/a/b/e;->a:Ljava/util/Map;
-
-    invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/a/d;
-
-    .line 135
-    iget-object v2, p0, Lcom/bbm/d/a/b/e;->a:Ljava/util/Map;
-
-    invoke-interface {v2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/a/b/a;
-
-    invoke-virtual {v0}, Lcom/bbm/d/a/b/a;->a()V
-
-    goto :goto_0
-
-    .line 137
-    :cond_0
-    return-void
 .end method
 
 .method public final a(Lcom/bbm/f/ab;)V
@@ -292,9 +246,9 @@
 
     if-eqz v1, :cond_2
 
-    iget-object v4, v1, Lcom/bbm/d/a/b/c;->a:Lcom/bbm/d/a/b/d;
+    iget v4, v1, Lcom/bbm/d/a/b/c;->a:I
 
-    sget-object v8, Lcom/bbm/d/a/b/d;->c:Lcom/bbm/d/a/b/d;
+    sget v8, Lcom/bbm/d/a/b/d;->c:I
 
     if-ne v4, v8, :cond_3
 
@@ -415,12 +369,58 @@
 
     if-eqz v1, :cond_7
 
-    sget-object v4, Lcom/bbm/d/a/b/d;->d:Lcom/bbm/d/a/b/d;
+    sget v4, Lcom/bbm/d/a/b/d;->d:I
 
-    invoke-virtual {v1, v4}, Lcom/bbm/d/a/b/c;->a(Lcom/bbm/d/a/b/d;)V
+    invoke-virtual {v1, v4}, Lcom/bbm/d/a/b/c;->a(I)V
 
     :cond_7
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_3
+.end method
+
+.method public final a_()V
+    .locals 3
+
+    .prologue
+    .line 134
+    iget-object v0, p0, Lcom/bbm/d/a/b/e;->a:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/a/d;
+
+    .line 135
+    iget-object v2, p0, Lcom/bbm/d/a/b/e;->a:Ljava/util/Map;
+
+    invoke-interface {v2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/a/b/a;
+
+    invoke-virtual {v0}, Lcom/bbm/d/a/b/a;->a()V
+
+    goto :goto_0
+
+    .line 137
+    :cond_0
+    return-void
 .end method

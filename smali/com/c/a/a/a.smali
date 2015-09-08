@@ -188,8 +188,6 @@
     move-result-object v0
 
     check-cast v0, Lcom/c/a/a/a;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
@@ -198,6 +196,8 @@
     move-exception v0
 
     monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
 .end method

@@ -1,178 +1,235 @@
-.class final Lcom/bbm/util/ez;
-.super Lcom/bbm/j/k;
-.source "UpdatesFragmentUtil.java"
+.class public final Lcom/bbm/util/ez;
+.super Ljava/lang/Object;
+.source "VoiceNoteRecorder.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/j/t;
+.field public a:Lcom/google/b/a/l;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/b/a/l",
+            "<",
+            "Landroid/media/MediaRecorder;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field final synthetic b:Lcom/bbm/util/ew;
+.field public final b:Landroid/content/Context;
 
-.field final synthetic c:Landroid/view/View;
+.field public c:J
 
-.field final synthetic d:Lcom/bbm/util/ey;
+.field public d:Lcom/google/b/a/l;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/b/a/l",
+            "<",
+            "Ljava/io/File;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public e:Z
+
+.field public f:Lcom/bbm/util/fb;
+
+.field private final g:Landroid/os/Handler;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/util/ey;Lcom/bbm/j/t;Lcom/bbm/util/ew;Landroid/view/View;)V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
     .prologue
-    .line 995
-    iput-object p1, p0, Lcom/bbm/util/ez;->d:Lcom/bbm/util/ey;
+    .line 42
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lcom/bbm/util/ez;->a:Lcom/bbm/j/t;
+    .line 26
+    invoke-static {}, Lcom/google/b/a/l;->e()Lcom/google/b/a/l;
 
-    iput-object p3, p0, Lcom/bbm/util/ez;->b:Lcom/bbm/util/ew;
+    move-result-object v0
 
-    iput-object p4, p0, Lcom/bbm/util/ez;->c:Landroid/view/View;
+    iput-object v0, p0, Lcom/bbm/util/ez;->a:Lcom/google/b/a/l;
 
+    .line 28
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lcom/bbm/util/ez;->g:Landroid/os/Handler;
+
+    .line 32
+    invoke-static {}, Lcom/google/b/a/l;->e()Lcom/google/b/a/l;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/util/ez;->d:Lcom/google/b/a/l;
+
+    .line 34
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    iput-boolean v0, p0, Lcom/bbm/util/ez;->e:Z
 
+    .line 43
+    iput-object p1, p0, Lcom/bbm/util/ez;->b:Landroid/content/Context;
+
+    .line 44
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 7
+.method public final a()V
+    .locals 1
 
     .prologue
-    const/4 v6, 0x1
+    .line 47
+    iget-object v0, p0, Lcom/bbm/util/ez;->a:Lcom/google/b/a/l;
 
-    .line 999
-    iget-object v0, p0, Lcom/bbm/util/ez;->a:Lcom/bbm/j/t;
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Z
 
-    invoke-virtual {v0}, Lcom/bbm/j/t;->e()Ljava/lang/Object;
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 48
+    iget-object v0, p0, Lcom/bbm/util/ez;->a:Lcom/google/b/a/l;
+
+    invoke-virtual {v0}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Boolean;
+    check-cast v0, Landroid/media/MediaRecorder;
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v0}, Landroid/media/MediaRecorder;->release()V
 
-    move-result v0
+    .line 49
+    invoke-static {}, Lcom/google/b/a/l;->e()Lcom/google/b/a/l;
 
-    if-eqz v0, :cond_2
+    move-result-object v0
 
-    .line 1000
-    iget-object v0, p0, Lcom/bbm/util/ez;->b:Lcom/bbm/util/ew;
+    iput-object v0, p0, Lcom/bbm/util/ez;->a:Lcom/google/b/a/l;
 
-    invoke-virtual {v0}, Lcom/bbm/util/ew;->a()I
-
-    move-result v0
-
-    .line 1001
-    iget-object v1, p0, Lcom/bbm/util/ez;->b:Lcom/bbm/util/ew;
-
-    invoke-virtual {v1}, Lcom/bbm/util/ew;->b()I
-
-    move-result v1
-
-    .line 1002
-    sub-int v2, v1, v0
-
-    .line 1004
-    const/4 v3, 0x2
-
-    new-array v3, v3, [I
-
-    .line 1005
-    iget-object v4, p0, Lcom/bbm/util/ez;->c:Landroid/view/View;
-
-    invoke-virtual {v4, v3}, Landroid/view/View;->getLocationOnScreen([I)V
-
-    .line 1006
-    aget v3, v3, v6
-
-    .line 1007
-    iget-object v4, p0, Lcom/bbm/util/ez;->c:Landroid/view/View;
-
-    invoke-virtual {v4}, Landroid/view/View;->getHeight()I
-
-    move-result v4
-
-    .line 1008
-    add-int v5, v3, v4
-
-    .line 1013
-    invoke-static {v3, v0}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    .line 1014
-    invoke-static {v5, v1}, Ljava/lang/Math;->min(II)I
-
-    move-result v1
-
-    .line 1015
-    sub-int v0, v1, v0
-
-    .line 1017
-    if-lez v0, :cond_2
-
-    if-eq v0, v4, :cond_0
-
-    if-ne v0, v2, :cond_2
-
-    .line 1019
+    .line 51
     :cond_0
-    iget-object v0, p0, Lcom/bbm/util/ez;->d:Lcom/bbm/util/ey;
+    return-void
+.end method
 
-    iget-boolean v1, v0, Lcom/bbm/util/ey;->b:Z
+.method public final b()V
+    .locals 2
 
-    if-nez v1, :cond_1
+    .prologue
+    .line 59
+    iget-object v0, p0, Lcom/bbm/util/ez;->a:Lcom/google/b/a/l;
 
-    iput-boolean v6, v0, Lcom/bbm/util/ey;->b:Z
-
-    new-instance v1, Ljava/util/Timer;
-
-    invoke-direct {v1}, Ljava/util/Timer;-><init>()V
-
-    iput-object v1, v0, Lcom/bbm/util/ey;->a:Ljava/util/Timer;
-
-    iget-object v1, v0, Lcom/bbm/util/ey;->a:Ljava/util/Timer;
-
-    new-instance v2, Lcom/bbm/util/fa;
-
-    invoke-direct {v2, v0}, Lcom/bbm/util/fa;-><init>(Lcom/bbm/util/ey;)V
-
-    invoke-static {}, Lcom/bbm/Alaska;->d()Lcom/bbm/b/w;
-
-    move-result-object v0
-
-    const-string v3, "viewThreshold"
-
-    invoke-virtual {v0, v3}, Lcom/bbm/b/w;->a(Ljava/lang/String;)Lcom/bbm/util/bm;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/bbm/util/bm;->a:Lorg/json/JSONObject;
-
-    const-string v3, "value"
-
-    const/16 v4, 0x5dc
-
-    invoke-virtual {v0, v3, v4}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Z
 
     move-result v0
 
-    int-to-long v4, v0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v1, v2, v4, v5}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
+    iget-boolean v0, p0, Lcom/bbm/util/ez;->e:Z
 
-    .line 1024
-    :cond_1
+    if-eqz v0, :cond_0
+
+    .line 60
+    iget-object v0, p0, Lcom/bbm/util/ez;->a:Lcom/google/b/a/l;
+
+    invoke-virtual {v0}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/media/MediaRecorder;
+
+    .line 63
+    :try_start_0
+    invoke-virtual {v0}, Landroid/media/MediaRecorder;->stop()V
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 69
+    :goto_0
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Lcom/bbm/util/ez;->e:Z
+
+    .line 71
+    invoke-virtual {v0}, Landroid/media/MediaRecorder;->reset()V
+
+    .line 72
+    invoke-virtual {v0}, Landroid/media/MediaRecorder;->release()V
+
+    .line 75
+    :cond_0
+    invoke-static {}, Lcom/google/b/a/l;->e()Lcom/google/b/a/l;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/util/ez;->a:Lcom/google/b/a/l;
+
+    .line 76
+    return-void
+
+    :catch_0
+    move-exception v1
+
+    goto :goto_0
+.end method
+
+.method public final c()V
+    .locals 4
+
+    .prologue
+    .line 135
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iget-wide v2, p0, Lcom/bbm/util/ez;->c:J
+
+    sub-long/2addr v0, v2
+
+    .line 138
+    const-wide/32 v2, 0x1d4c0
+
+    cmp-long v0, v0, v2
+
+    if-lez v0, :cond_1
+
+    .line 139
+    iget-object v0, p0, Lcom/bbm/util/ez;->f:Lcom/bbm/util/fb;
+
+    if-eqz v0, :cond_0
+
+    .line 140
+    iget-object v0, p0, Lcom/bbm/util/ez;->f:Lcom/bbm/util/fb;
+
+    invoke-interface {v0}, Lcom/bbm/util/fb;->a()V
+
+    .line 142
+    :cond_0
+    invoke-virtual {p0}, Lcom/bbm/util/ez;->b()V
+
+    .line 151
     :goto_0
     return-void
 
-    .line 1023
-    :cond_2
-    iget-object v0, p0, Lcom/bbm/util/ez;->d:Lcom/bbm/util/ey;
+    .line 144
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/util/ez;->g:Landroid/os/Handler;
 
-    invoke-static {v0}, Lcom/bbm/util/ey;->a(Lcom/bbm/util/ey;)V
+    new-instance v1, Lcom/bbm/util/fa;
+
+    invoke-direct {v1, p0}, Lcom/bbm/util/fa;-><init>(Lcom/bbm/util/ez;)V
+
+    const-wide/16 v2, 0x64
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     goto :goto_0
 .end method

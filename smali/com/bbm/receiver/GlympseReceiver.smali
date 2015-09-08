@@ -38,7 +38,7 @@
     if-eqz v0, :cond_1
 
     .line 28
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
+    invoke-static {}, Lcom/bbm/w;->a()Lcom/bbm/w;
 
     move-result-object v0
 
@@ -46,7 +46,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/p;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/w;->a(Landroid/content/Context;)V
 
     .line 33
     :cond_0
@@ -79,11 +79,11 @@
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
+    invoke-static {}, Lcom/bbm/w;->a()Lcom/bbm/w;
 
     move-result-object v0
 
-    iget-object v5, v0, Lcom/bbm/p;->b:Lcom/bbm/util/a/a;
+    iget-object v5, v0, Lcom/bbm/w;->b:Lcom/bbm/util/a/a;
 
     iget-object v0, v5, Lcom/bbm/util/a/a;->b:Lcom/glympse/android/core/GPrimitive;
 
@@ -131,9 +131,7 @@
     :catch_0
     move-exception v0
 
-    invoke-virtual {v0}, Ljava/lang/NullPointerException;->printStackTrace()V
-
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
@@ -170,7 +168,7 @@
     :catch_1
     move-exception v0
 
-    invoke-virtual {v0}, Landroid/app/PendingIntent$CanceledException;->printStackTrace()V
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
@@ -237,7 +235,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/f/r;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/app/PendingIntent;
+    invoke-static {v0, v1}, Lcom/bbm/ui/f/s;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/app/PendingIntent;
 
     move-result-object v0
 

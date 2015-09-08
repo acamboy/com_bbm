@@ -1,5 +1,5 @@
 .class public Lcom/bbm/ui/activities/GlympseViewerActivity;
-.super Landroid/support/v4/app/q;
+.super Lcom/bbm/bali/ui/main/a/e;
 .source "GlympseViewerActivity.java"
 
 # interfaces
@@ -15,34 +15,30 @@
 
 .field private d:Lcom/glympse/map/lib/Map;
 
-.field private e:Lcom/bbm/ui/FooterActionBar;
+.field private e:Ljava/lang/String;
 
-.field private f:Ljava/lang/String;
+.field private h:Lcom/bbm/d/fv;
 
-.field private g:Lcom/bbm/d/eu;
-
-.field private h:Ljava/lang/String;
-
-.field private i:Z
+.field private i:Ljava/lang/String;
 
 .field private j:Z
 
-.field private k:Ljava/util/List;
+.field private k:Z
+
+.field private l:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
             "<",
-            "Lcom/bbm/ui/activities/kt;",
+            "Lcom/bbm/ui/activities/jl;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final l:Lcom/bbm/d/a;
+.field private final m:Lcom/bbm/d/a;
 
-.field private final m:Lcom/bbm/ui/cs;
-
-.field private n:Lcom/bbm/ui/cn;
+.field private final n:Lcom/bbm/ui/da;
 
 .field private final o:Lcom/bbm/f/ac;
 
@@ -56,60 +52,53 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 39
-    invoke-direct {p0}, Landroid/support/v4/app/q;-><init>()V
+    .line 41
+    invoke-direct {p0}, Lcom/bbm/bali/ui/main/a/e;-><init>()V
 
-    .line 63
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->i:Z
-
-    .line 64
+    .line 59
     iput-boolean v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->j:Z
 
-    .line 67
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    .line 60
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->k:Z
+
+    .line 63
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->l:Lcom/bbm/d/a;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->m:Lcom/bbm/d/a;
 
-    .line 69
-    new-instance v0, Lcom/bbm/ui/activities/kp;
+    .line 65
+    new-instance v0, Lcom/bbm/ui/activities/ji;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/kp;-><init>(Lcom/bbm/ui/activities/GlympseViewerActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/ji;-><init>(Lcom/bbm/ui/activities/GlympseViewerActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->m:Lcom/bbm/ui/cs;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->n:Lcom/bbm/ui/da;
 
-    .line 87
-    new-instance v0, Lcom/bbm/ui/activities/kq;
+    .line 83
+    new-instance v0, Lcom/bbm/ui/activities/jj;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/kq;-><init>(Lcom/bbm/ui/activities/GlympseViewerActivity;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->n:Lcom/bbm/ui/cn;
-
-    .line 109
-    new-instance v0, Lcom/bbm/ui/activities/kr;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/kr;-><init>(Lcom/bbm/ui/activities/GlympseViewerActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/jj;-><init>(Lcom/bbm/ui/activities/GlympseViewerActivity;)V
 
     iput-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->o:Lcom/bbm/f/ac;
 
-    .line 129
-    new-instance v0, Lcom/bbm/ui/activities/ks;
+    .line 106
+    new-instance v0, Lcom/bbm/ui/activities/jk;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/ks;-><init>(Lcom/bbm/ui/activities/GlympseViewerActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/jk;-><init>(Lcom/bbm/ui/activities/GlympseViewerActivity;)V
 
     iput-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->p:Lcom/bbm/j/k;
 
-    .line 308
+    .line 313
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/GlympseViewerActivity;Lcom/bbm/d/eu;)Lcom/bbm/d/eu;
+.method static synthetic a(Lcom/bbm/ui/activities/GlympseViewerActivity;Lcom/bbm/d/fv;)Lcom/bbm/d/fv;
     .locals 0
 
     .prologue
-    .line 39
-    iput-object p1, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->g:Lcom/bbm/d/eu;
+    .line 41
+    iput-object p1, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->h:Lcom/bbm/d/fv;
 
     return-object p1
 .end method
@@ -118,24 +107,30 @@
     .locals 1
 
     .prologue
-    .line 39
+    .line 41
     iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->d:Lcom/glympse/map/lib/Map;
 
     return-object v0
 .end method
 
 .method static synthetic a(Lcom/bbm/ui/activities/GlympseViewerActivity;Lorg/json/JSONArray;)V
-    .locals 6
+    .locals 10
 
     .prologue
     const/4 v2, 0x0
 
-    .line 39
+    .line 41
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->k:Ljava/util/List;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->l:Ljava/util/List;
+
+    invoke-static {}, Lcom/bbm/w;->a()Lcom/bbm/w;
+
+    move-result-object v0
+
+    iget-object v4, v0, Lcom/bbm/w;->a:Lcom/glympse/android/api/GGlympse;
 
     move v1, v2
 
@@ -154,25 +149,31 @@
 
     invoke-virtual {v0, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v5
 
     invoke-virtual {p1, v1}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v0
 
-    const-string v4, "message"
+    const-string v3, "message"
 
-    invoke-virtual {v0, v4}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result-object v4
+    move-result v3
 
-    iget-object v4, v4, Lcom/bbm/p;->a:Lcom/glympse/android/api/GGlympse;
+    if-nez v3, :cond_3
 
-    invoke-interface {v4, v0}, Lcom/glympse/android/api/GGlympse;->extractInviteCodes(Ljava/lang/String;)Lcom/glympse/android/core/GArray;
+    invoke-static {}, Lcom/bbm/w;->a()Lcom/bbm/w;
+
+    move-result-object v3
+
+    iget-object v3, v3, Lcom/bbm/w;->a:Lcom/glympse/android/api/GGlympse;
+
+    invoke-interface {v3, v0}, Lcom/glympse/android/api/GGlympse;->extractInviteCodes(Ljava/lang/String;)Lcom/glympse/android/core/GArray;
 
     move-result-object v0
 
@@ -182,52 +183,54 @@
 
     check-cast v0, Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->k:Ljava/util/List;
+    const/4 v3, 0x1
 
-    new-instance v5, Lcom/bbm/ui/activities/kt;
+    invoke-interface {v4, v0, v3}, Lcom/glympse/android/api/GGlympse;->decodeInvite(Ljava/lang/String;I)Lcom/glympse/android/api/GEventSink;
 
-    invoke-direct {v5, p0, v3, v0}, Lcom/bbm/ui/activities/kt;-><init>(Lcom/bbm/ui/activities/GlympseViewerActivity;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
+    invoke-interface {v4}, Lcom/glympse/android/api/GGlympse;->getHistoryManager()Lcom/glympse/android/api/GHistoryManager;
 
     move-result-object v3
 
-    invoke-virtual {v3, v0}, Lcom/bbm/p;->a(Ljava/lang/String;)Lcom/glympse/android/api/GEventSink;
-
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
+    invoke-interface {v3, v0}, Lcom/glympse/android/api/GHistoryManager;->findTicketByInviteCode(Ljava/lang/String;)Lcom/glympse/android/api/GTicket;
 
     move-result-object v3
 
-    iget-object v3, v3, Lcom/bbm/p;->a:Lcom/glympse/android/api/GGlympse;
+    if-eqz v3, :cond_1
 
-    invoke-interface {v3}, Lcom/glympse/android/api/GGlympse;->getHistoryManager()Lcom/glympse/android/api/GHistoryManager;
+    invoke-interface {v4}, Lcom/glympse/android/api/GGlympse;->getUserManager()Lcom/glympse/android/api/GUserManager;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-interface {v4, v0}, Lcom/glympse/android/api/GHistoryManager;->findTicketByInviteCode(Ljava/lang/String;)Lcom/glympse/android/api/GTicket;
+    invoke-interface {v3}, Lcom/glympse/android/api/GUserManager;->getSelf()Lcom/glympse/android/api/GUser;
 
-    move-result-object v4
-
-    if-eqz v4, :cond_1
-
-    invoke-interface {v3}, Lcom/glympse/android/api/GGlympse;->getUserManager()Lcom/glympse/android/api/GUserManager;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/glympse/android/api/GUserManager;->getSelf()Lcom/glympse/android/api/GUser;
-
-    move-result-object v0
+    move-result-object v3
 
     :goto_1
-    if-eqz v0, :cond_0
+    if-eqz v3, :cond_0
 
-    invoke-interface {v3}, Lcom/glympse/android/api/GGlympse;->getUserManager()Lcom/glympse/android/api/GUserManager;
+    const-wide/16 v6, 0x0
 
-    move-result-object v3
+    invoke-static {v3}, Lcom/bbm/util/a/k;->c(Lcom/glympse/android/api/GUser;)J
 
-    invoke-interface {v3, v0}, Lcom/glympse/android/api/GUserManager;->startTracking(Lcom/glympse/android/api/GUser;)I
+    move-result-wide v8
+
+    cmp-long v6, v6, v8
+
+    if-gez v6, :cond_0
+
+    invoke-interface {v4}, Lcom/glympse/android/api/GGlympse;->getUserManager()Lcom/glympse/android/api/GUserManager;
+
+    move-result-object v6
+
+    invoke-interface {v6, v3}, Lcom/glympse/android/api/GUserManager;->startTracking(Lcom/glympse/android/api/GUser;)I
+
+    iget-object v3, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->l:Ljava/util/List;
+
+    new-instance v6, Lcom/bbm/ui/activities/jl;
+
+    invoke-direct {v6, p0, v5, v0}, Lcom/bbm/ui/activities/jl;-><init>(Lcom/bbm/ui/activities/GlympseViewerActivity;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v3, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_0
     add-int/lit8 v0, v1, 0x1
@@ -237,53 +240,48 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
-
-    move-result-object v4
-
-    iget-object v4, v4, Lcom/bbm/p;->a:Lcom/glympse/android/api/GGlympse;
-
     invoke-interface {v4}, Lcom/glympse/android/api/GGlympse;->getUserManager()Lcom/glympse/android/api/GUserManager;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-interface {v4, v0}, Lcom/glympse/android/api/GUserManager;->findUserByInviteCode(Ljava/lang/String;)Lcom/glympse/android/api/GUser;
+    invoke-interface {v3, v0}, Lcom/glympse/android/api/GUserManager;->findUserByInviteCode(Ljava/lang/String;)Lcom/glympse/android/api/GUser;
 
-    move-result-object v0
+    move-result-object v3
 
     goto :goto_1
 
     :cond_2
     iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->d:Lcom/glympse/map/lib/Map;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->k:Ljava/util/List;
+    iget-object v1, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->l:Ljava/util/List;
 
     invoke-virtual {v0, v1}, Lcom/glympse/map/lib/Map;->attachUserMapping(Ljava/util/List;)V
 
     iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->a:Lcom/bbm/ui/GlympseUserSelector;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->k:Ljava/util/List;
+    iget-object v1, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->l:Ljava/util/List;
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/GlympseUserSelector;->a(Ljava/util/List;)V
 
     iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->d:Lcom/glympse/map/lib/Map;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->g:Lcom/bbm/d/eu;
+    iget-object v1, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->h:Lcom/bbm/d/fv;
 
-    invoke-virtual {v0, v1}, Lcom/glympse/map/lib/Map;->attachConversation(Lcom/bbm/d/eu;)V
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->a:Lcom/bbm/ui/GlympseUserSelector;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->g:Lcom/bbm/d/eu;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/GlympseUserSelector;->a(Lcom/bbm/d/eu;)V
+    invoke-virtual {v0, v1}, Lcom/glympse/map/lib/Map;->attachConversation(Lcom/bbm/d/fv;)V
 
     iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->a:Lcom/bbm/ui/GlympseUserSelector;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->h:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->h:Lcom/bbm/d/fv;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/GlympseUserSelector;->a(Lcom/bbm/d/fv;)V
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->a:Lcom/bbm/ui/GlympseUserSelector;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->i:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/GlympseUserSelector;->a(Ljava/lang/String;)V
 
+    :cond_3
     return-void
 .end method
 
@@ -291,8 +289,8 @@
     .locals 1
 
     .prologue
-    .line 39
-    iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->l:Lcom/bbm/d/a;
+    .line 41
+    iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->m:Lcom/bbm/d/a;
 
     return-object v0
 .end method
@@ -301,18 +299,18 @@
     .locals 1
 
     .prologue
-    .line 39
-    iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->f:Ljava/lang/String;
+    .line 41
+    iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->e:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic d(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/bbm/d/eu;
+.method static synthetic d(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/bbm/d/fv;
     .locals 1
 
     .prologue
-    .line 39
-    iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->g:Lcom/bbm/d/eu;
+    .line 41
+    iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->h:Lcom/bbm/d/fv;
 
     return-object v0
 .end method
@@ -321,7 +319,7 @@
     .locals 1
 
     .prologue
-    .line 39
+    .line 41
     iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->o:Lcom/bbm/f/ac;
 
     return-object v0
@@ -331,7 +329,7 @@
     .locals 1
 
     .prologue
-    .line 39
+    .line 41
     iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->a:Lcom/bbm/ui/GlympseUserSelector;
 
     return-object v0
@@ -347,24 +345,24 @@
 
     const/4 v3, 0x1
 
-    .line 284
+    .line 241
     if-ne p2, v3, :cond_1
 
-    .line 286
+    .line 243
     and-int/lit16 v0, p3, 0x200
 
     if-eqz v0, :cond_0
 
-    .line 287
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
+    .line 244
+    invoke-static {}, Lcom/bbm/w;->a()Lcom/bbm/w;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lcom/bbm/p;->a:Lcom/glympse/android/api/GGlympse;
+    iput-object v1, v0, Lcom/bbm/w;->a:Lcom/glympse/android/api/GGlympse;
 
-    .line 289
+    .line 246
     :cond_0
     const/high16 v0, 0x400000
 
@@ -372,22 +370,22 @@
 
     if-eqz v0, :cond_3
 
-    .line 290
+    .line 247
     check-cast p4, Lcom/glympse/android/api/GUserTicket;
 
-    .line 291
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
+    .line 248
+    invoke-static {}, Lcom/bbm/w;->a()Lcom/bbm/w;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/p;->a:Lcom/glympse/android/api/GGlympse;
+    iget-object v0, v0, Lcom/bbm/w;->a:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v0, p4}, Lcom/glympse/android/api/GGlympse;->viewTicket(Lcom/glympse/android/api/GUserTicket;)Lcom/glympse/android/api/GTicket;
 
     move-result-object v0
 
-    .line 292
-    iput-boolean v3, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->j:Z
+    .line 249
+    iput-boolean v3, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->k:Z
 
     iget-object v1, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->d:Lcom/glympse/map/lib/Map;
 
@@ -403,28 +401,28 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/glympse/map/lib/Map;->centerOnUser(Lcom/glympse/android/api/GUser;Z)V
 
-    .line 293
+    .line 250
     :goto_0
     iget-object v1, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->d:Lcom/glympse/map/lib/Map;
 
     invoke-virtual {v1, v0}, Lcom/glympse/map/lib/Map;->trackTicket(Lcom/glympse/android/api/GTicket;)V
 
-    .line 294
+    .line 251
     iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->d:Lcom/glympse/map/lib/Map;
 
     invoke-virtual {v0}, Lcom/glympse/map/lib/Map;->update()V
 
-    .line 295
+    .line 252
     iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->a:Lcom/bbm/ui/GlympseUserSelector;
 
     invoke-virtual {v0}, Lcom/bbm/ui/GlympseUserSelector;->a()V
 
-    .line 305
+    .line 262
     :cond_1
     :goto_1
     return-void
 
-    .line 292
+    .line 249
     :cond_2
     iget-object v1, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->d:Lcom/glympse/map/lib/Map;
 
@@ -432,7 +430,7 @@
 
     goto :goto_0
 
-    .line 296
+    .line 253
     :cond_3
     const v0, 0x8000
 
@@ -440,29 +438,29 @@
 
     if-eqz v0, :cond_1
 
-    .line 297
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->i:Z
+    .line 254
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->j:Z
 
     if-nez v0, :cond_4
 
-    .line 298
+    .line 255
     iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->d:Lcom/glympse/map/lib/Map;
 
     invoke-virtual {v0}, Lcom/glympse/map/lib/Map;->update()V
 
-    .line 299
+    .line 256
     iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->a:Lcom/bbm/ui/GlympseUserSelector;
 
     invoke-virtual {v0}, Lcom/bbm/ui/GlympseUserSelector;->a()V
 
-    .line 300
+    .line 257
     iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->d:Lcom/glympse/map/lib/Map;
 
     invoke-virtual {v0, v2}, Lcom/glympse/map/lib/Map;->center(Z)V
 
-    .line 302
+    .line 259
     :cond_4
-    iput-boolean v3, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->i:Z
+    iput-boolean v3, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->j:Z
 
     goto :goto_1
 .end method
@@ -475,15 +473,15 @@
 
     const/4 v2, 0x0
 
-    .line 180
-    invoke-super {p0, p1}, Landroid/support/v4/app/q;->onCreate(Landroid/os/Bundle;)V
+    .line 159
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/e;->onCreate(Landroid/os/Bundle;)V
 
-    .line 182
-    const v0, 0x7f030025
+    .line 161
+    const v0, 0x7f03003e
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->setContentView(I)V
 
-    .line 185
+    .line 164
     invoke-virtual {p0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -494,9 +492,9 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->f:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->e:Ljava/lang/String;
 
-    .line 186
+    .line 165
     invoke-virtual {p0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -507,14 +505,14 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->h:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->i:Ljava/lang/String;
 
-    .line 187
-    iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->f:Ljava/lang/String;
+    .line 166
+    iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->e:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->f:Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->e:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
@@ -527,43 +525,43 @@
     :goto_0
     const-string v3, "No conversation URI specified in Intent"
 
-    invoke-static {p0, v0, v3}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;ZLjava/lang/Object;)Z
+    invoke-static {p0, v0, v3}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;ZLjava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 215
+    .line 191
     :goto_1
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 187
+    .line 166
     goto :goto_0
 
-    .line 193
+    .line 172
     :cond_1
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
+    invoke-static {}, Lcom/bbm/w;->a()Lcom/bbm/w;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/p;->a:Lcom/glympse/android/api/GGlympse;
+    iget-object v0, v0, Lcom/bbm/w;->a:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v0, v1}, Lcom/glympse/android/api/GGlympse;->setActive(Z)I
 
-    .line 194
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
+    .line 173
+    invoke-static {}, Lcom/bbm/w;->a()Lcom/bbm/w;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/p;->b:Lcom/bbm/util/a/a;
+    iget-object v0, v0, Lcom/bbm/w;->b:Lcom/bbm/util/a/a;
 
     iput-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->b:Lcom/bbm/util/a/a;
 
-    .line 197
-    const v0, 0x7f0b018b
+    .line 176
+    const v0, 0x7f0b01f8
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->findViewById(I)Landroid/view/View;
 
@@ -573,30 +571,30 @@
 
     iput-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->a:Lcom/bbm/ui/GlympseUserSelector;
 
-    .line 198
+    .line 177
     iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->a:Lcom/bbm/ui/GlympseUserSelector;
 
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
+    invoke-static {}, Lcom/bbm/w;->a()Lcom/bbm/w;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/bbm/p;->a:Lcom/glympse/android/api/GGlympse;
+    iget-object v1, v1, Lcom/bbm/w;->a:Lcom/glympse/android/api/GGlympse;
 
     iput-object v1, v0, Lcom/bbm/ui/GlympseUserSelector;->a:Lcom/glympse/android/api/GGlympse;
 
-    .line 199
+    .line 178
     iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->a:Lcom/bbm/ui/GlympseUserSelector;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->m:Lcom/bbm/ui/cs;
+    iget-object v1, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->n:Lcom/bbm/ui/da;
 
-    iput-object v1, v0, Lcom/bbm/ui/GlympseUserSelector;->b:Lcom/bbm/ui/cs;
+    iput-object v1, v0, Lcom/bbm/ui/GlympseUserSelector;->b:Lcom/bbm/ui/da;
 
-    .line 202
+    .line 181
     invoke-virtual {p0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->getSupportFragmentManager()Landroid/support/v4/app/v;
 
     move-result-object v0
 
-    const v1, 0x7f0b018a
+    const v1, 0x7f0b01f7
 
     invoke-virtual {v0, v1}, Landroid/support/v4/app/v;->a(I)Landroid/support/v4/app/Fragment;
 
@@ -606,7 +604,7 @@
 
     iput-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->d:Lcom/glympse/map/lib/Map;
 
-    .line 203
+    .line 182
     iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->d:Lcom/glympse/map/lib/Map;
 
     invoke-virtual {v0}, Lcom/glympse/map/lib/Map;->getMapView()Lcom/bbm/compat/maps/c;
@@ -615,12 +613,12 @@
 
     invoke-interface {v0, v2}, Lcom/bbm/compat/maps/c;->setZoomControlsEnabled(Z)V
 
-    .line 204
+    .line 183
     iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->d:Lcom/glympse/map/lib/Map;
 
     invoke-virtual {v0, v2}, Lcom/glympse/map/lib/Map;->setFollowMode(I)V
 
-    .line 205
+    .line 184
     iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->d:Lcom/glympse/map/lib/Map;
 
     invoke-virtual {v0}, Lcom/glympse/map/lib/Map;->getMapView()Lcom/bbm/compat/maps/c;
@@ -629,52 +627,72 @@
 
     invoke-interface {v0, v2}, Lcom/bbm/compat/maps/c;->setCompassEnabled(Z)V
 
-    .line 206
+    .line 185
     iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->d:Lcom/glympse/map/lib/Map;
 
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
+    invoke-static {}, Lcom/bbm/w;->a()Lcom/bbm/w;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/bbm/p;->a:Lcom/glympse/android/api/GGlympse;
+    iget-object v1, v1, Lcom/bbm/w;->a:Lcom/glympse/android/api/GGlympse;
 
     invoke-virtual {v0, v1}, Lcom/glympse/map/lib/Map;->attachGlympse(Lcom/glympse/android/api/GGlympse;)V
 
-    .line 209
-    const v0, 0x7f0b00bf
+    .line 187
+    const v0, 0x7f0b013c
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/FooterActionBar;
+    check-cast v0, Landroid/support/v7/widget/Toolbar;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->e:Lcom/bbm/ui/FooterActionBar;
+    .line 188
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->getResources()Landroid/content/res/Resources;
 
-    .line 210
-    iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->e:Lcom/bbm/ui/FooterActionBar;
+    move-result-object v1
 
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/FooterActionBar;->setOverflowEnabled(Z)V
+    const v2, 0x7f0e03f6
 
-    .line 212
-    iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->e:Lcom/bbm/ui/FooterActionBar;
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->n:Lcom/bbm/ui/cn;
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/activities/GlympseViewerActivity;->a(Landroid/support/v7/widget/Toolbar;Ljava/lang/String;)V
 
-    .line 214
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+    .line 190
+    invoke-static {}, Lcom/bbm/Alaska;->k()Lcom/bbm/c/c;
 
     move-result-object v0
 
-    iget v1, v0, Lcom/bbm/c/c;->W:I
+    iget v1, v0, Lcom/bbm/c/c;->o:I
 
     add-int/lit8 v1, v1, 0x1
 
-    iput v1, v0, Lcom/bbm/c/c;->W:I
+    iput v1, v0, Lcom/bbm/c/c;->o:I
 
     goto/16 :goto_1
+.end method
+
+.method public onCreateOptionsMenu(Landroid/view/Menu;)Z
+    .locals 2
+
+    .prologue
+    .line 295
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->getMenuInflater()Landroid/view/MenuInflater;
+
+    move-result-object v0
+
+    const v1, 0x7f100036
+
+    invoke-virtual {v0, v1, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
+
+    .line 296
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/e;->onCreateOptionsMenu(Landroid/view/Menu;)Z
+
+    move-result v0
+
+    return v0
 .end method
 
 .method protected onDestroy()V
@@ -683,57 +701,98 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 258
+    .line 232
     iput-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->d:Lcom/glympse/map/lib/Map;
 
-    .line 259
+    .line 233
     iput-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->a:Lcom/bbm/ui/GlympseUserSelector;
 
-    .line 260
+    .line 234
     iput-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->p:Lcom/bbm/j/k;
 
-    .line 261
-    iput-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->e:Lcom/bbm/ui/FooterActionBar;
+    .line 235
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/e;->onDestroy()V
 
-    .line 262
-    iput-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->n:Lcom/bbm/ui/cn;
-
-    .line 263
-    invoke-super {p0}, Landroid/support/v4/app/q;->onDestroy()V
-
-    .line 264
+    .line 236
     return-void
+.end method
+
+.method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    .locals 3
+
+    .prologue
+    const/4 v0, 0x1
+
+    .line 301
+    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
+
+    move-result v1
+
+    packed-switch v1, :pswitch_data_0
+
+    .line 310
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/e;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    .line 304
+    :pswitch_0
+    new-instance v1, Landroid/content/Intent;
+
+    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
+
+    .line 305
+    const-string v2, "OPEN_QUICK_SHARE_COMPONENT"
+
+    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 306
+    const/4 v2, -0x1
+
+    invoke-virtual {p0, v2, v1}, Lcom/bbm/ui/activities/GlympseViewerActivity;->setResult(ILandroid/content/Intent;)V
+
+    .line 307
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->finish()V
+
+    goto :goto_0
+
+    .line 301
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x7f0b07a4
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method protected onPause()V
     .locals 2
 
     .prologue
-    .line 229
+    .line 205
     iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->p:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
 
-    .line 230
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
+    .line 206
+    invoke-static {}, Lcom/bbm/w;->a()Lcom/bbm/w;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/bbm/p;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/bbm/w;->a(Z)V
 
-    .line 231
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
-
-    invoke-static {}, Lcom/bbm/p;->b()V
-
-    .line 232
+    .line 207
     iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->d:Lcom/glympse/map/lib/Map;
 
     invoke-virtual {v0}, Lcom/glympse/map/lib/Map;->stopListening()V
 
-    .line 233
+    .line 208
     iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->a:Lcom/bbm/ui/GlympseUserSelector;
 
     iget-object v1, v0, Lcom/bbm/ui/GlympseUserSelector;->a:Lcom/glympse/android/api/GGlympse;
@@ -744,50 +803,165 @@
 
     invoke-interface {v1, v0}, Lcom/glympse/android/api/GGlympse;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
 
-    .line 234
+    .line 209
     :cond_0
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
+    invoke-static {}, Lcom/bbm/w;->a()Lcom/bbm/w;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/bbm/p;->b(Lcom/glympse/android/api/GEventListener;)V
+    invoke-virtual {v0, p0}, Lcom/bbm/w;->b(Lcom/glympse/android/api/GEventListener;)V
 
-    .line 236
-    invoke-super {p0}, Landroid/support/v4/app/q;->onPause()V
+    .line 211
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/e;->onPause()V
 
-    .line 237
+    .line 212
     return-void
 .end method
 
-.method protected onResume()V
-    .locals 6
+.method public onPrepareOptionsMenu(Landroid/view/Menu;)Z
+    .locals 5
 
     .prologue
-    const/4 v5, 0x2
+    const/4 v1, 0x1
 
-    const/4 v4, 0x1
+    const/4 v2, 0x0
 
-    .line 241
-    invoke-super {p0}, Landroid/support/v4/app/q;->onResume()V
+    .line 266
+    .line 267
+    iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->b:Lcom/bbm/util/a/a;
 
-    .line 243
+    iget-object v3, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->e:Ljava/lang/String;
+
+    invoke-virtual {v0, v3}, Lcom/bbm/util/a/a;->a(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    .line 268
+    iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->b:Lcom/bbm/util/a/a;
+
+    iget-object v3, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->b:Lcom/bbm/util/a/a;
+
+    iget-object v4, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->e:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Lcom/bbm/util/a/a;->b(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Lcom/bbm/util/a/a;->c(Ljava/lang/String;)Lcom/glympse/android/api/GTicket;
+
+    move-result-object v0
+
+    .line 269
+    if-eqz v0, :cond_4
+
+    invoke-interface {v0}, Lcom/glympse/android/api/GTicket;->isActive()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    move v3, v1
+
+    .line 274
+    :goto_0
+    if-eqz p1, :cond_1
+
+    .line 275
+    const v0, 0x7f0b07a4
+
+    invoke-interface {p1, v0}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    .line 276
+    const v4, 0x7f0b07a5
+
+    invoke-interface {p1, v4}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v4
+
+    .line 278
+    if-eqz v0, :cond_0
+
+    .line 279
+    invoke-interface {v0, v3}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    .line 280
+    invoke-interface {v0, v3}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
+
+    .line 283
+    :cond_0
+    if-eqz v4, :cond_1
+
+    .line 284
+    if-nez v3, :cond_2
+
+    move v0, v1
+
+    :goto_1
+    invoke-interface {v4, v0}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    .line 285
+    if-nez v3, :cond_3
+
+    :goto_2
+    invoke-interface {v4, v1}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
+
+    .line 289
+    :cond_1
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/e;->onPrepareOptionsMenu(Landroid/view/Menu;)Z
+
+    move-result v0
+
+    return v0
+
+    :cond_2
+    move v0, v2
+
+    .line 284
+    goto :goto_1
+
+    :cond_3
+    move v1, v2
+
+    .line 285
+    goto :goto_2
+
+    :cond_4
+    move v3, v2
+
+    goto :goto_0
+.end method
+
+.method protected onResume()V
+    .locals 2
+
+    .prologue
+    .line 216
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/e;->onResume()V
+
+    .line 218
     iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->p:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 244
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
+    .line 219
+    invoke-static {}, Lcom/bbm/w;->a()Lcom/bbm/w;
 
     move-result-object v0
 
-    invoke-virtual {v0, v4}, Lcom/bbm/p;->a(Z)V
+    const/4 v1, 0x1
 
-    .line 245
+    invoke-virtual {v0, v1}, Lcom/bbm/w;->a(Z)V
+
+    .line 220
     iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->d:Lcom/glympse/map/lib/Map;
 
     invoke-virtual {v0}, Lcom/glympse/map/lib/Map;->startListening()V
 
-    .line 246
+    .line 221
     iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->a:Lcom/bbm/ui/GlympseUserSelector;
 
     iget-object v1, v0, Lcom/bbm/ui/GlympseUserSelector;->a:Lcom/glympse/android/api/GGlympse;
@@ -798,102 +972,32 @@
 
     invoke-interface {v1, v0}, Lcom/glympse/android/api/GGlympse;->addListener(Lcom/glympse/android/api/GEventListener;)Z
 
-    .line 247
+    .line 222
     :cond_0
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
+    invoke-static {}, Lcom/bbm/w;->a()Lcom/bbm/w;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/bbm/p;->a(Lcom/glympse/android/api/GEventListener;)V
+    invoke-virtual {v0, p0}, Lcom/bbm/w;->a(Lcom/glympse/android/api/GEventListener;)V
 
-    .line 248
-    iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->b:Lcom/bbm/util/a/a;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->f:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/util/a/a;->a(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->b:Lcom/bbm/util/a/a;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->b:Lcom/bbm/util/a/a;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->f:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Lcom/bbm/util/a/a;->b(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/util/a/a;->c(Ljava/lang/String;)Lcom/glympse/android/api/GTicket;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v0}, Lcom/glympse/android/api/GTicket;->isActive()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->e:Lcom/bbm/ui/FooterActionBar;
-
-    invoke-virtual {v0, v4}, Lcom/bbm/ui/FooterActionBar;->a(I)V
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->e:Lcom/bbm/ui/FooterActionBar;
-
-    new-instance v1, Lcom/bbm/ui/ActionBarItem;
-
-    const v2, 0x7f0200fc
-
-    const v3, 0x7f0e03a4
-
-    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;II)V
-
-    invoke-virtual {v0, v1, v5}, Lcom/bbm/ui/FooterActionBar;->a(Lcom/bbm/ui/ActionBarItem;I)V
-
-    .line 249
-    :goto_0
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->j:Z
+    .line 223
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->k:Z
 
     if-eqz v0, :cond_1
 
-    .line 250
+    .line 224
     iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->d:Lcom/glympse/map/lib/Map;
 
     invoke-virtual {v0}, Lcom/glympse/map/lib/Map;->update()V
 
-    .line 251
+    .line 225
     iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->d:Lcom/glympse/map/lib/Map;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/glympse/map/lib/Map;->center(Z)V
 
-    .line 253
+    .line 227
     :cond_1
     return-void
-
-    .line 248
-    :cond_2
-    iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->e:Lcom/bbm/ui/FooterActionBar;
-
-    invoke-virtual {v0, v5}, Lcom/bbm/ui/FooterActionBar;->a(I)V
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/GlympseViewerActivity;->e:Lcom/bbm/ui/FooterActionBar;
-
-    new-instance v1, Lcom/bbm/ui/ActionBarItem;
-
-    const v2, 0x7f020299
-
-    const v3, 0x7f0e03a6
-
-    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;II)V
-
-    invoke-virtual {v0, v1, v4}, Lcom/bbm/ui/FooterActionBar;->a(Lcom/bbm/ui/ActionBarItem;I)V
-
-    goto :goto_0
 .end method

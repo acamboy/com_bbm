@@ -1,178 +1,89 @@
 .class final Lcom/bbm/ui/activities/jz;
-.super Lcom/bbm/ui/cn;
-.source "FilePickerActivity.java"
+.super Ljava/lang/Object;
+.source "GroupAdminPasswordActivity.java"
+
+# interfaces
+.implements Landroid/text/TextWatcher;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/FilePickerActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupAdminPasswordActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/FilePickerActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupAdminPasswordActivity;)V
     .locals 0
 
     .prologue
-    .line 330
-    iput-object p1, p0, Lcom/bbm/ui/activities/jz;->a:Lcom/bbm/ui/activities/FilePickerActivity;
+    .line 77
+    iput-object p1, p0, Lcom/bbm/ui/activities/jz;->a:Lcom/bbm/ui/activities/GroupAdminPasswordActivity;
 
-    invoke-direct {p0}, Lcom/bbm/ui/cn;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 3
 
     .prologue
-    .line 334
-    iget-object v0, p0, Lcom/bbm/ui/activities/jz;->a:Lcom/bbm/ui/activities/FilePickerActivity;
+    .line 80
+    const-string v0, "password field afterTextChanged"
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/FilePickerActivity;->finish()V
+    const-class v1, Lcom/bbm/ui/activities/GroupAdminPasswordActivity;
 
-    .line 335
-    return-void
-.end method
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-.method public final a(I)V
-    .locals 4
+    .line 81
+    iget-object v0, p0, Lcom/bbm/ui/activities/jz;->a:Lcom/bbm/ui/activities/GroupAdminPasswordActivity;
 
-    .prologue
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    .line 339
-    packed-switch p1, :pswitch_data_0
-
-    .line 371
-    :goto_0
-    return-void
-
-    .line 341
-    :pswitch_0
-    new-instance v0, Lcom/bbm/ui/b/k;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/jz;->a:Lcom/bbm/ui/activities/FilePickerActivity;
-
-    invoke-direct {v0, v1}, Lcom/bbm/ui/b/k;-><init>(Landroid/content/Context;)V
-
-    .line 342
-    const v1, 0x7f0e033b
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/k;->setTitle(I)V
-
-    .line 343
-    iget-object v1, p0, Lcom/bbm/ui/activities/jz;->a:Lcom/bbm/ui/activities/FilePickerActivity;
-
-    const v2, 0x7f0e033f
-
-    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/FilePickerActivity;->getString(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupAdminPasswordActivity;->e(Lcom/bbm/ui/activities/GroupAdminPasswordActivity;)Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/k;->d(Ljava/lang/String;)V
+    iget-object v0, p0, Lcom/bbm/ui/activities/jz;->a:Lcom/bbm/ui/activities/GroupAdminPasswordActivity;
 
-    .line 344
-    const v1, 0x7f0e0175
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/k;->b(I)V
-
-    .line 345
-    const v1, 0x7f0e00f4
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/k;->a(I)V
-
-    .line 346
-    new-instance v1, Lcom/bbm/ui/activities/ka;
-
-    invoke-direct {v1, p0, v0}, Lcom/bbm/ui/activities/ka;-><init>(Lcom/bbm/ui/activities/jz;Lcom/bbm/ui/b/k;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/k;->a(Landroid/view/View$OnClickListener;)V
-
-    .line 357
-    invoke-virtual {v0}, Lcom/bbm/ui/b/k;->show()V
-
-    goto :goto_0
-
-    .line 360
-    :pswitch_1
-    new-instance v1, Landroid/content/Intent;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/jz;->a:Lcom/bbm/ui/activities/FilePickerActivity;
-
-    const-class v3, Lcom/bbm/ui/activities/FileSearchActivity;
-
-    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 361
-    iget-object v2, p0, Lcom/bbm/ui/activities/jz;->a:Lcom/bbm/ui/activities/FilePickerActivity;
-
-    invoke-virtual {v2, v1, v0}, Lcom/bbm/ui/activities/FilePickerActivity;->startActivityForResult(Landroid/content/Intent;I)V
-
-    goto :goto_0
-
-    .line 364
-    :pswitch_2
-    invoke-static {}, Lcom/bbm/ui/activities/FilePickerActivity;->f()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    :goto_1
-    invoke-static {v0}, Lcom/bbm/ui/activities/FilePickerActivity;->b(Z)Z
-
-    .line 365
-    iget-object v0, p0, Lcom/bbm/ui/activities/jz;->a:Lcom/bbm/ui/activities/FilePickerActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/FilePickerActivity;->j(Lcom/bbm/ui/activities/FilePickerActivity;)V
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    .line 364
-    goto :goto_1
-
-    .line 368
-    :pswitch_3
-    iget-object v0, p0, Lcom/bbm/ui/activities/jz;->a:Lcom/bbm/ui/activities/FilePickerActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/FilePickerActivity;->k(Lcom/bbm/ui/activities/FilePickerActivity;)Landroid/widget/LinearLayout;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupAdminPasswordActivity;->a(Lcom/bbm/ui/activities/GroupAdminPasswordActivity;)Landroid/widget/EditText;
 
     move-result-object v0
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/jz;->a:Lcom/bbm/ui/activities/FilePickerActivity;
+    invoke-virtual {v0}, Landroid/widget/EditText;->length()I
 
-    invoke-static {v2}, Lcom/bbm/ui/activities/FilePickerActivity;->k(Lcom/bbm/ui/activities/FilePickerActivity;)Landroid/widget/LinearLayout;
+    move-result v0
 
-    move-result-object v2
+    const/4 v2, 0x4
 
-    invoke-virtual {v2}, Landroid/widget/LinearLayout;->getVisibility()I
+    if-lt v0, v2, :cond_0
 
-    move-result v2
+    const/4 v0, 0x1
 
-    if-eqz v2, :cond_1
+    :goto_0
+    invoke-virtual {v1, v0}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setPositiveButtonEnabled(Z)V
 
-    :goto_2
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    .line 82
+    return-void
+
+    .line 81
+    :cond_0
+    const/4 v0, 0x0
 
     goto :goto_0
+.end method
 
-    :cond_1
-    const/16 v1, 0x8
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-    goto :goto_2
+    .prologue
+    .line 86
+    return-void
+.end method
 
-    .line 339
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-    .end packed-switch
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
+
+    .prologue
+    .line 90
+    return-void
 .end method

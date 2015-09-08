@@ -1,66 +1,46 @@
-.class public Lcom/bbm/b/au;
-.super Ljava/lang/Object;
+.class public final Lcom/bbm/b/au;
+.super Lcom/bbm/b/az;
 .source "AdsProtocol.java"
 
 
-# instance fields
-.field a:Lcom/bbm/f/ab;
-
-
 # direct methods
-.method constructor <init>(Ljava/lang/String;)V
+.method constructor <init>(Z)V
     .locals 2
 
     .prologue
-    .line 59
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1006
+    const-string v0, "requestPostAd"
 
-    .line 60
-    new-instance v0, Lcom/bbm/f/ab;
+    invoke-direct {p0, v0}, Lcom/bbm/b/az;-><init>(Ljava/lang/String;)V
 
-    new-instance v1, Lorg/json/JSONObject;
+    .line 1008
+    const-string v0, "prefetch"
 
-    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    invoke-direct {v0, p1, v1}, Lcom/bbm/f/ab;-><init>(Ljava/lang/String;Lorg/json/JSONObject;)V
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/bbm/b/au;->a:Lcom/bbm/f/ab;
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/b/au;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 61
+    .line 1009
     return-void
 .end method
 
 
 # virtual methods
-.method final a(Ljava/lang/String;Ljava/lang/Object;)V
+.method public final a(Lcom/bbm/b/av;)Lcom/bbm/b/au;
     .locals 2
 
     .prologue
-    .line 65
-    :try_start_0
-    iget-object v0, p0, Lcom/bbm/b/au;->a:Lcom/bbm/f/ab;
+    .line 1031
+    const-string v0, "connectionType"
 
-    iget-object v0, v0, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
-
-    invoke-static {p2}, Lcom/bbm/util/cd;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/bbm/b/av;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, p1, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/b/au;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 69
-    return-void
-
-    .line 67
-    :catch_0
-    move-exception v0
-
-    .line 68
-    new-instance v1, Lcom/bbm/f/z;
-
-    invoke-direct {v1, v0}, Lcom/bbm/f/z;-><init>(Ljava/lang/Exception;)V
-
-    throw v1
+    .line 1032
+    return-object p0
 .end method

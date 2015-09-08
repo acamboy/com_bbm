@@ -6,10 +6,10 @@
 # instance fields
 .field public final a:Lcom/bbm/d/a/d;
 
-.field public final b:Lcom/bbm/d/a/a/d;
+.field public final b:Lcom/bbm/d/a/a/e;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/bbm/d/a/a/d",
+            "Lcom/bbm/d/a/a/e",
             "<+",
             "Lcom/bbm/d/a/a;",
             ">;"
@@ -19,13 +19,13 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/d/a/d;Lcom/bbm/d/a/a/d;)V
+.method public constructor <init>(Lcom/bbm/d/a/d;Lcom/bbm/d/a/a/e;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/bbm/d/a/d;",
-            "Lcom/bbm/d/a/a/d",
+            "Lcom/bbm/d/a/a/e",
             "<+",
             "Lcom/bbm/d/a/a;",
             ">;)V"
@@ -40,7 +40,7 @@
     iput-object p1, p0, Lcom/bbm/d/a/e;->a:Lcom/bbm/d/a/d;
 
     .line 17
-    iput-object p2, p0, Lcom/bbm/d/a/e;->b:Lcom/bbm/d/a/a/d;
+    iput-object p2, p0, Lcom/bbm/d/a/e;->b:Lcom/bbm/d/a/a/e;
 
     .line 18
     return-void
@@ -128,12 +128,12 @@
 
     .line 53
     :cond_5
-    iget-object v2, p0, Lcom/bbm/d/a/e;->b:Lcom/bbm/d/a/a/d;
+    iget-object v2, p0, Lcom/bbm/d/a/e;->b:Lcom/bbm/d/a/a/e;
 
     if-nez v2, :cond_6
 
     .line 54
-    iget-object v2, p1, Lcom/bbm/d/a/e;->b:Lcom/bbm/d/a/a/d;
+    iget-object v2, p1, Lcom/bbm/d/a/e;->b:Lcom/bbm/d/a/a/e;
 
     if-eqz v2, :cond_0
 
@@ -144,9 +144,9 @@
 
     .line 57
     :cond_6
-    iget-object v2, p0, Lcom/bbm/d/a/e;->b:Lcom/bbm/d/a/a/d;
+    iget-object v2, p0, Lcom/bbm/d/a/e;->b:Lcom/bbm/d/a/a/e;
 
-    iget-object v3, p1, Lcom/bbm/d/a/e;->b:Lcom/bbm/d/a/a/d;
+    iget-object v3, p1, Lcom/bbm/d/a/e;->b:Lcom/bbm/d/a/a/e;
 
     invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -179,7 +179,7 @@
     .line 30
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/bbm/d/a/e;->b:Lcom/bbm/d/a/a/d;
+    iget-object v2, p0, Lcom/bbm/d/a/e;->b:Lcom/bbm/d/a/a/e;
 
     if-nez v2, :cond_1
 
@@ -201,7 +201,7 @@
 
     .line 30
     :cond_1
-    iget-object v1, p0, Lcom/bbm/d/a/e;->b:Lcom/bbm/d/a/a/d;
+    iget-object v1, p0, Lcom/bbm/d/a/e;->b:Lcom/bbm/d/a/a/e;
 
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
@@ -235,9 +235,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/d/a/e;->b:Lcom/bbm/d/a/a/d;
+    iget-object v1, p0, Lcom/bbm/d/a/e;->b:Lcom/bbm/d/a/a/e;
 
-    invoke-interface {v1}, Lcom/bbm/d/a/a/d;->a()Ljava/util/Map;
+    invoke-interface {v1}, Lcom/bbm/d/a/a/e;->a()Ljava/util/Map;
 
     move-result-object v1
 

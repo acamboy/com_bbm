@@ -326,7 +326,7 @@
     goto :goto_0
 .end method
 
-.method private g(I)Z
+.method private h(I)Z
     .locals 2
 
     .prologue
@@ -360,12 +360,12 @@
     goto :goto_0
 .end method
 
-.method private h(I)J
+.method private i(I)J
     .locals 3
 
     .prologue
     .line 784
-    invoke-direct {p0, p1}, Lit/sephiroth/android/library/widget/ExpandableHListView;->g(I)Z
+    invoke-direct {p0, p1}, Lit/sephiroth/android/library/widget/ExpandableHListView;->h(I)Z
 
     move-result v0
 
@@ -584,7 +584,7 @@
     const/4 v2, 0x0
 
     .line 545
-    invoke-direct {p0, p2}, Lit/sephiroth/android/library/widget/ExpandableHListView;->g(I)Z
+    invoke-direct {p0, p2}, Lit/sephiroth/android/library/widget/ExpandableHListView;->h(I)Z
 
     move-result v0
 
@@ -662,8 +662,6 @@
     iget-object v0, p0, Lit/sephiroth/android/library/widget/ExpandableHListView;->aW:Lit/sephiroth/android/library/widget/ah;
 
     if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/ExpandableHListView;->aW:Lit/sephiroth/android/library/widget/ah;
 
     iget-object v0, v3, Lit/sephiroth/android/library/widget/ac;->a:Lit/sephiroth/android/library/widget/ad;
 
@@ -786,8 +784,6 @@
 
     if-eqz v0, :cond_7
 
-    iget-object v0, p0, Lit/sephiroth/android/library/widget/ExpandableHListView;->aX:Lit/sephiroth/android/library/widget/ai;
-
     iget-object v0, v3, Lit/sephiroth/android/library/widget/ac;->a:Lit/sephiroth/android/library/widget/ad;
 
     iget v0, v0, Lit/sephiroth/android/library/widget/ad;->a:I
@@ -853,7 +849,7 @@
 
     .prologue
     .line 1007
-    invoke-direct {p0, p2}, Lit/sephiroth/android/library/widget/ExpandableHListView;->g(I)Z
+    invoke-direct {p0, p2}, Lit/sephiroth/android/library/widget/ExpandableHListView;->h(I)Z
 
     move-result v0
 
@@ -1469,7 +1465,7 @@
     move-result v0
 
     .line 827
-    invoke-direct {p0, v0}, Lit/sephiroth/android/library/widget/ExpandableHListView;->h(I)J
+    invoke-direct {p0, v0}, Lit/sephiroth/android/library/widget/ExpandableHListView;->i(I)J
 
     move-result-wide v0
 

@@ -1,111 +1,115 @@
-.class final synthetic Lcom/bbm/setup/ae;
-.super Ljava/lang/Object;
+.class final Lcom/bbm/setup/ae;
+.super Lcom/bbm/j/k;
 .source "SetupManager.java"
 
 
-# static fields
-.field static final synthetic a:[I
+# instance fields
+.field final synthetic a:Lcom/bbm/setup/z;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/bbm/setup/z;)V
+    .locals 1
 
     .prologue
-    .line 267
-    invoke-static {}, Lcom/bbm/f/af;->values()[Lcom/bbm/f/af;
+    .line 131
+    iput-object p1, p0, Lcom/bbm/setup/ae;->a:Lcom/bbm/setup/z;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected final a()V
+    .locals 4
+
+    .prologue
+    .line 134
+    iget-object v1, p0, Lcom/bbm/setup/ae;->a:Lcom/bbm/setup/z;
+
+    iget-object v0, v1, Lcom/bbm/setup/z;->b:Lcom/bbm/d/a;
+
+    const-string v2, "bbidState"
+
+    invoke-virtual {v0, v2}, Lcom/bbm/d/a;->I(Ljava/lang/String;)Lcom/bbm/util/bs;
 
     move-result-object v0
 
-    array-length v0, v0
+    invoke-virtual {v0}, Lcom/bbm/util/bs;->d()Lorg/json/JSONObject;
 
-    new-array v0, v0, [I
+    move-result-object v0
 
-    sput-object v0, Lcom/bbm/setup/ae;->a:[I
+    const-string v2, "credentials"
 
-    :try_start_0
-    sget-object v0, Lcom/bbm/setup/ae;->a:[I
+    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
-    sget-object v1, Lcom/bbm/f/af;->b:Lcom/bbm/f/af;
+    move-result-object v2
 
-    invoke-virtual {v1}, Lcom/bbm/f/af;->ordinal()I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result v1
+    const-string v3, "SetupManager monitorGlobalBbidState - new state provided: "
 
-    const/4 v2, 0x1
+    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_3
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_0
-    :try_start_1
-    sget-object v0, Lcom/bbm/setup/ae;->a:[I
+    move-result-object v0
 
-    sget-object v1, Lcom/bbm/f/af;->c:Lcom/bbm/f/af;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1}, Lcom/bbm/f/af;->ordinal()I
+    move-result-object v0
 
-    move-result v1
+    const/4 v3, 0x0
 
-    const/4 v2, 0x2
+    new-array v3, v3, [Ljava/lang/Object;
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
+    invoke-static {v0, v3}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/bbm/setup/ae;->a:[I
+    iget-object v0, v1, Lcom/bbm/setup/z;->a:Lcom/bbm/aa;
 
-    sget-object v1, Lcom/bbm/f/af;->e:Lcom/bbm/f/af;
+    invoke-interface {v0}, Lcom/bbm/aa;->G()Lcom/bbm/f/af;
 
-    invoke-virtual {v1}, Lcom/bbm/f/af;->ordinal()I
+    move-result-object v0
 
-    move-result v1
+    sget-object v3, Lcom/bbm/f/af;->a:Lcom/bbm/f/af;
 
-    const/4 v2, 0x3
+    if-ne v0, v3, :cond_0
 
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_1
+    iget-object v0, v1, Lcom/bbm/setup/z;->j:Lcom/bbm/util/dc;
 
-    :goto_2
-    :try_start_3
-    sget-object v0, Lcom/bbm/setup/ae;->a:[I
+    invoke-virtual {v0}, Lcom/bbm/util/dc;->f()Ljava/lang/Object;
 
-    sget-object v1, Lcom/bbm/f/af;->d:Lcom/bbm/f/af;
+    move-result-object v0
 
-    invoke-virtual {v1}, Lcom/bbm/f/af;->ordinal()I
+    check-cast v0, Ljava/lang/String;
 
-    move-result v1
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
-    const/4 v2, 0x4
+    move-result v0
 
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_0
+    if-eqz v0, :cond_0
 
-    :goto_3
+    const-string v0, "Unknown"
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, v1, Lcom/bbm/setup/z;->j:Lcom/bbm/util/dc;
+
+    invoke-virtual {v0, v2}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
+
+    :cond_0
+    iget-object v0, v1, Lcom/bbm/setup/z;->p:Lcom/bbm/util/dc;
+
+    invoke-virtual {v0, v2}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
+
+    .line 135
     return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_3
-
-    :catch_1
-    move-exception v0
-
-    goto :goto_2
-
-    :catch_2
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_3
-    move-exception v0
-
-    goto :goto_0
 .end method

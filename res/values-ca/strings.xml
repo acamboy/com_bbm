@@ -173,7 +173,7 @@
     <string name="RS">Sèrbia</string>
     <string name="RU">Rússia</string>
     <string name="RW">Ruanda</string>
-    <string name="SA">Aràbia Saudí</string>
+    <string name="SA">Aràbia Saudita</string>
     <string name="SB">Illes Salomó</string>
     <string name="SC">Seychelles</string>
     <string name="SD">Sudan</string>
@@ -225,6 +225,21 @@
     <string name="a_newer_version_of_bbm_is_required">Cal una versió més recent del BBM.</string>
     <string name="a_problem_has_occurred_in_bbm">"S'ha produït un problema al BBM. Torneu a provar-ho més tard."</string>
     <string name="a_temporary_server_error_has_occurred">"S'ha produït un error temporal al servidor. Torneu-ho a provar."</string>
+    <string name="abc_action_bar_home_description">"Navega a la pàgina d'inici"</string>
+    <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
+    <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
+    <string name="abc_action_bar_up_description">Navega cap a dalt</string>
+    <string name="abc_action_menu_overflow_description">Més opcions</string>
+    <string name="abc_action_mode_done">Fet</string>
+    <string name="abc_activity_chooser_view_see_all">"Mostra'ls tots"</string>
+    <string name="abc_activitychooserview_choose_application">Selecciona una aplicació</string>
+    <string name="abc_searchview_description_clear">Esborra la consulta</string>
+    <string name="abc_searchview_description_query">Consulta de cerca</string>
+    <string name="abc_searchview_description_search">Cerca</string>
+    <string name="abc_searchview_description_submit">Envia la consulta</string>
+    <string name="abc_searchview_description_voice">Cerca per veu</string>
+    <string name="abc_shareactionprovider_share_with">Comparteix amb</string>
+    <string name="abc_shareactionprovider_share_with_application">Comparteix amb %s</string>
     <string name="about">Quant a</string>
     <string name="about_bbm_pins_message">Un PIN us identifica de forma exclusiva en el BBM. Altres usuaris poden enviar-vos invitacions per ser contactes del BBM si compartiu el vostre PIN o codi de barres del BBM.</string>
     <string name="about_bbm_pins_title">Quant als PIN del BBM</string>
@@ -235,9 +250,9 @@
     <string name="activity_select_new_admin_title">Selecciona nou administrador</string>
     <string name="activity_select_new_admin_title_selection">+%1$d administradors</string>
     <string name="activity_tap_to_invite_dialog_info">Voleu activar la NFC?</string>
-    <string name="activity_tap_to_invite_dialog_no">No</string>
+    <string name="activity_tap_to_invite_dialog_no">@string/no</string>
     <string name="activity_tap_to_invite_dialog_title">La ràdio NFC està desactivada</string>
-    <string name="activity_tap_to_invite_dialog_yes">Sí</string>
+    <string name="activity_tap_to_invite_dialog_yes">@string/yes</string>
     <string name="activity_tap_to_invite_info">Alineeu la part posterior dels vostres dispositius. Cal que la NFC estigui activada a ambdós dispositius.</string>
     <string name="ad_block_channel">Si bloquegeu el canal, no veureu contingut patrocinat del canal \"%1$s\". Aquesta acció no es pot desfer.</string>
     <string name="ad_block_sponsor">No veureu contingut patrocinat del \"%1$s\". Aquesta acció no es pot desfer.</string>
@@ -263,13 +278,26 @@
     <string name="allow_comments_on_posts">Permet comentaris a les publicacions</string>
     <string name="app_name">BBM</string>
     <string name="app_picker_name">Aplicacions</string>
+    <string name="app_store_app_subscribe_notification_dialog_line">Expliqueu als vostres contactes que ara sou usuari %1$s dels paquets de Subscripció del BBM</string>
+    <string name="app_store_app_subscribe_notification_message">Hola, ara sóc usuari %1$s dels paquets de Subscripció del BBM! Vós també podeu ser-ho!</string>
+    <string name="app_store_confirmation_screen_feature_offered_line">Característiques de la vostra subscripció:</string>
     <string name="app_store_details_screen_install_button">Instal·la</string>
     <string name="app_store_details_screen_inventory_not_found">"No es pot obrir l'aplicació.
  Torneu a provar-ho més tard."</string>
     <string name="app_store_details_screen_open_button">Obre</string>
+    <string name="app_store_details_screen_renew_button">RENOVA</string>
+    <string name="app_store_details_screen_subscribe_button">Subscriu</string>
+    <string name="app_store_details_screen_subscribed_button">Subscrit</string>
     <string name="app_store_invalid_app_id">"L'article no està disponible"</string>
+    <string name="app_store_subscribed_app_no_ads_description">Amagueu les invitacions i els anuncis patrocinats al BBM amb aquesta subscripció.</string>
+    <string name="app_store_subscribed_app_vanity_pin_description">"El PIN personalitzat es fa servir per convidar altres usuaris i per visualitzar el vostre perfil. Un cop definit el PIN personalitzat, l'usuari el pot editar durant un període determinat. Canvia el PIN"</string>
+    <string name="app_subscription_thank_you">Gràcies. Ara esteu subscrit al BBM.</string>
     <string name="approve_comments">Aprova els comentaris</string>
     <string name="approve_comments_description">Podeu modificar aquesta opció des del lloc web dels canals.</string>
+    <string name="archiving_disabled_message">"El vostre administrador ha desactivat la funció d'arxivament. Ja no es desen els xats al dispositiu i els desats anteriorment ja no estan disponibles al vostre dispositiu. Per obtenir més informació, poseu-vos en contacte amb l'administrador."</string>
+    <string name="archiving_disabled_title">"L'arxivament està desactivat"</string>
+    <string name="archiving_enabled_message">"El vostre administrador ha activat la funció d'arxivament. Els xats es desen al vostre dispositiu. Per obtenir més informació, poseu-vos en contacte amb l'administrador."</string>
+    <string name="archiving_enabled_title">"L'arxivament està activat"</string>
     <string name="arrived_at_destination">Glympse: Arribat a la destinació</string>
     <string name="asterisk">*</string>
     <string name="attach">Adjunta</string>
@@ -286,15 +314,15 @@
     <string name="attach_list_voicenote">Nota de veu</string>
     <string name="audio_player_pause">Pausa</string>
     <string name="audio_player_play">Reprodueix</string>
-    <string name="auth_client_needs_enabling_title">"Una aplicació requereix que s'activin els serveis de Google Play."</string>
-    <string name="auth_client_needs_installation_title">"Una aplicació requereix que s'instal·lin els serveis de Google Play."</string>
-    <string name="auth_client_needs_update_title">"Una aplicació requereix que s'actualitzin els serveis de Google Play."</string>
-    <string name="auth_client_play_services_err_notification_msg">Error dels serveis de Google Play</string>
-    <string name="auth_client_requested_by_msg">Sol·licitada per %1$s</string>
-    <string name="auth_client_using_bad_version_title">Una aplic. ha intentat utilitzar una versió errònia de serveis de Play.</string>
+    <string name="autopassphrase_completed">Aquest xat ara està protegit amb el BBM Protected.</string>
+    <string name="autopassphrase_failed">"No s'ha pogut configurar el BBM Protected."</string>
+    <string name="autopassphrase_initiated">Creant un xat del BBM Protected.</string>
+    <string name="autopassphrase_retry">Torna-ho a provar</string>
     <string name="avatar_file_not_support">Fitxer no admès.</string>
     <string name="back">Enrere</string>
     <string name="backup_file_is_not_valid">El fitxer de seguretat no és vàlid. Cal que sortiu de la configuració del BBM i que feu servir la utilitat Canvi de dispositiu del BlackBerry Desktop Software.</string>
+    <string name="badge_on_your_avatar">"Insígnia a l'avatar"</string>
+    <string name="badge_on_your_avatar_description">"Quan s'activa la subscripció del BBM, rebreu la insígnia de l'avatar."</string>
     <string name="barcode_info">Un contacte pot escanejar el vostre codi de barres per afegir-vos al BBM</string>
     <string name="bbm_account_name">BBM</string>
     <string name="bbm_account_user_name">BBM Groups</string>
@@ -310,7 +338,9 @@
     <string name="bbm_service_running">Connectat</string>
     <string name="bbm_setup">Configuració del BBM</string>
     <string name="bbm_share_with_pin_uri">http://www.bbm.com/share/?BBMID=%1$s</string>
-    <string name="bbm_voice_ongoing_call">Al telèfon</string>
+    <string name="bbm_voice_ongoing_call">Fent una trucada del BBM</string>
+    <string name="billing_google_error_message_body">"Aquest element ja ha estat comprat per a un altre BlackBerry ID amb el vostre compte de botiga. Proveu d'utilitzar un altre compte de botiga."</string>
+    <string name="billing_google_error_message_title">No es pot comprar</string>
     <string name="blackberry_channels"><b>BBM Channels</b></string>
     <string name="blackberry_id">BBID</string>
     <string name="blackberry_id_is_not_responding">El BlackBerry ID no respon.</string>
@@ -573,6 +603,7 @@
     <string name="chat_history_missed_video_chat">Trucada de vídeo perduda de &lt;b>%1$s&lt;/b></string>
     <string name="chat_history_missed_voice_chat">Trucada de veu perduda de &lt;b>%1$s&lt;/b></string>
     <string name="chats">Xats</string>
+    <string name="chats_block_chat">Bloqueja aquest xat</string>
     <string name="chats_empty_chat">Xat buit</string>
     <string name="chats_end_chat">Finalitza el xat</string>
     <string name="chats_end_discussion">Finalitza la conversa</string>
@@ -581,35 +612,56 @@
     <string name="chats_open_group">Obre un grup</string>
     <string name="chats_select_more">"Selecciona'n més"</string>
     <string name="chats_start_video">Inicia el xat de vídeo</string>
-    <string name="chats_status_no_chats">"Toqueu l'angle superior per iniciar un xat."</string>
+    <string name="chats_status_no_chats">Toqueu el botó de xat a la part inferior de la pantalla per iniciar un xat.</string>
+    <string name="chats_status_no_chats_widget">"Toqueu l'angle superior per iniciar un xat."</string>
     <string name="chats_view_bbm_profile">Visualitza perfil del BBM</string>
     <string name="click_to_expire">Toqueu aquí per sortir del Glympse</string>
     <string name="click_to_reply">Toqueu aquí per respondre...</string>
     <string name="click_to_view">Toqueu aquí per veure...</string>
     <string name="close">Tanca</string>
+    <string name="cloud_directory_contact_add_coworkers">Troba companys de feina</string>
+    <string name="cloud_directory_contact_chat_failed">No es pot iniciar un xat del BBM amb aquest company de feina. Torneu a provar-ho més tard.</string>
+    <string name="cloud_directory_fields_info">Els vostres companys de feina poden veure aquest nom en cercar persones al BBM.</string>
+    <string name="cloud_directory_pin_lookup">"S'està sol·licitant informació de contacte."</string>
+    <string name="cloud_directory_search_failed">No es poden cercar companys de feina. Torneu a provar-ho més tard.</string>
+    <string name="cloud_directory_search_more_results">La cerca ha tornat massa resultats. Intenteu limitar la cerca.</string>
+    <string name="cloud_directory_search_text_min_length">Les cerques de companys de feina han de tenir com a mínim 2 caràcters.</string>
+    <string name="cloud_directory_service_hint">"Camps obligatoris. Assegureu-vos d'introduir el vostre nom real. Els vostres companys de feina poden cercar el vostre nom i iniciar xats del BBM amb vós."</string>
     <string name="coming_soon">"En aquests moments, aquesta funció no està disponible.
 Pròximament"</string>
     <string name="coming_soon_title">Pròximament</string>
     <string name="comment_copied">Comentari copiat</string>
     <string name="comments_disabled_label">Comentaris inhabilitats</string>
+    <string name="common_android_wear_notification_needs_update_text">"%1$s necessita que s'actualitzi l'aplicació Android Wear."</string>
+    <string name="common_android_wear_update_text">"%1$s no s'executarà fins que no actualitzis l'aplicació Android Wear."</string>
+    <string name="common_android_wear_update_title">Actualitza Android Wear</string>
+    <string name="common_google_play_services_api_unavailable_text">"%1$s necessita un o més serveis de Google Play que actualment no estan disponibles. Posa't en contacte amb el desenvolupador per obtenir ajuda."</string>
     <string name="common_google_play_services_enable_button">Activa els serveis de Google Play</string>
-    <string name="common_google_play_services_enable_text">Aquesta aplicació no funcionarà si no actives els serveis de Google Play.</string>
+    <string name="common_google_play_services_enable_text">%1$s no funcionarà si no actives els serveis de Google Play.</string>
     <string name="common_google_play_services_enable_title">Activa els serveis de Google Play</string>
+    <string name="common_google_play_services_error_notification_requested_by_msg">Sol·licitada per %1$s</string>
     <string name="common_google_play_services_install_button">Baixa els serveis de Google Play</string>
-    <string name="common_google_play_services_install_text_phone">"Aquesta aplicació no s'executarà si el telèfon no té instal·lats els serveis de  Google Play."</string>
-    <string name="common_google_play_services_install_text_tablet">Aquesta aplicació no funcionarà si la tauleta no té instal·lats els serveis de Google Play.</string>
+    <string name="common_google_play_services_install_text_phone">"%1$s no s'executarà si el telèfon no té instal·lats els serveis de Google Play."</string>
+    <string name="common_google_play_services_install_text_tablet">"%1$s no s'executarà si la tauleta no té instal·lats els serveis de Google Play."</string>
     <string name="common_google_play_services_install_title">Baixa els serveis de Google Play</string>
     <string name="common_google_play_services_invalid_account_text">El compte especificat no existeix en aquest dispositiu. Tria un compte diferent.</string>
     <string name="common_google_play_services_invalid_account_title">Compte no vàlid</string>
+    <string name="common_google_play_services_needs_enabling_title">"Una aplicació requereix que s'activin els serveis de Google Play."</string>
     <string name="common_google_play_services_network_error_text">Es requereix una connexió de dades per connectar amb els serveis de Google Play.</string>
     <string name="common_google_play_services_network_error_title">Error de xarxa</string>
+    <string name="common_google_play_services_notification_needs_update_title">"Una aplicació requereix que s'actualitzin els serveis de Google Play."</string>
+    <string name="common_google_play_services_notification_ticker">Error dels serveis de Google Play</string>
+    <string name="common_google_play_services_sign_in_failed_text">"S'ha produït un error en iniciar la sessió al compte especificat. Selecciona un altre compte."</string>
+    <string name="common_google_play_services_sign_in_failed_title">"S'ha produït un error en iniciar sessió."</string>
     <string name="common_google_play_services_unknown_issue">Error desconegut relacionat amb els serveis de Google Play.</string>
-    <string name="common_google_play_services_unsupported_date_text">Sembla que la data del dispositiu no és correcta. Comprova-la.</string>
-    <string name="common_google_play_services_unsupported_text">El teu dispositiu no és compatible amb els serveis de Google Play, en què es basen les teves aplicacions. Per obtenir assistència, contacta amb el fabricant.</string>
+    <string name="common_google_play_services_unsupported_text">"%1$s depèn dels serveis de Google Play, que no són compatibles amb el teu dispositiu. Posa't en contacte amb el fabricant per obtenir ajuda."</string>
     <string name="common_google_play_services_unsupported_title">Serveis de Google Play</string>
     <string name="common_google_play_services_update_button">Actualitza</string>
-    <string name="common_google_play_services_update_text">"Aquesta aplicació no s'executarà si no actualitzes els serveis de Google Play."</string>
+    <string name="common_google_play_services_update_text">"%1$s no s'executarà si no actualitzes els serveis de Google Play."</string>
     <string name="common_google_play_services_update_title">Actualitza els serveis de Google Play</string>
+    <string name="common_google_play_services_updating_text">"%1$s no s'executarà sense els serveis de Google Play, que s'estan actualitzant en aquest moment."</string>
+    <string name="common_google_play_services_updating_title">Actualitzant els serveis de Google Play</string>
+    <string name="common_open_on_phone">Obre al telèfon</string>
     <string name="common_signin_button_text">Inicia sessió</string>
     <string name="common_signin_button_text_long">Inicia sessió amb Google</string>
     <string name="complete">Finalitza</string>
@@ -618,8 +670,10 @@ Pròximament"</string>
     <string name="contact_add_category">Afegeix una categoria</string>
     <string name="contact_add_category_already_exists">La categoria ja existeix.</string>
     <string name="contact_add_category_hint">Introduïu un títol de categoria</string>
-    <string name="contact_add_notification">"L'usuari s'ha afegit"</string>
+    <string name="contact_add_notification">"S'ha afegit el contacte"</string>
     <string name="contact_delete_category">Suprimeix la categoria</string>
+    <string name="contact_delete_notification">"S'ha suprimit el contacte"</string>
+    <string name="contact_delete_notification_multiple">"S'han suprimit %1$d contactes"</string>
     <string name="contact_details">Detalls del contacte</string>
     <string name="contact_details_description">Afegiu un número de telèfon, adreça electrònica o lloc web.</string>
     <string name="contact_is_blocked">El contacte està blocat</string>
@@ -631,6 +685,8 @@ Pròximament"</string>
     <string name="contacts_are_blocked">Els contactes estan blocats</string>
     <string name="contacts_count">0</string>
     <string name="contacts_delete_contact">Suprimeix %1$s</string>
+    <string name="contacts_dialog_delete_and_block_info">Es blocaran totes les invitacions i els xats que %1$s faci en el futur. Voleu suprimir i blocar %1$s?</string>
+    <string name="contacts_dialog_delete_and_block_title">Suprimeix i bloca %1$s</string>
     <string name="contacts_dialog_delete_block_info">"%1$s s'afegirà a la vostra llista de blocatges"</string>
     <string name="contacts_dialog_delete_block_label">Bloca les invitacions futures</string>
     <string name="contacts_dialog_delete_multi_block_info">"Contactes s'afegirà a la vostra llista de blocatges"</string>
@@ -655,20 +711,25 @@ Pròximament"</string>
     <string name="contents_sms">Adreça SMS</string>
     <string name="contents_text">Text pla</string>
     <string name="context_menu_copy_message">Copia el missatge</string>
-    <string name="context_menu_recall_message">Retira missatge</string>
+    <string name="context_menu_quote_message">Cita un missatge</string>
+    <string name="context_menu_recall_message">Retira el missatge</string>
     <string name="context_menu_resend_message">Torna a enviar el missatge</string>
+    <string name="conversation_activity_block_chat_warning_message">"Si bloquegeu aquest xat, deixareu de rebre missatges nous que s'enviïn a aquest xat."</string>
+    <string name="conversation_activity_block_chat_warning_title">Voleu bloquejar el xat?</string>
     <string name="conversation_activity_end_chat_on_voice_warning_message">La vostra trucada finalitzarà i els missatges del xat se suprimiran.</string>
     <string name="conversation_activity_end_chat_warning_message">Si finalitzeu el xat, se suprimiran tots els missatges.</string>
     <string name="conversation_activity_end_chat_warning_title">Voleu finalitzar el xat?</string>
+    <string name="conversation_activity_leave_chat_warning_message">Si sortiu del xat, se suprimiran tots els missatges.</string>
+    <string name="conversation_activity_leave_chat_warning_title">Voleu sortir del xat?</string>
     <string name="conversation_activity_reinvite_accepted">Invitació acceptada</string>
     <string name="conversation_activity_reinvite_sent">Invitació enviada</string>
-    <string name="conversation_are_already_in_the_chat">&lt;b>%1$s&lt;/b> ja són al xat</string>
+    <string name="conversation_are_already_in_the_chat">%1$s ja són al xat</string>
     <string name="conversation_bubble_dropbox_caption">Aquí hi ha un enllaç a %1$s en el meu Dropbox</string>
     <string name="conversation_button_dropbox_download">Baixa</string>
     <string name="conversation_button_toast_attachment_deleted">Fitxer adjunt suprimit</string>
     <string name="conversation_button_toast_ref_content_deleted">"S'ha eliminat el contingut al qual es feia referència"</string>
     <string name="conversation_button_toast_undo">Desfés</string>
-    <string name="conversation_button_view_glympse">Visualitza el mapa</string>
+    <string name="conversation_button_view_glympse">VISUALITZA EL MAPA</string>
     <string name="conversation_email_chat_subject_multiple_participants">"Xat amb %1$s, %2$s i d'altres a %3$s"</string>
     <string name="conversation_email_chat_subject_three_participants">Xat amb %1$s i %2$s a %3$s</string>
     <string name="conversation_email_chat_subject_two_participants">Xat amb %1$s a %2$s</string>
@@ -678,30 +739,36 @@ Pròximament"</string>
     <string name="conversation_file_transfert">Fitxer rebut</string>
     <string name="conversation_file_transfert_canceled_dialog_title">Transferència de fitxers anul·lada</string>
     <string name="conversation_file_transfert_canceled_dialog_too_large">%1$s és massa gran. La mida màxima de fitxer és de 16 MB.</string>
-    <string name="conversation_incoming_invite_req">&lt;b>%1$s&lt;/b> vol convidar &lt;b>%2$s&lt;/b> al xat</string>
+    <string name="conversation_groups_alt_picture_sent">Imatge compartida</string>
+    <string name="conversation_groups_alt_sticker_sent">Sticker compartit</string>
+    <string name="conversation_incoming_invite_req">%1$s vol convidar %2$s al xat</string>
     <string name="conversation_incoming_invite_req_accepted">Heu afegit <b>%1$s</b></string>
-    <string name="conversation_incoming_invite_req_denied">Heu rebutjat la sol·licitud de &lt;b>%1$s&lt;/b> per convidar &lt;b>%2$s&lt;/b></string>
-    <string name="conversation_invite_accept_button">Permet</string>
-    <string name="conversation_invite_reject_button">Denega</string>
-    <string name="conversation_invited">&lt;b>%1$s&lt;/b> ha acceptat la vostra sol·licitud per convidar &lt;b>%2$s&lt;/b></string>
-    <string name="conversation_is_already_in_the_chat">&lt;b>%1$s&lt;/b> ja és al xat</string>
+    <string name="conversation_incoming_invite_req_denied">Heu rebutjat la sol·licitud de %1$s per convidar %2$s</string>
+    <string name="conversation_invite_accept_button">PERMET</string>
+    <string name="conversation_invite_reject_button">DENEGA</string>
+    <string name="conversation_invited">%1$s ha acceptat la vostra sol·licitud per convidar %2$s</string>
+    <string name="conversation_is_already_in_the_chat">%1$s ja és al xat</string>
     <string name="conversation_is_writing_a_message">està escrivint un missatge...</string>
-    <string name="conversation_joined_the_chat">"&lt;b>%1$s&lt;/b> s'ha unit al xat"</string>
-    <string name="conversation_left_the_chat">&lt;b>%1$s&lt;/b> ha sortit del xat</string>
+    <string name="conversation_joined_the_chat">"%1$s s'ha unit al xat"</string>
+    <string name="conversation_left_the_chat">%1$s ha sortit del xat</string>
     <string name="conversation_location_message_accurace_within">"Precisió d'%1$sm"</string>
     <string name="conversation_location_received">Ubicació rebuda</string>
     <string name="conversation_location_sent">Ubicació enviada</string>
+    <string name="conversation_message_edit_title">Edita el missatge</string>
+    <string name="conversation_message_editing">Editant: %1$s</string>
+    <string name="conversation_message_editing_removed">"S'ha eliminat el missatge editat"</string>
     <string name="conversation_message_recall_failed">"No s'ha pogut retirar el missatge"</string>
     <string name="conversation_message_recall_pending">Retirant missatge</string>
     <string name="conversation_message_recalled">Missatge retirat</string>
+    <string name="conversation_mpc_header">Xat</string>
     <string name="conversation_must_reinvite">%1$s no us té com a contacte. Voleu tornar a convidar %1$s?</string>
     <string name="conversation_notification_calendar_received">Cita rebuda</string>
     <string name="conversation_notification_calendar_sent">Cita enviada</string>
-    <string name="conversation_notification_conf_incoming_invite_req">&lt;b>%1$s&lt;/b> ha sol·licitat convidar algú al xat</string>
-    <string name="conversation_notification_conf_invited">"S'ha convidat a &lt;b>%1$s&lt;/b> al xat"</string>
-    <string name="conversation_notification_conf_outgoing_invite_req">Heu convidat a &lt;b>%1$s&lt;/b> al xat</string>
-    <string name="conversation_notification_conf_outgoing_invite_req_denied">"La vostra sol·licitud d'invitació per a &lt;b>%1$s&lt;/b> ha estat rebutjada"</string>
-    <string name="conversation_notification_conf_we_joined">&lt;b>%1$s&lt;/b> us ha convidat al xat</string>
+    <string name="conversation_notification_conf_incoming_invite_req">%1$s ha sol·licitat convidar algú al xat</string>
+    <string name="conversation_notification_conf_invited">"S'ha convidat a %1$s al xat"</string>
+    <string name="conversation_notification_conf_outgoing_invite_req">Heu convidat a %1$s al xat</string>
+    <string name="conversation_notification_conf_outgoing_invite_req_denied">"La vostra sol·licitud d'invitació per a %1$s s'ha rebutjat"</string>
+    <string name="conversation_notification_conf_we_joined">%1$s us ha convidat al xat</string>
     <string name="conversation_notification_contact_card_received">Targeta de contacte rebuda</string>
     <string name="conversation_notification_contact_card_sent">Targeta de contacte enviada</string>
     <string name="conversation_notification_default_incomming">Missatge rebut</string>
@@ -719,16 +786,17 @@ Pròximament"</string>
     <string name="conversation_notification_sticker_sent">"S'ha enviat un sticker"</string>
     <string name="conversation_notification_voice_note_received">Nota de veu rebuda</string>
     <string name="conversation_notification_voice_note_sent">Nota de veu enviada</string>
-    <string name="conversation_outgoing_invite_req">"La vostra sol·licitud per convidar &lt;b>%1$s&lt;/b> s'ha enviat a &lt;b>%2$s&lt;/b>"</string>
-    <string name="conversation_outgoing_invite_req_denied">&lt;b>%1$s&lt;/b> ha rebutjat la vostra sol·licitud per convidar &lt;b>%2$s&lt;/b></string>
+    <string name="conversation_outgoing_invite_req">"La vostra sol·licitud per convidar %1$s s'ha enviat a %2$s"</string>
+    <string name="conversation_outgoing_invite_req_denied">%1$s ha rebutjat la vostra sol·licitud per convidar %2$s</string>
     <string name="conversation_picture">"S'ha rebut la imatge"</string>
     <string name="conversation_ping">PING</string>
-    <string name="conversation_reinvite_accept_button">Torna a convidar</string>
-    <string name="conversation_reinvite_reject_button">Suprimeix el contacte</string>
+    <string name="conversation_reinvite_accept_button">TORNA A CONVIDAR</string>
+    <string name="conversation_reinvite_reject_button">SUPRIMEIX EL CONTACTE</string>
     <string name="conversation_send_button">Envia</string>
     <string name="conversation_share_max_participants">Hi ha massa participants al xat (el màxim és %1$s).</string>
     <string name="conversation_successfully_saved_picture">"La imatge s'ha desat correctament."</string>
     <string name="conversation_successfully_saved_voice_note">"La nota de veu s'ha desat correctament"</string>
+    <string name="conversation_toast_blocked_chat">"Heu bloquejat aquest xat. S'han suprimit tots els missatges."</string>
     <string name="conversation_toast_ended_chat">Xat finalitzat</string>
     <string name="conversation_toast_ended_chat_no_history">"Xat finalitzat. S'han suprimit tots els missatges."</string>
     <string name="conversation_toast_left_chat">Heu sortit del xat</string>
@@ -736,7 +804,7 @@ Pròximament"</string>
     <string name="conversation_unable_to_save_picture">La imatge no es pot desar</string>
     <string name="conversation_unable_to_save_voice_note">La nota de veu no es pot desar</string>
     <string name="conversation_voice_note_transfert">Nota de veu rebuda</string>
-    <string name="conversation_you_invited">Heu convidat &lt;b>%1$s&lt;/b> al xat</string>
+    <string name="conversation_you_invited">Heu convidat %1$s al xat</string>
     <string name="conversation_you_joined_the_chat">Us heu unit al xat</string>
     <string name="copied_group_passphrase">Frase de pas copiada</string>
     <string name="copied_group_passphrase_toast">Copiada al porta-retalls</string>
@@ -751,6 +819,26 @@ Pròximament"</string>
     <string name="creating_channel_toast_string">"S'està creant el canal"</string>
     <string name="creating_private_channel_confirmation">Aquesta acció no es pot desfer. Esteu segur que voleu convertir en privat aquest canal?</string>
     <string name="current">Actual</string>
+    <string name="custom_pin_activity_title">PIN personalitzat</string>
+    <string name="custom_pin_already_set">Ja heu creat un PIN personalitzat.</string>
+    <string name="custom_pin_confirm_postivie_text">És correcte</string>
+    <string name="custom_pin_confirm_text">Aquest text serà el vostre PIN personalitzat per al BBM. És correcte?</string>
+    <string name="custom_pin_friends_ad_link">Visiteu la botiga BBM</string>
+    <string name="custom_pin_friends_ad_text">Obteniu ara el vostre PIN personalitzat al BBM:</string>
+    <string name="custom_pin_get_your_custom_pin">Obteniu ara el vostre PIN personalitzat al BBM: visiteu la botiga BBM</string>
+    <string name="custom_pin_hint_text">Introduïu un PIN personalitzat</string>
+    <string name="custom_pin_legal">"És hora de crear el vostre PIN personalitzat. Preneu-vos el vostre temps, perquè després no el podreu canviar. El PIN personalitzat està associat amb el BBM sempre que la subscripció estigui activa.
+
+Directrius:
+* Ha de tenir entre 6 i 8 caràcters
+* Pot incloure números, lletres, guions baixos i guions
+* Ha d'incloure un guió baix, guió o lletra entre la G i la Z"</string>
+    <string name="custom_pin_not_subscribed">Personalitza el meu PIN</string>
+    <string name="custom_pin_share_to_feed_body">Expliqueu als vostres contactes que ara teniu el PIN personalitzat: %1$s</string>
+    <string name="custom_pin_shared_feed_item">Ara tinc un nou PIN personalitzat al BBM: %1$s. Per personalitzar el vostre PIN, toqueu http://shop.bbm.com/item/custom_pin</string>
+    <string name="custom_pin_terms_conditions">"&lt;p>&lt;b>Directrius per al PIN personalitzat al BBM&lt;/b>&lt;/p> &lt;p>Un PIN personalitzat és una forma divertida de personalitzar el vostre compte del BBM. Un PIN personalitzat no substitueix el vostre PIN actual [consulteu \"What is a PIN?\" (Què és el PIN?) a la secció de preguntes més freqüents de www.bbm.com per obtenir més informació sobre els PIN estàndard]; és un segon PIN que es mostra al perfil del BBM i que es pot fer servir per convidar d'altres usuaris del BBM i rebre'n invitacions.&lt;/p> &lt;p>A continuació s'enumeren una sèrie d'aspectes que cal tenir en compte quan es crea un PIN personalitzat:&lt;/p> &lt;p>&amp;#8226 No podeu reclamar un PIN personalitzat que estigui utilitzant algú altre.&lt;/p> &lt;p>&amp;#8226 Si no renoveu la vostra subscripció abans que no caduqui, ja no podreu utilitzar el PIN personalitzat i un altre subscriptor podrà reclamar-lo.&lt;/p> &lt;p>&amp;#8226 Pareu atenció a l'hora de triar el vostre PIN personalitzat. Un cop creat el PIN personalitzat, no es pot canviar durant el període de la subscripció.&lt;/p> &lt;p>&amp;#8226 Perquè el PIN personalitzat es pugui distingir d'un PIN estàndard del BBM, ha de complir els següents requisits: &lt;/p> &lt;p> - Ha de tenir entre 6 i 8 caràcters&lt;/p> &lt;p> - Pot incloure números, lletres, guions baixos i guions&lt;/p> &lt;p> - Ha d'incloure un guió baix, guió o lletra entre la G i la Z&lt;/p> &lt;p>&amp;#8226 Els PIN personalitzats no han d'incloure llenguatge abusiu, difamatori, calumniós, obscè, profà, il·legal o enganyós, ni utilitzar-se per a cap finalitat no permesa.&lt;/p> &lt;p>&amp;#8226 Els PIN personalitzats no es poden utilitzar per fer-vos passar per una altra persona, marca, organització o esdeveniment, ni per enganyar, confondre ni defraudar d'altres persones.&lt;/p> &lt;p>&amp;#8226 Els PIN personalitzats no poden incomplir ni infringir els drets, incloent-hi els drets de propietat intel·lectual, de cap individu, marca, organització o esdeveniment. Per exemple, el vostre PIN personalitzat no pot infringir els drets de marca comercial d'una altra persona o entitat.&lt;/p> &lt;p>&amp;#8226 BlackBerry es reserva el dret de rebutjar, eliminar o reclamar un PIN personalitzat en qualsevol moment i per qualsevol motiu, d'acord amb la política de termes d'adquisició/reemborsament aplicable.&lt;/p>"</string>
+    <string name="custom_pin_title">PIN personalitzat:</string>
+    <string name="custom_pin_warning_on_repurchase">Per conservar el vostre PIN personalitzat actual, és possible que hagueu de comprar una subscripció nova i després anul·lar la vostra subscripció anterior. Per obtenir més informació, visiteu: %1$s</string>
     <string name="date">Data</string>
     <string name="date_of_birth"><b>Data de naixement</b></string>
     <string name="date_of_birth_fail_age_limit">No teniu edat suficient per utilitzar els BBM Channels.</string>
@@ -777,6 +865,7 @@ Pròximament"</string>
     <string name="dialog_invite_security_question_tip">Consell: les respostes distingeixen entre majúscules i minúscules.</string>
     <string name="dialog_invite_security_question_title">Pregunta de seguretat</string>
     <string name="did_you_know">Consells i trucs</string>
+    <string name="different_platform_string">"Teniu una subscripció de renovació automàtica, que s'ha comprat en un altre dispositiu. Voleu subscriure-us amb aquest dispositiu?"</string>
     <string name="discard">Descarta</string>
     <string name="display_name"><i>Nom de visualització</i></string>
     <string name="do_you_want_to_switch_your_bbm_information_to_your_current_device">Voleu canviar la informació del BBM al dispositiu actual?</string>
@@ -793,10 +882,19 @@ Pròximament"</string>
     <string name="enter_an_address">Introduïu una adreça</string>
     <string name="enter_comment"><i>Introduïu un comentari</i></string>
     <string name="enter_date_of_birth">Introduïu la vostra data de naixement per accedir als BBM Channels.</string>
-    <string name="enter_passphrase">Introduïu la frase de pas</string>
+    <string name="enter_passphrase">INTRODUÏU LA FRASE DE PAS</string>
     <string name="enter_passphrase_hint"><i>Introduïu la frase de pas</i></string>
     <string name="enter_text"><i>Introduïu el text</i></string>
     <string name="entered_passphrase_incorrect">La frase de pas que heu introduït no és correcta.</string>
+    <string name="entitlement_dialog_title">Es requereix una subscripció</string>
+    <string name="entitlement_edit_dialogue">"Heu assolit el límit de prova per a l'edició de missatges.
+Per obtenir accés il·limitat a aquesta funció, podeu adquirir una subscripció."</string>
+    <string name="entitlement_privateconv_dialogue">"Heu assolit el límit de prova per als xats privats.
+Per obtenir accés il·limitat a aquesta funció, podeu adquirir una subscripció."</string>
+    <string name="entitlement_retracted_dialogue">"Heu assolit el límit de prova per als missatges retirats.
+Per obtenir accés il·limitat a aquesta funció, podeu adquirir una subscripció."</string>
+    <string name="entitlement_timed_dialogue">"Heu assolit el límit de prova per als missatges amb temporitzador.
+Per obtenir accés il·limitat a aquesta funció, podeu adquirir una subscripció."</string>
     <string name="ephemeral_hint_received">"Missatge temporitzat rebut. Manteniu-lo premut per veure'l."</string>
     <string name="ephemeral_hint_sent">Missatge temporitzat.</string>
     <string name="ephemeral_hint_viewed">Missatge temporitzat rebut. Caducat</string>
@@ -896,15 +994,17 @@ Pròximament"</string>
     <string name="filter_by">Filtra per</string>
     <string name="find_friend_allow_upload_dialog_double_check_text">"N'esteu segur? Si no permeteu que el BBM accedeixi als vostres contactes, haureu d'afegir els contactes del BBM manualment."</string>
     <string name="find_friend_allow_upload_dialog_double_check_title">No recomanat</string>
-    <string name="find_friend_allow_upload_dialog_title">Cerca amics al BBM</string>
-    <string name="find_friend_allow_upload_text">Permeteu que el BBM accedeixi periòdicament als vostres contactes per ajudar-vos a trobar amics.</string>
+    <string name="find_friend_allow_upload_dialog_title">Cercar amics</string>
+    <string name="find_friend_allow_upload_text">Permeteu que el BBM accedeixi als vostres contactes per ajudar-vos a trobar amics. Podeu decidir quins amics afegiu al BBM.</string>
     <string name="find_friend_category_get_bbm">Convida a baixar</string>
     <string name="find_friend_category_invite">Toqueu per continuar</string>
-    <string name="find_friends">Cerca amics al BBM</string>
+    <string name="find_friends">Cercar amics al BBM</string>
     <string name="find_more_friends">Cerca més amics</string>
-    <string name="first_launch_after_upgrade_privacy_terms">Accepto la &lt;b>&lt;a href=http://www.blackberry.com/legal/privacy>Política de privadesa&lt;/a>&lt;/b> i les &lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>Condicions del servei&lt;/a>&lt;/b></string>
-    <string name="first_launch_after_upgrade_subtitle">Feu que els vostres xats del BBM siguin més divertits amb els stickers. Ja disponibles.</string>
-    <string name="first_launch_after_upgrade_title">Envieu stickers!</string>
+    <string name="first_launch_after_upgrade_privacy_terms">Hem actualitzat les &lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>Condicions del servei&lt;/a>&lt;/b>. En fer clic a Continua, accepteu les &lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>Condicions del servei&lt;/a>&lt;/b> i la &lt;b>&lt;a href=http://www.blackberry.com/legal/privacy>Política de privadesa&lt;/a>&lt;/b></string>
+    <string name="first_launch_after_upgrade_subtitle">Creeu un PIN del BBM que sigui exclusivament vostre. Reserveu avui el vostre PIN personalitzat.</string>
+    <string name="first_launch_after_upgrade_title">Tan únic com vós</string>
+    <string name="first_name">Nom</string>
+    <string name="first_name_hint">Escriviu el vostre nom</string>
     <string name="flagged_comments_header">Comentaris</string>
     <string name="flagged_posts_header">Publicacions</string>
     <string name="format_not_supported_for_cropping">"El format no admet l'escapçament"</string>
@@ -912,6 +1012,7 @@ Pròximament"</string>
     <string name="general">General</string>
     <string name="glympse">Glympse</string>
     <string name="glympse_attach">Adjunta un Glympse</string>
+    <string name="glympse_duration_hourminutes">Queda %1$d:%2$02d</string>
     <string name="glympse_duration_minutes">Durada: %1$d min</string>
     <string name="glympse_expired">Caducat</string>
     <string name="glympse_expires_at">Comparteix fins %1$s</string>
@@ -946,6 +1047,7 @@ Pròximament"</string>
     <string name="glympse_update">Glympse actualitzat</string>
     <string name="glympse_user_selector_item_all_user_currently_sharing">Tots els usuaris comparteixen</string>
     <string name="glympse_user_selector_item_speed">Velocitat (km/h): %1$s</string>
+    <string name="glympse_user_selector_item_speed_na">Velocitat (km/h): N/A</string>
     <string name="glympse_user_selector_item_updated_d_ago">Darrera actualització : fa %1$ dies</string>
     <string name="glympse_user_selector_item_updated_h_m">Darrera actualització : fa %1$d:%2$s</string>
     <string name="glympse_user_selector_item_updated_m_ago">Darrera actualització : fa %1$d minuts</string>
@@ -979,9 +1081,11 @@ Pròximament"</string>
     <string name="group_add_list_title_hint"><i>Títol de la llista</i></string>
     <string name="group_admin_about">Quant als administradors dels grups</string>
     <string name="group_admin_text">Els administradors poden fer les accions següents:</string>
+    <string name="group_autopassphrase_details">Frase de pas automàtica activada.</string>
     <string name="group_barcode_info">Un contacte pot escanejar aquest codi de barres per entrar al vostre grup.</string>
     <string name="group_barcode_scan_rejected_user_not_protected">No teniu permís per unir-vos a aquest grup.</string>
     <string name="group_cancel">Anul·la</string>
+    <string name="group_cannot_delete_conversation">No podeu suprimir aquesta conversa</string>
     <string name="group_chat_exists">El tema de xat ja existeix</string>
     <string name="group_chat_general_discussion">Debat general</string>
     <string name="group_chat_history_days_1">1 dia</string>
@@ -1000,6 +1104,8 @@ Pròximament"</string>
     <string name="group_conversation_email_chat_message_header">Del grup: %1$s</string>
     <string name="group_conversation_email_chat_subject">Xat de %1$s: %2$s</string>
     <string name="group_conversation_is_writing_a_message">" està escrivint…"</string>
+    <string name="group_conversation_picture_loading">"S'està carregant la imatge..."</string>
+    <string name="group_conversation_picture_not_available">Imatge no disponible</string>
     <string name="group_conversation_slide_menu_chat_history">Historial de xat</string>
     <string name="group_conversation_slide_menu_clear_chat">Esborra el xat</string>
     <string name="group_conversation_slide_menu_copy_chat">Copia el xat</string>
@@ -1009,6 +1115,7 @@ Pròximament"</string>
     <string name="group_delete_picture">Suprimeix la imatge</string>
     <string name="group_delete_q">Voleu suprimir el grup?</string>
     <string name="group_done">Fet</string>
+    <string name="group_edit_admin_cannot_remove_self">No podeu eliminar-vos com a administrador</string>
     <string name="group_edit_caption">Edita la llegenda</string>
     <string name="group_edit_list_title">Detalls element</string>
     <string name="group_event_all_day">Tot el dia</string>
@@ -1031,15 +1138,15 @@ Pròximament"</string>
     <string name="group_events_time_notice">"L'hora de finalització ha de ser posterior a l'hora d'inici"</string>
     <string name="group_invitation_was_received">Heu rebut una invitació a un grup del Glympse</string>
     <string name="group_invite_bbg_uri">%1$s</string>
-    <string name="group_invite_email_message">"-----\ufffc----
-M'agradaria convidar-vos al meu grup %1$s.
+    <string name="group_invite_email_message">"M'agradaria convidar-vos a unir-vos al meu grup \"%1$s\". Per unir-vos al grup en un dispositiu mòbil, feu clic a 
+%2$s
 
-A l'Android o l'iPhone, feu clic a %2$s per unir-vos al grup o baixar el BBM.
 
 %3$s"</string>
-    <string name="group_invite_email_subject">Uniu-vos al meu grup BlackBerry.</string>
+    <string name="group_invite_email_subject">Invitació a un BBM Group de %1$s</string>
     <string name="group_invite_enter_passphrase">Per unir-vos a aquest grup, introduïu la frase de pas proporcionada per un membre del grup.</string>
     <string name="group_invite_enter_passphrase_multi_attempts">Frase pas incorrecta Per unir-vos a aquest grup, introduïu la frase de pas proporcionada per un membre del grup. (%1$d/%2$d)</string>
+    <string name="group_invite_expired">La invitació del grup ha caducat</string>
     <string name="group_invite_message_default">"M'agradaria convidar-vos a unir-vos al meu grup: %1$s"</string>
     <string name="group_invite_status_enter_passphrase_max_attempts_reached">Frase pas incorrecta Per unir-vos a aquest grup, heu de rebre una altra invitació.</string>
     <string name="group_invite_status_enter_passphrase_multi_attempts">Frase pas incorrecta Per unir-vos a aquest grup, introduïu la frase de pas proporcionada per un membre del grup.</string>
@@ -1082,6 +1189,11 @@ A l'Android o l'iPhone, feu clic a %2$s per unir-vos al grup o baixar el BBM.
     <string name="group_passphrase_info">Podeu compartir la frase de pas amb les persones a les quals convideu a unir-se al grup.</string>
     <string name="group_passphrase_missing">Frase de pas N/A</string>
     <string name="group_picture_add">Afegeix imatge</string>
+    <string name="group_picture_add_failed__wrong_picture_type">@string/avatar_file_not_support</string>
+    <string name="group_picture_add_failed_file_access_error">@string/filetransfer_abort_filenotfound</string>
+    <string name="group_picture_add_failed_file_does_not_exist">@string/filetransfer_abort_filenotfound</string>
+    <string name="group_picture_add_failed_picture_too_big">@string/conversation_file_image_transfer_canceled_dialog_too_large</string>
+    <string name="group_picture_add_failed_resize_error">@string/conversation_unable_to_save_picture</string>
     <string name="group_picture_added_days">Afegit fa %1$d dies per %2$s</string>
     <string name="group_picture_added_today">Afegit avui a les %1$s per %2$s</string>
     <string name="group_picture_added_yesterday">Afegit ahir per %1$s</string>
@@ -1156,7 +1268,7 @@ A l'Android o l'iPhone, feu clic a %2$s per unir-vos al grup o baixar el BBM.
     <string name="hdimage_prompt_message">"Voleu acceptar automàticament les sol·licituds d'alta definició, en endavant?"</string>
     <string name="hdimage_prompt_title">Accepta sempre les sol·licituds</string>
     <string name="help">Ajuda</string>
-    <string name="help_url">http://docs.blackberry.com/bbm/25/android/ca</string>
+    <string name="help_url">http://help.blackberry.com/detectLang/bbm-for-android/current/</string>
     <string name="high_priority">Prioritat alta</string>
     <string name="hint_protected_enabled_chat"><i>Protegit. Introduïu un missatge</i></string>
     <string name="history_clear_one_history_text">Neteja</string>
@@ -1185,6 +1297,7 @@ A l'Android o l'iPhone, feu clic a %2$s per unir-vos al grup o baixar el BBM.
     <string name="introducing_channels_second_part">Els subscriptors rebran la informació més recent al BBM i podran dir-vos què en pensen.</string>
     <string name="introducing_channels_title">Introducció als BBM Channels</string>
     <string name="invalid_passphrase_toast">Frase de pas no vàlida</string>
+    <string name="invitation_received">Invitació rebuda</string>
     <string name="invitation_rejected_invitee_not_protected_message">"%1$s no es pot unir a aquest grup. Només els contactes del BBM Protected poden unir-s'hi."</string>
     <string name="invitation_rejected_invitee_not_protected_title">"No podeu convidar l'usuari"</string>
     <string name="invitation_sent">Invitació enviada</string>
@@ -1192,10 +1305,8 @@ A l'Android o l'iPhone, feu clic a %2$s per unir-vos al grup o baixar el BBM.
     <string name="invite_activity_category">Categoria</string>
     <string name="invite_activity_lookup">Cerca…</string>
     <string name="invite_activity_mail">Correu electrònic: %1$s</string>
-    <string name="invite_activity_mail_body">"M'agradaria convidar-vos a parlar amb el BBM.
-
-Per unir-vos a mi al BBM, feu clic a
-%1s
+    <string name="invite_activity_mail_body">"M'agradaria convidar-vos a parlar amb el BBM. Per unir-vos a mi al BBM des d'un dispositiu mòbil, feu clic a 
+%1$s
 "</string>
     <string name="invite_activity_mail_subject">Invitació al BBM de %1$s</string>
     <string name="invite_activity_phone">Telèfon: %1$s</string>
@@ -1203,12 +1314,12 @@ Per unir-vos a mi al BBM, feu clic a
     <string name="invite_activity_security_custom_question">Introduïu una pregunta</string>
     <string name="invite_activity_security_custom_response">Introduïu una resposta</string>
     <string name="invite_activity_security_label">Pregunta de seguretat</string>
-    <string name="invite_activity_sms_body">"Afegiu-me al BBM! A BlackBerry, toqueu PIN:%1$s i seleccioneu \"Convida al BBM\". A l'Android o l'iPhone, feu clic a www.pin.bbm.com/%1$s per afegir-me o baixar el BBM."</string>
+    <string name="invite_activity_sms_body">Afegiu-me al BBM! Feu clic a www.pin.bbm.com/%1$s</string>
     <string name="invite_activity_to">Per a:</string>
     <string name="invite_bbm_contact">Afegeix contacte del BBM</string>
     <string name="invite_bbm_invites">Invitacions del BBM</string>
-    <string name="invite_button_join">"Uneix-t'hi"</string>
-    <string name="invite_button_preview">Visualització prèvia</string>
+    <string name="invite_button_join">"UNEIX-T'HI"</string>
+    <string name="invite_button_preview">VISUALITZACIÓ PRÈVIA</string>
     <string name="invite_by_barcode">Convida per codi de barres</string>
     <string name="invite_by_email">Convida per correu electrònic</string>
     <string name="invite_by_other">Convida per SMS o PIN</string>
@@ -1272,6 +1383,8 @@ Per unir-vos a mi al BBM, feu clic a
     <string name="key_exchange_hint_waiting_to_enter_passphrase">Introduïu la frase de pas per unir-vos</string>
     <string name="key_exchange_hint_waiting_to_join">"S'està esperant a que %1$s s'hi uneixi"</string>
     <string name="key_exchange_status_accepted">Frase de pas acceptada</string>
+    <string name="last_name">Cognoms</string>
+    <string name="last_name_hint">Escriviu els vostres cognoms</string>
     <string name="learn_more_about_bbm_pins">Més informació sobre els PIN del BBM</string>
     <string name="learn_more_about_restoring_bbm_data">Més informació sobre la restauració de dades del BBM.</string>
     <string name="leave_channel">Surt del canal</string>
@@ -1293,6 +1406,8 @@ Per unir-vos a mi al BBM, feu clic a
     <string name="location_service_failed">"No s'ha pogut adquirir la ubicació"</string>
     <string name="low_battey_warning">"S'ha aturat perquè hi ha poca bateria. Toqueu per continuar."</string>
     <string name="low_priority">Prioritat baixa</string>
+    <string name="main_drawer_close">Tanca calaix</string>
+    <string name="main_drawer_open">Obre calaix</string>
     <string name="main_mood_status_format">%1$s - %2$s</string>
     <string name="main_status_available">Disponible</string>
     <string name="main_status_busy">Ocupat</string>
@@ -1304,13 +1419,15 @@ Per unir-vos a mi al BBM, feu clic a
     <string name="menu_end_chat">Finalitza el xat</string>
     <string name="menu_help">Ajuda</string>
     <string name="menu_history">Historial</string>
+    <string name="menu_leave_chat">Abandona el xat</string>
     <string name="menu_settings">Configuració</string>
     <string name="menu_share">Comparteix</string>
-    <string name="message_button_accept">Accepta</string>
-    <string name="message_button_allow">Permet</string>
-    <string name="message_button_cancel">Anul·la</string>
-    <string name="message_button_decline">Rebutja</string>
-    <string name="message_button_deny">Denega</string>
+    <string name="message">Missatge</string>
+    <string name="message_button_accept">ACCEPTA</string>
+    <string name="message_button_allow">PERMET</string>
+    <string name="message_button_cancel">ANUL·LA</string>
+    <string name="message_button_decline">REBUTJA</string>
+    <string name="message_button_deny">DENEGA</string>
     <string name="message_copied">Missatge copiat</string>
     <string name="message_recall_tech_tip_body">"No preteníeu enviar aquest missatge?
 Manteniu premut el missatge per retirar-lo del xat del BBM de l'altra persona."</string>
@@ -1323,6 +1440,7 @@ Manteniu premut el missatge per retirar-lo del xat del BBM de l'altra persona."<
     <string name="message_with_context_new_contact">Informació sobre el nou contacte:</string>
     <string name="message_with_context_now_playing">Informació sobre la reproducció actual:</string>
     <string name="message_with_context_personal_message">Informació sobre el missatge personal:</string>
+    <string name="message_with_context_quote">%1$s ha escrit: \"%2$s\"</string>
     <string name="message_with_context_real_time_location">Informació sobre la ubicació:</string>
     <string name="more">Més</string>
     <string name="msg_bulk_mode_scanned">Mode en bloc: codi de barres escanejat i desat</string>
@@ -1360,6 +1478,11 @@ Manteniu premut el missatge per retirar-lo del xat del BBM de l'altra persona."<
     <string name="my_channels_fragment_mark_favorite">Marca com a preferit</string>
     <string name="my_channels_fragment_remove_favorite">Elimina dels preferits</string>
     <string name="mybbmbarcode">El meu codi de barres del BBM</string>
+    <string name="nav_chats">Xats del BBM</string>
+    <string name="nav_contacts">Contactes del BBM</string>
+    <string name="nav_feeds">Canals del BBM</string>
+    <string name="nav_feeds_all">Tots els canals del BBM</string>
+    <string name="nav_groups">BBM Groups</string>
     <string name="network_settings_dialog_text">Connecteu-vos a una xarxa Wi-Fi o mòbil per continuar.</string>
     <string name="network_settings_dialog_title">No hi ha connexió a la xarxa</string>
     <string name="new_channel_email_addresss">Correu electrònic</string>
@@ -1368,6 +1491,7 @@ Manteniu premut el missatge per retirar-lo del xat del BBM de l'altra persona."<
     <string name="new_chat_topic">Tema de xat nou</string>
     <string name="new_string">NOU</string>
     <string name="next">Següent</string>
+    <string name="no">No</string>
     <string name="no_active_glympses">No hi ha cap Glympse actiu</string>
     <string name="no_blackberry_data">No hi ha dades del BlackBerry</string>
     <string name="no_blocked_invites">Els contactes poden afegir-se a aquesta llista en ignorar una invitació o suprimir un contacte.</string>
@@ -1378,6 +1502,7 @@ Manteniu premut el missatge per retirar-lo del xat del BBM de l'altra persona."<
     <string name="no_connection_found">"No s'ha trobat cap connexió"</string>
     <string name="no_current_chat">No hi ha cap xat</string>
     <string name="no_network_connection">No hi ha connexió a la xarxa.</string>
+    <string name="no_picture">No hi ha imatges disponibles</string>
     <string name="no_pictures">No hi ha imatges</string>
     <string name="no_posts">No es poden mostrar totes les publicacions.</string>
     <string name="no_updates">No hi ha cap element nou.</string>
@@ -1428,6 +1553,19 @@ Manteniu premut el missatge per retirar-lo del xat del BBM de l'altra persona."<
 Als dispositius BlackBerry, toqueu el pin:%2$s i introduïu la frase de pas."</string>
     <string name="out_of_band_passphrase_message_sms">Voldria convidar-vos a un xat del BBM Protected. Als dispositius BlackBerry, toqueu %1$s. Introduïu la frase de pas %2$s.</string>
     <string name="out_of_band_passphrase_subject">Xat del BBM Protected</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_dialog_body">Aquesta funció només està disponible amb Contactes del BBM. Voleu afegir %1$s als vostres Contactes del BBM?</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_dialog_title">Afegeix a Contactes del BBM</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_toast">Cal que afegiu aquesta persona com a Contacte del BBM per utilitzar aquesta opció</string>
+    <string name="outer_circle_category_bbm_contacts">Contactes del BBM</string>
+    <string name="outer_circle_category_phone_contacts">@string/outer_circle_category_phone_contacts_v1</string>
+    <string name="outer_circle_category_phone_contacts_v1">Contactes</string>
+    <string name="outer_circle_category_phone_contacts_v2">Contactes del telèfon</string>
+    <string name="outer_circle_category_phone_contacts_v3">Contactes del dispositiu</string>
+    <string name="outer_circle_contact_add_more_friends">Afegeix més amics</string>
+    <string name="outer_circle_contact_menu_add_as_contact">Afegeix a Contactes del BBM</string>
+    <string name="outer_circle_contact_menu_delete_and_block">Suprimeix i bloca</string>
+    <string name="outer_circle_find_other_bbm_user_body">Podeu cercar automàticament els contactes del dispositiu per localitzar usuaris del BBM que conegueu. Voleu permetre que el BBM accedeixi a la vostra aplicació Contactes?</string>
+    <string name="outer_circle_find_other_bbm_user_title">Trobeu altres usuaris del BBM</string>
     <string name="overlay_bbm_ongoing_notification_reason">"Per què veig una icona del BBM a la part superior de la pantalla?
 
 La icona del BBM es mostra a la barra d'estat perquè el BBM sempre està activat a fi que estigueu sempre connectat."</string>
@@ -1461,13 +1599,13 @@ La icona del BBM es mostra a la barra d'estat perquè el BBM sempre està activa
     <string name="partner_app_register_failed_dialog_outage_message">"No s'ha detectat cap connexió de xarxa"</string>
     <string name="partner_app_register_failed_dialog_title">Registre al BBM</string>
     <string name="passphrase">Frase de pas</string>
-    <string name="passphrase_creation_details">Heu de compartir la frase de pas amb el vostre contacte del BBM per tal que es pugui unir al xat. Ha de tenir 4 lletres en majúscula com a mínim.</string>
+    <string name="passphrase_creation_details">Heu de compartir la frase de pas amb el vostre contacte del BBM per tal que es pugui unir al xat. Ha de tenir 4 caràcters com a mínim. Utilitzeu lletres, números o ambdós. Exemples: TGRS, 2905, TIG8.</string>
     <string name="passphrase_incorrect">&lt;b>%1$s&lt;/b> no ha introduït la frase de pas correcta.</string>
     <string name="passphrase_initiated">Heu compartit la frase de pas &lt;b>%1$s&lt;/b> amb &lt;b>%2$s&lt;/b>.</string>
-    <string name="passphrase_message_email">"Voldria convidar-vos a un xat del BBM Protected.
+    <string name="passphrase_message_email">"M'agradaria convidar-vos a un xat del BBM Protected.
 ---o---
-Introduïu la frase de pas \"%1$s\" després de tocar el PIN:%2$s o %3$s"</string>
-    <string name="passphrase_message_sms">Uniu-vos al meu xat del BBM Protected Introduïu la frase de pas \"%1$s\" després de tocar el PIN:%2$s o %3$s</string>
+Per unir-vos al xat, feu clic a pin:%1$s o %2$s. Si se us demana una frase de pas, introduïu \"%3$s\"."</string>
+    <string name="passphrase_message_sms">Uniu-vos al meu xat del BBM Protected. Feu clic a pin:%1$s o %2$s. Si se us demana una frase de pas, introduïu \"%3$s\".</string>
     <string name="passphrase_rules_details">Cal que estigui formada per tres conjunts de lletres separats per un espai. Cada conjunt ha de tenir de quatre a set lletres en majúscula. Exemple: TIGRES MARRONS FOSCOS</string>
     <string name="passphrase_share_details">Com voleu compartir la frase de pas amb %1$s?</string>
     <string name="passphrase_wait_to_join">"S'està esperant a que &lt;b>%1$s&lt;/b> s'hi uneixi."</string>
@@ -1491,12 +1629,38 @@ Introduïu la frase de pas \"%1$s\" després de tocar el PIN:%2$s o %3$s"</strin
     <string name="pending_invite_group_too_many_members">Denegat: aquest grup ja està ple.</string>
     <string name="pending_invite_pending">Pendent</string>
     <string name="pending_invite_protected_group_invites_you_to">%1$s vol convidar-vos al grup \"%2$s\". Per unir-vos a aquest grup del BBM Protected, introduïu la frase de pas que us pot proporcionar un membre del grup.</string>
+    <string name="people">Persones</string>
     <string name="personalize_profile_dialog_message">Toqueu el bàner per obrir el vostre perfil del BBM.</string>
     <string name="personalize_profile_dialog_title">Personalitzeu el perfil</string>
+    <string name="phone_contact_add">@string/phone_contact_add_v1</string>
+    <string name="phone_contact_add_v1">Afegeix contacte del BBM</string>
+    <string name="phone_contact_add_v2">Afegeix al BBM</string>
+    <string name="phone_contact_add_v3">Afegeix a Contactes del BBM</string>
+    <string name="phone_contact_block">Bloca</string>
+    <string name="phone_contact_block_from_conversation_description">Es blocaran totes les invitacions i els xats que %1$s faci en el futur. Voleu blocar %1$s?</string>
+    <string name="phone_contact_block_from_conversation_title">Bloqueja %1$s</string>
+    <string name="phone_contact_invitationsent">Invitació enviada</string>
+    <string name="phone_contact_not_a_contact">Per utilitzar totes les funcions del BBM, afegiu a aquesta persona a Contactes del BBM.</string>
+    <string name="phone_contact_reinvite_message">@string/phone_contact_reinvite_message_v1</string>
+    <string name="phone_contact_reinvite_message_v1">Per afegir %1$s als Contactes del BBM, toqueu %2$s.</string>
+    <string name="phone_contact_reinvite_message_v2">Cal que afegiu %1$s als vostres Contactes del BBM per iniciar un xat. Per afegir %1$s als Contactes del BBM, toqueu %2$s a la part superior del vostre xat.</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_1">Hi ha &lt;b>&lt;i>Contactes&lt;/i>&lt;/b> i &lt;b>&lt;i>Contactes del BBM&lt;/i>&lt;/b>.</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_2">Els &lt;b>&lt;i>Contactes&lt;/i>&lt;/b> són contactes del vostre dispositiu que utilitzen el BBM.&lt;br/>&lt;br/> * Xategeu amb els vostres Contactes al moment&lt;br/> * No cal invitació</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_3">"Els &lt;b>&lt;i>Contactes del BBM&lt;/i>&lt;/b> requereixen una invitació. Només els Contactes del BBM poden fer les accions següents:&lt;br/>&lt;br/> * Veure la vostra imatge de visualització del BBM&lt;br/> * Veure les vostres actualitzacions d'estat del BBM&lt;br/> * Fer o rebre trucades a través del BBM Voice."</string>
+    <string name="phone_contact_tutorial_conversation_section_1">Hi ha &lt;b>&lt;i>Contactes&lt;/i>&lt;/b> i &lt;b>&lt;i>Contactes del BBM&lt;/i>&lt;/b>.</string>
+    <string name="phone_contact_tutorial_conversation_section_2">"Aquest és un xat amb un &lt;b>&lt;i>Contacte&lt;/i>&lt;/b>. Aquesta persona no pot veure el següent:&lt;br/>&lt;br/> * La vostra imatge de visualització del BBM&lt;br/> * Les vostres actualitzacions d'estat del BBM"</string>
+    <string name="phone_contact_tutorial_conversation_section_3">"Cal que aquesta persona utilitzi l'última versió del BBM per xatejar. Podeu afegir aquesta persona als vostres &lt;b>&lt;i>Contactes del BBM&lt;/i>&lt;/b> o blocar-la en qualsevol moment."</string>
+    <string name="phone_contact_tutorial_profile_click_section_1">Hi ha &lt;b>&lt;i>Contactes&lt;/i>&lt;/b> i &lt;b>&lt;i>Contactes del BBM&lt;/i>&lt;/b>.</string>
+    <string name="phone_contact_tutorial_profile_click_section_2">"Els &lt;b>&lt;i>Contactes del BBM&lt;/i>&lt;/b> requereixen una invitació i poden fer les accions següents: &lt;br/>&lt;br/> * Veure la vostra imatge de visualització del BBM, les actualitzacions d'estat i de perfil&lt;br/> * Trucar-vos a través del BBM Voice&lt;br/> * Enviar-vos missatges de difusió"</string>
+    <string name="phone_contact_tutorial_profile_click_section_3">"Els &lt;b>&lt;i>Contactes&lt;/i>&lt;/b> són contactes del vostre dispositiu que utilitzen el BBM. Per a aquests Contactes, si utilitzen l'última versió del BBM, no calen invitacions i podeu continuar fent servir les característiques del xat del BBM com:&lt;br/>&lt;br/> &amp;#8226 Notificacions de lliurament (D) i lectura (R) en els missatges&lt;br/> &amp;#8226 Enviament d'imatges i fitxers&lt;br/> &amp;#8226 Compartir la vostra ubicació amb el Glympse"</string>
     <string name="pic_caption_hint"><i>Introduïu un títol</i></string>
+    <string name="picture">Imatge</string>
     <string name="picture_deleted">"S'ha suprimit la imatge"</string>
+    <string name="picture_selection_limit_toast">Massa fitxers (el màxim és 10).</string>
+    <string name="picture_selection_type_toast">"Únic tipus d'imatge compatible per a l'ús compartit múltiple."</string>
     <string name="pin_copied">PIN copiat</string>
     <string name="please_ensure_the_device_time_is_correctly_set">"Comproveu que l'hora del dispositiu sigui correcta i torneu-ho a provar."</string>
+    <string name="policy_change_title">Canvi de política</string>
     <string name="post_removed">"S'ha suprimit aquesta publicació."</string>
     <string name="posts_caption">Publicacions</string>
     <string name="pref_add_contact_on_tap">Afegeix contactes en connectar</string>
@@ -1557,21 +1721,49 @@ Introduïu la frase de pas \"%1$s\" després de tocar el PIN:%2$s o %3$s"</strin
     <string name="preferences_vibrate_title">Vibració</string>
     <string name="private_channel">Canal privat</string>
     <string name="private_channel_description">"Amagueu el vostre canal a la cerca i feu que només s'hi pugui accedir per invitació."</string>
+    <string name="private_chat">Xat privat</string>
+    <string name="private_chat_back_out_dialog_dont_ask_me_again">"No m'ho tornis a preguntar."</string>
+    <string name="private_chat_back_out_dialog_text">"El vostre xat privat finalitzarà si no torneu al xat d'aquí %1$d minut."</string>
+    <string name="private_chat_conversation_notification_title">%1$s vol iniciar un xat amb vós.</string>
+    <string name="private_chat_end_menu">Finalitza xat privat</string>
+    <string name="private_chat_entry_subtitle">Toqueu per tornar</string>
+    <string name="private_chat_menu">Inicia xat privat</string>
+    <string name="private_chat_message_notification_title">Nou missatge de xat privat.</string>
+    <string name="private_chat_other_party_not_support">Aquest contacte té una versió anterior del BBM que no admet xats privats.</string>
+    <string name="private_chat_request_incoming_subtitle">Sol·licitud de xat privat</string>
+    <string name="private_chat_request_invite_bubble_message">"Voldria iniciar un xat privat amb vós. Per unir-vos al xat privat, heu de baixar l'última versió del BBM.
+
+Visiteu http://bbm.com/upgrade per obtenir la versió més recent del BBM."</string>
+    <string name="private_chat_request_outgoing_subtitle">Sol·licitud de xat privat</string>
+    <string name="private_chat_stop_reason_busy">%1$s no està disponible per a un xat privat en aquests moments.</string>
+    <string name="private_chat_stop_reason_cancelled">%1$s ha anul·lat el xat privat.</string>
+    <string name="private_chat_stop_reason_declined">%1$s ha rebutjat el xat privat.</string>
+    <string name="private_chat_stop_reason_inactivity">El vostre xat privat ha finalitzat automàticament perquè estava inactiu.</string>
+    <string name="private_chat_stop_reason_localended">Heu finalitzat el xat privat.</string>
+    <string name="private_chat_stop_reason_noresponse">%1$s no ha respost a la vostra sol·licitud de xat privat.</string>
+    <string name="private_chat_stop_reason_remoteended">%1$s ha finalitzat el xat privat.</string>
+    <string name="private_chat_stop_reason_unknown">"S'ha desconnectat el xat privat. Torneu a iniciar el xat privat."</string>
+    <string name="private_chat_tutorial_description">"Els noms i les imatges de perfil estan amagats.
+
+El vostre xat s'elimina automàticament als dos dispositius quan el xat finalitza o està inactiu.
+
+Les notificacions dels missatges privats nous són confidencials."</string>
     <string name="profile_barcode">Codi de barres</string>
+    <string name="profile_bbm_pin_label">PIN del BBM</string>
     <string name="profile_copy_pin">Copia PIN</string>
     <string name="profile_copypin">Copia PIN</string>
     <string name="profile_default_pin">PIN: 00000000</string>
     <string name="profile_display_name_invalid">No es permeten dos punts ni comes al nom de visualització</string>
+    <string name="profile_display_name_invalid_empty">El nom de visualització no pot estar buit</string>
     <string name="profile_icon_source_camera">Càmera</string>
     <string name="profile_icon_source_picture">Imatge</string>
     <string name="profile_icon_source_sample_picture">Imatge de mostra</string>
-    <string name="profile_location_label">Ubicació/zona horària:</string>
+    <string name="profile_location_label">Ubicació/zona horària</string>
     <string name="profile_mood_hint"><i>Què esteu pensant?</i></string>
+    <string name="profile_name">Nom del perfil</string>
     <string name="profile_no_status_message">"No hi ha cap missatge d'estat"</string>
     <string name="profile_own_status_label">Estat</string>
-    <string name="profile_pin">%1$s</string>
     <string name="profile_pin_copied">PIN copiat</string>
-    <string name="profile_pin_label">PIN:</string>
     <string name="profile_pinlabel">PIN:</string>
     <string name="profile_revert_display_name">Reverteix nom de visualització</string>
     <string name="profile_selector_apps">Aplicacions</string>
@@ -1579,25 +1771,38 @@ Introduïu la frase de pas \"%1$s\" després de tocar el PIN:%2$s o %3$s"</strin
     <string name="profile_selector_members">Membres</string>
     <string name="profile_selector_updates">Canals</string>
     <string name="profile_share_pin">Comparteix el meu PIN</string>
+    <string name="profile_status_delete">Suprimir estat</string>
+    <string name="profile_status_delete_info">"N'esteu segur que voleu suprimir aquest estat?"</string>
     <string name="profile_status_edit">"Edita missatges d'estat"</string>
-    <string name="profile_status_label">Estat:</string>
+    <string name="profile_user_has_subscription">Aquesta persona té una subscripció.</string>
+    <string name="profile_user_view_all_sub">Visualitza totes les subscripcions del BBM</string>
     <string name="prompt_change_bbm_picture">"Voleu canviar l'imatge del BBM?"</string>
     <string name="prompted_after_rate_call">Gràcies!</string>
     <string name="prompted_before_rate_call">Valoreu la qualitat de la trucada</string>
     <string name="protected_group_invite_message_default">"M'agradaria convidar-vos a unir-vos al meu grup: \"%1$s\" Per unir-vos a aquest grup del BBM Protected, introduïu la frase de pas que us pot proporcionar un membre del grup."</string>
     <string name="protected_group_requires_join">"S'està esperant la confirmació de la frase de pas per tal de restaurar el grup protegit"</string>
     <string name="protected_mode_disabled_header">BBM Protected desactivat</string>
-    <string name="protected_mode_disabled_message">"S'han desat els vostres contactes i xats, però heu estat suprimit dels grups i xats múltiples que utilitzen el BBM Protected."</string>
+    <string name="protected_mode_disabled_message">"S'han desat els vostres contactes i xats, però heu estat suprimit dels grups que utilitzen el BBM Protected."</string>
     <string name="protected_mode_disabled_title">El vostre administrador ha desactivat el BBM Protected.</string>
     <string name="protected_mode_enabled_header">BBM Protected</string>
     <string name="protected_mode_enabled_message">"El BBM Protected proporciona una capa addicional de xifratge als vostres xats, transferències de fitxers i grups del BBM. La propera vegada que inicieu un xat amb un contacte del BBM Protected, especifiqueu una frase de pas que l'altra persona ha d'introduir per unir-se. Només cal que especifiqueu una frase de pas per contacte del BBM Protected. Per a grups del BBM, podeu elegir si voleu restringir l'accés als contactes del BBM Protected. Si creeu un grup del BBM Protected, podeu compartir la frase de pas que els usuaris han d'introduir per unir-se."</string>
     <string name="protected_mode_enabled_title">El vostre administrador ha activat el BBM Protected en el dispositiu.</string>
+    <string name="protected_preferred_details">El vostre contacte requereix un xat del BBM Protected.</string>
+    <string name="protected_preferred_dialog">Aquest contacte està utilitzant el Protected Plus. Els xats entre vós i aquest contacte estaran protegits amb el BBM Protected. <a href="http://blackberry.com/bbmprotected">Més informació</a></string>
+    <string name="protected_preferred_dialog_dismiss">"No m'ho tornis a mostrar."</string>
+    <string name="protected_preferred_mode_disabled_message">"L'administrador ha inhabilitat el Protected Plus."</string>
+    <string name="protected_preferred_mode_disabled_title">El Protected Plus està inhabilitat</string>
+    <string name="protected_preferred_mode_enabled_message">"L'administrador ha habilitat el Protected Plus, una funció del BBM Protected. Els xats entre vós i els vostres contactes estaran protegits amb el BBM Protected."</string>
+    <string name="protected_preferred_mode_enabled_title">El Protected Plus està habilitat</string>
+    <string name="protected_rejected_message_body">És possible que hàgiu de tornar a compartir la frase de pas per reinicialitzar aquest xat del BBM Protected. Per compartir la frase de pas, toqueu la icona del menú a la cantonada superior dreta de la pantalla. Toqueu &lt;b>%1$s&lt;/b>.</string>
+    <string name="protected_rejected_message_status">Comparteix la frase de pas de nou</string>
     <string name="purchase_failed_message">"No s'ha pogut processar el pagament. Voleu seleccionar un altre mètode de pagament?"</string>
     <string name="purchase_options">Opcions de pagament</string>
     <string name="purchase_success_message">Article comprat correctament</string>
     <string name="purchase_unexpected_error_message">"S'ha interromput la compra. Torneu-ho a provar."</string>
-    <string name="pyk_empty_invites_allow_upload_hint">Amics que ja utilitcen el BBM</string>
+    <string name="pyk_empty_invites_allow_upload_hint">Amics que ja utilitzen el BBM</string>
     <string name="qr_description">UsersQR</string>
+    <string name="quick_reply">Respon i finalitza</string>
     <string name="quick_share_glympse_first_experience_overlay_infos">Envieu un Glympse per tal que un contacte del BBM segueixi la vostra ubicació en un mapa durant el període de temps que trieu. Ideal per a una reunió o quan feu tard.</string>
     <string name="quick_share_glympse_first_experience_overlay_note"><i>Nota: En utilitzar aquesta funció, les vostres coordenades de GPS es comparteixen amb Glympse Inc. i estan subjectes a la seva <a href="http://glympse.com/privacy">política de privadesa</a></i></string>
     <string name="quick_share_glympse_first_experience_overlay_title">Compartiu la vostra ubicació.</string>
@@ -1607,8 +1812,11 @@ Introduïu la frase de pas \"%1$s\" després de tocar el PIN:%2$s o %3$s"</strin
     <string name="quick_share_voice_note_label_busy">No es pot enregistrar. El reproductor o servei multimèdia ja està en ús.</string>
     <string name="quick_share_voice_note_label_default">Manteniu premut per enregistrar</string>
     <string name="quick_share_voice_note_label_delete">Aixequeu el dit per suprimir</string>
+    <string name="quick_share_voice_note_label_rec">REC</string>
     <string name="quick_share_voice_note_label_send">Aixequeu el dit per enviar o feu-lo lliscar per anul·lar</string>
     <string name="quick_share_voice_note_tost_message">"Per enviar una nota de veu instantània, manteniu premut el botó d'enregistrar"</string>
+    <string name="quote_at_user_name">\@%1$s</string>
+    <string name="quote_message_label">\"%1$s\"</string>
     <string name="rate_limited">"S'ha assolit el límit del Glympse."</string>
     <string name="rate_my_app_ignore">No, gràcies</string>
     <string name="rate_my_app_message">"Si us agrada utilitzar el BBM, dediqueu uns instants a valorar l'aplicació. Gràcies!"</string>
@@ -1627,6 +1835,8 @@ Introduïu la frase de pas \"%1$s\" després de tocar el PIN:%2$s o %3$s"</strin
     <string name="remaining_title_glympse">Glympse</string>
     <string name="remove">Elimina</string>
     <string name="replace_picture">Substitueix la imatge</string>
+    <string name="reply">Respon</string>
+    <string name="reply_with_voice">Respon amb veu</string>
     <string name="report_channel">Informa del canal</string>
     <string name="report_problem_activity_choose_email_client">Selecciona correu electrònic</string>
     <string name="report_problem_activity_email_button">Envia informe per correu electrònic</string>
@@ -1656,7 +1866,9 @@ http://blackberry.com/support/bbm"</string>
     <string name="reports_caption_none">Notificats</string>
     <string name="request_was_received">Heu rebut una sol·licitud del Glympse</string>
     <string name="required_fields">Camps obligatoris*</string>
-    <string name="resend_passphrase">Reenvia la frase de pas</string>
+    <string name="resend_passphrase">REENVIA LA FRASE DE PAS</string>
+    <string name="reset_protected_chat">Reinicialitza aquest xat</string>
+    <string name="resolve_vanitypin_not_found">Aquest PIN no està disponible.</string>
     <string name="restore_sticker_purchases">Restaura</string>
     <string name="restore_using_device_switch">Restaura amb Canvi de dispositiu</string>
     <string name="restore_using_email">Restaura amb el correu electrònic</string>
@@ -1709,6 +1921,8 @@ http://blackberry.com/support/bbm"</string>
     <string name="select_contacts_to_move">"Seleccioneu els contactes que s'han de moure a \"%1$s\":"</string>
     <string name="select_group">Selecciona grup</string>
     <string name="select_group_activity_title">{0,choice,0#Selecciona grup|1#+1 Grup|1&lt;+{0} Grups}</string>
+    <string name="select_group_discussion">Selecciona debat</string>
+    <string name="select_pictures">{0,choice,0#Selecciona imatges|1#+1 Imatge|1&lt;+{0} Imatges}</string>
     <string name="send">Envia</string>
     <string name="send_comment">Envia comentari</string>
     <string name="send_decline_response">Envia resposta de rebuig</string>
@@ -1717,6 +1931,11 @@ http://blackberry.com/support/bbm"</string>
     <string name="sent_pending_invite_message_label">Missatge:</string>
     <string name="sent_pending_invite_sent_label">Enviada:</string>
     <string name="set_as">Defineix com a</string>
+    <string name="set_vanitypin_result_invalid">Aquest PIN no està disponible.</string>
+    <string name="set_vanitypin_result_refused">Aquest PIN no està disponible.</string>
+    <string name="set_vanitypin_result_reserved">Aquest PIN no està disponible.</string>
+    <string name="set_vanitypin_result_success">"S'ha creat el vostre PIN."</string>
+    <string name="set_vanitypin_result_used">Aquest PIN no està disponible.</string>
     <string name="setas_activity_bbm_picture_updated">"S'ha actualitzat la imatge del BBM"</string>
     <string name="setas_activity_item_bbm_picture">Imatge del BBM</string>
     <string name="setas_activity_item_contact_picture">Imatge del contacte</string>
@@ -1726,6 +1945,7 @@ http://blackberry.com/support/bbm"</string>
     <string name="setas_activity_title">Defineix com a</string>
     <string name="settings">Configuració</string>
     <string name="settings_activity_allow_hq_pictures">"Accepta sempre les sol·licituds d'imatge d'alta definició"</string>
+    <string name="settings_activity_backup_chat_history_now">Fes una còpia de seguretat ara</string>
     <string name="settings_activity_blackberry_id_edit">Edita</string>
     <string name="settings_activity_blackberry_id_generic_error">No podem editar el vostre BlackBerry ID en aquests moments. Torneu a provar-ho més tard.</string>
     <string name="settings_activity_blocked_contacts">Contactes i canals bloquejats</string>
@@ -1739,6 +1959,7 @@ http://blackberry.com/support/bbm"</string>
     <string name="settings_activity_deleting_chat_history_info">"L'historial del xat i tots els contactes se suprimiran. Aquesta acció no es pot desfer."</string>
     <string name="settings_activity_deleting_chat_history_title">"Suprimeix l'historial de xat"</string>
     <string name="settings_activity_hide_keyboard_on_enter_conversation">Mostra sempre el teclat</string>
+    <string name="settings_activity_keyboard_enter_as_new_line">La tecla Retorn del teclat introdueix una línia nova</string>
     <string name="settings_activity_legal">Informació legal</string>
     <string name="settings_activity_report_a_problem">"Informa d'un problema"</string>
     <string name="settings_activity_save_chat_history">"Desa l'historial de xat"</string>
@@ -1751,7 +1972,7 @@ http://blackberry.com/support/bbm"</string>
     <string name="setup_device_switch_prompt">Voleu canviar el BBM al dispositiu actual?</string>
     <string name="setup_error_message">"S'ha interromput la configuració del &lt;b>BBM&lt;/b>."</string>
     <string name="setup_error_title">Caram</string>
-    <string name="setup_find_friends">Cerca amics al &lt;b>BBM&lt;/b></string>
+    <string name="setup_find_friends">Cercar amics al &lt;b>BBM&lt;/b></string>
     <string name="setup_found_contact_invite_by_pin">Acabem de trobar aquest contacte al BBM i el convidarem directament.</string>
     <string name="setup_if_you_already_have_a_blackberry_id">Si ja teniu un BlackBerry ID, inicieu sessió. Si sou nou a BlackBerry, cal que creeu un BlackBerry ID.</string>
     <string name="setup_invite_bbm_people_you_know">Amics que ja són al BBM. Voleu afegir-los com a contactes del BBM?</string>
@@ -1777,6 +1998,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="share_passphrase_other">Us ho explicaré en persona</string>
     <string name="share_passphrase_sms">Missatge de text</string>
     <string name="share_passphrase_title">Comparteix frase pas</string>
+    <string name="share_to_feed_title">Voleu actualitzar el vostre canal?</string>
     <string name="sharead_sponsored_invite">Invitació patrocinada compartida</string>
     <string name="sharead_sponsored_post">Publicació patrocinada compartida</string>
     <string name="shared_channel_post_default_text">Publicació del canal compartida</string>
@@ -1784,6 +2006,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="shared_channel_post_sent">Publicació del canal enviada</string>
     <string name="shared_sponsored_content">Contingut patrocinat compartit</string>
     <string name="shop">Botiga</string>
+    <string name="shop_subscriptions">Subscripcions</string>
     <string name="show">Mostra</string>
     <string name="show_channel_preview">Visualització prèvia</string>
     <string name="show_map">Mostra el mapa</string>
@@ -1792,6 +2015,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="sign_in_to_bbm">Inicia la sessió al BBM</string>
     <string name="slide_menu_add_event">Afegeix esdeveniment</string>
     <string name="slide_menu_add_list">Afegeix llista</string>
+    <string name="slide_menu_block_chat">Bloqueja el xat</string>
     <string name="slide_menu_copy_chat">Copia el xat</string>
     <string name="slide_menu_delete_item">Suprimeix element</string>
     <string name="slide_menu_edit">Edita</string>
@@ -1807,6 +2031,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="slide_menu_new_chat">Inicia un xat nou</string>
     <string name="slide_menu_open_bbm_chat">Obre xat del BBM</string>
     <string name="slide_menu_ping">Fes ping</string>
+    <string name="slide_menu_play_in_media_player">Reprodueix al rep. multimèdia</string>
     <string name="slide_menu_remove_deleted_item">"Elimina l'element suprimit"</string>
     <string name="slide_menu_remove_from_group">Elimina del grup</string>
     <string name="slide_menu_reply_by_voice_note">Respon amb una nota de veu</string>
@@ -1825,18 +2050,22 @@ www.pin.bbm.com/%1$s"</string>
     <string name="sms_activity_title">Redacta</string>
     <string name="sort_by">Ordena per</string>
     <string name="stacked_notification_format"><Data>&lt;b>%1$s&lt;/b>: %2$s</Data></string>
+    <string name="stale_user_reinvite_message">"No s'ha vist a %1$s en línia des de %2$s."</string>
+    <string name="stale_user_reinvite_title">Torna a convidar</string>
     <string name="start_chat">Inicia el xat</string>
     <string name="start_chat_failed">"No s'ha pogut crear el xat"</string>
-    <string name="start_meeting">Inicia el BBM Meetings</string>
-    <string name="start_meeting_confirmation_dialog">Voleu finalitzar la trucada i iniciar una nova reunió?</string>
-    <string name="start_meeting_confirmation_title">Voleu iniciar una reunió del BBM?</string>
+    <string name="start_meeting">Iniciar el BBM Meetings</string>
+    <string name="start_meeting_confirmation_dialog">Actualment esteu fent una trucada del BBM. Voleu finalitzar la trucada i iniciar una reunió del BBM?</string>
+    <string name="start_meeting_confirmation_title">Iniciar el BBM Meetings</string>
     <string name="start_multiperson_chat">Inicia el xat múltiple</string>
+    <string name="start_pin_chat">Escriviu un PIN per iniciar un xat</string>
     <string name="starts">Comença</string>
     <string name="stats_caption">Estadístiques</string>
     <string name="stay_in_touch_like_never_before_with_blackberry_messenger">Manteniu-vos en contacte com mai abans amb el BlackBerry Messenger.</string>
     <string name="sticker_picker_no_stickers_purchased">"No s'han comprat stickers."</string>
     <string name="sticker_picker_preview_hint">Per obtenir una vista prèvia, manteniu premut un sticker.</string>
-    <string name="sticker_store_collection_heading">Sticker Col · leccions</string>
+    <string name="sticker_settings">Configuració dels stickers</string>
+    <string name="sticker_store_collection_heading">Stickers</string>
     <string name="sticker_store_details_artist_channel">Canal</string>
     <string name="sticker_store_details_artist_website">Lloc web</string>
     <string name="sticker_store_details_promo_text">VISUALITZA-HO AQUÍ</string>
@@ -1855,11 +2084,12 @@ www.pin.bbm.com/%1$s"</string>
 Consell: Podeu sortir d'aquesta pantalla mentre continua."</string>
     <string name="sticker_store_server_unavailable_message">No es pot obrir la botiga del BBM.</string>
     <string name="sticker_store_server_unavailable_retry_message">Comproveu la connexió a la xarxa i torneu-ho a provar.</string>
-    <string name="sticker_store_sticker_preview_artist">De %1$s</string>
+    <string name="sticker_store_sticker_preview_artist">Del %1$s</string>
     <string name="sticker_store_sticker_purchase_notification_dialog_heading">Voleu afegir als canals?</string>
     <string name="sticker_store_sticker_purchase_notification_dialog_line">Expliqueu als vostres contactes que teniu stickers nous.</string>
     <string name="sticker_store_sticker_purchase_notification_message">Feu una ullada als meus nous stickers! http://shop.bbm.com/stickers/%1$s</string>
     <string name="sticker_store_store_loading">"S'està carregant..."</string>
+    <string name="store_generic_billing_error">"No s'ha pogut comprar aquest element."</string>
     <string name="store_title">Botiga BBM</string>
     <string name="submit_button">Envia</string>
     <string name="submit_passphrase">Envia</string>
@@ -1869,6 +2099,44 @@ Consell: Podeu sortir d'aquesta pantalla mentre continua."</string>
     <string name="subscribed_channel_invite_default_message">"M'agradaria convidar-vos a unir-vos al meu canal \"%1$s\"."</string>
     <string name="subscribed_channels">Canals subscrits</string>
     <string name="subscribers_caption">Subscriptors</string>
+    <string name="subscriptino_pin_promo">Podeu crear un PIN del BBM que vós i els vostres amics recordeu fàcilment.</string>
+    <string name="subscription_already_exists_bb10">"Teniu una subscripció de renovació automàtica, que s'ha comprat en un altre dispositiu."</string>
+    <string name="subscription_app_type_no_ads">no_ads</string>
+    <string name="subscription_app_type_vanity_pin">custom_pin</string>
+    <string name="subscription_auto_renewing">Teniu una subscripció de renovació automàtica.</string>
+    <string name="subscription_bbid_conflict">"Aquest element s'ha comprat per a un altre BlackBerry ID amb el vostre compte de botiga. Proveu d'utilitzar un altre compte de botiga."</string>
+    <string name="subscription_custom_pin_description">Voleu un PIN personalitzat que vós i els vostres amics recordeu fàcilment? Creeu un PIN del BBM que sigui exclusivament vostre. No us perdeu aquesta oportunitat; reclameu avui el vostre PIN personalitzat.</string>
+    <string name="subscription_dialog_duration_monthly">Mensual: %1$s</string>
+    <string name="subscription_dialog_duration_title">Trieu una subscripció</string>
+    <string name="subscription_dialog_duration_yearly">Anual: %1$s</string>
+    <string name="subscription_edit_messages_description">Si us heu equivocat en un missatge, podeu retirar-lo, corregir els errors i tornar a enviar el missatge.</string>
+    <string name="subscription_exclusive_badge">Insígnia exclusiva</string>
+    <string name="subscription_exclusive_descritpion_pin">Mostreu el vostre estat especial del BBM amb una insígnia. Aquesta insígnia també apareix a les imatges de visualització que tenen una subscripció activa.</string>
+    <string name="subscription_expired">La vostra subscripció ha caducat. Voleu subscriure-us de nou?</string>
+    <string name="subscription_exsits_ios_72hours">La vostra subscripció està a punt de caducar. Per continuar utilitzant aquest element, subscriviu-vos aquí abans del %1$s.</string>
+    <string name="subscription_exsits_on_ios">"Aquest element s'ha comprat en un altre dispositiu. Per continuar utilitzant aquest element, subscriviu-vos aquí abans del %1$s."</string>
+    <string name="subscription_generic_guidelines">Directrius per al PIN personalitzat al BBM</string>
+    <string name="subscription_generic_learn_more">Més informació</string>
+    <string name="subscription_learn_more">Per obtenir més informació sobre les subscripcions, visiteu <a href="http://bbm.com/FAQ">bbm.com/FAQ</a>.</string>
+    <string name="subscription_no_adds_share">Expliqueu als vostres contactes que heu desactivat els anuncis del BBM.</string>
+    <string name="subscription_no_adds_status_message">He desactivat els anuncis del BBM. Per amagar els anuncis al vostre dispositiu, toqueu http://shop.bbm.com/item/no_ads</string>
+    <string name="subscription_no_ads">Sense anuncis</string>
+    <string name="subscription_no_ads_description">No voleu veure anuncis? Amagueu els anuncis al BBM amb aquesta subscripció.</string>
+    <string name="subscription_no_ads_promo">"Sense anuncis
+Amagueu les invitacions i els anuncis patrocinats al BBM amb aquesta subscripció."</string>
+    <string name="subscription_no_ads_title">Sense anuncis</string>
+    <string name="subscription_pin_before_share">He creat un PIN personalitzat al BBM. Per personalitzar el vostre PIN, toqueu http://shop.bbm.com/item/custom_pin</string>
+    <string name="subscription_pin_before_share_prompt">Expliqueu als vostres contactes que heu creat un PIN personalitzat.</string>
+    <string name="subscription_pin_feautres">Característiques incloses:</string>
+    <string name="subscription_private_chat_description">"En un xat privat, el nom del vostre contacte està amagat i es desactiven les notificacions de missatges nous. El vostre xat s'elimina automàticament passada una estona, o quan finalitzeu el xat privat."</string>
+    <string name="subscription_reactiviate">Subscriu</string>
+    <string name="subscription_retracted_messages_description">Si no preteníeu enviar un determinat missatge, el podeu retirar perquè no aparegui al xat.</string>
+    <string name="subscription_retracted_messages_title">Missatges retirats</string>
+    <string name="subscription_status_active_subscription">Teniu una subscripció de renovació automàtica.</string>
+    <string name="subscription_timed_messages_description">"També podeu enviar missatges i imatges que es puguin veure durant un període de temps determinat. El missatge queda amagat al xat i el destinatari pot mantenir premut el missatge perquè es mostri. Quan s'acaba l'interval de temps, no es pot visualitzar el missatge."</string>
+    <string name="subscription_timed_messages_title">Missatges temporitzats</string>
+    <string name="subscriptions_not_entitled">Heu de subscriure-us per utilitzar aquesta funció.</string>
+    <string name="subscriptions_restoring">Comprovant les vostres subscripcions</string>
     <string name="suggestion_i_invite_you">%1$s ha suggerit que us convidi a xatejar amb el BBM.</string>
     <string name="suggestion_sent">Suggeriment enviat</string>
     <string name="suggestion_want_to_invite_bbm_contact">Voleu convidar aquest contacte del BBM?</string>
@@ -1894,7 +2162,7 @@ Consell: Podeu sortir d'aquesta pantalla mentre continua."</string>
     <string name="timestamp_format_today_at">Avui a les %1$s</string>
     <string name="timestamp_format_yesterday_at">Ahir a les %1$s</string>
     <string name="title_activity_category">Categoria</string>
-    <string name="title_activity_change_status">"Canvia l'estat"</string>
+    <string name="title_activity_change_status">Estat</string>
     <string name="title_activity_channels_lobby">Punt de trobada propi</string>
     <string name="title_activity_group_event_details">"Detalls d'esdeveniment de grup"</string>
     <string name="title_activity_group_events">Esdeveniments de grup</string>
@@ -1927,6 +2195,9 @@ Consell: Podeu sortir d'aquesta pantalla mentre continua."</string>
     <string name="update_fragment_hide_updates">Amaga</string>
     <string name="update_fragment_view_channel">Visualitza el canal</string>
     <string name="update_fragment_view_post">Visualitza la publicació</string>
+    <string name="update_list_archiving_disabled_message">"El vostre administrador ha desactivat la funció d'arxivament."</string>
+    <string name="update_list_archiving_enabled_message">"El vostre administrador ha activat la funció d'arxivament."</string>
+    <string name="update_list_archiving_title">"S'estan arxivant els xats del BBM"</string>
     <string name="update_list_avatar">&lt;b>%1$s&lt;/b> ha canviat la imatge de visualització.</string>
     <string name="update_list_changed_event_sub_title">Esdeveniment canviat</string>
     <string name="update_list_comment_sub_title">Comentari afegit</string>
@@ -1939,9 +2210,9 @@ Consell: Podeu sortir d'aquesta pantalla mentre continua."</string>
     <string name="update_list_dialog_contact_hide_updates">Amaga els canals del contactes</string>
     <string name="update_list_dialog_contact_updates">Canals</string>
     <string name="update_list_dialog_contact_updates_hidden">%1$s amagades per a %2$s</string>
-    <string name="update_list_display_name_message">&lt;b>%1$s&lt;/b> ha canviat el nom de visualització a &lt;b>%2$s&lt;/b>.</string>
+    <string name="update_list_display_name_message">&lt;b>%1$s&lt;/b> heu canviat el nom de visualització a &lt;b>%2$s&lt;/b>.</string>
     <string name="update_list_display_name_sub_title">Nom de visualització canviat</string>
-    <string name="update_list_displayname">%1$s ha canviat el nom de visualització a &lt;b>%2$s&lt;/b>.</string>
+    <string name="update_list_displayname">%1$s heu canviat el nom de visualització a &lt;b>%2$s&lt;/b>.</string>
     <string name="update_list_group_event_new">&lt;b>%1$s&lt;/b> ha programat un esdeveniment anomenat &lt;b>%2$s&lt;/b> per al grup &lt;b>%3$s&lt;/b>.</string>
     <string name="update_list_group_event_updated">"&lt;b>%1$s&lt;/b> ha actualitzat l'esdeveniment &lt;b>%2$s&lt;/b> per al grup &lt;b>%3$s&lt;/b>."</string>
     <string name="update_list_group_event_updated_message">"&lt;b>%1$s&lt;/b> ha canviat l'esdeveniment &lt;b>%2$s&lt;/b>."</string>
@@ -1982,18 +2253,30 @@ Consell: Podeu sortir d'aquesta pantalla mentre continua."</string>
     <string name="update_list_new_contact_sub_title">Contacte del BBM</string>
     <string name="update_list_new_event_sub_title">Nou esdeveniment</string>
     <string name="update_list_new_list_item_sub_title">Nou element de la llista</string>
+    <string name="update_list_new_status_hint">"Introduïu un nom d'estat"</string>
     <string name="update_list_new_status_message">\"%1$s\"</string>
     <string name="update_list_new_status_sub_title">Nou estat</string>
     <string name="update_list_newcontact">&lt;b>%1$s&lt;/b> ara és a la llista de contactes.</string>
     <string name="update_list_now_playing_message">Està escoltant \"%1$s\"</string>
     <string name="update_list_nowplayingmessage">&lt;b>%1$s&lt;/b> està escoltant \"%2$s\".</string>
-    <string name="update_list_personalmessage">&lt;b>%1$s&lt;/b> ha dit \"%2$s\"</string>
+    <string name="update_list_personalmessage">&lt;b>%1$s&lt;/b> heu dit \"%2$s\"</string>
+    <string name="update_list_protected_disabled_message">"L'administrador ha inhabilitat el BBM Protected. Heu estat suprimit dels grups que utilitzen el BBM Protected."</string>
+    <string name="update_list_protected_enabled_message">"L'administrador ha habilitat el BBM Protected. Es fa servir una capa addicional de xifratge als xats, les transferències de fitxers i els grups amb els contactes que tenen el BBM Protected."</string>
+    <string name="update_list_protected_preferred_disabled_message">"L'administrador ha inhabilitat el Protected Plus."</string>
+    <string name="update_list_protected_preferred_enabled_message">"L'administrador ha habilitat el Protected Plus. Els xats entre vós i els vostres contactes estaran protegits amb el BBM Protected."</string>
+    <string name="update_list_protected_status_sub_title">Canvi de política</string>
+    <string name="update_list_protected_title">BBM Protected</string>
     <string name="update_list_you">Vós</string>
+    <string name="update_popular_channels_subtitle">Toqueu per explorar</string>
+    <string name="update_popular_channels_title">Canals populars</string>
     <string name="update_removed_from_blocked_list">"S'ha eliminat de la llista de bloquejats."</string>
     <string name="update_sponsored_content">Contingut patrocinat</string>
     <string name="update_sponsored_post">Publicació patrocinada</string>
+    <string name="update_your_subscription">Actualitzeu la subscripció</string>
     <string name="updates">Canals</string>
     <string name="upload">Puja</string>
+    <string name="user_status_stale">Vist per última vegada %1$s</string>
+    <string name="vanity_pin">PIN personalitzat</string>
     <string name="verify_date_of_birth">"S'està verificant la data de naixement."</string>
     <string name="verify_passphrase">"S'està verificant la frase de pas."</string>
     <string name="version">Versió</string>
@@ -2001,6 +2284,7 @@ Consell: Podeu sortir d'aquesta pantalla mentre continua."</string>
     <string name="view_channel_info">Visualització prèvia</string>
     <string name="view_channel_profile">Visualitza el perfil del canal</string>
     <string name="visits_caption">Visites</string>
+    <string name="voice_note_duration">%1$02d:%2$02d</string>
     <string name="voice_rating_bad">Deficient</string>
     <string name="voice_rating_excellent">Excel·lent</string>
     <string name="voice_rating_fair">Acceptable</string>
@@ -2008,11 +2292,31 @@ Consell: Podeu sortir d'aquesta pantalla mentre continua."</string>
     <string name="voice_rating_poor">Dolenta</string>
     <string name="voice_rating_title">"Com valoraríeu la qualitat d'aquesta trucada?"</string>
     <string name="voicecall_already_in_call">"Ja esteu fent una trucada del BBM. Per trucar a aquest contacte, finalitzeu l'altra trucada i torneu-ho a provar."</string>
+    <string name="voicecall_must_add_as_contact">Per utilitzar aquesta funció, cal que afegiu a aquesta persona a Contactes del BBM.</string>
+    <string name="voicecall_must_add_as_contact_title">Afegeix a Contactes del BBM</string>
     <string name="voicecall_status_calling">"S'està trucant"</string>
     <string name="voicecall_status_connecting">"S'està connectant"</string>
     <string name="voicecall_status_duration">Trucada de veu %1$s</string>
     <string name="voicecall_status_duration_while_mute">Silencia %1$s</string>
+    <string name="voicenote">Nota de veu</string>
     <string name="wait_passphrase_confirmation">"S'està esperant la confirmació de la frase de pas."</string>
+    <string name="warning_on_repurchase">"Per garantir que no s'interrompen les funcions d'aquesta subscripció, és possible que hagueu de comprar una subscripció nova i després anul·lar la vostra subscripció anterior. Per obtenir més informació, visiteu: %1$s"</string>
+    <string name="wear_quick_call_shortly">"Et trucaré d'aquí a una estona."</string>
+    <string name="wear_quick_cant_take">Estic ocupat i no puc respondre.</string>
+    <string name="wear_quick_im_on_my_way">Estic de camí.</string>
+    <string name="wear_quick_response_1">"D'acord."</string>
+    <string name="wear_quick_response_2">Rebut.</string>
+    <string name="wear_quick_response_3">Ara estic ocupat; et respondré tan aviat com pugui.</string>
+    <string name="wear_quick_response_appreciation">Gràcies</string>
+    <string name="wear_quick_response_confirmation">Sí</string>
+    <string name="wear_quick_response_disagree">No</string>
+    <string name="wear_quick_response_haha">Ha, ha!</string>
+    <string name="wear_quick_response_lol">Em peto!</string>
+    <string name="wear_quick_response_on_my_way">De camí</string>
+    <string name="wear_quick_response_see_you_soon">Fins ara</string>
+    <string name="wear_quick_response_talk_later">Ara no puc parlar</string>
+    <string name="wear_quick_response_understood">"D'acord"</string>
+    <string name="wearable_support">Compatibilitat amb wearables</string>
     <string name="widget_back_to_chat_previews">Torna a les visualitzacions prèvies del xat</string>
     <string name="widget_change_my_status_message">"Canvia el missatge d'estat"</string>
     <string name="widget_edit_status">"Edita l'estat"</string>
@@ -2028,6 +2332,7 @@ Consell: Podeu sortir d'aquesta pantalla mentre continua."</string>
     <string name="wifi_changing_network">Sollicitant connexió a la xarxa…</string>
     <string name="wifi_ssid_label">Nom de la xarxa</string>
     <string name="wifi_type_label">Tipus</string>
+    <string name="yes">Sí</string>
     <string name="you_are_signed_in_with_the_following_blackberry_id">Esteu connectat amb el següent BlackBerry ID: %1$s</string>
     <string name="you_can_choose_another_restore_option_or_delete_your_device_data">Podeu seleccionar una altra opció de restauració o suprimir les dades del dispositiu i iniciar sessió amb el BlackBerry ID que està associat amb la còpia de seguretat.</string>
     <string name="you_can_now_start_video_and_voice_chats">Ara podeu iniciar xats de vídeo i de veu des del BBM (si és compatible).</string>

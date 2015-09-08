@@ -1,30 +1,30 @@
 .class final Lcom/bbm/ui/activities/vb;
 .super Ljava/lang/Object;
-.source "InviteActivity.java"
+.source "NewChannelActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/j/s;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/vq;
+.field final synthetic a:I
 
-.field final synthetic b:Lcom/bbm/ui/activities/fk;
+.field final synthetic b:I
 
-.field final synthetic c:Lcom/bbm/ui/activities/InviteActivity;
+.field final synthetic c:Lcom/bbm/ui/activities/NewChannelActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/InviteActivity;Lcom/bbm/ui/activities/vq;Lcom/bbm/ui/activities/fk;)V
+.method constructor <init>(Lcom/bbm/ui/activities/NewChannelActivity;II)V
     .locals 0
 
     .prologue
-    .line 636
-    iput-object p1, p0, Lcom/bbm/ui/activities/vb;->c:Lcom/bbm/ui/activities/InviteActivity;
+    .line 531
+    iput-object p1, p0, Lcom/bbm/ui/activities/vb;->c:Lcom/bbm/ui/activities/NewChannelActivity;
 
-    iput-object p2, p0, Lcom/bbm/ui/activities/vb;->a:Lcom/bbm/ui/activities/vq;
+    iput p2, p0, Lcom/bbm/ui/activities/vb;->a:I
 
-    iput-object p3, p0, Lcom/bbm/ui/activities/vb;->b:Lcom/bbm/ui/activities/fk;
+    iput p3, p0, Lcom/bbm/ui/activities/vb;->b:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -33,86 +33,133 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final a()Z
     .locals 4
 
     .prologue
-    const/4 v3, -0x1
+    const/4 v1, 0x0
 
-    .line 640
-    const-string v0, "deleteButton Clicked"
+    .line 534
+    iget-object v0, p0, Lcom/bbm/ui/activities/vb;->c:Lcom/bbm/ui/activities/NewChannelActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 642
-    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->d(Lcom/bbm/ui/activities/NewChannelActivity;)Lcom/bbm/d/a;
 
     move-result-object v0
 
-    check-cast v0, Landroid/view/View;
+    invoke-virtual {v0}, Lcom/bbm/d/a;->ag()Lcom/bbm/j/w;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setActivated(Z)V
+    .line 535
+    invoke-interface {v0}, Lcom/bbm/j/w;->b()Z
 
-    .line 643
-    iget-object v0, p0, Lcom/bbm/ui/activities/vb;->a:Lcom/bbm/ui/activities/vq;
+    move-result v2
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/vq;->d:Landroid/widget/TextView;
+    if-eqz v2, :cond_0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/vb;->c:Lcom/bbm/ui/activities/InviteActivity;
+    move v0, v1
 
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/InviteActivity;->getResources()Landroid/content/res/Resources;
+    .line 551
+    :goto_0
+    return v0
+
+    .line 539
+    :cond_0
+    invoke-interface {v0}, Lcom/bbm/j/w;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    iget v2, p0, Lcom/bbm/ui/activities/vb;->a:I
+
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/fi;
+
+    .line 540
+    iget-object v2, p0, Lcom/bbm/ui/activities/vb;->c:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    invoke-static {v2}, Lcom/bbm/ui/activities/NewChannelActivity;->d(Lcom/bbm/ui/activities/NewChannelActivity;)Lcom/bbm/d/a;
+
+    move-result-object v2
+
+    iget-object v3, v0, Lcom/bbm/d/fi;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Lcom/bbm/d/a;->T(Ljava/lang/String;)Lcom/bbm/j/w;
+
+    move-result-object v2
+
+    .line 542
+    invoke-interface {v2}, Lcom/bbm/j/w;->b()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    move v0, v1
+
+    .line 543
+    goto :goto_0
+
+    .line 546
+    :cond_1
+    invoke-interface {v2}, Lcom/bbm/j/w;->f()Ljava/lang/Object;
 
     move-result-object v1
 
-    const v2, 0x7f0900fb
+    check-cast v1, Ljava/util/List;
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+    if-lez v1, :cond_2
 
-    .line 644
-    iget-object v0, p0, Lcom/bbm/ui/activities/vb;->b:Lcom/bbm/ui/activities/fk;
+    .line 547
+    iget-object v0, p0, Lcom/bbm/ui/activities/vb;->c:Lcom/bbm/ui/activities/NewChannelActivity;
 
-    iget v0, v0, Lcom/bbm/ui/activities/fk;->c:I
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->h(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/TextView;
 
-    if-ne v0, v3, :cond_0
+    move-result-object v1
 
-    .line 645
-    iget-object v0, p0, Lcom/bbm/ui/activities/vb;->c:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->t(Lcom/bbm/ui/activities/InviteActivity;)I
-
-    .line 647
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/vb;->c:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v0, v3}, Lcom/bbm/ui/activities/InviteActivity;->b(Lcom/bbm/ui/activities/InviteActivity;I)I
-
-    .line 648
-    invoke-static {}, Lcom/bbm/ui/activities/InviteActivity;->a()Ljava/util/ArrayList;
+    invoke-interface {v2}, Lcom/bbm/j/w;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/vb;->b:Lcom/bbm/ui/activities/fk;
+    check-cast v0, Ljava/util/List;
 
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    iget v2, p0, Lcom/bbm/ui/activities/vb;->b:I
 
-    .line 649
-    iget-object v0, p0, Lcom/bbm/ui/activities/vb;->c:Lcom/bbm/ui/activities/InviteActivity;
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->s(Lcom/bbm/ui/activities/InviteActivity;)V
+    move-result-object v0
 
-    .line 650
-    iget-object v0, p0, Lcom/bbm/ui/activities/vb;->c:Lcom/bbm/ui/activities/InviteActivity;
+    check-cast v0, Lcom/bbm/d/fq;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->e(Lcom/bbm/ui/activities/InviteActivity;)V
+    iget-object v0, v0, Lcom/bbm/d/fq;->b:Ljava/lang/String;
 
-    .line 651
-    return-void
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 551
+    :goto_1
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    .line 549
+    :cond_2
+    iget-object v1, p0, Lcom/bbm/ui/activities/vb;->c:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/NewChannelActivity;->h(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/TextView;
+
+    move-result-object v1
+
+    iget-object v0, v0, Lcom/bbm/d/fi;->b:Ljava/lang/String;
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_1
 .end method

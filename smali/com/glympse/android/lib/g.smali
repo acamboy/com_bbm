@@ -11,7 +11,7 @@
     .locals 0
 
     .prologue
-    .line 417
+    .line 449
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,7 +21,7 @@
     .locals 0
 
     .prologue
-    .line 417
+    .line 449
     invoke-direct {p0}, Lcom/glympse/android/lib/g;-><init>()V
 
     return-void
@@ -33,7 +33,7 @@
     .locals 0
 
     .prologue
-    .line 431
+    .line 463
     return-void
 .end method
 
@@ -41,7 +41,7 @@
     .locals 1
 
     .prologue
-    .line 426
+    .line 458
     const/4 v0, 0x0
 
     return v0
@@ -51,6 +51,6 @@
     .locals 0
 
     .prologue
-    .line 421
+    .line 453
     return-void
 .end method

@@ -3,15 +3,11 @@
 .source "ConversationActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnTouchListener;
+.implements Lcom/bbm/ui/cb;
 
 
 # instance fields
 .field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
-
-.field private b:F
-
-.field private c:F
 
 
 # direct methods
@@ -19,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 951
+    .line 2669
     iput-object p1, p0, Lcom/bbm/ui/activities/fv;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,148 +25,119 @@
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 4
+.method public final a(Z)V
+    .locals 2
 
     .prologue
-    const/4 v0, 0x1
+    const/4 v1, 0x2
 
-    .line 959
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+    .line 2672
+    if-eqz p1, :cond_1
 
-    move-result v1
+    .line 2675
+    iget-object v0, p0, Lcom/bbm/ui/activities/fv;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    if-nez v1, :cond_0
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ConversationActivity;->getResources()Landroid/content/res/Resources;
 
-    .line 961
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
+    move-result-object v0
 
-    move-result v1
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
-    iput v1, p0, Lcom/bbm/ui/activities/fv;->b:F
+    move-result-object v0
 
-    .line 963
+    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/fv;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/util/eu;->c(Landroid/app/Activity;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 2676
+    iget-object v0, p0, Lcom/bbm/ui/activities/fv;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->z(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/os/Handler;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/bbm/ui/activities/fw;
+
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/fw;-><init>(Lcom/bbm/ui/activities/fv;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 2701
+    :cond_0
+    :goto_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/fv;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->g(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/a;
+
+    move-result-object v0
+
     iget-object v1, p0, Lcom/bbm/ui/activities/fv;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->j(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/a;
+    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->e(Lcom/bbm/ui/activities/ConversationActivity;)Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/fv;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->m(Ljava/lang/String;)V
 
-    invoke-static {v2}, Lcom/bbm/ui/activities/ConversationActivity;->k(Lcom/bbm/ui/activities/ConversationActivity;)Ljava/lang/String;
+    .line 2702
+    return-void
 
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lcom/bbm/d/a;->k(Ljava/lang/String;)V
-
-    .line 966
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
-
-    move-result v1
-
-    float-to-int v1, v1
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawY()F
-
-    move-result v2
-
-    float-to-int v2, v2
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/fv;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v3}, Lcom/bbm/ui/activities/ConversationActivity;->x(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/widget/ListView;
-
-    move-result-object v3
-
-    invoke-static {v1, v2, v3}, Lcom/bbm/util/fl;->a(IILandroid/view/View;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    .line 981
-    :goto_0
-    return v0
-
-    .line 971
-    :cond_0
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v1
-
-    if-ne v1, v0, :cond_1
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/fv;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->F(Lcom/bbm/ui/activities/ConversationActivity;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 972
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
-
-    move-result v0
-
-    iput v0, p0, Lcom/bbm/ui/activities/fv;->c:F
-
-    .line 973
-    iget-object v0, p0, Lcom/bbm/ui/activities/fv;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ConversationActivity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/fv;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ConversationActivity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/Window;->getCurrentFocus()Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    .line 974
-    iget v0, p0, Lcom/bbm/ui/activities/fv;->c:F
-
-    iget v1, p0, Lcom/bbm/ui/activities/fv;->b:F
-
-    sub-float/2addr v0, v1
-
-    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
-
-    move-result v0
-
-    const/high16 v1, 0x41f00000
-
-    cmpg-float v0, v0, v1
-
-    if-gez v0, :cond_1
-
-    .line 975
-    const-string v0, "mOnRootTouchListener Clicked"
-
-    const-class v1, Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 976
-    iget-object v0, p0, Lcom/bbm/ui/activities/fv;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/ConversationActivity;->e:Lcom/bbm/ui/EmoticonInputPanel;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->d()Z
-
-    .line 981
+    .line 2685
     :cond_1
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcom/bbm/ui/activities/fv;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->ak(Lcom/bbm/ui/activities/ConversationActivity;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 2689
+    iget-object v0, p0, Lcom/bbm/ui/activities/fv;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->al(Lcom/bbm/ui/activities/ConversationActivity;)Z
+
+    .line 2690
+    iget-object v0, p0, Lcom/bbm/ui/activities/fv;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->am(Lcom/bbm/ui/activities/ConversationActivity;)V
+
+    .line 2692
+    :cond_2
+    iget-object v0, p0, Lcom/bbm/ui/activities/fv;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ConversationActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
+
+    if-ne v0, v1, :cond_0
+
+    .line 2693
+    iget-object v0, p0, Lcom/bbm/ui/activities/fv;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->z(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/os/Handler;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/bbm/ui/activities/fx;
+
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/fx;-><init>(Lcom/bbm/ui/activities/fv;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 .end method

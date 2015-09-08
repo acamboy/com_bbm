@@ -41,7 +41,7 @@
     if-ne p2, v0, :cond_0
 
     .line 51
-    invoke-static {}, Lcom/bbm/Alaska;->h()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcom/bbm/Alaska;->l()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -63,11 +63,11 @@
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 59
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/bbm/i/a;->a(Lcom/bbm/d/a;)Z
+    invoke-static {v0}, Lcom/bbm/h/a;->a(Lcom/bbm/d/a;)Z
 
     .line 61
     iget-object v0, p0, Lcom/bbm/setup/a;->a:Landroid/content/DialogInterface$OnDismissListener;

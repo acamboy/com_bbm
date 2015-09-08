@@ -13,6 +13,10 @@
         <item quantity="other">%1$d Ahli</item>
         <item quantity="one">%1$d Ahli</item>
     </plurals>
+    <plurals name="common_days_1d">
+        <item quantity="other">%1$d hari</item>
+        <item quantity="one">%1$d hari</item>
+    </plurals>
     <plurals name="ephemeral_picker_seconds">
         <item quantity="other">saat</item>
         <item quantity="one">saat</item>
@@ -35,28 +39,28 @@
         <item quantity="one">1 Hasil</item>
     </plurals>
     <plurals name="slide_menu_active_chats">
-        <item quantity="other">%1$s Sembang Aktif</item>
-        <item quantity="one">1 Sembang Aktif</item>
+        <item quantity="other">Sembang Aktif 1 %1$s</item>
+        <item quantity="one">Sembang Aktif 1 %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_channelupdates">
-        <item quantity="other">%1$s Pemberitahuan Baharu</item>
-        <item quantity="one">1 Pemberitahuan Baharu</item>
+        <item quantity="other">Butir Saluran baharu %1$s</item>
+        <item quantity="one">Butir Saluran baharu %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_invites">
-        <item quantity="other">%1$s Jemputan Baharu</item>
-        <item quantity="one">1 Jemputan Baharu</item>
+        <item quantity="other">Undangan Baharu %1$s</item>
+        <item quantity="one">Undangan Baharu %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_updates">
-        <item quantity="other">%1$s Item Baru</item>
-        <item quantity="one">1 Item Baru</item>
+        <item quantity="other">Suapan Baharu %1$s</item>
+        <item quantity="one">Suapan Baharu %1$s</item>
     </plurals>
     <plurals name="slide_menu_total_contacts">
         <item quantity="other">%1$s Kenalan</item>
-        <item quantity="one">1 Kenalan</item>
+        <item quantity="one">%1$s Kenalan</item>
     </plurals>
     <plurals name="slide_menu_total_groups">
         <item quantity="other">%1$s Kumpulan</item>
-        <item quantity="one">1 Kumpulan</item>
+        <item quantity="one">%1$s Kumpulan</item>
     </plurals>
     <plurals name="update_channel_stats_comments">
         <item quantity="other">%1$s Komen</item>

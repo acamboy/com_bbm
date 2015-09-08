@@ -1,5 +1,5 @@
 .class public Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;
-.super Lcom/bbm/ui/activities/ey;
+.super Lcom/bbm/bali/ui/main/a/a;
 .source "ReceivedPendingInviteActivity.java"
 
 
@@ -8,23 +8,17 @@
 
 .field private final b:Lcom/bbm/d/a;
 
-.field private c:Lcom/bbm/ui/FooterActionBar;
+.field private h:Lcom/bbm/ui/AvatarView;
 
-.field private d:Lcom/bbm/ui/ObservingImageView;
+.field private i:Landroid/widget/TextView;
 
-.field private e:Landroid/widget/TextView;
+.field private j:Landroid/widget/TextView;
 
-.field private f:Landroid/widget/TextView;
+.field private k:Landroid/widget/TextView;
 
-.field private g:Landroid/widget/TextView;
+.field private l:Landroid/widget/TextView;
 
-.field private h:Landroid/widget/TextView;
-
-.field private i:Ljava/lang/String;
-
-.field private j:Lcom/bbm/d/gr;
-
-.field private final k:Lcom/bbm/ui/cn;
+.field private m:Ljava/lang/String;
 
 
 # direct methods
@@ -32,279 +26,51 @@
     .locals 1
 
     .prologue
-    .line 36
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ey;-><init>()V
+    .line 38
+    invoke-direct {p0}, Lcom/bbm/bali/ui/main/a/a;-><init>()V
 
-    .line 40
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    .line 42
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->b:Lcom/bbm/d/a;
 
-    .line 52
-    new-instance v0, Lcom/bbm/ui/activities/adt;
+    .line 110
+    new-instance v0, Lcom/bbm/ui/activities/aau;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/adt;-><init>(Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->k:Lcom/bbm/ui/cn;
-
-    .line 125
-    new-instance v0, Lcom/bbm/ui/activities/adw;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/adw;-><init>(Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/aau;-><init>(Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;)V
 
     iput-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->a:Lcom/bbm/j/k;
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;Lcom/bbm/d/gr;)Lcom/bbm/d/gr;
-    .locals 0
-
-    .prologue
-    .line 36
-    iput-object p1, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->j:Lcom/bbm/d/gr;
-
-    return-object p1
-.end method
-
-.method static synthetic a(Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;)V
-    .locals 3
-
-    .prologue
-    .line 36
-    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->b:Lcom/bbm/d/a;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->i:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->y(Ljava/lang/String;)Lcom/bbm/d/fp;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/bbm/d/fp;->g:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->b:Lcom/bbm/d/a;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->i:Ljava/lang/String;
-
-    invoke-static {v1}, Lcom/bbm/d/aa;->b(Ljava/lang/String;)Lcom/bbm/d/bi;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->finish()V
-
-    :goto_0
-    return-void
-
-    :cond_0
-    new-instance v0, Lcom/bbm/ui/b/k;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/b/k;-><init>(Landroid/content/Context;)V
-
-    const v1, 0x7f0e030d
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/k;->setTitle(I)V
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->b:Lcom/bbm/d/a;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->i:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Lcom/bbm/d/a;->y(Ljava/lang/String;)Lcom/bbm/d/fp;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lcom/bbm/d/fp;->g:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/k;->a_(Ljava/lang/String;)V
-
-    const v1, 0x7f0e030b
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/k;->c(I)V
-
-    const/16 v1, 0x20
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/k;->d(I)V
-
-    const v1, 0x7f0e030c
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/k;->f(I)V
-
-    new-instance v1, Lcom/bbm/ui/activities/adu;
-
-    invoke-direct {v1, p0, v0}, Lcom/bbm/ui/activities/adu;-><init>(Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;Lcom/bbm/ui/b/k;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/k;->a(Landroid/view/View$OnClickListener;)V
-
-    invoke-virtual {v0}, Lcom/bbm/ui/b/k;->show()V
-
-    goto :goto_0
-.end method
-
-.method static synthetic b(Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;)V
-    .locals 7
-
-    .prologue
-    const/16 v6, 0x8
-
-    const/4 v5, 0x1
-
-    const/4 v4, 0x0
-
-    .line 36
-    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->e:Landroid/widget/TextView;
-
-    invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/bbm/ui/b/i;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/b/i;-><init>(Landroid/content/Context;)V
-
-    const v2, 0x7f0e0494
-
-    invoke-virtual {v1, v2}, Lcom/bbm/ui/b/i;->setTitle(I)V
-
-    const v2, 0x7f0e013a
-
-    invoke-virtual {v1, v2}, Lcom/bbm/ui/b/i;->c(I)V
-
-    const v2, 0x7f0e026d
-
-    invoke-virtual {p0, v2}, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    new-array v3, v5, [Ljava/lang/Object;
-
-    aput-object v0, v3, v4
-
-    invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lcom/bbm/ui/b/i;->a_(Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Lcom/bbm/ui/b/i;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    const v3, 0x7f0e06a5
-
-    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, v1, Lcom/bbm/ui/b/i;->g:Ljava/lang/String;
-
-    iget-object v2, v1, Lcom/bbm/ui/b/i;->f:Landroid/widget/CheckBox;
-
-    if-eqz v2, :cond_0
-
-    iget-object v2, v1, Lcom/bbm/ui/b/i;->d:Landroid/widget/TextView;
-
-    if-eqz v2, :cond_0
-
-    iget-object v2, v1, Lcom/bbm/ui/b/i;->g:Ljava/lang/String;
-
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    iget-object v2, v1, Lcom/bbm/ui/b/i;->f:Landroid/widget/CheckBox;
-
-    invoke-virtual {v2, v4}, Landroid/widget/CheckBox;->setVisibility(I)V
-
-    iget-object v2, v1, Lcom/bbm/ui/b/i;->d:Landroid/widget/TextView;
-
-    invoke-virtual {v2, v4}, Landroid/widget/TextView;->setVisibility(I)V
-
-    iget-object v2, v1, Lcom/bbm/ui/b/i;->d:Landroid/widget/TextView;
-
-    iget-object v3, v1, Lcom/bbm/ui/b/i;->g:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    :cond_0
-    :goto_0
-    const v2, 0x7f0e026f
-
-    invoke-virtual {p0, v2}, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    new-array v3, v5, [Ljava/lang/Object;
-
-    aput-object v0, v3, v4
-
-    invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/b/i;->f(Ljava/lang/String;)V
-
-    new-instance v0, Lcom/bbm/ui/activities/adv;
-
-    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/activities/adv;-><init>(Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;Lcom/bbm/ui/b/i;)V
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/b/i;->a(Landroid/view/View$OnClickListener;)V
-
-    invoke-virtual {v1}, Lcom/bbm/ui/b/i;->show()V
-
-    return-void
-
-    :cond_1
-    iget-object v2, v1, Lcom/bbm/ui/b/i;->f:Landroid/widget/CheckBox;
-
-    invoke-virtual {v2, v6}, Landroid/widget/CheckBox;->setVisibility(I)V
-
-    iget-object v2, v1, Lcom/bbm/ui/b/i;->d:Landroid/widget/TextView;
-
-    invoke-virtual {v2, v6}, Landroid/widget/TextView;->setVisibility(I)V
-
-    goto :goto_0
-.end method
-
-.method static synthetic c(Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;)Ljava/lang/String;
+.method static synthetic a(Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;)Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 36
-    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->i:Ljava/lang/String;
+    .line 38
+    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->m:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic d(Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;)Lcom/bbm/d/a;
+.method static synthetic b(Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;)Lcom/bbm/d/a;
     .locals 1
 
     .prologue
-    .line 36
+    .line 38
     iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->b:Lcom/bbm/d/a;
 
     return-object v0
 .end method
 
-.method static synthetic e(Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;)V
+.method static synthetic c(Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;)V
     .locals 4
 
     .prologue
-    .line 36
+    .line 38
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
@@ -316,7 +82,7 @@
     :try_start_0
     const-string v2, "id"
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->i:Ljava/lang/String;
+    iget-object v3, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->m:Ljava/lang/String;
 
     invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
@@ -336,11 +102,11 @@
 
     const-string v2, "pendingContact"
 
-    invoke-static {v1, v2}, Lcom/bbm/d/aa;->b(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/d/db;
+    invoke-static {v1, v2}, Lcom/bbm/d/aj;->c(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/d/dw;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ez;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -350,27 +116,148 @@
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method
 
-.method static synthetic f(Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;)Lcom/bbm/d/gr;
+.method static synthetic d(Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;)Lcom/bbm/ui/AvatarView;
     .locals 1
 
     .prologue
-    .line 36
-    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->j:Lcom/bbm/d/gr;
+    .line 38
+    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->h:Lcom/bbm/ui/AvatarView;
 
     return-object v0
 .end method
 
-.method static synthetic g(Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;)Lcom/bbm/ui/ObservingImageView;
+.method private d()V
+    .locals 3
+
+    .prologue
+    .line 54
+    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->b:Lcom/bbm/d/a;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->m:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->C(Ljava/lang/String;)Lcom/bbm/d/gr;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/bbm/d/gr;->g:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 55
+    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->b:Lcom/bbm/d/a;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->m:Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/bbm/d/aj;->b(Ljava/lang/String;)Lcom/bbm/d/by;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ez;)V
+
+    .line 56
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->finish()V
+
+    .line 80
+    :goto_0
+    return-void
+
+    .line 58
+    :cond_0
+    invoke-static {p0}, Lcom/bbm/ui/b/i;->a(Landroid/app/Activity;)Lcom/bbm/ui/b/i;
+
+    move-result-object v0
+
+    .line 59
+    const v1, 0x7f0e0367
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/i;->c(I)Lcom/bbm/ui/b/m;
+
+    .line 60
+    iget-object v1, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->b:Lcom/bbm/d/a;
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->m:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Lcom/bbm/d/a;->C(Ljava/lang/String;)Lcom/bbm/d/gr;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/bbm/d/gr;->g:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/i;->e(Ljava/lang/String;)Lcom/bbm/ui/b/m;
+
+    .line 61
+    const v1, 0x7f0e0365
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/i;->a(I)Lcom/bbm/ui/b/i;
+
+    .line 62
+    const/16 v1, 0x20
+
+    iput v1, v0, Lcom/bbm/ui/b/i;->d:I
+
+    .line 63
+    const v1, 0x7f0e0366
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/i;->h(I)Lcom/bbm/ui/b/m;
+
+    .line 64
+    const v1, 0x7f0e0197
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/i;->e(I)Lcom/bbm/ui/b/m;
+
+    .line 65
+    const v1, 0x7f0e0602
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/i;->d(I)Lcom/bbm/ui/b/m;
+
+    .line 66
+    new-instance v1, Lcom/bbm/ui/activities/aas;
+
+    invoke-direct {v1, p0, v0}, Lcom/bbm/ui/activities/aas;-><init>(Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;Lcom/bbm/ui/b/i;)V
+
+    iput-object v1, v0, Lcom/bbm/ui/b/m;->l:Landroid/content/DialogInterface$OnClickListener;
+
+    .line 78
+    invoke-virtual {v0}, Lcom/bbm/ui/b/i;->e()V
+
+    goto :goto_0
+.end method
+
+.method static synthetic e(Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;)Landroid/widget/TextView;
     .locals 1
 
     .prologue
-    .line 36
-    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->d:Lcom/bbm/ui/ObservingImageView;
+    .line 38
+    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->i:Landroid/widget/TextView;
+
+    return-object v0
+.end method
+
+.method static synthetic f(Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;)Landroid/widget/TextView;
+    .locals 1
+
+    .prologue
+    .line 38
+    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->j:Landroid/widget/TextView;
+
+    return-object v0
+.end method
+
+.method static synthetic g(Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;)Landroid/widget/TextView;
+    .locals 1
+
+    .prologue
+    .line 38
+    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->k:Landroid/widget/TextView;
 
     return-object v0
 .end method
@@ -379,38 +266,8 @@
     .locals 1
 
     .prologue
-    .line 36
-    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->e:Landroid/widget/TextView;
-
-    return-object v0
-.end method
-
-.method static synthetic i(Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;)Landroid/widget/TextView;
-    .locals 1
-
-    .prologue
-    .line 36
-    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->f:Landroid/widget/TextView;
-
-    return-object v0
-.end method
-
-.method static synthetic j(Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;)Landroid/widget/TextView;
-    .locals 1
-
-    .prologue
-    .line 36
-    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->g:Landroid/widget/TextView;
-
-    return-object v0
-.end method
-
-.method static synthetic k(Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;)Landroid/widget/TextView;
-    .locals 1
-
-    .prologue
-    .line 36
-    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->h:Landroid/widget/TextView;
+    .line 38
+    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->l:Landroid/widget/TextView;
 
     return-object v0
 .end method
@@ -418,229 +275,343 @@
 
 # virtual methods
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 6
+    .locals 4
 
     .prologue
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    .line 139
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onCreate(Landroid/os/Bundle;)V
 
-    .line 154
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/ey;->onCreate(Landroid/os/Bundle;)V
-
-    .line 155
+    .line 140
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    const-string v3, "pending_contact_id"
+    const-string v2, "pending_contact_id"
 
-    invoke-virtual {v0, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->i:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->m:Ljava/lang/String;
 
-    .line 156
-    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->i:Ljava/lang/String;
+    .line 141
+    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->m:Ljava/lang/String;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->i:Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->m:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
-    move v0, v1
+    const/4 v0, 0x1
 
     :goto_0
-    const-string v3, "No pending contact ID specified in Intent"
+    const-string v2, "No pending contact ID specified in Intent"
 
-    invoke-static {p0, v0, v3}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;ZLjava/lang/Object;)Z
+    invoke-static {p0, v0, v2}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;ZLjava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    .line 182
+    .line 163
+    :cond_0
     :goto_1
     return-void
 
-    :cond_0
-    move v0, v2
+    :cond_1
+    move v0, v1
 
-    .line 156
+    .line 141
     goto :goto_0
 
-    .line 161
-    :cond_1
-    const v0, 0x7f03004f
+    .line 146
+    :cond_2
+    const v0, 0x7f03006c
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->setContentView(I)V
 
-    .line 163
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->getActionBar()Landroid/app/ActionBar;
+    .line 147
+    const v0, 0x7f0b013c
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 164
-    const v3, 0x7f030119
+    check-cast v0, Landroid/support/v7/widget/Toolbar;
 
-    invoke-virtual {v0, v3}, Landroid/app/ActionBar;->setCustomView(I)V
-
-    .line 165
-    const/16 v3, 0x10
-
-    invoke-virtual {v0, v3}, Landroid/app/ActionBar;->setDisplayOptions(I)V
-
-    .line 166
-    invoke-virtual {v0}, Landroid/app/ActionBar;->getCustomView()Landroid/view/View;
-
-    move-result-object v0
-
-    const v3, 0x7f0b058e
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
+    .line 148
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v3
+    move-result-object v2
 
-    const v4, 0x7f0e064b
+    const v3, 0x7f0e0714
 
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v0, v2}, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->a(Landroid/support/v7/widget/Toolbar;Ljava/lang/String;)V
 
-    .line 170
-    const v0, 0x7f0b00bf
+    .line 151
+    const v0, 0x7f0b02f0
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/FooterActionBar;
+    check-cast v0, Lcom/bbm/ui/AvatarView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->c:Lcom/bbm/ui/FooterActionBar;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->h:Lcom/bbm/ui/AvatarView;
 
-    .line 171
-    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->c:Lcom/bbm/ui/FooterActionBar;
+    .line 152
+    const v0, 0x7f0b02f1
 
-    new-instance v3, Lcom/bbm/ui/ActionBarItem;
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->findViewById(I)Landroid/view/View;
 
-    const v4, 0x7f0202b5
+    move-result-object v0
 
-    const v5, 0x7f0e0647
+    check-cast v0, Landroid/widget/TextView;
 
-    invoke-direct {v3, p0, v4, v5}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;II)V
+    iput-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->i:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v3, v2}, Lcom/bbm/ui/FooterActionBar;->a(Lcom/bbm/ui/ActionBarItem;I)V
+    .line 153
+    const v0, 0x7f0b02f3
 
-    .line 172
-    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->c:Lcom/bbm/ui/FooterActionBar;
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->findViewById(I)Landroid/view/View;
 
-    new-instance v3, Lcom/bbm/ui/ActionBarItem;
+    move-result-object v0
 
-    const v4, 0x7f0202c3
+    check-cast v0, Landroid/widget/TextView;
 
-    const v5, 0x7f0e0649
+    iput-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->j:Landroid/widget/TextView;
 
-    invoke-direct {v3, p0, v4, v5}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;II)V
+    .line 154
+    const v0, 0x7f0b02f4
 
-    invoke-virtual {v0, v3, v1}, Lcom/bbm/ui/FooterActionBar;->a(Lcom/bbm/ui/ActionBarItem;I)V
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->findViewById(I)Landroid/view/View;
 
-    .line 173
-    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->c:Lcom/bbm/ui/FooterActionBar;
+    move-result-object v0
 
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/FooterActionBar;->setOverflowEnabled(Z)V
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->k:Landroid/widget/TextView;
+
+    .line 155
+    const v0, 0x7f0b02f2
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->l:Landroid/widget/TextView;
+
+    .line 157
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 158
+    const-string v2, "intent_accept_action"
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    .line 159
+    invoke-direct {p0}, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->d()V
+
+    goto :goto_1
+
+    .line 160
+    :cond_3
+    const-string v2, "intent_ignore_action"
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 161
+    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->b:Lcom/bbm/d/a;
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->m:Ljava/lang/String;
+
+    invoke-static {v2, v1, v1}, Lcom/bbm/d/aj;->a(Ljava/lang/String;ZZ)Lcom/bbm/d/bz;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ez;)V
+
+    goto :goto_1
+.end method
+
+.method public onCreateOptionsMenu(Landroid/view/Menu;)Z
+    .locals 2
+
+    .prologue
+    .line 168
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->getMenuInflater()Landroid/view/MenuInflater;
+
+    move-result-object v0
+
+    const v1, 0x7f100040
+
+    invoke-virtual {v0, v1, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
+
+    .line 169
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onCreateOptionsMenu(Landroid/view/Menu;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    .locals 6
+
+    .prologue
+    const/4 v5, 0x0
+
+    const/4 v0, 0x1
 
     .line 174
-    iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->c:Lcom/bbm/ui/FooterActionBar;
+    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->k:Lcom/bbm/ui/cn;
+    move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
+    packed-switch v1, :pswitch_data_0
 
-    .line 177
-    const v0, 0x7f0b028d
+    .line 182
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->findViewById(I)Landroid/view/View;
+    move-result v0
 
-    move-result-object v0
+    :goto_0
+    return v0
 
-    check-cast v0, Lcom/bbm/ui/ObservingImageView;
+    .line 176
+    :pswitch_0
+    invoke-direct {p0}, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->d()V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->d:Lcom/bbm/ui/ObservingImageView;
-
-    .line 178
-    const v0, 0x7f0b028e
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->e:Landroid/widget/TextView;
+    goto :goto_0
 
     .line 179
-    const v0, 0x7f0b028f
+    :pswitch_1
+    iget-object v1, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->i:Landroid/widget/TextView;
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Landroid/widget/TextView;
+    invoke-interface {v1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->f:Landroid/widget/TextView;
+    move-result-object v1
 
-    .line 180
-    const v0, 0x7f0b0291
+    invoke-static {p0}, Lcom/bbm/ui/b/g;->a(Landroid/app/Activity;)Lcom/bbm/ui/b/g;
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->findViewById(I)Landroid/view/View;
+    move-result-object v2
 
-    move-result-object v0
+    const v3, 0x7f0e0502
 
-    check-cast v0, Landroid/widget/TextView;
+    invoke-virtual {v2, v3}, Lcom/bbm/ui/b/g;->c(I)Lcom/bbm/ui/b/m;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->g:Landroid/widget/TextView;
+    const v3, 0x7f0e015c
 
-    .line 181
-    const v0, 0x7f0b0290
+    invoke-virtual {v2, v3}, Lcom/bbm/ui/b/g;->a(I)Lcom/bbm/ui/b/g;
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->findViewById(I)Landroid/view/View;
+    const v3, 0x7f0e02a7
 
-    move-result-object v0
+    invoke-virtual {p0, v3}, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->getString(I)Ljava/lang/String;
 
-    check-cast v0, Landroid/widget/TextView;
+    move-result-object v3
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->h:Landroid/widget/TextView;
+    new-array v4, v0, [Ljava/lang/Object;
 
-    goto/16 :goto_1
+    aput-object v1, v4, v5
+
+    invoke-static {v3, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Lcom/bbm/ui/b/g;->e(Ljava/lang/String;)Lcom/bbm/ui/b/m;
+
+    const v3, 0x7f0e0774
+
+    invoke-virtual {v2, v3}, Lcom/bbm/ui/b/g;->b(I)Lcom/bbm/ui/b/g;
+
+    const v3, 0x7f0e02a9
+
+    invoke-virtual {p0, v3}, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    new-array v4, v0, [Ljava/lang/Object;
+
+    aput-object v1, v4, v5
+
+    invoke-static {v3, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v1}, Lcom/bbm/ui/b/g;->f(Ljava/lang/String;)Lcom/bbm/ui/b/m;
+
+    const v1, 0x7f0e0199
+
+    invoke-virtual {v2, v1}, Lcom/bbm/ui/b/g;->e(I)Lcom/bbm/ui/b/m;
+
+    const v1, 0x7f0e0602
+
+    invoke-virtual {v2, v1}, Lcom/bbm/ui/b/g;->d(I)Lcom/bbm/ui/b/m;
+
+    new-instance v1, Lcom/bbm/ui/activities/aat;
+
+    invoke-direct {v1, p0, v2}, Lcom/bbm/ui/activities/aat;-><init>(Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;Lcom/bbm/ui/b/g;)V
+
+    iput-object v1, v2, Lcom/bbm/ui/b/m;->l:Landroid/content/DialogInterface$OnClickListener;
+
+    invoke-virtual {v2}, Lcom/bbm/ui/b/g;->e()V
+
+    goto :goto_0
+
+    .line 174
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x7f0b07ae
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method
 
 .method protected onPause()V
     .locals 1
 
     .prologue
-    .line 192
+    .line 193
     iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->a:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
-
-    .line 193
-    invoke-super {p0}, Lcom/bbm/ui/activities/ey;->onPause()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
 
     .line 194
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/a;->onPause()V
+
+    .line 195
     return-void
 .end method
 
@@ -648,14 +619,14 @@
     .locals 1
 
     .prologue
-    .line 186
-    invoke-super {p0}, Lcom/bbm/ui/activities/ey;->onResume()V
-
     .line 187
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/a;->onResume()V
+
+    .line 188
     iget-object v0, p0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;->a:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 188
+    .line 189
     return-void
 .end method

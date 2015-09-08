@@ -1,9 +1,21 @@
 .class final Landroid/support/v4/widget/t;
 .super Ljava/lang/Object;
-.source "EdgeEffectCompat.java"
+.source "DrawerLayout.java"
 
 # interfaces
-.implements Landroid/support/v4/widget/u;
+.implements Landroid/os/Parcelable$Creator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Landroid/support/v4/widget/DrawerLayout$SavedState;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
@@ -11,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 90
+    .line 1608
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,98 +31,24 @@
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;)Ljava/lang/Object;
+.method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
 
     .prologue
-    .line 92
-    new-instance v0, Landroid/widget/EdgeEffect;
+    .line 1608
+    new-instance v0, Landroid/support/v4/widget/DrawerLayout$SavedState;
 
-    invoke-direct {v0, p1}, Landroid/widget/EdgeEffect;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Landroid/support/v4/widget/DrawerLayout$SavedState;-><init>(Landroid/os/Parcel;)V
 
     return-object v0
 .end method
 
-.method public final a(Ljava/lang/Object;II)V
-    .locals 0
-
-    .prologue
-    .line 96
-    check-cast p1, Landroid/widget/EdgeEffect;
-
-    invoke-virtual {p1, p2, p3}, Landroid/widget/EdgeEffect;->setSize(II)V
-
-    .line 97
-    return-void
-.end method
-
-.method public final a(Ljava/lang/Object;)Z
+.method public final bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
     .prologue
-    .line 100
-    check-cast p1, Landroid/widget/EdgeEffect;
+    .line 1608
+    new-array v0, p1, [Landroid/support/v4/widget/DrawerLayout$SavedState;
 
-    invoke-virtual {p1}, Landroid/widget/EdgeEffect;->isFinished()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final a(Ljava/lang/Object;F)Z
-    .locals 1
-
-    .prologue
-    .line 108
-    check-cast p1, Landroid/widget/EdgeEffect;
-
-    invoke-virtual {p1, p2}, Landroid/widget/EdgeEffect;->onPull(F)V
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final a(Ljava/lang/Object;Landroid/graphics/Canvas;)Z
-    .locals 1
-
-    .prologue
-    .line 120
-    check-cast p1, Landroid/widget/EdgeEffect;
-
-    invoke-virtual {p1, p2}, Landroid/widget/EdgeEffect;->draw(Landroid/graphics/Canvas;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final b(Ljava/lang/Object;)V
-    .locals 0
-
-    .prologue
-    .line 104
-    check-cast p1, Landroid/widget/EdgeEffect;
-
-    invoke-virtual {p1}, Landroid/widget/EdgeEffect;->finish()V
-
-    .line 105
-    return-void
-.end method
-
-.method public final c(Ljava/lang/Object;)Z
-    .locals 1
-
-    .prologue
-    .line 112
-    check-cast p1, Landroid/widget/EdgeEffect;
-
-    invoke-virtual {p1}, Landroid/widget/EdgeEffect;->onRelease()V
-
-    invoke-virtual {p1}, Landroid/widget/EdgeEffect;->isFinished()Z
-
-    move-result v0
-
-    return v0
+    return-object v0
 .end method

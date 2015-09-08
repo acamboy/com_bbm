@@ -1,36 +1,46 @@
 .class final Lcom/bbm/ui/activities/p;
-.super Lcom/bbm/ui/cn;
-.source "AppStoreActivity.java"
+.super Ljava/lang/Object;
+.source "AppSubscriptionConfirmationActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/AppStoreActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/AppSubscriptionConfirmationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/AppStoreActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/AppSubscriptionConfirmationActivity;)V
     .locals 0
 
     .prologue
-    .line 60
-    iput-object p1, p0, Lcom/bbm/ui/activities/p;->a:Lcom/bbm/ui/activities/AppStoreActivity;
+    .line 40
+    iput-object p1, p0, Lcom/bbm/ui/activities/p;->a:Lcom/bbm/ui/activities/AppSubscriptionConfirmationActivity;
 
-    invoke-direct {p0}, Lcom/bbm/ui/cn;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 63
-    iget-object v0, p0, Lcom/bbm/ui/activities/p;->a:Lcom/bbm/ui/activities/AppStoreActivity;
+    .line 44
+    const-string v0, "Close button clicked"
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/AppStoreActivity;->finish()V
+    const-class v1, Lcom/bbm/ui/activities/AppSubscriptionConfirmationActivity;
 
-    .line 64
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 45
+    iget-object v0, p0, Lcom/bbm/ui/activities/p;->a:Lcom/bbm/ui/activities/AppSubscriptionConfirmationActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/AppSubscriptionConfirmationActivity;->finish()V
+
+    .line 46
     return-void
 .end method

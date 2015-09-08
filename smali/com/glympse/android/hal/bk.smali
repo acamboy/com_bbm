@@ -9,9 +9,9 @@
 # instance fields
 .field private e:Landroid/content/Context;
 
-.field private es:Lcom/glympse/android/hal/e;
+.field private ev:Lcom/glympse/android/hal/e;
 
-.field private et:Lcom/glympse/android/hal/ConnectivityListener;
+.field private ew:Lcom/glympse/android/hal/ConnectivityListener;
 
 
 # direct methods
@@ -26,44 +26,64 @@
 .end method
 
 .method private T()V
-    .locals 4
+    .locals 3
 
     .prologue
     .line 118
-    iget-object v0, p0, Lcom/glympse/android/hal/bk;->e:Landroid/content/Context;
+    new-instance v0, Landroid/content/Intent;
 
-    new-instance v1, Landroid/content/Intent;
+    iget-object v1, p0, Lcom/glympse/android/hal/bk;->e:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/glympse/android/hal/bk;->e:Landroid/content/Context;
+    const-class v2, Lcom/glympse/android/hal/GlympseService;
 
-    const-class v3, Lcom/glympse/android/hal/GlympseService;
-
-    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
     .line 119
+    iget-object v1, p0, Lcom/glympse/android/hal/bk;->e:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 120
+    iget-object v1, p0, Lcom/glympse/android/hal/bk;->e:Landroid/content/Context;
+
+    invoke-virtual {v1, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+
+    .line 121
     return-void
 .end method
 
 .method private U()V
-    .locals 4
+    .locals 3
 
     .prologue
-    .line 123
-    iget-object v0, p0, Lcom/glympse/android/hal/bk;->e:Landroid/content/Context;
+    .line 125
+    new-instance v0, Landroid/content/Intent;
 
-    new-instance v1, Landroid/content/Intent;
+    iget-object v1, p0, Lcom/glympse/android/hal/bk;->e:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/glympse/android/hal/bk;->e:Landroid/content/Context;
+    const-class v2, Lcom/glympse/android/hal/GlympseService;
 
-    const-class v3, Lcom/glympse/android/hal/GlympseService;
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    .line 126
+    iget-object v1, p0, Lcom/glympse/android/hal/bk;->e:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->stopService(Landroid/content/Intent;)Z
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    .line 124
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 127
+    iget-object v1, p0, Lcom/glympse/android/hal/bk;->e:Landroid/content/Context;
+
+    invoke-virtual {v1, v0}, Landroid/content/Context;->stopService(Landroid/content/Intent;)Z
+
+    .line 128
     return-void
 .end method
 
@@ -137,10 +157,10 @@
 
     invoke-direct {v0}, Lcom/glympse/android/hal/e;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/bk;->es:Lcom/glympse/android/hal/e;
+    iput-object v0, p0, Lcom/glympse/android/hal/bk;->ev:Lcom/glympse/android/hal/e;
 
     .line 47
-    iget-object v0, p0, Lcom/glympse/android/hal/bk;->es:Lcom/glympse/android/hal/e;
+    iget-object v0, p0, Lcom/glympse/android/hal/bk;->ev:Lcom/glympse/android/hal/e;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/hal/e;->start(Lcom/glympse/android/api/GGlympse;)V
 
@@ -150,10 +170,10 @@
 
     invoke-direct {v0}, Lcom/glympse/android/hal/ConnectivityListener;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/bk;->et:Lcom/glympse/android/hal/ConnectivityListener;
+    iput-object v0, p0, Lcom/glympse/android/hal/bk;->ew:Lcom/glympse/android/hal/ConnectivityListener;
 
     .line 52
-    iget-object v0, p0, Lcom/glympse/android/hal/bk;->et:Lcom/glympse/android/hal/ConnectivityListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/bk;->ew:Lcom/glympse/android/hal/ConnectivityListener;
 
     iget-object v1, p0, Lcom/glympse/android/hal/bk;->e:Landroid/content/Context;
 
@@ -209,31 +229,31 @@
     const/4 v1, 0x0
 
     .line 78
-    iget-object v0, p0, Lcom/glympse/android/hal/bk;->et:Lcom/glympse/android/hal/ConnectivityListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/bk;->ew:Lcom/glympse/android/hal/ConnectivityListener;
 
     if-eqz v0, :cond_0
 
     .line 80
-    iget-object v0, p0, Lcom/glympse/android/hal/bk;->et:Lcom/glympse/android/hal/ConnectivityListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/bk;->ew:Lcom/glympse/android/hal/ConnectivityListener;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/ConnectivityListener;->stop()V
 
     .line 81
-    iput-object v1, p0, Lcom/glympse/android/hal/bk;->et:Lcom/glympse/android/hal/ConnectivityListener;
+    iput-object v1, p0, Lcom/glympse/android/hal/bk;->ew:Lcom/glympse/android/hal/ConnectivityListener;
 
     .line 85
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/hal/bk;->es:Lcom/glympse/android/hal/e;
+    iget-object v0, p0, Lcom/glympse/android/hal/bk;->ev:Lcom/glympse/android/hal/e;
 
     if-eqz v0, :cond_1
 
     .line 87
-    iget-object v0, p0, Lcom/glympse/android/hal/bk;->es:Lcom/glympse/android/hal/e;
+    iget-object v0, p0, Lcom/glympse/android/hal/bk;->ev:Lcom/glympse/android/hal/e;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/e;->stop()V
 
     .line 88
-    iput-object v1, p0, Lcom/glympse/android/hal/bk;->es:Lcom/glympse/android/hal/e;
+    iput-object v1, p0, Lcom/glympse/android/hal/bk;->ev:Lcom/glympse/android/hal/e;
 
     .line 92
     :cond_1

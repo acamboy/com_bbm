@@ -1,31 +1,21 @@
 .class final Landroid/support/v4/view/ak;
 .super Ljava/lang/Object;
-.source "PagerTitleStrip.java"
-
-# interfaces
-.implements Landroid/support/v4/view/aj;
+.source "MenuItemCompatIcs.java"
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method public static a(Landroid/view/MenuItem;Landroid/support/v4/view/am;)Landroid/view/MenuItem;
+    .locals 1
 
     .prologue
-    .line 86
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 37
+    new-instance v0, Landroid/support/v4/view/al;
 
-    return-void
-.end method
+    invoke-direct {v0, p1}, Landroid/support/v4/view/al;-><init>(Landroid/support/v4/view/am;)V
 
+    invoke-interface {p0, v0}, Landroid/view/MenuItem;->setOnActionExpandListener(Landroid/view/MenuItem$OnActionExpandListener;)Landroid/view/MenuItem;
 
-# virtual methods
-.method public final a(Landroid/widget/TextView;)V
-    .locals 0
+    move-result-object v0
 
-    .prologue
-    .line 88
-    invoke-virtual {p1}, Landroid/widget/TextView;->setSingleLine()V
-
-    .line 89
-    return-void
+    return-object v0
 .end method

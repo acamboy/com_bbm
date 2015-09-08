@@ -1,132 +1,167 @@
-.class public final enum Lcom/bbm/util/f/b;
-.super Ljava/lang/Enum;
-.source "CaptureActivityHandler.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum",
-        "<",
-        "Lcom/bbm/util/f/b;",
-        ">;"
-    }
-.end annotation
-
-
-# static fields
-.field public static final enum a:Lcom/bbm/util/f/b;
-
-.field public static final enum b:Lcom/bbm/util/f/b;
-
-.field public static final enum c:Lcom/bbm/util/f/b;
-
-.field private static final synthetic d:[Lcom/bbm/util/f/b;
+.class final Lcom/bbm/util/f/b;
+.super Ljava/lang/Object;
+.source "CryptoUtils.java"
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method static a([B[BI)[B
+    .locals 8
 
     .prologue
-    const/4 v4, 0x2
+    const/4 v0, 0x0
 
-    const/4 v3, 0x1
+    .line 71
+    :try_start_0
+    const-string v1, "HmacSHA256"
 
-    const/4 v2, 0x0
+    invoke-static {v1}, Ljavax/crypto/Mac;->getInstance(Ljava/lang/String;)Ljavax/crypto/Mac;
+    :try_end_0
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 60
-    new-instance v0, Lcom/bbm/util/f/b;
+    move-result-object v4
 
-    const-string v1, "PREVIEW"
+    .line 79
+    const/16 v1, 0x10
 
-    invoke-direct {v0, v1, v2}, Lcom/bbm/util/f/b;-><init>(Ljava/lang/String;I)V
+    new-array v5, v1, [B
 
-    sput-object v0, Lcom/bbm/util/f/b;->a:Lcom/bbm/util/f/b;
+    move v3, v0
 
-    .line 61
-    new-instance v0, Lcom/bbm/util/f/b;
+    move v1, p2
 
-    const-string v1, "SUCCESS"
+    move-object v0, p1
 
-    invoke-direct {v0, v1, v3}, Lcom/bbm/util/f/b;-><init>(Ljava/lang/String;I)V
+    .line 84
+    :goto_0
+    if-lez v1, :cond_1
 
-    sput-object v0, Lcom/bbm/util/f/b;->b:Lcom/bbm/util/f/b;
+    .line 85
+    new-instance v6, Ljavax/crypto/spec/SecretKeySpec;
 
-    .line 62
-    new-instance v0, Lcom/bbm/util/f/b;
+    const-string v2, "HMACSHA256"
 
-    const-string v1, "DONE"
+    invoke-direct {v6, p0, v2}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
-    invoke-direct {v0, v1, v4}, Lcom/bbm/util/f/b;-><init>(Ljava/lang/String;I)V
+    .line 87
+    :try_start_1
+    invoke-virtual {v4, v6}, Ljavax/crypto/Mac;->init(Ljava/security/Key;)V
 
-    sput-object v0, Lcom/bbm/util/f/b;->c:Lcom/bbm/util/f/b;
+    .line 88
+    invoke-virtual {v4, v0}, Ljavax/crypto/Mac;->update([B)V
 
-    .line 59
-    const/4 v0, 0x3
+    .line 89
+    invoke-virtual {v4}, Ljavax/crypto/Mac;->doFinal()[B
 
-    new-array v0, v0, [Lcom/bbm/util/f/b;
+    move-result-object v2
 
-    sget-object v1, Lcom/bbm/util/f/b;->a:Lcom/bbm/util/f/b;
+    .line 90
+    invoke-virtual {v4}, Ljavax/crypto/Mac;->reset()V
 
-    aput-object v1, v0, v2
+    .line 91
+    invoke-virtual {v4, v6}, Ljavax/crypto/Mac;->init(Ljava/security/Key;)V
 
-    sget-object v1, Lcom/bbm/util/f/b;->b:Lcom/bbm/util/f/b;
+    .line 92
+    invoke-virtual {v4, v2}, Ljavax/crypto/Mac;->update([B)V
 
-    aput-object v1, v0, v3
+    .line 93
+    invoke-virtual {v4, p1}, Ljavax/crypto/Mac;->update([B)V
 
-    sget-object v1, Lcom/bbm/util/f/b;->c:Lcom/bbm/util/f/b;
+    .line 94
+    invoke-virtual {v4}, Ljavax/crypto/Mac;->doFinal()[B
 
-    aput-object v1, v0, v4
+    move-result-object v6
 
-    sput-object v0, Lcom/bbm/util/f/b;->d:[Lcom/bbm/util/f/b;
+    .line 95
+    array-length v0, v6
 
-    return-void
-.end method
+    if-le v1, v0, :cond_0
 
-.method private constructor <init>(Ljava/lang/String;I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
+    .line 96
+    :goto_1
+    const/4 v7, 0x0
 
-    .prologue
-    .line 59
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-static {v6, v7, v5, v3, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    :try_end_1
+    .catch Ljava/security/InvalidKeyException; {:try_start_1 .. :try_end_1} :catch_1
 
-    return-void
-.end method
+    .line 97
+    add-int/2addr v3, v0
 
-.method public static valueOf(Ljava/lang/String;)Lcom/bbm/util/f/b;
-    .locals 1
+    .line 98
+    sub-int/2addr v1, v0
 
-    .prologue
-    .line 59
-    const-class v0, Lcom/bbm/util/f/b;
+    move-object v0, v2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    .line 104
+    goto :goto_0
 
-    move-result-object v0
+    .line 73
+    :catch_0
+    move-exception v0
 
-    check-cast v0, Lcom/bbm/util/f/b;
+    .line 74
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    return-object v0
-.end method
+    const-string v2, "Error in createTokenSecret: "
 
-.method public static values()[Lcom/bbm/util/f/b;
-    .locals 1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .prologue
-    .line 59
-    sget-object v0, Lcom/bbm/util/f/b;->d:[Lcom/bbm/util/f/b;
+    invoke-virtual {v0}, Ljava/security/NoSuchAlgorithmException;->getLocalizedMessage()Ljava/lang/String;
 
-    invoke-virtual {v0}, [Lcom/bbm/util/f/b;->clone()Ljava/lang/Object;
+    move-result-object v2
 
-    move-result-object v0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast v0, [Lcom/bbm/util/f/b;
+    move-result-object v1
 
-    return-object v0
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 76
+    new-instance v2, Lcom/bbm/util/f/a;
+
+    invoke-direct {v2, v1, v0}, Lcom/bbm/util/f/a;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v2
+
+    :cond_0
+    move v0, v1
+
+    .line 95
+    goto :goto_1
+
+    .line 100
+    :catch_1
+    move-exception v0
+
+    .line 101
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Error in P_SHA256: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/security/InvalidKeyException;->getLocalizedMessage()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 103
+    new-instance v2, Lcom/bbm/util/f/a;
+
+    invoke-direct {v2, v1, v0}, Lcom/bbm/util/f/a;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v2
+
+    .line 105
+    :cond_1
+    return-object v5
 .end method

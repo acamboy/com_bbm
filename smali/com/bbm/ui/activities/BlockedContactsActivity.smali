@@ -1,9 +1,9 @@
 .class public Lcom/bbm/ui/activities/BlockedContactsActivity;
-.super Lcom/bbm/ui/activities/ey;
+.super Lcom/bbm/bali/ui/main/a/a;
 .source "BlockedContactsActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/fz;
+.implements Lcom/bbm/ui/gg;
 
 
 # instance fields
@@ -11,9 +11,9 @@
 
 .field final b:Landroid/os/Handler;
 
-.field private c:Lcom/bbm/ui/c/ad;
+.field private h:Lcom/bbm/ui/c/aw;
 
-.field private d:Lcom/bbm/ui/c/ae;
+.field private i:Lcom/bbm/ui/c/ax;
 
 
 # direct methods
@@ -23,25 +23,25 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 34
+    .line 30
     const-class v0, Lcom/bbm/ui/activities/SettingsActivity;
 
-    invoke-direct {p0, v0}, Lcom/bbm/ui/activities/ey;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/bbm/bali/ui/main/a/a;-><init>(Ljava/lang/Class;)V
 
-    .line 26
-    iput-object v1, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->c:Lcom/bbm/ui/c/ad;
+    .line 23
+    iput-object v1, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->h:Lcom/bbm/ui/c/aw;
+
+    .line 24
+    iput-object v1, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->i:Lcom/bbm/ui/c/ax;
 
     .line 27
-    iput-object v1, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->d:Lcom/bbm/ui/c/ae;
-
-    .line 31
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->b:Landroid/os/Handler;
 
-    .line 35
+    .line 31
     return-void
 .end method
 
@@ -53,117 +53,117 @@
 
     const/4 v0, 0x0
 
-    .line 105
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/BlockedContactsActivity;->getFragmentManager()Landroid/app/FragmentManager;
+    .line 75
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/BlockedContactsActivity;->getSupportFragmentManager()Landroid/support/v4/app/v;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
+    invoke-virtual {v1}, Landroid/support/v4/app/v;->a()Landroid/support/v4/app/ag;
 
     move-result-object v1
 
-    .line 107
-    iget-object v2, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->d:Lcom/bbm/ui/c/ae;
+    .line 78
+    iget-object v2, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->i:Lcom/bbm/ui/c/ax;
 
     if-eqz v2, :cond_1
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->d:Lcom/bbm/ui/c/ae;
+    iget-object v2, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->i:Lcom/bbm/ui/c/ax;
 
-    invoke-virtual {v1, v2}, Landroid/app/FragmentTransaction;->remove(Landroid/app/Fragment;)Landroid/app/FragmentTransaction;
+    invoke-virtual {v1, v2}, Landroid/support/v4/app/ag;->a(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/ag;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->d:Lcom/bbm/ui/c/ae;
+    iget-object v2, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->i:Lcom/bbm/ui/c/ax;
 
-    invoke-virtual {v2}, Lcom/bbm/ui/c/ae;->getView()Landroid/view/View;
+    invoke-virtual {v2}, Lcom/bbm/ui/c/ax;->getView()Landroid/view/View;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->d:Lcom/bbm/ui/c/ae;
+    iget-object v2, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->i:Lcom/bbm/ui/c/ax;
 
-    invoke-virtual {v2}, Lcom/bbm/ui/c/ae;->getView()Landroid/view/View;
+    invoke-virtual {v2}, Lcom/bbm/ui/c/ax;->getView()Landroid/view/View;
 
     move-result-object v2
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
 
     :cond_0
-    iput-object v0, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->d:Lcom/bbm/ui/c/ae;
+    iput-object v0, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->i:Lcom/bbm/ui/c/ax;
 
     :cond_1
-    iget-object v2, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->c:Lcom/bbm/ui/c/ad;
+    iget-object v2, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->h:Lcom/bbm/ui/c/aw;
 
     if-eqz v2, :cond_3
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->c:Lcom/bbm/ui/c/ad;
+    iget-object v2, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->h:Lcom/bbm/ui/c/aw;
 
-    invoke-virtual {v1, v2}, Landroid/app/FragmentTransaction;->remove(Landroid/app/Fragment;)Landroid/app/FragmentTransaction;
+    invoke-virtual {v1, v2}, Landroid/support/v4/app/ag;->a(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/ag;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->c:Lcom/bbm/ui/c/ad;
+    iget-object v2, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->h:Lcom/bbm/ui/c/aw;
 
-    invoke-virtual {v2}, Lcom/bbm/ui/c/ad;->getView()Landroid/view/View;
+    invoke-virtual {v2}, Lcom/bbm/ui/c/aw;->getView()Landroid/view/View;
 
     move-result-object v2
 
     if-eqz v2, :cond_2
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->c:Lcom/bbm/ui/c/ad;
+    iget-object v2, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->h:Lcom/bbm/ui/c/aw;
 
-    invoke-virtual {v2}, Lcom/bbm/ui/c/ad;->getView()Landroid/view/View;
+    invoke-virtual {v2}, Lcom/bbm/ui/c/aw;->getView()Landroid/view/View;
 
     move-result-object v2
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
 
     :cond_2
-    iput-object v0, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->c:Lcom/bbm/ui/c/ad;
+    iput-object v0, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->h:Lcom/bbm/ui/c/aw;
 
-    .line 109
+    .line 79
     :cond_3
     packed-switch p1, :pswitch_data_0
 
-    .line 111
+    .line 81
     :goto_0
-    const v2, 0x7f0b00c8
+    const v2, 0x7f0b013b
 
-    invoke-virtual {v1, v2, v0}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
+    invoke-virtual {v1, v2, v0}, Landroid/support/v4/app/ag;->b(ILandroid/support/v4/app/Fragment;)Landroid/support/v4/app/ag;
 
-    .line 112
-    invoke-virtual {v1}, Landroid/app/FragmentTransaction;->commit()I
+    .line 82
+    invoke-virtual {v1}, Landroid/support/v4/app/ag;->a()I
 
-    .line 113
+    .line 83
     return-void
 
-    .line 109
+    .line 79
     :pswitch_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->c:Lcom/bbm/ui/c/ad;
+    iget-object v0, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->h:Lcom/bbm/ui/c/aw;
 
     if-nez v0, :cond_4
 
-    new-instance v0, Lcom/bbm/ui/c/ad;
+    new-instance v0, Lcom/bbm/ui/c/aw;
 
-    invoke-direct {v0}, Lcom/bbm/ui/c/ad;-><init>()V
+    invoke-direct {v0}, Lcom/bbm/ui/c/aw;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->c:Lcom/bbm/ui/c/ad;
+    iput-object v0, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->h:Lcom/bbm/ui/c/aw;
 
     :cond_4
-    iget-object v0, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->c:Lcom/bbm/ui/c/ad;
+    iget-object v0, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->h:Lcom/bbm/ui/c/aw;
 
     goto :goto_0
 
     :pswitch_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->d:Lcom/bbm/ui/c/ae;
+    iget-object v0, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->i:Lcom/bbm/ui/c/ax;
 
     if-nez v0, :cond_5
 
-    new-instance v0, Lcom/bbm/ui/c/ae;
+    new-instance v0, Lcom/bbm/ui/c/ax;
 
-    invoke-direct {v0}, Lcom/bbm/ui/c/ae;-><init>()V
+    invoke-direct {v0}, Lcom/bbm/ui/c/ax;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->d:Lcom/bbm/ui/c/ae;
+    iput-object v0, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->i:Lcom/bbm/ui/c/ax;
 
     :cond_5
-    iget-object v0, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->d:Lcom/bbm/ui/c/ae;
+    iget-object v0, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->i:Lcom/bbm/ui/c/ax;
 
     goto :goto_0
 
@@ -176,60 +176,17 @@
 
 
 # virtual methods
-.method protected final a()V
-    .locals 1
-
-    .prologue
-    .line 69
-    iget-object v0, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->d:Lcom/bbm/ui/c/ae;
-
-    if-eqz v0, :cond_0
-
-    .line 70
-    iget-object v0, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->d:Lcom/bbm/ui/c/ae;
-
-    iget-object v0, v0, Lcom/bbm/ui/c/v;->c:Lcom/bbm/ui/dr;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/dr;->c()V
-
-    .line 72
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->c:Lcom/bbm/ui/c/ad;
-
-    if-eqz v0, :cond_1
-
-    .line 73
-    iget-object v0, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->c:Lcom/bbm/ui/c/ad;
-
-    iget-object v0, v0, Lcom/bbm/ui/c/v;->c:Lcom/bbm/ui/dr;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/dr;->c()V
-
-    .line 75
-    :cond_1
-    return-void
-.end method
-
 .method public final a(I)V
-    .locals 2
+    .locals 0
 
     .prologue
-    .line 97
+    .line 68
     invoke-direct {p0, p1}, Lcom/bbm/ui/activities/BlockedContactsActivity;->b(I)V
 
-    .line 98
-    iget-object v0, p0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
-
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
-
-    .line 100
+    .line 70
     invoke-virtual {p0}, Lcom/bbm/ui/activities/BlockedContactsActivity;->invalidateOptionsMenu()V
 
-    .line 101
+    .line 71
     return-void
 .end method
 
@@ -237,58 +194,45 @@
     .locals 3
 
     .prologue
-    const/4 v2, 0x0
+    .line 36
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onCreate(Landroid/os/Bundle;)V
 
-    .line 40
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/ey;->onCreate(Landroid/os/Bundle;)V
-
-    .line 41
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    .line 37
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bbm/ui/activities/BlockedContactsActivity;->a:Lcom/bbm/d/a;
 
-    .line 43
-    const v0, 0x7f030008
+    .line 39
+    const v0, 0x7f03001f
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/BlockedContactsActivity;->setContentView(I)V
 
-    .line 45
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/BlockedContactsActivity;->getActionBar()Landroid/app/ActionBar;
-
-    move-result-object v0
-
-    .line 46
-    invoke-virtual {v0, v2}, Landroid/app/ActionBar;->setDisplayShowHomeEnabled(Z)V
-
-    .line 47
-    invoke-virtual {v0, v2}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
-
-    .line 48
-    invoke-virtual {v0, v2}, Landroid/app/ActionBar;->setDisplayUseLogoEnabled(Z)V
-
-    .line 50
-    const v0, 0x7f0b00bf
+    .line 41
+    const v0, 0x7f0b013c
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/BlockedContactsActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/FooterActionBar;
+    check-cast v0, Landroid/support/v7/widget/Toolbar;
 
-    .line 51
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/FooterActionBar;->setOverflowEnabled(Z)V
+    .line 42
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/BlockedContactsActivity;->getResources()Landroid/content/res/Resources;
 
-    .line 52
-    new-instance v1, Lcom/bbm/ui/activities/af;
+    move-result-object v1
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/af;-><init>(Lcom/bbm/ui/activities/BlockedContactsActivity;)V
+    const v2, 0x7f0e078b
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 62
-    const v0, 0x7f0b00c6
+    move-result-object v1
+
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/activities/BlockedContactsActivity;->a(Landroid/support/v7/widget/Toolbar;Ljava/lang/String;)V
+
+    .line 44
+    const v0, 0x7f0b0139
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/BlockedContactsActivity;->findViewById(I)Landroid/view/View;
 
@@ -296,12 +240,14 @@
 
     check-cast v0, Lcom/bbm/ui/SegmentedControl;
 
-    .line 63
-    invoke-virtual {v0, p0}, Lcom/bbm/ui/SegmentedControl;->setOnOptionSelectedListener(Lcom/bbm/ui/fz;)V
+    .line 45
+    invoke-virtual {v0, p0}, Lcom/bbm/ui/SegmentedControl;->setOnOptionSelectedListener(Lcom/bbm/ui/gg;)V
 
-    .line 64
-    invoke-direct {p0, v2}, Lcom/bbm/ui/activities/BlockedContactsActivity;->b(I)V
+    .line 46
+    const/4 v0, 0x0
 
-    .line 65
+    invoke-direct {p0, v0}, Lcom/bbm/ui/activities/BlockedContactsActivity;->b(I)V
+
+    .line 47
     return-void
 .end method

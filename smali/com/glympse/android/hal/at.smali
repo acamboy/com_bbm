@@ -7,53 +7,53 @@
 
 
 # static fields
-.field public static final co:I = 0x0
-
-.field public static final cp:I = 0x0
-
-.field public static final cq:I = 0x0
-
 .field public static final cr:I = 0x0
 
 .field public static final cs:I = 0x0
 
 .field public static final ct:I = 0x0
 
-.field private static final cu:I = 0x1d4c0
+.field public static final cu:I = 0x0
+
+.field public static final cv:I = 0x0
+
+.field public static final cw:I = 0x0
+
+.field private static final cx:I = 0x1d4c0
 
 
 # instance fields
-.field private aV:Landroid/os/Handler;
+.field private aW:Landroid/os/Handler;
 
-.field private bZ:Lcom/glympse/android/core/GLocationListener;
+.field private cc:Lcom/glympse/android/core/GLocationListener;
 
-.field private ca:Landroid/location/LocationManager;
+.field private cd:Landroid/location/LocationManager;
 
-.field private cb:I
+.field private ce:I
 
-.field private cc:I
+.field private cf:I
 
-.field private cd:I
+.field private cg:I
 
-.field private ce:Lcom/glympse/android/core/GLocationProfile;
+.field private ch:Lcom/glympse/android/core/GLocationProfile;
 
-.field private cf:Z
+.field private ci:Z
 
-.field private cg:Z
+.field private cj:Z
 
-.field private ch:Z
+.field private ck:Z
 
-.field private ci:Lcom/glympse/android/hal/aw;
+.field private cl:Lcom/glympse/android/hal/aw;
 
-.field private cj:Lcom/glympse/android/hal/av;
+.field private cm:Lcom/glympse/android/hal/av;
 
-.field private ck:Lcom/glympse/android/hal/ax;
+.field private cn:Lcom/glympse/android/hal/ax;
 
-.field private cl:Lcom/glympse/android/hal/au;
+.field private co:Lcom/glympse/android/hal/au;
 
-.field private cm:Landroid/location/Location;
+.field private cp:Landroid/location/Location;
 
-.field private cn:Z
+.field private cq:Z
 
 .field private e:Landroid/content/Context;
 
@@ -74,28 +74,28 @@
     iput-object p1, p0, Lcom/glympse/android/hal/at;->e:Landroid/content/Context;
 
     .line 58
-    iput v0, p0, Lcom/glympse/android/hal/at;->cb:I
+    iput v0, p0, Lcom/glympse/android/hal/at;->ce:I
 
     .line 59
-    iput v0, p0, Lcom/glympse/android/hal/at;->cc:I
+    iput v0, p0, Lcom/glympse/android/hal/at;->cf:I
 
     .line 60
-    iput v0, p0, Lcom/glympse/android/hal/at;->cd:I
+    iput v0, p0, Lcom/glympse/android/hal/at;->cg:I
 
     .line 61
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/at;->aV:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/glympse/android/hal/at;->aW:Landroid/os/Handler;
 
     .line 62
-    iput-object v1, p0, Lcom/glympse/android/hal/at;->cm:Landroid/location/Location;
+    iput-object v1, p0, Lcom/glympse/android/hal/at;->cp:Landroid/location/Location;
 
     .line 63
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/glympse/android/hal/at;->cn:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/at;->cq:Z
 
     .line 66
     invoke-virtual {p0, v1}, Lcom/glympse/android/hal/at;->applyProfile(Lcom/glympse/android/core/GLocationProfile;)V
@@ -113,14 +113,14 @@
     const/4 v2, 0x1
 
     .line 292
-    iget v0, p0, Lcom/glympse/android/hal/at;->cc:I
+    iget v0, p0, Lcom/glympse/android/hal/at;->cf:I
 
-    iget v1, p0, Lcom/glympse/android/hal/at;->cd:I
+    iget v1, p0, Lcom/glympse/android/hal/at;->cg:I
 
     if-ne v0, v1, :cond_0
 
     .line 294
-    iget v0, p0, Lcom/glympse/android/hal/at;->cd:I
+    iget v0, p0, Lcom/glympse/android/hal/at;->cg:I
 
     invoke-direct {p0, v0}, Lcom/glympse/android/hal/at;->c(I)V
 
@@ -130,11 +130,11 @@
 
     .line 299
     :cond_0
-    iget v0, p0, Lcom/glympse/android/hal/at;->cc:I
+    iget v0, p0, Lcom/glympse/android/hal/at;->cf:I
 
     if-eq v3, v0, :cond_1
 
-    iget v0, p0, Lcom/glympse/android/hal/at;->cd:I
+    iget v0, p0, Lcom/glympse/android/hal/at;->cg:I
 
     if-ne v3, v0, :cond_2
 
@@ -146,11 +146,11 @@
 
     .line 305
     :cond_2
-    iget v0, p0, Lcom/glympse/android/hal/at;->cc:I
+    iget v0, p0, Lcom/glympse/android/hal/at;->cf:I
 
     if-eq v2, v0, :cond_3
 
-    iget v0, p0, Lcom/glympse/android/hal/at;->cd:I
+    iget v0, p0, Lcom/glympse/android/hal/at;->cg:I
 
     if-ne v2, v0, :cond_4
 
@@ -174,7 +174,7 @@
 
     .prologue
     .line 26
-    iput p1, p0, Lcom/glympse/android/hal/at;->cc:I
+    iput p1, p0, Lcom/glympse/android/hal/at;->cf:I
 
     return p1
 .end method
@@ -183,7 +183,7 @@
     .locals 13
 
     .prologue
-    const/high16 v12, 0x7fc00000
+    const/high16 v12, 0x7fc00000    # NaNf
 
     .line 266
     new-instance v1, Lcom/glympse/android/lib/Location;
@@ -276,7 +276,7 @@
 
     .prologue
     .line 26
-    iput-object p1, p0, Lcom/glympse/android/hal/at;->cl:Lcom/glympse/android/hal/au;
+    iput-object p1, p0, Lcom/glympse/android/hal/at;->co:Lcom/glympse/android/hal/au;
 
     return-object p1
 .end method
@@ -286,7 +286,7 @@
 
     .prologue
     .line 26
-    iput-boolean p1, p0, Lcom/glympse/android/hal/at;->cn:Z
+    iput-boolean p1, p0, Lcom/glympse/android/hal/at;->cq:Z
 
     return p1
 .end method
@@ -296,7 +296,7 @@
 
     .prologue
     .line 26
-    iput p1, p0, Lcom/glympse/android/hal/at;->cd:I
+    iput p1, p0, Lcom/glympse/android/hal/at;->cg:I
 
     return p1
 .end method
@@ -418,22 +418,22 @@
 
     .prologue
     .line 279
-    iget v0, p0, Lcom/glympse/android/hal/at;->cb:I
+    iget v0, p0, Lcom/glympse/android/hal/at;->ce:I
 
     if-eq p1, v0, :cond_0
 
     .line 281
-    iput p1, p0, Lcom/glympse/android/hal/at;->cb:I
+    iput p1, p0, Lcom/glympse/android/hal/at;->ce:I
 
     .line 282
-    iget-object v0, p0, Lcom/glympse/android/hal/at;->bZ:Lcom/glympse/android/core/GLocationListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/at;->cc:Lcom/glympse/android/core/GLocationListener;
 
     if-eqz v0, :cond_0
 
     .line 284
-    iget-object v0, p0, Lcom/glympse/android/hal/at;->bZ:Lcom/glympse/android/core/GLocationListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/at;->cc:Lcom/glympse/android/core/GLocationListener;
 
-    iget v1, p0, Lcom/glympse/android/hal/at;->cb:I
+    iget v1, p0, Lcom/glympse/android/hal/at;->ce:I
 
     invoke-interface {v0, v1}, Lcom/glympse/android/core/GLocationListener;->stateChanged(I)V
 
@@ -451,15 +451,15 @@
     const/4 v2, 0x0
 
     .line 354
-    iget-boolean v0, p0, Lcom/glympse/android/hal/at;->cn:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/at;->cq:Z
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/glympse/android/hal/at;->ci:Lcom/glympse/android/hal/aw;
+    iget-object v0, p0, Lcom/glympse/android/hal/at;->cl:Lcom/glympse/android/hal/aw;
 
     if-nez v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/glympse/android/hal/at;->cf:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/at;->ci:Z
 
     if-eqz v0, :cond_0
 
@@ -470,12 +470,12 @@
 
     invoke-direct {v0, p0, v1}, Lcom/glympse/android/hal/aw;-><init>(Lcom/glympse/android/hal/at;Lcom/glympse/android/hal/at$1;)V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/at;->ci:Lcom/glympse/android/hal/aw;
+    iput-object v0, p0, Lcom/glympse/android/hal/at;->cl:Lcom/glympse/android/hal/aw;
 
     .line 357
-    iget-object v0, p0, Lcom/glympse/android/hal/at;->ci:Lcom/glympse/android/hal/aw;
+    iget-object v0, p0, Lcom/glympse/android/hal/at;->cl:Lcom/glympse/android/hal/aw;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/at;->ca:Landroid/location/LocationManager;
+    iget-object v1, p0, Lcom/glympse/android/hal/at;->cd:Landroid/location/LocationManager;
 
     invoke-virtual {v0, v1, v2, v2}, Lcom/glympse/android/hal/aw;->a(Landroid/location/LocationManager;II)Z
 
@@ -489,21 +489,21 @@
 
     .prologue
     .line 363
-    iget-object v0, p0, Lcom/glympse/android/hal/at;->ci:Lcom/glympse/android/hal/aw;
+    iget-object v0, p0, Lcom/glympse/android/hal/at;->cl:Lcom/glympse/android/hal/aw;
 
     if-eqz v0, :cond_0
 
     .line 365
-    iget-object v0, p0, Lcom/glympse/android/hal/at;->ci:Lcom/glympse/android/hal/aw;
+    iget-object v0, p0, Lcom/glympse/android/hal/at;->cl:Lcom/glympse/android/hal/aw;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/at;->ca:Landroid/location/LocationManager;
+    iget-object v1, p0, Lcom/glympse/android/hal/at;->cd:Landroid/location/LocationManager;
 
     invoke-virtual {v0, v1}, Lcom/glympse/android/hal/aw;->a(Landroid/location/LocationManager;)V
 
     .line 366
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/at;->ci:Lcom/glympse/android/hal/aw;
+    iput-object v0, p0, Lcom/glympse/android/hal/at;->cl:Lcom/glympse/android/hal/aw;
 
     .line 368
     :cond_0
@@ -517,11 +517,11 @@
     const/4 v2, 0x0
 
     .line 372
-    iget-object v0, p0, Lcom/glympse/android/hal/at;->ck:Lcom/glympse/android/hal/ax;
+    iget-object v0, p0, Lcom/glympse/android/hal/at;->cn:Lcom/glympse/android/hal/ax;
 
     if-nez v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/glympse/android/hal/at;->ch:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/at;->ck:Z
 
     if-eqz v0, :cond_0
 
@@ -532,12 +532,12 @@
 
     invoke-direct {v0, p0, v1}, Lcom/glympse/android/hal/ax;-><init>(Lcom/glympse/android/hal/at;Lcom/glympse/android/hal/at$1;)V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/at;->ck:Lcom/glympse/android/hal/ax;
+    iput-object v0, p0, Lcom/glympse/android/hal/at;->cn:Lcom/glympse/android/hal/ax;
 
     .line 375
-    iget-object v0, p0, Lcom/glympse/android/hal/at;->ck:Lcom/glympse/android/hal/ax;
+    iget-object v0, p0, Lcom/glympse/android/hal/at;->cn:Lcom/glympse/android/hal/ax;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/at;->ca:Landroid/location/LocationManager;
+    iget-object v1, p0, Lcom/glympse/android/hal/at;->cd:Landroid/location/LocationManager;
 
     invoke-virtual {v0, v1, v2, v2}, Lcom/glympse/android/hal/ax;->a(Landroid/location/LocationManager;II)Z
 
@@ -551,21 +551,21 @@
 
     .prologue
     .line 381
-    iget-object v0, p0, Lcom/glympse/android/hal/at;->ck:Lcom/glympse/android/hal/ax;
+    iget-object v0, p0, Lcom/glympse/android/hal/at;->cn:Lcom/glympse/android/hal/ax;
 
     if-eqz v0, :cond_0
 
     .line 383
-    iget-object v0, p0, Lcom/glympse/android/hal/at;->ck:Lcom/glympse/android/hal/ax;
+    iget-object v0, p0, Lcom/glympse/android/hal/at;->cn:Lcom/glympse/android/hal/ax;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/at;->ca:Landroid/location/LocationManager;
+    iget-object v1, p0, Lcom/glympse/android/hal/at;->cd:Landroid/location/LocationManager;
 
     invoke-virtual {v0, v1}, Lcom/glympse/android/hal/ax;->a(Landroid/location/LocationManager;)V
 
     .line 384
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/at;->ck:Lcom/glympse/android/hal/ax;
+    iput-object v0, p0, Lcom/glympse/android/hal/at;->cn:Lcom/glympse/android/hal/ax;
 
     .line 386
     :cond_0
@@ -577,11 +577,11 @@
 
     .prologue
     .line 390
-    iget-object v0, p0, Lcom/glympse/android/hal/at;->cj:Lcom/glympse/android/hal/av;
+    iget-object v0, p0, Lcom/glympse/android/hal/at;->cm:Lcom/glympse/android/hal/av;
 
     if-nez v0, :cond_1
 
-    iget-boolean v0, p0, Lcom/glympse/android/hal/at;->cg:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/at;->cj:Z
 
     if-eqz v0, :cond_1
 
@@ -592,12 +592,12 @@
     const/4 v0, 0x0
 
     .line 396
-    iget-object v1, p0, Lcom/glympse/android/hal/at;->ce:Lcom/glympse/android/core/GLocationProfile;
+    iget-object v1, p0, Lcom/glympse/android/hal/at;->ch:Lcom/glympse/android/core/GLocationProfile;
 
     if-eqz v1, :cond_0
 
     .line 398
-    iget-object v0, p0, Lcom/glympse/android/hal/at;->ce:Lcom/glympse/android/core/GLocationProfile;
+    iget-object v0, p0, Lcom/glympse/android/hal/at;->ch:Lcom/glympse/android/core/GLocationProfile;
 
     invoke-interface {v0}, Lcom/glympse/android/core/GLocationProfile;->getFrequency()I
 
@@ -606,7 +606,7 @@
     int-to-long v2, v0
 
     .line 399
-    iget-object v0, p0, Lcom/glympse/android/hal/at;->ce:Lcom/glympse/android/core/GLocationProfile;
+    iget-object v0, p0, Lcom/glympse/android/hal/at;->ch:Lcom/glympse/android/core/GLocationProfile;
 
     invoke-interface {v0}, Lcom/glympse/android/core/GLocationProfile;->getDistance()D
 
@@ -622,12 +622,12 @@
 
     invoke-direct {v1, p0, v4}, Lcom/glympse/android/hal/av;-><init>(Lcom/glympse/android/hal/at;Lcom/glympse/android/hal/at$1;)V
 
-    iput-object v1, p0, Lcom/glympse/android/hal/at;->cj:Lcom/glympse/android/hal/av;
+    iput-object v1, p0, Lcom/glympse/android/hal/at;->cm:Lcom/glympse/android/hal/av;
 
     .line 404
-    iget-object v1, p0, Lcom/glympse/android/hal/at;->cj:Lcom/glympse/android/hal/av;
+    iget-object v1, p0, Lcom/glympse/android/hal/at;->cm:Lcom/glympse/android/hal/av;
 
-    iget-object v4, p0, Lcom/glympse/android/hal/at;->ca:Landroid/location/LocationManager;
+    iget-object v4, p0, Lcom/glympse/android/hal/at;->cd:Landroid/location/LocationManager;
 
     invoke-virtual {v1, v4, v2, v3, v0}, Lcom/glympse/android/hal/av;->a(Landroid/location/LocationManager;JF)Z
 
@@ -641,21 +641,21 @@
 
     .prologue
     .line 410
-    iget-object v0, p0, Lcom/glympse/android/hal/at;->cj:Lcom/glympse/android/hal/av;
+    iget-object v0, p0, Lcom/glympse/android/hal/at;->cm:Lcom/glympse/android/hal/av;
 
     if-eqz v0, :cond_0
 
     .line 412
-    iget-object v0, p0, Lcom/glympse/android/hal/at;->cj:Lcom/glympse/android/hal/av;
+    iget-object v0, p0, Lcom/glympse/android/hal/at;->cm:Lcom/glympse/android/hal/av;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/at;->ca:Landroid/location/LocationManager;
+    iget-object v1, p0, Lcom/glympse/android/hal/at;->cd:Landroid/location/LocationManager;
 
     invoke-virtual {v0, v1}, Lcom/glympse/android/hal/av;->a(Landroid/location/LocationManager;)V
 
     .line 413
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/at;->cj:Lcom/glympse/android/hal/av;
+    iput-object v0, p0, Lcom/glympse/android/hal/at;->cm:Lcom/glympse/android/hal/av;
 
     .line 415
     :cond_0
@@ -669,7 +669,7 @@
     const/4 v4, 0x0
 
     .line 420
-    iget-object v0, p0, Lcom/glympse/android/hal/at;->cl:Lcom/glympse/android/hal/au;
+    iget-object v0, p0, Lcom/glympse/android/hal/at;->co:Lcom/glympse/android/hal/au;
 
     if-nez v0, :cond_0
 
@@ -685,12 +685,12 @@
 
     invoke-direct {v0, p0, v4}, Lcom/glympse/android/hal/au;-><init>(Lcom/glympse/android/hal/at;Lcom/glympse/android/hal/at$1;)V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/at;->cl:Lcom/glympse/android/hal/au;
+    iput-object v0, p0, Lcom/glympse/android/hal/at;->co:Lcom/glympse/android/hal/au;
 
     .line 428
-    iget-object v0, p0, Lcom/glympse/android/hal/at;->aV:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/glympse/android/hal/at;->aW:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/at;->cl:Lcom/glympse/android/hal/au;
+    iget-object v1, p0, Lcom/glympse/android/hal/at;->co:Lcom/glympse/android/hal/au;
 
     const-wide/16 v2, 0x2710
 
@@ -701,7 +701,7 @@
     if-nez v0, :cond_0
 
     .line 430
-    iput-object v4, p0, Lcom/glympse/android/hal/at;->cl:Lcom/glympse/android/hal/au;
+    iput-object v4, p0, Lcom/glympse/android/hal/at;->co:Lcom/glympse/android/hal/au;
 
     .line 433
     :cond_0
@@ -713,7 +713,7 @@
 
     .prologue
     .line 438
-    iget-object v0, p0, Lcom/glympse/android/hal/at;->cl:Lcom/glympse/android/hal/au;
+    iget-object v0, p0, Lcom/glympse/android/hal/at;->co:Lcom/glympse/android/hal/au;
 
     if-eqz v0, :cond_0
 
@@ -725,16 +725,16 @@
     invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
     .line 443
-    iget-object v0, p0, Lcom/glympse/android/hal/at;->aV:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/glympse/android/hal/at;->aW:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/at;->cl:Lcom/glympse/android/hal/au;
+    iget-object v1, p0, Lcom/glympse/android/hal/at;->co:Lcom/glympse/android/hal/au;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     .line 446
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/at;->cl:Lcom/glympse/android/hal/au;
+    iput-object v0, p0, Lcom/glympse/android/hal/at;->co:Lcom/glympse/android/hal/au;
 
     .line 448
     :cond_0
@@ -757,10 +757,10 @@
     .line 457
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/at;->cm:Landroid/location/Location;
+    iput-object v0, p0, Lcom/glympse/android/hal/at;->cp:Landroid/location/Location;
 
     .line 461
-    iget-object v0, p0, Lcom/glympse/android/hal/at;->ca:Landroid/location/LocationManager;
+    iget-object v0, p0, Lcom/glympse/android/hal/at;->cd:Landroid/location/LocationManager;
 
     if-eqz v0, :cond_0
 
@@ -960,7 +960,7 @@
     const/4 v0, 0x0
 
     .line 243
-    iget-object v1, p0, Lcom/glympse/android/hal/at;->bZ:Lcom/glympse/android/core/GLocationListener;
+    iget-object v1, p0, Lcom/glympse/android/hal/at;->cc:Lcom/glympse/android/core/GLocationListener;
 
     if-nez v1, :cond_1
 
@@ -971,7 +971,7 @@
 
     .line 249
     :cond_1
-    iget-object v1, p0, Lcom/glympse/android/hal/at;->cm:Landroid/location/Location;
+    iget-object v1, p0, Lcom/glympse/android/hal/at;->cp:Landroid/location/Location;
 
     invoke-virtual {p0, p2, v1}, Lcom/glympse/android/hal/at;->a(Landroid/location/Location;Landroid/location/Location;)Z
 
@@ -980,7 +980,7 @@
     if-eqz v1, :cond_0
 
     .line 253
-    iput-object p2, p0, Lcom/glympse/android/hal/at;->cm:Landroid/location/Location;
+    iput-object p2, p0, Lcom/glympse/android/hal/at;->cp:Landroid/location/Location;
 
     .line 256
     invoke-static {p2}, Lcom/glympse/android/hal/at;->a(Landroid/location/Location;)Lcom/glympse/android/core/GLocation;
@@ -988,7 +988,7 @@
     move-result-object v0
 
     .line 259
-    iget-object v1, p0, Lcom/glympse/android/hal/at;->bZ:Lcom/glympse/android/core/GLocationListener;
+    iget-object v1, p0, Lcom/glympse/android/hal/at;->cc:Lcom/glympse/android/core/GLocationListener;
 
     invoke-interface {v1, v0}, Lcom/glympse/android/core/GLocationListener;->locationChanged(Lcom/glympse/android/core/GLocation;)V
 
@@ -1007,15 +1007,15 @@
     const/4 v1, 0x1
 
     .line 156
-    iput-object p1, p0, Lcom/glympse/android/hal/at;->ce:Lcom/glympse/android/core/GLocationProfile;
+    iput-object p1, p0, Lcom/glympse/android/hal/at;->ch:Lcom/glympse/android/core/GLocationProfile;
 
     .line 159
-    iget-object v0, p0, Lcom/glympse/android/hal/at;->ce:Lcom/glympse/android/core/GLocationProfile;
+    iget-object v0, p0, Lcom/glympse/android/hal/at;->ch:Lcom/glympse/android/core/GLocationProfile;
 
     if-eqz v0, :cond_3
 
     .line 161
-    iget-object v0, p0, Lcom/glympse/android/hal/at;->ce:Lcom/glympse/android/core/GLocationProfile;
+    iget-object v0, p0, Lcom/glympse/android/hal/at;->ch:Lcom/glympse/android/core/GLocationProfile;
 
     invoke-interface {v0}, Lcom/glympse/android/core/GLocationProfile;->getSource()I
 
@@ -1029,7 +1029,7 @@
     move v0, v1
 
     :goto_0
-    iput-boolean v0, p0, Lcom/glympse/android/hal/at;->cf:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/at;->ci:Z
 
     .line 163
     and-int/lit8 v0, v3, 0x2
@@ -1039,7 +1039,7 @@
     move v0, v1
 
     :goto_1
-    iput-boolean v0, p0, Lcom/glympse/android/hal/at;->cg:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/at;->cj:Z
 
     .line 164
     and-int/lit8 v0, v3, 0x4
@@ -1047,7 +1047,7 @@
     if-eqz v0, :cond_2
 
     :goto_2
-    iput-boolean v1, p0, Lcom/glympse/android/hal/at;->ch:Z
+    iput-boolean v1, p0, Lcom/glympse/android/hal/at;->ck:Z
 
     .line 175
     :goto_3
@@ -1076,13 +1076,13 @@
 
     .line 168
     :cond_3
-    iput-boolean v1, p0, Lcom/glympse/android/hal/at;->cf:Z
+    iput-boolean v1, p0, Lcom/glympse/android/hal/at;->ci:Z
 
     .line 169
-    iput-boolean v1, p0, Lcom/glympse/android/hal/at;->cg:Z
+    iput-boolean v1, p0, Lcom/glympse/android/hal/at;->cj:Z
 
     .line 170
-    iput-boolean v2, p0, Lcom/glympse/android/hal/at;->ch:Z
+    iput-boolean v2, p0, Lcom/glympse/android/hal/at;->ck:Z
 
     goto :goto_3
 .end method
@@ -1092,7 +1092,7 @@
 
     .prologue
     .line 320
-    iget v0, p0, Lcom/glympse/android/hal/at;->cc:I
+    iget v0, p0, Lcom/glympse/android/hal/at;->cf:I
 
     if-eq p1, v0, :cond_0
 
@@ -1101,7 +1101,7 @@
 
     if-ne p1, v0, :cond_1
 
-    iget v0, p0, Lcom/glympse/android/hal/at;->cc:I
+    iget v0, p0, Lcom/glympse/android/hal/at;->cf:I
 
     const/4 v1, 0x3
 
@@ -1114,7 +1114,7 @@
 
     .line 328
     :cond_1
-    iput p1, p0, Lcom/glympse/android/hal/at;->cc:I
+    iput p1, p0, Lcom/glympse/android/hal/at;->cf:I
 
     .line 329
     invoke-direct {p0}, Lcom/glympse/android/hal/at;->A()V
@@ -1127,7 +1127,7 @@
 
     .prologue
     .line 335
-    iget v0, p0, Lcom/glympse/android/hal/at;->cd:I
+    iget v0, p0, Lcom/glympse/android/hal/at;->cg:I
 
     if-eq p1, v0, :cond_0
 
@@ -1136,7 +1136,7 @@
 
     if-ne p1, v0, :cond_1
 
-    iget v0, p0, Lcom/glympse/android/hal/at;->cd:I
+    iget v0, p0, Lcom/glympse/android/hal/at;->cg:I
 
     const/4 v1, 0x3
 
@@ -1149,7 +1149,7 @@
 
     .line 343
     :cond_1
-    iput p1, p0, Lcom/glympse/android/hal/at;->cd:I
+    iput p1, p0, Lcom/glympse/android/hal/at;->cg:I
 
     .line 344
     invoke-direct {p0}, Lcom/glympse/android/hal/at;->A()V
@@ -1266,7 +1266,7 @@
 
     .prologue
     .line 116
-    iget-object v0, p0, Lcom/glympse/android/hal/at;->ca:Landroid/location/LocationManager;
+    iget-object v0, p0, Lcom/glympse/android/hal/at;->cd:Landroid/location/LocationManager;
 
     if-eqz v0, :cond_0
 
@@ -1286,7 +1286,7 @@
 
     .prologue
     .line 150
-    iput-object p1, p0, Lcom/glympse/android/hal/at;->bZ:Lcom/glympse/android/core/GLocationListener;
+    iput-object p1, p0, Lcom/glympse/android/hal/at;->cc:Lcom/glympse/android/core/GLocationListener;
 
     .line 151
     return-void
@@ -1297,7 +1297,7 @@
 
     .prologue
     .line 76
-    iget-object v0, p0, Lcom/glympse/android/hal/at;->ca:Landroid/location/LocationManager;
+    iget-object v0, p0, Lcom/glympse/android/hal/at;->cd:Landroid/location/LocationManager;
 
     if-nez v0, :cond_0
 
@@ -1313,7 +1313,7 @@
 
     check-cast v0, Landroid/location/LocationManager;
 
-    iput-object v0, p0, Lcom/glympse/android/hal/at;->ca:Landroid/location/LocationManager;
+    iput-object v0, p0, Lcom/glympse/android/hal/at;->cd:Landroid/location/LocationManager;
 
     .line 84
     invoke-virtual {p0}, Lcom/glympse/android/hal/at;->F()V
@@ -1350,7 +1350,7 @@
 
     .prologue
     .line 98
-    iget-object v0, p0, Lcom/glympse/android/hal/at;->ca:Landroid/location/LocationManager;
+    iget-object v0, p0, Lcom/glympse/android/hal/at;->cd:Landroid/location/LocationManager;
 
     if-eqz v0, :cond_0
 
@@ -1370,7 +1370,7 @@
     :goto_0
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/at;->ca:Landroid/location/LocationManager;
+    iput-object v0, p0, Lcom/glympse/android/hal/at;->cd:Landroid/location/LocationManager;
 
     .line 112
     :cond_0

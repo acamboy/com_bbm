@@ -3,7 +3,7 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <FrameLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
         <ImageView android:layout_gravity="center" android:id="@id/actionbar_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_overflow_send" android:contentDescription="@string/blank" />
-        <ImageView android:layout_gravity="top|right|center" android:id="@id/actionbar_badge" android:visibility="gone" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/ic_badge" android:contentDescription="@string/blank" />
+        <ImageView android:layout_gravity="center|right|top" android:id="@id/actionbar_badge" android:visibility="gone" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/ic_badge" android:contentDescription="@string/blank" />
     </FrameLayout>
     <TextView android:textAppearance="@style/BottomActionBar" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/actionbar_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/send" />
 </LinearLayout>

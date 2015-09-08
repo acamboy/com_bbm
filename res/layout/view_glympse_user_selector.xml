@@ -3,8 +3,8 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <ImageButton android:id="@id/view_glympse_user_selector_toggle" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/glympse_user_selector_toggle_margin_top" android:layout_marginRight="@dimen/glympse_user_selector_toggle_margin_right" android:src="@drawable/selector_glympse_toogle_arrow" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:contentDescription="@string/blank" />
     <com.bbm.ui.GlympseUserSelectorItem android:id="@id/view_glympse_user_selector_selected" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/view_glympse_user_selector_toggle" android:layout_alignParentLeft="true" />
-    <LinearLayout android:orientation="vertical" android:id="@id/view_glympse_user_selector_list_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/footer_action_bar" android:layout_below="@id/view_glympse_user_selector_selected" android:layout_alignParentLeft="true">
-        <ListView android:id="@id/view_glympse_user_selector_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@color/selection_and_info" android:layout_weight="1.0" android:layout_alignParentLeft="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/view_glympse_user_selector_list_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/view_glympse_user_selector_selected" android:layout_alignParentLeft="true">
+        <ListView android:id="@id/view_glympse_user_selector_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_alignParentLeft="true" />
         <com.bbm.ui.GlympseUserSelectorItem android:id="@id/view_glympse_user_selector_all" android:background="@drawable/selector_glympse_user_selector_all" android:layout_width="fill_parent" android:layout_height="wrap_content" />
     </LinearLayout>
 </RelativeLayout>

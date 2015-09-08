@@ -1,114 +1,195 @@
-.class public final enum Lcom/d/a/b/a/j;
-.super Ljava/lang/Enum;
-.source "QueueProcessingType.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum",
-        "<",
-        "Lcom/d/a/b/a/j;",
-        ">;"
-    }
-.end annotation
+.class final synthetic Lcom/d/a/b/a/j;
+.super Ljava/lang/Object;
+.source "ViewScaleType.java"
 
 
 # static fields
-.field public static final enum a:Lcom/d/a/b/a/j;
-
-.field public static final enum b:Lcom/d/a/b/a/j;
-
-.field private static final synthetic c:[Lcom/d/a/b/a/j;
+.field static final synthetic a:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 3
 
     .prologue
-    const/4 v3, 0x1
-
-    const/4 v2, 0x0
-
-    .line 25
-    new-instance v0, Lcom/d/a/b/a/j;
-
-    const-string v1, "FIFO"
-
-    invoke-direct {v0, v1, v2}, Lcom/d/a/b/a/j;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/d/a/b/a/j;->a:Lcom/d/a/b/a/j;
-
-    new-instance v0, Lcom/d/a/b/a/j;
-
-    const-string v1, "LIFO"
-
-    invoke-direct {v0, v1, v3}, Lcom/d/a/b/a/j;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/d/a/b/a/j;->b:Lcom/d/a/b/a/j;
-
-    .line 24
-    const/4 v0, 0x2
-
-    new-array v0, v0, [Lcom/d/a/b/a/j;
-
-    sget-object v1, Lcom/d/a/b/a/j;->a:Lcom/d/a/b/a/j;
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lcom/d/a/b/a/j;->b:Lcom/d/a/b/a/j;
-
-    aput-object v1, v0, v3
-
-    sput-object v0, Lcom/d/a/b/a/j;->c:[Lcom/d/a/b/a/j;
-
-    return-void
-.end method
-
-.method private constructor <init>(Ljava/lang/String;I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
-
-    .prologue
-    .line 24
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lcom/d/a/b/a/j;
-    .locals 1
-
-    .prologue
-    .line 24
-    const-class v0, Lcom/d/a/b/a/j;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    .line 59
+    invoke-static {}, Landroid/widget/ImageView$ScaleType;->values()[Landroid/widget/ImageView$ScaleType;
 
     move-result-object v0
 
-    check-cast v0, Lcom/d/a/b/a/j;
+    array-length v0, v0
 
-    return-object v0
-.end method
+    new-array v0, v0, [I
 
-.method public static values()[Lcom/d/a/b/a/j;
-    .locals 1
+    sput-object v0, Lcom/d/a/b/a/j;->a:[I
 
-    .prologue
-    .line 24
-    sget-object v0, Lcom/d/a/b/a/j;->c:[Lcom/d/a/b/a/j;
+    :try_start_0
+    sget-object v0, Lcom/d/a/b/a/j;->a:[I
 
-    invoke-virtual {v0}, [Lcom/d/a/b/a/j;->clone()Ljava/lang/Object;
+    sget-object v1, Landroid/widget/ImageView$ScaleType;->FIT_CENTER:Landroid/widget/ImageView$ScaleType;
 
-    move-result-object v0
+    invoke-virtual {v1}, Landroid/widget/ImageView$ScaleType;->ordinal()I
 
-    check-cast v0, [Lcom/d/a/b/a/j;
+    move-result v1
 
-    return-object v0
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_7
+
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/d/a/b/a/j;->a:[I
+
+    sget-object v1, Landroid/widget/ImageView$ScaleType;->FIT_XY:Landroid/widget/ImageView$ScaleType;
+
+    invoke-virtual {v1}, Landroid/widget/ImageView$ScaleType;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_6
+
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/d/a/b/a/j;->a:[I
+
+    sget-object v1, Landroid/widget/ImageView$ScaleType;->FIT_START:Landroid/widget/ImageView$ScaleType;
+
+    invoke-virtual {v1}, Landroid/widget/ImageView$ScaleType;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_5
+
+    :goto_2
+    :try_start_3
+    sget-object v0, Lcom/d/a/b/a/j;->a:[I
+
+    sget-object v1, Landroid/widget/ImageView$ScaleType;->FIT_END:Landroid/widget/ImageView$ScaleType;
+
+    invoke-virtual {v1}, Landroid/widget/ImageView$ScaleType;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_4
+
+    :goto_3
+    :try_start_4
+    sget-object v0, Lcom/d/a/b/a/j;->a:[I
+
+    sget-object v1, Landroid/widget/ImageView$ScaleType;->CENTER_INSIDE:Landroid/widget/ImageView$ScaleType;
+
+    invoke-virtual {v1}, Landroid/widget/ImageView$ScaleType;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_3
+
+    :goto_4
+    :try_start_5
+    sget-object v0, Lcom/d/a/b/a/j;->a:[I
+
+    sget-object v1, Landroid/widget/ImageView$ScaleType;->MATRIX:Landroid/widget/ImageView$ScaleType;
+
+    invoke-virtual {v1}, Landroid/widget/ImageView$ScaleType;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x6
+
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_2
+
+    :goto_5
+    :try_start_6
+    sget-object v0, Lcom/d/a/b/a/j;->a:[I
+
+    sget-object v1, Landroid/widget/ImageView$ScaleType;->CENTER:Landroid/widget/ImageView$ScaleType;
+
+    invoke-virtual {v1}, Landroid/widget/ImageView$ScaleType;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x7
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_1
+
+    :goto_6
+    :try_start_7
+    sget-object v0, Lcom/d/a/b/a/j;->a:[I
+
+    sget-object v1, Landroid/widget/ImageView$ScaleType;->CENTER_CROP:Landroid/widget/ImageView$ScaleType;
+
+    invoke-virtual {v1}, Landroid/widget/ImageView$ScaleType;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0x8
+
+    aput v2, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_0
+
+    :goto_7
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_7
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_6
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_5
+
+    :catch_3
+    move-exception v0
+
+    goto :goto_4
+
+    :catch_4
+    move-exception v0
+
+    goto :goto_3
+
+    :catch_5
+    move-exception v0
+
+    goto :goto_2
+
+    :catch_6
+    move-exception v0
+
+    goto :goto_1
+
+    :catch_7
+    move-exception v0
+
+    goto :goto_0
 .end method

@@ -1,5 +1,5 @@
 .class public Lcom/bbm/ui/activities/TapToInviteActivity;
-.super Lcom/bbm/ui/activities/akz;
+.super Lcom/bbm/bali/ui/main/a/e;
 .source "TapToInviteActivity.java"
 
 
@@ -12,90 +12,69 @@
     .locals 1
 
     .prologue
-    .line 30
-    invoke-direct {p0}, Lcom/bbm/ui/activities/akz;-><init>()V
+    .line 31
+    invoke-direct {p0}, Lcom/bbm/bali/ui/main/a/e;-><init>()V
 
-    .line 27
+    .line 28
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/bbm/ui/activities/TapToInviteActivity;->a:Z
 
-    .line 31
-    new-instance v0, Lcom/bbm/ui/gc;
-
-    invoke-direct {v0}, Lcom/bbm/ui/gc;-><init>()V
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/TapToInviteActivity;->a(Lcom/bbm/ui/activities/alb;)V
-
     .line 32
-    new-instance v0, Lcom/bbm/ui/voice/o;
+    new-instance v0, Lcom/bbm/ui/gj;
 
-    invoke-direct {v0}, Lcom/bbm/ui/voice/o;-><init>()V
+    invoke-direct {v0}, Lcom/bbm/ui/gj;-><init>()V
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/TapToInviteActivity;->a(Lcom/bbm/ui/activities/alb;)V
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/TapToInviteActivity;->a(Lcom/bbm/ui/d/b;)V
 
     .line 33
+    new-instance v0, Lcom/bbm/ui/voice/a;
+
+    invoke-direct {v0}, Lcom/bbm/ui/voice/a;-><init>()V
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/TapToInviteActivity;->a(Lcom/bbm/ui/d/b;)V
+
+    .line 34
     return-void
 .end method
 
 
 # virtual methods
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 4
+    .locals 3
 
     .prologue
-    const/4 v3, -0x1
-
-    .line 37
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/akz;->onCreate(Landroid/os/Bundle;)V
-
     .line 38
-    const v0, 0x7f030067
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/e;->onCreate(Landroid/os/Bundle;)V
+
+    .line 39
+    const v0, 0x7f030083
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/TapToInviteActivity;->setContentView(I)V
 
-    .line 41
-    new-instance v0, Lcom/bbm/ui/HeaderButtonActionBar;
-
-    const v1, 0x7f0e074b
-
-    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/TapToInviteActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const v2, 0x7f0e0177
-
-    invoke-virtual {p0, v2}, Lcom/bbm/ui/activities/TapToInviteActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v0, p0, v1, v2}, Lcom/bbm/ui/HeaderButtonActionBar;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
     .line 42
-    new-instance v1, Lcom/bbm/ui/activities/ajh;
+    const v0, 0x7f0b013c
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/ajh;-><init>(Lcom/bbm/ui/activities/TapToInviteActivity;)V
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/TapToInviteActivity;->findViewById(I)Landroid/view/View;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/HeaderButtonActionBar;->setNegativeButtonOnClickListener(Landroid/view/View$OnClickListener;)V
+    move-result-object v0
 
-    .line 51
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/TapToInviteActivity;->getActionBar()Landroid/app/ActionBar;
+    check-cast v0, Landroid/support/v7/widget/Toolbar;
+
+    .line 43
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/TapToInviteActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 52
-    new-instance v2, Landroid/app/ActionBar$LayoutParams;
+    const v2, 0x7f0e0851
 
-    invoke-direct {v2, v3, v3}, Landroid/app/ActionBar$LayoutParams;-><init>(II)V
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    invoke-virtual {v1, v0, v2}, Landroid/app/ActionBar;->setCustomView(Landroid/view/View;Landroid/app/ActionBar$LayoutParams;)V
+    move-result-object v1
 
-    .line 53
-    const/16 v0, 0x10
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/activities/TapToInviteActivity;->a(Landroid/support/v7/widget/Toolbar;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v0}, Landroid/app/ActionBar;->setDisplayOptions(I)V
-
-    .line 54
+    .line 44
     return-void
 .end method
 
@@ -103,8 +82,8 @@
     .locals 3
 
     .prologue
-    .line 70
-    invoke-static {}, Lcom/bbm/Alaska;->h()Landroid/content/SharedPreferences;
+    .line 60
+    invoke-static {}, Lcom/bbm/Alaska;->l()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -122,10 +101,10 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 71
-    invoke-super {p0}, Lcom/bbm/ui/activities/akz;->onPause()V
+    .line 61
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/e;->onPause()V
 
-    .line 72
+    .line 62
     return-void
 .end method
 
@@ -135,8 +114,8 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 59
-    invoke-static {}, Lcom/bbm/Alaska;->h()Landroid/content/SharedPreferences;
+    .line 49
+    invoke-static {}, Lcom/bbm/Alaska;->l()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -148,8 +127,8 @@
 
     iput-boolean v0, p0, Lcom/bbm/ui/activities/TapToInviteActivity;->a:Z
 
-    .line 60
-    invoke-static {}, Lcom/bbm/Alaska;->h()Landroid/content/SharedPreferences;
+    .line 50
+    invoke-static {}, Lcom/bbm/Alaska;->l()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -165,7 +144,7 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 63
+    .line 53
     const-string v0, "nfc"
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/TapToInviteActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -187,44 +166,52 @@
     if-nez v0, :cond_1
 
     :cond_0
-    new-instance v0, Lcom/bbm/ui/b/o;
+    invoke-static {p0, v2}, Lcom/bbm/ui/b/m;->a(Landroid/app/Activity;Z)Lcom/bbm/ui/b/m;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/b/o;-><init>(Landroid/content/Context;)V
+    move-result-object v0
 
-    const v1, 0x7f0e00ec
+    const v1, 0x7f0e00fd
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->setTitle(I)V
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/m;->c(I)Lcom/bbm/ui/b/m;
 
-    const v1, 0x7f0e00ea
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->e(I)V
+    const v2, 0x7f0e00fb
 
-    const v1, 0x7f0e00eb
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/b/m;->g(I)Lcom/bbm/ui/b/m;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->b(I)V
+    move-result-object v1
 
-    const v1, 0x7f0e00ed
+    const v2, 0x7f0e00fc
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->a(I)V
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/b/m;->e(I)Lcom/bbm/ui/b/m;
 
-    new-instance v1, Lcom/bbm/ui/activities/aji;
+    move-result-object v1
 
-    invoke-direct {v1, p0, v0}, Lcom/bbm/ui/activities/aji;-><init>(Lcom/bbm/ui/activities/TapToInviteActivity;Lcom/bbm/ui/b/o;)V
+    const v2, 0x7f0e00fe
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->b(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/b/m;->d(I)Lcom/bbm/ui/b/m;
 
-    new-instance v1, Lcom/bbm/ui/activities/ajj;
+    move-result-object v1
 
-    invoke-direct {v1, p0, v0}, Lcom/bbm/ui/activities/ajj;-><init>(Lcom/bbm/ui/activities/TapToInviteActivity;Lcom/bbm/ui/b/o;)V
+    new-instance v2, Lcom/bbm/ui/activities/afr;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->a(Landroid/view/View$OnClickListener;)V
+    invoke-direct {v2, p0}, Lcom/bbm/ui/activities/afr;-><init>(Lcom/bbm/ui/activities/TapToInviteActivity;)V
 
-    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->show()V
+    iput-object v2, v1, Lcom/bbm/ui/b/m;->m:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 64
+    new-instance v2, Lcom/bbm/ui/activities/afq;
+
+    invoke-direct {v2, p0}, Lcom/bbm/ui/activities/afq;-><init>(Lcom/bbm/ui/activities/TapToInviteActivity;)V
+
+    iput-object v2, v1, Lcom/bbm/ui/b/m;->l:Landroid/content/DialogInterface$OnClickListener;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/b/m;->e()V
+
+    .line 54
     :cond_1
-    invoke-super {p0}, Lcom/bbm/ui/activities/akz;->onResume()V
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/e;->onResume()V
 
-    .line 65
+    .line 55
     return-void
 .end method

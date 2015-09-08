@@ -7,36 +7,31 @@
 
 
 # instance fields
-.field private qL:Lcom/glympse/android/ws/GWebSocketListener;
+.field private rA:Lcom/glympse/android/ws/GWebSocket;
 
-.field private qM:Lcom/glympse/android/ws/GWebSocket;
+.field private rz:Lcom/glympse/android/ws/GWebSocketListener;
 
-.field private wt:I
+.field private xn:I
 
 
 # direct methods
 .method public constructor <init>(Lcom/glympse/android/ws/GWebSocket;Lcom/glympse/android/ws/GWebSocketListener;I)V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 624
+    .line 627
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 620
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/glympse/android/ws/e;->qL:Lcom/glympse/android/ws/GWebSocketListener;
-
-    .line 625
-    iput-object p1, p0, Lcom/glympse/android/ws/e;->qM:Lcom/glympse/android/ws/GWebSocket;
-
-    .line 626
-    iput-object p2, p0, Lcom/glympse/android/ws/e;->qL:Lcom/glympse/android/ws/GWebSocketListener;
-
-    .line 627
-    iput p3, p0, Lcom/glympse/android/ws/e;->wt:I
-
     .line 628
+    iput-object p1, p0, Lcom/glympse/android/ws/e;->rA:Lcom/glympse/android/ws/GWebSocket;
+
+    .line 629
+    iput-object p2, p0, Lcom/glympse/android/ws/e;->rz:Lcom/glympse/android/ws/GWebSocketListener;
+
+    .line 630
+    iput p3, p0, Lcom/glympse/android/ws/e;->xn:I
+
+    .line 631
     return-void
 .end method
 
@@ -46,15 +41,15 @@
     .locals 3
 
     .prologue
-    .line 632
-    iget-object v0, p0, Lcom/glympse/android/ws/e;->qL:Lcom/glympse/android/ws/GWebSocketListener;
+    .line 635
+    iget-object v0, p0, Lcom/glympse/android/ws/e;->rz:Lcom/glympse/android/ws/GWebSocketListener;
 
-    iget-object v1, p0, Lcom/glympse/android/ws/e;->qM:Lcom/glympse/android/ws/GWebSocket;
+    iget-object v1, p0, Lcom/glympse/android/ws/e;->rA:Lcom/glympse/android/ws/GWebSocket;
 
-    iget v2, p0, Lcom/glympse/android/ws/e;->wt:I
+    iget v2, p0, Lcom/glympse/android/ws/e;->xn:I
 
     invoke-interface {v0, v1, v2}, Lcom/glympse/android/ws/GWebSocketListener;->failed(Lcom/glympse/android/ws/GWebSocket;I)V
 
-    .line 633
+    .line 636
     return-void
 .end method

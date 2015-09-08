@@ -19,7 +19,7 @@
 .method public abstract extractFromCache(Ljava/lang/String;Z)Lcom/glympse/android/lib/GUserPrivate;
 .end method
 
-.method public abstract modifyUser(Lcom/glympse/android/lib/GUserPrivate;)V
+.method public abstract modifyUser(Lcom/glympse/android/lib/GUserPrivate;Ljava/lang/String;Ljava/lang/String;)V
 .end method
 
 .method public abstract orderChanged()V

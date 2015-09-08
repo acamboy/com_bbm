@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/mu;
 .super Ljava/lang/Object;
-.source "GroupConversationActivity.java"
+.source "GroupListItemsActivity.java"
 
 # interfaces
-.implements Lcom/slidingmenu/lib/a/b;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupListItemsActivity;)V
     .locals 0
 
     .prologue
-    .line 653
-    iput-object p1, p0, Lcom/bbm/ui/activities/mu;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    .line 191
+    iput-object p1, p0, Lcom/bbm/ui/activities/mu;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,50 +25,22 @@
 
 
 # virtual methods
-.method public final a()V
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
     .prologue
-    .line 657
-    const-string v0, "onHardwareMenuButtonClicked"
+    .line 194
+    const-string v0, "addNewButton Clicked"
 
-    const-class v1, Lcom/bbm/ui/activities/GroupConversationActivity;
+    const-class v1, Lcom/bbm/ui/activities/GroupListItemsActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 658
-    iget-object v0, p0, Lcom/bbm/ui/activities/mu;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    .line 195
+    iget-object v0, p0, Lcom/bbm/ui/activities/mu;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupListItemsActivity;->a(Lcom/bbm/ui/activities/GroupListItemsActivity;)V
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
-
-    invoke-virtual {v0}, Lcom/slidingmenu/lib/SlidingMenu;->b()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 659
-    iget-object v0, p0, Lcom/bbm/ui/activities/mu;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
-
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
-
-    .line 663
-    :goto_0
+    .line 196
     return-void
-
-    .line 661
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/mu;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->c(Lcom/bbm/ui/activities/GroupConversationActivity;)V
-
-    goto :goto_0
 .end method

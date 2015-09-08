@@ -1,9 +1,9 @@
 .class final Lcom/bbm/ui/a/ag;
 .super Ljava/lang/Object;
-.source "UpdatesAdapter.java"
+.source "MonitoredRecyclerAdapter.java"
 
 # interfaces
-.implements Lcom/bbm/f/ac;
+.implements Landroid/support/v7/widget/cd;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 106
+    .line 28
     iput-object p1, p0, Lcom/bbm/ui/a/ag;->a:Lcom/bbm/ui/a/af;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,62 +25,21 @@
 
 
 # virtual methods
-.method public final a()V
-    .locals 0
+.method public final a(Landroid/support/v7/widget/cl;)V
+    .locals 1
 
     .prologue
-    .line 121
-    return-void
-.end method
+    .line 31
+    check-cast p1, Lcom/bbm/ui/a/ac;
 
-.method public final a(Lcom/bbm/f/ab;)V
-    .locals 2
+    iget-object v0, p1, Lcom/bbm/ui/a/ac;->r:Lcom/bbm/j/k;
 
-    .prologue
-    .line 109
-    iget-object v0, p1, Lcom/bbm/f/ab;->b:Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
 
-    const-string v1, "listChange"
+    iget-object v0, p1, Lcom/bbm/ui/a/ac;->m:Lcom/bbm/ui/a/ah;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-interface {v0}, Lcom/bbm/ui/a/ah;->a()V
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 110
-    iget-object v0, p1, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
-
-    const-string v1, "type"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 111
-    const-string v1, "recentChannelPosts"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 112
-    const-string v0, "UpdatesAdapter: listChange on recentChannelPosts"
-
-    const/4 v1, 0x0
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 113
-    iget-object v0, p0, Lcom/bbm/ui/a/ag;->a:Lcom/bbm/ui/a/af;
-
-    invoke-static {v0}, Lcom/bbm/ui/a/af;->a(Lcom/bbm/ui/a/af;)Z
-
-    .line 116
-    :cond_0
+    .line 32
     return-void
 .end method

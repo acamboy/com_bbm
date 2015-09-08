@@ -1,33 +1,39 @@
 .class public final Lcom/bbm/util/ev;
-.super Lcom/bbm/util/fe;
-.source "UpdatesFragmentUtil.java"
+.super Ljava/lang/Object;
+.source "Util.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public a:Lcom/bbm/ui/LinkifyTextView;
-
-.field public b:Lcom/bbm/ui/LinkifyTextView;
-
-.field public c:Landroid/widget/TextView;
-
-.field public d:Landroid/widget/ImageButton;
-
-.field public e:Ljava/lang/String;
-
-.field public f:Ljava/lang/String;
-
-.field public g:Lcom/bbm/util/o;
-
-.field public h:Z
+.field final synthetic a:Landroid/widget/Toast;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Landroid/widget/Toast;)V
     .locals 0
 
     .prologue
-    .line 235
-    invoke-direct {p0}, Lcom/bbm/util/fe;-><init>()V
+    .line 224
+    iput-object p1, p0, Lcom/bbm/util/ev;->a:Landroid/widget/Toast;
 
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 1
+
+    .prologue
+    .line 227
+    iget-object v0, p0, Lcom/bbm/util/ev;->a:Landroid/widget/Toast;
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->cancel()V
+
+    .line 228
     return-void
 .end method

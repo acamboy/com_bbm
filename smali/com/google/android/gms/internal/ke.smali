@@ -1,176 +1,89 @@
-.class public abstract Lcom/google/android/gms/internal/ke;
+.class public final Lcom/google/android/gms/internal/ke;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Lcom/google/android/gms/internal/kc;
 
 
 # instance fields
-.field protected DY:I
+.field private a:Landroid/os/IBinder;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Landroid/os/IBinder;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, -0x1
-
-    iput v0, p0, Lcom/google/android/gms/internal/ke;->DY:I
+    iput-object p1, p0, Lcom/google/android/gms/internal/ke;->a:Landroid/os/IBinder;
 
     return-void
-.end method
-
-.method public static final a(Lcom/google/android/gms/internal/ke;[B)Lcom/google/android/gms/internal/ke;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Lcom/google/android/gms/internal/ke;",
-            ">(TT;[B)TT;"
-        }
-    .end annotation
-
-    const/4 v0, 0x0
-
-    array-length v1, p1
-
-    invoke-static {p0, p1, v0, v1}, Lcom/google/android/gms/internal/ke;->b(Lcom/google/android/gms/internal/ke;[BII)Lcom/google/android/gms/internal/ke;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static final a(Lcom/google/android/gms/internal/ke;[BII)V
-    .locals 3
-
-    :try_start_0
-    invoke-static {p1, p2, p3}, Lcom/google/android/gms/internal/jz;->b([BII)Lcom/google/android/gms/internal/jz;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/ke;->a(Lcom/google/android/gms/internal/jz;)V
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/jz;->kN()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Ljava/lang/RuntimeException;
-
-    const-string v2, "Serializing to a byte array threw an IOException (should never happen)."
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v1
-.end method
-
-.method public static final b(Lcom/google/android/gms/internal/ke;[BII)Lcom/google/android/gms/internal/ke;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Lcom/google/android/gms/internal/ke;",
-            ">(TT;[BII)TT;"
-        }
-    .end annotation
-
-    :try_start_0
-    invoke-static {p1, p2, p3}, Lcom/google/android/gms/internal/jy;->a([BII)Lcom/google/android/gms/internal/jy;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/ke;->b(Lcom/google/android/gms/internal/jy;)Lcom/google/android/gms/internal/ke;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/internal/jy;->cu(I)V
-    :try_end_0
-    .catch Lcom/google/android/gms/internal/kd; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
-
-    return-object p0
-
-    :catch_0
-    move-exception v0
-
-    throw v0
-
-    :catch_1
-    move-exception v0
-
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    const-string v1, "Reading from a byte array threw an IOException (should never happen)."
-
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public static final d(Lcom/google/android/gms/internal/ke;)[B
-    .locals 3
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/ke;->c()I
-
-    move-result v0
-
-    new-array v0, v0, [B
-
-    const/4 v1, 0x0
-
-    array-length v2, v0
-
-    invoke-static {p0, v0, v1, v2}, Lcom/google/android/gms/internal/ke;->a(Lcom/google/android/gms/internal/ke;[BII)V
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public a(Lcom/google/android/gms/internal/jz;)V
-    .locals 0
+.method public final a(Lcom/google/android/gms/internal/jz;)V
+    .locals 5
 
-    return-void
-.end method
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-.method public abstract b(Lcom/google/android/gms/internal/jy;)Lcom/google/android/gms/internal/ke;
-.end method
+    move-result-object v1
 
-.method public c()I
-    .locals 1
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    const/4 v0, 0x0
+    move-result-object v2
 
-    iput v0, p0, Lcom/google/android/gms/internal/ke;->DY:I
+    :try_start_0
+    const-string v0, "com.google.android.gms.ads.internal.purchase.client.IInAppPurchaseListener"
 
-    return v0
-.end method
+    invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-.method public eW()I
-    .locals 1
+    if-eqz p1, :cond_0
 
-    iget v0, p0, Lcom/google/android/gms/internal/ke;->DY:I
-
-    if-gez v0, :cond_0
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/ke;->c()I
-
-    :cond_0
-    iget v0, p0, Lcom/google/android/gms/internal/ke;->DY:I
-
-    return v0
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 1
-
-    invoke-static {p0}, Lcom/google/android/gms/internal/kf;->e(Lcom/google/android/gms/internal/ke;)Ljava/lang/String;
+    invoke-interface {p1}, Lcom/google/android/gms/internal/jz;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
+
+    :goto_0
+    invoke-virtual {v1, v0}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/ke;->a:Landroid/os/IBinder;
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    invoke-interface {v0, v3, v1, v2, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    invoke-virtual {v2}, Landroid/os/Parcel;->readException()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    throw v0
+.end method
+
+.method public final asBinder()Landroid/os/IBinder;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/ke;->a:Landroid/os/IBinder;
 
     return-object v0
 .end method

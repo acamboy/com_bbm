@@ -21,7 +21,7 @@
 
 .field private final d:Lcom/bbm/j/h;
 
-.field final h:Lcom/bbm/util/di;
+.field final h:Lcom/bbm/util/ds;
 
 .field final i:Ljava/lang/Runnable;
 
@@ -40,7 +40,7 @@
     .line 36
     const-string v0, ""
 
-    new-instance v1, Lcom/bbm/util/bp;
+    new-instance v1, Lcom/bbm/util/bv;
 
     new-instance v2, Landroid/os/Handler;
 
@@ -50,11 +50,11 @@
 
     invoke-direct {v2, v3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    invoke-direct {v1, v2}, Lcom/bbm/util/bp;-><init>(Landroid/os/Handler;)V
+    invoke-direct {v1, v2}, Lcom/bbm/util/bv;-><init>(Landroid/os/Handler;)V
 
     const-wide/16 v2, 0x3e8
 
-    invoke-direct {p0, v0, v1, v2, v3}, Lcom/bbm/j/k;-><init>(Ljava/lang/String;Lcom/bbm/util/di;J)V
+    invoke-direct {p0, v0, v1, v2, v3}, Lcom/bbm/j/k;-><init>(Ljava/lang/String;Lcom/bbm/util/ds;J)V
 
     .line 37
     return-void
@@ -67,7 +67,7 @@
     .line 40
     const-string v0, ""
 
-    new-instance v1, Lcom/bbm/util/bp;
+    new-instance v1, Lcom/bbm/util/bv;
 
     new-instance v2, Landroid/os/Handler;
 
@@ -77,17 +77,17 @@
 
     invoke-direct {v2, v3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    invoke-direct {v1, v2}, Lcom/bbm/util/bp;-><init>(Landroid/os/Handler;)V
+    invoke-direct {v1, v2}, Lcom/bbm/util/bv;-><init>(Landroid/os/Handler;)V
 
     const-wide/16 v2, 0x0
 
-    invoke-direct {p0, v0, v1, v2, v3}, Lcom/bbm/j/k;-><init>(Ljava/lang/String;Lcom/bbm/util/di;J)V
+    invoke-direct {p0, v0, v1, v2, v3}, Lcom/bbm/j/k;-><init>(Ljava/lang/String;Lcom/bbm/util/ds;J)V
 
     .line 41
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;Lcom/bbm/util/di;J)V
+.method private constructor <init>(Ljava/lang/String;Lcom/bbm/util/ds;J)V
     .locals 3
 
     .prologue
@@ -119,7 +119,7 @@
     iput-object v0, p0, Lcom/bbm/j/k;->d:Lcom/bbm/j/h;
 
     .line 51
-    iput-object p2, p0, Lcom/bbm/j/k;->h:Lcom/bbm/util/di;
+    iput-object p2, p0, Lcom/bbm/j/k;->h:Lcom/bbm/util/ds;
 
     .line 52
     iput-object p1, p0, Lcom/bbm/j/k;->a:Ljava/lang/String;
@@ -203,30 +203,13 @@
     iput-boolean v0, p0, Lcom/bbm/j/k;->k:Z
 
     .line 85
-    invoke-virtual {p0}, Lcom/bbm/j/k;->e_()V
+    invoke-virtual {p0}, Lcom/bbm/j/k;->d_()V
 
     .line 86
     return-void
 .end method
 
-.method public final d_()V
-    .locals 1
-
-    .prologue
-    .line 93
-    iget-boolean v0, p0, Lcom/bbm/j/k;->j:Z
-
-    if-eqz v0, :cond_0
-
-    .line 94
-    invoke-virtual {p0}, Lcom/bbm/j/k;->e_()V
-
-    .line 96
-    :cond_0
-    return-void
-.end method
-
-.method public final e()V
+.method public final d()V
     .locals 2
 
     .prologue
@@ -239,11 +222,11 @@
     iput-boolean v0, p0, Lcom/bbm/j/k;->j:Z
 
     .line 106
-    iget-object v0, p0, Lcom/bbm/j/k;->h:Lcom/bbm/util/di;
+    iget-object v0, p0, Lcom/bbm/j/k;->h:Lcom/bbm/util/ds;
 
     iget-object v1, p0, Lcom/bbm/j/k;->i:Ljava/lang/Runnable;
 
-    invoke-interface {v0, v1}, Lcom/bbm/util/di;->b(Ljava/lang/Runnable;)V
+    invoke-interface {v0, v1}, Lcom/bbm/util/ds;->b(Ljava/lang/Runnable;)V
 
     .line 107
     iget-object v0, p0, Lcom/bbm/j/k;->c:Ljava/util/List;
@@ -259,7 +242,7 @@
     return-void
 .end method
 
-.method final e_()V
+.method final d_()V
     .locals 4
 
     .prologue
@@ -272,11 +255,11 @@
     if-eqz v0, :cond_0
 
     .line 122
-    iget-object v0, p0, Lcom/bbm/j/k;->h:Lcom/bbm/util/di;
+    iget-object v0, p0, Lcom/bbm/j/k;->h:Lcom/bbm/util/ds;
 
     iget-object v1, p0, Lcom/bbm/j/k;->i:Ljava/lang/Runnable;
 
-    invoke-interface {v0, v1}, Lcom/bbm/util/di;->b(Ljava/lang/Runnable;)V
+    invoke-interface {v0, v1}, Lcom/bbm/util/ds;->b(Ljava/lang/Runnable;)V
 
     .line 123
     const/4 v0, 0x0
@@ -338,10 +321,10 @@
 
     new-array v2, v3, [Ljava/lang/Object;
 
-    invoke-static {v0, v1, v2}, Lcom/bbm/y;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/bbm/af;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 139
-    invoke-virtual {p0}, Lcom/bbm/j/k;->e()V
+    invoke-virtual {p0}, Lcom/bbm/j/k;->d()V
 
     .line 147
     :cond_1

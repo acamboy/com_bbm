@@ -10,7 +10,7 @@
 # instance fields
 .field final a:Lcom/google/zxing/client/android/i;
 
-.field b:Lcom/google/zxing/client/android/e;
+.field b:I
 
 .field final c:Lcom/google/zxing/client/android/a/e;
 
@@ -76,9 +76,9 @@
     invoke-virtual {v0}, Lcom/google/zxing/client/android/i;->start()V
 
     .line 66
-    sget-object v0, Lcom/google/zxing/client/android/e;->b:Lcom/google/zxing/client/android/e;
+    sget v0, Lcom/google/zxing/client/android/e;->b:I
 
-    iput-object v0, p0, Lcom/google/zxing/client/android/d;->b:Lcom/google/zxing/client/android/e;
+    iput v0, p0, Lcom/google/zxing/client/android/d;->b:I
 
     .line 69
     iput-object p4, p0, Lcom/google/zxing/client/android/d;->c:Lcom/google/zxing/client/android/a/e;
@@ -98,16 +98,16 @@
 
     .prologue
     .line 200
-    iget-object v0, p0, Lcom/google/zxing/client/android/d;->b:Lcom/google/zxing/client/android/e;
+    iget v0, p0, Lcom/google/zxing/client/android/d;->b:I
 
-    sget-object v1, Lcom/google/zxing/client/android/e;->b:Lcom/google/zxing/client/android/e;
+    sget v1, Lcom/google/zxing/client/android/e;->b:I
 
     if-ne v0, v1, :cond_0
 
     .line 201
-    sget-object v0, Lcom/google/zxing/client/android/e;->a:Lcom/google/zxing/client/android/e;
+    sget v0, Lcom/google/zxing/client/android/e;->a:I
 
-    iput-object v0, p0, Lcom/google/zxing/client/android/d;->b:Lcom/google/zxing/client/android/e;
+    iput v0, p0, Lcom/google/zxing/client/android/d;->b:I
 
     .line 202
     iget-object v0, p0, Lcom/google/zxing/client/android/d;->c:Lcom/google/zxing/client/android/a/e;
@@ -186,9 +186,9 @@
     invoke-static {v0, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 81
-    sget-object v0, Lcom/google/zxing/client/android/e;->b:Lcom/google/zxing/client/android/e;
+    sget v0, Lcom/google/zxing/client/android/e;->b:I
 
-    iput-object v0, p0, Lcom/google/zxing/client/android/d;->b:Lcom/google/zxing/client/android/e;
+    iput v0, p0, Lcom/google/zxing/client/android/d;->b:I
 
     .line 82
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
@@ -278,7 +278,7 @@
 
     if-ne v10, v12, :cond_5
 
-    const/high16 v10, 0x40800000
+    const/high16 v10, 0x40800000    # 4.0f
 
     invoke-virtual {v9, v10}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
@@ -292,11 +292,9 @@
     :goto_4
     sget-object v2, Lcom/google/zxing/client/android/c;->a:[I
 
-    iget-object v7, v6, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/q;
+    iget v7, v6, Lcom/google/zxing/client/android/CaptureActivity;->e:I
 
-    invoke-virtual {v7}, Lcom/google/zxing/client/android/q;->ordinal()I
-
-    move-result v7
+    add-int/lit8 v7, v7, -0x1
 
     aget v2, v2, v7
 
@@ -456,7 +454,7 @@
     goto/16 :goto_4
 
     :cond_7
-    const/high16 v2, 0x41200000
+    const/high16 v2, 0x41200000    # 10.0f
 
     invoke-virtual {v9, v2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
@@ -569,9 +567,9 @@
     if-ne v0, v2, :cond_a
 
     .line 89
-    sget-object v0, Lcom/google/zxing/client/android/e;->a:Lcom/google/zxing/client/android/e;
+    sget v0, Lcom/google/zxing/client/android/e;->a:I
 
-    iput-object v0, p0, Lcom/google/zxing/client/android/d;->b:Lcom/google/zxing/client/android/e;
+    iput v0, p0, Lcom/google/zxing/client/android/d;->b:I
 
     .line 90
     iget-object v0, p0, Lcom/google/zxing/client/android/d;->c:Lcom/google/zxing/client/android/a/e;

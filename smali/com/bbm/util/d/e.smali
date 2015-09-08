@@ -1,90 +1,78 @@
-.class final synthetic Lcom/bbm/util/d/e;
+.class public final Lcom/bbm/util/d/e;
 .super Ljava/lang/Object;
-.source "GroupContactToUserConvertorMonitor.java"
+.source "InlineImageUtil.java"
 
 
-# static fields
-.field static final synthetic a:[I
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public final b:Ljava/lang/String;
+
+.field public c:I
+
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method private constructor <init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
     .prologue
-    .line 22
-    invoke-static {}, Lcom/bbm/util/bi;->values()[Lcom/bbm/util/bi;
+    .line 361
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    .line 362
+    iput-object p1, p0, Lcom/bbm/util/d/e;->a:Ljava/lang/String;
 
-    array-length v0, v0
+    .line 363
+    iput-object p2, p0, Lcom/bbm/util/d/e;->b:Ljava/lang/String;
 
-    new-array v0, v0, [I
+    .line 364
+    iput p3, p0, Lcom/bbm/util/d/e;->c:I
 
-    sput-object v0, Lcom/bbm/util/d/e;->a:[I
+    .line 365
+    iput-object p4, p0, Lcom/bbm/util/d/e;->d:Ljava/lang/String;
 
-    :try_start_0
-    sget-object v0, Lcom/bbm/util/d/e;->a:[I
-
-    sget-object v1, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
-
-    invoke-virtual {v1}, Lcom/bbm/util/bi;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_2
-
-    :goto_0
-    :try_start_1
-    sget-object v0, Lcom/bbm/util/d/e;->a:[I
-
-    sget-object v1, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
-
-    invoke-virtual {v1}, Lcom/bbm/util/bi;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/bbm/util/d/e;->a:[I
-
-    sget-object v1, Lcom/bbm/util/bi;->b:Lcom/bbm/util/bi;
-
-    invoke-virtual {v1}, Lcom/bbm/util/bi;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_0
-
-    :goto_2
+    .line 366
     return-void
+.end method
 
-    :catch_0
-    move-exception v0
+.method synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;B)V
+    .locals 0
 
-    goto :goto_2
+    .prologue
+    .line 348
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/bbm/util/d/e;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
 
-    :catch_1
-    move-exception v0
+    return-void
+.end method
 
-    goto :goto_1
+.method private constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    :catch_2
-    move-exception v0
+    .prologue
+    .line 355
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    goto :goto_0
+    .line 356
+    iput-object p1, p0, Lcom/bbm/util/d/e;->a:Ljava/lang/String;
+
+    .line 357
+    iput-object p2, p0, Lcom/bbm/util/d/e;->b:Ljava/lang/String;
+
+    .line 358
+    iput-object p3, p0, Lcom/bbm/util/d/e;->d:Ljava/lang/String;
+
+    .line 359
+    return-void
+.end method
+
+.method synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;B)V
+    .locals 0
+
+    .prologue
+    .line 348
+    invoke-direct {p0, p1, p2, p3}, Lcom/bbm/util/d/e;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
 .end method

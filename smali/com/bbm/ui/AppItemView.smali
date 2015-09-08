@@ -6,9 +6,9 @@
 # instance fields
 .field private a:Lcom/bbm/l/b/d;
 
-.field private b:Lcom/bbm/util/b/d;
+.field private b:Lcom/bbm/util/b/e;
 
-.field private c:Lcom/bbm/util/bq;
+.field private c:Lcom/bbm/util/bw;
 
 .field private d:Landroid/widget/TextView;
 
@@ -26,18 +26,18 @@
     .locals 1
 
     .prologue
-    .line 51
+    .line 50
     invoke-direct {p0, p1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
-    .line 36
+    .line 35
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/bbm/ui/AppItemView;->a:Lcom/bbm/l/b/d;
 
-    .line 53
+    .line 52
     invoke-direct {p0}, Lcom/bbm/ui/AppItemView;->a()V
 
-    .line 54
+    .line 53
     return-void
 .end method
 
@@ -45,18 +45,18 @@
     .locals 1
 
     .prologue
-    .line 61
+    .line 60
     invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 36
+    .line 35
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/bbm/ui/AppItemView;->a:Lcom/bbm/l/b/d;
 
-    .line 63
+    .line 62
     invoke-direct {p0}, Lcom/bbm/ui/AppItemView;->a()V
 
-    .line 64
+    .line 63
     return-void
 .end method
 
@@ -64,18 +64,18 @@
     .locals 1
 
     .prologue
-    .line 72
+    .line 71
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 36
+    .line 35
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/bbm/ui/AppItemView;->a:Lcom/bbm/l/b/d;
 
-    .line 74
+    .line 73
     invoke-direct {p0}, Lcom/bbm/ui/AppItemView;->a()V
 
-    .line 75
+    .line 74
     return-void
 .end method
 
@@ -83,7 +83,7 @@
     .locals 1
 
     .prologue
-    .line 34
+    .line 33
     iget-object v0, p0, Lcom/bbm/ui/AppItemView;->h:Ljava/lang/String;
 
     return-object v0
@@ -93,10 +93,10 @@
     .locals 3
 
     .prologue
-    .line 78
+    .line 77
     invoke-virtual {p0}, Lcom/bbm/ui/AppItemView;->getResources()Landroid/content/res/Resources;
 
-    .line 79
+    .line 78
     invoke-virtual {p0}, Lcom/bbm/ui/AppItemView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -105,14 +105,14 @@
 
     move-result-object v0
 
-    const v1, 0x7f03011d
+    const v1, 0x7f030136
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 81
-    const v0, 0x7f0b0591
+    .line 80
+    const v0, 0x7f0b0618
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/AppItemView;->findViewById(I)Landroid/view/View;
 
@@ -122,8 +122,8 @@
 
     iput-object v0, p0, Lcom/bbm/ui/AppItemView;->f:Landroid/widget/ImageView;
 
-    .line 84
-    const v0, 0x7f0b0590
+    .line 83
+    const v0, 0x7f0b0617
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/AppItemView;->findViewById(I)Landroid/view/View;
 
@@ -133,8 +133,8 @@
 
     iput-object v0, p0, Lcom/bbm/ui/AppItemView;->e:Landroid/widget/ImageView;
 
-    .line 86
-    const v0, 0x7f0b0593
+    .line 85
+    const v0, 0x7f0b061a
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/AppItemView;->findViewById(I)Landroid/view/View;
 
@@ -144,7 +144,7 @@
 
     iput-object v0, p0, Lcom/bbm/ui/AppItemView;->d:Landroid/widget/TextView;
 
-    .line 87
+    .line 86
     return-void
 .end method
 
@@ -156,35 +156,35 @@
 
     const/4 v9, 0x0
 
-    .line 163
+    .line 162
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 164
-    invoke-interface {p2, v11, p1}, Lcom/bbm/ui/k;->a(Lcom/bbm/d/ff;Ljava/lang/String;)V
+    .line 163
+    invoke-interface {p2, v11, p1}, Lcom/bbm/ui/k;->a(Lcom/bbm/d/gh;Ljava/lang/String;)V
 
     move v0, v9
 
-    .line 204
+    .line 203
     :goto_0
     return v0
 
-    .line 170
+    .line 169
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/AppItemView;->b:Lcom/bbm/util/b/d;
+    iget-object v0, p0, Lcom/bbm/ui/AppItemView;->b:Lcom/bbm/util/b/e;
 
     if-nez v0, :cond_1
 
     move-object v10, v11
 
-    .line 171
+    .line 170
     :goto_1
     if-nez v10, :cond_2
 
-    .line 172
+    .line 171
     :try_start_0
     new-instance v8, Ljava/net/URL;
 
@@ -192,7 +192,7 @@
     :try_end_0
     .catch Ljava/net/MalformedURLException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 176
+    .line 175
     :try_start_1
     new-instance v0, Ljava/net/URI;
 
@@ -226,7 +226,7 @@
 
     invoke-direct/range {v0 .. v7}, Ljava/net/URI;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 177
+    .line 176
     invoke-virtual {v0}, Ljava/net/URI;->toURL()Ljava/net/URL;
     :try_end_1
     .catch Ljava/net/URISyntaxException; {:try_start_1 .. :try_end_1} :catch_0
@@ -234,17 +234,17 @@
 
     move-result-object v0
 
-    .line 188
+    .line 187
     :goto_2
-    iget-object v1, p0, Lcom/bbm/ui/AppItemView;->c:Lcom/bbm/util/bq;
+    iget-object v1, p0, Lcom/bbm/ui/AppItemView;->c:Lcom/bbm/util/bw;
 
     new-instance v2, Lcom/bbm/ui/j;
 
     invoke-direct {v2, p0, p1, p2}, Lcom/bbm/ui/j;-><init>(Lcom/bbm/ui/AppItemView;Ljava/lang/String;Lcom/bbm/ui/k;)V
 
-    invoke-virtual {v1, v0, v2}, Lcom/bbm/util/bq;->a(Ljava/net/URL;Lcom/bbm/util/bz;)V
+    invoke-virtual {v1, v0, v2}, Lcom/bbm/util/bw;->a(Ljava/net/URL;Lcom/bbm/util/cf;)V
 
-    .line 204
+    .line 203
     :goto_3
     if-eqz v10, :cond_3
 
@@ -252,11 +252,11 @@
 
     goto :goto_0
 
-    .line 170
+    .line 169
     :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/AppItemView;->b:Lcom/bbm/util/b/d;
+    iget-object v0, p0, Lcom/bbm/ui/AppItemView;->b:Lcom/bbm/util/b/e;
 
-    invoke-virtual {v0, p1}, Lcom/bbm/util/b/d;->a(Ljava/lang/String;)Lcom/bbm/d/ff;
+    invoke-virtual {v0, p1}, Lcom/bbm/util/b/e;->a(Ljava/lang/String;)Lcom/bbm/d/gh;
 
     move-result-object v0
 
@@ -264,44 +264,44 @@
 
     goto :goto_1
 
-    .line 178
+    .line 177
     :catch_0
     move-exception v0
 
     :try_start_2
-    invoke-virtual {v0}, Ljava/net/URISyntaxException;->printStackTrace()V
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
     :try_end_2
     .catch Ljava/net/MalformedURLException; {:try_start_2 .. :try_end_2} :catch_1
 
     move-object v0, v8
 
-    .line 187
+    .line 186
     goto :goto_2
 
-    .line 181
+    .line 180
     :catch_1
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
 
-    .line 183
-    invoke-interface {p2, v11, p1}, Lcom/bbm/ui/k;->a(Lcom/bbm/d/ff;Ljava/lang/String;)V
+    .line 182
+    invoke-interface {p2, v11, p1}, Lcom/bbm/ui/k;->a(Lcom/bbm/d/gh;Ljava/lang/String;)V
 
     move v0, v9
 
-    .line 186
+    .line 185
     goto :goto_0
 
-    .line 200
+    .line 199
     :cond_2
-    invoke-interface {p2, v10, p1}, Lcom/bbm/ui/k;->a(Lcom/bbm/d/ff;Ljava/lang/String;)V
+    invoke-interface {p2, v10, p1}, Lcom/bbm/ui/k;->a(Lcom/bbm/d/gh;Ljava/lang/String;)V
 
     goto :goto_3
 
     :cond_3
     move v0, v9
 
-    .line 204
+    .line 203
     goto :goto_0
 .end method
 
@@ -309,18 +309,18 @@
     .locals 1
 
     .prologue
-    .line 34
+    .line 33
     iget-object v0, p0, Lcom/bbm/ui/AppItemView;->e:Landroid/widget/ImageView;
 
     return-object v0
 .end method
 
-.method static synthetic c(Lcom/bbm/ui/AppItemView;)Lcom/bbm/util/b/d;
+.method static synthetic c(Lcom/bbm/ui/AppItemView;)Lcom/bbm/util/b/e;
     .locals 1
 
     .prologue
-    .line 34
-    iget-object v0, p0, Lcom/bbm/ui/AppItemView;->b:Lcom/bbm/util/b/d;
+    .line 33
+    iget-object v0, p0, Lcom/bbm/ui/AppItemView;->b:Lcom/bbm/util/b/e;
 
     return-object v0
 .end method
@@ -331,14 +331,14 @@
     .locals 1
 
     .prologue
-    .line 90
+    .line 89
     new-instance v0, Lcom/bbm/ui/h;
 
     invoke-direct {v0, p0, p1}, Lcom/bbm/ui/h;-><init>(Lcom/bbm/ui/AppItemView;Landroid/view/GestureDetector;)V
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/AppItemView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 98
+    .line 97
     return-void
 .end method
 
@@ -350,11 +350,11 @@
 
     const/4 v1, 0x0
 
-    .line 113
+    .line 112
     iput-object p1, p0, Lcom/bbm/ui/AppItemView;->a:Lcom/bbm/l/b/d;
 
-    .line 115
-    iget-object v0, p0, Lcom/bbm/ui/AppItemView;->c:Lcom/bbm/util/bq;
+    .line 114
+    iget-object v0, p0, Lcom/bbm/ui/AppItemView;->c:Lcom/bbm/util/bw;
 
     if-eqz v0, :cond_1
 
@@ -363,13 +363,13 @@
     :goto_0
     const-string v2, "AppItemView needs an HttpLoader"
 
-    invoke-static {v0, v2}, Lcom/bbm/util/fh;->a(ZLjava/lang/Object;)Z
+    invoke-static {v0, v2}, Lcom/bbm/util/eu;->a(ZLjava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 160
+    .line 159
     :cond_0
     :goto_1
     return-void
@@ -377,40 +377,40 @@
     :cond_1
     move v0, v1
 
-    .line 115
+    .line 114
     goto :goto_0
 
-    .line 119
+    .line 118
     :cond_2
     iget-object v0, p0, Lcom/bbm/ui/AppItemView;->a:Lcom/bbm/l/b/d;
 
     if-nez v0, :cond_3
 
-    .line 120
+    .line 119
     const-string v0, ""
 
     iput-object v0, p0, Lcom/bbm/ui/AppItemView;->g:Ljava/lang/String;
 
-    .line 121
+    .line 120
     const-string v0, ""
 
     iput-object v0, p0, Lcom/bbm/ui/AppItemView;->h:Ljava/lang/String;
 
-    .line 127
+    .line 126
     :goto_2
-    invoke-static {}, Lcom/bbm/Alaska;->h()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcom/bbm/Alaska;->l()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 128
+    .line 127
     const-string v2, "apps_last_viewed_time"
 
     invoke-interface {v0, v2, v4, v5}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v6
 
-    .line 130
-    iget-object v0, p1, Lcom/bbm/l/b/s;->m:Ljava/lang/String;
+    .line 129
+    iget-object v0, p1, Lcom/bbm/l/b/t;->n:Ljava/lang/String;
 
     const-string v2, ""
 
@@ -420,8 +420,8 @@
 
     if-nez v0, :cond_5
 
-    .line 131
-    iget-object v0, p1, Lcom/bbm/l/b/s;->m:Ljava/lang/String;
+    .line 130
+    iget-object v0, p1, Lcom/bbm/l/b/t;->n:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
 
@@ -431,7 +431,7 @@
 
     move-result-wide v2
 
-    .line 133
+    .line 132
     :goto_3
     invoke-virtual {p1}, Lcom/bbm/l/b/d;->a()Z
 
@@ -447,12 +447,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 134
+    .line 133
     iget-object v0, p0, Lcom/bbm/ui/AppItemView;->f:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 139
+    .line 138
     :goto_4
     iget-object v0, p0, Lcom/bbm/ui/AppItemView;->d:Landroid/widget/TextView;
 
@@ -460,12 +460,12 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 140
+    .line 139
     iget-object v0, p0, Lcom/bbm/ui/AppItemView;->d:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 142
+    .line 141
     iget-object v0, p0, Lcom/bbm/ui/AppItemView;->h:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -480,12 +480,12 @@
 
     if-nez v0, :cond_0
 
-    .line 143
+    .line 142
     new-instance v0, Lcom/bbm/ui/i;
 
     invoke-direct {v0, p0}, Lcom/bbm/ui/i;-><init>(Lcom/bbm/ui/AppItemView;)V
 
-    .line 156
+    .line 155
     iget-object v1, p0, Lcom/bbm/ui/AppItemView;->h:Ljava/lang/String;
 
     invoke-direct {p0, v1, v0}, Lcom/bbm/ui/AppItemView;->a(Ljava/lang/String;Lcom/bbm/ui/k;)Z
@@ -494,7 +494,7 @@
 
     if-nez v0, :cond_0
 
-    .line 157
+    .line 156
     iget-object v0, p0, Lcom/bbm/ui/AppItemView;->e:Landroid/widget/ImageView;
 
     const/4 v1, 0x0
@@ -503,24 +503,24 @@
 
     goto :goto_1
 
-    .line 123
+    .line 122
     :cond_3
     iget-object v0, p0, Lcom/bbm/ui/AppItemView;->a:Lcom/bbm/l/b/d;
 
-    iget-object v0, v0, Lcom/bbm/l/b/s;->k:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/l/b/t;->l:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/bbm/ui/AppItemView;->g:Ljava/lang/String;
 
-    .line 124
+    .line 123
     iget-object v0, p0, Lcom/bbm/ui/AppItemView;->a:Lcom/bbm/l/b/d;
 
-    iget-object v0, v0, Lcom/bbm/l/b/d;->a:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/l/b/d;->b:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/bbm/ui/AppItemView;->h:Ljava/lang/String;
 
     goto :goto_2
 
-    .line 136
+    .line 135
     :cond_4
     iget-object v0, p0, Lcom/bbm/ui/AppItemView;->f:Landroid/widget/ImageView;
 
@@ -536,24 +536,24 @@
     goto :goto_3
 .end method
 
-.method public setHttpLoader(Lcom/bbm/util/bq;)V
+.method public setHttpLoader(Lcom/bbm/util/bw;)V
     .locals 0
 
     .prologue
-    .line 105
-    iput-object p1, p0, Lcom/bbm/ui/AppItemView;->c:Lcom/bbm/util/bq;
+    .line 104
+    iput-object p1, p0, Lcom/bbm/ui/AppItemView;->c:Lcom/bbm/util/bw;
 
-    .line 106
+    .line 105
     return-void
 .end method
 
-.method public setImageCache(Lcom/bbm/util/b/d;)V
+.method public setImageCache(Lcom/bbm/util/b/e;)V
     .locals 0
 
     .prologue
-    .line 101
-    iput-object p1, p0, Lcom/bbm/ui/AppItemView;->b:Lcom/bbm/util/b/d;
+    .line 100
+    iput-object p1, p0, Lcom/bbm/ui/AppItemView;->b:Lcom/bbm/util/b/e;
 
-    .line 102
+    .line 101
     return-void
 .end method

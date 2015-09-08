@@ -1,103 +1,63 @@
 .class final Lcom/bbm/ui/activities/um;
-.super Ljava/lang/Object;
-.source "ImageViewerActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Lcom/bbm/j/k;
+.source "MainActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ImageViewerActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ImageViewerActivity;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
+    .locals 1
 
     .prologue
-    .line 74
-    iput-object p1, p0, Lcom/bbm/ui/activities/um;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
+    .line 323
+    iput-object p1, p0, Lcom/bbm/ui/activities/um;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method protected final a()V
+    .locals 2
 
     .prologue
-    const/4 v3, 0x4
-
-    const/4 v2, 0x0
-
-    .line 78
-    const-string v0, "mOnClickListener Clicked"
-
-    const-class v1, Lcom/bbm/ui/activities/ImageViewerActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 80
-    iget-object v0, p0, Lcom/bbm/ui/activities/um;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->a(Lcom/bbm/ui/activities/ImageViewerActivity;)Lcom/bbm/ui/FooterActionBar;
+    .line 326
+    invoke-static {}, Lcom/bbm/ui/activities/MainActivity;->l()Lcom/bbm/d/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/FooterActionBar;->getVisibility()I
+    const-string v1, "rateBbmNotification"
+
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->I(Ljava/lang/String;)Lcom/bbm/util/bs;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/util/bs;->d()Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v1, "enabled"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    .line 327
+    if-eqz v0, :cond_0
 
-    .line 81
-    iget-object v0, p0, Lcom/bbm/ui/activities/um;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
+    .line 328
+    iget-object v0, p0, Lcom/bbm/ui/activities/um;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->a(Lcom/bbm/ui/activities/ImageViewerActivity;)Lcom/bbm/ui/FooterActionBar;
+    invoke-static {v0}, Lcom/bbm/ui/activities/MainActivity;->d(Lcom/bbm/ui/activities/MainActivity;)V
 
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Lcom/bbm/ui/FooterActionBar;->setVisibility(I)V
-
-    .line 82
-    iget-object v0, p0, Lcom/bbm/ui/activities/um;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->b(Lcom/bbm/ui/activities/ImageViewerActivity;)Landroid/widget/ImageView;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 88
-    :goto_0
-    return-void
-
-    .line 84
+    .line 330
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/um;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->a(Lcom/bbm/ui/activities/ImageViewerActivity;)Lcom/bbm/ui/FooterActionBar;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/FooterActionBar;->setVisibility(I)V
-
-    .line 85
-    iget-object v0, p0, Lcom/bbm/ui/activities/um;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->b(Lcom/bbm/ui/activities/ImageViewerActivity;)Landroid/widget/ImageView;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 86
-    iget-object v0, p0, Lcom/bbm/ui/activities/um;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->c(Lcom/bbm/ui/activities/ImageViewerActivity;)V
-
-    goto :goto_0
+    return-void
 .end method

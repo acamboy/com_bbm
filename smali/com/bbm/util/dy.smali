@@ -1,26 +1,26 @@
 .class final Lcom/bbm/util/dy;
 .super Ljava/lang/Object;
-.source "TpaUtil.java"
+.source "ShareMyPinUtil.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/media/MediaScannerConnection$OnScanCompletedListener;
 
 
 # instance fields
-.field final synthetic a:Landroid/content/Context;
+.field final synthetic a:Ljava/lang/String;
 
-.field final synthetic b:Ljava/lang/String;
+.field final synthetic b:Lcom/bbm/util/dx;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
+.method constructor <init>(Lcom/bbm/util/dx;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 336
-    iput-object p1, p0, Lcom/bbm/util/dy;->a:Landroid/content/Context;
+    .line 84
+    iput-object p1, p0, Lcom/bbm/util/dy;->b:Lcom/bbm/util/dx;
 
-    iput-object p2, p0, Lcom/bbm/util/dy;->b:Ljava/lang/String;
+    iput-object p2, p0, Lcom/bbm/util/dy;->a:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,17 +29,19 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
+.method public final onScanCompleted(Ljava/lang/String;Landroid/net/Uri;)V
     .locals 2
 
     .prologue
-    .line 338
-    iget-object v0, p0, Lcom/bbm/util/dy;->a:Landroid/content/Context;
+    .line 87
+    iget-object v0, p0, Lcom/bbm/util/dy;->b:Lcom/bbm/util/dx;
 
-    iget-object v1, p0, Lcom/bbm/util/dy;->b:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/util/dx;->a:Landroid/app/Activity;
 
-    invoke-static {v0, v1}, Lcom/bbm/util/ds;->a(Landroid/content/Context;Ljava/lang/String;)V
+    iget-object v1, p0, Lcom/bbm/util/dy;->a:Ljava/lang/String;
 
-    .line 339
+    invoke-static {v0, v1, p2}, Lcom/bbm/util/dw;->a(Landroid/app/Activity;Ljava/lang/String;Landroid/net/Uri;)V
+
+    .line 88
     return-void
 .end method

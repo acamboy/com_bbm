@@ -1,42 +1,42 @@
 .class public final Lcom/bbm/d/cx;
-.super Lcom/bbm/d/dy;
+.super Lcom/bbm/d/ez;
 .source "BbmdsProtocol.java"
 
 
 # direct methods
-.method constructor <init>(Ljava/util/List;J)V
+.method constructor <init>(Ljava/lang/String;JLcom/bbm/d/cy;)V
     .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Ljava/lang/String;",
-            ">;J)V"
-        }
-    .end annotation
 
     .prologue
-    .line 3939
-    const-string v0, "requestChangeCategory"
+    .line 3213
+    const-string v0, "messageStatus"
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/d/ez;-><init>(Ljava/lang/String;)V
 
-    .line 3941
-    const-string v0, "contacts"
+    .line 3215
+    const-string v0, "conversationUri"
 
     invoke-virtual {p0, v0, p1}, Lcom/bbm/d/cx;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 3942
-    const-string v0, "newCategoryId"
+    .line 3216
+    const-string v0, "id"
 
-    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {p2, p3}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p0, v0, v1}, Lcom/bbm/d/cx;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 3943
+    .line 3217
+    const-string v0, "status"
+
+    invoke-virtual {p4}, Lcom/bbm/d/cy;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/d/cx;->a(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 3218
     return-void
 .end method
 
@@ -46,8 +46,8 @@
     .locals 1
 
     .prologue
-    .line 3937
-    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
+    .line 3182
+    invoke-super {p0}, Lcom/bbm/d/ez;->a()Lcom/bbm/f/ab;
 
     move-result-object v0
 

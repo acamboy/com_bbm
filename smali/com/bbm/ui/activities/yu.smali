@@ -1,89 +1,96 @@
 .class final Lcom/bbm/ui/activities/yu;
-.super Ljava/lang/Object;
-.source "NewChannelActivity.java"
+.super Lcom/bbm/j/a;
+.source "PrivateConversationActivity.java"
 
-# interfaces
-.implements Landroid/text/TextWatcher;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/j/a",
+        "<",
+        "Lcom/google/b/a/l",
+        "<",
+        "Lcom/bbm/d/ie;",
+        ">;>;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/NewChannelActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/NewChannelActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/PrivateConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 349
-    iput-object p1, p0, Lcom/bbm/ui/activities/yu;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+    .line 874
+    iput-object p1, p0, Lcom/bbm/ui/activities/yu;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
-    .locals 0
+.method protected final synthetic a()Ljava/lang/Object;
+    .locals 3
 
     .prologue
-    .line 354
-    return-void
-.end method
+    .line 874
+    iget-object v0, p0, Lcom/bbm/ui/activities/yu;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
-
-    .prologue
-    .line 359
-    return-void
-.end method
-
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 2
-
-    .prologue
-    .line 363
-    iget-object v1, p0, Lcom/bbm/ui/activities/yu;->a:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/yu;->a:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->m(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/EditText;
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->m(Lcom/bbm/ui/activities/PrivateConversationActivity;)Lcom/bbm/j/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    check-cast v0, Lcom/bbm/d/fv;
+
+    iget-object v0, v0, Lcom/bbm/d/fv;->q:Ljava/util/List;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/yu;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/PrivateConversationActivity;->i(Lcom/bbm/ui/activities/PrivateConversationActivity;)Lcom/bbm/d/a;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
+    check-cast v0, Ljava/lang/String;
 
-    move-result v0
+    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->e(Ljava/lang/String;)Lcom/bbm/d/ie;
 
-    if-nez v0, :cond_0
+    move-result-object v0
 
-    const/4 v0, 0x1
+    invoke-static {v0}, Lcom/google/b/a/l;->b(Ljava/lang/Object;)Lcom/google/b/a/l;
+
+    move-result-object v0
 
     :goto_0
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/NewChannelActivity;->a(Lcom/bbm/ui/activities/NewChannelActivity;Z)Z
+    return-object v0
 
-    .line 364
-    iget-object v0, p0, Lcom/bbm/ui/activities/yu;->a:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->a()V
-
-    .line 365
-    return-void
-
-    .line 363
     :cond_0
-    const/4 v0, 0x0
+    invoke-static {}, Lcom/google/b/a/l;->e()Lcom/google/b/a/l;
+
+    move-result-object v0
 
     goto :goto_0
 .end method

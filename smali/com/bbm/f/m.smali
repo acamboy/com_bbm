@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 229
+    .line 248
     iput-object p1, p0, Lcom/bbm/f/m;->a:Lcom/bbm/f/l;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,34 +35,34 @@
 
     const/4 v5, 0x0
 
-    .line 232
+    .line 251
     iget-object v0, p0, Lcom/bbm/f/m;->a:Lcom/bbm/f/l;
 
     iget-object v0, v0, Lcom/bbm/f/l;->a:Lcom/bbm/f/j;
 
     invoke-static {v0}, Lcom/bbm/f/j;->c(Lcom/bbm/f/j;)Z
 
-    .line 233
+    .line 252
     iget-object v0, p0, Lcom/bbm/f/m;->a:Lcom/bbm/f/l;
 
     iget-object v0, v0, Lcom/bbm/f/l;->a:Lcom/bbm/f/j;
 
-    invoke-static {v0}, Lcom/bbm/f/j;->a(Lcom/bbm/f/j;)Lcom/bbm/util/ct;
+    invoke-static {v0}, Lcom/bbm/f/j;->a(Lcom/bbm/f/j;)Lcom/bbm/util/dc;
 
     move-result-object v0
 
     sget-object v1, Lcom/bbm/f/b;->c:Lcom/bbm/f/b;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
 
-    .line 234
+    .line 253
     const-string v0, "Service layer status: disconnected"
 
     new-array v1, v5, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 237
+    .line 256
     iget-object v0, p0, Lcom/bbm/f/m;->a:Lcom/bbm/f/l;
 
     iget-object v0, v0, Lcom/bbm/f/l;->a:Lcom/bbm/f/j;
@@ -73,16 +73,12 @@
 
     if-nez v0, :cond_0
 
-    .line 238
-    iget-object v0, p0, Lcom/bbm/f/m;->a:Lcom/bbm/f/l;
-
-    iget-object v0, v0, Lcom/bbm/f/l;->a:Lcom/bbm/f/j;
-
-    invoke-static {}, Lcom/bbm/f/j;->k()J
+    .line 257
+    invoke-static {}, Lcom/bbm/f/j;->l()J
 
     move-result-wide v0
 
-    .line 239
+    .line 258
     const-string v2, "Unsolicited shutdown of bbmcore attempting to restart in %d ms"
 
     new-array v3, v6, [Ljava/lang/Object;
@@ -93,21 +89,21 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v7, v2, v3}, Lcom/bbm/y;->d(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v7, v2, v3}, Lcom/bbm/af;->d(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 240
+    .line 259
     iget-object v2, p0, Lcom/bbm/f/m;->a:Lcom/bbm/f/l;
 
     iget-object v2, v2, Lcom/bbm/f/l;->a:Lcom/bbm/f/j;
 
     invoke-static {v2, v6}, Lcom/bbm/f/j;->a(Lcom/bbm/f/j;Z)Z
 
-    .line 241
+    .line 260
     iget-object v2, p0, Lcom/bbm/f/m;->a:Lcom/bbm/f/l;
 
     iget-object v2, v2, Lcom/bbm/f/l;->a:Lcom/bbm/f/j;
 
-    invoke-static {v2}, Lcom/bbm/f/j;->f(Lcom/bbm/f/j;)Lcom/bbm/util/di;
+    invoke-static {v2}, Lcom/bbm/f/j;->f(Lcom/bbm/f/j;)Lcom/bbm/util/ds;
 
     move-result-object v2
 
@@ -119,46 +115,46 @@
 
     move-result-object v3
 
-    invoke-interface {v2, v3, v0, v1}, Lcom/bbm/util/di;->a(Ljava/lang/Runnable;J)V
+    invoke-interface {v2, v3, v0, v1}, Lcom/bbm/util/ds;->a(Ljava/lang/Runnable;J)V
 
-    .line 268
+    .line 287
     :goto_0
     return-void
 
-    .line 245
+    .line 264
     :cond_0
-    invoke-static {}, Lcom/bbm/f/j;->l()Z
+    invoke-static {}, Lcom/bbm/f/j;->m()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 246
+    .line 265
     const-string v0, "Stopping Platform"
 
     new-array v1, v5, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 247
+    .line 266
     invoke-static {}, Lcom/rim/bbm/BbmPlatformService;->stopPlatform()V
 
-    .line 248
+    .line 267
     invoke-static {v7}, Lcom/rim/bbm/BbmPlatformService;->setPlatformDelegate(Lcom/rim/bbm/BbmPlatformService$PlatformDelegate;)V
 
-    .line 249
+    .line 268
     const-string v0, "StopPlatform returned."
 
     new-array v1, v5, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 250
-    invoke-static {}, Lcom/bbm/f/j;->m()Z
-
-    .line 253
-    :cond_1
+    .line 269
     invoke-static {}, Lcom/bbm/f/j;->n()Z
+
+    .line 272
+    :cond_1
+    invoke-static {}, Lcom/bbm/f/j;->o()Z
 
     move-result v0
 
@@ -172,20 +168,20 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/b/a/l;->a()Z
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 254
+    .line 273
     const-string v0, "Stopping MediaCallService"
 
     new-array v1, v5, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 255
+    .line 274
     iget-object v0, p0, Lcom/bbm/f/m;->a:Lcom/bbm/f/l;
 
     iget-object v0, v0, Lcom/bbm/f/l;->a:Lcom/bbm/f/j;
@@ -194,7 +190,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -204,29 +200,29 @@
 
     move-result v0
 
-    .line 256
+    .line 275
     if-eqz v0, :cond_3
 
-    .line 257
+    .line 276
     const-string v0, "MediaCallService stopped successfully."
 
     new-array v1, v5, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 261
+    .line 280
     :goto_1
-    invoke-static {}, Lcom/bbm/f/j;->o()Z
+    invoke-static {}, Lcom/bbm/f/j;->p()Z
 
-    .line 264
+    .line 283
     :cond_2
     const-string v0, "NativeServiceLayer Stopped"
 
     new-array v1, v5, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 267
+    .line 286
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
@@ -235,13 +231,13 @@
 
     goto :goto_0
 
-    .line 259
+    .line 278
     :cond_3
     const-string v0, "Fatal error stopping MediaCallService"
 
     new-array v1, v5, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     goto :goto_1
 .end method

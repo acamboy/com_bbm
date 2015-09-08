@@ -1,28 +1,32 @@
 .class public final Lcom/bbm/g/cp;
-.super Lcom/bbm/g/cv;
+.super Lcom/bbm/g/db;
 .source "GroupsProtocol.java"
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>(ZLjava/lang/String;)V
+    .locals 2
 
     .prologue
-    .line 2555
-    const-string v0, "groupQRCodeScannedRequestGroupAccess"
+    .line 2462
+    const-string v0, "groupPictureDelete"
 
-    invoke-direct {p0, v0}, Lcom/bbm/g/cv;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/g/db;-><init>(Ljava/lang/String;)V
 
-    .line 2557
-    const-string v0, "cookie"
+    .line 2464
+    const-string v0, "localOnly"
 
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/g/cp;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    .line 2558
-    const-string v0, "qrcode"
+    move-result-object v1
+
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/g/cp;->a(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 2465
+    const-string v0, "pictureUri"
 
     invoke-virtual {p0, v0, p2}, Lcom/bbm/g/cp;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 2559
+    .line 2466
     return-void
 .end method

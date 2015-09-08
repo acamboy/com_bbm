@@ -74,7 +74,7 @@
 .end method
 
 .method public setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
-    .locals 1
+    .locals 2
 
     .prologue
     .line 38
@@ -95,7 +95,9 @@
 
     move-result-object v0
 
-    invoke-super {p0, v0}, Lcom/bbm/ui/SpanFixTextView;->setText(Ljava/lang/CharSequence;)V
+    sget-object v1, Landroid/widget/TextView$BufferType;->NORMAL:Landroid/widget/TextView$BufferType;
+
+    invoke-super {p0, v0, v1}, Lcom/bbm/ui/SpanFixTextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
 
     goto :goto_0
 .end method

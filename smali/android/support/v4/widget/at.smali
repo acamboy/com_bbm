@@ -1,23 +1,17 @@
-.class final Landroid/support/v4/widget/at;
+.class Landroid/support/v4/widget/at;
 .super Ljava/lang/Object;
-.source "SwipeRefreshLayout.java"
+.source "ScrollerCompat.java"
 
 # interfaces
-.implements Landroid/view/animation/Animation$AnimationListener;
-
-
-# instance fields
-.field final synthetic a:Landroid/support/v4/widget/SwipeRefreshLayout;
+.implements Landroid/support/v4/widget/ar;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/widget/SwipeRefreshLayout;)V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 149
-    iput-object p1, p0, Landroid/support/v4/widget/at;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
-
+    .line 150
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,161 +19,187 @@
 
 
 # virtual methods
-.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
-    .locals 3
+.method public final a(Landroid/content/Context;Landroid/view/animation/Interpolator;)Ljava/lang/Object;
+    .locals 1
 
     .prologue
-    .line 160
-    iget-object v0, p0, Landroid/support/v4/widget/at;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
+    .line 153
+    if-eqz p2, :cond_0
 
-    invoke-static {v0}, Landroid/support/v4/widget/SwipeRefreshLayout;->a(Landroid/support/v4/widget/SwipeRefreshLayout;)Z
+    new-instance v0, Landroid/widget/OverScroller;
 
-    move-result v0
+    invoke-direct {v0, p1, p2}, Landroid/widget/OverScroller;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
 
-    if-eqz v0, :cond_1
-
-    .line 162
-    iget-object v0, p0, Landroid/support/v4/widget/at;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
-
-    invoke-static {v0}, Landroid/support/v4/widget/SwipeRefreshLayout;->b(Landroid/support/v4/widget/SwipeRefreshLayout;)Landroid/support/v4/widget/v;
-
-    move-result-object v0
-
-    const/16 v1, 0xff
-
-    invoke-virtual {v0, v1}, Landroid/support/v4/widget/v;->setAlpha(I)V
-
-    .line 163
-    iget-object v0, p0, Landroid/support/v4/widget/at;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
-
-    invoke-static {v0}, Landroid/support/v4/widget/SwipeRefreshLayout;->b(Landroid/support/v4/widget/SwipeRefreshLayout;)Landroid/support/v4/widget/v;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/support/v4/widget/v;->start()V
-
-    .line 164
-    iget-object v0, p0, Landroid/support/v4/widget/at;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
-
-    invoke-static {v0}, Landroid/support/v4/widget/SwipeRefreshLayout;->c(Landroid/support/v4/widget/SwipeRefreshLayout;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 165
-    iget-object v0, p0, Landroid/support/v4/widget/at;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
-
-    invoke-static {v0}, Landroid/support/v4/widget/SwipeRefreshLayout;->d(Landroid/support/v4/widget/SwipeRefreshLayout;)Landroid/support/v4/widget/bb;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 166
-    iget-object v0, p0, Landroid/support/v4/widget/at;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
-
-    invoke-static {v0}, Landroid/support/v4/widget/SwipeRefreshLayout;->d(Landroid/support/v4/widget/SwipeRefreshLayout;)Landroid/support/v4/widget/bb;
-
-    .line 181
-    :cond_0
     :goto_0
-    iget-object v0, p0, Landroid/support/v4/widget/at;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
+    return-object v0
 
-    iget-object v1, p0, Landroid/support/v4/widget/at;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
+    :cond_0
+    new-instance v0, Landroid/widget/OverScroller;
 
-    invoke-static {v1}, Landroid/support/v4/widget/SwipeRefreshLayout;->e(Landroid/support/v4/widget/SwipeRefreshLayout;)Landroid/support/v4/widget/a;
+    invoke-direct {v0, p1}, Landroid/widget/OverScroller;-><init>(Landroid/content/Context;)V
 
-    move-result-object v1
+    goto :goto_0
+.end method
 
-    invoke-virtual {v1}, Landroid/support/v4/widget/a;->getTop()I
+.method public final a(Ljava/lang/Object;IIII)V
+    .locals 9
 
-    move-result v1
-
-    invoke-static {v0, v1}, Landroid/support/v4/widget/SwipeRefreshLayout;->a(Landroid/support/v4/widget/SwipeRefreshLayout;I)I
-
-    .line 182
-    return-void
-
-    .line 170
-    :cond_1
-    iget-object v0, p0, Landroid/support/v4/widget/at;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
-
-    invoke-static {v0}, Landroid/support/v4/widget/SwipeRefreshLayout;->b(Landroid/support/v4/widget/SwipeRefreshLayout;)Landroid/support/v4/widget/v;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/support/v4/widget/v;->stop()V
-
-    .line 171
-    iget-object v0, p0, Landroid/support/v4/widget/at;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
-
-    invoke-static {v0}, Landroid/support/v4/widget/SwipeRefreshLayout;->e(Landroid/support/v4/widget/SwipeRefreshLayout;)Landroid/support/v4/widget/a;
-
-    move-result-object v0
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/support/v4/widget/a;->setVisibility(I)V
-
-    .line 172
-    iget-object v0, p0, Landroid/support/v4/widget/at;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
-
-    invoke-static {v0}, Landroid/support/v4/widget/SwipeRefreshLayout;->f(Landroid/support/v4/widget/SwipeRefreshLayout;)V
-
-    .line 174
-    iget-object v0, p0, Landroid/support/v4/widget/at;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
-
-    invoke-static {v0}, Landroid/support/v4/widget/SwipeRefreshLayout;->g(Landroid/support/v4/widget/SwipeRefreshLayout;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 175
-    iget-object v0, p0, Landroid/support/v4/widget/at;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
-
+    .prologue
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Landroid/support/v4/widget/SwipeRefreshLayout;->a(Landroid/support/v4/widget/SwipeRefreshLayout;F)V
+    .line 195
+    move-object v0, p1
 
-    goto :goto_0
+    check-cast v0, Landroid/widget/OverScroller;
 
-    .line 177
-    :cond_2
-    iget-object v0, p0, Landroid/support/v4/widget/at;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
+    const/high16 v7, -0x80000000
 
-    iget-object v1, p0, Landroid/support/v4/widget/at;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
+    const v8, 0x7fffffff
 
-    iget v1, v1, Landroid/support/v4/widget/SwipeRefreshLayout;->b:I
+    move v2, v1
 
-    iget-object v2, p0, Landroid/support/v4/widget/at;->a:Landroid/support/v4/widget/SwipeRefreshLayout;
+    move v3, p2
 
-    invoke-static {v2}, Landroid/support/v4/widget/SwipeRefreshLayout;->h(Landroid/support/v4/widget/SwipeRefreshLayout;)I
+    move v4, p3
 
-    move-result v2
+    move v5, p4
 
-    sub-int/2addr v1, v2
+    move v6, p5
 
-    const/4 v2, 0x1
+    invoke-virtual/range {v0 .. v8}, Landroid/widget/OverScroller;->fling(IIIIIIII)V
 
-    invoke-static {v0, v1, v2}, Landroid/support/v4/widget/SwipeRefreshLayout;->a(Landroid/support/v4/widget/SwipeRefreshLayout;IZ)V
-
-    goto :goto_0
-.end method
-
-.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
-    .locals 0
-
-    .prologue
-    .line 156
+    .line 197
     return-void
 .end method
 
-.method public final onAnimationStart(Landroid/view/animation/Animation;)V
+.method public final a(Ljava/lang/Object;IIIII)V
+    .locals 6
+
+    .prologue
+    .line 189
+    move-object v0, p1
+
+    check-cast v0, Landroid/widget/OverScroller;
+
+    move v1, p2
+
+    move v2, p3
+
+    move v3, p4
+
+    move v4, p5
+
+    move v5, p6
+
+    invoke-virtual/range {v0 .. v5}, Landroid/widget/OverScroller;->startScroll(IIIII)V
+
+    .line 190
+    return-void
+.end method
+
+.method public final a(Ljava/lang/Object;)Z
+    .locals 1
+
+    .prologue
+    .line 158
+    check-cast p1, Landroid/widget/OverScroller;
+
+    invoke-virtual {p1}, Landroid/widget/OverScroller;->isFinished()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final b(Ljava/lang/Object;)I
+    .locals 1
+
+    .prologue
+    .line 163
+    check-cast p1, Landroid/widget/OverScroller;
+
+    invoke-virtual {p1}, Landroid/widget/OverScroller;->getCurrX()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final c(Ljava/lang/Object;)I
+    .locals 1
+
+    .prologue
+    .line 168
+    check-cast p1, Landroid/widget/OverScroller;
+
+    invoke-virtual {p1}, Landroid/widget/OverScroller;->getCurrY()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public d(Ljava/lang/Object;)F
+    .locals 1
+
+    .prologue
+    .line 173
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final e(Ljava/lang/Object;)Z
+    .locals 1
+
+    .prologue
+    .line 178
+    check-cast p1, Landroid/widget/OverScroller;
+
+    invoke-virtual {p1}, Landroid/widget/OverScroller;->computeScrollOffset()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final f(Ljava/lang/Object;)V
     .locals 0
 
     .prologue
-    .line 152
+    .line 208
+    check-cast p1, Landroid/widget/OverScroller;
+
+    invoke-virtual {p1}, Landroid/widget/OverScroller;->abortAnimation()V
+
+    .line 209
     return-void
+.end method
+
+.method public final g(Ljava/lang/Object;)I
+    .locals 1
+
+    .prologue
+    .line 229
+    check-cast p1, Landroid/widget/OverScroller;
+
+    invoke-virtual {p1}, Landroid/widget/OverScroller;->getFinalX()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final h(Ljava/lang/Object;)I
+    .locals 1
+
+    .prologue
+    .line 234
+    check-cast p1, Landroid/widget/OverScroller;
+
+    invoke-virtual {p1}, Landroid/widget/OverScroller;->getFinalY()I
+
+    move-result v0
+
+    return v0
 .end method

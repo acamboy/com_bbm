@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@id/menu_view_channel">
+        <item android:icon="@drawable/ic_header_like" android:id="@id/button_like" android:visible="false" android:title="@string/channel_post_comment_like" app:showAsAction="always|collapseActionView" />
+        <item android:icon="@drawable/ic_header_unlike" android:id="@id/button_unlike" android:visible="false" android:title="@string/channel_post_comment_unlike" app:showAsAction="always|collapseActionView" />
+        <item android:icon="@drawable/ic_header_repost" android:id="@id/button_repost" android:visible="true" android:title="@string/channel_post_comment_repost" app:showAsAction="always|collapseActionView" />
+        <item android:icon="@drawable/ic_feeds_like" android:id="@id/menu_like" android:visible="false" android:title="@string/channel_post_comment_like" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_feeds_unlike" android:id="@id/menu_unlike" android:visible="false" android:title="@string/channel_post_comment_unlike" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_repost" android:id="@id/menu_repost" android:visible="true" android:title="@string/channel_post_comment_repost" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_share" android:id="@id/menu_share" android:visible="false" android:title="@string/channel_post_secondary_slidemenu_share_post" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_drawer_report" android:id="@id/menu_report_post" android:title="@string/channel_post_secondary_slidemenu_report_post" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_drawer_report" android:id="@id/menu_remove_report_post" android:title="@string/channel_post_secondary_slidemenu_remove_complaint" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_join_channel" android:id="@id/menu_join" android:visible="false" android:title="@string/join_channel" app:showAsAction="ifRoom" />
+        <item android:icon="@drawable/ic_channels_header_profile" android:id="@id/menu_preview" android:visible="false" android:title="@string/view_channel_info" app:showAsAction="ifRoom" />
+    </group>
+</menu>

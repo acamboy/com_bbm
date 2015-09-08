@@ -1,22 +1,26 @@
 .class final Lcom/bbm/ui/activities/aec;
 .super Ljava/lang/Object;
-.source "ReportProblemActivity.java"
+.source "SettingsActivity.java"
 
 # interfaces
-.implements Landroid/text/TextWatcher;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ReportProblemActivity;
+.field final synthetic a:Landroid/app/Dialog;
+
+.field final synthetic b:Lcom/bbm/ui/activities/SettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ReportProblemActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;Landroid/app/Dialog;)V
     .locals 0
 
     .prologue
-    .line 237
-    iput-object p1, p0, Lcom/bbm/ui/activities/aec;->a:Lcom/bbm/ui/activities/ReportProblemActivity;
+    .line 789
+    iput-object p1, p0, Lcom/bbm/ui/activities/aec;->b:Lcom/bbm/ui/activities/SettingsActivity;
+
+    iput-object p2, p0, Lcom/bbm/ui/activities/aec;->a:Landroid/app/Dialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,38 +29,28 @@
 
 
 # virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
-    .locals 2
+.method public final run()V
+    .locals 3
 
     .prologue
-    .line 248
-    const-string v0, "afterTextChanged"
+    .line 793
+    iget-object v0, p0, Lcom/bbm/ui/activities/aec;->a:Landroid/app/Dialog;
 
-    const-class v1, Lcom/bbm/ui/activities/ReportProblemActivity;
+    invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    .line 794
+    iget-object v0, p0, Lcom/bbm/ui/activities/aec;->b:Lcom/bbm/ui/activities/SettingsActivity;
 
-    .line 249
-    iget-object v0, p0, Lcom/bbm/ui/activities/aec;->a:Lcom/bbm/ui/activities/ReportProblemActivity;
+    iget-object v1, p0, Lcom/bbm/ui/activities/aec;->b:Lcom/bbm/ui/activities/SettingsActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ReportProblemActivity;->e(Lcom/bbm/ui/activities/ReportProblemActivity;)V
+    const v2, 0x7f0e078e
 
-    .line 250
-    return-void
-.end method
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/SettingsActivity;->getString(I)Ljava/lang/String;
 
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
+    move-result-object v1
 
-    .prologue
-    .line 244
-    return-void
-.end method
+    invoke-static {v0, v1}, Lcom/bbm/util/eu;->a(Landroid/content/Context;Ljava/lang/String;)V
 
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
-
-    .prologue
-    .line 240
+    .line 795
     return-void
 .end method

@@ -1,276 +1,266 @@
-.class final Lcom/bbm/iceberg/n;
-.super Lcom/bbm/d/b/f;
+.class public final Lcom/bbm/iceberg/n;
+.super Ljava/lang/Object;
 .source "LocalContactEnhancer.java"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/d/b/f",
-        "<",
-        "Lcom/bbm/iceberg/l;",
-        ">;"
-    }
-.end annotation
+# static fields
+.field private static final f:Ljava/lang/Object;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/iceberg/m;
+.field public final a:Lcom/bbm/iceberg/c;
+
+.field public b:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Lcom/bbm/j/r",
+            "<",
+            "Ljava/lang/Boolean;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+.field private final c:Landroid/content/Context;
+
+.field private final d:Lcom/bbm/util/ds;
+
+.field private final e:Ljava/util/concurrent/ThreadPoolExecutor;
+
+.field private g:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Lcom/bbm/iceberg/q;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private h:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Lcom/bbm/d/b/o",
+            "<",
+            "Lcom/bbm/iceberg/m;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+.field private final i:Landroid/os/Handler;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/iceberg/m;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
     .prologue
-    .line 59
-    iput-object p1, p0, Lcom/bbm/iceberg/n;->a:Lcom/bbm/iceberg/m;
+    .line 32
+    new-instance v0, Ljava/lang/Object;
 
-    invoke-direct {p0}, Lcom/bbm/d/b/f;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcom/bbm/iceberg/n;->f:Ljava/lang/Object;
 
     return-void
 .end method
 
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 8
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 45
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 36
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v0, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lcom/bbm/iceberg/n;->g:Ljava/lang/ref/WeakReference;
+
+    .line 40
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v0, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lcom/bbm/iceberg/n;->h:Ljava/lang/ref/WeakReference;
+
+    .line 42
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v0, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lcom/bbm/iceberg/n;->b:Ljava/lang/ref/WeakReference;
+
+    .line 46
+    iput-object p1, p0, Lcom/bbm/iceberg/n;->c:Landroid/content/Context;
+
+    .line 47
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lcom/bbm/iceberg/n;->i:Landroid/os/Handler;
+
+    .line 48
+    new-instance v0, Lcom/bbm/util/bv;
+
+    iget-object v1, p0, Lcom/bbm/iceberg/n;->i:Landroid/os/Handler;
+
+    invoke-direct {v0, v1}, Lcom/bbm/util/bv;-><init>(Landroid/os/Handler;)V
+
+    iput-object v0, p0, Lcom/bbm/iceberg/n;->d:Lcom/bbm/util/ds;
+
+    .line 50
+    new-instance v1, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x2
+
+    const-wide/16 v4, 0x1e
+
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    new-instance v7, Ljava/util/concurrent/ArrayBlockingQueue;
+
+    const/4 v0, 0x4
+
+    invoke-direct {v7, v0}, Ljava/util/concurrent/ArrayBlockingQueue;-><init>(I)V
+
+    invoke-direct/range {v1 .. v7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;)V
+
+    iput-object v1, p0, Lcom/bbm/iceberg/n;->e:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    .line 52
+    new-instance v0, Lcom/bbm/iceberg/c;
+
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/f;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/bbm/iceberg/n;->e:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    iget-object v3, p0, Lcom/bbm/iceberg/n;->d:Lcom/bbm/util/ds;
+
+    invoke-direct {v0, p1, v1, v2, v3}, Lcom/bbm/iceberg/c;-><init>(Landroid/content/Context;Lcom/bbm/f;Ljava/util/concurrent/Executor;Lcom/bbm/util/ds;)V
+
+    iput-object v0, p0, Lcom/bbm/iceberg/n;->a:Lcom/bbm/iceberg/c;
+
+    .line 53
+    return-void
+.end method
+
+.method static synthetic a(Lcom/bbm/iceberg/n;)Lcom/bbm/iceberg/q;
+    .locals 4
+
+    .prologue
+    .line 27
+    iget-object v0, p0, Lcom/bbm/iceberg/n;->g:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/iceberg/q;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcom/bbm/iceberg/q;
+
+    iget-object v1, p0, Lcom/bbm/iceberg/n;->c:Landroid/content/Context;
+
+    iget-object v2, p0, Lcom/bbm/iceberg/n;->e:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    iget-object v3, p0, Lcom/bbm/iceberg/n;->i:Landroid/os/Handler;
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/bbm/iceberg/q;-><init>(Landroid/content/Context;Ljava/util/concurrent/Executor;Landroid/os/Handler;)V
+
+    new-instance v1, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v1, v0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v1, p0, Lcom/bbm/iceberg/n;->g:Ljava/lang/ref/WeakReference;
+
+    :cond_0
+    return-object v0
+.end method
+
+.method static synthetic b(Lcom/bbm/iceberg/n;)Lcom/bbm/iceberg/c;
+    .locals 1
+
+    .prologue
+    .line 27
+    iget-object v0, p0, Lcom/bbm/iceberg/n;->a:Lcom/bbm/iceberg/c;
+
+    return-object v0
+.end method
+
+.method static synthetic b()Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 27
+    sget-object v0, Lcom/bbm/iceberg/n;->f:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method protected final a()Ljava/util/List;
-    .locals 11
+.method public final a()Lcom/bbm/j/r;
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
+            "Lcom/bbm/j/r",
+            "<",
             "Ljava/util/List",
             "<",
-            "Lcom/bbm/iceberg/l;",
-            ">;"
+            "Lcom/bbm/iceberg/m;",
+            ">;>;"
         }
     .end annotation
 
     .prologue
-    const/4 v10, 0x1
+    .line 56
+    iget-object v0, p0, Lcom/bbm/iceberg/n;->h:Ljava/lang/ref/WeakReference;
 
-    .line 62
-    iget-object v0, p0, Lcom/bbm/iceberg/n;->a:Lcom/bbm/iceberg/m;
-
-    invoke-static {v0}, Lcom/bbm/iceberg/m;->a(Lcom/bbm/iceberg/m;)Lcom/bbm/iceberg/p;
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/iceberg/p;->a()Lcom/bbm/j/r;
+    check-cast v0, Lcom/bbm/d/b/o;
 
-    move-result-object v0
+    .line 58
+    if-nez v0, :cond_0
 
-    invoke-interface {v0}, Lcom/bbm/j/r;->e()Ljava/lang/Object;
+    .line 59
+    new-instance v0, Lcom/bbm/iceberg/o;
 
-    move-result-object v0
+    invoke-direct {v0, p0}, Lcom/bbm/iceberg/o;-><init>(Lcom/bbm/iceberg/n;)V
 
-    check-cast v0, Ljava/util/List;
+    .line 124
+    new-instance v1, Ljava/lang/ref/WeakReference;
 
-    .line 64
-    invoke-static {}, Lcom/bbm/Alaska;->l()Lcom/bbm/ag;
+    invoke-direct {v1, v0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    move-result-object v1
+    iput-object v1, p0, Lcom/bbm/iceberg/n;->h:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v1}, Lcom/bbm/ag;->p()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    .line 110
-    :goto_0
-    return-object v0
-
-    .line 68
+    .line 128
     :cond_0
-    iget-object v1, p0, Lcom/bbm/iceberg/n;->a:Lcom/bbm/iceberg/m;
-
-    invoke-static {v1}, Lcom/bbm/iceberg/m;->b(Lcom/bbm/iceberg/m;)Lcom/bbm/iceberg/c;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/bbm/iceberg/c;->c()Lcom/bbm/iceberg/k;
-
-    move-result-object v3
-
-    .line 70
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    .line 72
-    new-instance v4, Ljava/util/HashMap;
-
-    invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
-
-    .line 74
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v5
-
-    :goto_1
-    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/iceberg/l;
-
-    .line 76
-    iget-object v1, v0, Lcom/bbm/iceberg/l;->e:Ljava/util/List;
-
-    .line 78
-    if-eqz v1, :cond_2
-
-    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
-
-    move-result v6
-
-    if-nez v6, :cond_2
-
-    .line 80
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v6
-
-    move-object v1, v0
-
-    :goto_2
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    .line 81
-    invoke-virtual {v3, v0}, Lcom/bbm/iceberg/k;->a(Ljava/lang/String;)Lcom/bbm/util/bi;
-
-    move-result-object v7
-
-    .line 83
-    invoke-virtual {v3, v0}, Lcom/bbm/iceberg/k;->b(Ljava/lang/String;)Ljava/util/List;
-
-    move-result-object v8
-
-    .line 85
-    sget-object v9, Lcom/bbm/util/bi;->b:Lcom/bbm/util/bi;
-
-    if-ne v7, v9, :cond_1
-
-    .line 86
-    invoke-static {}, Lcom/bbm/iceberg/m;->b()Ljava/lang/Object;
-
-    move-result-object v7
-
-    invoke-interface {v4, v0, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_2
-
-    .line 87
-    :cond_1
-    sget-object v0, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
-
-    if-ne v7, v0, :cond_6
-
-    .line 88
-    new-instance v7, Ljava/util/ArrayList;
-
-    invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
-
-    .line 89
-    invoke-virtual {v7, v8}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
-    .line 90
-    iget-object v0, v1, Lcom/bbm/iceberg/l;->f:Ljava/util/List;
-
-    invoke-virtual {v7, v0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
-    .line 91
-    new-instance v0, Lcom/bbm/iceberg/l;
-
-    invoke-direct {v0, v1}, Lcom/bbm/iceberg/l;-><init>(Lcom/bbm/iceberg/l;)V
-
-    .line 92
-    iput-boolean v10, v0, Lcom/bbm/iceberg/l;->g:Z
-
-    .line 93
-    iput-object v7, v0, Lcom/bbm/iceberg/l;->f:Ljava/util/List;
-
-    :goto_3
-    move-object v1, v0
-
-    .line 95
-    goto :goto_2
-
-    .line 98
-    :cond_2
-    new-instance v1, Lcom/bbm/iceberg/l;
-
-    invoke-direct {v1, v0}, Lcom/bbm/iceberg/l;-><init>(Lcom/bbm/iceberg/l;)V
-
-    .line 99
-    iput-boolean v10, v1, Lcom/bbm/iceberg/l;->g:Z
-
-    .line 100
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, v1, Lcom/bbm/iceberg/l;->f:Ljava/util/List;
-
-    .line 103
-    :cond_3
-    invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    .line 106
-    :cond_4
-    invoke-interface {v4}, Ljava/util/Map;->keySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    .line 107
-    iget-object v0, p0, Lcom/bbm/iceberg/n;->a:Lcom/bbm/iceberg/m;
-
-    invoke-static {v0}, Lcom/bbm/iceberg/m;->b(Lcom/bbm/iceberg/m;)Lcom/bbm/iceberg/c;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-interface {v4}, Ljava/util/Map;->keySet()Ljava/util/Set;
-
-    move-result-object v3
-
-    invoke-direct {v1, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/iceberg/c;->a(Ljava/util/List;)V
-
-    :cond_5
-    move-object v0, v2
-
-    .line 110
-    goto/16 :goto_0
-
-    :cond_6
-    move-object v0, v1
-
-    goto :goto_3
+    return-object v0
 .end method

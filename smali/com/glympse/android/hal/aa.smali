@@ -20,7 +20,7 @@
 
 
 # instance fields
-.field private ba:Ljava/util/ListIterator;
+.field private bb:Ljava/util/ListIterator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ListIterator",
@@ -46,7 +46,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 77
-    iput-object p1, p0, Lcom/glympse/android/hal/aa;->ba:Ljava/util/ListIterator;
+    iput-object p1, p0, Lcom/glympse/android/hal/aa;->bb:Ljava/util/ListIterator;
 
     .line 78
     return-void
@@ -59,7 +59,7 @@
 
     .prologue
     .line 82
-    iget-object v0, p0, Lcom/glympse/android/hal/aa;->ba:Ljava/util/ListIterator;
+    iget-object v0, p0, Lcom/glympse/android/hal/aa;->bb:Ljava/util/ListIterator;
 
     invoke-interface {v0}, Ljava/util/ListIterator;->hasPrevious()Z
 
@@ -78,7 +78,7 @@
 
     .prologue
     .line 87
-    iget-object v0, p0, Lcom/glympse/android/hal/aa;->ba:Ljava/util/ListIterator;
+    iget-object v0, p0, Lcom/glympse/android/hal/aa;->bb:Ljava/util/ListIterator;
 
     invoke-interface {v0}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
 

@@ -1,21 +1,24 @@
 .class final Lcom/bbm/ui/activities/sf;
-.super Ljava/util/TimerTask;
-.source "GroupPictureCommentsActivity.java"
+.super Ljava/lang/Object;
+.source "ImageViewerActivity.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/se;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/se;)V
     .locals 0
 
     .prologue
-    .line 700
-    iput-object p1, p0, Lcom/bbm/ui/activities/sf;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    .line 253
+    iput-object p1, p0, Lcom/bbm/ui/activities/sf;->a:Lcom/bbm/ui/activities/se;
 
-    invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -23,22 +26,29 @@
 
 # virtual methods
 .method public final run()V
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 704
-    iget-object v0, p0, Lcom/bbm/ui/activities/sf;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    .line 256
+    iget-object v0, p0, Lcom/bbm/ui/activities/sf;->a:Lcom/bbm/ui/activities/se;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->v(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Landroid/os/Handler;
+    iget-object v0, v0, Lcom/bbm/ui/activities/se;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
+
+    invoke-virtual {v0}, Landroid/support/v7/app/d;->c()Landroid/support/v7/app/e;
 
     move-result-object v0
 
-    new-instance v1, Lcom/bbm/ui/activities/sg;
+    invoke-virtual {v0}, Landroid/support/v7/app/e;->b()Landroid/support/v7/app/a;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/sg;-><init>(Lcom/bbm/ui/activities/sf;)V
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    .line 257
+    if-eqz v0, :cond_0
 
-    .line 714
+    .line 258
+    invoke-virtual {v0}, Landroid/support/v7/app/a;->f()V
+
+    .line 260
+    :cond_0
     return-void
 .end method

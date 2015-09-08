@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static cR:Z
+.field private static cU:Z
 
-.field private static cS:Ljava/lang/Class;
+.field private static cV:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class",
@@ -15,9 +15,9 @@
     .end annotation
 .end field
 
-.field private static dj:Ljava/lang/reflect/Method;
+.field private static dm:Ljava/lang/reflect/Method;
 
-.field private static dk:Landroid/net/Uri;
+.field private static dn:Landroid/net/Uri;
 
 
 # direct methods
@@ -30,16 +30,16 @@
     .line 2560
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_Instances;->cR:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_Instances;->cU:Z
 
     .line 2561
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_Instances;->cS:Ljava/lang/Class;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_Instances;->cV:Ljava/lang/Class;
 
     .line 2562
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_Instances;->dj:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_Instances;->dm:Ljava/lang/reflect/Method;
 
     .line 2563
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_Instances;->dk:Landroid/net/Uri;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_Instances;->dn:Landroid/net/Uri;
 
     return-void
 .end method
@@ -61,12 +61,12 @@
     const/4 v1, 0x1
 
     .line 2568
-    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_Instances;->cR:Z
+    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_Instances;->cU:Z
 
     if-nez v0, :cond_1
 
     .line 2570
-    sput-boolean v1, Lcom/glympse/android/hal/Reflection$_Instances;->cR:Z
+    sput-boolean v1, Lcom/glympse/android/hal/Reflection$_Instances;->cU:Z
 
     .line 2574
     :try_start_0
@@ -76,19 +76,19 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_Instances;->cS:Ljava/lang/Class;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_Instances;->cV:Ljava/lang/Class;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_2
 
     .line 2580
     :goto_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Instances;->cS:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Instances;->cV:Ljava/lang/Class;
 
     if-eqz v0, :cond_0
 
     .line 2584
     :try_start_1
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Instances;->cS:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Instances;->cV:Ljava/lang/Class;
 
     const-string v1, "query"
 
@@ -124,14 +124,14 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_Instances;->dj:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_Instances;->dm:Ljava/lang/reflect/Method;
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
 
     .line 2591
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Instances;->cS:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Instances;->cV:Ljava/lang/Class;
 
     const-string v1, "CONTENT_URI"
 
@@ -147,14 +147,14 @@
 
     check-cast v0, Landroid/net/Uri;
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_Instances;->dk:Landroid/net/Uri;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_Instances;->dn:Landroid/net/Uri;
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
 
     .line 2600
     :cond_0
     :goto_2
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Instances;->dk:Landroid/net/Uri;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Instances;->dn:Landroid/net/Uri;
 
     if-nez v0, :cond_1
 
@@ -175,7 +175,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_Instances;->dk:Landroid/net/Uri;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_Instances;->dn:Landroid/net/Uri;
 
     .line 2605
     :cond_1
@@ -209,13 +209,13 @@
     invoke-static {p0}, Lcom/glympse/android/hal/Reflection$_Instances;->a(Landroid/content/ContentResolver;)V
 
     .line 2612
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Instances;->dj:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Instances;->dm:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 2616
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Instances;->dj:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Instances;->dm:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
 
@@ -267,11 +267,11 @@
 
     .line 2625
     :cond_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Instances;->dk:Landroid/net/Uri;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Instances;->dn:Landroid/net/Uri;
 
     if-eqz v0, :cond_1
 
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Instances;->dk:Landroid/net/Uri;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Instances;->dn:Landroid/net/Uri;
 
     new-instance v1, Ljava/lang/StringBuilder;
 

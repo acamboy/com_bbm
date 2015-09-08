@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/afb;
 .super Ljava/lang/Object;
-.source "SelectCategoryActivity.java"
+.source "SponsoredAdActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/activities/afh;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/aez;
+.field final synthetic a:Lcom/bbm/ui/activities/SponsoredAdActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/aez;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SponsoredAdActivity;)V
     .locals 0
 
     .prologue
-    .line 88
-    iput-object p1, p0, Lcom/bbm/ui/activities/afb;->a:Lcom/bbm/ui/activities/aez;
+    .line 293
+    iput-object p1, p0, Lcom/bbm/ui/activities/afb;->a:Lcom/bbm/ui/activities/SponsoredAdActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,36 +25,15 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;J)V
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
 
     .prologue
-    .line 91
-    invoke-static {}, Lcom/bbm/ui/activities/SelectCategoryActivity;->a()Lcom/bbm/d/a;
+    .line 296
+    iget-object v0, p0, Lcom/bbm/ui/activities/afb;->a:Lcom/bbm/ui/activities/SponsoredAdActivity;
 
-    move-result-object v0
+    invoke-static {v0}, Lcom/bbm/ui/activities/SponsoredAdActivity;->j(Lcom/bbm/ui/activities/SponsoredAdActivity;)V
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/afb;->a:Lcom/bbm/ui/activities/aez;
-
-    iget-object v1, v1, Lcom/bbm/ui/activities/aez;->a:Lcom/bbm/ui/activities/SelectCategoryActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/SelectCategoryActivity;->b(Lcom/bbm/ui/activities/SelectCategoryActivity;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    invoke-static {v1, p2, p3}, Lcom/bbm/d/aa;->a(Ljava/util/List;J)Lcom/bbm/d/cx;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
-
-    .line 92
-    iget-object v0, p0, Lcom/bbm/ui/activities/afb;->a:Lcom/bbm/ui/activities/aez;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/aez;->a:Lcom/bbm/ui/activities/SelectCategoryActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/SelectCategoryActivity;->finish()V
-
-    .line 93
+    .line 297
     return-void
 .end method

@@ -1,83 +1,102 @@
 .class final Lcom/bbm/util/v;
-.super Ljava/lang/Object;
+.super Lcom/bbm/ui/e/e;
 .source "ChannelJoinUtil.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/util/u;
+.field final synthetic a:Lcom/bbm/d/ff;
+
+.field final synthetic b:Landroid/widget/ImageView;
+
+.field final synthetic d:Landroid/app/Activity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/util/u;)V
+.method constructor <init>(Ljava/lang/String;Lcom/bbm/d/ff;Landroid/widget/ImageView;Landroid/app/Activity;)V
     .locals 0
 
     .prologue
-    .line 73
-    iput-object p1, p0, Lcom/bbm/util/v;->a:Lcom/bbm/util/u;
+    .line 80
+    iput-object p2, p0, Lcom/bbm/util/v;->a:Lcom/bbm/d/ff;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Lcom/bbm/util/v;->b:Landroid/widget/ImageView;
+
+    iput-object p4, p0, Lcom/bbm/util/v;->d:Landroid/app/Activity;
+
+    invoke-direct {p0, p1}, Lcom/bbm/ui/e/e;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final a()V
+    .locals 2
 
     .prologue
-    .line 76
-    iget-object v0, p0, Lcom/bbm/util/v;->a:Lcom/bbm/util/u;
-
-    iget-object v0, v0, Lcom/bbm/util/u;->d:Landroid/app/Activity;
-
-    iget-object v1, p0, Lcom/bbm/util/v;->a:Lcom/bbm/util/u;
-
-    iget-object v1, v1, Lcom/bbm/util/u;->d:Landroid/app/Activity;
-
-    const v2, 0x7f0e0690
-
-    invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    iget-object v4, p0, Lcom/bbm/util/v;->a:Lcom/bbm/util/u;
-
-    iget-object v4, v4, Lcom/bbm/util/u;->a:Lcom/bbm/d/ee;
-
-    iget-object v4, v4, Lcom/bbm/d/ee;->k:Ljava/lang/String;
-
-    aput-object v4, v2, v3
-
-    invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/util/v;->a:Lcom/bbm/util/u;
-
-    iget-object v2, v2, Lcom/bbm/util/u;->d:Landroid/app/Activity;
-
-    const v3, 0x7f0e0691
-
-    invoke-virtual {v2, v3}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v3, Lcom/bbm/util/w;
-
-    invoke-direct {v3, p0}, Lcom/bbm/util/w;-><init>(Lcom/bbm/util/v;)V
-
-    invoke-static {v0, v1, v2, v3}, Lcom/bbm/util/fh;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/view/View$OnClickListener;)V
-
     .line 83
+    iget-object v0, p0, Lcom/bbm/util/v;->a:Lcom/bbm/d/ff;
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lcom/bbm/d/ff;->w:Z
+
+    .line 84
+    invoke-static {}, Lcom/bbm/util/t;->a()Z
+
+    .line 85
+    iget-object v0, p0, Lcom/bbm/util/v;->b:Landroid/widget/ImageView;
+
+    if-eqz v0, :cond_0
+
+    .line 86
+    iget-object v0, p0, Lcom/bbm/util/v;->b:Landroid/widget/ImageView;
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 88
+    :cond_0
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
+
+    new-instance v1, Lcom/bbm/util/w;
+
+    invoke-direct {v1, p0}, Lcom/bbm/util/w;-><init>(Lcom/bbm/util/v;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 100
+    return-void
+.end method
+
+.method public final a(I)V
+    .locals 2
+
+    .prologue
+    .line 104
+    iget-object v0, p0, Lcom/bbm/util/v;->a:Lcom/bbm/d/ff;
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Lcom/bbm/d/ff;->w:Z
+
+    .line 105
+    invoke-static {}, Lcom/bbm/util/t;->a()Z
+
+    .line 106
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
+
+    new-instance v1, Lcom/bbm/util/y;
+
+    invoke-direct {v1, p0, p1}, Lcom/bbm/util/y;-><init>(Lcom/bbm/util/v;I)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 112
     return-void
 .end method

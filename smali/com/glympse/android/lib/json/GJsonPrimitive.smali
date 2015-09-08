@@ -21,11 +21,11 @@
 
 .field public _type:I
 
-.field private ro:J
+.field private sr:J
 
-.field private rp:D
+.field private ss:D
 
-.field private rq:Ljava/lang/String;
+.field private st:Ljava/lang/String;
 
 
 # direct methods
@@ -63,17 +63,17 @@
     .line 48
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->ro:J
+    iput-wide v0, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->sr:J
 
     .line 49
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->rp:D
+    iput-wide v0, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->ss:D
 
     .line 50
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->rq:Ljava/lang/String;
+    iput-object v0, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->st:Ljava/lang/String;
 
     .line 51
     return-void
@@ -357,7 +357,7 @@
     goto :goto_0
 .end method
 
-.method private cX()Z
+.method private db()Z
     .locals 6
 
     .prologue
@@ -396,14 +396,14 @@
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->ro:J
+    iput-wide v2, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->sr:J
 
     .line 334
-    iget-wide v2, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->ro:J
+    iget-wide v2, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->sr:J
 
     long-to-double v2, v2
 
-    iput-wide v2, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->rp:D
+    iput-wide v2, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->ss:D
 
     .line 336
     iget-object v1, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->_buffer:[C
@@ -418,7 +418,7 @@
     return v0
 .end method
 
-.method private cY()Z
+.method private dc()Z
     .locals 6
 
     .prologue
@@ -457,14 +457,14 @@
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->rp:D
+    iput-wide v2, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->ss:D
 
     .line 348
-    iget-wide v2, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->rp:D
+    iget-wide v2, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->ss:D
 
     double-to-long v2, v2
 
-    iput-wide v2, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->ro:J
+    iput-wide v2, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->sr:J
 
     .line 350
     iget-object v1, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->_buffer:[C
@@ -479,7 +479,7 @@
     return v0
 .end method
 
-.method private cZ()Z
+.method private dd()Z
     .locals 4
 
     .prologue
@@ -513,14 +513,14 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->ro:J
+    iput-wide v0, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->sr:J
 
     .line 363
-    iget-wide v0, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->ro:J
+    iget-wide v0, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->sr:J
 
     long-to-double v0, v0
 
-    iput-wide v0, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->rp:D
+    iput-wide v0, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->ss:D
 
     .line 364
     const/4 v0, 0x1
@@ -552,7 +552,7 @@
     if-eqz v0, :cond_0
 
     .line 103
-    iget-wide v0, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->rp:D
+    iget-wide v0, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->ss:D
 
     .line 129
     :goto_0
@@ -571,13 +571,13 @@
     iput-boolean v1, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->_success:Z
 
     .line 124
-    const-wide/high16 v0, 0x7ff8000000000000L
+    const-wide/high16 v0, 0x7ff8000000000000L    # NaN
 
-    iput-wide v0, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->rp:D
+    iput-wide v0, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->ss:D
 
     .line 129
     :goto_1
-    iget-wide v0, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->rp:D
+    iget-wide v0, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->ss:D
 
     goto :goto_0
 
@@ -586,7 +586,7 @@
     iput-boolean v1, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->_processed:Z
 
     .line 111
-    invoke-direct {p0}, Lcom/glympse/android/lib/json/GJsonPrimitive;->cY()Z
+    invoke-direct {p0}, Lcom/glympse/android/lib/json/GJsonPrimitive;->dc()Z
 
     move-result v0
 
@@ -599,7 +599,7 @@
     iput-boolean v1, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->_processed:Z
 
     .line 117
-    invoke-direct {p0}, Lcom/glympse/android/lib/json/GJsonPrimitive;->cX()Z
+    invoke-direct {p0}, Lcom/glympse/android/lib/json/GJsonPrimitive;->db()Z
 
     move-result v0
 
@@ -627,7 +627,7 @@
     if-eqz v0, :cond_0
 
     .line 71
-    iget-wide v0, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->ro:J
+    iget-wide v0, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->sr:J
 
     .line 96
     :goto_0
@@ -641,7 +641,7 @@
 
     .line 96
     :goto_1
-    iget-wide v0, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->ro:J
+    iget-wide v0, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->sr:J
 
     goto :goto_0
 
@@ -650,7 +650,7 @@
     iput-boolean v1, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->_processed:Z
 
     .line 79
-    invoke-direct {p0}, Lcom/glympse/android/lib/json/GJsonPrimitive;->cX()Z
+    invoke-direct {p0}, Lcom/glympse/android/lib/json/GJsonPrimitive;->db()Z
 
     move-result v0
 
@@ -663,7 +663,7 @@
     iput-boolean v1, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->_processed:Z
 
     .line 85
-    invoke-direct {p0}, Lcom/glympse/android/lib/json/GJsonPrimitive;->cY()Z
+    invoke-direct {p0}, Lcom/glympse/android/lib/json/GJsonPrimitive;->dc()Z
 
     move-result v0
 
@@ -676,7 +676,7 @@
     iput-boolean v1, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->_processed:Z
 
     .line 91
-    invoke-direct {p0}, Lcom/glympse/android/lib/json/GJsonPrimitive;->cZ()Z
+    invoke-direct {p0}, Lcom/glympse/android/lib/json/GJsonPrimitive;->dd()Z
 
     move-result v0
 
@@ -729,7 +729,7 @@
     if-eqz v0, :cond_1
 
     .line 137
-    iget-object v0, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->rq:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->st:Ljava/lang/String;
 
     goto :goto_0
 
@@ -775,17 +775,17 @@
 
     invoke-direct {v1, v2, v5, v0}, Ljava/lang/String;-><init>([CII)V
 
-    iput-object v1, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->rq:Ljava/lang/String;
+    iput-object v1, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->st:Ljava/lang/String;
 
     .line 248
     :cond_2
-    iget-object v0, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->rq:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->st:Ljava/lang/String;
 
     goto :goto_0
 
     .line 150
     :cond_3
-    iput-object v4, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->rq:Ljava/lang/String;
+    iput-object v4, p0, Lcom/glympse/android/lib/json/GJsonPrimitive;->st:Ljava/lang/String;
 
     move v3, v5
 

@@ -1,4 +1,4 @@
-.class public final enum Lcom/bbm/k/j;
+.class public final Lcom/bbm/k/j;
 .super Ljava/lang/Enum;
 .source "GroupsCalendarProvider.java"
 
@@ -15,13 +15,13 @@
 
 
 # static fields
-.field public static final enum a:Lcom/bbm/k/j;
+.field public static final enum a:I
 
-.field public static final enum b:Lcom/bbm/k/j;
+.field public static final enum b:I
 
-.field public static final enum c:Lcom/bbm/k/j;
+.field public static final enum c:I
 
-.field private static final synthetic d:[Lcom/bbm/k/j;
+.field private static final synthetic d:[I
 
 
 # direct methods
@@ -29,104 +29,55 @@
     .locals 5
 
     .prologue
+    const/4 v0, 0x3
+
     const/4 v4, 0x2
 
     const/4 v3, 0x1
 
-    const/4 v2, 0x0
-
     .line 47
-    new-instance v0, Lcom/bbm/k/j;
-
-    const-string v1, "ActionAdded"
-
-    invoke-direct {v0, v1, v2}, Lcom/bbm/k/j;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/k/j;->a:Lcom/bbm/k/j;
+    sput v3, Lcom/bbm/k/j;->a:I
 
     .line 48
-    new-instance v0, Lcom/bbm/k/j;
-
-    const-string v1, "ActionRemoved"
-
-    invoke-direct {v0, v1, v3}, Lcom/bbm/k/j;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/k/j;->b:Lcom/bbm/k/j;
+    sput v4, Lcom/bbm/k/j;->b:I
 
     .line 49
-    new-instance v0, Lcom/bbm/k/j;
-
-    const-string v1, "ActionChanged"
-
-    invoke-direct {v0, v1, v4}, Lcom/bbm/k/j;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/k/j;->c:Lcom/bbm/k/j;
+    sput v0, Lcom/bbm/k/j;->c:I
 
     .line 46
-    const/4 v0, 0x3
+    new-array v0, v0, [I
 
-    new-array v0, v0, [Lcom/bbm/k/j;
+    const/4 v1, 0x0
 
-    sget-object v1, Lcom/bbm/k/j;->a:Lcom/bbm/k/j;
+    sget v2, Lcom/bbm/k/j;->a:I
 
-    aput-object v1, v0, v2
+    aput v2, v0, v1
 
-    sget-object v1, Lcom/bbm/k/j;->b:Lcom/bbm/k/j;
+    sget v1, Lcom/bbm/k/j;->b:I
 
-    aput-object v1, v0, v3
+    aput v1, v0, v3
 
-    sget-object v1, Lcom/bbm/k/j;->c:Lcom/bbm/k/j;
+    sget v1, Lcom/bbm/k/j;->c:I
 
-    aput-object v1, v0, v4
+    aput v1, v0, v4
 
-    sput-object v0, Lcom/bbm/k/j;->d:[Lcom/bbm/k/j;
+    sput-object v0, Lcom/bbm/k/j;->d:[I
 
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
-
-    .prologue
-    .line 46
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lcom/bbm/k/j;
+.method public static a()[I
     .locals 1
 
     .prologue
     .line 46
-    const-class v0, Lcom/bbm/k/j;
+    sget-object v0, Lcom/bbm/k/j;->d:[I
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/k/j;
-
-    return-object v0
-.end method
-
-.method public static values()[Lcom/bbm/k/j;
-    .locals 1
-
-    .prologue
-    .line 46
-    sget-object v0, Lcom/bbm/k/j;->d:[Lcom/bbm/k/j;
-
-    invoke-virtual {v0}, [Lcom/bbm/k/j;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, [I->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lcom/bbm/k/j;
+    check-cast v0, [I
 
     return-object v0
 .end method

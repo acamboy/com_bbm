@@ -1,189 +1,53 @@
 .class final Lcom/bbm/ui/c/is;
 .super Ljava/lang/Object;
-.source "StoreHomeFragment.java"
+.source "UpdatesFragment.java"
+
+# interfaces
+.implements Landroid/widget/TextView$OnEditorActionListener;
 
 
 # instance fields
-.field final a:Lcom/bbm/ui/c/it;
-
-.field final b:Ljava/lang/Object;
+.field final synthetic a:Lcom/bbm/ui/c/ic;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/ui/c/it;Lcom/bbm/l/b/d;)V
+.method constructor <init>(Lcom/bbm/ui/c/ic;)V
     .locals 0
 
     .prologue
-    .line 711
+    .line 1525
+    iput-object p1, p0, Lcom/bbm/ui/c/is;->a:Lcom/bbm/ui/c/ic;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 712
-    iput-object p2, p0, Lcom/bbm/ui/c/is;->b:Ljava/lang/Object;
-
-    .line 713
-    iput-object p1, p0, Lcom/bbm/ui/c/is;->a:Lcom/bbm/ui/c/it;
-
-    .line 714
-    return-void
-.end method
-
-.method public constructor <init>(Lcom/bbm/ui/c/it;Lcom/bbm/l/b/p;)V
-    .locals 0
-
-    .prologue
-    .line 706
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 707
-    iput-object p2, p0, Lcom/bbm/ui/c/is;->b:Ljava/lang/Object;
-
-    .line 708
-    iput-object p1, p0, Lcom/bbm/ui/c/is;->a:Lcom/bbm/ui/c/it;
-
-    .line 709
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
+    .locals 1
 
     .prologue
+    .line 1528
+    const/4 v0, 0x4
+
+    if-ne p2, v0, :cond_0
+
+    .line 1529
+    iget-object v0, p0, Lcom/bbm/ui/c/is;->a:Lcom/bbm/ui/c/ic;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/ic;->t(Lcom/bbm/ui/c/ic;)V
+
+    .line 1530
     const/4 v0, 0x1
 
-    const/4 v1, 0x0
-
-    .line 735
-    if-ne p0, p1, :cond_1
-
-    .line 755
-    :cond_0
+    .line 1532
     :goto_0
     return v0
 
-    .line 738
-    :cond_1
-    if-nez p1, :cond_2
-
-    move v0, v1
-
-    .line 739
-    goto :goto_0
-
-    .line 741
-    :cond_2
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_3
-
-    move v0, v1
-
-    .line 742
-    goto :goto_0
-
-    .line 744
-    :cond_3
-    check-cast p1, Lcom/bbm/ui/c/is;
-
-    .line 745
-    iget-object v2, p0, Lcom/bbm/ui/c/is;->a:Lcom/bbm/ui/c/it;
-
-    iget-object v3, p1, Lcom/bbm/ui/c/is;->a:Lcom/bbm/ui/c/it;
-
-    if-eq v2, v3, :cond_4
-
-    move v0, v1
-
-    .line 746
-    goto :goto_0
-
-    .line 748
-    :cond_4
-    iget-object v2, p0, Lcom/bbm/ui/c/is;->b:Ljava/lang/Object;
-
-    if-nez v2, :cond_5
-
-    .line 749
-    iget-object v2, p1, Lcom/bbm/ui/c/is;->b:Ljava/lang/Object;
-
-    if-eqz v2, :cond_0
-
-    move v0, v1
-
-    .line 750
-    goto :goto_0
-
-    .line 752
-    :cond_5
-    iget-object v2, p0, Lcom/bbm/ui/c/is;->b:Ljava/lang/Object;
-
-    iget-object v3, p1, Lcom/bbm/ui/c/is;->b:Ljava/lang/Object;
-
-    invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    move v0, v1
-
-    .line 753
-    goto :goto_0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 726
-    iget-object v0, p0, Lcom/bbm/ui/c/is;->a:Lcom/bbm/ui/c/it;
-
-    if-nez v0, :cond_0
-
-    move v0, v1
-
-    :goto_0
-    add-int/lit8 v0, v0, 0x1f
-
-    .line 729
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v2, p0, Lcom/bbm/ui/c/is;->b:Ljava/lang/Object;
-
-    if-nez v2, :cond_1
-
-    :goto_1
-    add-int/2addr v0, v1
-
-    .line 730
-    return v0
-
-    .line 726
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/c/is;->a:Lcom/bbm/ui/c/it;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/c/it;->hashCode()I
-
-    move-result v0
+    const/4 v0, 0x0
 
     goto :goto_0
-
-    .line 729
-    :cond_1
-    iget-object v1, p0, Lcom/bbm/ui/c/is;->b:Ljava/lang/Object;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    goto :goto_1
 .end method

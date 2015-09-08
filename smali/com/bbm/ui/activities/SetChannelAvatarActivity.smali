@@ -1,33 +1,31 @@
 .class public Lcom/bbm/ui/activities/SetChannelAvatarActivity;
-.super Lcom/bbm/ui/activities/ey;
+.super Lcom/bbm/bali/ui/main/a/a;
 .source "SetChannelAvatarActivity.java"
 
 
 # instance fields
-.field private a:Lcom/bbm/ui/FooterActionBar;
+.field private a:Z
 
 .field private b:Landroid/content/Context;
 
-.field private c:Landroid/net/Uri;
+.field private h:Landroid/net/Uri;
 
-.field private final d:Ljava/util/List;
+.field private final i:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
             "<",
-            "Lcom/bbm/ui/activities/agm;",
+            "Lcom/bbm/ui/activities/ade;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private e:Landroid/widget/ListView;
+.field private j:Landroid/widget/ListView;
 
-.field private f:Lcom/bbm/ui/activities/agn;
+.field private k:Lcom/bbm/ui/activities/adf;
 
-.field private g:Landroid/widget/AdapterView$OnItemClickListener;
-
-.field private final h:Lcom/bbm/ui/cn;
+.field private l:Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # direct methods
@@ -35,70 +33,43 @@
     .locals 1
 
     .prologue
-    .line 55
+    .line 56
     const-class v0, Lcom/bbm/ui/activities/NewChannelActivity;
 
-    invoke-direct {p0, v0}, Lcom/bbm/ui/activities/ey;-><init>(Ljava/lang/Class;)V
-
-    .line 45
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->c:Landroid/net/Uri;
+    invoke-direct {p0, v0}, Lcom/bbm/bali/ui/main/a/a;-><init>(Ljava/lang/Class;)V
 
     .line 46
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->h:Landroid/net/Uri;
+
+    .line 47
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->d:Ljava/util/List;
+    iput-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->i:Ljava/util/List;
 
-    .line 131
-    new-instance v0, Lcom/bbm/ui/activities/agk;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/agk;-><init>(Lcom/bbm/ui/activities/SetChannelAvatarActivity;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->h:Lcom/bbm/ui/cn;
-
-    .line 56
+    .line 57
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/SetChannelAvatarActivity;Landroid/net/Uri;)Landroid/net/Uri;
-    .locals 0
-
-    .prologue
-    .line 34
-    iput-object p1, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->c:Landroid/net/Uri;
-
-    return-object p1
-.end method
-
-.method static synthetic a(Lcom/bbm/ui/activities/SetChannelAvatarActivity;)Lcom/bbm/ui/activities/agn;
+.method static synthetic a(Lcom/bbm/ui/activities/SetChannelAvatarActivity;)Lcom/bbm/ui/activities/adf;
     .locals 1
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->f:Lcom/bbm/ui/activities/agn;
+    iget-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->k:Lcom/bbm/ui/activities/adf;
 
     return-object v0
 .end method
 
-.method static synthetic b(Lcom/bbm/ui/activities/SetChannelAvatarActivity;)Landroid/net/Uri;
+.method static synthetic b(Lcom/bbm/ui/activities/SetChannelAvatarActivity;)Ljava/util/List;
     .locals 1
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->c:Landroid/net/Uri;
-
-    return-object v0
-.end method
-
-.method static synthetic c(Lcom/bbm/ui/activities/SetChannelAvatarActivity;)Ljava/util/List;
-    .locals 1
-
-    .prologue
-    .line 34
-    iget-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->d:Ljava/util/List;
+    iget-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->i:Ljava/util/List;
 
     return-object v0
 .end method
@@ -109,19 +80,19 @@
     .locals 3
 
     .prologue
-    .line 99
-    invoke-super {p0, p1, p2, p3}, Lcom/bbm/ui/activities/ey;->onActivityResult(IILandroid/content/Intent;)V
+    .line 95
+    invoke-super {p0, p1, p2, p3}, Lcom/bbm/bali/ui/main/a/a;->onActivityResult(IILandroid/content/Intent;)V
 
-    .line 100
+    .line 96
     const/4 v0, -0x1
 
     if-eq p2, v0, :cond_0
 
-    .line 123
+    .line 119
     :goto_0
     return-void
 
-    .line 103
+    .line 99
     :cond_0
     new-instance v1, Landroid/content/Intent;
 
@@ -129,68 +100,68 @@
 
     invoke-direct {v1, p0, v0}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 104
+    .line 100
     if-nez p1, :cond_2
 
-    .line 105
+    .line 101
     if-eqz p3, :cond_1
 
-    .line 106
+    .line 102
     invoke-virtual {p3}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 108
+    .line 104
     if-eqz v0, :cond_1
 
-    .line 110
+    .line 106
     :try_start_0
-    invoke-static {p0, v0}, Lcom/bbm/util/bj;->a(Landroid/content/Context;Landroid/net/Uri;)Ljava/lang/String;
+    invoke-static {p0, v0}, Lcom/bbm/util/bp;->a(Landroid/content/Context;Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 111
+    .line 107
     const-string v2, "imageUrl"
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 121
+    .line 117
     :cond_1
     :goto_1
     const/16 v0, 0xa
 
     invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->setResult(ILandroid/content/Intent;)V
 
-    .line 122
+    .line 118
     invoke-virtual {p0}, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->finish()V
 
     goto :goto_0
 
-    .line 112
+    .line 108
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
-    .line 117
+    .line 113
     :cond_2
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_1
 
-    .line 118
-    iget-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->c:Landroid/net/Uri;
+    .line 114
+    iget-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->h:Landroid/net/Uri;
 
-    invoke-static {p0, v0}, Lcom/bbm/util/b/h;->b(Landroid/content/Context;Landroid/net/Uri;)V
+    invoke-static {p0, v0}, Lcom/bbm/util/b/i;->b(Landroid/content/Context;Landroid/net/Uri;)V
 
-    .line 119
+    .line 115
     const-string v0, "imageUrl"
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->c:Landroid/net/Uri;
+    iget-object v2, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->h:Landroid/net/Uri;
 
     invoke-virtual {v2}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
@@ -202,21 +173,19 @@
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 5
+    .locals 4
 
     .prologue
-    const/4 v4, 0x0
-
-    .line 60
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/ey;->onCreate(Landroid/os/Bundle;)V
-
     .line 61
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onCreate(Landroid/os/Bundle;)V
+
+    .line 62
     iput-object p0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->b:Landroid/content/Context;
 
-    .line 63
+    .line 64
     if-eqz p1, :cond_0
 
-    .line 64
+    .line 65
     const-string v0, "cameraFileUri"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -225,115 +194,75 @@
 
     check-cast v0, Landroid/net/Uri;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->c:Landroid/net/Uri;
+    iput-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->h:Landroid/net/Uri;
 
-    .line 67
+    .line 68
     :cond_0
-    const v0, 0x7f03004d
+    const v0, 0x7f03006a
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->setContentView(I)V
 
-    .line 69
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->getActionBar()Landroid/app/ActionBar;
-
-    move-result-object v1
-
     .line 70
-    const v0, 0x7f030119
+    invoke-static {p0}, Lcom/bbm/util/eu;->b(Landroid/content/Context;)Z
 
-    invoke-virtual {v1, v0}, Landroid/app/ActionBar;->setCustomView(I)V
+    move-result v0
 
-    .line 71
-    invoke-virtual {v1}, Landroid/app/ActionBar;->getCustomView()Landroid/view/View;
-
-    move-result-object v0
-
-    const v2, 0x7f0b058e
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    .line 72
-    const v2, 0x7f0e0697
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->a:Z
 
     .line 73
-    const/16 v0, 0x10
-
-    invoke-virtual {v1, v0}, Landroid/app/ActionBar;->setDisplayOptions(I)V
-
-    .line 75
-    const v0, 0x7f0b00bf
+    const v0, 0x7f0b013c
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/FooterActionBar;
+    check-cast v0, Landroid/support/v7/widget/Toolbar;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->a:Lcom/bbm/ui/FooterActionBar;
+    .line 74
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f0e0764
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->a(Landroid/support/v7/widget/Toolbar;Ljava/lang/String;)V
 
     .line 76
-    iget-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->a:Lcom/bbm/ui/FooterActionBar;
+    iget-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->i:Ljava/util/List;
 
-    new-instance v1, Lcom/bbm/ui/ActionBarItem;
-
-    const v2, 0x7f020200
-
-    const v3, 0x7f0e0611
-
-    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;II)V
-
-    invoke-virtual {v0, v1, v4}, Lcom/bbm/ui/FooterActionBar;->a(Lcom/bbm/ui/ActionBarItem;I)V
-
-    .line 77
-    iget-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->a:Lcom/bbm/ui/FooterActionBar;
-
-    invoke-virtual {v0, v4}, Lcom/bbm/ui/FooterActionBar;->setOverflowEnabled(Z)V
-
-    .line 78
-    iget-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->a:Lcom/bbm/ui/FooterActionBar;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->h:Lcom/bbm/ui/cn;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
-
-    .line 80
-    iget-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->d:Ljava/util/List;
-
-    new-instance v1, Lcom/bbm/ui/activities/agm;
+    new-instance v1, Lcom/bbm/ui/activities/ade;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f0e0612
+    const v3, 0x7f0e06cc
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    sget-object v3, Lcom/bbm/ui/activities/ago;->a:Lcom/bbm/ui/activities/ago;
+    sget v3, Lcom/bbm/ui/activities/adg;->a:I
 
-    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/activities/agm;-><init>(Lcom/bbm/ui/activities/SetChannelAvatarActivity;Ljava/lang/String;Lcom/bbm/ui/activities/ago;)V
+    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/activities/ade;-><init>(Lcom/bbm/ui/activities/SetChannelAvatarActivity;Ljava/lang/String;I)V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 81
-    new-instance v0, Lcom/bbm/ui/activities/agn;
+    .line 77
+    new-instance v0, Lcom/bbm/ui/activities/adf;
 
     iget-object v1, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->b:Landroid/content/Context;
 
-    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/activities/agn;-><init>(Lcom/bbm/ui/activities/SetChannelAvatarActivity;Landroid/content/Context;)V
+    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/activities/adf;-><init>(Lcom/bbm/ui/activities/SetChannelAvatarActivity;Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->f:Lcom/bbm/ui/activities/agn;
+    iput-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->k:Lcom/bbm/ui/activities/adf;
 
-    .line 82
-    const v0, 0x7f0b0287
+    .line 78
+    const v0, 0x7f0b02ec
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->findViewById(I)Landroid/view/View;
 
@@ -341,47 +270,167 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->e:Landroid/widget/ListView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->j:Landroid/widget/ListView;
 
-    .line 83
-    iget-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->e:Landroid/widget/ListView;
+    .line 79
+    iget-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->j:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->f:Lcom/bbm/ui/activities/agn;
+    iget-object v1, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->k:Lcom/bbm/ui/activities/adf;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 84
-    new-instance v0, Lcom/bbm/ui/activities/agj;
+    .line 80
+    new-instance v0, Lcom/bbm/ui/activities/adc;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/agj;-><init>(Lcom/bbm/ui/activities/SetChannelAvatarActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/adc;-><init>(Lcom/bbm/ui/activities/SetChannelAvatarActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->g:Landroid/widget/AdapterView$OnItemClickListener;
+    iput-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->l:Landroid/widget/AdapterView$OnItemClickListener;
 
-    .line 94
-    iget-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->e:Landroid/widget/ListView;
+    .line 90
+    iget-object v0, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->j:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->g:Landroid/widget/AdapterView$OnItemClickListener;
+    iget-object v1, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->l:Landroid/widget/AdapterView$OnItemClickListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 95
+    .line 91
     return-void
+.end method
+
+.method public onCreateOptionsMenu(Landroid/view/Menu;)Z
+    .locals 2
+
+    .prologue
+    .line 130
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->getMenuInflater()Landroid/view/MenuInflater;
+
+    move-result-object v0
+
+    const v1, 0x7f10003f
+
+    invoke-virtual {v0, v1, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
+
+    .line 131
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onCreateOptionsMenu(Landroid/view/Menu;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    .locals 4
+
+    .prologue
+    const/4 v0, 0x1
+
+    .line 150
+    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
+
+    move-result v1
+
+    packed-switch v1, :pswitch_data_0
+
+    .line 158
+    const-string v0, "Unexpected other menu selected"
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 162
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    .line 152
+    :pswitch_0
+    new-instance v1, Landroid/content/Intent;
+
+    const-string v2, "android.media.action.IMAGE_CAPTURE"
+
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    .line 153
+    const-string v2, "image/jpeg"
+
+    invoke-static {v2}, Lcom/bbm/util/b/i;->c(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->h:Landroid/net/Uri;
+
+    .line 154
+    const-string v2, "output"
+
+    iget-object v3, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->h:Landroid/net/Uri;
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    .line 155
+    invoke-virtual {p0, v1, v0}, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    goto :goto_0
+
+    .line 150
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x7f0b0445
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public onPrepareOptionsMenu(Landroid/view/Menu;)Z
+    .locals 2
+
+    .prologue
+    .line 136
+    if-eqz p1, :cond_0
+
+    .line 137
+    const v0, 0x7f0b0445
+
+    invoke-interface {p1, v0}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    .line 138
+    if-eqz v0, :cond_0
+
+    .line 142
+    iget-boolean v1, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->a:Z
+
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    .line 145
+    :cond_0
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onPrepareOptionsMenu(Landroid/view/Menu;)Z
+
+    move-result v0
+
+    return v0
 .end method
 
 .method protected onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 2
 
     .prologue
-    .line 127
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/ey;->onSaveInstanceState(Landroid/os/Bundle;)V
+    .line 123
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 128
+    .line 124
     const-string v0, "cameraFileUri"
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->c:Landroid/net/Uri;
+    iget-object v1, p0, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->h:Landroid/net/Uri;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 129
+    .line 125
     return-void
 .end method

@@ -21,35 +21,3 @@
 
 .method public abstract a(Landroid/content/Context;Landroid/os/Parcelable;)Landroid/view/View;
 .end method
-
-.method public abstract a()V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
-.end method
-
-.method public abstract b()V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
-.end method
-
-.method public abstract c()V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
-.end method
-
-.method public abstract d()V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
-.end method

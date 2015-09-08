@@ -6,17 +6,7 @@
 # static fields
 .field public static final CALENDAR_CHANGED:I = 0x1
 
-.field public static final FAVORITES_ADDED:I = 0x1
-
-.field public static final FAVORITES_CHANGED:I = 0x7
-
-.field public static final FAVORITES_REMOVED:I = 0x2
-
-.field public static final FAVORITES_REORDERED:I = 0x4
-
 .field public static final LISTENER_CALENDAR:I = 0x10004
-
-.field public static final LISTENER_FAVORITES:I = 0x10005
 
 .field public static final LISTENER_MESSAGES:I = 0x10007
 
@@ -27,8 +17,6 @@
 .field public static final LISTENER_PUSH:I = 0x10006
 
 .field public static final LISTENER_RPC:I = 0x10008
-
-.field public static final LISTENER_SEARCH:I = 0x10001
 
 .field public static final MESSAGES_RECEIVED:I = 0x1
 
@@ -74,6 +62,8 @@
 
 .field public static final PUSH_REFRESH:I = 0x10
 
+.field public static final PUSH_SYNC:I = 0x40
+
 .field public static final PUSH_VIEWER:I = 0x4
 
 .field public static final RPC_FAVORITES_READY:I = 0x1
@@ -81,8 +71,6 @@
 .field public static final RPC_INVITE_READY:I = 0x2
 
 .field public static final SEARCH_COMPLETED:I = 0x1
-
-.field public static final SEARCH_FAILED:I = 0x2
 
 
 # direct methods

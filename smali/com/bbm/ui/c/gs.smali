@@ -1,45 +1,48 @@
 .class final Lcom/bbm/ui/c/gs;
-.super Ljava/lang/Object;
+.super Lcom/bbm/j/a;
 .source "StickerDetailsFragment.java"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/j/a",
+        "<",
+        "Lcom/bbm/l/b/s;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/gr;
+.field final synthetic a:Lcom/bbm/ui/c/fx;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/gr;)V
+.method constructor <init>(Lcom/bbm/ui/c/fx;)V
     .locals 0
 
     .prologue
-    .line 144
-    iput-object p1, p0, Lcom/bbm/ui/c/gs;->a:Lcom/bbm/ui/c/gr;
+    .line 1065
+    iput-object p1, p0, Lcom/bbm/ui/c/gs;->a:Lcom/bbm/ui/c/fx;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method protected final synthetic a()Ljava/lang/Object;
+    .locals 1
 
     .prologue
-    .line 147
-    iget-object v0, p0, Lcom/bbm/ui/c/gs;->a:Lcom/bbm/ui/c/gr;
+    .line 1065
+    iget-object v0, p0, Lcom/bbm/ui/c/gs;->a:Lcom/bbm/ui/c/fx;
 
-    invoke-static {v0}, Lcom/bbm/ui/c/gr;->a(Lcom/bbm/ui/c/gr;)Landroid/widget/TextView;
+    invoke-static {v0}, Lcom/bbm/ui/c/fx;->g(Lcom/bbm/ui/c/fx;)Lcom/bbm/l/b/s;
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 148
-    return-void
+    return-object v0
 .end method

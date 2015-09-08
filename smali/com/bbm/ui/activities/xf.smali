@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/xf;
 .super Ljava/lang/Object;
-.source "MainActivity.java"
+.source "OpenInBbmActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/b/ah;
+.implements Landroid/content/DialogInterface$OnCancelListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/OpenInBbmActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
     .locals 0
 
     .prologue
-    .line 2491
-    iput-object p1, p0, Lcom/bbm/ui/activities/xf;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 654
+    iput-object p1, p0, Lcom/bbm/ui/activities/xf;->a:Lcom/bbm/ui/activities/OpenInBbmActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,25 +25,15 @@
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
+.method public final onCancel(Landroid/content/DialogInterface;)V
+    .locals 1
 
     .prologue
-    .line 2495
-    iget-object v0, p0, Lcom/bbm/ui/activities/xf;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 656
+    iget-object v0, p0, Lcom/bbm/ui/activities/xf;->a:Lcom/bbm/ui/activities/OpenInBbmActivity;
 
-    const/16 v1, 0x3e8
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->finish()V
 
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/bbm/d/a;->h()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v1, v2}, Lcom/bbm/h/aq;->a(Landroid/app/Activity;ILjava/lang/String;)V
-
-    .line 2496
+    .line 657
     return-void
 .end method

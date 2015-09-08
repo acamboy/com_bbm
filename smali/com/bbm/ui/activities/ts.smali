@@ -1,216 +1,193 @@
 .class final Lcom/bbm/ui/activities/ts;
-.super Ljava/lang/Object;
-.source "GroupSelectNewAdminActivity.java"
-
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.super Lcom/bbm/j/k;
+.source "MainActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
+    .locals 1
 
     .prologue
-    .line 44
-    iput-object p1, p0, Lcom/bbm/ui/activities/ts;->a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
+    .line 177
+    iput-object p1, p0, Lcom/bbm/ui/activities/ts;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method protected final a()V
+    .locals 9
 
     .prologue
-    const/4 v1, 0x1
+    const/4 v6, 0x1
 
     const/4 v2, 0x0
 
-    .line 48
-    invoke-virtual {p2}, Landroid/view/View;->isActivated()Z
+    .line 180
+    invoke-static {}, Lcom/bbm/ui/activities/MainActivity;->l()Lcom/bbm/d/a;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/bbm/d/a;->f:Lcom/bbm/j/a;
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/util/bb;
+
+    .line 181
+    iget-object v1, p0, Lcom/bbm/ui/activities/ts;->a:Lcom/bbm/ui/activities/MainActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/MainActivity;->a(Lcom/bbm/ui/activities/MainActivity;)Landroid/widget/ListView;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/bbm/bali/ui/main/lists/DrawerAdapter;
+
+    .line 183
+    sget-object v3, Lcom/bbm/util/bb;->a:Lcom/bbm/util/bb;
+
+    if-eq v0, v3, :cond_0
+
+    sget-object v3, Lcom/bbm/util/bb;->e:Lcom/bbm/util/bb;
+
+    if-ne v0, v3, :cond_4
+
+    .line 184
+    :cond_0
+    iget-object v0, v1, Lcom/bbm/bali/ui/main/lists/DrawerAdapter;->b:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    add-int/lit8 v0, v0, -0x1
 
-    move v0, v1
+    move v3, v0
 
     :goto_0
-    invoke-virtual {p2, v0}, Landroid/view/View;->setActivated(Z)V
+    if-ltz v3, :cond_3
 
-    .line 49
-    invoke-virtual {p2}, Landroid/view/View;->isActivated()Z
+    iget-object v0, v1, Lcom/bbm/bali/ui/main/lists/DrawerAdapter;->b:Ljava/util/List;
 
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 50
-    iget-object v0, p0, Lcom/bbm/ui/activities/ts;->a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;->b(Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;)Ljava/util/List;
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/ts;->a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
+    check-cast v0, Lcom/bbm/bali/ui/main/lists/d;
 
-    invoke-static {v3}, Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;->a(Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;)Lcom/bbm/ui/activities/tw;
+    iget v0, v0, Lcom/bbm/bali/ui/main/lists/d;->b:I
 
-    move-result-object v3
+    sget v4, Lcom/bbm/bali/ui/main/lists/f;->c:I
 
-    invoke-virtual {v3, p3}, Lcom/bbm/ui/activities/tw;->getItem(I)Ljava/lang/Object;
+    if-ne v0, v4, :cond_2
 
-    move-result-object v3
+    iget-object v0, v1, Lcom/bbm/bali/ui/main/lists/DrawerAdapter;->b:Ljava/util/List;
 
-    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v3}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 55
+    move v0, v6
+
     :goto_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/ts;->a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
+    move v2, v0
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;->c(Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;)Lcom/bbm/ui/HeaderButtonActionBar;
-
-    move-result-object v3
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/ts;->a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;->b(Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-lez v0, :cond_2
-
-    move v0, v1
-
+    .line 189
     :goto_2
-    invoke-virtual {v3, v0}, Lcom/bbm/ui/HeaderButtonActionBar;->setPositiveButtonEnabled(Z)V
+    if-eqz v2, :cond_1
 
-    .line 56
-    iget-object v0, p0, Lcom/bbm/ui/activities/ts;->a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
+    .line 191
+    iget-object v0, p0, Lcom/bbm/ui/activities/ts;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;->c(Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;)Lcom/bbm/ui/HeaderButtonActionBar;
-
-    move-result-object v3
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/ts;->a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;->b(Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;)Ljava/util/List;
+    invoke-static {v0}, Lcom/bbm/ui/activities/MainActivity;->a(Lcom/bbm/ui/activities/MainActivity;)Landroid/widget/ListView;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    move-result v0
-
-    if-lez v0, :cond_3
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/ts;->a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v4, 0x7f0e00e9
-
-    invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    iget-object v4, p0, Lcom/bbm/ui/activities/ts;->a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
-
-    invoke-static {v4}, Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;->b(Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;)Ljava/util/List;
-
-    move-result-object v4
-
-    invoke-interface {v4}, Ljava/util/List;->size()I
-
-    move-result v4
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v1, v2
-
-    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_3
-    invoke-virtual {v3, v0}, Lcom/bbm/ui/HeaderButtonActionBar;->setTitle(Ljava/lang/String;)V
-
-    .line 60
+    .line 193
+    :cond_1
     return-void
 
-    :cond_0
-    move v0, v2
+    .line 184
+    :cond_2
+    add-int/lit8 v0, v3, -0x1
 
-    .line 48
+    move v3, v0
+
     goto :goto_0
 
-    .line 52
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/ts;->a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;->b(Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;)Ljava/util/List;
-
-    move-result-object v0
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/ts;->a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
-
-    invoke-static {v3}, Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;->a(Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;)Lcom/bbm/ui/activities/tw;
-
-    move-result-object v3
-
-    invoke-virtual {v3, p3}, Lcom/bbm/ui/activities/tw;->getItem(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-interface {v0, v3}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+    :cond_3
+    move v0, v2
 
     goto :goto_1
 
-    :cond_2
-    move v0, v2
+    .line 186
+    :cond_4
+    iget-object v0, v1, Lcom/bbm/bali/ui/main/lists/DrawerAdapter;->b:Ljava/util/List;
 
-    .line 55
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :cond_5
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/bali/ui/main/lists/d;
+
+    iget v0, v0, Lcom/bbm/bali/ui/main/lists/d;->b:I
+
+    sget v4, Lcom/bbm/bali/ui/main/lists/f;->c:I
+
+    if-ne v0, v4, :cond_5
+
     goto :goto_2
 
-    .line 56
-    :cond_3
-    iget-object v0, p0, Lcom/bbm/ui/activities/ts;->a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
+    :cond_6
+    iget-object v7, v1, Lcom/bbm/bali/ui/main/lists/DrawerAdapter;->b:Ljava/util/List;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;->getResources()Landroid/content/res/Resources;
+    sget v0, Lcom/bbm/bali/ui/main/lists/f;->c:I
 
-    move-result-object v0
+    add-int/lit8 v8, v0, -0x1
 
-    const v1, 0x7f0e00e8
+    new-instance v0, Lcom/bbm/bali/ui/main/lists/d;
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    sget v2, Lcom/bbm/bali/ui/main/lists/f;->c:I
 
-    move-result-object v0
+    add-int/lit8 v2, v2, -0x1
 
-    goto :goto_3
+    sget v3, Lcom/bbm/bali/ui/main/lists/f;->c:I
+
+    const v4, 0x7f0e0247
+
+    const v5, 0x7f02030d
+
+    invoke-direct/range {v0 .. v5}, Lcom/bbm/bali/ui/main/lists/d;-><init>(Lcom/bbm/bali/ui/main/lists/DrawerAdapter;IIII)V
+
+    invoke-interface {v7, v8, v0}, Ljava/util/List;->add(ILjava/lang/Object;)V
+
+    move v2, v6
+
+    goto :goto_2
 .end method

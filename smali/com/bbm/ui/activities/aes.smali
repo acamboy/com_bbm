@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/aes;
 .super Ljava/lang/Object;
-.source "SearchResultsChannelsActivity.java"
+.source "ShareToFeedActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/DialogInterface$OnCancelListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ShareToFeedActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ShareToFeedActivity;)V
     .locals 0
 
     .prologue
-    .line 369
-    iput-object p1, p0, Lcom/bbm/ui/activities/aes;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
+    .line 61
+    iput-object p1, p0, Lcom/bbm/ui/activities/aes;->a:Lcom/bbm/ui/activities/ShareToFeedActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,20 +25,15 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final onCancel(Landroid/content/DialogInterface;)V
     .locals 1
 
     .prologue
-    .line 372
-    iget-object v0, p0, Lcom/bbm/ui/activities/aes;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
+    .line 63
+    iget-object v0, p0, Lcom/bbm/ui/activities/aes;->a:Lcom/bbm/ui/activities/ShareToFeedActivity;
 
-    invoke-static {v0}, Lcom/bbm/util/fh;->b(Landroid/app/Activity;)V
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ShareToFeedActivity;->finish()V
 
-    .line 373
-    iget-object v0, p0, Lcom/bbm/ui/activities/aes;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;->onBackPressed()V
-
-    .line 374
+    .line 64
     return-void
 .end method

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_view_channel" android:id="@id/actionmode_feed_list_channel_view_channel" android:title="@string/update_fragment_view_channel" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_share" android:id="@id/actionmode_feed_list_channel_share_post" android:title="@string/channel_post_secondary_slidemenu_share_post" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_block" android:id="@id/actionmode_feed_list_channel_hide" android:title="@string/update_fragment_hide_updates" app:showAsAction="always" />
+</menu>

@@ -1,20 +1,23 @@
-.class public interface abstract Landroid/support/v4/view/a/y;
+.class interface abstract Landroid/support/v4/view/a/y;
 .super Ljava/lang/Object;
-.source "AccessibilityRecordCompat.java"
+.source "AccessibilityNodeProviderCompatJellyBean.java"
 
 
 # virtual methods
-.method public abstract a()Ljava/lang/Object;
+.method public abstract a()Z
 .end method
 
-.method public abstract a(Ljava/lang/Object;I)V
+.method public abstract b()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
 .end method
 
-.method public abstract a(Ljava/lang/Object;Z)V
-.end method
-
-.method public abstract b(Ljava/lang/Object;I)V
-.end method
-
-.method public abstract c(Ljava/lang/Object;I)V
+.method public abstract c()Ljava/lang/Object;
 .end method

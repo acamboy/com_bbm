@@ -28,21 +28,25 @@
     .locals 3
 
     .prologue
-    const v2, 0x7f0e06cc
+    const v2, 0x7f0e07a2
 
     .line 30
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
 
     sget-object v0, Lcom/bbm/Alaska;->f:Lcom/bbm/setup/z;
 
-    invoke-virtual {v0}, Lcom/bbm/setup/z;->a()Lcom/bbm/setup/af;
+    iget-object v0, v0, Lcom/bbm/setup/z;->r:Lcom/bbm/j/a;
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/setup/af;->a:Lcom/bbm/setup/ag;
+    check-cast v0, Lcom/bbm/setup/am;
+
+    iget-object v0, v0, Lcom/bbm/setup/am;->a:Lcom/bbm/setup/an;
 
     .line 31
-    sget-object v1, Lcom/bbm/setup/ag;->i:Lcom/bbm/setup/ag;
+    sget-object v1, Lcom/bbm/setup/an;->i:Lcom/bbm/setup/an;
 
     if-eq v0, v1, :cond_0
 
@@ -57,16 +61,16 @@
 
     .line 37
     :cond_0
-    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/f/ae;
+    invoke-static {}, Lcom/bbm/Alaska;->n()Lcom/bbm/f/ae;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/f/ae;->k:Lcom/bbm/al;
+    iget-object v0, v0, Lcom/bbm/f/ae;->j:Lcom/bbm/au;
 
     .line 41
     sget-object v1, Lcom/bbm/setup/v;->a:[I
 
-    invoke-virtual {v0}, Lcom/bbm/al;->ordinal()I
+    invoke-virtual {v0}, Lcom/bbm/au;->ordinal()I
 
     move-result v0
 
@@ -84,7 +88,7 @@
     .line 57
     iget-object v0, p0, Lcom/bbm/setup/t;->a:Lcom/bbm/setup/SetupBbidErrorActivity;
 
-    const v2, 0x7f0e06cb
+    const v2, 0x7f0e07a1
 
     invoke-virtual {v0, v2}, Lcom/bbm/setup/SetupBbidErrorActivity;->getString(I)Ljava/lang/String;
 
@@ -151,7 +155,7 @@
     .line 49
     iget-object v0, p0, Lcom/bbm/setup/t;->a:Lcom/bbm/setup/SetupBbidErrorActivity;
 
-    const v2, 0x7f0e0501
+    const v2, 0x7f0e0572
 
     invoke-virtual {v0, v2}, Lcom/bbm/setup/SetupBbidErrorActivity;->getString(I)Ljava/lang/String;
 
@@ -163,7 +167,7 @@
     :cond_1
     iget-object v0, p0, Lcom/bbm/setup/t;->a:Lcom/bbm/setup/SetupBbidErrorActivity;
 
-    const v1, 0x7f0e055e
+    const v1, 0x7f0e05d9
 
     invoke-virtual {v0, v1}, Lcom/bbm/setup/SetupBbidErrorActivity;->getString(I)Ljava/lang/String;
 
@@ -172,7 +176,7 @@
     .line 52
     iget-object v0, p0, Lcom/bbm/setup/t;->a:Lcom/bbm/setup/SetupBbidErrorActivity;
 
-    const v2, 0x7f0e07e7
+    const v2, 0x7f0e0912
 
     invoke-virtual {v0, v2}, Lcom/bbm/setup/SetupBbidErrorActivity;->getString(I)Ljava/lang/String;
 

@@ -3,36 +3,20 @@
 .source "ChatsFragment.java"
 
 # interfaces
-.implements Ljava/util/Comparator;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
-        "<",
-        "Ljava/lang/Integer;",
-        ">;"
-    }
-.end annotation
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Ljava/util/ArrayList;
-
-.field final synthetic b:Lcom/bbm/ui/c/cb;
+.field final synthetic a:Lcom/bbm/ui/c/ca;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/cb;Ljava/util/ArrayList;)V
+.method constructor <init>(Lcom/bbm/ui/c/ca;)V
     .locals 0
 
     .prologue
-    .line 394
-    iput-object p1, p0, Lcom/bbm/ui/c/cc;->b:Lcom/bbm/ui/c/cb;
-
-    iput-object p2, p0, Lcom/bbm/ui/c/cc;->a:Ljava/util/ArrayList;
+    .line 867
+    iput-object p1, p0, Lcom/bbm/ui/c/cc;->a:Lcom/bbm/ui/c/ca;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,67 +25,65 @@
 
 
 # virtual methods
-.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 5
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
     .prologue
-    .line 394
-    check-cast p1, Ljava/lang/Integer;
-
-    check-cast p2, Ljava/lang/Integer;
-
-    iget-object v0, p0, Lcom/bbm/ui/c/cc;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    .line 870
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Long;
+    iget-object v0, v0, Lcom/bbm/d/a;->c:Lcom/bbm/d/hc;
 
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+    iget-object v0, v0, Lcom/bbm/d/hc;->c:Lcom/bbm/util/dc;
 
-    move-result-wide v2
-
-    iget-object v0, p0, Lcom/bbm/ui/c/cc;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/util/dc;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Long;
+    check-cast v0, Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+    .line 871
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result-wide v0
+    move-result v1
 
-    cmp-long v4, v2, v0
+    if-nez v1, :cond_0
 
-    if-lez v4, :cond_0
+    .line 872
+    new-instance v1, Landroid/content/Intent;
 
-    const/4 v0, 0x1
+    iget-object v2, p0, Lcom/bbm/ui/c/cc;->a:Lcom/bbm/ui/c/ca;
 
-    :goto_0
-    return v0
+    invoke-static {v2}, Lcom/bbm/ui/c/ca;->b(Lcom/bbm/ui/c/ca;)Landroid/content/Context;
 
+    move-result-object v2
+
+    const-class v3, Lcom/bbm/ui/activities/PrivateConversationActivity;
+
+    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 873
+    const/high16 v2, 0x10000000
+
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 874
+    const-string v2, "conversation_uri"
+
+    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 875
+    iget-object v0, p0, Lcom/bbm/ui/c/cc;->a:Lcom/bbm/ui/c/ca;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/ca;->b(Lcom/bbm/ui/c/ca;)Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    .line 877
     :cond_0
-    cmp-long v0, v0, v2
-
-    if-lez v0, :cond_1
-
-    const/4 v0, -0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-void
 .end method

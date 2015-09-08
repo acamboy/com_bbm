@@ -85,7 +85,7 @@
     check-cast v0, Lcom/bbm/f/ac;
 
     .line 55
-    invoke-interface {v0}, Lcom/bbm/f/ac;->a()V
+    invoke-interface {v0}, Lcom/bbm/f/ac;->a_()V
 
     goto :goto_0
 

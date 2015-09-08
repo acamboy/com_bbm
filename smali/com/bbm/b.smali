@@ -12,7 +12,7 @@
     .locals 0
 
     .prologue
-    .line 132
+    .line 140
     iput-object p1, p0, Lcom/bbm/b;->a:Lcom/bbm/Alaska;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -26,23 +26,21 @@
     .locals 2
 
     .prologue
-    .line 136
+    .line 144
     invoke-super {p0}, Ljava/lang/Thread;->run()V
 
-    .line 138
-    iget-object v0, p0, Lcom/bbm/b;->a:Lcom/bbm/Alaska;
+    .line 146
+    invoke-static {}, Lcom/bbm/Alaska;->v()Z
 
-    invoke-static {}, Lcom/bbm/Alaska;->q()Z
-
-    .line 139
+    .line 147
     const-string v0, "Crittercism is not required"
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 140
+    .line 148
     return-void
 .end method

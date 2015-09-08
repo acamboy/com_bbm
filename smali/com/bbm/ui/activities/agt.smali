@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/agt;
 .super Ljava/lang/Object;
-.source "SettingsActivity.java"
+.source "ViewChannelPostActivity.java"
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Landroid/widget/TextView$OnEditorActionListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
     .locals 0
 
     .prologue
-    .line 327
-    iput-object p1, p0, Lcom/bbm/ui/activities/agt;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    .line 311
+    iput-object p1, p0, Lcom/bbm/ui/activities/agt;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,24 +25,29 @@
 
 
 # virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 2
+.method public final onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
+    .locals 1
 
     .prologue
-    .line 331
-    const-string v0, "vibrate enabled onCheckedChanged"
+    .line 314
+    const/4 v0, 0x4
 
-    const-class v1, Lcom/bbm/ui/activities/SettingsActivity;
+    if-ne p2, v0, :cond_0
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    .line 315
+    iget-object v0, p0, Lcom/bbm/ui/activities/agt;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
 
-    .line 332
-    iget-object v0, p0, Lcom/bbm/ui/activities/agt;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
 
-    const-string v1, "notification_ping_vibrate_enabled"
+    .line 316
+    const/4 v0, 0x1
 
-    invoke-static {v0, v1, p2}, Lcom/bbm/ui/activities/SettingsActivity;->a(Lcom/bbm/ui/activities/SettingsActivity;Ljava/lang/String;Z)V
+    .line 318
+    :goto_0
+    return v0
 
-    .line 333
-    return-void
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

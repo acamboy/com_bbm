@@ -1,441 +1,145 @@
-.class public final Landroid/support/v4/view/as;
+.class public abstract Landroid/support/v4/view/as;
 .super Ljava/lang/Object;
-.source "ViewCompat.java"
+.source "PagerAdapter.java"
 
 
-# static fields
-.field static final a:Landroid/support/v4/view/bc;
+# instance fields
+.field private a:Landroid/database/DataSetObservable;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
+    .locals 1
+
+    .prologue
+    .line 78
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 79
+    new-instance v0, Landroid/database/DataSetObservable;
+
+    invoke-direct {v0}, Landroid/database/DataSetObservable;-><init>()V
+
+    iput-object v0, p0, Landroid/support/v4/view/as;->a:Landroid/database/DataSetObservable;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Landroid/view/ViewGroup;I)Ljava/lang/Object;
     .locals 2
 
     .prologue
-    .line 1151
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    .line 110
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    .line 1152
-    const/16 v1, 0x15
+    const-string v1, "Required method instantiateItem was not overridden"
 
-    if-lt v0, v1, :cond_0
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    .line 1153
-    new-instance v0, Landroid/support/v4/view/at;
-
-    invoke-direct {v0}, Landroid/support/v4/view/at;-><init>()V
-
-    sput-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    .line 1171
-    :goto_0
-    return-void
-
-    .line 1154
-    :cond_0
-    const/16 v1, 0x13
-
-    if-lt v0, v1, :cond_1
-
-    .line 1155
-    new-instance v0, Landroid/support/v4/view/bb;
-
-    invoke-direct {v0}, Landroid/support/v4/view/bb;-><init>()V
-
-    sput-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    goto :goto_0
-
-    .line 1156
-    :cond_1
-    const/16 v1, 0x11
-
-    if-lt v0, v1, :cond_2
-
-    .line 1157
-    new-instance v0, Landroid/support/v4/view/ba;
-
-    invoke-direct {v0}, Landroid/support/v4/view/ba;-><init>()V
-
-    sput-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    goto :goto_0
-
-    .line 1158
-    :cond_2
-    const/16 v1, 0x10
-
-    if-lt v0, v1, :cond_3
-
-    .line 1159
-    new-instance v0, Landroid/support/v4/view/az;
-
-    invoke-direct {v0}, Landroid/support/v4/view/az;-><init>()V
-
-    sput-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    goto :goto_0
-
-    .line 1160
-    :cond_3
-    const/16 v1, 0xe
-
-    if-lt v0, v1, :cond_4
-
-    .line 1161
-    new-instance v0, Landroid/support/v4/view/ay;
-
-    invoke-direct {v0}, Landroid/support/v4/view/ay;-><init>()V
-
-    sput-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    goto :goto_0
-
-    .line 1162
-    :cond_4
-    const/16 v1, 0xb
-
-    if-lt v0, v1, :cond_5
-
-    .line 1163
-    new-instance v0, Landroid/support/v4/view/ax;
-
-    invoke-direct {v0}, Landroid/support/v4/view/ax;-><init>()V
-
-    sput-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    goto :goto_0
-
-    .line 1164
-    :cond_5
-    const/16 v1, 0x9
-
-    if-lt v0, v1, :cond_6
-
-    .line 1165
-    new-instance v0, Landroid/support/v4/view/aw;
-
-    invoke-direct {v0}, Landroid/support/v4/view/aw;-><init>()V
-
-    sput-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    goto :goto_0
-
-    .line 1166
-    :cond_6
-    const/4 v1, 0x7
-
-    if-lt v0, v1, :cond_7
-
-    .line 1167
-    new-instance v0, Landroid/support/v4/view/av;
-
-    invoke-direct {v0}, Landroid/support/v4/view/av;-><init>()V
-
-    sput-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    goto :goto_0
-
-    .line 1169
-    :cond_7
-    new-instance v0, Landroid/support/v4/view/au;
-
-    invoke-direct {v0}, Landroid/support/v4/view/au;-><init>()V
-
-    sput-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    goto :goto_0
+    throw v0
 .end method
 
-.method public static a(Landroid/view/View;F)V
+.method public a()V
+    .locals 0
+
+    .prologue
+    .line 148
+    return-void
+.end method
+
+.method public final a(Landroid/database/DataSetObserver;)V
     .locals 1
 
     .prologue
-    .line 2056
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
+    .line 285
+    iget-object v0, p0, Landroid/support/v4/view/as;->a:Landroid/database/DataSetObservable;
 
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/bc;->b(Landroid/view/View;F)V
+    invoke-virtual {v0, p1}, Landroid/database/DataSetObservable;->registerObserver(Ljava/lang/Object;)V
 
-    .line 2057
+    .line 286
     return-void
 .end method
 
-.method public static a(Landroid/view/View;IIII)V
-    .locals 6
+.method public a(Landroid/os/Parcelable;Ljava/lang/ClassLoader;)V
+    .locals 0
 
     .prologue
-    .line 1407
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    move-object v1, p0
-
-    move v2, p1
-
-    move v3, p2
-
-    move v4, p3
-
-    move v5, p4
-
-    invoke-interface/range {v0 .. v5}, Landroid/support/v4/view/bc;->a(Landroid/view/View;IIII)V
-
-    .line 1408
+    .line 250
     return-void
 .end method
 
-.method public static a(Landroid/view/View;ILandroid/graphics/Paint;)V
+.method public a(Landroid/view/ViewGroup;ILjava/lang/Object;)V
+    .locals 2
+
+    .prologue
+    .line 124
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Required method destroyItem was not overridden"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public a(Ljava/lang/Object;)V
+    .locals 0
+
+    .prologue
+    .line 137
+    return-void
+.end method
+
+.method public abstract a(Landroid/view/View;Ljava/lang/Object;)Z
+.end method
+
+.method public b(Ljava/lang/Object;)I
     .locals 1
 
     .prologue
-    .line 1579
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    invoke-interface {v0, p0, p1, p2}, Landroid/support/v4/view/bc;->a(Landroid/view/View;ILandroid/graphics/Paint;)V
-
-    .line 1580
-    return-void
-.end method
-
-.method public static a(Landroid/view/View;Landroid/graphics/Paint;)V
-    .locals 1
-
-    .prologue
-    .line 1656
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/bc;->a(Landroid/view/View;Landroid/graphics/Paint;)V
-
-    .line 1657
-    return-void
-.end method
-
-.method public static a(Landroid/view/View;Landroid/support/v4/view/a;)V
-    .locals 1
-
-    .prologue
-    .line 1343
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/bc;->a(Landroid/view/View;Landroid/support/v4/view/a;)V
-
-    .line 1344
-    return-void
-.end method
-
-.method public static a(Landroid/view/View;Ljava/lang/Runnable;)V
-    .locals 1
-
-    .prologue
-    .line 1421
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/bc;->a(Landroid/view/View;Ljava/lang/Runnable;)V
-
-    .line 1422
-    return-void
-.end method
-
-.method public static a(Landroid/view/ViewGroup;)V
-    .locals 1
-
-    .prologue
-    .line 2234
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    invoke-interface {v0, p0}, Landroid/support/v4/view/bc;->a(Landroid/view/ViewGroup;)V
-
-    .line 2235
-    return-void
-.end method
-
-.method public static a(Landroid/view/View;)Z
-    .locals 1
-
-    .prologue
-    .line 1192
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    invoke-interface {v0, p0}, Landroid/support/v4/view/bc;->a(Landroid/view/View;)Z
-
-    move-result v0
+    .line 268
+    const/4 v0, -0x1
 
     return v0
 .end method
 
-.method public static a(Landroid/view/View;I)Z
+.method public b()Landroid/os/Parcelable;
     .locals 1
 
     .prologue
-    .line 1181
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/bc;->a(Landroid/view/View;I)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static b(Landroid/view/View;)I
-    .locals 1
-
-    .prologue
-    .line 1206
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    invoke-interface {v0, p0}, Landroid/support/v4/view/bc;->b(Landroid/view/View;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static b(Landroid/view/View;F)V
-    .locals 1
-
-    .prologue
-    .line 2068
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/bc;->c(Landroid/view/View;F)V
-
-    .line 2069
-    return-void
-.end method
-
-.method public static b(Landroid/view/View;I)V
-    .locals 1
-
-    .prologue
-    .line 1480
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/bc;->b(Landroid/view/View;I)V
-
-    .line 1481
-    return-void
-.end method
-
-.method public static c(Landroid/view/View;)V
-    .locals 1
-
-    .prologue
-    .line 1389
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    invoke-interface {v0, p0}, Landroid/support/v4/view/bc;->c(Landroid/view/View;)V
-
-    .line 1390
-    return-void
-.end method
-
-.method public static c(Landroid/view/View;F)V
-    .locals 1
-
-    .prologue
-    .line 2156
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/bc;->a(Landroid/view/View;F)V
-
-    .line 2157
-    return-void
-.end method
-
-.method public static d(Landroid/view/View;)I
-    .locals 1
-
-    .prologue
-    .line 1456
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    invoke-interface {v0, p0}, Landroid/support/v4/view/bc;->d(Landroid/view/View;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static e(Landroid/view/View;)I
-    .locals 1
-
-    .prologue
-    .line 1600
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    invoke-interface {v0, p0}, Landroid/support/v4/view/bc;->e(Landroid/view/View;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static f(Landroid/view/View;)I
-    .locals 1
-
-    .prologue
-    .line 1671
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    invoke-interface {v0, p0}, Landroid/support/v4/view/bc;->f(Landroid/view/View;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static g(Landroid/view/View;)Landroid/view/ViewParent;
-    .locals 1
-
-    .prologue
-    .line 1703
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    invoke-interface {v0, p0}, Landroid/support/v4/view/bc;->g(Landroid/view/View;)Landroid/view/ViewParent;
-
-    move-result-object v0
+    .line 239
+    const/4 v0, 0x0
 
     return-object v0
 .end method
 
-.method public static h(Landroid/view/View;)Z
+.method public final b(Landroid/database/DataSetObserver;)V
     .locals 1
 
     .prologue
-    .line 1716
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
+    .line 294
+    iget-object v0, p0, Landroid/support/v4/view/as;->a:Landroid/database/DataSetObservable;
 
-    invoke-interface {v0, p0}, Landroid/support/v4/view/bc;->h(Landroid/view/View;)Z
+    invoke-virtual {v0, p1}, Landroid/database/DataSetObservable;->unregisterObserver(Ljava/lang/Object;)V
 
-    move-result v0
-
-    return v0
+    .line 295
+    return-void
 .end method
 
-.method public static i(Landroid/view/View;)F
-    .locals 1
-
-    .prologue
-    .line 2137
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
-
-    invoke-interface {v0, p0}, Landroid/support/v4/view/bc;->i(Landroid/view/View;)F
-
-    move-result v0
-
-    return v0
+.method public abstract c()I
 .end method
 
-.method public static j(Landroid/view/View;)Z
+.method public d()V
     .locals 1
 
     .prologue
-    .line 2242
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
+    .line 276
+    iget-object v0, p0, Landroid/support/v4/view/as;->a:Landroid/database/DataSetObservable;
 
-    invoke-interface {v0, p0}, Landroid/support/v4/view/bc;->j(Landroid/view/View;)Z
+    invoke-virtual {v0}, Landroid/database/DataSetObservable;->notifyChanged()V
 
-    move-result v0
-
-    return v0
+    .line 277
+    return-void
 .end method

@@ -1,13 +1,19 @@
-.class public final Lcom/google/android/gms/internal/gl;
+.class final Lcom/google/android/gms/internal/gl;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/google/android/gms/games/Notifications;
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field final synthetic a:Lcom/google/android/gms/internal/gk;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcom/google/android/gms/internal/gk;)V
     .locals 0
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/gl;->a:Lcom/google/android/gms/internal/gk;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -16,24 +22,18 @@
 
 
 # virtual methods
-.method public final clear(Lcom/google/android/gms/common/api/GoogleApiClient;I)V
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    invoke-static {p1}, Lcom/google/android/gms/games/Games;->c(Lcom/google/android/gms/common/api/GoogleApiClient;)Lcom/google/android/gms/internal/fx;
+    invoke-static {}, Lcom/google/android/gms/ads/internal/z;->q()Lcom/google/android/gms/internal/gm;
 
     move-result-object v0
 
-    invoke-virtual {v0, p2}, Lcom/google/android/gms/internal/fx;->aU(I)V
+    iget-object v1, p0, Lcom/google/android/gms/internal/gl;->a:Lcom/google/android/gms/internal/gk;
 
-    return-void
-.end method
+    iget-object v0, v0, Lcom/google/android/gms/internal/gm;->a:Ljava/util/List;
 
-.method public final clearAll(Lcom/google/android/gms/common/api/GoogleApiClient;)V
-    .locals 1
-
-    const/4 v0, 0x7
-
-    invoke-virtual {p0, p1, v0}, Lcom/google/android/gms/internal/gl;->clear(Lcom/google/android/gms/common/api/GoogleApiClient;I)V
+    invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
     return-void
 .end method

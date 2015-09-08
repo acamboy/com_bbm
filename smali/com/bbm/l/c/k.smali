@@ -1,120 +1,103 @@
-.class Lcom/bbm/l/c/k;
-.super Lcom/bbm/util/b;
-.source "AsyncAppListFetcher.java"
+.class public Lcom/bbm/l/c/k;
+.super Lcom/bbm/l/c/s;
+.source "AsyncStickerPackDetailsFetcher.java"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/util/b",
-        "<",
-        "Ljava/lang/String;",
-        "Ljava/lang/Integer;",
-        "Ljava/net/URL;",
-        ">;"
-    }
-.end annotation
+# static fields
+.field private static final c:Ljava/lang/String;
 
 
 # direct methods
-.method private constructor <init>()V
-    .locals 0
-
-    .prologue
-    .line 140
-    invoke-direct {p0}, Lcom/bbm/util/b;-><init>()V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(B)V
-    .locals 0
-
-    .prologue
-    .line 140
-    invoke-direct {p0}, Lcom/bbm/l/c/k;-><init>()V
-
-    return-void
-.end method
-
-.method private static varargs a([Ljava/lang/String;)Ljava/net/URL;
-    .locals 3
-
-    .prologue
-    .line 144
-    const/4 v0, 0x1
-
-    invoke-static {v0}, Lcom/bbm/l/a/a;->a(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    .line 145
-    invoke-virtual {v0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
-
-    move-result-object v2
-
-    .line 146
-    const-string v0, "collectionId"
-
-    const/4 v1, 0x0
-
-    aget-object v1, p0, v1
-
-    invoke-virtual {v2, v0, v1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
-
-    .line 147
-    invoke-static {v2}, Lcom/bbm/l/c/u;->a(Landroid/net/Uri$Builder;)V
-
-    .line 148
-    const/4 v1, 0x0
-
-    .line 150
-    :try_start_0
-    new-instance v0, Ljava/net/URL;
-
-    invoke-virtual {v2}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v0, v2}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/net/MalformedURLException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 154
-    :goto_0
-    return-object v0
-
-    .line 151
-    :catch_0
-    move-exception v0
-
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
-
-    move-object v0, v1
-
-    goto :goto_0
-.end method
-
-
-# virtual methods
-.method protected final bridge synthetic a([Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
     .prologue
-    .line 140
-    check-cast p1, [Ljava/lang/String;
+    .line 26
+    const-class v0, Lcom/bbm/l/c/k;
 
-    invoke-static {p1}, Lcom/bbm/l/c/k;->a([Ljava/lang/String;)Ljava/net/URL;
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
+    sput-object v0, Lcom/bbm/l/c/k;->c:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 24
+    invoke-direct {p0}, Lcom/bbm/l/c/s;-><init>()V
+
+    .line 28
+    return-void
+.end method
+
+.method public static a(Lcom/bbm/util/bw;Ljava/lang/String;ZLcom/bbm/l/c/m;)V
+    .locals 2
+
+    .prologue
+    .line 41
+    :try_start_0
+    new-instance v0, Ljava/net/URL;
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Lcom/bbm/l/a/a;->b(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    invoke-static {v1}, Lcom/bbm/l/c/k;->a(Landroid/net/Uri$Builder;)V
+
+    invoke-virtual {v1}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/net/MalformedURLException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 49
+    new-instance v1, Lcom/bbm/l/c/l;
+
+    invoke-direct {v1, p3, p2, p0}, Lcom/bbm/l/c/l;-><init>(Lcom/bbm/l/c/m;ZLcom/bbm/util/bw;)V
+
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/util/bw;->a(Ljava/net/URL;Lcom/bbm/util/cc;)V
+
+    .line 97
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 42
+    :catch_0
+    move-exception v0
+
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
+
+    .line 44
+    if-eqz p3, :cond_0
+
+    .line 45
+    const/4 v0, 0x1
+
+    invoke-interface {p3, v0}, Lcom/bbm/l/c/m;->a(I)V
+
+    goto :goto_0
 .end method

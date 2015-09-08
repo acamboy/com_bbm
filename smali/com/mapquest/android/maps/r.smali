@@ -43,7 +43,7 @@
     .line 83
     iget-object v0, p0, Lcom/mapquest/android/maps/r;->c:Lcom/mapquest/android/maps/MapView;
 
-    invoke-virtual {v0}, Lcom/mapquest/android/maps/MapView;->getProjection()Lcom/mapquest/android/maps/bq;
+    invoke-virtual {v0}, Lcom/mapquest/android/maps/MapView;->getProjection()Lcom/mapquest/android/maps/bp;
 
     move-result-object v0
 
@@ -108,7 +108,7 @@
     iput v3, p0, Lcom/mapquest/android/maps/r;->i:I
 
     .line 89
-    invoke-interface {v0, v1, v2}, Lcom/mapquest/android/maps/bq;->a(II)Lcom/mapquest/android/maps/s;
+    invoke-interface {v0, v1, v2}, Lcom/mapquest/android/maps/bp;->a(II)Lcom/mapquest/android/maps/s;
 
     move-result-object v0
 
@@ -136,7 +136,7 @@
 
     const/high16 v5, -0x80000000
 
-    const/high16 v4, 0x3e800000
+    const/high16 v4, 0x3e800000    # 0.25f
 
     .line 64
     invoke-super {p0}, Lcom/mapquest/android/maps/a;->b()V
@@ -205,7 +205,7 @@
     .line 55
     iget-object v0, p0, Lcom/mapquest/android/maps/r;->c:Lcom/mapquest/android/maps/MapView;
 
-    invoke-virtual {v0}, Lcom/mapquest/android/maps/MapView;->getProjection()Lcom/mapquest/android/maps/bq;
+    invoke-virtual {v0}, Lcom/mapquest/android/maps/MapView;->getProjection()Lcom/mapquest/android/maps/bp;
 
     move-result-object v0
 
@@ -220,7 +220,7 @@
     :cond_0
     const/4 v1, 0x0
 
-    invoke-interface {v0, p1, v1}, Lcom/mapquest/android/maps/bq;->a(Lcom/mapquest/android/maps/s;Landroid/graphics/Point;)Landroid/graphics/Point;
+    invoke-interface {v0, p1, v1}, Lcom/mapquest/android/maps/bp;->a(Lcom/mapquest/android/maps/s;Landroid/graphics/Point;)Landroid/graphics/Point;
 
     move-result-object v0
 

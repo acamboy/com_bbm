@@ -8,7 +8,7 @@
     .locals 2
 
     .prologue
-    .line 497
+    .line 500
     const/4 v0, 0x4
 
     const/4 v1, 0x0
@@ -20,7 +20,7 @@
 
 
 # virtual methods
-.method final a(Lcom/google/b/b/an;Ljava/lang/Object;ILcom/google/b/b/am;)Lcom/google/b/b/am;
+.method final a(Lcom/google/b/b/ao;Ljava/lang/Object;ILcom/google/b/b/an;)Lcom/google/b/b/an;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -29,22 +29,22 @@
             "V:",
             "Ljava/lang/Object;",
             ">(",
-            "Lcom/google/b/b/an",
+            "Lcom/google/b/b/ao",
             "<TK;TV;>;TK;I",
-            "Lcom/google/b/b/am",
+            "Lcom/google/b/b/an",
             "<TK;TV;>;)",
-            "Lcom/google/b/b/am",
+            "Lcom/google/b/b/an",
             "<TK;TV;>;"
         }
     .end annotation
 
     .prologue
-    .line 501
-    new-instance v0, Lcom/google/b/b/be;
+    .line 504
+    new-instance v0, Lcom/google/b/b/bf;
 
-    iget-object v1, p1, Lcom/google/b/b/an;->h:Ljava/lang/ref/ReferenceQueue;
+    iget-object v1, p1, Lcom/google/b/b/ao;->h:Ljava/lang/ref/ReferenceQueue;
 
-    invoke-direct {v0, v1, p2, p3, p4}, Lcom/google/b/b/be;-><init>(Ljava/lang/ref/ReferenceQueue;Ljava/lang/Object;ILcom/google/b/b/am;)V
+    invoke-direct {v0, v1, p2, p3, p4}, Lcom/google/b/b/bf;-><init>(Ljava/lang/ref/ReferenceQueue;Ljava/lang/Object;ILcom/google/b/b/an;)V
 
     return-object v0
 .end method

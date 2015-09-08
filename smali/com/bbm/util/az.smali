@@ -1,62 +1,56 @@
-.class public final Lcom/bbm/util/az;
+.class final Lcom/bbm/util/az;
 .super Ljava/lang/Object;
 .source "ChannelUtil.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field private final a:Landroid/content/Context;
+.field final synthetic a:Ljava/lang/String;
 
-.field private final b:Ljava/lang/String;
+.field final synthetic b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
+.method constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 1010
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 779
+    iput-object p1, p0, Lcom/bbm/util/az;->a:Ljava/lang/String;
 
-    .line 1011
-    iput-object p1, p0, Lcom/bbm/util/az;->a:Landroid/content/Context;
-
-    .line 1012
     iput-object p2, p0, Lcom/bbm/util/az;->b:Ljava/lang/String;
 
-    .line 1013
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 4
 
     .prologue
-    .line 1017
-    new-instance v0, Landroid/content/Intent;
+    .line 783
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    iget-object v1, p0, Lcom/bbm/util/az;->a:Landroid/content/Context;
+    .line 784
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
-    const-class v2, Lcom/bbm/ui/activities/ChannelDetailsActivity;
+    move-result-object v0
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 1018
-    const-string v1, "bbm_channel_uri"
+    iget-object v1, p0, Lcom/bbm/util/az;->a:Ljava/lang/String;
 
     iget-object v2, p0, Lcom/bbm/util/az;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    new-instance v3, Lcom/bbm/d/ci;
 
-    .line 1019
-    iget-object v1, p0, Lcom/bbm/util/az;->a:Landroid/content/Context;
+    invoke-direct {v3, v1, v2}, Lcom/bbm/d/ci;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v0, v3}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ez;)V
 
-    .line 1020
+    .line 785
     return-void
 .end method

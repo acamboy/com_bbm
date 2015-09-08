@@ -4,12 +4,12 @@
 
 
 # instance fields
-.field final a:Lcom/bbm/d/b/f;
+.field final a:Lcom/bbm/d/b/o;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/bbm/d/b/f",
+            "Lcom/bbm/d/b/o",
             "<",
-            "Lcom/bbm/d/fn;",
+            "Lcom/bbm/d/gp;",
             ">;"
         }
     .end annotation
@@ -17,7 +17,7 @@
 
 .field private b:Z
 
-.field private c:Lcom/bbm/ui/activities/aay;
+.field private c:Lcom/bbm/ui/activities/xo;
 
 .field private d:Lcom/bbm/f/ac;
 
@@ -43,26 +43,26 @@
     .line 51
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 77
+    .line 80
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/bbm/ui/activities/OpenInBbmActivity;->b:Z
 
-    .line 81
-    new-instance v0, Lcom/bbm/ui/activities/aan;
+    .line 84
+    new-instance v0, Lcom/bbm/ui/activities/xd;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/aan;-><init>(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/xd;-><init>(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
 
     iput-object v0, p0, Lcom/bbm/ui/activities/OpenInBbmActivity;->e:Lcom/bbm/j/a;
 
-    .line 89
-    new-instance v0, Lcom/bbm/ui/activities/aaq;
+    .line 92
+    new-instance v0, Lcom/bbm/ui/activities/xg;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/aaq;-><init>(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/xg;-><init>(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/OpenInBbmActivity;->a:Lcom/bbm/d/b/f;
+    iput-object v0, p0, Lcom/bbm/ui/activities/OpenInBbmActivity;->a:Lcom/bbm/d/b/o;
 
-    .line 737
+    .line 770
     return-void
 .end method
 
@@ -76,36 +76,30 @@
     return-object v0
 .end method
 
-.method private a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
+.method private a()V
+    .locals 3
 
     .prologue
-    .line 518
-    invoke-static {p1, p2, p3}, Lcom/bbm/util/ds;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/app/AlertDialog$Builder;
+    .line 545
+    const v0, 0x7f0e0621
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 519
-    new-instance v1, Lcom/bbm/ui/activities/aaw;
+    const v1, 0x7f0e062b
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/aaw;-><init>(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
+    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/OpenInBbmActivity;->getString(I)Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;
+    move-result-object v1
 
-    .line 524
-    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+    new-instance v2, Lcom/bbm/ui/activities/xm;
 
-    move-result-object v0
+    invoke-direct {v2, p0}, Lcom/bbm/ui/activities/xm;-><init>(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
 
-    .line 525
-    const/4 v1, 0x0
+    invoke-static {p0, v0, v1, v2}, Lcom/bbm/util/eg;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/DialogInterface$OnCancelListener;)V
 
-    invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->setCanceledOnTouchOutside(Z)V
-
-    .line 526
-    invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
-
-    .line 527
+    .line 550
     return-void
 .end method
 
@@ -113,32 +107,32 @@
     .locals 2
 
     .prologue
-    .line 391
-    invoke-static {p1, p2}, Lcom/bbm/util/ds;->a(Landroid/content/Context;Z)Landroid/app/AlertDialog$Builder;
+    .line 419
+    invoke-static {p1, p2}, Lcom/bbm/util/eg;->a(Landroid/content/Context;Z)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    .line 392
-    new-instance v1, Lcom/bbm/ui/activities/aav;
+    .line 420
+    new-instance v1, Lcom/bbm/ui/activities/xl;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/aav;-><init>(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/xl;-><init>(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 397
+    .line 425
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v0
 
-    .line 398
+    .line 426
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 399
+    .line 427
     invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
-    .line 400
+    .line 428
     return-void
 .end method
 
@@ -147,9 +141,9 @@
 
     .prologue
     .line 51
-    new-instance v0, Lcom/bbm/ui/activities/aap;
+    new-instance v0, Lcom/bbm/ui/activities/xf;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/aap;-><init>(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/xf;-><init>(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
 
     invoke-virtual {p1, v0}, Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;
 
@@ -166,22 +160,14 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/OpenInBbmActivity;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    .prologue
-    .line 51
-    invoke-direct {p0, p1, p2, p3}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
 .method static synthetic a(Lcom/bbm/ui/activities/OpenInBbmActivity;Ljava/lang/String;)V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 51
-    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/OpenInBbmActivity;->b(Ljava/lang/String;)V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -204,17 +190,17 @@
 
     move-result-object v1
 
-    new-instance v2, Lcom/bbm/g/t;
+    new-instance v2, Lcom/bbm/g/v;
 
-    invoke-direct {v2}, Lcom/bbm/g/t;-><init>()V
+    invoke-direct {v2}, Lcom/bbm/g/v;-><init>()V
 
-    invoke-virtual {v2, v1}, Lcom/bbm/g/t;->a(Lorg/json/JSONObject;)V
+    invoke-virtual {v2, v1}, Lcom/bbm/g/v;->a(Lorg/json/JSONObject;)V
 
-    iget-boolean v1, v2, Lcom/bbm/g/t;->l:Z
+    iget-boolean v1, v2, Lcom/bbm/g/v;->l:Z
 
     if-nez v1, :cond_0
 
-    iget-object v1, v2, Lcom/bbm/g/t;->g:Ljava/lang/String;
+    iget-object v1, v2, Lcom/bbm/g/v;->g:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
@@ -226,7 +212,7 @@
 
     const-string v3, "invite_id"
 
-    iget-object v2, v2, Lcom/bbm/g/t;->g:Ljava/lang/String;
+    iget-object v2, v2, Lcom/bbm/g/v;->g:Ljava/lang/String;
 
     invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -243,75 +229,26 @@
     return-void
 .end method
 
-.method private a()Z
-    .locals 4
+.method private a(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
     .prologue
-    const/4 v2, 0x1
+    .line 371
+    new-instance v0, Lcom/bbm/ui/activities/xj;
 
-    const/4 v1, 0x0
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/xj;-><init>(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
 
-    .line 372
-    iget-object v0, p0, Lcom/bbm/ui/activities/OpenInBbmActivity;->e:Lcom/bbm/j/a;
+    invoke-static {p0, p1, p2, v0}, Lcom/bbm/invite/o;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Lcom/bbm/invite/ae;)V
 
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/f/ag;
-
-    .line 373
-    iget-object v0, v0, Lcom/bbm/f/ag;->a:Lcom/bbm/f/ah;
-
-    sget-object v3, Lcom/bbm/f/ah;->b:Lcom/bbm/f/ah;
-
-    if-eq v0, v3, :cond_1
-
-    .line 375
-    const-string v0, "connectivity"
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/net/ConnectivityManager;
-
-    .line 376
-    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
-
-    move-result-object v0
-
-    .line 377
-    if-nez v0, :cond_0
-
-    .line 379
-    invoke-direct {p0, p0, v2}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a(Landroid/content/Context;Z)V
-
-    :goto_0
-    move v0, v1
-
-    .line 386
-    :goto_1
-    return v0
-
-    .line 382
-    :cond_0
-    invoke-direct {p0, p0, v1}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a(Landroid/content/Context;Z)V
-
-    goto :goto_0
-
-    :cond_1
-    move v0, v2
-
-    .line 386
-    goto :goto_1
+    .line 378
+    return-void
 .end method
 
 .method private static a(Ljava/lang/String;)Z
     .locals 1
 
     .prologue
-    .line 165
+    .line 188
     const-string v0, "HTTP"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -352,22 +289,17 @@
     return-object v0
 .end method
 
-.method private b(Ljava/lang/String;)V
-    .locals 1
+.method static synthetic c(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
+    .locals 0
 
     .prologue
-    .line 343
-    new-instance v0, Lcom/bbm/ui/activities/aat;
+    .line 51
+    invoke-direct {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a()V
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/aat;-><init>(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
-
-    invoke-static {p0, p1, v0}, Lcom/bbm/h/aq;->a(Landroid/app/Activity;Ljava/lang/String;Lcom/bbm/h/bb;)V
-
-    .line 350
     return-void
 .end method
 
-.method static synthetic c(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
+.method static synthetic d(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
     .locals 3
 
     .prologue
@@ -380,7 +312,7 @@
 
     const-string v1, "active_section"
 
-    const v2, 0x7f0b0062
+    const v2, 0x7f0b0094
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
@@ -402,221 +334,314 @@
 
 # virtual methods
 .method protected onActivityResult(IILandroid/content/Intent;)V
-    .locals 7
+    .locals 9
 
     .prologue
-    .line 136
+    const/4 v1, 0x0
+
+    .line 150
+    const/16 v0, 0xc8
+
+    if-eq p1, v0, :cond_3
+
+    .line 151
     const/16 v0, 0x64
 
-    if-ne p1, v0, :cond_3
+    if-ne p1, v0, :cond_4
 
-    .line 137
+    .line 153
     const/4 v0, -0x1
 
-    if-ne p2, v0, :cond_2
+    if-ne p2, v0, :cond_3
 
-    .line 138
+    .line 154
     const-string v0, "com.bbm.selectcontact.bundle.passthrough"
 
     invoke-virtual {p3, v0}, Landroid/content/Intent;->getBundleExtra(Ljava/lang/String;)Landroid/os/Bundle;
 
-    move-result-object v0
-
-    .line 139
-    const-string v1, "message"
-
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 140
-    const-string v2, "userCustomMessage"
-
-    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 141
-    const-string v3, "appId"
-
-    invoke-virtual {v0, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
     move-result-object v3
 
-    .line 142
-    const-string v4, "com.bbm.selectedcontacts"
+    .line 155
+    const-string v0, "message"
 
-    invoke-virtual {p3, v4}, Landroid/content/Intent;->getStringArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
+    invoke-virtual {v3, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 143
-    if-eqz v0, :cond_2
+    .line 156
+    const-string v0, "userCustomMessage"
 
-    invoke-virtual {v0}, Landroid/os/Bundle;->isEmpty()Z
+    invoke-virtual {v3, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result v0
+    move-result-object v5
 
-    if-nez v0, :cond_2
+    .line 157
+    const-string v0, "appId"
 
-    if-eqz v4, :cond_2
+    invoke-virtual {v3, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+    move-result-object v6
 
-    move-result v0
+    .line 158
+    const-string v0, "com.bbm.selectedcontactsuris"
 
-    if-lez v0, :cond_2
+    invoke-virtual {p3, v0}, Landroid/content/Intent;->getStringArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
 
-    .line 144
-    new-instance v5, Landroid/content/Intent;
+    move-result-object v7
+
+    .line 159
+    const-string v0, "com.bbm.selectedcontactspins"
+
+    invoke-virtual {p3, v0}, Landroid/content/Intent;->getStringArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object v8
+
+    .line 160
+    if-nez v7, :cond_5
+
+    move v2, v1
+
+    :goto_0
+    if-nez v8, :cond_6
+
+    move v0, v1
+
+    :goto_1
+    add-int/2addr v0, v2
+
+    .line 162
+    if-eqz v3, :cond_3
+
+    invoke-virtual {v3}, Landroid/os/Bundle;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    if-lez v0, :cond_3
+
+    .line 163
+    new-instance v2, Landroid/content/Intent;
 
     const-class v0, Lcom/bbm/ui/activities/MainActivity;
 
-    invoke-direct {v5, p0, v0}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    invoke-direct {v2, p0, v0}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 145
+    .line 164
     const-string v0, "startConversation"
 
-    const-string v6, "New Share Message"
+    const-string v3, "New Share Message"
 
-    invoke-virtual {v5, v0, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v2, v0, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 146
+    .line 165
     const-string v0, "message"
 
-    invoke-virtual {v5, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v2, v0, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 147
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    .line 166
+    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 148
+    .line 167
     const-string v0, "userCustomMessage"
 
-    invoke-virtual {v5, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v2, v0, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 150
+    .line 169
     :cond_0
-    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 151
+    .line 170
     const-string v0, "appId"
 
-    invoke-virtual {v5, v0, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v2, v0, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 153
+    .line 172
     :cond_1
-    const-string v1, "userUri"
+    if-eqz v7, :cond_7
 
-    const/4 v0, 0x0
+    invoke-virtual {v7}, Ljava/util/ArrayList;->isEmpty()Z
 
-    invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    .line 173
+    const-string v3, "userUri"
+
+    invoke-virtual {v7, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-virtual {v5, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v2, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 154
+    .line 177
+    :cond_2
+    :goto_2
     const/high16 v0, 0x10000000
 
-    invoke-virtual {v5, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+    invoke-virtual {v2, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 155
-    invoke-virtual {p0, v5}, Lcom/bbm/ui/activities/OpenInBbmActivity;->startActivity(Landroid/content/Intent;)V
+    .line 178
+    invoke-virtual {p0, v2}, Lcom/bbm/ui/activities/OpenInBbmActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 157
-    :cond_2
+    .line 180
+    :cond_3
     invoke-virtual {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->finish()V
 
-    .line 162
-    :cond_3
+    .line 185
+    :cond_4
     return-void
-.end method
 
-.method public onCreate(Landroid/os/Bundle;)V
-    .locals 12
-
-    .prologue
-    .line 108
-    invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
-
-    .line 110
-    const-string v0, "android.intent.action.VIEW"
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 160
+    :cond_5
+    invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    if-eqz v0, :cond_43
+    move v2, v0
 
+    goto :goto_0
+
+    :cond_6
+    invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    goto :goto_1
+
+    .line 174
+    :cond_7
+    if-eqz v8, :cond_2
+
+    invoke-virtual {v8}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    .line 175
+    const-string v3, "userPin"
+
+    invoke-virtual {v8, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-virtual {v2, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    goto :goto_2
+.end method
+
+.method public onCreate(Landroid/os/Bundle;)V
+    .locals 14
+
+    .prologue
     .line 111
+    invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
+
+    .line 113
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    .line 115
+    if-nez v0, :cond_1
+
+    .line 116
+    const-string v0, "NULL intent for OpenInBbmActivity"
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 117
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->finish()V
+
+    .line 133
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 120
+    :cond_1
+    invoke-virtual {v0}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 121
+    const-string v2, "android.intent.action.VIEW"
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_46
+
+    .line 122
     invoke-virtual {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
-    move-result-object v1
+    move-result-object v2
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    const-string v2, "internalStoreLinking"
+    const-string v1, "internalStoreLinking"
 
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_2
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    const-string v2, "internalStoreLinking"
+    const-string v1, "internalStoreLinking"
 
     const/4 v3, 0x0
 
-    invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/bbm/ui/activities/OpenInBbmActivity;->b:Z
 
-    :cond_0
+    :cond_2
     invoke-virtual {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->getApplication()Landroid/app/Application;
 
-    invoke-virtual {v1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+    invoke-virtual {v2}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v0
 
-    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
+    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object v3
 
     invoke-static {v3}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a(Ljava/lang/String;)Z
 
-    move-result v2
+    move-result v1
 
     const-string v0, "BBM"
 
@@ -638,78 +663,78 @@
 
     new-instance v7, Ljava/util/ArrayList;
 
-    invoke-virtual {v1}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
+    invoke-virtual {v2}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object v0
 
     invoke-direct {v7, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    invoke-virtual {v1}, Landroid/net/Uri;->getHost()Ljava/lang/String;
+    invoke-virtual {v2}, Landroid/net/Uri;->getHost()Ljava/lang/String;
 
     move-result-object v0
 
-    if-nez v2, :cond_1
+    if-nez v1, :cond_3
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v2
+    move-result v1
 
-    if-nez v2, :cond_1
+    if-nez v1, :cond_3
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {v7, v2, v0}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
-
-    const-string v0, ""
-
-    :cond_1
-    if-nez v0, :cond_2
+    invoke-virtual {v7, v1, v0}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
     const-string v0, ""
 
-    :cond_2
-    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
+    :cond_3
+    if-nez v0, :cond_4
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
+    const-string v0, ""
+
+    :cond_4
+    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object v8
 
-    if-nez v4, :cond_3
+    if-nez v4, :cond_5
 
-    if-nez v5, :cond_3
+    if-nez v5, :cond_5
 
-    if-eqz v6, :cond_1c
+    if-eqz v6, :cond_1f
 
-    :cond_3
-    invoke-static {v1}, Lcom/bbm/util/ds;->a(Landroid/net/Uri;)Z
+    :cond_5
+    invoke-static {v2}, Lcom/bbm/util/eg;->a(Landroid/net/Uri;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1c
+    if-eqz v0, :cond_1f
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v2, "TPA: handleTpa. Uri: "
+    const-string v1, "TPA: handleTpa. Uri: "
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v2, " in "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-class v2, Lcom/bbm/ui/activities/OpenInBbmActivity;
+    const-string v1, " in "
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-class v1, Lcom/bbm/ui/activities/OpenInBbmActivity;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -717,11 +742,11 @@
 
     move-result-object v0
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    new-array v2, v2, [Ljava/lang/Object;
+    new-array v1, v1, [Ljava/lang/Object;
 
-    invoke-static {v0, v2}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     const-string v0, "BBMAPI-1-1"
 
@@ -729,29 +754,31 @@
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     const-string v0, "TPA: scheme bbmapi-1-1 just open bbm"
 
     const-class v1, Lcom/bbm/ui/activities/OpenInBbmActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/String;Ljava/lang/Class;)V
 
     const/4 v0, 0x0
 
-    :goto_0
-    if-nez v0, :cond_4
+    :goto_1
+    if-nez v0, :cond_0
 
-    .line 113
+    .line 124
     invoke-virtual {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->getApplication()Landroid/app/Application;
 
-    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/f/ae;
+    invoke-static {}, Lcom/bbm/Alaska;->n()Lcom/bbm/f/ae;
 
     move-result-object v0
 
-    iget-boolean v0, v0, Lcom/bbm/f/ae;->i:Z
+    invoke-virtual {v0}, Lcom/bbm/f/ae;->a()Z
 
-    if-nez v0, :cond_42
+    move-result v0
+
+    if-nez v0, :cond_45
 
     new-instance v0, Landroid/content/Intent;
 
@@ -759,7 +786,7 @@
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    :goto_1
+    :goto_2
     const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
@@ -768,20 +795,17 @@
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->finish()V
 
-    .line 119
-    :cond_4
-    :goto_2
-    return-void
+    goto/16 :goto_0
 
-    .line 111
-    :cond_5
+    .line 122
+    :cond_6
     const-string v0, "BBM"
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_6
+    if-nez v0, :cond_7
 
     const-string v0, "BBMI"
 
@@ -789,57 +813,203 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1a
+    if-eqz v0, :cond_d
 
-    :cond_6
-    const-string v0, "share"
+    :cond_7
+    const/4 v0, 0x1
 
-    const/4 v2, 0x1
+    invoke-interface {v7, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    invoke-interface {v7, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object v2
+    check-cast v0, Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-object v1, p0, Lcom/bbm/ui/activities/OpenInBbmActivity;->e:Lcom/bbm/j/a;
+
+    invoke-virtual {v1}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/bbm/f/ag;
+
+    iget-object v1, v1, Lcom/bbm/f/ag;->a:Lcom/bbm/f/ah;
+
+    sget-object v3, Lcom/bbm/f/ah;->b:Lcom/bbm/f/ah;
+
+    if-eq v1, v3, :cond_a
+
+    const-string v1, "connectivity"
+
+    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/OpenInBbmActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/net/ConnectivityManager;
+
+    invoke-virtual {v1}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
+
+    move-result-object v1
+
+    if-nez v1, :cond_9
+
+    const/4 v1, 0x1
+
+    invoke-direct {p0, p0, v1}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a(Landroid/content/Context;Z)V
+
+    :goto_3
+    const/4 v1, 0x0
+
+    :goto_4
+    if-eqz v1, :cond_8
+
+    if-nez v0, :cond_b
+
+    :cond_8
+    const/4 v0, 0x1
+
+    goto :goto_1
+
+    :cond_9
+    const/4 v1, 0x0
+
+    invoke-direct {p0, p0, v1}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a(Landroid/content/Context;Z)V
+
+    goto :goto_3
+
+    :cond_a
+    const/4 v1, 0x1
+
+    goto :goto_4
+
+    :cond_b
+    const/4 v1, -0x1
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
+
+    sparse-switch v3, :sswitch_data_0
+
+    :cond_c
+    move v0, v1
+
+    :goto_5
+    packed-switch v0, :pswitch_data_0
+
+    :cond_d
+    const-string v0, "TPA: no other scheme is supported"
+
+    const-class v1, Lcom/bbm/ui/activities/OpenInBbmActivity;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/String;Ljava/lang/Class;)V
+
+    :cond_e
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :sswitch_0
+    const-string v3, "rwv"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_c
 
-    invoke-direct {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a()Z
+    const/4 v0, 0x0
+
+    goto :goto_5
+
+    :sswitch_1
+    const-string v3, "share"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_7
+    if-eqz v0, :cond_c
 
     const/4 v0, 0x1
 
-    goto :goto_0
+    goto :goto_5
 
-    :cond_7
+    :sswitch_2
+    const-string v3, "registerWithBbm"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_c
+
+    const/4 v0, 0x2
+
+    goto :goto_5
+
+    :sswitch_3
+    const-string v3, "openContactPicker"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_c
+
+    const/4 v0, 0x3
+
+    goto :goto_5
+
+    :sswitch_4
+    const-string v3, "sendMessage"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_c
+
+    const/4 v0, 0x4
+
+    goto :goto_5
+
+    :sswitch_5
+    const-string v3, "shareToFeed"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_c
+
+    const/4 v0, 0x5
+
+    goto :goto_5
+
+    :pswitch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v2, "TPA: Share with BBM. Uri: "
+    const-string v1, "TPA: Refresh web view. Uri: "
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v2, " in "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-class v2, Lcom/bbm/ui/activities/OpenInBbmActivity;
+    const-string v1, " in "
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-class v1, Lcom/bbm/ui/activities/OpenInBbmActivity;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -847,97 +1017,148 @@
 
     move-result-object v0
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    new-array v2, v2, [Ljava/lang/Object;
+    new-array v1, v1, [Ljava/lang/Object;
 
-    invoke-static {v0, v2}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Lcom/bbm/ui/activities/PartnerWebViewActivity;
+
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const-string v1, "rwv"
+
+    const-string v2, "true"
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->startActivity(Landroid/content/Intent;)V
+
+    const/4 v0, 0x0
+
+    goto/16 :goto_1
+
+    :pswitch_1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "TPA: Share with BBM. Uri: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " in "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-class v1, Lcom/bbm/ui/activities/OpenInBbmActivity;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     invoke-interface {v7}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_f
 
     const-string v0, "appId"
 
-    invoke-virtual {v1, v0}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v0}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v2, "message"
+    const-string v1, "message"
 
-    invoke-virtual {v1, v2}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
     const-string v3, "userCustomMessage"
 
-    invoke-virtual {v1, v3}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v2}, Lcom/bbm/util/ds;->c(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v1}, Lcom/bbm/util/ds;->c(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/bbm/util/eg;->c(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v2}, Lcom/bbm/util/eg;->c(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_9
+    if-eqz v3, :cond_10
 
-    const/4 v0, 0x0
+    const v0, 0x7f0e0621
 
-    const v1, 0x7f0e0598
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->getString(I)Ljava/lang/String;
 
-    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/OpenInBbmActivity;->getString(I)Ljava/lang/String;
+    invoke-direct {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a()V
 
-    move-result-object v1
-
-    invoke-direct {p0, p0, v0, v1}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_8
-    :goto_3
+    :cond_f
+    :goto_6
     const/4 v0, 0x1
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    :cond_9
+    :cond_10
     new-instance v3, Landroid/os/Bundle;
 
     invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
 
     const-string v4, "message"
 
-    invoke-virtual {v3, v4, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v3, v4, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v2
+    move-result v1
 
-    if-nez v2, :cond_a
+    if-nez v1, :cond_11
 
-    const-string v2, "appId"
+    const-string v1, "appId"
 
-    invoke-virtual {v3, v2, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v3, v1, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_a
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    :cond_11
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-nez v0, :cond_b
+    if-nez v0, :cond_12
 
     const-string v0, "userCustomMessage"
 
-    invoke-virtual {v3, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v3, v0, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_b
+    :cond_12
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/bbm/ui/activities/SelectContactActivity;
@@ -958,57 +1179,32 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/activities/OpenInBbmActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    goto :goto_3
+    goto :goto_6
 
-    :cond_c
-    const-string v0, "registerWithBbm"
-
-    const/4 v2, 0x1
-
-    invoke-interface {v7, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_12
-
-    invoke-direct {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a()Z
-
-    move-result v0
-
-    if-nez v0, :cond_d
-
-    const/4 v0, 0x1
-
-    goto/16 :goto_0
-
-    :cond_d
+    :pswitch_2
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v2, "TPA: Register with BBM. Uri: "
+    const-string v1, "TPA: Register with BBM. Uri: "
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v2, " in "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-class v2, Lcom/bbm/ui/activities/OpenInBbmActivity;
+    const-string v1, " in "
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-class v1, Lcom/bbm/ui/activities/OpenInBbmActivity;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1016,17 +1212,50 @@
 
     move-result-object v0
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    new-array v2, v2, [Ljava/lang/Object;
+    new-array v1, v1, [Ljava/lang/Object;
 
-    invoke-static {v0, v2}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->getApplication()Landroid/app/Application;
+
+    invoke-static {}, Lcom/bbm/Alaska;->n()Lcom/bbm/f/ae;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/f/ae;->a()Z
+
+    move-result v0
+
+    if-nez v0, :cond_14
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Lcom/bbm/ui/activities/StartupActivity;
+
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const v1, 0x10004000
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->startActivity(Landroid/content/Intent;)V
+
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->finish()V
+
+    :cond_13
+    :goto_7
+    const/4 v0, 0x1
+
+    goto/16 :goto_1
+
+    :cond_14
     invoke-interface {v7}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_13
 
     const/4 v0, 0x0
 
@@ -1036,11 +1265,11 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/util/ds;->a(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/bbm/util/eg;->a(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_15
 
     const/4 v0, 0x1
 
@@ -1050,84 +1279,72 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/util/ds;->b(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/bbm/util/eg;->b(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-nez v0, :cond_10
+    if-nez v0, :cond_16
 
-    :cond_e
-    const v0, 0x7f0e05ac
+    :cond_15
+    const v0, 0x7f0e0635
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->getString(I)Ljava/lang/String;
 
-    move-result-object v0
+    const v0, 0x7f0e0621
 
-    const v1, 0x7f0e0598
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->getString(I)Ljava/lang/String;
 
-    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/OpenInBbmActivity;->getString(I)Ljava/lang/String;
+    invoke-direct {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a()V
 
-    move-result-object v1
+    goto :goto_7
 
-    invoke-direct {p0, p0, v0, v1}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_f
-    :goto_4
-    const/4 v0, 0x1
-
-    goto/16 :goto_0
-
-    :cond_10
+    :cond_16
     const-string v0, "appId"
 
-    invoke-virtual {v1, v0}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v0}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_11
+    if-eqz v1, :cond_17
 
-    const v0, 0x7f0e05ac
+    const v0, 0x7f0e0635
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->getString(I)Ljava/lang/String;
 
-    move-result-object v0
+    const v0, 0x7f0e0621
 
-    const v1, 0x7f0e0598
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->getString(I)Ljava/lang/String;
 
-    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/OpenInBbmActivity;->getString(I)Ljava/lang/String;
+    invoke-direct {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a()V
 
-    move-result-object v1
+    goto :goto_7
 
-    invoke-direct {p0, p0, v0, v1}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    :cond_17
+    const-string v1, "context"
 
-    goto :goto_4
-
-    :cond_11
-    const-string v2, "context"
-
-    invoke-virtual {v1, v2}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    new-instance v2, Lcom/bbm/ui/activities/aax;
+    new-instance v2, Lcom/bbm/ui/activities/xn;
 
-    invoke-direct {v2, p0}, Lcom/bbm/ui/activities/aax;-><init>(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
+    invoke-direct {v2, p0}, Lcom/bbm/ui/activities/xn;-><init>(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
 
-    new-instance v3, Lcom/bbm/d/b/n;
+    new-instance v3, Lcom/bbm/d/b/x;
 
-    invoke-direct {v3, v0}, Lcom/bbm/d/b/n;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v0}, Lcom/bbm/d/b/x;-><init>(Ljava/lang/String;)V
 
-    new-instance v0, Lcom/bbm/ui/activities/aao;
+    new-instance v0, Lcom/bbm/ui/activities/xe;
 
-    invoke-direct {v0, p0, v3, v2, v1}, Lcom/bbm/ui/activities/aao;-><init>(Lcom/bbm/ui/activities/OpenInBbmActivity;Lcom/bbm/d/b/n;Landroid/os/Handler;Ljava/lang/String;)V
+    invoke-direct {v0, p0, v3, v2, v1}, Lcom/bbm/ui/activities/xe;-><init>(Lcom/bbm/ui/activities/OpenInBbmActivity;Lcom/bbm/d/b/x;Landroid/os/Handler;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/bbm/ui/activities/OpenInBbmActivity;->f:Lcom/bbm/j/u;
 
@@ -1135,57 +1352,32 @@
 
     invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
 
-    goto :goto_4
+    goto :goto_7
 
-    :cond_12
-    const-string v0, "openContactPicker"
-
-    const/4 v2, 0x1
-
-    invoke-interface {v7, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_14
-
-    invoke-direct {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a()Z
-
-    move-result v0
-
-    if-nez v0, :cond_13
-
-    const/4 v0, 0x1
-
-    goto/16 :goto_0
-
-    :cond_13
+    :pswitch_3
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v2, "TPA: start Transaction and pick a contact. Uri: "
+    const-string v1, "TPA: open contact picker. Uri: "
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v2, " in "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-class v2, Lcom/bbm/ui/activities/OpenInBbmActivity;
+    const-string v1, " in "
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-class v1, Lcom/bbm/ui/activities/OpenInBbmActivity;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1193,37 +1385,37 @@
 
     move-result-object v0
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    new-array v2, v2, [Ljava/lang/Object;
+    new-array v1, v1, [Ljava/lang/Object;
 
-    invoke-static {v0, v2}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     new-instance v0, Landroid/content/Intent;
 
-    const-class v2, Lcom/bbm/ui/activities/ShareActivity;
+    const-class v1, Lcom/bbm/ui/activities/ShareActivity;
 
-    invoke-direct {v0, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    const-string v2, "appId"
+    const-string v1, "appId"
 
     const-string v3, "appId"
 
-    invoke-virtual {v1, v3}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    const-string v2, "context"
+    const-string v1, "context"
 
     const-string v3, "context"
 
-    invoke-virtual {v1, v3}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->startActivity(Landroid/content/Intent;)V
 
@@ -1231,57 +1423,32 @@
 
     const/4 v0, 0x1
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    :cond_14
-    const-string v0, "sendMessage"
-
-    const/4 v2, 0x1
-
-    invoke-interface {v7, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1a
-
-    invoke-direct {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a()Z
-
-    move-result v0
-
-    if-nez v0, :cond_15
-
-    const/4 v0, 0x1
-
-    goto/16 :goto_0
-
-    :cond_15
+    :pswitch_4
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v2, "TPA: Paid Money and Send Message. Uri: "
+    const-string v1, "TPA: Paid Money and Send Message. Uri: "
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v2, " in "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-class v2, Lcom/bbm/ui/activities/OpenInBbmActivity;
+    const-string v1, " in "
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-class v1, Lcom/bbm/ui/activities/OpenInBbmActivity;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1289,89 +1456,101 @@
 
     move-result-object v0
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    new-array v2, v2, [Ljava/lang/Object;
+    new-array v1, v1, [Ljava/lang/Object;
 
-    invoke-static {v0, v2}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     const-string v0, "message"
 
-    invoke-virtual {v1, v0}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v0}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v2, "userCustomMessage"
+    const-string v1, "userCustomMessage"
 
-    invoke-virtual {v1, v2}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
     const-string v3, "appId"
 
-    invoke-virtual {v1, v3}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     const-string v4, "receiverBbmId"
 
-    invoke-virtual {v1, v4}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v4}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     const-string v5, "context"
 
-    invoke-virtual {v1, v5}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v5}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     const-string v6, "token"
 
-    invoke-virtual {v1, v6}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0}, Lcom/bbm/util/ds;->c(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v6}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-static {v2}, Lcom/bbm/util/ds;->c(Ljava/lang/String;)Ljava/lang/String;
+    const-string v7, "incomingClickable"
+
+    invoke-virtual {v2, v7}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    const-string v8, "outgoingClickable"
+
+    invoke-virtual {v2, v8}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
+    invoke-static {v0}, Lcom/bbm/util/eg;->c(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v1}, Lcom/bbm/util/eg;->c(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v7, "TPA: MONEY TRANSFER receiver RegId: "
+    const-string v9, "TPA: MONEY TRANSFER receiver RegId: "
 
-    invoke-direct {v0, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-string v7, " message: "
+    const-string v9, " message: "
 
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-string v7, " | customMessage "
-
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v9, " | customMessage "
+
+    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-string v7, " | appId: "
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
+
+    const-string v9, " | appId: "
+
+    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1383,123 +1562,136 @@
 
     move-result-object v0
 
-    const-class v7, Lcom/bbm/ui/activities/OpenInBbmActivity;
+    const-class v9, Lcom/bbm/ui/activities/OpenInBbmActivity;
 
-    invoke-static {v0, v7}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v9}, Lcom/bbm/af;->c(Ljava/lang/String;Ljava/lang/Class;)V
 
     const/4 v0, 0x1
 
     invoke-virtual {v3}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v9
 
-    invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v9}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v7
+    move-result v9
 
-    if-nez v7, :cond_16
+    if-nez v9, :cond_18
 
     invoke-virtual {v4}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v9
 
-    invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v9}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v7
+    move-result v9
 
-    if-eqz v7, :cond_18
+    if-eqz v9, :cond_1a
 
-    :cond_16
+    :cond_18
     const/4 v0, 0x0
 
-    :cond_17
-    :goto_5
-    if-nez v0, :cond_19
+    :cond_19
+    :goto_8
+    if-nez v0, :cond_1b
 
-    const v0, 0x7f0e059a
+    const v0, 0x7f0e0623
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->getString(I)Ljava/lang/String;
 
-    move-result-object v0
+    const v0, 0x7f0e0621
 
-    const v1, 0x7f0e0598
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->getString(I)Ljava/lang/String;
 
-    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/OpenInBbmActivity;->getString(I)Ljava/lang/String;
+    invoke-direct {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a()V
 
-    move-result-object v1
-
-    invoke-direct {p0, p0, v0, v1}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_6
+    :goto_9
     const/4 v0, 0x1
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    :cond_18
+    :cond_1a
     :try_start_0
     invoke-virtual {v4}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v9
 
-    invoke-static {v7}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+    invoke-static {v9}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-wide v8
+    move-result-wide v10
 
-    const-wide/16 v10, 0x0
+    const-wide/16 v12, 0x0
 
-    cmp-long v7, v8, v10
+    cmp-long v9, v10, v12
 
-    if-nez v7, :cond_17
+    if-nez v9, :cond_19
 
     const/4 v0, 0x0
 
-    goto :goto_5
+    goto :goto_8
 
     :catch_0
     move-exception v0
 
     const/4 v0, 0x0
 
-    goto :goto_5
+    goto :goto_8
 
-    :cond_19
+    :cond_1b
     new-instance v0, Landroid/content/Intent;
 
-    const-class v7, Lcom/bbm/ui/activities/MainActivity;
+    const-class v9, Lcom/bbm/ui/activities/MainActivity;
 
-    invoke-direct {v0, p0, v7}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    invoke-direct {v0, p0, v9}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    const-string v7, "startConversation"
+    const-string v9, "startConversation"
 
-    const-string v8, "New Transaction Send Message"
+    const-string v10, "New Transaction Send Message"
 
-    invoke-virtual {v0, v7, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v0, v9, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    const-string v7, "message"
+    const-string v9, "message"
 
-    invoke-virtual {v0, v7, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v0, v9, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    const-string v6, "userCustomMessage"
+    const-string v8, "userCustomMessage"
 
-    invoke-virtual {v0, v6, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v0, v8, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    const-string v2, "appId"
+    if-eqz v7, :cond_1c
 
-    invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    const-string v1, "incomingClickable"
 
-    const-string v2, "receiverBbmId"
+    invoke-virtual {v0, v1, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-virtual {v0, v2, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    :cond_1c
+    if-eqz v2, :cond_1d
 
-    const-string v2, "context"
+    const-string v1, "outgoingClickable"
 
-    invoke-virtual {v0, v2, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    const-string v2, "token"
+    :cond_1d
+    const-string v1, "appId"
 
-    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    if-eqz v4, :cond_1e
+
+    const-string v1, "receiverBbmId"
+
+    invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    :cond_1e
+    const-string v1, "context"
+
+    invoke-virtual {v0, v1, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v1, "token"
+
+    invoke-virtual {v0, v1, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const/high16 v1, 0x10000000
 
@@ -1509,28 +1701,51 @@
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->finish()V
 
-    goto :goto_6
+    goto :goto_9
 
-    :cond_1a
-    const-string v0, "TPA: no other scheme is supported"
+    :pswitch_5
+    new-instance v0, Landroid/content/Intent;
 
-    const-class v1, Lcom/bbm/ui/activities/OpenInBbmActivity;
+    const-class v1, Lcom/bbm/ui/activities/ShareToFeedActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    :cond_1b
-    const/4 v0, 0x0
+    const-string v1, "message"
 
-    goto/16 :goto_0
+    const-string v3, "message"
 
-    :cond_1c
-    invoke-virtual {v1}, Landroid/net/Uri;->getPort()I
+    invoke-virtual {v2, v3}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v1, "appId"
+
+    const-string v3, "appId"
+
+    invoke-virtual {v2, v3}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    const/16 v1, 0xc8
+
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/activities/OpenInBbmActivity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    const/4 v0, 0x1
+
+    goto/16 :goto_1
+
+    :cond_1f
+    invoke-virtual {v2}, Landroid/net/Uri;->getPort()I
 
     move-result v0
 
-    const/4 v2, -0x1
+    const/4 v1, -0x1
 
-    if-eq v0, v2, :cond_1d
+    if-eq v0, v1, :cond_20
 
     const-string v0, "Port exists. Finishing activity."
 
@@ -1538,20 +1753,20 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->finish()V
 
     const/4 v0, 0x1
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    :cond_1d
+    :cond_20
     invoke-static {v3}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1e
+    if-eqz v0, :cond_21
 
     const-string v0, "WWW.PIN.BBM.COM"
 
@@ -1559,7 +1774,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_1f
+    if-nez v0, :cond_22
 
     const-string v0, "PIN.BBM.COM"
 
@@ -1567,25 +1782,25 @@
 
     move-result v0
 
-    if-nez v0, :cond_1f
+    if-nez v0, :cond_22
 
     const/4 v0, 0x0
 
-    :goto_7
-    if-eqz v0, :cond_24
+    :goto_a
+    if-eqz v0, :cond_27
 
     const/4 v0, 0x1
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    :cond_1e
+    :cond_21
     const-string v0, "PIN"
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_1f
+    if-nez v0, :cond_22
 
     const-string v0, "BBM"
 
@@ -1593,7 +1808,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_1f
+    if-nez v0, :cond_22
 
     const-string v0, "BBMI"
 
@@ -1601,27 +1816,27 @@
 
     move-result v0
 
-    if-nez v0, :cond_1f
+    if-nez v0, :cond_22
 
     const/4 v0, 0x0
 
-    goto :goto_7
+    goto :goto_a
 
-    :cond_1f
+    :cond_22
     invoke-interface {v7}, Ljava/util/List;->size()I
 
     move-result v0
 
-    const/4 v2, 0x2
+    const/4 v1, 0x2
 
-    if-eq v0, v2, :cond_20
+    if-eq v0, v1, :cond_23
 
     const/4 v0, 0x0
 
-    goto :goto_7
+    goto :goto_a
 
-    :cond_20
-    const-string v2, "SUPPORT"
+    :cond_23
+    const-string v1, "SUPPORT"
 
     const/4 v0, 0x0
 
@@ -1637,13 +1852,13 @@
 
     move-result-object v0
 
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_21
+    if-eqz v0, :cond_24
 
-    const-string v2, "REPORT"
+    const-string v1, "REPORT"
 
     const/4 v0, 0x1
 
@@ -1659,63 +1874,65 @@
 
     move-result-object v0
 
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_22
+    if-nez v0, :cond_25
 
-    :cond_21
+    :cond_24
     const/4 v0, 0x0
 
-    goto :goto_7
+    goto :goto_a
 
-    :cond_22
+    :cond_25
     new-instance v0, Landroid/content/Intent;
 
-    const-class v2, Lcom/bbm/ui/activities/ReportProblemActivity;
+    const-class v1, Lcom/bbm/ui/activities/ReportProblemActivity;
 
-    invoke-direct {v0, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    const-string v2, "wc"
+    const-string v1, "wc"
 
-    invoke-virtual {v1, v2}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
 
-    if-nez v4, :cond_23
+    if-nez v4, :cond_26
 
     const-string v4, "incidentId"
 
-    invoke-virtual {v0, v4, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v0, v4, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    :cond_23
+    :cond_26
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->startActivity(Landroid/content/Intent;)V
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->finish()V
 
     const/4 v0, 0x1
 
-    goto :goto_7
+    goto :goto_a
 
-    :cond_24
-    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/f/ae;
+    :cond_27
+    invoke-static {}, Lcom/bbm/Alaska;->n()Lcom/bbm/f/ae;
 
     move-result-object v0
 
-    iget-boolean v0, v0, Lcom/bbm/f/ae;->i:Z
+    invoke-virtual {v0}, Lcom/bbm/f/ae;->a()Z
 
-    if-eqz v0, :cond_1b
+    move-result v0
+
+    if-eqz v0, :cond_e
 
     invoke-static {v3}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_25
+    if-eqz v0, :cond_28
 
     const-string v0, "WWW.PIN.BBM.COM"
 
@@ -1723,7 +1940,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_26
+    if-nez v0, :cond_29
 
     const-string v0, "PIN.BBM.COM"
 
@@ -1731,25 +1948,25 @@
 
     move-result v0
 
-    if-nez v0, :cond_26
+    if-nez v0, :cond_29
 
     const/4 v0, 0x0
 
-    :goto_8
-    if-eqz v0, :cond_2b
+    :goto_b
+    if-eqz v0, :cond_2e
 
     const/4 v0, 0x1
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    :cond_25
+    :cond_28
     const-string v0, "PIN"
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_26
+    if-nez v0, :cond_29
 
     const-string v0, "BBM"
 
@@ -1757,7 +1974,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_26
+    if-nez v0, :cond_29
 
     const-string v0, "BBMI"
 
@@ -1765,24 +1982,24 @@
 
     move-result v0
 
-    if-nez v0, :cond_26
+    if-nez v0, :cond_29
 
     const/4 v0, 0x0
 
-    goto :goto_8
+    goto :goto_b
 
-    :cond_26
+    :cond_29
     invoke-interface {v7}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-nez v0, :cond_27
+    if-nez v0, :cond_2a
 
     const/4 v0, 0x0
 
-    goto :goto_8
+    goto :goto_b
 
-    :cond_27
+    :cond_2a
     const/4 v0, 0x0
 
     invoke-interface {v7, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1791,60 +2008,60 @@
 
     check-cast v0, Ljava/lang/String;
 
-    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
+    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/bbm/h/aq;->a(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_29
-
-    invoke-static {v0}, Lcom/bbm/h/aq;->b(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/bbm/invite/o;->b(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-nez v1, :cond_28
+    if-nez v1, :cond_2c
+
+    invoke-static {v0}, Lcom/bbm/invite/o;->c(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2b
 
     const/4 v0, 0x0
 
-    goto :goto_8
+    goto :goto_b
 
-    :cond_28
-    new-instance v1, Lcom/bbm/ui/activities/aau;
+    :cond_2b
+    new-instance v1, Lcom/bbm/ui/activities/xk;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/aau;-><init>(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/xk;-><init>(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
 
-    invoke-static {p0, v0, v1}, Lcom/bbm/h/aq;->b(Landroid/app/Activity;Ljava/lang/String;Lcom/bbm/h/bb;)V
+    invoke-static {p0, v0, v1}, Lcom/bbm/invite/o;->a(Landroid/app/Activity;Ljava/lang/String;Lcom/bbm/invite/ae;)V
 
-    :goto_9
+    :goto_c
     const/4 v0, 0x1
 
-    goto :goto_8
+    goto :goto_b
 
-    :cond_29
-    const-string v2, "invite"
+    :cond_2c
+    const-string v1, "invite"
 
-    invoke-virtual {v1, v2}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/bbm/h/aq;->d(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/bbm/invite/o;->e(Ljava/lang/String;)Z
 
-    move-result v2
+    move-result v4
 
-    if-eqz v2, :cond_2a
+    if-eqz v4, :cond_2d
 
     new-instance v2, Landroid/os/Handler;
 
     invoke-direct {v2}, Landroid/os/Handler;-><init>()V
 
-    new-instance v4, Lcom/bbm/ui/activities/aar;
+    new-instance v4, Lcom/bbm/ui/activities/xh;
 
-    invoke-direct {v4, p0, v0}, Lcom/bbm/ui/activities/aar;-><init>(Lcom/bbm/ui/activities/OpenInBbmActivity;Ljava/lang/String;)V
+    invoke-direct {v4, p0, v0}, Lcom/bbm/ui/activities/xh;-><init>(Lcom/bbm/ui/activities/OpenInBbmActivity;Ljava/lang/String;)V
 
     const-wide/16 v10, 0x3e8
 
@@ -1874,17 +2091,17 @@
 
     move-result-object v0
 
-    new-instance v5, Lcom/bbm/ui/activities/aas;
+    new-instance v5, Lcom/bbm/ui/activities/xi;
 
-    invoke-direct {v5, p0, v0, v2, v4}, Lcom/bbm/ui/activities/aas;-><init>(Lcom/bbm/ui/activities/OpenInBbmActivity;Ljava/lang/String;Landroid/os/Handler;Ljava/lang/Runnable;)V
+    invoke-direct {v5, p0, v0, v2, v4}, Lcom/bbm/ui/activities/xi;-><init>(Lcom/bbm/ui/activities/OpenInBbmActivity;Ljava/lang/String;Landroid/os/Handler;Ljava/lang/Runnable;)V
 
     iput-object v5, p0, Lcom/bbm/ui/activities/OpenInBbmActivity;->d:Lcom/bbm/f/ac;
 
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v2
 
-    iget-object v2, v2, Lcom/bbm/d/ac;->h:Lcom/bbm/d/a/f;
+    iget-object v2, v2, Lcom/bbm/d/aq;->j:Lcom/bbm/d/a/f;
 
     iget-object v2, v2, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
 
@@ -1894,30 +2111,40 @@
 
     const/4 v2, 0x0
 
-    sget-object v4, Lcom/bbm/d/bx;->b:Lcom/bbm/d/bx;
+    sget-object v4, Lcom/bbm/d/cs;->b:Lcom/bbm/d/cs;
 
-    invoke-static {v2, v1, v4}, Lcom/bbm/d/aa;->a(ZLjava/lang/String;Lcom/bbm/d/bx;)Lcom/bbm/d/bw;
+    invoke-static {v2, v1, v4}, Lcom/bbm/d/aj;->a(ZLjava/lang/String;Lcom/bbm/d/cs;)Lcom/bbm/d/cr;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/bbm/d/bw;->a(Ljava/lang/String;)Lcom/bbm/d/bw;
+    invoke-virtual {v1, v0}, Lcom/bbm/d/cr;->a(Ljava/lang/String;)Lcom/bbm/d/cr;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
+    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ez;)V
 
-    goto :goto_9
+    goto :goto_c
 
-    :cond_2a
-    invoke-direct {p0, v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->b(Ljava/lang/String;)V
+    :cond_2d
+    const-string v1, "ebbmphrase"
 
-    goto :goto_9
+    invoke-virtual {v2, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
-    :cond_2b
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/bbm/util/dk;->e(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {p0, v0, v1}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_c
+
+    :cond_2e
     const/4 v1, 0x0
 
     const/4 v2, 0x0
@@ -1926,7 +2153,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2e
+    if-eqz v0, :cond_31
 
     const-string v0, "SHOP.BBM.COM"
 
@@ -1934,23 +2161,23 @@
 
     move-result v0
 
-    if-nez v0, :cond_2c
+    if-nez v0, :cond_2f
 
     const/4 v0, 0x0
 
-    :goto_a
-    if-eqz v0, :cond_3c
+    :goto_d
+    if-eqz v0, :cond_3f
 
     const/4 v0, 0x1
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    :cond_2c
+    :cond_2f
     invoke-interface {v7}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-lez v0, :cond_2d
+    if-lez v0, :cond_30
 
     const/4 v0, 0x0
 
@@ -1962,14 +2189,14 @@
 
     move-object v1, v0
 
-    :cond_2d
+    :cond_30
     invoke-interface {v7}, Ljava/util/List;->size()I
 
     move-result v0
 
     const/4 v4, 0x1
 
-    if-le v0, v4, :cond_47
+    if-le v0, v4, :cond_4c
 
     const/4 v0, 0x1
 
@@ -1979,7 +2206,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    :goto_b
+    :goto_e
     const/4 v2, 0x0
 
     const-string v4, "stickers"
@@ -1988,17 +2215,17 @@
 
     move-result v4
 
-    if-eqz v4, :cond_37
+    if-eqz v4, :cond_3a
 
     iget-boolean v1, p0, Lcom/bbm/ui/activities/OpenInBbmActivity;->b:Z
 
-    if-eqz v1, :cond_35
+    if-eqz v1, :cond_38
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    if-nez v1, :cond_34
+    if-nez v1, :cond_37
 
     new-instance v1, Landroid/content/Intent;
 
@@ -2016,29 +2243,29 @@
 
     const-string v0, "view_source"
 
-    sget-object v2, Lcom/bbm/c/q;->e:Lcom/bbm/c/q;
+    sget-object v2, Lcom/bbm/c/v;->e:Lcom/bbm/c/v;
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
     move-object v0, v1
 
-    :goto_c
+    :goto_f
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->startActivity(Landroid/content/Intent;)V
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->finish()V
 
     const/4 v0, 0x1
 
-    goto :goto_a
+    goto :goto_d
 
-    :cond_2e
+    :cond_31
     const-string v0, "BBM"
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_2f
+    if-nez v0, :cond_32
 
     const-string v0, "BBMI"
 
@@ -2046,20 +2273,20 @@
 
     move-result v0
 
-    if-nez v0, :cond_2f
+    if-nez v0, :cond_32
 
     const/4 v0, 0x0
 
-    goto :goto_a
+    goto :goto_d
 
-    :cond_2f
+    :cond_32
     const-string v0, "BBM"
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_30
+    if-nez v0, :cond_33
 
     const-string v0, "BBMI"
 
@@ -2067,20 +2294,20 @@
 
     move-result v0
 
-    if-eqz v0, :cond_47
+    if-eqz v0, :cond_4c
 
-    :cond_30
+    :cond_33
     invoke-interface {v7}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-nez v0, :cond_31
+    if-nez v0, :cond_34
 
     const/4 v0, 0x0
 
-    goto :goto_a
+    goto :goto_d
 
-    :cond_31
+    :cond_34
     const-string v4, "SHOP"
 
     const/4 v0, 0x0
@@ -2095,20 +2322,20 @@
 
     move-result v0
 
-    if-nez v0, :cond_32
+    if-nez v0, :cond_35
 
     const/4 v0, 0x0
 
-    goto/16 :goto_a
+    goto/16 :goto_d
 
-    :cond_32
+    :cond_35
     invoke-interface {v7}, Ljava/util/List;->size()I
 
     move-result v0
 
     const/4 v4, 0x1
 
-    if-le v0, v4, :cond_33
+    if-le v0, v4, :cond_36
 
     const/4 v0, 0x1
 
@@ -2120,14 +2347,14 @@
 
     move-object v1, v0
 
-    :cond_33
+    :cond_36
     invoke-interface {v7}, Ljava/util/List;->size()I
 
     move-result v0
 
     const/4 v4, 0x2
 
-    if-le v0, v4, :cond_47
+    if-le v0, v4, :cond_4c
 
     const/4 v0, 0x2
 
@@ -2137,9 +2364,9 @@
 
     check-cast v0, Ljava/lang/String;
 
-    goto/16 :goto_b
+    goto/16 :goto_e
 
-    :cond_34
+    :cond_37
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/bbm/ui/activities/StickerStoreActivity;
@@ -2150,9 +2377,9 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    goto :goto_c
+    goto :goto_f
 
-    :cond_35
+    :cond_38
     new-instance v1, Landroid/content/Intent;
 
     const-class v2, Lcom/bbm/ui/activities/StoreHomeActivity;
@@ -2167,7 +2394,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_36
+    if-nez v2, :cond_39
 
     const-string v2, "pack_id"
 
@@ -2175,15 +2402,15 @@
 
     const-string v0, "view_source"
 
-    sget-object v2, Lcom/bbm/c/q;->e:Lcom/bbm/c/q;
+    sget-object v2, Lcom/bbm/c/v;->e:Lcom/bbm/c/v;
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
     move-object v0, v1
 
-    goto/16 :goto_c
+    goto/16 :goto_f
 
-    :cond_36
+    :cond_39
     const-string v0, "pack_id"
 
     const-string v2, ""
@@ -2192,26 +2419,26 @@
 
     move-object v0, v1
 
-    goto/16 :goto_c
+    goto/16 :goto_f
 
-    :cond_37
+    :cond_3a
     const-string v4, "item"
 
     invoke-virtual {v4, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v4
 
-    if-eqz v4, :cond_39
+    if-eqz v4, :cond_3c
 
     iget-boolean v1, p0, Lcom/bbm/ui/activities/OpenInBbmActivity;->b:Z
 
-    if-eqz v1, :cond_38
+    if-eqz v1, :cond_3b
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    if-nez v1, :cond_45
+    if-nez v1, :cond_4a
 
     new-instance v1, Landroid/content/Intent;
 
@@ -2229,15 +2456,15 @@
 
     const-string v0, "view_source"
 
-    sget-object v2, Lcom/bbm/c/l;->d:Lcom/bbm/c/l;
+    sget-object v2, Lcom/bbm/c/n;->d:Lcom/bbm/c/n;
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
     move-object v0, v1
 
-    goto/16 :goto_c
+    goto/16 :goto_f
 
-    :cond_38
+    :cond_3b
     new-instance v1, Landroid/content/Intent;
 
     const-class v2, Lcom/bbm/ui/activities/StoreHomeActivity;
@@ -2252,7 +2479,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_46
+    if-nez v2, :cond_4b
 
     const-string v2, "app_id"
 
@@ -2260,32 +2487,32 @@
 
     const-string v0, "view_source"
 
-    sget-object v2, Lcom/bbm/c/l;->d:Lcom/bbm/c/l;
+    sget-object v2, Lcom/bbm/c/n;->d:Lcom/bbm/c/n;
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
     move-object v0, v1
 
-    goto/16 :goto_c
+    goto/16 :goto_f
 
-    :cond_39
+    :cond_3c
     const-string v4, "list"
 
     invoke-virtual {v4, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_3b
+    if-eqz v1, :cond_3e
 
     iget-boolean v1, p0, Lcom/bbm/ui/activities/OpenInBbmActivity;->b:Z
 
-    if-eqz v1, :cond_3a
+    if-eqz v1, :cond_3d
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    if-nez v1, :cond_45
+    if-nez v1, :cond_4a
 
     new-instance v1, Landroid/content/Intent;
 
@@ -2303,9 +2530,9 @@
 
     move-object v0, v1
 
-    goto/16 :goto_c
+    goto/16 :goto_f
 
-    :cond_3a
+    :cond_3d
     new-instance v1, Landroid/content/Intent;
 
     const-class v2, Lcom/bbm/ui/activities/StoreHomeActivity;
@@ -2320,7 +2547,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_44
+    if-nez v2, :cond_49
 
     const-string v2, "collection_id"
 
@@ -2328,9 +2555,9 @@
 
     move-object v0, v1
 
-    goto/16 :goto_c
+    goto/16 :goto_f
 
-    :cond_3b
+    :cond_3e
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/bbm/ui/activities/StoreHomeActivity;
@@ -2341,14 +2568,14 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    goto/16 :goto_c
+    goto/16 :goto_f
 
-    :cond_3c
+    :cond_3f
     invoke-static {v3}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_3d
+    if-eqz v0, :cond_40
 
     const-string v0, "WWW.PIN.BBM.COM"
 
@@ -2356,7 +2583,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_3e
+    if-nez v0, :cond_41
 
     const-string v0, "PIN.BBM.COM"
 
@@ -2364,25 +2591,25 @@
 
     move-result v0
 
-    if-nez v0, :cond_3e
+    if-nez v0, :cond_41
 
     const/4 v0, 0x0
 
-    :goto_d
-    if-eqz v0, :cond_1b
+    :goto_10
+    if-eqz v0, :cond_e
 
     const/4 v0, 0x1
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    :cond_3d
+    :cond_40
     const-string v0, "PIN"
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_3e
+    if-nez v0, :cond_41
 
     const-string v0, "BBM"
 
@@ -2390,7 +2617,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_3e
+    if-nez v0, :cond_41
 
     const-string v0, "BBMI"
 
@@ -2398,26 +2625,26 @@
 
     move-result v0
 
-    if-nez v0, :cond_3e
+    if-nez v0, :cond_41
 
     const/4 v0, 0x0
 
-    goto :goto_d
+    goto :goto_10
 
-    :cond_3e
+    :cond_41
     invoke-interface {v7}, Ljava/util/List;->size()I
 
     move-result v0
 
     const/4 v1, 0x2
 
-    if-eq v0, v1, :cond_3f
+    if-eq v0, v1, :cond_42
 
     const/4 v0, 0x0
 
-    goto :goto_d
+    goto :goto_10
 
-    :cond_3f
+    :cond_42
     const-string v1, "GROUP"
 
     const/4 v0, 0x0
@@ -2438,13 +2665,13 @@
 
     move-result v0
 
-    if-nez v0, :cond_40
+    if-nez v0, :cond_43
 
     const/4 v0, 0x0
 
-    goto :goto_d
+    goto :goto_10
 
-    :cond_40
+    :cond_43
     const/4 v0, 0x1
 
     invoke-interface {v7, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2453,42 +2680,42 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/h/aq;->c(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/bbm/invite/o;->d(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-nez v0, :cond_41
+    if-nez v0, :cond_44
 
     const/4 v0, 0x0
 
-    goto :goto_d
+    goto :goto_10
 
-    :cond_41
-    new-instance v0, Lcom/bbm/ui/activities/aay;
+    :cond_44
+    new-instance v0, Lcom/bbm/ui/activities/xo;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/activities/aay;-><init>(Lcom/bbm/ui/activities/OpenInBbmActivity;B)V
+    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/activities/xo;-><init>(Lcom/bbm/ui/activities/OpenInBbmActivity;B)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/OpenInBbmActivity;->c:Lcom/bbm/ui/activities/aay;
+    iput-object v0, p0, Lcom/bbm/ui/activities/OpenInBbmActivity;->c:Lcom/bbm/ui/activities/xo;
 
     const-string v0, "Add consumer"
 
     const-class v1, Lcom/bbm/ui/activities/OpenInBbmActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/f;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/e;->c:Lcom/bbm/g/al;
+    iget-object v0, v0, Lcom/bbm/f;->c:Lcom/bbm/g/an;
 
-    iget-object v0, v0, Lcom/bbm/g/an;->a:Lcom/bbm/d/a/f;
+    iget-object v0, v0, Lcom/bbm/g/as;->a:Lcom/bbm/d/a/f;
 
     iget-object v0, v0, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/OpenInBbmActivity;->c:Lcom/bbm/ui/activities/aay;
+    iget-object v1, p0, Lcom/bbm/ui/activities/OpenInBbmActivity;->c:Lcom/bbm/ui/activities/xo;
 
     invoke-interface {v0, v1}, Lcom/bbm/f/a;->a(Lcom/bbm/f/ac;)V
 
@@ -2514,24 +2741,62 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/bbm/h/aq;->f(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/bbm/invite/o;->g(Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
-    goto/16 :goto_d
+    goto/16 :goto_10
 
-    .line 113
-    :cond_42
+    .line 124
+    :cond_45
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/bbm/ui/activities/MainActivity;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
-    .line 116
-    :cond_43
+    .line 126
+    :cond_46
+    const-string v2, "bbm.com.intent.action.ACTION_OPEN_CONVERSATION"
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_48
+
+    .line 127
+    invoke-virtual {v0}, Landroid/content/Intent;->getData()Landroid/net/Uri;
+
+    move-result-object v0
+
+    if-nez v0, :cond_47
+
+    const-string v0, "handleOpenConversation: opening contact picker"
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Lcom/bbm/ui/activities/ShareActivity;
+
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->startActivity(Landroid/content/Intent;)V
+
+    :cond_47
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->finish()V
+
+    goto/16 :goto_0
+
+    .line 129
+    :cond_48
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "Action \'"
@@ -2564,39 +2829,62 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 117
+    .line 130
     invoke-virtual {p0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->finish()V
 
-    goto/16 :goto_2
+    goto/16 :goto_0
 
-    :cond_44
+    :cond_49
     move-object v0, v1
 
-    goto/16 :goto_c
+    goto/16 :goto_f
 
-    :cond_45
+    :cond_4a
     move-object v0, v2
 
-    goto/16 :goto_c
+    goto/16 :goto_f
 
-    :cond_46
+    :cond_4b
     move-object v0, v1
 
-    goto/16 :goto_c
+    goto/16 :goto_f
 
-    :cond_47
+    :cond_4c
     move-object v0, v2
 
-    goto/16 :goto_b
+    goto/16 :goto_e
+
+    .line 122
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x1bad1 -> :sswitch_0
+        0x5304b78 -> :sswitch_5
+        0x6854fdf -> :sswitch_1
+        0x2936bf5f -> :sswitch_4
+        0x48119164 -> :sswitch_2
+        0x790292a4 -> :sswitch_3
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+        :pswitch_4
+        :pswitch_5
+    .end packed-switch
 .end method
 
 .method protected onPause()V
     .locals 1
 
     .prologue
-    .line 123
+    .line 137
     iget-object v0, p0, Lcom/bbm/ui/activities/OpenInBbmActivity;->f:Lcom/bbm/j/u;
 
     if-eqz v0, :cond_0
@@ -2607,16 +2895,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 124
+    .line 138
     iget-object v0, p0, Lcom/bbm/ui/activities/OpenInBbmActivity;->f:Lcom/bbm/j/u;
 
-    invoke-virtual {v0}, Lcom/bbm/j/u;->e()V
+    invoke-virtual {v0}, Lcom/bbm/j/u;->d()V
 
-    .line 126
+    .line 140
     :cond_0
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
-    .line 127
+    .line 141
     return-void
 .end method
 
@@ -2624,9 +2912,9 @@
     .locals 0
 
     .prologue
-    .line 131
+    .line 145
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    .line 132
+    .line 146
     return-void
 .end method

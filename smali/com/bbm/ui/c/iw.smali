@@ -1,63 +1,130 @@
 .class final Lcom/bbm/ui/c/iw;
-.super Landroid/view/GestureDetector$SimpleOnGestureListener;
-.source "StoreHomeFragment.java"
+.super Lcom/bbm/d/b/o;
+.source "UpdatesFragment.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/d/b/o",
+        "<",
+        "Lcom/bbm/b/h;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/iu;
+.field final synthetic a:Lcom/bbm/ui/c/ic;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/iu;)V
+.method constructor <init>(Lcom/bbm/ui/c/ic;)V
     .locals 0
 
     .prologue
-    .line 857
-    iput-object p1, p0, Lcom/bbm/ui/c/iw;->a:Lcom/bbm/ui/c/iu;
+    .line 193
+    iput-object p1, p0, Lcom/bbm/ui/c/iw;->a:Lcom/bbm/ui/c/ic;
 
-    invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/d/b/o;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onSingleTapConfirmed(Landroid/view/MotionEvent;)Z
-    .locals 3
+.method protected final a()Ljava/util/List;
+    .locals 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/bbm/b/h;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 860
-    new-instance v0, Landroid/content/Intent;
+    .line 196
+    new-instance v1, Ljava/util/ArrayList;
 
-    iget-object v1, p0, Lcom/bbm/ui/c/iw;->a:Lcom/bbm/ui/c/iu;
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    iget-object v1, v1, Lcom/bbm/ui/c/iu;->f:Lcom/bbm/ui/c/ig;
+    .line 197
+    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/b/x;
 
-    invoke-virtual {v1}, Lcom/bbm/ui/c/ig;->getActivity()Landroid/app/Activity;
+    move-result-object v0
 
-    move-result-object v1
+    iget-object v0, v0, Lcom/bbm/b/x;->h:Lcom/bbm/util/dd;
 
-    invoke-virtual {v1}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+    .line 198
+    invoke-virtual {v0}, Lcom/bbm/util/dd;->a()Ljava/util/List;
 
-    move-result-object v1
+    move-result-object v0
 
-    const-class v2, Lcom/bbm/ui/activities/StickerStoreActivity;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    move-result-object v2
 
-    .line 861
-    iget-object v1, p0, Lcom/bbm/ui/c/iw;->a:Lcom/bbm/ui/c/iu;
+    :cond_0
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-object v1, v1, Lcom/bbm/ui/c/iu;->f:Lcom/bbm/ui/c/ig;
+    move-result v0
 
-    invoke-virtual {v1}, Lcom/bbm/ui/c/ig;->getActivity()Landroid/app/Activity;
+    if-eqz v0, :cond_1
 
-    move-result-object v1
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {v1, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
+    move-result-object v0
 
-    .line 862
-    const/4 v0, 0x1
+    check-cast v0, Lcom/bbm/b/h;
 
-    return v0
+    .line 199
+    iget-wide v4, v0, Lcom/bbm/b/h;->d:J
+
+    const-wide/16 v6, 0x0
+
+    cmp-long v3, v4, v6
+
+    if-nez v3, :cond_0
+
+    iget-object v3, v0, Lcom/bbm/b/h;->b:Ljava/lang/Object;
+
+    if-eqz v3, :cond_0
+
+    .line 200
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    .line 204
+    :cond_1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v2, "AdMob unpositioned list is "
+
+    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v2, 0x0
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {v0, v2}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 205
+    return-object v1
 .end method

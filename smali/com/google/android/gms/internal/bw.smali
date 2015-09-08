@@ -1,31 +1,45 @@
-.class public interface abstract Lcom/google/android/gms/internal/bw;
+.class final Lcom/google/android/gms/internal/bw;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/os/IInterface;
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Lcom/google/android/gms/internal/bt;
+
+
+# direct methods
+.method constructor <init>(Lcom/google/android/gms/internal/bt;Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/bw;->b:Lcom/google/android/gms/internal/bt;
+
+    iput-object p2, p0, Lcom/google/android/gms/internal/bw;->a:Ljava/lang/String;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract onCreate(Landroid/os/Bundle;)V
-.end method
+.method public final run()V
+    .locals 4
 
-.method public abstract onDestroy()V
-.end method
+    iget-object v0, p0, Lcom/google/android/gms/internal/bw;->b:Lcom/google/android/gms/internal/bt;
 
-.method public abstract onPause()V
-.end method
+    iget-object v0, v0, Lcom/google/android/gms/internal/bt;->a:Lcom/google/android/gms/internal/pp;
 
-.method public abstract onRestart()V
-.end method
+    iget-object v1, p0, Lcom/google/android/gms/internal/bw;->a:Ljava/lang/String;
 
-.method public abstract onResume()V
-.end method
+    const-string v2, "text/html"
 
-.method public abstract onSaveInstanceState(Landroid/os/Bundle;)V
-.end method
+    const-string v3, "UTF-8"
 
-.method public abstract onStart()V
-.end method
+    invoke-interface {v0, v1, v2, v3}, Lcom/google/android/gms/internal/pp;->loadData(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-.method public abstract onStop()V
+    return-void
 .end method

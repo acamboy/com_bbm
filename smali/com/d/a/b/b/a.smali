@@ -7,63 +7,25 @@
 
 
 # instance fields
-.field protected a:Z
+.field protected final a:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .prologue
-    .line 51
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 52
-    return-void
-.end method
-
 .method public constructor <init>(Z)V
     .locals 0
 
     .prologue
-    .line 54
+    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
+    .line 56
     iput-boolean p1, p0, Lcom/d/a/b/b/a;->a:Z
 
-    .line 56
+    .line 57
     return-void
 .end method
 
-.method private static a(Ljava/io/InputStream;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-    .locals 1
-
-    .prologue
-    .line 156
-    const/4 v0, 0x0
-
-    :try_start_0
-    invoke-static {p0, v0, p1}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move-result-object v0
-
-    .line 158
-    invoke-static {p0}, Lcom/d/a/c/c;->a(Ljava/io/Closeable;)V
-
-    return-object v0
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {p0}, Lcom/d/a/c/c;->a(Ljava/io/Closeable;)V
-
-    throw v0
-.end method
-
-.method private static a(Ljava/lang/String;Ljava/lang/String;)Lcom/d/a/b/b/b;
+.method private static a(Ljava/lang/String;)Lcom/d/a/b/b/b;
     .locals 5
 
     .prologue
@@ -71,25 +33,8 @@
 
     const/4 v0, 0x1
 
-    .line 104
-    .line 106
-    const-string v2, "image/jpeg"
-
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-static {p0}, Lcom/d/a/b/d/d;->a(Ljava/lang/String;)Lcom/d/a/b/d/d;
-
-    move-result-object v2
-
-    sget-object v3, Lcom/d/a/b/d/d;->c:Lcom/d/a/b/d/d;
-
-    if-ne v2, v3, :cond_0
-
-    .line 108
+    .line 117
+    .line 120
     :try_start_0
     new-instance v2, Landroid/media/ExifInterface;
 
@@ -101,7 +46,7 @@
 
     invoke-direct {v2, v3}, Landroid/media/ExifInterface;-><init>(Ljava/lang/String;)V
 
-    .line 109
+    .line 121
     const-string v3, "Orientation"
 
     const/4 v4, 0x1
@@ -112,15 +57,14 @@
 
     move-result v2
 
-    .line 110
+    .line 122
     packed-switch v2, :pswitch_data_0
 
-    :cond_0
     :goto_0
     :pswitch_0
     move v0, v1
 
-    .line 136
+    .line 147
     :goto_1
     :pswitch_1
     new-instance v2, Lcom/d/a/b/b/b;
@@ -132,33 +76,33 @@
     :pswitch_2
     move v0, v1
 
-    .line 119
+    .line 131
     :pswitch_3
     const/16 v1, 0x5a
 
-    .line 120
+    .line 132
     goto :goto_1
 
     :pswitch_4
     move v0, v1
 
-    .line 124
+    .line 136
     :pswitch_5
     const/16 v1, 0xb4
 
-    .line 125
+    .line 137
     goto :goto_1
 
     :pswitch_6
     move v0, v1
 
-    .line 129
+    .line 141
     :pswitch_7
     const/16 v1, 0x10e
 
     goto :goto_1
 
-    .line 133
+    .line 145
     :catch_0
     move-exception v2
 
@@ -168,11 +112,11 @@
 
     aput-object p0, v0, v1
 
-    invoke-static {v2, v0}, Lcom/d/a/c/d;->c(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v0}, Lcom/d/a/c/e;->c(Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 110
+    .line 122
     nop
 
     :pswitch_data_0
@@ -188,76 +132,30 @@
     .end packed-switch
 .end method
 
-.method private static a(Ljava/io/InputStream;Ljava/lang/String;)Lcom/d/a/b/b/c;
-    .locals 6
+.method private static a(Ljava/io/InputStream;Lcom/d/a/b/b/e;)Ljava/io/InputStream;
+    .locals 1
 
     .prologue
-    .line 86
-    new-instance v1, Landroid/graphics/BitmapFactory$Options;
-
-    invoke-direct {v1}, Landroid/graphics/BitmapFactory$Options;-><init>()V
-
-    .line 87
-    const/4 v0, 0x1
-
-    iput-boolean v0, v1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
-
-    .line 89
-    const/4 v0, 0x0
-
+    .line 173
     :try_start_0
-    invoke-static {p0, v0, v1}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    invoke-virtual {p0}, Ljava/io/InputStream;->reset()V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 91
-    invoke-static {p0}, Lcom/d/a/c/c;->a(Ljava/io/Closeable;)V
-
-    .line 95
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/4 v2, 0x5
-
-    if-lt v0, v2, :cond_0
-
-    .line 96
-    iget-object v0, v1, Landroid/graphics/BitmapFactory$Options;->outMimeType:Ljava/lang/String;
-
-    invoke-static {p1, v0}, Lcom/d/a/b/b/a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/d/a/b/b/b;
-
-    move-result-object v0
-
-    .line 100
+    .line 178
     :goto_0
-    new-instance v2, Lcom/d/a/b/b/c;
+    return-object p0
 
-    new-instance v3, Lcom/d/a/b/a/f;
-
-    iget v4, v1, Landroid/graphics/BitmapFactory$Options;->outWidth:I
-
-    iget v1, v1, Landroid/graphics/BitmapFactory$Options;->outHeight:I
-
-    iget v5, v0, Lcom/d/a/b/b/b;->a:I
-
-    invoke-direct {v3, v4, v1, v5}, Lcom/d/a/b/a/f;-><init>(III)V
-
-    invoke-direct {v2, v3, v0}, Lcom/d/a/b/b/c;-><init>(Lcom/d/a/b/a/f;Lcom/d/a/b/b/b;)V
-
-    return-object v2
-
-    .line 91
-    :catchall_0
+    .line 175
+    :catch_0
     move-exception v0
 
     invoke-static {p0}, Lcom/d/a/c/c;->a(Ljava/io/Closeable;)V
 
-    throw v0
+    .line 176
+    invoke-static {p1}, Lcom/d/a/b/b/a;->b(Lcom/d/a/b/b/e;)Ljava/io/InputStream;
 
-    .line 98
-    :cond_0
-    new-instance v0, Lcom/d/a/b/b/b;
-
-    invoke-direct {v0}, Lcom/d/a/b/b/b;-><init>()V
+    move-result-object p0
 
     goto :goto_0
 .end method
@@ -266,7 +164,7 @@
     .locals 3
 
     .prologue
-    .line 82
+    .line 93
     iget-object v0, p0, Lcom/d/a/b/b/e;->f:Lcom/d/a/b/d/c;
 
     iget-object v1, p0, Lcom/d/a/b/b/e;->b:Ljava/lang/String;
@@ -283,142 +181,164 @@
 
 # virtual methods
 .method public final a(Lcom/d/a/b/b/e;)Landroid/graphics/Bitmap;
-    .locals 14
+    .locals 11
 
     .prologue
-    .line 68
+    .line 73
     invoke-static {p1}, Lcom/d/a/b/b/a;->b(Lcom/d/a/b/b/e;)Ljava/io/InputStream;
 
-    move-result-object v0
+    move-result-object v1
 
-    .line 69
-    iget-object v1, p1, Lcom/d/a/b/b/e;->b:Ljava/lang/String;
+    .line 75
+    :try_start_0
+    new-instance v2, Landroid/graphics/BitmapFactory$Options;
 
-    invoke-static {v0, v1}, Lcom/d/a/b/b/a;->a(Ljava/io/InputStream;Ljava/lang/String;)Lcom/d/a/b/b/c;
-
-    move-result-object v4
-
-    .line 70
-    iget-object v5, v4, Lcom/d/a/b/b/c;->a:Lcom/d/a/b/a/f;
-
-    iget-object v1, p1, Lcom/d/a/b/b/e;->d:Lcom/d/a/b/a/e;
-
-    iget-object v6, p1, Lcom/d/a/b/b/e;->c:Lcom/d/a/b/a/f;
+    invoke-direct {v2}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
     const/4 v0, 0x1
 
-    sget-object v2, Lcom/d/a/b/a/e;->a:Lcom/d/a/b/a/e;
+    iput-boolean v0, v2, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    if-eq v1, v2, :cond_3
+    const/4 v0, 0x0
 
-    sget-object v0, Lcom/d/a/b/a/e;->b:Lcom/d/a/b/a/e;
+    invoke-static {v1, v0, v2}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    if-ne v1, v0, :cond_4
+    iget-object v3, p1, Lcom/d/a/b/b/e;->b:Ljava/lang/String;
+
+    iget-boolean v0, p1, Lcom/d/a/b/b/e;->h:Z
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, v2, Landroid/graphics/BitmapFactory$Options;->outMimeType:Ljava/lang/String;
+
+    const-string v4, "image/jpeg"
+
+    invoke-virtual {v4, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-static {v3}, Lcom/d/a/b/d/d;->a(Ljava/lang/String;)Lcom/d/a/b/d/d;
+
+    move-result-object v0
+
+    sget-object v4, Lcom/d/a/b/d/d;->c:Lcom/d/a/b/d/d;
+
+    if-ne v0, v4, :cond_1
 
     const/4 v0, 0x1
 
     :goto_0
-    iget-object v7, p1, Lcom/d/a/b/b/e;->e:Lcom/d/a/b/a/l;
+    if-eqz v0, :cond_2
 
-    iget v3, v5, Lcom/d/a/b/a/f;->a:I
+    invoke-static {v3}, Lcom/d/a/b/b/a;->a(Ljava/lang/String;)Lcom/d/a/b/b/b;
 
-    iget v2, v5, Lcom/d/a/b/a/f;->b:I
+    move-result-object v0
 
-    iget v8, v6, Lcom/d/a/b/a/f;->a:I
-
-    iget v6, v6, Lcom/d/a/b/a/f;->b:I
-
-    const/4 v1, 0x1
-
-    div-int v9, v3, v8
-
-    div-int v10, v2, v6
-
-    sget-object v11, Lcom/d/a/c/b;->a:[I
-
-    invoke-virtual {v7}, Lcom/d/a/b/a/l;->ordinal()I
-
-    move-result v7
-
-    aget v7, v11, v7
-
-    packed-switch v7, :pswitch_data_0
-
-    :cond_0
-    move v0, v1
-
-    :cond_1
     :goto_1
-    if-gtz v0, :cond_2
+    new-instance v3, Lcom/d/a/b/b/c;
+
+    new-instance v4, Lcom/d/a/b/a/f;
+
+    iget v5, v2, Landroid/graphics/BitmapFactory$Options;->outWidth:I
+
+    iget v2, v2, Landroid/graphics/BitmapFactory$Options;->outHeight:I
+
+    iget v6, v0, Lcom/d/a/b/b/b;->a:I
+
+    invoke-direct {v4, v5, v2, v6}, Lcom/d/a/b/a/f;-><init>(III)V
+
+    invoke-direct {v3, v4, v0}, Lcom/d/a/b/b/c;-><init>(Lcom/d/a/b/a/f;Lcom/d/a/b/b/b;)V
+
+    .line 76
+    invoke-static {v1, p1}, Lcom/d/a/b/b/a;->a(Ljava/io/InputStream;Lcom/d/a/b/b/e;)Ljava/io/InputStream;
+
+    move-result-object v1
+
+    .line 77
+    iget-object v2, v3, Lcom/d/a/b/b/c;->a:Lcom/d/a/b/a/f;
+
+    iget v0, p1, Lcom/d/a/b/b/e;->d:I
+
+    sget v4, Lcom/d/a/b/a/e;->a:I
+
+    if-ne v0, v4, :cond_3
 
     const/4 v0, 0x1
 
-    :cond_2
-    iget-boolean v1, p0, Lcom/d/a/b/b/a;->a:Z
+    :goto_2
+    const/4 v4, 0x1
 
-    if-eqz v1, :cond_3
+    if-le v0, v4, :cond_0
 
-    const-string v1, "Subsample original image (%1$s) to %2$s (scale = %3$d) [%4$s]"
+    iget-boolean v4, p0, Lcom/d/a/b/b/a;->a:Z
 
-    const/4 v2, 0x4
+    if-eqz v4, :cond_0
 
-    new-array v2, v2, [Ljava/lang/Object;
+    const-string v4, "Subsample original image (%1$s) to %2$s (scale = %3$d) [%4$s]"
 
-    const/4 v3, 0x0
+    const/4 v5, 0x4
 
-    aput-object v5, v2, v3
+    new-array v5, v5, [Ljava/lang/Object;
 
-    const/4 v3, 0x1
+    const/4 v6, 0x0
 
-    new-instance v6, Lcom/d/a/b/a/f;
+    aput-object v2, v5, v6
 
-    iget v7, v5, Lcom/d/a/b/a/f;->a:I
+    const/4 v6, 0x1
 
-    div-int/2addr v7, v0
+    new-instance v7, Lcom/d/a/b/a/f;
 
-    iget v5, v5, Lcom/d/a/b/a/f;->b:I
+    iget v8, v2, Lcom/d/a/b/a/f;->a:I
 
-    div-int/2addr v5, v0
+    div-int/2addr v8, v0
 
-    invoke-direct {v6, v7, v5}, Lcom/d/a/b/a/f;-><init>(II)V
+    iget v2, v2, Lcom/d/a/b/a/f;->b:I
 
-    aput-object v6, v2, v3
+    div-int/2addr v2, v0
 
-    const/4 v3, 0x2
+    invoke-direct {v7, v8, v2}, Lcom/d/a/b/a/f;-><init>(II)V
+
+    aput-object v7, v5, v6
+
+    const/4 v2, 0x2
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v5
+    move-result-object v6
 
-    aput-object v5, v2, v3
+    aput-object v6, v5, v2
 
-    const/4 v3, 0x3
+    const/4 v2, 0x3
 
-    iget-object v5, p1, Lcom/d/a/b/b/e;->a:Ljava/lang/String;
+    iget-object v6, p1, Lcom/d/a/b/b/e;->a:Ljava/lang/String;
 
-    aput-object v5, v2, v3
+    aput-object v6, v5, v2
 
-    invoke-static {v1, v2}, Lcom/d/a/c/d;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5}, Lcom/d/a/c/e;->a(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    :cond_3
-    iget-object v1, p1, Lcom/d/a/b/b/e;->h:Landroid/graphics/BitmapFactory$Options;
+    :cond_0
+    iget-object v2, p1, Lcom/d/a/b/b/e;->i:Landroid/graphics/BitmapFactory$Options;
 
-    iput v0, v1, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
+    iput v0, v2, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 71
-    invoke-static {p1}, Lcom/d/a/b/b/a;->b(Lcom/d/a/b/b/e;)Ljava/io/InputStream;
+    .line 78
+    const/4 v0, 0x0
+
+    invoke-static {v1, v0, v2}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
-    .line 72
-    invoke-static {v0, v1}, Lcom/d/a/b/b/a;->a(Ljava/io/InputStream;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    .line 80
+    invoke-static {v1}, Lcom/d/a/c/c;->a(Ljava/io/Closeable;)V
 
-    move-result-object v0
+    .line 83
+    if-nez v0, :cond_6
 
-    .line 73
-    if-nez v0, :cond_8
-
-    .line 74
+    .line 84
     const-string v1, "Image can\'t be decoded [%s]"
 
     const/4 v2, 0x1
@@ -431,232 +351,155 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v1, v2}, Lcom/d/a/c/d;->d(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2}, Lcom/d/a/c/e;->d(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 78
-    :goto_2
+    .line 89
+    :goto_3
     return-object v0
 
-    .line 70
-    :cond_4
+    .line 75
+    :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    :pswitch_0
-    if-eqz v0, :cond_6
+    :cond_2
+    :try_start_1
+    new-instance v0, Lcom/d/a/b/b/b;
 
-    move v0, v1
-
-    move v1, v2
-
-    move v2, v3
-
-    :goto_3
-    div-int/lit8 v3, v2, 0x2
-
-    if-ge v3, v8, :cond_5
-
-    div-int/lit8 v3, v1, 0x2
-
-    if-lt v3, v6, :cond_1
-
-    :cond_5
-    div-int/lit8 v2, v2, 0x2
-
-    div-int/lit8 v1, v1, 0x2
-
-    mul-int/lit8 v0, v0, 0x2
-
-    goto :goto_3
-
-    :cond_6
-    invoke-static {v9, v10}, Ljava/lang/Math;->max(II)I
-
-    move-result v1
-
-    move v0, v1
+    invoke-direct {v0}, Lcom/d/a/b/b/b;-><init>()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_1
 
-    :pswitch_1
-    if-eqz v0, :cond_7
+    .line 80
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v1}, Lcom/d/a/c/c;->a(Ljava/io/Closeable;)V
+
+    throw v0
+
+    .line 77
+    :cond_3
+    :try_start_2
+    sget v4, Lcom/d/a/b/a/e;->b:I
+
+    if-ne v0, v4, :cond_4
+
+    invoke-static {v2}, Lcom/d/a/c/a;->a(Lcom/d/a/b/a/f;)I
+
+    move-result v0
+
+    goto :goto_2
+
+    :cond_4
+    iget-object v4, p1, Lcom/d/a/b/b/e;->c:Lcom/d/a/b/a/f;
+
+    sget v5, Lcom/d/a/b/a/e;->c:I
+
+    if-ne v0, v5, :cond_5
+
+    const/4 v0, 0x1
 
     :goto_4
-    div-int/lit8 v0, v3, 0x2
+    iget v5, p1, Lcom/d/a/b/b/e;->e:I
 
-    if-lt v0, v8, :cond_0
+    invoke-static {v2, v4, v5, v0}, Lcom/d/a/c/a;->a(Lcom/d/a/b/a/f;Lcom/d/a/b/a/f;IZ)I
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    div-int/lit8 v0, v2, 0x2
+    move-result v0
 
-    if-lt v0, v6, :cond_0
+    goto :goto_2
 
-    div-int/lit8 v3, v3, 0x2
-
-    div-int/lit8 v2, v2, 0x2
-
-    mul-int/lit8 v1, v1, 0x2
+    :cond_5
+    const/4 v0, 0x0
 
     goto :goto_4
 
-    :cond_7
-    invoke-static {v9, v10}, Ljava/lang/Math;->min(II)I
+    .line 86
+    :cond_6
+    iget-object v1, v3, Lcom/d/a/b/b/c;->b:Lcom/d/a/b/b/b;
 
-    move-result v1
+    iget v2, v1, Lcom/d/a/b/b/b;->a:I
 
-    move v0, v1
+    iget-object v1, v3, Lcom/d/a/b/b/c;->b:Lcom/d/a/b/b/b;
 
-    goto :goto_1
-
-    .line 76
-    :cond_8
-    iget-object v1, v4, Lcom/d/a/b/b/c;->b:Lcom/d/a/b/b/b;
-
-    iget v6, v1, Lcom/d/a/b/b/b;->a:I
-
-    iget-object v1, v4, Lcom/d/a/b/b/c;->b:Lcom/d/a/b/b/b;
-
-    iget-boolean v7, v1, Lcom/d/a/b/b/b;->b:Z
+    iget-boolean v3, v1, Lcom/d/a/b/b/b;->b:Z
 
     new-instance v5, Landroid/graphics/Matrix;
 
     invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
 
-    iget-object v1, p1, Lcom/d/a/b/b/e;->d:Lcom/d/a/b/a/e;
+    iget v1, p1, Lcom/d/a/b/b/e;->d:I
 
-    sget-object v2, Lcom/d/a/b/a/e;->d:Lcom/d/a/b/a/e;
+    sget v4, Lcom/d/a/b/a/e;->e:I
 
-    if-eq v1, v2, :cond_9
+    if-eq v1, v4, :cond_7
 
-    sget-object v2, Lcom/d/a/b/a/e;->e:Lcom/d/a/b/a/e;
+    sget v4, Lcom/d/a/b/a/e;->f:I
 
-    if-ne v1, v2, :cond_e
+    if-ne v1, v4, :cond_8
 
-    :cond_9
-    new-instance v8, Lcom/d/a/b/a/f;
+    :cond_7
+    new-instance v4, Lcom/d/a/b/a/f;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
-    move-result v2
+    move-result v6
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
 
-    move-result v3
+    move-result v7
 
-    invoke-direct {v8, v2, v3, v6}, Lcom/d/a/b/a/f;-><init>(III)V
+    invoke-direct {v4, v6, v7, v2}, Lcom/d/a/b/a/f;-><init>(III)V
 
-    iget-object v2, p1, Lcom/d/a/b/b/e;->c:Lcom/d/a/b/a/f;
+    iget-object v6, p1, Lcom/d/a/b/b/e;->c:Lcom/d/a/b/a/f;
 
-    iget-object v4, p1, Lcom/d/a/b/b/e;->e:Lcom/d/a/b/a/l;
+    iget v7, p1, Lcom/d/a/b/b/e;->e:I
 
-    sget-object v3, Lcom/d/a/b/a/e;->e:Lcom/d/a/b/a/e;
+    sget v8, Lcom/d/a/b/a/e;->f:I
 
-    if-ne v1, v3, :cond_12
+    if-ne v1, v8, :cond_c
 
     const/4 v1, 0x1
 
     :goto_5
-    iget v9, v8, Lcom/d/a/b/a/f;->a:I
+    invoke-static {v4, v6, v7, v1}, Lcom/d/a/c/a;->b(Lcom/d/a/b/a/f;Lcom/d/a/b/a/f;IZ)F
 
-    iget v10, v8, Lcom/d/a/b/a/f;->b:I
+    move-result v1
 
-    iget v3, v2, Lcom/d/a/b/a/f;->a:I
+    const/high16 v6, 0x3f800000    # 1.0f
 
-    iget v2, v2, Lcom/d/a/b/a/f;->b:I
+    invoke-static {v1, v6}, Ljava/lang/Float;->compare(FF)I
 
-    int-to-float v11, v9
+    move-result v6
 
-    int-to-float v12, v3
-
-    div-float/2addr v11, v12
-
-    int-to-float v12, v10
-
-    int-to-float v13, v2
-
-    div-float/2addr v12, v13
-
-    sget-object v13, Lcom/d/a/b/a/l;->a:Lcom/d/a/b/a/l;
-
-    if-ne v4, v13, :cond_a
-
-    cmpl-float v13, v11, v12
-
-    if-gez v13, :cond_b
-
-    :cond_a
-    sget-object v13, Lcom/d/a/b/a/l;->b:Lcom/d/a/b/a/l;
-
-    if-ne v4, v13, :cond_13
-
-    cmpg-float v4, v11, v12
-
-    if-gez v4, :cond_13
-
-    :cond_b
-    int-to-float v2, v10
-
-    div-float/2addr v2, v11
-
-    float-to-int v2, v2
-
-    move v4, v3
-
-    move v3, v2
-
-    :goto_6
-    const/high16 v2, 0x3f800000
-
-    if-nez v1, :cond_c
-
-    if-ge v4, v9, :cond_c
-
-    if-lt v3, v10, :cond_d
-
-    :cond_c
-    if-eqz v1, :cond_14
-
-    if-eq v4, v9, :cond_14
-
-    if-eq v3, v10, :cond_14
-
-    :cond_d
-    int-to-float v1, v4
-
-    int-to-float v2, v9
-
-    div-float/2addr v1, v2
-
-    :goto_7
-    const/high16 v2, 0x3f800000
-
-    invoke-static {v1, v2}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v2
-
-    if-eqz v2, :cond_e
+    if-eqz v6, :cond_8
 
     invoke-virtual {v5, v1, v1}, Landroid/graphics/Matrix;->setScale(FF)V
 
-    iget-boolean v2, p0, Lcom/d/a/b/b/a;->a:Z
+    iget-boolean v6, p0, Lcom/d/a/b/b/a;->a:Z
 
-    if-eqz v2, :cond_e
+    if-eqz v6, :cond_8
 
-    const-string v2, "Scale subsampled image (%1$s) to %2$s (scale = %3$.5f) [%4$s]"
+    const-string v6, "Scale subsampled image (%1$s) to %2$s (scale = %3$.5f) [%4$s]"
 
-    const/4 v3, 0x4
+    const/4 v7, 0x4
 
-    new-array v3, v3, [Ljava/lang/Object;
+    new-array v7, v7, [Ljava/lang/Object;
 
-    const/4 v4, 0x0
+    const/4 v8, 0x0
 
-    aput-object v8, v3, v4
+    aput-object v4, v7, v8
 
-    const/4 v4, 0x1
+    const/4 v8, 0x1
 
     new-instance v9, Lcom/d/a/b/a/f;
 
-    iget v10, v8, Lcom/d/a/b/a/f;->a:I
+    iget v10, v4, Lcom/d/a/b/a/f;->a:I
 
     int-to-float v10, v10
 
@@ -664,17 +507,17 @@
 
     float-to-int v10, v10
 
-    iget v8, v8, Lcom/d/a/b/a/f;->b:I
+    iget v4, v4, Lcom/d/a/b/a/f;->b:I
 
-    int-to-float v8, v8
+    int-to-float v4, v4
 
-    mul-float/2addr v8, v1
+    mul-float/2addr v4, v1
 
-    float-to-int v8, v8
+    float-to-int v4, v4
 
-    invoke-direct {v9, v10, v8}, Lcom/d/a/b/a/f;-><init>(II)V
+    invoke-direct {v9, v10, v4}, Lcom/d/a/b/a/f;-><init>(II)V
 
-    aput-object v9, v3, v4
+    aput-object v9, v7, v8
 
     const/4 v4, 0x2
 
@@ -682,77 +525,77 @@
 
     move-result-object v1
 
-    aput-object v1, v3, v4
+    aput-object v1, v7, v4
 
     const/4 v1, 0x3
 
     iget-object v4, p1, Lcom/d/a/b/b/e;->a:Ljava/lang/String;
 
-    aput-object v4, v3, v1
+    aput-object v4, v7, v1
 
-    invoke-static {v2, v3}, Lcom/d/a/c/d;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v6, v7}, Lcom/d/a/c/e;->a(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    :cond_e
-    if-eqz v7, :cond_f
+    :cond_8
+    if-eqz v3, :cond_9
 
-    const/high16 v1, -0x40800000
+    const/high16 v1, -0x40800000    # -1.0f
 
-    const/high16 v2, 0x3f800000
+    const/high16 v3, 0x3f800000    # 1.0f
 
-    invoke-virtual {v5, v1, v2}, Landroid/graphics/Matrix;->postScale(FF)Z
+    invoke-virtual {v5, v1, v3}, Landroid/graphics/Matrix;->postScale(FF)Z
 
     iget-boolean v1, p0, Lcom/d/a/b/b/a;->a:Z
 
-    if-eqz v1, :cond_f
+    if-eqz v1, :cond_9
 
     const-string v1, "Flip image horizontally [%s]"
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    new-array v2, v2, [Ljava/lang/Object;
+    new-array v3, v3, [Ljava/lang/Object;
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    iget-object v4, p1, Lcom/d/a/b/b/e;->a:Ljava/lang/String;
+    iget-object v6, p1, Lcom/d/a/b/b/e;->a:Ljava/lang/String;
 
-    aput-object v4, v2, v3
+    aput-object v6, v3, v4
 
-    invoke-static {v1, v2}, Lcom/d/a/c/d;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v3}, Lcom/d/a/c/e;->a(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    :cond_f
-    if-eqz v6, :cond_10
+    :cond_9
+    if-eqz v2, :cond_a
 
-    int-to-float v1, v6
+    int-to-float v1, v2
 
     invoke-virtual {v5, v1}, Landroid/graphics/Matrix;->postRotate(F)Z
 
     iget-boolean v1, p0, Lcom/d/a/b/b/a;->a:Z
 
-    if-eqz v1, :cond_10
+    if-eqz v1, :cond_a
 
     const-string v1, "Rotate image on %1$d\u00b0 [%2$s]"
 
-    const/4 v2, 0x2
+    const/4 v3, 0x2
 
-    new-array v2, v2, [Ljava/lang/Object;
+    new-array v3, v3, [Ljava/lang/Object;
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v4
+    move-result-object v2
 
-    aput-object v4, v2, v3
+    aput-object v2, v3, v4
 
-    const/4 v3, 0x1
+    const/4 v2, 0x1
 
     iget-object v4, p1, Lcom/d/a/b/b/e;->a:Ljava/lang/String;
 
-    aput-object v4, v2, v3
+    aput-object v4, v3, v2
 
-    invoke-static {v1, v2}, Lcom/d/a/c/d;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v3}, Lcom/d/a/c/e;->a(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    :cond_10
+    :cond_a
     const/4 v1, 0x0
 
     const/4 v2, 0x0
@@ -771,44 +614,17 @@
 
     move-result-object v1
 
-    if-eq v1, v0, :cond_11
+    if-eq v1, v0, :cond_b
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    :cond_11
+    :cond_b
     move-object v0, v1
 
-    goto/16 :goto_2
+    goto/16 :goto_3
 
-    :cond_12
+    :cond_c
     const/4 v1, 0x0
 
     goto/16 :goto_5
-
-    :cond_13
-    int-to-float v3, v9
-
-    div-float/2addr v3, v12
-
-    float-to-int v3, v3
-
-    move v4, v3
-
-    move v3, v2
-
-    goto/16 :goto_6
-
-    :cond_14
-    move v1, v2
-
-    goto/16 :goto_7
-
-    .line 70
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
 .end method

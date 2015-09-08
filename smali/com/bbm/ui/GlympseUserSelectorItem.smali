@@ -72,13 +72,13 @@
     .line 36
     iget-object v0, p0, Lcom/bbm/ui/GlympseUserSelectorItem;->a:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f030138
+    const v1, 0x7f030151
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v1
 
-    const v0, 0x7f0b05fc
+    const v0, 0x7f0b068b
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -88,7 +88,7 @@
 
     iput-object v0, p0, Lcom/bbm/ui/GlympseUserSelectorItem;->b:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0b05fd
+    const v0, 0x7f0b068c
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -104,7 +104,7 @@
 
     move-result-object v0
 
-    const v3, 0x7f0200da
+    const v3, 0x7f0200aa
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -114,7 +114,7 @@
 
     invoke-virtual {v2, v0}, Lcom/glympse/android/ui/GLYAvatarView;->setDefault(Landroid/graphics/drawable/BitmapDrawable;)V
 
-    const v0, 0x7f0b05fe
+    const v0, 0x7f0b068d
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -124,7 +124,7 @@
 
     iput-object v0, p0, Lcom/bbm/ui/GlympseUserSelectorItem;->d:Lcom/bbm/ui/InlineImageTextView;
 
-    const v0, 0x7f0b05ff
+    const v0, 0x7f0b068e
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -134,7 +134,7 @@
 
     iput-object v0, p0, Lcom/bbm/ui/GlympseUserSelectorItem;->f:Landroid/widget/TextView;
 
-    const v0, 0x7f0b0600
+    const v0, 0x7f0b068f
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -144,7 +144,7 @@
 
     iput-object v0, p0, Lcom/bbm/ui/GlympseUserSelectorItem;->g:Landroid/widget/TextView;
 
-    const v0, 0x7f0b0601
+    const v0, 0x7f0b0690
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -186,7 +186,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f020254
+    const v2, 0x7f020256
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -222,7 +222,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e03b7
+    const v2, 0x7f0e0419
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -240,7 +240,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e03be
+    const v2, 0x7f0e0421
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -265,9 +265,9 @@
     .locals 13
 
     .prologue
-    const v8, 0x7f0e03bc
+    const v8, 0x7f0e041f
 
-    const v12, 0x7f0e03b8
+    const v12, 0x7f0e041b
 
     const/4 v11, 0x0
 
@@ -298,7 +298,7 @@
 
     move-result-object v0
 
-    const v3, 0x7f0200da
+    const v3, 0x7f0200aa
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -330,11 +330,7 @@
 
     iget-object v1, p0, Lcom/bbm/ui/GlympseUserSelectorItem;->h:Lcom/glympse/android/api/GUser;
 
-    invoke-virtual {p0}, Lcom/bbm/ui/GlympseUserSelectorItem;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/bbm/util/a/k;->a(Lcom/glympse/android/api/GUser;Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/bbm/util/a/k;->a(Lcom/glympse/android/api/GUser;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -349,7 +345,7 @@
 
     move-result-object v2
 
-    invoke-static {v0}, Lcom/bbm/util/a/k;->a(Lcom/glympse/android/api/GUser;)Lcom/glympse/android/api/GTicket;
+    invoke-static {v0}, Lcom/bbm/util/a/k;->b(Lcom/glympse/android/api/GUser;)Lcom/glympse/android/api/GTicket;
 
     move-result-object v3
 
@@ -384,7 +380,7 @@
 
     move-result-object v2
 
-    invoke-static {v0}, Lcom/bbm/util/a/k;->a(Lcom/glympse/android/api/GUser;)Lcom/glympse/android/api/GTicket;
+    invoke-static {v0}, Lcom/bbm/util/a/k;->b(Lcom/glympse/android/api/GUser;)Lcom/glympse/android/api/GTicket;
 
     move-result-object v3
 
@@ -403,13 +399,7 @@
     if-nez v3, :cond_8
 
     :cond_2
-    new-array v0, v10, [Ljava/lang/Object;
-
-    const-string v3, "N/A"
-
-    aput-object v3, v0, v11
-
-    invoke-virtual {v2, v12, v0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v2, v12}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -421,11 +411,11 @@
 
     .line 69
     :cond_3
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
+    invoke-static {}, Lcom/bbm/w;->a()Lcom/bbm/w;
 
     move-result-object v3
 
-    iget-object v3, v3, Lcom/bbm/p;->a:Lcom/glympse/android/api/GGlympse;
+    iget-object v3, v3, Lcom/bbm/w;->a:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v3}, Lcom/glympse/android/api/GGlympse;->getTime()J
 
@@ -460,7 +450,7 @@
 
     if-gez v0, :cond_5
 
-    const v0, 0x7f0e03bd
+    const v0, 0x7f0e0420
 
     new-array v3, v10, [Ljava/lang/Object;
 
@@ -489,7 +479,7 @@
 
     if-gez v0, :cond_6
 
-    const v0, 0x7f0e03bb
+    const v0, 0x7f0e041e
 
     new-array v3, v10, [Ljava/lang/Object;
 
@@ -509,7 +499,7 @@
 
     move-result-object v0
 
-    goto/16 :goto_0
+    goto :goto_0
 
     :cond_6
     const-wide/32 v6, 0x5265c00
@@ -538,7 +528,7 @@
 
     sub-long/2addr v4, v8
 
-    const v0, 0x7f0e03ba
+    const v0, 0x7f0e041d
 
     const/4 v3, 0x2
 
@@ -563,7 +553,7 @@
     goto/16 :goto_0
 
     :cond_7
-    const v0, 0x7f0e03b9
+    const v0, 0x7f0e041c
 
     new-array v3, v10, [Ljava/lang/Object;
 
@@ -595,15 +585,30 @@
 
     move-result v0
 
-    new-array v3, v10, [Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/Float;->isNaN(F)Z
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(F)Ljava/lang/String;
+    move-result v3
+
+    if-nez v3, :cond_9
+
+    const v3, 0x7f0e041a
+
+    new-array v4, v10, [Ljava/lang/Object;
+
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v0
 
-    aput-object v0, v3, v11
+    aput-object v0, v4, v11
 
-    invoke-virtual {v2, v12, v3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v2, v3, v4}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto/16 :goto_1
+
+    :cond_9
+    invoke-virtual {v2, v12}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 

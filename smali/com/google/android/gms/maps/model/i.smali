@@ -1,44 +1,31 @@
-.class public Lcom/google/android/gms/maps/model/i;
+.class final Lcom/google/android/gms/maps/model/i;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Lcom/google/android/gms/maps/model/j;
+
+
+# instance fields
+.field final synthetic a:Lcom/google/android/gms/maps/model/TileOverlayOptions;
+
+.field private final c:Lcom/google/android/gms/maps/model/internal/ab;
 
 
 # direct methods
-.method static a(Lcom/google/android/gms/maps/model/Tile;Landroid/os/Parcel;I)V
-    .locals 4
+.method constructor <init>(Lcom/google/android/gms/maps/model/TileOverlayOptions;)V
+    .locals 1
 
-    invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/b;->p(Landroid/os/Parcel;)I
+    iput-object p1, p0, Lcom/google/android/gms/maps/model/i;->a:Lcom/google/android/gms/maps/model/TileOverlayOptions;
 
-    move-result v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x1
+    iget-object v0, p0, Lcom/google/android/gms/maps/model/i;->a:Lcom/google/android/gms/maps/model/TileOverlayOptions;
 
-    invoke-virtual {p0}, Lcom/google/android/gms/maps/model/Tile;->getVersionCode()I
+    invoke-static {v0}, Lcom/google/android/gms/maps/model/TileOverlayOptions;->a(Lcom/google/android/gms/maps/model/TileOverlayOptions;)Lcom/google/android/gms/maps/model/internal/ab;
 
-    move-result v2
+    move-result-object v0
 
-    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/b;->c(Landroid/os/Parcel;II)V
-
-    const/4 v1, 0x2
-
-    iget v2, p0, Lcom/google/android/gms/maps/model/Tile;->width:I
-
-    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/b;->c(Landroid/os/Parcel;II)V
-
-    const/4 v1, 0x3
-
-    iget v2, p0, Lcom/google/android/gms/maps/model/Tile;->height:I
-
-    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/b;->c(Landroid/os/Parcel;II)V
-
-    const/4 v1, 0x4
-
-    iget-object v2, p0, Lcom/google/android/gms/maps/model/Tile;->data:[B
-
-    const/4 v3, 0x0
-
-    invoke-static {p1, v1, v2, v3}, Lcom/google/android/gms/common/internal/safeparcel/b;->a(Landroid/os/Parcel;I[BZ)V
-
-    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/b;->D(Landroid/os/Parcel;I)V
+    iput-object v0, p0, Lcom/google/android/gms/maps/model/i;->c:Lcom/google/android/gms/maps/model/internal/ab;
 
     return-void
 .end method

@@ -1,12 +1,12 @@
 .class final Lcom/bbm/d/a/c/d;
-.super Lcom/bbm/d/a/a/b;
+.super Lcom/bbm/d/a/a/c;
 .source "SparseList.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/bbm/d/a/a/b",
+        "Lcom/bbm/d/a/a/c",
         "<",
         "Ljava/lang/String;",
         "TT;>;"
@@ -26,7 +26,7 @@
     .line 35
     iput-object p1, p0, Lcom/bbm/d/a/c/d;->c:Lcom/bbm/d/a/c/a;
 
-    invoke-direct {p0}, Lcom/bbm/d/a/a/b;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/d/a/a/c;-><init>()V
 
     return-void
 .end method

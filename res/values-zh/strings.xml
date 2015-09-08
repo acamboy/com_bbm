@@ -10,7 +10,7 @@
     <string name="no_active_glympses">没有正在进行的Glympse</string>
     <string name="no_network_connection">无网络连接。</string>
     <string name="rate_limited">已达到Glympse频率上限。</string>
-    <string name="remaining_details">查看者数量：最近查看的有 %1$d 个，总共有 %2$d 个</string>
+    <string name="remaining_details">%2$d 次查看, %1$d 个正在查看</string>
     <string name="remaining_title">Glympse：还有 %1$s</string>
     <string name="remaining_title_glympse">Glympse</string>
     <string name="reply_with_a_glympse">使用 Glympse 回复？</string>

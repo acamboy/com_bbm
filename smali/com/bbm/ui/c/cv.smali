@@ -1,444 +1,349 @@
-.class final Lcom/bbm/ui/c/cv;
-.super Lcom/bbm/ui/c/cy;
-.source "ContactsFragment.java"
+.class public final Lcom/bbm/ui/c/cv;
+.super Ljava/lang/Object;
+.source "ChatsFragment.java"
+
+# interfaces
+.implements Lcom/bbm/ui/ab;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/bbm/ui/ab",
+        "<",
+        "Ljava/lang/Object;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic f:Lcom/bbm/ui/c/ch;
+.field final synthetic a:Lcom/bbm/ui/c/ca;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/ch;Landroid/content/Context;Lcom/bbm/j/r;Lcom/bbm/util/di;)V
+.method public constructor <init>(Lcom/bbm/ui/c/ca;)V
     .locals 0
 
     .prologue
-    .line 221
-    iput-object p1, p0, Lcom/bbm/ui/c/cv;->f:Lcom/bbm/ui/c/ch;
+    .line 246
+    iput-object p1, p0, Lcom/bbm/ui/c/cv;->a:Lcom/bbm/ui/c/ca;
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/bbm/ui/c/cy;-><init>(Lcom/bbm/ui/c/ch;Landroid/content/Context;Lcom/bbm/j/r;Lcom/bbm/util/di;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a(Landroid/view/ViewGroup;I)Landroid/view/View;
-    .locals 3
+.method public final a(Ljava/lang/Object;)Ljava/lang/String;
+    .locals 1
 
     .prologue
-    const/4 v2, 0x0
+    .line 316
+    instance-of v0, p1, Lcom/bbm/d/ia;
 
-    .line 225
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v0
-
-    const v1, 0x7f0300c0
-
-    invoke-virtual {v0, v1, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    .line 317
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/ContactsGridItem;
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    .line 226
-    invoke-virtual {v0}, Lcom/bbm/ui/ContactsGridItem;->getContactAvatar()Lcom/bbm/ui/ObservingImageView;
+    move-result-object v0
 
-    move-result-object v1
-
-    invoke-virtual {v1, v2}, Lcom/bbm/ui/ObservingImageView;->setLimitedLengthAnimation(Z)V
-
-    .line 227
+    .line 319
+    :goto_0
     return-object v0
+
+    :cond_0
+    const-string v0, ""
+
+    goto :goto_0
 .end method
 
-.method protected final a(Landroid/view/View;Lcom/bbm/d/gr;)V
-    .locals 9
+.method public final a(Landroid/view/ActionMode;Landroid/view/Menu;Ljava/util/ArrayList;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/view/ActionMode;",
+            "Landroid/view/Menu;",
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/Object;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
-    const/16 v8, 0x15
+    const/4 v3, 0x0
 
-    const/16 v7, 0x13
+    .line 293
+    invoke-virtual {p3}, Ljava/util/ArrayList;->size()I
 
-    const/4 v3, 0x4
+    move-result v0
 
-    const/4 v2, 0x0
-
-    const/4 v1, 0x0
-
-    .line 261
-    check-cast p1, Lcom/bbm/ui/ContactsGridItem;
-
-    .line 262
-    invoke-virtual {p1}, Lcom/bbm/ui/ContactsGridItem;->getContactName()Landroid/widget/TextView;
-
-    move-result-object v4
-
-    .line 263
-    invoke-virtual {p1}, Lcom/bbm/ui/ContactsGridItem;->getContactAvatar()Lcom/bbm/ui/ObservingImageView;
-
-    move-result-object v0
-
-    .line 264
-    invoke-static {}, Lcom/d/a/b/f;->a()Lcom/d/a/b/f;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v0}, Lcom/d/a/b/f;->a(Landroid/widget/ImageView;)V
-
-    .line 266
-    iget-object v5, p2, Lcom/bbm/d/gr;->B:Ljava/lang/String;
-
-    const-string v6, "contacts_fragment_find_more_fake_user_uri"
-
-    invoke-static {v5, v6}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    .line 267
-    const v1, 0x7f0e038b
-
-    invoke-virtual {v4, v1}, Landroid/widget/TextView;->setText(I)V
-
-    .line 268
-    const v1, 0x7f02001b
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/ObservingImageView;->setObservableImage(I)V
+    if-gtz v0, :cond_0
 
     .line 309
     :goto_0
     return-void
 
-    .line 270
+    .line 296
     :cond_0
-    invoke-static {p2}, Lcom/bbm/d/b/a;->b(Lcom/bbm/d/gr;)Ljava/lang/String;
+    invoke-virtual {p3, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object v5
-
-    .line 271
-    invoke-static {v5}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_1
-
-    .line 272
-    invoke-static {v5}, Lcom/bbm/util/fh;->c(Ljava/lang/String;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_4
-
-    .line 273
-    invoke-static {v5}, Lcom/bbm/util/fh;->d(Ljava/lang/String;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_3
-
-    .line 274
-    invoke-virtual {v4, v8}, Landroid/widget/TextView;->setGravity(I)V
-
-    .line 284
-    :cond_1
-    :goto_1
-    invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 286
-    iget-object v5, p0, Lcom/bbm/ui/c/cv;->f:Lcom/bbm/ui/c/ch;
-
-    invoke-static {v5}, Lcom/bbm/ui/c/ch;->e(Lcom/bbm/ui/c/ch;)Lcom/bbm/d/a;
-
-    move-result-object v5
-
-    iget-object v6, p2, Lcom/bbm/d/gr;->B:Ljava/lang/String;
-
-    iget-object v7, p2, Lcom/bbm/d/gr;->a:Ljava/lang/String;
-
-    invoke-virtual {v5, v6, v7}, Lcom/bbm/d/a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/j/r;
-
-    move-result-object v5
-
-    invoke-virtual {v0, v5}, Lcom/bbm/ui/ObservingImageView;->setObservableImage(Lcom/bbm/j/r;)V
-
-    .line 287
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/ObservingImageView;->setLimitedLengthAnimation(Z)V
-
-    .line 289
-    iget-boolean v0, p2, Lcom/bbm/d/gr;->x:Z
-
-    if-eqz v0, :cond_6
-
-    iget-object v0, p0, Lcom/bbm/ui/c/cv;->f:Lcom/bbm/ui/c/ch;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/ch;->f(Lcom/bbm/ui/c/ch;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    .line 290
-    :goto_2
-    invoke-virtual {v4}, Landroid/widget/TextView;->getCompoundDrawables()[Landroid/graphics/drawable/Drawable;
-
-    move-result-object v5
-
-    .line 291
-    aget-object v5, v5, v2
-
-    if-eq v0, v5, :cond_2
-
-    .line 292
-    invoke-virtual {v4, v0, v1, v1, v1}, Landroid/widget/TextView;->setCompoundDrawables(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-
-    .line 295
-    :cond_2
-    iget-object v0, p0, Lcom/bbm/ui/c/cv;->f:Lcom/bbm/ui/c/ch;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/ch;->e(Lcom/bbm/ui/c/ch;)Lcom/bbm/d/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/d/a;->u()Ljava/util/Map;
-
-    move-result-object v0
-
-    iget-object v1, p2, Lcom/bbm/d/gr;->B:Ljava/lang/String;
-
-    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
+    move-result-object v1
 
     .line 297
-    if-eqz v0, :cond_8
+    instance-of v0, v1, Ljava/util/ArrayList;
 
-    .line 298
-    iget-object v1, p0, Lcom/bbm/ui/c/cv;->f:Lcom/bbm/ui/c/ch;
+    if-eqz v0, :cond_2
 
-    invoke-static {v1}, Lcom/bbm/ui/c/ch;->e(Lcom/bbm/ui/c/ch;)Lcom/bbm/d/a;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->K(Ljava/lang/String;)Lcom/bbm/d/eu;
-
-    move-result-object v0
-
-    .line 300
-    iget-object v1, p0, Lcom/bbm/ui/c/cv;->f:Lcom/bbm/ui/c/ch;
-
-    invoke-static {v1}, Lcom/bbm/ui/c/ch;->e(Lcom/bbm/ui/c/ch;)Lcom/bbm/d/a;
-
-    move-result-object v1
-
-    iget-object v4, v0, Lcom/bbm/d/eu;->b:Ljava/lang/String;
-
-    invoke-static {v4}, Lcom/bbm/d/a;->e(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    iget-wide v6, v0, Lcom/bbm/d/eu;->n:J
-
-    invoke-virtual {v1, v4, v6, v7}, Lcom/bbm/d/a;->a(Ljava/lang/String;J)Lcom/bbm/d/fi;
-
-    move-result-object v0
-
-    .line 304
-    invoke-virtual {p1}, Lcom/bbm/ui/ContactsGridItem;->getContactSplat()Landroid/view/View;
-
-    move-result-object v1
-
-    iget-boolean v4, v0, Lcom/bbm/d/fi;->j:Z
-
-    if-eqz v4, :cond_7
-
-    iget-object v0, v0, Lcom/bbm/d/fi;->p:Lcom/bbm/d/fl;
-
-    sget-object v4, Lcom/bbm/d/fl;->f:Lcom/bbm/d/fl;
-
-    if-eq v0, v4, :cond_7
-
-    move v0, v2
-
-    :goto_3
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    goto/16 :goto_0
-
-    .line 276
-    :cond_3
-    invoke-virtual {v4, v7}, Landroid/widget/TextView;->setGravity(I)V
-
-    goto :goto_1
-
-    .line 278
-    :cond_4
-    invoke-static {v5}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_5
-
-    invoke-static {v5}, Lcom/bbm/util/fh;->b(Ljava/lang/String;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_5
-
-    .line 279
-    invoke-virtual {v4, v8}, Landroid/widget/TextView;->setGravity(I)V
-
-    goto/16 :goto_1
-
-    .line 281
-    :cond_5
-    invoke-virtual {v4, v7}, Landroid/widget/TextView;->setGravity(I)V
-
-    goto/16 :goto_1
-
-    :cond_6
     move-object v0, v1
 
-    .line 289
-    goto :goto_2
+    check-cast v0, Ljava/util/ArrayList;
 
-    :cond_7
-    move v0, v3
-
-    .line 304
-    goto :goto_3
-
-    .line 306
-    :cond_8
-    invoke-virtual {p1}, Lcom/bbm/ui/ContactsGridItem;->getContactSplat()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
-
-    goto/16 :goto_0
-.end method
-
-.method protected final a(Landroid/view/View;Lcom/bbm/iceberg/l;)V
-    .locals 6
-
-    .prologue
-    const/16 v5, 0x15
-
-    const/16 v4, 0x13
-
-    .line 232
-    check-cast p1, Lcom/bbm/ui/ContactsGridItem;
-
-    .line 233
-    invoke-virtual {p1}, Lcom/bbm/ui/ContactsGridItem;->getContactName()Landroid/widget/TextView;
-
-    move-result-object v0
-
-    .line 234
-    invoke-virtual {p1}, Lcom/bbm/ui/ContactsGridItem;->getContactAvatar()Lcom/bbm/ui/ObservingImageView;
-
-    move-result-object v1
-
-    .line 236
-    iget-object v2, p2, Lcom/bbm/iceberg/l;->a:Ljava/lang/String;
-
-    .line 237
-    invoke-static {v2}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    .line 238
-    invoke-static {v2}, Lcom/bbm/util/fh;->c(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    .line 239
-    invoke-static {v2}, Lcom/bbm/util/fh;->d(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    .line 240
-    invoke-virtual {v0, v5}, Landroid/widget/TextView;->setGravity(I)V
-
-    .line 250
-    :cond_0
-    :goto_0
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 252
-    invoke-static {}, Lcom/d/a/b/f;->a()Lcom/d/a/b/f;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Lcom/d/a/b/f;->a(Landroid/widget/ImageView;)V
-
-    .line 253
-    const v0, 0x7f0200da
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/ObservingImageView;->setObservableImage(I)V
-
-    .line 254
-    iget-object v0, p2, Lcom/bbm/iceberg/l;->c:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    if-nez v0, :cond_1
+    const/4 v2, 0x1
 
-    .line 255
-    invoke-static {}, Lcom/d/a/b/f;->a()Lcom/d/a/b/f;
+    if-ne v0, v2, :cond_2
+
+    .line 300
+    check-cast v1, Ljava/util/ArrayList;
+
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v0, v1
+
+    .line 302
+    :goto_1
+    instance-of v1, v0, Lcom/bbm/d/ia;
+
+    if-eqz v1, :cond_1
+
+    .line 303
+    iget-object v1, p0, Lcom/bbm/ui/c/cv;->a:Lcom/bbm/ui/c/ca;
+
+    invoke-static {v1}, Lcom/bbm/ui/c/ca;->c(Lcom/bbm/ui/c/ca;)Lcom/bbm/ui/w;
+
+    iget-object v1, p0, Lcom/bbm/ui/c/cv;->a:Lcom/bbm/ui/c/ca;
+
+    iget-object v1, v1, Lcom/bbm/ui/c/ca;->a:[Ljava/lang/Integer;
+
+    invoke-static {v1, p1, p2}, Lcom/bbm/ui/w;->a([Ljava/lang/Integer;Landroid/view/ActionMode;Landroid/view/Menu;)V
+
+    .line 304
+    check-cast v0, Lcom/bbm/d/ia;
+
+    iget-object v0, v0, Lcom/bbm/d/ia;->e:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Landroid/view/ActionMode;->setTitle(Ljava/lang/CharSequence;)V
+
+    goto :goto_0
+
+    .line 307
+    :cond_1
+    invoke-interface {p2}, Landroid/view/Menu;->clear()V
+
+    .line 308
+    iget-object v0, p0, Lcom/bbm/ui/c/cv;->a:Lcom/bbm/ui/c/ca;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/ca;->c(Lcom/bbm/ui/c/ca;)Lcom/bbm/ui/w;
 
     move-result-object v0
 
-    iget-object v2, p2, Lcom/bbm/iceberg/l;->c:Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/bbm/ui/w;->b()V
 
-    invoke-virtual {v0, v2, v1}, Lcom/d/a/b/f;->a(Ljava/lang/String;Landroid/widget/ImageView;)V
+    goto :goto_0
+
+    :cond_2
+    move-object v0, v1
+
+    goto :goto_1
+.end method
+
+.method public final a(Landroid/view/MenuItem;Ljava/util/ArrayList;Landroid/view/ActionMode;)Z
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/view/MenuItem;",
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/Object;",
+            ">;",
+            "Landroid/view/ActionMode;",
+            ")Z"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v3, 0x1
+
+    const/4 v1, 0x0
+
+    .line 252
+    invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    if-gtz v2, :cond_0
+
+    .line 279
+    :goto_0
+    return v1
+
+    .line 255
+    :cond_0
+    new-instance v4, Ljava/util/ArrayList;
+
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     .line 257
+    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
+
+    move-result v2
+
+    packed-switch v2, :pswitch_data_0
+
+    goto :goto_0
+
+    .line 259
+    :pswitch_0
+    const-string v1, "Action Mode Delete Item Clicked"
+
+    const-class v2, Lcom/bbm/ui/activities/MainActivity;
+
+    invoke-static {v1, v2}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 261
+    const/4 v1, 0x0
+
+    :try_start_0
+    invoke-virtual {p2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    .line 262
+    instance-of v1, v2, Ljava/util/ArrayList;
+
+    if-eqz v1, :cond_2
+
+    move-object v0, v2
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    move-object v1, v0
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    if-ne v1, v3, :cond_2
+
+    .line 264
+    check-cast v2, Ljava/util/ArrayList;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v1, v2
+
+    .line 266
+    :goto_1
+    instance-of v2, v1, Lcom/bbm/d/ia;
+
+    if-eqz v2, :cond_1
+
+    .line 268
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 269
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Lorg/json/JSONObject;
+
+    const/4 v4, 0x0
+
+    new-instance v5, Lorg/json/JSONObject;
+
+    invoke-direct {v5}, Lorg/json/JSONObject;-><init>()V
+
+    const-string v6, "id"
+
+    check-cast v1, Lcom/bbm/d/ia;
+
+    iget-object v1, v1, Lcom/bbm/d/ia;->b:Ljava/lang/String;
+
+    invoke-virtual {v5, v6, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    aput-object v1, v2, v4
+
+    invoke-static {v2}, Lcom/google/b/c/p;->a([Ljava/lang/Object;)Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    .line 270
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
+
+    move-result-object v2
+
+    const-string v4, "systemMessage"
+
+    invoke-static {v1, v4}, Lcom/bbm/d/aj;->e(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/d/dz;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ez;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 276
     :cond_1
-    return-void
+    :goto_2
+    invoke-virtual {p3}, Landroid/view/ActionMode;->finish()V
 
-    .line 242
+    move v1, v3
+
+    .line 277
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    goto :goto_2
+
     :cond_2
-    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setGravity(I)V
+    move-object v1, v2
 
-    goto :goto_0
+    goto :goto_1
 
-    .line 244
-    :cond_3
-    invoke-static {v2}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
+    .line 257
+    :pswitch_data_0
+    .packed-switch 0x7f0b0740
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    move-result v3
+.method public final b(Ljava/lang/Object;)V
+    .locals 0
 
-    if-nez v3, :cond_4
-
-    invoke-static {v2}, Lcom/bbm/util/fh;->b(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_4
-
-    .line 245
-    invoke-virtual {v0, v5}, Landroid/widget/TextView;->setGravity(I)V
-
-    goto :goto_0
-
-    .line 247
-    :cond_4
-    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setGravity(I)V
-
-    goto :goto_0
+    .prologue
+    .line 289
+    return-void
 .end method

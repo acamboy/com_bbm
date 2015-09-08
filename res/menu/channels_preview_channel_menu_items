@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@id/menu_preview_channel">
+        <item android:icon="@drawable/ic_join_channel" android:id="@id/button_join_channel" android:title="@string/join_channel" app:showAsAction="always|collapseActionView" />
+        <item android:icon="@drawable/ic_menu_joinchannel" android:id="@id/menu_join_channel" android:title="@string/join_channel" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_drawer_report" android:id="@id/menu_report_channel" android:visible="false" android:title="@string/report_channel" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_drawer_report" android:id="@id/menu_remove_report_channel" android:visible="false" android:title="@string/channel_report_remove_complaint" app:showAsAction="never" />
+    </group>
+</menu>

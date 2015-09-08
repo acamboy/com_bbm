@@ -63,9 +63,9 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/google/zxing/client/android/m;->b:Lcom/google/zxing/client/android/m;
+    sget v1, Lcom/google/zxing/client/android/m;->b:I
 
-    invoke-static {v0, v1}, Lcom/google/zxing/client/android/k;->a(Ljava/lang/String;Lcom/google/zxing/client/android/m;)Ljava/lang/CharSequence;
+    invoke-static {v0, v1}, Lcom/google/zxing/client/android/k;->a(Ljava/lang/String;I)Ljava/lang/CharSequence;
 
     move-result-object v0
 

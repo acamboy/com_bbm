@@ -1,66 +1,45 @@
 .class final Lcom/bbm/ui/c/bx;
-.super Lcom/bbm/j/k;
-.source "ChatsFragment.java"
+.super Ljava/lang/Object;
+.source "ChannelsNotificationsFragment.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/bo;
+.field final synthetic a:Lcom/bbm/d/fl;
+
+.field final synthetic b:Lcom/bbm/ui/c/bw;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/bo;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/c/bw;Lcom/bbm/d/fl;)V
+    .locals 0
 
     .prologue
-    .line 149
-    iput-object p1, p0, Lcom/bbm/ui/c/bx;->a:Lcom/bbm/ui/c/bo;
+    .line 295
+    iput-object p1, p0, Lcom/bbm/ui/c/bx;->b:Lcom/bbm/ui/c/bw;
 
-    const/4 v0, 0x0
+    iput-object p2, p0, Lcom/bbm/ui/c/bx;->a:Lcom/bbm/d/fl;
 
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
 
     .prologue
-    const/16 v1, 0x8
+    .line 298
+    iget-object v0, p0, Lcom/bbm/ui/c/bx;->a:Lcom/bbm/d/fl;
 
-    .line 157
-    iget-object v0, p0, Lcom/bbm/ui/c/bx;->a:Lcom/bbm/ui/c/bo;
+    iget-object v0, v0, Lcom/bbm/d/fl;->b:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/ui/c/bo;->a(Lcom/bbm/ui/c/bo;)Landroid/view/View;
+    invoke-static {v0}, Lcom/bbm/util/af;->e(Ljava/lang/String;)V
 
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/ui/c/bx;->a:Lcom/bbm/ui/c/bo;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/bo;->a(Lcom/bbm/ui/c/bo;)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
-
-    move-result v0
-
-    if-eq v0, v1, :cond_0
-
-    .line 159
-    iget-object v0, p0, Lcom/bbm/ui/c/bx;->a:Lcom/bbm/ui/c/bo;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/bo;->a(Lcom/bbm/ui/c/bo;)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    .line 161
-    :cond_0
+    .line 299
     return-void
 .end method

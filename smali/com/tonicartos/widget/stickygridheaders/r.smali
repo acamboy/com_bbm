@@ -80,17 +80,11 @@
 .end method
 
 .method public final a(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 2
+    .locals 1
 
     .prologue
     .line 59
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/r;->a:Lcom/tonicartos/widget/stickygridheaders/q;
-
-    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/r;->b:[Lcom/tonicartos/widget/stickygridheaders/t;
-
-    aget-object v1, v1, p1
-
-    iget v1, v1, Lcom/tonicartos/widget/stickygridheaders/t;->b:I
 
     invoke-interface {v0}, Lcom/tonicartos/widget/stickygridheaders/q;->b()Landroid/view/View;
 

@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 143
+    .line 142
     iput-object p1, p0, Lcom/bbm/ui/i;->a:Lcom/bbm/ui/AppItemView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,11 +25,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/d/ff;Ljava/lang/String;)V
+.method public final a(Lcom/bbm/d/gh;Ljava/lang/String;)V
     .locals 2
 
     .prologue
-    .line 146
+    .line 145
     iget-object v0, p0, Lcom/bbm/ui/i;->a:Lcom/bbm/ui/AppItemView;
 
     invoke-static {v0}, Lcom/bbm/ui/AppItemView;->a(Lcom/bbm/ui/AppItemView;)Ljava/lang/String;
@@ -42,10 +42,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 147
+    .line 146
     if-nez p1, :cond_1
 
-    .line 148
+    .line 147
     iget-object v0, p0, Lcom/bbm/ui/i;->a:Lcom/bbm/ui/AppItemView;
 
     invoke-static {v0}, Lcom/bbm/ui/AppItemView;->b(Lcom/bbm/ui/AppItemView;)Landroid/widget/ImageView;
@@ -56,16 +56,16 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 154
+    .line 153
     :cond_0
     :goto_0
     return-void
 
-    .line 151
+    .line 150
     :cond_1
-    iget-object v0, p1, Lcom/bbm/d/ff;->b:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p1, Lcom/bbm/d/gh;->b:Landroid/graphics/drawable/Drawable;
 
-    .line 152
+    .line 151
     iget-object v1, p0, Lcom/bbm/ui/i;->a:Lcom/bbm/ui/AppItemView;
 
     invoke-static {v1}, Lcom/bbm/ui/AppItemView;->b(Lcom/bbm/ui/AppItemView;)Landroid/widget/ImageView;

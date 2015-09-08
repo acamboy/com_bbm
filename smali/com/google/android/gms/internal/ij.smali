@@ -1,39 +1,46 @@
-.class public final Lcom/google/android/gms/internal/ij;
+.class public interface abstract Lcom/google/android/gms/internal/ij;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/google/android/gms/plus/a;
+.implements Landroid/os/IInterface;
 
 
-# instance fields
-.field private final Rw:Lcom/google/android/gms/common/api/Api$b;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/Api$b",
-            "<",
-            "Lcom/google/android/gms/plus/internal/e;",
-            ">;"
-        }
-    .end annotation
-.end field
+# virtual methods
+.method public abstract a()Lcom/google/android/gms/a/h;
+.end method
 
+.method public abstract a(Lcom/google/android/gms/a/h;Lcom/google/android/gms/ads/internal/client/AdRequestParcel;Ljava/lang/String;Lcom/google/android/gms/ads/internal/reward/mediation/client/a;Ljava/lang/String;)V
+.end method
 
-# direct methods
-.method public constructor <init>(Lcom/google/android/gms/common/api/Api$b;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/Api$b",
-            "<",
-            "Lcom/google/android/gms/plus/internal/e;",
-            ">;)V"
-        }
-    .end annotation
+.method public abstract a(Lcom/google/android/gms/a/h;Lcom/google/android/gms/ads/internal/client/AdRequestParcel;Ljava/lang/String;Lcom/google/android/gms/internal/im;)V
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract a(Lcom/google/android/gms/a/h;Lcom/google/android/gms/ads/internal/client/AdRequestParcel;Ljava/lang/String;Ljava/lang/String;Lcom/google/android/gms/internal/im;)V
+.end method
 
-    iput-object p1, p0, Lcom/google/android/gms/internal/ij;->Rw:Lcom/google/android/gms/common/api/Api$b;
+.method public abstract a(Lcom/google/android/gms/a/h;Lcom/google/android/gms/ads/internal/client/AdSizeParcel;Lcom/google/android/gms/ads/internal/client/AdRequestParcel;Ljava/lang/String;Lcom/google/android/gms/internal/im;)V
+.end method
 
-    return-void
+.method public abstract a(Lcom/google/android/gms/a/h;Lcom/google/android/gms/ads/internal/client/AdSizeParcel;Lcom/google/android/gms/ads/internal/client/AdRequestParcel;Ljava/lang/String;Ljava/lang/String;Lcom/google/android/gms/internal/im;)V
+.end method
+
+.method public abstract a(Lcom/google/android/gms/ads/internal/client/AdRequestParcel;Ljava/lang/String;)V
+.end method
+
+.method public abstract b()V
+.end method
+
+.method public abstract c()V
+.end method
+
+.method public abstract d()V
+.end method
+
+.method public abstract e()V
+.end method
+
+.method public abstract f()V
+.end method
+
+.method public abstract g()Z
 .end method

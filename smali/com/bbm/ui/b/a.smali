@@ -6,7 +6,7 @@
 # instance fields
 .field public a:Lcom/bbm/ui/b/f;
 
-.field private final b:Lcom/bbm/e;
+.field private final b:Lcom/bbm/f;
 
 .field private final c:Lcom/bbm/d/a;
 
@@ -120,16 +120,16 @@
     invoke-direct {p0, p1}, Landroid/app/Dialog;-><init>(Landroid/content/Context;)V
 
     .line 50
-    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/f;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/b/a;->b:Lcom/bbm/e;
+    iput-object v0, p0, Lcom/bbm/ui/b/a;->b:Lcom/bbm/f;
 
     .line 51
-    iget-object v0, p0, Lcom/bbm/ui/b/a;->b:Lcom/bbm/e;
+    iget-object v0, p0, Lcom/bbm/ui/b/a;->b:Lcom/bbm/f;
 
-    iget-object v0, v0, Lcom/bbm/e;->b:Lcom/bbm/d/a;
+    iget-object v0, v0, Lcom/bbm/f;->b:Lcom/bbm/d/a;
 
     iput-object v0, p0, Lcom/bbm/ui/b/a;->c:Lcom/bbm/d/a;
 
@@ -321,7 +321,7 @@
 
     iget-object v1, p0, Lcom/bbm/ui/b/a;->d:Landroid/app/Activity;
 
-    const v2, 0x7f0e0136
+    const v2, 0x7f0e0158
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -383,7 +383,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f090010
+    const v2, 0x7f09001e
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -412,7 +412,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f090038
+    const v2, 0x7f090053
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -914,15 +914,15 @@
 
     invoke-direct {v1, p0}, Lcom/bbm/ui/b/e;-><init>(Lcom/bbm/ui/b/a;)V
 
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v2
 
-    iget-object v2, v2, Lcom/bbm/d/a;->c:Lcom/bbm/ui/d/d;
+    iget-object v2, v2, Lcom/bbm/d/a;->b:Lcom/bbm/ui/e/d;
 
     const-string v3, "channelsSetupError"
 
-    invoke-virtual {v2, v3, v1, p0}, Lcom/bbm/ui/d/d;->b(Ljava/lang/String;Lcom/bbm/ui/d/c;Ljava/lang/Object;)V
+    invoke-virtual {v2, v3, v1, p0}, Lcom/bbm/ui/e/d;->b(Ljava/lang/String;Lcom/bbm/ui/e/c;Ljava/lang/Object;)V
 
     invoke-virtual {v0}, Ljava/util/Date;->getTime()J
 
@@ -932,19 +932,19 @@
 
     div-long/2addr v0, v2
 
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v2
 
-    new-instance v3, Lcom/bbm/d/cq;
+    new-instance v3, Lcom/bbm/d/dl;
 
-    invoke-direct {v3}, Lcom/bbm/d/cq;-><init>()V
+    invoke-direct {v3}, Lcom/bbm/d/dl;-><init>()V
 
-    invoke-virtual {v3, v0, v1}, Lcom/bbm/d/cq;->a(J)Lcom/bbm/d/cq;
+    invoke-virtual {v3, v0, v1}, Lcom/bbm/d/dl;->a(J)Lcom/bbm/d/dl;
 
     move-result-object v0
 
-    invoke-virtual {v2, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
+    invoke-virtual {v2, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ez;)V
 
     return-void
 .end method
@@ -970,7 +970,7 @@
     .line 153
     iget-object v0, p0, Lcom/bbm/ui/b/a;->x:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
 
     .line 154
     invoke-super {p0}, Landroid/app/Dialog;->dismiss()V
@@ -983,9 +983,9 @@
     .locals 9
 
     .prologue
-    const v8, 0x1090009
+    const v8, 0x7f03011b
 
-    const v7, 0x1090008
+    const v7, 0x1090009
 
     const/4 v6, 0x0
 
@@ -1034,7 +1034,7 @@
     invoke-virtual {v0, v1}, Landroid/view/Window;->setGravity(I)V
 
     .line 168
-    const v0, 0x7f030073
+    const v0, 0x7f0300ab
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/b/a;->setContentView(I)V
 
@@ -1042,7 +1042,7 @@
     invoke-virtual {p0, v6}, Lcom/bbm/ui/b/a;->setCancelable(Z)V
 
     .line 172
-    const v0, 0x7f0b029b
+    const v0, 0x7f0b02df
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/b/a;->findViewById(I)Landroid/view/View;
 
@@ -1053,7 +1053,7 @@
     iput-object v0, p0, Lcom/bbm/ui/b/a;->e:Landroid/widget/ProgressBar;
 
     .line 174
-    const v0, 0x7f0b034e
+    const v0, 0x7f0b0420
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/b/a;->findViewById(I)Landroid/view/View;
 
@@ -1064,7 +1064,7 @@
     iput-object v0, p0, Lcom/bbm/ui/b/a;->o:Landroid/widget/TextView;
 
     .line 175
-    const v0, 0x7f0b034f
+    const v0, 0x7f0b0421
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/b/a;->findViewById(I)Landroid/view/View;
 
@@ -1075,7 +1075,7 @@
     iput-object v0, p0, Lcom/bbm/ui/b/a;->p:Landroid/widget/TextView;
 
     .line 176
-    const v0, 0x7f0b0350
+    const v0, 0x7f0b0422
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/b/a;->findViewById(I)Landroid/view/View;
 
@@ -1086,7 +1086,7 @@
     iput-object v0, p0, Lcom/bbm/ui/b/a;->q:Landroid/widget/TextView;
 
     .line 177
-    const v0, 0x7f0b0352
+    const v0, 0x7f0b0424
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/b/a;->findViewById(I)Landroid/view/View;
 
@@ -1097,7 +1097,7 @@
     iput-object v0, p0, Lcom/bbm/ui/b/a;->l:Landroid/widget/Spinner;
 
     .line 178
-    const v0, 0x7f0b0353
+    const v0, 0x7f0b0425
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/b/a;->findViewById(I)Landroid/view/View;
 
@@ -1108,7 +1108,7 @@
     iput-object v0, p0, Lcom/bbm/ui/b/a;->m:Landroid/widget/Spinner;
 
     .line 179
-    const v0, 0x7f0b0354
+    const v0, 0x7f0b0426
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/b/a;->findViewById(I)Landroid/view/View;
 
@@ -1119,7 +1119,7 @@
     iput-object v0, p0, Lcom/bbm/ui/b/a;->n:Landroid/widget/Spinner;
 
     .line 181
-    const v0, 0x7f0b0357
+    const v0, 0x7f0b0429
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/b/a;->findViewById(I)Landroid/view/View;
 
@@ -1130,7 +1130,7 @@
     iput-object v0, p0, Lcom/bbm/ui/b/a;->r:Landroid/widget/TextView;
 
     .line 182
-    const v0, 0x7f0b0356
+    const v0, 0x7f0b0428
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/b/a;->findViewById(I)Landroid/view/View;
 
@@ -1141,7 +1141,7 @@
     iput-object v0, p0, Lcom/bbm/ui/b/a;->s:Landroid/widget/TextView;
 
     .line 183
-    const v0, 0x7f0b0358
+    const v0, 0x7f0b042a
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/b/a;->findViewById(I)Landroid/view/View;
 
@@ -1152,7 +1152,7 @@
     iput-object v0, p0, Lcom/bbm/ui/b/a;->t:Landroid/widget/TextView;
 
     .line 185
-    const v0, 0x7f0b0351
+    const v0, 0x7f0b0423
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/b/a;->findViewById(I)Landroid/view/View;
 
@@ -1161,7 +1161,7 @@
     iput-object v0, p0, Lcom/bbm/ui/b/a;->u:Landroid/view/View;
 
     .line 186
-    const v0, 0x7f0b0355
+    const v0, 0x7f0b0427
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/b/a;->findViewById(I)Landroid/view/View;
 
@@ -1211,13 +1211,13 @@
 
     iget-object v4, p0, Lcom/bbm/ui/b/a;->i:Ljava/util/ArrayList;
 
-    invoke-direct {v1, v3, v7, v4}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;ILjava/util/List;)V
+    invoke-direct {v1, v3, v8, v4}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;ILjava/util/List;)V
 
     iput-object v1, p0, Lcom/bbm/ui/b/a;->f:Landroid/widget/ArrayAdapter;
 
     iget-object v1, p0, Lcom/bbm/ui/b/a;->f:Landroid/widget/ArrayAdapter;
 
-    invoke-virtual {v1, v8}, Landroid/widget/ArrayAdapter;->setDropDownViewResource(I)V
+    invoke-virtual {v1, v7}, Landroid/widget/ArrayAdapter;->setDropDownViewResource(I)V
 
     iget-object v1, p0, Lcom/bbm/ui/b/a;->n:Landroid/widget/Spinner;
 
@@ -1249,13 +1249,13 @@
 
     iget-object v3, p0, Lcom/bbm/ui/b/a;->j:Ljava/util/ArrayList;
 
-    invoke-direct {v1, v2, v7, v3}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;ILjava/util/List;)V
+    invoke-direct {v1, v2, v8, v3}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;ILjava/util/List;)V
 
     iput-object v1, p0, Lcom/bbm/ui/b/a;->g:Landroid/widget/ArrayAdapter;
 
     iget-object v1, p0, Lcom/bbm/ui/b/a;->g:Landroid/widget/ArrayAdapter;
 
-    invoke-virtual {v1, v8}, Landroid/widget/ArrayAdapter;->setDropDownViewResource(I)V
+    invoke-virtual {v1, v7}, Landroid/widget/ArrayAdapter;->setDropDownViewResource(I)V
 
     iget-object v1, p0, Lcom/bbm/ui/b/a;->m:Landroid/widget/Spinner;
 
@@ -1289,13 +1289,13 @@
 
     iget-object v2, p0, Lcom/bbm/ui/b/a;->k:Ljava/util/ArrayList;
 
-    invoke-direct {v0, v1, v7, v2}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;ILjava/util/List;)V
+    invoke-direct {v0, v1, v8, v2}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;ILjava/util/List;)V
 
     iput-object v0, p0, Lcom/bbm/ui/b/a;->h:Landroid/widget/ArrayAdapter;
 
     iget-object v0, p0, Lcom/bbm/ui/b/a;->h:Landroid/widget/ArrayAdapter;
 
-    invoke-virtual {v0, v8}, Landroid/widget/ArrayAdapter;->setDropDownViewResource(I)V
+    invoke-virtual {v0, v7}, Landroid/widget/ArrayAdapter;->setDropDownViewResource(I)V
 
     iget-object v0, p0, Lcom/bbm/ui/b/a;->l:Landroid/widget/Spinner;
 

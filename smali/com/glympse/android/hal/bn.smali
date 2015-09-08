@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field protected ew:Ljava/lang/String;
+.field protected eA:Ljava/lang/String;
 
-.field protected ex:Ljava/lang/String;
+.field protected eB:Lcom/glympse/android/hal/GSmsListener;
 
-.field protected ey:Lcom/glympse/android/hal/GSmsListener;
+.field final synthetic eC:Lcom/glympse/android/hal/bm;
 
-.field final synthetic ez:Lcom/glympse/android/hal/bm;
+.field protected ez:Ljava/lang/String;
 
 
 # direct methods
@@ -19,18 +19,18 @@
 
     .prologue
     .line 222
-    iput-object p1, p0, Lcom/glympse/android/hal/bn;->ez:Lcom/glympse/android/hal/bm;
+    iput-object p1, p0, Lcom/glympse/android/hal/bn;->eC:Lcom/glympse/android/hal/bm;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 223
-    iput-object p2, p0, Lcom/glympse/android/hal/bn;->ew:Ljava/lang/String;
+    iput-object p2, p0, Lcom/glympse/android/hal/bn;->ez:Ljava/lang/String;
 
     .line 224
-    iput-object p3, p0, Lcom/glympse/android/hal/bn;->ex:Ljava/lang/String;
+    iput-object p3, p0, Lcom/glympse/android/hal/bn;->eA:Ljava/lang/String;
 
     .line 225
-    iput-object p4, p0, Lcom/glympse/android/hal/bn;->ey:Lcom/glympse/android/hal/GSmsListener;
+    iput-object p4, p0, Lcom/glympse/android/hal/bn;->eB:Lcom/glympse/android/hal/GSmsListener;
 
     .line 226
     return-void

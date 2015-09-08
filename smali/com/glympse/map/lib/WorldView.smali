@@ -12,14 +12,14 @@
 
 .field _mapCommon:Lcom/glympse/map/lib/MapCommon;
 
-.field private mConversation:Lcom/bbm/d/eu;
+.field private mConversation:Lcom/bbm/d/fv;
 
 .field private mUserMappingInvite:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
             "<",
-            "Lcom/bbm/ui/activities/kt;",
+            "Lcom/bbm/ui/activities/jl;",
             ">;"
         }
     .end annotation
@@ -55,12 +55,12 @@
 
 
 # virtual methods
-.method public attachConversation(Lcom/bbm/d/eu;)V
+.method public attachConversation(Lcom/bbm/d/fv;)V
     .locals 0
 
     .prologue
     .line 129
-    iput-object p1, p0, Lcom/glympse/map/lib/WorldView;->mConversation:Lcom/bbm/d/eu;
+    iput-object p1, p0, Lcom/glympse/map/lib/WorldView;->mConversation:Lcom/bbm/d/fv;
 
     .line 130
     return-void
@@ -73,7 +73,7 @@
             "(",
             "Ljava/util/List",
             "<",
-            "Lcom/bbm/ui/activities/kt;",
+            "Lcom/bbm/ui/activities/jl;",
             ">;)V"
         }
     .end annotation
@@ -161,14 +161,14 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/activities/kt;
+    check-cast v0, Lcom/bbm/ui/activities/jl;
 
     .line 35
     invoke-interface {p1}, Lcom/glympse/android/api/GGlympse;->getHistoryManager()Lcom/glympse/android/api/GHistoryManager;
 
     move-result-object v1
 
-    iget-object v2, v0, Lcom/bbm/ui/activities/kt;->b:Ljava/lang/String;
+    iget-object v2, v0, Lcom/bbm/ui/activities/jl;->b:Ljava/lang/String;
 
     invoke-interface {v1, v2}, Lcom/glympse/android/api/GHistoryManager;->findTicketByInviteCode(Ljava/lang/String;)Lcom/glympse/android/api/GTicket;
 
@@ -202,11 +202,11 @@
 
     iget-object v4, p0, Lcom/glympse/map/lib/WorldView;->mUserMappingInvite:Ljava/util/List;
 
-    iget-object v5, p0, Lcom/glympse/map/lib/WorldView;->mConversation:Lcom/bbm/d/eu;
+    iget-object v5, p0, Lcom/glympse/map/lib/WorldView;->mConversation:Lcom/bbm/d/fv;
 
     move v3, p2
 
-    invoke-virtual/range {v0 .. v5}, Lcom/glympse/map/lib/MapCommon;->draw(Lcom/glympse/android/api/GTicket;Lcom/glympse/android/api/GUser;ILjava/util/List;Lcom/bbm/d/eu;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/glympse/map/lib/MapCommon;->draw(Lcom/glympse/android/api/GTicket;Lcom/glympse/android/api/GUser;ILjava/util/List;Lcom/bbm/d/fv;)V
 
     .line 46
     iget-object v0, p0, Lcom/glympse/map/lib/WorldView;->_followedMarkerCode:Ljava/lang/String;
@@ -222,34 +222,34 @@
 
     .line 40
     :cond_1
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
+    invoke-static {}, Lcom/bbm/w;->a()Lcom/bbm/w;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/bbm/p;->a:Lcom/glympse/android/api/GGlympse;
+    iget-object v1, v1, Lcom/bbm/w;->a:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v1}, Lcom/glympse/android/api/GGlympse;->getUserManager()Lcom/glympse/android/api/GUserManager;
 
     move-result-object v1
 
-    iget-object v2, v0, Lcom/bbm/ui/activities/kt;->b:Ljava/lang/String;
+    iget-object v2, v0, Lcom/bbm/ui/activities/jl;->b:Ljava/lang/String;
 
     invoke-interface {v1, v2}, Lcom/glympse/android/api/GUserManager;->findUserByInviteCode(Ljava/lang/String;)Lcom/glympse/android/api/GUser;
 
     move-result-object v2
 
     .line 41
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
+    invoke-static {}, Lcom/bbm/w;->a()Lcom/bbm/w;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/bbm/p;->a:Lcom/glympse/android/api/GGlympse;
+    iget-object v1, v1, Lcom/bbm/w;->a:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v1}, Lcom/glympse/android/api/GGlympse;->getUserManager()Lcom/glympse/android/api/GUserManager;
 
     move-result-object v1
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/kt;->b:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/ui/activities/jl;->b:Ljava/lang/String;
 
     invoke-interface {v1, v0}, Lcom/glympse/android/api/GUserManager;->findTicketByInviteCode(Ljava/lang/String;)Lcom/glympse/android/api/GTicket;
 

@@ -35,20 +35,20 @@
         <item quantity="one">תוצאה אחת</item>
     </plurals>
     <plurals name="slide_menu_active_chats">
-        <item quantity="other">"%1$s צ'אטים פעילים"</item>
-        <item quantity="one">"צ'אט פעיל אחד"</item>
+        <item quantity="other">"צ'אטים פעילים %1$s"</item>
+        <item quantity="one">"צ'אט פעיל %1$s"</item>
     </plurals>
     <plurals name="slide_menu_new_channelupdates">
-        <item quantity="other">%1$s התראות חדשות</item>
-        <item quantity="one">התראה חדשה אחת</item>
+        <item quantity="other">פריטי ערוצים חדשים %1$s</item>
+        <item quantity="one">פריט ערוצים חדש %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_invites">
-        <item quantity="other">%1$s הזמנות חדשות</item>
-        <item quantity="one">הזמנה חדשה אחת</item>
+        <item quantity="other">הזמנות חדשות %1$s</item>
+        <item quantity="one">הזמנה חדשה %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_updates">
-        <item quantity="other">%1$s פריטים חדשים</item>
-        <item quantity="one">פריט חדש אחד</item>
+        <item quantity="other">הזנות חדשות %1$s</item>
+        <item quantity="one">הזנה חדשה %1$s</item>
     </plurals>
     <plurals name="slide_menu_total_contacts">
         <item quantity="other">%1$s אנשי קשר</item>

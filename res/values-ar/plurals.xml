@@ -53,32 +53,36 @@
         <item quantity="many">نتيجة %1$s</item>
     </plurals>
     <plurals name="slide_menu_active_chats">
-        <item quantity="other">%1$s من الدردشات النشطة</item>
-        <item quantity="zero">لا تتوفر دردشات نشطة</item>
+        <item quantity="other">دردشة نشطة %1$s</item>
+        <item quantity="zero">لا توجد دردشة نشطة</item>
         <item quantity="one">دردشة واحدة نشطة</item>
         <item quantity="two">دردشتان نشطتان</item>
-        <item quantity="few">%1$s دردشات نشطة</item>
-        <item quantity="many">%1$s دردشة نشطة</item>
+        <item quantity="few">دردشات نشطة %1$s</item>
+        <item quantity="many">دردشة نشطة %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_channelupdates">
-        <item quantity="other">%1$s إشعار جديد</item>
-        <item quantity="zero">لا يوجد إشعار جديد</item>
-        <item quantity="one">إشعار واحد جديد</item>
-        <item quantity="two">إشعاران جديدان</item>
-        <item quantity="few">%1$s إشعارات جديدة</item>
-        <item quantity="many">%1$s إشعار جديد</item>
+        <item quantity="other">عنصر قنوات %1$s</item>
+        <item quantity="zero">لا يوجد عنصر قنوات</item>
+        <item quantity="one">عنصر قنوات واحد</item>
+        <item quantity="two">عنصران للقنوات</item>
+        <item quantity="few">عناصر قنوات %1$s</item>
+        <item quantity="many">عنصر قنوات %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_invites">
-        <item quantity="other">%1$s من الدعوات الجديدة</item>
-        <item quantity="zero">لا تتوفر دعوات جديدة</item>
+        <item quantity="other">دعوة جديدة %1$s</item>
+        <item quantity="zero">لا توجد دعوات جديدة</item>
         <item quantity="one">دعوة واحدة جديدة</item>
         <item quantity="two">دعوتان جديدتان</item>
-        <item quantity="few">%1$s دعوات جديدة</item>
-        <item quantity="many">%1$s دعوة جديدة</item>
+        <item quantity="few">دعوات جديدة %1$s</item>
+        <item quantity="many">دعوة جديدة %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_updates">
-        <item quantity="other">عناصر جديدة: %1$s</item>
-        <item quantity="one">عنصر واحد جديد</item>
+        <item quantity="other">موجز جديد %1$s</item>
+        <item quantity="zero">لا يوجد موجز جديد</item>
+        <item quantity="one">موجز واحد جديد</item>
+        <item quantity="two">موجزان جديدان</item>
+        <item quantity="few">مواجز جديدة %1$s</item>
+        <item quantity="many">موجز جديد %1$s</item>
     </plurals>
     <plurals name="slide_menu_total_contacts">
         <item quantity="other">%1$s من جهات الاتصال</item>

@@ -1,270 +1,194 @@
 .class Lcom/glympse/android/lib/fv;
 .super Ljava/lang/Object;
-.source "MemoryCache.java"
+.source "LatLng.java"
 
 # interfaces
-.implements Lcom/glympse/android/lib/GMemoryCache;
+.implements Lcom/glympse/android/core/GLatLng;
 
 
 # instance fields
-.field private nS:Ljava/util/Hashtable;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Hashtable",
-            "<",
-            "Ljava/lang/String;",
-            "Lcom/glympse/android/lib/fx;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public _latitude:D
 
-.field private ql:I
-
-.field private qm:I
-
-.field private qn:Lcom/glympse/android/lib/bu;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/glympse/android/lib/bu",
-            "<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public _longitude:D
 
 
 # direct methods
-.method public constructor <init>(II)V
+.method public constructor <init>()V
     .locals 2
 
     .prologue
-    .line 38
+    const-wide/high16 v0, 0x7ff8000000000000L    # NaN
+
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
-    iput p1, p0, Lcom/glympse/android/lib/fv;->ql:I
+    .line 24
+    iput-wide v0, p0, Lcom/glympse/android/lib/fv;->_latitude:D
 
-    .line 40
-    iput p2, p0, Lcom/glympse/android/lib/fv;->qm:I
+    .line 25
+    iput-wide v0, p0, Lcom/glympse/android/lib/fv;->_longitude:D
 
-    .line 41
-    new-instance v0, Ljava/util/Hashtable;
-
-    iget v1, p0, Lcom/glympse/android/lib/fv;->qm:I
-
-    add-int/lit8 v1, v1, 0x1
-
-    invoke-direct {v0, v1}, Ljava/util/Hashtable;-><init>(I)V
-
-    iput-object v0, p0, Lcom/glympse/android/lib/fv;->nS:Ljava/util/Hashtable;
-
-    .line 42
-    new-instance v0, Lcom/glympse/android/lib/ge;
-
-    invoke-direct {v0}, Lcom/glympse/android/lib/ge;-><init>()V
-
-    iput-object v0, p0, Lcom/glympse/android/lib/fv;->qn:Lcom/glympse/android/lib/bu;
-
-    .line 43
+    .line 26
     return-void
 .end method
 
-.method private ca()V
-    .locals 3
-
-    .prologue
-    .line 104
-    iget-object v0, p0, Lcom/glympse/android/lib/fv;->qn:Lcom/glympse/android/lib/bu;
-
-    invoke-interface {v0}, Lcom/glympse/android/lib/bu;->size()I
-
-    move-result v0
-
-    .line 105
-    iget v1, p0, Lcom/glympse/android/lib/fv;->qm:I
-
-    if-ge v0, v1, :cond_1
-
-    .line 118
-    :cond_0
-    return-void
-
-    .line 111
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Lcom/glympse/android/lib/fv;->qn:Lcom/glympse/android/lib/bu;
-
-    invoke-interface {v0}, Lcom/glympse/android/lib/bu;->size()I
-
-    move-result v0
-
-    iget v1, p0, Lcom/glympse/android/lib/fv;->ql:I
-
-    if-le v0, v1, :cond_0
-
-    .line 113
-    iget-object v0, p0, Lcom/glympse/android/lib/fv;->qn:Lcom/glympse/android/lib/bu;
-
-    invoke-interface {v0}, Lcom/glympse/android/lib/bu;->bi()Lcom/glympse/android/lib/bt;
-
-    move-result-object v0
-
-    .line 115
-    iget-object v1, p0, Lcom/glympse/android/lib/fv;->nS:Ljava/util/Hashtable;
-
-    invoke-interface {v0}, Lcom/glympse/android/lib/bt;->be()Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/util/Hashtable;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 116
-    iget-object v1, p0, Lcom/glympse/android/lib/fv;->qn:Lcom/glympse/android/lib/bu;
-
-    invoke-interface {v1, v0}, Lcom/glympse/android/lib/bu;->c(Lcom/glympse/android/lib/bt;)V
-
-    goto :goto_0
-.end method
-
-.method private x(Ljava/lang/String;)Lcom/glympse/android/lib/fx;
+.method public constructor <init>(DD)V
     .locals 1
 
     .prologue
-    .line 99
-    iget-object v0, p0, Lcom/glympse/android/lib/fv;->nS:Ljava/util/Hashtable;
+    .line 29
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0, p1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 30
+    iput-wide p1, p0, Lcom/glympse/android/lib/fv;->_latitude:D
 
-    move-result-object v0
+    .line 31
+    iput-wide p3, p0, Lcom/glympse/android/lib/fv;->_longitude:D
 
-    check-cast v0, Lcom/glympse/android/lib/fx;
-
-    return-object v0
+    .line 32
+    return-void
 .end method
 
 
 # virtual methods
-.method public cache(Ljava/lang/String;Lcom/glympse/android/core/GCommon;)V
+.method public equals(Ljava/lang/Object;)Z
     .locals 3
 
     .prologue
-    .line 66
-    invoke-direct {p0, p1}, Lcom/glympse/android/lib/fv;->x(Ljava/lang/String;)Lcom/glympse/android/lib/fx;
-
-    move-result-object v0
-
-    .line 67
-    if-nez v0, :cond_0
-
-    .line 70
-    new-instance v0, Lcom/glympse/android/lib/fw;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lcom/glympse/android/lib/fw;-><init>(Lcom/glympse/android/lib/fv$1;)V
-
-    .line 71
-    iput-object p2, v0, Lcom/glympse/android/lib/fx;->qo:Lcom/glympse/android/core/GCommon;
-
-    .line 72
-    iget-object v1, p0, Lcom/glympse/android/lib/fv;->qn:Lcom/glympse/android/lib/bu;
-
-    invoke-interface {v1, p1}, Lcom/glympse/android/lib/bu;->e(Ljava/lang/Object;)Lcom/glympse/android/lib/bt;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lcom/glympse/android/lib/fx;->qp:Lcom/glympse/android/lib/bt;
-
-    .line 73
-    iget-object v1, p0, Lcom/glympse/android/lib/fv;->nS:Ljava/util/Hashtable;
-
-    invoke-virtual {v1, p1, v0}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 76
-    invoke-direct {p0}, Lcom/glympse/android/lib/fv;->ca()V
-
-    .line 84
-    :goto_0
-    return-void
-
-    .line 81
-    :cond_0
-    iget-object v1, p0, Lcom/glympse/android/lib/fv;->qn:Lcom/glympse/android/lib/bu;
-
-    iget-object v2, v0, Lcom/glympse/android/lib/fx;->qp:Lcom/glympse/android/lib/bt;
-
-    invoke-interface {v1, v2}, Lcom/glympse/android/lib/bu;->c(Lcom/glympse/android/lib/bt;)V
-
-    .line 82
-    iget-object v1, p0, Lcom/glympse/android/lib/fv;->qn:Lcom/glympse/android/lib/bu;
-
-    invoke-interface {v1, p1}, Lcom/glympse/android/lib/bu;->e(Ljava/lang/Object;)Lcom/glympse/android/lib/bt;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lcom/glympse/android/lib/fx;->qp:Lcom/glympse/android/lib/bt;
-
-    goto :goto_0
-.end method
-
-.method public extract(Ljava/lang/String;)Lcom/glympse/android/core/GCommon;
-    .locals 3
-
-    .prologue
-    .line 51
-    invoke-direct {p0, p1}, Lcom/glympse/android/lib/fv;->x(Ljava/lang/String;)Lcom/glympse/android/lib/fx;
-
-    move-result-object v0
-
-    .line 52
-    if-nez v0, :cond_0
-
-    .line 54
     const/4 v0, 0x0
 
-    .line 61
-    :goto_0
-    return-object v0
+    .line 69
+    check-cast p1, Lcom/glympse/android/lib/fv;
 
-    .line 58
+    .line 70
+    if-nez p1, :cond_1
+
+    .line 75
     :cond_0
-    iget-object v1, p0, Lcom/glympse/android/lib/fv;->qn:Lcom/glympse/android/lib/bu;
+    :goto_0
+    return v0
 
-    iget-object v2, v0, Lcom/glympse/android/lib/fx;->qp:Lcom/glympse/android/lib/bt;
+    :cond_1
+    invoke-virtual {p1}, Lcom/glympse/android/lib/fv;->getLatitudeE6()I
 
-    invoke-interface {v1, v2}, Lcom/glympse/android/lib/bu;->c(Lcom/glympse/android/lib/bt;)V
+    move-result v1
 
-    .line 59
-    iget-object v1, p0, Lcom/glympse/android/lib/fv;->qn:Lcom/glympse/android/lib/bu;
+    invoke-virtual {p0}, Lcom/glympse/android/lib/fv;->getLatitudeE6()I
 
-    invoke-interface {v1, p1}, Lcom/glympse/android/lib/bu;->e(Ljava/lang/Object;)Lcom/glympse/android/lib/bt;
+    move-result v2
 
-    move-result-object v1
+    if-ne v1, v2, :cond_0
 
-    iput-object v1, v0, Lcom/glympse/android/lib/fx;->qp:Lcom/glympse/android/lib/bt;
+    invoke-virtual {p1}, Lcom/glympse/android/lib/fv;->getLongitudeE6()I
 
-    .line 61
-    iget-object v0, v0, Lcom/glympse/android/lib/fx;->qo:Lcom/glympse/android/core/GCommon;
+    move-result v1
+
+    invoke-virtual {p0}, Lcom/glympse/android/lib/fv;->getLongitudeE6()I
+
+    move-result v2
+
+    if-ne v1, v2, :cond_0
+
+    const/4 v0, 0x1
 
     goto :goto_0
 .end method
 
-.method public onLowMemory()V
-    .locals 1
+.method public getLatitude()D
+    .locals 2
 
     .prologue
-    .line 89
-    iget-object v0, p0, Lcom/glympse/android/lib/fv;->nS:Ljava/util/Hashtable;
+    .line 45
+    iget-wide v0, p0, Lcom/glympse/android/lib/fv;->_latitude:D
 
-    invoke-virtual {v0}, Ljava/util/Hashtable;->clear()V
+    return-wide v0
+.end method
 
-    .line 90
-    iget-object v0, p0, Lcom/glympse/android/lib/fv;->qn:Lcom/glympse/android/lib/bu;
+.method public getLatitudeE6()I
+    .locals 4
 
-    invoke-interface {v0}, Lcom/glympse/android/lib/bu;->removeAll()V
+    .prologue
+    .line 55
+    iget-wide v0, p0, Lcom/glympse/android/lib/fv;->_latitude:D
 
-    .line 91
-    return-void
+    const-wide v2, 0x412e848000000000L    # 1000000.0
+
+    mul-double/2addr v0, v2
+
+    double-to-int v0, v0
+
+    return v0
+.end method
+
+.method public getLongitude()D
+    .locals 2
+
+    .prologue
+    .line 50
+    iget-wide v0, p0, Lcom/glympse/android/lib/fv;->_longitude:D
+
+    return-wide v0
+.end method
+
+.method public getLongitudeE6()I
+    .locals 4
+
+    .prologue
+    .line 60
+    iget-wide v0, p0, Lcom/glympse/android/lib/fv;->_longitude:D
+
+    const-wide v2, 0x412e848000000000L    # 1000000.0
+
+    mul-double/2addr v0, v2
+
+    double-to-int v0, v0
+
+    return v0
+.end method
+
+.method public hasLocation()Z
+    .locals 4
+
+    .prologue
+    .line 40
+    iget-wide v0, p0, Lcom/glympse/android/lib/fv;->_latitude:D
+
+    iget-wide v2, p0, Lcom/glympse/android/lib/fv;->_longitude:D
+
+    invoke-static {v0, v1, v2, v3}, Lcom/glympse/android/lib/Location;->isValid(DD)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public hashCode()I
+    .locals 2
+
+    .prologue
+    .line 82
+    new-instance v0, Lcom/glympse/android/lib/ed;
+
+    invoke-direct {v0}, Lcom/glympse/android/lib/ed;-><init>()V
+
+    .line 83
+    invoke-virtual {p0}, Lcom/glympse/android/lib/fv;->getLatitudeE6()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/glympse/android/lib/ed;->append(I)V
+
+    .line 84
+    invoke-virtual {p0}, Lcom/glympse/android/lib/fv;->getLongitudeE6()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/glympse/android/lib/ed;->append(I)V
+
+    .line 85
+    invoke-virtual {v0}, Lcom/glympse/android/lib/ed;->bW()I
+
+    move-result v0
+
+    return v0
 .end method

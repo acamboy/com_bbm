@@ -1,9 +1,9 @@
 .class public abstract Lcom/google/b/c/bz;
-.super Lcom/google/b/c/by;
-.source "UnmodifiableListIterator.java"
+.super Ljava/lang/Object;
+.source "UnmodifiableIterator.java"
 
 # interfaces
-.implements Ljava/util/ListIterator;
+.implements Ljava/util/Iterator;
 
 
 # annotations
@@ -12,9 +12,8 @@
         "<E:",
         "Ljava/lang/Object;",
         ">",
-        "Lcom/google/b/c/by",
-        "<TE;>;",
-        "Ljava/util/ListIterator",
+        "Ljava/lang/Object;",
+        "Ljava/util/Iterator",
         "<TE;>;"
     }
 .end annotation
@@ -25,47 +24,21 @@
     .locals 0
 
     .prologue
-    .line 34
-    invoke-direct {p0}, Lcom/google/b/c/by;-><init>()V
+    .line 32
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final add(Ljava/lang/Object;)V
+.method public final remove()V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TE;)V"
-        }
-    .end annotation
-
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .prologue
     .line 43
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final set(Ljava/lang/Object;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TE;)V"
-        }
-    .end annotation
-
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .prologue
-    .line 53
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

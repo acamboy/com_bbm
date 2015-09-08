@@ -3,16 +3,16 @@
 .source "LongAddables.java"
 
 # interfaces
-.implements Lcom/google/b/a/s;
+.implements Lcom/google/b/a/t;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/google/b/a/s",
+        "Lcom/google/b/a/t",
         "<",
-        "Lcom/google/b/b/bm;",
+        "Lcom/google/b/b/bn;",
         ">;"
     }
 .end annotation
@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 45
+    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,15 +32,13 @@
 
 # virtual methods
 .method public final synthetic a()Ljava/lang/Object;
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 45
-    new-instance v0, Lcom/google/b/b/bq;
+    .line 38
+    new-instance v0, Lcom/google/b/b/bs;
 
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lcom/google/b/b/bq;-><init>(B)V
+    invoke-direct {v0}, Lcom/google/b/b/bs;-><init>()V
 
     return-object v0
 .end method

@@ -13,6 +13,10 @@
         <item quantity="other">%1$d jäsentä</item>
         <item quantity="one">%1$d jäsen</item>
     </plurals>
+    <plurals name="common_days_1d">
+        <item quantity="other">%1$d päivää</item>
+        <item quantity="one">%1$d päivä</item>
+    </plurals>
     <plurals name="ephemeral_picker_seconds">
         <item quantity="other">sekuntia</item>
         <item quantity="one">sekunti</item>
@@ -35,28 +39,28 @@
         <item quantity="one">1 tulos</item>
     </plurals>
     <plurals name="slide_menu_active_chats">
-        <item quantity="other">%1$s aktiivista keskustelua</item>
-        <item quantity="one">1 aktiivinen keskustelu</item>
+        <item quantity="other">Aktiivisia keskusteluja: %1$s</item>
+        <item quantity="one">Aktiivinen keskustelu: %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_channelupdates">
-        <item quantity="other">%1$s uutta ilmoitusta</item>
-        <item quantity="one">1 uusi ilmoitus</item>
+        <item quantity="other">Uusia kanavakohteita: %1$s</item>
+        <item quantity="one">Uusi kanavakohde: %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_invites">
-        <item quantity="other">%1$s uutta kutsua</item>
-        <item quantity="one">1 uusi kutsu</item>
+        <item quantity="other">Uusia kutsuja: %1$s</item>
+        <item quantity="one">Uusi kutsu: %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_updates">
-        <item quantity="other">%1$s uutta kohdetta</item>
-        <item quantity="one">1 uusi kohde</item>
+        <item quantity="other">Uusia syötteitä: %1$s</item>
+        <item quantity="one">Uusi syöte: %1$s</item>
     </plurals>
     <plurals name="slide_menu_total_contacts">
         <item quantity="other">%1$s yhteystietoa</item>
-        <item quantity="one">1 yhteystieto</item>
+        <item quantity="one">%1$s yhteystieto</item>
     </plurals>
     <plurals name="slide_menu_total_groups">
         <item quantity="other">%1$s ryhmää</item>
-        <item quantity="one">1 ryhmä</item>
+        <item quantity="one">%1$s ryhmä</item>
     </plurals>
     <plurals name="update_channel_stats_comments">
         <item quantity="other">%1$s kommenttia</item>

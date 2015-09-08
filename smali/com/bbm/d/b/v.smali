@@ -1,39 +1,122 @@
-.class final Lcom/bbm/d/b/v;
-.super Ljava/lang/Object;
-.source "TransformingList.java"
+.class public abstract Lcom/bbm/d/b/v;
+.super Lcom/bbm/d/b/o;
+.source "FilteredList.java"
 
-# interfaces
-.implements Lcom/bbm/j/h;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Lcom/bbm/d/b/o",
+        "<TT;>;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/d/b/u;
+.field private final a:Lcom/bbm/j/r;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/j/r",
+            "<",
+            "Ljava/util/List",
+            "<TT;>;>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/d/b/u;)V
+.method public constructor <init>(Lcom/bbm/j/r;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/bbm/j/r",
+            "<",
+            "Ljava/util/List",
+            "<TT;>;>;)V"
+        }
+    .end annotation
 
     .prologue
-    .line 19
-    iput-object p1, p0, Lcom/bbm/d/b/v;->a:Lcom/bbm/d/b/u;
+    .line 13
+    invoke-direct {p0}, Lcom/bbm/d/b/o;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 14
+    iput-object p1, p0, Lcom/bbm/d/b/v;->a:Lcom/bbm/j/r;
 
+    .line 15
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method protected final a()Ljava/util/List;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<TT;>;"
+        }
+    .end annotation
 
     .prologue
-    .line 22
-    iget-object v0, p0, Lcom/bbm/d/b/v;->a:Lcom/bbm/d/b/u;
+    .line 19
+    iget-object v0, p0, Lcom/bbm/d/b/v;->a:Lcom/bbm/j/r;
 
-    invoke-virtual {v0}, Lcom/bbm/d/b/u;->a()V
+    invoke-interface {v0}, Lcom/bbm/j/r;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    .line 20
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    .line 22
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
 
     .line 23
-    return-void
+    invoke-virtual {p0, v2}, Lcom/bbm/d/b/v;->a(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .line 24
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    .line 27
+    :cond_1
+    return-object v1
+.end method
+
+.method public abstract a(Ljava/lang/Object;)Z
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)Z"
+        }
+    .end annotation
 .end method

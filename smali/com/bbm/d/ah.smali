@@ -1,55 +1,45 @@
-.class public final Lcom/bbm/d/ah;
-.super Lcom/bbm/d/dy;
-.source "BbmdsProtocol.java"
+.class final Lcom/bbm/d/ah;
+.super Ljava/lang/Object;
+.source "BbmdsModel.java"
+
+
+# instance fields
+.field final a:Lcom/bbm/d/ai;
+
+.field b:Ljava/lang/String;
+
+.field final synthetic c:Lcom/bbm/d/a;
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+.method private constructor <init>(Lcom/bbm/d/a;)V
+    .locals 2
 
     .prologue
-    .line 314
-    const-string v0, "bbidCredentials"
+    .line 2001
+    iput-object p1, p0, Lcom/bbm/d/ah;->c:Lcom/bbm/d/a;
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 316
-    const-string v0, "ecoId"
+    .line 2003
+    new-instance v0, Lcom/bbm/d/ai;
 
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/ah;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    const/4 v1, 0x0
 
-    .line 317
-    const-string v0, "token"
+    invoke-direct {v0, p0, v1}, Lcom/bbm/d/ai;-><init>(Lcom/bbm/d/ah;B)V
 
-    invoke-virtual {p0, v0, p2}, Lcom/bbm/d/ah;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    iput-object v0, p0, Lcom/bbm/d/ah;->a:Lcom/bbm/d/ai;
 
-    .line 318
+    .line 2006
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Ljava/lang/String;)Lcom/bbm/d/ah;
-    .locals 1
+.method synthetic constructor <init>(Lcom/bbm/d/a;B)V
+    .locals 0
 
     .prologue
-    .line 328
-    const-string v0, "pin"
+    .line 2001
+    invoke-direct {p0, p1}, Lcom/bbm/d/ah;-><init>(Lcom/bbm/d/a;)V
 
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/ah;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 329
-    return-object p0
-.end method
-
-.method public final bridge synthetic a()Lcom/bbm/f/ab;
-    .locals 1
-
-    .prologue
-    .line 312
-    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

@@ -1,35 +1,29 @@
 .class public final Lcom/bbm/d/dr;
-.super Lcom/bbm/d/dy;
+.super Lcom/bbm/d/ez;
 .source "BbmdsProtocol.java"
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 2
+.method constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
     .prologue
-    .line 5616
-    const-string v0, "typingNotification"
+    .line 4465
+    const-string v0, "requestChangeAvatar"
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/d/ez;-><init>(Ljava/lang/String;)V
 
-    .line 5618
-    const-string v0, "conversationUri"
+    .line 4467
+    const-string v0, "file"
 
     invoke-virtual {p0, v0, p1}, Lcom/bbm/d/dr;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 5619
-    const-string v0, "typing"
+    .line 4468
+    const-string v0, "type"
 
-    const/4 v1, 0x1
+    invoke-virtual {p0, v0, p2}, Lcom/bbm/d/dr;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v0, v1}, Lcom/bbm/d/dr;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 5620
+    .line 4469
     return-void
 .end method
 
@@ -39,8 +33,8 @@
     .locals 1
 
     .prologue
-    .line 5614
-    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
+    .line 4463
+    invoke-super {p0}, Lcom/bbm/d/ez;->a()Lcom/bbm/f/ab;
 
     move-result-object v0
 

@@ -1,135 +1,179 @@
-.class public Lcom/bbm/b/av;
-.super Ljava/lang/Object;
-.source "JsAd.java"
+.class public final enum Lcom/bbm/b/av;
+.super Ljava/lang/Enum;
+.source "AdsProtocol.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/bbm/b/av;",
+        ">;"
+    }
+.end annotation
 
 
 # static fields
-.field private static final d:Ljava/lang/String;
+.field public static final enum a:Lcom/bbm/b/av;
+
+.field public static final enum b:Lcom/bbm/b/av;
+
+.field public static final enum c:Lcom/bbm/b/av;
+
+.field public static final enum d:Lcom/bbm/b/av;
+
+.field private static final synthetic f:[Lcom/bbm/b/av;
 
 
 # instance fields
-.field a:Lcom/bbm/b/a;
-
-.field b:Z
-
-.field c:Z
+.field private final e:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 7
 
     .prologue
-    .line 8
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/4 v6, 0x3
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 v5, 0x2
 
-    const-class v1, Lcom/bbm/b/av;
+    const/4 v4, 0x1
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    const/4 v3, 0x0
 
-    move-result-object v1
+    .line 965
+    new-instance v0, Lcom/bbm/b/av;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "Wifi"
 
-    move-result-object v0
+    const-string v2, "Wifi"
 
-    const-string v1, ": "
+    invoke-direct {v0, v1, v3, v2}, Lcom/bbm/b/av;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sput-object v0, Lcom/bbm/b/av;->a:Lcom/bbm/b/av;
 
-    move-result-object v0
+    .line 970
+    new-instance v0, Lcom/bbm/b/av;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v1, "Cellular"
 
-    move-result-object v0
+    const-string v2, "Cellular"
 
-    sput-object v0, Lcom/bbm/b/av;->d:Ljava/lang/String;
+    invoke-direct {v0, v1, v4, v2}, Lcom/bbm/b/av;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/b/av;->b:Lcom/bbm/b/av;
+
+    .line 975
+    new-instance v0, Lcom/bbm/b/av;
+
+    const-string v1, "Other"
+
+    const-string v2, "Other"
+
+    invoke-direct {v0, v1, v5, v2}, Lcom/bbm/b/av;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/b/av;->c:Lcom/bbm/b/av;
+
+    .line 980
+    new-instance v0, Lcom/bbm/b/av;
+
+    const-string v1, "Unspecified"
+
+    const-string v2, ""
+
+    invoke-direct {v0, v1, v6, v2}, Lcom/bbm/b/av;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/b/av;->d:Lcom/bbm/b/av;
+
+    .line 960
+    const/4 v0, 0x4
+
+    new-array v0, v0, [Lcom/bbm/b/av;
+
+    sget-object v1, Lcom/bbm/b/av;->a:Lcom/bbm/b/av;
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcom/bbm/b/av;->b:Lcom/bbm/b/av;
+
+    aput-object v1, v0, v4
+
+    sget-object v1, Lcom/bbm/b/av;->c:Lcom/bbm/b/av;
+
+    aput-object v1, v0, v5
+
+    sget-object v1, Lcom/bbm/b/av;->d:Lcom/bbm/b/av;
+
+    aput-object v1, v0, v6
+
+    sput-object v0, Lcom/bbm/b/av;->f:[Lcom/bbm/b/av;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/bbm/b/a;)V
+.method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")V"
+        }
+    .end annotation
+
+    .prologue
+    .line 984
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 985
+    iput-object p3, p0, Lcom/bbm/b/av;->e:Ljava/lang/String;
+
+    .line 986
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lcom/bbm/b/av;
     .locals 1
 
     .prologue
-    const/4 v0, 0x0
+    .line 960
+    const-class v0, Lcom/bbm/b/av;
 
-    .line 13
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    .line 10
-    iput-boolean v0, p0, Lcom/bbm/b/av;->b:Z
+    move-result-object v0
 
-    .line 11
-    iput-boolean v0, p0, Lcom/bbm/b/av;->c:Z
+    check-cast v0, Lcom/bbm/b/av;
 
-    .line 14
-    iput-object p1, p0, Lcom/bbm/b/av;->a:Lcom/bbm/b/a;
+    return-object v0
+.end method
 
-    .line 15
-    return-void
+.method public static values()[Lcom/bbm/b/av;
+    .locals 1
+
+    .prologue
+    .line 960
+    sget-object v0, Lcom/bbm/b/av;->f:[Lcom/bbm/b/av;
+
+    invoke-virtual {v0}, [Lcom/bbm/b/av;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcom/bbm/b/av;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public toString()Ljava/lang/String;
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
     .prologue
-    .line 27
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget-object v1, Lcom/bbm/b/av;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "adId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/b/av;->a:Lcom/bbm/b/a;
-
-    iget-object v1, v1, Lcom/bbm/b/a;->j:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, " isRenderFinished="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-boolean v1, p0, Lcom/bbm/b/av;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, " isBrowsedFinished="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-boolean v1, p0, Lcom/bbm/b/av;->c:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    .line 1001
+    iget-object v0, p0, Lcom/bbm/b/av;->e:Ljava/lang/String;
 
     return-object v0
 .end method

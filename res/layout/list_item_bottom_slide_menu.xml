@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <View android:id="@id/slide_menu_bottom_divider_top" android:background="@color/slide_menu_divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
-    <com.bbm.ui.slidingmenu.SlidingMenuItemView android:id="@id/slide_menu_bottom_item" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-    <View android:id="@id/slide_menu_bottom_divider_bottom" android:background="@color/slide_menu_divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
-</LinearLayout>

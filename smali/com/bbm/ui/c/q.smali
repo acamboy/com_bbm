@@ -1,48 +1,59 @@
-.class final synthetic Lcom/bbm/ui/c/q;
+.class final Lcom/bbm/ui/c/q;
 .super Ljava/lang/Object;
-.source "AppStoreFragment.java"
+.source "AppDetailsFragment.java"
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
-# static fields
-.field static final synthetic a:[I
+# instance fields
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Lcom/bbm/ui/c/a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/bbm/ui/c/a;Ljava/lang/String;)V
+    .locals 0
 
     .prologue
-    .line 354
-    invoke-static {}, Lcom/bbm/ui/c/u;->values()[Lcom/bbm/ui/c/u;
+    .line 1013
+    iput-object p1, p0, Lcom/bbm/ui/c/q;->b:Lcom/bbm/ui/c/a;
+
+    iput-object p2, p0, Lcom/bbm/ui/c/q;->a:Ljava/lang/String;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 2
+
+    .prologue
+    .line 1016
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+
+    .line 1017
+    iget-object v0, p0, Lcom/bbm/ui/c/q;->b:Lcom/bbm/ui/c/a;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/a;->H(Lcom/bbm/ui/c/a;)V
+
+    .line 1018
+    invoke-static {}, Lcom/bbm/ui/c/a;->d()Lcom/bbm/d/a;
 
     move-result-object v0
 
-    array-length v0, v0
+    iget-object v1, p0, Lcom/bbm/ui/c/q;->a:Ljava/lang/String;
 
-    new-array v0, v0, [I
+    invoke-static {v1}, Lcom/bbm/d/aj;->g(Ljava/lang/String;)Lcom/bbm/d/de;
 
-    sput-object v0, Lcom/bbm/ui/c/q;->a:[I
+    move-result-object v1
 
-    :try_start_0
-    sget-object v0, Lcom/bbm/ui/c/q;->a:[I
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ez;)V
 
-    sget-object v1, Lcom/bbm/ui/c/u;->c:Lcom/bbm/ui/c/u;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/c/u;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
+    .line 1019
     return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_0
 .end method

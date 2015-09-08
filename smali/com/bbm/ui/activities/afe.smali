@@ -1,53 +1,219 @@
-.class final Lcom/bbm/ui/activities/afe;
+.class final synthetic Lcom/bbm/ui/activities/afe;
 .super Ljava/lang/Object;
-.source "SelectCategoryActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "SponsoredAdActivity.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SelectCategoryActivity;
+# static fields
+.field static final synthetic a:[I
+
+.field static final synthetic b:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SelectCategoryActivity;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 307
-    iput-object p1, p0, Lcom/bbm/ui/activities/afe;->a:Lcom/bbm/ui/activities/SelectCategoryActivity;
+    .line 320
+    invoke-static {}, Lcom/bbm/ui/activities/aff;->values()[Lcom/bbm/ui/activities/aff;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/activities/afe;->b:[I
+
+    :try_start_0
+    sget-object v0, Lcom/bbm/ui/activities/afe;->b:[I
+
+    sget-object v1, Lcom/bbm/ui/activities/aff;->b:Lcom/bbm/ui/activities/aff;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/activities/aff;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_8
+
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/ui/activities/afe;->b:[I
+
+    sget-object v1, Lcom/bbm/ui/activities/aff;->d:Lcom/bbm/ui/activities/aff;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/activities/aff;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_7
+
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/bbm/ui/activities/afe;->b:[I
+
+    sget-object v1, Lcom/bbm/ui/activities/aff;->c:Lcom/bbm/ui/activities/aff;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/activities/aff;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_6
+
+    :goto_2
+    :try_start_3
+    sget-object v0, Lcom/bbm/ui/activities/afe;->b:[I
+
+    sget-object v1, Lcom/bbm/ui/activities/aff;->a:Lcom/bbm/ui/activities/aff;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/activities/aff;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_5
+
+    .line 172
+    :goto_3
+    invoke-static {}, Lcom/bbm/b/w;->a()[I
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/activities/afe;->a:[I
+
+    :try_start_4
+    sget-object v0, Lcom/bbm/ui/activities/afe;->a:[I
+
+    sget v1, Lcom/bbm/b/w;->d:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :goto_4
+    :try_start_5
+    sget-object v0, Lcom/bbm/ui/activities/afe;->a:[I
+
+    sget v1, Lcom/bbm/b/w;->b:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_3
+
+    :goto_5
+    :try_start_6
+    sget-object v0, Lcom/bbm/ui/activities/afe;->a:[I
+
+    sget v1, Lcom/bbm/b/w;->a:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_2
+
+    :goto_6
+    :try_start_7
+    sget-object v0, Lcom/bbm/ui/activities/afe;->a:[I
+
+    sget v1, Lcom/bbm/b/w;->c:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_1
+
+    :goto_7
+    :try_start_8
+    sget-object v0, Lcom/bbm/ui/activities/afe;->a:[I
+
+    sget v1, Lcom/bbm/b/w;->e:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_0
+
+    :goto_8
     return-void
-.end method
 
+    :catch_0
+    move-exception v0
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+    goto :goto_8
 
-    .prologue
-    .line 311
-    const-string v0, "headerActionBar NegativeButton Clicked"
+    :catch_1
+    move-exception v0
 
-    const-class v1, Lcom/bbm/ui/activities/SelectCategoryActivity;
+    goto :goto_7
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    :catch_2
+    move-exception v0
 
-    .line 313
-    iget-object v0, p0, Lcom/bbm/ui/activities/afe;->a:Lcom/bbm/ui/activities/SelectCategoryActivity;
+    goto :goto_6
 
-    const/4 v1, 0x0
+    :catch_3
+    move-exception v0
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/SelectCategoryActivity;->setResult(I)V
+    goto :goto_5
 
-    .line 314
-    iget-object v0, p0, Lcom/bbm/ui/activities/afe;->a:Lcom/bbm/ui/activities/SelectCategoryActivity;
+    :catch_4
+    move-exception v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/SelectCategoryActivity;->finish()V
+    goto :goto_4
 
-    .line 315
-    return-void
+    :catch_5
+    move-exception v0
+
+    goto :goto_3
+
+    :catch_6
+    move-exception v0
+
+    goto :goto_2
+
+    :catch_7
+    move-exception v0
+
+    goto :goto_1
+
+    :catch_8
+    move-exception v0
+
+    goto :goto_0
 .end method

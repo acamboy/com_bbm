@@ -1,19 +1,17 @@
 .class final enum Lcom/google/b/b/bu;
-.super Lcom/google/b/b/bs;
+.super Lcom/google/b/b/bt;
 .source "RemovalCause.java"
 
 
 # direct methods
 .method constructor <init>(Ljava/lang/String;)V
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 53
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
-
-    invoke-direct {p0, p1, v0, v1}, Lcom/google/b/b/bs;-><init>(Ljava/lang/String;IB)V
+    .line 40
+    invoke-direct {p0, p1, v0, v0}, Lcom/google/b/b/bt;-><init>(Ljava/lang/String;IB)V
 
     return-void
 .end method
@@ -24,7 +22,7 @@
     .locals 1
 
     .prologue
-    .line 56
+    .line 43
     const/4 v0, 0x0
 
     return v0

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/chats_empty_view_text_size" android:textColor="@color/chats_empty_color" android:id="@id/chats_empty_label" android:paddingLeft="@dimen/chats_empty_view_text_padding" android:paddingRight="@dimen/chats_empty_view_text_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="350.0dip" android:text="@string/chats_status_no_chats" android:includeFontPadding="false" />
+</RelativeLayout>

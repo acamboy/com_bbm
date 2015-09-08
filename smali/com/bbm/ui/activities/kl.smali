@@ -1,51 +1,66 @@
 .class final Lcom/bbm/ui/activities/kl;
-.super Ljava/lang/Object;
-.source "FileSearchActivity.java"
+.super Lcom/bbm/d/b/v;
+.source "GroupChatListActivity.java"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/d/b/v",
+        "<",
+        "Lcom/bbm/g/s;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/FileSearchActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupChatListActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/FileSearchActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupChatListActivity;Lcom/bbm/j/r;)V
     .locals 0
 
     .prologue
-    .line 117
-    iput-object p1, p0, Lcom/bbm/ui/activities/kl;->a:Lcom/bbm/ui/activities/FileSearchActivity;
+    .line 216
+    iput-object p1, p0, Lcom/bbm/ui/activities/kl;->a:Lcom/bbm/ui/activities/GroupChatListActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lcom/bbm/d/b/v;-><init>(Lcom/bbm/j/r;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method protected final synthetic a(Ljava/lang/Object;)Z
+    .locals 2
 
     .prologue
-    .line 121
-    iget-object v0, p0, Lcom/bbm/ui/activities/kl;->a:Lcom/bbm/ui/activities/FileSearchActivity;
+    .line 216
+    check-cast p1, Lcom/bbm/g/s;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/FileSearchActivity;->b(Lcom/bbm/ui/activities/FileSearchActivity;)Lcom/bbm/ui/ListHeaderView;
+    iget-object v0, p1, Lcom/bbm/g/s;->d:Ljava/lang/String;
 
-    move-result-object v0
+    iget-object v1, p0, Lcom/bbm/ui/activities/kl;->a:Lcom/bbm/ui/activities/GroupChatListActivity;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/kl;->a:Lcom/bbm/ui/activities/FileSearchActivity;
-
-    const v2, 0x7f0e034c
-
-    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/FileSearchActivity;->getString(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupChatListActivity;->a(Lcom/bbm/ui/activities/GroupChatListActivity;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/ListHeaderView;->setRightLabel(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
-    .line 122
-    return-void
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

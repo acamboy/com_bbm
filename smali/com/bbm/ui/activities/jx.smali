@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/activities/jx;
 .super Ljava/lang/Object;
-.source "FilePickerActivity.java"
+.source "GroupAdminPasswordActivity.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Lcom/bbm/ui/activities/jw;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupAdminPasswordActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/jw;Ljava/lang/String;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupAdminPasswordActivity;)V
     .locals 0
 
     .prologue
-    .line 271
-    iput-object p1, p0, Lcom/bbm/ui/activities/jx;->b:Lcom/bbm/ui/activities/jw;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/jx;->a:Ljava/lang/String;
+    .line 48
+    iput-object p1, p0, Lcom/bbm/ui/activities/jx;->a:Lcom/bbm/ui/activities/GroupAdminPasswordActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -30,48 +26,21 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 3
+    .locals 2
 
     .prologue
-    .line 275
-    iget-object v0, p0, Lcom/bbm/ui/activities/jx;->b:Lcom/bbm/ui/activities/jw;
+    .line 52
+    const-string v0, "mButtonToolbar Negative Button Clicked"
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/jw;->a:Lcom/bbm/ui/activities/FilePickerActivity;
+    const-class v1, Lcom/bbm/ui/activities/GroupAdminPasswordActivity;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    .line 54
+    iget-object v0, p0, Lcom/bbm/ui/activities/jx;->a:Lcom/bbm/ui/activities/GroupAdminPasswordActivity;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/jx;->b:Lcom/bbm/ui/activities/jw;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupAdminPasswordActivity;->finish()V
 
-    iget-object v2, v2, Lcom/bbm/ui/activities/jw;->a:Lcom/bbm/ui/activities/FilePickerActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/FilePickerActivity;->h(Lcom/bbm/ui/activities/FilePickerActivity;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    sget-object v2, Ljava/io/File;->separator:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/jx;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/FilePickerActivity;->b(Lcom/bbm/ui/activities/FilePickerActivity;Ljava/lang/String;)V
-
-    .line 276
+    .line 55
     return-void
 .end method

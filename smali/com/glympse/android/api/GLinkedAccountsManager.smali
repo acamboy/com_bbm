@@ -37,6 +37,9 @@
 .method public abstract link(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)Lcom/glympse/android/api/GLinkedAccount;
 .end method
 
+.method public abstract link(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;Z)Lcom/glympse/android/api/GLinkedAccount;
+.end method
+
 .method public abstract refresh(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)Lcom/glympse/android/api/GLinkedAccount;
 .end method
 

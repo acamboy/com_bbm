@@ -8,7 +8,7 @@
 
 .field private static d:Ljava/lang/String;
 
-.field private static e:Lcom/bbm/d/ff;
+.field private static e:Lcom/bbm/d/gh;
 
 
 # instance fields
@@ -40,7 +40,7 @@
     .line 82
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/bbm/ui/activities/EphemeralImageActivity;->e:Lcom/bbm/d/ff;
+    sput-object v0, Lcom/bbm/ui/activities/EphemeralImageActivity;->e:Lcom/bbm/d/gh;
 
     .line 83
     return-void
@@ -131,7 +131,7 @@
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Lcom/bbm/d/fu;Lcom/bbm/d/ew;)V
+.method public static a(Landroid/content/Context;Lcom/bbm/d/gw;Lcom/bbm/d/fx;)V
     .locals 3
 
     .prologue
@@ -155,21 +155,21 @@
     .line 52
     const-string v1, "EphemeralImageActivity.extra.suggested.filename"
 
-    iget-object v2, p1, Lcom/bbm/d/fu;->c:Ljava/lang/String;
+    iget-object v2, p1, Lcom/bbm/d/gw;->c:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 53
     const-string v1, "EphemeralImageActivity.extra.image.path"
 
-    iget-object v2, p1, Lcom/bbm/d/fu;->i:Ljava/lang/String;
+    iget-object v2, p1, Lcom/bbm/d/gw;->i:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 54
     const-string v1, "EphemeralImageActivity.extra.image.id"
 
-    iget-object v2, p2, Lcom/bbm/d/ew;->b:Ljava/lang/String;
+    iget-object v2, p2, Lcom/bbm/d/fx;->b:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -260,12 +260,12 @@
 
     .line 109
     :goto_0
-    const v0, 0x7f030021
+    const v0, 0x7f030039
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/EphemeralImageActivity;->setContentView(I)V
 
     .line 110
-    const v0, 0x7f0b0174
+    const v0, 0x7f0b01e0
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/EphemeralImageActivity;->findViewById(I)Landroid/view/View;
 
@@ -276,7 +276,7 @@
     iput-object v0, p0, Lcom/bbm/ui/activities/EphemeralImageActivity;->a:Lcom/bbm/ui/ObservingImageView;
 
     .line 111
-    const v0, 0x7f0b0175
+    const v0, 0x7f0b01e1
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/EphemeralImageActivity;->findViewById(I)Landroid/view/View;
 
@@ -327,7 +327,7 @@
     if-nez v0, :cond_0
 
     .line 118
-    const v0, 0x7f0b0176
+    const v0, 0x7f0b01e2
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/EphemeralImageActivity;->findViewById(I)Landroid/view/View;
 
@@ -336,7 +336,7 @@
     invoke-virtual {v0, v10}, Landroid/view/View;->setVisibility(I)V
 
     .line 119
-    const v0, 0x7f0b0177
+    const v0, 0x7f0b01e3
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/EphemeralImageActivity;->findViewById(I)Landroid/view/View;
 
@@ -360,9 +360,9 @@
     .line 124
     iget-object v0, p0, Lcom/bbm/ui/activities/EphemeralImageActivity;->a:Lcom/bbm/ui/ObservingImageView;
 
-    sget-object v1, Lcom/bbm/ui/activities/EphemeralImageActivity;->e:Lcom/bbm/d/ff;
+    sget-object v1, Lcom/bbm/ui/activities/EphemeralImageActivity;->e:Lcom/bbm/d/gh;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/ObservingImageView;->setObservableImage(Lcom/bbm/d/ff;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/ObservingImageView;->setObservableImage(Lcom/bbm/d/gh;)V
 
     .line 129
     :goto_1
@@ -396,25 +396,29 @@
     .line 126
     :cond_4
     :try_start_0
-    invoke-static {v2}, Lcom/bbm/ui/cp;->a(Ljava/lang/String;)Lcom/bbm/ui/cp;
+    invoke-static {v2}, Lcom/bbm/util/b/i;->h(Ljava/lang/String;)Z
 
-    move-result-object v0
+    move-result v0
 
     if-eqz v0, :cond_6
 
-    new-instance v1, Lcom/bbm/d/ff;
+    new-instance v0, Lcom/bbm/d/gh;
 
-    invoke-direct {v1, v0}, Lcom/bbm/d/ff;-><init>(Lcom/bbm/ui/cp;)V
+    invoke-static {v2}, Lcom/bbm/ui/cw;->a(Ljava/lang/String;)Lcom/bbm/ui/cw;
 
-    sput-object v1, Lcom/bbm/ui/activities/EphemeralImageActivity;->e:Lcom/bbm/d/ff;
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/bbm/d/gh;-><init>(Lcom/bbm/ui/cw;)V
+
+    sput-object v0, Lcom/bbm/ui/activities/EphemeralImageActivity;->e:Lcom/bbm/d/gh;
 
     sput-object v3, Lcom/bbm/ui/activities/EphemeralImageActivity;->d:Ljava/lang/String;
 
     iget-object v0, p0, Lcom/bbm/ui/activities/EphemeralImageActivity;->a:Lcom/bbm/ui/ObservingImageView;
 
-    sget-object v1, Lcom/bbm/ui/activities/EphemeralImageActivity;->e:Lcom/bbm/d/ff;
+    sget-object v1, Lcom/bbm/ui/activities/EphemeralImageActivity;->e:Lcom/bbm/d/gh;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/ObservingImageView;->setObservableImage(Lcom/bbm/d/ff;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/ObservingImageView;->setObservableImage(Lcom/bbm/d/gh;)V
     :try_end_0
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
@@ -422,9 +426,9 @@
     .line 127
     :cond_5
     :goto_2
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
-    invoke-static {v3}, Lcom/bbm/d/a;->l(Ljava/lang/String;)V
+    invoke-static {v3}, Lcom/bbm/d/a;->p(Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -447,7 +451,7 @@
 
     sget-object v1, Landroid/widget/ImageView$ScaleType;->CENTER_INSIDE:Landroid/widget/ImageView$ScaleType;
 
-    invoke-static {v2, v0, v1}, Lcom/bbm/util/b/h;->a(Ljava/lang/String;Landroid/graphics/Point;Landroid/widget/ImageView$ScaleType;)Landroid/graphics/Bitmap;
+    invoke-static {v2, v0, v1}, Lcom/bbm/util/b/i;->a(Ljava/lang/String;Landroid/graphics/Point;Landroid/widget/ImageView$ScaleType;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -497,25 +501,25 @@
 
     aput-object v5, v2, v4
 
-    invoke-static {v1, v2}, Lcom/bbm/y;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v1, v2}, Lcom/bbm/af;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    new-instance v1, Lcom/bbm/d/ff;
+    new-instance v1, Lcom/bbm/d/gh;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/EphemeralImageActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    invoke-direct {v1, v2, v0}, Lcom/bbm/d/ff;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
+    invoke-direct {v1, v2, v0}, Lcom/bbm/d/gh;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    sput-object v1, Lcom/bbm/ui/activities/EphemeralImageActivity;->e:Lcom/bbm/d/ff;
+    sput-object v1, Lcom/bbm/ui/activities/EphemeralImageActivity;->e:Lcom/bbm/d/gh;
 
     sput-object v3, Lcom/bbm/ui/activities/EphemeralImageActivity;->d:Ljava/lang/String;
 
     iget-object v0, p0, Lcom/bbm/ui/activities/EphemeralImageActivity;->a:Lcom/bbm/ui/ObservingImageView;
 
-    sget-object v1, Lcom/bbm/ui/activities/EphemeralImageActivity;->e:Lcom/bbm/d/ff;
+    sget-object v1, Lcom/bbm/ui/activities/EphemeralImageActivity;->e:Lcom/bbm/d/gh;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/ObservingImageView;->setObservableImage(Lcom/bbm/d/ff;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/ObservingImageView;->setObservableImage(Lcom/bbm/d/gh;)V
     :try_end_1
     .catch Ljava/lang/OutOfMemoryError; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
@@ -531,14 +535,14 @@
 
     aput-object v0, v2, v10
 
-    invoke-static {v1, v2}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v1, v2}, Lcom/bbm/af;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     goto :goto_2
 
     :catch_1
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
 
     goto :goto_2
 .end method
@@ -555,7 +559,7 @@
     .line 179
     iget-object v0, p0, Lcom/bbm/ui/activities/EphemeralImageActivity;->a:Lcom/bbm/ui/ObservingImageView;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/ObservingImageView;->b()V
+    invoke-virtual {v0}, Lcom/bbm/ui/ObservingImageView;->c()V
 
     .line 180
     const/4 v0, 0x0

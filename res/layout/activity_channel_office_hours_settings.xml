@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:id="@id/settings_availability" android:paddingLeft="@dimen/settings_item_padding_left" android:paddingRight="@dimen/settings_item_padding_right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+    <include android:id="@id/channel_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/view_bali_toolbar" />
+    <RelativeLayout android:id="@id/settings_availability" android:paddingLeft="@dimen/settings_item_padding_left" android:paddingRight="@dimen/settings_item_padding_right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/channel_toolbar">
         <ImageView android:id="@id/icon_availability" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_always_available" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="@string/blank" />
-        <Switch android:id="@id/allways_available" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/channel_chat_schedule_always_available" android:layout_toRightOf="@id/icon_availability" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:onClick="onAlwaysAvailableClicked" style="@style/Common.Switch" />
+        <android.support.v7.widget.SwitchCompat android:id="@id/allways_available" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/channel_chat_schedule_always_available" android:layout_toRightOf="@id/icon_availability" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:onClick="onAlwaysAvailableClicked" style="@style/Common.BaliSwitch" />
     </RelativeLayout>
     <RelativeLayout android:id="@id/divider" android:paddingLeft="@dimen/settings_item_padding_left" android:paddingRight="@dimen/settings_item_padding_right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/settings_availability">
         <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_item_small_padding_top" android:layout_marginBottom="@dimen/settings_item_small_padding_bottom" layout="@layout/divider_common" />
     </RelativeLayout>
-    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/footer_action_bar" android:layout_below="@id/divider" android:layout_alignParentLeft="true" android:layout_alignParentRight="true">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/divider" android:layout_alignParentLeft="true" android:layout_alignParentRight="true">
         <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/day_hours_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
     </ScrollView>
-    <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
 </RelativeLayout>

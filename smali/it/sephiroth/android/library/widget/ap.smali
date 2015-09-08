@@ -48,24 +48,24 @@
     .locals 16
 
     .prologue
-    const v13, 0x3e333333
+    const v13, 0x3e333333    # 0.175f
 
     const/4 v4, 0x0
 
-    const-wide v14, 0x3ee4f8b588e368f1L
+    const-wide v14, 0x3ee4f8b588e368f1L    # 1.0E-5
 
     const/16 v12, 0x64
 
-    const/high16 v1, 0x3f800000
+    const/high16 v1, 0x3f800000    # 1.0f
 
     .line 614
-    const-wide v2, 0x3fe8f5c28f5c28f6L
+    const-wide v2, 0x3fe8f5c28f5c28f6L    # 0.78
 
     invoke-static {v2, v3}, Ljava/lang/Math;->log(D)D
 
     move-result-wide v2
 
-    const-wide v6, 0x3feccccccccccccdL
+    const-wide v6, 0x3feccccccccccccdL    # 0.9
 
     invoke-static {v6, v7}, Ljava/lang/Math;->log(D)D
 
@@ -104,7 +104,7 @@
     .line 633
     int-to-float v0, v5
 
-    const/high16 v3, 0x42c80000
+    const/high16 v3, 0x42c80000    # 100.0f
 
     div-float v6, v0, v3
 
@@ -116,14 +116,14 @@
     :goto_1
     sub-float v2, v0, v3
 
-    const/high16 v7, 0x40000000
+    const/high16 v7, 0x40000000    # 2.0f
 
     div-float/2addr v2, v7
 
     add-float/2addr v2, v3
 
     .line 639
-    const/high16 v7, 0x40400000
+    const/high16 v7, 0x40400000    # 3.0f
 
     mul-float/2addr v7, v2
 
@@ -136,7 +136,7 @@
 
     mul-float/2addr v8, v13
 
-    const v9, 0x3eb33334
+    const v9, 0x3eb33334    # 0.35000002f
 
     mul-float/2addr v9, v2
 
@@ -184,7 +184,7 @@
 
     sub-float v8, v1, v2
 
-    const/high16 v9, 0x3f000000
+    const/high16 v9, 0x3f000000    # 0.5f
 
     mul-float/2addr v8, v9
 
@@ -206,14 +206,14 @@
     :goto_2
     sub-float v2, v0, v4
 
-    const/high16 v7, 0x40000000
+    const/high16 v7, 0x40000000    # 2.0f
 
     div-float/2addr v2, v7
 
     add-float/2addr v2, v4
 
     .line 651
-    const/high16 v7, 0x40400000
+    const/high16 v7, 0x40400000    # 3.0f
 
     mul-float/2addr v7, v2
 
@@ -224,7 +224,7 @@
     .line 652
     sub-float v8, v1, v2
 
-    const/high16 v9, 0x3f000000
+    const/high16 v9, 0x3f000000    # 0.5f
 
     mul-float/2addr v8, v9
 
@@ -274,7 +274,7 @@
 
     mul-float/2addr v6, v13
 
-    const v8, 0x3eb33334
+    const v8, 0x3eb33334    # 0.35000002f
 
     mul-float/2addr v8, v2
 
@@ -348,7 +348,7 @@
 
     iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
-    const/high16 v1, 0x43200000
+    const/high16 v1, 0x43200000    # 160.0f
 
     mul-float/2addr v0, v1
 
@@ -357,7 +357,7 @@
 
     mul-float/2addr v0, v1
 
-    const v1, 0x3f570a3d
+    const v1, 0x3f570a3d    # 0.84f
 
     mul-float/2addr v0, v1
 
@@ -410,9 +410,9 @@
     iput v1, p0, Lit/sephiroth/android/library/widget/ap;->c:I
 
     .line 768
-    const-wide v2, 0x408f400000000000L
+    const-wide v2, 0x408f400000000000L    # 1000.0
 
-    const-wide/high16 v4, -0x4000000000000000L
+    const-wide/high16 v4, -0x4000000000000000L    # -2.0
 
     int-to-double v0, v0
 
@@ -455,13 +455,13 @@
     .line 683
     if-lez p0, :cond_0
 
-    const/high16 v0, -0x3b060000
+    const/high16 v0, -0x3b060000    # -2000.0f
 
     :goto_0
     return v0
 
     :cond_0
-    const/high16 v0, 0x44fa0000
+    const/high16 v0, 0x44fa0000    # 2000.0f
 
     goto :goto_0
 .end method
@@ -480,7 +480,7 @@
     .locals 6
 
     .prologue
-    const/high16 v4, 0x42c80000
+    const/high16 v4, 0x42c80000    # 100.0f
 
     .line 691
     sub-int v0, p2, p1
@@ -567,7 +567,7 @@
 
     .prologue
     .line 808
-    const v0, 0x3eb33333
+    const v0, 0x3eb33333    # 0.35f
 
     invoke-static {p1}, Ljava/lang/Math;->abs(I)I
 
@@ -618,7 +618,7 @@
 
     float-to-double v2, v2
 
-    const-wide/high16 v4, 0x3ff0000000000000L
+    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
 
     sub-double/2addr v2, v4
 
@@ -662,7 +662,7 @@
     .locals 4
 
     .prologue
-    const/high16 v3, 0x40000000
+    const/high16 v3, 0x40000000    # 2.0f
 
     .line 878
     iget v0, p0, Lit/sephiroth/android/library/widget/ap;->i:I
@@ -757,7 +757,7 @@
     iput v0, p0, Lit/sephiroth/android/library/widget/ap;->h:I
 
     .line 890
-    const/high16 v0, 0x447a0000
+    const/high16 v0, 0x447a0000    # 1000.0f
 
     iget v1, p0, Lit/sephiroth/android/library/widget/ap;->i:I
 
@@ -979,7 +979,7 @@
 
     int-to-float v1, v1
 
-    const/high16 v3, 0x40000000
+    const/high16 v3, 0x40000000    # 2.0f
 
     div-float/2addr v1, v3
 
@@ -999,7 +999,7 @@
 
     int-to-float v3, v3
 
-    const-wide/high16 v4, 0x4000000000000000L
+    const-wide/high16 v4, 0x4000000000000000L    # 2.0
 
     add-float/2addr v1, v3
 
@@ -1025,7 +1025,7 @@
 
     iget-wide v4, p0, Lit/sephiroth/android/library/widget/ap;->b:J
 
-    const/high16 v3, 0x447a0000
+    const/high16 v3, 0x447a0000    # 1000.0f
 
     sub-float v0, v1, v0
 
@@ -1205,11 +1205,11 @@
 
     float-to-double v2, v2
 
-    const-wide/high16 v4, 0x3ff0000000000000L
+    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
 
     sub-double/2addr v2, v4
 
-    const-wide v4, 0x408f400000000000L
+    const-wide v4, 0x408f400000000000L    # 1000.0
 
     div-double/2addr v0, v2
 
@@ -1449,11 +1449,11 @@
     .locals 8
 
     .prologue
-    const/high16 v7, 0x447a0000
+    const/high16 v7, 0x447a0000    # 1000.0f
 
-    const/high16 v6, 0x40000000
+    const/high16 v6, 0x40000000    # 2.0f
 
-    const/high16 v5, 0x42c80000
+    const/high16 v5, 0x42c80000    # 100.0f
 
     .line 928
     invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
@@ -1525,7 +1525,7 @@
     float-to-int v3, v0
 
     .line 940
-    const/high16 v1, 0x3f800000
+    const/high16 v1, 0x3f800000    # 1.0f
 
     .line 941
     const/4 v0, 0x0
@@ -1675,7 +1675,7 @@
 
     mul-float/2addr v0, v4
 
-    const/high16 v1, 0x40400000
+    const/high16 v1, 0x40400000    # 3.0f
 
     mul-float/2addr v1, v3
 
@@ -1696,7 +1696,7 @@
 
     mul-float/2addr v4, v5
 
-    const/high16 v5, 0x40c00000
+    const/high16 v5, 0x40c00000    # 6.0f
 
     mul-float/2addr v4, v5
 

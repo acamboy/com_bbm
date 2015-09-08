@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.bbm.ui.HeaderButtonProgressActionBar android:id="@id/header_progress_toolbar" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:title="@string/app_name" local:contentInsetEnd="0.0dip" local:popupTheme="@style/ThemeOverlay.AppCompat.Light" local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:local="http://schemas.android.com/apk/res-auto">
+        <LinearLayout android:orientation="horizontal" android:id="@id/group_toolbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="1.0" android:layout_centerVertical="true" android:layout_alignWithParentIfMissing="true">
+            <TextView android:textAppearance="@style/ActionBarTitleTextStyle" android:gravity="center" android:id="@id/header_action_bar_title" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/group_add_list_title" android:singleLine="true" android:layout_weight="0.75" />
+            <FrameLayout android:layout_gravity="end" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.25" style="?android:actionButtonStyle"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@drawable/selector_bali_button_text_color" android:layout_gravity="center" android:id="@id/header_action_bar_positive_button" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/done" android:drawableStart="@drawable/toolbar_done_button_icon" style="?android:actionBarTabTextStyle" />
+                <ProgressBar android:layout_gravity="center" android:id="@id/save_progress" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" style="@style/Common.Progress" />
+            </FrameLayout>
+        </LinearLayout>
+    </com.bbm.ui.HeaderButtonProgressActionBar>
+</LinearLayout>

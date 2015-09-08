@@ -1,155 +1,211 @@
 .class final Landroid/support/v4/app/bq;
-.super Ljava/lang/Object;
-.source "NotificationCompatApi20.java"
+.super Landroid/support/v4/app/bo;
+.source "NotificationCompat.java"
 
 
 # direct methods
-.method static a(Landroid/support/v4/app/bv;)Landroid/app/Notification$Action;
-    .locals 5
+.method constructor <init>()V
+    .locals 0
 
     .prologue
-    .line 132
-    new-instance v0, Landroid/app/Notification$Action$Builder;
+    .line 555
+    invoke-direct {p0}, Landroid/support/v4/app/bo;-><init>()V
 
-    invoke-virtual {p0}, Landroid/support/v4/app/bv;->a()I
+    return-void
+.end method
 
-    move-result v1
 
-    invoke-virtual {p0}, Landroid/support/v4/app/bv;->b()Ljava/lang/CharSequence;
+# virtual methods
+.method public final a(Landroid/support/v4/app/bi;)Landroid/app/Notification;
+    .locals 14
 
-    move-result-object v2
+    .prologue
+    .line 558
+    iget-object v0, p1, Landroid/support/v4/app/bi;->a:Landroid/content/Context;
 
-    invoke-virtual {p0}, Landroid/support/v4/app/bv;->c()Landroid/app/PendingIntent;
+    iget-object v1, p1, Landroid/support/v4/app/bi;->B:Landroid/app/Notification;
 
-    move-result-object v3
+    iget-object v2, p1, Landroid/support/v4/app/bi;->b:Ljava/lang/CharSequence;
 
-    invoke-direct {v0, v1, v2, v3}, Landroid/app/Notification$Action$Builder;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
+    iget-object v3, p1, Landroid/support/v4/app/bi;->c:Ljava/lang/CharSequence;
 
-    invoke-virtual {p0}, Landroid/support/v4/app/bv;->d()Landroid/os/Bundle;
+    iget-object v4, p1, Landroid/support/v4/app/bi;->h:Ljava/lang/CharSequence;
 
-    move-result-object v1
+    iget-object v5, p1, Landroid/support/v4/app/bi;->f:Landroid/widget/RemoteViews;
 
-    invoke-virtual {v0, v1}, Landroid/app/Notification$Action$Builder;->addExtras(Landroid/os/Bundle;)Landroid/app/Notification$Action$Builder;
+    iget v6, p1, Landroid/support/v4/app/bi;->i:I
 
-    move-result-object v1
+    iget-object v7, p1, Landroid/support/v4/app/bi;->d:Landroid/app/PendingIntent;
 
-    .line 135
-    invoke-virtual {p0}, Landroid/support/v4/app/bv;->e()[Landroid/support/v4/app/ct;
+    iget-object v8, p1, Landroid/support/v4/app/bi;->e:Landroid/app/PendingIntent;
+
+    iget-object v9, p1, Landroid/support/v4/app/bi;->g:Landroid/graphics/Bitmap;
+
+    new-instance v10, Landroid/app/Notification$Builder;
+
+    invoke-direct {v10, v0}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;)V
+
+    iget-wide v12, v1, Landroid/app/Notification;->when:J
+
+    invoke-virtual {v10, v12, v13}, Landroid/app/Notification$Builder;->setWhen(J)Landroid/app/Notification$Builder;
 
     move-result-object v0
 
-    .line 136
+    iget v10, v1, Landroid/app/Notification;->icon:I
+
+    iget v11, v1, Landroid/app/Notification;->iconLevel:I
+
+    invoke-virtual {v0, v10, v11}, Landroid/app/Notification$Builder;->setSmallIcon(II)Landroid/app/Notification$Builder;
+
+    move-result-object v0
+
+    iget-object v10, v1, Landroid/app/Notification;->contentView:Landroid/widget/RemoteViews;
+
+    invoke-virtual {v0, v10}, Landroid/app/Notification$Builder;->setContent(Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
+
+    move-result-object v0
+
+    iget-object v10, v1, Landroid/app/Notification;->tickerText:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v10, v5}, Landroid/app/Notification$Builder;->setTicker(Ljava/lang/CharSequence;Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
+
+    move-result-object v0
+
+    iget-object v5, v1, Landroid/app/Notification;->sound:Landroid/net/Uri;
+
+    iget v10, v1, Landroid/app/Notification;->audioStreamType:I
+
+    invoke-virtual {v0, v5, v10}, Landroid/app/Notification$Builder;->setSound(Landroid/net/Uri;I)Landroid/app/Notification$Builder;
+
+    move-result-object v0
+
+    iget-object v5, v1, Landroid/app/Notification;->vibrate:[J
+
+    invoke-virtual {v0, v5}, Landroid/app/Notification$Builder;->setVibrate([J)Landroid/app/Notification$Builder;
+
+    move-result-object v0
+
+    iget v5, v1, Landroid/app/Notification;->ledARGB:I
+
+    iget v10, v1, Landroid/app/Notification;->ledOnMS:I
+
+    iget v11, v1, Landroid/app/Notification;->ledOffMS:I
+
+    invoke-virtual {v0, v5, v10, v11}, Landroid/app/Notification$Builder;->setLights(III)Landroid/app/Notification$Builder;
+
+    move-result-object v5
+
+    iget v0, v1, Landroid/app/Notification;->flags:I
+
+    and-int/lit8 v0, v0, 0x2
+
     if-eqz v0, :cond_0
 
-    .line 137
-    invoke-static {v0}, Landroid/support/v4/app/cr;->a([Landroid/support/v4/app/ct;)[Landroid/app/RemoteInput;
+    const/4 v0, 0x1
+
+    :goto_0
+    invoke-virtual {v5, v0}, Landroid/app/Notification$Builder;->setOngoing(Z)Landroid/app/Notification$Builder;
+
+    move-result-object v5
+
+    iget v0, v1, Landroid/app/Notification;->flags:I
+
+    and-int/lit8 v0, v0, 0x8
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x1
+
+    :goto_1
+    invoke-virtual {v5, v0}, Landroid/app/Notification$Builder;->setOnlyAlertOnce(Z)Landroid/app/Notification$Builder;
+
+    move-result-object v5
+
+    iget v0, v1, Landroid/app/Notification;->flags:I
+
+    and-int/lit8 v0, v0, 0x10
+
+    if-eqz v0, :cond_2
+
+    const/4 v0, 0x1
+
+    :goto_2
+    invoke-virtual {v5, v0}, Landroid/app/Notification$Builder;->setAutoCancel(Z)Landroid/app/Notification$Builder;
+
+    move-result-object v0
+
+    iget v5, v1, Landroid/app/Notification;->defaults:I
+
+    invoke-virtual {v0, v5}, Landroid/app/Notification$Builder;->setDefaults(I)Landroid/app/Notification$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Landroid/app/Notification$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Landroid/app/Notification$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v4}, Landroid/app/Notification$Builder;->setContentInfo(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v7}, Landroid/app/Notification$Builder;->setContentIntent(Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;
+
+    move-result-object v0
+
+    iget-object v2, v1, Landroid/app/Notification;->deleteIntent:Landroid/app/PendingIntent;
+
+    invoke-virtual {v0, v2}, Landroid/app/Notification$Builder;->setDeleteIntent(Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;
 
     move-result-object v2
 
-    .line 138
-    array-length v3, v2
+    iget v0, v1, Landroid/app/Notification;->flags:I
 
-    const/4 v0, 0x0
+    and-int/lit16 v0, v0, 0x80
 
-    :goto_0
-    if-ge v0, v3, :cond_0
+    if-eqz v0, :cond_3
 
-    aget-object v4, v2, v0
+    const/4 v0, 0x1
 
-    .line 139
-    invoke-virtual {v1, v4}, Landroid/app/Notification$Action$Builder;->addRemoteInput(Landroid/app/RemoteInput;)Landroid/app/Notification$Action$Builder;
+    :goto_3
+    invoke-virtual {v2, v8, v0}, Landroid/app/Notification$Builder;->setFullScreenIntent(Landroid/app/PendingIntent;Z)Landroid/app/Notification$Builder;
 
-    .line 138
-    add-int/lit8 v0, v0, 0x1
+    move-result-object v0
 
-    goto :goto_0
+    invoke-virtual {v0, v9}, Landroid/app/Notification$Builder;->setLargeIcon(Landroid/graphics/Bitmap;)Landroid/app/Notification$Builder;
 
-    .line 142
-    :cond_0
-    invoke-virtual {v1}, Landroid/app/Notification$Action$Builder;->build()Landroid/app/Notification$Action;
+    move-result-object v0
+
+    invoke-virtual {v0, v6}, Landroid/app/Notification$Builder;->setNumber(I)Landroid/app/Notification$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/Notification$Builder;->getNotification()Landroid/app/Notification;
 
     move-result-object v0
 
     return-object v0
-.end method
 
-.method public static a(Landroid/app/Notification$Builder;Landroid/support/v4/app/bv;)V
-    .locals 5
-
-    .prologue
-    .line 101
-    new-instance v1, Landroid/app/Notification$Action$Builder;
-
-    invoke-virtual {p1}, Landroid/support/v4/app/bv;->a()I
-
-    move-result v0
-
-    invoke-virtual {p1}, Landroid/support/v4/app/bv;->b()Ljava/lang/CharSequence;
-
-    move-result-object v2
-
-    invoke-virtual {p1}, Landroid/support/v4/app/bv;->c()Landroid/app/PendingIntent;
-
-    move-result-object v3
-
-    invoke-direct {v1, v0, v2, v3}, Landroid/app/Notification$Action$Builder;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
-
-    .line 103
-    invoke-virtual {p1}, Landroid/support/v4/app/bv;->e()[Landroid/support/v4/app/ct;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 104
-    invoke-virtual {p1}, Landroid/support/v4/app/bv;->e()[Landroid/support/v4/app/ct;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/support/v4/app/cr;->a([Landroid/support/v4/app/ct;)[Landroid/app/RemoteInput;
-
-    move-result-object v2
-
-    array-length v3, v2
-
+    :cond_0
     const/4 v0, 0x0
-
-    :goto_0
-    if-ge v0, v3, :cond_0
-
-    aget-object v4, v2, v0
-
-    .line 106
-    invoke-virtual {v1, v4}, Landroid/app/Notification$Action$Builder;->addRemoteInput(Landroid/app/RemoteInput;)Landroid/app/Notification$Action$Builder;
-
-    .line 104
-    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 109
-    :cond_0
-    invoke-virtual {p1}, Landroid/support/v4/app/bv;->d()Landroid/os/Bundle;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    .line 110
-    invoke-virtual {p1}, Landroid/support/v4/app/bv;->d()Landroid/os/Bundle;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Landroid/app/Notification$Action$Builder;->addExtras(Landroid/os/Bundle;)Landroid/app/Notification$Action$Builder;
-
-    .line 112
     :cond_1
-    invoke-virtual {v1}, Landroid/app/Notification$Action$Builder;->build()Landroid/app/Notification$Action;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    goto :goto_1
 
-    invoke-virtual {p0, v0}, Landroid/app/Notification$Builder;->addAction(Landroid/app/Notification$Action;)Landroid/app/Notification$Builder;
+    :cond_2
+    const/4 v0, 0x0
 
-    .line 113
-    return-void
+    goto :goto_2
+
+    :cond_3
+    const/4 v0, 0x0
+
+    goto :goto_3
 .end method

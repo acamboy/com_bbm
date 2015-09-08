@@ -1,11 +1,14 @@
-.class public interface abstract Lcom/mapquest/android/maps/bq;
+.class interface abstract Lcom/mapquest/android/maps/bq;
 .super Ljava/lang/Object;
-.source "Projection.java"
+.source "ProjectionX.java"
+
+# interfaces
+.implements Lcom/mapquest/android/maps/bp;
 
 
 # virtual methods
-.method public abstract a(Lcom/mapquest/android/maps/s;Landroid/graphics/Point;)Landroid/graphics/Point;
+.method public abstract a(I)I
 .end method
 
-.method public abstract a(II)Lcom/mapquest/android/maps/s;
+.method public abstract a(Lcom/mapquest/android/maps/b;II)I
 .end method

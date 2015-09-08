@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/st;
 .super Ljava/lang/Object;
-.source "GroupPictureCommentsActivity.java"
+.source "InviteActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/bs;
+.implements Landroid/text/TextWatcher;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/InviteActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/InviteActivity;)V
     .locals 0
 
     .prologue
-    .line 295
-    iput-object p1, p0, Lcom/bbm/ui/activities/st;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    .line 221
+    iput-object p1, p0, Lcom/bbm/ui/activities/st;->a:Lcom/bbm/ui/activities/InviteActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,49 +25,47 @@
 
 
 # virtual methods
-.method public final a(Z)V
-    .locals 3
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 1
 
     .prologue
-    const/4 v2, 0x1
+    .line 235
+    iget-object v0, p0, Lcom/bbm/ui/activities/st;->a:Lcom/bbm/ui/activities/InviteActivity;
 
-    const/4 v1, 0x0
+    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->e(Lcom/bbm/ui/activities/InviteActivity;)Lcom/bbm/j/k;
 
-    .line 298
-    if-eqz p1, :cond_0
+    move-result-object v0
 
-    .line 299
-    iget-object v0, p0, Lcom/bbm/ui/activities/st;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    iget-boolean v0, v0, Lcom/bbm/j/k;->k:Z
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;Z)V
+    if-eqz v0, :cond_0
 
-    .line 300
-    iget-object v0, p0, Lcom/bbm/ui/activities/st;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    .line 236
+    iget-object v0, p0, Lcom/bbm/ui/activities/st;->a:Lcom/bbm/ui/activities/InviteActivity;
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->e(Lcom/bbm/ui/activities/InviteActivity;)Lcom/bbm/j/k;
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->setTouchInterceptEnabled(Z)V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 305
-    :goto_0
-    return-void
-
-    .line 302
+    .line 238
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/st;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    return-void
+.end method
 
-    invoke-static {v0, v2}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;Z)V
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-    .line 303
-    iget-object v0, p0, Lcom/bbm/ui/activities/st;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    .prologue
+    .line 231
+    return-void
+.end method
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
-
-    invoke-virtual {v0, v2}, Lcom/slidingmenu/lib/SlidingMenu;->setTouchInterceptEnabled(Z)V
-
-    goto :goto_0
+    .prologue
+    .line 226
+    return-void
 .end method

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="left" android:orientation="horizontal" android:id="@id/message_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/conversation_chat_row_padding_T" android:layout_marginRight="@dimen/conversation_chat_bubble_margin_incoming" android:layout_marginBottom="@dimen/conversation_chat_timestamp_padding_B"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.bbm.ui.InlineImageTextView android:textAppearance="@style/ConversationSender" android:ellipsize="end" android:id="@id/message_sender" android:visibility="gone" android:clickable="false" android:longClickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/conversation_chat_date_header_spacing_H" android:singleLine="true" android:layout_weight="1.0" android:textIsSelectable="false" />
+    <TextView android:textAppearance="@style/ConversationDate" android:ellipsize="none" android:id="@id/message_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/conversation_chat_date_header_spacing_H" android:singleLine="true" android:textIsSelectable="false" />
+</LinearLayout>

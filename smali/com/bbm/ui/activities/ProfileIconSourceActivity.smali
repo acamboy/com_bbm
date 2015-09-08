@@ -1,5 +1,5 @@
 .class public Lcom/bbm/ui/activities/ProfileIconSourceActivity;
-.super Lcom/bbm/ui/activities/ey;
+.super Lcom/bbm/bali/ui/main/a/a;
 .source "ProfileIconSourceActivity.java"
 
 
@@ -8,30 +8,26 @@
 
 .field private b:Landroid/content/Context;
 
-.field private c:Lcom/bbm/ui/FooterActionBar;
+.field private h:Landroid/widget/ListView;
 
-.field private d:Landroid/widget/ListView;
-
-.field private final e:Ljava/util/List;
+.field private final i:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
             "<",
-            "Lcom/bbm/ui/activities/ade;",
+            "Lcom/bbm/ui/activities/aae;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private f:Lcom/bbm/ui/activities/adf;
+.field private j:Lcom/bbm/ui/activities/aaf;
 
-.field private g:Landroid/net/Uri;
+.field private k:Landroid/net/Uri;
 
-.field private h:Z
+.field private l:Z
 
-.field private final i:Lcom/bbm/ui/cn;
-
-.field private final j:Landroid/widget/AdapterView$OnItemClickListener;
+.field private final m:Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # direct methods
@@ -39,97 +35,50 @@
     .locals 1
 
     .prologue
-    .line 67
-    const-class v0, Lcom/bbm/ui/activities/ProfileActivity;
+    .line 62
+    const-class v0, Lcom/bbm/ui/activities/ViewProfileActivity;
 
-    invoke-direct {p0, v0}, Lcom/bbm/ui/activities/ey;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/bbm/bali/ui/main/a/a;-><init>(Ljava/lang/Class;)V
 
-    .line 60
+    .line 55
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->e:Ljava/util/List;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->i:Ljava/util/List;
 
-    .line 63
+    .line 58
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->g:Landroid/net/Uri;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->k:Landroid/net/Uri;
 
-    .line 111
-    new-instance v0, Lcom/bbm/ui/activities/adb;
+    .line 140
+    new-instance v0, Lcom/bbm/ui/activities/aac;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/adb;-><init>(Lcom/bbm/ui/activities/ProfileIconSourceActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/aac;-><init>(Lcom/bbm/ui/activities/ProfileIconSourceActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->i:Lcom/bbm/ui/cn;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->m:Landroid/widget/AdapterView$OnItemClickListener;
 
-    .line 144
-    new-instance v0, Lcom/bbm/ui/activities/adc;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/adc;-><init>(Lcom/bbm/ui/activities/ProfileIconSourceActivity;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->j:Landroid/widget/AdapterView$OnItemClickListener;
-
-    .line 68
+    .line 63
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/ProfileIconSourceActivity;Landroid/net/Uri;)Landroid/net/Uri;
-    .locals 0
-
-    .prologue
-    .line 43
-    iput-object p1, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->g:Landroid/net/Uri;
-
-    return-object p1
-.end method
-
-.method static synthetic a(Lcom/bbm/ui/activities/ProfileIconSourceActivity;)Z
+.method static synthetic a(Lcom/bbm/ui/activities/ProfileIconSourceActivity;)Lcom/bbm/ui/activities/aaf;
     .locals 1
 
     .prologue
-    .line 43
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->h:Z
-
-    return v0
-.end method
-
-.method static synthetic b(Lcom/bbm/ui/activities/ProfileIconSourceActivity;)Landroid/net/Uri;
-    .locals 1
-
-    .prologue
-    .line 43
-    iget-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->g:Landroid/net/Uri;
+    .line 40
+    iget-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->j:Lcom/bbm/ui/activities/aaf;
 
     return-object v0
 .end method
 
-.method static synthetic c(Lcom/bbm/ui/activities/ProfileIconSourceActivity;)Landroid/content/Context;
+.method static synthetic b(Lcom/bbm/ui/activities/ProfileIconSourceActivity;)Ljava/util/List;
     .locals 1
 
     .prologue
-    .line 43
-    iget-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->b:Landroid/content/Context;
-
-    return-object v0
-.end method
-
-.method static synthetic d(Lcom/bbm/ui/activities/ProfileIconSourceActivity;)Lcom/bbm/ui/activities/adf;
-    .locals 1
-
-    .prologue
-    .line 43
-    iget-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->f:Lcom/bbm/ui/activities/adf;
-
-    return-object v0
-.end method
-
-.method static synthetic e(Lcom/bbm/ui/activities/ProfileIconSourceActivity;)Ljava/util/List;
-    .locals 1
-
-    .prologue
-    .line 43
-    iget-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->e:Ljava/util/List;
+    .line 40
+    iget-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->i:Ljava/util/List;
 
     return-object v0
 .end method
@@ -142,26 +91,26 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 167
-    invoke-super {p0, p1, p2, p3}, Lcom/bbm/ui/activities/ey;->onActivityResult(IILandroid/content/Intent;)V
+    .line 163
+    invoke-super {p0, p1, p2, p3}, Lcom/bbm/bali/ui/main/a/a;->onActivityResult(IILandroid/content/Intent;)V
 
-    .line 168
+    .line 164
     const/4 v0, -0x1
 
     if-eq p2, v0, :cond_1
 
-    .line 207
+    .line 203
     :cond_0
     :goto_0
     return-void
 
-    .line 172
+    .line 168
     :cond_1
     packed-switch p1, :pswitch_data_0
 
     goto :goto_0
 
-    .line 175
+    .line 171
     :pswitch_0
     if-eqz p3, :cond_2
 
@@ -171,21 +120,21 @@
 
     if-nez v0, :cond_3
 
-    .line 178
+    .line 174
     :cond_2
-    iget-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->g:Landroid/net/Uri;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->k:Landroid/net/Uri;
 
-    .line 183
+    .line 179
     :goto_1
     if-eqz v0, :cond_0
 
-    .line 184
+    .line 180
     const/4 v1, 0x4
 
     const/4 v2, 0x0
 
     :try_start_0
-    invoke-static {p0, v1, v0, v2}, Lcom/bbm/ui/es;->a(Landroid/app/Activity;ILandroid/net/Uri;Z)Z
+    invoke-static {p0, v1, v0, v2}, Lcom/bbm/ui/ew;->a(Landroid/app/Activity;ILandroid/net/Uri;Z)Z
 
     move-result v0
 
@@ -200,7 +149,7 @@
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->getApplicationContext()Landroid/content/Context;
 
@@ -210,17 +159,17 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e0123
+    const v2, 0x7f0e0141
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1, v3}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;I)V
+    invoke-static {v0, v1, v3}, Lcom/bbm/util/eu;->a(Landroid/content/Context;Ljava/lang/String;I)V
 
     goto :goto_0
 
-    .line 180
+    .line 176
     :cond_3
     invoke-virtual {p3}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
@@ -228,7 +177,7 @@
 
     goto :goto_1
 
-    .line 189
+    .line 185
     :pswitch_1
     const-string v0, "file"
 
@@ -236,32 +185,32 @@
 
     move-result-object v0
 
-    .line 190
+    .line 186
     iget-object v1, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->a:Lcom/bbm/d/a;
 
     const-string v2, "image/jpeg"
 
-    invoke-static {v0, v2}, Lcom/bbm/d/aa;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/d/cw;
+    invoke-static {v0, v2}, Lcom/bbm/d/aj;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/d/dr;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
+    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ez;)V
 
-    .line 191
+    .line 187
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->finish()V
 
     goto :goto_0
 
-    .line 195
+    .line 191
     :pswitch_2
     invoke-virtual {p3}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 196
+    .line 192
     if-eqz v0, :cond_4
 
-    .line 197
+    .line 193
     const-string v1, "data"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -270,13 +219,13 @@
 
     check-cast v0, Landroid/graphics/Bitmap;
 
-    .line 199
+    .line 195
     :try_start_1
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {p0}, Lcom/bbm/util/bj;->a(Landroid/content/Context;)Ljava/io/File;
+    invoke-static {p0}, Lcom/bbm/util/bp;->a(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v2
 
@@ -310,40 +259,40 @@
 
     move-result-object v1
 
-    .line 200
+    .line 196
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Lcom/bbm/util/b/h;->a(Landroid/graphics/Bitmap;Ljava/lang/String;Z)Z
+    invoke-static {v0, v1, v2}, Lcom/bbm/util/b/i;->a(Landroid/graphics/Bitmap;Ljava/lang/String;Z)Z
 
-    .line 201
+    .line 197
     iget-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->a:Lcom/bbm/d/a;
 
     const-string v2, "image/jpeg"
 
-    invoke-static {v1, v2}, Lcom/bbm/d/aa;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/d/cw;
+    invoke-static {v1, v2}, Lcom/bbm/d/aj;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/d/dr;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ez;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 206
+    .line 202
     :cond_4
     :goto_2
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->finish()V
 
     goto/16 :goto_0
 
-    .line 202
+    .line 198
     :catch_1
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
 
     goto :goto_2
 
-    .line 172
+    .line 168
     nop
 
     :pswitch_data_0
@@ -356,30 +305,26 @@
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 6
+    .locals 5
 
     .prologue
-    const v5, 0x7f0e0611
+    .line 67
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onCreate(Landroid/os/Bundle;)V
 
-    const/4 v4, 0x0
-
-    .line 72
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/ey;->onCreate(Landroid/os/Bundle;)V
-
-    .line 73
+    .line 68
     iput-object p0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->b:Landroid/content/Context;
 
-    .line 74
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    .line 69
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->a:Lcom/bbm/d/a;
 
-    .line 75
+    .line 70
     if-eqz p1, :cond_0
 
-    .line 76
+    .line 71
     const-string v0, "cameraFileUri"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -388,150 +333,99 @@
 
     check-cast v0, Landroid/net/Uri;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->g:Landroid/net/Uri;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->k:Landroid/net/Uri;
 
-    .line 79
+    .line 74
     :cond_0
-    const v0, 0x7f03004d
+    const v0, 0x7f03006a
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->setContentView(I)V
 
-    .line 81
-    invoke-static {p0}, Lcom/bbm/util/fh;->b(Landroid/content/Context;)Z
+    .line 76
+    invoke-static {p0}, Lcom/bbm/util/eu;->b(Landroid/content/Context;)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->h:Z
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->l:Z
 
-    .line 83
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->getActionBar()Landroid/app/ActionBar;
-
-    move-result-object v1
-
-    .line 84
-    const v0, 0x7f030119
-
-    invoke-virtual {v1, v0}, Landroid/app/ActionBar;->setCustomView(I)V
-
-    .line 85
-    invoke-virtual {v1}, Landroid/app/ActionBar;->getCustomView()Landroid/view/View;
-
-    move-result-object v0
-
-    const v2, 0x7f0b058e
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    .line 86
-    const v2, 0x7f0e0697
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
-
-    .line 87
-    const/16 v0, 0x10
-
-    invoke-virtual {v1, v0}, Landroid/app/ActionBar;->setDisplayOptions(I)V
-
-    .line 89
-    const v0, 0x7f0b00bf
+    .line 79
+    const v0, 0x7f0b013c
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/FooterActionBar;
+    check-cast v0, Landroid/support/v7/widget/Toolbar;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->c:Lcom/bbm/ui/FooterActionBar;
+    .line 80
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->getResources()Landroid/content/res/Resources;
 
-    .line 90
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->h:Z
+    move-result-object v1
 
-    if-eqz v0, :cond_1
+    const v2, 0x7f0e0764
 
-    .line 91
-    iget-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->c:Lcom/bbm/ui/FooterActionBar;
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    new-instance v1, Lcom/bbm/ui/ActionBarItem;
+    move-result-object v1
 
-    const v2, 0x7f020200
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->a(Landroid/support/v7/widget/Toolbar;Ljava/lang/String;)V
 
-    invoke-direct {v1, p0, v2, v5}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;II)V
+    .line 82
+    iget-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->i:Ljava/util/List;
 
-    invoke-virtual {v0, v1, v4}, Lcom/bbm/ui/FooterActionBar;->a(Lcom/bbm/ui/ActionBarItem;I)V
+    new-instance v1, Lcom/bbm/ui/activities/aae;
 
-    .line 95
-    :goto_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->c:Lcom/bbm/ui/FooterActionBar;
-
-    invoke-virtual {v0, v4}, Lcom/bbm/ui/FooterActionBar;->setOverflowEnabled(Z)V
-
-    .line 96
-    iget-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->c:Lcom/bbm/ui/FooterActionBar;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->i:Lcom/bbm/ui/cn;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
-
-    .line 98
-    iget-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->e:Ljava/util/List;
-
-    new-instance v1, Lcom/bbm/ui/activities/ade;
-
-    const v2, 0x7f0201f5
+    const v2, 0x7f0201a0
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f0e0612
+    const v4, 0x7f0e06cc
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    sget-object v4, Lcom/bbm/ui/activities/adg;->a:Lcom/bbm/ui/activities/adg;
+    sget v4, Lcom/bbm/ui/activities/aag;->a:I
 
-    invoke-direct {v1, p0, v2, v3, v4}, Lcom/bbm/ui/activities/ade;-><init>(Lcom/bbm/ui/activities/ProfileIconSourceActivity;ILjava/lang/String;Lcom/bbm/ui/activities/adg;)V
+    invoke-direct {v1, p0, v2, v3, v4}, Lcom/bbm/ui/activities/aae;-><init>(Lcom/bbm/ui/activities/ProfileIconSourceActivity;ILjava/lang/String;I)V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->e:Ljava/util/List;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->i:Ljava/util/List;
 
-    new-instance v1, Lcom/bbm/ui/activities/ade;
+    new-instance v1, Lcom/bbm/ui/activities/aae;
 
-    const v2, 0x7f0201f2
+    const v2, 0x7f02019f
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f0e0613
+    const v4, 0x7f0e06cd
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    sget-object v4, Lcom/bbm/ui/activities/adg;->b:Lcom/bbm/ui/activities/adg;
+    sget v4, Lcom/bbm/ui/activities/aag;->b:I
 
-    invoke-direct {v1, p0, v2, v3, v4}, Lcom/bbm/ui/activities/ade;-><init>(Lcom/bbm/ui/activities/ProfileIconSourceActivity;ILjava/lang/String;Lcom/bbm/ui/activities/adg;)V
+    invoke-direct {v1, p0, v2, v3, v4}, Lcom/bbm/ui/activities/aae;-><init>(Lcom/bbm/ui/activities/ProfileIconSourceActivity;ILjava/lang/String;I)V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 99
-    new-instance v0, Lcom/bbm/ui/activities/adf;
+    .line 83
+    new-instance v0, Lcom/bbm/ui/activities/aaf;
 
     iget-object v1, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->b:Landroid/content/Context;
 
-    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/activities/adf;-><init>(Lcom/bbm/ui/activities/ProfileIconSourceActivity;Landroid/content/Context;)V
+    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/activities/aaf;-><init>(Lcom/bbm/ui/activities/ProfileIconSourceActivity;Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->f:Lcom/bbm/ui/activities/adf;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->j:Lcom/bbm/ui/activities/aaf;
 
-    .line 100
-    const v0, 0x7f0b0287
+    .line 84
+    const v0, 0x7f0b02ec
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->findViewById(I)Landroid/view/View;
 
@@ -539,56 +433,171 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->d:Landroid/widget/ListView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->h:Landroid/widget/ListView;
 
-    .line 101
-    iget-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->d:Landroid/widget/ListView;
+    .line 85
+    iget-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->h:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->f:Lcom/bbm/ui/activities/adf;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->j:Lcom/bbm/ui/activities/aaf;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 102
-    iget-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->d:Landroid/widget/ListView;
+    .line 86
+    iget-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->h:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->j:Landroid/widget/AdapterView$OnItemClickListener;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->m:Landroid/widget/AdapterView$OnItemClickListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 103
+    .line 87
     return-void
+.end method
 
-    .line 93
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->c:Lcom/bbm/ui/FooterActionBar;
+.method public onCreateOptionsMenu(Landroid/view/Menu;)Z
+    .locals 2
 
-    new-instance v1, Lcom/bbm/ui/ActionBarItem;
+    .prologue
+    .line 98
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->getMenuInflater()Landroid/view/MenuInflater;
 
-    const v2, 0x7f020201
+    move-result-object v0
 
-    const v3, -0x777778
+    const v1, 0x7f10003f
 
-    invoke-direct {v1, p0, v2, v5, v3}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;III)V
+    invoke-virtual {v0, v1, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
 
-    invoke-virtual {v0, v1, v4}, Lcom/bbm/ui/FooterActionBar;->a(Lcom/bbm/ui/ActionBarItem;I)V
+    .line 99
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onCreateOptionsMenu(Landroid/view/Menu;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    .locals 4
+
+    .prologue
+    .line 118
+    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
+
+    move-result v0
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 126
+    const-string v0, "Unexpected other menu selected"
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 130
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    .line 120
+    :pswitch_0
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "android.media.action.IMAGE_CAPTURE"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    .line 121
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    sget-object v2, Landroid/provider/MediaStore$Images$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+
+    new-instance v3, Landroid/content/ContentValues;
+
+    invoke-direct {v3}, Landroid/content/ContentValues;-><init>()V
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->k:Landroid/net/Uri;
+
+    .line 122
+    const-string v1, "output"
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->k:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    .line 123
+    const/4 v1, 0x3
+
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    .line 124
+    const/4 v0, 0x1
 
     goto :goto_0
+
+    .line 118
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x7f0b0445
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public onPrepareOptionsMenu(Landroid/view/Menu;)Z
+    .locals 2
+
+    .prologue
+    .line 104
+    if-eqz p1, :cond_0
+
+    .line 105
+    const v0, 0x7f0b0445
+
+    invoke-interface {p1, v0}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    .line 106
+    if-eqz v0, :cond_0
+
+    .line 110
+    iget-boolean v1, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->l:Z
+
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    .line 113
+    :cond_0
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onPrepareOptionsMenu(Landroid/view/Menu;)Z
+
+    move-result v0
+
+    return v0
 .end method
 
 .method protected onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 2
 
     .prologue
-    .line 107
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/ey;->onSaveInstanceState(Landroid/os/Bundle;)V
+    .line 91
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 108
+    .line 92
     const-string v0, "cameraFileUri"
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->g:Landroid/net/Uri;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ProfileIconSourceActivity;->k:Landroid/net/Uri;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 109
+    .line 93
     return-void
 .end method

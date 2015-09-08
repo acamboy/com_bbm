@@ -1,94 +1,155 @@
 .class final Lcom/bbm/ui/activities/em;
-.super Lcom/bbm/j/u;
-.source "ChannelStatsActivity.java"
+.super Ljava/lang/Object;
+.source "ConversationActivity.java"
+
+# interfaces
+.implements Lcom/bbm/n/j;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ChannelStatsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 167
-    iput-object p1, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+    .line 1119
+    iput-object p1, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final b()Z
-    .locals 4
+.method public final a()V
+    .locals 1
 
     .prologue
-    .line 170
-    iget-object v0, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+    .line 1122
+    iget-object v0, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ConversationActivity;->invalidateOptionsMenu()V
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/ChannelStatsActivity;->c(Lcom/bbm/ui/activities/ChannelStatsActivity;)Lcom/bbm/d/a;
+    .line 1124
+    iget-object v0, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
-
-    invoke-virtual {v2}, Lcom/bbm/ui/activities/ChannelStatsActivity;->b()Ljava/lang/String;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
-
-    invoke-static {v3}, Lcom/bbm/ui/activities/ChannelStatsActivity;->b(Lcom/bbm/ui/activities/ChannelStatsActivity;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/bbm/ui/activities/cg;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lcom/bbm/d/a;->Q(Ljava/lang/String;)Lcom/bbm/d/eo;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ChannelStatsActivity;->a(Lcom/bbm/ui/activities/ChannelStatsActivity;Lcom/bbm/d/eo;)Lcom/bbm/d/eo;
-
-    .line 171
-    iget-object v0, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelStatsActivity;->a(Lcom/bbm/ui/activities/ChannelStatsActivity;)Lcom/bbm/d/eo;
+    invoke-static {v0}, Lcom/bbm/n/b;->a(Landroid/content/Context;)Lcom/bbm/n/b;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/d/eo;->j:Lcom/bbm/util/bi;
+    invoke-virtual {v0, p0}, Lcom/bbm/n/b;->b(Lcom/bbm/n/j;)V
 
-    sget-object v1, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
+    .line 1125
+    return-void
+.end method
 
-    if-eq v0, v1, :cond_0
+.method public final a(Z)V
+    .locals 1
 
-    .line 173
-    iget-object v0, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+    .prologue
+    .line 1163
+    iget-object v0, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelStatsActivity;->d(Lcom/bbm/ui/activities/ChannelStatsActivity;)V
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ConversationActivity;->invalidateOptionsMenu()V
 
-    .line 174
-    iget-object v0, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+    .line 1164
+    iget-object v0, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelStatsActivity;->e(Lcom/bbm/ui/activities/ChannelStatsActivity;)V
+    invoke-static {v0}, Lcom/bbm/n/b;->a(Landroid/content/Context;)Lcom/bbm/n/b;
 
-    .line 175
-    const/4 v0, 0x1
+    move-result-object v0
 
-    .line 177
+    invoke-virtual {v0, p0}, Lcom/bbm/n/b;->b(Lcom/bbm/n/j;)V
+
+    .line 1165
+    return-void
+.end method
+
+.method public final b()V
+    .locals 0
+
+    .prologue
+    .line 1137
+    return-void
+.end method
+
+.method public final c()V
+    .locals 1
+
+    .prologue
+    .line 1141
+    iget-object v0, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ConversationActivity;->invalidateOptionsMenu()V
+
+    .line 1142
+    return-void
+.end method
+
+.method public final d()V
+    .locals 3
+
+    .prologue
+    .line 1147
+    new-instance v1, Landroid/content/Intent;
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    const-class v2, Lcom/bbm/ui/voice/activities/InCallActivity;
+
+    invoke-direct {v1, v0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 1148
+    iget-object v0, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/ConversationActivity;->t:Lcom/bbm/j/a;
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/b/a/l;
+
+    .line 1149
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    .line 1155
     :goto_0
-    return v0
+    return-void
 
+    .line 1152
     :cond_0
-    const/4 v0, 0x0
+    const-string v2, "user_uri"
+
+    invoke-virtual {v0}, Lcom/google/b/a/l;->c()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/ie;
+
+    iget-object v0, v0, Lcom/bbm/d/ie;->z:Ljava/lang/String;
+
+    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 1153
+    const-string v0, "Open in call activity"
+
+    const-class v2, Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v0, v2}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 1154
+    iget-object v0, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/ConversationActivity;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0
 .end method

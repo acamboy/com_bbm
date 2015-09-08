@@ -1,61 +1,108 @@
 .class final Lcom/bbm/ui/activities/ys;
-.super Ljava/lang/Object;
-.source "NewChannelActivity.java"
+.super Lcom/bbm/j/a;
+.source "PrivateConversationActivity.java"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/j/a",
+        "<",
+        "Ljava/lang/Boolean;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/NewChannelActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/NewChannelActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/PrivateConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 309
-    iput-object p1, p0, Lcom/bbm/ui/activities/ys;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+    .line 850
+    iput-object p1, p0, Lcom/bbm/ui/activities/ys;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method protected final synthetic a()Ljava/lang/Object;
+    .locals 4
 
     .prologue
-    .line 312
-    new-instance v0, Landroid/content/Intent;
+    const/4 v3, 0x0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ys;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+    .line 850
+    iget-object v0, p0, Lcom/bbm/ui/activities/ys;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
 
-    const-class v2, Lcom/bbm/ui/activities/SetChannelAvatarActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/PrivateConversationActivity;->m(Lcom/bbm/ui/activities/PrivateConversationActivity;)Lcom/bbm/j/a;
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    move-result-object v0
 
-    .line 314
-    const-string v1, "imageUrl"
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/ys;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+    move-result-object v0
 
-    invoke-static {v2}, Lcom/bbm/ui/activities/NewChannelActivity;->j(Lcom/bbm/ui/activities/NewChannelActivity;)Ljava/lang/String;
+    check-cast v0, Lcom/bbm/d/fv;
 
-    move-result-object v2
+    iget-object v0, v0, Lcom/bbm/d/fv;->q:Ljava/util/List;
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    if-eqz v0, :cond_0
 
-    .line 315
-    iget-object v1, p0, Lcom/bbm/ui/activities/ys;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v1
 
     const/4 v2, 0x1
 
-    invoke-virtual {v1, v0, v2}, Lcom/bbm/ui/activities/NewChannelActivity;->startActivityForResult(Landroid/content/Intent;I)V
+    if-ne v1, v2, :cond_0
 
-    .line 316
-    return-void
+    iget-object v1, p0, Lcom/bbm/ui/activities/ys;->a:Lcom/bbm/ui/activities/PrivateConversationActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/PrivateConversationActivity;->i(Lcom/bbm/ui/activities/PrivateConversationActivity;)Lcom/bbm/d/a;
+
+    move-result-object v1
+
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->e(Ljava/lang/String;)Lcom/bbm/d/ie;
+
+    move-result-object v0
+
+    iget-object v1, v0, Lcom/bbm/d/ie;->B:Lcom/bbm/util/bo;
+
+    sget-object v2, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
+
+    if-ne v1, v2, :cond_0
+
+    sget-object v1, Lcom/bbm/d/if;->f:Lcom/bbm/d/if;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/d/ie;->a(Lcom/bbm/d/if;)Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method

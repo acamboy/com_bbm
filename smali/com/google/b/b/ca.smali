@@ -1,229 +1,257 @@
-.class abstract Lcom/google/b/b/ca;
-.super Ljava/lang/Number;
-.source "Striped64.java"
+.class public final Lcom/google/b/b/ca;
+.super Ljava/lang/Object;
+.source "RemovalNotification.java"
+
+# interfaces
+.implements Ljava/util/Map$Entry;
 
 
-# static fields
-.field static final a:Lcom/google/b/b/ce;
-
-.field static final b:I
-
-.field private static final f:Lsun/misc/Unsafe;
-
-.field private static final g:J
-
-.field private static final h:J
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<K:",
+        "Ljava/lang/Object;",
+        "V:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;",
+        "Ljava/util/Map$Entry",
+        "<TK;TV;>;"
+    }
+.end annotation
 
 
 # instance fields
-.field volatile transient c:[Lcom/google/b/b/cc;
+.field private final a:Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "TK;"
+        }
+    .end annotation
+.end field
 
-.field volatile transient d:J
+.field private final b:Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "TV;"
+        }
+    .end annotation
+.end field
 
-.field volatile transient e:I
+.field private final c:Lcom/google/b/b/bt;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    .prologue
-    .line 145
-    new-instance v0, Lcom/google/b/b/ce;
-
-    invoke-direct {v0}, Lcom/google/b/b/ce;-><init>()V
-
-    sput-object v0, Lcom/google/b/b/ca;->a:Lcom/google/b/b/ce;
-
-    .line 148
-    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Runtime;->availableProcessors()I
-
-    move-result v0
-
-    sput v0, Lcom/google/b/b/ca;->b:I
-
-    .line 306
-    :try_start_0
-    invoke-static {}, Lcom/google/b/b/ca;->a()Lsun/misc/Unsafe;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/google/b/b/ca;->f:Lsun/misc/Unsafe;
-
-    .line 307
-    const-class v0, Lcom/google/b/b/ca;
-
-    .line 308
-    sget-object v1, Lcom/google/b/b/ca;->f:Lsun/misc/Unsafe;
-
-    const-string v2, "base"
-
-    invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
-
-    move-result-wide v2
-
-    sput-wide v2, Lcom/google/b/b/ca;->g:J
-
-    .line 310
-    sget-object v1, Lcom/google/b/b/ca;->f:Lsun/misc/Unsafe;
-
-    const-string v2, "busy"
-
-    invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
-
-    move-result-wide v0
-
-    sput-wide v0, Lcom/google/b/b/ca;->h:J
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 314
-    return-void
-
-    .line 312
-    :catch_0
-    move-exception v0
-
-    .line 313
-    new-instance v1, Ljava/lang/Error;
-
-    invoke-direct {v1, v0}, Ljava/lang/Error;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-.end method
-
-.method constructor <init>()V
-    .locals 0
-
-    .prologue
-    .line 169
-    invoke-direct {p0}, Ljava/lang/Number;-><init>()V
-
-    .line 170
-    return-void
-.end method
-
-.method private static a()Lsun/misc/Unsafe;
-    .locals 3
-
-    .prologue
-    .line 326
-    :try_start_0
-    invoke-static {}, Lsun/misc/Unsafe;->getUnsafe()Lsun/misc/Unsafe;
-    :try_end_0
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    .line 329
-    :goto_0
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    :try_start_1
-    new-instance v0, Lcom/google/b/b/cb;
-
-    invoke-direct {v0}, Lcom/google/b/b/cb;-><init>()V
-
-    invoke-static {v0}, Ljava/security/AccessController;->doPrivileged(Ljava/security/PrivilegedExceptionAction;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lsun/misc/Unsafe;
-    :try_end_1
-    .catch Ljava/security/PrivilegedActionException; {:try_start_1 .. :try_end_1} :catch_1
-
-    goto :goto_0
-
-    .line 341
-    :catch_1
-    move-exception v0
-
-    .line 342
-    new-instance v1, Ljava/lang/RuntimeException;
-
-    const-string v2, "Could not initialize intrinsics"
-
-    invoke-virtual {v0}, Ljava/security/PrivilegedActionException;->getCause()Ljava/lang/Throwable;
-
-    move-result-object v0
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v1
-.end method
-
-.method static synthetic c()Lsun/misc/Unsafe;
+.method constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Lcom/google/b/b/bt;)V
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TK;TV;",
+            "Lcom/google/b/b/bt;",
+            ")V"
+        }
+    .end annotation
 
     .prologue
-    .line 21
-    invoke-static {}, Lcom/google/b/b/ca;->a()Lsun/misc/Unsafe;
+    .line 47
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 48
+    iput-object p1, p0, Lcom/google/b/b/ca;->a:Ljava/lang/Object;
+
+    .line 49
+    iput-object p2, p0, Lcom/google/b/b/ca;->b:Ljava/lang/Object;
+
+    .line 50
+    invoke-static {p3}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lcom/google/b/b/bt;
+
+    iput-object v0, p0, Lcom/google/b/b/ca;->c:Lcom/google/b/b/bt;
+
+    .line 51
+    return-void
 .end method
 
 
 # virtual methods
-.method abstract a(JJ)J
-.end method
-
-.method final b()Z
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
     .prologue
-    .line 183
-    sget-object v0, Lcom/google/b/b/ca;->f:Lsun/misc/Unsafe;
+    const/4 v0, 0x0
 
-    sget-wide v2, Lcom/google/b/b/ca;->h:J
+    .line 81
+    instance-of v1, p1, Ljava/util/Map$Entry;
 
-    const/4 v4, 0x0
+    if-eqz v1, :cond_0
 
-    const/4 v5, 0x1
+    .line 82
+    check-cast p1, Ljava/util/Map$Entry;
 
-    move-object v1, p0
+    .line 83
+    invoke-virtual {p0}, Lcom/google/b/b/ca;->getKey()Ljava/lang/Object;
 
-    invoke-virtual/range {v0 .. v5}, Lsun/misc/Unsafe;->compareAndSwapInt(Ljava/lang/Object;JII)Z
+    move-result-object v1
 
-    move-result v0
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/google/b/a/i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p0}, Lcom/google/b/b/ca;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/google/b/a/i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 86
+    :cond_0
     return v0
 .end method
 
-.method final b(JJ)Z
-    .locals 9
+.method public final getKey()Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TK;"
+        }
+    .end annotation
 
     .prologue
-    .line 176
-    sget-object v0, Lcom/google/b/b/ca;->f:Lsun/misc/Unsafe;
+    .line 69
+    iget-object v0, p0, Lcom/google/b/b/ca;->a:Ljava/lang/Object;
 
-    sget-wide v2, Lcom/google/b/b/ca;->g:J
+    return-object v0
+.end method
 
-    move-object v1, p0
+.method public final getValue()Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TV;"
+        }
+    .end annotation
 
-    move-wide v4, p1
+    .prologue
+    .line 73
+    iget-object v0, p0, Lcom/google/b/b/ca;->b:Ljava/lang/Object;
 
-    move-wide v6, p3
+    return-object v0
+.end method
 
-    invoke-virtual/range {v0 .. v7}, Lsun/misc/Unsafe;->compareAndSwapLong(Ljava/lang/Object;JJJ)Z
+.method public final hashCode()I
+    .locals 3
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 90
+    invoke-virtual {p0}, Lcom/google/b/b/ca;->getKey()Ljava/lang/Object;
+
+    move-result-object v1
+
+    .line 91
+    invoke-virtual {p0}, Lcom/google/b/b/ca;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    .line 92
+    if-nez v1, :cond_0
+
+    move v1, v0
+
+    :goto_0
+    if-nez v2, :cond_1
+
+    :goto_1
+    xor-int/2addr v0, v1
+
+    return v0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    return v0
+    goto :goto_1
+.end method
+
+.method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TV;)TV;"
+        }
+    .end annotation
+
+    .prologue
+    .line 77
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    .prologue
+    .line 99
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Lcom/google/b/b/ca;->getKey()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcom/google/b/b/ca;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

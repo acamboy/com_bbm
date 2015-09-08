@@ -1,5 +1,5 @@
 .class final enum Lcom/google/b/b/at;
-.super Lcom/google/b/b/aq;
+.super Lcom/google/b/b/ar;
 .source "LocalCache.java"
 
 
@@ -8,12 +8,12 @@
     .locals 2
 
     .prologue
-    .line 409
-    const/4 v0, 0x2
+    .line 396
+    const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    invoke-direct {p0, p1, v0, v1}, Lcom/google/b/b/aq;-><init>(Ljava/lang/String;IB)V
+    invoke-direct {p0, p1, v0, v1}, Lcom/google/b/b/ar;-><init>(Ljava/lang/String;IB)V
 
     return-void
 .end method
@@ -33,13 +33,13 @@
     .end annotation
 
     .prologue
-    .line 421
+    .line 408
     sget-object v0, Lcom/google/b/a/e;->a:Lcom/google/b/a/e;
 
     return-object v0
 .end method
 
-.method final a(Lcom/google/b/b/an;Lcom/google/b/b/am;Ljava/lang/Object;)Lcom/google/b/b/ba;
+.method final a(Lcom/google/b/b/ao;Lcom/google/b/b/an;Ljava/lang/Object;)Lcom/google/b/b/bb;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -48,22 +48,22 @@
             "V:",
             "Ljava/lang/Object;",
             ">(",
-            "Lcom/google/b/b/an",
+            "Lcom/google/b/b/ao",
             "<TK;TV;>;",
-            "Lcom/google/b/b/am",
+            "Lcom/google/b/b/an",
             "<TK;TV;>;TV;)",
-            "Lcom/google/b/b/ba",
+            "Lcom/google/b/b/bb",
             "<TK;TV;>;"
         }
     .end annotation
 
     .prologue
-    .line 413
-    new-instance v0, Lcom/google/b/b/bf;
+    .line 400
+    new-instance v0, Lcom/google/b/b/aq;
 
-    iget-object v1, p1, Lcom/google/b/b/an;->i:Ljava/lang/ref/ReferenceQueue;
+    iget-object v1, p1, Lcom/google/b/b/ao;->i:Ljava/lang/ref/ReferenceQueue;
 
-    invoke-direct {v0, v1, p3, p2}, Lcom/google/b/b/bf;-><init>(Ljava/lang/ref/ReferenceQueue;Ljava/lang/Object;Lcom/google/b/b/am;)V
+    invoke-direct {v0, v1, p3, p2}, Lcom/google/b/b/aq;-><init>(Ljava/lang/ref/ReferenceQueue;Ljava/lang/Object;Lcom/google/b/b/an;)V
 
     return-object v0
 .end method

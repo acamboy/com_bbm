@@ -13,7 +13,7 @@
 
     .prologue
     .line 250
-    invoke-static {}, Lcom/google/zxing/a/a/c;->values()[Lcom/google/zxing/a/a/c;
+    invoke-static {}, Lcom/google/zxing/a/a/c;->a()[I
 
     move-result-object v0
 
@@ -26,11 +26,9 @@
     :try_start_0
     sget-object v0, Lcom/google/zxing/a/a/b;->a:[I
 
-    sget-object v1, Lcom/google/zxing/a/a/c;->a:Lcom/google/zxing/a/a/c;
+    sget v1, Lcom/google/zxing/a/a/c;->a:I
 
-    invoke-virtual {v1}, Lcom/google/zxing/a/a/c;->ordinal()I
-
-    move-result v1
+    add-int/lit8 v1, v1, -0x1
 
     const/4 v2, 0x1
 
@@ -42,11 +40,9 @@
     :try_start_1
     sget-object v0, Lcom/google/zxing/a/a/b;->a:[I
 
-    sget-object v1, Lcom/google/zxing/a/a/c;->b:Lcom/google/zxing/a/a/c;
+    sget v1, Lcom/google/zxing/a/a/c;->b:I
 
-    invoke-virtual {v1}, Lcom/google/zxing/a/a/c;->ordinal()I
-
-    move-result v1
+    add-int/lit8 v1, v1, -0x1
 
     const/4 v2, 0x2
 
@@ -58,11 +54,9 @@
     :try_start_2
     sget-object v0, Lcom/google/zxing/a/a/b;->a:[I
 
-    sget-object v1, Lcom/google/zxing/a/a/c;->c:Lcom/google/zxing/a/a/c;
+    sget v1, Lcom/google/zxing/a/a/c;->c:I
 
-    invoke-virtual {v1}, Lcom/google/zxing/a/a/c;->ordinal()I
-
-    move-result v1
+    add-int/lit8 v1, v1, -0x1
 
     const/4 v2, 0x3
 
@@ -74,11 +68,9 @@
     :try_start_3
     sget-object v0, Lcom/google/zxing/a/a/b;->a:[I
 
-    sget-object v1, Lcom/google/zxing/a/a/c;->e:Lcom/google/zxing/a/a/c;
+    sget v1, Lcom/google/zxing/a/a/c;->e:I
 
-    invoke-virtual {v1}, Lcom/google/zxing/a/a/c;->ordinal()I
-
-    move-result v1
+    add-int/lit8 v1, v1, -0x1
 
     const/4 v2, 0x4
 
@@ -90,11 +82,9 @@
     :try_start_4
     sget-object v0, Lcom/google/zxing/a/a/b;->a:[I
 
-    sget-object v1, Lcom/google/zxing/a/a/c;->d:Lcom/google/zxing/a/a/c;
+    sget v1, Lcom/google/zxing/a/a/c;->d:I
 
-    invoke-virtual {v1}, Lcom/google/zxing/a/a/c;->ordinal()I
-
-    move-result v1
+    add-int/lit8 v1, v1, -0x1
 
     const/4 v2, 0x5
 

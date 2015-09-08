@@ -14,15 +14,15 @@
     .locals 1
 
     .prologue
-    .line 294
+    .line 291
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 296
+    .line 293
     sget v0, Lcom/rim/bbm/BbmPlatformService;->MSDP_STATUS_UNKNOWN:I
 
     iput v0, p0, Lcom/rim/bbm/BbmPlatformService$ConnectionStatus;->status:I
 
-    .line 297
+    .line 294
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/rim/bbm/BbmPlatformService$ConnectionStatus;->reason:I

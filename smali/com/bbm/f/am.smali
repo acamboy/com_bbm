@@ -17,7 +17,7 @@
     .locals 0
 
     .prologue
-    .line 123
+    .line 124
     iput-object p1, p0, Lcom/bbm/f/am;->b:Lcom/bbm/f/al;
 
     iput-object p2, p0, Lcom/bbm/f/am;->a:Lorg/json/JSONObject;
@@ -33,7 +33,7 @@
     .locals 2
 
     .prologue
-    .line 128
+    .line 129
     :try_start_0
     new-instance v0, Lcom/bbm/f/ab;
 
@@ -41,7 +41,7 @@
 
     invoke-direct {v0, v1}, Lcom/bbm/f/ab;-><init>(Lorg/json/JSONObject;)V
 
-    .line 129
+    .line 130
     iget-object v1, p0, Lcom/bbm/f/am;->b:Lcom/bbm/f/al;
 
     iget-object v1, v1, Lcom/bbm/f/al;->b:Lcom/bbm/f/ai;
@@ -52,15 +52,15 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 133
+    .line 134
     :goto_0
     return-void
 
-    .line 130
+    .line 131
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method

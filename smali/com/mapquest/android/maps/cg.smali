@@ -1,308 +1,244 @@
 .class final Lcom/mapquest/android/maps/cg;
-.super Lcom/mapquest/android/maps/bg;
-.source "TomTomTileFactory.java"
+.super Ljava/lang/Object;
+.source "TouchEventHandler.java"
+
+
+# static fields
+.field static final a:I
 
 
 # instance fields
-.field a:Ljava/lang/StringBuilder;
+.field b:Lcom/mapquest/android/maps/cj;
 
-.field private b:Lcom/mapquest/android/maps/ai;
+.field private c:Lcom/mapquest/android/maps/MapView;
+
+.field private d:Lcom/mapquest/android/maps/cm;
+
+.field private e:Landroid/view/GestureDetector;
+
+.field private f:Z
+
+.field private g:Z
 
 
 # direct methods
-.method public constructor <init>(Lcom/mapquest/android/maps/MapView;Lcom/mapquest/android/maps/ai;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
     .prologue
-    .line 17
-    invoke-direct {p0, p1}, Lcom/mapquest/android/maps/bg;-><init>(Lcom/mapquest/android/maps/MapView;)V
+    .line 28
+    const/4 v0, 0x0
 
-    .line 14
-    new-instance v0, Ljava/lang/StringBuilder;
+    sput v0, Lcom/mapquest/android/maps/cg;->a:I
 
-    const/16 v1, 0x100
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    iput-object v0, p0, Lcom/mapquest/android/maps/cg;->a:Ljava/lang/StringBuilder;
-
-    .line 18
-    iput-object p2, p0, Lcom/mapquest/android/maps/cg;->b:Lcom/mapquest/android/maps/ai;
-
-    .line 19
+    .line 29
     return-void
 .end method
 
-.method private b(Lcom/mapquest/android/maps/ca;)Ljava/lang/String;
+.method public constructor <init>(Lcom/mapquest/android/maps/MapView;)V
     .locals 3
 
     .prologue
-    .line 55
-    sget-object v0, Lcom/mapquest/android/maps/an;->c:Lcom/mapquest/android/maps/an;
-
-    invoke-virtual {v0}, Lcom/mapquest/android/maps/an;->a()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 56
-    iget-object v1, p0, Lcom/mapquest/android/maps/cg;->a:Ljava/lang/StringBuilder;
-
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->setLength(I)V
+    .line 31
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
-    iget-object v1, p0, Lcom/mapquest/android/maps/cg;->a:Ljava/lang/StringBuilder;
+    .line 22
+    iput-boolean v2, p0, Lcom/mapquest/android/maps/cg;->f:Z
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 23
+    iput-boolean v2, p0, Lcom/mapquest/android/maps/cg;->g:Z
 
-    .line 58
-    iget-object v0, p0, Lcom/mapquest/android/maps/cg;->a:Ljava/lang/StringBuilder;
+    .line 25
+    const/4 v0, 0x0
 
-    iget-object v1, p1, Lcom/mapquest/android/maps/ca;->f:Lcom/mapquest/android/maps/cf;
+    iput-object v0, p0, Lcom/mapquest/android/maps/cg;->b:Lcom/mapquest/android/maps/cj;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    .line 32
+    iput-object p1, p0, Lcom/mapquest/android/maps/cg;->c:Lcom/mapquest/android/maps/MapView;
 
-    move-result-object v0
+    .line 33
+    new-instance v0, Lcom/mapquest/android/maps/cm;
 
-    const-string v1, "/"
+    invoke-direct {v0, p0}, Lcom/mapquest/android/maps/cm;-><init>(Lcom/mapquest/android/maps/cg;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-object v0, p0, Lcom/mapquest/android/maps/cg;->d:Lcom/mapquest/android/maps/cm;
 
-    .line 59
-    iget-object v0, p0, Lcom/mapquest/android/maps/cg;->a:Ljava/lang/StringBuilder;
+    .line 35
+    new-instance v0, Landroid/view/GestureDetector;
 
-    iget v1, p1, Lcom/mapquest/android/maps/ca;->b:I
+    new-instance v1, Lcom/mapquest/android/maps/ci;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-direct {v1, p0, v2}, Lcom/mapquest/android/maps/ci;-><init>(Lcom/mapquest/android/maps/cg;B)V
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Landroid/view/GestureDetector;-><init>(Landroid/view/GestureDetector$OnGestureListener;)V
 
-    const-string v1, "/"
+    iput-object v0, p0, Lcom/mapquest/android/maps/cg;->e:Landroid/view/GestureDetector;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 36
+    new-instance v0, Lcom/mapquest/android/maps/cj;
 
-    .line 60
-    iget-object v0, p0, Lcom/mapquest/android/maps/cg;->a:Ljava/lang/StringBuilder;
+    invoke-direct {v0, p0, p1}, Lcom/mapquest/android/maps/cj;-><init>(Lcom/mapquest/android/maps/cg;Lcom/mapquest/android/maps/MapView;)V
 
-    iget v1, p1, Lcom/mapquest/android/maps/ca;->d:I
+    iput-object v0, p0, Lcom/mapquest/android/maps/cg;->b:Lcom/mapquest/android/maps/cj;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 44
+    iget-object v0, p0, Lcom/mapquest/android/maps/cg;->d:Lcom/mapquest/android/maps/cm;
 
-    move-result-object v0
+    iget-object v0, v0, Lcom/mapquest/android/maps/cm;->f:Ljava/util/ArrayList;
 
-    const-string v1, "/"
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lcom/mapquest/android/maps/cg;->d:Lcom/mapquest/android/maps/cm;
 
-    .line 61
-    iget-object v0, p0, Lcom/mapquest/android/maps/cg;->a:Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lcom/mapquest/android/maps/cg;->b:Lcom/mapquest/android/maps/cj;
 
-    iget v1, p1, Lcom/mapquest/android/maps/ca;->e:I
+    invoke-virtual {v0, v1}, Lcom/mapquest/android/maps/cm;->a(Lcom/mapquest/android/maps/ck;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lcom/mapquest/android/maps/cg;->d:Lcom/mapquest/android/maps/cm;
 
-    move-result-object v0
+    new-instance v1, Lcom/mapquest/android/maps/cl;
 
-    const-string v1, ".jpg"
+    iget-object v2, p0, Lcom/mapquest/android/maps/cg;->c:Lcom/mapquest/android/maps/MapView;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, p0, v2}, Lcom/mapquest/android/maps/cl;-><init>(Lcom/mapquest/android/maps/cg;Lcom/mapquest/android/maps/MapView;)V
 
-    .line 62
-    iget-object v0, p0, Lcom/mapquest/android/maps/cg;->a:Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Lcom/mapquest/android/maps/cm;->a(Lcom/mapquest/android/maps/ck;)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 46
+    return-void
+.end method
 
-    move-result-object v0
+.method static synthetic a(Lcom/mapquest/android/maps/cg;)Lcom/mapquest/android/maps/cm;
+    .locals 1
+
+    .prologue
+    .line 14
+    iget-object v0, p0, Lcom/mapquest/android/maps/cg;->d:Lcom/mapquest/android/maps/cm;
 
     return-object v0
+.end method
+
+.method protected static a()V
+    .locals 1
+
+    .prologue
+    .line 101
+    const/16 v0, 0xb
+
+    invoke-static {v0}, Lcom/mapquest/android/maps/g;->a(I)V
+
+    .line 102
+    return-void
+.end method
+
+.method static synthetic b(Lcom/mapquest/android/maps/cg;)Lcom/mapquest/android/maps/MapView;
+    .locals 1
+
+    .prologue
+    .line 14
+    iget-object v0, p0, Lcom/mapquest/android/maps/cg;->c:Lcom/mapquest/android/maps/MapView;
+
+    return-object v0
+.end method
+
+.method static synthetic c(Lcom/mapquest/android/maps/cg;)Z
+    .locals 1
+
+    .prologue
+    .line 14
+    iget-boolean v0, p0, Lcom/mapquest/android/maps/cg;->f:Z
+
+    return v0
+.end method
+
+.method static synthetic d(Lcom/mapquest/android/maps/cg;)Z
+    .locals 1
+
+    .prologue
+    .line 14
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/mapquest/android/maps/cg;->f:Z
+
+    return v0
 .end method
 
 
 # virtual methods
-.method protected final a()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 23
-    const-string v0, "tt"
-
-    return-object v0
-.end method
-
-.method protected final a(Lcom/mapquest/android/maps/ca;)Ljava/lang/String;
+.method public final a(Landroid/view/MotionEvent;)Z
     .locals 4
 
     .prologue
-    .line 37
-    iget-object v0, p1, Lcom/mapquest/android/maps/ca;->f:Lcom/mapquest/android/maps/cf;
-
-    invoke-virtual {p0, v0}, Lcom/mapquest/android/maps/cg;->a(Lcom/mapquest/android/maps/cf;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 38
-    if-nez v0, :cond_0
-
-    .line 39
-    invoke-direct {p0, p1}, Lcom/mapquest/android/maps/cg;->b(Lcom/mapquest/android/maps/ca;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 51
-    :goto_0
-    return-object v0
-
-    .line 43
-    :cond_0
-    :try_start_0
-    const-string v1, "{$z}"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget v3, p1, Lcom/mapquest/android/maps/ca;->b:I
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 44
-    const-string v1, "{$x}"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget v3, p1, Lcom/mapquest/android/maps/ca;->d:I
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 45
-    const-string v1, "{$y}"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget v3, p1, Lcom/mapquest/android/maps/ca;->e:I
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 46
-    const-string v1, "{$ext}"
-
-    const-string v2, "jpg"
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    goto :goto_0
-
-    .line 48
-    :catch_0
-    move-exception v0
-
-    invoke-direct {p0, p1}, Lcom/mapquest/android/maps/cg;->b(Lcom/mapquest/android/maps/ca;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
-.end method
-
-.method protected final a(Lcom/mapquest/android/maps/cf;)Ljava/lang/String;
-    .locals 3
-
-    .prologue
-    .line 71
-    iget-object v0, p0, Lcom/mapquest/android/maps/cg;->b:Lcom/mapquest/android/maps/ai;
-
-    const-string v1, "commercial2"
-
-    iget-object v2, p1, Lcom/mapquest/android/maps/cf;->g:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lcom/mapquest/android/maps/ai;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final b()Lcom/mapquest/android/maps/an;
-    .locals 1
-
-    .prologue
-    .line 27
-    sget-object v0, Lcom/mapquest/android/maps/an;->c:Lcom/mapquest/android/maps/an;
-
-    return-object v0
-.end method
-
-.method public final b(Lcom/mapquest/android/maps/cf;)Z
-    .locals 1
-
-    .prologue
-    .line 32
-    sget-object v0, Lcom/mapquest/android/maps/cf;->a:Lcom/mapquest/android/maps/cf;
-
-    if-eq p1, v0, :cond_0
-
-    sget-object v0, Lcom/mapquest/android/maps/cf;->c:Lcom/mapquest/android/maps/cf;
-
-    if-eq p1, v0, :cond_0
-
-    sget-object v0, Lcom/mapquest/android/maps/cf;->b:Lcom/mapquest/android/maps/cf;
-
-    if-eq p1, v0, :cond_0
-
-    sget-object v0, Lcom/mapquest/android/maps/cf;->d:Lcom/mapquest/android/maps/cf;
-
-    if-eq p1, v0, :cond_0
-
-    sget-object v0, Lcom/mapquest/android/maps/cf;->f:Lcom/mapquest/android/maps/cf;
-
-    if-ne p1, v0, :cond_1
-
-    :cond_0
     const/4 v0, 0x1
 
+    const/4 v1, 0x0
+
+    .line 51
+    iget-object v2, p0, Lcom/mapquest/android/maps/cg;->d:Lcom/mapquest/android/maps/cm;
+
+    invoke-virtual {v2, p1}, Lcom/mapquest/android/maps/cm;->a(Landroid/view/MotionEvent;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 68
     :goto_0
     return v0
 
-    :cond_1
-    const/4 v0, 0x0
+    .line 54
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
+    move-result v2
+
+    .line 55
+    iget-object v3, p0, Lcom/mapquest/android/maps/cg;->d:Lcom/mapquest/android/maps/cm;
+
+    iget v3, v3, Lcom/mapquest/android/maps/cm;->e:I
+
+    and-int/2addr v2, v3
+
+    .line 57
+    if-ne v2, v0, :cond_2
+
+    .line 58
+    iget-boolean v0, p0, Lcom/mapquest/android/maps/cg;->f:Z
+
+    if-eqz v0, :cond_1
+
+    .line 59
+    const/16 v0, 0x17
+
+    invoke-static {v0}, Lcom/mapquest/android/maps/g;->a(I)V
+
+    .line 60
+    iput-boolean v1, p0, Lcom/mapquest/android/maps/cg;->f:Z
+
+    .line 62
+    :cond_1
+    iput-boolean v1, p0, Lcom/mapquest/android/maps/cg;->g:Z
+
+    .line 65
+    :cond_2
+    iget-object v0, p0, Lcom/mapquest/android/maps/cg;->e:Landroid/view/GestureDetector;
+
+    if-eqz v0, :cond_3
+
+    .line 66
+    iget-object v0, p0, Lcom/mapquest/android/maps/cg;->e:Landroid/view/GestureDetector;
+
+    invoke-virtual {v0, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_3
+    move v0, v1
+
+    .line 68
     goto :goto_0
 .end method

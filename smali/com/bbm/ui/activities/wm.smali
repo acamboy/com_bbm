@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/wm;
 .super Ljava/lang/Object;
-.source "MainActivity.java"
+.source "NewListActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/c/gn;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/NewListActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/NewListActivity;)V
     .locals 0
 
     .prologue
-    .line 1095
-    iput-object p1, p0, Lcom/bbm/ui/activities/wm;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 89
+    iput-object p1, p0, Lcom/bbm/ui/activities/wm;->a:Lcom/bbm/ui/activities/NewListActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,44 +25,22 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 1098
-    iget v0, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
+    .line 93
+    const-string v0, "mButtonToolbar PositiveButton Clicked"
 
-    .line 1099
-    const v1, 0x7f0b005f
+    const-class v1, Lcom/bbm/ui/activities/NewListItemActivity;
 
-    if-eq v0, v1, :cond_0
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    const v1, 0x7f0b0060
+    .line 95
+    iget-object v0, p0, Lcom/bbm/ui/activities/wm;->a:Lcom/bbm/ui/activities/NewListActivity;
 
-    if-eq v0, v1, :cond_0
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewListActivity;->c(Lcom/bbm/ui/activities/NewListActivity;)V
 
-    const v1, 0x7f0b0062
-
-    if-ne v0, v1, :cond_1
-
-    .line 1100
-    :cond_0
-    iget-object v1, p0, Lcom/bbm/ui/activities/wm;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/MainActivity;->h(Lcom/bbm/ui/activities/MainActivity;)Lcom/bbm/ui/MainTabBarView;
-
-    move-result-object v1
-
-    const/4 v2, 0x7
-
-    invoke-virtual {v1, v2}, Lcom/bbm/ui/MainTabBarView;->setLeftTabVisibility(I)V
-
-    .line 1102
-    :cond_1
-    iget-object v1, p0, Lcom/bbm/ui/activities/wm;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/MainActivity;->b(I)V
-
-    .line 1103
+    .line 96
     return-void
 .end method

@@ -56,12 +56,12 @@
 
     move-result-object v0
 
-    const v1, 0x7f030152
+    const v1, 0x7f03016f
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 36
-    const v0, 0x7f0b0184
+    const v0, 0x7f0b01f0
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/StoreGridHeaderView;->findViewById(I)Landroid/view/View;
 
@@ -72,7 +72,7 @@
     iput-object v0, p0, Lcom/bbm/ui/StoreGridHeaderView;->a:Landroid/widget/TextView;
 
     .line 37
-    const v0, 0x7f0b069e
+    const v0, 0x7f0b071a
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/StoreGridHeaderView;->findViewById(I)Landroid/view/View;
 
@@ -83,7 +83,7 @@
     iput-object v0, p0, Lcom/bbm/ui/StoreGridHeaderView;->b:Landroid/widget/TextView;
 
     .line 38
-    const v0, 0x7f0b0605
+    const v0, 0x7f0b0693
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/StoreGridHeaderView;->findViewById(I)Landroid/view/View;
 
@@ -94,7 +94,7 @@
     iput-object v0, p0, Lcom/bbm/ui/StoreGridHeaderView;->c:Landroid/widget/ImageView;
 
     .line 39
-    const v0, 0x7f0b0604
+    const v0, 0x7f0b0692
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/StoreGridHeaderView;->findViewById(I)Landroid/view/View;
 
@@ -109,7 +109,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/bbm/ae;->StoreGridHeaderView:[I
+    sget-object v1, Lcom/bbm/al;->StoreGridHeaderView:[I
 
     invoke-virtual {v0, p2, v1, p3, v3}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -211,16 +211,22 @@
     .locals 2
 
     .prologue
-    .line 93
-    iget-object v0, p0, Lcom/bbm/ui/StoreGridHeaderView;->b:Landroid/widget/TextView;
+    .line 94
+    new-instance v0, Lcom/bbm/ui/hk;
 
-    new-instance v1, Lcom/bbm/ui/hd;
+    invoke-direct {v0, p0, p1}, Lcom/bbm/ui/hk;-><init>(Lcom/bbm/ui/StoreGridHeaderView;Landroid/view/GestureDetector;)V
 
-    invoke-direct {v1, p0, p1}, Lcom/bbm/ui/hd;-><init>(Lcom/bbm/ui/StoreGridHeaderView;Landroid/view/GestureDetector;)V
+    .line 103
+    iget-object v1, p0, Lcom/bbm/ui/StoreGridHeaderView;->a:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 101
+    .line 104
+    iget-object v1, p0, Lcom/bbm/ui/StoreGridHeaderView;->b:Landroid/widget/TextView;
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+
+    .line 105
     return-void
 .end method
 

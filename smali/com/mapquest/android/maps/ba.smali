@@ -112,8 +112,6 @@
 
     .line 154
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
@@ -122,6 +120,8 @@
     move-exception v0
 
     monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
 
@@ -140,12 +140,12 @@
     return-void
 .end method
 
-.method public final a(Lcom/mapquest/android/maps/ca;)V
+.method public final a(Lcom/mapquest/android/maps/bz;)V
     .locals 4
 
     .prologue
     .line 94
-    invoke-virtual {p1}, Lcom/mapquest/android/maps/ca;->a()Z
+    invoke-virtual {p1}, Lcom/mapquest/android/maps/bz;->a()Z
 
     move-result v0
 
@@ -158,7 +158,7 @@
 
     .line 97
     :cond_1
-    iget-object v0, p1, Lcom/mapquest/android/maps/ca;->k:Ljava/lang/String;
+    iget-object v0, p1, Lcom/mapquest/android/maps/bz;->k:Ljava/lang/String;
 
     .line 98
     iget-object v1, p0, Lcom/mapquest/android/maps/ba;->b:Lcom/mapquest/android/maps/bb;
@@ -170,7 +170,7 @@
     if-nez v1, :cond_0
 
     .line 101
-    iget-object v1, p1, Lcom/mapquest/android/maps/ca;->g:Landroid/graphics/Bitmap;
+    iget-object v1, p1, Lcom/mapquest/android/maps/bz;->g:Landroid/graphics/Bitmap;
 
     if-eqz v1, :cond_0
 
@@ -181,9 +181,9 @@
 
     .line 103
     :try_start_0
-    iget-object v2, p1, Lcom/mapquest/android/maps/ca;->f:Lcom/mapquest/android/maps/cf;
+    iget-object v2, p1, Lcom/mapquest/android/maps/bz;->f:Lcom/mapquest/android/maps/ce;
 
-    sget-object v3, Lcom/mapquest/android/maps/cf;->c:Lcom/mapquest/android/maps/cf;
+    sget-object v3, Lcom/mapquest/android/maps/ce;->c:Lcom/mapquest/android/maps/ce;
 
     if-ne v2, v3, :cond_2
 
@@ -219,8 +219,6 @@
 
     .line 110
     monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
@@ -229,6 +227,8 @@
     move-exception v0
 
     monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
 
@@ -237,7 +237,7 @@
     :try_start_1
     iget-object v2, p0, Lcom/mapquest/android/maps/ba;->b:Lcom/mapquest/android/maps/bb;
 
-    iget-object v3, p1, Lcom/mapquest/android/maps/ca;->g:Landroid/graphics/Bitmap;
+    iget-object v3, p1, Lcom/mapquest/android/maps/bz;->g:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2, v0, v3}, Lcom/mapquest/android/maps/bb;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -249,7 +249,7 @@
     goto :goto_0
 .end method
 
-.method public final b(Lcom/mapquest/android/maps/ca;)Lcom/mapquest/android/maps/ca;
+.method public final b(Lcom/mapquest/android/maps/bz;)Lcom/mapquest/android/maps/bz;
     .locals 4
 
     .prologue
@@ -266,7 +266,7 @@
 
     .line 79
     :cond_0
-    iget-object v0, p1, Lcom/mapquest/android/maps/ca;->k:Ljava/lang/String;
+    iget-object v0, p1, Lcom/mapquest/android/maps/bz;->k:Ljava/lang/String;
 
     .line 80
     if-nez v0, :cond_1
@@ -304,12 +304,10 @@
 
     .line 88
     :cond_2
-    iput-object v0, p1, Lcom/mapquest/android/maps/ca;->g:Landroid/graphics/Bitmap;
+    iput-object v0, p1, Lcom/mapquest/android/maps/bz;->g:Landroid/graphics/Bitmap;
 
     .line 89
     monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
@@ -317,6 +315,8 @@
     move-exception v0
 
     monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
 .end method
@@ -332,7 +332,7 @@
     return-void
 .end method
 
-.method public final c(Lcom/mapquest/android/maps/ca;)V
+.method public final c(Lcom/mapquest/android/maps/bz;)V
     .locals 3
 
     .prologue
@@ -345,7 +345,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/mapquest/android/maps/ba;->b:Lcom/mapquest/android/maps/bb;
 
-    iget-object v2, p1, Lcom/mapquest/android/maps/ca;->k:Ljava/lang/String;
+    iget-object v2, p1, Lcom/mapquest/android/maps/bz;->k:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Lcom/mapquest/android/maps/bb;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -360,8 +360,6 @@
 
     .line 146
     monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     return-void
 
@@ -369,18 +367,20 @@
     move-exception v0
 
     monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
 .end method
 
-.method public final d(Lcom/mapquest/android/maps/ca;)Z
+.method public final d(Lcom/mapquest/android/maps/bz;)Z
     .locals 2
 
     .prologue
     .line 117
     iget-object v0, p0, Lcom/mapquest/android/maps/ba;->b:Lcom/mapquest/android/maps/bb;
 
-    iget-object v1, p1, Lcom/mapquest/android/maps/ca;->k:Ljava/lang/String;
+    iget-object v1, p1, Lcom/mapquest/android/maps/bz;->k:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/mapquest/android/maps/bb;->containsKey(Ljava/lang/Object;)Z
 

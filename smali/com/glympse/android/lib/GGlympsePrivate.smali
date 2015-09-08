@@ -46,22 +46,19 @@
 .method public abstract getJobQueue()Lcom/glympse/android/lib/GJobQueue;
 .end method
 
+.method public abstract getLinkedAccountsManagerPrivate()Lcom/glympse/android/lib/GLinkedAccountsManagerPrivate;
+.end method
+
 .method public abstract getLocationManagerPrivate()Lcom/glympse/android/lib/GLocationManagerPrivate;
 .end method
 
 .method public abstract getMessageCenter()Lcom/glympse/android/lib/GMessageCenter;
 .end method
 
-.method public abstract getMotdUrl()Ljava/lang/String;
-.end method
-
 .method public abstract getNetworkManagerPrivate()Lcom/glympse/android/lib/GNetworkManagerPrivate;
 .end method
 
 .method public abstract getNotificationCenter()Lcom/glympse/android/lib/GNotificationCenter;
-.end method
-
-.method public abstract getSearchEngine()Lcom/glympse/android/lib/GSearchEngine;
 .end method
 
 .method public abstract getServerPost()Lcom/glympse/android/lib/GServerPost;
@@ -73,7 +70,7 @@
 .method public abstract getUserManagerPrivate()Lcom/glympse/android/lib/GUserManagerPrivate;
 .end method
 
-.method public abstract getWifiManager()Lcom/glympse/android/lib/bw;
+.method public abstract getWifiManager()Lcom/glympse/android/lib/GWifiManager;
 .end method
 
 .method public abstract isSharing()Z

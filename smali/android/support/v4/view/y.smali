@@ -1,28 +1,14 @@
-.class Landroid/support/v4/view/y;
-.super Landroid/support/v4/view/x;
+.class interface abstract Landroid/support/v4/view/y;
+.super Ljava/lang/Object;
 .source "KeyEventCompat.java"
 
 
-# direct methods
-.method constructor <init>()V
-    .locals 0
-
-    .prologue
-    .line 118
-    invoke-direct {p0}, Landroid/support/v4/view/x;-><init>()V
-
-    return-void
+# virtual methods
+.method public abstract a(Landroid/view/KeyEvent;)V
 .end method
 
+.method public abstract b(I)Z
+.end method
 
-# virtual methods
-.method public final a(Landroid/view/KeyEvent;)V
-    .locals 0
-
-    .prologue
-    .line 121
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->startTracking()V
-
-    .line 122
-    return-void
+.method public abstract c(I)Z
 .end method

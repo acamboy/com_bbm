@@ -1,6 +1,6 @@
 .class public final enum Lcom/bbm/d/gv;
 .super Ljava/lang/Enum;
-.source "UserBlockedItem.java"
+.source "PendingPost.java"
 
 
 # annotations
@@ -65,88 +65,88 @@
 
     const/4 v4, 0x0
 
-    .line 78
+    .line 31
     new-instance v0, Lcom/bbm/d/gv;
 
-    const-string v1, "All"
+    const-string v1, "NetworkFailure"
 
-    const-string v2, "All"
+    const-string v2, "NetworkFailure"
 
     invoke-direct {v0, v1, v4, v2}, Lcom/bbm/d/gv;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/d/gv;->a:Lcom/bbm/d/gv;
 
-    .line 79
+    .line 36
     new-instance v0, Lcom/bbm/d/gv;
 
-    const-string v1, "ContactInvitation"
+    const-string v1, "ContentTooLarge"
 
-    const-string v2, "ContactInvitation"
+    const-string v2, "ContentTooLarge"
 
     invoke-direct {v0, v1, v5, v2}, Lcom/bbm/d/gv;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/d/gv;->b:Lcom/bbm/d/gv;
 
-    .line 80
+    .line 41
     new-instance v0, Lcom/bbm/d/gv;
 
-    const-string v1, "NowPlaying"
+    const-string v1, "ImageTooLarge"
 
-    const-string v2, "NowPlaying"
+    const-string v2, "ImageTooLarge"
 
     invoke-direct {v0, v1, v6, v2}, Lcom/bbm/d/gv;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/d/gv;->c:Lcom/bbm/d/gv;
 
-    .line 81
+    .line 46
     new-instance v0, Lcom/bbm/d/gv;
 
-    const-string v1, "RecentUpdateDisplayName"
+    const-string v1, "UnknownChannelId"
 
-    const-string v2, "RecentUpdateDisplayName"
+    const-string v2, "UnknownChannelId"
 
     invoke-direct {v0, v1, v7, v2}, Lcom/bbm/d/gv;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/d/gv;->d:Lcom/bbm/d/gv;
 
-    .line 82
+    .line 51
     new-instance v0, Lcom/bbm/d/gv;
 
-    const-string v1, "RecentUpdatePersonalMessage"
+    const-string v1, "ImageInvalidPath"
 
-    const-string v2, "RecentUpdatePersonalMessage"
+    const-string v2, "ImageInvalidPath"
 
     invoke-direct {v0, v1, v8, v2}, Lcom/bbm/d/gv;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/d/gv;->e:Lcom/bbm/d/gv;
 
-    .line 83
+    .line 56
     new-instance v0, Lcom/bbm/d/gv;
 
-    const-string v1, "RecentUpdateAvatar"
+    const-string v1, "AuthorizationFailure"
 
     const/4 v2, 0x5
 
-    const-string v3, "RecentUpdateAvatar"
+    const-string v3, "AuthorizationFailure"
 
     invoke-direct {v0, v1, v2, v3}, Lcom/bbm/d/gv;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/d/gv;->f:Lcom/bbm/d/gv;
 
-    .line 84
+    .line 61
     new-instance v0, Lcom/bbm/d/gv;
 
-    const-string v1, "RecentUpdateApp"
+    const-string v1, "Timeout"
 
     const/4 v2, 0x6
 
-    const-string v3, "RecentUpdateApp"
+    const-string v3, "Timeout"
 
     invoke-direct {v0, v1, v2, v3}, Lcom/bbm/d/gv;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/d/gv;->g:Lcom/bbm/d/gv;
 
-    .line 85
+    .line 66
     new-instance v0, Lcom/bbm/d/gv;
 
     const-string v1, "Unspecified"
@@ -159,7 +159,7 @@
 
     sput-object v0, Lcom/bbm/d/gv;->h:Lcom/bbm/d/gv;
 
-    .line 77
+    .line 26
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/bbm/d/gv;
@@ -218,13 +218,13 @@
     .end annotation
 
     .prologue
-    .line 90
+    .line 71
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 91
+    .line 72
     iput-object p3, p0, Lcom/bbm/d/gv;->j:Ljava/lang/String;
 
-    .line 92
+    .line 73
     return-void
 .end method
 
@@ -232,17 +232,17 @@
     .locals 6
 
     .prologue
-    .line 95
+    .line 76
     sget-object v0, Lcom/bbm/d/gv;->i:Ljava/util/Hashtable;
 
     if-nez v0, :cond_1
 
-    .line 96
+    .line 77
     new-instance v1, Ljava/util/Hashtable;
 
     invoke-direct {v1}, Ljava/util/Hashtable;-><init>()V
 
-    .line 97
+    .line 78
     invoke-static {}, Lcom/bbm/d/gv;->values()[Lcom/bbm/d/gv;
 
     move-result-object v2
@@ -256,21 +256,21 @@
 
     aget-object v4, v2, v0
 
-    .line 98
+    .line 79
     iget-object v5, v4, Lcom/bbm/d/gv;->j:Ljava/lang/String;
 
     invoke-virtual {v1, v5, v4}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 97
+    .line 78
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 100
+    .line 81
     :cond_0
     sput-object v1, Lcom/bbm/d/gv;->i:Ljava/util/Hashtable;
 
-    .line 102
+    .line 83
     :cond_1
     if-eqz p0, :cond_2
 
@@ -282,20 +282,20 @@
 
     check-cast v0, Lcom/bbm/d/gv;
 
-    .line 103
+    .line 84
     :goto_1
     if-eqz v0, :cond_3
 
     :goto_2
     return-object v0
 
-    .line 102
+    .line 83
     :cond_2
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 103
+    .line 84
     :cond_3
     sget-object v0, Lcom/bbm/d/gv;->h:Lcom/bbm/d/gv;
 
@@ -306,7 +306,7 @@
     .locals 1
 
     .prologue
-    .line 77
+    .line 26
     const-class v0, Lcom/bbm/d/gv;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -322,7 +322,7 @@
     .locals 1
 
     .prologue
-    .line 77
+    .line 26
     sget-object v0, Lcom/bbm/d/gv;->k:[Lcom/bbm/d/gv;
 
     invoke-virtual {v0}, [Lcom/bbm/d/gv;->clone()Ljava/lang/Object;
@@ -340,7 +340,7 @@
     .locals 1
 
     .prologue
-    .line 107
+    .line 88
     iget-object v0, p0, Lcom/bbm/d/gv;->j:Ljava/lang/String;
 
     return-object v0

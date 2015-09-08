@@ -63,7 +63,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/bbm/util/c/c;->a(Landroid/content/Context;)Lcom/bbm/util/c/c;
+    invoke-static {v0}, Lcom/bbm/util/d/c;->a(Landroid/content/Context;)Lcom/bbm/util/d/c;
 
     move-result-object v0
 
@@ -71,7 +71,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, p1, v1}, Lcom/bbm/util/c/c;->a(Ljava/lang/CharSequence;F)Landroid/text/Spannable;
+    invoke-virtual {v0, p1, v1}, Lcom/bbm/util/d/c;->a(Ljava/lang/CharSequence;F)Landroid/text/Spannable;
 
     move-result-object v0
 
@@ -87,7 +87,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/bbm/util/c/c;->a(Landroid/content/Context;)Lcom/bbm/util/c/c;
+    invoke-static {v0}, Lcom/bbm/util/d/c;->a(Landroid/content/Context;)Lcom/bbm/util/d/c;
 
     move-result-object v0
 
@@ -107,7 +107,7 @@
 
     invoke-direct {v2, v3}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v0, v2, v1}, Lcom/bbm/util/c/c;->a(Ljava/lang/CharSequence;F)Landroid/text/Spannable;
+    invoke-virtual {v0, v2, v1}, Lcom/bbm/util/d/c;->a(Ljava/lang/CharSequence;F)Landroid/text/Spannable;
 
     move-result-object v0
 

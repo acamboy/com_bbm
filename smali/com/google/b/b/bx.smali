@@ -1,5 +1,5 @@
 .class final enum Lcom/google/b/b/bx;
-.super Lcom/google/b/b/bs;
+.super Lcom/google/b/b/bt;
 .source "RemovalCause.java"
 
 
@@ -8,12 +8,12 @@
     .locals 2
 
     .prologue
-    .line 87
-    const/4 v0, 0x4
+    .line 76
+    const/4 v0, 0x3
 
     const/4 v1, 0x0
 
-    invoke-direct {p0, p1, v0, v1}, Lcom/google/b/b/bs;-><init>(Ljava/lang/String;IB)V
+    invoke-direct {p0, p1, v0, v1}, Lcom/google/b/b/bt;-><init>(Ljava/lang/String;IB)V
 
     return-void
 .end method
@@ -24,7 +24,7 @@
     .locals 1
 
     .prologue
-    .line 90
+    .line 79
     const/4 v0, 0x1
 
     return v0

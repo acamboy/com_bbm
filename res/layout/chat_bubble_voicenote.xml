@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/play_pause_icon" android:layout_width="@dimen/inline_voice_note_play_icon_size" android:layout_height="@dimen/inline_voice_note_play_icon_size" android:layout_margin="@dimen/inline_voice_note_play_icon_padding" android:src="@drawable/ic_play_voicenote" android:scaleType="centerInside" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/voice_play_progress" android:layout_width="@dimen/inline_voice_note_progressbar_width" android:layout_height="@dimen/inline_voice_note_progressbar_height" style="@style/VoiceNoteProgressBar" />
+    <TextView android:layout_gravity="center" android:id="@id/voice_length" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/inline_voice_note_margin" android:layout_marginRight="@dimen/inline_voice_note_margin" android:singleLine="true" />
+</LinearLayout>

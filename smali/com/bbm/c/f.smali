@@ -1,65 +1,67 @@
-.class public final Lcom/bbm/c/f;
-.super Lcom/bbm/j/u;
+.class final Lcom/bbm/c/f;
+.super Lcom/bbm/j/k;
 .source "EventTracker.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/d/fi;
-
-.field final synthetic b:Lcom/bbm/c/c;
+.field final synthetic a:Lcom/bbm/c/c;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/c/c;Lcom/bbm/d/fi;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/c/c;)V
+    .locals 1
 
     .prologue
-    .line 803
-    iput-object p1, p0, Lcom/bbm/c/f;->b:Lcom/bbm/c/c;
+    .line 267
+    iput-object p1, p0, Lcom/bbm/c/f;->a:Lcom/bbm/c/c;
 
-    iput-object p2, p0, Lcom/bbm/c/f;->a:Lcom/bbm/d/fi;
+    const/4 v0, 0x0
 
-    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final b()Z
-    .locals 2
+.method protected final a()V
+    .locals 4
 
     .prologue
-    .line 807
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    .line 271
+    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/b/x;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/c/f;->a:Lcom/bbm/d/fi;
+    const-string v1, "adsEnabled"
 
-    iget-object v1, v1, Lcom/bbm/d/fi;->q:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->s(Ljava/lang/String;)Lcom/bbm/d/gh;
+    invoke-virtual {v0, v1}, Lcom/bbm/b/x;->a(Ljava/lang/String;)Lcom/bbm/util/bs;
 
     move-result-object v0
 
-    .line 808
-    iget-object v0, v0, Lcom/bbm/d/gh;->j:Lcom/bbm/util/bi;
+    .line 272
+    iget-object v1, v0, Lcom/bbm/util/bs;->b:Lcom/bbm/util/bo;
 
-    sget-object v1, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
+    sget-object v2, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
 
-    if-eq v0, v1, :cond_0
+    if-ne v1, v2, :cond_0
 
-    const/4 v0, 0x1
+    .line 273
+    iget-object v1, p0, Lcom/bbm/c/f;->a:Lcom/bbm/c/c;
 
-    .line 809
-    :goto_0
-    return v0
+    iget-object v0, v0, Lcom/bbm/util/bs;->a:Lorg/json/JSONObject;
 
-    .line 808
+    const-string v2, "value"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    invoke-static {v1, v0}, Lcom/bbm/c/c;->a(Lcom/bbm/c/c;Z)Z
+
+    .line 275
     :cond_0
-    const/4 v0, 0x0
-
-    .line 809
-    goto :goto_0
+    return-void
 .end method

@@ -352,9 +352,9 @@
 
     .line 190
     :goto_0
-    sget-object v2, Lcom/google/zxing/client/android/m;->b:Lcom/google/zxing/client/android/m;
+    sget v2, Lcom/google/zxing/client/android/m;->b:I
 
-    invoke-static {v0, v2}, Lcom/google/zxing/client/android/k;->a(Ljava/lang/String;Lcom/google/zxing/client/android/m;)Ljava/lang/CharSequence;
+    invoke-static {v0, v2}, Lcom/google/zxing/client/android/k;->a(Ljava/lang/String;I)Ljava/lang/CharSequence;
 
     move-result-object v2
 

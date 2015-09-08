@@ -1,115 +1,193 @@
 .class final Lcom/bbm/ui/activities/oq;
-.super Ljava/lang/Object;
-.source "GroupListItemsActivity.java"
+.super Lcom/bbm/j/a;
+.source "GroupLobbyActivity.java"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/j/a",
+        "<",
+        "Lcom/bbm/g/s;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupListItemsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupListItemsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupLobbyActivity;)V
     .locals 0
 
     .prologue
-    .line 160
-    iput-object p1, p0, Lcom/bbm/ui/activities/oq;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
+    .line 152
+    iput-object p1, p0, Lcom/bbm/ui/activities/oq;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 5
+.method protected final synthetic a()Ljava/lang/Object;
+    .locals 10
 
     .prologue
-    .line 163
-    const-string v0, "addNewButton Clicked"
+    .line 152
+    iget-object v0, p0, Lcom/bbm/ui/activities/oq;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/GroupListItemsActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 165
-    iget-object v0, p0, Lcom/bbm/ui/activities/oq;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupListItemsActivity;->a(Lcom/bbm/ui/activities/GroupListItemsActivity;)Lcom/bbm/ui/InlineImageEditText;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->f(Lcom/bbm/ui/activities/GroupLobbyActivity;)Lcom/bbm/j/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/InlineImageEditText;->length()I
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
-    if-lez v0, :cond_0
+    if-lez v0, :cond_2
 
-    .line 166
-    iget-object v0, p0, Lcom/bbm/ui/activities/oq;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
+    new-instance v3, Ljava/util/ArrayList;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupListItemsActivity;->a(Lcom/bbm/ui/activities/GroupListItemsActivity;)Lcom/bbm/ui/InlineImageEditText;
+    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    move-result-object v0
+    new-instance v4, Ljava/util/HashMap;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/InlineImageEditText;->getText()Landroid/text/Editable;
+    invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
-    move-result-object v0
+    iget-object v0, p0, Lcom/bbm/ui/activities/oq;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 167
-    iget-object v1, p0, Lcom/bbm/ui/activities/oq;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
-
-    iget-object v1, v1, Lcom/bbm/ui/activities/GroupListItemsActivity;->a:Lcom/bbm/g/al;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/oq;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/GroupListItemsActivity;->b(Lcom/bbm/ui/activities/GroupListItemsActivity;)Ljava/lang/String;
-
-    move-result-object v2
-
-    sget-object v3, Lcom/bbm/g/bu;->b:Lcom/bbm/g/bu;
-
-    sget-object v4, Lcom/bbm/g/bv;->a:Lcom/bbm/g/bv;
-
-    invoke-static {v2, v0, v3, v4}, Lcom/bbm/g/am;->a(Ljava/lang/String;Ljava/lang/String;Lcom/bbm/g/bu;Lcom/bbm/g/bv;)Lcom/bbm/g/bt;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->e(Lcom/bbm/ui/activities/GroupLobbyActivity;)Lcom/bbm/j/a;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
-
-    .line 168
-    iget-object v0, p0, Lcom/bbm/ui/activities/oq;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupListItemsActivity;->a(Lcom/bbm/ui/activities/GroupListItemsActivity;)Lcom/bbm/ui/InlineImageEditText;
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, ""
+    check-cast v0, Ljava/util/List;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/InlineImageEditText;->setText(Ljava/lang/CharSequence;)V
+    const/4 v1, 0x0
 
-    .line 169
-    iget-object v0, p0, Lcom/bbm/ui/activities/oq;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
+    move v2, v1
 
-    invoke-static {v0}, Lcom/bbm/util/fh;->b(Landroid/app/Activity;)V
-
-    .line 173
     :goto_0
-    return-void
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    .line 171
+    move-result v1
+
+    if-ge v2, v1, :cond_1
+
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/bbm/g/s;
+
+    iget-wide v6, v1, Lcom/bbm/g/s;->j:J
+
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/bbm/g/s;
+
+    iget-object v1, v1, Lcom/bbm/g/s;->d:Ljava/lang/String;
+
+    iget-object v5, p0, Lcom/bbm/ui/activities/oq;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+
+    invoke-static {v5}, Lcom/bbm/ui/activities/GroupLobbyActivity;->g(Lcom/bbm/ui/activities/GroupLobbyActivity;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const-wide/16 v8, 0x0
+
+    cmp-long v1, v6, v8
+
+    if-lez v1, :cond_0
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {v3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v5
+
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/bbm/g/s;
+
+    iget-object v1, v1, Lcom/bbm/g/s;->m:Ljava/lang/String;
+
+    invoke-virtual {v4, v5, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/oq;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
+    add-int/lit8 v1, v2, 0x1
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupListItemsActivity;->c(Lcom/bbm/ui/activities/GroupListItemsActivity;)V
+    move v2, v1
 
     goto :goto_0
+
+    :cond_1
+    invoke-static {v3}, Ljava/util/Collections;->sort(Ljava/util/List;)V
+
+    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_2
+
+    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {v4, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/oq;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupLobbyActivity;->b(Lcom/bbm/ui/activities/GroupLobbyActivity;)Lcom/bbm/g/an;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/bbm/g/an;->q(Ljava/lang/String;)Lcom/bbm/g/s;
+
+    move-result-object v0
+
+    :goto_1
+    return-object v0
+
+    :cond_2
+    const/4 v0, 0x0
+
+    goto :goto_1
 .end method

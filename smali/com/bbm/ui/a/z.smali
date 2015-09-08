@@ -1,44 +1,52 @@
 .class final Lcom/bbm/ui/a/z;
-.super Ljava/lang/Object;
-.source "GroupMessageListAdapter.java"
+.super Lcom/bbm/d/a/a/l;
+.source "MessageRecyclerViewAdapter.java"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/d/a/a/l",
+        "<",
+        "Lcom/bbm/d/gk;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/a/x;
+.field final synthetic e:Lcom/bbm/ui/a/w;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/a/x;)V
+.method constructor <init>(Lcom/bbm/ui/a/w;Lcom/bbm/d/a/b/a;)V
     .locals 0
 
     .prologue
-    .line 167
-    iput-object p1, p0, Lcom/bbm/ui/a/z;->a:Lcom/bbm/ui/a/x;
+    .line 202
+    iput-object p1, p0, Lcom/bbm/ui/a/z;->e:Lcom/bbm/ui/a/w;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lcom/bbm/d/a/a/l;-><init>(Lcom/bbm/d/a/b/a;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final a(J)Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 170
-    iget-object v0, p0, Lcom/bbm/ui/a/z;->a:Lcom/bbm/ui/a/x;
+    .line 205
+    iget-object v0, p0, Lcom/bbm/ui/a/z;->e:Lcom/bbm/ui/a/w;
 
-    invoke-static {v0}, Lcom/bbm/ui/a/x;->e(Lcom/bbm/ui/a/x;)Z
+    invoke-static {v0}, Lcom/bbm/ui/a/w;->e(Lcom/bbm/ui/a/w;)Ljava/lang/String;
 
-    .line 171
-    iget-object v0, p0, Lcom/bbm/ui/a/z;->a:Lcom/bbm/ui/a/x;
+    move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/a/x;->notifyDataSetChanged()V
+    invoke-static {v0, p1, p2}, Lcom/bbm/d/a;->b(Ljava/lang/String;J)Ljava/lang/String;
 
-    .line 172
-    return-void
+    move-result-object v0
+
+    return-object v0
 .end method

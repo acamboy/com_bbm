@@ -6,7 +6,7 @@
 # instance fields
 .field public a:Ljava/lang/String;
 
-.field public b:Lcom/bbm/l/b/o;
+.field public b:Lcom/bbm/l/b/p;
 
 .field private c:Ljava/lang/String;
 
@@ -68,9 +68,9 @@
     iput-object v0, p0, Lcom/bbm/l/b/m;->d:Ljava/lang/String;
 
     .line 20
-    new-instance v0, Lcom/bbm/l/b/o;
+    new-instance v0, Lcom/bbm/l/b/p;
 
-    invoke-direct {v0}, Lcom/bbm/l/b/o;-><init>()V
+    invoke-direct {v0}, Lcom/bbm/l/b/p;-><init>()V
 
     const-string v1, "link"
 
@@ -78,11 +78,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/l/b/o;->a(Lorg/json/JSONObject;)Lcom/bbm/l/b/o;
+    invoke-virtual {v0, v1}, Lcom/bbm/l/b/p;->a(Lorg/json/JSONObject;)Lcom/bbm/l/b/p;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/l/b/m;->b:Lcom/bbm/l/b/o;
+    iput-object v0, p0, Lcom/bbm/l/b/m;->b:Lcom/bbm/l/b/p;
 
     .line 22
     :cond_0

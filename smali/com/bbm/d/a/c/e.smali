@@ -23,12 +23,12 @@
 
 .field public final c:Lcom/bbm/f/a;
 
-.field public final d:Lcom/bbm/util/di;
+.field private final d:Lcom/bbm/util/ds;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/f/a;Lcom/bbm/d/a/h;Lcom/bbm/util/di;)V
-    .locals 1
+.method public constructor <init>(Lcom/bbm/f/a;Lcom/bbm/d/a/h;Lcom/bbm/util/ds;)V
+    .locals 2
 
     .prologue
     .line 24
@@ -39,15 +39,17 @@
 
     invoke-direct {v0}, Lcom/google/b/c/q;-><init>()V
 
-    invoke-virtual {v0}, Lcom/google/b/c/q;->f()Lcom/google/b/c/q;
+    invoke-virtual {v0}, Lcom/google/b/c/q;->e()Lcom/google/b/c/q;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/b/c/q;->c()Lcom/google/b/c/q;
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/google/b/c/q;->a(I)Lcom/google/b/c/q;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/b/c/q;->g()Ljava/util/concurrent/ConcurrentMap;
+    invoke-virtual {v0}, Lcom/google/b/c/q;->f()Ljava/util/concurrent/ConcurrentMap;
 
     move-result-object v0
 
@@ -60,7 +62,7 @@
     iput-object p1, p0, Lcom/bbm/d/a/c/e;->c:Lcom/bbm/f/a;
 
     .line 27
-    iput-object p3, p0, Lcom/bbm/d/a/c/e;->d:Lcom/bbm/util/di;
+    iput-object p3, p0, Lcom/bbm/d/a/c/e;->d:Lcom/bbm/util/ds;
 
     .line 28
     invoke-interface {p1, p0}, Lcom/bbm/f/a;->a(Lcom/bbm/f/ac;)V
@@ -71,58 +73,6 @@
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
-
-    .prologue
-    .line 63
-    iget-object v0, p0, Lcom/bbm/d/a/c/e;->a:Ljava/util/Map;
-
-    invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/a/d;
-
-    .line 64
-    iget-object v2, p0, Lcom/bbm/d/a/c/e;->a:Ljava/util/Map;
-
-    invoke-interface {v2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/a/c/a;
-
-    .line 65
-    invoke-virtual {v0}, Lcom/bbm/d/a/c/a;->a()V
-
-    .line 67
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v2}, Lcom/bbm/d/a/c/a;->a(Z)V
-
-    goto :goto_0
-
-    .line 69
-    :cond_0
-    return-void
-.end method
-
 .method public final a(Lcom/bbm/f/ab;)V
     .locals 4
 
@@ -197,4 +147,56 @@
     invoke-virtual {v0, v2}, Lcom/bbm/d/a/c/a;->b(Lorg/json/JSONObject;)V
 
     goto :goto_0
+.end method
+
+.method public final a_()V
+    .locals 3
+
+    .prologue
+    .line 63
+    iget-object v0, p0, Lcom/bbm/d/a/c/e;->a:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/a/d;
+
+    .line 64
+    iget-object v2, p0, Lcom/bbm/d/a/c/e;->a:Ljava/util/Map;
+
+    invoke-interface {v2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/a/c/a;
+
+    .line 65
+    invoke-virtual {v0}, Lcom/bbm/d/a/c/a;->a()V
+
+    .line 67
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v2}, Lcom/bbm/d/a/c/a;->a(Z)V
+
+    goto :goto_0
+
+    .line 69
+    :cond_0
+    return-void
 .end method

@@ -8,7 +8,7 @@
 
 
 # instance fields
-.field final a:Lcom/bbm/p;
+.field final a:Lcom/bbm/w;
 
 .field final b:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
@@ -16,7 +16,7 @@
             "Ljava/util/Map",
             "<",
             "Ljava/lang/String;",
-            "Lcom/bbm/util/ct",
+            "Lcom/bbm/util/dc",
             "<",
             "Lcom/bbm/util/a/f;",
             ">;>;"
@@ -32,11 +32,11 @@
 
 
 # direct methods
-.method private constructor <init>(Lcom/bbm/p;)V
-    .locals 2
+.method private constructor <init>(Lcom/bbm/w;)V
+    .locals 3
 
     .prologue
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     .line 93
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,22 +46,24 @@
 
     invoke-direct {v0}, Lcom/google/b/c/q;-><init>()V
 
-    invoke-virtual {v0}, Lcom/google/b/c/q;->f()Lcom/google/b/c/q;
+    invoke-virtual {v0}, Lcom/google/b/c/q;->e()Lcom/google/b/c/q;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/b/c/q;->c()Lcom/google/b/c/q;
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/google/b/c/q;->a(I)Lcom/google/b/c/q;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/b/c/q;->g()Ljava/util/concurrent/ConcurrentMap;
+    invoke-virtual {v0}, Lcom/google/b/c/q;->f()Ljava/util/concurrent/ConcurrentMap;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bbm/util/a/d;->b:Ljava/util/Map;
 
     .line 85
-    iput v1, p0, Lcom/bbm/util/a/d;->d:I
+    iput v2, p0, Lcom/bbm/util/a/d;->d:I
 
     .line 86
     new-instance v0, Lcom/bbm/util/a/e;
@@ -71,17 +73,17 @@
     iput-object v0, p0, Lcom/bbm/util/a/d;->e:Lcom/glympse/android/api/GEventListener;
 
     .line 94
-    iput-object p1, p0, Lcom/bbm/util/a/d;->a:Lcom/bbm/p;
+    iput-object p1, p0, Lcom/bbm/util/a/d;->a:Lcom/bbm/w;
 
     .line 95
-    iput-boolean v1, p0, Lcom/bbm/util/a/d;->c:Z
+    iput-boolean v2, p0, Lcom/bbm/util/a/d;->c:Z
 
     .line 96
     return-void
 .end method
 
 .method public static a(Ljava/lang/String;)Lcom/bbm/j/r;
-    .locals 5
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -95,6 +97,8 @@
     .end annotation
 
     .prologue
+    const/4 v5, 0x1
+
     .line 103
     sget-object v0, Lcom/bbm/util/a/d;->f:Lcom/bbm/util/a/d;
 
@@ -103,11 +107,11 @@
     .line 104
     new-instance v0, Lcom/bbm/util/a/d;
 
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
+    invoke-static {}, Lcom/bbm/w;->a()Lcom/bbm/w;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/bbm/util/a/d;-><init>(Lcom/bbm/p;)V
+    invoke-direct {v0, v1}, Lcom/bbm/util/a/d;-><init>(Lcom/bbm/w;)V
 
     sput-object v0, Lcom/bbm/util/a/d;->f:Lcom/bbm/util/a/d;
 
@@ -121,13 +125,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/util/ct;
+    check-cast v0, Lcom/bbm/util/dc;
 
     if-nez v0, :cond_3
 
-    iget-object v0, v3, Lcom/bbm/util/a/d;->a:Lcom/bbm/p;
+    iget-object v0, v3, Lcom/bbm/util/a/d;->a:Lcom/bbm/w;
 
-    iget-object v0, v0, Lcom/bbm/p;->a:Lcom/glympse/android/api/GGlympse;
+    iget-object v0, v0, Lcom/bbm/w;->a:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v0}, Lcom/glympse/android/api/GGlympse;->getUserManager()Lcom/glympse/android/api/GUserManager;
 
@@ -137,11 +141,11 @@
 
     move-result-object v0
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_6
 
-    iget-object v0, v3, Lcom/bbm/util/a/d;->a:Lcom/bbm/p;
+    iget-object v0, v3, Lcom/bbm/util/a/d;->a:Lcom/bbm/w;
 
-    iget-object v0, v0, Lcom/bbm/p;->a:Lcom/glympse/android/api/GGlympse;
+    iget-object v0, v0, Lcom/bbm/w;->a:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v0}, Lcom/glympse/android/api/GGlympse;->getHistoryManager()Lcom/glympse/android/api/GHistoryManager;
 
@@ -161,9 +165,9 @@
     invoke-direct {v0}, Lcom/bbm/util/a/f;-><init>()V
 
     :goto_1
-    new-instance v1, Lcom/bbm/util/ct;
+    new-instance v1, Lcom/bbm/util/dc;
 
-    invoke-direct {v1, v0}, Lcom/bbm/util/ct;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v1, v0}, Lcom/bbm/util/dc;-><init>(Ljava/lang/Object;)V
 
     iget-object v0, v3, Lcom/bbm/util/a/d;->b:Ljava/util/Map;
 
@@ -175,15 +179,13 @@
 
     if-nez v0, :cond_1
 
-    const/4 v0, 0x1
+    iput-boolean v5, v3, Lcom/bbm/util/a/d;->c:Z
 
-    iput-boolean v0, v3, Lcom/bbm/util/a/d;->c:Z
-
-    iget-object v0, v3, Lcom/bbm/util/a/d;->a:Lcom/bbm/p;
+    iget-object v0, v3, Lcom/bbm/util/a/d;->a:Lcom/bbm/w;
 
     iget-object v2, v3, Lcom/bbm/util/a/d;->e:Lcom/glympse/android/api/GEventListener;
 
-    invoke-virtual {v0, v2}, Lcom/bbm/p;->a(Lcom/glympse/android/api/GEventListener;)V
+    invoke-virtual {v0, v2}, Lcom/bbm/w;->a(Lcom/glympse/android/api/GEventListener;)V
 
     :cond_1
     iget v0, v3, Lcom/bbm/util/a/d;->d:I
@@ -192,12 +194,19 @@
 
     iput v0, v3, Lcom/bbm/util/a/d;->d:I
 
-    iget-object v0, v3, Lcom/bbm/util/a/d;->a:Lcom/bbm/p;
+    iget-object v0, v3, Lcom/bbm/util/a/d;->a:Lcom/bbm/w;
 
-    invoke-virtual {v0, p0}, Lcom/bbm/p;->a(Ljava/lang/String;)Lcom/glympse/android/api/GEventSink;
+    iget-object v2, v0, Lcom/bbm/w;->a:Lcom/glympse/android/api/GGlympse;
+
+    if-eqz v2, :cond_5
+
+    iget-object v0, v0, Lcom/bbm/w;->a:Lcom/glympse/android/api/GGlympse;
+
+    invoke-interface {v0, p0, v5}, Lcom/glympse/android/api/GGlympse;->decodeInvite(Ljava/lang/String;I)Lcom/glympse/android/api/GEventSink;
 
     move-result-object v0
 
+    :goto_2
     if-eqz v0, :cond_2
 
     iget-object v2, v3, Lcom/bbm/util/a/d;->e:Lcom/glympse/android/api/GEventListener;
@@ -219,9 +228,9 @@
 
     invoke-interface {v2, v1}, Lcom/glympse/android/api/GTicket;->addListener(Lcom/glympse/android/api/GEventListener;)Z
 
-    iget-object v1, v3, Lcom/bbm/util/a/d;->a:Lcom/bbm/p;
+    iget-object v1, v3, Lcom/bbm/util/a/d;->a:Lcom/bbm/w;
 
-    iget-object v1, v1, Lcom/bbm/p;->a:Lcom/glympse/android/api/GGlympse;
+    iget-object v1, v1, Lcom/bbm/w;->a:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v1}, Lcom/glympse/android/api/GGlympse;->getUserManager()Lcom/glympse/android/api/GUserManager;
 
@@ -231,9 +240,9 @@
 
     move-result-object v1
 
-    iget-object v4, v3, Lcom/bbm/util/a/d;->a:Lcom/bbm/p;
+    iget-object v4, v3, Lcom/bbm/util/a/d;->a:Lcom/bbm/w;
 
-    iget-object v4, v4, Lcom/bbm/p;->a:Lcom/glympse/android/api/GGlympse;
+    iget-object v4, v4, Lcom/bbm/w;->a:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v4}, Lcom/glympse/android/api/GGlympse;->getUserManager()Lcom/glympse/android/api/GUserManager;
 
@@ -244,6 +253,11 @@
     goto :goto_1
 
     :cond_5
+    const/4 v0, 0x0
+
+    goto :goto_2
+
+    :cond_6
     move-object v2, v0
 
     goto :goto_0
@@ -360,9 +374,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/bbm/util/ct;
+    check-cast v1, Lcom/bbm/util/dc;
 
-    invoke-virtual {v1}, Lcom/bbm/util/ct;->e()Ljava/lang/Object;
+    invoke-virtual {v1}, Lcom/bbm/util/dc;->f()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -394,7 +408,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/util/ct;
+    check-cast v0, Lcom/bbm/util/dc;
 
     .line 228
     if-eqz v0, :cond_0
@@ -408,13 +422,13 @@
     invoke-direct {v1}, Lcom/bbm/util/a/f;-><init>()V
 
     .line 232
-    sget-object v2, Lcom/bbm/util/bi;->b:Lcom/bbm/util/bi;
+    sget-object v2, Lcom/bbm/util/bo;->b:Lcom/bbm/util/bo;
 
-    iput-object v2, v1, Lcom/bbm/util/a/f;->a:Lcom/bbm/util/bi;
+    iput-object v2, v1, Lcom/bbm/util/a/f;->a:Lcom/bbm/util/bo;
 
     .line 236
     :goto_0
-    invoke-virtual {v0, v1}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
 
     .line 238
     :cond_0

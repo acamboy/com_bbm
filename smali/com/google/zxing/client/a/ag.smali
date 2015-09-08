@@ -92,7 +92,7 @@
     .locals 15
 
     .prologue
-    const-wide/high16 v10, 0x7ff8000000000000L
+    const-wide/high16 v10, 0x7ff8000000000000L    # NaN
 
     const/4 v12, 0x0
 

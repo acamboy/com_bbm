@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout android:orientation="vertical" android:id="@id/select_contact_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/toolbar_cancel_done_header" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/toolbar_cancel_done_header" />
     <com.bbm.ui.SearchEditText android:id="@id/searchContacts" android:layout_width="fill_parent" android:layout_height="@dimen/contacts_search_area_height" custom:hint="@string/contacts_search" />
     <ImageView android:id="@id/greyDividingLine" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/grey_divider_line" android:scaleType="fitXY" android:contentDescription="@string/blank">
         <requestFocus />

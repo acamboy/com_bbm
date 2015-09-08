@@ -1,9 +1,6 @@
 .class final Lcom/bbm/ui/activities/hb;
-.super Ljava/lang/Object;
+.super Lcom/bbm/j/u;
 .source "ConversationActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnFocusChangeListener;
 
 
 # instance fields
@@ -15,67 +12,95 @@
     .locals 0
 
     .prologue
-    .line 2033
+    .line 548
     iput-object p1, p0, Lcom/bbm/ui/activities/hb;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onFocusChange(Landroid/view/View;Z)V
-    .locals 2
+.method protected final b()Z
+    .locals 6
 
     .prologue
-    .line 2037
-    if-eqz p2, :cond_0
+    const/4 v2, 0x1
 
-    .line 2038
-    const-string v0, "mMessageInput OnFocusChange"
+    const/4 v1, 0x0
 
-    const-class v1, Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 2039
+    .line 552
     iget-object v0, p0, Lcom/bbm/ui/activities/hb;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->x(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/widget/ListView;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->q(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/j/a;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/hb;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->x(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/widget/ListView;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/widget/ListView;->getCount()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x1
-
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setSelection(I)V
-
-    .line 2040
-    iget-object v0, p0, Lcom/bbm/ui/activities/hb;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->j(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/a;
+    invoke-virtual {v0}, Lcom/bbm/j/a;->f()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/hb;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    check-cast v0, Lcom/bbm/d/fv;
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->k(Lcom/bbm/ui/activities/ConversationActivity;)Ljava/lang/String;
+    .line 554
+    iget-object v3, v0, Lcom/bbm/d/fv;->t:Lcom/bbm/util/bo;
 
-    move-result-object v1
+    sget-object v4, Lcom/bbm/util/bo;->c:Lcom/bbm/util/bo;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->k(Ljava/lang/String;)V
+    if-ne v3, v4, :cond_0
 
-    .line 2042
+    move v0, v1
+
+    .line 568
+    :goto_0
+    return v0
+
+    .line 558
     :cond_0
-    return-void
+    new-instance v3, Landroid/content/Intent;
+
+    iget-object v4, p0, Lcom/bbm/ui/activities/hb;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    const-class v5, Lcom/bbm/ui/activities/SelectContactActivity;
+
+    invoke-direct {v3, v4, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 559
+    const-string v4, "com.bbm.onlyone"
+
+    invoke-virtual {v3, v4, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 560
+    const-string v4, "com.bbm.showStartChatFromPin"
+
+    invoke-virtual {v3, v4, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 563
+    const-string v4, "com.bbm.showphonecontacts"
+
+    invoke-virtual {v3, v4, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 564
+    const-string v1, "com.bbm.excludedcontacts"
+
+    new-instance v4, Ljava/util/ArrayList;
+
+    iget-object v0, v0, Lcom/bbm/d/fv;->q:Ljava/util/List;
+
+    invoke-direct {v4, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    invoke-virtual {v3, v1, v4}, Landroid/content/Intent;->putStringArrayListExtra(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;
+
+    .line 566
+    iget-object v0, p0, Lcom/bbm/ui/activities/hb;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v3, v1}, Lcom/bbm/ui/activities/ConversationActivity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    move v0, v2
+
+    .line 568
+    goto :goto_0
 .end method

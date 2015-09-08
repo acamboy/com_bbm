@@ -1,14 +1,14 @@
 .class public final Lcom/bbm/ui/views/c;
-.super Lcom/bbm/ui/ej;
+.super Lcom/bbm/ui/eh;
 .source "ChannelFeaturedPostsView.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/bbm/ui/ej",
+        "Lcom/bbm/ui/eh",
         "<",
-        "Lcom/bbm/d/ey;",
+        "Lcom/bbm/d/ga;",
         "Ljava/lang/String;",
         ">;"
     }
@@ -23,7 +23,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/bbm/d/ey;",
+            "Lcom/bbm/d/ga;",
             ">;"
         }
     .end annotation
@@ -35,10 +35,10 @@
     .locals 0
 
     .prologue
-    .line 95
+    .line 98
     iput-object p1, p0, Lcom/bbm/ui/views/c;->b:Lcom/bbm/ui/views/a;
 
-    invoke-direct {p0, p2}, Lcom/bbm/ui/ej;-><init>(Lcom/bbm/j/r;)V
+    invoke-direct {p0, p2}, Lcom/bbm/ui/eh;-><init>(Lcom/bbm/j/r;)V
 
     return-void
 .end method
@@ -49,7 +49,7 @@
     .locals 2
 
     .prologue
-    .line 152
+    .line 155
     iget-object v0, p0, Lcom/bbm/ui/views/c;->b:Lcom/bbm/ui/views/a;
 
     new-instance v1, Lcom/bbm/ui/views/f;
@@ -67,10 +67,10 @@
     .locals 1
 
     .prologue
-    .line 95
-    check-cast p1, Lcom/bbm/d/ey;
+    .line 98
+    check-cast p1, Lcom/bbm/d/ga;
 
-    invoke-virtual {p1}, Lcom/bbm/d/ey;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/bbm/d/ga;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -84,7 +84,7 @@
             "()",
             "Ljava/util/List",
             "<",
-            "Lcom/bbm/d/ey;",
+            "Lcom/bbm/d/ga;",
             ">;"
         }
     .end annotation
@@ -92,17 +92,17 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 102
+    .line 105
     iget-object v0, p0, Lcom/bbm/ui/views/c;->c:Ljava/util/ArrayList;
 
     if-nez v0, :cond_4
 
-    .line 104
-    invoke-super {p0}, Lcom/bbm/ui/ej;->a()Ljava/util/List;
+    .line 107
+    invoke-super {p0}, Lcom/bbm/ui/eh;->a()Ljava/util/List;
 
     move-result-object v3
 
-    .line 107
+    .line 110
     new-instance v4, Ljava/util/HashMap;
 
     invoke-interface {v3}, Ljava/util/List;->size()I
@@ -113,7 +113,7 @@
 
     move v1, v2
 
-    .line 108
+    .line 111
     :goto_0
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -121,14 +121,14 @@
 
     if-ge v1, v0, :cond_0
 
-    .line 109
+    .line 112
     invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/d/ey;
+    check-cast v0, Lcom/bbm/d/ga;
 
-    iget-object v0, v0, Lcom/bbm/d/ey;->a:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/d/ga;->a:Ljava/lang/String;
 
     invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -136,14 +136,14 @@
 
     invoke-virtual {v4, v0, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 108
+    .line 111
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
 
-    .line 113
+    .line 116
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -155,24 +155,24 @@
 
     iput-object v0, p0, Lcom/bbm/ui/views/c;->c:Ljava/util/ArrayList;
 
-    .line 114
+    .line 117
     iget-object v0, p0, Lcom/bbm/ui/views/c;->b:Lcom/bbm/ui/views/a;
 
     invoke-static {v0}, Lcom/bbm/ui/views/a;->c(Lcom/bbm/ui/views/a;)Lcom/bbm/d/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/d/a;->M()Lcom/bbm/j/w;
+    invoke-virtual {v0}, Lcom/bbm/d/a;->ac()Lcom/bbm/j/w;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+    invoke-interface {v0}, Lcom/bbm/j/w;->f()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/List;
 
-    .line 115
+    .line 118
     :goto_1
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -180,14 +180,14 @@
 
     if-ge v2, v1, :cond_2
 
-    .line 116
+    .line 119
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/bbm/d/ex;
+    check-cast v1, Lcom/bbm/d/fy;
 
-    iget-object v1, v1, Lcom/bbm/d/ex;->a:Ljava/lang/String;
+    iget-object v1, v1, Lcom/bbm/d/fy;->b:Ljava/lang/String;
 
     invoke-virtual {v4, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -195,16 +195,16 @@
 
     if-eqz v1, :cond_1
 
-    .line 117
+    .line 120
     iget-object v5, p0, Lcom/bbm/ui/views/c;->c:Ljava/util/ArrayList;
 
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/bbm/d/ex;
+    check-cast v1, Lcom/bbm/d/fy;
 
-    iget-object v1, v1, Lcom/bbm/d/ex;->a:Ljava/lang/String;
+    iget-object v1, v1, Lcom/bbm/d/fy;->b:Ljava/lang/String;
 
     invoke-virtual {v4, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -212,13 +212,13 @@
 
     invoke-virtual {v5, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 115
+    .line 118
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 121
+    .line 124
     :cond_2
     invoke-virtual {v4}, Ljava/util/HashMap;->size()I
 
@@ -226,7 +226,7 @@
 
     if-lez v0, :cond_3
 
-    .line 122
+    .line 125
     iget-object v0, p0, Lcom/bbm/ui/views/c;->c:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -235,23 +235,23 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 125
+    .line 128
     :cond_3
     invoke-interface {v3}, Ljava/util/List;->clear()V
 
-    .line 127
+    .line 130
     iget-object v0, p0, Lcom/bbm/ui/views/c;->c:Ljava/util/ArrayList;
 
     invoke-interface {v3, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     move-object v0, v3
 
-    .line 131
+    .line 134
     :goto_2
     return-object v0
 
     :cond_4
-    invoke-super {p0}, Lcom/bbm/ui/ej;->a()Ljava/util/List;
+    invoke-super {p0}, Lcom/bbm/ui/eh;->a()Ljava/util/List;
 
     move-result-object v0
 
@@ -262,8 +262,8 @@
     .locals 4
 
     .prologue
-    .line 95
-    check-cast p2, Lcom/bbm/d/ey;
+    .line 98
+    check-cast p2, Lcom/bbm/d/ga;
 
     iget-object v0, p0, Lcom/bbm/ui/views/c;->b:Lcom/bbm/ui/views/a;
 
@@ -271,9 +271,9 @@
 
     move-result-object v0
 
-    iget-object v1, p2, Lcom/bbm/d/ey;->a:Ljava/lang/String;
+    iget-object v1, p2, Lcom/bbm/d/ga;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->U(Ljava/lang/String;)Lcom/bbm/d/ee;
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->Y(Ljava/lang/String;)Lcom/bbm/d/ff;
 
     move-result-object v1
 
@@ -283,29 +283,29 @@
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lcom/bbm/d/ey;->a()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/bbm/d/ga;->a()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Lcom/bbm/d/a;->w(Ljava/lang/String;)Lcom/bbm/d/fy;
+    invoke-virtual {v0, v2}, Lcom/bbm/d/a;->A(Ljava/lang/String;)Lcom/bbm/d/ha;
 
     move-result-object v2
 
-    iget-object v0, v2, Lcom/bbm/d/fy;->t:Lcom/bbm/util/bi;
+    iget-object v0, v2, Lcom/bbm/d/ha;->t:Lcom/bbm/util/bo;
 
-    sget-object v3, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
+    sget-object v3, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
 
     if-ne v0, v3, :cond_0
 
-    iget-object v0, v1, Lcom/bbm/d/ee;->R:Lcom/bbm/util/bi;
+    iget-object v0, v1, Lcom/bbm/d/ff;->R:Lcom/bbm/util/bo;
 
-    sget-object v3, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
+    sget-object v3, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
 
     if-ne v0, v3, :cond_0
 
     iget-object v3, p0, Lcom/bbm/ui/views/c;->b:Lcom/bbm/ui/views/a;
 
-    const v0, 0x7f0b0086
+    const v0, 0x7f0b00c0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -313,7 +313,7 @@
 
     check-cast v0, Lcom/bbm/ui/views/f;
 
-    invoke-static {v3, v1, v2, v0}, Lcom/bbm/ui/views/a;->a(Lcom/bbm/ui/views/a;Lcom/bbm/d/ee;Lcom/bbm/d/fy;Lcom/bbm/ui/views/f;)V
+    invoke-static {v3, v1, v2, v0}, Lcom/bbm/ui/views/a;->a(Lcom/bbm/ui/views/a;Lcom/bbm/d/ff;Lcom/bbm/d/ha;Lcom/bbm/ui/views/f;)V
 
     :cond_0
     return-void
@@ -323,7 +323,7 @@
     .locals 1
 
     .prologue
-    .line 138
+    .line 141
     iget-object v0, p0, Lcom/bbm/ui/views/c;->b:Lcom/bbm/ui/views/a;
 
     invoke-static {v0}, Lcom/bbm/ui/views/a;->f(Lcom/bbm/ui/views/a;)Landroid/widget/GridLayout;
@@ -336,12 +336,12 @@
 
     if-lez v0, :cond_0
 
-    .line 139
-    invoke-super {p0}, Lcom/bbm/ui/ej;->getCount()I
+    .line 142
+    invoke-super {p0}, Lcom/bbm/ui/eh;->getCount()I
 
     move-result v0
 
-    .line 141
+    .line 144
     :goto_0
     return v0
 

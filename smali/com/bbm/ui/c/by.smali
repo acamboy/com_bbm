@@ -1,129 +1,134 @@
-.class final Lcom/bbm/ui/c/by;
-.super Lcom/bbm/j/a;
-.source "ChatsFragment.java"
+.class public final Lcom/bbm/ui/c/by;
+.super Ljava/lang/Object;
+.source "ChannelsNotificationsFragment.java"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/j/a",
-        "<",
-        "Ljava/lang/Integer;",
-        ">;"
-    }
-.end annotation
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/bo;
+.field final synthetic a:Lcom/bbm/ui/c/bt;
+
+.field private final b:Lcom/bbm/d/fl;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/bo;)V
+.method public constructor <init>(Lcom/bbm/ui/c/bt;Lcom/bbm/d/fl;)V
     .locals 0
 
     .prologue
-    .line 267
-    iput-object p1, p0, Lcom/bbm/ui/c/by;->a:Lcom/bbm/ui/c/bo;
+    .line 151
+    iput-object p1, p0, Lcom/bbm/ui/c/by;->a:Lcom/bbm/ui/c/bt;
 
-    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 152
+    iput-object p2, p0, Lcom/bbm/ui/c/by;->b:Lcom/bbm/d/fl;
+
+    .line 153
     return-void
 .end method
 
 
 # virtual methods
-.method protected final synthetic a()Ljava/lang/Object;
+.method public final onClick(Landroid/view/View;)V
     .locals 4
 
     .prologue
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    .line 267
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    .line 157
+    iget-object v1, p0, Lcom/bbm/ui/c/by;->b:Lcom/bbm/d/fl;
 
-    move-result-object v0
+    iget-object v1, v1, Lcom/bbm/d/fl;->b:Ljava/lang/String;
 
-    invoke-virtual {v0}, Lcom/bbm/d/a;->r()Lcom/bbm/j/w;
+    invoke-static {v1}, Lcom/bbm/util/af;->e(Ljava/lang/String;)V
 
-    move-result-object v0
+    .line 161
+    :try_start_0
+    iget-object v1, p0, Lcom/bbm/ui/c/by;->b:Lcom/bbm/d/fl;
 
-    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+    iget-object v1, v1, Lcom/bbm/d/fl;->d:Lorg/json/JSONObject;
 
-    move-result-object v0
+    const-string v2, "channelUri"
 
-    check-cast v0, Ljava/util/List;
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    move-result-object v1
 
-    move-result v2
+    .line 162
+    :try_start_1
+    iget-object v2, p0, Lcom/bbm/ui/c/by;->b:Lcom/bbm/d/fl;
 
-    invoke-static {}, Lcom/bbm/Alaska;->d()Lcom/bbm/b/w;
+    iget-object v2, v2, Lcom/bbm/d/fl;->d:Lorg/json/JSONObject;
 
-    move-result-object v0
+    const-string v3, "postId"
 
-    const-string v3, "adsEnabled"
-
-    invoke-virtual {v0, v3}, Lcom/bbm/b/w;->a(Ljava/lang/String;)Lcom/bbm/util/bm;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/bbm/util/bm;->a:Lorg/json/JSONObject;
-
-    const-string v3, "value"
-
-    invoke-virtual {v0, v3, v1}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Lcom/bbm/Alaska;->d()Lcom/bbm/b/w;
+    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    :try_end_1
+    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/b/w;->c()Lcom/bbm/j/w;
+    .line 167
+    :goto_0
+    iget-object v2, p0, Lcom/bbm/ui/c/by;->b:Lcom/bbm/d/fl;
+
+    iget-object v2, v2, Lcom/bbm/d/fl;->f:Lcom/bbm/d/fm;
+
+    sget-object v3, Lcom/bbm/d/fm;->a:Lcom/bbm/d/fm;
+
+    if-ne v2, v3, :cond_0
+
+    .line 171
+    iget-object v0, p0, Lcom/bbm/ui/c/by;->a:Lcom/bbm/ui/c/bt;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/bt;->c(Lcom/bbm/ui/c/bt;)Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+    invoke-static {}, Lcom/google/b/a/l;->e()Lcom/google/b/a/l;
 
-    move-result-object v0
+    move-result-object v2
 
-    check-cast v0, Ljava/util/List;
+    invoke-static {v0, v1, v2}, Lcom/bbm/util/af;->a(Landroid/content/Context;Ljava/lang/String;Lcom/google/b/a/l;)V
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    .line 176
+    :goto_1
+    return-void
 
-    move-result v0
+    .line 163
+    :catch_0
+    move-exception v1
 
-    move v1, v0
+    move-object v2, v1
 
+    move-object v1, v0
+
+    :goto_2
+    invoke-static {v2}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    .line 174
     :cond_0
-    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/g/al;
+    iget-object v2, p0, Lcom/bbm/ui/c/by;->a:Lcom/bbm/ui/c/bt;
 
-    move-result-object v0
+    invoke-static {v2}, Lcom/bbm/ui/c/bt;->c(Lcom/bbm/ui/c/bt;)Landroid/content/Context;
 
-    invoke-virtual {v0}, Lcom/bbm/g/al;->c()Lcom/bbm/j/w;
+    move-result-object v2
 
-    move-result-object v0
+    const/4 v3, 0x0
 
-    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+    invoke-static {v2, v0, v1, v3}, Lcom/bbm/util/af;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    move-result-object v0
+    goto :goto_1
 
-    check-cast v0, Ljava/util/List;
+    .line 163
+    :catch_1
+    move-exception v2
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    add-int/2addr v1, v2
-
-    add-int/2addr v0, v1
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    return-object v0
+    goto :goto_2
 .end method

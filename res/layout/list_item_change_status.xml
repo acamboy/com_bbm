@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/change_status_root_list" android:padding="@dimen/changestatus_busy_padding" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+<LinearLayout android:orientation="horizontal" android:id="@id/change_status_root_list" android:padding="@dimen/changestatus_busy_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:orientation="horizontal" android:id="@id/list_change_status_busy" android:background="@drawable/list_change_busy_background" android:padding="@dimen/changestatus_busy_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
-    <EditText android:textSize="@dimen/changestatus_status_text_size" android:id="@id/list_change_status_edit" android:nextFocusLeft="@id/change_status_root_list" android:nextFocusRight="@id/change_status_root_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/changestatus_status_margin_left" android:hint="@string/enter_text" android:singleLine="true" android:selectAllOnFocus="false" android:layout_toRightOf="@id/list_change_status_busy" android:inputType="textNoSuggestions" android:textIsSelectable="false" style="@style/BB10EditBoxActivated" />
-</RelativeLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/list_change_status_busy" android:padding="@dimen/changestatus_busy_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:textSize="@dimen/changestatus_status_text_size" android:id="@id/list_change_status_edit" android:nextFocusLeft="@id/change_status_root_list" android:nextFocusRight="@id/change_status_root_list" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/changestatus_status_margin_left" android:singleLine="true" android:selectAllOnFocus="false" android:layout_weight="1.0" android:textIsSelectable="false" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/status_buttons_layout" android:focusableInTouchMode="false" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/status_edit" android:background="@drawable/ic_menu_editprofile" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/abc_action_bar_icon_vertical_padding_material" />
+        <ImageView android:id="@id/status_delete" android:background="@drawable/ic_delete_cross" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

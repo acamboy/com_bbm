@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field final synthetic cv:Lcom/glympse/android/hal/at;
+.field final synthetic cy:Lcom/glympse/android/hal/at;
 
-.field protected cw:Z
+.field protected cz:Z
 
 
 # direct methods
@@ -18,14 +18,14 @@
 
     .prologue
     .line 572
-    iput-object p1, p0, Lcom/glympse/android/hal/av;->cv:Lcom/glympse/android/hal/at;
+    iput-object p1, p0, Lcom/glympse/android/hal/av;->cy:Lcom/glympse/android/hal/at;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 574
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/glympse/android/hal/av;->cw:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/av;->cz:Z
 
     return-void
 .end method
@@ -49,7 +49,7 @@
     const/4 v2, 0x0
 
     .line 600
-    iget-boolean v0, p0, Lcom/glympse/android/hal/av;->cw:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/av;->cz:Z
 
     if-eqz v0, :cond_0
 
@@ -68,10 +68,10 @@
 
     .line 612
     :goto_0
-    iput-boolean v2, p0, Lcom/glympse/android/hal/av;->cw:Z
+    iput-boolean v2, p0, Lcom/glympse/android/hal/av;->cz:Z
 
     .line 613
-    iget-object v0, p0, Lcom/glympse/android/hal/av;->cv:Lcom/glympse/android/hal/at;
+    iget-object v0, p0, Lcom/glympse/android/hal/av;->cy:Lcom/glympse/android/hal/at;
 
     const/4 v1, 0x1
 
@@ -79,12 +79,12 @@
 
     .line 617
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/hal/av;->cv:Lcom/glympse/android/hal/at;
+    iget-object v0, p0, Lcom/glympse/android/hal/av;->cy:Lcom/glympse/android/hal/at;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/at;->I()V
 
     .line 618
-    iget-object v0, p0, Lcom/glympse/android/hal/av;->cv:Lcom/glympse/android/hal/at;
+    iget-object v0, p0, Lcom/glympse/android/hal/av;->cy:Lcom/glympse/android/hal/at;
 
     invoke-static {v0, v2}, Lcom/glympse/android/hal/at;->a(Lcom/glympse/android/hal/at;Z)Z
 
@@ -108,14 +108,14 @@
 
     .line 580
     :try_start_0
-    iget-boolean v0, p0, Lcom/glympse/android/hal/av;->cw:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/av;->cz:Z
 
     if-nez v0, :cond_0
 
     .line 583
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/glympse/android/hal/av;->cw:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/av;->cz:Z
 
     .line 586
     const-string v1, "gps"
@@ -135,7 +135,7 @@
     .line 595
     :cond_0
     :goto_0
-    iget-boolean v0, p0, Lcom/glympse/android/hal/av;->cw:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/av;->cz:Z
 
     return v0
 
@@ -144,7 +144,7 @@
     move-exception v0
 
     .line 591
-    iput-boolean v6, p0, Lcom/glympse/android/hal/av;->cw:Z
+    iput-boolean v6, p0, Lcom/glympse/android/hal/av;->cz:Z
 
     .line 592
     invoke-static {v0, v6}, Lcom/glympse/android/lib/Debug;->ex(Ljava/lang/Throwable;Z)V
@@ -161,7 +161,7 @@
 
     .line 627
     :try_start_0
-    iget-object v0, p0, Lcom/glympse/android/hal/av;->cv:Lcom/glympse/android/hal/at;
+    iget-object v0, p0, Lcom/glympse/android/hal/av;->cy:Lcom/glympse/android/hal/at;
 
     const-string v1, "GPS"
 
@@ -172,26 +172,26 @@
     if-eqz v0, :cond_0
 
     .line 630
-    iget-object v0, p0, Lcom/glympse/android/hal/av;->cv:Lcom/glympse/android/hal/at;
+    iget-object v0, p0, Lcom/glympse/android/hal/av;->cy:Lcom/glympse/android/hal/at;
 
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1}, Lcom/glympse/android/hal/at;->e(I)V
 
     .line 633
-    iget-object v0, p0, Lcom/glympse/android/hal/av;->cv:Lcom/glympse/android/hal/at;
+    iget-object v0, p0, Lcom/glympse/android/hal/av;->cy:Lcom/glympse/android/hal/at;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/at;->I()V
 
     .line 636
-    iget-object v0, p0, Lcom/glympse/android/hal/av;->cv:Lcom/glympse/android/hal/at;
+    iget-object v0, p0, Lcom/glympse/android/hal/av;->cy:Lcom/glympse/android/hal/at;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/glympse/android/hal/at;->a(Lcom/glympse/android/hal/at;Z)Z
 
     .line 639
-    iget-object v0, p0, Lcom/glympse/android/hal/av;->cv:Lcom/glympse/android/hal/at;
+    iget-object v0, p0, Lcom/glympse/android/hal/av;->cy:Lcom/glympse/android/hal/at;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/at;->C()V
     :try_end_0
@@ -237,18 +237,18 @@
     invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
     .line 653
-    iget-boolean v0, p0, Lcom/glympse/android/hal/av;->cw:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/av;->cz:Z
 
     if-eqz v0, :cond_0
 
     .line 655
-    iget-object v0, p0, Lcom/glympse/android/hal/av;->cv:Lcom/glympse/android/hal/at;
+    iget-object v0, p0, Lcom/glympse/android/hal/av;->cy:Lcom/glympse/android/hal/at;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/at;->H()V
 
     .line 658
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/hal/av;->cv:Lcom/glympse/android/hal/at;
+    iget-object v0, p0, Lcom/glympse/android/hal/av;->cy:Lcom/glympse/android/hal/at;
 
     const/4 v1, 0x2
 
@@ -282,7 +282,7 @@
     invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
     .line 664
-    iget-object v0, p0, Lcom/glympse/android/hal/av;->cv:Lcom/glympse/android/hal/at;
+    iget-object v0, p0, Lcom/glympse/android/hal/av;->cy:Lcom/glympse/android/hal/at;
 
     const/4 v1, 0x1
 
@@ -325,7 +325,7 @@
     invoke-static {v2, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
     .line 673
-    iget-object v0, p0, Lcom/glympse/android/hal/av;->cv:Lcom/glympse/android/hal/at;
+    iget-object v0, p0, Lcom/glympse/android/hal/av;->cy:Lcom/glympse/android/hal/at;
 
     invoke-virtual {v0, v5}, Lcom/glympse/android/hal/at;->e(I)V
 
@@ -339,12 +339,12 @@
     invoke-static {v2, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
     .line 698
-    iget-boolean v0, p0, Lcom/glympse/android/hal/av;->cw:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/av;->cz:Z
 
     if-eqz v0, :cond_0
 
     .line 706
-    iget-object v0, p0, Lcom/glympse/android/hal/av;->cv:Lcom/glympse/android/hal/at;
+    iget-object v0, p0, Lcom/glympse/android/hal/av;->cy:Lcom/glympse/android/hal/at;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/at;->H()V
 
@@ -374,7 +374,7 @@
     invoke-static {v2, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
     .line 680
-    iget-object v0, p0, Lcom/glympse/android/hal/av;->cv:Lcom/glympse/android/hal/at;
+    iget-object v0, p0, Lcom/glympse/android/hal/av;->cy:Lcom/glympse/android/hal/at;
 
     invoke-virtual {v0, v5}, Lcom/glympse/android/hal/at;->e(I)V
 
@@ -402,7 +402,7 @@
     invoke-static {v2, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
     .line 687
-    iget-object v0, p0, Lcom/glympse/android/hal/av;->cv:Lcom/glympse/android/hal/at;
+    iget-object v0, p0, Lcom/glympse/android/hal/av;->cy:Lcom/glympse/android/hal/at;
 
     invoke-virtual {v0, v3}, Lcom/glympse/android/hal/at;->e(I)V
 

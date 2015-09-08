@@ -1,12 +1,12 @@
 .class final Lcom/bbm/k/b;
-.super Lcom/bbm/d/b/l;
+.super Lcom/bbm/d/b/u;
 .source "GroupsCalendarProvider.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/bbm/d/b/l",
+        "Lcom/bbm/d/b/u",
         "<",
         "Lcom/bbm/g/a;",
         "Lcom/bbm/j/r",
@@ -31,7 +31,7 @@
     .line 68
     iput-object p1, p0, Lcom/bbm/k/b;->b:Lcom/bbm/k/a;
 
-    invoke-direct {p0, p2}, Lcom/bbm/d/b/l;-><init>(Lcom/bbm/j/r;)V
+    invoke-direct {p0, p2}, Lcom/bbm/d/b/u;-><init>(Lcom/bbm/j/r;)V
 
     return-void
 .end method
@@ -55,7 +55,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/d/b/l;
+    check-cast v0, Lcom/bbm/d/b/u;
 
     const-string v3, "getAppointmentsForGroup: got appointments for groupUri: %s"
 
@@ -67,7 +67,7 @@
 
     aput-object v2, v4, v5
 
-    invoke-static {v3, v4}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v3, v4}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     if-eqz v0, :cond_0
 
@@ -77,9 +77,9 @@
     :cond_0
     new-instance v0, Lcom/bbm/k/c;
 
-    iget-object v3, v1, Lcom/bbm/k/a;->a:Lcom/bbm/g/al;
+    iget-object v3, v1, Lcom/bbm/k/a;->a:Lcom/bbm/g/an;
 
-    invoke-virtual {v3, v2}, Lcom/bbm/g/al;->r(Ljava/lang/String;)Lcom/bbm/j/w;
+    invoke-virtual {v3, v2}, Lcom/bbm/g/an;->u(Ljava/lang/String;)Lcom/bbm/j/w;
 
     move-result-object v3
 

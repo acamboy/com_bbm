@@ -1,57 +1,55 @@
 .class final Lcom/bbm/ui/activities/aez;
-.super Lcom/bbm/ui/cn;
-.source "SelectCategoryActivity.java"
+.super Ljava/lang/Object;
+.source "SponsoredAdActivity.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SelectCategoryActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/aey;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SelectCategoryActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/aey;)V
     .locals 0
 
     .prologue
-    .line 77
-    iput-object p1, p0, Lcom/bbm/ui/activities/aez;->a:Lcom/bbm/ui/activities/SelectCategoryActivity;
+    .line 214
+    iput-object p1, p0, Lcom/bbm/ui/activities/aez;->a:Lcom/bbm/ui/activities/aey;
 
-    invoke-direct {p0}, Lcom/bbm/ui/cn;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)V
-    .locals 3
+.method public final run()V
+    .locals 4
 
     .prologue
-    .line 81
-    packed-switch p1, :pswitch_data_0
+    .line 217
+    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/b/x;
 
-    .line 97
-    :goto_0
+    move-result-object v0
+
+    sget-object v1, Lcom/bbm/b/ar;->b:Lcom/bbm/b/ar;
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/aez;->a:Lcom/bbm/ui/activities/aey;
+
+    iget-object v2, v2, Lcom/bbm/ui/activities/aey;->a:Lcom/bbm/ui/activities/SponsoredAdActivity;
+
+    invoke-static {v2}, Lcom/bbm/ui/activities/SponsoredAdActivity;->a(Lcom/bbm/ui/activities/SponsoredAdActivity;)Ljava/lang/String;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/bbm/b/aq;
+
+    invoke-direct {v3, v1, v2}, Lcom/bbm/b/aq;-><init>(Lcom/bbm/b/ar;Ljava/lang/String;)V
+
+    invoke-virtual {v0, v3}, Lcom/bbm/b/x;->a(Lcom/bbm/b/az;)V
+
+    .line 218
     return-void
-
-    .line 83
-    :pswitch_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/aez;->a:Lcom/bbm/ui/activities/SelectCategoryActivity;
-
-    new-instance v1, Lcom/bbm/ui/activities/afa;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/afa;-><init>(Lcom/bbm/ui/activities/aez;)V
-
-    new-instance v2, Lcom/bbm/ui/activities/afb;
-
-    invoke-direct {v2, p0}, Lcom/bbm/ui/activities/afb;-><init>(Lcom/bbm/ui/activities/aez;)V
-
-    invoke-static {v0, v1, v2}, Lcom/bbm/ui/activities/SelectCategoryActivity;->a(Landroid/content/Context;Landroid/content/DialogInterface$OnDismissListener;Lcom/bbm/ui/activities/afh;)V
-
-    goto :goto_0
-
-    .line 81
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

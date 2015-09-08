@@ -11,7 +11,7 @@
 
 .field public static b:I
 
-.field private static j:I
+.field private static m:I
 
 
 # instance fields
@@ -23,17 +23,19 @@
             "Ljava/util/Map",
             "<",
             "Ljava/lang/String;",
-            "Lcom/bbm/util/ct",
+            "Lcom/bbm/util/dc",
             "<",
-            "Lcom/bbm/d/ff;",
+            "Lcom/bbm/d/gh;",
             ">;>;"
         }
     .end annotation
 .end field
 
-.field public e:Landroid/graphics/drawable/BitmapDrawable;
+.field public e:Landroid/graphics/drawable/Drawable;
 
-.field public final f:Ljava/util/LinkedList;
+.field public f:Landroid/graphics/drawable/BitmapDrawable;
+
+.field public final g:Ljava/util/LinkedList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/LinkedList",
@@ -44,9 +46,9 @@
     .end annotation
 .end field
 
-.field public g:I
+.field public h:I
 
-.field public final h:Lcom/google/b/b/d;
+.field public final i:Lcom/google/b/b/d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/b/b/d",
@@ -57,22 +59,28 @@
     .end annotation
 .end field
 
-.field public final i:Ljava/util/LinkedList;
+.field public final j:Ljava/util/LinkedList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/LinkedList",
             "<",
-            "Lcom/bbm/util/ct",
+            "Lcom/bbm/util/dc",
             "<",
-            "Lcom/bbm/d/ff;",
+            "Lcom/bbm/d/gh;",
             ">;>;"
         }
     .end annotation
 .end field
 
-.field private final k:Lcom/bbm/f/a;
+.field k:Lcom/bbm/j/k;
 
-.field private final l:Ljava/util/Map;
+.field l:Z
+
+.field private final n:Lcom/bbm/f/a;
+
+.field private final o:Lcom/bbm/d/a;
+
+.field private final p:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map",
@@ -84,23 +92,19 @@
     .end annotation
 .end field
 
-.field private m:Landroid/graphics/drawable/Drawable;
+.field private q:Landroid/graphics/drawable/Drawable;
 
-.field private n:Landroid/graphics/drawable/Drawable;
-
-.field private o:Landroid/graphics/drawable/Drawable;
-
-.field private p:Z
-
-.field private final q:Ljava/lang/Runnable;
-
-.field private final r:Landroid/os/Handler;
+.field private r:Landroid/graphics/drawable/Drawable;
 
 .field private s:Z
 
 .field private final t:Ljava/lang/Runnable;
 
-.field private u:Z
+.field private final u:Landroid/os/Handler;
+
+.field private v:Z
+
+.field private final w:Ljava/lang/Runnable;
 
 
 # direct methods
@@ -110,19 +114,19 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 33
+    .line 43
     sput v0, Lcom/bbm/d/a/d/c;->a:I
 
-    .line 39
-    sput v0, Lcom/bbm/d/a/d/c;->j:I
+    .line 49
+    sput v0, Lcom/bbm/d/a/d/c;->m:I
 
-    .line 48
+    .line 58
     sput v0, Lcom/bbm/d/a/d/c;->b:I
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/bbm/f/a;Landroid/content/Context;)V
+.method public constructor <init>(Lcom/bbm/f/a;Landroid/content/Context;Lcom/bbm/d/a;)V
     .locals 12
 
     .prologue
@@ -132,51 +136,51 @@
 
     const/4 v2, 0x0
 
-    .line 91
+    .line 117
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
+    .line 63
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/d/a/d/c;->l:Ljava/util/Map;
+    iput-object v0, p0, Lcom/bbm/d/a/d/c;->p:Ljava/util/Map;
 
-    .line 53
+    .line 64
     new-instance v0, Lcom/google/b/c/q;
 
     invoke-direct {v0}, Lcom/google/b/c/q;-><init>()V
 
-    invoke-virtual {v0}, Lcom/google/b/c/q;->f()Lcom/google/b/c/q;
+    invoke-virtual {v0}, Lcom/google/b/c/q;->e()Lcom/google/b/c/q;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/b/c/q;->c()Lcom/google/b/c/q;
+    invoke-virtual {v0, v1}, Lcom/google/b/c/q;->a(I)Lcom/google/b/c/q;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/b/c/q;->g()Ljava/util/concurrent/ConcurrentMap;
+    invoke-virtual {v0}, Lcom/google/b/c/q;->f()Ljava/util/concurrent/ConcurrentMap;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bbm/d/a/d/c;->d:Ljava/util/Map;
 
-    .line 60
+    .line 71
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/d/a/d/c;->f:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/bbm/d/a/d/c;->g:Ljava/util/LinkedList;
 
-    .line 62
-    iput v2, p0, Lcom/bbm/d/a/d/c;->g:I
+    .line 73
+    iput v2, p0, Lcom/bbm/d/a/d/c;->h:I
 
-    .line 64
+    .line 75
     invoke-static {}, Lcom/google/b/b/e;->a()Lcom/google/b/b/e;
 
     move-result-object v3
 
-    sget v0, Lcom/bbm/d/a/d/c;->j:I
+    sget v0, Lcom/bbm/d/a/d/c;->m:I
 
     int-to-long v4, v0
 
@@ -201,7 +205,7 @@
 
     aput-object v8, v7, v2
 
-    invoke-static {v0, v6, v7}, Lcom/google/b/a/o;->a(ZLjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v6, v7}, Lcom/google/b/a/m;->a(ZLjava/lang/String;[Ljava/lang/Object;)V
 
     iget-wide v6, v3, Lcom/google/b/b/e;->j:J
 
@@ -224,9 +228,9 @@
 
     aput-object v8, v7, v2
 
-    invoke-static {v0, v6, v7}, Lcom/google/b/a/o;->a(ZLjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v6, v7}, Lcom/google/b/a/m;->a(ZLjava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v0, v3, Lcom/google/b/b/e;->k:Lcom/google/b/b/cf;
+    iget-object v0, v3, Lcom/google/b/b/e;->k:Lcom/google/b/b/cg;
 
     if-nez v0, :cond_3
 
@@ -235,7 +239,7 @@
     :goto_2
     const-string v6, "maximum size can not be combined with weigher"
 
-    invoke-static {v0, v6}, Lcom/google/b/a/o;->b(ZLjava/lang/Object;)V
+    invoke-static {v0, v6}, Lcom/google/b/a/m;->b(ZLjava/lang/Object;)V
 
     const-wide/16 v6, 0x0
 
@@ -248,11 +252,11 @@
     :goto_3
     const-string v6, "maximum size must not be negative"
 
-    invoke-static {v0, v6}, Lcom/google/b/a/o;->a(ZLjava/lang/Object;)V
+    invoke-static {v0, v6}, Lcom/google/b/a/m;->a(ZLjava/lang/Object;)V
 
     iput-wide v4, v3, Lcom/google/b/b/e;->i:J
 
-    iget-object v0, v3, Lcom/google/b/b/e;->k:Lcom/google/b/b/cf;
+    iget-object v0, v3, Lcom/google/b/b/e;->k:Lcom/google/b/b/cg;
 
     if-nez v0, :cond_6
 
@@ -267,7 +271,7 @@
     :goto_4
     const-string v4, "maximumWeight requires weigher"
 
-    invoke-static {v0, v4}, Lcom/google/b/a/o;->b(ZLjava/lang/Object;)V
+    invoke-static {v0, v4}, Lcom/google/b/a/m;->b(ZLjava/lang/Object;)V
 
     :cond_0
     :goto_5
@@ -277,74 +281,94 @@
 
     if-nez v0, :cond_9
 
+    move v0, v1
+
     :goto_6
-    const-string v0, "refreshAfterWrite requires a LoadingCache"
+    const-string v4, "refreshAfterWrite requires a LoadingCache"
 
-    invoke-static {v1, v0}, Lcom/google/b/a/o;->b(ZLjava/lang/Object;)V
+    invoke-static {v0, v4}, Lcom/google/b/a/m;->b(ZLjava/lang/Object;)V
 
-    new-instance v0, Lcom/google/b/b/ak;
+    new-instance v0, Lcom/google/b/b/al;
 
-    invoke-direct {v0, v3}, Lcom/google/b/b/ak;-><init>(Lcom/google/b/b/e;)V
+    invoke-direct {v0, v3}, Lcom/google/b/b/al;-><init>(Lcom/google/b/b/e;)V
 
-    iput-object v0, p0, Lcom/bbm/d/a/d/c;->h:Lcom/google/b/b/d;
+    iput-object v0, p0, Lcom/bbm/d/a/d/c;->i:Lcom/google/b/b/d;
 
-    .line 68
+    .line 79
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/d/a/d/c;->i:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/bbm/d/a/d/c;->j:Ljava/util/LinkedList;
 
-    .line 70
+    .line 81
     new-instance v0, Lcom/bbm/d/a/d/d;
 
     invoke-direct {v0, p0}, Lcom/bbm/d/a/d/d;-><init>(Lcom/bbm/d/a/d/c;)V
 
-    iput-object v0, p0, Lcom/bbm/d/a/d/c;->q:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/bbm/d/a/d/c;->t:Ljava/lang/Runnable;
 
-    .line 77
+    .line 88
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    invoke-direct {v0, v3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    iput-object v0, p0, Lcom/bbm/d/a/d/c;->r:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/bbm/d/a/d/c;->u:Landroid/os/Handler;
 
-    .line 79
-    iput-boolean v2, p0, Lcom/bbm/d/a/d/c;->s:Z
+    .line 90
+    iput-boolean v2, p0, Lcom/bbm/d/a/d/c;->v:Z
 
-    .line 81
+    .line 92
     new-instance v0, Lcom/bbm/d/a/d/e;
 
     invoke-direct {v0, p0}, Lcom/bbm/d/a/d/e;-><init>(Lcom/bbm/d/a/d/c;)V
 
-    iput-object v0, p0, Lcom/bbm/d/a/d/c;->t:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/bbm/d/a/d/c;->w:Ljava/lang/Runnable;
 
-    .line 92
-    iput-object p1, p0, Lcom/bbm/d/a/d/c;->k:Lcom/bbm/f/a;
+    .line 100
+    new-instance v0, Lcom/bbm/d/a/d/f;
 
-    .line 93
+    invoke-direct {v0, p0}, Lcom/bbm/d/a/d/f;-><init>(Lcom/bbm/d/a/d/c;)V
+
+    iput-object v0, p0, Lcom/bbm/d/a/d/c;->k:Lcom/bbm/j/k;
+
+    .line 115
+    iput-boolean v1, p0, Lcom/bbm/d/a/d/c;->l:Z
+
+    .line 118
+    iput-object p1, p0, Lcom/bbm/d/a/d/c;->n:Lcom/bbm/f/a;
+
+    .line 119
     iput-object p2, p0, Lcom/bbm/d/a/d/c;->c:Landroid/content/Context;
 
-    .line 94
+    .line 120
+    iput-object p3, p0, Lcom/bbm/d/a/d/c;->o:Lcom/bbm/d/a;
+
+    .line 121
+    iget-object v0, p0, Lcom/bbm/d/a/d/c;->k:Lcom/bbm/j/k;
+
+    invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
+
+    .line 122
     invoke-interface {p1, p0}, Lcom/bbm/f/a;->a(Lcom/bbm/f/ac;)V
 
-    .line 95
+    .line 123
     return-void
 
     :cond_1
     move v0, v2
 
-    .line 64
+    .line 75
     goto/16 :goto_0
 
     :cond_2
     move v0, v2
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :cond_3
     move v0, v2
@@ -377,7 +401,7 @@
     :goto_7
     const-string v4, "weigher requires maximumWeight"
 
-    invoke-static {v0, v4}, Lcom/google/b/a/o;->b(ZLjava/lang/Object;)V
+    invoke-static {v0, v4}, Lcom/google/b/a/m;->b(ZLjava/lang/Object;)V
 
     goto :goto_5
 
@@ -404,7 +428,7 @@
     goto :goto_5
 
     :cond_9
-    move v1, v2
+    move v0, v2
 
     goto :goto_6
 .end method
@@ -413,10 +437,10 @@
     .locals 1
 
     .prologue
-    .line 27
+    .line 37
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/bbm/d/a/d/c;->p:Z
+    iput-boolean v0, p0, Lcom/bbm/d/a/d/c;->s:Z
 
     return v0
 .end method
@@ -425,8 +449,8 @@
     .locals 0
 
     .prologue
-    .line 27
-    invoke-virtual {p0}, Lcom/bbm/d/a/d/c;->f()V
+    .line 37
+    invoke-virtual {p0}, Lcom/bbm/d/a/d/c;->e()V
 
     return-void
 .end method
@@ -435,10 +459,10 @@
     .locals 1
 
     .prologue
-    .line 27
+    .line 37
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/bbm/d/a/d/c;->s:Z
+    iput-boolean v0, p0, Lcom/bbm/d/a/d/c;->v:Z
 
     return v0
 .end method
@@ -447,34 +471,290 @@
     .locals 1
 
     .prologue
-    .line 27
+    .line 37
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/bbm/d/a/d/c;->g:I
+    iput v0, p0, Lcom/bbm/d/a/d/c;->h:I
 
     return v0
+.end method
+
+.method static synthetic e(Lcom/bbm/d/a/d/c;)Lcom/bbm/d/a;
+    .locals 1
+
+    .prologue
+    .line 37
+    iget-object v0, p0, Lcom/bbm/d/a/d/c;->o:Lcom/bbm/d/a;
+
+    return-object v0
 .end method
 
 .method private g()V
     .locals 1
 
     .prologue
-    .line 341
+    .line 397
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/bbm/d/a/d/c;->p:Z
+    iput-boolean v0, p0, Lcom/bbm/d/a/d/c;->s:Z
 
-    .line 342
-    invoke-virtual {p0}, Lcom/bbm/d/a/d/c;->f()V
+    .line 398
+    invoke-virtual {p0}, Lcom/bbm/d/a/d/c;->e()V
 
-    .line 343
+    .line 399
     return-void
 .end method
 
 
 # virtual methods
+.method public final a(C)Lcom/bbm/j/r;
+    .locals 13
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(C)",
+            "Lcom/bbm/j/r",
+            "<",
+            "Lcom/bbm/d/gh;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v8, 0x1
+
+    const/4 v12, 0x0
+
+    .line 211
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
+
+    move-result-object v1
+
+    .line 213
+    invoke-static {p1}, Ljava/lang/String;->valueOf(C)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 214
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v3, 0x7f090193
+
+    invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v3
+
+    .line 219
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    .line 221
+    iget-object v0, p0, Lcom/bbm/d/a/d/c;->d:Ljava/util/Map;
+
+    invoke-interface {v0, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/util/dc;
+
+    .line 223
+    if-nez v0, :cond_0
+
+    .line 224
+    new-instance v0, Lcom/bbm/util/dc;
+
+    new-instance v5, Lcom/bbm/d/gh;
+
+    invoke-virtual {p0}, Lcom/bbm/d/a/d/c;->c()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v6
+
+    invoke-direct {v5, v6}, Lcom/bbm/d/gh;-><init>(Landroid/graphics/drawable/Drawable;)V
+
+    invoke-direct {v0, v5}, Lcom/bbm/util/dc;-><init>(Ljava/lang/Object;)V
+
+    .line 226
+    iget-object v5, p0, Lcom/bbm/d/a/d/c;->d:Ljava/util/Map;
+
+    invoke-interface {v5, v4, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 228
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    const v5, 0x7f0a006d
+
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v4
+
+    .line 231
+    new-instance v5, Landroid/graphics/Paint;
+
+    invoke-direct {v5}, Landroid/graphics/Paint;-><init>()V
+
+    .line 232
+    invoke-virtual {v5, v3}, Landroid/graphics/Paint;->setColor(I)V
+
+    .line 233
+    invoke-virtual {v5, v8}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+
+    .line 236
+    sget-object v3, Landroid/graphics/Bitmap$Config;->ARGB_4444:Landroid/graphics/Bitmap$Config;
+
+    .line 237
+    invoke-static {v4, v4, v3}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+
+    move-result-object v3
+
+    .line 240
+    new-instance v6, Landroid/graphics/Canvas;
+
+    invoke-direct {v6, v3}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+
+    .line 243
+    invoke-virtual {v6, v5}, Landroid/graphics/Canvas;->drawPaint(Landroid/graphics/Paint;)V
+
+    .line 246
+    new-instance v5, Landroid/text/TextPaint;
+
+    invoke-direct {v5}, Landroid/text/TextPaint;-><init>()V
+
+    .line 247
+    const/4 v7, -0x1
+
+    invoke-virtual {v5, v7}, Landroid/text/TextPaint;->setColor(I)V
+
+    .line 248
+    sget-object v7, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
+
+    invoke-virtual {v5, v7}, Landroid/text/TextPaint;->setTextAlign(Landroid/graphics/Paint$Align;)V
+
+    .line 249
+    invoke-virtual {v5, v8}, Landroid/text/TextPaint;->setAntiAlias(Z)V
+
+    .line 250
+    const-wide v8, 0x3fe3333333333333L    # 0.6
+
+    int-to-double v10, v4
+
+    mul-double/2addr v8, v10
+
+    double-to-int v7, v8
+
+    int-to-float v7, v7
+
+    invoke-virtual {v5, v7}, Landroid/text/TextPaint;->setTextSize(F)V
+
+    .line 253
+    invoke-virtual {v5}, Landroid/text/TextPaint;->descent()F
+
+    move-result v7
+
+    invoke-virtual {v5}, Landroid/text/TextPaint;->ascent()F
+
+    move-result v8
+
+    sub-float/2addr v7, v8
+
+    const/high16 v8, 0x40000000    # 2.0f
+
+    div-float/2addr v7, v8
+
+    invoke-virtual {v5}, Landroid/text/TextPaint;->descent()F
+
+    move-result v8
+
+    sub-float/2addr v7, v8
+
+    .line 254
+    new-instance v8, Landroid/graphics/RectF;
+
+    int-to-float v9, v4
+
+    int-to-float v4, v4
+
+    invoke-direct {v8, v12, v12, v9, v4}, Landroid/graphics/RectF;-><init>(FFFF)V
+
+    .line 255
+    invoke-virtual {v8}, Landroid/graphics/RectF;->centerX()F
+
+    move-result v4
+
+    invoke-virtual {v8}, Landroid/graphics/RectF;->centerY()F
+
+    move-result v8
+
+    add-float/2addr v7, v8
+
+    invoke-virtual {v6, v2, v4, v7, v5}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+
+    .line 257
+    new-instance v2, Lcom/bbm/d/gh;
+
+    new-instance v4, Landroid/graphics/drawable/BitmapDrawable;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-direct {v4, v1, v3}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
+
+    invoke-direct {v2, v4}, Lcom/bbm/d/gh;-><init>(Landroid/graphics/drawable/Drawable;)V
+
+    invoke-virtual {v0, v2}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
+
+    .line 259
+    sget v1, Lcom/bbm/d/a/d/c;->a:I
+
+    if-lez v1, :cond_0
+
+    .line 260
+    iget-object v1, p0, Lcom/bbm/d/a/d/c;->j:Ljava/util/LinkedList;
+
+    invoke-virtual {v1, v0}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
+
+    .line 261
+    :goto_0
+    iget-object v1, p0, Lcom/bbm/d/a/d/c;->j:Ljava/util/LinkedList;
+
+    invoke-virtual {v1}, Ljava/util/LinkedList;->size()I
+
+    move-result v1
+
+    sget v2, Lcom/bbm/d/a/d/c;->a:I
+
+    if-le v1, v2, :cond_0
+
+    .line 262
+    iget-object v1, p0, Lcom/bbm/d/a/d/c;->j:Ljava/util/LinkedList;
+
+    invoke-virtual {v1}, Ljava/util/LinkedList;->removeFirst()Ljava/lang/Object;
+
+    goto :goto_0
+
+    .line 267
+    :cond_0
+    return-object v0
+.end method
+
 .method public final a(Ljava/lang/String;)Lcom/bbm/j/r;
-    .locals 6
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -482,56 +762,83 @@
             ")",
             "Lcom/bbm/j/r",
             "<",
-            "Lcom/bbm/d/ff;",
+            "Lcom/bbm/d/gh;",
             ">;"
         }
     .end annotation
 
     .prologue
-    const/4 v2, 0x1
+    .line 207
+    const/4 v0, 0x1
 
-    const/4 v3, 0x0
+    invoke-virtual {p0}, Lcom/bbm/d/a/d/c;->c()Landroid/graphics/drawable/Drawable;
 
-    .line 175
-    .line 176
+    move-result-object v1
+
+    invoke-virtual {p0, p1, v0, v1}, Lcom/bbm/d/a/d/c;->a(Ljava/lang/String;ZLandroid/graphics/drawable/Drawable;)Lcom/bbm/j/r;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final a(Ljava/lang/String;ZLandroid/graphics/drawable/Drawable;)Lcom/bbm/j/r;
+    .locals 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Z",
+            "Landroid/graphics/drawable/Drawable;",
+            ")",
+            "Lcom/bbm/j/r",
+            "<",
+            "Lcom/bbm/d/gh;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v6, 0x1
+
+    const/4 v7, 0x0
+
+    .line 158
+    .line 159
     iget-object v0, p0, Lcom/bbm/d/a/d/c;->d:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/util/ct;
+    check-cast v0, Lcom/bbm/util/dc;
 
-    .line 178
-    if-nez v0, :cond_2
+    .line 161
+    if-nez v0, :cond_1
 
-    .line 180
-    new-instance v1, Lcom/bbm/util/ct;
+    .line 162
+    new-instance v3, Lcom/bbm/util/dc;
 
-    new-instance v0, Lcom/bbm/d/ff;
+    new-instance v0, Lcom/bbm/d/gh;
 
-    invoke-virtual {p0}, Lcom/bbm/d/a/d/c;->c()Landroid/graphics/drawable/Drawable;
+    invoke-direct {v0, p3}, Lcom/bbm/d/gh;-><init>(Landroid/graphics/drawable/Drawable;)V
 
-    move-result-object v4
+    invoke-direct {v3, v0}, Lcom/bbm/util/dc;-><init>(Ljava/lang/Object;)V
 
-    invoke-direct {v0, v4}, Lcom/bbm/d/ff;-><init>(Landroid/graphics/drawable/Drawable;)V
-
-    invoke-direct {v1, v0}, Lcom/bbm/util/ct;-><init>(Ljava/lang/Object;)V
-
-    .line 182
+    .line 164
     iget-object v0, p0, Lcom/bbm/d/a/d/c;->d:Ljava/util/Map;
 
-    invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 185
-    iget v0, p0, Lcom/bbm/d/a/d/c;->g:I
+    .line 167
+    iget v0, p0, Lcom/bbm/d/a/d/c;->h:I
 
-    sget v4, Lcom/bbm/d/a/d/c;->b:I
+    sget v1, Lcom/bbm/d/a/d/c;->b:I
 
-    if-ge v0, v4, :cond_3
+    if-ge v0, v1, :cond_3
 
-    .line 186
-    iget-object v0, p0, Lcom/bbm/d/a/d/c;->h:Lcom/google/b/b/d;
+    .line 168
+    iget-object v0, p0, Lcom/bbm/d/a/d/c;->i:Lcom/google/b/b/d;
 
     invoke-interface {v0, p1}, Lcom/google/b/b/d;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -539,126 +846,122 @@
 
     check-cast v0, [B
 
-    .line 187
+    .line 169
     if-eqz v0, :cond_3
 
-    .line 188
-    iget v4, p0, Lcom/bbm/d/a/d/c;->g:I
+    .line 170
+    iget v1, p0, Lcom/bbm/d/a/d/c;->h:I
 
-    add-int/lit8 v4, v4, 0x1
+    add-int/lit8 v1, v1, 0x1
 
-    iput v4, p0, Lcom/bbm/d/a/d/c;->g:I
+    iput v1, p0, Lcom/bbm/d/a/d/c;->h:I
 
-    .line 191
-    new-instance v4, Lcom/bbm/d/ff;
+    .line 173
+    new-instance v1, Lcom/bbm/d/gh;
 
-    iget-object v5, p0, Lcom/bbm/d/a/d/c;->c:Landroid/content/Context;
+    iget-object v2, p0, Lcom/bbm/d/a/d/c;->c:Landroid/content/Context;
 
-    invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v5
+    move-result-object v2
 
-    invoke-direct {v4, v5, v0}, Lcom/bbm/d/ff;-><init>(Landroid/content/res/Resources;[B)V
+    invoke-direct {v1, v2, v0}, Lcom/bbm/d/gh;-><init>(Landroid/content/res/Resources;[B)V
 
-    invoke-virtual {v1, v4}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
+    invoke-virtual {v3, v1}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
 
-    .line 192
-    invoke-virtual {p0}, Lcom/bbm/d/a/d/c;->e()V
+    .line 174
+    invoke-virtual {p0}, Lcom/bbm/d/a/d/c;->d()V
 
-    move v0, v2
+    move v0, v6
 
-    .line 195
+    .line 177
     :goto_0
     if-nez v0, :cond_0
 
-    .line 197
+    .line 179
     new-instance v0, Lcom/bbm/d/a/d/g;
 
-    iget-object v4, p0, Lcom/bbm/d/a/d/c;->c:Landroid/content/Context;
+    iget-object v2, p0, Lcom/bbm/d/a/d/c;->c:Landroid/content/Context;
 
-    invoke-direct {v0, p0, v4, v1, p1}, Lcom/bbm/d/a/d/g;-><init>(Lcom/bbm/d/a/d/c;Landroid/content/Context;Lcom/bbm/util/ct;Ljava/lang/String;)V
+    move-object v1, p0
 
-    .line 206
-    new-array v2, v2, [Ljava/lang/String;
+    move v4, p2
 
-    aput-object p1, v2, v3
+    move-object v5, p1
 
-    invoke-virtual {v0, v2}, Lcom/bbm/util/ff;->b([Ljava/lang/Object;)Lcom/bbm/util/b;
+    invoke-direct/range {v0 .. v5}, Lcom/bbm/d/a/d/g;-><init>(Lcom/bbm/d/a/d/c;Landroid/content/Context;Lcom/bbm/util/dc;ZLjava/lang/String;)V
 
-    .line 209
+    .line 188
+    new-array v1, v6, [Ljava/lang/String;
+
+    aput-object p1, v1, v7
+
+    invoke-virtual {v0, v1}, Lcom/bbm/util/es;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+
+    .line 191
     :cond_0
+    if-eqz p2, :cond_2
+
     sget v0, Lcom/bbm/d/a/d/c;->a:I
 
-    if-lez v0, :cond_1
+    if-lez v0, :cond_2
 
-    .line 210
-    iget-object v0, p0, Lcom/bbm/d/a/d/c;->i:Ljava/util/LinkedList;
+    .line 192
+    iget-object v0, p0, Lcom/bbm/d/a/d/c;->j:Ljava/util/LinkedList;
 
-    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
+    invoke-virtual {v0, v3}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
 
-    .line 211
+    .line 193
     :goto_1
-    iget-object v0, p0, Lcom/bbm/d/a/d/c;->i:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/bbm/d/a/d/c;->j:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
     move-result v0
 
-    sget v2, Lcom/bbm/d/a/d/c;->a:I
+    sget v1, Lcom/bbm/d/a/d/c;->a:I
 
-    if-le v0, v2, :cond_1
+    if-le v0, v1, :cond_2
 
-    .line 212
-    iget-object v0, p0, Lcom/bbm/d/a/d/c;->i:Ljava/util/LinkedList;
+    .line 194
+    iget-object v0, p0, Lcom/bbm/d/a/d/c;->j:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->removeFirst()Ljava/lang/Object;
 
     goto :goto_1
 
     :cond_1
-    move-object v0, v1
+    move-object v3, v0
 
-    .line 217
+    .line 199
     :cond_2
-    return-object v0
+    return-object v3
 
     :cond_3
-    move v0, v3
+    move v0, v7
 
     goto :goto_0
 .end method
 
-.method public final a()V
-    .locals 1
-
-    .prologue
-    .line 334
-    iget-object v0, p0, Lcom/bbm/d/a/d/c;->l:Ljava/util/Map;
-
-    invoke-interface {v0}, Ljava/util/Map;->clear()V
-
-    .line 337
-    invoke-direct {p0}, Lcom/bbm/d/a/d/c;->g()V
-
-    .line 338
-    return-void
-.end method
-
 .method public final a(Lcom/bbm/f/ab;)V
-    .locals 2
+    .locals 5
 
     .prologue
-    .line 316
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    .line 369
     iget-object v0, p1, Lcom/bbm/f/ab;->b:Ljava/lang/String;
 
-    .line 317
+    .line 370
     const-string v1, "streamError"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 318
+    .line 371
     if-nez v0, :cond_0
 
     invoke-virtual {p1}, Lcom/bbm/f/ab;->a()Z
@@ -667,12 +970,21 @@
 
     if-eqz v0, :cond_2
 
-    .line 319
+    .line 372
     :cond_0
     iget-object v1, p1, Lcom/bbm/f/ab;->c:Ljava/lang/String;
 
-    .line 320
-    iget-object v0, p0, Lcom/bbm/d/a/d/c;->l:Ljava/util/Map;
+    .line 373
+    const-string v0, "Received avatar stream message for stream id %s"
+
+    new-array v2, v3, [Ljava/lang/Object;
+
+    aput-object v1, v2, v4
+
+    invoke-static {v0, v2}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 374
+    iget-object v0, p0, Lcom/bbm/d/a/d/c;->p:Ljava/util/Map;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -680,22 +992,31 @@
 
     check-cast v0, Lcom/bbm/d/a/d/b;
 
-    .line 321
+    .line 375
     if-eqz v0, :cond_1
 
-    .line 322
+    .line 376
+    const-string v2, "Found matching avatar BbmdsStream for stream id %s"
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    aput-object v1, v3, v4
+
+    invoke-static {v2, v3}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 378
     invoke-virtual {v0, p1}, Lcom/bbm/d/a/d/b;->a(Lcom/bbm/f/ab;)V
 
-    .line 324
-    iget-object v0, p0, Lcom/bbm/d/a/d/c;->l:Ljava/util/Map;
+    .line 380
+    iget-object v0, p0, Lcom/bbm/d/a/d/c;->p:Ljava/util/Map;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 327
+    .line 383
     :cond_1
     invoke-direct {p0}, Lcom/bbm/d/a/d/c;->g()V
 
-    .line 329
+    .line 385
     :cond_2
     return-void
 .end method
@@ -704,12 +1025,28 @@
     .locals 1
 
     .prologue
-    .line 346
-    iget-object v0, p0, Lcom/bbm/d/a/d/c;->h:Lcom/google/b/b/d;
+    .line 402
+    iget-object v0, p0, Lcom/bbm/d/a/d/c;->i:Lcom/google/b/b/d;
 
     invoke-interface {v0, p1, p2}, Lcom/google/b/b/d;->a(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 347
+    .line 403
+    return-void
+.end method
+
+.method public final a_()V
+    .locals 1
+
+    .prologue
+    .line 390
+    iget-object v0, p0, Lcom/bbm/d/a/d/c;->p:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->clear()V
+
+    .line 393
+    invoke-direct {p0}, Lcom/bbm/d/a/d/c;->g()V
+
+    .line 394
     return-void
 .end method
 
@@ -717,29 +1054,29 @@
     .locals 2
 
     .prologue
-    .line 109
-    iget-object v0, p0, Lcom/bbm/d/a/d/c;->n:Landroid/graphics/drawable/Drawable;
+    .line 137
+    iget-object v0, p0, Lcom/bbm/d/a/d/c;->r:Landroid/graphics/drawable/Drawable;
 
     if-nez v0, :cond_0
 
-    .line 110
+    .line 138
     iget-object v0, p0, Lcom/bbm/d/a/d/c;->c:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0200dc
+    const v1, 0x7f0200ac
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/d/a/d/c;->n:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Lcom/bbm/d/a/d/c;->r:Landroid/graphics/drawable/Drawable;
 
-    .line 112
+    .line 140
     :cond_0
-    iget-object v0, p0, Lcom/bbm/d/a/d/c;->n:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/bbm/d/a/d/c;->r:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
@@ -748,110 +1085,83 @@
     .locals 2
 
     .prologue
-    .line 116
-    iget-object v0, p0, Lcom/bbm/d/a/d/c;->o:Landroid/graphics/drawable/Drawable;
+    .line 151
+    iget-object v0, p0, Lcom/bbm/d/a/d/c;->q:Landroid/graphics/drawable/Drawable;
 
     if-nez v0, :cond_0
 
-    .line 117
+    .line 152
     iget-object v0, p0, Lcom/bbm/d/a/d/c;->c:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f02035c
+    const v1, 0x7f0200aa
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/d/a/d/c;->o:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Lcom/bbm/d/a/d/c;->q:Landroid/graphics/drawable/Drawable;
 
-    .line 119
+    .line 154
     :cond_0
-    iget-object v0, p0, Lcom/bbm/d/a/d/c;->o:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/bbm/d/a/d/c;->q:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
 
-.method public final d()Landroid/graphics/drawable/Drawable;
+.method public final d()V
     .locals 2
 
     .prologue
-    .line 123
-    iget-object v0, p0, Lcom/bbm/d/a/d/c;->m:Landroid/graphics/drawable/Drawable;
-
-    if-nez v0, :cond_0
-
-    .line 124
-    iget-object v0, p0, Lcom/bbm/d/a/d/c;->c:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0200da
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/d/a/d/c;->m:Landroid/graphics/drawable/Drawable;
-
-    .line 126
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/d/a/d/c;->m:Landroid/graphics/drawable/Drawable;
-
-    return-object v0
-.end method
-
-.method public final e()V
-    .locals 2
-
-    .prologue
-    .line 261
-    iget-boolean v0, p0, Lcom/bbm/d/a/d/c;->s:Z
+    .line 311
+    iget-boolean v0, p0, Lcom/bbm/d/a/d/c;->v:Z
 
     if-eqz v0, :cond_0
 
-    .line 266
+    .line 316
     :goto_0
     return-void
 
-    .line 264
+    .line 314
     :cond_0
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/bbm/d/a/d/c;->s:Z
+    iput-boolean v0, p0, Lcom/bbm/d/a/d/c;->v:Z
 
-    .line 265
-    iget-object v0, p0, Lcom/bbm/d/a/d/c;->r:Landroid/os/Handler;
+    .line 315
+    iget-object v0, p0, Lcom/bbm/d/a/d/c;->u:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/bbm/d/a/d/c;->t:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/bbm/d/a/d/c;->w:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 .end method
 
-.method public final f()V
-    .locals 7
+.method public final e()V
+    .locals 9
 
     .prologue
-    .line 274
-    iget-boolean v0, p0, Lcom/bbm/d/a/d/c;->u:Z
+    const/4 v8, 0x1
+
+    const/4 v7, 0x0
+
+    .line 324
+    iget-boolean v0, p0, Lcom/bbm/d/a/d/c;->l:Z
 
     if-eqz v0, :cond_2
 
-    .line 312
+    .line 365
     :cond_0
     :goto_0
     return-void
 
-    .line 285
+    .line 335
     :cond_1
-    iget-object v0, p0, Lcom/bbm/d/a/d/c;->f:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/bbm/d/a/d/c;->g:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->removeLast()Ljava/lang/Object;
 
@@ -859,25 +1169,23 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 288
+    .line 338
     iget-object v1, p0, Lcom/bbm/d/a/d/c;->d:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/bbm/util/ct;
+    check-cast v1, Lcom/bbm/util/dc;
 
-    .line 291
+    .line 341
     if-eqz v1, :cond_2
 
-    .line 292
-    const/4 v2, 0x1
+    .line 342
+    iput-boolean v8, p0, Lcom/bbm/d/a/d/c;->s:Z
 
-    iput-boolean v2, p0, Lcom/bbm/d/a/d/c;->p:Z
-
-    .line 298
-    iget-object v2, p0, Lcom/bbm/d/a/d/c;->h:Lcom/google/b/b/d;
+    .line 348
+    iget-object v2, p0, Lcom/bbm/d/a/d/c;->i:Lcom/google/b/b/d;
 
     invoke-interface {v2, v0}, Lcom/google/b/b/d;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -885,23 +1193,21 @@
 
     check-cast v2, [B
 
-    .line 299
+    .line 349
     if-nez v2, :cond_3
 
-    .line 300
-    const/4 v2, 0x0
+    .line 350
+    const/16 v2, 0x23
 
-    const/16 v3, 0x23
+    invoke-virtual {v0, v2}, Ljava/lang/String;->indexOf(I)I
 
-    invoke-virtual {v0, v3}, Ljava/lang/String;->indexOf(I)I
+    move-result v2
 
-    move-result v3
-
-    invoke-virtual {v0, v2, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-virtual {v0, v7, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 302
+    .line 352
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v4, ":"
@@ -920,39 +1226,57 @@
 
     move-result-object v3
 
-    .line 305
-    iget-object v4, p0, Lcom/bbm/d/a/d/c;->l:Ljava/util/Map;
+    .line 354
+    const-string v4, "Adding avatar for user %s in pending streams queue with stream id %s"
+
+    const/4 v5, 0x2
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    aput-object v2, v5, v7
+
+    aput-object v3, v5, v8
+
+    invoke-static {v4, v5}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 357
+    iget-object v4, p0, Lcom/bbm/d/a/d/c;->p:Ljava/util/Map;
 
     new-instance v5, Lcom/bbm/d/a/d/a;
 
     iget-object v6, p0, Lcom/bbm/d/a/d/c;->c:Landroid/content/Context;
 
-    invoke-direct {v5, v6, v1, v0, p0}, Lcom/bbm/d/a/d/a;-><init>(Landroid/content/Context;Lcom/bbm/util/ct;Ljava/lang/String;Lcom/bbm/d/a/d/c;)V
+    invoke-direct {v5, v6, v1, v0, p0}, Lcom/bbm/d/a/d/a;-><init>(Landroid/content/Context;Lcom/bbm/util/dc;Ljava/lang/String;Lcom/bbm/d/a/d/c;)V
 
     invoke-interface {v4, v3, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 306
-    iget-object v0, p0, Lcom/bbm/d/a/d/c;->k:Lcom/bbm/f/a;
+    .line 358
+    new-instance v0, Lcom/bbm/d/dq;
 
-    new-instance v1, Lcom/bbm/d/cv;
+    invoke-direct {v0, v2}, Lcom/bbm/d/dq;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v1, v3, v2}, Lcom/bbm/d/cv;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v3}, Lcom/bbm/d/dq;->a(Ljava/lang/String;)Lcom/bbm/d/dq;
 
-    invoke-virtual {v1}, Lcom/bbm/d/cv;->a()Lcom/bbm/f/ab;
+    move-result-object v0
 
-    move-result-object v1
+    .line 359
+    iget-object v1, p0, Lcom/bbm/d/a/d/c;->n:Lcom/bbm/f/a;
 
-    invoke-interface {v0, v1}, Lcom/bbm/f/a;->a(Lcom/bbm/f/ab;)V
+    invoke-virtual {v0}, Lcom/bbm/d/dq;->a()Lcom/bbm/f/ab;
 
-    .line 278
+    move-result-object v0
+
+    invoke-interface {v1, v0}, Lcom/bbm/f/a;->a(Lcom/bbm/f/ab;)V
+
+    .line 328
     :cond_2
     :goto_1
-    iget-boolean v0, p0, Lcom/bbm/d/a/d/c;->p:Z
+    iget-boolean v0, p0, Lcom/bbm/d/a/d/c;->s:Z
 
     if-nez v0, :cond_0
 
-    .line 280
-    iget-object v0, p0, Lcom/bbm/d/a/d/c;->f:Ljava/util/LinkedList;
+    .line 330
+    iget-object v0, p0, Lcom/bbm/d/a/d/c;->g:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->isEmpty()Z
 
@@ -962,9 +1286,9 @@
 
     goto :goto_0
 
-    .line 308
+    .line 361
     :cond_3
-    new-instance v0, Lcom/bbm/d/ff;
+    new-instance v0, Lcom/bbm/d/gh;
 
     iget-object v3, p0, Lcom/bbm/d/a/d/c;->c:Landroid/content/Context;
 
@@ -972,16 +1296,39 @@
 
     move-result-object v3
 
-    invoke-direct {v0, v3, v2}, Lcom/bbm/d/ff;-><init>(Landroid/content/res/Resources;[B)V
+    invoke-direct {v0, v3, v2}, Lcom/bbm/d/gh;-><init>(Landroid/content/res/Resources;[B)V
 
-    invoke-virtual {v1, v0}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
+    invoke-virtual {v1, v0}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
 
-    .line 309
-    iget-object v0, p0, Lcom/bbm/d/a/d/c;->r:Landroid/os/Handler;
+    .line 362
+    iget-object v0, p0, Lcom/bbm/d/a/d/c;->u:Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/bbm/d/a/d/c;->q:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/bbm/d/a/d/c;->t:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_1
+.end method
+
+.method public final f()V
+    .locals 3
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 416
+    const-string v0, "Resuming avatar request queue"
+
+    new-array v1, v2, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 417
+    iput-boolean v2, p0, Lcom/bbm/d/a/d/c;->l:Z
+
+    .line 423
+    invoke-direct {p0}, Lcom/bbm/d/a/d/c;->g()V
+
+    .line 424
+    return-void
 .end method

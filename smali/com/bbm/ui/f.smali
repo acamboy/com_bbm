@@ -35,7 +35,7 @@
 
     .prologue
     .line 49
-    const/high16 v0, 0x3f800000
+    const/high16 v0, 0x3f800000    # 1.0f
 
     cmpl-float v0, p1, v0
 

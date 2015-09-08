@@ -1,159 +1,54 @@
-.class public final Lcom/google/b/b/ak;
+.class final Lcom/google/b/b/ak;
 .super Ljava/lang/Object;
 .source "LocalCache.java"
 
 # interfaces
-.implements Lcom/google/b/b/d;
-.implements Ljava/io/Serializable;
+.implements Lcom/google/b/a/f;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "<K:",
         "Ljava/lang/Object;",
-        "V:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;",
-        "Lcom/google/b/b/d",
-        "<TK;TV;>;",
-        "Ljava/io/Serializable;"
+        "Lcom/google/b/a/f",
+        "<TV;TV;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final a:Lcom/google/b/b/n;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/b/b/n",
-            "<TK;TV;>;"
-        }
-    .end annotation
-.end field
+.field final synthetic a:Lcom/google/b/b/aj;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/b/b/e;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/b/b/e",
-            "<-TK;-TV;>;)V"
-        }
-    .end annotation
-
-    .prologue
-    .line 4771
-    new-instance v0, Lcom/google/b/b/n;
-
-    invoke-direct {v0, p1}, Lcom/google/b/b/n;-><init>(Lcom/google/b/b/e;)V
-
-    invoke-direct {p0, v0}, Lcom/google/b/b/ak;-><init>(Lcom/google/b/b/n;)V
-
-    .line 4772
-    return-void
-.end method
-
-.method private constructor <init>(Lcom/google/b/b/n;)V
+.method constructor <init>(Lcom/google/b/b/aj;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/b/b/n",
-            "<TK;TV;>;)V"
-        }
-    .end annotation
 
     .prologue
-    .line 4774
+    .line 3533
+    iput-object p1, p0, Lcom/google/b/b/ak;->a:Lcom/google/b/b/aj;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4775
-    iput-object p1, p0, Lcom/google/b/b/ak;->a:Lcom/google/b/b/n;
-
-    .line 4776
     return-void
 .end method
 
 
 # virtual methods
 .method public final a(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(",
-            "Ljava/lang/Object;",
-            ")TV;"
+            "(TV;)TV;"
         }
     .end annotation
 
     .prologue
-    .line 4783
-    iget-object v0, p0, Lcom/google/b/b/ak;->a:Lcom/google/b/b/n;
+    .line 3536
+    iget-object v0, p0, Lcom/google/b/b/ak;->a:Lcom/google/b/b/aj;
 
-    invoke-static {p1}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lcom/google/b/b/aj;->b(Ljava/lang/Object;)Z
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/google/b/b/n;->a(Ljava/lang/Object;)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lcom/google/b/b/n;->a(I)Lcom/google/b/b/an;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p1, v1}, Lcom/google/b/b/an;->a(Ljava/lang/Object;I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-nez v1, :cond_0
-
-    iget-object v0, v0, Lcom/google/b/b/n;->t:Lcom/google/b/b/c;
-
-    invoke-interface {v0}, Lcom/google/b/b/c;->b()V
-
-    :goto_0
-    return-object v1
-
-    :cond_0
-    iget-object v0, v0, Lcom/google/b/b/n;->t:Lcom/google/b/b/c;
-
-    invoke-interface {v0}, Lcom/google/b/b/c;->a()V
-
-    goto :goto_0
-.end method
-
-.method public final a()V
-    .locals 1
-
-    .prologue
-    .line 4825
-    iget-object v0, p0, Lcom/google/b/b/ak;->a:Lcom/google/b/b/n;
-
-    invoke-virtual {v0}, Lcom/google/b/b/n;->clear()V
-
-    .line 4826
-    return-void
-.end method
-
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TK;TV;)V"
-        }
-    .end annotation
-
-    .prologue
-    .line 4804
-    iget-object v0, p0, Lcom/google/b/b/ak;->a:Lcom/google/b/b/n;
-
-    invoke-virtual {v0, p1, p2}, Lcom/google/b/b/n;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 4805
-    return-void
+    .line 3537
+    return-object p1
 .end method

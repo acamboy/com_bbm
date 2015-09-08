@@ -1,6 +1,6 @@
 .class public final enum Lcom/bbm/d/fk;
 .super Ljava/lang/Enum;
-.source "Message.java"
+.source "ChannelInvitation.java"
 
 
 # annotations
@@ -43,7 +43,7 @@
 
     const/4 v3, 0x0
 
-    .line 232
+    .line 27
     new-instance v0, Lcom/bbm/d/fk;
 
     const-string v1, "Pending"
@@ -54,29 +54,29 @@
 
     sput-object v0, Lcom/bbm/d/fk;->a:Lcom/bbm/d/fk;
 
-    .line 233
+    .line 33
     new-instance v0, Lcom/bbm/d/fk;
 
-    const-string v1, "Failed"
+    const-string v1, "Accepted"
 
-    const-string v2, "Failed"
+    const-string v2, "Accepted"
 
     invoke-direct {v0, v1, v4, v2}, Lcom/bbm/d/fk;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/d/fk;->b:Lcom/bbm/d/fk;
 
-    .line 234
+    .line 39
     new-instance v0, Lcom/bbm/d/fk;
 
-    const-string v1, "Recalled"
+    const-string v1, "Error"
 
-    const-string v2, "Recalled"
+    const-string v2, "Error"
 
     invoke-direct {v0, v1, v5, v2}, Lcom/bbm/d/fk;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/d/fk;->c:Lcom/bbm/d/fk;
 
-    .line 235
+    .line 44
     new-instance v0, Lcom/bbm/d/fk;
 
     const-string v1, "Unspecified"
@@ -87,7 +87,7 @@
 
     sput-object v0, Lcom/bbm/d/fk;->d:Lcom/bbm/d/fk;
 
-    .line 231
+    .line 21
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/bbm/d/fk;
@@ -124,13 +124,13 @@
     .end annotation
 
     .prologue
-    .line 239
+    .line 48
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 240
+    .line 49
     iput-object p3, p0, Lcom/bbm/d/fk;->e:Ljava/lang/String;
 
-    .line 241
+    .line 50
     return-void
 .end method
 
@@ -138,7 +138,7 @@
     .locals 1
 
     .prologue
-    .line 244
+    .line 53
     const-string v0, "Pending"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -147,16 +147,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 245
+    .line 54
     sget-object v0, Lcom/bbm/d/fk;->a:Lcom/bbm/d/fk;
 
-    .line 253
+    .line 62
     :goto_0
     return-object v0
 
-    .line 247
+    .line 56
     :cond_0
-    const-string v0, "Failed"
+    const-string v0, "Accepted"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -164,14 +164,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 248
+    .line 57
     sget-object v0, Lcom/bbm/d/fk;->b:Lcom/bbm/d/fk;
 
     goto :goto_0
 
-    .line 250
+    .line 59
     :cond_1
-    const-string v0, "Recalled"
+    const-string v0, "Error"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -179,12 +179,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 251
+    .line 60
     sget-object v0, Lcom/bbm/d/fk;->c:Lcom/bbm/d/fk;
 
     goto :goto_0
 
-    .line 253
+    .line 62
     :cond_2
     sget-object v0, Lcom/bbm/d/fk;->d:Lcom/bbm/d/fk;
 
@@ -195,7 +195,7 @@
     .locals 1
 
     .prologue
-    .line 231
+    .line 21
     const-class v0, Lcom/bbm/d/fk;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -211,7 +211,7 @@
     .locals 1
 
     .prologue
-    .line 231
+    .line 21
     sget-object v0, Lcom/bbm/d/fk;->f:[Lcom/bbm/d/fk;
 
     invoke-virtual {v0}, [Lcom/bbm/d/fk;->clone()Ljava/lang/Object;
@@ -229,7 +229,7 @@
     .locals 1
 
     .prologue
-    .line 256
+    .line 65
     iget-object v0, p0, Lcom/bbm/d/fk;->e:Ljava/lang/String;
 
     return-object v0

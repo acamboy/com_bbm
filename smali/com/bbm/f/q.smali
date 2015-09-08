@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 412
+    .line 443
     iput-object p1, p0, Lcom/bbm/f/q;->a:Lcom/bbm/f/j;
 
     invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
@@ -37,14 +37,14 @@
     .locals 4
 
     .prologue
-    .line 412
+    .line 443
     iget-object v0, p0, Lcom/bbm/f/q;->a:Lcom/bbm/f/j;
 
     invoke-static {v0}, Lcom/bbm/f/j;->n(Lcom/bbm/f/j;)Lcom/google/b/a/l;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/b/a/l;->a()Z
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Z
 
     move-result v0
 
@@ -64,17 +64,17 @@
 
     iget v0, v0, Lcom/rim/bbm/BbmPlatformService$PlatformIdsErrorState;->ids_error:I
 
-    invoke-static {v0}, Lcom/bbm/al;->a(I)Lcom/bbm/al;
+    invoke-static {v0}, Lcom/bbm/au;->a(I)Lcom/bbm/au;
 
     move-result-object v1
 
-    sget-object v0, Lcom/bbm/al;->a:Lcom/bbm/al;
+    sget-object v0, Lcom/bbm/au;->a:Lcom/bbm/au;
 
     if-eq v0, v1, :cond_1
 
     new-instance v0, Lcom/bbm/f/ae;
 
-    invoke-direct {v0, v1}, Lcom/bbm/f/ae;-><init>(Lcom/bbm/al;)V
+    invoke-direct {v0, v1}, Lcom/bbm/f/ae;-><init>(Lcom/bbm/au;)V
 
     goto :goto_0
 

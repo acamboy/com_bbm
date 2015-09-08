@@ -1,6 +1,10 @@
 .class final Lcom/google/b/a/p;
-.super Lcom/google/b/a/l;
-.source "Present.java"
+.super Ljava/lang/Object;
+.source "Predicates.java"
+
+# interfaces
+.implements Lcom/google/b/a/n;
+.implements Ljava/io/Serializable;
 
 
 # annotations
@@ -9,126 +13,125 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lcom/google/b/a/l",
-        "<TT;>;"
+        "Ljava/lang/Object;",
+        "Lcom/google/b/a/n",
+        "<TT;>;",
+        "Ljava/io/Serializable;"
     }
 .end annotation
 
 
 # instance fields
-.field private final a:Ljava/lang/Object;
+.field private final a:Ljava/util/Collection;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "TT;"
+            "Ljava/util/Collection",
+            "<*>;"
         }
     .end annotation
 .end field
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/Object;)V
-    .locals 0
+.method private constructor <init>(Ljava/util/Collection;)V
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(TT;)V"
+            "(",
+            "Ljava/util/Collection",
+            "<*>;)V"
         }
     .end annotation
 
     .prologue
-    .line 35
-    invoke-direct {p0}, Lcom/google/b/a/l;-><init>()V
+    .line 506
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
-    iput-object p1, p0, Lcom/google/b/a/p;->a:Ljava/lang/Object;
+    .line 507
+    invoke-static {p1}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 37
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Collection;
+
+    iput-object v0, p0, Lcom/google/b/a/p;->a:Ljava/util/Collection;
+
+    .line 508
+    return-void
+.end method
+
+.method synthetic constructor <init>(Ljava/util/Collection;B)V
+    .locals 0
+
+    .prologue
+    .line 503
+    invoke-direct {p0, p1}, Lcom/google/b/a/p;-><init>(Ljava/util/Collection;)V
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Ljava/lang/Object;)Z
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(TT;)TT;"
+            "(TT;)Z"
         }
     .end annotation
 
     .prologue
-    .line 48
-    const-string v0, "use Optional.orNull() instead of Optional.or(null)"
+    const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/google/b/a/o;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 513
+    :try_start_0
+    iget-object v1, p0, Lcom/google/b/a/p;->a:Ljava/util/Collection;
 
-    .line 49
-    iget-object v0, p0, Lcom/google/b/a/p;->a:Ljava/lang/Object;
+    invoke-interface {v1, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object v0
-.end method
+    move-result v0
 
-.method public final a()Z
-    .locals 1
-
-    .prologue
-    .line 40
-    const/4 v0, 0x1
-
+    .line 517
+    :goto_0
     return v0
-.end method
 
-.method public final b()Ljava/lang/Object;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()TT;"
-        }
-    .end annotation
+    :catch_0
+    move-exception v1
 
-    .prologue
-    .line 44
-    iget-object v0, p0, Lcom/google/b/a/p;->a:Ljava/lang/Object;
+    goto :goto_0
 
-    return-object v0
-.end method
+    .line 515
+    :catch_1
+    move-exception v1
 
-.method public final c()Ljava/lang/Object;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()TT;"
-        }
-    .end annotation
-
-    .prologue
-    .line 63
-    iget-object v0, p0, Lcom/google/b/a/p;->a:Ljava/lang/Object;
-
-    return-object v0
+    goto :goto_0
 .end method
 
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
     .prologue
-    .line 76
+    .line 522
     instance-of v0, p1, Lcom/google/b/a/p;
 
     if-eqz v0, :cond_0
 
-    .line 77
+    .line 523
     check-cast p1, Lcom/google/b/a/p;
 
-    .line 78
-    iget-object v0, p0, Lcom/google/b/a/p;->a:Ljava/lang/Object;
+    .line 524
+    iget-object v0, p0, Lcom/google/b/a/p;->a:Ljava/util/Collection;
 
-    iget-object v1, p1, Lcom/google/b/a/p;->a:Ljava/lang/Object;
+    iget-object v1, p1, Lcom/google/b/a/p;->a:Ljava/util/Collection;
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-interface {v0, v1}, Ljava/util/Collection;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 80
+    .line 526
     :goto_0
     return v0
 
@@ -139,19 +142,15 @@
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 84
-    const v0, 0x598df91c
+    .line 530
+    iget-object v0, p0, Lcom/google/b/a/p;->a:Ljava/util/Collection;
 
-    iget-object v1, p0, Lcom/google/b/a/p;->a:Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Collection;->hashCode()I
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
+    move-result v0
 
     return v0
 .end method
@@ -160,14 +159,14 @@
     .locals 2
 
     .prologue
-    .line 88
+    .line 534
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Optional.of("
+    const-string v1, "Predicates.in("
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/google/b/a/p;->a:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/google/b/a/p;->a:Ljava/util/Collection;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

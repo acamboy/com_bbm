@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <GridView android:id="@id/profile_icons_grid" android:paddingLeft="2.0dip" android:paddingRight="2.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:horizontalSpacing="2.0dip" android:verticalSpacing="2.0dip" android:numColumns="3" android:layout_above="@id/footer_action_bar" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
-    <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
-</RelativeLayout>
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/view_bali_toolbar" />
+    <GridView android:id="@id/profile_icons_grid" android:paddingLeft="2.0dip" android:paddingTop="2.0dip" android:paddingRight="2.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:horizontalSpacing="2.0dip" android:verticalSpacing="2.0dip" android:numColumns="3" />
+</LinearLayout>

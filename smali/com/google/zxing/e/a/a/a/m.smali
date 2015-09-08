@@ -6,7 +6,7 @@
 # instance fields
 .field a:I
 
-.field b:Lcom/google/zxing/e/a/a/a/n;
+.field b:I
 
 
 # direct methods
@@ -23,9 +23,9 @@
     iput v0, p0, Lcom/google/zxing/e/a/a/a/m;->a:I
 
     .line 45
-    sget-object v0, Lcom/google/zxing/e/a/a/a/n;->a:Lcom/google/zxing/e/a/a/a/n;
+    sget v0, Lcom/google/zxing/e/a/a/a/n;->a:I
 
-    iput-object v0, p0, Lcom/google/zxing/e/a/a/a/m;->b:Lcom/google/zxing/e/a/a/a/n;
+    iput v0, p0, Lcom/google/zxing/e/a/a/a/m;->b:I
 
     .line 46
     return-void

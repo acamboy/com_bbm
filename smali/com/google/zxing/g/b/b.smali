@@ -100,7 +100,7 @@
 
     int-to-float v1, v1
 
-    const/high16 v2, 0x40000000
+    const/high16 v2, 0x40000000    # 2.0f
 
     div-float/2addr v1, v2
 
@@ -209,7 +209,7 @@
     if-le v8, v4, :cond_4
 
     :cond_1
-    const/high16 v0, 0x7fc00000
+    const/high16 v0, 0x7fc00000    # NaNf
 
     move v1, v0
 
@@ -240,7 +240,7 @@
 
     int-to-float v0, v0
 
-    const/high16 v2, 0x40400000
+    const/high16 v2, 0x40400000    # 3.0f
 
     div-float v4, v0, v2
 
@@ -297,7 +297,7 @@
 
     move-result v2
 
-    const/high16 v6, 0x3f800000
+    const/high16 v6, 0x3f800000    # 1.0f
 
     cmpg-float v6, v2, v6
 
@@ -320,7 +320,7 @@
 
     add-float/2addr v2, v3
 
-    const/high16 v3, 0x40000000
+    const/high16 v3, 0x40000000    # 2.0f
 
     div-float/2addr v2, v3
 
@@ -328,7 +328,7 @@
 
     add-float/2addr v1, v3
 
-    const/high16 v3, 0x40000000
+    const/high16 v3, 0x40000000    # 2.0f
 
     div-float/2addr v1, v3
 
@@ -336,7 +336,7 @@
 
     add-float/2addr v0, v4
 
-    const/high16 v3, 0x40000000
+    const/high16 v3, 0x40000000    # 2.0f
 
     div-float v3, v0, v3
 
@@ -384,7 +384,7 @@
 
     if-le v0, v4, :cond_6
 
-    const/high16 v0, 0x7fc00000
+    const/high16 v0, 0x7fc00000    # NaNf
 
     move v1, v0
 
@@ -430,7 +430,7 @@
     if-le v8, v4, :cond_9
 
     :cond_8
-    const/high16 v0, 0x7fc00000
+    const/high16 v0, 0x7fc00000    # NaNf
 
     move v1, v0
 
@@ -471,7 +471,7 @@
 
     if-le v2, v4, :cond_b
 
-    const/high16 v0, 0x7fc00000
+    const/high16 v0, 0x7fc00000    # NaNf
 
     move v1, v0
 
@@ -506,7 +506,7 @@
 
     if-lt v2, v1, :cond_c
 
-    const/high16 v0, 0x7fc00000
+    const/high16 v0, 0x7fc00000    # NaNf
 
     move v1, v0
 
@@ -528,7 +528,7 @@
     goto/16 :goto_1
 
     :cond_d
-    const/high16 v0, 0x7fc00000
+    const/high16 v0, 0x7fc00000    # NaNf
 
     move v1, v0
 
@@ -583,7 +583,7 @@
     iget v2, p0, Lcom/google/zxing/g/b/b;->g:F
 
     .line 171
-    const/high16 v1, 0x40000000
+    const/high16 v1, 0x40000000    # 2.0f
 
     div-float v3, v2, v1
 

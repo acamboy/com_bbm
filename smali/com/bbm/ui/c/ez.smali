@@ -1,138 +1,61 @@
 .class final Lcom/bbm/ui/c/ez;
 .super Ljava/lang/Object;
-.source "MyChannelsFragment.java"
-
-# interfaces
-.implements Lcom/bbm/ui/db;
+.source "GroupsFragment.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/er;
+.field final a:I
+
+.field final b:Ljava/lang/String;
+
+.field final c:Lcom/bbm/d/a/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/er;)V
-    .locals 0
+.method public constructor <init>(Lcom/bbm/g/a;)V
+    .locals 1
 
     .prologue
-    .line 264
-    iput-object p1, p0, Lcom/bbm/ui/c/ez;->a:Lcom/bbm/ui/c/er;
-
+    .line 277
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 278
+    sget v0, Lcom/bbm/ui/c/fa;->a:I
+
+    iput v0, p0, Lcom/bbm/ui/c/ez;->a:I
+
+    .line 279
+    iget-object v0, p1, Lcom/bbm/g/a;->r:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/bbm/ui/c/ez;->b:Ljava/lang/String;
+
+    .line 280
+    iput-object p1, p0, Lcom/bbm/ui/c/ez;->c:Lcom/bbm/d/a/a;
+
+    .line 281
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 5
+.method public constructor <init>(Lcom/bbm/g/aj;)V
+    .locals 1
 
     .prologue
-    .line 267
-    iget-object v0, p0, Lcom/bbm/ui/c/ez;->a:Lcom/bbm/ui/c/er;
+    .line 283
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Lcom/bbm/ui/c/er;->b(Lcom/bbm/ui/c/er;)Landroid/content/Context;
+    .line 284
+    sget v0, Lcom/bbm/ui/c/fa;->b:I
 
-    move-result-object v0
+    iput v0, p0, Lcom/bbm/ui/c/ez;->a:I
 
-    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    .line 285
+    iget-object v0, p1, Lcom/bbm/g/aj;->a:Ljava/lang/String;
 
-    move-result-object v0
+    iput-object v0, p0, Lcom/bbm/ui/c/ez;->b:Ljava/lang/String;
 
-    const v1, 0x7f0300d7
+    .line 286
+    iput-object p1, p0, Lcom/bbm/ui/c/ez;->c:Lcom/bbm/d/a/a;
 
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object v3
-
-    .line 268
-    const v0, 0x7f0b0385
-
-    invoke-virtual {v3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/ObservingImageView;
-
-    .line 269
-    const v1, 0x7f0b011c
-
-    invoke-virtual {v3, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/LinearLayout;
-
-    .line 271
-    invoke-virtual {v0}, Lcom/bbm/ui/ObservingImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/FrameLayout$LayoutParams;
-
-    iget-object v4, p0, Lcom/bbm/ui/c/ez;->a:Lcom/bbm/ui/c/er;
-
-    invoke-static {v4}, Lcom/bbm/ui/c/er;->d(Lcom/bbm/ui/c/er;)I
-
-    move-result v4
-
-    iput v4, v2, Landroid/widget/FrameLayout$LayoutParams;->height:I
-
-    .line 272
-    invoke-virtual {v0}, Lcom/bbm/ui/ObservingImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/FrameLayout$LayoutParams;
-
-    iget-object v4, p0, Lcom/bbm/ui/c/ez;->a:Lcom/bbm/ui/c/er;
-
-    invoke-static {v4}, Lcom/bbm/ui/c/er;->d(Lcom/bbm/ui/c/er;)I
-
-    move-result v4
-
-    iput v4, v2, Landroid/widget/FrameLayout$LayoutParams;->width:I
-
-    .line 273
-    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/FrameLayout$LayoutParams;
-
-    iget-object v2, p0, Lcom/bbm/ui/c/ez;->a:Lcom/bbm/ui/c/er;
-
-    invoke-static {v2}, Lcom/bbm/ui/c/er;->d(Lcom/bbm/ui/c/er;)I
-
-    move-result v2
-
-    iput v2, v1, Landroid/widget/FrameLayout$LayoutParams;->width:I
-
-    .line 275
-    iget-object v1, p0, Lcom/bbm/ui/c/ez;->a:Lcom/bbm/ui/c/er;
-
-    invoke-static {v1}, Lcom/bbm/ui/c/er;->e(Lcom/bbm/ui/c/er;)Lcom/bbm/util/b/g;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lcom/bbm/util/b/i;->b:Lcom/bbm/util/b/d;
-
-    const-string v2, "com.bbm.ui.fragments.ChannelsDefaultAvatarBitmap"
-
-    invoke-virtual {v1, v2}, Lcom/bbm/util/b/d;->a(Ljava/lang/String;)Lcom/bbm/d/ff;
-
-    move-result-object v1
-
-    .line 276
-    if-eqz v1, :cond_0
-
-    .line 277
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/ObservingImageView;->setObservableImage(Lcom/bbm/d/ff;)V
-
-    .line 279
-    :cond_0
-    return-object v3
+    .line 287
+    return-void
 .end method

@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static cR:Z
+.field private static cU:Z
 
-.field private static dz:Ljava/lang/reflect/Method;
+.field private static dC:Ljava/lang/reflect/Method;
 
 
 # direct methods
@@ -17,12 +17,12 @@
     .line 954
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_MotionEvent;->cR:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_MotionEvent;->cU:Z
 
     .line 955
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_MotionEvent;->dz:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_MotionEvent;->dC:Ljava/lang/reflect/Method;
 
     return-void
 .end method
@@ -42,14 +42,14 @@
 
     .prologue
     .line 960
-    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_MotionEvent;->cR:Z
+    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_MotionEvent;->cU:Z
 
     if-nez v0, :cond_0
 
     .line 962
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_MotionEvent;->cR:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_MotionEvent;->cU:Z
 
     .line 966
     :try_start_0
@@ -63,7 +63,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_MotionEvent;->dz:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_MotionEvent;->dC:Ljava/lang/reflect/Method;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -86,13 +86,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_MotionEvent;->Load()V
 
     .line 979
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_MotionEvent;->dz:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_MotionEvent;->dC:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 983
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_MotionEvent;->dz:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_MotionEvent;->dC:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
 

@@ -1,4 +1,4 @@
-.class public final Lcom/b/a/a/j;
+.class final Lcom/b/a/a/j;
 .super Ljava/lang/Object;
 .source "DbxChooser.java"
 
@@ -13,7 +13,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/b/a/a/i;Landroid/app/Activity;)V
+.method constructor <init>(Lcom/b/a/a/i;Landroid/app/Activity;)V
     .locals 0
 
     .prologue

@@ -6,5 +6,23 @@
 
 
 # virtual methods
-.method public abstract b(ILandroid/os/IBinder;Landroid/os/Bundle;)V
+.method public abstract a()Ljava/lang/String;
+.end method
+
+.method public abstract b()Ljava/util/List;
+.end method
+
+.method public abstract c()Ljava/lang/String;
+.end method
+
+.method public abstract d()Lcom/google/android/gms/internal/dy;
+.end method
+
+.method public abstract e()Ljava/lang/String;
+.end method
+
+.method public abstract f()Ljava/lang/String;
+.end method
+
+.method public abstract g()Lcom/google/android/gms/a/h;
 .end method

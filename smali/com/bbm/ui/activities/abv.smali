@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/abv;
 .super Ljava/lang/Object;
-.source "OwnedChannelLobbyActivity.java"
+.source "SelectCategoryActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/util/bg;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SelectCategoryActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SelectCategoryActivity;)V
     .locals 0
 
     .prologue
-    .line 162
-    iput-object p1, p0, Lcom/bbm/ui/activities/abv;->a:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
+    .line 115
+    iput-object p1, p0, Lcom/bbm/ui/activities/abv;->a:Lcom/bbm/ui/activities/SelectCategoryActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,66 +25,32 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final a(Ljava/lang/String;J)V
+    .locals 2
 
     .prologue
-    .line 166
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 118
+    invoke-static {}, Lcom/bbm/ui/activities/SelectCategoryActivity;->d()Lcom/bbm/d/a;
 
-    const-string v1, "Channel URL:"
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v1, p0, Lcom/bbm/ui/activities/abv;->a:Lcom/bbm/ui/activities/SelectCategoryActivity;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/abv;->a:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->b()Ljava/lang/String;
+    invoke-static {v1}, Lcom/bbm/ui/activities/SelectCategoryActivity;->b(Lcom/bbm/ui/activities/SelectCategoryActivity;)Ljava/util/ArrayList;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, p2, p3}, Lcom/bbm/d/aj;->a(Ljava/util/List;J)Lcom/bbm/d/ds;
 
-    move-result-object v0
+    move-result-object v1
 
-    const-string v1, " chats clicked"
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ez;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 119
+    iget-object v0, p0, Lcom/bbm/ui/activities/abv;->a:Lcom/bbm/ui/activities/SelectCategoryActivity;
 
-    move-result-object v0
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/SelectCategoryActivity;->finish()V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-class v1, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 167
-    new-instance v0, Landroid/content/Intent;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/abv;->a:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
-
-    const-class v2, Lcom/bbm/ui/activities/ChannelChatListActivity;
-
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 168
-    const-string v1, "bbm_channel_uri"
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/abv;->a:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
-
-    invoke-virtual {v2}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->b()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 169
-    iget-object v1, p0, Lcom/bbm/ui/activities/abv;->a:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->startActivity(Landroid/content/Intent;)V
-
-    .line 170
+    .line 120
     return-void
 .end method

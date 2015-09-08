@@ -1,42 +1,26 @@
-.class public final Lcom/bbm/ui/a/ae;
+.class final Lcom/bbm/ui/a/ae;
 .super Ljava/lang/Object;
-.source "GroupMessageListAdapter.java"
+.source "MonitoredHolder.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field a:Lcom/bbm/ui/e/ai;
+.field final synthetic a:I
 
-.field b:Lcom/bbm/j/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/bbm/j/a",
-            "<",
-            "Lcom/bbm/ui/e/i;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field c:I
-
-.field d:Ljava/lang/String;
-
-.field e:Z
-
-.field f:Z
-
-.field g:I
-
-.field final synthetic h:Lcom/bbm/ui/a/x;
+.field final synthetic b:Lcom/bbm/ui/a/ad;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/ui/a/x;)V
+.method constructor <init>(Lcom/bbm/ui/a/ad;I)V
     .locals 0
 
     .prologue
-    .line 103
-    iput-object p1, p0, Lcom/bbm/ui/a/ae;->h:Lcom/bbm/ui/a/x;
+    .line 40
+    iput-object p1, p0, Lcom/bbm/ui/a/ae;->b:Lcom/bbm/ui/a/ad;
+
+    iput p2, p0, Lcom/bbm/ui/a/ae;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,132 +29,56 @@
 
 
 # virtual methods
-.method public final a(I)V
-    .locals 5
+.method public final run()V
+    .locals 3
 
     .prologue
-    .line 136
-    iget-object v0, p0, Lcom/bbm/ui/a/ae;->h:Lcom/bbm/ui/a/x;
+    .line 43
+    iget-object v0, p0, Lcom/bbm/ui/a/ae;->b:Lcom/bbm/ui/a/ad;
 
-    invoke-virtual {v0, p1}, Lcom/bbm/ui/a/x;->a(I)Lcom/bbm/g/ad;
+    iget-object v0, v0, Lcom/bbm/ui/a/ad;->a:Lcom/bbm/ui/a/ac;
 
-    move-result-object v0
+    iget-object v0, v0, Lcom/bbm/ui/a/ac;->p:Lcom/bbm/ui/a/af;
 
-    iget-object v1, v0, Lcom/bbm/g/ad;->c:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/a/ae;->b:Lcom/bbm/ui/a/ad;
 
-    .line 138
-    iget-object v0, p0, Lcom/bbm/ui/a/ae;->h:Lcom/bbm/ui/a/x;
+    iget-object v1, v1, Lcom/bbm/ui/a/ad;->a:Lcom/bbm/ui/a/ac;
 
-    invoke-static {v0}, Lcom/bbm/ui/a/x;->c(Lcom/bbm/ui/a/x;)Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/bbm/ui/a/ac;->c()I
 
-    move-result-object v0
+    move-result v1
 
-    iget-object v2, p0, Lcom/bbm/ui/a/ae;->d:Ljava/lang/String;
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/a/af;->a(II)V
 
-    move-result v2
+    .line 44
+    iget-object v0, p0, Lcom/bbm/ui/a/ae;->b:Lcom/bbm/ui/a/ad;
 
-    .line 139
-    iget-object v0, p0, Lcom/bbm/ui/a/ae;->h:Lcom/bbm/ui/a/x;
+    iget-object v0, v0, Lcom/bbm/ui/a/ad;->a:Lcom/bbm/ui/a/ac;
 
-    invoke-static {v0}, Lcom/bbm/ui/a/x;->d(Lcom/bbm/ui/a/x;)Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/ui/a/ac;->n:Landroid/support/v7/widget/LinearLayoutManager;
 
-    move-result-object v0
+    invoke-virtual {v0}, Landroid/support/v7/widget/LinearLayoutManager;->g()I
 
-    iget-object v3, p0, Lcom/bbm/ui/a/ae;->d:Ljava/lang/String;
+    move-result v0
 
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    iget v1, p0, Lcom/bbm/ui/a/ae;->a:I
 
-    move-result v3
+    if-ne v0, v1, :cond_0
 
-    .line 140
-    iget-boolean v0, p0, Lcom/bbm/ui/a/ae;->f:Z
+    .line 45
+    iget-object v0, p0, Lcom/bbm/ui/a/ae;->b:Lcom/bbm/ui/a/ad;
 
-    if-nez v0, :cond_0
+    iget-object v0, v0, Lcom/bbm/ui/a/ad;->a:Lcom/bbm/ui/a/ac;
 
-    iget-boolean v0, p0, Lcom/bbm/ui/a/ae;->e:Z
+    iget-object v0, v0, Lcom/bbm/ui/a/ac;->o:Landroid/support/v7/widget/RecyclerView;
 
-    if-eqz v0, :cond_5
+    iget v1, p0, Lcom/bbm/ui/a/ae;->a:I
 
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/RecyclerView;->b(I)V
+
+    .line 47
     :cond_0
-    const/4 v0, 0x1
-
-    .line 142
-    :goto_0
-    iget-object v4, p0, Lcom/bbm/ui/a/ae;->d:Ljava/lang/String;
-
-    invoke-virtual {v1, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    iget-boolean v4, p0, Lcom/bbm/ui/a/ae;->f:Z
-
-    if-ne v2, v4, :cond_1
-
-    iget-boolean v4, p0, Lcom/bbm/ui/a/ae;->e:Z
-
-    if-eq v3, v4, :cond_4
-
-    .line 143
-    :cond_1
-    iput p1, p0, Lcom/bbm/ui/a/ae;->c:I
-
-    .line 144
-    iput-object v1, p0, Lcom/bbm/ui/a/ae;->d:Ljava/lang/String;
-
-    .line 145
-    iput-boolean v2, p0, Lcom/bbm/ui/a/ae;->f:Z
-
-    .line 146
-    iput-boolean v3, p0, Lcom/bbm/ui/a/ae;->e:Z
-
-    .line 148
-    iget-object v1, p0, Lcom/bbm/ui/a/ae;->b:Lcom/bbm/j/a;
-
-    invoke-virtual {v1}, Lcom/bbm/j/a;->c()V
-
-    .line 150
-    if-eqz v0, :cond_2
-
-    .line 151
-    iget-object v0, p0, Lcom/bbm/ui/a/ae;->h:Lcom/bbm/ui/a/x;
-
-    invoke-static {v0}, Lcom/bbm/ui/a/x;->b(Lcom/bbm/ui/a/x;)Lcom/bbm/util/fp;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lcom/bbm/util/fp;->b(Ljava/lang/Object;)V
-
-    .line 154
-    :cond_2
-    iget-boolean v0, p0, Lcom/bbm/ui/a/ae;->f:Z
-
-    if-nez v0, :cond_3
-
-    iget-boolean v0, p0, Lcom/bbm/ui/a/ae;->e:Z
-
-    if-eqz v0, :cond_4
-
-    .line 155
-    :cond_3
-    iget-object v0, p0, Lcom/bbm/ui/a/ae;->h:Lcom/bbm/ui/a/x;
-
-    invoke-static {v0}, Lcom/bbm/ui/a/x;->b(Lcom/bbm/ui/a/x;)Lcom/bbm/util/fp;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lcom/bbm/util/fp;->a(Ljava/lang/Object;)V
-
-    .line 158
-    :cond_4
     return-void
-
-    .line 140
-    :cond_5
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method

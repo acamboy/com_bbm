@@ -1,33 +1,29 @@
 .class public Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
-.super Lcom/bbm/ui/activities/mj;
+.super Lcom/bbm/bali/ui/main/a/d;
 .source "GroupChatHistorySettingsActivity.java"
 
 
 # instance fields
-.field protected a:Lcom/bbm/g/al;
+.field protected b:Lcom/bbm/g/an;
 
-.field private b:Landroid/content/Context;
+.field private h:Ljava/lang/String;
 
-.field private d:Ljava/lang/String;
+.field private i:Lcom/bbm/ui/activities/ki;
 
-.field private e:Landroid/widget/ListView;
-
-.field private f:Lcom/bbm/ui/activities/lt;
-
-.field private final g:Ljava/util/List;
+.field private final j:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
             "<",
-            "Lcom/bbm/ui/activities/ls;",
+            "Lcom/bbm/ui/activities/kh;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private h:Lcom/bbm/g/r;
+.field private k:Lcom/bbm/g/t;
 
-.field private final i:Lcom/bbm/j/k;
+.field private final l:Lcom/bbm/j/k;
 
 
 # direct methods
@@ -35,50 +31,50 @@
     .locals 1
 
     .prologue
-    .line 45
+    .line 41
     const-class v0, Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    invoke-direct {p0, v0}, Lcom/bbm/ui/activities/mj;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/bbm/bali/ui/main/a/d;-><init>(Ljava/lang/Class;)V
 
-    .line 41
+    .line 37
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->g:Ljava/util/List;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->j:Ljava/util/List;
 
-    .line 42
+    .line 38
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->h:Lcom/bbm/g/r;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->k:Lcom/bbm/g/t;
 
-    .line 134
-    new-instance v0, Lcom/bbm/ui/activities/lr;
+    .line 123
+    new-instance v0, Lcom/bbm/ui/activities/kg;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/lr;-><init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/kg;-><init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->i:Lcom/bbm/j/k;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->l:Lcom/bbm/j/k;
 
-    .line 46
+    .line 42
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)Lcom/bbm/g/r;
+.method static synthetic a(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)Lcom/bbm/g/t;
     .locals 1
 
     .prologue
-    .line 31
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->h:Lcom/bbm/g/r;
+    .line 29
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->k:Lcom/bbm/g/t;
 
     return-object v0
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;Lcom/bbm/g/r;)Lcom/bbm/g/r;
+.method static synthetic a(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;Lcom/bbm/g/t;)Lcom/bbm/g/t;
     .locals 0
 
     .prologue
-    .line 31
-    iput-object p1, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->h:Lcom/bbm/g/r;
+    .line 29
+    iput-object p1, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->k:Lcom/bbm/g/t;
 
     return-object p1
 .end method
@@ -87,18 +83,18 @@
     .locals 1
 
     .prologue
-    .line 31
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->d:Ljava/lang/String;
+    .line 29
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->h:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic c(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)Lcom/bbm/ui/activities/lt;
+.method static synthetic c(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)Lcom/bbm/ui/activities/ki;
     .locals 1
 
     .prologue
-    .line 31
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->f:Lcom/bbm/ui/activities/lt;
+    .line 29
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->i:Lcom/bbm/ui/activities/ki;
 
     return-object v0
 .end method
@@ -107,8 +103,8 @@
     .locals 1
 
     .prologue
-    .line 31
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->g:Ljava/util/List;
+    .line 29
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->j:Ljava/util/List;
 
     return-object v0
 .end method
@@ -116,25 +112,22 @@
 
 # virtual methods
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 6
+    .locals 4
 
     .prologue
-    const/4 v5, -0x1
+    const/4 v1, 0x1
 
-    .line 50
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/mj;->onCreate(Landroid/os/Bundle;)V
+    .line 46
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/d;->onCreate(Landroid/os/Bundle;)V
 
-    .line 51
-    iput-object p0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->b:Landroid/content/Context;
-
-    .line 52
-    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/g/al;
+    .line 47
+    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/g/an;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->a:Lcom/bbm/g/al;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->b:Lcom/bbm/g/an;
 
-    .line 53
+    .line 48
     invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -145,26 +138,26 @@
 
     if-eqz v0, :cond_0
 
-    .line 54
+    .line 49
     invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    const-string v1, "groupConversationUri"
+    const-string v2, "groupConversationUri"
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->d:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->h:Ljava/lang/String;
 
-    .line 56
+    .line 51
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->d:Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->h:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->d:Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->h:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
@@ -172,271 +165,242 @@
 
     if-nez v0, :cond_1
 
-    const/4 v0, 0x1
+    move v0, v1
 
     :goto_0
-    const-string v1, "GroupChatHistorySettingsActivity invoked without group conversation uri"
+    const-string v2, "GroupChatHistorySettingsActivity invoked without group conversation uri"
 
-    invoke-static {p0, v0, v1}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;ZLjava/lang/Object;)Z
+    invoke-static {p0, v0, v2}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;ZLjava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 99
+    .line 88
     :goto_1
     return-void
 
-    .line 56
+    .line 51
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 60
+    .line 55
     :cond_2
-    const v0, 0x7f030026
+    const v0, 0x7f03003f
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->setContentView(I)V
 
-    .line 62
-    new-instance v0, Lcom/bbm/ui/HeaderButtonActionBar;
+    .line 57
+    const v0, 0x7f0b05e8
 
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->findViewById(I)Landroid/view/View;
 
-    move-result-object v1
+    move-result-object v0
 
-    const v2, 0x7f0e03e6
+    check-cast v0, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
+    .line 58
     invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f0e0177
+    const v3, 0x7f0e044b
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0, v2}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setTitle(Ljava/lang/String;)V
 
-    move-result-object v3
+    .line 60
+    new-instance v2, Lcom/bbm/ui/activities/ke;
 
-    const v4, 0x7f0e0312
+    invoke-direct {v2, p0}, Lcom/bbm/ui/activities/ke;-><init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)V
 
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setNegativeButtonOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    move-result-object v3
+    .line 68
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setPositiveButtonEnabled(Z)V
 
-    invoke-direct {v0, p0, v1, v2, v3}, Lcom/bbm/ui/HeaderButtonActionBar;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .line 69
+    new-instance v1, Lcom/bbm/ui/activities/kf;
 
-    .line 66
-    new-instance v1, Lcom/bbm/ui/activities/lp;
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/kf;-><init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)V
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/lp;-><init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setPositiveButtonOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/HeaderButtonActionBar;->setNegativeButtonOnClickListener(Landroid/view/View$OnClickListener;)V
+    .line 84
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->j:Ljava/util/List;
 
-    .line 75
-    new-instance v1, Lcom/bbm/ui/activities/lq;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/lq;-><init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/HeaderButtonActionBar;->setPositiveButtonOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 91
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->getActionBar()Landroid/app/ActionBar;
-
-    move-result-object v1
-
-    .line 92
-    new-instance v2, Landroid/app/ActionBar$LayoutParams;
-
-    invoke-direct {v2, v5, v5}, Landroid/app/ActionBar$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v1, v0, v2}, Landroid/app/ActionBar;->setCustomView(Landroid/view/View;Landroid/app/ActionBar$LayoutParams;)V
-
-    .line 93
-    const/16 v0, 0x10
-
-    invoke-virtual {v1, v0}, Landroid/app/ActionBar;->setDisplayOptions(I)V
-
-    .line 95
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->g:Ljava/util/List;
-
-    new-instance v1, Lcom/bbm/ui/activities/ls;
+    new-instance v1, Lcom/bbm/ui/activities/kh;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f0e03e0
+    const v3, 0x7f0e0445
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    sget-object v3, Lcom/bbm/g/r;->a:Lcom/bbm/g/r;
+    sget-object v3, Lcom/bbm/g/t;->a:Lcom/bbm/g/t;
 
-    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/activities/ls;-><init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;Ljava/lang/String;Lcom/bbm/g/r;)V
+    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/activities/kh;-><init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;Ljava/lang/String;Lcom/bbm/g/t;)V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->g:Ljava/util/List;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->j:Ljava/util/List;
 
-    new-instance v1, Lcom/bbm/ui/activities/ls;
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    const v3, 0x7f0e03e1
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    sget-object v3, Lcom/bbm/g/r;->b:Lcom/bbm/g/r;
-
-    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/activities/ls;-><init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;Ljava/lang/String;Lcom/bbm/g/r;)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->g:Ljava/util/List;
-
-    new-instance v1, Lcom/bbm/ui/activities/ls;
+    new-instance v1, Lcom/bbm/ui/activities/kh;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f0e03e2
+    const v3, 0x7f0e0446
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    sget-object v3, Lcom/bbm/g/r;->c:Lcom/bbm/g/r;
+    sget-object v3, Lcom/bbm/g/t;->b:Lcom/bbm/g/t;
 
-    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/activities/ls;-><init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;Ljava/lang/String;Lcom/bbm/g/r;)V
+    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/activities/kh;-><init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;Ljava/lang/String;Lcom/bbm/g/t;)V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->g:Ljava/util/List;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->j:Ljava/util/List;
 
-    new-instance v1, Lcom/bbm/ui/activities/ls;
+    new-instance v1, Lcom/bbm/ui/activities/kh;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f0e03e7
+    const v3, 0x7f0e0447
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    sget-object v3, Lcom/bbm/g/r;->d:Lcom/bbm/g/r;
+    sget-object v3, Lcom/bbm/g/t;->c:Lcom/bbm/g/t;
 
-    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/activities/ls;-><init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;Ljava/lang/String;Lcom/bbm/g/r;)V
+    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/activities/kh;-><init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;Ljava/lang/String;Lcom/bbm/g/t;)V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->g:Ljava/util/List;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->j:Ljava/util/List;
 
-    new-instance v1, Lcom/bbm/ui/activities/ls;
+    new-instance v1, Lcom/bbm/ui/activities/kh;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f0e03e8
+    const v3, 0x7f0e044c
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    sget-object v3, Lcom/bbm/g/r;->e:Lcom/bbm/g/r;
+    sget-object v3, Lcom/bbm/g/t;->d:Lcom/bbm/g/t;
 
-    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/activities/ls;-><init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;Ljava/lang/String;Lcom/bbm/g/r;)V
+    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/activities/kh;-><init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;Ljava/lang/String;Lcom/bbm/g/t;)V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->g:Ljava/util/List;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->j:Ljava/util/List;
 
-    new-instance v1, Lcom/bbm/ui/activities/ls;
+    new-instance v1, Lcom/bbm/ui/activities/kh;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f0e03e9
+    const v3, 0x7f0e044d
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    sget-object v3, Lcom/bbm/g/r;->f:Lcom/bbm/g/r;
+    sget-object v3, Lcom/bbm/g/t;->e:Lcom/bbm/g/t;
 
-    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/activities/ls;-><init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;Ljava/lang/String;Lcom/bbm/g/r;)V
+    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/activities/kh;-><init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;Ljava/lang/String;Lcom/bbm/g/t;)V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->g:Ljava/util/List;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->j:Ljava/util/List;
 
-    new-instance v1, Lcom/bbm/ui/activities/ls;
+    new-instance v1, Lcom/bbm/ui/activities/kh;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f0e03e5
+    const v3, 0x7f0e044e
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    sget-object v3, Lcom/bbm/g/r;->g:Lcom/bbm/g/r;
+    sget-object v3, Lcom/bbm/g/t;->f:Lcom/bbm/g/t;
 
-    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/activities/ls;-><init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;Ljava/lang/String;Lcom/bbm/g/r;)V
+    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/activities/kh;-><init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;Ljava/lang/String;Lcom/bbm/g/t;)V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->g:Ljava/util/List;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->j:Ljava/util/List;
 
-    new-instance v1, Lcom/bbm/ui/activities/ls;
+    new-instance v1, Lcom/bbm/ui/activities/kh;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f0e03e3
+    const v3, 0x7f0e044a
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    sget-object v3, Lcom/bbm/g/r;->h:Lcom/bbm/g/r;
+    sget-object v3, Lcom/bbm/g/t;->g:Lcom/bbm/g/t;
 
-    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/activities/ls;-><init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;Ljava/lang/String;Lcom/bbm/g/r;)V
+    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/activities/kh;-><init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;Ljava/lang/String;Lcom/bbm/g/t;)V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 96
-    new-instance v0, Lcom/bbm/ui/activities/lt;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->j:Ljava/util/List;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->b:Landroid/content/Context;
+    new-instance v1, Lcom/bbm/ui/activities/kh;
 
-    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/activities/lt;-><init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;Landroid/content/Context;)V
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->getResources()Landroid/content/res/Resources;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->f:Lcom/bbm/ui/activities/lt;
+    move-result-object v2
 
-    .line 97
-    const v0, 0x7f0b018e
+    const v3, 0x7f0e0448
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    sget-object v3, Lcom/bbm/g/t;->h:Lcom/bbm/g/t;
+
+    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/activities/kh;-><init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;Ljava/lang/String;Lcom/bbm/g/t;)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 85
+    new-instance v0, Lcom/bbm/ui/activities/ki;
+
+    invoke-direct {v0, p0, p0}, Lcom/bbm/ui/activities/ki;-><init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->i:Lcom/bbm/ui/activities/ki;
+
+    .line 86
+    const v0, 0x7f0b01fb
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->findViewById(I)Landroid/view/View;
 
@@ -444,12 +408,8 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->e:Landroid/widget/ListView;
-
-    .line 98
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->e:Landroid/widget/ListView;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->f:Lcom/bbm/ui/activities/lt;
+    .line 87
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->i:Lcom/bbm/ui/activities/ki;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
@@ -460,15 +420,15 @@
     .locals 1
 
     .prologue
-    .line 109
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->i:Lcom/bbm/j/k;
+    .line 98
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->l:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
 
-    .line 110
-    invoke-super {p0}, Lcom/bbm/ui/activities/mj;->onPause()V
+    .line 99
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/d;->onPause()V
 
-    .line 111
+    .line 100
     return-void
 .end method
 
@@ -476,14 +436,14 @@
     .locals 1
 
     .prologue
-    .line 103
-    invoke-super {p0}, Lcom/bbm/ui/activities/mj;->onResume()V
+    .line 92
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/d;->onResume()V
 
-    .line 104
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->i:Lcom/bbm/j/k;
+    .line 93
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->l:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 105
+    .line 94
     return-void
 .end method

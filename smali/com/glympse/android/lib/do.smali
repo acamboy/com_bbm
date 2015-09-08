@@ -1,54 +1,91 @@
 .class Lcom/glympse/android/lib/do;
-.super Ljava/lang/Object;
-.source "HandlerManager.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.super Lcom/glympse/android/lib/ew;
+.source "GroupInviteCreate.java"
 
 
 # instance fields
-.field private mU:Lcom/glympse/android/lib/dn;
-
-.field private mV:Ljava/lang/Runnable;
+.field private hu:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/lib/dn;Ljava/lang/Runnable;)V
-    .locals 0
+.method public constructor <init>(Lcom/glympse/android/lib/GGlympsePrivate;Lcom/glympse/android/lib/GGroupPrivate;Lcom/glympse/android/lib/GInvitePrivate;)V
+    .locals 1
 
     .prologue
-    .line 159
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 21
+    invoke-direct {p0}, Lcom/glympse/android/lib/ew;-><init>()V
 
-    .line 160
-    iput-object p1, p0, Lcom/glympse/android/lib/do;->mU:Lcom/glympse/android/lib/dn;
+    .line 23
+    iput-object p2, p0, Lcom/glympse/android/lib/do;->iS:Lcom/glympse/android/api/GEventSink;
 
-    .line 161
-    iput-object p2, p0, Lcom/glympse/android/lib/do;->mV:Ljava/lang/Runnable;
+    .line 24
+    const/16 v0, 0xa
 
-    .line 162
+    iput v0, p0, Lcom/glympse/android/lib/do;->oO:I
+
+    .line 25
+    const/4 v0, 0x2
+
+    iput v0, p0, Lcom/glympse/android/lib/do;->oP:I
+
+    .line 26
+    const/4 v0, 0x4
+
+    iput v0, p0, Lcom/glympse/android/lib/do;->oQ:I
+
+    .line 27
+    const/16 v0, 0x8
+
+    iput v0, p0, Lcom/glympse/android/lib/do;->oR:I
+
+    .line 28
+    iput-object p3, p0, Lcom/glympse/android/lib/do;->oT:Lcom/glympse/android/lib/GInvitePrivate;
+
+    .line 29
+    iput-object p1, p0, Lcom/glympse/android/lib/do;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    .line 30
+    invoke-interface {p2}, Lcom/glympse/android/lib/GGroupPrivate;->getId()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/glympse/android/lib/do;->hu:Ljava/lang/String;
+
+    .line 31
+    invoke-interface {p3}, Lcom/glympse/android/lib/GInvitePrivate;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/glympse/android/lib/do;->oL:Ljava/lang/String;
+
+    .line 34
+    invoke-virtual {p0}, Lcom/glympse/android/lib/do;->ci()V
+
+    .line 35
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public a(Ljava/lang/StringBuilder;)V
+    .locals 1
 
     .prologue
-    .line 166
-    iget-object v1, p0, Lcom/glympse/android/lib/do;->mU:Lcom/glympse/android/lib/dn;
+    .line 43
+    const-string v0, "groups/"
 
-    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    .line 44
+    iget-object v0, p0, Lcom/glympse/android/lib/do;->hu:Ljava/lang/String;
 
-    check-cast v0, Ljava/lang/Runnable;
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/glympse/android/lib/do;->mV:Ljava/lang/Runnable;
+    .line 45
+    const-string v0, "/create_invite"
 
-    invoke-virtual {v1, v0, v2}, Lcom/glympse/android/lib/dn;->a(Ljava/lang/Runnable;Ljava/lang/Runnable;)V
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 167
+    .line 46
     return-void
 .end method

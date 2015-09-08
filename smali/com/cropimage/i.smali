@@ -192,32 +192,14 @@
     :cond_0
     iget-object v0, p0, Lcom/cropimage/i;->h:Lcom/cropimage/m;
 
-    iget-object v0, v0, Lcom/cropimage/m;->a:Landroid/graphics/Bitmap;
-
-    .line 132
-    iget-object v1, p0, Lcom/cropimage/i;->h:Lcom/cropimage/m;
-
-    iput-object p1, v1, Lcom/cropimage/m;->a:Landroid/graphics/Bitmap;
+    iput-object p1, v0, Lcom/cropimage/m;->a:Landroid/graphics/Bitmap;
 
     .line 133
-    iget-object v1, p0, Lcom/cropimage/i;->h:Lcom/cropimage/m;
+    iget-object v0, p0, Lcom/cropimage/i;->h:Lcom/cropimage/m;
 
-    iput p2, v1, Lcom/cropimage/m;->b:I
+    iput p2, v0, Lcom/cropimage/m;->b:I
 
     .line 135
-    if-eqz v0, :cond_1
-
-    if-eq v0, p1, :cond_1
-
-    iget-object v0, p0, Lcom/cropimage/i;->c:Lcom/cropimage/l;
-
-    if-eqz v0, :cond_1
-
-    .line 136
-    iget-object v0, p0, Lcom/cropimage/i;->c:Lcom/cropimage/l;
-
-    .line 138
-    :cond_1
     return-void
 .end method
 
@@ -225,9 +207,9 @@
     .locals 9
 
     .prologue
-    const/high16 v6, 0x40400000
+    const/high16 v6, 0x40400000    # 3.0f
 
-    const/high16 v8, 0x40000000
+    const/high16 v8, 0x40000000    # 2.0f
 
     .line 259
     invoke-virtual {p0}, Lcom/cropimage/i;->getWidth()I
@@ -369,7 +351,7 @@
     .locals 7
 
     .prologue
-    const/high16 v6, 0x40000000
+    const/high16 v6, 0x40000000    # 2.0f
 
     const/4 v1, 0x0
 
@@ -651,7 +633,7 @@
 
     sub-float v0, p1, v0
 
-    const/high16 v1, 0x43960000
+    const/high16 v1, 0x43960000    # 300.0f
 
     div-float v5, v0, v1
 
@@ -765,9 +747,9 @@
     .locals 4
 
     .prologue
-    const/high16 v3, 0x40000000
+    const/high16 v3, 0x40000000    # 2.0f
 
-    const/high16 v2, 0x3f800000
+    const/high16 v2, 0x3f800000    # 1.0f
 
     .line 105
     const/4 v0, 0x4
@@ -980,7 +962,7 @@
 
     if-nez v0, :cond_3
 
-    const/high16 v0, 0x3f800000
+    const/high16 v0, 0x3f800000    # 1.0f
 
     :goto_2
     iput v0, p0, Lcom/cropimage/i;->k:F
@@ -1034,7 +1016,7 @@
 
     move-result v0
 
-    const/high16 v1, 0x40800000
+    const/high16 v1, 0x40800000    # 4.0f
 
     mul-float/2addr v0, v1
 

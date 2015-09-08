@@ -61,7 +61,7 @@
 
     sput-object v0, Lcom/bbm/b/b;->b:Lcom/bbm/b/b;
 
-    .line 26
+    .line 30
     new-instance v0, Lcom/bbm/b/b;
 
     const-string v1, "Unspecified"
@@ -105,13 +105,13 @@
     .end annotation
 
     .prologue
-    .line 30
+    .line 34
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 31
+    .line 35
     iput-object p3, p0, Lcom/bbm/b/b;->d:Ljava/lang/String;
 
-    .line 32
+    .line 36
     return-void
 .end method
 
@@ -119,7 +119,7 @@
     .locals 1
 
     .prologue
-    .line 35
+    .line 39
     const-string v0, "Channel"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -128,14 +128,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 36
+    .line 40
     sget-object v0, Lcom/bbm/b/b;->a:Lcom/bbm/b/b;
 
-    .line 41
+    .line 45
     :goto_0
     return-object v0
 
-    .line 38
+    .line 42
     :cond_0
     const-string v0, "Display"
 
@@ -145,12 +145,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 39
+    .line 43
     sget-object v0, Lcom/bbm/b/b;->b:Lcom/bbm/b/b;
 
     goto :goto_0
 
-    .line 41
+    .line 45
     :cond_1
     sget-object v0, Lcom/bbm/b/b;->c:Lcom/bbm/b/b;
 
@@ -195,7 +195,7 @@
     .locals 1
 
     .prologue
-    .line 44
+    .line 48
     iget-object v0, p0, Lcom/bbm/b/b;->d:Ljava/lang/String;
 
     return-object v0

@@ -45,26 +45,28 @@
         <item quantity="many">%1$s rezultata</item>
     </plurals>
     <plurals name="slide_menu_active_chats">
-        <item quantity="other">%1$s aktivnih čavrljanja</item>
-        <item quantity="one">1 aktivno čavrljanje</item>
-        <item quantity="few">%1$s aktivna čavrljanja</item>
-        <item quantity="many">%1$s aktivnih čavrljanja</item>
+        <item quantity="other">Aktivnih čavrljanja %1$s</item>
+        <item quantity="one">Aktivno čavrljanje %1$s</item>
+        <item quantity="few">Aktivna čavrljanja %1$s</item>
+        <item quantity="many">Aktivnih čavrljanja %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_channelupdates">
-        <item quantity="other">%1$s novih obavijesti</item>
-        <item quantity="one">1 nova obavijest</item>
-        <item quantity="few">%1$s nove obavijesti</item>
-        <item quantity="many">%1$s novih obavijesti</item>
+        <item quantity="other">Stavki na kanalima %1$s</item>
+        <item quantity="one">Stavka na kanalima %1$s</item>
+        <item quantity="few">Stavke na kanalima %1$s</item>
+        <item quantity="many">Stavki na kanalima %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_invites">
-        <item quantity="other">%1$s novih pozivnica</item>
-        <item quantity="one">1 nova pozivnica</item>
-        <item quantity="few">%1$s nove pozivnice</item>
-        <item quantity="many">%1$s novih pozivnica</item>
+        <item quantity="other">Novih pozivnica %1$s</item>
+        <item quantity="one">Nova pozivnica %1$s</item>
+        <item quantity="few">Nove pozivnice %1$s</item>
+        <item quantity="many">Novih pozivnica %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_updates">
-        <item quantity="other">%1$s novih stavki</item>
-        <item quantity="one">1 nova stavka</item>
+        <item quantity="other">Novih sažetaka %1$s</item>
+        <item quantity="one">Novi sažetak %1$s</item>
+        <item quantity="few">Nova sažetka %1$s</item>
+        <item quantity="many">Novih sažetaka %1$s</item>
     </plurals>
     <plurals name="slide_menu_total_contacts">
         <item quantity="other">%1$s kontakata</item>

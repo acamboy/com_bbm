@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@id/default_menu">
+        <item android:icon="@drawable/ic_glympse" android:id="@id/bbm_glympes_menu" android:visible="false" android:title="@string/glympse" app:showAsAction="always" />
+        <item android:icon="@drawable/ic_voice_call" android:id="@id/bbm_voice_menu" android:visible="false" android:title="@string/incoming_call_type_voice" app:showAsAction="always" />
+        <item android:icon="@drawable/ic_private_chat_header" android:id="@id/bbm_private_chat_menu" android:visible="false" android:title="@string/private_chat_menu" app:showAsAction="always" />
+        <item android:icon="@drawable/ic_menu_add_contact" android:id="@id/bbm_invitemore" android:visible="true" android:title="@string/menu_chat_invite_more" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_bbm_meetings" android:id="@id/menu_bbm_meetings" android:title="@string/start_meeting" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_ping" android:id="@id/conversation_menu_ping" android:title="@string/slide_menu_ping" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_copy" android:id="@id/conversation_menu_copy" android:title="@string/group_conversation_slide_menu_copy_chat" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_send_email" android:id="@id/conversation_menu_email" android:title="@string/group_conversation_slide_menu_email_chat" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_locker_menu" android:id="@id/reset_protected_chat" android:visible="false" android:title="@string/share_passphrase_title" app:showAsAction="never" />
+        <item android:icon="@drawable/ic_menu_block" android:id="@id/conversation_menu_block" android:visible="false" android:title="@string/slide_menu_block_chat" app:showAsAction="never" />
+    </group>
+    <group android:id="@id/protected_menu" android:visible="false">
+        <item android:icon="@drawable/ic_locker_header" android:id="@id/protected_key_exchange" android:title="@string/share_passphrase_title" app:showAsAction="always" />
+    </group>
+    <item android:icon="@drawable/ic_menu_delete" android:id="@id/conversation_menu_delete" android:visible="false" android:title="@string/menu_end_chat" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_menu_delete" android:id="@id/conversation_menu_leave" android:visible="false" android:title="@string/menu_leave_chat" app:showAsAction="never" />
+</menu>

@@ -1,145 +1,115 @@
-.class final synthetic Lcom/bbm/ui/c/ib;
-.super Ljava/lang/Object;
-.source "StickerStoreFragment.java"
+.class public final enum Lcom/bbm/ui/c/ib;
+.super Ljava/lang/Enum;
+.source "SuggestionSections.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/bbm/ui/c/ib;",
+        ">;"
+    }
+.end annotation
 
 
 # static fields
-.field static final synthetic a:[I
+.field public static final enum a:Lcom/bbm/ui/c/ib;
 
-.field static final synthetic b:[I
+.field public static final enum b:Lcom/bbm/ui/c/ib;
+
+.field private static final synthetic c:[Lcom/bbm/ui/c/ib;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 4
 
     .prologue
-    .line 379
-    invoke-static {}, Lcom/bbm/ui/c/id;->values()[Lcom/bbm/ui/c/id;
+    const/4 v3, 0x1
 
-    move-result-object v0
+    const/4 v2, 0x0
 
-    array-length v0, v0
+    .line 4
+    new-instance v0, Lcom/bbm/ui/c/ib;
 
-    new-array v0, v0, [I
+    const-string v1, "InivteToBBM"
 
-    sput-object v0, Lcom/bbm/ui/c/ib;->b:[I
+    invoke-direct {v0, v1, v2}, Lcom/bbm/ui/c/ib;-><init>(Ljava/lang/String;I)V
 
-    :try_start_0
-    sget-object v0, Lcom/bbm/ui/c/ib;->b:[I
+    sput-object v0, Lcom/bbm/ui/c/ib;->a:Lcom/bbm/ui/c/ib;
 
-    sget-object v1, Lcom/bbm/ui/c/id;->a:Lcom/bbm/ui/c/id;
+    .line 5
+    new-instance v0, Lcom/bbm/ui/c/ib;
 
-    invoke-virtual {v1}, Lcom/bbm/ui/c/id;->ordinal()I
+    const-string v1, "FoundFriends"
 
-    move-result v1
+    invoke-direct {v0, v1, v3}, Lcom/bbm/ui/c/ib;-><init>(Ljava/lang/String;I)V
 
-    const/4 v2, 0x1
+    sput-object v0, Lcom/bbm/ui/c/ib;->b:Lcom/bbm/ui/c/ib;
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_4
+    .line 3
+    const/4 v0, 0x2
 
-    :goto_0
-    :try_start_1
-    sget-object v0, Lcom/bbm/ui/c/ib;->b:[I
+    new-array v0, v0, [Lcom/bbm/ui/c/ib;
 
-    sget-object v1, Lcom/bbm/ui/c/id;->b:Lcom/bbm/ui/c/id;
+    sget-object v1, Lcom/bbm/ui/c/ib;->a:Lcom/bbm/ui/c/ib;
 
-    invoke-virtual {v1}, Lcom/bbm/ui/c/id;->ordinal()I
+    aput-object v1, v0, v2
 
-    move-result v1
+    sget-object v1, Lcom/bbm/ui/c/ib;->b:Lcom/bbm/ui/c/ib;
 
-    const/4 v2, 0x2
+    aput-object v1, v0, v3
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_3
+    sput-object v0, Lcom/bbm/ui/c/ib;->c:[Lcom/bbm/ui/c/ib;
 
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/bbm/ui/c/ib;->b:[I
-
-    sget-object v1, Lcom/bbm/ui/c/id;->c:Lcom/bbm/ui/c/id;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/c/id;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    .line 264
-    :goto_2
-    invoke-static {}, Lcom/bbm/util/bi;->values()[Lcom/bbm/util/bi;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/bbm/ui/c/ib;->a:[I
-
-    :try_start_3
-    sget-object v0, Lcom/bbm/ui/c/ib;->a:[I
-
-    sget-object v1, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
-
-    invoke-virtual {v1}, Lcom/bbm/util/bi;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_1
-
-    :goto_3
-    :try_start_4
-    sget-object v0, Lcom/bbm/ui/c/ib;->a:[I
-
-    sget-object v1, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
-
-    invoke-virtual {v1}, Lcom/bbm/util/bi;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_0
-
-    :goto_4
     return-void
+.end method
 
-    :catch_0
-    move-exception v0
+.method private constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
-    goto :goto_4
+    .prologue
+    .line 3
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    :catch_1
-    move-exception v0
+    return-void
+.end method
 
-    goto :goto_3
+.method public static valueOf(Ljava/lang/String;)Lcom/bbm/ui/c/ib;
+    .locals 1
 
-    :catch_2
-    move-exception v0
+    .prologue
+    .line 3
+    const-class v0, Lcom/bbm/ui/c/ib;
 
-    goto :goto_2
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    :catch_3
-    move-exception v0
+    move-result-object v0
 
-    goto :goto_1
+    check-cast v0, Lcom/bbm/ui/c/ib;
 
-    :catch_4
-    move-exception v0
+    return-object v0
+.end method
 
-    goto :goto_0
+.method public static values()[Lcom/bbm/ui/c/ib;
+    .locals 1
+
+    .prologue
+    .line 3
+    sget-object v0, Lcom/bbm/ui/c/ib;->c:[Lcom/bbm/ui/c/ib;
+
+    invoke-virtual {v0}, [Lcom/bbm/ui/c/ib;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcom/bbm/ui/c/ib;
+
+    return-object v0
 .end method

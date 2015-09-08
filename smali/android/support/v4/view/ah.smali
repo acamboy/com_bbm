@@ -1,22 +1,26 @@
 .class final Landroid/support/v4/view/ah;
 .super Ljava/lang/Object;
-.source "PagerTabStrip.java"
+.source "MenuItemCompat.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/support/v4/view/am;
 
 
 # instance fields
-.field final synthetic a:Landroid/support/v4/view/PagerTabStrip;
+.field final synthetic a:Landroid/support/v4/view/aj;
+
+.field final synthetic b:Landroid/support/v4/view/ag;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/view/PagerTabStrip;)V
+.method constructor <init>(Landroid/support/v4/view/ag;Landroid/support/v4/view/aj;)V
     .locals 0
 
     .prologue
-    .line 113
-    iput-object p1, p0, Landroid/support/v4/view/ah;->a:Landroid/support/v4/view/PagerTabStrip;
+    .line 228
+    iput-object p1, p0, Landroid/support/v4/view/ah;->b:Landroid/support/v4/view/ag;
+
+    iput-object p2, p0, Landroid/support/v4/view/ah;->a:Landroid/support/v4/view/aj;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,27 +29,30 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final a(Landroid/view/MenuItem;)Z
+    .locals 1
 
     .prologue
-    .line 116
-    iget-object v0, p0, Landroid/support/v4/view/ah;->a:Landroid/support/v4/view/PagerTabStrip;
+    .line 231
+    iget-object v0, p0, Landroid/support/v4/view/ah;->a:Landroid/support/v4/view/aj;
 
-    iget-object v0, v0, Landroid/support/v4/view/PagerTabStrip;->a:Landroid/support/v4/view/ViewPager;
+    invoke-interface {v0, p1}, Landroid/support/v4/view/aj;->a(Landroid/view/MenuItem;)Z
 
-    iget-object v1, p0, Landroid/support/v4/view/ah;->a:Landroid/support/v4/view/PagerTabStrip;
+    move-result v0
 
-    iget-object v1, v1, Landroid/support/v4/view/PagerTabStrip;->a:Landroid/support/v4/view/ViewPager;
+    return v0
+.end method
 
-    invoke-virtual {v1}, Landroid/support/v4/view/ViewPager;->getCurrentItem()I
+.method public final b(Landroid/view/MenuItem;)Z
+    .locals 1
 
-    move-result v1
+    .prologue
+    .line 236
+    iget-object v0, p0, Landroid/support/v4/view/ah;->a:Landroid/support/v4/view/aj;
 
-    add-int/lit8 v1, v1, 0x1
+    invoke-interface {v0, p1}, Landroid/support/v4/view/aj;->b(Landroid/view/MenuItem;)Z
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->setCurrentItem(I)V
+    move-result v0
 
-    .line 117
-    return-void
+    return v0
 .end method

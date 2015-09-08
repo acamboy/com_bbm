@@ -1,91 +1,75 @@
 .class final Lcom/bbm/ui/c/em;
-.super Ljava/lang/Object;
-.source "GroupsFragment.java"
+.super Lcom/bbm/d/b/ab;
+.source "GroupUpdatesFragment.java"
 
-# interfaces
-.implements Lcom/bbm/ui/c/gn;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/d/b/ab",
+        "<",
+        "Lcom/bbm/g/al;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
-
-.field final synthetic b:Lcom/bbm/g/a;
-
-.field final synthetic c:Lcom/bbm/ui/c/eb;
+.field final synthetic a:Lcom/bbm/ui/c/ek;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/eb;Lcom/bbm/ui/activities/MainActivity;Lcom/bbm/g/a;)V
+.method constructor <init>(Lcom/bbm/ui/c/ek;Lcom/bbm/j/r;)V
     .locals 0
 
     .prologue
-    .line 361
-    iput-object p1, p0, Lcom/bbm/ui/c/em;->c:Lcom/bbm/ui/c/eb;
+    .line 126
+    iput-object p1, p0, Lcom/bbm/ui/c/em;->a:Lcom/bbm/ui/c/ek;
 
-    iput-object p2, p0, Lcom/bbm/ui/c/em;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    iput-object p3, p0, Lcom/bbm/ui/c/em;->b:Lcom/bbm/g/a;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lcom/bbm/d/b/ab;-><init>(Lcom/bbm/j/r;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
-    .locals 3
+.method public final bridge synthetic a(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 4
 
     .prologue
-    .line 365
-    iget v0, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
+    .line 126
+    check-cast p1, Lcom/bbm/g/al;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lcom/bbm/g/al;
 
-    .line 373
+    iget-wide v0, p1, Lcom/bbm/g/al;->k:J
+
+    iget-wide v2, p2, Lcom/bbm/g/al;->k:J
+
+    cmp-long v0, v0, v2
+
+    if-gez v0, :cond_0
+
+    const/4 v0, 0x1
+
     :goto_0
-    return-void
+    return v0
 
-    .line 367
-    :pswitch_0
-    iget-object v0, p0, Lcom/bbm/ui/c/em;->a:Lcom/bbm/ui/activities/MainActivity;
+    :cond_0
+    iget-wide v0, p1, Lcom/bbm/g/al;->k:J
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+    iget-wide v2, p2, Lcom/bbm/g/al;->k:J
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+    cmp-long v0, v0, v2
 
-    const/4 v1, 0x1
+    if-lez v0, :cond_1
 
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
-
-    .line 368
-    new-instance v0, Landroid/content/Intent;
-
-    iget-object v1, p0, Lcom/bbm/ui/c/em;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    const-class v2, Lcom/bbm/ui/activities/GroupProfileActivity;
-
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 369
-    const-string v1, "groupUri"
-
-    iget-object v2, p0, Lcom/bbm/ui/c/em;->b:Lcom/bbm/g/a;
-
-    iget-object v2, v2, Lcom/bbm/g/a;->v:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 370
-    iget-object v1, p0, Lcom/bbm/ui/c/em;->c:Lcom/bbm/ui/c/eb;
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/c/eb;->startActivity(Landroid/content/Intent;)V
+    const/4 v0, -0x1
 
     goto :goto_0
 
-    .line 365
-    :pswitch_data_0
-    .packed-switch 0x7f0b005b
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

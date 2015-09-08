@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field final synthetic eQ:Lcom/glympse/android/hal/bv;
+.field final synthetic eT:Lcom/glympse/android/hal/bv;
 
 
 # direct methods
@@ -13,7 +13,7 @@
 
     .prologue
     .line 69
-    iput-object p1, p0, Lcom/glympse/android/hal/bw;->eQ:Lcom/glympse/android/hal/bv;
+    iput-object p1, p0, Lcom/glympse/android/hal/bw;->eT:Lcom/glympse/android/hal/bv;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -38,7 +38,7 @@
     .prologue
     .line 76
     :try_start_0
-    iget-object v0, p0, Lcom/glympse/android/hal/bw;->eQ:Lcom/glympse/android/hal/bv;
+    iget-object v0, p0, Lcom/glympse/android/hal/bw;->eT:Lcom/glympse/android/hal/bv;
 
     invoke-static {v0}, Lcom/glympse/android/hal/bv;->a(Lcom/glympse/android/hal/bv;)Lcom/glympse/android/hal/GWifiListener;
 
@@ -95,7 +95,7 @@
     check-cast v0, Landroid/net/wifi/WifiInfo;
 
     .line 89
-    iget-object v1, p0, Lcom/glympse/android/hal/bw;->eQ:Lcom/glympse/android/hal/bv;
+    iget-object v1, p0, Lcom/glympse/android/hal/bw;->eT:Lcom/glympse/android/hal/bv;
 
     invoke-static {v1}, Lcom/glympse/android/hal/bv;->a(Lcom/glympse/android/hal/bv;)Lcom/glympse/android/hal/GWifiListener;
 
@@ -122,7 +122,7 @@
     if-ne v1, v0, :cond_0
 
     .line 93
-    iget-object v0, p0, Lcom/glympse/android/hal/bw;->eQ:Lcom/glympse/android/hal/bv;
+    iget-object v0, p0, Lcom/glympse/android/hal/bw;->eT:Lcom/glympse/android/hal/bv;
 
     invoke-static {v0}, Lcom/glympse/android/hal/bv;->a(Lcom/glympse/android/hal/bv;)Lcom/glympse/android/hal/GWifiListener;
 

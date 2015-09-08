@@ -1,216 +1,205 @@
-.class final enum Lcom/bbm/ui/c/hv;
-.super Ljava/lang/Enum;
-.source "StickerDetailsFragment.java"
+.class final Lcom/bbm/ui/c/hv;
+.super Lcom/bbm/ui/he;
+.source "StoreHomeFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ljava/lang/Enum",
+        "Lcom/bbm/ui/he",
         "<",
-        "Lcom/bbm/ui/c/hv;",
+        "Lcom/bbm/l/b/d;",
+        "Ljava/lang/String;",
+        "Lcom/bbm/l/h;",
         ">;"
     }
 .end annotation
 
 
-# static fields
-.field public static final enum a:Lcom/bbm/ui/c/hv;
-
-.field public static final enum b:Lcom/bbm/ui/c/hv;
-
-.field public static final enum c:Lcom/bbm/ui/c/hv;
-
-.field public static final enum d:Lcom/bbm/ui/c/hv;
-
-.field public static final enum e:Lcom/bbm/ui/c/hv;
-
-.field public static final enum f:Lcom/bbm/ui/c/hv;
-
-.field public static final enum g:Lcom/bbm/ui/c/hv;
-
-.field public static final enum h:Lcom/bbm/ui/c/hv;
-
-.field private static final synthetic i:[Lcom/bbm/ui/c/hv;
+# instance fields
+.field final synthetic f:Lcom/bbm/ui/c/hn;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
-
-    .prologue
-    const/4 v7, 0x4
-
-    const/4 v6, 0x3
-
-    const/4 v5, 0x2
-
-    const/4 v4, 0x1
-
-    const/4 v3, 0x0
-
-    .line 169
-    new-instance v0, Lcom/bbm/ui/c/hv;
-
-    const-string v1, "UNKNOWN"
-
-    invoke-direct {v0, v1, v3}, Lcom/bbm/ui/c/hv;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/ui/c/hv;->a:Lcom/bbm/ui/c/hv;
-
-    new-instance v0, Lcom/bbm/ui/c/hv;
-
-    const-string v1, "INSTALL"
-
-    invoke-direct {v0, v1, v4}, Lcom/bbm/ui/c/hv;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/ui/c/hv;->b:Lcom/bbm/ui/c/hv;
-
-    new-instance v0, Lcom/bbm/ui/c/hv;
-
-    const-string v1, "INSTALLING"
-
-    invoke-direct {v0, v1, v5}, Lcom/bbm/ui/c/hv;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/ui/c/hv;->c:Lcom/bbm/ui/c/hv;
-
-    new-instance v0, Lcom/bbm/ui/c/hv;
-
-    const-string v1, "INSTALLED"
-
-    invoke-direct {v0, v1, v6}, Lcom/bbm/ui/c/hv;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/ui/c/hv;->d:Lcom/bbm/ui/c/hv;
-
-    new-instance v0, Lcom/bbm/ui/c/hv;
-
-    const-string v1, "UNAVAILABLE"
-
-    invoke-direct {v0, v1, v7}, Lcom/bbm/ui/c/hv;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/ui/c/hv;->e:Lcom/bbm/ui/c/hv;
-
-    new-instance v0, Lcom/bbm/ui/c/hv;
-
-    const-string v1, "FREE"
-
-    const/4 v2, 0x5
-
-    invoke-direct {v0, v1, v2}, Lcom/bbm/ui/c/hv;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/ui/c/hv;->f:Lcom/bbm/ui/c/hv;
-
-    new-instance v0, Lcom/bbm/ui/c/hv;
-
-    const-string v1, "PAID_UNPRICED"
-
-    const/4 v2, 0x6
-
-    invoke-direct {v0, v1, v2}, Lcom/bbm/ui/c/hv;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/ui/c/hv;->g:Lcom/bbm/ui/c/hv;
-
-    new-instance v0, Lcom/bbm/ui/c/hv;
-
-    const-string v1, "PAID"
-
-    const/4 v2, 0x7
-
-    invoke-direct {v0, v1, v2}, Lcom/bbm/ui/c/hv;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/ui/c/hv;->h:Lcom/bbm/ui/c/hv;
-
-    .line 168
-    const/16 v0, 0x8
-
-    new-array v0, v0, [Lcom/bbm/ui/c/hv;
-
-    sget-object v1, Lcom/bbm/ui/c/hv;->a:Lcom/bbm/ui/c/hv;
-
-    aput-object v1, v0, v3
-
-    sget-object v1, Lcom/bbm/ui/c/hv;->b:Lcom/bbm/ui/c/hv;
-
-    aput-object v1, v0, v4
-
-    sget-object v1, Lcom/bbm/ui/c/hv;->c:Lcom/bbm/ui/c/hv;
-
-    aput-object v1, v0, v5
-
-    sget-object v1, Lcom/bbm/ui/c/hv;->d:Lcom/bbm/ui/c/hv;
-
-    aput-object v1, v0, v6
-
-    sget-object v1, Lcom/bbm/ui/c/hv;->e:Lcom/bbm/ui/c/hv;
-
-    aput-object v1, v0, v7
-
-    const/4 v1, 0x5
-
-    sget-object v2, Lcom/bbm/ui/c/hv;->f:Lcom/bbm/ui/c/hv;
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x6
-
-    sget-object v2, Lcom/bbm/ui/c/hv;->g:Lcom/bbm/ui/c/hv;
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x7
-
-    sget-object v2, Lcom/bbm/ui/c/hv;->h:Lcom/bbm/ui/c/hv;
-
-    aput-object v2, v0, v1
-
-    sput-object v0, Lcom/bbm/ui/c/hv;->i:[Lcom/bbm/ui/c/hv;
-
-    return-void
-.end method
-
-.method private constructor <init>(Ljava/lang/String;I)V
-    .locals 0
+.method public constructor <init>(Lcom/bbm/ui/c/hn;Landroid/content/Context;Lcom/bbm/j/r;)V
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "()V"
+            "(",
+            "Landroid/content/Context;",
+            "Lcom/bbm/j/r",
+            "<",
+            "Ljava/util/List",
+            "<",
+            "Lcom/bbm/ui/hj",
+            "<",
+            "Lcom/bbm/l/b/d;",
+            "Lcom/bbm/l/h;",
+            ">;>;>;)V"
         }
     .end annotation
 
     .prologue
-    .line 168
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 814
+    iput-object p1, p0, Lcom/bbm/ui/c/hv;->f:Lcom/bbm/ui/c/hn;
+
+    .line 815
+    invoke-static {}, Lcom/bbm/util/bv;->a()Lcom/bbm/util/bv;
+
+    move-result-object v0
+
+    invoke-direct {p0, p2, p3, v0}, Lcom/bbm/ui/he;-><init>(Landroid/content/Context;Lcom/bbm/j/r;Lcom/bbm/util/ds;)V
+
+    .line 816
+    return-void
+.end method
+
+
+# virtual methods
+.method protected final a()Landroid/view/View;
+    .locals 2
+
+    .prologue
+    .line 820
+    new-instance v0, Lcom/bbm/ui/StoreGridHeaderView;
+
+    iget-object v1, p0, Lcom/bbm/ui/c/hv;->f:Lcom/bbm/ui/c/hn;
+
+    invoke-static {v1}, Lcom/bbm/ui/c/hn;->p(Lcom/bbm/ui/c/hn;)Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/bbm/ui/StoreGridHeaderView;-><init>(Landroid/content/Context;)V
+
+    .line 821
+    return-object v0
+.end method
+
+.method protected final a(Landroid/view/ViewGroup;I)Landroid/view/View;
+    .locals 2
+
+    .prologue
+    .line 848
+    new-instance v0, Lcom/bbm/ui/AppItemView;
+
+    iget-object v1, p0, Lcom/bbm/ui/c/hv;->f:Lcom/bbm/ui/c/hn;
+
+    invoke-static {v1}, Lcom/bbm/ui/c/hn;->p(Lcom/bbm/ui/c/hn;)Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/bbm/ui/AppItemView;-><init>(Landroid/content/Context;)V
+
+    .line 849
+    iget-object v1, p0, Lcom/bbm/ui/c/hv;->f:Lcom/bbm/ui/c/hn;
+
+    invoke-static {v1}, Lcom/bbm/ui/c/hn;->q(Lcom/bbm/ui/c/hn;)Lcom/bbm/util/b/e;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/AppItemView;->setImageCache(Lcom/bbm/util/b/e;)V
+
+    .line 850
+    iget-object v1, p0, Lcom/bbm/ui/c/hv;->f:Lcom/bbm/ui/c/hn;
+
+    invoke-static {v1}, Lcom/bbm/ui/c/hn;->t(Lcom/bbm/ui/c/hn;)Lcom/bbm/util/bw;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/AppItemView;->setHttpLoader(Lcom/bbm/util/bw;)V
+
+    .line 851
+    return-object v0
+.end method
+
+.method protected final bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 812
+    check-cast p1, Lcom/bbm/l/b/d;
+
+    iget-object v0, p1, Lcom/bbm/l/b/t;->k:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method protected final synthetic a(Landroid/view/View;Ljava/lang/Object;)V
+    .locals 3
+
+    .prologue
+    .line 812
+    check-cast p2, Lcom/bbm/l/h;
+
+    move-object v0, p1
+
+    check-cast v0, Lcom/bbm/ui/StoreGridHeaderView;
+
+    iget-object v1, p2, Lcom/bbm/l/h;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/StoreGridHeaderView;->setLeftLabel(Ljava/lang/String;)V
+
+    move-object v0, p1
+
+    check-cast v0, Lcom/bbm/ui/StoreGridHeaderView;
+
+    iget-object v1, p0, Lcom/bbm/ui/c/hv;->f:Lcom/bbm/ui/c/hn;
+
+    const v2, 0x7f0e04ff
+
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/c/hn;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/StoreGridHeaderView;->setRightLabel(Ljava/lang/String;)V
+
+    new-instance v0, Landroid/view/GestureDetector;
+
+    iget-object v1, p0, Lcom/bbm/ui/c/hv;->f:Lcom/bbm/ui/c/hn;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/c/hn;->getActivity()Landroid/support/v4/app/q;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/bbm/ui/c/hw;
+
+    invoke-direct {v2, p0, p2}, Lcom/bbm/ui/c/hw;-><init>(Lcom/bbm/ui/c/hv;Lcom/bbm/l/h;)V
+
+    invoke-direct {v0, v1, v2}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
+
+    check-cast p1, Lcom/bbm/ui/StoreGridHeaderView;
+
+    invoke-virtual {p1, v0}, Lcom/bbm/ui/StoreGridHeaderView;->a(Landroid/view/GestureDetector;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcom/bbm/ui/c/hv;
-    .locals 1
+.method protected final synthetic b(Landroid/view/View;Ljava/lang/Object;)V
+    .locals 3
 
     .prologue
-    .line 168
-    const-class v0, Lcom/bbm/ui/c/hv;
+    .line 812
+    check-cast p2, Lcom/bbm/l/b/d;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Lcom/bbm/ui/AppItemView;
 
-    move-result-object v0
+    new-instance v0, Landroid/view/GestureDetector;
 
-    check-cast v0, Lcom/bbm/ui/c/hv;
+    iget-object v1, p0, Lcom/bbm/ui/c/hv;->f:Lcom/bbm/ui/c/hn;
 
-    return-object v0
-.end method
+    invoke-virtual {v1}, Lcom/bbm/ui/c/hn;->getActivity()Landroid/support/v4/app/q;
 
-.method public static values()[Lcom/bbm/ui/c/hv;
-    .locals 1
+    move-result-object v1
 
-    .prologue
-    .line 168
-    sget-object v0, Lcom/bbm/ui/c/hv;->i:[Lcom/bbm/ui/c/hv;
+    new-instance v2, Lcom/bbm/ui/c/hx;
 
-    invoke-virtual {v0}, [Lcom/bbm/ui/c/hv;->clone()Ljava/lang/Object;
+    invoke-direct {v2, p0, p2}, Lcom/bbm/ui/c/hx;-><init>(Lcom/bbm/ui/c/hv;Lcom/bbm/l/b/d;)V
 
-    move-result-object v0
+    invoke-direct {v0, v1, v2}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
 
-    check-cast v0, [Lcom/bbm/ui/c/hv;
+    invoke-virtual {p1, v0}, Lcom/bbm/ui/AppItemView;->a(Landroid/view/GestureDetector;)V
 
-    return-object v0
+    invoke-virtual {p1, p2}, Lcom/bbm/ui/AppItemView;->setApp(Lcom/bbm/l/b/d;)V
+
+    return-void
 .end method

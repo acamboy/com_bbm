@@ -180,24 +180,24 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/v4/app/v;->a()Landroid/support/v4/app/af;
+    invoke-virtual {v0}, Landroid/support/v4/app/v;->a()Landroid/support/v4/app/ag;
 
     move-result-object v0
 
     .line 196
-    invoke-virtual {v0, p0}, Landroid/support/v4/app/af;->b(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/af;
+    invoke-virtual {v0, p0}, Landroid/support/v4/app/ag;->a(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/ag;
 
     .line 197
     if-eqz p1, :cond_3
 
     .line 198
-    invoke-virtual {v0}, Landroid/support/v4/app/af;->b()I
+    invoke-virtual {v0}, Landroid/support/v4/app/ag;->b()I
 
     goto :goto_0
 
     .line 200
     :cond_3
-    invoke-virtual {v0}, Landroid/support/v4/app/af;->a()I
+    invoke-virtual {v0}, Landroid/support/v4/app/ag;->a()I
 
     goto :goto_0
 .end method
@@ -866,7 +866,7 @@
     return-void
 .end method
 
-.method public show(Landroid/support/v4/app/af;Ljava/lang/String;)I
+.method public show(Landroid/support/v4/app/ag;Ljava/lang/String;)I
     .locals 2
 
     .prologue
@@ -881,13 +881,13 @@
     iput-boolean v0, p0, Landroid/support/v4/app/m;->mShownByMe:Z
 
     .line 153
-    invoke-virtual {p1, p0, p2}, Landroid/support/v4/app/af;->a(Landroid/support/v4/app/Fragment;Ljava/lang/String;)Landroid/support/v4/app/af;
+    invoke-virtual {p1, p0, p2}, Landroid/support/v4/app/ag;->a(Landroid/support/v4/app/Fragment;Ljava/lang/String;)Landroid/support/v4/app/ag;
 
     .line 154
     iput-boolean v1, p0, Landroid/support/v4/app/m;->mViewDestroyed:Z
 
     .line 155
-    invoke-virtual {p1}, Landroid/support/v4/app/af;->a()I
+    invoke-virtual {p1}, Landroid/support/v4/app/ag;->a()I
 
     move-result v0
 
@@ -914,15 +914,15 @@
     iput-boolean v0, p0, Landroid/support/v4/app/m;->mShownByMe:Z
 
     .line 136
-    invoke-virtual {p1}, Landroid/support/v4/app/v;->a()Landroid/support/v4/app/af;
+    invoke-virtual {p1}, Landroid/support/v4/app/v;->a()Landroid/support/v4/app/ag;
 
     move-result-object v0
 
     .line 137
-    invoke-virtual {v0, p0, p2}, Landroid/support/v4/app/af;->a(Landroid/support/v4/app/Fragment;Ljava/lang/String;)Landroid/support/v4/app/af;
+    invoke-virtual {v0, p0, p2}, Landroid/support/v4/app/ag;->a(Landroid/support/v4/app/Fragment;Ljava/lang/String;)Landroid/support/v4/app/ag;
 
     .line 138
-    invoke-virtual {v0}, Landroid/support/v4/app/af;->a()I
+    invoke-virtual {v0}, Landroid/support/v4/app/ag;->a()I
 
     .line 139
     return-void

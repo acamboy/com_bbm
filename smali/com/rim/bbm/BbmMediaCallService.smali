@@ -160,6 +160,10 @@
 
 .field public static final BBMV_MEDIASTATE_NONE:I = 0x0
 
+.field public static final BBMV_MEDIASTATE_RECOVERY_PENDING:I = 0x5
+
+.field public static final BBMV_MEDIASTATE_RECOVERY_STARTED:I = 0x6
+
 .field public static final BBMV_MEDIASTATE_RECVONLY:I = 0x4
 
 .field public static final BBMV_MEDIASTATE_SENDONLY:I = 0x3
@@ -232,14 +236,14 @@
     .locals 1
 
     .prologue
-    .line 305
+    .line 309
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     sput-object v0, Lcom/rim/bbm/BbmMediaCallService;->mHandler:Landroid/os/Handler;
 
-    .line 580
+    .line 619
     new-instance v0, Lcom/rim/bbm/BbmMediaCallService$3;
 
     invoke-direct {v0}, Lcom/rim/bbm/BbmMediaCallService$3;-><init>()V
@@ -253,10 +257,10 @@
     .locals 0
 
     .prologue
-    .line 311
+    .line 315
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 314
+    .line 318
     return-void
 .end method
 
@@ -298,6 +302,9 @@
 .method private static native bbmv_make_call(Ljava/lang/String;Ljava/lang/String;ZLcom/rim/bbm/BbmMediaCallService$OuputCallId;)I
 .end method
 
+.method private static native bbmv_make_call_secure(Ljava/lang/String;Ljava/lang/String;ZLcom/rim/bbm/BbmMediaCallService$OuputCallId;Z)I
+.end method
+
 .method private static native bbmv_mute_audio(IZ)I
 .end method
 
@@ -314,30 +321,30 @@
     .locals 1
 
     .prologue
-    .line 317
+    .line 321
     sget-object v0, Lcom/rim/bbm/BbmMediaCallService;->mInstance:Lcom/rim/bbm/BbmMediaCallService;
 
     if-nez v0, :cond_0
 
-    .line 318
+    .line 322
     new-instance v0, Lcom/rim/bbm/BbmMediaCallService;
 
     invoke-direct {v0}, Lcom/rim/bbm/BbmMediaCallService;-><init>()V
 
     sput-object v0, Lcom/rim/bbm/BbmMediaCallService;->mInstance:Lcom/rim/bbm/BbmMediaCallService;
 
-    .line 320
+    .line 324
     :cond_0
     sget-object v0, Lcom/rim/bbm/BbmMediaCallService;->mInstance:Lcom/rim/bbm/BbmMediaCallService;
 
     return-object v0
 .end method
 
-.method public static onStateChange(IILjava/lang/String;Ljava/lang/String;IIIIIIIIIIJJ)V
-    .locals 22
+.method public static onStateChange(IILjava/lang/String;Ljava/lang/String;IIIIIIIIIIJJI)V
+    .locals 24
 
     .prologue
-    .line 473
+    .line 492
     const/4 v2, 0x1
 
     move/from16 v0, p0
@@ -346,11 +353,9 @@
 
     if-nez p0, :cond_4
 
-    .line 475
+    .line 494
     :cond_0
     sget-object v2, Lcom/rim/bbm/BbmMediaCallService;->mContext:Landroid/content/Context;
-
-    sget-object v3, Lcom/rim/bbm/BbmMediaCallService;->mContext:Landroid/content/Context;
 
     const-string v3, "audio"
 
@@ -360,7 +365,7 @@
 
     check-cast v2, Landroid/media/AudioManager;
 
-    .line 476
+    .line 495
     const/4 v3, 0x7
 
     move/from16 v0, p5
@@ -369,7 +374,7 @@
 
     if-nez p5, :cond_5
 
-    .line 480
+    .line 499
     :cond_1
     invoke-virtual {v2}, Landroid/media/AudioManager;->getMode()I
 
@@ -379,18 +384,18 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 482
+    .line 501
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/media/AudioManager;->setMode(I)V
 
-    .line 487
+    .line 506
     :cond_2
     sget-object v3, Lcom/rim/bbm/BbmMediaCallService;->afChangeListener:Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
     invoke-virtual {v2, v3}, Landroid/media/AudioManager;->abandonAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;)I
 
-    .line 491
+    .line 510
     sget-object v2, Lcom/rim/bbm/BbmMediaCallService;->mWifiLock:Landroid/net/wifi/WifiManager$WifiLock;
 
     invoke-virtual {v2}, Landroid/net/wifi/WifiManager$WifiLock;->isHeld()Z
@@ -399,13 +404,17 @@
 
     if-eqz v2, :cond_3
 
-    .line 492
+    .line 512
+    :try_start_0
     sget-object v2, Lcom/rim/bbm/BbmMediaCallService;->mWifiLock:Landroid/net/wifi/WifiManager$WifiLock;
 
     invoke-virtual {v2}, Landroid/net/wifi/WifiManager$WifiLock;->release()V
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 494
+    .line 517
     :cond_3
+    :goto_0
     sget-object v2, Lcom/rim/bbm/BbmMediaCallService;->mPowerLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -414,15 +423,18 @@
 
     if-eqz v2, :cond_4
 
-    .line 495
+    .line 519
+    :try_start_1
     sget-object v2, Lcom/rim/bbm/BbmMediaCallService;->mPowerLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->release()V
+    :try_end_1
+    .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 541
+    .line 579
     :cond_4
-    :goto_0
-    sget-object v21, Lcom/rim/bbm/BbmMediaCallService;->mHandler:Landroid/os/Handler;
+    :goto_1
+    sget-object v22, Lcom/rim/bbm/BbmMediaCallService;->mHandler:Landroid/os/Handler;
 
     new-instance v2, Lcom/rim/bbm/BbmMediaCallService$2;
 
@@ -456,18 +468,48 @@
 
     move-wide/from16 v18, p16
 
-    move/from16 v20, p0
+    move/from16 v20, p18
 
-    invoke-direct/range {v2 .. v20}, Lcom/rim/bbm/BbmMediaCallService$2;-><init>(ILjava/lang/String;Ljava/lang/String;IIIIIIIIIIJJI)V
+    move/from16 v21, p0
 
-    move-object/from16 v0, v21
+    invoke-direct/range {v2 .. v21}, Lcom/rim/bbm/BbmMediaCallService$2;-><init>(ILjava/lang/String;Ljava/lang/String;IIIIIIIIIIJJII)V
+
+    move-object/from16 v0, v22
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 578
+    .line 617
     return-void
 
-    .line 504
+    .line 514
+    :catch_0
+    move-exception v2
+
+    const-string v2, "Wifi Lock release SecurityException"
+
+    const/4 v3, 0x0
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    invoke-static {v2, v3}, Lcom/blackberry/ids/Ln;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 521
+    :catch_1
+    move-exception v2
+
+    const-string v2, "Power Wake Lock release SecurityException"
+
+    const/4 v3, 0x0
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    invoke-static {v2, v3}, Lcom/blackberry/ids/Ln;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    .line 531
     :cond_5
     sget-object v3, Lcom/rim/bbm/BbmMediaCallService;->mWifiLock:Landroid/net/wifi/WifiManager$WifiLock;
 
@@ -485,14 +527,18 @@
 
     if-ne v0, v3, :cond_7
 
-    .line 507
+    .line 535
     :cond_6
+    :try_start_2
     sget-object v3, Lcom/rim/bbm/BbmMediaCallService;->mWifiLock:Landroid/net/wifi/WifiManager$WifiLock;
 
     invoke-virtual {v3}, Landroid/net/wifi/WifiManager$WifiLock;->acquire()V
+    :try_end_2
+    .catch Ljava/lang/SecurityException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 516
+    .line 547
     :cond_7
+    :goto_2
     sget-object v3, Lcom/rim/bbm/BbmMediaCallService;->mPowerLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v3}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -501,42 +547,31 @@
 
     if-nez v3, :cond_8
 
-    .line 517
+    .line 549
+    :try_start_3
     sget-object v3, Lcom/rim/bbm/BbmMediaCallService;->mPowerLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v3}, Landroid/os/PowerManager$WakeLock;->acquire()V
+    :try_end_3
+    .catch Ljava/lang/SecurityException; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 520
+    .line 555
     :cond_8
-    const/4 v3, 0x3
-
-    move/from16 v0, p5
-
-    if-ne v0, v3, :cond_9
-
-    .line 524
-    const/4 v3, 0x3
-
-    invoke-virtual {v2, v3}, Landroid/media/AudioManager;->setMode(I)V
-
-    goto :goto_0
-
-    .line 525
-    :cond_9
+    :goto_3
     const/4 v3, 0x1
 
     move/from16 v0, p5
 
-    if-eq v0, v3, :cond_a
+    if-eq v0, v3, :cond_9
 
     const/4 v3, 0x5
 
     move/from16 v0, p5
 
-    if-ne v0, v3, :cond_4
+    if-ne v0, v3, :cond_a
 
-    .line 531
-    :cond_a
+    .line 561
+    :cond_9
     sget-object v3, Lcom/rim/bbm/BbmMediaCallService;->afChangeListener:Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
     const/4 v4, 0x0
@@ -545,23 +580,71 @@
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/media/AudioManager;->requestAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;II)I
 
-    move-result v2
+    move-result v3
 
-    .line 534
-    const/4 v3, 0x1
+    .line 564
+    const/4 v4, 0x1
 
-    if-eq v2, v3, :cond_4
+    if-eq v3, v4, :cond_a
 
-    .line 535
-    const-string v2, "Audio focus was not gained"
+    .line 565
+    const-string v3, "Audio focus was not gained"
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    new-array v3, v3, [Ljava/lang/Object;
+    new-array v4, v4, [Ljava/lang/Object;
 
-    invoke-static {v2, v3}, Lcom/blackberry/ids/Ln;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v3, v4}, Lcom/blackberry/ids/Ln;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    goto :goto_0
+    .line 569
+    :cond_a
+    const/4 v3, 0x3
+
+    move/from16 v0, p5
+
+    if-eq v0, v3, :cond_b
+
+    const/4 v3, 0x5
+
+    move/from16 v0, p5
+
+    if-ne v0, v3, :cond_4
+
+    .line 574
+    :cond_b
+    const/4 v3, 0x3
+
+    invoke-virtual {v2, v3}, Landroid/media/AudioManager;->setMode(I)V
+
+    goto/16 :goto_1
+
+    .line 537
+    :catch_2
+    move-exception v3
+
+    const-string v3, "Wifi Lock acquire SecurityException"
+
+    const/4 v4, 0x0
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    invoke-static {v3, v4}, Lcom/blackberry/ids/Ln;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    goto :goto_2
+
+    .line 551
+    :catch_3
+    move-exception v3
+
+    const-string v3, "Power Wake Lock acquire SecurityException"
+
+    const/4 v4, 0x0
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    invoke-static {v3, v4}, Lcom/blackberry/ids/Ln;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    goto :goto_3
 .end method
 
 
@@ -570,7 +653,7 @@
     .locals 1
 
     .prologue
-    .line 380
+    .line 397
     invoke-static {p1, p2}, Lcom/rim/bbm/BbmMediaCallService;->bbmv_answer_call(IZ)I
 
     move-result v0
@@ -584,13 +667,13 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 395
-    .line 396
+    .line 412
+    .line 413
     sget-object v1, Lcom/rim/bbm/BbmMediaCallService;->mContext:Landroid/content/Context;
 
     if-eqz v1, :cond_0
 
-    .line 397
+    .line 414
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "Setting speaker to "
@@ -609,7 +692,7 @@
 
     invoke-static {v1, v0}, Lcom/blackberry/ids/Ln;->i(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 398
+    .line 415
     sget-object v0, Lcom/rim/bbm/BbmMediaCallService;->mContext:Landroid/content/Context;
 
     const-string v1, "audio"
@@ -620,17 +703,17 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 399
+    .line 416
     invoke-virtual {v0, p2}, Landroid/media/AudioManager;->setSpeakerphoneOn(Z)V
 
-    .line 400
+    .line 417
     const/4 v0, 0x1
 
-    .line 405
+    .line 422
     :goto_0
     return v0
 
-    .line 402
+    .line 419
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -663,7 +746,7 @@
     .locals 1
 
     .prologue
-    .line 375
+    .line 392
     invoke-static {p1, p2}, Lcom/rim/bbm/BbmMediaCallService;->bbmv_end_call(II)I
 
     move-result v0
@@ -675,10 +758,10 @@
     .locals 0
 
     .prologue
-    .line 390
+    .line 407
     invoke-static {p1}, Lcom/rim/bbm/BbmMediaCallService;->bbmv_get_last_call_info(Lcom/rim/bbm/BbmMediaCallService$CallResultDetails;)V
 
-    .line 391
+    .line 408
     return-void
 .end method
 
@@ -686,7 +769,7 @@
     .locals 1
 
     .prologue
-    .line 425
+    .line 442
     invoke-static {p1}, Lcom/rim/bbm/BbmMediaCallService;->bbmv_is_service_enabled(I)Z
 
     move-result v0
@@ -698,7 +781,7 @@
     .locals 1
 
     .prologue
-    .line 420
+    .line 437
     invoke-static {p1}, Lcom/rim/bbm/BbmMediaCallService;->bbmv_is_service_supported(I)Z
 
     move-result v0
@@ -707,45 +790,59 @@
 .end method
 
 .method public makeCall(Ljava/lang/String;Ljava/lang/String;Z)Lcom/rim/bbm/BbmMediaCallService$MakeCallResult;
+    .locals 1
+
+    .prologue
+    .line 371
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, p1, p2, p3, v0}, Lcom/rim/bbm/BbmMediaCallService;->makeCallSecure(Ljava/lang/String;Ljava/lang/String;ZZ)Lcom/rim/bbm/BbmMediaCallService$MakeCallResult;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public makeCallSecure(Ljava/lang/String;Ljava/lang/String;ZZ)Lcom/rim/bbm/BbmMediaCallService$MakeCallResult;
     .locals 3
 
     .prologue
-    .line 359
+    .line 376
     new-instance v0, Lcom/rim/bbm/BbmMediaCallService$OuputCallId;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Lcom/rim/bbm/BbmMediaCallService$OuputCallId;-><init>(Lcom/rim/bbm/BbmMediaCallService$1;)V
 
-    .line 360
-    invoke-static {p1, p2, p3, v0}, Lcom/rim/bbm/BbmMediaCallService;->bbmv_make_call(Ljava/lang/String;Ljava/lang/String;ZLcom/rim/bbm/BbmMediaCallService$OuputCallId;)I
+    .line 377
+    invoke-static {p1, p2, p3, v0, p4}, Lcom/rim/bbm/BbmMediaCallService;->bbmv_make_call_secure(Ljava/lang/String;Ljava/lang/String;ZLcom/rim/bbm/BbmMediaCallService$OuputCallId;Z)I
 
     move-result v1
 
-    .line 362
+    .line 379
     new-instance v2, Lcom/rim/bbm/BbmMediaCallService$MakeCallResult;
 
     invoke-direct {v2}, Lcom/rim/bbm/BbmMediaCallService$MakeCallResult;-><init>()V
 
-    .line 363
+    .line 380
     iget v0, v0, Lcom/rim/bbm/BbmMediaCallService$OuputCallId;->id:I
 
     iput v0, v2, Lcom/rim/bbm/BbmMediaCallService$MakeCallResult;->newCallId:I
 
-    .line 364
+    .line 381
     iput v1, v2, Lcom/rim/bbm/BbmMediaCallService$MakeCallResult;->error:I
 
-    .line 366
+    .line 383
     iget v0, v2, Lcom/rim/bbm/BbmMediaCallService$MakeCallResult;->error:I
 
     if-nez v0, :cond_0
 
-    .line 367
+    .line 384
     sget-object v0, Lcom/rim/bbm/BbmMediaCallService;->mBluetoothManager:Lcom/rim/bbm/a;
 
-    invoke-virtual {v0}, Lcom/rim/bbm/a;->a()V
+    invoke-virtual {v0}, Lcom/rim/bbm/a;->c()V
 
-    .line 370
+    .line 387
     :cond_0
     return-object v2
 .end method
@@ -754,7 +851,7 @@
     .locals 1
 
     .prologue
-    .line 385
+    .line 402
     invoke-static {p1, p2}, Lcom/rim/bbm/BbmMediaCallService;->bbmv_mute_audio(IZ)I
 
     move-result v0
@@ -766,10 +863,10 @@
     .locals 0
 
     .prologue
-    .line 410
+    .line 427
     invoke-static {p1, p2}, Lcom/rim/bbm/BbmMediaCallService;->bbmv_set_setting(II)V
 
-    .line 411
+    .line 428
     return-void
 .end method
 
@@ -777,7 +874,7 @@
     .locals 1
 
     .prologue
-    .line 415
+    .line 432
     if-eqz p2, :cond_0
 
     const/4 v0, 0x1
@@ -785,10 +882,10 @@
     :goto_0
     invoke-static {p1, v0}, Lcom/rim/bbm/BbmMediaCallService;->bbmv_set_setting(II)V
 
-    .line 416
+    .line 433
     return-void
 
-    .line 415
+    .line 432
     :cond_0
     const/4 v0, 0x0
 
@@ -799,13 +896,13 @@
     .locals 3
 
     .prologue
-    .line 325
+    .line 329
     sput-object p1, Lcom/rim/bbm/BbmMediaCallService;->mListener:Lcom/rim/bbm/BbmMediaCallService$IMediaCallListener;
 
-    .line 326
+    .line 330
     sput-object p3, Lcom/rim/bbm/BbmMediaCallService;->mContext:Landroid/content/Context;
 
-    .line 327
+    .line 331
     new-instance v0, Lcom/rim/bbm/a;
 
     new-instance v1, Lcom/rim/bbm/BbmMediaCallService$1;
@@ -816,10 +913,8 @@
 
     sput-object v0, Lcom/rim/bbm/BbmMediaCallService;->mBluetoothManager:Lcom/rim/bbm/a;
 
-    .line 335
+    .line 339
     sget-object v0, Lcom/rim/bbm/BbmMediaCallService;->mContext:Landroid/content/Context;
-
-    sget-object v1, Lcom/rim/bbm/BbmMediaCallService;->mContext:Landroid/content/Context;
 
     const-string v1, "wifi"
 
@@ -829,7 +924,7 @@
 
     check-cast v0, Landroid/net/wifi/WifiManager;
 
-    .line 336
+    .line 340
     const/4 v1, 0x3
 
     const-string v2, "BbmMedia"
@@ -840,10 +935,8 @@
 
     sput-object v0, Lcom/rim/bbm/BbmMediaCallService;->mWifiLock:Landroid/net/wifi/WifiManager$WifiLock;
 
-    .line 338
+    .line 342
     sget-object v0, Lcom/rim/bbm/BbmMediaCallService;->mContext:Landroid/content/Context;
-
-    sget-object v1, Lcom/rim/bbm/BbmMediaCallService;->mContext:Landroid/content/Context;
 
     const-string v1, "power"
 
@@ -853,7 +946,7 @@
 
     check-cast v0, Landroid/os/PowerManager;
 
-    .line 339
+    .line 343
     const/4 v1, 0x1
 
     const-string v2, "BbmMedia"
@@ -864,7 +957,7 @@
 
     sput-object v0, Lcom/rim/bbm/BbmMediaCallService;->mPowerLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 340
+    .line 344
     invoke-static {p2}, Lcom/rim/bbm/BbmMediaCallService;->bbmv_start(Ljava/lang/String;)Z
 
     move-result v0
@@ -873,10 +966,12 @@
 .end method
 
 .method public stop()Z
-    .locals 1
+    .locals 3
 
     .prologue
-    .line 347
+    const/4 v2, 0x0
+
+    .line 351
     sget-object v0, Lcom/rim/bbm/BbmMediaCallService;->mWifiLock:Landroid/net/wifi/WifiManager$WifiLock;
 
     invoke-virtual {v0}, Landroid/net/wifi/WifiManager$WifiLock;->isHeld()Z
@@ -885,13 +980,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 348
+    .line 353
+    :try_start_0
     sget-object v0, Lcom/rim/bbm/BbmMediaCallService;->mWifiLock:Landroid/net/wifi/WifiManager$WifiLock;
 
     invoke-virtual {v0}, Landroid/net/wifi/WifiManager$WifiLock;->release()V
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 350
+    .line 358
     :cond_0
+    :goto_0
     sget-object v0, Lcom/rim/bbm/BbmMediaCallService;->mPowerLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -900,21 +999,49 @@
 
     if-eqz v0, :cond_1
 
-    .line 351
+    .line 360
+    :try_start_1
     sget-object v0, Lcom/rim/bbm/BbmMediaCallService;->mPowerLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
+    :try_end_1
+    .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 353
+    .line 365
     :cond_1
+    :goto_1
     const/4 v0, 0x0
 
     sput-object v0, Lcom/rim/bbm/BbmMediaCallService;->mContext:Landroid/content/Context;
 
-    .line 354
+    .line 366
     invoke-static {}, Lcom/rim/bbm/BbmMediaCallService;->bbmv_stop()Z
 
     move-result v0
 
     return v0
+
+    .line 355
+    :catch_0
+    move-exception v0
+
+    const-string v0, "Wifi Lock release SecurityException"
+
+    new-array v1, v2, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 362
+    :catch_1
+    move-exception v0
+
+    const-string v0, "Power Wake Lock release SecurityException"
+
+    new-array v1, v2, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    goto :goto_1
 .end method

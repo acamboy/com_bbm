@@ -1,4 +1,4 @@
-.class final enum Lcom/mapquest/android/maps/p;
+.class final Lcom/mapquest/android/maps/p;
 .super Ljava/lang/Enum;
 .source "FSTileCache.java"
 
@@ -15,15 +15,15 @@
 
 
 # static fields
-.field public static final enum a:Lcom/mapquest/android/maps/p;
+.field public static final enum a:I
 
-.field public static final enum b:Lcom/mapquest/android/maps/p;
+.field public static final enum b:I
 
-.field public static final enum c:Lcom/mapquest/android/maps/p;
+.field public static final enum c:I
 
-.field public static final enum d:Lcom/mapquest/android/maps/p;
+.field public static final enum d:I
 
-.field private static final synthetic e:[Lcom/mapquest/android/maps/p;
+.field private static final synthetic e:[I
 
 
 # direct methods
@@ -31,119 +31,64 @@
     .locals 6
 
     .prologue
+    const/4 v0, 0x4
+
     const/4 v5, 0x3
 
     const/4 v4, 0x2
 
     const/4 v3, 0x1
 
-    const/4 v2, 0x0
-
     .line 209
-    new-instance v0, Lcom/mapquest/android/maps/p;
-
-    const-string v1, "EMPTY_CACHE"
-
-    invoke-direct {v0, v1, v2}, Lcom/mapquest/android/maps/p;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/mapquest/android/maps/p;->a:Lcom/mapquest/android/maps/p;
+    sput v3, Lcom/mapquest/android/maps/p;->a:I
 
     .line 210
-    new-instance v0, Lcom/mapquest/android/maps/p;
-
-    const-string v1, "PURGE_EXTERNAL_CACHE_BASED_ON_SIZE"
-
-    invoke-direct {v0, v1, v3}, Lcom/mapquest/android/maps/p;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/mapquest/android/maps/p;->b:Lcom/mapquest/android/maps/p;
+    sput v4, Lcom/mapquest/android/maps/p;->b:I
 
     .line 211
-    new-instance v0, Lcom/mapquest/android/maps/p;
-
-    const-string v1, "PURGE_INTERNAL_CACHE_BASED_ON_SIZE"
-
-    invoke-direct {v0, v1, v4}, Lcom/mapquest/android/maps/p;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/mapquest/android/maps/p;->c:Lcom/mapquest/android/maps/p;
+    sput v5, Lcom/mapquest/android/maps/p;->c:I
 
     .line 212
-    new-instance v0, Lcom/mapquest/android/maps/p;
-
-    const-string v1, "PURGE_CACHE_BASED_ON_EXPIRY"
-
-    invoke-direct {v0, v1, v5}, Lcom/mapquest/android/maps/p;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/mapquest/android/maps/p;->d:Lcom/mapquest/android/maps/p;
+    sput v0, Lcom/mapquest/android/maps/p;->d:I
 
     .line 208
-    const/4 v0, 0x4
+    new-array v0, v0, [I
 
-    new-array v0, v0, [Lcom/mapquest/android/maps/p;
+    const/4 v1, 0x0
 
-    sget-object v1, Lcom/mapquest/android/maps/p;->a:Lcom/mapquest/android/maps/p;
+    sget v2, Lcom/mapquest/android/maps/p;->a:I
 
-    aput-object v1, v0, v2
+    aput v2, v0, v1
 
-    sget-object v1, Lcom/mapquest/android/maps/p;->b:Lcom/mapquest/android/maps/p;
+    sget v1, Lcom/mapquest/android/maps/p;->b:I
 
-    aput-object v1, v0, v3
+    aput v1, v0, v3
 
-    sget-object v1, Lcom/mapquest/android/maps/p;->c:Lcom/mapquest/android/maps/p;
+    sget v1, Lcom/mapquest/android/maps/p;->c:I
 
-    aput-object v1, v0, v4
+    aput v1, v0, v4
 
-    sget-object v1, Lcom/mapquest/android/maps/p;->d:Lcom/mapquest/android/maps/p;
+    sget v1, Lcom/mapquest/android/maps/p;->d:I
 
-    aput-object v1, v0, v5
+    aput v1, v0, v5
 
-    sput-object v0, Lcom/mapquest/android/maps/p;->e:[Lcom/mapquest/android/maps/p;
+    sput-object v0, Lcom/mapquest/android/maps/p;->e:[I
 
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
-
-    .prologue
-    .line 208
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lcom/mapquest/android/maps/p;
+.method public static a()[I
     .locals 1
 
     .prologue
     .line 208
-    const-class v0, Lcom/mapquest/android/maps/p;
+    sget-object v0, Lcom/mapquest/android/maps/p;->e:[I
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/mapquest/android/maps/p;
-
-    return-object v0
-.end method
-
-.method public static values()[Lcom/mapquest/android/maps/p;
-    .locals 1
-
-    .prologue
-    .line 208
-    sget-object v0, Lcom/mapquest/android/maps/p;->e:[Lcom/mapquest/android/maps/p;
-
-    invoke-virtual {v0}, [Lcom/mapquest/android/maps/p;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, [I->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lcom/mapquest/android/maps/p;
+    check-cast v0, [I
 
     return-object v0
 .end method

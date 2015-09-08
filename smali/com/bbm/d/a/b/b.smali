@@ -62,7 +62,7 @@
     move v0, v1
 
     :goto_0
-    invoke-static {v0}, Lcom/google/b/a/o;->b(Z)V
+    invoke-static {v0}, Lcom/google/b/a/m;->b(Z)V
 
     iget-object v0, v4, Lcom/bbm/d/a/b/a;->c:Ljava/util/Set;
 
@@ -70,7 +70,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/google/b/a/o;->b(Z)V
+    invoke-static {v0}, Lcom/google/b/a/m;->b(Z)V
 
     iput-boolean v1, v4, Lcom/bbm/d/a/b/a;->i:Z
 
@@ -115,9 +115,9 @@
 
     if-eqz v1, :cond_7
 
-    iget-object v1, v1, Lcom/bbm/d/a/b/c;->a:Lcom/bbm/d/a/b/d;
+    iget v1, v1, Lcom/bbm/d/a/b/c;->a:I
 
-    sget-object v6, Lcom/bbm/d/a/b/d;->a:Lcom/bbm/d/a/b/d;
+    sget v6, Lcom/bbm/d/a/b/d;->a:I
 
     if-ne v1, v6, :cond_7
 
@@ -219,9 +219,9 @@
 
     invoke-virtual {v3, v1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
-    sget-object v1, Lcom/bbm/d/a/b/d;->b:Lcom/bbm/d/a/b/d;
+    sget v1, Lcom/bbm/d/a/b/d;->b:I
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a/b/c;->a(Lcom/bbm/d/a/b/d;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a/b/c;->a(I)V
 
     goto :goto_4
 

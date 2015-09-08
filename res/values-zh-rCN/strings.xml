@@ -225,6 +225,21 @@
     <string name="a_newer_version_of_bbm_is_required">需要新版本的 BBM。</string>
     <string name="a_problem_has_occurred_in_bbm">BBM 出现问题。请稍后再试。</string>
     <string name="a_temporary_server_error_has_occurred">发生临时服务器错误。请重试。</string>
+    <string name="abc_action_bar_home_description">转到主屏幕</string>
+    <string name="abc_action_bar_home_description_format">%1$s：%2$s</string>
+    <string name="abc_action_bar_home_subtitle_description_format">%1$s - %2$s：%3$s</string>
+    <string name="abc_action_bar_up_description">转到上一层级</string>
+    <string name="abc_action_menu_overflow_description">更多选项</string>
+    <string name="abc_action_mode_done">完成</string>
+    <string name="abc_activity_chooser_view_see_all">查看全部</string>
+    <string name="abc_activitychooserview_choose_application">选择应用</string>
+    <string name="abc_searchview_description_clear">清除查询</string>
+    <string name="abc_searchview_description_query">搜索查询</string>
+    <string name="abc_searchview_description_search">搜索</string>
+    <string name="abc_searchview_description_submit">提交查询</string>
+    <string name="abc_searchview_description_voice">语音搜索</string>
+    <string name="abc_shareactionprovider_share_with">分享方式</string>
+    <string name="abc_shareactionprovider_share_with_application">通过%s分享</string>
     <string name="about">关于</string>
     <string name="about_bbm_pins_message">PIN 是 BBM 中唯一识别您身份的编码。如果共享自己的 BBM PIN 或条形码，用户就可以邀请您加入 BBM 联系人。</string>
     <string name="about_bbm_pins_title">关于 BBM PIN</string>
@@ -235,9 +250,9 @@
     <string name="activity_select_new_admin_title">选择新管理员</string>
     <string name="activity_select_new_admin_title_selection">+%1$d 个管理员</string>
     <string name="activity_tap_to_invite_dialog_info">是否要打开 NFC？</string>
-    <string name="activity_tap_to_invite_dialog_no">否</string>
+    <string name="activity_tap_to_invite_dialog_no">@string/no</string>
     <string name="activity_tap_to_invite_dialog_title">NFC 无线电关闭</string>
-    <string name="activity_tap_to_invite_dialog_yes">是</string>
+    <string name="activity_tap_to_invite_dialog_yes">@string/yes</string>
     <string name="activity_tap_to_invite_info">对齐当前设备背面。两台设备都必须打开 NFC。</string>
     <string name="ad_block_channel">如果您阻止此频道，则不会看到此频道 \"%1$s\" 的任何赞助内容此操作无法撤销。</string>
     <string name="ad_block_sponsor">"您不会看到 \"%1$s\" 的任何赞助内容。'此操作无法撤销。'"</string>
@@ -263,13 +278,26 @@
     <string name="allow_comments_on_posts">允许对帖子发表评论</string>
     <string name="app_name">BBM</string>
     <string name="app_picker_name">应用</string>
+    <string name="app_store_app_subscribe_notification_dialog_line">通知联系人您已成为 BBM 订阅包 %1$s 用户</string>
+    <string name="app_store_app_subscribe_notification_message">嘿，我现在是 BBM 订阅包 %1$s 用户啦！你也可以加入哦！</string>
+    <string name="app_store_confirmation_screen_feature_offered_line">您的订阅具备以下功能：</string>
     <string name="app_store_details_screen_install_button">安装</string>
     <string name="app_store_details_screen_inventory_not_found">"无法打开应用程序。
 请稍后再试。"</string>
     <string name="app_store_details_screen_open_button">打开</string>
+    <string name="app_store_details_screen_renew_button">续订</string>
+    <string name="app_store_details_screen_subscribe_button">订阅</string>
+    <string name="app_store_details_screen_subscribed_button">已订阅</string>
     <string name="app_store_invalid_app_id">此项目不可用</string>
+    <string name="app_store_subscribed_app_no_ads_description">订阅此功能，即可隐藏 BBM 中的赞助广告和赞助邀请。</string>
+    <string name="app_store_subscribed_app_vanity_pin_description">自定义 PIN 用于邀请其他用户以及档案显示。指定自定义 PIN 后，用户可在指定期间内对其进行编辑。更改 PIN</string>
+    <string name="app_subscription_thank_you">非常感谢。你现在已成为 BBM 的订阅用户。</string>
     <string name="approve_comments">批准评论</string>
     <string name="approve_comments_description">您可以在频道网站中更改此选项。</string>
+    <string name="archiving_disabled_message">管理员已关闭归档功能。聊天不再保存到设备中，之前保存的聊天也不再保存在您的设备中。有关详细信息，请与系统管理员联系。</string>
+    <string name="archiving_disabled_title">归档已关闭</string>
+    <string name="archiving_enabled_message">管理员已打开归档功能。聊天会保存在您的设备中。有关详细信息，请与系统管理员联系。</string>
+    <string name="archiving_enabled_title">归档已开启</string>
     <string name="arrived_at_destination">Glympse:已抵达目的地</string>
     <string name="asterisk">*</string>
     <string name="attach">附加</string>
@@ -286,15 +314,15 @@
     <string name="attach_list_voicenote">语音消息</string>
     <string name="audio_player_pause">暂停</string>
     <string name="audio_player_play">播放</string>
-    <string name="auth_client_needs_enabling_title">某个应用要求启用 Google Play 服务。</string>
-    <string name="auth_client_needs_installation_title">某个应用要求安装 Google Play 服务。</string>
-    <string name="auth_client_needs_update_title">某个应用要求更新 Google Play 服务。</string>
-    <string name="auth_client_play_services_err_notification_msg">Google Play 服务出错</string>
-    <string name="auth_client_requested_by_msg">由“%1$s”发出</string>
-    <string name="auth_client_using_bad_version_title">某个应用尝试使用的 Google Play 服务版本有误。</string>
+    <string name="autopassphrase_completed">该聊天现为 BBM Protected 聊天。</string>
+    <string name="autopassphrase_failed">无法设置 BBM Protected。</string>
+    <string name="autopassphrase_initiated">创建 BBM Protected 聊天。</string>
+    <string name="autopassphrase_retry">重试</string>
     <string name="avatar_file_not_support">文件不受支持。</string>
     <string name="back">返回</string>
     <string name="backup_file_is_not_valid">备份文件无效，您必须退出 BBM 设置并使用 BlackBerry Desktop Software 中的“设备切换”实用程序。</string>
+    <string name="badge_on_your_avatar">头像上的徽章</string>
+    <string name="badge_on_your_avatar_description">BBM 订阅生效后，您的图像上就会出现一个徽章。</string>
     <string name="barcode_info">联系人可扫描您的条形码以将您添加至 BBM</string>
     <string name="bbm_account_name">BBM</string>
     <string name="bbm_account_user_name">BBM Groups</string>
@@ -310,7 +338,9 @@
     <string name="bbm_service_running">已连接</string>
     <string name="bbm_setup">BBM 设置</string>
     <string name="bbm_share_with_pin_uri">http://www.bbm.com/share/?BBMID=%1$s</string>
-    <string name="bbm_voice_ongoing_call">通话中</string>
+    <string name="bbm_voice_ongoing_call">在 BBM 通话中</string>
+    <string name="billing_google_error_message_body">此项已被您商店帐户的其他 BlackBerry ID 购买。尝试使用其他商店帐户。</string>
+    <string name="billing_google_error_message_title">无法购买</string>
     <string name="blackberry_channels"><b>BBM Channels</b></string>
     <string name="blackberry_id">BBID</string>
     <string name="blackberry_id_is_not_responding">BlackBerry ID 没有响应。</string>
@@ -573,6 +603,7 @@
     <string name="chat_history_missed_video_chat">未接 &lt;b>%1$s&lt;/b> 的未接视频呼叫</string>
     <string name="chat_history_missed_voice_chat">来自 &lt;b>%1$s&lt;/b> 的未接语音呼叫</string>
     <string name="chats">聊天</string>
+    <string name="chats_block_chat">阻止此聊天</string>
     <string name="chats_empty_chat">空白聊天</string>
     <string name="chats_end_chat">结束聊天</string>
     <string name="chats_end_discussion">结束讨论</string>
@@ -581,45 +612,68 @@
     <string name="chats_open_group">打开组</string>
     <string name="chats_select_more">选择更多</string>
     <string name="chats_start_video">开始视频聊天</string>
-    <string name="chats_status_no_chats">点按顶部以开始聊天。</string>
+    <string name="chats_status_no_chats">如要发起聊天，点按屏幕底部的聊天按钮。</string>
+    <string name="chats_status_no_chats_widget">点按顶部以发起聊天。</string>
     <string name="chats_view_bbm_profile">查看 BBM 个人主页</string>
     <string name="click_to_expire">单击此处停止您的 Glympse</string>
     <string name="click_to_reply">单击此处回复...</string>
     <string name="click_to_view">单击此处查看...</string>
     <string name="close">关闭</string>
+    <string name="cloud_directory_contact_add_coworkers">查找同事</string>
+    <string name="cloud_directory_contact_chat_failed">无法向此同事发起 BBM 聊天。请稍后再试。</string>
+    <string name="cloud_directory_fields_info">同事在 BBM 中搜索人员时可以看到此姓名。</string>
+    <string name="cloud_directory_pin_lookup">请求联系信息。</string>
+    <string name="cloud_directory_search_failed">无法搜索同事。请稍后再试。</string>
+    <string name="cloud_directory_search_more_results">您的搜索可能返回太多结果。尝试细化您的搜索。</string>
+    <string name="cloud_directory_search_text_min_length">同事搜索的字符长度必须至少为 2 个。</string>
+    <string name="cloud_directory_service_hint">必填字段。务必输入您的真实姓名。您的同事可按名字搜索您，然后向您发起 BBM 聊天。</string>
     <string name="coming_soon">"此功能当前不可用。
 即将推出"</string>
     <string name="coming_soon_title">即将推出！</string>
     <string name="comment_copied">评论已复制</string>
     <string name="comments_disabled_label">评论已禁用</string>
-    <string name="common_google_play_services_enable_button">启用 Google Play 服务</string>
-    <string name="common_google_play_services_enable_text">您必须先启用 Google Play 服务才能运行此应用。</string>
-    <string name="common_google_play_services_enable_title">启用 Google Play 服务</string>
-    <string name="common_google_play_services_install_button">获取 Google Play 服务</string>
-    <string name="common_google_play_services_install_text_phone">您的手机中没有 Google Play 服务，您必须先安装该服务才能运行此应用。</string>
-    <string name="common_google_play_services_install_text_tablet">您的平板电脑中没有 Google Play 服务，您必须先安装该服务才能运行此应用。</string>
-    <string name="common_google_play_services_install_title">获取 Google Play 服务</string>
+    <string name="common_android_wear_notification_needs_update_text">%1$s需要更新 Android Wear 应用才能正常运行。</string>
+    <string name="common_android_wear_update_text">只有更新 Android Wear 应用后，%1$s才能正常运行。</string>
+    <string name="common_android_wear_update_title">更新Android Wear</string>
+    <string name="common_google_play_services_api_unavailable_text">运行%1$s所需的一项或多项 Google Play 服务目前无法使用。请与开发者联系以寻求帮助。</string>
+    <string name="common_google_play_services_enable_button">启用Google Play服务</string>
+    <string name="common_google_play_services_enable_text">您必须先启用 Google Play 服务，然后才能运行%1$s。</string>
+    <string name="common_google_play_services_enable_title">启用Google Play服务</string>
+    <string name="common_google_play_services_error_notification_requested_by_msg">%1$s发出的请求</string>
+    <string name="common_google_play_services_install_button">获取Google Play服务</string>
+    <string name="common_google_play_services_install_text_phone">您的手机没有安装 Google Play 服务，因此无法运行%1$s。</string>
+    <string name="common_google_play_services_install_text_tablet">您的平板电脑没有安装 Google Play 服务，因此无法运行%1$s。</string>
+    <string name="common_google_play_services_install_title">获取Google Play服务</string>
     <string name="common_google_play_services_invalid_account_text">此设备上不存在指定的帐户，请选择其他帐户。</string>
     <string name="common_google_play_services_invalid_account_title">无效帐户</string>
-    <string name="common_google_play_services_network_error_text">您必须有数据网络连接才能接入 Google Play 服务。</string>
+    <string name="common_google_play_services_needs_enabling_title">启用Google Play服务后才能运行应用。</string>
+    <string name="common_google_play_services_network_error_text">您必须有数据网络连接才能接入Google Play服务。</string>
     <string name="common_google_play_services_network_error_title">网络错误</string>
-    <string name="common_google_play_services_unknown_issue">Google Play 服务出现未知问题。</string>
-    <string name="common_google_play_services_unsupported_date_text">设备上的日期似乎不正确，请在设备上检查日期。</string>
-    <string name="common_google_play_services_unsupported_text">您的设备不支持部分应用所依赖的 Google Play 服务。请与设备制造商联系，以寻求帮助。</string>
-    <string name="common_google_play_services_unsupported_title">Google Play 服务</string>
+    <string name="common_google_play_services_notification_needs_update_title">更新Google Play服务后才能运行应用。</string>
+    <string name="common_google_play_services_notification_ticker">Google Play服务出错</string>
+    <string name="common_google_play_services_sign_in_failed_text">登录该帐户时出错。请选择其他帐户。</string>
+    <string name="common_google_play_services_sign_in_failed_title">登录失败</string>
+    <string name="common_google_play_services_unknown_issue">Google Play服务出现未知问题。</string>
+    <string name="common_google_play_services_unsupported_text">要运行%1$s，必须先启用 Google Play 服务，但您的设备目前不支持该服务。请与制造商联系以寻求帮助。</string>
+    <string name="common_google_play_services_unsupported_title">Google Play服务</string>
     <string name="common_google_play_services_update_button">更新</string>
-    <string name="common_google_play_services_update_text">您必须先更新 Google Play 服务才能运行此应用。</string>
-    <string name="common_google_play_services_update_title">更新 Google Play 服务</string>
+    <string name="common_google_play_services_update_text">您必须先更新 Google Play 服务，然后才能运行%1$s。</string>
+    <string name="common_google_play_services_update_title">更新Google Play服务</string>
+    <string name="common_google_play_services_updating_text">Google Play 服务当前正在更新，因此您无法运行%1$s。</string>
+    <string name="common_google_play_services_updating_title">Google Play 服务正在更新</string>
+    <string name="common_open_on_phone">在手机上打开</string>
     <string name="common_signin_button_text">登录</string>
-    <string name="common_signin_button_text_long">使用 Google 帐户登录</string>
+    <string name="common_signin_button_text_long">使用Google帐户登录</string>
     <string name="complete">完成</string>
     <string name="complete_your_bbm_profile">完成您的 BBM 个人主页</string>
     <string name="confirm">确认</string>
     <string name="contact_add_category">添加类别</string>
     <string name="contact_add_category_already_exists">该类别已存在。</string>
     <string name="contact_add_category_hint">输入类别名称</string>
-    <string name="contact_add_notification">用户已添加</string>
+    <string name="contact_add_notification">聊天人已添加</string>
     <string name="contact_delete_category">删除类别</string>
+    <string name="contact_delete_notification">聊天人已删除</string>
+    <string name="contact_delete_notification_multiple">%1$d 个联系人已删除</string>
     <string name="contact_details">详细联系方式</string>
     <string name="contact_details_description">包括电话号码、电子邮件地址或网址。</string>
     <string name="contact_is_blocked">联系人被阻止</string>
@@ -631,6 +685,8 @@
     <string name="contacts_are_blocked">联系人被阻止</string>
     <string name="contacts_count">0</string>
     <string name="contacts_delete_contact">删除 %1$s</string>
+    <string name="contacts_dialog_delete_and_block_info">以后，来自 %1$s 的所有邀请和聊天都会被阻止。是否要删除和阻止 %1$s？</string>
+    <string name="contacts_dialog_delete_and_block_title">删除和阻止 %1$s</string>
     <string name="contacts_dialog_delete_block_info">%1$s 将被添加到您的阻止列表</string>
     <string name="contacts_dialog_delete_block_label">阻止未来邀请</string>
     <string name="contacts_dialog_delete_multi_block_info">联系人将被添加到您的阻止列表</string>
@@ -655,14 +711,19 @@
     <string name="contents_sms">短信地址</string>
     <string name="contents_text">纯文本</string>
     <string name="context_menu_copy_message">复制消息</string>
+    <string name="context_menu_quote_message">引用消息</string>
     <string name="context_menu_recall_message">撤回消息</string>
     <string name="context_menu_resend_message">重新发送消息</string>
+    <string name="conversation_activity_block_chat_warning_message">如果阻止此聊天，您将停止接收此聊天中所发送的新消息。</string>
+    <string name="conversation_activity_block_chat_warning_title">阻止聊天？</string>
     <string name="conversation_activity_end_chat_on_voice_warning_message">您的通话将结束，聊天消息将全部删除。</string>
     <string name="conversation_activity_end_chat_warning_message">如果结束聊天，所有消息都将被删除。</string>
     <string name="conversation_activity_end_chat_warning_title">结束聊天？</string>
+    <string name="conversation_activity_leave_chat_warning_message">如果退出聊天，所有消息都将被删除。</string>
+    <string name="conversation_activity_leave_chat_warning_title">退出聊天？</string>
     <string name="conversation_activity_reinvite_accepted">邀请已接受</string>
     <string name="conversation_activity_reinvite_sent">邀请已发送</string>
-    <string name="conversation_are_already_in_the_chat">&lt;b>%1$s&lt;/b> 已在聊天</string>
+    <string name="conversation_are_already_in_the_chat">%1$s 已在聊天</string>
     <string name="conversation_bubble_dropbox_caption">下方链接可转至 Dropbox 中的 %1$s</string>
     <string name="conversation_button_dropbox_download">下载</string>
     <string name="conversation_button_toast_attachment_deleted">附件已删除</string>
@@ -678,30 +739,36 @@
     <string name="conversation_file_transfert">文件接收完成</string>
     <string name="conversation_file_transfert_canceled_dialog_title">文件传输已取消</string>
     <string name="conversation_file_transfert_canceled_dialog_too_large">%1$s 太大。最大的文件大小为 16MB。</string>
-    <string name="conversation_incoming_invite_req">&lt;b>%1$s&lt;/b> 想邀请 &lt;b>%2$s&lt;/b> 加入聊天</string>
+    <string name="conversation_groups_alt_picture_sent">图片已共享</string>
+    <string name="conversation_groups_alt_sticker_sent">贴纸已共享</string>
+    <string name="conversation_incoming_invite_req">%1$s 想邀请 %2$s 加入聊天</string>
     <string name="conversation_incoming_invite_req_accepted">您已添加 <b>%1$s</b></string>
-    <string name="conversation_incoming_invite_req_denied">您已拒绝 &lt;b>%1$s&lt;/b> 邀请 &lt;b>%2$s&lt;/b> 的请求</string>
+    <string name="conversation_incoming_invite_req_denied">您已拒绝 %1$s 邀请 %2$s 的请求</string>
     <string name="conversation_invite_accept_button">允许</string>
     <string name="conversation_invite_reject_button">拒绝</string>
-    <string name="conversation_invited">&lt;b>%1$s&lt;/b> 已接受您邀请 &lt;b>%2$s&lt;/b> 的请求</string>
-    <string name="conversation_is_already_in_the_chat">&lt;b>%1$s&lt;/b> 已在聊天</string>
+    <string name="conversation_invited">%1$s 已接受您邀请 %2$s 的请求</string>
+    <string name="conversation_is_already_in_the_chat">%1$s 已在聊天</string>
     <string name="conversation_is_writing_a_message">正在输入消息...</string>
-    <string name="conversation_joined_the_chat">&lt;b>%1$s&lt;/b> 已加入聊天</string>
-    <string name="conversation_left_the_chat">&lt;b>%1$s&lt;/b> 已退出聊天</string>
-    <string name="conversation_location_message_accurace_within">精确到 %1$sm</string>
+    <string name="conversation_joined_the_chat">%1$s 已加入聊天</string>
+    <string name="conversation_left_the_chat">%1$s 已退出聊天</string>
+    <string name="conversation_location_message_accurace_within">精确到 %1$s 米</string>
     <string name="conversation_location_received">位置已收到</string>
     <string name="conversation_location_sent">位置已发送</string>
+    <string name="conversation_message_edit_title">编辑消息</string>
+    <string name="conversation_message_editing">正在编辑：%1$s</string>
+    <string name="conversation_message_editing_removed">编辑消息已删除</string>
     <string name="conversation_message_recall_failed">无法撤回消息</string>
     <string name="conversation_message_recall_pending">正在撤回消息</string>
     <string name="conversation_message_recalled">消息已撤回</string>
+    <string name="conversation_mpc_header">聊天</string>
     <string name="conversation_must_reinvite">%1$s 没有将您添加为联系人。是否要重新邀请 %1$s？</string>
     <string name="conversation_notification_calendar_received">约会已收到</string>
     <string name="conversation_notification_calendar_sent">约会已发送</string>
-    <string name="conversation_notification_conf_incoming_invite_req">&lt;b>%1$s&lt;/b> 已请求邀请某人加入聊天</string>
-    <string name="conversation_notification_conf_invited">已邀请 &lt;b>%1$s&lt;/b> 加入聊天</string>
-    <string name="conversation_notification_conf_outgoing_invite_req">您已邀请 &lt;b>%1$s&lt;/b> 加入聊天</string>
-    <string name="conversation_notification_conf_outgoing_invite_req_denied">您邀请 &lt;b>%1$s&lt;/b> 的请求已被拒绝</string>
-    <string name="conversation_notification_conf_we_joined">&lt;b>%1$s&lt;/b> 已邀请您加入聊天</string>
+    <string name="conversation_notification_conf_incoming_invite_req">%1$s 已请求邀请某人加入聊天</string>
+    <string name="conversation_notification_conf_invited">已邀请 %1$s 加入聊天</string>
+    <string name="conversation_notification_conf_outgoing_invite_req">您已邀请 %1$s 加入聊天</string>
+    <string name="conversation_notification_conf_outgoing_invite_req_denied">您邀请 %1$s 的请求已被拒绝</string>
+    <string name="conversation_notification_conf_we_joined">%1$s 已邀请您加入聊天</string>
     <string name="conversation_notification_contact_card_received">已收到联系人卡片</string>
     <string name="conversation_notification_contact_card_sent">已发送联系人卡片</string>
     <string name="conversation_notification_default_incomming">消息已收到</string>
@@ -719,8 +786,8 @@
     <string name="conversation_notification_sticker_sent">贴纸已发送</string>
     <string name="conversation_notification_voice_note_received">已收到语音消息</string>
     <string name="conversation_notification_voice_note_sent">语音消息已发送</string>
-    <string name="conversation_outgoing_invite_req">您邀请 &lt;b>%1$s&lt;/b> 的请求已发送至 &lt;b>%2$s&lt;/b></string>
-    <string name="conversation_outgoing_invite_req_denied">&lt;b>%1$s&lt;/b> 已拒绝您邀请 &lt;b>%2$s&lt;/b> 的请求</string>
+    <string name="conversation_outgoing_invite_req">您邀请 %1$s 的请求已发送至 %2$s</string>
+    <string name="conversation_outgoing_invite_req_denied">%1$s 已拒绝您邀请 %2$s 的请求</string>
     <string name="conversation_picture">图片接收完成</string>
     <string name="conversation_ping">校验!!!</string>
     <string name="conversation_reinvite_accept_button">重新邀请</string>
@@ -729,6 +796,7 @@
     <string name="conversation_share_max_participants">聊天参与者过多（最多人数为 %1$s）。</string>
     <string name="conversation_successfully_saved_picture">已成功保存图片</string>
     <string name="conversation_successfully_saved_voice_note">已成功保存语音消息</string>
+    <string name="conversation_toast_blocked_chat">您阻止了此聊天。所有消息已删除。</string>
     <string name="conversation_toast_ended_chat">聊天已结束</string>
     <string name="conversation_toast_ended_chat_no_history">聊天已结束所有消息已删除。</string>
     <string name="conversation_toast_left_chat">您已退出聊天</string>
@@ -736,7 +804,7 @@
     <string name="conversation_unable_to_save_picture">无法保存图片</string>
     <string name="conversation_unable_to_save_voice_note">无法保存语音消息</string>
     <string name="conversation_voice_note_transfert">语音消息接收完成</string>
-    <string name="conversation_you_invited">您已邀请 &lt;b>%1$s&lt;/b> 加入聊天</string>
+    <string name="conversation_you_invited">您已邀请 %1$s 加入聊天</string>
     <string name="conversation_you_joined_the_chat">您已加入聊天</string>
     <string name="copied_group_passphrase">已复制密码</string>
     <string name="copied_group_passphrase_toast">已复制到剪贴板</string>
@@ -751,6 +819,26 @@
     <string name="creating_channel_toast_string">正在创建频道</string>
     <string name="creating_private_channel_confirmation">此操作无法撤销。是否确定要转为私人频道？</string>
     <string name="current">当前</string>
+    <string name="custom_pin_activity_title">自定义 PIN</string>
+    <string name="custom_pin_already_set">您已创建自定义 PIN。</string>
+    <string name="custom_pin_confirm_postivie_text">正确</string>
+    <string name="custom_pin_confirm_text">本文本将成为您的 BBM 自定义 PIN。是否正确？</string>
+    <string name="custom_pin_friends_ad_link">请访问 BBM 商店</string>
+    <string name="custom_pin_friends_ad_text">立即在 BBM 上获取您的自定义 PIN：</string>
+    <string name="custom_pin_get_your_custom_pin">立即在 BBM 上获取您的自定义 PIN：访问 BBM 商店</string>
+    <string name="custom_pin_hint_text">输入自定义 PIN</string>
+    <string name="custom_pin_legal">"该创建自定义 PIN 码了。请注意，PIN 码创建后就无法更改。只要您的订阅仍有效，您的自定义 PIN 码就会与 BBM 关联。
+
+指南：
+*必须为 6 - 8 位字符
+*可以包含数字、字母、下划线、破折号
+*必须包含一个下划线、破折号或 G - Z 之间的一个字母"</string>
+    <string name="custom_pin_not_subscribed">自定义我的 PIN</string>
+    <string name="custom_pin_share_to_feed_body">通知联系人您获刚刚得了自定义 PIN：%1$s</string>
+    <string name="custom_pin_shared_feed_item">我刚在 BBM 上获得了新的自定义 PIN：%1$s。如要自定义 PIN，请点按 http://shop.bbm.com/item/custom_pin</string>
+    <string name="custom_pin_terms_conditions">&lt;p>&lt;b>BBM 自定义 PIN 指南&lt;/b>&lt;/p>&lt;p>自定义 PIN 是个性化 BBM 帐户的有趣方式。自定义 PIN 不会替代您当前的 PIN（请参见 www.bbm.com 中的常见问题解答部分中的\"何为 PIN？\"，了解常规 PIN 的详细信息），是显示在 BBM 档案中的第二个 PIN 码，可用于邀请其他 BBM 用户和接收其邀请。&lt;/p>&lt;p>以下是创建自定义 PIN 时需谨记的几点：&lt;/p>&lt;/p> &lt;p>&amp;#8226您无法申请他人已在使用的自定义 PIN。&lt;p>&lt;/p>&amp;#8226如果您在订阅到期前未及时续订，则将无法再使用自定义 PIN，该 PIN 可能会被其他用户申请。&lt;p>&lt;p>&amp;#8226请谨慎选择您的自定义 PIN。自定义 PIN 创建后，续订期间即无法更改。&lt;/p> &lt;p>&amp;#8226因此，您的自定义 PIN 明显有别于标准 BBM PIN 码，自定义 PIN 必须遵守以下几点要求：&lt;/p>&lt;p> - 必须至少为 6 - 8 个字符；&lt;/p>&lt;p>- 可以包含数字、字母、下划线、破折号；&lt;/p>&lt;p> - 必须包含一个下划线、破折号或 G - Z 之间的一个字母；&lt;/p>&lt;p>&amp;#8226自定义 PIN 不得包含侮辱、中伤、诽谤、淫秽、亵渎、非法或欺诈性字眼，或用于任何非法用途。&lt;/p> &lt;p>&amp;#8226自定义 PIN 不得用于冒充他人、品牌、组织或会所，或误导、迷惑或欺诈他人。&lt;/p> &lt;p>&amp;#8226自定义 PIN 不得侵犯或违反他人权利，包括任何个人、品牌、组织或会所的知识产权。例如，您的自定义 PIN 不得违反他人或机构的商标权利。&lt;/p>&lt;p>&amp;#8226BlackBerry 有权随时出于任何原因拒绝、删除和/或收回任何自定义 PIN，但会依据相关适用购买条款/退款政策。</string>
+    <string name="custom_pin_title">自定义 PIN：</string>
+    <string name="custom_pin_warning_on_repurchase">如要保留当前自定义 PIN，您可能需要购买新的订阅，然后取消旧订阅。有关详细信息，请访问：%1$s</string>
     <string name="date">日期</string>
     <string name="date_of_birth"><b>出生日期</b></string>
     <string name="date_of_birth_fail_age_limit">您尚未达到 BBM Channels 规定的使用年龄。</string>
@@ -786,6 +874,7 @@
     <string name="dialog_invite_security_question_tip">提示：答案区分大小写。</string>
     <string name="dialog_invite_security_question_title">安全提示问题</string>
     <string name="did_you_know">您知道吗？</string>
+    <string name="different_platform_string">您有在其他设备购买的自动续订订阅。在此设备上订阅？</string>
     <string name="discard">放弃</string>
     <string name="display_name"><i>显示名称</i></string>
     <string name="do_you_want_to_switch_your_bbm_information_to_your_current_device">是否要将您的 BBM 信息切换到当前设备？</string>
@@ -806,6 +895,15 @@
     <string name="enter_passphrase_hint"><i>输入密码</i></string>
     <string name="enter_text"><i>输入文本</i></string>
     <string name="entered_passphrase_incorrect">输入的密码不正确。</string>
+    <string name="entitlement_dialog_title">需要订阅</string>
+    <string name="entitlement_edit_dialogue">"编辑消息的试用期已结束。
+如要无限制访问，请购买此订阅功能。"</string>
+    <string name="entitlement_privateconv_dialogue">"私人聊天的试用期已结束。
+如要无限制访问，请购买此订阅功能。"</string>
+    <string name="entitlement_retracted_dialogue">"撤回消息的试用期已结束。
+如要无限制访问，请购买此订阅功能。"</string>
+    <string name="entitlement_timed_dialogue">"定时消息的试用期已结束。
+如要无限制访问，请购买此订阅功能。"</string>
     <string name="ephemeral_hint_received">定时消息已接收。触摸并按住可查看。</string>
     <string name="ephemeral_hint_sent">定时消息。</string>
     <string name="ephemeral_hint_viewed">定时消息已接收。已过期</string>
@@ -905,15 +1003,17 @@
     <string name="filter_by">筛选标准</string>
     <string name="find_friend_allow_upload_dialog_double_check_text">是否确定？如果不允许 BBM 访问您的联系人，您必须手动添加 BBM 联系人。</string>
     <string name="find_friend_allow_upload_dialog_double_check_title">不建议</string>
-    <string name="find_friend_allow_upload_dialog_title">在 BBM 上查找好友</string>
-    <string name="find_friend_allow_upload_text">允许 BBM 访问联系人，帮助您查找和添加好友。</string>
+    <string name="find_friend_allow_upload_dialog_title">查找好友</string>
+    <string name="find_friend_allow_upload_text">允许 BBM 访问联系人，帮助您查找好友。您可以决定将哪些好友添加到 BBM。</string>
     <string name="find_friend_category_get_bbm">邀请下载</string>
     <string name="find_friend_category_invite">点按以添加</string>
     <string name="find_friends">在 BBM 上查找好友</string>
     <string name="find_more_friends">查找更多好友</string>
-    <string name="first_launch_after_upgrade_privacy_terms">我同意 &lt;b>&lt;a href=http://www.blackberry.com/legal/privacy>隐私政策&lt;/a>&lt;/b>和&lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>服务条款&lt;/a>&lt;/b></string>
-    <string name="first_launch_after_upgrade_subtitle">贴纸可为您的 BBM 聊天带来更多乐趣。现在就可以用。</string>
-    <string name="first_launch_after_upgrade_title">发送贴纸！</string>
+    <string name="first_launch_after_upgrade_privacy_terms">我们更新了&lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>服务条款&lt;/a>&lt;/b>。单击“继续”即表示您同意&lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>服务条款&lt;/a>&lt;/b>和&lt;b>&lt;a href=http://www.blackberry.com/legal/privacy>隐私政策&lt;/a>&lt;/b></string>
+    <string name="first_launch_after_upgrade_subtitle">创建一个完全属于您的 BBM PIN。立即申请您的自定义 PIN。</string>
+    <string name="first_launch_after_upgrade_title">独一无二</string>
+    <string name="first_name">名字</string>
+    <string name="first_name_hint">输入名字</string>
     <string name="flagged_comments_header">评论</string>
     <string name="flagged_posts_header">帖子</string>
     <string name="format_not_supported_for_cropping">此格式不支持裁剪</string>
@@ -921,6 +1021,7 @@
     <string name="general">常规</string>
     <string name="glympse">Glympse</string>
     <string name="glympse_attach">附加 Glympse</string>
+    <string name="glympse_duration_hourminutes">剩余 %1$d:%2$02d</string>
     <string name="glympse_duration_minutes">持续时间：%1$d 分钟</string>
     <string name="glympse_expired">已过期</string>
     <string name="glympse_expires_at">共享至 %1$s</string>
@@ -955,6 +1056,7 @@
     <string name="glympse_update">更新 Glympse</string>
     <string name="glympse_user_selector_item_all_user_currently_sharing">当前共享的所有用户</string>
     <string name="glympse_user_selector_item_speed">速度（公里/小时）：%1$s</string>
+    <string name="glympse_user_selector_item_speed_na">速度（公里/小时）：不适用</string>
     <string name="glympse_user_selector_item_updated_d_ago">上次更新时间：%1$d 天前</string>
     <string name="glympse_user_selector_item_updated_h_m">上次更新时间：%1$d:%2$s 前</string>
     <string name="glympse_user_selector_item_updated_m_ago">上次更新时间：%1$d 分钟前</string>
@@ -988,9 +1090,11 @@
     <string name="group_add_list_title_hint"><i>列表标题</i></string>
     <string name="group_admin_about">关于组管理员</string>
     <string name="group_admin_text">管理员可进行以下操作：</string>
+    <string name="group_autopassphrase_details">自动加密已启用。</string>
     <string name="group_barcode_info">联系人可扫描该条形码以加入您的组</string>
     <string name="group_barcode_scan_rejected_user_not_protected">您未获准加入此组。</string>
     <string name="group_cancel">取消</string>
+    <string name="group_cannot_delete_conversation">无法删除此对话</string>
     <string name="group_chat_exists">聊天主题已存在</string>
     <string name="group_chat_general_discussion">一般讨论</string>
     <string name="group_chat_history_days_1">1 天</string>
@@ -1009,6 +1113,8 @@
     <string name="group_conversation_email_chat_message_header">来自组：%1$s</string>
     <string name="group_conversation_email_chat_subject">%1$s 的聊天：%2$s</string>
     <string name="group_conversation_is_writing_a_message">正在键入：</string>
+    <string name="group_conversation_picture_loading">正在加载图片...</string>
+    <string name="group_conversation_picture_not_available">图片不可用</string>
     <string name="group_conversation_slide_menu_chat_history">聊天记录</string>
     <string name="group_conversation_slide_menu_clear_chat">清除聊天</string>
     <string name="group_conversation_slide_menu_copy_chat">复制聊天</string>
@@ -1018,6 +1124,7 @@
     <string name="group_delete_picture">删除图片</string>
     <string name="group_delete_q">删除组？</string>
     <string name="group_done">完成</string>
+    <string name="group_edit_admin_cannot_remove_self">无法移除管理员本人</string>
     <string name="group_edit_caption">编辑标题</string>
     <string name="group_edit_list_title">项目详细信息</string>
     <string name="group_event_all_day">全天</string>
@@ -1040,15 +1147,15 @@
     <string name="group_events_time_notice">结束时间必须迟于开始时间</string>
     <string name="group_invitation_was_received">您获邀加入 Glympse 组</string>
     <string name="group_invite_bbg_uri">%1$s</string>
-    <string name="group_invite_email_message">"------\ufffc------
-我想邀请您加入我的组 %1$s。
+    <string name="group_invite_email_message">"我想邀请您加入我的组：\"%1$s\"。如要在移动设备上加入组，单击 
+%2$s
 
-在 Android 或 iPhone 上，单击 %2$s 可加入组或下载 BBM。
 
 %3$s"</string>
-    <string name="group_invite_email_subject">加入我的 BlackBerry Group！</string>
+    <string name="group_invite_email_subject">来自 %1$s 的 BBM Group 邀请</string>
     <string name="group_invite_enter_passphrase">要加入此组，请输入组成员提供的密码。</string>
     <string name="group_invite_enter_passphrase_multi_attempts">密码错误。要加入此组，请输入组成员提供的密码。(%1$d/%2$d)</string>
+    <string name="group_invite_expired">组邀请已过期</string>
     <string name="group_invite_message_default">我想邀请您加入我的组：%1$s</string>
     <string name="group_invite_status_enter_passphrase_max_attempts_reached">密码错误。要加入此组，必须再次获邀。</string>
     <string name="group_invite_status_enter_passphrase_multi_attempts">密码错误。要加入此组，请输入组成员提供的密码。</string>
@@ -1091,6 +1198,11 @@
     <string name="group_passphrase_info">您可以共享受邀人员加入时必须输入的密码。</string>
     <string name="group_passphrase_missing">密码不适用</string>
     <string name="group_picture_add">添加图片</string>
+    <string name="group_picture_add_failed__wrong_picture_type">@string/avatar_file_not_support</string>
+    <string name="group_picture_add_failed_file_access_error">@string/filetransfer_abort_filenotfound</string>
+    <string name="group_picture_add_failed_file_does_not_exist">@string/filetransfer_abort_filenotfound</string>
+    <string name="group_picture_add_failed_picture_too_big">@string/conversation_file_image_transfer_canceled_dialog_too_large</string>
+    <string name="group_picture_add_failed_resize_error">@string/conversation_unable_to_save_picture</string>
     <string name="group_picture_added_days">%2$s %1$d 天前添加</string>
     <string name="group_picture_added_today">%2$s 今天 %1$s 时添加</string>
     <string name="group_picture_added_yesterday">%1$s 昨天添加</string>
@@ -1165,7 +1277,7 @@
     <string name="hdimage_prompt_message">是否要自动接受未来的高清图片请求？</string>
     <string name="hdimage_prompt_title">始终接受请求</string>
     <string name="help">帮助</string>
-    <string name="help_url">http://docs.blackberry.com/bbm/25/android/zh-cn</string>
+    <string name="help_url">http://help.blackberry.com/detectLang/bbm-for-android/current/</string>
     <string name="high_priority">高优先级</string>
     <string name="hint_protected_enabled_chat"><i>已加密保护。输入消息</i></string>
     <string name="history_clear_one_history_text">删除</string>
@@ -1194,6 +1306,7 @@
     <string name="introducing_channels_second_part">您的用户会在 BBM 中收到最新信息，分享他们的想法。</string>
     <string name="introducing_channels_title">介绍 BBM Channels</string>
     <string name="invalid_passphrase_toast">密码无效</string>
+    <string name="invitation_received">邀请已收到</string>
     <string name="invitation_rejected_invitee_not_protected_message">%1$s无法加入该组。仅 BBM Protected 联系人可加入。</string>
     <string name="invitation_rejected_invitee_not_protected_title">用户无法受邀加入</string>
     <string name="invitation_sent">邀请已发送</string>
@@ -1201,10 +1314,8 @@
     <string name="invite_activity_category">类别</string>
     <string name="invite_activity_lookup">查找…</string>
     <string name="invite_activity_mail">电子邮件：%1$s</string>
-    <string name="invite_activity_mail_body">"我想邀请您使用 BBM 聊天。
-
-要在 BBM 上加我，请单击
-%1s
+    <string name="invite_activity_mail_body">"我想邀请您使用 BBM 聊天。要在移动设备的 BBM 上加我，请单击 
+%1$s
 "</string>
     <string name="invite_activity_mail_subject">BBM 上来自 %1$s 的邀请</string>
     <string name="invite_activity_phone">电话：%1$s</string>
@@ -1212,7 +1323,7 @@
     <string name="invite_activity_security_custom_question">输入问题</string>
     <string name="invite_activity_security_custom_response">输入答案</string>
     <string name="invite_activity_security_label">安全提示问题</string>
-    <string name="invite_activity_sms_body">将我添加至 BBM！在 BlackBerry 上，单击 PIN %1$s，然后选择\"邀请加入 BBM\"。在 Android 或 iPhone 上，单击 www.pin.bbm.com/%1$s 可添加我或下载 BBM。</string>
+    <string name="invite_activity_sms_body">将我添加至 BBM！单击 www.pin.bbm.com/%1$s</string>
     <string name="invite_activity_to">收件人：</string>
     <string name="invite_bbm_contact">添加 BBM 联系人</string>
     <string name="invite_bbm_invites">BBM 邀请</string>
@@ -1281,6 +1392,8 @@
     <string name="key_exchange_hint_waiting_to_enter_passphrase">输入加入密码</string>
     <string name="key_exchange_hint_waiting_to_join">等待 %1$s 加入</string>
     <string name="key_exchange_status_accepted">密码已接受</string>
+    <string name="last_name">姓氏</string>
+    <string name="last_name_hint">输入姓氏</string>
     <string name="learn_more_about_bbm_pins">了解有关 BBM PIN 的更多信息</string>
     <string name="learn_more_about_restoring_bbm_data">了解有关恢复 BBM 数据的更多信息。</string>
     <string name="leave_channel">离开频道</string>
@@ -1302,6 +1415,8 @@
     <string name="location_service_failed">无法获取位置</string>
     <string name="low_battey_warning">电量过低导致暂停，单击可恢复。</string>
     <string name="low_priority">低优先级</string>
+    <string name="main_drawer_close">关闭抽屉</string>
+    <string name="main_drawer_open">打开抽屉</string>
     <string name="main_mood_status_format">%1$s - %2$s</string>
     <string name="main_status_available">有空</string>
     <string name="main_status_busy">忙碌</string>
@@ -1313,8 +1428,10 @@
     <string name="menu_end_chat">结束聊天</string>
     <string name="menu_help">帮助</string>
     <string name="menu_history">历史</string>
+    <string name="menu_leave_chat">退出聊天</string>
     <string name="menu_settings">设置</string>
     <string name="menu_share">分享</string>
+    <string name="message">消息</string>
     <string name="message_button_accept">接受</string>
     <string name="message_button_allow">允许</string>
     <string name="message_button_cancel">取消</string>
@@ -1332,6 +1449,7 @@
     <string name="message_with_context_new_contact">关于您的新联系人：</string>
     <string name="message_with_context_now_playing">关于当前播放：</string>
     <string name="message_with_context_personal_message">关于您的个人消息：</string>
+    <string name="message_with_context_quote">%1$s 写道：\"%2$s\"</string>
     <string name="message_with_context_real_time_location">关于您的位置：</string>
     <string name="more">更多</string>
     <string name="msg_bulk_mode_scanned">批量扫描：找到条码，已保存</string>
@@ -1369,6 +1487,11 @@
     <string name="my_channels_fragment_mark_favorite">标记为收藏</string>
     <string name="my_channels_fragment_remove_favorite">删除收藏</string>
     <string name="mybbmbarcode">我的 BBM 条形码</string>
+    <string name="nav_chats">BBM 聊天</string>
+    <string name="nav_contacts">BBM 联系人</string>
+    <string name="nav_feeds">BBM 订阅源</string>
+    <string name="nav_feeds_all">BBM 订阅源 - 全部</string>
+    <string name="nav_groups">BBM Groups</string>
     <string name="network_settings_dialog_text">连接到 Wi-Fi 或移动网络方可继续。</string>
     <string name="network_settings_dialog_title">无网络连接</string>
     <string name="new_channel_email_addresss">电子邮件地址</string>
@@ -1377,6 +1500,7 @@
     <string name="new_chat_topic">新建聊天主题</string>
     <string name="new_string">新</string>
     <string name="next">下一个</string>
+    <string name="no">否</string>
     <string name="no_active_glympses">无活动的 Glympse</string>
     <string name="no_blackberry_data">无 BlackBerry 数据</string>
     <string name="no_blocked_invites">忽略邀请或删除联系人时，可将联系人添加至此列表。</string>
@@ -1387,6 +1511,7 @@
     <string name="no_connection_found">找不到连接</string>
     <string name="no_current_chat">无聊天</string>
     <string name="no_network_connection">无网络连接。</string>
+    <string name="no_picture">无可用图片</string>
     <string name="no_pictures">无图片</string>
     <string name="no_posts">无法显示所有帖子。</string>
     <string name="no_updates">无新项目。</string>
@@ -1437,6 +1562,19 @@
 在 BlackBerry 设备上，点按 pin:%2$s，然后输入密码。"</string>
     <string name="out_of_band_passphrase_message_sms">我想与您开始 BBM Protected 聊天。在 BlackBerry 设备上，点按 %1$s。输入密码 %2$s。</string>
     <string name="out_of_band_passphrase_subject">BBM Protected 聊天</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_dialog_body">此功能仅针对 BBM 联系人。是否立即将 %1$s 添加至您的 BBM 联系人？</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_dialog_title">添加至 BBM 联系人</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_toast">您必须将此人加为 BBM 联系人，方可使用此选项。</string>
+    <string name="outer_circle_category_bbm_contacts">BBM 联系人</string>
+    <string name="outer_circle_category_phone_contacts">@string/outer_circle_category_phone_contacts_v1</string>
+    <string name="outer_circle_category_phone_contacts_v1">联系人</string>
+    <string name="outer_circle_category_phone_contacts_v2">电话联系人</string>
+    <string name="outer_circle_category_phone_contacts_v3">设备联系人</string>
+    <string name="outer_circle_contact_add_more_friends">添加更多朋友</string>
+    <string name="outer_circle_contact_menu_add_as_contact">添加至 BBM 联系人</string>
+    <string name="outer_circle_contact_menu_delete_and_block">删除和阻止</string>
+    <string name="outer_circle_find_other_bbm_user_body">您可以在设备联系人自动搜索可能认识的 BBM 用户。是否允许 BBM 访问您的联系人应用程序？</string>
+    <string name="outer_circle_find_other_bbm_user_title">查找其他 BBM 用户</string>
     <string name="overlay_bbm_ongoing_notification_reason">"为何可以在屏幕顶部看到 BBM 图标？
 
 BBM 图标显示在状态栏中，因为 BBM 始终处于启动状态，一直保持连接畅通。"</string>
@@ -1470,13 +1608,13 @@ BBM 图标显示在状态栏中，因为 BBM 始终处于启动状态，一直�
     <string name="partner_app_register_failed_dialog_outage_message">未检测到网络连接</string>
     <string name="partner_app_register_failed_dialog_title">通过 BBM 注册</string>
     <string name="passphrase">密码</string>
-    <string name="passphrase_creation_details">密码必须共享给要加入该聊天的 BBM 联系人。必须至少是四个大写字母。</string>
+    <string name="passphrase_creation_details">密码必须共享给要加入该聊天的 BBM 联系人。至少为 4 个字符。使用字母、数字或两者的组合。示例：TGRS、2905、TIG8。</string>
     <string name="passphrase_incorrect">&lt;b>%1$s&lt;/b> 未输入正确的密码。</string>
     <string name="passphrase_initiated">已与 &lt;b>%2$s&lt;/b> 分享聊天密码 &lt;b>%1$s&lt;/b>。</string>
     <string name="passphrase_message_email">"我想与您开始 BBM Protected 聊天。
 ---o---
-单击 pin:%2$s 或 %3$s 后输入密码 \"%1$s\""</string>
-    <string name="passphrase_message_sms">加入我的 BBM Protected 聊天！单击 pin:%2$s 或 %3$s 后输入密码 \"%1$s\"。</string>
+要加入该聊天，只需单击 pin %1$s 或 %2$s 即可。如果提示要输入密码，请输入 \"%3$s\"。"</string>
+    <string name="passphrase_message_sms">加入我的 BBM Protected 聊天！只需单击 PIN %1$s 或 %2$s 即可。如果提示要输入密码，请输入 \"%3$s\"。</string>
     <string name="passphrase_rules_details">必须由三组字母组成，每组包含四到七个大写字母，字母组之间用空格隔开。示例：DARK BROWN TIGERS</string>
     <string name="passphrase_share_details">要以何种方式将密码发送给 %1$s？</string>
     <string name="passphrase_wait_to_join">等待 &lt;b>%1$s&lt;/b> 加入。</string>
@@ -1500,12 +1638,38 @@ BBM 图标显示在状态栏中，因为 BBM 始终处于启动状态，一直�
     <string name="pending_invite_group_too_many_members">已拒绝：此组人员已满</string>
     <string name="pending_invite_pending">等待中</string>
     <string name="pending_invite_protected_group_invites_you_to">%1$s 想邀请您加入组 \"%2$s\"。要加入此 BBM Protected 组，您必须输入组成员提供的密码。</string>
+    <string name="people">人员</string>
     <string name="personalize_profile_dialog_message">点按标题栏可打开 BBM 个人主页。</string>
     <string name="personalize_profile_dialog_title">个性化设置个人主页</string>
+    <string name="phone_contact_add">@string/phone_contact_add_v1</string>
+    <string name="phone_contact_add_v1">添加 BBM 联系人</string>
+    <string name="phone_contact_add_v2">添加至 BBM</string>
+    <string name="phone_contact_add_v3">添加至 BBM 联系人</string>
+    <string name="phone_contact_block">阻止</string>
+    <string name="phone_contact_block_from_conversation_description">以后，来自 %1$s 的所有邀请和聊天都会被阻止。是否要阻止 %1$s？</string>
+    <string name="phone_contact_block_from_conversation_title">阻止 %1$s</string>
+    <string name="phone_contact_invitationsent">邀请已发送</string>
+    <string name="phone_contact_not_a_contact">您必须将此人加为 BBM 联系人，方可使用全部 BBM 功能。</string>
+    <string name="phone_contact_reinvite_message">@string/phone_contact_reinvite_message_v1</string>
+    <string name="phone_contact_reinvite_message_v1">要将 %1$s 添加到 BBM 联系人，请点按 %2$s。</string>
+    <string name="phone_contact_reinvite_message_v2">您必须将 %1$s 添加到 BBM 联系人方可开始聊天。要将 %1$s 添加到 BBM 联系人中，请点按聊天顶部的 %2$s。</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_1">&lt;b>&lt;i>BBM 联系人&lt;/i>&lt;/b>首先必须是您的&lt;b>&lt;i>联系人&lt;/i>&lt;/b>。</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_2">&lt;b>&lt;i>联系人&lt;/i>&lt;/b>指的是使用 BBM 的设备联系人。&lt;br/>&lt;br/>* 立即与联系人聊天&lt;br/>* 无需邀请</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_3">&lt;b>&lt;i>BBM 联系人&lt;/i>&lt;/b>需要邀请。只有 BBM 联系人可执行以下操作：&lt;br/>&lt;br/>* 查看您的 BBM 显示图片&lt;br/>* 查看您的 BBM 状态更新&lt;br/>* 使用 BBM Voice 拨打或接听电话。</string>
+    <string name="phone_contact_tutorial_conversation_section_1">&lt;b>&lt;i>BBM 联系人&lt;/i>&lt;/b>首先必须是您的&lt;b>&lt;i>联系人&lt;/i>&lt;/b>。</string>
+    <string name="phone_contact_tutorial_conversation_section_2">这是与&lt;b>&lt;i>联系人&lt;/i>&lt;/b>之间的聊天。此人看不到如下内容：&lt;br/>&lt;br/>* 您的 BBM 显示图片&lt;br/>* 您的 BBM 状态更新</string>
+    <string name="phone_contact_tutorial_conversation_section_3">该联系人必须使用最新版的 BBM 方可聊天。您可以将该联系人添加为 &lt;b>&lt;i>BBM 联系人&lt;/i>&lt;/b>，或随时阻止。</string>
+    <string name="phone_contact_tutorial_profile_click_section_1">&lt;b>&lt;i>BBM 联系人&lt;/i>&lt;/b>首先必须是您的&lt;b>&lt;i>联系人&lt;/i>&lt;/b>。</string>
+    <string name="phone_contact_tutorial_profile_click_section_2">&lt;b>&lt;i>BBM 联系人&lt;/i>&lt;/b>必须收到邀请方可执行以下操作：&lt;br/>&lt;br/>* 查看您的 BBM 显示图片、状态更新和个人档案&lt;br/>* 通过 BBM Voice 呼叫您&lt;br/>* 向您发送广播消息</string>
+    <string name="phone_contact_tutorial_profile_click_section_3">&lt;b>&lt;i>联系人&lt;/i>&lt;/b>指的是使用 BBM 的设备联系人。添加联系人后，如果使用最新版的 BBM，则无需邀请即可使用 BBM 聊天功能，包括：&lt;br/>&lt;br/>&amp;#8226;接收消息的 D 和 R 通知&lt;br/>&amp;#8226;发送图片和文件&lt;br/>&amp;#8226;通过 Glympse 分享您的位置</string>
     <string name="pic_caption_hint"><i>输入标题</i></string>
+    <string name="picture">图片</string>
     <string name="picture_deleted">图片已删除</string>
+    <string name="picture_selection_limit_toast">文件数过多（最多 10 个）。</string>
+    <string name="picture_selection_type_toast">多人共享仅支持图像类型。</string>
     <string name="pin_copied">已复制 PIN</string>
     <string name="please_ensure_the_device_time_is_correctly_set">请确保设备时间设置正确，然后重试。</string>
+    <string name="policy_change_title">政策更改</string>
     <string name="post_removed">帖子已删除。</string>
     <string name="posts_caption">帖子</string>
     <string name="pref_add_contact_on_tap">点按即可添加联系人</string>
@@ -1566,21 +1730,49 @@ BBM 图标显示在状态栏中，因为 BBM 始终处于启动状态，一直�
     <string name="preferences_vibrate_title">振动</string>
     <string name="private_channel">私人频道</string>
     <string name="private_channel_description">设置频道只对邀请的用户开放，不显示在他人的搜索结果中。</string>
+    <string name="private_chat">私人聊天</string>
+    <string name="private_chat_back_out_dialog_dont_ask_me_again">不再询问。</string>
+    <string name="private_chat_back_out_dialog_text">如果您在 %1$d 分钟内未返回聊天，您的私人聊天将结束。</string>
+    <string name="private_chat_conversation_notification_title">%1$s 想向您发起聊天。</string>
+    <string name="private_chat_end_menu">结束私人聊天</string>
+    <string name="private_chat_entry_subtitle">点按可返回</string>
+    <string name="private_chat_menu">发起私人聊天</string>
+    <string name="private_chat_message_notification_title">新建私人聊天消息。</string>
+    <string name="private_chat_other_party_not_support">此联系人的 BBM 版本较旧，不支持私人聊天。</string>
+    <string name="private_chat_request_incoming_subtitle">私人聊天请求</string>
+    <string name="private_chat_request_invite_bubble_message">"我想向您发起私人聊天。如要加入私人聊天，您必须下载最新版的 BBM。
+
+如要获取最新版的 BBM，请访问 http://bbm.com/upgrade。"</string>
+    <string name="private_chat_request_outgoing_subtitle">私人聊天请求</string>
+    <string name="private_chat_stop_reason_busy">%1$s 当前不在线，无法进行私人聊天。</string>
+    <string name="private_chat_stop_reason_cancelled">%1$s 已取消私人聊天。</string>
+    <string name="private_chat_stop_reason_declined">%1$s 已拒绝私人聊天。</string>
+    <string name="private_chat_stop_reason_inactivity">私人聊天处于闲置状态，因此会话自动结束。</string>
+    <string name="private_chat_stop_reason_localended">您结束了私人聊天。</string>
+    <string name="private_chat_stop_reason_noresponse">%1$s 未响应您的私人聊天请求。</string>
+    <string name="private_chat_stop_reason_remoteended">%1$s 结束了私人聊天。</string>
+    <string name="private_chat_stop_reason_unknown">您的私人聊天已断开连接。请再次启动您的私人聊天。</string>
+    <string name="private_chat_tutorial_description">"姓名和个人头像都已隐藏。
+
+聊天窗口结束或闲置后，两个设备上的聊天内容会自动删除。
+
+私人消息新通知隐蔽性强。"</string>
     <string name="profile_barcode">条形码</string>
+    <string name="profile_bbm_pin_label">BBM PIN</string>
     <string name="profile_copy_pin">复制 PIN</string>
     <string name="profile_copypin">复制 PIN</string>
     <string name="profile_default_pin">PIN:00000000</string>
     <string name="profile_display_name_invalid">显示名称中不得包含冒号或逗号</string>
+    <string name="profile_display_name_invalid_empty">显示名称不能为空</string>
     <string name="profile_icon_source_camera">相机</string>
     <string name="profile_icon_source_picture">图片</string>
     <string name="profile_icon_source_sample_picture">示例图片</string>
-    <string name="profile_location_label">位置/时区：</string>
+    <string name="profile_location_label">位置/时区</string>
     <string name="profile_mood_hint"><i>您在想什么？</i></string>
+    <string name="profile_name">个人主页名称</string>
     <string name="profile_no_status_message">无状态消息</string>
     <string name="profile_own_status_label">状态</string>
-    <string name="profile_pin">%1$s</string>
     <string name="profile_pin_copied">已复制 PIN</string>
-    <string name="profile_pin_label">PIN:</string>
     <string name="profile_pinlabel">PIN:</string>
     <string name="profile_revert_display_name">还原显示名称</string>
     <string name="profile_selector_apps">应用程序</string>
@@ -1588,27 +1780,40 @@ BBM 图标显示在状态栏中，因为 BBM 始终处于启动状态，一直�
     <string name="profile_selector_members">成员</string>
     <string name="profile_selector_updates">订阅源</string>
     <string name="profile_share_pin">共享我的 PIN</string>
+    <string name="profile_status_delete">删除状态</string>
+    <string name="profile_status_delete_info">是否确定要删除此状态？</string>
     <string name="profile_status_edit">编辑状态消息</string>
-    <string name="profile_status_label">状态：</string>
+    <string name="profile_user_has_subscription">此人有一个订阅。</string>
+    <string name="profile_user_view_all_sub">查看全部 BBM 订阅</string>
     <string name="prompt_change_bbm_picture">更改 BBM 图片？</string>
     <string name="prompted_after_rate_call">谢谢！</string>
     <string name="prompted_before_rate_call">评价通话质量</string>
     <string name="protected_group_invite_message_default">我想邀请您加入我的组：\"%1$s\"。要加入此 BBM Protected 组，您必须输入组成员提供的密码。</string>
     <string name="protected_group_requires_join">等待密码确认以恢复受保护的组</string>
     <string name="protected_mode_disabled_header">BBM Protected 已关闭</string>
-    <string name="protected_mode_disabled_message">您的联系人和聊天已保存，但您已从使用 BBM Protected 的多人聊天和组中移除。</string>
+    <string name="protected_mode_disabled_message">您的联系人和聊天已保存，但您已从使用 BBM Protected 的组中移除。</string>
     <string name="protected_mode_disabled_title">管理员已关闭 BBM Protected。</string>
     <string name="protected_mode_enabled_header">BBM Protected</string>
     <string name="protected_mode_enabled_message">"BBM Protected 为 BBM 聊天、文件传输和组又增加一层加密功能。首次发起与 BBM Protected 联系人的聊天时，必须指定一个密码，他人需要输入这个密码方可加入聊天。您只需一次为所有 BBM Protected 联系人指定一个密码。
  
 对于 BBM Groups，您可以选择是否限制他人成为 BBM Protected 联系人。如果您创建了 BBM Protected 组，则可以共享密码，因为他人必须输入密码方可加入。"</string>
     <string name="protected_mode_enabled_title">系统管理员已激活设备上的 BBM Protected。</string>
+    <string name="protected_preferred_details">您的联系人要求进行 BBM Protected 聊天。</string>
+    <string name="protected_preferred_dialog">该联系人正在使用 Protected Plus。您和该联系人之间的聊天将为 BBM Protected 聊天。 <a href="http://blackberry.com/bbmprotected">了解更多</a></string>
+    <string name="protected_preferred_dialog_dismiss">不再显示</string>
+    <string name="protected_preferred_mode_disabled_message">管理员已关闭 Protected Plus。</string>
+    <string name="protected_preferred_mode_disabled_title">Protected Plus 功能已关闭</string>
+    <string name="protected_preferred_mode_enabled_message">管理员已打开 Protected Plus（BBM Protected 功能之一）。您和您的联系人之间的聊天将为 BBM Protected 聊天。</string>
+    <string name="protected_preferred_mode_enabled_title">Protected Plus 功能已开启</string>
+    <string name="protected_rejected_message_body">您可能需要再次共享密码方可重置此 BBM Protected 聊天。如要共享密码，点按屏幕右上角的菜单图标。点按&lt;b>“%1$s”&lt;/b>。</string>
+    <string name="protected_rejected_message_status">再次分享密码</string>
     <string name="purchase_failed_message">您的付款无法处理。是否要选择其他的付款方式？</string>
     <string name="purchase_options">付款选项</string>
     <string name="purchase_success_message">产品已成功购买</string>
     <string name="purchase_unexpected_error_message">您的购买已中断。请重试。</string>
     <string name="pyk_empty_invites_allow_upload_hint">查找已使用 BBM 的好友</string>
     <string name="qr_description">UsersQR</string>
+    <string name="quick_reply">答复并结束</string>
     <string name="quick_share_glympse_first_experience_overlay_infos">发送 Glympse 即可让 BBM 联系人在您选定的时间段内在地图上关注您的位置。会面或快要迟到时的完美选择。</string>
     <string name="quick_share_glympse_first_experience_overlay_note"><i>注意：使用此功能时，Glympse Inc. 公司将共享您的 GPS 坐标，并遵守公司 <a href="http://glympse.com/privacy">相应的隐私政策</a></i></string>
     <string name="quick_share_glympse_first_experience_overlay_title">共享您的位置。</string>
@@ -1618,8 +1823,11 @@ BBM 图标显示在状态栏中，因为 BBM 始终处于启动状态，一直�
     <string name="quick_share_voice_note_label_busy">无法录音。媒体播放器或媒体服务正在使用。</string>
     <string name="quick_share_voice_note_label_default">触摸并按住可录音</string>
     <string name="quick_share_voice_note_label_delete">释放即可删除</string>
+    <string name="quick_share_voice_note_label_rec">录制</string>
     <string name="quick_share_voice_note_label_send">释放即可发送，或滑动以取消</string>
     <string name="quick_share_voice_note_tost_message">要发送即时语音消息，请按住录音按钮</string>
+    <string name="quote_at_user_name">\@%1$s</string>
+    <string name="quote_message_label">\"%1$s\"</string>
     <string name="rate_limited">已达 Glympse 额度限制。</string>
     <string name="rate_my_app_ignore">不，谢谢</string>
     <string name="rate_my_app_message">如果喜欢使用 BBM，请花一点时间为该应用程序打分。谢谢！</string>
@@ -1638,6 +1846,8 @@ BBM 图标显示在状态栏中，因为 BBM 始终处于启动状态，一直�
     <string name="remaining_title_glympse">Glympse</string>
     <string name="remove">移除</string>
     <string name="replace_picture">替换图片</string>
+    <string name="reply">答复</string>
+    <string name="reply_with_voice">通过语音答复</string>
     <string name="report_channel">报告频道</string>
     <string name="report_problem_activity_choose_email_client">选择电子邮件</string>
     <string name="report_problem_activity_email_button">通过电子邮件发送报告</string>
@@ -1668,6 +1878,8 @@ http://blackberry.com/support/bbm"</string>
     <string name="request_was_received">您收到一个 Glympse 请求</string>
     <string name="required_fields">必填字段*</string>
     <string name="resend_passphrase">重新发送密码</string>
+    <string name="reset_protected_chat">重置此聊天</string>
+    <string name="resolve_vanitypin_not_found">该 PIN 不可用。</string>
     <string name="restore_sticker_purchases">恢复</string>
     <string name="restore_using_device_switch">使用设备切换进行恢复</string>
     <string name="restore_using_email">使用电子邮件进行恢复</string>
@@ -1720,6 +1932,8 @@ http://blackberry.com/support/bbm"</string>
     <string name="select_contacts_to_move">选择要移至 \"%1$s\" 的联系人：</string>
     <string name="select_group">选择组</string>
     <string name="select_group_activity_title">{0,choice,0#选择组|#+1 组|1&lt;+{0} 组}</string>
+    <string name="select_group_discussion">选择讨论</string>
+    <string name="select_pictures">{0,choice,0#选择图片|1#+1 图片|1&lt;+{0} 图片}</string>
     <string name="send">发送</string>
     <string name="send_comment">发送评论</string>
     <string name="send_decline_response">发送拒绝回应</string>
@@ -1728,6 +1942,11 @@ http://blackberry.com/support/bbm"</string>
     <string name="sent_pending_invite_message_label">消息：</string>
     <string name="sent_pending_invite_sent_label">已发送：</string>
     <string name="set_as">设置为</string>
+    <string name="set_vanitypin_result_invalid">该 PIN 不可用。</string>
+    <string name="set_vanitypin_result_refused">该 PIN 不可用。</string>
+    <string name="set_vanitypin_result_reserved">该 PIN 不可用。</string>
+    <string name="set_vanitypin_result_success">您的 PIN 已创建。</string>
+    <string name="set_vanitypin_result_used">该 PIN 不可用。</string>
     <string name="setas_activity_bbm_picture_updated">BBM 图片已更新</string>
     <string name="setas_activity_item_bbm_picture">BBM 图片</string>
     <string name="setas_activity_item_contact_picture">联系人图片</string>
@@ -1737,6 +1956,7 @@ http://blackberry.com/support/bbm"</string>
     <string name="setas_activity_title">设置为</string>
     <string name="settings">设置</string>
     <string name="settings_activity_allow_hq_pictures">始终接受高清图片请求</string>
+    <string name="settings_activity_backup_chat_history_now">立即备份</string>
     <string name="settings_activity_blackberry_id_edit">编辑</string>
     <string name="settings_activity_blackberry_id_generic_error">我们暂时无法编辑您的 BlackBerry ID，请稍后重试。</string>
     <string name="settings_activity_blocked_contacts">阻止的联系人和订阅源</string>
@@ -1750,6 +1970,7 @@ http://blackberry.com/support/bbm"</string>
     <string name="settings_activity_deleting_chat_history_info">您与所有联系人的聊天记录都将删除。此操作无法撤销。</string>
     <string name="settings_activity_deleting_chat_history_title">删除聊天记录</string>
     <string name="settings_activity_hide_keyboard_on_enter_conversation">始终显示键盘</string>
+    <string name="settings_activity_keyboard_enter_as_new_line">在键盘上按 Enter 即可插入新增行</string>
     <string name="settings_activity_legal">法律</string>
     <string name="settings_activity_report_a_problem">报告问题</string>
     <string name="settings_activity_save_chat_history">保存聊天记录</string>
@@ -1788,6 +2009,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="share_passphrase_other">我想亲自告诉他们</string>
     <string name="share_passphrase_sms">短信息</string>
     <string name="share_passphrase_title">分享密码</string>
+    <string name="share_to_feed_title">更新您的订阅源？</string>
     <string name="sharead_sponsored_invite">共享的赞助邀请</string>
     <string name="sharead_sponsored_post">共享的赞助帖子</string>
     <string name="shared_channel_post_default_text">共享的频道帖子</string>
@@ -1795,6 +2017,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="shared_channel_post_sent">频道帖子已发送</string>
     <string name="shared_sponsored_content">共享的赞助内容</string>
     <string name="shop">商店</string>
+    <string name="shop_subscriptions">订阅</string>
     <string name="show">显示</string>
     <string name="show_channel_preview">预览</string>
     <string name="show_map">显示地图</string>
@@ -1803,6 +2026,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="sign_in_to_bbm">登录 BBM</string>
     <string name="slide_menu_add_event">添加事件</string>
     <string name="slide_menu_add_list">添加列表</string>
+    <string name="slide_menu_block_chat">阻止聊天</string>
     <string name="slide_menu_copy_chat">复制聊天</string>
     <string name="slide_menu_delete_item">删除项目</string>
     <string name="slide_menu_edit">编辑</string>
@@ -1818,6 +2042,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="slide_menu_new_chat">开始新聊天</string>
     <string name="slide_menu_open_bbm_chat">打开 BBM 聊天</string>
     <string name="slide_menu_ping">校验</string>
+    <string name="slide_menu_play_in_media_player">在媒体播放器中播放</string>
     <string name="slide_menu_remove_deleted_item">移除已删除的项目</string>
     <string name="slide_menu_remove_from_group">从组中删除</string>
     <string name="slide_menu_reply_by_voice_note">通过语音消息答复</string>
@@ -1836,19 +2061,23 @@ www.pin.bbm.com/%1$s"</string>
     <string name="sms_activity_title">编写</string>
     <string name="sort_by">排序依据</string>
     <string name="stacked_notification_format"><Data>&lt;b>%1$s&lt;/b>: %2$s</Data></string>
+    <string name="stale_user_reinvite_message">%1$s 自从 %2$s 后一直未上线</string>
+    <string name="stale_user_reinvite_title">重新邀请</string>
     <string name="start_chat">开始聊天</string>
     <string name="start_chat_failed">无法创建聊天</string>
     <string name="start_meeting">启动 BBM Meetings</string>
-    <string name="start_meeting_confirmation_dialog">结束通话并启动新的会议？</string>
-    <string name="start_meeting_confirmation_title">启动 BBM Meeting？</string>
+    <string name="start_meeting_confirmation_dialog">您正在进行 BBM 通话。是否要结束通话并启动 BBM 会议？</string>
+    <string name="start_meeting_confirmation_title">启动 BBM Meetings</string>
     <string name="start_multiperson_chat">开始多方聊天</string>
+    <string name="start_pin_chat">输入 PIN 可发起聊天</string>
     <string name="starts">开始</string>
     <string name="stats_caption">统计</string>
     <string name="stay_in_touch_like_never_before_with_blackberry_messenger">BlackBerry Messenger 能让您以前所未有的方式和好友保持联系。</string>
     <string name="sticker_picker_no_stickers_purchased">未购买任何贴纸。</string>
     <string name="sticker_picker_preview_hint">按住某个贴纸即可预览。</string>
-    <string name="sticker_store_collection_heading">贴纸收藏</string>
-    <string name="sticker_store_details_artist_channel">频道</string>
+    <string name="sticker_settings">贴纸设置</string>
+    <string name="sticker_store_collection_heading">贴纸</string>
+    <string name="sticker_store_details_artist_channel">BBM Channel</string>
     <string name="sticker_store_details_artist_website">网站</string>
     <string name="sticker_store_details_promo_text">查看此处</string>
     <string name="sticker_store_details_screen_about">关于</string>
@@ -1871,6 +2100,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="sticker_store_sticker_purchase_notification_dialog_line">通知联系人您获得了新贴纸。</string>
     <string name="sticker_store_sticker_purchase_notification_message">查看我的新贴纸：http://shop.bbm.com/stickers/%1$s</string>
     <string name="sticker_store_store_loading">正在加载...</string>
+    <string name="store_generic_billing_error">无法购买此项。</string>
     <string name="store_title">BBM 商店</string>
     <string name="submit_button">提交</string>
     <string name="submit_passphrase">提交</string>
@@ -1880,6 +2110,44 @@ www.pin.bbm.com/%1$s"</string>
     <string name="subscribed_channel_invite_default_message">我想邀请您加入频道 \"%1$s\"。</string>
     <string name="subscribed_channels">已订阅的频道</string>
     <string name="subscribers_caption">用户</string>
+    <string name="subscriptino_pin_promo">您可以创建一个您和好友都能轻松记住的 BBM PIN。</string>
+    <string name="subscription_already_exists_bb10">您有在其他设备购买的自动续订订阅。</string>
+    <string name="subscription_app_type_no_ads">no_ads</string>
+    <string name="subscription_app_type_vanity_pin">custom_pin</string>
+    <string name="subscription_auto_renewing">您有自动续订的订阅。</string>
+    <string name="subscription_bbid_conflict">此项已被您商店帐户的其他 BlackBerry ID 购买。尝试使用其他商店帐户。</string>
+    <string name="subscription_custom_pin_description">想要一个您和好友都能轻松记住的自定义 PIN？创建一个完全属于您的 BBM PIN。切勿错过，立即申请您的自定义 PIN。</string>
+    <string name="subscription_dialog_duration_monthly">每月：%1$s</string>
+    <string name="subscription_dialog_duration_title">选择订阅</string>
+    <string name="subscription_dialog_duration_yearly">每年：%1$s</string>
+    <string name="subscription_edit_messages_description">如果某条消息中有错误，您可以撤回消息，更正错误，然后再次发送。</string>
+    <string name="subscription_exclusive_badge">专属徽章</string>
+    <string name="subscription_exclusive_descritpion_pin">炫耀带着徽章的独特 BBM 状态吧。激活订阅后，此徽章也会显示在个人头像上。</string>
+    <string name="subscription_expired">您的订阅已到期。再次订阅？</string>
+    <string name="subscription_exsits_ios_72hours">您的订阅即将到期。如要继续使用此功能，请在 %1$s之前在此订阅。</string>
+    <string name="subscription_exsits_on_ios">此项已在其他设备上购买。如要继续使用此功能，请在 %1$s之前在此订阅。</string>
+    <string name="subscription_generic_guidelines">BBM 自定义 PIN 指南</string>
+    <string name="subscription_generic_learn_more">了解更多</string>
+    <string name="subscription_learn_more">如要了解订阅详细信息，请访问 <a href="http://bbm.com/FAQ">bbm.com/FAQ</a>。</string>
+    <string name="subscription_no_adds_share">通知联系人您刚刚关闭了 BBM 中的广告。</string>
+    <string name="subscription_no_adds_status_message">我刚关闭了 BBM 中的广告。如要在您的设备上隐藏广告，点按 http://shop.bbm.com/item/no_ads</string>
+    <string name="subscription_no_ads">零广告</string>
+    <string name="subscription_no_ads_description">不想再看到广告？订阅此功能，即可隐藏 BBM 中的广告。</string>
+    <string name="subscription_no_ads_promo">"零广告
+订阅此功能，即可隐藏 BBM 中的赞助广告和赞助邀请。"</string>
+    <string name="subscription_no_ads_title">零广告</string>
+    <string name="subscription_pin_before_share">我要在 BBM 上创建一个自定义 PIN。如要自定义 PIN，请点按 http://shop.bbm.com/item/custom_pin</string>
+    <string name="subscription_pin_before_share_prompt">通知联系人您要创建一个自定义 PIN。</string>
+    <string name="subscription_pin_feautres">功能包括：</string>
+    <string name="subscription_private_chat_description">私人聊天中，您的联系人姓名会隐藏，新消息通知也会关闭。聊天内容很快会自动删除，或在您结束聊天时删除。</string>
+    <string name="subscription_reactiviate">订阅</string>
+    <string name="subscription_retracted_messages_description">如果您后悔发送了消息，可撤回这条消息，使其不显示在聊天中。</string>
+    <string name="subscription_retracted_messages_title">撤回消息</string>
+    <string name="subscription_status_active_subscription">您有自动续订的订阅。</string>
+    <string name="subscription_timed_messages_description">您可发送限定查看时间的消息和图片。消息隐藏在聊天中，收件人按住消息即可显示。计时器到时后，消息无法查看。</string>
+    <string name="subscription_timed_messages_title">定时消息</string>
+    <string name="subscriptions_not_entitled">您必须订阅方可使用此功能。</string>
+    <string name="subscriptions_restoring">查看订阅</string>
     <string name="suggestion_i_invite_you">%1$s 建议我邀请您使用 BBM 聊天。</string>
     <string name="suggestion_sent">建议已发送</string>
     <string name="suggestion_want_to_invite_bbm_contact">是否要邀请该 BBM 联系人？</string>
@@ -1905,7 +2173,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="timestamp_format_today_at">今天 %1$s</string>
     <string name="timestamp_format_yesterday_at">昨天 %1$s</string>
     <string name="title_activity_category">类别</string>
-    <string name="title_activity_change_status">更改状态</string>
+    <string name="title_activity_change_status">状态</string>
     <string name="title_activity_channels_lobby">自有频道接待大厅</string>
     <string name="title_activity_group_event_details">组事件详细信息</string>
     <string name="title_activity_group_events">组事件</string>
@@ -1938,6 +2206,9 @@ www.pin.bbm.com/%1$s"</string>
     <string name="update_fragment_hide_updates">隐藏</string>
     <string name="update_fragment_view_channel">查看频道</string>
     <string name="update_fragment_view_post">查看帖子</string>
+    <string name="update_list_archiving_disabled_message">管理员已关闭归档功能。</string>
+    <string name="update_list_archiving_enabled_message">管理员已打开归档功能。</string>
+    <string name="update_list_archiving_title">归档 BBM 聊天</string>
     <string name="update_list_avatar">&lt;b>%1$s&lt;/b> 已更改显示图片。</string>
     <string name="update_list_changed_event_sub_title">已更改活动</string>
     <string name="update_list_comment_sub_title">已添加评论</string>
@@ -1993,18 +2264,30 @@ www.pin.bbm.com/%1$s"</string>
     <string name="update_list_new_contact_sub_title">BBM 联系人</string>
     <string name="update_list_new_event_sub_title">新建活动</string>
     <string name="update_list_new_list_item_sub_title">新列表项目</string>
+    <string name="update_list_new_status_hint">输入状态名称</string>
     <string name="update_list_new_status_message">\"%1$s\"</string>
     <string name="update_list_new_status_sub_title">新建状态</string>
     <string name="update_list_newcontact">&lt;b>%1$s&lt;/b> 已是联系人。</string>
     <string name="update_list_now_playing_message">正在收听 \"%1$s\"</string>
     <string name="update_list_nowplayingmessage">&lt;b>%1$s&lt;/b> 正在收听 \"%2$s\"。</string>
     <string name="update_list_personalmessage">&lt;b>%1$s&lt;/b> 说 \"%2$s\"</string>
+    <string name="update_list_protected_disabled_message">管理员已关闭 BBM Protected。您已被移出使用 BBM Protected 的组。</string>
+    <string name="update_list_protected_enabled_message">管理员已打开 BBM Protected。与 BBM Protected 联系人之间的 BBM 聊天、文件传输和组现增加了一层额外加密功能。</string>
+    <string name="update_list_protected_preferred_disabled_message">管理员已关闭 Protected Plus。</string>
+    <string name="update_list_protected_preferred_enabled_message">管理员已打开 Protected Plus。您和您的联系人之间的聊天将为 BBM Protected 聊天。</string>
+    <string name="update_list_protected_status_sub_title">政策更改</string>
+    <string name="update_list_protected_title">BBM Protected</string>
     <string name="update_list_you">您</string>
+    <string name="update_popular_channels_subtitle">点按即可浏览</string>
+    <string name="update_popular_channels_title">精选频道</string>
     <string name="update_removed_from_blocked_list">已从阻止列表中删除。</string>
     <string name="update_sponsored_content">赞助的内容</string>
     <string name="update_sponsored_post">赞助的帖子</string>
+    <string name="update_your_subscription">更新订阅</string>
     <string name="updates">订阅源</string>
     <string name="upload">上传</string>
+    <string name="user_status_stale">%1$s 上次上线日期</string>
+    <string name="vanity_pin">自定义 PIN</string>
     <string name="verify_date_of_birth">正在验证您的出生日期</string>
     <string name="verify_passphrase">验证密码。</string>
     <string name="version">版本</string>
@@ -2012,6 +2295,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="view_channel_info">预览</string>
     <string name="view_channel_profile">查看频道个人主页</string>
     <string name="visits_caption">访问</string>
+    <string name="voice_note_duration">%1$02d:%2$02d</string>
     <string name="voice_rating_bad">很差</string>
     <string name="voice_rating_excellent">非常好</string>
     <string name="voice_rating_fair">一般</string>
@@ -2019,11 +2303,31 @@ www.pin.bbm.com/%1$s"</string>
     <string name="voice_rating_poor">差</string>
     <string name="voice_rating_title">您认为此次通话质量如何？</string>
     <string name="voicecall_already_in_call">您已接通 BBM 通话。要呼叫该联系人，结束其他通话并重新尝试。</string>
+    <string name="voicecall_must_add_as_contact">您必须将此人加为 BBM 联系人，方可使用此功能。</string>
+    <string name="voicecall_must_add_as_contact_title">添加至 BBM 联系人</string>
     <string name="voicecall_status_calling">正在呼叫</string>
     <string name="voicecall_status_connecting">正在连接</string>
     <string name="voicecall_status_duration">语音呼叫 %1$s</string>
     <string name="voicecall_status_duration_while_mute">已静音 %1$s</string>
+    <string name="voicenote">语音消息</string>
     <string name="wait_passphrase_confirmation">等待密码确认。</string>
+    <string name="warning_on_repurchase">如要确保此订阅功能不中断，您可能需要购买新的订阅，然后取消旧订阅。有关详细信息，请访问：%1$s</string>
+    <string name="wear_quick_call_shortly">我稍后给您回电话。</string>
+    <string name="wear_quick_cant_take">我现在很忙，无法接听您的电话。</string>
+    <string name="wear_quick_im_on_my_way">我正在路上。</string>
+    <string name="wear_quick_response_1">“没问题”</string>
+    <string name="wear_quick_response_2">“我知道啦！”</string>
+    <string name="wear_quick_response_3">“我现在很忙，待会回你。”</string>
+    <string name="wear_quick_response_appreciation">谢谢</string>
+    <string name="wear_quick_response_confirmation">是</string>
+    <string name="wear_quick_response_disagree">否</string>
+    <string name="wear_quick_response_haha">哈哈</string>
+    <string name="wear_quick_response_lol">笑脸</string>
+    <string name="wear_quick_response_on_my_way">在路上</string>
+    <string name="wear_quick_response_see_you_soon">闪人了</string>
+    <string name="wear_quick_response_talk_later">抱歉，现在没空聊</string>
+    <string name="wear_quick_response_understood">确定</string>
+    <string name="wearable_support">可穿戴支持</string>
     <string name="widget_back_to_chat_previews">返回至聊天预览</string>
     <string name="widget_change_my_status_message">更改我的状态消息</string>
     <string name="widget_edit_status">编辑状态</string>
@@ -2039,6 +2343,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="wifi_changing_network">请求连接到网络…</string>
     <string name="wifi_ssid_label">网络SSID</string>
     <string name="wifi_type_label">类型</string>
+    <string name="yes">是</string>
     <string name="you_are_signed_in_with_the_following_blackberry_id">您已使用以下 BlackBerry ID 登录：%1$s</string>
     <string name="you_can_choose_another_restore_option_or_delete_your_device_data">您可以选择其他恢复选项，或者删除设备数据，然后使用与备份文件关联的 BlackBerry ID 登录。</string>
     <string name="you_can_now_start_video_and_voice_chats">您现在可从 BBM 开始视频和语音聊天（如果支持该功能）。</string>

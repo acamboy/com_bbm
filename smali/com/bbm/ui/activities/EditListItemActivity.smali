@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field private final F:Lcom/bbm/ui/cn;
+.field private A:Ljava/lang/String;
 
-.field protected a:Lcom/bbm/ui/p;
+.field protected b:Lcom/bbm/ui/p;
 
-.field protected final b:Ljava/util/HashMap;
+.field protected final h:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap",
@@ -20,15 +20,11 @@
     .end annotation
 .end field
 
-.field private s:Lcom/bbm/ui/FooterActionBar;
+.field private x:Landroid/widget/Spinner;
 
-.field private t:Landroid/widget/Spinner;
+.field private y:Lcom/bbm/ui/InlineImageTextView;
 
-.field private u:Lcom/bbm/ui/InlineImageTextView;
-
-.field private v:Lcom/bbm/ui/InlineImageTextView;
-
-.field private w:Ljava/lang/String;
+.field private z:Lcom/bbm/ui/InlineImageTextView;
 
 
 # direct methods
@@ -36,90 +32,27 @@
     .locals 1
 
     .prologue
-    .line 34
+    .line 29
     invoke-direct {p0}, Lcom/bbm/ui/activities/NewListItemActivity;-><init>()V
 
-    .line 46
+    .line 40
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->b:Ljava/util/HashMap;
-
-    .line 53
-    new-instance v0, Lcom/bbm/ui/activities/jp;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/jp;-><init>(Lcom/bbm/ui/activities/EditListItemActivity;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->F:Lcom/bbm/ui/cn;
+    iput-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->h:Ljava/util/HashMap;
 
     return-void
 .end method
 
 .method static synthetic a(Lcom/bbm/ui/activities/EditListItemActivity;)V
-    .locals 3
-
-    .prologue
-    .line 34
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->d:Lcom/bbm/g/al;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->e:Ljava/lang/String;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/EditListItemActivity;->w:Ljava/lang/String;
-
-    invoke-static {v1, v2}, Lcom/bbm/g/am;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/bx;
-
-    move-result-object v1
-
-    sget-object v2, Lcom/bbm/g/bz;->b:Lcom/bbm/g/bz;
-
-    invoke-virtual {v1, v2}, Lcom/bbm/g/bx;->a(Lcom/bbm/g/bz;)Lcom/bbm/g/bx;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/EditListItemActivity;->finish()V
-
-    return-void
-.end method
-
-.method static synthetic b(Lcom/bbm/ui/activities/EditListItemActivity;)V
-    .locals 3
-
-    .prologue
-    .line 34
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->d:Lcom/bbm/g/al;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->e:Ljava/lang/String;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/EditListItemActivity;->w:Ljava/lang/String;
-
-    invoke-static {v1, v2}, Lcom/bbm/g/am;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/bw;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Lcom/bbm/g/bw;->a(Z)Lcom/bbm/g/bw;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/EditListItemActivity;->finish()V
-
-    return-void
-.end method
-
-.method static synthetic c(Lcom/bbm/ui/activities/EditListItemActivity;)V
     .locals 18
 
     .prologue
-    .line 34
+    .line 29
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->g:Lcom/bbm/ui/InlineImageEditText;
+    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->l:Lcom/bbm/ui/InlineImageEditText;
 
     invoke-virtual {v2}, Lcom/bbm/ui/InlineImageEditText;->getText()Landroid/text/Editable;
 
@@ -141,7 +74,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->g:Lcom/bbm/ui/InlineImageEditText;
+    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->l:Lcom/bbm/ui/InlineImageEditText;
 
     invoke-virtual {v2, v6}, Lcom/bbm/ui/InlineImageEditText;->setText(Ljava/lang/CharSequence;)V
 
@@ -151,31 +84,31 @@
     :cond_0
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->d:Lcom/bbm/g/al;
+    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->i:Lcom/bbm/g/an;
 
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/bbm/ui/activities/EditListItemActivity;->e:Ljava/lang/String;
+    iget-object v3, v0, Lcom/bbm/ui/activities/EditListItemActivity;->j:Ljava/lang/String;
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
+    iget-object v4, v0, Lcom/bbm/bali/ui/main/a/d;->a:Ljava/lang/String;
 
-    invoke-virtual {v2, v3, v4}, Lcom/bbm/g/al;->g(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/w;
+    invoke-virtual {v2, v3, v4}, Lcom/bbm/g/an;->f(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/y;
 
     move-result-object v2
 
-    iget-object v7, v2, Lcom/bbm/g/w;->f:Ljava/lang/String;
+    iget-object v7, v2, Lcom/bbm/g/y;->f:Ljava/lang/String;
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->a:Lcom/bbm/ui/p;
+    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->b:Lcom/bbm/ui/p;
 
     iget v2, v2, Lcom/bbm/ui/p;->a:I
 
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/bbm/ui/activities/EditListItemActivity;->a:Lcom/bbm/ui/p;
+    iget-object v3, v0, Lcom/bbm/ui/activities/EditListItemActivity;->b:Lcom/bbm/ui/p;
 
     invoke-virtual {v3, v2}, Lcom/bbm/ui/p;->getItem(I)Ljava/lang/Object;
 
@@ -187,7 +120,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/bbm/ui/activities/EditListItemActivity;->b:Ljava/util/HashMap;
+    iget-object v3, v0, Lcom/bbm/ui/activities/EditListItemActivity;->h:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
@@ -212,7 +145,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/bbm/ui/activities/EditListItemActivity;->b:Ljava/util/HashMap;
+    iget-object v4, v0, Lcom/bbm/ui/activities/EditListItemActivity;->h:Ljava/util/HashMap;
 
     invoke-virtual {v4, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -245,54 +178,54 @@
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->d:Lcom/bbm/g/al;
+    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->i:Lcom/bbm/g/an;
 
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/bbm/ui/activities/EditListItemActivity;->e:Ljava/lang/String;
+    iget-object v3, v0, Lcom/bbm/ui/activities/EditListItemActivity;->j:Ljava/lang/String;
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/bbm/ui/activities/EditListItemActivity;->w:Ljava/lang/String;
+    iget-object v4, v0, Lcom/bbm/ui/activities/EditListItemActivity;->A:Ljava/lang/String;
 
-    invoke-static {v3, v4}, Lcom/bbm/g/am;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/bw;
+    invoke-static {v3, v4}, Lcom/bbm/g/ar;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/cb;
 
     move-result-object v3
 
     const/4 v4, 0x1
 
-    invoke-virtual {v3, v4}, Lcom/bbm/g/bw;->a(Z)Lcom/bbm/g/bw;
+    invoke-virtual {v3, v4}, Lcom/bbm/g/cb;->a(Z)Lcom/bbm/g/cb;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
+    invoke-virtual {v2, v3}, Lcom/bbm/g/an;->a(Lcom/bbm/g/db;)V
 
     goto :goto_0
 
     :cond_2
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->d:Lcom/bbm/g/al;
+    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->i:Lcom/bbm/g/an;
 
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/bbm/ui/activities/EditListItemActivity;->w:Ljava/lang/String;
+    iget-object v3, v0, Lcom/bbm/ui/activities/EditListItemActivity;->A:Ljava/lang/String;
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/bbm/ui/activities/EditListItemActivity;->e:Ljava/lang/String;
+    iget-object v4, v0, Lcom/bbm/ui/activities/EditListItemActivity;->j:Ljava/lang/String;
 
-    invoke-virtual {v2, v3, v4}, Lcom/bbm/g/al;->e(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/y;
+    invoke-virtual {v2, v3, v4}, Lcom/bbm/g/an;->d(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/aa;
 
     move-result-object v7
 
-    invoke-static {}, Lcom/bbm/ui/activities/aam;->values()[Lcom/bbm/ui/activities/aam;
+    invoke-static {}, Lcom/bbm/ui/activities/xc;->values()[Lcom/bbm/ui/activities/xc;
 
     move-result-object v2
 
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/bbm/ui/activities/EditListItemActivity;->p:Lcom/bbm/ui/p;
+    iget-object v3, v0, Lcom/bbm/ui/activities/EditListItemActivity;->u:Lcom/bbm/ui/p;
 
     iget v3, v3, Lcom/bbm/ui/p;->a:I
 
@@ -300,11 +233,11 @@
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->o:Lcom/bbm/ui/p;
+    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->t:Lcom/bbm/ui/p;
 
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/bbm/ui/activities/EditListItemActivity;->o:Lcom/bbm/ui/p;
+    iget-object v3, v0, Lcom/bbm/ui/activities/EditListItemActivity;->t:Lcom/bbm/ui/p;
 
     iget v3, v3, Lcom/bbm/ui/p;->a:I
 
@@ -316,9 +249,9 @@
 
     const/4 v5, 0x0
 
-    sget-object v3, Lcom/bbm/ui/activities/aak;->b:Lcom/bbm/ui/activities/aak;
+    sget-object v3, Lcom/bbm/ui/activities/xa;->b:Lcom/bbm/ui/activities/xa;
 
-    iget v3, v3, Lcom/bbm/ui/activities/aak;->c:I
+    iget v3, v3, Lcom/bbm/ui/activities/xa;->c:I
 
     move-object/from16 v0, p0
 
@@ -341,11 +274,11 @@
     :goto_2
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->n:Lcom/bbm/ui/p;
+    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->s:Lcom/bbm/ui/p;
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/bbm/ui/activities/EditListItemActivity;->n:Lcom/bbm/ui/p;
+    iget-object v5, v0, Lcom/bbm/ui/activities/EditListItemActivity;->s:Lcom/bbm/ui/p;
 
     iget v5, v5, Lcom/bbm/ui/p;->a:I
 
@@ -355,9 +288,9 @@
 
     check-cast v2, Ljava/lang/String;
 
-    sget-object v5, Lcom/bbm/ui/activities/aal;->b:Lcom/bbm/ui/activities/aal;
+    sget-object v5, Lcom/bbm/ui/activities/xb;->b:Lcom/bbm/ui/activities/xb;
 
-    iget v5, v5, Lcom/bbm/ui/activities/aal;->c:I
+    iget v5, v5, Lcom/bbm/ui/activities/xb;->c:I
 
     move-object/from16 v0, p0
 
@@ -376,27 +309,27 @@
     :cond_3
     move-object/from16 v0, p0
 
-    iget-wide v10, v0, Lcom/bbm/ui/activities/EditListItemActivity;->m:J
+    iget-wide v10, v0, Lcom/bbm/ui/activities/EditListItemActivity;->r:J
 
-    iget-object v5, v7, Lcom/bbm/g/y;->l:Ljava/lang/String;
+    iget-object v5, v7, Lcom/bbm/g/aa;->l:Ljava/lang/String;
 
-    iget-object v9, v7, Lcom/bbm/g/y;->q:Lcom/bbm/g/aa;
+    iget-object v9, v7, Lcom/bbm/g/aa;->q:Lcom/bbm/g/ac;
 
-    invoke-virtual {v9}, Lcom/bbm/g/aa;->toString()Ljava/lang/String;
-
-    move-result-object v9
-
-    invoke-static {v9}, Lcom/bbm/ui/activities/aam;->a(Ljava/lang/String;)Lcom/bbm/ui/activities/aam;
+    invoke-virtual {v9}, Lcom/bbm/g/ac;->toString()Ljava/lang/String;
 
     move-result-object v9
 
-    iget-object v12, v7, Lcom/bbm/g/y;->b:Ljava/lang/String;
+    invoke-static {v9}, Lcom/bbm/ui/activities/xc;->a(Ljava/lang/String;)Lcom/bbm/ui/activities/xc;
 
-    iget-object v13, v7, Lcom/bbm/g/y;->a:Ljava/lang/String;
+    move-result-object v9
 
-    iget-object v14, v7, Lcom/bbm/g/y;->c:Ljava/lang/String;
+    iget-object v12, v7, Lcom/bbm/g/aa;->b:Ljava/lang/String;
 
-    iget-wide v0, v7, Lcom/bbm/g/y;->h:J
+    iget-object v13, v7, Lcom/bbm/g/aa;->a:Ljava/lang/String;
+
+    iget-object v14, v7, Lcom/bbm/g/aa;->c:Ljava/lang/String;
+
+    iget-wide v0, v7, Lcom/bbm/g/aa;->h:J
 
     move-wide/from16 v16, v0
 
@@ -408,28 +341,28 @@
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/bbm/ui/activities/EditListItemActivity;->d:Lcom/bbm/g/al;
+    iget-object v5, v0, Lcom/bbm/ui/activities/EditListItemActivity;->i:Lcom/bbm/g/an;
 
     move-object/from16 v0, p0
 
-    iget-object v7, v0, Lcom/bbm/ui/activities/EditListItemActivity;->e:Ljava/lang/String;
+    iget-object v7, v0, Lcom/bbm/ui/activities/EditListItemActivity;->j:Ljava/lang/String;
 
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/bbm/ui/activities/EditListItemActivity;->w:Ljava/lang/String;
+    iget-object v15, v0, Lcom/bbm/ui/activities/EditListItemActivity;->A:Ljava/lang/String;
 
-    invoke-static {v7, v15}, Lcom/bbm/g/am;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/bx;
+    invoke-static {v7, v15}, Lcom/bbm/g/ar;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/cc;
 
     move-result-object v7
 
-    invoke-virtual {v7, v6}, Lcom/bbm/g/bx;->d(Ljava/lang/String;)Lcom/bbm/g/bx;
+    invoke-virtual {v7, v6}, Lcom/bbm/g/cc;->d(Ljava/lang/String;)Lcom/bbm/g/cc;
 
     move-result-object v6
 
-    invoke-virtual {v5, v6}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
+    invoke-virtual {v5, v6}, Lcom/bbm/g/an;->a(Lcom/bbm/g/db;)V
 
     :cond_4
-    invoke-virtual {v8, v9}, Lcom/bbm/ui/activities/aam;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v8, v9}, Lcom/bbm/ui/activities/xc;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
@@ -437,31 +370,31 @@
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/bbm/ui/activities/EditListItemActivity;->d:Lcom/bbm/g/al;
+    iget-object v5, v0, Lcom/bbm/ui/activities/EditListItemActivity;->i:Lcom/bbm/g/an;
 
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Lcom/bbm/ui/activities/EditListItemActivity;->e:Ljava/lang/String;
+    iget-object v6, v0, Lcom/bbm/ui/activities/EditListItemActivity;->j:Ljava/lang/String;
 
     move-object/from16 v0, p0
 
-    iget-object v7, v0, Lcom/bbm/ui/activities/EditListItemActivity;->w:Ljava/lang/String;
+    iget-object v7, v0, Lcom/bbm/ui/activities/EditListItemActivity;->A:Ljava/lang/String;
 
-    invoke-static {v6, v7}, Lcom/bbm/g/am;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/bx;
+    invoke-static {v6, v7}, Lcom/bbm/g/ar;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/cc;
 
     move-result-object v6
 
-    iget-object v7, v8, Lcom/bbm/ui/activities/aam;->e:Ljava/lang/String;
+    iget-object v7, v8, Lcom/bbm/ui/activities/xc;->e:Ljava/lang/String;
 
-    invoke-static {v7}, Lcom/bbm/g/by;->a(Ljava/lang/String;)Lcom/bbm/g/by;
+    invoke-static {v7}, Lcom/bbm/g/cd;->a(Ljava/lang/String;)Lcom/bbm/g/cd;
 
     move-result-object v7
 
-    invoke-virtual {v6, v7}, Lcom/bbm/g/bx;->a(Lcom/bbm/g/by;)Lcom/bbm/g/bx;
+    invoke-virtual {v6, v7}, Lcom/bbm/g/cc;->a(Lcom/bbm/g/cd;)Lcom/bbm/g/cc;
 
     move-result-object v6
 
-    invoke-virtual {v5, v6}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
+    invoke-virtual {v5, v6}, Lcom/bbm/g/an;->a(Lcom/bbm/g/db;)V
 
     :cond_5
     invoke-static {v2, v14}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -472,25 +405,25 @@
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/bbm/ui/activities/EditListItemActivity;->d:Lcom/bbm/g/al;
+    iget-object v5, v0, Lcom/bbm/ui/activities/EditListItemActivity;->i:Lcom/bbm/g/an;
 
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Lcom/bbm/ui/activities/EditListItemActivity;->e:Ljava/lang/String;
+    iget-object v6, v0, Lcom/bbm/ui/activities/EditListItemActivity;->j:Ljava/lang/String;
 
     move-object/from16 v0, p0
 
-    iget-object v7, v0, Lcom/bbm/ui/activities/EditListItemActivity;->w:Ljava/lang/String;
+    iget-object v7, v0, Lcom/bbm/ui/activities/EditListItemActivity;->A:Ljava/lang/String;
 
-    invoke-static {v6, v7}, Lcom/bbm/g/am;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/bx;
+    invoke-static {v6, v7}, Lcom/bbm/g/ar;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/cc;
 
     move-result-object v6
 
-    invoke-virtual {v6, v2}, Lcom/bbm/g/bx;->c(Ljava/lang/String;)Lcom/bbm/g/bx;
+    invoke-virtual {v6, v2}, Lcom/bbm/g/cc;->c(Ljava/lang/String;)Lcom/bbm/g/cc;
 
     move-result-object v2
 
-    invoke-virtual {v5, v2}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
+    invoke-virtual {v5, v2}, Lcom/bbm/g/an;->a(Lcom/bbm/g/db;)V
 
     :cond_6
     cmp-long v2, v10, v16
@@ -499,32 +432,32 @@
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->d:Lcom/bbm/g/al;
+    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->i:Lcom/bbm/g/an;
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/bbm/ui/activities/EditListItemActivity;->e:Ljava/lang/String;
+    iget-object v5, v0, Lcom/bbm/ui/activities/EditListItemActivity;->j:Ljava/lang/String;
 
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Lcom/bbm/ui/activities/EditListItemActivity;->w:Ljava/lang/String;
+    iget-object v6, v0, Lcom/bbm/ui/activities/EditListItemActivity;->A:Ljava/lang/String;
 
-    invoke-static {v5, v6}, Lcom/bbm/g/am;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/bx;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v10, v11}, Lcom/bbm/g/bx;->a(J)Lcom/bbm/g/bx;
+    invoke-static {v5, v6}, Lcom/bbm/g/ar;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/cc;
 
     move-result-object v5
 
-    invoke-virtual {v2, v5}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
+    invoke-virtual {v5, v10, v11}, Lcom/bbm/g/cc;->a(J)Lcom/bbm/g/cc;
+
+    move-result-object v5
+
+    invoke-virtual {v2, v5}, Lcom/bbm/g/an;->a(Lcom/bbm/g/db;)V
 
     :cond_7
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->j:Landroid/widget/Switch;
+    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->o:Landroid/support/v7/widget/SwitchCompat;
 
-    invoke-virtual {v2}, Landroid/widget/Switch;->isChecked()Z
+    invoke-virtual {v2}, Landroid/support/v7/widget/SwitchCompat;->isChecked()Z
 
     move-result v2
 
@@ -538,27 +471,27 @@
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->d:Lcom/bbm/g/al;
+    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->i:Lcom/bbm/g/an;
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/bbm/ui/activities/EditListItemActivity;->e:Ljava/lang/String;
+    iget-object v5, v0, Lcom/bbm/ui/activities/EditListItemActivity;->j:Ljava/lang/String;
 
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Lcom/bbm/ui/activities/EditListItemActivity;->w:Ljava/lang/String;
+    iget-object v6, v0, Lcom/bbm/ui/activities/EditListItemActivity;->A:Ljava/lang/String;
 
-    invoke-static {v5, v6}, Lcom/bbm/g/am;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/bx;
+    invoke-static {v5, v6}, Lcom/bbm/g/ar;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/cc;
 
     move-result-object v5
 
     const-wide/16 v6, 0x0
 
-    invoke-virtual {v5, v6, v7}, Lcom/bbm/g/bx;->a(J)Lcom/bbm/g/bx;
+    invoke-virtual {v5, v6, v7}, Lcom/bbm/g/cc;->a(J)Lcom/bbm/g/cc;
 
     move-result-object v5
 
-    invoke-virtual {v2, v5}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
+    invoke-virtual {v2, v5}, Lcom/bbm/g/an;->a(Lcom/bbm/g/db;)V
 
     :cond_8
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -575,31 +508,31 @@
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->d:Lcom/bbm/g/al;
+    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->i:Lcom/bbm/g/an;
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/bbm/ui/activities/EditListItemActivity;->e:Ljava/lang/String;
+    iget-object v4, v0, Lcom/bbm/ui/activities/EditListItemActivity;->j:Ljava/lang/String;
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/bbm/ui/activities/EditListItemActivity;->w:Ljava/lang/String;
+    iget-object v5, v0, Lcom/bbm/ui/activities/EditListItemActivity;->A:Ljava/lang/String;
 
-    invoke-static {v4, v5}, Lcom/bbm/g/am;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/bx;
+    invoke-static {v4, v5}, Lcom/bbm/g/ar;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/cc;
 
     move-result-object v4
 
-    invoke-virtual {v4, v3}, Lcom/bbm/g/bx;->a(Ljava/lang/String;)Lcom/bbm/g/bx;
+    invoke-virtual {v4, v3}, Lcom/bbm/g/cc;->a(Ljava/lang/String;)Lcom/bbm/g/cc;
 
     move-result-object v3
 
     const-string v4, ""
 
-    invoke-virtual {v3, v4}, Lcom/bbm/g/bx;->b(Ljava/lang/String;)Lcom/bbm/g/bx;
+    invoke-virtual {v3, v4}, Lcom/bbm/g/cc;->b(Ljava/lang/String;)Lcom/bbm/g/cc;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
+    invoke-virtual {v2, v3}, Lcom/bbm/g/an;->a(Lcom/bbm/g/db;)V
 
     :cond_9
     :goto_3
@@ -610,7 +543,7 @@
     :cond_a
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/bbm/ui/activities/EditListItemActivity;->q:Ljava/util/HashMap;
+    iget-object v3, v0, Lcom/bbm/ui/activities/EditListItemActivity;->v:Ljava/util/HashMap;
 
     invoke-virtual {v3, v2}, Ljava/util/HashMap;->containsValue(Ljava/lang/Object;)Z
 
@@ -620,7 +553,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/bbm/ui/activities/EditListItemActivity;->q:Ljava/util/HashMap;
+    iget-object v3, v0, Lcom/bbm/ui/activities/EditListItemActivity;->v:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
@@ -645,7 +578,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/bbm/ui/activities/EditListItemActivity;->q:Ljava/util/HashMap;
+    iget-object v4, v0, Lcom/bbm/ui/activities/EditListItemActivity;->v:Ljava/util/HashMap;
 
     invoke-virtual {v4, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -685,64 +618,64 @@
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->d:Lcom/bbm/g/al;
+    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->i:Lcom/bbm/g/an;
 
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/bbm/ui/activities/EditListItemActivity;->e:Ljava/lang/String;
+    iget-object v3, v0, Lcom/bbm/ui/activities/EditListItemActivity;->j:Ljava/lang/String;
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/bbm/ui/activities/EditListItemActivity;->w:Ljava/lang/String;
+    iget-object v4, v0, Lcom/bbm/ui/activities/EditListItemActivity;->A:Ljava/lang/String;
 
-    invoke-static {v3, v4}, Lcom/bbm/g/am;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/bx;
+    invoke-static {v3, v4}, Lcom/bbm/g/ar;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/cc;
 
     move-result-object v3
 
     const-string v4, ""
 
-    invoke-virtual {v3, v4}, Lcom/bbm/g/bx;->b(Ljava/lang/String;)Lcom/bbm/g/bx;
+    invoke-virtual {v3, v4}, Lcom/bbm/g/cc;->b(Ljava/lang/String;)Lcom/bbm/g/cc;
 
     move-result-object v3
 
     const-string v4, ""
 
-    invoke-virtual {v3, v4}, Lcom/bbm/g/bx;->a(Ljava/lang/String;)Lcom/bbm/g/bx;
+    invoke-virtual {v3, v4}, Lcom/bbm/g/cc;->a(Ljava/lang/String;)Lcom/bbm/g/cc;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
+    invoke-virtual {v2, v3}, Lcom/bbm/g/an;->a(Lcom/bbm/g/db;)V
 
     goto :goto_3
 
     :cond_e
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->d:Lcom/bbm/g/al;
+    iget-object v2, v0, Lcom/bbm/ui/activities/EditListItemActivity;->i:Lcom/bbm/g/an;
 
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/bbm/ui/activities/EditListItemActivity;->e:Ljava/lang/String;
+    iget-object v3, v0, Lcom/bbm/ui/activities/EditListItemActivity;->j:Ljava/lang/String;
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/bbm/ui/activities/EditListItemActivity;->w:Ljava/lang/String;
+    iget-object v5, v0, Lcom/bbm/ui/activities/EditListItemActivity;->A:Ljava/lang/String;
 
-    invoke-static {v3, v5}, Lcom/bbm/g/am;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/bx;
+    invoke-static {v3, v5}, Lcom/bbm/g/ar;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/cc;
 
     move-result-object v3
 
-    invoke-virtual {v3, v4}, Lcom/bbm/g/bx;->b(Ljava/lang/String;)Lcom/bbm/g/bx;
+    invoke-virtual {v3, v4}, Lcom/bbm/g/cc;->b(Ljava/lang/String;)Lcom/bbm/g/cc;
 
     move-result-object v3
 
     const-string v4, ""
 
-    invoke-virtual {v3, v4}, Lcom/bbm/g/bx;->a(Ljava/lang/String;)Lcom/bbm/g/bx;
+    invoke-virtual {v3, v4}, Lcom/bbm/g/cc;->a(Ljava/lang/String;)Lcom/bbm/g/cc;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
+    invoke-virtual {v2, v3}, Lcom/bbm/g/an;->a(Lcom/bbm/g/db;)V
 
     goto/16 :goto_3
 
@@ -761,7 +694,7 @@
 
 
 # virtual methods
-.method protected final b()V
+.method protected final d()V
     .locals 13
 
     .prologue
@@ -773,192 +706,175 @@
 
     const/4 v2, 0x0
 
-    .line 129
-    invoke-super {p0}, Lcom/bbm/ui/activities/NewListItemActivity;->b()V
+    .line 80
+    invoke-super {p0}, Lcom/bbm/ui/activities/NewListItemActivity;->d()V
 
-    .line 131
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->d:Lcom/bbm/g/al;
+    .line 82
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->i:Lcom/bbm/g/an;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->w:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->A:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/bbm/ui/activities/EditListItemActivity;->e:Ljava/lang/String;
+    iget-object v4, p0, Lcom/bbm/ui/activities/EditListItemActivity;->j:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v4}, Lcom/bbm/g/al;->e(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/y;
+    invoke-virtual {v0, v1, v4}, Lcom/bbm/g/an;->d(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/aa;
 
     move-result-object v4
 
-    .line 133
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->s:Lcom/bbm/ui/FooterActionBar;
+    .line 85
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->i:Lcom/bbm/g/an;
 
-    if-eqz v0, :cond_0
+    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->j:Ljava/lang/String;
 
-    iget-object v0, v4, Lcom/bbm/g/y;->r:Lcom/bbm/g/ab;
+    iget-object v5, p0, Lcom/bbm/bali/ui/main/a/d;->a:Ljava/lang/String;
 
-    sget-object v1, Lcom/bbm/g/ab;->b:Lcom/bbm/g/ab;
-
-    if-ne v0, v1, :cond_0
-
-    .line 134
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->s:Lcom/bbm/ui/FooterActionBar;
-
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/FooterActionBar;->a(I)V
-
-    .line 138
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->d:Lcom/bbm/g/al;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->e:Ljava/lang/String;
-
-    iget-object v5, p0, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v5}, Lcom/bbm/g/al;->g(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/w;
+    invoke-virtual {v0, v1, v5}, Lcom/bbm/g/an;->f(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/y;
 
     move-result-object v0
 
-    iget-object v5, v0, Lcom/bbm/g/w;->e:Ljava/lang/String;
+    iget-object v5, v0, Lcom/bbm/g/y;->e:Ljava/lang/String;
 
-    .line 139
+    .line 86
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 140
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->d:Lcom/bbm/g/al;
+    .line 87
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->i:Lcom/bbm/g/an;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/bali/ui/main/a/d;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->j(Ljava/lang/String;)Lcom/bbm/j/w;
+    invoke-virtual {v0, v1}, Lcom/bbm/g/an;->l(Ljava/lang/String;)Lcom/bbm/j/w;
 
     move-result-object v7
 
     move v1, v2
 
-    .line 141
+    .line 88
     :goto_0
     invoke-interface {v7}, Lcom/bbm/j/w;->d()I
 
     move-result v0
 
-    if-ge v1, v0, :cond_2
+    if-ge v1, v0, :cond_1
 
-    .line 142
-    invoke-interface {v7, v1}, Lcom/bbm/j/w;->a(I)Ljava/lang/Object;
+    .line 89
+    invoke-interface {v7, v1}, Lcom/bbm/j/w;->b(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/g/w;
+    check-cast v0, Lcom/bbm/g/y;
 
-    .line 144
-    iget-object v8, v0, Lcom/bbm/g/w;->g:Lcom/bbm/util/bi;
+    .line 91
+    iget-object v8, v0, Lcom/bbm/g/y;->g:Lcom/bbm/util/bo;
 
-    sget-object v9, Lcom/bbm/util/bi;->b:Lcom/bbm/util/bi;
+    sget-object v9, Lcom/bbm/util/bo;->b:Lcom/bbm/util/bo;
 
-    if-eq v8, v9, :cond_1
+    if-eq v8, v9, :cond_0
 
-    .line 145
-    iget-object v8, p0, Lcom/bbm/ui/activities/EditListItemActivity;->b:Ljava/util/HashMap;
+    .line 92
+    iget-object v8, p0, Lcom/bbm/ui/activities/EditListItemActivity;->h:Ljava/util/HashMap;
 
-    iget-object v9, v0, Lcom/bbm/g/w;->f:Ljava/lang/String;
+    iget-object v9, v0, Lcom/bbm/g/y;->f:Ljava/lang/String;
 
-    iget-object v10, v0, Lcom/bbm/g/w;->e:Ljava/lang/String;
+    iget-object v10, v0, Lcom/bbm/g/y;->e:Ljava/lang/String;
 
     invoke-virtual {v8, v9, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 146
-    iget-object v0, v0, Lcom/bbm/g/w;->e:Ljava/lang/String;
+    .line 93
+    iget-object v0, v0, Lcom/bbm/g/y;->e:Ljava/lang/String;
 
     invoke-virtual {v6, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 141
-    :cond_1
+    .line 88
+    :cond_0
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
 
-    .line 150
-    :cond_2
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->a:Lcom/bbm/ui/p;
+    .line 97
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->b:Lcom/bbm/ui/p;
 
     invoke-virtual {v0, v6}, Lcom/bbm/ui/p;->a(Ljava/util/ArrayList;)V
 
-    .line 151
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->a:Lcom/bbm/ui/p;
+    .line 98
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->b:Lcom/bbm/ui/p;
 
     invoke-virtual {v0, v5}, Lcom/bbm/ui/p;->a(Ljava/lang/String;)V
 
-    .line 152
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->t:Landroid/widget/Spinner;
+    .line 99
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->x:Landroid/widget/Spinner;
 
     new-instance v1, Lcom/bbm/ui/u;
 
-    iget-object v5, p0, Lcom/bbm/ui/activities/EditListItemActivity;->a:Lcom/bbm/ui/p;
+    iget-object v5, p0, Lcom/bbm/ui/activities/EditListItemActivity;->b:Lcom/bbm/ui/p;
 
     invoke-direct {v1, v5, v3}, Lcom/bbm/ui/u;-><init>(Lcom/bbm/ui/p;Lcom/bbm/ui/t;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
 
-    .line 153
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->t:Landroid/widget/Spinner;
+    .line 100
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->x:Landroid/widget/Spinner;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->a:Lcom/bbm/ui/p;
+    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->b:Lcom/bbm/ui/p;
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setAdapter(Landroid/widget/SpinnerAdapter;)V
 
-    .line 154
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->t:Landroid/widget/Spinner;
+    .line 101
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->x:Landroid/widget/Spinner;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->a:Lcom/bbm/ui/p;
+    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->b:Lcom/bbm/ui/p;
 
     iget v1, v1, Lcom/bbm/ui/p;->a:I
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setSelection(I)V
 
-    .line 157
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->g:Lcom/bbm/ui/InlineImageEditText;
+    .line 104
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->l:Lcom/bbm/ui/InlineImageEditText;
 
-    iget-object v1, v4, Lcom/bbm/g/y;->l:Ljava/lang/String;
+    iget-object v1, v4, Lcom/bbm/g/aa;->l:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/InlineImageEditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 160
-    iget-object v0, v4, Lcom/bbm/g/y;->c:Ljava/lang/String;
+    .line 107
+    iget-object v0, v4, Lcom/bbm/g/aa;->c:Ljava/lang/String;
 
-    .line 161
+    .line 108
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    if-nez v1, :cond_3
+    if-nez v1, :cond_2
 
-    .line 162
-    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->n:Lcom/bbm/ui/p;
+    .line 109
+    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->s:Lcom/bbm/ui/p;
 
     invoke-virtual {v1, v0}, Lcom/bbm/ui/p;->a(Ljava/lang/String;)V
 
-    .line 163
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->h:Landroid/widget/Spinner;
+    .line 110
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->m:Landroid/widget/Spinner;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->n:Lcom/bbm/ui/p;
+    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->s:Lcom/bbm/ui/p;
 
     iget v1, v1, Lcom/bbm/ui/p;->a:I
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setSelection(I)V
 
-    .line 167
-    :cond_3
-    iget-object v0, v4, Lcom/bbm/g/y;->b:Ljava/lang/String;
+    .line 114
+    :cond_2
+    iget-object v0, v4, Lcom/bbm/g/aa;->b:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_4
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->q:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->v:Ljava/util/HashMap;
 
-    iget-object v1, v4, Lcom/bbm/g/y;->a:Ljava/lang/String;
+    iget-object v1, v4, Lcom/bbm/g/aa;->a:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -966,55 +882,55 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 169
+    .line 116
     :goto_1
-    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->o:Lcom/bbm/ui/p;
+    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->t:Lcom/bbm/ui/p;
 
     invoke-virtual {v1, v0}, Lcom/bbm/ui/p;->a(Ljava/lang/String;)V
 
-    .line 170
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->i:Landroid/widget/Spinner;
+    .line 117
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->n:Landroid/widget/Spinner;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->o:Lcom/bbm/ui/p;
+    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->t:Lcom/bbm/ui/p;
 
     iget v1, v1, Lcom/bbm/ui/p;->a:I
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setSelection(I)V
 
-    .line 174
-    iget-wide v0, v4, Lcom/bbm/g/y;->h:J
+    .line 121
+    iget-wide v0, v4, Lcom/bbm/g/aa;->h:J
 
     const-wide/16 v6, 0x3e8
 
     mul-long/2addr v0, v6
 
-    .line 175
+    .line 122
     const-wide/16 v6, 0x0
 
     cmp-long v5, v0, v6
 
-    if-lez v5, :cond_6
+    if-lez v5, :cond_5
 
-    .line 176
-    iget-object v5, p0, Lcom/bbm/ui/activities/EditListItemActivity;->j:Landroid/widget/Switch;
+    .line 123
+    iget-object v5, p0, Lcom/bbm/ui/activities/EditListItemActivity;->o:Landroid/support/v7/widget/SwitchCompat;
 
-    invoke-virtual {v5, v11}, Landroid/widget/Switch;->setChecked(Z)V
+    invoke-virtual {v5, v11}, Landroid/support/v7/widget/SwitchCompat;->setChecked(Z)V
 
-    .line 178
+    .line 125
     new-instance v5, Ljava/util/Date;
 
     invoke-direct {v5, v0, v1}, Ljava/util/Date;-><init>(J)V
 
-    .line 179
+    .line 126
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 180
+    .line 127
     invoke-virtual {v0, v5}, Ljava/util/Calendar;->setTime(Ljava/util/Date;)V
 
-    .line 181
-    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->k:Lcom/bbm/ui/DateTimePickerView;
+    .line 128
+    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->p:Lcom/bbm/ui/DateTimePickerView;
 
     invoke-virtual {v0}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
 
@@ -1022,73 +938,73 @@
 
     invoke-virtual {v1, v0}, Lcom/bbm/ui/DateTimePickerView;->setDate(Ljava/util/Date;)V
 
-    .line 187
+    .line 134
     :goto_2
-    iget-object v0, v4, Lcom/bbm/g/y;->q:Lcom/bbm/g/aa;
+    iget-object v0, v4, Lcom/bbm/g/aa;->q:Lcom/bbm/g/ac;
 
-    invoke-virtual {v0}, Lcom/bbm/g/aa;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/aam;->a(Ljava/lang/String;)Lcom/bbm/ui/activities/aam;
+    invoke-virtual {v0}, Lcom/bbm/g/ac;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 188
-    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->p:Lcom/bbm/ui/p;
+    invoke-static {v0}, Lcom/bbm/ui/activities/xc;->a(Ljava/lang/String;)Lcom/bbm/ui/activities/xc;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/aam;->ordinal()I
+    move-result-object v0
+
+    .line 135
+    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->u:Lcom/bbm/ui/p;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/xc;->ordinal()I
 
     move-result v0
 
     iput v0, v1, Lcom/bbm/ui/p;->a:I
 
-    .line 189
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->l:Landroid/widget/Spinner;
+    .line 136
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->q:Landroid/widget/Spinner;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->p:Lcom/bbm/ui/p;
+    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->u:Lcom/bbm/ui/p;
 
     iget v1, v1, Lcom/bbm/ui/p;->a:I
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setSelection(I)V
 
-    .line 193
-    iget-object v0, v4, Lcom/bbm/g/y;->n:Ljava/lang/String;
+    .line 140
+    iget-object v0, v4, Lcom/bbm/g/aa;->n:Ljava/lang/String;
 
-    .line 194
+    .line 141
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    .line 142
+    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->i:Lcom/bbm/g/an;
+
+    invoke-virtual {v1, v0}, Lcom/bbm/g/an;->s(Ljava/lang/String;)Lcom/bbm/g/q;
+
+    move-result-object v0
+
+    .line 143
+    iget-object v0, v0, Lcom/bbm/g/q;->c:Ljava/lang/String;
+
+    .line 148
+    :goto_3
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_7
 
-    .line 195
-    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->d:Lcom/bbm/g/al;
-
-    invoke-virtual {v1, v0}, Lcom/bbm/g/al;->q(Ljava/lang/String;)Lcom/bbm/g/o;
-
-    move-result-object v0
-
-    .line 196
-    iget-object v0, v0, Lcom/bbm/g/o;->c:Ljava/lang/String;
-
-    .line 201
-    :goto_3
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_8
-
-    .line 202
-    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->u:Lcom/bbm/ui/InlineImageTextView;
+    .line 149
+    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->y:Lcom/bbm/ui/InlineImageTextView;
 
     invoke-virtual {v1, v2}, Lcom/bbm/ui/InlineImageTextView;->setVisibility(I)V
 
-    .line 203
-    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->u:Lcom/bbm/ui/InlineImageTextView;
+    .line 150
+    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->y:Lcom/bbm/ui/InlineImageTextView;
 
-    const v5, 0x7f0e0503
+    const v5, 0x7f0e0574
 
     new-array v6, v11, [Ljava/lang/Object;
 
@@ -1100,45 +1016,45 @@
 
     invoke-virtual {v1, v0}, Lcom/bbm/ui/InlineImageTextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 210
+    .line 157
     :goto_4
-    iget-object v0, v4, Lcom/bbm/g/y;->g:Ljava/lang/String;
+    iget-object v0, v4, Lcom/bbm/g/aa;->g:Ljava/lang/String;
 
-    .line 211
+    .line 158
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    if-nez v1, :cond_9
+    if-nez v1, :cond_8
 
-    .line 212
-    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->d:Lcom/bbm/g/al;
+    .line 159
+    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->i:Lcom/bbm/g/an;
 
-    invoke-virtual {v1, v0}, Lcom/bbm/g/al;->q(Ljava/lang/String;)Lcom/bbm/g/o;
+    invoke-virtual {v1, v0}, Lcom/bbm/g/an;->s(Ljava/lang/String;)Lcom/bbm/g/q;
 
     move-result-object v0
 
-    .line 213
-    iget-object v3, v0, Lcom/bbm/g/o;->c:Ljava/lang/String;
+    .line 160
+    iget-object v3, v0, Lcom/bbm/g/q;->c:Ljava/lang/String;
 
-    .line 218
-    :cond_4
+    .line 165
+    :cond_3
     :goto_5
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-nez v0, :cond_a
+    if-nez v0, :cond_9
 
-    .line 219
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->v:Lcom/bbm/ui/InlineImageTextView;
+    .line 166
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->z:Lcom/bbm/ui/InlineImageTextView;
 
     invoke-virtual {v0, v2}, Lcom/bbm/ui/InlineImageTextView;->setVisibility(I)V
 
-    .line 220
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->v:Lcom/bbm/ui/InlineImageTextView;
+    .line 167
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->z:Lcom/bbm/ui/InlineImageTextView;
 
-    const v1, 0x7f0e0502
+    const v1, 0x7f0e0573
 
     new-array v4, v11, [Ljava/lang/Object;
 
@@ -1150,87 +1066,87 @@
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/InlineImageTextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 224
+    .line 171
     :goto_6
     return-void
 
-    .line 167
-    :cond_5
-    iget-object v0, v4, Lcom/bbm/g/y;->b:Ljava/lang/String;
+    .line 114
+    :cond_4
+    iget-object v0, v4, Lcom/bbm/g/aa;->b:Ljava/lang/String;
 
     goto/16 :goto_1
 
-    .line 183
-    :cond_6
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->j:Landroid/widget/Switch;
+    .line 130
+    :cond_5
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->o:Landroid/support/v7/widget/SwitchCompat;
 
-    invoke-virtual {v0, v2}, Landroid/widget/Switch;->setChecked(Z)V
+    invoke-virtual {v0, v2}, Landroid/support/v7/widget/SwitchCompat;->setChecked(Z)V
 
     goto :goto_2
 
-    .line 197
-    :cond_7
-    iget-object v0, v4, Lcom/bbm/g/y;->m:Ljava/lang/String;
+    .line 144
+    :cond_6
+    iget-object v0, v4, Lcom/bbm/g/aa;->m:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-nez v0, :cond_b
+    if-nez v0, :cond_a
 
-    .line 198
-    iget-object v0, v4, Lcom/bbm/g/y;->m:Ljava/lang/String;
+    .line 145
+    iget-object v0, v4, Lcom/bbm/g/aa;->m:Ljava/lang/String;
 
     goto :goto_3
 
-    .line 205
-    :cond_8
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->u:Lcom/bbm/ui/InlineImageTextView;
+    .line 152
+    :cond_7
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->y:Lcom/bbm/ui/InlineImageTextView;
 
     invoke-virtual {v0, v12}, Lcom/bbm/ui/InlineImageTextView;->setVisibility(I)V
 
     goto :goto_4
 
-    .line 214
-    :cond_9
-    iget-object v0, v4, Lcom/bbm/g/y;->f:Ljava/lang/String;
+    .line 161
+    :cond_8
+    iget-object v0, v4, Lcom/bbm/g/aa;->f:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_3
 
-    .line 215
-    iget-object v3, v4, Lcom/bbm/g/y;->f:Ljava/lang/String;
+    .line 162
+    iget-object v3, v4, Lcom/bbm/g/aa;->f:Ljava/lang/String;
 
     goto :goto_5
 
-    .line 222
-    :cond_a
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->v:Lcom/bbm/ui/InlineImageTextView;
+    .line 169
+    :cond_9
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->z:Lcom/bbm/ui/InlineImageTextView;
 
     invoke-virtual {v0, v12}, Lcom/bbm/ui/InlineImageTextView;->setVisibility(I)V
 
     goto :goto_6
 
-    :cond_b
+    :cond_a
     move-object v0, v3
 
     goto :goto_3
 .end method
 
-.method protected final f()V
+.method protected final j()V
     .locals 3
 
     .prologue
     const/4 v2, 0x0
 
-    .line 233
-    invoke-super {p0}, Lcom/bbm/ui/activities/NewListItemActivity;->f()V
+    .line 180
+    invoke-super {p0}, Lcom/bbm/ui/activities/NewListItemActivity;->j()V
 
-    .line 235
-    const v0, 0x7f0b016b
+    .line 182
+    const v0, 0x7f0b01ce
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/EditListItemActivity;->findViewById(I)Landroid/view/View;
 
@@ -1238,22 +1154,22 @@
 
     check-cast v0, Landroid/widget/Spinner;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->t:Landroid/widget/Spinner;
+    iput-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->x:Landroid/widget/Spinner;
 
-    .line 236
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->t:Landroid/widget/Spinner;
+    .line 183
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->x:Landroid/widget/Spinner;
 
     invoke-virtual {v0, v2}, Landroid/widget/Spinner;->setVisibility(I)V
 
-    .line 237
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->t:Landroid/widget/Spinner;
+    .line 184
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->x:Landroid/widget/Spinner;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->r:Landroid/view/View$OnTouchListener;
+    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->w:Landroid/view/View$OnTouchListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 239
-    const v0, 0x7f0b0172
+    .line 186
+    const v0, 0x7f0b01d5
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/EditListItemActivity;->findViewById(I)Landroid/view/View;
 
@@ -1261,15 +1177,15 @@
 
     check-cast v0, Lcom/bbm/ui/InlineImageTextView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->u:Lcom/bbm/ui/InlineImageTextView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->y:Lcom/bbm/ui/InlineImageTextView;
 
-    .line 240
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->u:Lcom/bbm/ui/InlineImageTextView;
+    .line 187
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->y:Lcom/bbm/ui/InlineImageTextView;
 
     invoke-virtual {v0, v2}, Lcom/bbm/ui/InlineImageTextView;->setVisibility(I)V
 
-    .line 242
-    const v0, 0x7f0b0173
+    .line 189
+    const v0, 0x7f0b01d6
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/EditListItemActivity;->findViewById(I)Landroid/view/View;
 
@@ -1277,110 +1193,98 @@
 
     check-cast v0, Lcom/bbm/ui/InlineImageTextView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->v:Lcom/bbm/ui/InlineImageTextView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->z:Lcom/bbm/ui/InlineImageTextView;
 
-    .line 243
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->v:Lcom/bbm/ui/InlineImageTextView;
+    .line 190
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->z:Lcom/bbm/ui/InlineImageTextView;
 
     invoke-virtual {v0, v2}, Lcom/bbm/ui/InlineImageTextView;->setVisibility(I)V
 
-    .line 244
+    .line 191
     return-void
 .end method
 
 .method protected final k()V
-    .locals 6
+    .locals 3
 
     .prologue
-    const/4 v5, -0x1
+    .line 200
+    const v0, 0x7f0b05e8
 
-    .line 253
-    new-instance v0, Lcom/bbm/ui/HeaderButtonActionBar;
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/EditListItemActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->k:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    .line 201
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->k:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/EditListItemActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0e03fa
+    const v2, 0x7f0e0462
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/EditListItemActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setTitle(Ljava/lang/String;)V
 
-    move-result-object v2
-
-    const v3, 0x7f0e0177
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
+    .line 202
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->k:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/EditListItemActivity;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v3
+    move-result-object v1
 
-    const v4, 0x7f0e0683
+    const v2, 0x7f0e0750
 
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-direct {v0, p0, v1, v2, v3}, Lcom/bbm/ui/HeaderButtonActionBar;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setPositiveButtonLabel(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->f:Lcom/bbm/ui/HeaderButtonActionBar;
+    .line 203
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->k:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
-    .line 255
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->f:Lcom/bbm/ui/HeaderButtonActionBar;
+    new-instance v1, Lcom/bbm/ui/activities/hx;
 
-    new-instance v1, Lcom/bbm/ui/activities/jq;
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/hx;-><init>(Lcom/bbm/ui/activities/EditListItemActivity;)V
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/jq;-><init>(Lcom/bbm/ui/activities/EditListItemActivity;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setNegativeButtonOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/HeaderButtonActionBar;->setNegativeButtonOnClickListener(Landroid/view/View$OnClickListener;)V
+    .line 214
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->k:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
-    .line 266
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->f:Lcom/bbm/ui/HeaderButtonActionBar;
+    new-instance v1, Lcom/bbm/ui/activities/hy;
 
-    new-instance v1, Lcom/bbm/ui/activities/jr;
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/hy;-><init>(Lcom/bbm/ui/activities/EditListItemActivity;)V
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/jr;-><init>(Lcom/bbm/ui/activities/EditListItemActivity;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setPositiveButtonOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/HeaderButtonActionBar;->setPositiveButtonOnClickListener(Landroid/view/View$OnClickListener;)V
+    .line 226
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->k:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
-    .line 278
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/EditListItemActivity;->getActionBar()Landroid/app/ActionBar;
+    const/4 v1, 0x0
 
-    move-result-object v0
+    const/4 v2, 0x0
 
-    .line 279
-    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->f:Lcom/bbm/ui/HeaderButtonActionBar;
+    invoke-virtual {p0, v0, v1, v2}, Lcom/bbm/bali/ui/main/a/e;->a(Landroid/support/v7/widget/Toolbar;ZLandroid/view/View$OnClickListener;)V
 
-    new-instance v2, Landroid/app/ActionBar$LayoutParams;
-
-    invoke-direct {v2, v5, v5}, Landroid/app/ActionBar$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v1, v2}, Landroid/app/ActionBar;->setCustomView(Landroid/view/View;Landroid/app/ActionBar$LayoutParams;)V
-
-    .line 280
-    const/16 v1, 0x10
-
-    invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setDisplayOptions(I)V
-
-    .line 281
+    .line 227
     return-void
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 6
+    .locals 4
 
     .prologue
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    .line 88
+    .line 51
     invoke-virtual {p0}, Lcom/bbm/ui/activities/EditListItemActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -1413,35 +1317,35 @@
 
     move-result-object v0
 
-    const-string v3, "itemId"
+    const-string v1, "itemId"
 
-    invoke-virtual {v0, v3}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 90
+    .line 53
     invoke-virtual {p0}, Lcom/bbm/ui/activities/EditListItemActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    const-string v3, "itemId"
+    const-string v1, "itemId"
 
-    invoke-virtual {v0, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->w:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->A:Ljava/lang/String;
 
-    .line 94
+    .line 57
     :cond_0
     :goto_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->w:Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->A:Ljava/lang/String;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->w:Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->A:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
@@ -1449,22 +1353,22 @@
 
     if-nez v0, :cond_2
 
-    move v0, v1
+    const/4 v0, 0x1
 
     :goto_1
-    const-string v3, "No Item Id specified in Intent"
+    const-string v1, "No Item Id specified in Intent"
 
-    invoke-static {p0, v0, v3}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;ZLjava/lang/Object;)Z
+    invoke-static {p0, v0, v1}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;ZLjava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 114
+    .line 65
     :goto_2
     return-void
 
-    .line 91
+    .line 54
     :cond_1
     if-eqz p1, :cond_0
 
@@ -1476,122 +1380,52 @@
 
     if-eqz v0, :cond_0
 
-    .line 92
+    .line 55
     const-string v0, "itemId"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->w:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->A:Ljava/lang/String;
 
     goto :goto_0
 
+    .line 57
     :cond_2
-    move v0, v2
+    const/4 v0, 0x0
 
-    .line 94
     goto :goto_1
 
-    .line 97
+    .line 60
     :cond_3
     new-instance v0, Lcom/bbm/ui/p;
 
-    const v3, 0x7f0e03ce
+    const v1, 0x7f0e0431
 
-    invoke-virtual {p0, v3}, Lcom/bbm/ui/activities/EditListItemActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/EditListItemActivity;->getString(I)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-direct {v0, p0, v3}, Lcom/bbm/ui/p;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/p;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->a:Lcom/bbm/ui/p;
+    iput-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->b:Lcom/bbm/ui/p;
 
-    .line 99
+    .line 62
     invoke-super {p0, p1}, Lcom/bbm/ui/activities/NewListItemActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 102
-    const v0, 0x7f0b00bf
+    .line 64
+    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->i:Lcom/bbm/g/an;
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/EditListItemActivity;->findViewById(I)Landroid/view/View;
+    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->A:Ljava/lang/String;
 
-    move-result-object v0
+    iget-object v2, p0, Lcom/bbm/ui/activities/EditListItemActivity;->j:Ljava/lang/String;
 
-    check-cast v0, Lcom/bbm/ui/FooterActionBar;
+    new-instance v3, Lcom/bbm/g/bf;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->s:Lcom/bbm/ui/FooterActionBar;
+    invoke-direct {v3, v1, v2}, Lcom/bbm/g/bf;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 103
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->d:Lcom/bbm/g/al;
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/EditListItemActivity;->w:Ljava/lang/String;
-
-    iget-object v4, p0, Lcom/bbm/ui/activities/EditListItemActivity;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v3, v4}, Lcom/bbm/g/al;->e(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/y;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/bbm/g/y;->r:Lcom/bbm/g/ab;
-
-    sget-object v3, Lcom/bbm/g/ab;->b:Lcom/bbm/g/ab;
-
-    if-eq v0, v3, :cond_4
-
-    .line 104
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->s:Lcom/bbm/ui/FooterActionBar;
-
-    new-instance v3, Lcom/bbm/ui/ActionBarItem;
-
-    const v4, 0x7f02032a
-
-    const v5, 0x7f0e06ff
-
-    invoke-direct {v3, p0, v4, v5}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;II)V
-
-    invoke-virtual {v0, v3, v2}, Lcom/bbm/ui/FooterActionBar;->a(Lcom/bbm/ui/ActionBarItem;I)V
-
-    .line 107
-    :cond_4
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->s:Lcom/bbm/ui/FooterActionBar;
-
-    new-instance v3, Lcom/bbm/ui/ActionBarItem;
-
-    const v4, 0x7f0203a2
-
-    const v5, 0x7f0e06f6
-
-    invoke-direct {v3, p0, v4, v5}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;II)V
-
-    invoke-virtual {v0, v3, v1}, Lcom/bbm/ui/FooterActionBar;->a(Lcom/bbm/ui/ActionBarItem;I)V
-
-    .line 109
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->s:Lcom/bbm/ui/FooterActionBar;
-
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/FooterActionBar;->setBackActionAndOverflowEnabled(Z)V
-
-    .line 110
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->s:Lcom/bbm/ui/FooterActionBar;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/EditListItemActivity;->F:Lcom/bbm/ui/cn;
-
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
-
-    .line 111
-    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/EditListItemActivity;->a(Z)V
-
-    .line 113
-    iget-object v0, p0, Lcom/bbm/ui/activities/EditListItemActivity;->d:Lcom/bbm/g/al;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->w:Ljava/lang/String;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/EditListItemActivity;->e:Ljava/lang/String;
-
-    new-instance v3, Lcom/bbm/g/ba;
-
-    invoke-direct {v3, v1, v2}, Lcom/bbm/g/ba;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v3}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
+    invoke-virtual {v0, v3}, Lcom/bbm/g/an;->a(Lcom/bbm/g/db;)V
 
     goto :goto_2
 .end method
@@ -1600,16 +1434,16 @@
     .locals 2
 
     .prologue
-    .line 118
+    .line 69
     invoke-super {p0, p1}, Lcom/bbm/ui/activities/NewListItemActivity;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 119
+    .line 70
     const-string v0, "itemId"
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->w:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/activities/EditListItemActivity;->A:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 120
+    .line 71
     return-void
 .end method

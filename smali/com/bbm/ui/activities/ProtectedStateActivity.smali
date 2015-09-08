@@ -1,22 +1,18 @@
 .class public Lcom/bbm/ui/activities/ProtectedStateActivity;
-.super Lcom/bbm/ui/activities/ey;
+.super Lcom/bbm/bali/ui/main/a/a;
 .source "ProtectedStateActivity.java"
 
 
 # instance fields
 .field private final a:Lcom/bbm/d/a;
 
-.field private b:Landroid/app/ActionBar;
+.field private b:Landroid/widget/TextView;
 
-.field private c:Landroid/widget/TextView;
+.field private h:Landroid/widget/TextView;
 
-.field private d:Landroid/widget/TextView;
+.field private i:Lcom/bbm/d/ak;
 
-.field private e:Landroid/widget/Button;
-
-.field private f:Z
-
-.field private final g:Lcom/bbm/j/k;
+.field private final j:Lcom/bbm/j/k;
 
 
 # direct methods
@@ -25,140 +21,231 @@
 
     .prologue
     .line 42
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ey;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/bali/ui/main/a/a;-><init>()V
 
-    .line 18
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    .line 19
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->a:Lcom/bbm/d/a;
 
     .line 26
-    new-instance v0, Lcom/bbm/ui/activities/adi;
+    new-instance v0, Lcom/bbm/ui/activities/aai;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/adi;-><init>(Lcom/bbm/ui/activities/ProtectedStateActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/aai;-><init>(Lcom/bbm/ui/activities/ProtectedStateActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->g:Lcom/bbm/j/k;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->j:Lcom/bbm/j/k;
 
     .line 43
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/ey;->y:Z
-
-    .line 44
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/ProtectedStateActivity;)Z
+.method static synthetic a(Lcom/bbm/ui/activities/ProtectedStateActivity;)Lcom/bbm/d/ak;
     .locals 1
 
     .prologue
-    .line 16
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->f:Z
-
-    return v0
-.end method
-
-.method static synthetic b(Lcom/bbm/ui/activities/ProtectedStateActivity;)Lcom/bbm/d/a;
-    .locals 1
-
-    .prologue
-    .line 16
-    iget-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->a:Lcom/bbm/d/a;
+    .line 15
+    iget-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->i:Lcom/bbm/d/ak;
 
     return-object v0
 .end method
 
-.method private b()V
-    .locals 2
+.method private a(Lcom/bbm/d/ak;)V
+    .locals 5
 
     .prologue
-    .line 74
-    iget-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->a:Lcom/bbm/d/a;
+    const v4, 0x7f0e06f1
 
-    invoke-virtual {v0}, Lcom/bbm/d/a;->D()Z
+    const v3, 0x7f0e06ef
 
-    move-result v0
+    .line 63
+    const v0, 0x7f0b013c
 
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->f:Z
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ProtectedStateActivity;->findViewById(I)Landroid/view/View;
 
-    .line 75
-    iget-object v1, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->b:Landroid/app/ActionBar;
+    move-result-object v0
 
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->f:Z
+    check-cast v0, Landroid/support/v7/widget/Toolbar;
 
-    if-eqz v0, :cond_0
+    .line 65
+    iput-object p1, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->i:Lcom/bbm/d/ak;
 
-    const v0, 0x7f0e062c
+    .line 66
+    sget-object v1, Lcom/bbm/ui/activities/aaj;->a:[I
 
+    invoke-virtual {p1}, Lcom/bbm/d/ak;->ordinal()I
+
+    move-result v2
+
+    aget v1, v1, v2
+
+    packed-switch v1, :pswitch_data_0
+
+    .line 89
     :goto_0
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ProtectedStateActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Landroid/app/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
-
-    .line 76
-    iget-object v1, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->c:Landroid/widget/TextView;
-
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->f:Z
-
-    if-eqz v0, :cond_1
-
-    const v0, 0x7f0e062e
-
-    :goto_1
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ProtectedStateActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 77
-    iget-object v1, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->d:Landroid/widget/TextView;
-
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->f:Z
-
-    if-eqz v0, :cond_2
-
-    const v0, 0x7f0e062d
-
-    :goto_2
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ProtectedStateActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 78
     return-void
 
-    .line 75
-    :cond_0
-    const v0, 0x7f0e0629
+    .line 68
+    :pswitch_0
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ProtectedStateActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/activities/ProtectedStateActivity;->a(Landroid/support/v7/widget/Toolbar;Ljava/lang/String;)V
+
+    .line 69
+    iget-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->b:Landroid/widget/TextView;
+
+    invoke-virtual {p0, v4}, Lcom/bbm/ui/activities/ProtectedStateActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 70
+    iget-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->h:Landroid/widget/TextView;
+
+    const v1, 0x7f0e06f0
+
+    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/ProtectedStateActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
+    .line 74
+    :pswitch_1
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ProtectedStateActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/activities/ProtectedStateActivity;->a(Landroid/support/v7/widget/Toolbar;Ljava/lang/String;)V
+
+    .line 75
+    iget-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->b:Landroid/widget/TextView;
+
+    invoke-virtual {p0, v3}, Lcom/bbm/ui/activities/ProtectedStateActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
     .line 76
-    :cond_1
-    const v0, 0x7f0e062b
+    iget-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->h:Landroid/widget/TextView;
 
-    goto :goto_1
+    const v1, 0x7f0e06ee
 
-    .line 77
-    :cond_2
-    const v0, 0x7f0e062a
+    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/ProtectedStateActivity;->getString(I)Ljava/lang/String;
 
-    goto :goto_2
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_0
+
+    .line 80
+    :pswitch_2
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ProtectedStateActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f0e06e8
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/activities/ProtectedStateActivity;->a(Landroid/support/v7/widget/Toolbar;Ljava/lang/String;)V
+
+    .line 81
+    iget-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->b:Landroid/widget/TextView;
+
+    const v1, 0x7f0e06ea
+
+    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/ProtectedStateActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 82
+    iget-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->h:Landroid/widget/TextView;
+
+    const v1, 0x7f0e06e9
+
+    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/ProtectedStateActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_0
+
+    .line 86
+    :pswitch_3
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ProtectedStateActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f0e06e5
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/activities/ProtectedStateActivity;->a(Landroid/support/v7/widget/Toolbar;Ljava/lang/String;)V
+
+    .line 87
+    iget-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->b:Landroid/widget/TextView;
+
+    const v1, 0x7f0e06e7
+
+    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/ProtectedStateActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 88
+    iget-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->h:Landroid/widget/TextView;
+
+    const v1, 0x7f0e06e6
+
+    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/ProtectedStateActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto/16 :goto_0
+
+    .line 66
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+    .end packed-switch
 .end method
 
-.method static synthetic c(Lcom/bbm/ui/activities/ProtectedStateActivity;)V
+.method static synthetic a(Lcom/bbm/ui/activities/ProtectedStateActivity;Lcom/bbm/d/ak;)V
     .locals 0
 
     .prologue
-    .line 16
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ProtectedStateActivity;->b()V
+    .line 15
+    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/ProtectedStateActivity;->a(Lcom/bbm/d/ak;)V
 
     return-void
 .end method
@@ -169,84 +256,55 @@
     .locals 2
 
     .prologue
-    const/4 v1, 0x0
+    .line 51
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onCreate(Landroid/os/Bundle;)V
 
     .line 52
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/ey;->onCreate(Landroid/os/Bundle;)V
-
-    .line 53
-    const v0, 0x7f03004e
+    const v0, 0x7f03006b
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ProtectedStateActivity;->setContentView(I)V
 
     .line 54
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ProtectedStateActivity;->getActionBar()Landroid/app/ActionBar;
+    const v0, 0x7f0b02ed
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ProtectedStateActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->b:Landroid/app/ActionBar;
+    check-cast v0, Landroid/widget/TextView;
 
-    .line 56
-    iget-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->b:Landroid/app/ActionBar;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->b:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setDisplayShowHomeEnabled(Z)V
+    .line 55
+    const v0, 0x7f0b02ee
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ProtectedStateActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->h:Landroid/widget/TextView;
 
     .line 57
-    iget-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->b:Landroid/app/ActionBar;
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ProtectedStateActivity;->getIntent()Landroid/content/Intent;
 
-    invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
+    move-result-object v0
+
+    const-string v1, "initializeProtectedState"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/bbm/d/ak;->a(Ljava/lang/String;)Lcom/bbm/d/ak;
+
+    move-result-object v0
 
     .line 58
-    iget-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->b:Landroid/app/ActionBar;
+    invoke-direct {p0, v0}, Lcom/bbm/ui/activities/ProtectedStateActivity;->a(Lcom/bbm/d/ak;)V
 
-    invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setDisplayUseLogoEnabled(Z)V
-
-    .line 60
-    const v0, 0x7f0b0288
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ProtectedStateActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->c:Landroid/widget/TextView;
-
-    .line 61
-    const v0, 0x7f0b0289
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ProtectedStateActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->d:Landroid/widget/TextView;
-
-    .line 62
-    const v0, 0x7f0b028b
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ProtectedStateActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/Button;
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->e:Landroid/widget/Button;
-
-    .line 63
-    iget-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->e:Landroid/widget/Button;
-
-    new-instance v1, Lcom/bbm/ui/activities/adj;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/adj;-><init>(Lcom/bbm/ui/activities/ProtectedStateActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 70
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ProtectedStateActivity;->b()V
-
-    .line 71
+    .line 59
     return-void
 .end method
 
@@ -254,15 +312,15 @@
     .locals 1
 
     .prologue
-    .line 96
-    invoke-super {p0}, Lcom/bbm/ui/activities/ey;->onPause()V
+    .line 113
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/a;->onPause()V
 
-    .line 97
-    iget-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->g:Lcom/bbm/j/k;
+    .line 114
+    iget-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->j:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
 
-    .line 98
+    .line 115
     return-void
 .end method
 
@@ -270,14 +328,14 @@
     .locals 1
 
     .prologue
-    .line 86
-    iget-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->g:Lcom/bbm/j/k;
+    .line 103
+    iget-object v0, p0, Lcom/bbm/ui/activities/ProtectedStateActivity;->j:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 87
-    invoke-super {p0}, Lcom/bbm/ui/activities/ey;->onResume()V
+    .line 104
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/a;->onResume()V
 
-    .line 88
+    .line 105
     return-void
 .end method

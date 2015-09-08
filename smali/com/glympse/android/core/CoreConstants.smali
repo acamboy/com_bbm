@@ -40,6 +40,12 @@
 
 .field public static final GEOFENCE_TRANSITION_EXIT:I = 0x2
 
+.field public static final HTTP_METHOD_DEFAULT:I = 0x0
+
+.field public static final HTTP_METHOD_GET:I = 0x1
+
+.field public static final HTTP_METHOD_POST:I = 0x2
+
 .field public static final INFO:I = 0x1
 
 .field public static final LOCATION_MODE_DEFAULT:I = 0x0

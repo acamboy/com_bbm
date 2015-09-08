@@ -1,64 +1,83 @@
 .class final Lcom/bbm/ui/e/f;
-.super Ljava/lang/Object;
-.source "ChannelInviteMessageHolder.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Lcom/bbm/j/u;
+.source "ChannelSubscribeListener.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/d/ee;
+.field final synthetic a:Ljava/lang/String;
 
-.field final synthetic b:Lcom/bbm/ui/e/d;
+.field final synthetic b:Lcom/bbm/ui/e/e;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/e/d;Lcom/bbm/d/ee;)V
+.method constructor <init>(Lcom/bbm/ui/e/e;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 180
-    iput-object p1, p0, Lcom/bbm/ui/e/f;->b:Lcom/bbm/ui/e/d;
+    .line 29
+    iput-object p1, p0, Lcom/bbm/ui/e/f;->b:Lcom/bbm/ui/e/e;
 
-    iput-object p2, p0, Lcom/bbm/ui/e/f;->a:Lcom/bbm/d/ee;
+    iput-object p2, p0, Lcom/bbm/ui/e/f;->a:Ljava/lang/String;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method protected final b()Z
+    .locals 3
 
     .prologue
-    .line 183
-    const-string v0, "Join Clicked"
-
-    const-class v1, Lcom/bbm/ui/e/d;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 185
-    iget-object v0, p0, Lcom/bbm/ui/e/f;->b:Lcom/bbm/ui/e/d;
-
-    invoke-static {v0}, Lcom/bbm/ui/e/d;->b(Lcom/bbm/ui/e/d;)Lcom/bbm/ui/e/bo;
+    .line 32
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/e/f;->b:Lcom/bbm/ui/e/d;
+    iget-object v1, p0, Lcom/bbm/ui/e/f;->a:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/bbm/ui/e/d;->a(Lcom/bbm/ui/e/d;)Lcom/bbm/d/fi;
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->H(Ljava/lang/String;)Lcom/bbm/d/gi;
 
-    move-result-object v1
+    move-result-object v0
 
-    iget-object v2, p0, Lcom/bbm/ui/e/f;->a:Lcom/bbm/d/ee;
+    .line 33
+    iget-object v0, v0, Lcom/bbm/d/gi;->b:Lcom/bbm/util/bo;
 
-    iget-wide v2, v2, Lcom/bbm/d/ee;->z:J
+    sget-object v1, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
 
-    invoke-interface {v0, v1, v2, v3}, Lcom/bbm/ui/e/bo;->a(Lcom/bbm/d/fi;J)V
+    if-eq v0, v1, :cond_0
 
-    .line 186
-    return-void
+    .line 34
+    const/4 v0, 0x0
+
+    .line 38
+    :goto_0
+    return v0
+
+    .line 36
+    :cond_0
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/bbm/d/a;->b:Lcom/bbm/ui/e/d;
+
+    iget-object v1, p0, Lcom/bbm/ui/e/f;->b:Lcom/bbm/ui/e/e;
+
+    iget-object v1, v1, Lcom/bbm/ui/e/e;->c:Ljava/lang/Object;
+
+    iget-object v2, p0, Lcom/bbm/ui/e/f;->b:Lcom/bbm/ui/e/e;
+
+    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/e/d;->a(Ljava/lang/Object;Lcom/bbm/ui/e/c;)V
+
+    .line 37
+    iget-object v0, p0, Lcom/bbm/ui/e/f;->b:Lcom/bbm/ui/e/e;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/e/e;->a()V
+
+    .line 38
+    const/4 v0, 0x1
+
+    goto :goto_0
 .end method

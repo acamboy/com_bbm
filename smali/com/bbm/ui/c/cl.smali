@@ -1,6 +1,6 @@
 .class final Lcom/bbm/ui/c/cl;
 .super Lcom/bbm/j/a;
-.source "ContactsFragment.java"
+.source "ChatsFragment.java"
 
 
 # annotations
@@ -8,23 +8,23 @@
     value = {
         "Lcom/bbm/j/a",
         "<",
-        "Ljava/lang/Boolean;",
+        "Ljava/lang/Integer;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/ch;
+.field final synthetic a:Lcom/bbm/ui/c/ca;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/ch;)V
+.method constructor <init>(Lcom/bbm/ui/c/ca;)V
     .locals 0
 
     .prologue
-    .line 645
-    iput-object p1, p0, Lcom/bbm/ui/c/cl;->a:Lcom/bbm/ui/c/ch;
+    .line 324
+    iput-object p1, p0, Lcom/bbm/ui/c/cl;->a:Lcom/bbm/ui/c/ca;
 
     invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
 
@@ -34,52 +34,96 @@
 
 # virtual methods
 .method protected final synthetic a()Ljava/lang/Object;
-    .locals 1
+    .locals 4
 
     .prologue
-    .line 645
-    iget-object v0, p0, Lcom/bbm/ui/c/cl;->a:Lcom/bbm/ui/c/ch;
+    const/4 v1, 0x0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/c/ch;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/activities/MainActivity;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
-
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
-
-    iget-object v0, v0, Lcom/slidingmenu/lib/SlidingMenu;->a:Lcom/slidingmenu/lib/CustomViewAbove;
-
-    iget-object v0, v0, Lcom/slidingmenu/lib/CustomViewAbove;->a:Lcom/bbm/util/ct;
-
-    invoke-virtual {v0}, Lcom/bbm/util/ct;->e()Ljava/lang/Object;
+    .line 324
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Boolean;
+    invoke-virtual {v0}, Lcom/bbm/d/a;->s()Lcom/bbm/j/w;
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/bbm/j/w;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/b/x;
+
+    move-result-object v0
+
+    const-string v3, "adsEnabled"
+
+    invoke-virtual {v0, v3}, Lcom/bbm/b/x;->a(Ljava/lang/String;)Lcom/bbm/util/bs;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/bbm/util/bs;->a:Lorg/json/JSONObject;
+
+    const-string v3, "value"
+
+    invoke-virtual {v0, v3, v1}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/b/x;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/b/x;->b()Lcom/bbm/j/w;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/bbm/j/w;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    move v1, v0
 
     :cond_0
-    const/4 v0, 0x1
+    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/g/an;
 
-    :goto_0
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/g/an;->d()Lcom/bbm/j/w;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/bbm/j/w;->f()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    add-int/2addr v1, v2
+
+    add-int/2addr v0, v1
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     return-object v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method

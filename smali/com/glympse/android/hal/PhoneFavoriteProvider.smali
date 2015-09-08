@@ -7,7 +7,7 @@
 
 
 # static fields
-.field private static final cC:Ljava/lang/String; = "data1"
+.field private static final cF:Ljava/lang/String; = "data1"
 
 
 # instance fields
@@ -15,9 +15,11 @@
 
 .field protected _handler:Lcom/glympse/android/core/GHandler;
 
-.field private cA:Lcom/glympse/android/hal/ba;
+.field protected cC:Lcom/glympse/android/hal/GPhoneFavoriteListener;
 
-.field private cB:Lcom/glympse/android/core/GArray;
+.field private cD:Lcom/glympse/android/hal/ba;
+
+.field private cE:Lcom/glympse/android/core/GArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/glympse/android/core/GArray",
@@ -27,8 +29,6 @@
         }
     .end annotation
 .end field
-
-.field protected cz:Lcom/glympse/android/hal/GPhoneFavoriteListener;
 
 .field protected e:Landroid/content/Context;
 
@@ -381,21 +381,21 @@
     const/4 v0, 0x0
 
     .line 90
-    iput-object p1, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->cB:Lcom/glympse/android/core/GArray;
+    iput-object p1, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->cE:Lcom/glympse/android/core/GArray;
 
     .line 91
-    iput-object v0, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->cA:Lcom/glympse/android/hal/ba;
+    iput-object v0, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->cD:Lcom/glympse/android/hal/ba;
 
     .line 92
     iput-object v0, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->R:Ljava/util/concurrent/Future;
 
     .line 93
-    iget-object v0, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->cz:Lcom/glympse/android/hal/GPhoneFavoriteListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->cC:Lcom/glympse/android/hal/GPhoneFavoriteListener;
 
     if-eqz v0, :cond_0
 
     .line 95
-    iget-object v0, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->cz:Lcom/glympse/android/hal/GPhoneFavoriteListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->cC:Lcom/glympse/android/hal/GPhoneFavoriteListener;
 
     invoke-interface {v0, p0}, Lcom/glympse/android/hal/GPhoneFavoriteListener;->phoneFavoritesReady(Lcom/glympse/android/hal/GPhoneFavoriteProvider;)V
 
@@ -418,7 +418,7 @@
 
     .prologue
     .line 85
-    iget-object v0, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->cB:Lcom/glympse/android/core/GArray;
+    iget-object v0, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->cE:Lcom/glympse/android/core/GArray;
 
     return-object v0
 .end method
@@ -437,7 +437,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->cB:Lcom/glympse/android/core/GArray;
+    iput-object v0, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->cE:Lcom/glympse/android/core/GArray;
 
     .line 80
     :cond_0
@@ -446,7 +446,7 @@
 
     .line 72
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->cA:Lcom/glympse/android/hal/ba;
+    iget-object v0, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->cD:Lcom/glympse/android/hal/ba;
 
     if-nez v0, :cond_0
 
@@ -457,14 +457,14 @@
 
     invoke-direct {v0, p0, v1}, Lcom/glympse/android/hal/ba;-><init>(Lcom/glympse/android/hal/PhoneFavoriteProvider;Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->cA:Lcom/glympse/android/hal/ba;
+    iput-object v0, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->cD:Lcom/glympse/android/hal/ba;
 
     .line 78
     invoke-static {}, Lcom/glympse/android/hal/GlympseThreadPool;->instance()Lcom/glympse/android/hal/GlympseThreadPool;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->cA:Lcom/glympse/android/hal/ba;
+    iget-object v1, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->cD:Lcom/glympse/android/hal/ba;
 
     invoke-virtual {v0, v1}, Lcom/glympse/android/hal/GlympseThreadPool;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
@@ -480,7 +480,7 @@
 
     .prologue
     .line 37
-    iput-object p1, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->cz:Lcom/glympse/android/hal/GPhoneFavoriteListener;
+    iput-object p1, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->cC:Lcom/glympse/android/hal/GPhoneFavoriteListener;
 
     .line 38
     iput-object p2, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->_handler:Lcom/glympse/android/core/GHandler;
@@ -501,7 +501,7 @@
     const/4 v2, 0x0
 
     .line 46
-    iget-object v0, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->cA:Lcom/glympse/android/hal/ba;
+    iget-object v0, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->cD:Lcom/glympse/android/hal/ba;
 
     if-eqz v0, :cond_0
 
@@ -517,14 +517,14 @@
 
     .line 55
     :goto_0
-    iput-object v2, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->cA:Lcom/glympse/android/hal/ba;
+    iput-object v2, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->cD:Lcom/glympse/android/hal/ba;
 
     .line 56
     iput-object v2, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->R:Ljava/util/concurrent/Future;
 
     .line 58
     :cond_0
-    iput-object v2, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->cz:Lcom/glympse/android/hal/GPhoneFavoriteListener;
+    iput-object v2, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->cC:Lcom/glympse/android/hal/GPhoneFavoriteListener;
 
     .line 59
     iput-object v2, p0, Lcom/glympse/android/hal/PhoneFavoriteProvider;->_handler:Lcom/glympse/android/core/GHandler;

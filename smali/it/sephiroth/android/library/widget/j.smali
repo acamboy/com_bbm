@@ -28,14 +28,14 @@
 
 
 # virtual methods
-.method public final a(Landroid/view/View;Landroid/support/v4/view/a/a;)V
+.method public final a(Landroid/view/View;Landroid/support/v4/view/a/e;)V
     .locals 4
 
     .prologue
     const/4 v3, 0x1
 
     .line 1996
-    invoke-super {p0, p1, p2}, Landroid/support/v4/view/a;->a(Landroid/view/View;Landroid/support/v4/view/a/a;)V
+    invoke-super {p0, p1, p2}, Landroid/support/v4/view/a;->a(Landroid/view/View;Landroid/support/v4/view/a/e;)V
 
     .line 1998
     iget-object v0, p0, Lit/sephiroth/android/library/widget/j;->b:Lit/sephiroth/android/library/widget/AbsHListView;
@@ -91,12 +91,12 @@
     if-ne v1, v0, :cond_3
 
     .line 2010
-    invoke-virtual {p2, v3}, Landroid/support/v4/view/a/a;->e(Z)V
+    invoke-virtual {p2, v3}, Landroid/support/v4/view/a/e;->e(Z)V
 
     .line 2011
     const/16 v0, 0x8
 
-    invoke-virtual {p2, v0}, Landroid/support/v4/view/a/a;->a(I)V
+    invoke-virtual {p2, v0}, Landroid/support/v4/view/a/e;->a(I)V
 
     .line 2016
     :goto_1
@@ -111,10 +111,10 @@
     .line 2017
     const/16 v0, 0x10
 
-    invoke-virtual {p2, v0}, Landroid/support/v4/view/a/a;->a(I)V
+    invoke-virtual {p2, v0}, Landroid/support/v4/view/a/e;->a(I)V
 
     .line 2018
-    invoke-virtual {p2, v3}, Landroid/support/v4/view/a/a;->f(Z)V
+    invoke-virtual {p2, v3}, Landroid/support/v4/view/a/e;->f(Z)V
 
     .line 2021
     :cond_2
@@ -129,10 +129,10 @@
     .line 2022
     const/16 v0, 0x20
 
-    invoke-virtual {p2, v0}, Landroid/support/v4/view/a/a;->a(I)V
+    invoke-virtual {p2, v0}, Landroid/support/v4/view/a/e;->a(I)V
 
     .line 2023
-    invoke-virtual {p2, v3}, Landroid/support/v4/view/a/a;->g(Z)V
+    invoke-virtual {p2, v3}, Landroid/support/v4/view/a/e;->g(Z)V
 
     goto :goto_0
 
@@ -140,7 +140,7 @@
     :cond_3
     const/4 v0, 0x4
 
-    invoke-virtual {p2, v0}, Landroid/support/v4/view/a/a;->a(I)V
+    invoke-virtual {p2, v0}, Landroid/support/v4/view/a/e;->a(I)V
 
     goto :goto_1
 .end method
@@ -222,7 +222,7 @@
     :cond_4
     iget-object v0, p0, Lit/sephiroth/android/library/widget/j;->b:Lit/sephiroth/android/library/widget/AbsHListView;
 
-    invoke-virtual {v0, v3}, Lit/sephiroth/android/library/widget/AbsHListView;->f(I)J
+    invoke-virtual {v0, v3}, Lit/sephiroth/android/library/widget/AbsHListView;->g(I)J
 
     move-result-wide v4
 

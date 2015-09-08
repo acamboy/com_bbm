@@ -1,34 +1,26 @@
 .class final Lcom/bbm/ui/c/ed;
 .super Ljava/lang/Object;
-.source "GroupsFragment.java"
+.source "GroupMembersFragment.java"
 
 # interfaces
-.implements Ljava/util/Comparator;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
-        "<",
-        "Lcom/bbm/ui/c/ep;",
-        ">;"
-    }
-.end annotation
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/ec;
+.field final synthetic a:Lcom/google/b/f/a/p;
+
+.field final synthetic b:Lcom/bbm/ui/c/dy;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/ec;)V
+.method constructor <init>(Lcom/bbm/ui/c/dy;Lcom/google/b/f/a/p;)V
     .locals 0
 
     .prologue
-    .line 110
-    iput-object p1, p0, Lcom/bbm/ui/c/ed;->a:Lcom/bbm/ui/c/ec;
+    .line 576
+    iput-object p1, p0, Lcom/bbm/ui/c/ed;->b:Lcom/bbm/ui/c/dy;
+
+    iput-object p2, p0, Lcom/bbm/ui/c/ed;->a:Lcom/google/b/f/a/p;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,22 +29,61 @@
 
 
 # virtual methods
-.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 2
+.method public final run()V
+    .locals 4
 
     .prologue
-    .line 110
-    check-cast p1, Lcom/bbm/ui/c/ep;
+    .line 581
+    :try_start_0
+    iget-object v0, p0, Lcom/bbm/ui/c/ed;->a:Lcom/google/b/f/a/p;
 
-    check-cast p2, Lcom/bbm/ui/c/ep;
+    invoke-interface {v0}, Lcom/google/b/f/a/p;->get()Ljava/lang/Object;
 
-    iget-object v0, p1, Lcom/bbm/ui/c/ep;->b:Ljava/lang/String;
+    move-result-object v0
 
-    iget-object v1, p2, Lcom/bbm/ui/c/ep;->b:Ljava/lang/String;
+    check-cast v0, Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
+    .line 582
+    new-instance v1, Landroid/content/Intent;
 
-    move-result v0
+    iget-object v2, p0, Lcom/bbm/ui/c/ed;->b:Lcom/bbm/ui/c/dy;
 
-    return v0
+    invoke-virtual {v2}, Lcom/bbm/ui/c/dy;->getActivity()Landroid/app/Activity;
+
+    move-result-object v2
+
+    const-class v3, Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 583
+    const-string v2, "conversation_uri"
+
+    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 584
+    iget-object v0, p0, Lcom/bbm/ui/c/ed;->b:Lcom/bbm/ui/c/dy;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/c/dy;->startActivity(Landroid/content/Intent;)V
+
+    .line 585
+    const-string v0, "open"
+
+    const-string v1, "Conversation"
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->a(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 589
+    :goto_0
+    return-void
+
+    .line 586
+    :catch_0
+    move-exception v0
+
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_0
 .end method

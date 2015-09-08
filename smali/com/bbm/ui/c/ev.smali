@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/c/ev;
 .super Ljava/lang/Object;
-.source "MyChannelsFragment.java"
+.source "GroupsFragment.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/er;
+.field final synthetic a:Lcom/bbm/ui/c/ep;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/er;)V
+.method constructor <init>(Lcom/bbm/ui/c/ep;)V
     .locals 0
 
     .prologue
-    .line 523
-    iput-object p1, p0, Lcom/bbm/ui/c/ev;->a:Lcom/bbm/ui/c/er;
+    .line 387
+    iput-object p1, p0, Lcom/bbm/ui/c/ev;->a:Lcom/bbm/ui/c/ep;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,53 +26,33 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 2
+    .locals 4
 
     .prologue
-    .line 527
-    const-string v0, "createButton Clicked"
+    .line 390
+    const-string v0, "mNewGroupButton Clicked"
 
-    const-class v1, Lcom/bbm/ui/c/er;
+    const-class v1, Lcom/bbm/ui/c/ep;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 530
-    invoke-static {}, Lcom/bbm/util/ac;->b()Z
+    .line 391
+    iget-object v0, p0, Lcom/bbm/ui/c/ev;->a:Lcom/bbm/ui/c/ep;
 
-    move-result v0
+    new-instance v1, Landroid/content/Intent;
 
-    if-eqz v0, :cond_0
+    iget-object v2, p0, Lcom/bbm/ui/c/ev;->a:Lcom/bbm/ui/c/ep;
 
-    .line 531
-    new-instance v0, Lcom/bbm/ui/b/a;
+    invoke-virtual {v2}, Lcom/bbm/ui/c/ep;->getActivity()Landroid/support/v4/app/q;
 
-    iget-object v1, p0, Lcom/bbm/ui/c/ev;->a:Lcom/bbm/ui/c/er;
+    move-result-object v2
 
-    invoke-virtual {v1}, Lcom/bbm/ui/c/er;->getActivity()Landroid/app/Activity;
+    const-class v3, Lcom/bbm/ui/activities/NewGroupActivity;
 
-    move-result-object v1
+    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    invoke-direct {v0, v1}, Lcom/bbm/ui/b/a;-><init>(Landroid/app/Activity;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/c/ep;->startActivity(Landroid/content/Intent;)V
 
-    .line 533
-    new-instance v1, Lcom/bbm/ui/c/ew;
-
-    invoke-direct {v1, p0, v0}, Lcom/bbm/ui/c/ew;-><init>(Lcom/bbm/ui/c/ev;Lcom/bbm/ui/b/a;)V
-
-    iput-object v1, v0, Lcom/bbm/ui/b/a;->a:Lcom/bbm/ui/b/f;
-
-    .line 541
-    invoke-virtual {v0}, Lcom/bbm/ui/b/a;->show()V
-
-    .line 545
-    :goto_0
+    .line 392
     return-void
-
-    .line 543
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/c/ev;->a:Lcom/bbm/ui/c/er;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/er;->h(Lcom/bbm/ui/c/er;)V
-
-    goto :goto_0
 .end method

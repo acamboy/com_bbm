@@ -1,27 +1,32 @@
 .class public final Lcom/bbm/b/aq;
-.super Lcom/bbm/b/au;
+.super Lcom/bbm/b/az;
 .source "AdsProtocol.java"
 
 
 # direct methods
-.method constructor <init>(Z)V
+.method public constructor <init>(Lcom/bbm/b/ar;Ljava/lang/String;)V
     .locals 2
 
     .prologue
-    .line 823
-    const-string v0, "requestPostAd"
+    .line 503
+    const-string v0, "hideAd"
 
-    invoke-direct {p0, v0}, Lcom/bbm/b/au;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/b/az;-><init>(Ljava/lang/String;)V
 
-    .line 825
-    const-string v0, "prefetch"
+    .line 505
+    const-string v0, "context"
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {p1}, Lcom/bbm/b/ar;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p0, v0, v1}, Lcom/bbm/b/aq;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 826
+    .line 506
+    const-string v0, "id"
+
+    invoke-virtual {p0, v0, p2}, Lcom/bbm/b/aq;->a(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 507
     return-void
 .end method

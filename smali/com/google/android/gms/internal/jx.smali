@@ -1,172 +1,81 @@
-.class public Lcom/google/android/gms/internal/jx;
+.class final Lcom/google/android/gms/internal/jx;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field private final ZR:[B
+.field final synthetic a:Ljava/lang/String;
 
-.field private ZS:I
+.field final synthetic b:Ljava/lang/String;
 
-.field private ZT:I
+.field final synthetic c:Lcom/google/android/gms/internal/jw;
 
 
 # direct methods
-.method public constructor <init>([B)V
-    .locals 7
+.method constructor <init>(Lcom/google/android/gms/internal/jw;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    const/16 v6, 0x100
+    iput-object p1, p0, Lcom/google/android/gms/internal/jx;->c:Lcom/google/android/gms/internal/jw;
 
-    const/4 v1, 0x0
+    iput-object p2, p0, Lcom/google/android/gms/internal/jx;->a:Ljava/lang/String;
+
+    iput-object p3, p0, Lcom/google/android/gms/internal/jx;->b:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-array v0, v6, [B
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/jx;->ZR:[B
-
-    move v0, v1
-
-    :goto_0
-    if-ge v0, v6, :cond_0
-
-    iget-object v2, p0, Lcom/google/android/gms/internal/jx;->ZR:[B
-
-    int-to-byte v3, v0
-
-    aput-byte v3, v2, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    move v2, v1
-
-    :goto_1
-    if-ge v2, v6, :cond_1
-
-    iget-object v3, p0, Lcom/google/android/gms/internal/jx;->ZR:[B
-
-    aget-byte v3, v3, v2
-
-    add-int/2addr v0, v3
-
-    array-length v3, p1
-
-    rem-int v3, v2, v3
-
-    aget-byte v3, p1, v3
-
-    add-int/2addr v0, v3
-
-    and-int/lit16 v0, v0, 0xff
-
-    iget-object v3, p0, Lcom/google/android/gms/internal/jx;->ZR:[B
-
-    aget-byte v3, v3, v2
-
-    iget-object v4, p0, Lcom/google/android/gms/internal/jx;->ZR:[B
-
-    iget-object v5, p0, Lcom/google/android/gms/internal/jx;->ZR:[B
-
-    aget-byte v5, v5, v0
-
-    aput-byte v5, v4, v2
-
-    iget-object v4, p0, Lcom/google/android/gms/internal/jx;->ZR:[B
-
-    aput-byte v3, v4, v0
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    iput v1, p0, Lcom/google/android/gms/internal/jx;->ZS:I
-
-    iput v1, p0, Lcom/google/android/gms/internal/jx;->ZT:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public m([B)V
-    .locals 7
+.method public final run()V
+    .locals 6
 
-    iget v2, p0, Lcom/google/android/gms/internal/jx;->ZS:I
+    iget-object v1, p0, Lcom/google/android/gms/internal/jx;->c:Lcom/google/android/gms/internal/jw;
 
-    iget v1, p0, Lcom/google/android/gms/internal/jx;->ZT:I
+    new-instance v0, Landroid/webkit/WebView;
 
-    const/4 v0, 0x0
+    iget-object v1, v1, Lcom/google/android/gms/internal/jw;->a:Landroid/content/Context;
 
-    :goto_0
-    array-length v3, p1
+    invoke-direct {v0, v1}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;)V
 
-    if-ge v0, v3, :cond_0
+    invoke-virtual {v0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
-    add-int/lit8 v2, v2, 0x1
+    move-result-object v1
 
-    and-int/lit16 v2, v2, 0xff
+    const/4 v2, 0x1
 
-    iget-object v3, p0, Lcom/google/android/gms/internal/jx;->ZR:[B
+    invoke-virtual {v1, v2}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
-    aget-byte v3, v3, v2
+    new-instance v1, Lcom/google/android/gms/internal/jy;
 
-    add-int/2addr v1, v3
+    invoke-direct {v1, p0, v0}, Lcom/google/android/gms/internal/jy;-><init>(Lcom/google/android/gms/internal/jx;Landroid/webkit/WebView;)V
 
-    and-int/lit16 v1, v1, 0xff
+    invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
-    iget-object v3, p0, Lcom/google/android/gms/internal/jx;->ZR:[B
+    iget-object v1, p0, Lcom/google/android/gms/internal/jx;->c:Lcom/google/android/gms/internal/jw;
 
-    aget-byte v3, v3, v2
+    iget-object v1, v1, Lcom/google/android/gms/internal/jw;->b:Ljava/util/Set;
 
-    iget-object v4, p0, Lcom/google/android/gms/internal/jx;->ZR:[B
+    invoke-interface {v1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    iget-object v5, p0, Lcom/google/android/gms/internal/jx;->ZR:[B
+    iget-object v1, p0, Lcom/google/android/gms/internal/jx;->a:Ljava/lang/String;
 
-    aget-byte v5, v5, v1
+    iget-object v2, p0, Lcom/google/android/gms/internal/jx;->b:Ljava/lang/String;
 
-    aput-byte v5, v4, v2
+    const-string v3, "text/html"
 
-    iget-object v4, p0, Lcom/google/android/gms/internal/jx;->ZR:[B
+    const-string v4, "UTF-8"
 
-    aput-byte v3, v4, v1
+    const/4 v5, 0x0
 
-    aget-byte v3, p1, v0
+    invoke-virtual/range {v0 .. v5}, Landroid/webkit/WebView;->loadDataWithBaseURL(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/google/android/gms/internal/jx;->ZR:[B
+    const-string v0, "Fetching assets finished."
 
-    iget-object v5, p0, Lcom/google/android/gms/internal/jx;->ZR:[B
-
-    aget-byte v5, v5, v2
-
-    iget-object v6, p0, Lcom/google/android/gms/internal/jx;->ZR:[B
-
-    aget-byte v6, v6, v1
-
-    add-int/2addr v5, v6
-
-    and-int/lit16 v5, v5, 0xff
-
-    aget-byte v4, v4, v5
-
-    xor-int/2addr v3, v4
-
-    int-to-byte v3, v3
-
-    aput-byte v3, p1, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    iput v2, p0, Lcom/google/android/gms/internal/jx;->ZS:I
-
-    iput v1, p0, Lcom/google/android/gms/internal/jx;->ZT:I
+    invoke-static {v0}, Lcom/google/android/gms/ads/internal/util/client/b;->a(Ljava/lang/String;)V
 
     return-void
 .end method

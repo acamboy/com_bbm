@@ -1,8 +1,11 @@
 .class interface abstract Landroid/support/v4/view/by;
 .super Ljava/lang/Object;
-.source "ViewPager.java"
+.source "ViewConfigurationCompat.java"
 
 
 # virtual methods
-.method public abstract a(Landroid/support/v4/view/af;Landroid/support/v4/view/af;)V
+.method public abstract a(Landroid/view/ViewConfiguration;)I
+.end method
+
+.method public abstract b(Landroid/view/ViewConfiguration;)Z
 .end method

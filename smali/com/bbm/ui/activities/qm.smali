@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/qm;
 .super Ljava/lang/Object;
-.source "GroupLobbyActivity.java"
+.source "GroupPictureShareActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/b/ah;
+.implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupPictureShareActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupLobbyActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupPictureShareActivity;)V
     .locals 0
 
     .prologue
-    .line 850
-    iput-object p1, p0, Lcom/bbm/ui/activities/qm;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    .line 137
+    iput-object p1, p0, Lcom/bbm/ui/activities/qm;->a:Lcom/bbm/ui/activities/GroupPictureShareActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,62 +25,41 @@
 
 
 # virtual methods
-.method public final a()V
-    .locals 6
+.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
-    .line 854
-    iget-object v0, p0, Lcom/bbm/ui/activities/qm;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    .line 140
+    iget-object v0, p0, Lcom/bbm/ui/activities/qm;->a:Lcom/bbm/ui/activities/GroupPictureShareActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->a(Lcom/bbm/ui/activities/GroupLobbyActivity;)Lcom/bbm/g/al;
+    iget-object v1, p0, Lcom/bbm/ui/activities/qm;->a:Lcom/bbm/ui/activities/GroupPictureShareActivity;
 
-    move-result-object v0
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupPictureShareActivity;->a(Lcom/bbm/ui/activities/GroupPictureShareActivity;)Lcom/bbm/ui/activities/qp;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/qm;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    move-result-object v1
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
+    invoke-virtual {v1, p3}, Lcom/bbm/ui/activities/qp;->a(I)Lcom/bbm/g/a;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->t(Ljava/lang/String;)Lcom/bbm/g/a;
+    move-result-object v1
 
-    move-result-object v5
+    iget-object v1, v1, Lcom/bbm/g/a;->v:Ljava/lang/String;
 
-    .line 855
-    iget-object v0, p0, Lcom/bbm/ui/activities/qm;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/GroupPictureShareActivity;->a(Lcom/bbm/ui/activities/GroupPictureShareActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/qm;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    .line 141
+    iget-object v0, p0, Lcom/bbm/ui/activities/qm;->a:Lcom/bbm/ui/activities/GroupPictureShareActivity;
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureShareActivity;->b(Lcom/bbm/ui/activities/GroupPictureShareActivity;)V
 
-    iget-object v2, v5, Lcom/bbm/g/a;->r:Ljava/lang/String;
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/qm;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
-
-    invoke-static {v3}, Lcom/bbm/ui/activities/GroupLobbyActivity;->r(Lcom/bbm/ui/activities/GroupLobbyActivity;)Lcom/bbm/j/a;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/Integer;
-
-    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
-
-    move-result v3
-
-    iget-object v4, p0, Lcom/bbm/ui/activities/qm;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
-
-    invoke-static {v4}, Lcom/bbm/ui/activities/GroupLobbyActivity;->s(Lcom/bbm/ui/activities/GroupLobbyActivity;)I
-
-    move-result v4
-
-    invoke-static {v5}, Lcom/bbm/util/db;->a(Lcom/bbm/g/a;)Z
-
-    move-result v5
-
-    invoke-static/range {v0 .. v5}, Lcom/bbm/h/aq;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;IIZ)V
-
-    .line 856
+    .line 142
     return-void
 .end method

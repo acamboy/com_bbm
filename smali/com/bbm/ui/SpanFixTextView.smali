@@ -57,7 +57,7 @@
     return-void
 .end method
 
-.method private a(Landroid/text/SpannableStringBuilder;II)Lcom/bbm/ui/gg;
+.method private a(Landroid/text/SpannableStringBuilder;II)Lcom/bbm/ui/gn;
     .locals 10
 
     .prologue
@@ -149,11 +149,11 @@
     invoke-direct {p0, p1, p2, p3}, Lcom/bbm/ui/SpanFixTextView;->a(Ljava/lang/CharSequence;II)V
 
     .line 144
-    new-instance v0, Lcom/bbm/ui/gg;
+    new-instance v0, Lcom/bbm/ui/gn;
 
     const/4 v7, 0x1
 
-    invoke-direct {v0, v7, v4, v5}, Lcom/bbm/ui/gg;-><init>(ZLjava/util/List;Ljava/util/List;)V
+    invoke-direct {v0, v7, v4, v5}, Lcom/bbm/ui/gn;-><init>(ZLjava/util/List;Ljava/util/List;)V
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -173,9 +173,9 @@
 
     .line 151
     :cond_2
-    new-instance v0, Lcom/bbm/ui/gg;
+    new-instance v0, Lcom/bbm/ui/gn;
 
-    invoke-direct {v0, v2, v9, v9}, Lcom/bbm/ui/gg;-><init>(ZLjava/util/List;Ljava/util/List;)V
+    invoke-direct {v0, v2, v9, v9}, Lcom/bbm/ui/gn;-><init>(ZLjava/util/List;Ljava/util/List;)V
 
     goto :goto_1
 .end method
@@ -184,7 +184,7 @@
     .locals 1
 
     .prologue
-    .line 197
+    .line 203
     invoke-virtual {p0}, Lcom/bbm/ui/SpanFixTextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -193,14 +193,14 @@
 
     move-result-object v0
 
-    .line 198
+    .line 204
     invoke-direct {p0, v0, p1, p2}, Lcom/bbm/ui/SpanFixTextView;->a(Ljava/lang/CharSequence;II)V
 
-    .line 199
+    .line 205
     return-void
 .end method
 
-.method private a(IILandroid/text/SpannableStringBuilder;Lcom/bbm/ui/gg;)V
+.method private a(IILandroid/text/SpannableStringBuilder;Lcom/bbm/ui/gn;)V
     .locals 4
     .annotation build Landroid/annotation/SuppressLint;
         value = {
@@ -212,7 +212,7 @@
     const/4 v1, 0x1
 
     .line 163
-    iget-object v0, p4, Lcom/bbm/ui/gg;->c:Ljava/util/List;
+    iget-object v0, p4, Lcom/bbm/ui/gn;->c:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -259,7 +259,7 @@
 
     .line 174
     :cond_0
-    iget-object v0, p4, Lcom/bbm/ui/gg;->b:Ljava/util/List;
+    iget-object v0, p4, Lcom/bbm/ui/gn;->b:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -272,7 +272,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_2
 
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -283,13 +283,13 @@
 
     move-result v0
 
-    .line 176
+    .line 177
     add-int/lit8 v3, v0, -0x1
 
+    :try_start_1
     invoke-virtual {p3, v3, v0}, Landroid/text/SpannableStringBuilder;->delete(II)Landroid/text/SpannableStringBuilder;
 
     .line 178
-    :try_start_1
     invoke-direct {p0, p3, p1, p2}, Lcom/bbm/ui/SpanFixTextView;->a(Ljava/lang/CharSequence;II)V
     :try_end_1
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_1 .. :try_end_1} :catch_1
@@ -303,31 +303,41 @@
     :catch_1
     move-exception v3
 
-    .line 182
+    .line 183
+    if-le v0, v1, :cond_1
+
+    .line 184
     add-int/lit8 v0, v0, -0x1
 
-    .line 183
+    .line 189
+    :goto_2
     const-string v3, " "
 
     invoke-virtual {p3, v0, v3}, Landroid/text/SpannableStringBuilder;->insert(ILjava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
     move v0, v1
 
-    .line 185
+    .line 191
     goto :goto_1
 
-    .line 187
     :cond_1
-    if-eqz v0, :cond_2
+    move v0, v1
 
-    .line 188
+    .line 187
+    goto :goto_2
+
+    .line 193
+    :cond_2
+    if-eqz v0, :cond_3
+
+    .line 194
     invoke-virtual {p0, p3}, Lcom/bbm/ui/SpanFixTextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 189
+    .line 195
     invoke-super {p0, p1, p2}, Landroid/widget/TextView;->onMeasure(II)V
 
-    .line 191
-    :cond_2
+    .line 197
+    :cond_3
     return-void
 .end method
 
@@ -356,6 +366,12 @@
     .prologue
     .line 98
     if-ltz p1, :cond_0
+
+    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v0
+
+    if-ge p1, v0, :cond_0
 
     invoke-interface {p0, p1}, Ljava/lang/CharSequence;->charAt(I)C
 
@@ -416,15 +432,15 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    invoke-direct {p0, v1, p1, p2}, Lcom/bbm/ui/SpanFixTextView;->a(Landroid/text/SpannableStringBuilder;II)Lcom/bbm/ui/gg;
+    invoke-direct {p0, v1, p1, p2}, Lcom/bbm/ui/SpanFixTextView;->a(Landroid/text/SpannableStringBuilder;II)Lcom/bbm/ui/gn;
 
     move-result-object v0
 
-    iget-boolean v2, v0, Lcom/bbm/ui/gg;->a:Z
+    iget-boolean v2, v0, Lcom/bbm/ui/gn;->a:Z
 
     if-eqz v2, :cond_0
 
-    invoke-direct {p0, p1, p2, v1, v0}, Lcom/bbm/ui/SpanFixTextView;->a(IILandroid/text/SpannableStringBuilder;Lcom/bbm/ui/gg;)V
+    invoke-direct {p0, p1, p2, v1, v0}, Lcom/bbm/ui/SpanFixTextView;->a(IILandroid/text/SpannableStringBuilder;Lcom/bbm/ui/gn;)V
 
     goto :goto_0
 

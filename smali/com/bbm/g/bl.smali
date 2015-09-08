@@ -1,28 +1,32 @@
 .class public final Lcom/bbm/g/bl;
-.super Lcom/bbm/g/cv;
+.super Lcom/bbm/g/db;
 .source "GroupsProtocol.java"
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Lcom/bbm/g/bm;)V
+    .locals 2
 
     .prologue
-    .line 1073
-    const-string v0, "groupCustomIconChange"
+    .line 872
+    const-string v0, "groupConversationOptionsEdit"
 
-    invoke-direct {p0, v0}, Lcom/bbm/g/cv;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/g/db;-><init>(Ljava/lang/String;)V
 
-    .line 1075
-    const-string v0, "customIcon"
+    .line 874
+    const-string v0, "conversationUri"
 
     invoke-virtual {p0, v0, p1}, Lcom/bbm/g/bl;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1076
-    const-string v0, "groupUri"
+    .line 875
+    const-string v0, "keepMessagesFor"
 
-    invoke-virtual {p0, v0, p2}, Lcom/bbm/g/bl;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p2}, Lcom/bbm/g/bm;->toString()Ljava/lang/String;
 
-    .line 1077
+    move-result-object v1
+
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/g/bl;->a(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 876
     return-void
 .end method

@@ -1,68 +1,85 @@
 .class final Lcom/bbm/ui/dn;
-.super Ljava/lang/Object;
-.source "LinkifyTextView.java"
-
-# interfaces
-.implements Ljava/util/Comparator;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
-        "<",
-        "Landroid/text/style/ClickableSpan;",
-        ">;"
-    }
-.end annotation
+.super Lcom/bbm/j/u;
+.source "InlineImageEditText.java"
 
 
 # instance fields
-.field final synthetic a:Landroid/text/Spannable;
-
-.field final synthetic b:Lcom/bbm/ui/LinkifyTextView;
+.field final synthetic a:Lcom/bbm/ui/InlineImageEditText;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/LinkifyTextView;Landroid/text/Spannable;)V
+.method constructor <init>(Lcom/bbm/ui/InlineImageEditText;)V
     .locals 0
 
     .prologue
-    .line 98
-    iput-object p1, p0, Lcom/bbm/ui/dn;->b:Lcom/bbm/ui/LinkifyTextView;
+    .line 50
+    iput-object p1, p0, Lcom/bbm/ui/dn;->a:Lcom/bbm/ui/InlineImageEditText;
 
-    iput-object p2, p0, Lcom/bbm/ui/dn;->a:Landroid/text/Spannable;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+.method protected final b()Z
     .locals 2
 
     .prologue
-    .line 98
-    check-cast p1, Landroid/text/style/ClickableSpan;
+    .line 53
+    iget-object v0, p0, Lcom/bbm/ui/dn;->a:Lcom/bbm/ui/InlineImageEditText;
 
-    check-cast p2, Landroid/text/style/ClickableSpan;
-
-    iget-object v0, p0, Lcom/bbm/ui/dn;->a:Landroid/text/Spannable;
-
-    invoke-interface {v0, p1}, Landroid/text/Spannable;->getSpanStart(Ljava/lang/Object;)I
+    invoke-virtual {v0}, Lcom/bbm/ui/InlineImageEditText;->isInEditMode()Z
 
     move-result v0
 
-    iget-object v1, p0, Lcom/bbm/ui/dn;->a:Landroid/text/Spannable;
+    if-nez v0, :cond_0
 
-    invoke-interface {v1, p2}, Landroid/text/Spannable;->getSpanStart(Ljava/lang/Object;)I
+    .line 54
+    iget-object v0, p0, Lcom/bbm/ui/dn;->a:Lcom/bbm/ui/InlineImageEditText;
 
-    move-result v1
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/f;
 
-    sub-int/2addr v0, v1
+    move-result-object v1
 
+    iget-object v1, v1, Lcom/bbm/f;->b:Lcom/bbm/d/a;
+
+    invoke-virtual {v1}, Lcom/bbm/d/a;->i()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/InlineImageEditText;->a(Lcom/bbm/ui/InlineImageEditText;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 56
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/dn;->a:Lcom/bbm/ui/InlineImageEditText;
+
+    invoke-static {v0}, Lcom/bbm/ui/InlineImageEditText;->a(Lcom/bbm/ui/InlineImageEditText;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/bbm/ui/dn;->a:Lcom/bbm/ui/InlineImageEditText;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/InlineImageEditText;->isInEditMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    :cond_1
+    const/4 v0, 0x1
+
+    :goto_0
     return v0
+
+    :cond_2
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

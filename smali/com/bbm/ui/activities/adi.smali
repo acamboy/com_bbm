@@ -1,19 +1,19 @@
 .class final Lcom/bbm/ui/activities/adi;
 .super Lcom/bbm/j/k;
-.source "ProtectedStateActivity.java"
+.source "SettingsActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ProtectedStateActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ProtectedStateActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
     .locals 1
 
     .prologue
-    .line 26
-    iput-object p1, p0, Lcom/bbm/ui/activities/adi;->a:Lcom/bbm/ui/activities/ProtectedStateActivity;
+    .line 136
+    iput-object p1, p0, Lcom/bbm/ui/activities/adi;->a:Lcom/bbm/ui/activities/SettingsActivity;
 
     const/4 v0, 0x0
 
@@ -28,56 +28,28 @@
     .locals 2
 
     .prologue
-    .line 29
-    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
+    .line 140
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
+
+    invoke-static {}, Lcom/bbm/Alaska;->n()Lcom/bbm/f/ae;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/e;->b:Lcom/bbm/d/a;
+    iget-object v0, v0, Lcom/bbm/f/ae;->b:Ljava/lang/String;
 
-    .line 30
-    iget-object v0, v0, Lcom/bbm/d/a;->g:Lcom/bbm/j/a;
-
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Boolean;
+    .line 141
+    iget-object v1, p0, Lcom/bbm/ui/activities/adi;->a:Lcom/bbm/ui/activities/SettingsActivity;
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    .line 31
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/adi;->a:Lcom/bbm/ui/activities/ProtectedStateActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ProtectedStateActivity;->a(Lcom/bbm/ui/activities/ProtectedStateActivity;)Z
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/adi;->a:Lcom/bbm/ui/activities/ProtectedStateActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ProtectedStateActivity;->b(Lcom/bbm/ui/activities/ProtectedStateActivity;)Lcom/bbm/d/a;
+    invoke-static {v1}, Lcom/bbm/ui/activities/SettingsActivity;->a(Lcom/bbm/ui/activities/SettingsActivity;)Landroid/widget/TextView;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/bbm/d/a;->D()Z
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    move-result v1
-
-    if-eq v0, v1, :cond_0
-
-    .line 32
-    invoke-static {}, Lcom/bbm/util/db;->a()V
-
-    .line 33
-    iget-object v0, p0, Lcom/bbm/ui/activities/adi;->a:Lcom/bbm/ui/activities/ProtectedStateActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ProtectedStateActivity;->c(Lcom/bbm/ui/activities/ProtectedStateActivity;)V
-
-    .line 35
-    :cond_0
+    .line 142
     return-void
 .end method

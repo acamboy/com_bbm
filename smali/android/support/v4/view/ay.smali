@@ -1,74 +1,39 @@
-.class Landroid/support/v4/view/ay;
-.super Landroid/support/v4/view/ax;
-.source "ViewCompat.java"
+.class final Landroid/support/v4/view/ay;
+.super Ljava/lang/Object;
+.source "PagerTitleStrip.java"
 
-
-# static fields
-.field static b:Z
+# interfaces
+.implements Landroid/support/v4/view/aw;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    .prologue
-    .line 900
-    const/4 v0, 0x0
-
-    sput-boolean v0, Landroid/support/v4/view/ay;->b:Z
-
-    return-void
-.end method
-
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 898
-    invoke-direct {p0}, Landroid/support/v4/view/ax;-><init>()V
+    .line 92
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/view/View;Landroid/support/v4/view/a;)V
-    .locals 1
+.method public final a(Landroid/widget/TextView;)V
+    .locals 2
 
     .prologue
-    .line 923
-    iget-object v0, p2, Landroid/support/v4/view/a;->a:Ljava/lang/Object;
+    .line 94
+    new-instance v0, Landroid/support/v4/view/ba;
 
-    check-cast v0, Landroid/view/View$AccessibilityDelegate;
+    invoke-virtual {p1}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAccessibilityDelegate(Landroid/view/View$AccessibilityDelegate;)V
+    move-result-object v1
 
-    .line 924
+    invoke-direct {v0, v1}, Landroid/support/v4/view/ba;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTransformationMethod(Landroid/text/method/TransformationMethod;)V
+
+    .line 95
     return-void
-.end method
-
-.method public final a(Landroid/view/View;)Z
-    .locals 1
-
-    .prologue
-    .line 907
-    const/4 v0, -0x1
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->canScrollVertically(I)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final a(Landroid/view/View;I)Z
-    .locals 1
-
-    .prologue
-    .line 903
-    invoke-virtual {p1, p2}, Landroid/view/View;->canScrollHorizontally(I)Z
-
-    move-result v0
-
-    return v0
 .end method

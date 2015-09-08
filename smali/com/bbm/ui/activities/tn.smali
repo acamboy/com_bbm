@@ -1,106 +1,85 @@
 .class final Lcom/bbm/ui/activities/tn;
-.super Lcom/bbm/j/k;
-.source "GroupProfileActivity.java"
+.super Ljava/lang/Object;
+.source "MainActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupProfileActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupProfileActivity;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
+    .locals 0
 
     .prologue
-    .line 85
-    iput-object p1, p0, Lcom/bbm/ui/activities/tn;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
+    .line 766
+    iput-object p1, p0, Lcom/bbm/ui/activities/tn;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 4
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 88
-    iget-object v0, p0, Lcom/bbm/ui/activities/tn;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
+    .line 769
+    iget-object v0, p0, Lcom/bbm/ui/activities/tn;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupProfileActivity;->getResources()Landroid/content/res/Resources;
+    invoke-static {v0}, Lcom/bbm/ui/activities/MainActivity;->i(Lcom/bbm/ui/activities/MainActivity;)Landroid/support/v4/widget/DrawerLayout;
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/tn;->a:Lcom/bbm/ui/activities/MainActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/MainActivity;->a(Lcom/bbm/ui/activities/MainActivity;)Landroid/widget/ListView;
 
     move-result-object v0
 
-    const v1, 0x7f0c0018
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
+    invoke-static {v0}, Landroid/support/v4/widget/DrawerLayout;->g(Landroid/view/View;)Z
 
     move-result v0
 
-    .line 89
-    iget-object v1, p0, Lcom/bbm/ui/activities/tn;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
+    if-eqz v0, :cond_0
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/GroupProfileActivity;->a(Lcom/bbm/ui/activities/GroupProfileActivity;)Lcom/bbm/g/al;
+    .line 770
+    iget-object v0, p0, Lcom/bbm/ui/activities/tn;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    move-result-object v1
+    invoke-static {v0}, Lcom/bbm/ui/activities/MainActivity;->i(Lcom/bbm/ui/activities/MainActivity;)Landroid/support/v4/widget/DrawerLayout;
 
-    const-string v2, "maxGroupMembersPerGroup"
+    move-result-object v0
 
-    invoke-virtual {v1, v2}, Lcom/bbm/g/al;->u(Ljava/lang/String;)Lcom/bbm/util/bm;
+    iget-object v1, p0, Lcom/bbm/ui/activities/tn;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    move-result-object v1
-
-    .line 90
-    iget-object v2, v1, Lcom/bbm/util/bm;->b:Lcom/bbm/util/bi;
-
-    sget-object v3, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
-
-    if-ne v2, v3, :cond_1
-
-    .line 91
-    iget-object v1, v1, Lcom/bbm/util/bm;->a:Lorg/json/JSONObject;
-
-    const-string v2, "value"
-
-    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+    invoke-static {v1}, Lcom/bbm/ui/activities/MainActivity;->a(Lcom/bbm/ui/activities/MainActivity;)Landroid/widget/ListView;
 
     move-result-object v1
 
-    .line 92
-    if-eqz v1, :cond_0
+    invoke-virtual {v0, v1}, Landroid/support/v4/widget/DrawerLayout;->f(Landroid/view/View;)V
 
-    .line 93
-    iget-object v2, p0, Lcom/bbm/ui/activities/tn;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
-
-    const-string v3, "memberCount"
-
-    invoke-virtual {v1, v3, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
-
-    move-result v0
-
-    invoke-static {v2, v0}, Lcom/bbm/ui/activities/GroupProfileActivity;->a(Lcom/bbm/ui/activities/GroupProfileActivity;I)I
-
-    .line 100
+    .line 774
     :goto_0
     return-void
 
-    .line 95
+    .line 772
     :cond_0
-    iget-object v1, p0, Lcom/bbm/ui/activities/tn;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
+    iget-object v0, p0, Lcom/bbm/ui/activities/tn;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/GroupProfileActivity;->a(Lcom/bbm/ui/activities/GroupProfileActivity;I)I
+    invoke-static {v0}, Lcom/bbm/ui/activities/MainActivity;->i(Lcom/bbm/ui/activities/MainActivity;)Landroid/support/v4/widget/DrawerLayout;
 
-    goto :goto_0
+    move-result-object v0
 
-    .line 98
-    :cond_1
-    iget-object v1, p0, Lcom/bbm/ui/activities/tn;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
+    iget-object v1, p0, Lcom/bbm/ui/activities/tn;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/GroupProfileActivity;->a(Lcom/bbm/ui/activities/GroupProfileActivity;I)I
+    invoke-static {v1}, Lcom/bbm/ui/activities/MainActivity;->a(Lcom/bbm/ui/activities/MainActivity;)Landroid/widget/ListView;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/widget/DrawerLayout;->e(Landroid/view/View;)V
 
     goto :goto_0
 .end method

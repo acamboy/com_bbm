@@ -1,207 +1,225 @@
 .class public final Lcom/bbm/util/d/a;
-.super Lcom/bbm/j/u;
-.source "DeleteChatDialogMonitor.java"
+.super Ljava/lang/Object;
+.source "InlineImageSet.java"
+
+
+# static fields
+.field private static final b:[Ljava/lang/String;
 
 
 # instance fields
-.field private final a:Lcom/bbm/d/a;
+.field final a:Lcom/bbm/util/d/h;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/util/d/h",
+            "<",
+            "Lcom/bbm/util/d/b;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private final b:Landroid/content/Context;
-
-.field private final c:Z
-
-.field private final d:Z
-
-.field private final e:Lcom/bbm/util/d/c;
+.field private final c:Lcom/bbm/util/d/h;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/util/d/h",
+            "<",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;ZZLcom/bbm/util/d/c;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 31
-    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
+    .line 10
+    const/4 v0, 0x6
 
-    .line 20
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    new-array v0, v0, [Ljava/lang/String;
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    iput-object v0, p0, Lcom/bbm/util/d/a;->a:Lcom/bbm/d/a;
+    const-string v2, "http:/"
 
-    .line 32
-    iput-object p1, p0, Lcom/bbm/util/d/a;->b:Landroid/content/Context;
+    aput-object v2, v0, v1
 
-    .line 33
-    iput-boolean p2, p0, Lcom/bbm/util/d/a;->c:Z
+    const/4 v1, 0x1
 
-    .line 34
-    iput-boolean p3, p0, Lcom/bbm/util/d/a;->d:Z
+    const-string v2, "https:/"
 
-    .line 35
-    iput-object p4, p0, Lcom/bbm/util/d/a;->e:Lcom/bbm/util/d/c;
+    aput-object v2, v0, v1
 
-    .line 36
+    const/4 v1, 0x2
+
+    const-string v2, "ftp:/"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x3
+
+    const-string v2, "mailto:"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x4
+
+    const-string v2, "file:/"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x5
+
+    const-string v2, "pin:"
+
+    aput-object v2, v0, v1
+
+    sput-object v0, Lcom/bbm/util/d/a;->b:[Ljava/lang/String;
+
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/util/d/a;)Landroid/content/Context;
-    .locals 1
+.method public constructor <init>()V
+    .locals 10
 
     .prologue
-    .line 18
-    iget-object v0, p0, Lcom/bbm/util/d/a;->b:Landroid/content/Context;
+    const/4 v1, 0x0
 
-    return-object v0
-.end method
+    const/4 v9, 0x1
 
-.method static synthetic b(Lcom/bbm/util/d/a;)Lcom/bbm/util/d/c;
-    .locals 1
+    .line 15
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .prologue
-    .line 18
-    iget-object v0, p0, Lcom/bbm/util/d/a;->e:Lcom/bbm/util/d/c;
+    .line 12
+    new-instance v0, Lcom/bbm/util/d/h;
 
-    return-object v0
-.end method
+    invoke-direct {v0}, Lcom/bbm/util/d/h;-><init>()V
 
-.method static synthetic c(Lcom/bbm/util/d/a;)Z
-    .locals 1
+    iput-object v0, p0, Lcom/bbm/util/d/a;->c:Lcom/bbm/util/d/h;
 
-    .prologue
-    .line 18
-    iget-boolean v0, p0, Lcom/bbm/util/d/a;->c:Z
+    .line 16
+    sget-object v2, Lcom/bbm/util/d/a;->b:[Ljava/lang/String;
 
-    return v0
+    array-length v3, v2
+
+    move v0, v1
+
+    :goto_0
+    if-ge v0, v3, :cond_0
+
+    aget-object v4, v2, v0
+
+    .line 19
+    iget-object v5, p0, Lcom/bbm/util/d/a;->c:Lcom/bbm/util/d/h;
+
+    invoke-static {v9}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v4, v6}, Lcom/bbm/util/d/h;->a(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 22
+    iget-object v5, p0, Lcom/bbm/util/d/a;->c:Lcom/bbm/util/d/h;
+
+    sget-object v6, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    invoke-virtual {v4, v6}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v9}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v7
+
+    invoke-virtual {v5, v6, v7}, Lcom/bbm/util/d/h;->a(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 25
+    iget-object v5, p0, Lcom/bbm/util/d/a;->c:Lcom/bbm/util/d/h;
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v4, v1, v9}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v7
+
+    sget-object v8, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    invoke-virtual {v7, v8}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v9}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v9}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v4, v6}, Lcom/bbm/util/d/h;->a(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 16
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    .line 28
+    :cond_0
+    new-instance v0, Lcom/bbm/util/d/h;
+
+    const/16 v1, 0x3dd
+
+    iget-object v2, p0, Lcom/bbm/util/d/a;->c:Lcom/bbm/util/d/h;
+
+    invoke-direct {v0, v1, v2}, Lcom/bbm/util/d/h;-><init>(ILcom/bbm/util/d/h;)V
+
+    iput-object v0, p0, Lcom/bbm/util/d/a;->a:Lcom/bbm/util/d/h;
+
+    .line 29
+    iget-object v0, p0, Lcom/bbm/util/d/a;->a:Lcom/bbm/util/d/h;
+
+    iput-boolean v9, v0, Lcom/bbm/util/d/h;->a:Z
+
+    .line 30
+    return-void
 .end method
 
 
 # virtual methods
-.method protected final b()Z
-    .locals 3
+.method final a(Ljava/lang/String;Lcom/bbm/util/d/b;)V
+    .locals 2
 
     .prologue
+    .line 39
+    iget v0, p2, Lcom/bbm/util/d/b;->a:I
+
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_0
+
     .line 40
-    iget-object v0, p0, Lcom/bbm/util/d/a;->a:Lcom/bbm/d/a;
+    iget-object v0, p0, Lcom/bbm/util/d/a;->a:Lcom/bbm/util/d/h;
 
-    const-string v1, "keepChatHistory"
-
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->E(Ljava/lang/String;)Lcom/bbm/util/bm;
-
-    move-result-object v0
-
-    .line 41
-    iget-object v1, v0, Lcom/bbm/util/bm;->b:Lcom/bbm/util/bi;
-
-    sget-object v2, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
-
-    if-ne v1, v2, :cond_4
+    invoke-virtual {v0, p1, p2}, Lcom/bbm/util/d/h;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 42
-    iget-object v0, v0, Lcom/bbm/util/bm;->a:Lorg/json/JSONObject;
-
-    const-string v1, "value"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;)Z
-
-    move-result v0
-
-    .line 46
-    if-eqz v0, :cond_2
-
-    .line 47
-    iget-object v0, p0, Lcom/bbm/util/d/a;->e:Lcom/bbm/util/d/c;
-
-    if-eqz v0, :cond_0
-
-    .line 48
-    iget-object v0, p0, Lcom/bbm/util/d/a;->e:Lcom/bbm/util/d/c;
-
-    invoke-interface {v0}, Lcom/bbm/util/d/c;->a()V
-
-    .line 51
     :cond_0
-    iget-object v1, p0, Lcom/bbm/util/d/a;->b:Landroid/content/Context;
-
-    iget-object v2, p0, Lcom/bbm/util/d/a;->b:Landroid/content/Context;
-
-    iget-boolean v0, p0, Lcom/bbm/util/d/a;->c:Z
-
-    if-eqz v0, :cond_1
-
-    const v0, 0x7f0e02d8
-
-    :goto_0
-    invoke-virtual {v2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;)V
-
-    .line 78
-    :goto_1
-    const/4 v0, 0x1
-
-    .line 80
-    :goto_2
-    return v0
-
-    .line 51
-    :cond_1
-    const v0, 0x7f0e02d6
-
-    goto :goto_0
-
-    .line 56
-    :cond_2
-    new-instance v1, Lcom/bbm/ui/b/o;
-
-    iget-object v0, p0, Lcom/bbm/util/d/a;->b:Landroid/content/Context;
-
-    invoke-direct {v1, v0}, Lcom/bbm/ui/b/o;-><init>(Landroid/content/Context;)V
-
-    .line 57
-    const v0, 0x7f0e0290
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/b/o;->setTitle(I)V
-
-    .line 58
-    iget-boolean v0, p0, Lcom/bbm/util/d/a;->d:Z
-
-    if-eqz v0, :cond_3
-
-    const v0, 0x7f0e028e
-
-    :goto_3
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/b/o;->e(I)V
-
-    .line 60
-    const v0, 0x7f0e06f8
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/b/o;->a(I)V
-
-    .line 61
-    new-instance v0, Lcom/bbm/util/d/b;
-
-    invoke-direct {v0, p0, v1}, Lcom/bbm/util/d/b;-><init>(Lcom/bbm/util/d/a;Lcom/bbm/ui/b/o;)V
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/b/o;->a(Landroid/view/View$OnClickListener;)V
-
-    .line 76
-    invoke-virtual {v1}, Lcom/bbm/ui/b/o;->show()V
-
-    goto :goto_1
-
-    .line 58
-    :cond_3
-    const v0, 0x7f0e028f
-
-    goto :goto_3
-
-    .line 80
-    :cond_4
-    const/4 v0, 0x0
-
-    goto :goto_2
+    return-void
 .end method

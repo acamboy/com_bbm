@@ -1,46 +1,116 @@
 .class Lcom/glympse/android/lib/ed;
-.super Lcom/glympse/android/lib/fb;
-.source "ImageCache.java"
+.super Ljava/lang/Object;
+.source "HashCodeBuilder.java"
+
+# interfaces
+.implements Lcom/glympse/android/core/GCommon;
 
 
 # instance fields
-.field private nM:Lcom/glympse/android/lib/ea;
+.field private nK:I
 
-.field final synthetic nO:Lcom/glympse/android/lib/ea;
+.field private nL:I
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/lib/ea;Lcom/glympse/android/lib/ea;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .prologue
-    .line 476
-    iput-object p1, p0, Lcom/glympse/android/lib/ed;->nO:Lcom/glympse/android/lib/ea;
+    .line 29
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Lcom/glympse/android/lib/fb;-><init>()V
+    .line 30
+    const/16 v0, 0x25
 
-    .line 477
-    iput-object p2, p0, Lcom/glympse/android/lib/ed;->nM:Lcom/glympse/android/lib/ea;
+    iput v0, p0, Lcom/glympse/android/lib/ed;->nK:I
 
-    .line 478
+    .line 31
+    const/16 v0, 0x11
+
+    iput v0, p0, Lcom/glympse/android/lib/ed;->nL:I
+
+    .line 32
     return-void
 .end method
 
 
 # virtual methods
-.method public onProcess()V
+.method public a(F)V
+    .locals 2
+
+    .prologue
+    .line 59
+    iget v0, p0, Lcom/glympse/android/lib/ed;->nL:I
+
+    iget v1, p0, Lcom/glympse/android/lib/ed;->nK:I
+
+    mul-int/2addr v0, v1
+
+    invoke-static {p1}, Lcom/glympse/android/hal/Helpers;->floatToIntBits(F)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    iput v0, p0, Lcom/glympse/android/lib/ed;->nL:I
+
+    .line 60
+    return-void
+.end method
+
+.method public append(I)V
+    .locals 2
+
+    .prologue
+    .line 70
+    iget v0, p0, Lcom/glympse/android/lib/ed;->nL:I
+
+    iget v1, p0, Lcom/glympse/android/lib/ed;->nK:I
+
+    mul-int/2addr v0, v1
+
+    add-int/2addr v0, p1
+
+    iput v0, p0, Lcom/glympse/android/lib/ed;->nL:I
+
+    .line 71
+    return-void
+.end method
+
+.method public bW()I
     .locals 1
 
     .prologue
-    .line 482
-    iget-object v0, p0, Lcom/glympse/android/lib/ed;->nM:Lcom/glympse/android/lib/ea;
+    .line 80
+    iget v0, p0, Lcom/glympse/android/lib/ed;->nL:I
 
-    invoke-virtual {v0}, Lcom/glympse/android/lib/ea;->getMemoryCache()Lcom/glympse/android/lib/GMemoryCache;
+    return v0
+.end method
 
-    move-result-object v0
+.method public g(J)V
+    .locals 5
 
-    invoke-interface {v0}, Lcom/glympse/android/lib/GMemoryCache;->onLowMemory()V
+    .prologue
+    .line 49
+    iget v0, p0, Lcom/glympse/android/lib/ed;->nL:I
 
-    .line 483
+    iget v1, p0, Lcom/glympse/android/lib/ed;->nK:I
+
+    mul-int/2addr v0, v1
+
+    const/16 v1, 0x20
+
+    shr-long v2, p1, v1
+
+    xor-long/2addr v2, p1
+
+    long-to-int v1, v2
+
+    add-int/2addr v0, v1
+
+    iput v0, p0, Lcom/glympse/android/lib/ed;->nL:I
+
+    .line 50
     return-void
 .end method

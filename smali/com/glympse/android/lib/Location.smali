@@ -31,9 +31,9 @@
     .locals 4
 
     .prologue
-    const-wide/high16 v2, 0x7ff8000000000000L
+    const-wide/high16 v2, 0x7ff8000000000000L    # NaN
 
-    const/high16 v1, 0x7fc00000
+    const/high16 v1, 0x7fc00000    # NaNf
 
     .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -117,7 +117,7 @@
     .locals 8
 
     .prologue
-    const-wide v6, 0x3f91df46a1fae711L
+    const-wide v6, 0x3f91df46a1fae711L    # 0.0174532925
 
     .line 169
     mul-double v0, p0, v6
@@ -132,7 +132,7 @@
 
     move-result-wide v0
 
-    const-wide v2, 0x404ca5dc1a47a9e3L
+    const-wide v2, 0x404ca5dc1a47a9e3L    # 57.2957795
 
     mul-double/2addr v0, v2
 
@@ -214,21 +214,21 @@
 
     .prologue
     .line 113
-    const-wide v8, 0x415854a640000000L
+    const-wide v8, 0x415854a640000000L    # 6378137.0
 
-    const-wide v0, 0x3f91df46a1fae711L
+    const-wide v0, 0x3f91df46a1fae711L    # 0.0174532925
 
     mul-double/2addr v0, p0
 
-    const-wide v2, 0x3f91df46a1fae711L
+    const-wide v2, 0x3f91df46a1fae711L    # 0.0174532925
 
     mul-double/2addr v2, p2
 
-    const-wide v4, 0x3f91df46a1fae711L
+    const-wide v4, 0x3f91df46a1fae711L    # 0.0174532925
 
     mul-double/2addr v4, p4
 
-    const-wide v6, 0x3f91df46a1fae711L
+    const-wide v6, 0x3f91df46a1fae711L    # 0.0174532925
 
     mul-double v6, v6, p6
 
@@ -277,25 +277,25 @@
     add-double/2addr v0, v2
 
     .line 146
-    const-wide/high16 v2, -0x4010000000000000L
+    const-wide/high16 v2, -0x4010000000000000L    # -1.0
 
     cmpg-double v2, v0, v2
 
     if-gez v2, :cond_0
 
     .line 148
-    const-wide/high16 v0, -0x4010000000000000L
+    const-wide/high16 v0, -0x4010000000000000L    # -1.0
 
     .line 150
     :cond_0
-    const-wide/high16 v2, 0x3ff0000000000000L
+    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
 
     cmpl-double v2, v0, v2
 
     if-lez v2, :cond_1
 
     .line 152
-    const-wide/high16 v0, 0x3ff0000000000000L
+    const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
 
     .line 156
     :cond_1
@@ -379,25 +379,25 @@
     if-eqz v0, :cond_1
 
     :cond_0
-    const-wide v0, -0x3fa9800000000000L
+    const-wide v0, -0x3fa9800000000000L    # -90.0
 
     cmpl-double v0, p0, v0
 
     if-ltz v0, :cond_1
 
-    const-wide v0, 0x4056800000000000L
+    const-wide v0, 0x4056800000000000L    # 90.0
 
     cmpg-double v0, p0, v0
 
     if-gtz v0, :cond_1
 
-    const-wide v0, -0x3f99800000000000L
+    const-wide v0, -0x3f99800000000000L    # -180.0
 
     cmpl-double v0, p2, v0
 
     if-ltz v0, :cond_1
 
-    const-wide v0, 0x4066800000000000L
+    const-wide v0, 0x4066800000000000L    # 180.0
 
     cmpg-double v0, p2, v0
 
@@ -442,25 +442,25 @@
     if-eqz v0, :cond_1
 
     :cond_0
-    const/high16 v0, -0x3d4c0000
+    const/high16 v0, -0x3d4c0000    # -90.0f
 
     cmpl-float v0, p0, v0
 
     if-ltz v0, :cond_1
 
-    const/high16 v0, 0x42b40000
+    const/high16 v0, 0x42b40000    # 90.0f
 
     cmpg-float v0, p0, v0
 
     if-gtz v0, :cond_1
 
-    const/high16 v0, -0x3ccc0000
+    const/high16 v0, -0x3ccc0000    # -180.0f
 
     cmpl-float v0, p1, v0
 
     if-ltz v0, :cond_1
 
-    const/high16 v0, 0x43340000
+    const/high16 v0, 0x43340000    # 180.0f
 
     cmpg-float v0, p1, v0
 
@@ -840,7 +840,7 @@
     .line 243
     iget-wide v0, p0, Lcom/glympse/android/lib/Location;->_latitude:D
 
-    const-wide v2, 0x412e848000000000L
+    const-wide v2, 0x412e848000000000L    # 1000000.0
 
     mul-double/2addr v0, v2
 
@@ -866,7 +866,7 @@
     .line 248
     iget-wide v0, p0, Lcom/glympse/android/lib/Location;->_longitude:D
 
-    const-wide v2, 0x412e848000000000L
+    const-wide v2, 0x412e848000000000L    # 1000000.0
 
     mul-double/2addr v0, v2
 
@@ -1102,40 +1102,40 @@
 
     .prologue
     .line 376
-    new-instance v0, Lcom/glympse/android/lib/dq;
+    new-instance v0, Lcom/glympse/android/lib/ed;
 
-    invoke-direct {v0}, Lcom/glympse/android/lib/dq;-><init>()V
+    invoke-direct {v0}, Lcom/glympse/android/lib/ed;-><init>()V
 
     .line 377
     invoke-virtual {p0}, Lcom/glympse/android/lib/Location;->getTime()J
 
     move-result-wide v2
 
-    invoke-virtual {v0, v2, v3}, Lcom/glympse/android/lib/dq;->f(J)V
+    invoke-virtual {v0, v2, v3}, Lcom/glympse/android/lib/ed;->g(J)V
 
     .line 378
     invoke-virtual {p0}, Lcom/glympse/android/lib/Location;->getLatitudeE6()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/glympse/android/lib/dq;->append(I)V
+    invoke-virtual {v0, v1}, Lcom/glympse/android/lib/ed;->append(I)V
 
     .line 379
     invoke-virtual {p0}, Lcom/glympse/android/lib/Location;->getLongitudeE6()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/glympse/android/lib/dq;->append(I)V
+    invoke-virtual {v0, v1}, Lcom/glympse/android/lib/ed;->append(I)V
 
     .line 380
     invoke-virtual {p0}, Lcom/glympse/android/lib/Location;->getAltitude()F
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/glympse/android/lib/dq;->a(F)V
+    invoke-virtual {v0, v1}, Lcom/glympse/android/lib/ed;->a(F)V
 
     .line 381
-    invoke-virtual {v0}, Lcom/glympse/android/lib/dq;->bP()I
+    invoke-virtual {v0}, Lcom/glympse/android/lib/ed;->bW()I
 
     move-result v0
 

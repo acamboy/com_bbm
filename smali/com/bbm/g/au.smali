@@ -1,32 +1,28 @@
 .class public final Lcom/bbm/g/au;
-.super Lcom/bbm/g/cv;
+.super Lcom/bbm/g/db;
 .source "GroupsProtocol.java"
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;Lcom/bbm/g/av;)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
     .prologue
-    .line 410
-    const-string v0, "groupClearSplatGroup"
+    .line 139
+    const-string v0, "groupAdminRequestByPassword"
 
-    invoke-direct {p0, v0}, Lcom/bbm/g/cv;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/g/db;-><init>(Ljava/lang/String;)V
 
-    .line 412
+    .line 141
     const-string v0, "groupUri"
 
     invoke-virtual {p0, v0, p1}, Lcom/bbm/g/au;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 413
-    const-string v0, "splat"
+    .line 142
+    const-string v0, "password"
 
-    invoke-virtual {p2}, Lcom/bbm/g/av;->toString()Ljava/lang/String;
+    invoke-virtual {p0, v0, p2}, Lcom/bbm/g/au;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    move-result-object v1
-
-    invoke-virtual {p0, v0, v1}, Lcom/bbm/g/au;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 414
+    .line 143
     return-void
 .end method

@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/jq;
 .super Ljava/lang/Object;
-.source "EditListItemActivity.java"
+.source "GroupAdminAddActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/EditListItemActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/EditListItemActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupAdminAddActivity;)V
     .locals 0
 
     .prologue
-    .line 255
-    iput-object p1, p0, Lcom/bbm/ui/activities/jq;->a:Lcom/bbm/ui/activities/EditListItemActivity;
+    .line 89
+    iput-object p1, p0, Lcom/bbm/ui/activities/jq;->a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,34 +25,85 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
-    .line 259
-    const-string v0, "mHeaderActionBar Negative Button Clicked"
+    .line 93
+    iget-object v0, p0, Lcom/bbm/ui/activities/jq;->a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/EditListItemActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupAdminAddActivity;->d(Lcom/bbm/ui/activities/GroupAdminAddActivity;)Landroid/widget/ListView;
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    move-result-object v0
 
-    .line 261
-    const-string v0, "negativebutton onClick"
+    invoke-virtual {v0, p3}, Landroid/widget/ListView;->getItemAtPosition(I)Ljava/lang/Object;
 
-    const-class v1, Lcom/bbm/ui/activities/EditListItemActivity;
+    move-result-object v0
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    check-cast v0, Lcom/bbm/g/ae;
 
-    .line 262
-    iget-object v0, p0, Lcom/bbm/ui/activities/jq;->a:Lcom/bbm/ui/activities/EditListItemActivity;
+    .line 95
+    invoke-virtual {p2}, Landroid/view/View;->isActivated()Z
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/EditListItemActivity;->finish()V
+    move-result v1
 
-    .line 263
-    iget-object v0, p0, Lcom/bbm/ui/activities/jq;->a:Lcom/bbm/ui/activities/EditListItemActivity;
+    if-nez v1, :cond_0
 
-    invoke-static {v0}, Lcom/bbm/util/fh;->b(Landroid/app/Activity;)V
+    const/4 v1, 0x1
 
-    .line 264
+    .line 96
+    :goto_0
+    invoke-virtual {p2, v1}, Landroid/view/View;->setActivated(Z)V
+
+    .line 97
+    if-eqz v1, :cond_1
+
+    .line 98
+    iget-object v1, p0, Lcom/bbm/ui/activities/jq;->a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupAdminAddActivity;->a(Lcom/bbm/ui/activities/GroupAdminAddActivity;)Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    iget-object v0, v0, Lcom/bbm/g/ae;->c:Ljava/lang/String;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 102
+    :goto_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/jq;->a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupAdminAddActivity;->e(Lcom/bbm/ui/activities/GroupAdminAddActivity;)V
+
+    .line 103
     return-void
+
+    .line 95
+    :cond_0
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    .line 100
+    :cond_1
+    iget-object v1, p0, Lcom/bbm/ui/activities/jq;->a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupAdminAddActivity;->a(Lcom/bbm/ui/activities/GroupAdminAddActivity;)Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    iget-object v0, v0, Lcom/bbm/g/ae;->c:Ljava/lang/String;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    goto :goto_1
 .end method

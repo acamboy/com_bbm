@@ -25,7 +25,7 @@
     .locals 2
 
     .prologue
-    .line 128
+    .line 139
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, 0x1
@@ -37,14 +37,14 @@
     return-void
 .end method
 
-.method constructor <init>(I)V
+.method constructor <init>(ILjava/lang/String;)V
     .locals 2
 
     .prologue
-    .line 135
+    .line 146
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 131
+    .line 142
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, 0x1
@@ -53,30 +53,28 @@
 
     iput-object v0, p0, Lcom/d/a/b/b;->c:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 136
+    .line 147
     iput p1, p0, Lcom/d/a/b/b;->e:I
 
-    .line 137
-    invoke-static {}, Ljava/lang/System;->getSecurityManager()Ljava/lang/SecurityManager;
+    .line 148
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
 
-    .line 138
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/SecurityManager;->getThreadGroup()Ljava/lang/ThreadGroup;
+    invoke-virtual {v0}, Ljava/lang/Thread;->getThreadGroup()Ljava/lang/ThreadGroup;
 
     move-result-object v0
 
-    :goto_0
     iput-object v0, p0, Lcom/d/a/b/b;->b:Ljava/lang/ThreadGroup;
 
-    .line 139
+    .line 149
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "pool-"
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     sget-object v1, Lcom/d/a/b/b;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
@@ -100,20 +98,8 @@
 
     iput-object v0, p0, Lcom/d/a/b/b;->d:Ljava/lang/String;
 
-    .line 140
+    .line 150
     return-void
-
-    .line 138
-    :cond_0
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->getThreadGroup()Ljava/lang/ThreadGroup;
-
-    move-result-object v0
-
-    goto :goto_0
 .end method
 
 
@@ -122,7 +108,7 @@
     .locals 6
 
     .prologue
-    .line 143
+    .line 154
     new-instance v0, Ljava/lang/Thread;
 
     iget-object v1, p0, Lcom/d/a/b/b;->b:Ljava/lang/ThreadGroup;
@@ -157,7 +143,7 @@
 
     invoke-direct/range {v0 .. v5}, Ljava/lang/Thread;-><init>(Ljava/lang/ThreadGroup;Ljava/lang/Runnable;Ljava/lang/String;J)V
 
-    .line 144
+    .line 155
     invoke-virtual {v0}, Ljava/lang/Thread;->isDaemon()Z
 
     move-result v1
@@ -168,12 +154,12 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/Thread;->setDaemon(Z)V
 
-    .line 145
+    .line 156
     :cond_0
     iget v1, p0, Lcom/d/a/b/b;->e:I
 
     invoke-virtual {v0, v1}, Ljava/lang/Thread;->setPriority(I)V
 
-    .line 146
+    .line 157
     return-object v0
 .end method

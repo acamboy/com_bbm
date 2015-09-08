@@ -1,66 +1,77 @@
 .class final Landroid/support/v4/widget/aw;
-.super Landroid/view/animation/Animation;
-.source "SwipeRefreshLayout.java"
+.super Ljava/lang/Object;
+.source "SlidingPaneLayout.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:I
+.field final a:Landroid/view/View;
 
-.field final synthetic b:I
-
-.field final synthetic c:Landroid/support/v4/widget/SwipeRefreshLayout;
+.field final synthetic b:Landroid/support/v4/widget/SlidingPaneLayout;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/widget/SwipeRefreshLayout;II)V
+.method constructor <init>(Landroid/support/v4/widget/SlidingPaneLayout;Landroid/view/View;)V
     .locals 0
 
     .prologue
-    .line 432
-    iput-object p1, p0, Landroid/support/v4/widget/aw;->c:Landroid/support/v4/widget/SwipeRefreshLayout;
+    .line 1627
+    iput-object p1, p0, Landroid/support/v4/widget/aw;->b:Landroid/support/v4/widget/SlidingPaneLayout;
 
-    iput p2, p0, Landroid/support/v4/widget/aw;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p3, p0, Landroid/support/v4/widget/aw;->b:I
+    .line 1628
+    iput-object p2, p0, Landroid/support/v4/widget/aw;->a:Landroid/view/View;
 
-    invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
-
+    .line 1629
     return-void
 .end method
 
 
 # virtual methods
-.method public final applyTransformation(FLandroid/view/animation/Transformation;)V
-    .locals 4
+.method public final run()V
+    .locals 3
 
     .prologue
-    .line 435
-    iget-object v0, p0, Landroid/support/v4/widget/aw;->c:Landroid/support/v4/widget/SwipeRefreshLayout;
+    .line 1633
+    iget-object v0, p0, Landroid/support/v4/widget/aw;->a:Landroid/view/View;
 
-    invoke-static {v0}, Landroid/support/v4/widget/SwipeRefreshLayout;->b(Landroid/support/v4/widget/SwipeRefreshLayout;)Landroid/support/v4/widget/v;
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
-    iget v1, p0, Landroid/support/v4/widget/aw;->a:I
+    iget-object v1, p0, Landroid/support/v4/widget/aw;->b:Landroid/support/v4/widget/SlidingPaneLayout;
 
-    int-to-float v1, v1
+    if-ne v0, v1, :cond_0
 
-    iget v2, p0, Landroid/support/v4/widget/aw;->b:I
+    .line 1634
+    iget-object v0, p0, Landroid/support/v4/widget/aw;->a:Landroid/view/View;
 
-    iget v3, p0, Landroid/support/v4/widget/aw;->a:I
+    const/4 v1, 0x0
 
-    sub-int/2addr v2, v3
+    const/4 v2, 0x0
 
-    int-to-float v2, v2
+    invoke-static {v0, v1, v2}, Landroid/support/v4/view/bf;->a(Landroid/view/View;ILandroid/graphics/Paint;)V
 
-    mul-float/2addr v2, p1
+    .line 1635
+    iget-object v0, p0, Landroid/support/v4/widget/aw;->b:Landroid/support/v4/widget/SlidingPaneLayout;
 
-    add-float/2addr v1, v2
+    iget-object v1, p0, Landroid/support/v4/widget/aw;->a:Landroid/view/View;
 
-    float-to-int v1, v1
+    invoke-static {v0, v1}, Landroid/support/v4/widget/SlidingPaneLayout;->a(Landroid/support/v4/widget/SlidingPaneLayout;Landroid/view/View;)V
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/widget/v;->setAlpha(I)V
+    .line 1637
+    :cond_0
+    iget-object v0, p0, Landroid/support/v4/widget/aw;->b:Landroid/support/v4/widget/SlidingPaneLayout;
 
-    .line 438
+    invoke-static {v0}, Landroid/support/v4/widget/SlidingPaneLayout;->g(Landroid/support/v4/widget/SlidingPaneLayout;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    .line 1638
     return-void
 .end method

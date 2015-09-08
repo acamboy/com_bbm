@@ -1,31 +1,17 @@
 .class final Lcom/bbm/util/en;
 .super Ljava/lang/Object;
-.source "UpdatesFragmentUtil.java"
+.source "TpaUtil.java"
 
 # interfaces
-.implements Lcom/bbm/ui/c/gn;
-
-
-# instance fields
-.field final synthetic a:Landroid/app/Activity;
-
-.field final synthetic b:Landroid/content/Context;
-
-.field final synthetic c:Lcom/bbm/d/ga;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # direct methods
-.method constructor <init>(Landroid/app/Activity;Landroid/content/Context;Lcom/bbm/d/ga;)V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 723
-    iput-object p1, p0, Lcom/bbm/util/en;->a:Landroid/app/Activity;
-
-    iput-object p2, p0, Lcom/bbm/util/en;->b:Landroid/content/Context;
-
-    iput-object p3, p0, Lcom/bbm/util/en;->c:Lcom/bbm/d/ga;
-
+    .line 404
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,64 +19,10 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
-    .locals 3
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 0
 
     .prologue
-    .line 726
-    iget-object v0, p0, Lcom/bbm/util/en;->a:Landroid/app/Activity;
-
-    check-cast v0, Lcom/bbm/ui/activities/MainActivity;
-
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
-
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
-
-    .line 727
-    iget v0, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 735
-    :goto_0
+    .line 406
     return-void
-
-    .line 729
-    :pswitch_0
-    iget-object v0, p0, Lcom/bbm/util/en;->b:Landroid/content/Context;
-
-    iget-object v1, p0, Lcom/bbm/util/en;->c:Lcom/bbm/d/ga;
-
-    iget-object v1, v1, Lcom/bbm/d/ga;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lcom/bbm/util/ac;->a(Landroid/content/Context;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 732
-    :pswitch_1
-    iget-object v0, p0, Lcom/bbm/util/en;->a:Landroid/app/Activity;
-
-    iget-object v1, p0, Lcom/bbm/util/en;->c:Lcom/bbm/d/ga;
-
-    iget-object v1, v1, Lcom/bbm/d/ga;->b:Ljava/lang/String;
-
-    iget-object v2, p0, Lcom/bbm/util/en;->c:Lcom/bbm/d/ga;
-
-    iget-object v2, v2, Lcom/bbm/d/ga;->j:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lcom/bbm/util/ac;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 727
-    :pswitch_data_0
-    .packed-switch 0x7f0b0031
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

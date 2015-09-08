@@ -126,11 +126,11 @@
     move-result-object v0
 
     check-cast v0, Lit/sephiroth/android/library/widget/ad;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 125
     monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 126
     iput v3, v0, Lit/sephiroth/android/library/widget/ad;->a:I
@@ -153,8 +153,6 @@
     invoke-direct {v0}, Lit/sephiroth/android/library/widget/ad;-><init>()V
 
     monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
@@ -163,6 +161,8 @@
     move-exception v0
 
     monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw v0
 .end method
@@ -231,8 +231,6 @@
     .line 139
     :cond_0
     monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     return-void
 
@@ -240,6 +238,8 @@
     move-exception v0
 
     monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
 .end method

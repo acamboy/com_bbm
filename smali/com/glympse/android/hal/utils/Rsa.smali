@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private gA:Ljava/security/PublicKey;
+.field private gD:Ljava/security/PublicKey;
 
 
 # direct methods
@@ -20,7 +20,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/utils/Rsa;->gA:Ljava/security/PublicKey;
+    iput-object v0, p0, Lcom/glympse/android/hal/utils/Rsa;->gD:Ljava/security/PublicKey;
 
     .line 24
     return-void
@@ -77,7 +77,7 @@
     .line 63
     const/4 v1, 0x1
 
-    iget-object v3, p0, Lcom/glympse/android/hal/utils/Rsa;->gA:Ljava/security/PublicKey;
+    iget-object v3, p0, Lcom/glympse/android/hal/utils/Rsa;->gD:Ljava/security/PublicKey;
 
     invoke-virtual {v2, v1, v3}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
 

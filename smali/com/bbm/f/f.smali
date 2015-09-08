@@ -41,24 +41,24 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 10
-    new-instance v0, Lcom/bbm/util/ct;
+    new-instance v0, Lcom/bbm/util/dc;
 
     new-instance v1, Lcom/bbm/f/ae;
 
     invoke-direct {v1}, Lcom/bbm/f/ae;-><init>()V
 
-    invoke-direct {v0, v1}, Lcom/bbm/util/ct;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, v1}, Lcom/bbm/util/dc;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/bbm/f/f;->b:Lcom/bbm/j/r;
 
     .line 11
-    new-instance v0, Lcom/bbm/util/ct;
+    new-instance v0, Lcom/bbm/util/dc;
 
     new-instance v1, Lcom/bbm/f/ag;
 
     invoke-direct {v1}, Lcom/bbm/f/ag;-><init>()V
 
-    invoke-direct {v0, v1}, Lcom/bbm/util/ct;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, v1}, Lcom/bbm/util/dc;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/bbm/f/f;->c:Lcom/bbm/j/r;
 
@@ -72,6 +72,14 @@
 
     .prologue
     .line 16
+    return-void
+.end method
+
+.method public final a(Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 68
     return-void
 .end method
 
@@ -169,7 +177,15 @@
     return-void
 .end method
 
-.method public final j()Z
+.method public final j()V
+    .locals 0
+
+    .prologue
+    .line 59
+    return-void
+.end method
+
+.method public final k()Z
     .locals 1
 
     .prologue

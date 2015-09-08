@@ -1,129 +1,91 @@
 .class final Lcom/bbm/ui/ez;
-.super Ljava/lang/Object;
-.source "QuickShareGlympseView.java"
-
-# interfaces
-.implements Lcom/glympse/android/controls/GTimerView$OnDurationChangedListener;
+.super Lcom/bbm/j/u;
+.source "ProfilePinView.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/QuickShareGlympseView;
+.field final synthetic a:Lcom/bbm/ui/ProfilePinView;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/QuickShareGlympseView;)V
+.method constructor <init>(Lcom/bbm/ui/ProfilePinView;)V
     .locals 0
 
     .prologue
-    .line 144
-    iput-object p1, p0, Lcom/bbm/ui/ez;->a:Lcom/bbm/ui/QuickShareGlympseView;
+    .line 65
+    iput-object p1, p0, Lcom/bbm/ui/ez;->a:Lcom/bbm/ui/ProfilePinView;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDurationChanged(Lcom/glympse/android/controls/GTimerView;I)V
-    .locals 10
+.method protected final b()Z
+    .locals 4
 
     .prologue
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
-    .line 148
-    iget-object v1, p0, Lcom/bbm/ui/ez;->a:Lcom/bbm/ui/QuickShareGlympseView;
-
-    invoke-static {v1}, Lcom/bbm/ui/QuickShareGlympseView;->h(Lcom/bbm/ui/QuickShareGlympseView;)Landroid/widget/TextView;
+    .line 70
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/bbm/ui/ez;->a:Lcom/bbm/ui/QuickShareGlympseView;
-
-    invoke-virtual {v2}, Lcom/bbm/ui/QuickShareGlympseView;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    const v3, 0x7f0e0399
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    const/4 v3, 0x1
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    iget-object v4, p0, Lcom/bbm/ui/ez;->a:Lcom/bbm/ui/QuickShareGlympseView;
-
-    invoke-static {v4}, Lcom/bbm/ui/QuickShareGlympseView;->f(Lcom/bbm/ui/QuickShareGlympseView;)Landroid/content/Context;
-
-    move-result-object v4
-
-    iget-object v5, p0, Lcom/bbm/ui/ez;->a:Lcom/bbm/ui/QuickShareGlympseView;
-
-    invoke-static {v5}, Lcom/bbm/ui/QuickShareGlympseView;->g(Lcom/bbm/ui/QuickShareGlympseView;)Lcom/glympse/android/controls/GTimerView;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Lcom/glympse/android/controls/GTimerView;->getExpireTime()J
-
-    move-result-wide v6
-
-    iget-object v5, p0, Lcom/bbm/ui/ez;->a:Lcom/bbm/ui/QuickShareGlympseView;
-
-    iget-object v5, v5, Lcom/bbm/ui/QuickShareGlympseView;->h:Ljava/util/TimeZone;
-
-    iget-object v8, p0, Lcom/bbm/ui/ez;->a:Lcom/bbm/ui/QuickShareGlympseView;
-
-    invoke-static {v8}, Lcom/bbm/ui/QuickShareGlympseView;->g(Lcom/bbm/ui/QuickShareGlympseView;)Lcom/glympse/android/controls/GTimerView;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Lcom/glympse/android/controls/GTimerView;->getExpireTime()J
-
-    move-result-wide v8
-
-    invoke-virtual {v5, v8, v9}, Ljava/util/TimeZone;->getOffset(J)I
-
-    move-result v5
-
-    int-to-long v8, v5
-
-    add-long/2addr v6, v8
-
-    const/16 v5, 0x2001
-
-    invoke-static {v4, v6, v7, v5}, Lcom/bbm/util/be;->a(Landroid/content/Context;JI)Ljava/lang/String;
-
-    move-result-object v4
-
-    aput-object v4, v3, v0
-
-    invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 153
-    iget-object v1, p0, Lcom/bbm/ui/ez;->a:Lcom/bbm/ui/QuickShareGlympseView;
-
-    invoke-static {v1}, Lcom/bbm/ui/QuickShareGlympseView;->h(Lcom/bbm/ui/QuickShareGlympseView;)Landroid/widget/TextView;
+    invoke-virtual {v1}, Lcom/bbm/d/a;->l()Lcom/bbm/d/ao;
 
     move-result-object v1
 
-    if-lez p2, :cond_0
+    .line 71
+    sget-object v2, Lcom/bbm/d/ao;->a:Lcom/bbm/d/ao;
 
+    if-ne v1, v2, :cond_0
+
+    .line 72
+    new-instance v1, Landroid/content/Intent;
+
+    invoke-static {}, Lcom/bbm/Alaska;->s()Lcom/bbm/Alaska;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/bbm/Alaska;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    const-class v3, Lcom/bbm/ui/activities/CustomPinSubscriptionActivity;
+
+    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 73
+    iget-object v2, p0, Lcom/bbm/ui/ez;->a:Lcom/bbm/ui/ProfilePinView;
+
+    invoke-static {v2}, Lcom/bbm/ui/ProfilePinView;->a(Lcom/bbm/ui/ProfilePinView;)Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    .line 81
     :goto_0
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setVisibility(I)V
+    return v0
 
-    .line 154
-    return-void
-
-    .line 153
+    .line 75
     :cond_0
-    const/4 v0, 0x4
+    sget-object v2, Lcom/bbm/d/ao;->b:Lcom/bbm/d/ao;
+
+    if-ne v1, v2, :cond_1
+
+    .line 76
+    iget-object v1, p0, Lcom/bbm/ui/ez;->a:Lcom/bbm/ui/ProfilePinView;
+
+    invoke-static {v1}, Lcom/bbm/ui/ProfilePinView;->b(Lcom/bbm/ui/ProfilePinView;)V
+
+    goto :goto_0
+
+    .line 81
+    :cond_1
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method

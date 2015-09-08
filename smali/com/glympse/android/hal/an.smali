@@ -7,11 +7,11 @@
 
 
 # static fields
-.field public static final bQ:Ljava/lang/String; = "com.glympse.android.v2.keychain"
+.field public static final bT:Ljava/lang/String; = "com.glympse.android.v2.keychain"
 
 
 # instance fields
-.field private bR:Landroid/content/SharedPreferences;
+.field private bU:Landroid/content/SharedPreferences;
 
 
 # direct methods
@@ -31,7 +31,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/an;->bR:Landroid/content/SharedPreferences;
+    iput-object v0, p0, Lcom/glympse/android/hal/an;->bU:Landroid/content/SharedPreferences;
 
     .line 15
     return-void
@@ -44,7 +44,7 @@
 
     .prologue
     .line 27
-    iget-object v0, p0, Lcom/glympse/android/hal/an;->bR:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/glympse/android/hal/an;->bU:Landroid/content/SharedPreferences;
 
     const/4 v1, 0x0
 
@@ -60,7 +60,7 @@
 
     .prologue
     .line 32
-    iget-object v0, p0, Lcom/glympse/android/hal/an;->bR:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/glympse/android/hal/an;->bU:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -83,7 +83,7 @@
 
     .prologue
     .line 19
-    iget-object v0, p0, Lcom/glympse/android/hal/an;->bR:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/glympse/android/hal/an;->bU:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 

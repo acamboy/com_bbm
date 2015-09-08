@@ -6,54 +6,43 @@
 
 
 # static fields
-.field public static final CREATOR:Lcom/google/android/gms/location/DetectedActivityCreator;
+.field public static final CREATOR:Lcom/google/android/gms/location/c;
 
-.field public static final IN_VEHICLE:I = 0x0
-
-.field public static final ON_BICYCLE:I = 0x1
-
-.field public static final ON_FOOT:I = 0x2
-
-.field public static final STILL:I = 0x3
-
-.field public static final TILTING:I = 0x5
-
-.field public static final UNKNOWN:I = 0x4
+.field public static final a:Ljava/util/Comparator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Comparator",
+            "<",
+            "Lcom/google/android/gms/location/DetectedActivity;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field KS:I
+.field final b:I
 
-.field KT:I
+.field c:I
 
-.field private final wj:I
+.field d:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/gms/location/DetectedActivityCreator;
+    new-instance v0, Lcom/google/android/gms/location/b;
 
-    invoke-direct {v0}, Lcom/google/android/gms/location/DetectedActivityCreator;-><init>()V
+    invoke-direct {v0}, Lcom/google/android/gms/location/b;-><init>()V
 
-    sput-object v0, Lcom/google/android/gms/location/DetectedActivity;->CREATOR:Lcom/google/android/gms/location/DetectedActivityCreator;
+    sput-object v0, Lcom/google/android/gms/location/DetectedActivity;->a:Ljava/util/Comparator;
 
-    return-void
-.end method
+    new-instance v0, Lcom/google/android/gms/location/c;
 
-.method public constructor <init>(II)V
-    .locals 1
+    invoke-direct {v0}, Lcom/google/android/gms/location/c;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lcom/google/android/gms/location/DetectedActivity;->wj:I
-
-    iput p1, p0, Lcom/google/android/gms/location/DetectedActivity;->KS:I
-
-    iput p2, p0, Lcom/google/android/gms/location/DetectedActivity;->KT:I
+    sput-object v0, Lcom/google/android/gms/location/DetectedActivity;->CREATOR:Lcom/google/android/gms/location/c;
 
     return-void
 .end method
@@ -63,30 +52,32 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lcom/google/android/gms/location/DetectedActivity;->wj:I
+    iput p1, p0, Lcom/google/android/gms/location/DetectedActivity;->b:I
 
-    iput p2, p0, Lcom/google/android/gms/location/DetectedActivity;->KS:I
+    iput p2, p0, Lcom/google/android/gms/location/DetectedActivity;->c:I
 
-    iput p3, p0, Lcom/google/android/gms/location/DetectedActivity;->KT:I
+    iput p3, p0, Lcom/google/android/gms/location/DetectedActivity;->d:I
 
     return-void
 .end method
 
-.method private bh(I)I
-    .locals 1
-
-    const/4 v0, 0x6
-
-    if-le p1, v0, :cond_0
-
-    const/4 p1, 0x4
-
-    :cond_0
-    return p1
-.end method
-
 
 # virtual methods
+.method public final a()I
+    .locals 2
+
+    iget v0, p0, Lcom/google/android/gms/location/DetectedActivity;->c:I
+
+    const/16 v1, 0xf
+
+    if-le v0, v1, :cond_0
+
+    const/4 v0, 0x4
+
+    :cond_0
+    return v0
+.end method
+
 .method public describeContents()I
     .locals 1
 
@@ -95,48 +86,28 @@
     return v0
 .end method
 
-.method public getConfidence()I
-    .locals 1
-
-    iget v0, p0, Lcom/google/android/gms/location/DetectedActivity;->KT:I
-
-    return v0
-.end method
-
-.method public getType()I
-    .locals 1
-
-    iget v0, p0, Lcom/google/android/gms/location/DetectedActivity;->KS:I
-
-    invoke-direct {p0, v0}, Lcom/google/android/gms/location/DetectedActivity;->bh(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public getVersionCode()I
-    .locals 1
-
-    iget v0, p0, Lcom/google/android/gms/location/DetectedActivity;->wj:I
-
-    return v0
-.end method
-
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v1, "DetectedActivity [type="
+    const-string v0, "DetectedActivity [type="
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/google/android/gms/location/DetectedActivity;->getType()I
+    invoke-virtual {p0}, Lcom/google/android/gms/location/DetectedActivity;->a()I
 
-    move-result v1
+    move-result v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    packed-switch v0, :pswitch_data_0
+
+    :pswitch_0
+    invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -146,7 +117,7 @@
 
     move-result-object v0
 
-    iget v1, p0, Lcom/google/android/gms/location/DetectedActivity;->KT:I
+    iget v1, p0, Lcom/google/android/gms/location/DetectedActivity;->d:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -163,12 +134,67 @@
     move-result-object v0
 
     return-object v0
+
+    :pswitch_1
+    const-string v0, "IN_VEHICLE"
+
+    goto :goto_0
+
+    :pswitch_2
+    const-string v0, "ON_BICYCLE"
+
+    goto :goto_0
+
+    :pswitch_3
+    const-string v0, "ON_FOOT"
+
+    goto :goto_0
+
+    :pswitch_4
+    const-string v0, "STILL"
+
+    goto :goto_0
+
+    :pswitch_5
+    const-string v0, "UNKNOWN"
+
+    goto :goto_0
+
+    :pswitch_6
+    const-string v0, "TILTING"
+
+    goto :goto_0
+
+    :pswitch_7
+    const-string v0, "WALKING"
+
+    goto :goto_0
+
+    :pswitch_8
+    const-string v0, "RUNNING"
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+        :pswitch_4
+        :pswitch_5
+        :pswitch_6
+        :pswitch_0
+        :pswitch_7
+        :pswitch_8
+    .end packed-switch
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    invoke-static {p0, p1, p2}, Lcom/google/android/gms/location/DetectedActivityCreator;->a(Lcom/google/android/gms/location/DetectedActivity;Landroid/os/Parcel;I)V
+    invoke-static {p0, p1}, Lcom/google/android/gms/location/c;->a(Lcom/google/android/gms/location/DetectedActivity;Landroid/os/Parcel;)V
 
     return-void
 .end method

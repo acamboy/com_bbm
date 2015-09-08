@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 120
+    .line 123
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +35,7 @@
     .locals 1
 
     .prologue
-    .line 122
+    .line 125
     const/4 v0, 0x0
 
     return v0
@@ -45,7 +45,7 @@
     .locals 1
 
     .prologue
-    .line 126
+    .line 129
     new-instance v0, Ljava/util/NoSuchElementException;
 
     invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
@@ -54,13 +54,16 @@
 .end method
 
 .method public final remove()V
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 130
-    new-instance v0, Ljava/lang/IllegalStateException;
+    .line 133
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+    const-string v1, "no calls to next() since the last call to remove()"
 
-    throw v0
+    invoke-static {v0, v1}, Lcom/google/b/a/m;->b(ZLjava/lang/Object;)V
+
+    .line 134
+    return-void
 .end method

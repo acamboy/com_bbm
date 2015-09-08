@@ -1,12 +1,30 @@
-.class public final Lcom/google/a/a/f;
-.super Ljava/lang/Exception;
+.class public interface abstract Lcom/google/a/a/f;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcom/google/a/a/e;
 
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<ADDITIONA",
+        "L_PARAMETERS::Lcom/google/a/a/k;",
+        "SERVER_PARAMETERS:",
+        "Lcom/google/a/a/h;",
+        ">",
+        "Ljava/lang/Object;",
+        "Lcom/google/a/a/e",
+        "<TADDITIONA",
+        "L_PARAMETERS;",
+        "TSERVER_PARAMETERS;>;"
+    }
+.end annotation
 
-    invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
 
-    return-void
+
+# virtual methods
+.method public abstract c()Landroid/view/View;
 .end method

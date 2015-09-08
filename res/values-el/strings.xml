@@ -225,6 +225,21 @@
     <string name="a_newer_version_of_bbm_is_required">Απαιτείται νεότερη έκδοση του BBM.</string>
     <string name="a_problem_has_occurred_in_bbm">Παρουσιάστηκε πρόβλημα στο BBM. Δοκιμάστε ξανά αργότερα.</string>
     <string name="a_temporary_server_error_has_occurred">Προέκυψε προσωρινό σφάλμα διακομιστή. Προσπαθήστε ξανά.</string>
+    <string name="abc_action_bar_home_description">Πλοήγηση στην αρχική σελίδα</string>
+    <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
+    <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
+    <string name="abc_action_bar_up_description">Πλοήγηση προς τα επάνω</string>
+    <string name="abc_action_menu_overflow_description">Περισσότερες επιλογές</string>
+    <string name="abc_action_mode_done">Τέλος</string>
+    <string name="abc_activity_chooser_view_see_all">Προβολή όλων</string>
+    <string name="abc_activitychooserview_choose_application">Επιλέξτε κάποια εφαρμογή</string>
+    <string name="abc_searchview_description_clear">Διαγραφή ερωτήματος</string>
+    <string name="abc_searchview_description_query">Ερώτημα αναζήτησης</string>
+    <string name="abc_searchview_description_search">Αναζήτηση</string>
+    <string name="abc_searchview_description_submit">Υποβολή ερωτήματος</string>
+    <string name="abc_searchview_description_voice">Φωνητική αναζήτηση</string>
+    <string name="abc_shareactionprovider_share_with">Κοινή χρήση με</string>
+    <string name="abc_shareactionprovider_share_with_application">Κοινή χρήση με %s</string>
     <string name="about">Πληροφορίες</string>
     <string name="about_bbm_pins_message">Το PIN προσδιορίζει με μοναδικό τρόπο τους χρήστες του BBM. Οι χρήστες μπορούν να σας προσκαλέσουν να γίνετε επαφές τους στο BBM, αν τους κοινοποιήσετε το PIN ή τον γραμμικό κώδικα του BBM.</string>
     <string name="about_bbm_pins_title">Πληροφορίες για τα BBM PIN</string>
@@ -235,9 +250,9 @@
     <string name="activity_select_new_admin_title">Νέος διαχειρ.</string>
     <string name="activity_select_new_admin_title_selection">+%1$d Διαχειριστές</string>
     <string name="activity_tap_to_invite_dialog_info">Θέλετε να ενεργοποιήσετε τη ραδιοεπικοινωνία NFC;</string>
-    <string name="activity_tap_to_invite_dialog_no">Όχι</string>
+    <string name="activity_tap_to_invite_dialog_no">@string/no</string>
     <string name="activity_tap_to_invite_dialog_title">Η ραδιοεπικοινωνία NFC είναι απενεργοποιημένη</string>
-    <string name="activity_tap_to_invite_dialog_yes">Ναι</string>
+    <string name="activity_tap_to_invite_dialog_yes">@string/yes</string>
     <string name="activity_tap_to_invite_info">Ευθυγραμμίστε το πίσω μέρος των συσκευών σας. Και οι δύο συσκευές πρέπει να έχουν ενεργοποιημένη τη λειτουργία NFC.</string>
     <string name="ad_block_channel">Αν αποκλείσετε το κανάλι, δεν θα βλέπετε χορηγούμενο περιεχόμενο από αυτό \"%1$s\". Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</string>
     <string name="ad_block_sponsor">Δεν θα βλέπετε χορηγούμενο περιεχόμενο από το \"%1$s\". Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</string>
@@ -248,7 +263,7 @@
     <string name="add_all">Προσθήκη όλων</string>
     <string name="add_channel_post">Προσθήκη δημοσίευσης</string>
     <string name="add_contacts">Πρόσκληση</string>
-    <string name="add_contacts_category_add_to_bbm">Πατήστε για Συνέχεια</string>
+    <string name="add_contacts_category_add_to_bbm">Πατήστε για Προσθήκη</string>
     <string name="add_contacts_category_incoming_ads">Προσκλήσεις με χορηγό</string>
     <string name="add_contacts_category_incoming_bbm">Προσκλήσεις BBM</string>
     <string name="add_contacts_category_incoming_group">Προσκλήσεις ομάδων</string>
@@ -263,13 +278,26 @@
     <string name="allow_comments_on_posts">Να επιτρέπονται σχόλια στις δημοσιεύσεις</string>
     <string name="app_name">BBM</string>
     <string name="app_picker_name">Εφαρμογές</string>
+    <string name="app_store_app_subscribe_notification_dialog_line">Μπορείτε να ενημερώσετε τις επαφές σας ότι μόλις γίνατε χρήστης των πακέτων συνδρομής BBM %1$s.</string>
+    <string name="app_store_app_subscribe_notification_message">Γεια, μόλις έγινα χρήστης των πακέτων συνδρομής BBM %1$s! Μπορείς να γίνεις κι εσύ!!!</string>
+    <string name="app_store_confirmation_screen_feature_offered_line">Η συνδρομή σας προσφέρει τις εξής δυνατότητες:</string>
     <string name="app_store_details_screen_install_button">Εγκατάσταση</string>
     <string name="app_store_details_screen_inventory_not_found">"Δεν είναι δυνατό το άνοιγμα της εφαρμογής.
  Δοκιμάστε ξανά αργότερα."</string>
     <string name="app_store_details_screen_open_button">Άνοιγμα</string>
+    <string name="app_store_details_screen_renew_button">ΑΝΑΝΕΩΣΗ</string>
+    <string name="app_store_details_screen_subscribe_button">Εγγραφή</string>
+    <string name="app_store_details_screen_subscribed_button">Έγινε εγγραφή</string>
     <string name="app_store_invalid_app_id">Αυτό το στοιχείο δεν είναι διαθέσιμο</string>
+    <string name="app_store_subscribed_app_no_ads_description">Με αυτήν τη συνδρομή, δεν θα εμφανίζονται πλέον διαφημίσεις και προσκλήσεις με χορηγό στο BBM.</string>
+    <string name="app_store_subscribed_app_vanity_pin_description">Το Προσαρμοσμένο PIN χρησιμοποιείται όταν προσκαλείτε άλλους χρήστες και για την εμφάνιση του προφίλ. Μόλις οριστεί το Προσαρμοσμένο PIN, ο χρήστης μπορεί να το εξεργαστεί για ένα προκαθορισμένο χρονικό διάστημα. Αλλαγή PIN</string>
+    <string name="app_subscription_thank_you">Ευχαριστούμε. Είστε πλέον συνδρομητής του BBM.</string>
     <string name="approve_comments">Έγκριση σχολίων</string>
     <string name="approve_comments_description">Μπορείτε να αλλάξετε αυτήν την επιλογή από τις ρυθμίσεις καναλιών.</string>
+    <string name="archiving_disabled_message">Ο διαχειριστής απενεργοποίησε τη δυνατότητα αρχειοθέτησης. Οι συνομιλίες δεν αποθηκεύονται πλέον στη συσκευή σας και οι συνομιλίες που αποθηκεύονταν στο παρελθόν δεν είναι πλέον αποθηκευμένες στη συσκευή σας. Για περισσότερες πληροφορίες, επικοινωνήστε με το διαχειριστή.</string>
+    <string name="archiving_disabled_title">Η αρχειοθέτηση είναι απενεργοποιημένη</string>
+    <string name="archiving_enabled_message">Ο διαχειριστής ενεργοποίησε τη δυνατότητα αρχειοθέτησης. Οι συνομιλίες αποθηκεύονται στη συσκευή σας. Για περισσότερες πληροφορίες, επικοινωνήστε με το διαχειριστή.</string>
+    <string name="archiving_enabled_title">Η αρχειοθέτηση είναι ενεργοποιημένη</string>
     <string name="arrived_at_destination">Glympse: Έφτασε στον προορισμό</string>
     <string name="asterisk">*</string>
     <string name="attach">Επισύναψη</string>
@@ -286,15 +314,15 @@
     <string name="attach_list_voicenote">Φωνητική σημείωση</string>
     <string name="audio_player_pause">Παύση</string>
     <string name="audio_player_play">Αναπαραγωγή</string>
-    <string name="auth_client_needs_enabling_title">Μια εφαρμογή απαιτεί τις Υπηρεσίες Google Play για ενεργοποίηση.</string>
-    <string name="auth_client_needs_installation_title">Μια εφαρμογή απαιτεί την εγκατάσταση των Υπηρεσιών Google Play.</string>
-    <string name="auth_client_needs_update_title">Μια εφαρμογή απαιτεί μια ενημέρωση για τις Υπηρεσίες Google Play.</string>
-    <string name="auth_client_play_services_err_notification_msg">Σφάλμα υπηρεσιών Google Play</string>
-    <string name="auth_client_requested_by_msg">Υποβλήθηκε αίτημα από την εφαρμογή %1$s</string>
-    <string name="auth_client_using_bad_version_title">Απόπειρα χρήσης ακατάλληλης έκδοσης Υπηρεσιών Google Play από εφαρμογή</string>
+    <string name="autopassphrase_completed">Αυτή η συνομιλία είναι πλέον BBM Protected.</string>
+    <string name="autopassphrase_failed">Δεν ήταν δυνατή η ρύθμιση του BBM Protected.</string>
+    <string name="autopassphrase_initiated">Δημιουργία συνομιλίας BBM Protected.</string>
+    <string name="autopassphrase_retry">Επανάληψη</string>
     <string name="avatar_file_not_support">Το αρχείο δεν υποστηρίζεται.</string>
     <string name="back">Πίσω</string>
     <string name="backup_file_is_not_valid">Το αρχείο αντιγράφου ασφαλείας δεν είναι έγκυρο. Πρέπει να βγείτε από τη ρύθμιση BBM και να χρησιμοποιήσετε το βοηθητικό πρόγραμμα εναλλαγής συσκευών στο BlackBerry Desktop Software.</string>
+    <string name="badge_on_your_avatar">Σήμα avatar</string>
+    <string name="badge_on_your_avatar_description">Μόλις ενεργοποιηθεί η συνδρομή BBM, θα εμφανιστεί ένα σήμα στο avatar σας...</string>
     <string name="barcode_info">Μια επαφή μπορεί να πραγματοποιήσει σάρωση του γραμμικού κώδικά σας και να σας προσθέσει στο BBM</string>
     <string name="bbm_account_name">BBM</string>
     <string name="bbm_account_user_name">BBM Groups</string>
@@ -310,7 +338,9 @@
     <string name="bbm_service_running">Συνδέθηκε</string>
     <string name="bbm_setup">Ρύθμιση ΒΒΜ</string>
     <string name="bbm_share_with_pin_uri">http://www.bbm.com/share/?BBMID=%1$s</string>
-    <string name="bbm_voice_ongoing_call">Βρίσκομαι στο τηλέφωνο</string>
+    <string name="bbm_voice_ongoing_call">Σε κλήση στο BBM</string>
+    <string name="billing_google_error_message_body">Αυτό το στοιχείο έχει αγοραστεί ήδη για κάποιο άλλο BlackBerry ID με το λογαριασμό σας στο κατάστημα. Δοκιμάστε να χρησιμοποιήσετε έναν άλλο λογαριασμό καταστήματος.</string>
+    <string name="billing_google_error_message_title">Δεν είναι δυνατή η αγορά</string>
     <string name="blackberry_channels"><b>BBM Channels</b></string>
     <string name="blackberry_id">BBID</string>
     <string name="blackberry_id_is_not_responding">Το BlackBerry ID δεν ανταποκρίνεται.</string>
@@ -573,6 +603,7 @@
     <string name="chat_history_missed_video_chat">Αναπάντητη βιντεοκλήση από το χρήστη &lt;b>%1$s&lt;/b></string>
     <string name="chat_history_missed_voice_chat">Αναπάντητη φωνητική κλήση από το χρήστη &lt;b>%1$s&lt;/b></string>
     <string name="chats">Συνομιλίες</string>
+    <string name="chats_block_chat">Αποκλεισμός αυτής της συνομιλίας</string>
     <string name="chats_empty_chat">Κενή συνομιλία</string>
     <string name="chats_end_chat">Τερματισμός συνομιλίας</string>
     <string name="chats_end_discussion">Τερματισμός συζήτησης</string>
@@ -581,35 +612,56 @@
     <string name="chats_open_group">Άνοιγμα ομάδας</string>
     <string name="chats_select_more">Επιλέξτε περισσότερα</string>
     <string name="chats_start_video">Έναρξη βιντεοσυνομιλίας</string>
-    <string name="chats_status_no_chats">Πατήστε την επάνω γωνία για να ξεκινήσετε μια συνομιλία.</string>
+    <string name="chats_status_no_chats">Για να ξεκινήσετε μια συνομιλία, πατήστε το κουμπί συνομιλίας στο κάτω μέρος της οθόνης.</string>
+    <string name="chats_status_no_chats_widget">Πατήστε την επάνω γωνία για να ξεκινήσετε μια συνομιλία.</string>
     <string name="chats_view_bbm_profile">Προβολή προφίλ BBM</string>
     <string name="click_to_expire">Κάντε κλικ εδώ για να τερματίσετε το Glympse σας</string>
     <string name="click_to_reply">Κάντε κλικ εδώ για να απαντήσετε...</string>
     <string name="click_to_view">Κάντε κλικ εδώ για να το δείτε...</string>
     <string name="close">Κλείσιμο</string>
+    <string name="cloud_directory_contact_add_coworkers">Εύρεση συναδέλφων</string>
+    <string name="cloud_directory_contact_chat_failed">Δεν είναι δυνατή η εκκίνηση συνομιλίας BBM με αυτόν το συνάδελφο. Δοκιμάστε ξανά αργότερα.</string>
+    <string name="cloud_directory_fields_info">Οι συνάδελφοί σας μπορούν να δουν αυτό το όνομα όταν αναζητούν άτομα στο BBM.</string>
+    <string name="cloud_directory_pin_lookup">Πραγματοποιείται αίτημα για στοιχεία επικοινωνίας.</string>
+    <string name="cloud_directory_search_failed">Δεν είναι δυνατή η αναζήτηση συναδέλφων. Δοκιμάστε ξανά αργότερα.</string>
+    <string name="cloud_directory_search_more_results">Η αναζήτησή σας επέστρεψε υπερβολικά πολλά αποτελέσματα. Δοκιμάστε να περιορίσετε την αναζήτησή σας.</string>
+    <string name="cloud_directory_search_text_min_length">Η αναζήτησή σας για συναδέλφους πρέπει να περιέχει τουλάχιστον 2 χαρακτήρες.</string>
+    <string name="cloud_directory_service_hint">Απαιτούμενα πεδία. Βεβαιωθείτε ότι εισαγάγετε το πραγματικό όνομά σας. Οι συνάδελφοί σας μπορούν να σας αναζητήσουν ανά όνομα και να ξεκινήσουν συνομιλίες BBM μαζί σας.</string>
     <string name="coming_soon">"Αυτή η λειτουργία δεν είναι διαθέσιμη αυτή τη στιγμή
 Θα διατεθεί σύντομα"</string>
     <string name="coming_soon_title">Σύντομα διαθέσιμο!</string>
     <string name="comment_copied">Το σχόλιο αντιγράφηκε</string>
     <string name="comments_disabled_label">Απενεργοποίηση σχολίων</string>
+    <string name="common_android_wear_notification_needs_update_text">Η εφαρμογή %1$s απαιτεί την ενημέρωση της εφαρμογής Android Wear.</string>
+    <string name="common_android_wear_update_text">Η εφαρμογή %1$s δεν θα εκτελεστεί εάν δεν ενημερώσετε την εφαρμογή Android Wear.</string>
+    <string name="common_android_wear_update_title">Ενημέρωση Android Wear</string>
+    <string name="common_google_play_services_api_unavailable_text">Η εφαρμογή %1$s απαιτεί μία ή περισσότερες υπηρεσίες του Google Play που δεν είναι διαθέσιμες προς το παρόν. Επικοινωνήστε με τον προγραμματιστή για βοήθεια.</string>
     <string name="common_google_play_services_enable_button">Ενεργοπ. υπηρεσιών Google Play</string>
-    <string name="common_google_play_services_enable_text">Αυτή η εφαρμογή δεν θα λειτουργήσει εάν δεν έχετε ενεργοποιήσει τις υπηρεσίες Google Play.</string>
+    <string name="common_google_play_services_enable_text">Η εφαρμογή %1$s δεν θα λειτουργήσει εάν δεν έχετε ενεργοποιήσει τις Υπηρεσίες Google Play.</string>
     <string name="common_google_play_services_enable_title">Ενεργοποίηση υπηρεσιών Google Play</string>
+    <string name="common_google_play_services_error_notification_requested_by_msg">Υποβλήθηκε αίτημα από την εφαρμογή %1$s</string>
     <string name="common_google_play_services_install_button">Λήψη υπηρεσιών Google Play</string>
-    <string name="common_google_play_services_install_text_phone">Αυτή η εφαρμογή δεν θα εκτελεστεί χωρίς τις υπηρεσίες Google Play, οι οποίες λείπουν από το τηλέφωνό σας.</string>
-    <string name="common_google_play_services_install_text_tablet">Αυτή η εφαρμογή δεν θα εκτελεστεί χωρίς τις υπηρεσίες Google Play, οι οποίες λείπουν από το tablet σας.</string>
+    <string name="common_google_play_services_install_text_phone">Η εφαρμογή %1$s δεν θα εκτελεστεί χωρίς τις Υπηρεσίες Google Play, οι οποίες λείπουν από το τηλέφωνό σας.</string>
+    <string name="common_google_play_services_install_text_tablet">Η εφαρμογή %1$s δεν θα εκτελεστεί χωρίς τις Υπηρεσίες Google Play, οι οποίες λείπουν από το tablet σας.</string>
     <string name="common_google_play_services_install_title">Λήψη υπηρεσιών Google Play</string>
     <string name="common_google_play_services_invalid_account_text">Ο συγκεκριμένος λογαριασμός δεν υπάρχει σε αυτήν τη συσκευή. Επιλέξτε έναν διαφορετικό λογαριασμό.</string>
     <string name="common_google_play_services_invalid_account_title">Μη έγκυρος λογαριασμός</string>
+    <string name="common_google_play_services_needs_enabling_title">Μια εφαρμογή απαιτεί την ενεργοποίηση των Υπηρεσιών Google Play.</string>
     <string name="common_google_play_services_network_error_text">Απαιτείται σύνδεση δεδομένων για να συνδεθείτε με τις Υπηρεσίες Google Play.</string>
     <string name="common_google_play_services_network_error_title">Σφάλμα δικτύου</string>
+    <string name="common_google_play_services_notification_needs_update_title">Μια εφαρμογή απαιτεί την ενημέρωση των Υπηρεσιών Google Play.</string>
+    <string name="common_google_play_services_notification_ticker">Σφάλμα Υπηρεσιών Google Play</string>
+    <string name="common_google_play_services_sign_in_failed_text">Σφάλμα κατά τη σύνδεση στον συγκεκριμένο λογαριασμό. Επιλέξτε έναν διαφορετικό λογαριασμό.</string>
+    <string name="common_google_play_services_sign_in_failed_title">Η σύνδεση απέτυχε</string>
     <string name="common_google_play_services_unknown_issue">Άγνωστο πρόβλημα με τις υπηρεσίες Google Play.</string>
-    <string name="common_google_play_services_unsupported_date_text">Η ημερομηνία στη συσκευή φαίνεται λανθασμένη. Ελέγξτε την ημερομηνία στη συσκευή.</string>
-    <string name="common_google_play_services_unsupported_text">Οι υπηρεσίες Google Play, στις οποίες βασίζονται ορισμένες από τις εφαρμογές σας, δεν υποστηρίζονται στη συσκευή σας. Επικοινωνήστε με τον κατασκευαστή για υποστήριξη.</string>
+    <string name="common_google_play_services_unsupported_text">Η εφαρμογή %1$s βασίζεται στις Υπηρεσίες Google Play, οι οποίες δεν υποστηρίζονται από τη συσκευή σας. Επικοινωνήστε με τον κατασκευαστή για βοήθεια.</string>
     <string name="common_google_play_services_unsupported_title">Υπηρεσίες Google Play</string>
     <string name="common_google_play_services_update_button">Ενημέρωση</string>
-    <string name="common_google_play_services_update_text">Αυτή η εφαρμογή θα εκτελεστεί αφού ενημερώσετε τις υπηρεσίες Google Play.</string>
+    <string name="common_google_play_services_update_text">Η εφαρμογή %1$s θα εκτελεστεί αφού ενημερώσετε τις Υπηρεσίες Google Play.</string>
     <string name="common_google_play_services_update_title">Ενημέρωση υπηρεσιών Google Play</string>
+    <string name="common_google_play_services_updating_text">Η εφαρμογή %1$s δεν θα εκτελεστεί χωρίς τις Υπηρεσίες Google Play, οι οποίες ενημερώνονται αυτήν τη στιγμή.</string>
+    <string name="common_google_play_services_updating_title">Ενημέρωση των Υπηρεσιών Google Play</string>
+    <string name="common_open_on_phone">Άνοιγμα στο τηλέφωνο</string>
     <string name="common_signin_button_text">Σύνδεση</string>
     <string name="common_signin_button_text_long">Συνδεθείτε στο Google</string>
     <string name="complete">Ολοκληρώθηκε</string>
@@ -618,8 +670,10 @@
     <string name="contact_add_category">Προσθήκη κατηγορίας</string>
     <string name="contact_add_category_already_exists">Αυτή η κατηγορία υπάρχει ήδη.</string>
     <string name="contact_add_category_hint">Εισαγωγή τίτλου κατηγορίας</string>
-    <string name="contact_add_notification">Προστέθηκε χρήστης</string>
+    <string name="contact_add_notification">Η επαφή προστέθηκε</string>
     <string name="contact_delete_category">Διαγραφή κατηγορίας</string>
+    <string name="contact_delete_notification">Επαφή διαγράφηκε</string>
+    <string name="contact_delete_notification_multiple">%1$d επαφές διαγράφηκαν</string>
     <string name="contact_details">Στοιχεία επαφής</string>
     <string name="contact_details_description">Συμπεριλάβετε αριθμό τηλεφώνου, διεύθυνση email ή τοποθεσία Web.</string>
     <string name="contact_is_blocked">Η επαφή είναι αποκλεισμένη</string>
@@ -631,6 +685,8 @@
     <string name="contacts_are_blocked">Οι επαφές είναι αποκλεισμένες</string>
     <string name="contacts_count">0</string>
     <string name="contacts_delete_contact">Διαγραφή %1$s</string>
+    <string name="contacts_dialog_delete_and_block_info">Όλες οι μελλοντικές προσκλήσεις και συνομιλίες από το χρήστη %1$s θα αποκλειστούν. Θέλετε να διαγράψετε και να αποκλείσετε το χρήστη %1$s;</string>
+    <string name="contacts_dialog_delete_and_block_title">Διαγραφή και αποκλεισμός %1$s</string>
     <string name="contacts_dialog_delete_block_info">Ο χρήστης %1$s θα προστεθεί στη Λίστα αποκλεισμένων</string>
     <string name="contacts_dialog_delete_block_label">Αποκλ. μελλοντ. προσκλ.</string>
     <string name="contacts_dialog_delete_multi_block_info">Οι επαφές θα προστεθούν στη Λίστα αποκλεισμένων σας</string>
@@ -655,20 +711,25 @@
     <string name="contents_sms">Διεύθνση SMS</string>
     <string name="contents_text">Απλό κείμενο</string>
     <string name="context_menu_copy_message">Αντιγραφή μηνύματος</string>
+    <string name="context_menu_quote_message">Παράθεση μηνύματος</string>
     <string name="context_menu_recall_message">Αναίρεση μηνύματος</string>
     <string name="context_menu_resend_message">Επανάληψη αποστολής μηνύματος</string>
+    <string name="conversation_activity_block_chat_warning_message">Αν αποκλείσετε τη συνομιλία, θα σταματήσετε να λαμβάνετε νέα μηνύματα που αποστέλλονται σε αυτήν τη συνομιλία.</string>
+    <string name="conversation_activity_block_chat_warning_title">Να αποκλειστεί η συνομιλία;</string>
     <string name="conversation_activity_end_chat_on_voice_warning_message">Η κλήση σας θα τερματιστεί και τυχόν μηνύματα συνομιλιών θα διαγραφούν.</string>
     <string name="conversation_activity_end_chat_warning_message">Εάν τερματίσετε τη συνομιλία, όλα τα μηνύματα θα διαγραφούν.</string>
     <string name="conversation_activity_end_chat_warning_title">Τερματισμός συνομιλίας;</string>
+    <string name="conversation_activity_leave_chat_warning_message">Αν αποχωρήσετε από τη συνομιλία, όλα τα μηνύματα θα διαγραφούν.</string>
+    <string name="conversation_activity_leave_chat_warning_title">Αποχώρηση από τη συνομιλία;</string>
     <string name="conversation_activity_reinvite_accepted">Έγινε αποδοχή της πρόσκλησης</string>
     <string name="conversation_activity_reinvite_sent">Η πρόσκληση εστάλη</string>
-    <string name="conversation_are_already_in_the_chat">Οι χρήστες &lt;b>%1$s&lt;/b> συμμετέχουν ήδη στη συνομιλία</string>
+    <string name="conversation_are_already_in_the_chat">Οι χρήστες %1$s συμμετέχουν ήδη στη συνομιλία</string>
     <string name="conversation_bubble_dropbox_caption">Αυτός είναι ένας σύνδεσμος για το στοιχείο %1$s στο Dropbox μου</string>
     <string name="conversation_button_dropbox_download">Λήψη</string>
     <string name="conversation_button_toast_attachment_deleted">Το συνημμένο διαγράφηκε</string>
     <string name="conversation_button_toast_ref_content_deleted">Το αναφερόμενο περιεχόμενο διαγράφηκε</string>
     <string name="conversation_button_toast_undo">Αναίρεση</string>
-    <string name="conversation_button_view_glympse">Εμφάνιση χάρτη</string>
+    <string name="conversation_button_view_glympse">ΕΜΦΑΝΙΣΗ ΧΑΡΤΗ</string>
     <string name="conversation_email_chat_subject_multiple_participants">Συνομιλία με το χρήστη %1$s,%2$s και άλλους στο %3$s</string>
     <string name="conversation_email_chat_subject_three_participants">Συνομιλία με το χρήστη %1$s και %2$s στο %3$s</string>
     <string name="conversation_email_chat_subject_two_participants">Συνομιλία με το χρήστη %1$s στο %2$s</string>
@@ -678,30 +739,36 @@
     <string name="conversation_file_transfert">Έγινε λήψη αρχείου</string>
     <string name="conversation_file_transfert_canceled_dialog_title">Η μεταφορά αρχείου ακυρώθηκε</string>
     <string name="conversation_file_transfert_canceled_dialog_too_large">Το %1$s είναι υπερβολικά μεγάλο. Το μέγιστο μέγεθος αρχείου είναι 16 MB.</string>
-    <string name="conversation_incoming_invite_req">Ο χρήστης &lt;b>%1$s&lt;/b> θα ήθελε να προσκαλέσει τον χρήστη &lt;b>%2$s&lt;/b> στη συνομιλία</string>
+    <string name="conversation_groups_alt_picture_sent">Έγινε κοινή χρήση εικόνας</string>
+    <string name="conversation_groups_alt_sticker_sent">Έγινε κοινή χρήση αυτοκόλλητου</string>
+    <string name="conversation_incoming_invite_req">Ο χρήστης %1$s θα ήθελε να προσκαλέσει τον χρήστη %2$s στη συνομιλία</string>
     <string name="conversation_incoming_invite_req_accepted">Προσθέσατε το χρήστη <b>%1$s</b></string>
-    <string name="conversation_incoming_invite_req_denied">Απορρίψατε την αίτηση του χρήστη &lt;b>%1$s&lt;/b> να προσκαλέσει το χρήστη &lt;b>%2$s&lt;/b></string>
-    <string name="conversation_invite_accept_button">Να επιτρέπεται</string>
-    <string name="conversation_invite_reject_button">Απόρριψη</string>
-    <string name="conversation_invited">Ο χρήστης &lt;b>%1$s&lt;/b> δέχτηκε την αίτησή σας να προσκαλέσετε το χρήστη &lt;b>%2$s&lt;/b></string>
-    <string name="conversation_is_already_in_the_chat">Ο χρήστης &lt;b>%1$s&lt;/b> συμμετέχει ήδη στη συνομιλία</string>
+    <string name="conversation_incoming_invite_req_denied">Απορρίψατε την αίτηση του χρήστη %1$s να προσκαλέσει το χρήστη %2$s</string>
+    <string name="conversation_invite_accept_button">ΑΠΟΔΟΧΗ</string>
+    <string name="conversation_invite_reject_button">ΑΡΝΗΣΗ</string>
+    <string name="conversation_invited">Ο χρήστης %1$s δέχτηκε το αίτημά σας να προσκαλέσετε το χρήστη %2$s</string>
+    <string name="conversation_is_already_in_the_chat">Ο χρήστης %1$s συμμετέχει ήδη στη συνομιλία</string>
     <string name="conversation_is_writing_a_message">γράφει ένα μήνυμα...</string>
-    <string name="conversation_joined_the_chat">Ο χρήστης &lt;b>%1$s&lt;/b> εισήλθε στη συνομιλία</string>
-    <string name="conversation_left_the_chat">Ο χρήστης &lt;b>%1$s&lt;/b> αποχώρησε από τη συνομιλία</string>
+    <string name="conversation_joined_the_chat">Ο χρήστης %1$s εισήλθε στη συνομιλία</string>
+    <string name="conversation_left_the_chat">Ο χρήστης %1$s αποχώρησε από τη συνομιλία</string>
     <string name="conversation_location_message_accurace_within">Ακριβές εντός %1$s μ.</string>
     <string name="conversation_location_received">Έγινε λήψη θέσης</string>
     <string name="conversation_location_sent">Η θέση εστάλη</string>
+    <string name="conversation_message_edit_title">Επεξεργασία μηνύματος</string>
+    <string name="conversation_message_editing">Επεξεργασία: %1$s</string>
+    <string name="conversation_message_editing_removed">Το επεξεργασμένο μήνυμα διαγράφηκε</string>
     <string name="conversation_message_recall_failed">Δεν ήταν δυνατή η αναίρεση του μηνύματος</string>
     <string name="conversation_message_recall_pending">Γίνεται αναίρεση του μηνύματος</string>
     <string name="conversation_message_recalled">Το μήνυμα αναιρέθηκε</string>
-    <string name="conversation_must_reinvite">ο χρήστης %1$s δεν σας έχει στις επαφές του. Θέλετε να προσκαλέσετε ξανά τον χρήστη %1$s;</string>
+    <string name="conversation_mpc_header">Συνομιλία</string>
+    <string name="conversation_must_reinvite">Δεν είστε στις επαφές του χρήστη %1$s. Θέλετε να προσκαλέσετε ξανά το χρήστη %1$s;</string>
     <string name="conversation_notification_calendar_received">Έγινε λήψη ραντεβού</string>
     <string name="conversation_notification_calendar_sent">Το ραντεβού εστάλη</string>
-    <string name="conversation_notification_conf_incoming_invite_req">Ο χρήστης &lt;b>%1$s&lt;/b> ζήτησε να προσκαλέσει κάποιον στη συνομιλία</string>
-    <string name="conversation_notification_conf_invited">Ο χρήστης &lt;b>%1$s&lt;/b> προσκλήθηκε στη συνομιλία</string>
-    <string name="conversation_notification_conf_outgoing_invite_req">Έχετε προσκαλέσει το χρήστη &lt;b>%1$s&lt;/b> στη συνομιλία</string>
-    <string name="conversation_notification_conf_outgoing_invite_req_denied">Το αίτημά σας για πρόσκληση του χρήστη &lt;b>%1$s&lt;/b> απορρίφθηκε</string>
-    <string name="conversation_notification_conf_we_joined">Ο χρήστης &lt;b>%1$s&lt;/b> σας προσκάλεσε στη συνομιλία</string>
+    <string name="conversation_notification_conf_incoming_invite_req">Ο χρήστης %1$s ζήτησε να προσκαλέσει κάποιον στη συνομιλία</string>
+    <string name="conversation_notification_conf_invited">Ο χρήστης %1$s προσκλήθηκε στη συνομιλία</string>
+    <string name="conversation_notification_conf_outgoing_invite_req">Έχετε προσκαλέσει το χρήστη %1$s στη συνομιλία</string>
+    <string name="conversation_notification_conf_outgoing_invite_req_denied">Το αίτημά σας για πρόσκληση του χρήστη %1$s απορρίφθηκε</string>
+    <string name="conversation_notification_conf_we_joined">Ο χρήστης %1$s σας προσκάλεσε στη συνομιλία</string>
     <string name="conversation_notification_contact_card_received">Ελήφθη κάρτα επαφής</string>
     <string name="conversation_notification_contact_card_sent">Εστάλη κάρτα επαφής</string>
     <string name="conversation_notification_default_incomming">Έγινε λήψη μηνύματος</string>
@@ -719,16 +786,17 @@
     <string name="conversation_notification_sticker_sent">Εστάλη αυτοκόλλητο</string>
     <string name="conversation_notification_voice_note_received">Ελήφθη φωνητική σημείωση</string>
     <string name="conversation_notification_voice_note_sent">Εστάλη φωνητική σημείωση</string>
-    <string name="conversation_outgoing_invite_req">Η αίτηση πρόσκλησης του χρήστη &lt;b>%1$s&lt;/b> έχει σταλεί στο χρήστη &lt;b>%2$s&lt;/b></string>
-    <string name="conversation_outgoing_invite_req_denied">Ο χρήστης &lt;b>%1$s&lt;/b> απέρριψε την αίτηση σας να προσκαλέσετε τον χρήστη &lt;b>%2$s&lt;/b></string>
+    <string name="conversation_outgoing_invite_req">Η αίτηση πρόσκλησης του χρήστη %1$s έχει σταλεί στο χρήστη %2$s</string>
+    <string name="conversation_outgoing_invite_req_denied">Ο χρήστης %1$s απέρριψε την αίτησή σας να προσκαλέσετε το χρήστη %2$s</string>
     <string name="conversation_picture">Ελήφθη εικόνα</string>
     <string name="conversation_ping">PING!!!</string>
-    <string name="conversation_reinvite_accept_button">Επανάληψη πρόσκλησης</string>
-    <string name="conversation_reinvite_reject_button">Διαγραφή επαφής</string>
+    <string name="conversation_reinvite_accept_button">ΕΠΑΝΑΛΗΨΗ ΠΡΟΣΚΛΗΣΗΣ</string>
+    <string name="conversation_reinvite_reject_button">ΔΙΑΓΡΑΦΗ ΕΠΑΦΗΣ</string>
     <string name="conversation_send_button">Αποστολή</string>
     <string name="conversation_share_max_participants">Υπερβολικά μεγάλος αριθμός συμμετεχόντων (ο μέγιστος αριθμός είναι %1$s).</string>
     <string name="conversation_successfully_saved_picture">Η εικόνα αποθηκεύτηκε επιτυχώς</string>
     <string name="conversation_successfully_saved_voice_note">Η φωνητική σημείωση αποθηκεύτηκε επιτυχώς</string>
+    <string name="conversation_toast_blocked_chat">Αποκλείσατε τη συνομιλία. Όλα τα μηνύματα διαγράφηκαν.</string>
     <string name="conversation_toast_ended_chat">Η συνομιλία τερματίστηκε</string>
     <string name="conversation_toast_ended_chat_no_history">Η συνομιλία ολοκληρώθηκε Όλα τα μηνύματα διαγράφηκαν.</string>
     <string name="conversation_toast_left_chat">Αποχωρήσατε από τη συνομιλία</string>
@@ -736,7 +804,7 @@
     <string name="conversation_unable_to_save_picture">Δεν είναι δυνατή η αποθήκευση της εικόνας</string>
     <string name="conversation_unable_to_save_voice_note">Δεν είναι δυνατή η αποθήκευση της φωνητικής σημείωσης</string>
     <string name="conversation_voice_note_transfert">Έγινε λήψη φωνητικής σημείωσης</string>
-    <string name="conversation_you_invited">Προσκαλέσατε το χρήστη &lt;b>%1$s&lt;/b> στη συνομιλία</string>
+    <string name="conversation_you_invited">Προσκαλέσατε το χρήστη %1$s στη συνομιλία</string>
     <string name="conversation_you_joined_the_chat">Έχετε εισέλθει στη συνομιλία</string>
     <string name="copied_group_passphrase">Η φράση πρόσβασης αντιγράφηκε</string>
     <string name="copied_group_passphrase_toast">Αντιγράφηκε στο πρόχειρο</string>
@@ -751,6 +819,26 @@
     <string name="creating_channel_toast_string">Γίνεται δημιουργία καναλιού</string>
     <string name="creating_private_channel_confirmation">Αυτή η ενέργεια δεν μπορεί να αναιρεθεί. Θέλετε σίγουρα να κάνετε αυτό το κανάλι ιδιωτικό;</string>
     <string name="current">Τρέχουσα</string>
+    <string name="custom_pin_activity_title">Προσαρμ. PIN</string>
+    <string name="custom_pin_already_set">Έχετε δημιουργήσει ήδη ένα προσαρμοσμένο PIN.</string>
+    <string name="custom_pin_confirm_postivie_text">Είναι σωστό</string>
+    <string name="custom_pin_confirm_text">Αυτό το κείμενο θα είναι το προσαρμοσμένο PIN σας για το BBM. Είναι σωστό;</string>
+    <string name="custom_pin_friends_ad_link">Επισκεφτείτε το Κατάστημα BBM.</string>
+    <string name="custom_pin_friends_ad_text">Αποκτήστε τώρα το δικό σας προσαρμοσμένο PIN στο BBM:</string>
+    <string name="custom_pin_get_your_custom_pin">Αποκτήστε τώρα το δικό σας προσαρμοσμένο PIN στο BBM: Επισκεφτείτε το κατάστημα BBM</string>
+    <string name="custom_pin_hint_text">Εισαγάγετε ένα προσαρμοσμένο PIN</string>
+    <string name="custom_pin_legal">"Ήρθε η ώρα να δημιουργήσετε το δικό σας προσαρμοσμένο PIN. Μη βιαστείτε, γιατί δεν θα μπορείτε να το αλλάξετε αργότερα. Το προσαρμοσμένο PIN συνδέεται με το BBM όσο είναι ενεργή η συνδρομή σας.
+
+Οδηγίες:
+* Πρέπει να αποτελείται από 6 έως 8 χαρακτήρες
+* Μπορεί να περιέχει αριθμούς, γράμματα, χαρακτήρες υπογράμμισης, παύλες
+* Πρέπει να περιλαμβάνει έναν χαρακτήρα υπογράμμισης, μια παύλα ή ένα γράμμα μεταξύ G και Z"</string>
+    <string name="custom_pin_not_subscribed">Προσαρμογή του PIN</string>
+    <string name="custom_pin_share_to_feed_body">Μπορείτε να ενημερώσετε τις επαφές σας ότι μόλις αποκτήσατε το προσαρμοσμένο PIN: %1$s</string>
+    <string name="custom_pin_shared_feed_item">Μόλις απόκτησα ένα νέο προσαρμοσμένο PIN στο BBM: %1$s. Για να προσαρμόσετε το PIN σας, πατήστε http://shop.bbm.com/item/custom_pin</string>
+    <string name="custom_pin_terms_conditions">&lt;p>&lt;b>Οδηγίες προσαρμοσμένων PIN BBM&lt;/b>&lt;/p> &lt;p>Τα προσαρμοσμένα PIN είναι ένας διασκεδαστικός τρόπος για να εξατομικεύσετε το λογαριασμό σας στο BBM. Το προσαρμοσμένο PIN δεν αντικαθιστά το τρέχον PIN σας (δείτε \"Τι είναι το PIN;\" στις συνήθεις ερωτήσεις της τοποθεσίας web www.bbm.com για περισσότερες πληροφορίες σχετικά με τα κανονικά PIN), αλλά είναι ένα δεύτερο PIN που εμφανίζεται στο προφίλ σας στο BBM και μπορεί να χρησιμοποιηθεί για την πρόσκληση και τη λήψη προσκλήσεων από άλλους χρήστες του BBM.&lt;/p> &lt;p>Όταν δημιουργείτε ένα προσαρμοσμένο PIN πρέπει να έχετε υπόψη σας τα εξής:&lt;/p> &lt;p>&amp;#8226 Δεν μπορείτε να επιλέξετε ένα προσαρμοσμένο PIN που χρησιμοποιεί κάποιος άλλος.&lt;/p> &lt;p>&amp;#8226 Αν η συνδρομή σας δεν ανανεωθεί πριν από τη λήξη της, δεν θα έχετε πλέον τη δυνατότητα να χρησιμοποιήσετε το προσαρμοσμένο PIN σας και θα είναι πλέον διαθέσιμο σε άλλους συνδρομητές.&lt;/p> &lt;p>&amp;#8226 Επιλέξτε προσεκτικά το προσαρμοσμένο PIN σας. Όταν δημιουργηθεί το προσαρμοσμένο PIN, δεν θα είναι δυνατή η αλλαγή του όσο διαρκεί η συνδρομή σας.&lt;/p> &lt;p>&amp;#8226 Τα προσαρμοσμένα PIN έχουν τις εξής απαιτήσεις ώστε να ξεχωρίζουν από τα κανονικά PIN του BBM: &lt;/p> &lt;p> - πρέπει να αποτελούνται από 6 έως 8 χαρακτήρες,&lt;/p> &lt;p> - μπορούν να περιλαμβάνουν αριθμούς, γράμματα, χαρακτήρες υπογράμμισης και παύλες,&lt;/p> &lt;p> - πρέπει να περιλαμβάνουν έναν χαρακτήρα υπογράμμισης, μια παύλα ή ένα γράμμα μεταξύ G και Z.&lt;/p> &lt;p>&amp;#8226 Τα προσαρμοσμένα PIN δεν επιτρέπεται να περιλαμβάνουν προσβλητικές, δυσφημιστικές, συκοφαντικές, χυδαίες, άσεμνες, παράνομες ή παραπλανητικές εκφράσεις, ούτε να χρησιμοποιούνται για οποιονδήποτε παράνομο σκοπό.&lt;/p> &lt;p>&amp;#8226 Δεν επιτρέπεται η χρήση των προσαρμοσμένων PIN με σκοπό την πλαστοπροσωπία την ψευδή εκπροσώπηση άλλων ατόμων, επωνυμιών, οργανισμών ή εκδηλώσεων ή με σκοπό την παραπλάνηση, τη σύγχυση ή την εξαπάτηση άλλων ατόμων.&lt;/p> &lt;p>&amp;#8226 Τα προσαρμοσμένα PIN δεν πρέπει να καταστρατηγούν ή να παραβιάζουν τα δικαιώματα, συμπεριλαμβανομένων των δικαιωμάτων πνευματικής ιδιοκτησίας, οποιουδήποτε ατόμου, επωνυμίας, οργανισμού ή εκδήλωσης. Για παράδειγμα, το προσαρμοσμένο PIN σας δεν επιτρέπεται να παραβιάζει τα κατοχυρωμένα εμπορικά σήματα ενός άλλου ατόμου ή οντότητας.&lt;/p> &lt;p>&amp;#8226 Η BlackBerry διατηρεί το δικαίωμα απόρριψης, κατάργησης ή/και απόσυρσης οποιουδήποτε προσαρμοσμένου PIN, ανά πάσα στιγμή και για οποιονδήποτε λόγο, στα πλαίσια των ισχυόντων όρων αφοράς/πολιτικών επιστροφής χρημάτων.&lt;/p></string>
+    <string name="custom_pin_title">Προσαρμοσμένο PIN:</string>
+    <string name="custom_pin_warning_on_repurchase">Για να διατηρήσετε το τρέχον προσαρμοσμένο PIN σας, ενδεχομένως να χρειαστεί να αγοράσετε νέα συνδρομή και στη συνέχεια να ακυρώσετε την παλαιά συνδρομή σας. Για περισσότερες πληροφορίες, επισκεφθείτε τη διεύθυνση: %1$s</string>
     <string name="date">Ημερομηνία</string>
     <string name="date_of_birth"><b>Ημερομηνία γέννησης</b></string>
     <string name="date_of_birth_fail_age_limit">Δεν έχετε την απαιτούμενη ηλικία για να χρησιμοποιήσετε τα BBM Channel.</string>
@@ -777,6 +865,7 @@
     <string name="dialog_invite_security_question_tip">Συμβουλή: Στις απαντήσεις, υπάρχει διάκριση πεζών-κεφαλαίων γραμμάτων.</string>
     <string name="dialog_invite_security_question_title">Ερώτηση ασφαλείας</string>
     <string name="did_you_know">Γνωρίζετε ότι;</string>
+    <string name="different_platform_string">Διαθέτετε συνδρομή με αυτόματη ανανέωση, η οποία αγοράστηκε σε κάποια άλλη συσκευή. Να δημιουργηθεί συνδρομή σε αυτήν τη συσκευή;</string>
     <string name="discard">Απόρριψη</string>
     <string name="display_name"><i>Εμφανιζόμενο όνομα</i></string>
     <string name="do_you_want_to_switch_your_bbm_information_to_your_current_device">Θέλετε να μεταφέρετε τις πληροφορίες BBM στην τρέχουσα συσκευή σας;</string>
@@ -793,10 +882,19 @@
     <string name="enter_an_address">Πληκτρολογήστε μια διεύθυνση</string>
     <string name="enter_comment"><i>Εισαγωγή σχολίου</i></string>
     <string name="enter_date_of_birth">Εισαγάγετε την ημερομηνία γέννησής σας για να χρησιμοποιήσετε τα BBM Channel.</string>
-    <string name="enter_passphrase">Εισαγωγή φράσης πρόσβασης</string>
+    <string name="enter_passphrase">ΕΙΣΑΓΩΓΗ ΦΡΑΣΗΣ ΠΡΟΣΒΑΣΗΣ</string>
     <string name="enter_passphrase_hint"><i>Εισαγάγετε τη φράση πρόσβασης</i></string>
     <string name="enter_text"><i>Πληκτρολόγηση κειμένου</i></string>
     <string name="entered_passphrase_incorrect">Η φράση πρόσβασης που εισαγάγατε δεν είναι σωστή.</string>
+    <string name="entitlement_dialog_title">Απαιτείται συνδρομή</string>
+    <string name="entitlement_edit_dialogue">"Έχετε φτάσει το δοκιμαστικό όριο επεξεργασίας μηνυμάτων.
+Αγοράστε μια συνδρομή για να αποκτήσετε απεριόριστη πρόσβαση σε αυτήν τη δυνατότητα."</string>
+    <string name="entitlement_privateconv_dialogue">"Έχετε φτάσει το δοκιμαστικό όριο των ιδιωτικών συνομιλιών.
+Αγοράστε μια συνδρομή για να αποκτήσετε απεριόριστη πρόσβαση σε αυτήν τη δυνατότητα."</string>
+    <string name="entitlement_retracted_dialogue">"Έχετε φτάσει το δοκιμαστικό όριο των μηνυμάτων που έχουν αναιρεθεί.
+Αγοράστε μια συνδρομή για να αποκτήσετε απεριόριστη πρόσβαση σε αυτήν τη δυνατότητα."</string>
+    <string name="entitlement_timed_dialogue">"Έχετε φτάσει το δοκιμαστικό όριο χρονομετρημένων μηνυμάτων.
+Αγοράστε μια συνδρομή για να αποκτήσετε απεριόριστη πρόσβαση σε αυτήν τη δυνατότητα."</string>
     <string name="ephemeral_hint_received">Έγινε λήψη χρονομετρημένου μηνύματος. Πατήστε παρατεταμένα για προβολή.</string>
     <string name="ephemeral_hint_sent">Χρονομετρημένο μήνυμα.</string>
     <string name="ephemeral_hint_viewed">Έγινε λήψη χρονομετρημένου μηνύματος. Έληξε</string>
@@ -808,7 +906,7 @@
     <string name="ephemeral_picture_sent">Χρονομετρημένη εικόνα.</string>
     <string name="ephemeral_setting">Χρονομετρημένα μηνύματα</string>
     <string name="ephemeral_tech_tip_body">Ρυθμίστε ένα χρονομετρητή για να ελέγχετε το χρονικό διάστημα που οι επαφές σας μπορούν να βλέπουν το μήνυμα ή την εικόνα σας πριν αυτοκαταστραφεί.</string>
-    <string name="ephemeral_tech_tip_title">Χρονομετρημένα μηνύματα</string>
+    <string name="ephemeral_tech_tip_title">Χρονομ. μηνύματα</string>
     <string name="ephemeral_unsupport_toast">Ο χρονομετρητής καταργήθηκε. Ο τύπος συνημμένου δεν υποστηρίζει αυτήν τη λειτουργία.</string>
     <string name="error_network_failure"><i>Αποτυχία δικτύου</i></string>
     <string name="exit">Έξοδος</string>
@@ -896,15 +994,17 @@
     <string name="filter_by">Φίλτρο ανά</string>
     <string name="find_friend_allow_upload_dialog_double_check_text">Είστε βέβαιοι; Αν δεν επιτρέψετε στο BBM να αποκτήσει πρόσβαση στις επαφές σας, θα πρέπει να προσθέσετε τις επαφές BBM μη αυτόματα.</string>
     <string name="find_friend_allow_upload_dialog_double_check_title">Δεν συνιστάται</string>
-    <string name="find_friend_allow_upload_dialog_title">Εύρεση φίλων στο BBM</string>
-    <string name="find_friend_allow_upload_text">Επιτρέψτε στο BBM να πραγματοποιεί πρόσβαση στις επαφές σας για να σας βοηθά να βρίσκετε και να προσθέτετε φίλους.</string>
+    <string name="find_friend_allow_upload_dialog_title">Εύρεση φίλων</string>
+    <string name="find_friend_allow_upload_text">Επιτρέψτε στο BBM την πρόσβαση στις επαφές σας για να σας βοηθά να βρίσκετε φίλους. Μπορείτε να αποφασίσετε ποιους φίλους θέλετε να προσθέσετε στο BBM.</string>
     <string name="find_friend_category_get_bbm">Πρόσκληση για λήψη</string>
-    <string name="find_friend_category_invite">Πατήστε για Συνέχεια</string>
+    <string name="find_friend_category_invite">Πατήστε για Προσθήκη</string>
     <string name="find_friends">Εύρεση φίλων στο BBM</string>
-    <string name="find_more_friends">Εύρεση περισσότερων φίλων</string>
-    <string name="first_launch_after_upgrade_privacy_terms">Συμφωνώ με την &lt;b>&lt;a href=http://www.blackberry.com/legal/privacy>Πολιτική απορρήτου&lt;/a>&lt;/b> και τους &lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>Όρους υπηρεσίας&lt;/a>&lt;/b></string>
-    <string name="first_launch_after_upgrade_subtitle">Περισσότερη διασκέδαση στις συνομιλίες BBM με αυτοκόλλητα. Διαθέσιμα τώρα.</string>
-    <string name="first_launch_after_upgrade_title">Στείλτε αυτοκόλλητα!</string>
+    <string name="find_more_friends">Εύρεση φίλων</string>
+    <string name="first_launch_after_upgrade_privacy_terms">Ενημερώσαμε τους &lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>Όρους υπηρεσίας&lt;/a>&lt;/b>. Κάνοντας κλικ στην επιλογή Συνέχεια, συμφωνείτε με τους &lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>Όρους υπηρεσίας&lt;/a>&lt;/b> και την &lt;b>&lt;a href=http://www.blackberry.com/legal/privacy>Πολιτική απορρήτου&lt;/a>&lt;/b></string>
+    <string name="first_launch_after_upgrade_subtitle">Δημιουργήστε ένα PIN για το BBM που θα είναι αποκλειστικά δικό σας! Ζητήστε το δικό σας προσαρμοσμένο PIN σήμερα.</string>
+    <string name="first_launch_after_upgrade_title">Μοναδικό, όπως εσείς</string>
+    <string name="first_name">Όνομα</string>
+    <string name="first_name_hint">Εισαγωγή ονόματος</string>
     <string name="flagged_comments_header">Σχόλια</string>
     <string name="flagged_posts_header">Δημοσιεύσεις</string>
     <string name="format_not_supported_for_cropping">Αυτή η μορφή δεν υποστηρίζει την περικοπή</string>
@@ -912,6 +1012,7 @@
     <string name="general">Γενικά</string>
     <string name="glympse">Glympse</string>
     <string name="glympse_attach">Επισύναψη Glympse</string>
+    <string name="glympse_duration_hourminutes">Απομένουν %1$d:%2$02d</string>
     <string name="glympse_duration_minutes">Διάρκεια: %1$d λεπτά</string>
     <string name="glympse_expired">Έληξε</string>
     <string name="glympse_expires_at">Κοινή χρήση έως %1$s</string>
@@ -946,6 +1047,7 @@
     <string name="glympse_update">Ενημέρωση Glympse</string>
     <string name="glympse_user_selector_item_all_user_currently_sharing">Όλοι οι χρήστες που πραγματοποιούν κοινή χρήση αυτή τη στιγμή</string>
     <string name="glympse_user_selector_item_speed">Ταχύτητα (χλμ/ώρα): %1$s</string>
+    <string name="glympse_user_selector_item_speed_na">Ταχύτητα (χλμ/ώρα): Μ/Δ</string>
     <string name="glympse_user_selector_item_updated_d_ago">Τελευταία ενημέρωση: πριν από %1$d ημέρες</string>
     <string name="glympse_user_selector_item_updated_h_m">Τελευταία ενημέρωση: πριν από %1$d: %2$s</string>
     <string name="glympse_user_selector_item_updated_m_ago">Τελευταία ενημέρωση: πριν από %1$d λεπτά</string>
@@ -979,9 +1081,11 @@
     <string name="group_add_list_title_hint"><i>Τίτλος λίστας</i></string>
     <string name="group_admin_about">Πληροφορίες για τους διαχειριστές ομάδων</string>
     <string name="group_admin_text">Οι διαχειριστές μπορούν να κάνουν τις εξής ενέργειες:</string>
+    <string name="group_autopassphrase_details">Ενεργοποιήθηκε η αυτόματη φράση πρόσβασης.</string>
     <string name="group_barcode_info">Μια επαφή μπορεί να πραγματοποιήσει σάρωση αυτού του γραμμικού κώδικα για να συμμετάσχει στην ομάδα σας</string>
     <string name="group_barcode_scan_rejected_user_not_protected">Δεν έχετε δικαίωμα συμμετοχής σε αυτήν την ομάδα.</string>
     <string name="group_cancel">Άκυρο</string>
+    <string name="group_cannot_delete_conversation">Δεν είναι δυνατή η διαγραφή αυτής της συνομιλίας</string>
     <string name="group_chat_exists">Το θέμα συνομιλίας υπάρχει ήδη</string>
     <string name="group_chat_general_discussion">Γενική συζήτηση</string>
     <string name="group_chat_history_days_1">1 ημέρα</string>
@@ -1000,6 +1104,8 @@
     <string name="group_conversation_email_chat_message_header">Από την ομάδα: %1$s</string>
     <string name="group_conversation_email_chat_subject">Συνομιλία με το χρήστη %1$s: %2$s</string>
     <string name="group_conversation_is_writing_a_message">" πληκτρολογεί..."</string>
+    <string name="group_conversation_picture_loading">Πραγματοποιείται φόρτωση εικόνας...</string>
+    <string name="group_conversation_picture_not_available">Η εικόνα δεν είναι διαθέσιμη.</string>
     <string name="group_conversation_slide_menu_chat_history">Ιστορικό συνομιλίας</string>
     <string name="group_conversation_slide_menu_clear_chat">Διαγραφή συνομιλίας</string>
     <string name="group_conversation_slide_menu_copy_chat">Αντιγραφή συνομιλίας</string>
@@ -1009,6 +1115,7 @@
     <string name="group_delete_picture">Διαγραφή εικόνας</string>
     <string name="group_delete_q">Διαγραφή ομάδας;</string>
     <string name="group_done">Τέλος</string>
+    <string name="group_edit_admin_cannot_remove_self">Δεν μπορείτε να καταργήσετε τον εαυτό σας από Διαχειριστή</string>
     <string name="group_edit_caption">Επεξεργασία λεζάντας</string>
     <string name="group_edit_list_title">Λεπτομ. στοιχ.</string>
     <string name="group_event_all_day">Όλη την ημέρα</string>
@@ -1031,15 +1138,15 @@
     <string name="group_events_time_notice">Η ώρα λήξης πρέπει να είναι μεταγενέστερη από την ώρα έναρξης</string>
     <string name="group_invitation_was_received">Έχετε λάβει πρόσκληση για μια ομάδα Glympse</string>
     <string name="group_invite_bbg_uri">%1$s</string>
-    <string name="group_invite_email_message">"-----\ufffc----
-Θα ήθελα να σε προσκαλέσω στην ομάδα μου με όνομα %1$s.
+    <string name="group_invite_email_message">"Θα ήθελα να σας προσκαλέσω στην ομάδα με όνομα: \"%1$s\" Για να συμμετάσχετε στην ομάδα από κινητή συσκευή, κάντε κλικ εδώ:
+%2$s
 
--------o-------Σε Android ή iPhone, κάνε κλικ στο %2$s για να συμμετάσχεις στην ομάδα ή για να πραγματοποιήσεις λήψη του BBM.-------o-------
 
 %3$s"</string>
-    <string name="group_invite_email_subject">Μπες στην Ομάδα BlackBerry που δημιούργησα!</string>
+    <string name="group_invite_email_subject">Πρόσκληση BBM Group από τον χρήστη %1$s</string>
     <string name="group_invite_enter_passphrase">Για να συμμετάσχετε σε αυτήν την ομάδα, εισαγάγετε τη φράση πρόσβασης που σας έδωσε ένα μέλος της ομάδας.</string>
     <string name="group_invite_enter_passphrase_multi_attempts">Λανθασμένη φράση πρόσβασης. Για να συμμετάσχετε σε αυτήν την ομάδα, εισαγάγετε τη φράση πρόσβασης που σας έδωσε ένα μέλος της ομάδας. (%1$d/%2$d)</string>
+    <string name="group_invite_expired">Η πρόσκληση σε ομάδα έληξε</string>
     <string name="group_invite_message_default">Θέλω να σε προσκαλέσω στην ομάδα μου με όνομα: %1$s</string>
     <string name="group_invite_status_enter_passphrase_max_attempts_reached">Λανθασμένη φράση πρόσβασης. Για να συμμετάσχετε σε αυτήν την ομάδα, πρέπει να σας σταλεί ξανά πρόσκληση.</string>
     <string name="group_invite_status_enter_passphrase_multi_attempts">Λανθασμένη φράση πρόσβασης. Για να συμμετάσχετε σε αυτήν την ομάδα, εισαγάγετε τη φράση πρόσβασης που σας έδωσε ένα μέλος της ομάδας.</string>
@@ -1082,6 +1189,11 @@
     <string name="group_passphrase_info">Μπορείτε να κοινοποιήσετε τη φράση πρόσβασης που χρησιμοποιούν οι χρήστες για τη συμμετοχή τους στην ομάδα.</string>
     <string name="group_passphrase_missing">Φράση πρόσβασης Μ/Δ</string>
     <string name="group_picture_add">Προσθήκη εικόνας</string>
+    <string name="group_picture_add_failed__wrong_picture_type">@string/avatar_file_not_support</string>
+    <string name="group_picture_add_failed_file_access_error">@string/filetransfer_abort_filenotfound</string>
+    <string name="group_picture_add_failed_file_does_not_exist">@string/filetransfer_abort_filenotfound</string>
+    <string name="group_picture_add_failed_picture_too_big">@string/conversation_file_image_transfer_canceled_dialog_too_large</string>
+    <string name="group_picture_add_failed_resize_error">@string/conversation_unable_to_save_picture</string>
     <string name="group_picture_added_days">Προστέθηκε πριν από %1$d ημέρες από το χρήστη %2$s</string>
     <string name="group_picture_added_today">Προστέθηκε σήμερα στις %1$s από το χρήστη %2$s</string>
     <string name="group_picture_added_yesterday">Προστέθηκε χθες από το χρήστη %1$s</string>
@@ -1156,7 +1268,7 @@
     <string name="hdimage_prompt_message">Θέλετε να πραγματοποιείται αυτόματη αποδοχή των αιτημάτων υψηλής ευκρίνειας;</string>
     <string name="hdimage_prompt_title">Να γίνεται πάντα αποδοχή αιτημάτων</string>
     <string name="help">Βοήθεια</string>
-    <string name="help_url">http://docs.blackberry.com/bbm/25/android/el</string>
+    <string name="help_url">http://help.blackberry.com/detectLang/bbm-for-android/current/</string>
     <string name="high_priority">Υψηλή προτεραιότητα</string>
     <string name="hint_protected_enabled_chat"><i>Με προστασία. Πληκτρολογήστε ένα μήνυμα</i></string>
     <string name="history_clear_one_history_text">Διαγραφή</string>
@@ -1185,6 +1297,7 @@
     <string name="introducing_channels_second_part">Οι συνδρομητές σας λαμβάνουν τις πιο πρόσφατες πληροφορίες στο BBM και μπορούν να μοιραστούν τις σκέψεις τους.</string>
     <string name="introducing_channels_title">Παρουσίαση των BBM Channels</string>
     <string name="invalid_passphrase_toast">Μη έγκυρη φράση πρόσβασης</string>
+    <string name="invitation_received">Ελήφθη πρόσκληση</string>
     <string name="invitation_rejected_invitee_not_protected_message">Δεν είναι δυνατή η συμμετοχή του χρήστη %1$s σε αυτήν την ομάδα. Μόνο οι επαφές BBM Protected μπορούν να συμμετάσχουν.</string>
     <string name="invitation_rejected_invitee_not_protected_title">Δεν είναι δυνατή η πρόσκληση του χρήστη για συμμετοχή</string>
     <string name="invitation_sent">Η πρόσκληση εστάλη</string>
@@ -1192,10 +1305,8 @@
     <string name="invite_activity_category">Κατηγορία</string>
     <string name="invite_activity_lookup">Αναζήτηση...</string>
     <string name="invite_activity_mail">Email: %1$s</string>
-    <string name="invite_activity_mail_body">"Θα ήθελα να σας προσκαλέσω σε συνομιλία μέσω του BBM.
-
-Για να συνδεθείτε μαζί μου στο BBM, κάντε κλικ στο 
-%1s
+    <string name="invite_activity_mail_body">"Θέλω να σε προσκαλέσω σε συνομιλία μέσω του BBM. Για να συνδεθείς μαζί μου στο BBM από την κινητή συσκευή σου, κάνε κλικ εδώ: 
+%1$s
 "</string>
     <string name="invite_activity_mail_subject">Πρόσκληση BBM από το χρήστη %1$s</string>
     <string name="invite_activity_phone">Τηλέφωνο: %1$s</string>
@@ -1203,12 +1314,12 @@
     <string name="invite_activity_security_custom_question">Πληκτρολογήστε μια ερώτηση</string>
     <string name="invite_activity_security_custom_response">Πληκτρολογήστε μια απάντηση</string>
     <string name="invite_activity_security_label">Ερώτηση ασφαλείας</string>
-    <string name="invite_activity_sms_body">Προσθέστε με στο BBM! Στο BlackBerry, κάντε κλικ στο pin:%1$sκαι επιλέξτε \"Πρόσκληση στο BBM\". Σε Android ή iPhone, κάντε κλικ στο www.pin.bbm.com/%1$s για να με προσθέσετε ή για να πραγματοποιήσετε λήψη του BBM.</string>
+    <string name="invite_activity_sms_body">Προσθέστε με στο ΒΒΜ! Κάντε κλικ στο www.pin.bbm.com/%1$s</string>
     <string name="invite_activity_to">Προς:</string>
     <string name="invite_bbm_contact">Προσθήκη επαφής BBM</string>
     <string name="invite_bbm_invites">Προσκλήσεις BBM</string>
-    <string name="invite_button_join">Συμμετοχή</string>
-    <string name="invite_button_preview">Προεπισκόπηση</string>
+    <string name="invite_button_join">ΣΥΜΜΕΤΟΧΗ</string>
+    <string name="invite_button_preview">ΠΡΟΕΠΙΣΚΟΠΗΣΗ</string>
     <string name="invite_by_barcode">Αποστολή πρόσκλησης με σάρωση γραμμικού κώδικα</string>
     <string name="invite_by_email">Πρόσκληση μέσω email</string>
     <string name="invite_by_other">Πρόσκληση μέσω SMS ή PIN</string>
@@ -1272,6 +1383,8 @@
     <string name="key_exchange_hint_waiting_to_enter_passphrase">Εισαγάγετε τη φράση πρόσβασης για να συμμετάσχετε</string>
     <string name="key_exchange_hint_waiting_to_join">Αναμονή για τη συμμετοχή του χρήστη %1$s</string>
     <string name="key_exchange_status_accepted">Η φράση πρόσβασης έγινε δεκτή</string>
+    <string name="last_name">Επώνυμο</string>
+    <string name="last_name_hint">Εισαγωγή επώνυμου</string>
     <string name="learn_more_about_bbm_pins">Μάθετε περισσότερα σχετικά με τα BBM PIN</string>
     <string name="learn_more_about_restoring_bbm_data">Μάθετε περισσότερα για την επαναφορά δεδομένων BBM.</string>
     <string name="leave_channel">Αποχώρηση από το κανάλι</string>
@@ -1293,6 +1406,8 @@
     <string name="location_service_failed">Αποτυχία λήψης θέσης</string>
     <string name="low_battey_warning">Έγινε παύση λόγω χαμηλής μπαταρίας. Κάντε κλικ για να συνεχίσετε.</string>
     <string name="low_priority">Χαμηλή προτεραιότητα</string>
+    <string name="main_drawer_close">Κλείσιμο συρταριού</string>
+    <string name="main_drawer_open">Άνοιγμα συρταριού</string>
     <string name="main_mood_status_format">%1$s - %2$s</string>
     <string name="main_status_available">Διαθέσιμος</string>
     <string name="main_status_busy">Απασχολημένος</string>
@@ -1304,13 +1419,15 @@
     <string name="menu_end_chat">Τερματισμός συνομιλίας</string>
     <string name="menu_help">Βοήθεια</string>
     <string name="menu_history">Ιστορικό</string>
+    <string name="menu_leave_chat">Αποχώρηση από συνομιλία</string>
     <string name="menu_settings">Ρυθμίσεις</string>
     <string name="menu_share">Κοινή χρήση</string>
-    <string name="message_button_accept">Αποδοχή</string>
-    <string name="message_button_allow">Να επιτρέπεται</string>
-    <string name="message_button_cancel">Άκυρο</string>
-    <string name="message_button_decline">Απόρριψη</string>
-    <string name="message_button_deny">Απόρριψη</string>
+    <string name="message">Μήνυμα</string>
+    <string name="message_button_accept">ΑΠΟΔΟΧΗ</string>
+    <string name="message_button_allow">ΑΠΟΔΟΧΗ</string>
+    <string name="message_button_cancel">ΑΚΥΡΟ</string>
+    <string name="message_button_decline">ΑΠΟΡΡΙΨΗ</string>
+    <string name="message_button_deny">ΑΡΝΗΣΗ</string>
     <string name="message_copied">Το μήνυμα αντιγράφηκε</string>
     <string name="message_recall_tech_tip_body">"Στείλατε το μήνυμα κατά λάθος;
 Πατήστε παρατεταμένα το μήνυμα για να πραγματοποιήσετε αναίρεσή του από τη συνομιλία BBM του άλλου χρήστη."</string>
@@ -1323,6 +1440,7 @@
     <string name="message_with_context_new_contact">Πληροφορίες για την νέα επαφή σας:</string>
     <string name="message_with_context_now_playing">Πληροφορίες για την τρέχουσα λίστα αναπαραγωγής:</string>
     <string name="message_with_context_personal_message">Πληροφορίες για το προσωπικό σας μήνυμα:</string>
+    <string name="message_with_context_quote">Ο χρήστης %1$s έγγραψε: \"%2$s\"</string>
     <string name="message_with_context_real_time_location">Πληροφορίες για τη θέση σας:</string>
     <string name="more">Περισσότερα</string>
     <string name="msg_bulk_mode_scanned">Μαζική λειτουργία: barcode σκαναρίστηκε και αποθηκεύτηκε</string>
@@ -1360,6 +1478,11 @@
     <string name="my_channels_fragment_mark_favorite">Σήμανση ως Αγαπημένο</string>
     <string name="my_channels_fragment_remove_favorite">Κατάργηση από τα Αγαπημένα</string>
     <string name="mybbmbarcode">Ο γραμμικός κώδικάς μου στο BBM</string>
+    <string name="nav_chats">Συνομιλίες BBM</string>
+    <string name="nav_contacts">Επαφές BBM</string>
+    <string name="nav_feeds">Τροφοδοσίες BBM</string>
+    <string name="nav_feeds_all">Όλες οι τροφοδοσίες BBM</string>
+    <string name="nav_groups">BBM Groups</string>
     <string name="network_settings_dialog_text">Για να συνεχίσετε, συνδεθείτε σε Wi-Fi ή δίκτυο κινητής τηλεφωνίας.</string>
     <string name="network_settings_dialog_title">Δεν υπάρχει σύνδεση δικτύου</string>
     <string name="new_channel_email_addresss">Διεύθυνση email</string>
@@ -1368,6 +1491,7 @@
     <string name="new_chat_topic">Νέο θέμα συνομιλίας</string>
     <string name="new_string">ΝΕΟ</string>
     <string name="next">Επόμενο</string>
+    <string name="no">Όχι</string>
     <string name="no_active_glympses">Δεν υπάρχουν ενεργά Glympse.</string>
     <string name="no_blackberry_data">Δεν υπάρχουν δεδομένα BlackBerry</string>
     <string name="no_blocked_invites">Είναι δυνατή η προσθήκη επαφών σε αυτήν τη λίστα κατά την αγνόηση μιας πρόσκλησης ή τη διαγραφή μιας επαφής.</string>
@@ -1378,6 +1502,7 @@
     <string name="no_connection_found">Δεν βρέθηκε σύνδεση</string>
     <string name="no_current_chat">Δεν υπάρχουν συνομιλίες</string>
     <string name="no_network_connection">Δεν υπάρχει σύνδεση δικτύου.</string>
+    <string name="no_picture">Δεν υπάρχει διαθέσιμη εικόνα</string>
     <string name="no_pictures">Δεν υπάρχουν εικόνες</string>
     <string name="no_posts">Δεν είναι δυνατή η εμφάνιση όλων των δημοσιεύσεων.</string>
     <string name="no_updates">Δεν υπάρχουν νέα στοιχεία.</string>
@@ -1428,6 +1553,19 @@
 Σε συσκευές BlackBerry, πατήστε το PIN:%2$s και πληκτρολογήστε τη φράση πρόσβασης."</string>
     <string name="out_of_band_passphrase_message_sms">Θα ήθελα να ξεκινήσω μια συνομιλία BBM Protected μαζί σας. Σε συσκευή BlackBerry, πατήστε %1$s. Εισαγάγετε τη φράση πρόσβασης %2$s.</string>
     <string name="out_of_band_passphrase_subject">Συνομιλία BBM Protected</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_dialog_body">Αυτή η λειτουργία είναι διαθέσιμη μόνο για Επαφές BBM. Θέλετε να προσθέσετε το χρήστη %1$s στις επαφές σας στο BBM;</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_dialog_title">Προσθήκη στις επαφές BBM</string>
+    <string name="outer_circle_add_to_bbm_contacts_for_feature_toast">Πρέπει να προσθέσετε αυτό το άτομο ως επαφή BBM για να χρησιμοποιήσετε αυτή την επιλογή.</string>
+    <string name="outer_circle_category_bbm_contacts">Επαφές BBM</string>
+    <string name="outer_circle_category_phone_contacts">@string/outer_circle_category_phone_contacts_v1</string>
+    <string name="outer_circle_category_phone_contacts_v1">Επαφές</string>
+    <string name="outer_circle_category_phone_contacts_v2">Επαφές τηλεφώνου</string>
+    <string name="outer_circle_category_phone_contacts_v3">Επαφές συσκευής</string>
+    <string name="outer_circle_contact_add_more_friends">Προσθ. περ. φίλων</string>
+    <string name="outer_circle_contact_menu_add_as_contact">Προσθήκη στις επαφές BBM</string>
+    <string name="outer_circle_contact_menu_delete_and_block">Διαγραφή και αποκλεισμός</string>
+    <string name="outer_circle_find_other_bbm_user_body">Μπορείτε να πραγματοποιήσετε αυτόματη αναζήτηση των επαφών της συσκευής σας για χρήστες BBM που ενδεχομένως να γνωρίζετε. Θέλετε να επιτρέψετε την πρόσβαση του BBM στην εφαρμογή Επαφές;</string>
+    <string name="outer_circle_find_other_bbm_user_title">Εύρεση λοιπών χρηστών BBM</string>
     <string name="overlay_bbm_ongoing_notification_reason">"Γιατί βλέπω το εικονίδιο του BBM στο επάνω μέρος της οθόνης;
 
 Το εικονίδιο BBM εμφανίζεται στη γραμμή κατάστασης επειδή το BBM είναι πάντα ενεργοποιημένο, ώστε να παραμένετε συνεχώς συνδεδεμένοι."</string>
@@ -1461,13 +1599,13 @@
     <string name="partner_app_register_failed_dialog_outage_message">Δεν εντοπίστηκε σύνδεση δικτύου</string>
     <string name="partner_app_register_failed_dialog_title">Εγγραφή στο BBM</string>
     <string name="passphrase">Φράση πρόσβασης</string>
-    <string name="passphrase_creation_details">Πρέπει να γίνει κοινοποίηση φράσης πρόσβασης με την επαφή BBM σας για συμμετοχή στη συνομιλία. Πρέπει να αποτελείται από τουλάχιστον τέσσερις κεφαλαίους χαρακτήρες.</string>
+    <string name="passphrase_creation_details">Πρέπει να γίνει κοινοποίηση φράσης πρόσβασης με την επαφή BBM σας για συμμετοχή στη συνομιλία. Πρέπει να περιέχει τουλάχιστον τέσσερις χαρακτήρες. Χρησιμοποιήστε γράμματα, αριθμούς ή και τα δύο. Παραδείγματα: TGRS, 2905, TIG8.</string>
     <string name="passphrase_incorrect">Ο χρήστης &lt;b>«%1$s»&lt;/b> δεν εισήγαγε τη σωστή φράση πρόσβασης.</string>
     <string name="passphrase_initiated">Πραγματοποιήσατε κοινή χρήση της φράσης πρόσβασης &lt;b>«%1$s»&lt;/b> με το χρήστη &lt;b>«%2$s»&lt;/b>.</string>
-    <string name="passphrase_message_email">"Θα ήθελα να ξεκινήσω μια συνομιλία BBM Protected μαζί σας.
+    <string name="passphrase_message_email">"Θα ήθελα να ξεκινήσω μία συνομιλία BBM Protected μαζί σας.
 ---o---
-Εισαγωγή φράσης πρόσβασης \"%1$s\" αφού κάνετε κλικ στο pin:%2$s ή %3$s"</string>
-    <string name="passphrase_message_sms">Συμμετάσχετε στη συνομιλία μου στο BBM Protected! Εισαγωγή της φράσης πρόσβασης \"%1$s\" αφού κάνετε κλικ στο pin:%2$s ή %3$s</string>
+Για να συμμετάσχετε στη συνομιλία, κάντε κλικ στο pin:%1$s ή στη διεύθυνση %2$s. Αν σας ζητηθεί φράση πρόσβασης, εισαγάγετε \"%3$s\"."</string>
+    <string name="passphrase_message_sms">Συμμετάσχετε στη συνομιλία μου στο BBM Protected! Απλώς κάντε κλικ στο pin:%1$s ή στη διεύθυνση %2$s. Αν σας ζητηθεί φράση πρόσβασης, εισαγάγετε \"%3$s\".</string>
     <string name="passphrase_rules_details">Πρέπει να περιέχει τρία σετ γραμμάτων, τέσσερα έως επτά κεφαλαία γράμματα σε κάθε σετ, διαχωρισμένα με κενό. Παράδειγμα: DARK BROWN TIGERS</string>
     <string name="passphrase_share_details">Πώς επιθυμείτε να αποστείλετε τη φράση πρόσβασης στο χρήστη %1$s;</string>
     <string name="passphrase_wait_to_join">Αναμονή για τη συμμετοχή του χρήστη &lt;b>%1$s&lt;/b>.</string>
@@ -1484,19 +1622,45 @@
     <string name="pending_invite_declined">Η πρόσκληση απορρίφθηκε</string>
     <string name="pending_invite_deleted">Η πρόσκληση διαγράφηκε</string>
     <string name="pending_invite_group_incorrect_answer">Λανθασμένη απάντηση. Για να συμμετάσχετε σε αυτήν την ομάδα, πρέπει να σας σταλεί ξανά πρόσκληση.</string>
-    <string name="pending_invite_group_invites_you_to">ο χρήστης %1$s θα ήθελε να σας προσκαλέσει στην ομάδα με όνομα \"%2$s\".</string>
+    <string name="pending_invite_group_invites_you_to">Ο χρήστης %1$s θα ήθελε να σας προσκαλέσει στην ομάδα με όνομα \"%2$s\".</string>
     <string name="pending_invite_group_no_invitation">Απορρίφθηκε: Ο χρήστης %1$s απέρριψε την πρόσκληση.</string>
     <string name="pending_invite_group_pending">Σε εκκρεμότητα: %1$s</string>
     <string name="pending_invite_group_title">Πρόσκληση σε %1$s</string>
     <string name="pending_invite_group_too_many_members">Απορρίπτεται: Αυτή η ομάδα είναι ήδη πλήρης.</string>
     <string name="pending_invite_pending">Σε εκκρεμότητα</string>
     <string name="pending_invite_protected_group_invites_you_to">Ο χρήστης %1$s θα ήθελε να σας προσκαλέσει στην ομάδα με όνομα \"%2$s\". Για να συμμετάσχετε σε αυτήν την ομάδα του BBM Protected, πρέπει να εισαγάγετε τη φράση πρόσβασης που σας έδωσε ένα μέλος της ομάδας.</string>
+    <string name="people">Χρήστες</string>
     <string name="personalize_profile_dialog_message">Μπορείτε να πατήσετε το πλαίσιο για να ανοίξετε το προφίλ σας στο BBM.</string>
     <string name="personalize_profile_dialog_title">Εξατομίκευση του προφίλ σας</string>
+    <string name="phone_contact_add">@string/phone_contact_add_v1</string>
+    <string name="phone_contact_add_v1">Προσθήκη επαφής BBM</string>
+    <string name="phone_contact_add_v2">Προσθήκη στο BBM</string>
+    <string name="phone_contact_add_v3">Προσθήκη στις επαφές BBM</string>
+    <string name="phone_contact_block">Αποκλεισμός</string>
+    <string name="phone_contact_block_from_conversation_description">Όλες οι μελλοντικές προσκλήσεις και συνομιλίες από το χρήστη %1$s θα αποκλειστούν. Θέλετε να αποκλείσετε το χρήστη %1$s;</string>
+    <string name="phone_contact_block_from_conversation_title">Αποκλεισμός %1$s</string>
+    <string name="phone_contact_invitationsent">Η πρόσκληση εστάλη</string>
+    <string name="phone_contact_not_a_contact">Για να απολαύσετε όλες τις δυνατότητες του BBM, πρέπει να προσθέσετε αυτόν το χρήστη στις Επαφές BBM.</string>
+    <string name="phone_contact_reinvite_message">@string/phone_contact_reinvite_message_v1</string>
+    <string name="phone_contact_reinvite_message_v1">Για να προσθέσετε το χρήστη %1$s στις επαφές σας στο BBM, πατήστε %2$s.</string>
+    <string name="phone_contact_reinvite_message_v2">Πρέπει να προσθέσετε το χρήστη %1$s στις επαφές BBM σας για να ξεκινήσετε μια συνομιλία. Για να προσθέσετε το χρήστη %1$s στις επαφές BBM σας, πατήστε την επιλογή %2$s στο πάνω μέρος της συνομιλίας σας.</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_1">Οι &lt;b>&lt;i>επαφές&lt;/i>&lt;/b> διαφέρουν από τις &lt;b>&lt;i>επαφές BBM&lt;/i>&lt;/b>.</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_2">Στις &lt;b>&lt;i>Επαφές&lt;/i>&lt;/b> συγκαταλέγονται τα άτομα από τις επαφές της συσκευής σας που χρησιμοποιούν το BBM.&lt;br/>&lt;br/> * Ξεκινήστε αμέσως συνομιλία με τις επαφές&lt;br/> * Δεν απαιτείται πρόσκληση</string>
+    <string name="phone_contact_tutorial_contacts_tab_section_3">Οι &lt;b>&lt;i>Επαφές BBM&lt;/i>&lt;/b> απαιτούν πρόσκληση. Μόνο οι επαφές BBM μπορούν να εκτελέσουν τις ακόλουθες ενέργειες:&lt;br/>&lt;br/> * Προβολή της εμφανιζόμενης εικόνας BBM που διαθέτετε&lt;br/> * Προβολή των ενημερώσεων κατάστασης BBM&lt;br/> * Πραγματοποίηση ή λήψη κλήσεων μέσω του BBM Voice.</string>
+    <string name="phone_contact_tutorial_conversation_section_1">Οι &lt;b>&lt;i>επαφές&lt;/i>&lt;/b> διαφέρουν από τις &lt;b>&lt;i>επαφές BBM&lt;/i>&lt;/b>.</string>
+    <string name="phone_contact_tutorial_conversation_section_2">Αυτή είναι μια συνομιλία με μια &lt;b>&lt;i>Επαφή&lt;/i>&lt;/b>. Αυτό το άτομο δεν έχει πρόσβαση στις ακόλουθες πληροφορίες:&lt;br/>&lt;br/> * Την εμφανιζόμενη εικόνα BBM που διαθέτετε&lt;br/> * Τις ενημερώσεις κατάστασης BBM</string>
+    <string name="phone_contact_tutorial_conversation_section_3">Αυτό το άτομο πρέπει να χρησιμοποιεί την πιο πρόσφατη έκδοση του BBM για να πραγματοποιήσετε συνομιλία. Μπορείτε να προσθέσετε αυτό το άτομο στις &lt;b>&lt;i>Επαφές BBM&lt;/i>&lt;/b> ή να το αποκλείσετε ανά πάσα στιγμή.</string>
+    <string name="phone_contact_tutorial_profile_click_section_1">Οι &lt;b>&lt;i>επαφές&lt;/i>&lt;/b> διαφέρουν από τις &lt;b>&lt;i>επαφές BBM&lt;/i>&lt;/b>.</string>
+    <string name="phone_contact_tutorial_profile_click_section_2">Οι &lt;b>&lt;i>επαφές BBM&lt;/i>&lt;/b> απαιτούν πρόσκληση και μπορούν να εκτελέσουν τις ακόλουθες ενέργειες: &lt;br/>&lt;br/> * Προβολή της εμφανιζόμενης εικόνας, των ενημερώσεων κατάστασης και του προφίλ BBM&lt;br/> * Κλήση μέσω του BBM Voice&lt;br/> * Αποστολή μηνυμάτων εκπομπής</string>
+    <string name="phone_contact_tutorial_profile_click_section_3">Στις &lt;b>&lt;i>Επαφές&lt;/i>&lt;/b> συγκαταλέγονται τα άτομα από τις επαφές της συσκευής σας που χρησιμοποιούν το BBM. Στις Επαφές, δεν απαιτείται πρόσκληση, εφόσον αυτά τα άτομα χρησιμοποιούν την πιο πρόσφατη έκδοση του BBM. Εξακολουθείτε να απολαμβάνετε τις δυνατότητες συνομιλίας του BBM, οι οποίες περιλαμβάνουν: &lt;br/>&lt;br/> &amp;#8226; ειδοποιήσεις παράδοσης και ανάγνωσης στα μηνύματα&lt;br/> &amp;#8226; Αποστολή φωτογραφιών και αρχείων&lt;br/> &amp;#8226; Κοινή χρήση της τοποθεσίας σας με το Glympse</string>
     <string name="pic_caption_hint"><i>Εισαγωγή λεζάντας</i></string>
+    <string name="picture">Εικόνα</string>
     <string name="picture_deleted">Η εικόνα διαγράφηκε</string>
+    <string name="picture_selection_limit_toast">Υπερβολικά πολλά αρχεία (Ο μέγ. αριθμός είναι 10).</string>
+    <string name="picture_selection_type_toast">Ο μόνος τύπος εικόνας που υποστηρίζεται σε πολλαπλή κοινή χρήση.</string>
     <string name="pin_copied">Το PIN αντιγράφηκε</string>
     <string name="please_ensure_the_device_time_is_correctly_set">Βεβαιωθείτε ότι η ώρα της συσκευής έχει ρυθμιστεί σωστά και προσπαθήστε ξανά.</string>
+    <string name="policy_change_title">Αλλαγή πολιτικής</string>
     <string name="post_removed">Αυτή η δημοσίευση έχει διαγραφεί.</string>
     <string name="posts_caption">Δημοσιεύσεις</string>
     <string name="pref_add_contact_on_tap">Προσθήκη επαφών κατά το άγγιγμα</string>
@@ -1557,21 +1721,49 @@
     <string name="preferences_vibrate_title">Δόνηση</string>
     <string name="private_channel">Ιδιωτικό κανάλι</string>
     <string name="private_channel_description">Αποκρύψτε το κανάλι σας από την αναζήτηση και ρυθμίστε αποκλειστική πρόσβαση για τα άτομα που προσκαλείτε.</string>
+    <string name="private_chat">Ιδιωτική συνομιλία</string>
+    <string name="private_chat_back_out_dialog_dont_ask_me_again">Να μην ερωτηθώ ξανά.</string>
+    <string name="private_chat_back_out_dialog_text">Η ιδιωτική συνομιλία σας θα τερματιστεί αν δεν επιστρέψετε στη συνομιλία σε %1$d λεπτό.</string>
+    <string name="private_chat_conversation_notification_title">Ο χρήστης %1$s επιθυμεί να ξεκινήσει μια συνομιλία μαζί σας.</string>
+    <string name="private_chat_end_menu">Τερματισμός ιδιωτικής συνομιλίας</string>
+    <string name="private_chat_entry_subtitle">Πατήστε για επιστροφή</string>
+    <string name="private_chat_menu">Έναρξη ιδιωτικής συνομιλίας</string>
+    <string name="private_chat_message_notification_title">Νέο μήνυμα ιδιωτικής συνομιλίας.</string>
+    <string name="private_chat_other_party_not_support">Αυτή η επαφή διαθέτει παλαιότερη έκδοση του BBM, η οποία δεν υποστηρίζει ιδιωτικές συνομιλίες.</string>
+    <string name="private_chat_request_incoming_subtitle">Αίτημα ιδιωτικής συνομιλίας</string>
+    <string name="private_chat_request_invite_bubble_message">"Θέλω να ξεκινήσω μια ιδιωτική συνομιλία μαζί σας. Για να συμμετάσχετε στην ιδιωτική συνομιλία, πρέπει να πραγματοποιήσετε λήψη της πιο πρόσφατης έκδοσης του BBM.
+
+Επισκεφτείτε τη σελίδα http://bbm.com/upgrade για να λάβετε την πιο πρόσφατη έκδοση του BBM."</string>
+    <string name="private_chat_request_outgoing_subtitle">Αίτημα ιδιωτικής συνομιλίας</string>
+    <string name="private_chat_stop_reason_busy">Ο χρήστης %1$s δεν είναι διαθέσιμος για ιδιωτική συνομιλία αυτή τη στιγμή.</string>
+    <string name="private_chat_stop_reason_cancelled">Ο χρήστης %1$s ακύρωσε την ιδιωτική συνομιλία.</string>
+    <string name="private_chat_stop_reason_declined">Ο χρήστης %1$s απέρριψε την ιδιωτική συνομιλία.</string>
+    <string name="private_chat_stop_reason_inactivity">Η ιδιωτική συνομιλία σας τερματίστηκε αυτόματα γιατί ήταν ανενεργή.</string>
+    <string name="private_chat_stop_reason_localended">Τερματίσατε την ιδιωτική συνομιλία.</string>
+    <string name="private_chat_stop_reason_noresponse">Ο χρήστης %1$s δεν απάντησε στο αίτημά σας για ιδιωτική συνομιλία.</string>
+    <string name="private_chat_stop_reason_remoteended">Ο χρήστης %1$s τερμάτισε την ιδιωτική συνομιλία.</string>
+    <string name="private_chat_stop_reason_unknown">Η ιδιωτική συνομιλία σας αποσυνδέθηκε. Επανεκκινήστε την ιδιωτική συνομιλία σας.</string>
+    <string name="private_chat_tutorial_description">"Τα ονόματα και οι εικόνες προφίλ είναι κρυφά.
+
+Η συνομιλία διαγράφεται αυτόματα και στις δύο συσκευές όταν η συνομιλία τερματιστεί ή είναι ανενεργή.
+
+Οι ειδοποιήσεις για τα νέα ιδιωτικά μηνύματα είναι διακριτικές."</string>
     <string name="profile_barcode">Γραμμικός κώδικας</string>
+    <string name="profile_bbm_pin_label">BBM PIN</string>
     <string name="profile_copy_pin">Αντιγραφή PIN</string>
     <string name="profile_copypin">Αντιγραφή PIN</string>
     <string name="profile_default_pin">PIN: 00000000</string>
     <string name="profile_display_name_invalid">Δεν επιτρέπεται η χρήση ελληνικού ερωτηματικού ή κόμματος στα εμφανιζόμενα ονόματα</string>
+    <string name="profile_display_name_invalid_empty">Το εμφανιζόμενο όνομα δεν μπορεί να είναι κενό</string>
     <string name="profile_icon_source_camera">Κάμερα</string>
     <string name="profile_icon_source_picture">Εικόνα</string>
     <string name="profile_icon_source_sample_picture">Δείγμα εικόνας</string>
-    <string name="profile_location_label">Θέση/ζώνη ώρας:</string>
+    <string name="profile_location_label">Θέση/ζώνη ώρας</string>
     <string name="profile_mood_hint"><i>Τι σκέφτεστε;</i></string>
+    <string name="profile_name">Όνομα προφίλ</string>
     <string name="profile_no_status_message">Δεν υπάρχει μήνυμα κατάστασης</string>
     <string name="profile_own_status_label">Κατάσταση</string>
-    <string name="profile_pin">%1$s</string>
     <string name="profile_pin_copied">Το PIN αντιγράφηκε</string>
-    <string name="profile_pin_label">PIN:</string>
     <string name="profile_pinlabel">PIN:</string>
     <string name="profile_revert_display_name">Επαναφορά εμφανιζόμενου ονόματος</string>
     <string name="profile_selector_apps">Εφαρμογές</string>
@@ -1579,27 +1771,40 @@
     <string name="profile_selector_members">Μέλη</string>
     <string name="profile_selector_updates">Τροφοδοσίες</string>
     <string name="profile_share_pin">Κοινή χρήση του PIN μου</string>
+    <string name="profile_status_delete">Διαγραφή κατάστασης</string>
+    <string name="profile_status_delete_info">Θέλετε σίγουρα να διαγράψετε αυτήν την κατάσταση;</string>
     <string name="profile_status_edit">Επεξεργασία μηνυμάτων κατάστασης</string>
-    <string name="profile_status_label">Κατάσταση:</string>
+    <string name="profile_user_has_subscription">Αυτό το άτομο διαθέτει συνδρομή.</string>
+    <string name="profile_user_view_all_sub">Δείτε όλες τις συνδρομές στο BBM</string>
     <string name="prompt_change_bbm_picture">Να αλλάξει η Εικόνα BBM σας;</string>
     <string name="prompted_after_rate_call">Ευχαριστούμε!</string>
     <string name="prompted_before_rate_call">Αξιολόγηση ποιότητας κλήσης</string>
     <string name="protected_group_invite_message_default">Θέλω να σε προσκαλέσω στην ομάδα μου με όνομα: \"%1$s\" Για να συμμετάσχετε σε αυτήν την ομάδα του BBM Protected, πρέπει να εισαγάγετε τη φράση πρόσβασης που σας έδωσε ένα μέλος της ομάδας.</string>
     <string name="protected_group_requires_join">Αναμονή για επιβεβαίωση της φράσης πρόσβασης για επαναφορά της προστατευμένης ομάδας</string>
     <string name="protected_mode_disabled_header">Το BBM Protected είναι απενεργοποιημένο</string>
-    <string name="protected_mode_disabled_message">Οι επαφές και οι συνομιλίες σας αποθηκεύτηκαν, αλλά δεν συμμετέχετε πλέον στις συνομιλίες πολλαπλών προσώπων και στις ομάδες που χρησιμοποιούν το BBM Protected.</string>
+    <string name="protected_mode_disabled_message">Οι επαφές και οι συνομιλίες σας αποθηκεύτηκαν, αλλά δεν συμμετέχετε πλέον στις ομάδες που χρησιμοποιούν το BBM Protected.</string>
     <string name="protected_mode_disabled_title">Ο διαχειριστής απενεργοποίησε το BBM Protected.</string>
     <string name="protected_mode_enabled_header">BBM Protected</string>
     <string name="protected_mode_enabled_message">"Το BBM Protected προσθέτει ένα επιπλέον επίπεδο κρυπτογράφησης στις συνομιλίες, τις μεταφορές αρχείων και τις ομάδες σας στο BBM. Την επόμενη φορά που πραγματοποιείτε εκκίνηση μιας συνομιλίας με μια επαφή BBM Protected, ορίζετε μια φράση πρόσβασης την οποία πρέπει να πληκτρολογήσει το άτομο για να συμμετάσχει. Χρειάζεται να προσδιορίσετε μία φράση πρόσβασης μια φορά για κάθε επαφή BBM Protected. 
  
  Για τα BBM Groups, μπορείτε να επιλέξετε αν θέλετε να περιορίσετε τη συμμετοχή σε επαφές του BBM Protected ή όχι. Όταν δημιουργείτε μια ομάδα BBM Protected, μπορείτε να πραγματοποιήσετε κοινή χρήση της φράσης πρόσβασης που πρέπει να πληκτρολογήσουν οι χρήστες για να συμμετάσχουν."</string>
     <string name="protected_mode_enabled_title">Ο διαχειριστής έχει ενεργοποιήσει το BBM Protected στη συσκευή σας.</string>
+    <string name="protected_preferred_details">Η επαφή σας απαιτεί συνομιλία BBM Protected.</string>
+    <string name="protected_preferred_dialog">Αυτή η επαφή χρησιμοποιεί το Protected Plus. Οι συνομιλίες στις οποίες συμμετέχετε εσείς και αυτή η επαφή θα είναι συνομιλίες BBM Protected. <a href="http://blackberry.com/bbmprotected">Μάθετε περισσότερα</a></string>
+    <string name="protected_preferred_dialog_dismiss">Να μην εμφανιστεί ξανά.</string>
+    <string name="protected_preferred_mode_disabled_message">Ο διαχειριστής σας απενεργοποίησε το Protected Plus.</string>
+    <string name="protected_preferred_mode_disabled_title">Η λειτουργία Protected Plus είναι απενεργοποιημένη</string>
+    <string name="protected_preferred_mode_enabled_message">Ο διαχειριστής σας ενεργοποίησε το Protected Plus, μια λειτουργία του BBM Protected. Οι συνομιλίες στις οποίες συμμετέχετε εσείς και οι επαφές σας θα είναι συνομιλίες BBM Protected.</string>
+    <string name="protected_preferred_mode_enabled_title">Η λειτουργία Protected Plus είναι ενεργοποιημένη</string>
+    <string name="protected_rejected_message_body">Ενδεχομένως να χρειαστεί να πραγματοποιήσετε εκ νέου κοινή χρήση της φράσης πρόσβασης για να επαναφέρετε αυτή τη συνομιλία BBM Protected. Για να πραγματοποιήσετε κοινή χρήση μιας φράσης πρόσβασης, πατήστε το εικονίδιο μενού στην πάνω δεξιά γωνία της οθόνης. Πατήστε &lt;b>«%1$s»&lt;/b>.</string>
+    <string name="protected_rejected_message_status">Εκ νέου κοινοποίηση φράσης πρόσβασης</string>
     <string name="purchase_failed_message">Δεν ήταν δυνατή η επεξεργασία της πληρωμής. Θέλετε να επιλέξετε διαφορετική μέθοδο πληρωμής;</string>
     <string name="purchase_options">Επιλογές πληρωμής</string>
     <string name="purchase_success_message">Επιτυχής αγορά στοιχείου</string>
     <string name="purchase_unexpected_error_message">Η αγορά σας διακόπηκε. Προσπαθήστε ξανά.</string>
     <string name="pyk_empty_invites_allow_upload_hint">Εύρεση φίλων που χρησιμοποιούν ήδη το BBM.</string>
     <string name="qr_description">ΧρήστεςQR</string>
+    <string name="quick_reply">Απάντηση και τερματισμός</string>
     <string name="quick_share_glympse_first_experience_overlay_infos">Αποστείλετε ένα Glympse για να επιτρέψετε σε μια επαφή BBM να ακολουθήσει τη θέση σας στο χάρτη για το χρονικό διάστημα που επιθυμείτε. Ιδανικό για συναντήσεις ή για όταν καθυστερείτε.</string>
     <string name="quick_share_glympse_first_experience_overlay_note"><i>Σημείωση: Κατά τη χρήση αυτής της λειτουργίας, πραγματοποιείται κοινή χρήση των συντεταγμένων του GPS σας με την Glympse Inc. και οι συντεταγμένες σας υπόκεινται στην <a href="http://glympse.com/privacy">πολιτική απορρήτου</a></i></string>
     <string name="quick_share_glympse_first_experience_overlay_title">Κοινοποιήστε τη γεωγραφική θέση σας.</string>
@@ -1607,10 +1812,13 @@
     <string name="quick_share_glympse_location_services_overlay_title">Ενεργοποιήστε τις υπηρεσίες θέσης.</string>
     <string name="quick_share_glympse_sending_glympse">Γίνεται αποστολή Glympse</string>
     <string name="quick_share_voice_note_label_busy">Δεν είναι δυνατή η εγγραφή. Το πρόγραμμα αναπαραγωγής ή η υπηρεσία πολυμέσων χρησιμοποιείται ήδη.</string>
-    <string name="quick_share_voice_note_label_default">Πατήστε παρατεταμένα για εγγραφή</string>
+    <string name="quick_share_voice_note_label_default">Πατήστε παρατεταμένα για καταγραφή</string>
     <string name="quick_share_voice_note_label_delete">Απελευθερώστε για διαγραφή</string>
+    <string name="quick_share_voice_note_label_rec">ΚΑΤΑΓΡ.</string>
     <string name="quick_share_voice_note_label_send">Απελευθερώστε για αποστολή ή σύρετε για ακύρωση</string>
     <string name="quick_share_voice_note_tost_message">Για να αποστείλετε άμεση φωνητική σημείωση, πατήστε παρατεταμένα το κουμπί εγγραφής</string>
+    <string name="quote_at_user_name">\@%1$s</string>
+    <string name="quote_message_label">\"%1$s\"</string>
     <string name="rate_limited">Έχετε φτάσει το όριο ρυθμού Glympse.</string>
     <string name="rate_my_app_ignore">Όχι, ευχαριστώ</string>
     <string name="rate_my_app_message">Αν σας αρέσει να χρησιμοποιείτε το BBM, αφιερώστε λίγο χρόνο στο να αξιολογήσετε την εφαρμογή. Σας ευχαριστούμε!</string>
@@ -1629,6 +1837,8 @@
     <string name="remaining_title_glympse">Glympse</string>
     <string name="remove">Κατάργηση</string>
     <string name="replace_picture">Αντικατάσταση εικόνας</string>
+    <string name="reply">Απάντηση</string>
+    <string name="reply_with_voice">Απάντηση με ομιλία</string>
     <string name="report_channel">Αναφορά καναλιού</string>
     <string name="report_problem_activity_choose_email_client">Επιλογή email</string>
     <string name="report_problem_activity_email_button">Αποστολή αναφοράς μέσω email</string>
@@ -1658,7 +1868,9 @@ http://blackberry.com/support/bbm"</string>
     <string name="reports_caption_none">Έγινε αναφορά</string>
     <string name="request_was_received">Έχετε λάβει ένα αίτημα Glympse</string>
     <string name="required_fields">Απαιτούμενα πεδία*</string>
-    <string name="resend_passphrase">Εκ νέου αποστολή της φράσης πρόσβασης</string>
+    <string name="resend_passphrase">ΕΚ ΝΕΟΥ ΑΠΟΣΤΟΛΗ ΦΡΑΣΗΣ ΠΡΟΣΒΑΣΗΣ</string>
+    <string name="reset_protected_chat">Επαναφορά αυτής της συνομιλίας</string>
+    <string name="resolve_vanitypin_not_found">Αυτό το PIN δεν είναι διαθέσιμο.</string>
     <string name="restore_sticker_purchases">Επαναφορά</string>
     <string name="restore_using_device_switch">Επαναφορά μέσω της Εναλλαγής συσκευών</string>
     <string name="restore_using_email">Επαναφορά μέσω email</string>
@@ -1679,7 +1891,7 @@ http://blackberry.com/support/bbm"</string>
     <string name="retry">Επανάληψη</string>
     <string name="rotate_left">Περιστρ. αριστερά</string>
     <string name="rotate_right">Περιστρ. δεξιά</string>
-    <string name="save">Αποθήκευση</string>
+    <string name="save">Αποθήκ.</string>
     <string name="save_as">Αποθήκευση</string>
     <string name="save_picture_to_gallery_generic_error">Παρουσιάστηκε ένα σφάλμα κατά την αποθήκευση.</string>
     <string name="save_picture_to_gallery_source_error">Προς το παρόν δεν είναι εφικτή η πρόσβαση στην εικόνα. Δοκιμάστε ξανά αργότερα.</string>
@@ -1710,7 +1922,9 @@ http://blackberry.com/support/bbm"</string>
     <string name="select_contacts_for_existing_protected_chat">Αυτή η συνομιλία είναι προστατευμένη. Μόνο οι χρήστες του BBM Protected μπορούν να συμμετάσχουν.</string>
     <string name="select_contacts_to_move">Επιλογή επαφών για μετακίνηση στο \"%1$s\":</string>
     <string name="select_group">Επιλογή ομάδας</string>
-    <string name="select_group_activity_title">{0,επιλογή,0#Επιλογή ομάδας|1#+1 Ομάδα|1&lt;+{0} Ομάδες}</string>
+    <string name="select_group_activity_title">{0,choice,0#Επιλογή ομάδας|1#+1 Ομάδα|1&lt;+{0} Ομάδες}</string>
+    <string name="select_group_discussion">Επιλογή συνομιλίας</string>
+    <string name="select_pictures">{0,choice,0#Επιλ. εικόνων|1#+1 εικόνα|1&lt;+{0} εικόνες}</string>
     <string name="send">Αποστολή</string>
     <string name="send_comment">Αποστολή σχολίου</string>
     <string name="send_decline_response">Αποστολή απάντησης απόρριψης</string>
@@ -1719,6 +1933,11 @@ http://blackberry.com/support/bbm"</string>
     <string name="sent_pending_invite_message_label">Μήνυμα:</string>
     <string name="sent_pending_invite_sent_label">Εστάλη:</string>
     <string name="set_as">Ορισμός ως</string>
+    <string name="set_vanitypin_result_invalid">Αυτό το PIN δεν είναι διαθέσιμο.</string>
+    <string name="set_vanitypin_result_refused">Αυτό το PIN δεν είναι διαθέσιμο.</string>
+    <string name="set_vanitypin_result_reserved">Αυτό το PIN δεν είναι διαθέσιμο.</string>
+    <string name="set_vanitypin_result_success">Το PIN σας έχει δημιουργηθεί.</string>
+    <string name="set_vanitypin_result_used">Αυτό το PIN δεν είναι διαθέσιμο.</string>
     <string name="setas_activity_bbm_picture_updated">Η εικόνα BBM ενημερώθηκε</string>
     <string name="setas_activity_item_bbm_picture">Εικόνα BBM</string>
     <string name="setas_activity_item_contact_picture">Εικόνα επαφής</string>
@@ -1728,9 +1947,10 @@ http://blackberry.com/support/bbm"</string>
     <string name="setas_activity_title">Ορισμός ως</string>
     <string name="settings">Ρυθμίσεις</string>
     <string name="settings_activity_allow_hq_pictures">Να γίνεται πάντα αποδοχή αιτημάτων για εικόνες υψηλής ευκρίνειας</string>
+    <string name="settings_activity_backup_chat_history_now">Δημιουργία αντιγράφων ασφαλείας τώρα</string>
     <string name="settings_activity_blackberry_id_edit">Επεξεργασία</string>
     <string name="settings_activity_blackberry_id_generic_error">Δεν είναι δυνατή η επεξεργασία του BlackBerry ID σας αυτή τη στιγμή. Δοκιμάστε ξανά αργότερα</string>
-    <string name="settings_activity_blocked_contacts">Αποκλεισμένες επαφές και τροφοδοσίες</string>
+    <string name="settings_activity_blocked_contacts">Αποκλ. επαφές και τροφοδοσίες</string>
     <string name="settings_activity_blocked_contacts_edit">Επεξεργασία αποκλεισμένων επαφών</string>
     <string name="settings_activity_chat_history">Ιστορικό συνομιλίας</string>
     <string name="settings_activity_chat_history_deleted">Το ιστορικό συνομιλίας διαγράφηκε</string>
@@ -1741,6 +1961,7 @@ http://blackberry.com/support/bbm"</string>
     <string name="settings_activity_deleting_chat_history_info">Το ιστορικό συνομιλίας με όλες τις επαφές θα διαγραφεί. Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</string>
     <string name="settings_activity_deleting_chat_history_title">Διαγραφή ιστορικού συνομιλίας</string>
     <string name="settings_activity_hide_keyboard_on_enter_conversation">Να εμφανίζεται πάντα το πληκτρολόγιο</string>
+    <string name="settings_activity_keyboard_enter_as_new_line">Το πλήκτρο Enter στο πληκτρολόγιο εισαγάγει νέα γραμμή</string>
     <string name="settings_activity_legal">Νομικές πληροφορίες</string>
     <string name="settings_activity_report_a_problem">Αναφορά προβλήματος</string>
     <string name="settings_activity_save_chat_history">Αποθήκευση ιστορικού συνομιλίας</string>
@@ -1779,6 +2000,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="share_passphrase_other">Θα τους το πω πρόσωπο με πρόσωπο</string>
     <string name="share_passphrase_sms">Μήνυμα κειμένου</string>
     <string name="share_passphrase_title">Κοινοποίηση φράσης πρόσβασης</string>
+    <string name="share_to_feed_title">Να ενημερωθεί η τροφοδοσία σας;</string>
     <string name="sharead_sponsored_invite">Κοινοποιημένη πρόσκληση με χορηγό</string>
     <string name="sharead_sponsored_post">Κοινοποιημένη δημοσίευση με χορηγό</string>
     <string name="shared_channel_post_default_text">Έγινε κοινή χρήση δημοσίευσης καναλιού</string>
@@ -1786,6 +2008,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="shared_channel_post_sent">Έγινε αποστολή δημοσίευσης καναλιού</string>
     <string name="shared_sponsored_content">Κοινοποιημένο περιεχόμενο με χορηγό</string>
     <string name="shop">Κατάστημα</string>
+    <string name="shop_subscriptions">Συνδρομές</string>
     <string name="show">Εμφάνιση</string>
     <string name="show_channel_preview">Προεπισκόπηση</string>
     <string name="show_map">Εμφάνιση χάρτη</string>
@@ -1794,6 +2017,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="sign_in_to_bbm">Σύνδεση στο BBM</string>
     <string name="slide_menu_add_event">Προσθήκη εκδήλωσης</string>
     <string name="slide_menu_add_list">Προσθήκη λίστας</string>
+    <string name="slide_menu_block_chat">Αποκλεισμός συνομιλίας</string>
     <string name="slide_menu_copy_chat">Αντιγραφή συνομιλίας</string>
     <string name="slide_menu_delete_item">Διαγραφή στοιχείου</string>
     <string name="slide_menu_edit">Επεξεργασία</string>
@@ -1809,6 +2033,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="slide_menu_new_chat">Εκκίνηση νέας συνομιλίας</string>
     <string name="slide_menu_open_bbm_chat">Άνοιγμα συνομιλίας BBM</string>
     <string name="slide_menu_ping">Ping</string>
+    <string name="slide_menu_play_in_media_player">Αναπαραγ. στο πρόγρ. αναπαραγωγής</string>
     <string name="slide_menu_remove_deleted_item">Κατάργηση διαγραμμένου στοιχείου</string>
     <string name="slide_menu_remove_from_group">Κατάργηση από την ομάδα</string>
     <string name="slide_menu_reply_by_voice_note">Απάντηση μέσω φωνητικής σημείωσης</string>
@@ -1817,7 +2042,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="slide_menu_save">Αποθήκευση</string>
     <string name="slide_menu_save_picture">Αποθήκευση εικόνας</string>
     <string name="slide_menu_send">Αποστολή</string>
-    <string name="slide_menu_set_as_bbm_display">Ορισμός ως εμφανιζόμενης εικόνας BBM</string>
+    <string name="slide_menu_set_as_bbm_display">Ορισμός ως εμφαν. εικόνας BBM</string>
     <string name="slide_menu_share">Κοινή χρήση</string>
     <string name="slide_menu_suggest_contact">Πρόταση επαφής</string>
     <string name="slide_menu_view_group_profile">Προβολή προφίλ ομάδας</string>
@@ -1827,19 +2052,23 @@ www.pin.bbm.com/%1$s"</string>
     <string name="sms_activity_title">Δημιουργία</string>
     <string name="sort_by">Ταξινόμηση κατά</string>
     <string name="stacked_notification_format"><Data>&lt;b>%1$s&lt;/b>: %2$s</Data></string>
+    <string name="stale_user_reinvite_message">Ο χρήστης %1$s συνδέθηκε τελευταία φορά στις %2$s</string>
+    <string name="stale_user_reinvite_title">Επανάληψη πρόσκλησης</string>
     <string name="start_chat">Έναρξη συνομιλίας</string>
     <string name="start_chat_failed">Δεν ήταν δυνατή η δημιουργία της συνομιλίας</string>
     <string name="start_meeting">Έναρξη BBM Meetings</string>
-    <string name="start_meeting_confirmation_dialog">Να γίνει τερματισμός κλήσης και έναρξη μιας νέας σύσκεψης;</string>
-    <string name="start_meeting_confirmation_title">Να γίνει έναρξη του BBM Meeting;</string>
+    <string name="start_meeting_confirmation_dialog">Αυτήν τη στιγμή, βρίσκεστε σε κλήση στο BBM. Θέλετε να τερματίσετε την κλήση σας και να ξεκινήσετε μια σύσκεψη BBM;</string>
+    <string name="start_meeting_confirmation_title">Έναρξη BBM Meetings</string>
     <string name="start_multiperson_chat">Έναρξη συνομιλίας πολλών προσώπων</string>
+    <string name="start_pin_chat">Πληκτρολογήστε ένα PIN για να ξεκινήσετε μια συνομιλία</string>
     <string name="starts">Έναρξη</string>
     <string name="stats_caption">Στατιστικά</string>
     <string name="stay_in_touch_like_never_before_with_blackberry_messenger">Μείνετε σε επαφή όπως ποτέ πριν με το BlackBerry Messenger.</string>
     <string name="sticker_picker_no_stickers_purchased">Δεν έχετε αγοράσει αυτοκόλλητα.</string>
     <string name="sticker_picker_preview_hint">Για προεπισκόπηση, πατήστε παρατεταμένα ένα αυτοκόλλητο.</string>
-    <string name="sticker_store_collection_heading">αυτοκόλλητο Συλλογές</string>
-    <string name="sticker_store_details_artist_channel">Κανάλι</string>
+    <string name="sticker_settings">Ρυθμίσεις αυτοκόλλητων</string>
+    <string name="sticker_store_collection_heading">Αυτοκόλλητα</string>
+    <string name="sticker_store_details_artist_channel">BBM Channel</string>
     <string name="sticker_store_details_artist_website">Τοποθεσία Web</string>
     <string name="sticker_store_details_promo_text">ΠΡΟΒΟΛΗ ΕΔΩ</string>
     <string name="sticker_store_details_screen_about">Πληροφορίες</string>
@@ -1862,6 +2091,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="sticker_store_sticker_purchase_notification_dialog_line">Μπορείτε να ενημερώσετε τις επαφές σας ότι μόλις αποκτήσατε νέα αυτοκόλλητα.</string>
     <string name="sticker_store_sticker_purchase_notification_message">Κοιτάξτε τα νέα μου αυτοκόλλητα! http://shop.bbm.com/stickers/%1$s</string>
     <string name="sticker_store_store_loading">Γίνεται φόρτωση...</string>
+    <string name="store_generic_billing_error">Δεν ήταν δυνατή η αγορά αυτού του στοιχείου.</string>
     <string name="store_title">Κατάστημα BBM</string>
     <string name="submit_button">Υποβολή</string>
     <string name="submit_passphrase">Υποβολή</string>
@@ -1871,6 +2101,44 @@ www.pin.bbm.com/%1$s"</string>
     <string name="subscribed_channel_invite_default_message">Θέλω να σε προσκαλέσω στο κανάλι με όνομα \"%1$s\".</string>
     <string name="subscribed_channels">Κανάλια με εγγραφή</string>
     <string name="subscribers_caption">Συνδρομητές</string>
+    <string name="subscriptino_pin_promo">Μπορείτε να δημιουργήσετε ένα PIN για το BBM που θα μπορείτε να θυμάστε εύκολα εσείς και οι φίλοι σας.</string>
+    <string name="subscription_already_exists_bb10">Έχετε μια συνδρομή με αυτόματη ανανέωση, η οποία αγοράστε σε κάποια άλλη συσκευή.</string>
+    <string name="subscription_app_type_no_ads">no_ads</string>
+    <string name="subscription_app_type_vanity_pin">custom_pin</string>
+    <string name="subscription_auto_renewing">Έχετε μια συνδρομή με αυτόματη ανανέωση.</string>
+    <string name="subscription_bbid_conflict">Αυτό το στοιχείο αγοράστηκε για κάποιο άλλο BlackBerry ID με το λογαριασμό σας στο κατάστημα. Δοκιμάστε να χρησιμοποιήσετε έναν άλλο λογαριασμό καταστήματος.</string>
+    <string name="subscription_custom_pin_description">Θέλετε ένα προσαρμοσμένο PIN που θα μπορείτε να θυμάστε εύκολα εσείς και οι φίλοι σας; Δημιουργήστε ένα PIN για το BBM που θα είναι αποκλειστικά δικό σας. Μη χάσετε την ευκαιρία: ζητήστε το δικό σας προσαρμοσμένο PIN σήμερα.</string>
+    <string name="subscription_dialog_duration_monthly">Μηνιαία: %1$s</string>
+    <string name="subscription_dialog_duration_title">Επιλέξτε μια συνδρομή</string>
+    <string name="subscription_dialog_duration_yearly">Ετήσια: %1$s</string>
+    <string name="subscription_edit_messages_description">Αν κάνατε λάθος σε κάποιο μήνυμα, μπορείτε να το αναιρέσετε, να διορθώσετε τα λάθη σας και να το στείλετε εκ νέου.</string>
+    <string name="subscription_exclusive_badge">Αποκλειστικό σήμα</string>
+    <string name="subscription_exclusive_descritpion_pin">Δείξτε σε όλους το κύρος σας στο BBM με ένα σήμα. Αυτό το σήμα εμφανίζεται και σε εμφανιζόμενες εικόνες με ενεργή συνδρομή.</string>
+    <string name="subscription_expired">Η συνδρομή σας έχει λήξει. Θέλετε να αποκτήσετε νέα συνδρομή;</string>
+    <string name="subscription_exsits_ios_72hours">Η συνδρομή σας πρόκειται να λήξει σύντομα. Για να συνεχίσετε να χρησιμοποιείτε αυτήν τη δυνατότητα, αποκτήστε μια συνδρομή εδώ πριν από τις %1$s.</string>
+    <string name="subscription_exsits_on_ios">Αυτό το στοιχείο αγοράστηκε σε κάποια άλλη συσκευή. Για να συνεχίσετε να χρησιμοποιείτε αυτήν τη δυνατότητα, αποκτήστε μια συνδρομή εδώ πριν από τις %1$s.</string>
+    <string name="subscription_generic_guidelines">Οδηγίες χρήσης για το προσαρμοσμένο PIN στο BBM</string>
+    <string name="subscription_generic_learn_more">Μάθετε περισσότερα</string>
+    <string name="subscription_learn_more">Για να μάθετε περισσότερα σχετικά με τις συνδρομές επισκεφτείτε τη διεύθυνση <a href="http://bbm.com/FAQ">bbm.com/FAQ</a>.</string>
+    <string name="subscription_no_adds_share">Μπορείτε να ενημερώσετε τις επαφές σας ότι μόλις απενεργοποιήσατε τις διαφημίσεις στο BBM.</string>
+    <string name="subscription_no_adds_status_message">Μόλις απενεργοποίησα τις διαφημίσεις στο BBM. Για να αποκρύψετε τις διαφημίσεις στη συσκευή σας, πατήστε http://shop.bbm.com/item/no_ads</string>
+    <string name="subscription_no_ads">Χωρίς διαφημίσεις</string>
+    <string name="subscription_no_ads_description">Δεν θέλετε να βλέπετε διαφημίσεις; Μπορείτε να αποκτήσετε μια συνδρομή για να μην εμφανίζονται πλέον διαφημίσεις στο BBM.</string>
+    <string name="subscription_no_ads_promo">"Απαλλαγή από διαφημίσεις
+Με αυτήν τη συνδρομή, δεν θα εμφανίζονται πλέον διαφημίσεις και χορηγούμενες προσκλήσεις στο BBM."</string>
+    <string name="subscription_no_ads_title">Χωρίς διαφημίσεις</string>
+    <string name="subscription_pin_before_share">Τώρα μπορώ να δημιουργήσω ένα προσαρμοσμένο PΙΝ στο BBM. Για να προσαρμόσετε το PIN σας, πατήστε http://shop.bbm.com/item/custom_pin</string>
+    <string name="subscription_pin_before_share_prompt">Μπορείτε να ενημερώσετε τις επαφές σας ότι μπορείτε να δημιουργήσετε ένα προσαρμοσμένο PIN.</string>
+    <string name="subscription_pin_feautres">Περιλαμβάνει τις εξής δυνατότητες:</string>
+    <string name="subscription_private_chat_description">Στις ιδιωτικές συνομιλίες, το όνομα της επαφής σας είναι κρυφό και οι ειδοποιήσεις μηνυμάτων είναι απενεργοποιημένες. Η συνομιλία σας διαγράφεται αυτόματα μετά από σύντομο χρονικό διάστημα ή όταν τερματίσετε την ιδιωτική συνομιλία.</string>
+    <string name="subscription_reactiviate">Εγγραφή</string>
+    <string name="subscription_retracted_messages_description">Αν στείλατε το μήνυμα κατά λάθος, μπορείτε να αναιρέσετε το μήνυμά σας, ώστε να μην εμφανίζεται στη συνομιλία.</string>
+    <string name="subscription_retracted_messages_title">Μηνύματα που έχουν αναιρεθεί</string>
+    <string name="subscription_status_active_subscription">Έχετε μια συνδρομή με αυτόματη ανανέωση.</string>
+    <string name="subscription_timed_messages_description">Μπορείτε να αποστέλλετε μηνύματα και εικόνες, των οποίων η προβολή είναι δυνατή για συγκεκριμένο χρονικό διάστημα. Το μήνυμα είναι κρυμμένο στη συνομιλία και ο παραλήπτης μπορεί να πατήσει παρατεταμένα το μήνυμα για να το αποκαλύψει. Δεν είναι δυνατή η προβολή του μηνύματος μετά τη λήξη του χρονομετρητή.</string>
+    <string name="subscription_timed_messages_title">Χρονομετρημένα μηνύματα</string>
+    <string name="subscriptions_not_entitled">Πρέπει να έχετε συνδρομή για να χρησιμοποιήσετε αυτήν τη δυνατότητα.</string>
+    <string name="subscriptions_restoring">Έλεγχος των συνδρομών σας</string>
     <string name="suggestion_i_invite_you">Ο χρήστης %1$s μου πρότεινε να σας προσκαλέσω σε συνομιλία μέσω του BBM.</string>
     <string name="suggestion_sent">Η πρόταση εστάλη</string>
     <string name="suggestion_want_to_invite_bbm_contact">Θέλετε να προσκαλέσετε αυτήν την επαφή BBM;</string>
@@ -1896,7 +2164,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="timestamp_format_today_at">Σήμερα στις %1$s</string>
     <string name="timestamp_format_yesterday_at">Χθες στις %1$s</string>
     <string name="title_activity_category">Κατηγορία</string>
-    <string name="title_activity_change_status">Αλλαγή κατάστασης</string>
+    <string name="title_activity_change_status">Κατάσταση</string>
     <string name="title_activity_channels_lobby">Χώρος του προσωπικού καναλιού</string>
     <string name="title_activity_group_event_details">Λεπτομέρειες εκδηλώσεων ομάδας</string>
     <string name="title_activity_group_events">Εκδηλώσεις ομάδας</string>
@@ -1929,6 +2197,9 @@ www.pin.bbm.com/%1$s"</string>
     <string name="update_fragment_hide_updates">Απόκρυψη</string>
     <string name="update_fragment_view_channel">Προβολή καναλιού</string>
     <string name="update_fragment_view_post">Προβολή δημοσίευσης</string>
+    <string name="update_list_archiving_disabled_message">Ο διαχειριστής απενεργοποίησε τη δυνατότητα αρχειοθέτησης.</string>
+    <string name="update_list_archiving_enabled_message">Ο διαχειριστής ενεργοποίησε τη δυνατότητα αρχειοθέτησης.</string>
+    <string name="update_list_archiving_title">Αρχειοθέτηση συνομιλιών BBM</string>
     <string name="update_list_avatar">Ο χρήστης &lt;b>%1$s&lt;/b> άλλαξε την εμφανιζόμενη εικόνα του.</string>
     <string name="update_list_changed_event_sub_title">Έγινε αλλαγή εκδήλωσης</string>
     <string name="update_list_comment_sub_title">Έγινε προσθήκη σχολίου</string>
@@ -1984,18 +2255,30 @@ www.pin.bbm.com/%1$s"</string>
     <string name="update_list_new_contact_sub_title">Επαφή BBM</string>
     <string name="update_list_new_event_sub_title">Δημιουργία εκδήλωσης</string>
     <string name="update_list_new_list_item_sub_title">Νέο στοιχείο λίστας</string>
+    <string name="update_list_new_status_hint">Εισαγωγή ονόματος κατάστασης</string>
     <string name="update_list_new_status_message">\"%1$s\"</string>
     <string name="update_list_new_status_sub_title">Νέα κατάσταση</string>
     <string name="update_list_newcontact">Ο χρήστης &lt;b>%1$s&lt;/b> είναι πλέον επαφή.</string>
     <string name="update_list_now_playing_message">Ακούει \"%1$s\"</string>
     <string name="update_list_nowplayingmessage">Ο χρήστης &lt;b>%1$s&lt;/b> ακούει το \"%2$s\".</string>
     <string name="update_list_personalmessage">Ο χρήστης &lt;b>%1$s&lt;/b> είπε \"%2$s\"</string>
+    <string name="update_list_protected_disabled_message">Ο διαχειριστής σας απενεργοποίησε το BBM Protected. Δεν συμμετέχετε πλέον στις ομάδες που χρησιμοποιούν το BBM Protected.</string>
+    <string name="update_list_protected_enabled_message">Ο διαχειριστής σας ενεργοποίησε το BBM Protected. Θα χρησιμοποιηθεί ένα επιπλέον επίπεδο κρυπτογράφησης στις συνομιλίες, στις μεταφορές αρχείων και στις ομάδες σας με επαφές BBM Protected.</string>
+    <string name="update_list_protected_preferred_disabled_message">Ο διαχειριστής σας απενεργοποίησε το Protected Plus.</string>
+    <string name="update_list_protected_preferred_enabled_message">Ο διαχειριστής σας ενεργοποίησε το Protected Plus. Οι συνομιλίες στις οποίες συμμετέχετε εσείς και οι επαφές σας θα είναι συνομιλίες BBM Protected.</string>
+    <string name="update_list_protected_status_sub_title">Αλλαγή πολιτικής</string>
+    <string name="update_list_protected_title">BBM Protected</string>
     <string name="update_list_you">Εσείς</string>
+    <string name="update_popular_channels_subtitle">Πατήστε για εξερεύνηση</string>
+    <string name="update_popular_channels_title">Δημοφιλή κανάλια</string>
     <string name="update_removed_from_blocked_list">Καταργήθηκαν από τη λίστα αποκλεισμού.</string>
     <string name="update_sponsored_content">Περιεχόμενο με χορηγό</string>
     <string name="update_sponsored_post">Δημοσίευση με χορηγό</string>
+    <string name="update_your_subscription">Ενημέρωση συνδρομής</string>
     <string name="updates">Τροφοδοσίες</string>
     <string name="upload">Αποστολή</string>
+    <string name="user_status_stale">Εθεάθη τελευταία φορά %1$s</string>
+    <string name="vanity_pin">Προσαρμοσμένο PIN</string>
     <string name="verify_date_of_birth">Επαλήθευση της ημερομηνίας γέννησής σας.</string>
     <string name="verify_passphrase">Γίνεται επαλήθευση της φράσης πρόσβασης.</string>
     <string name="version">Έκδοση</string>
@@ -2003,6 +2286,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="view_channel_info">Προεπισκόπηση</string>
     <string name="view_channel_profile">Προβ. προφίλ καναλιού</string>
     <string name="visits_caption">Επισκέψεις</string>
+    <string name="voice_note_duration">%1$02d:%2$02d</string>
     <string name="voice_rating_bad">Κάκιστη</string>
     <string name="voice_rating_excellent">Τέλεια</string>
     <string name="voice_rating_fair">Μέτρια</string>
@@ -2010,11 +2294,31 @@ www.pin.bbm.com/%1$s"</string>
     <string name="voice_rating_poor">Κακή</string>
     <string name="voice_rating_title">Πώς θα αξιολογούσατε την ποιότητα αυτής της κλήσης;</string>
     <string name="voicecall_already_in_call">Βρίσκεστε ήδη σε κλήση στο BBM. Για να καλέσετε αυτή την επαφή, τερματίστε την άλλη κλήση σας και προσπαθήστε ξανά.</string>
+    <string name="voicecall_must_add_as_contact">Για να χρησιμοποιήσετε αυτή τη δυνατότητα, πρέπει να προσθέσετε αυτόν το χρήστη στις Επαφές BBM.</string>
+    <string name="voicecall_must_add_as_contact_title">Προσθήκη στις επαφές BBM</string>
     <string name="voicecall_status_calling">Κλήση σε εξέλιξη</string>
     <string name="voicecall_status_connecting">Γίνεται σύνδεση</string>
     <string name="voicecall_status_duration">Φωνητική κλήση %1$s</string>
     <string name="voicecall_status_duration_while_mute">Έγινε σίγαση του %1$s</string>
+    <string name="voicenote">Φωνητική σημείωση</string>
     <string name="wait_passphrase_confirmation">Αναμονή επιβεβαίωσης φράσης πρόσβασης.</string>
+    <string name="warning_on_repurchase">Για να αποτρέψετε τη διακοπή των δυνατοτήτων αυτής της συνδρομής, ενδεχομένως να χρειαστεί να αγοράσετε νέα συνδρομή και στη συνέχεια να ακυρώσετε την παλαιά συνδρομή σας. Για περισσότερες πληροφορίες, επισκεφθείτε τη διεύθυνση: %1$s</string>
+    <string name="wear_quick_call_shortly">Θα σας καλέσω σύντομα.</string>
+    <string name="wear_quick_cant_take">Είμαι απασχολημένος και δεν μπορώ να δεχθώ την κλήση σας.</string>
+    <string name="wear_quick_im_on_my_way">"Είμαι καθ' οδόν."</string>
+    <string name="wear_quick_response_1">Εντάξει.</string>
+    <string name="wear_quick_response_2">Κατάλαβα!</string>
+    <string name="wear_quick_response_3">Είμαι απασχολημένος τώρα, θα απαντήσω όταν μπορέσω.</string>
+    <string name="wear_quick_response_appreciation">Ευχαριστώ</string>
+    <string name="wear_quick_response_confirmation">Ναι</string>
+    <string name="wear_quick_response_disagree">Όχι</string>
+    <string name="wear_quick_response_haha">Χαχα</string>
+    <string name="wear_quick_response_lol">LOL</string>
+    <string name="wear_quick_response_on_my_way">"Καθ' οδόν"</string>
+    <string name="wear_quick_response_see_you_soon">Τα λέμε</string>
+    <string name="wear_quick_response_talk_later">Δεν μπορώ να μιλήσω τώρα</string>
+    <string name="wear_quick_response_understood">ΟΚ</string>
+    <string name="wearable_support">Υποστήριξη φορετών συσκευών</string>
     <string name="widget_back_to_chat_previews">Επιστροφή στις Προεπισκοπήσεις συνομιλιών</string>
     <string name="widget_change_my_status_message">Αλλαγή του μηνύματος κατάστασης</string>
     <string name="widget_edit_status">Επεξεργασία κατάστασης</string>
@@ -2030,6 +2334,7 @@ www.pin.bbm.com/%1$s"</string>
     <string name="wifi_changing_network">Αίτηση σύνδεσης με το δίκτυο…</string>
     <string name="wifi_ssid_label">Όνομα Δικτύου</string>
     <string name="wifi_type_label">Τύπος</string>
+    <string name="yes">Ναι</string>
     <string name="you_are_signed_in_with_the_following_blackberry_id">Έχετε συνδεθεί με το εξής BlackBerry ID: %1$s</string>
     <string name="you_can_choose_another_restore_option_or_delete_your_device_data">Μπορείτε να διαλέξετε μια άλλη επιλογή επαναφοράς ή να διαγράψετε τα δεδομένα της συσκευής σας και να συνδεθείτε με το BlackBerry ID που έχει συσχετιστεί με το αρχείο αντιγράφου ασφαλείας.</string>
     <string name="you_can_now_start_video_and_voice_chats">Μπορείτε πλέον να ξεκινάτε βιντεοσυνομιλίες και φωνητικές συνομιλίες από το BBM (εάν υποστηρίζεται).</string>

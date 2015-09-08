@@ -1,5 +1,5 @@
 .class public abstract Lcom/trinea/view/autoscrollviewpager/e;
-.super Landroid/support/v4/view/af;
+.super Landroid/support/v4/view/as;
 .source "RecyclingPagerAdapter.java"
 
 
@@ -32,7 +32,7 @@
     const/4 v1, 0x0
 
     .line 37
-    invoke-direct {p0}, Landroid/support/v4/view/af;-><init>()V
+    invoke-direct {p0}, Landroid/support/v4/view/as;-><init>()V
 
     .line 38
     iput-object p1, p0, Lcom/trinea/view/autoscrollviewpager/e;->a:Lcom/trinea/view/autoscrollviewpager/d;
@@ -130,7 +130,7 @@
     goto :goto_0
 .end method
 
-.method public final a(Landroid/view/ViewGroup;ILjava/lang/Object;)V
+.method public a(Landroid/view/ViewGroup;ILjava/lang/Object;)V
     .locals 3
 
     .prologue
@@ -199,7 +199,7 @@
     goto :goto_0
 .end method
 
-.method public final b()V
+.method public final d()V
     .locals 12
 
     .prologue
@@ -341,7 +341,7 @@
 
     .line 44
     :cond_6
-    invoke-super {p0}, Landroid/support/v4/view/af;->b()V
+    invoke-super {p0}, Landroid/support/v4/view/as;->d()V
 
     .line 45
     return-void

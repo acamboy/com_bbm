@@ -82,7 +82,7 @@
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/glympse/android/lib/GJobQueue;->getRertyQueueLength()I
+    invoke-interface {v0}, Lcom/glympse/android/lib/GJobQueue;->getRetryQueueLength()I
 
     move-result v0
 

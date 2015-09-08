@@ -10,7 +10,7 @@
 
 .field private final c:Landroid/widget/ProgressBar;
 
-.field private d:Lcom/bbm/ui/n;
+.field private d:I
 
 .field private e:J
 
@@ -54,9 +54,9 @@
     invoke-direct {p0, p1, p2, p3}, Lcom/bbm/ui/CustomView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 23
-    sget-object v0, Lcom/bbm/ui/n;->b:Lcom/bbm/ui/n;
+    sget v0, Lcom/bbm/ui/n;->b:I
 
-    iput-object v0, p0, Lcom/bbm/ui/AudioProgressBar;->d:Lcom/bbm/ui/n;
+    iput v0, p0, Lcom/bbm/ui/AudioProgressBar;->d:I
 
     .line 24
     const-wide/16 v0, 0x0
@@ -73,7 +73,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/bbm/ae;->AudioProgressBar:[I
+    sget-object v1, Lcom/bbm/al;->AudioProgressBar:[I
 
     invoke-virtual {v0, p2, v1, p3, v2}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -81,7 +81,7 @@
 
     .line 37
     :try_start_0
-    invoke-static {}, Lcom/bbm/ui/n;->values()[Lcom/bbm/ui/n;
+    invoke-static {}, Lcom/bbm/ui/n;->a()[I
 
     move-result-object v0
 
@@ -93,18 +93,16 @@
 
     move-result v2
 
-    aget-object v0, v0, v2
+    aget v0, v0, v2
 
-    iput-object v0, p0, Lcom/bbm/ui/AudioProgressBar;->d:Lcom/bbm/ui/n;
+    iput v0, p0, Lcom/bbm/ui/AudioProgressBar;->d:I
 
     .line 38
     sget-object v0, Lcom/bbm/ui/m;->a:[I
 
-    iget-object v2, p0, Lcom/bbm/ui/AudioProgressBar;->d:Lcom/bbm/ui/n;
+    iget v2, p0, Lcom/bbm/ui/AudioProgressBar;->d:I
 
-    invoke-virtual {v2}, Lcom/bbm/ui/n;->ordinal()I
-
-    move-result v2
+    add-int/lit8 v2, v2, -0x1
 
     aget v0, v0, v2
 
@@ -115,7 +113,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f030122
+    const v2, 0x7f03013b
 
     const/4 v3, 0x1
 
@@ -128,7 +126,7 @@
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 52
-    const v0, 0x7f0b05ad
+    const v0, 0x7f0b063b
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/AudioProgressBar;->findViewById(I)Landroid/view/View;
 
@@ -139,7 +137,7 @@
     iput-object v0, p0, Lcom/bbm/ui/AudioProgressBar;->a:Landroid/widget/TextView;
 
     .line 53
-    const v0, 0x7f0b05ae
+    const v0, 0x7f0b063c
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/AudioProgressBar;->findViewById(I)Landroid/view/View;
 
@@ -150,7 +148,7 @@
     iput-object v0, p0, Lcom/bbm/ui/AudioProgressBar;->b:Landroid/widget/TextView;
 
     .line 55
-    const v0, 0x7f0b05ac
+    const v0, 0x7f0b063a
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/AudioProgressBar;->findViewById(I)Landroid/view/View;
 
@@ -161,9 +159,9 @@
     iput-object v0, p0, Lcom/bbm/ui/AudioProgressBar;->c:Landroid/widget/ProgressBar;
 
     .line 56
-    iget-object v0, p0, Lcom/bbm/ui/AudioProgressBar;->d:Lcom/bbm/ui/n;
+    iget v0, p0, Lcom/bbm/ui/AudioProgressBar;->d:I
 
-    sget-object v1, Lcom/bbm/ui/n;->b:Lcom/bbm/ui/n;
+    sget v1, Lcom/bbm/ui/n;->b:I
 
     if-ne v0, v1, :cond_0
 
@@ -176,7 +174,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f02002a
+    const v2, 0x7f02004a
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -206,7 +204,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f030122
+    const v2, 0x7f03013b
 
     const/4 v3, 0x1
 
@@ -231,7 +229,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f030121
+    const v2, 0x7f03013a
 
     const/4 v3, 0x1
 
@@ -347,9 +345,9 @@
     invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setProgress(I)V
 
     .line 96
-    iget-object v0, p0, Lcom/bbm/ui/AudioProgressBar;->d:Lcom/bbm/ui/n;
+    iget v0, p0, Lcom/bbm/ui/AudioProgressBar;->d:I
 
-    sget-object v1, Lcom/bbm/ui/n;->b:Lcom/bbm/ui/n;
+    sget v1, Lcom/bbm/ui/n;->b:I
 
     if-ne v0, v1, :cond_0
 

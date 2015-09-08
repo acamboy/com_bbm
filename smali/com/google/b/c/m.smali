@@ -4,10 +4,10 @@
 
 
 # static fields
-.field static final a:Lcom/google/b/c/bz;
+.field static final a:Lcom/google/b/c/ca;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/google/b/c/bz",
+            "Lcom/google/b/c/ca",
             "<",
             "Ljava/lang/Object;",
             ">;"
@@ -32,14 +32,14 @@
     .locals 1
 
     .prologue
-    .line 69
+    .line 72
     new-instance v0, Lcom/google/b/c/n;
 
     invoke-direct {v0}, Lcom/google/b/c/n;-><init>()V
 
-    sput-object v0, Lcom/google/b/c/m;->a:Lcom/google/b/c/bz;
+    sput-object v0, Lcom/google/b/c/m;->a:Lcom/google/b/c/ca;
 
-    .line 119
+    .line 122
     new-instance v0, Lcom/google/b/c/o;
 
     invoke-direct {v0}, Lcom/google/b/c/o;-><init>()V
@@ -49,21 +49,21 @@
     return-void
 .end method
 
-.method public static a()Lcom/google/b/c/by;
+.method public static a()Lcom/google/b/c/bz;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">()",
-            "Lcom/google/b/c/by",
+            "Lcom/google/b/c/bz",
             "<TT;>;"
         }
     .end annotation
 
     .prologue
-    .line 104
-    sget-object v0, Lcom/google/b/c/m;->a:Lcom/google/b/c/bz;
+    .line 107
+    sget-object v0, Lcom/google/b/c/m;->a:Lcom/google/b/c/ca;
 
     return-object v0
 .end method
@@ -83,13 +83,16 @@
     .end annotation
 
     .prologue
-    .line 381
-    invoke-static {p0}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 353
+    invoke-static {p0}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 382
+    .line 354
+    invoke-static {p1}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 355
     const/4 v0, 0x0
 
-    .line 383
+    .line 356
     :goto_0
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -97,7 +100,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 384
+    .line 357
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -110,13 +113,13 @@
 
     goto :goto_0
 
-    .line 386
+    .line 359
     :cond_0
     return v0
 .end method
 
 .method public static a(Ljava/util/Iterator;Ljava/util/Collection;)Z
-    .locals 2
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -128,41 +131,39 @@
     .end annotation
 
     .prologue
-    .line 222
-    invoke-static {p1}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 211
+    invoke-static {p1}, Lcom/google/b/a/o;->a(Ljava/util/Collection;)Lcom/google/b/a/n;
 
-    .line 223
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
+
     const/4 v0, 0x0
 
-    .line 224
     :cond_0
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_1
+    if-eqz v2, :cond_1
 
-    .line 225
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-interface {p1, v1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+    invoke-interface {v1, v2}, Lcom/google/b/a/n;->a(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_0
+    if-eqz v2, :cond_0
 
-    .line 226
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
 
-    .line 227
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 230
     :cond_1
     return v0
 .end method

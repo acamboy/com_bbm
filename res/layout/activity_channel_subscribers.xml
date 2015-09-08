@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <ListView android:id="@id/channel_subscribers_listview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
-    <RelativeLayout android:id="@id/fetch_results_message_bar" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/footer_action_bar">
+    <include android:id="@id/channel_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/toolbar_channels" />
+    <ListView android:id="@id/channel_subscribers_listview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/channel_toolbar" />
+    <RelativeLayout android:id="@id/fetch_results_message_bar" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/channel_toolbar">
         <TextView android:textSize="@dimen/search_results_message_text_size" android:id="@id/fetch_results_message_text" android:paddingLeft="@dimen/search_results_message_text_left_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
         <ImageView android:id="@id/fetch_results_message_image" android:visibility="gone" android:layout_width="@dimen/search_results_retry_button_size" android:layout_height="@dimen/search_results_retry_button_size" android:src="@drawable/message_bar_retry_button" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/blank" />
         <ProgressBar android:id="@id/fetch_results_progress_bar" android:visibility="gone" android:layout_width="@dimen/search_results_progress_bar_size" android:layout_height="@dimen/search_results_progress_bar_size" android:indeterminate="true" android:layout_alignParentRight="true" style="?android:attr/progressBarStyleLarge" />
     </RelativeLayout>
     <ViewStub android:id="@id/channel_removed" android:layout="@layout/activity_channel_child" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <include android:layout_alignParentBottom="true" layout="@layout/view_merge_footer_actionbar_dropshadow" />
 </RelativeLayout>

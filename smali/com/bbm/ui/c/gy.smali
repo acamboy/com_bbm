@@ -3,20 +3,24 @@
 .source "StickerDetailsFragment.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnCancelListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/gr;
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Lcom/bbm/ui/c/fx;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/gr;)V
+.method constructor <init>(Lcom/bbm/ui/c/fx;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 741
-    iput-object p1, p0, Lcom/bbm/ui/c/gy;->a:Lcom/bbm/ui/c/gr;
+    .line 461
+    iput-object p1, p0, Lcom/bbm/ui/c/gy;->b:Lcom/bbm/ui/c/fx;
+
+    iput-object p2, p0, Lcom/bbm/ui/c/gy;->a:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,10 +29,24 @@
 
 
 # virtual methods
-.method public final onCancel(Landroid/content/DialogInterface;)V
-    .locals 0
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 745
+    .line 465
+    const-string v0, "Artist Web Site button clicked"
+
+    const-class v1, Lcom/bbm/ui/c/fx;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 466
+    iget-object v0, p0, Lcom/bbm/ui/c/gy;->b:Lcom/bbm/ui/c/fx;
+
+    iget-object v1, p0, Lcom/bbm/ui/c/gy;->a:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/c/fx;->a(Lcom/bbm/ui/c/fx;Ljava/lang/String;)V
+
+    .line 467
     return-void
 .end method

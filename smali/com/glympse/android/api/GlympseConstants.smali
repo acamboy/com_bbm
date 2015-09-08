@@ -72,8 +72,6 @@
 
 .field public static final INVITE_MODE_ACTIVATE_USER:I = 0x2
 
-.field public static final INVITE_MODE_COMPLETE_TRACK:I = 0x4
-
 .field public static final INVITE_MODE_DEFAULT:I = 0x0
 
 .field public static final INVITE_MODE_PROMPT_BEFORE_VIEWING:I = 0x1
@@ -150,7 +148,21 @@
 
 .field public static final LINKED_ACCOUNT_STATUS_REFRESH_NEEDED:I = 0x2
 
+.field public static final NETWORK_RESPONSE_BODY_ANY:I = 0x0
+
+.field public static final NETWORK_RESPONSE_BODY_NOT_EMPTY:I = 0x10
+
+.field public static final NETWORK_RESPONSE_BODY_VALID_JSON:I = 0x30
+
+.field public static final NETWORK_RESPONSE_CODE_2XX:I = 0x2
+
+.field public static final NETWORK_RESPONSE_CODE_ANY:I = 0x0
+
+.field public static final NETWORK_RESPONSE_CODE_ANY_VALID:I = 0x1
+
 .field public static final SERVER_ERROR_ACCESS_DENIED:I = 0x3
+
+.field public static final SERVER_ERROR_DISABLED:I = 0x9
 
 .field public static final SERVER_ERROR_EXISTING_LINK:I = 0x6
 
@@ -212,6 +224,8 @@
 
 .field public static final TRACK_SOURCE_GOOGLE_DIRECTIONS:I = 0x1
 
+.field public static final TRACK_SOURCE_HERE_DIRECTIONS:I = 0x3
+
 .field public static final TRACK_SOURCE_INFLIGHT:I = 0x2
 
 .field public static final TRACK_SOURCE_UNKNOWN:I = 0x0
@@ -250,7 +264,7 @@
     .locals 1
 
     .prologue
-    .line 516
+    .line 519
     const-string v0, "invite_client_send"
 
     invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createString(Ljava/lang/String;)Ljava/lang/String;
@@ -264,7 +278,7 @@
     .locals 1
 
     .prologue
-    .line 493
+    .line 488
     const-string v0, "evernote"
 
     invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createString(Ljava/lang/String;)Ljava/lang/String;
@@ -278,7 +292,7 @@
     .locals 1
 
     .prologue
-    .line 477
+    .line 472
     const-string v0, "facebook"
 
     invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createString(Ljava/lang/String;)Ljava/lang/String;
@@ -292,8 +306,22 @@
     .locals 1
 
     .prologue
-    .line 501
+    .line 496
     const-string v0, "google_plus"
+
+    invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static LINKED_ACCOUNT_TYPE_PAIRING()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 504
+    const-string v0, "pairing"
 
     invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -306,7 +334,7 @@
     .locals 1
 
     .prologue
-    .line 485
+    .line 480
     const-string v0, "twitter"
 
     invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createString(Ljava/lang/String;)Ljava/lang/String;
@@ -320,7 +348,7 @@
     .locals 1
 
     .prologue
-    .line 465
+    .line 460
     const-string v0, "context"
 
     invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createString(Ljava/lang/String;)Ljava/lang/String;
@@ -334,7 +362,7 @@
     .locals 1
 
     .prologue
-    .line 457
+    .line 452
     const-string v0, "location"
 
     invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createString(Ljava/lang/String;)Ljava/lang/String;
@@ -348,7 +376,7 @@
     .locals 1
 
     .prologue
-    .line 449
+    .line 444
     const-string v0, "hidden"
 
     invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createString(Ljava/lang/String;)Ljava/lang/String;
@@ -362,7 +390,7 @@
     .locals 1
 
     .prologue
-    .line 441
+    .line 436
     const-string v0, "visible"
 
     invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createString(Ljava/lang/String;)Ljava/lang/String;

@@ -25,7 +25,7 @@
 .method public abstract b(Lcom/bbm/j/h;)V
 .end method
 
-.method public abstract e()Ljava/lang/Object;
+.method public abstract f()Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TV;"

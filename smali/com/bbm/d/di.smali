@@ -1,19 +1,24 @@
 .class public final Lcom/bbm/d/di;
-.super Lcom/bbm/d/dy;
+.super Lcom/bbm/d/ez;
 .source "BbmdsProtocol.java"
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Ljava/lang/String;)V
     .locals 1
 
     .prologue
-    .line 4838
-    const-string v0, "setupSkip"
+    .line 3573
+    const-string v0, "pictureRequestHigherQuality"
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/d/ez;-><init>(Ljava/lang/String;)V
 
-    .line 4840
+    .line 3575
+    const-string v0, "id"
+
+    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/di;->a(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 3576
     return-void
 .end method
 
@@ -23,8 +28,8 @@
     .locals 1
 
     .prologue
-    .line 4836
-    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
+    .line 3571
+    invoke-super {p0}, Lcom/bbm/d/ez;->a()Lcom/bbm/f/ab;
 
     move-result-object v0
 

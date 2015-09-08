@@ -39,6 +39,3 @@
 
 .method public abstract viewGroup(Lcom/glympse/android/lib/GGroupPrivate;)V
 .end method
-
-.method public abstract viewTicket(Lcom/glympse/android/lib/GGroupPrivate;Lcom/glympse/android/lib/GGroupMemberPrivate;Ljava/lang/String;)Lcom/glympse/android/lib/GTicketPrivate;
-.end method

@@ -1,115 +1,59 @@
 .class final Lcom/bbm/ui/c/cd;
-.super Lcom/bbm/j/a;
+.super Ljava/lang/Object;
 .source "ChatsFragment.java"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/j/a",
-        "<",
-        "Ljava/lang/Boolean;",
-        ">;"
-    }
-.end annotation
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/bo;
+.field final synthetic a:Lcom/bbm/ui/c/ca;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/bo;)V
+.method constructor <init>(Lcom/bbm/ui/c/ca;)V
     .locals 0
 
     .prologue
-    .line 421
-    iput-object p1, p0, Lcom/bbm/ui/c/cd;->a:Lcom/bbm/ui/c/bo;
+    .line 882
+    iput-object p1, p0, Lcom/bbm/ui/c/cd;->a:Lcom/bbm/ui/c/ca;
 
-    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final synthetic a()Ljava/lang/Object;
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
     .prologue
-    .line 421
-    iget-object v0, p0, Lcom/bbm/ui/c/cd;->a:Lcom/bbm/ui/c/bo;
+    .line 885
+    const-string v0, "Transition invite activity"
 
-    invoke-static {v0}, Lcom/bbm/ui/c/bo;->i(Lcom/bbm/ui/c/bo;)Lcom/bbm/j/r;
+    const-class v1, Lcom/bbm/ui/c/ca;
 
-    move-result-object v0
+    invoke-static {v0, v1}, Lcom/bbm/af;->c(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-interface {v0}, Lcom/bbm/j/r;->e()Ljava/lang/Object;
+    .line 886
+    new-instance v0, Landroid/content/Intent;
 
-    move-result-object v0
+    iget-object v1, p0, Lcom/bbm/ui/c/cd;->a:Lcom/bbm/ui/c/ca;
 
-    check-cast v0, Ljava/util/List;
+    invoke-virtual {v1}, Lcom/bbm/ui/c/ca;->getActivity()Landroid/support/v4/app/q;
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    move-result-object v1
 
-    move-result v0
+    const-class v2, Lcom/bbm/invite/InvitesActivity;
 
-    if-gtz v0, :cond_0
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    .line 887
+    iget-object v1, p0, Lcom/bbm/ui/c/cd;->a:Lcom/bbm/ui/c/ca;
 
-    move-result-object v0
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/c/ca;->startActivity(Landroid/content/Intent;)V
 
-    invoke-virtual {v0}, Lcom/bbm/d/a;->F()Lcom/bbm/j/w;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-gtz v0, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/ui/c/cd;->a:Lcom/bbm/ui/c/bo;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/bo;->c(Lcom/bbm/ui/c/bo;)Lcom/bbm/j/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    if-lez v0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :cond_1
-    const/4 v0, 0x1
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    goto :goto_0
+    .line 888
+    return-void
 .end method

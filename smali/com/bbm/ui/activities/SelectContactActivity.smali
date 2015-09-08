@@ -1,48 +1,72 @@
 .class public Lcom/bbm/ui/activities/SelectContactActivity;
-.super Lcom/bbm/ui/activities/akz;
+.super Lcom/bbm/bali/ui/main/a/a;
 .source "SelectContactActivity.java"
 
 
 # instance fields
-.field private final A:Landroid/view/View$OnTouchListener;
+.field private A:Landroid/os/Bundle;
 
-.field private final B:Landroid/widget/AdapterView$OnItemClickListener;
+.field private B:Ljava/lang/String;
 
-.field private final C:Lcom/bbm/ui/cn;
+.field private C:I
 
-.field private final E:Lcom/bbm/j/k;
+.field private D:Z
 
-.field private final F:Lcom/bbm/d/b/q;
+.field private E:Landroid/graphics/drawable/Drawable;
+
+.field private F:J
+
+.field private G:Z
+
+.field private H:Z
+
+.field private I:I
+
+.field private J:I
+
+.field private K:I
+
+.field private L:Z
+
+.field private final M:Landroid/view/View$OnTouchListener;
+
+.field private final N:Landroid/widget/AdapterView$OnItemClickListener;
+
+.field private O:Landroid/widget/CompoundButton$OnCheckedChangeListener;
+
+.field private P:Lcom/bbm/d/b/aa;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/bbm/d/b/q",
+            "Lcom/bbm/d/b/aa",
             "<",
-            "Lcom/bbm/d/gr;",
+            "Lcom/bbm/iceberg/a;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final G:Lcom/bbm/d/b/f;
+.field private Q:Lcom/bbm/d/b/o;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/bbm/d/b/f",
+            "Lcom/bbm/d/b/o",
             "<",
-            "Lcom/bbm/d/gr;",
+            "Lcom/bbm/iceberg/a;",
             ">;"
         }
     .end annotation
 .end field
+
+.field private final R:Lcom/bbm/j/k;
 
 .field private final a:Lcom/bbm/d/a;
 
-.field private b:Lcom/bbm/ui/FooterActionBar;
+.field private volatile b:Z
 
-.field private c:Landroid/widget/ListView;
+.field private h:Landroid/widget/ListView;
 
-.field private d:Lcom/bbm/ui/activities/afv;
+.field private i:Lcom/bbm/ui/activities/acl;
 
-.field private e:Ljava/util/Set;
+.field private j:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set",
@@ -53,7 +77,7 @@
     .end annotation
 .end field
 
-.field private f:Ljava/util/Set;
+.field private k:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set",
@@ -64,20 +88,22 @@
     .end annotation
 .end field
 
-.field private g:Z
+.field private l:Z
 
-.field private h:Lcom/bbm/ui/HeaderButtonActionBar;
+.field private m:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
-.field private i:Landroid/widget/EditText;
+.field private n:Landroid/widget/EditText;
 
-.field private j:Landroid/widget/Button;
+.field private o:Landroid/widget/Button;
 
-.field private k:Landroid/widget/LinearLayout;
+.field private p:Landroid/widget/LinearLayout;
 
-.field private l:Ljava/util/ArrayList;
+.field private q:Landroid/view/MenuItem;
+
+.field private r:Ljava/util/HashSet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/ArrayList",
+            "Ljava/util/HashSet",
             "<",
             "Ljava/lang/String;",
             ">;"
@@ -85,18 +111,29 @@
     .end annotation
 .end field
 
-.field private m:Z
-
-.field private n:Z
-
-.field private o:Landroid/graphics/drawable/Drawable;
-
-.field private p:Z
-
-.field private q:Lcom/bbm/util/ct;
+.field private s:Ljava/util/HashSet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/bbm/util/ct",
+            "Ljava/util/HashSet",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private t:Z
+
+.field private u:Z
+
+.field private v:Z
+
+.field private w:Z
+
+.field private x:Lcom/bbm/util/dc;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/util/dc",
             "<",
             "Ljava/lang/Boolean;",
             ">;"
@@ -104,190 +141,397 @@
     .end annotation
 .end field
 
-.field private r:Landroid/os/Bundle;
+.field private y:Lcom/bbm/util/dc;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/util/dc",
+            "<",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private s:Ljava/lang/String;
-
-.field private t:I
-
-.field private u:Z
-
-.field private v:Landroid/graphics/drawable/Drawable;
-
-.field private w:Landroid/graphics/drawable/Drawable;
-
-.field private x:Landroid/graphics/drawable/Drawable;
-
-.field private y:Landroid/graphics/drawable/Drawable;
-
-.field private z:J
+.field private z:Z
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 2
+    .locals 3
 
     .prologue
-    .line 226
-    invoke-direct {p0}, Lcom/bbm/ui/activities/akz;-><init>()V
+    const/4 v2, 0x0
 
-    .line 96
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    .line 300
+    invoke-direct {p0}, Lcom/bbm/bali/ui/main/a/a;-><init>()V
+
+    .line 104
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/d/a;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->a:Lcom/bbm/d/a;
 
-    .line 109
-    new-instance v0, Ljava/util/ArrayList;
+    .line 106
+    iput-boolean v2, p0, Lcom/bbm/ui/activities/SelectContactActivity;->b:Z
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    .line 118
+    new-instance v0, Ljava/util/HashSet;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->l:Ljava/util/ArrayList;
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 114
-    new-instance v0, Lcom/bbm/util/ct;
+    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->r:Ljava/util/HashSet;
 
-    const/4 v1, 0x0
+    .line 119
+    new-instance v0, Ljava/util/HashSet;
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    move-result-object v1
+    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->s:Ljava/util/HashSet;
 
-    invoke-direct {v0, v1}, Lcom/bbm/util/ct;-><init>(Ljava/lang/Object;)V
+    .line 124
+    new-instance v0, Lcom/bbm/util/dc;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->q:Lcom/bbm/util/ct;
-
-    .line 127
-    new-instance v0, Lcom/bbm/ui/activities/afi;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/afi;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->A:Landroid/view/View$OnTouchListener;
-
-    .line 138
-    new-instance v0, Lcom/bbm/ui/activities/afn;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/afn;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->B:Landroid/widget/AdapterView$OnItemClickListener;
-
-    .line 202
-    new-instance v0, Lcom/bbm/ui/activities/afo;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/afo;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->C:Lcom/bbm/ui/cn;
-
-    .line 231
-    new-instance v0, Lcom/bbm/ui/activities/afp;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/afp;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->E:Lcom/bbm/j/k;
-
-    .line 526
-    new-instance v0, Lcom/bbm/ui/activities/afl;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->a:Lcom/bbm/d/a;
-
-    invoke-virtual {v1}, Lcom/bbm/d/a;->o()Lcom/bbm/j/r;
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/activities/afl;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;Lcom/bbm/j/r;)V
+    invoke-direct {v0, v1}, Lcom/bbm/util/dc;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->F:Lcom/bbm/d/b/q;
+    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->x:Lcom/bbm/util/dc;
 
-    .line 556
-    new-instance v0, Lcom/bbm/ui/activities/afm;
+    .line 125
+    new-instance v0, Lcom/bbm/util/dc;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/afm;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->G:Lcom/bbm/d/b/f;
+    move-result-object v1
 
-    .line 227
-    new-instance v0, Lcom/bbm/ui/gc;
+    invoke-direct {v0, v1}, Lcom/bbm/util/dc;-><init>(Ljava/lang/Object;)V
 
-    invoke-direct {v0}, Lcom/bbm/ui/gc;-><init>()V
+    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->y:Lcom/bbm/util/dc;
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectContactActivity;->a(Lcom/bbm/ui/activities/alb;)V
+    .line 135
+    const/4 v0, 0x1
 
-    .line 228
-    new-instance v0, Lcom/bbm/ui/voice/o;
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->G:Z
 
-    invoke-direct {v0}, Lcom/bbm/ui/voice/o;-><init>()V
+    .line 143
+    new-instance v0, Lcom/bbm/ui/activities/aby;
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectContactActivity;->a(Lcom/bbm/ui/activities/alb;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/aby;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
 
-    .line 229
+    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->M:Landroid/view/View$OnTouchListener;
+
+    .line 154
+    new-instance v0, Lcom/bbm/ui/activities/acd;
+
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/acd;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->N:Landroid/widget/AdapterView$OnItemClickListener;
+
+    .line 277
+    new-instance v0, Lcom/bbm/ui/activities/ace;
+
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/ace;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->O:Landroid/widget/CompoundButton$OnCheckedChangeListener;
+
+    .line 292
+    new-instance v0, Lcom/bbm/ui/activities/acf;
+
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/acf;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->R:Lcom/bbm/j/k;
+
+    .line 301
+    new-instance v0, Lcom/bbm/ui/gj;
+
+    invoke-direct {v0}, Lcom/bbm/ui/gj;-><init>()V
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectContactActivity;->a(Lcom/bbm/ui/d/b;)V
+
+    .line 302
+    new-instance v0, Lcom/bbm/ui/voice/a;
+
+    invoke-direct {v0}, Lcom/bbm/ui/voice/a;-><init>()V
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectContactActivity;->a(Lcom/bbm/ui/d/b;)V
+
+    .line 303
     return-void
 .end method
 
-.method static synthetic A(Lcom/bbm/ui/activities/SelectContactActivity;)Landroid/graphics/drawable/Drawable;
+.method static synthetic A(Lcom/bbm/ui/activities/SelectContactActivity;)Lcom/bbm/util/dc;
     .locals 1
 
     .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->w:Landroid/graphics/drawable/Drawable;
+    .line 68
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->x:Lcom/bbm/util/dc;
 
     return-object v0
 .end method
 
-.method static synthetic B(Lcom/bbm/ui/activities/SelectContactActivity;)Landroid/graphics/drawable/Drawable;
+.method static synthetic B(Lcom/bbm/ui/activities/SelectContactActivity;)Lcom/bbm/util/dc;
     .locals 1
 
     .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->o:Landroid/graphics/drawable/Drawable;
+    .line 68
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->y:Lcom/bbm/util/dc;
 
     return-object v0
 .end method
 
-.method static synthetic C(Lcom/bbm/ui/activities/SelectContactActivity;)Landroid/graphics/drawable/Drawable;
+.method static synthetic C(Lcom/bbm/ui/activities/SelectContactActivity;)Z
     .locals 1
 
     .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->x:Landroid/graphics/drawable/Drawable;
+    .line 68
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->t:Z
+
+    return v0
+.end method
+
+.method static synthetic D(Lcom/bbm/ui/activities/SelectContactActivity;)Z
+    .locals 1
+
+    .prologue
+    .line 68
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->u:Z
+
+    return v0
+.end method
+
+.method static synthetic E(Lcom/bbm/ui/activities/SelectContactActivity;)Z
+    .locals 1
+
+    .prologue
+    .line 68
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->u:Z
+
+    return v0
+.end method
+
+.method static synthetic F(Lcom/bbm/ui/activities/SelectContactActivity;)Z
+    .locals 1
+
+    .prologue
+    .line 68
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->w:Z
+
+    return v0
+.end method
+
+.method static synthetic G(Lcom/bbm/ui/activities/SelectContactActivity;)Landroid/widget/CompoundButton$OnCheckedChangeListener;
+    .locals 1
+
+    .prologue
+    .line 68
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->O:Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
     return-object v0
 .end method
 
-.method static synthetic D(Lcom/bbm/ui/activities/SelectContactActivity;)Landroid/graphics/drawable/Drawable;
+.method static synthetic H(Lcom/bbm/ui/activities/SelectContactActivity;)Z
     .locals 1
 
     .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->v:Landroid/graphics/drawable/Drawable;
+    .line 68
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->z:Z
+
+    return v0
+.end method
+
+.method static synthetic I(Lcom/bbm/ui/activities/SelectContactActivity;)Landroid/graphics/drawable/Drawable;
+    .locals 1
+
+    .prologue
+    .line 68
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->E:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/SelectContactActivity;)Lcom/bbm/ui/activities/afv;
+.method static synthetic a(Lcom/bbm/ui/activities/SelectContactActivity;)Lcom/bbm/ui/activities/acl;
     .locals 1
 
     .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->d:Lcom/bbm/ui/activities/afv;
+    .line 68
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->i:Lcom/bbm/ui/activities/acl;
 
     return-object v0
 .end method
 
-.method private a()V
+.method static synthetic a(Lcom/bbm/ui/activities/SelectContactActivity;Landroid/widget/CheckBox;Z)V
+    .locals 1
+
+    .prologue
+    .line 68
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+
+    invoke-virtual {p1, p2}, Landroid/widget/CheckBox;->setChecked(Z)V
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->O:Landroid/widget/CompoundButton$OnCheckedChangeListener;
+
+    invoke-virtual {p1, v0}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+
+    return-void
+.end method
+
+.method static synthetic a(Lcom/bbm/ui/activities/SelectContactActivity;Z)Z
+    .locals 0
+
+    .prologue
+    .line 68
+    iput-boolean p1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->G:Z
+
+    return p1
+.end method
+
+.method static synthetic b(Lcom/bbm/ui/activities/SelectContactActivity;)V
     .locals 4
 
     .prologue
-    const v3, 0x7f0b02bd
+    .line 68
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->z:Z
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->n:Landroid/widget/EditText;
+
+    invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
+
+    :goto_0
+    return-void
+
+    :cond_0
+    new-instance v0, Landroid/content/Intent;
+
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->n:Landroid/widget/EditText;
+
+    invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/SelectContactActivity;->s:Ljava/util/HashSet;
+
+    invoke-virtual {v2}, Ljava/util/HashSet;->clear()V
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/SelectContactActivity;->s:Ljava/util/HashSet;
+
+    invoke-virtual {v2, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "com.bbm.selectedcontactspins"
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    iget-object v3, p0, Lcom/bbm/ui/activities/SelectContactActivity;->s:Ljava/util/HashSet;
+
+    invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putStringArrayListExtra(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->A:Landroid/os/Bundle;
+
+    if-eqz v1, :cond_1
+
+    const-string v1, "com.bbm.selectcontact.bundle.passthrough"
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/SelectContactActivity;->A:Landroid/os/Bundle;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
+
+    :cond_1
+    iget-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->B:Ljava/lang/String;
+
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    const-string v1, "com.bbm.resultadid"
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/SelectContactActivity;->B:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    :cond_2
+    const/4 v1, -0x1
+
+    invoke-virtual {p0, v1, v0}, Lcom/bbm/ui/activities/SelectContactActivity;->setResult(ILandroid/content/Intent;)V
+
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->finish()V
+
+    goto :goto_0
+.end method
+
+.method static synthetic b(Lcom/bbm/ui/activities/SelectContactActivity;Z)Z
+    .locals 0
+
+    .prologue
+    .line 68
+    iput-boolean p1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->b:Z
+
+    return p1
+.end method
+
+.method static synthetic c(Lcom/bbm/ui/activities/SelectContactActivity;)Z
+    .locals 1
+
+    .prologue
+    .line 68
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->l:Z
+
+    return v0
+.end method
+
+.method static synthetic c(Lcom/bbm/ui/activities/SelectContactActivity;Z)Z
+    .locals 0
+
+    .prologue
+    .line 68
+    iput-boolean p1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->L:Z
+
+    return p1
+.end method
+
+.method static synthetic d(Lcom/bbm/ui/activities/SelectContactActivity;)Ljava/util/HashSet;
+    .locals 1
+
+    .prologue
+    .line 68
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->r:Ljava/util/HashSet;
+
+    return-object v0
+.end method
+
+.method private d()V
+    .locals 4
+
+    .prologue
+    const v3, 0x7f0b0316
 
     const/16 v2, 0x8
 
     const/4 v1, 0x0
 
-    .line 466
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->G:Lcom/bbm/d/b/f;
+    .line 705
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->Q:Lcom/bbm/d/b/o;
 
-    invoke-virtual {v0}, Lcom/bbm/d/b/f;->g()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/bbm/d/b/o;->g()Ljava/util/List;
 
     move-result-object v0
 
@@ -295,311 +539,230 @@
 
     move-result v0
 
-    if-lez v0, :cond_1
+    if-lez v0, :cond_0
 
-    .line 467
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->c:Landroid/widget/ListView;
+    .line 706
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->h:Landroid/widget/ListView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setVisibility(I)V
 
-    .line 468
+    .line 707
     invoke-virtual {p0, v3}, Lcom/bbm/ui/activities/SelectContactActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 469
-    iget-object v2, p0, Lcom/bbm/ui/activities/SelectContactActivity;->b:Lcom/bbm/ui/FooterActionBar;
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->l:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/SelectContactActivity;->F:Lcom/bbm/d/b/q;
-
-    invoke-virtual {v3}, Lcom/bbm/d/b/q;->g()Ljava/util/List;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Ljava/util/List;->size()I
-
-    move-result v3
-
-    if-ge v0, v3, :cond_0
-
-    const/4 v0, 0x1
-
+    .line 712
     :goto_0
-    invoke-virtual {v2, v1, v0}, Lcom/bbm/ui/FooterActionBar;->setActionEnabled(IZ)V
-
-    .line 475
-    :goto_1
     return-void
 
+    .line 709
     :cond_0
-    move v0, v1
-
-    .line 469
-    goto :goto_0
-
-    .line 471
-    :cond_1
     invoke-virtual {p0, v3}, Lcom/bbm/ui/activities/SelectContactActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 472
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->c:Landroid/widget/ListView;
+    .line 710
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->h:Landroid/widget/ListView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ListView;->setVisibility(I)V
 
-    .line 473
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->b:Lcom/bbm/ui/FooterActionBar;
-
-    invoke-virtual {v0, v1, v1}, Lcom/bbm/ui/FooterActionBar;->setActionEnabled(IZ)V
-
-    goto :goto_1
+    goto :goto_0
 .end method
 
-.method private a(Z)Z
-    .locals 6
+.method static synthetic d(Lcom/bbm/ui/activities/SelectContactActivity;Z)V
+    .locals 5
 
     .prologue
-    const v5, 0x7f0e0438
+    .line 68
+    if-eqz p1, :cond_0
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->n:Landroid/widget/EditText;
 
-    const/4 v1, 0x0
+    iget v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->I:I
 
-    .line 479
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
+    iget v2, p0, Lcom/bbm/ui/activities/SelectContactActivity;->J:I
 
-    move-result-object v2
-
-    const-string v3, "group_max_member_count"
-
-    invoke-virtual {v2, v3, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v2
-
-    .line 480
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getApplication()Landroid/app/Application;
 
     move-result-object v3
 
-    const-string v4, "group_member_count"
-
-    invoke-virtual {v3, v4, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    invoke-static {v3}, Lcom/bbm/util/eu;->c(Landroid/content/Context;)I
 
     move-result v3
 
-    .line 482
-    sub-int/2addr v2, v3
+    iget v4, p0, Lcom/bbm/ui/activities/SelectContactActivity;->K:I
 
-    .line 485
-    if-eqz p1, :cond_0
+    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/EditText;->setPadding(IIII)V
 
-    .line 486
-    iget-object v3, p0, Lcom/bbm/ui/activities/SelectContactActivity;->F:Lcom/bbm/d/b/q;
-
-    invoke-virtual {v3}, Lcom/bbm/d/b/q;->d()I
-
-    move-result v3
-
-    if-ge v2, v3, :cond_1
-
-    .line 487
-    invoke-virtual {p0, v5}, Lcom/bbm/ui/activities/SelectContactActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {p0, v1}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;)V
-
-    .line 498
     :goto_0
-    return v0
+    return-void
 
-    .line 493
     :cond_0
-    iget-object v3, p0, Lcom/bbm/ui/activities/SelectContactActivity;->l:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->n:Landroid/widget/EditText;
 
-    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
+    iget v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->I:I
 
-    move-result v3
+    iget v2, p0, Lcom/bbm/ui/activities/SelectContactActivity;->J:I
 
-    add-int/lit8 v3, v3, 0x1
+    iget v3, p0, Lcom/bbm/ui/activities/SelectContactActivity;->J:I
 
-    if-ge v2, v3, :cond_1
+    iget v4, p0, Lcom/bbm/ui/activities/SelectContactActivity;->K:I
 
-    .line 494
-    invoke-virtual {p0, v5}, Lcom/bbm/ui/activities/SelectContactActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {p0, v1}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/EditText;->setPadding(IIII)V
 
     goto :goto_0
-
-    :cond_1
-    move v0, v1
-
-    .line 498
-    goto :goto_0
 .end method
 
-.method static synthetic b(Lcom/bbm/ui/activities/SelectContactActivity;)Z
+.method static synthetic e(Lcom/bbm/ui/activities/SelectContactActivity;)Landroid/os/Bundle;
     .locals 1
 
     .prologue
-    .line 67
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->g:Z
-
-    return v0
-.end method
-
-.method static synthetic c(Lcom/bbm/ui/activities/SelectContactActivity;)Ljava/util/ArrayList;
-    .locals 1
-
-    .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->l:Ljava/util/ArrayList;
+    .line 68
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->A:Landroid/os/Bundle;
 
     return-object v0
 .end method
 
-.method static synthetic d(Lcom/bbm/ui/activities/SelectContactActivity;)Landroid/os/Bundle;
+.method static synthetic e(Lcom/bbm/ui/activities/SelectContactActivity;Z)Z
+    .locals 0
+
+    .prologue
+    .line 68
+    iput-boolean p1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->z:Z
+
+    return p1
+.end method
+
+.method static synthetic f(Lcom/bbm/ui/activities/SelectContactActivity;)Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->r:Landroid/os/Bundle;
+    .line 68
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->B:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic e(Lcom/bbm/ui/activities/SelectContactActivity;)Ljava/lang/String;
+.method static synthetic g(Lcom/bbm/ui/activities/SelectContactActivity;)Ljava/util/HashSet;
     .locals 1
 
     .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->s:Ljava/lang/String;
+    .line 68
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->s:Ljava/util/HashSet;
 
     return-object v0
-.end method
-
-.method static synthetic f(Lcom/bbm/ui/activities/SelectContactActivity;)Z
-    .locals 1
-
-    .prologue
-    .line 67
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Z
-
-    return v0
-.end method
-
-.method static synthetic g(Lcom/bbm/ui/activities/SelectContactActivity;)Z
-    .locals 1
-
-    .prologue
-    .line 67
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/ui/activities/SelectContactActivity;->a(Z)Z
-
-    move-result v0
-
-    return v0
 .end method
 
 .method static synthetic h(Lcom/bbm/ui/activities/SelectContactActivity;)Z
     .locals 1
 
     .prologue
-    .line 67
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->u:Z
+    .line 68
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->b:Z
 
     return v0
 .end method
 
-.method static synthetic i(Lcom/bbm/ui/activities/SelectContactActivity;)Lcom/bbm/d/a;
+.method static synthetic i(Lcom/bbm/ui/activities/SelectContactActivity;)Z
     .locals 1
 
     .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->a:Lcom/bbm/d/a;
+    .line 68
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->H:Z
 
-    return-object v0
+    return v0
 .end method
 
-.method static synthetic j(Lcom/bbm/ui/activities/SelectContactActivity;)Lcom/bbm/ui/HeaderButtonActionBar;
-    .locals 1
-
-    .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->h:Lcom/bbm/ui/HeaderButtonActionBar;
-
-    return-object v0
-.end method
-
-.method static synthetic k(Lcom/bbm/ui/activities/SelectContactActivity;)Lcom/bbm/d/b/q;
-    .locals 1
-
-    .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->F:Lcom/bbm/d/b/q;
-
-    return-object v0
-.end method
-
-.method static synthetic l(Lcom/bbm/ui/activities/SelectContactActivity;)Lcom/bbm/ui/FooterActionBar;
-    .locals 1
-
-    .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->b:Lcom/bbm/ui/FooterActionBar;
-
-    return-object v0
-.end method
-
-.method static synthetic m(Lcom/bbm/ui/activities/SelectContactActivity;)V
-    .locals 6
+.method private j()V
+    .locals 7
 
     .prologue
     const/4 v4, 0x1
 
     const/4 v2, 0x0
 
-    .line 67
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Z
+    .line 767
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->t:Z
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    invoke-direct {p0, v4}, Lcom/bbm/ui/activities/SelectContactActivity;->a(Z)Z
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string v1, "group_max_member_count"
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    if-nez v0, :cond_2
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v1
+
+    const-string v3, "group_member_count"
+
+    invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->P:Lcom/bbm/d/b/aa;
+
+    invoke-virtual {v1}, Lcom/bbm/d/b/aa;->d()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_0
+
+    const v0, 0x7f0e04a1
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectContactActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p0, v0}, Lcom/bbm/util/eu;->a(Landroid/content/Context;Ljava/lang/String;)V
+
+    move v0, v4
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    .line 808
+    :goto_1
+    return-void
 
     :cond_0
-    new-instance v0, Ljava/util/ArrayList;
+    move v0, v2
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    .line 767
+    goto :goto_0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->l:Ljava/util/ArrayList;
+    .line 771
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->r:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
+
+    .line 772
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->s:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
     move v1, v2
 
     move v3, v4
 
-    :goto_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->F:Lcom/bbm/d/b/q;
+    .line 774
+    :goto_2
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->P:Lcom/bbm/d/b/aa;
 
-    invoke-virtual {v0}, Lcom/bbm/d/b/q;->g()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/bbm/d/b/aa;->g()Ljava/util/List;
 
     move-result-object v0
 
@@ -607,29 +770,12 @@
 
     move-result v0
 
-    if-ge v1, v0, :cond_1
+    if-ge v1, v0, :cond_3
 
-    iget-object v5, p0, Lcom/bbm/ui/activities/SelectContactActivity;->l:Ljava/util/ArrayList;
+    .line 775
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->P:Lcom/bbm/d/b/aa;
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->F:Lcom/bbm/d/b/q;
-
-    invoke-virtual {v0}, Lcom/bbm/d/b/q;->g()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/gr;
-
-    iget-object v0, v0, Lcom/bbm/d/gr;->B:Ljava/lang/String;
-
-    invoke-virtual {v5, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->F:Lcom/bbm/d/b/q;
-
-    invoke-virtual {v0}, Lcom/bbm/d/b/q;->g()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/bbm/d/b/aa;->g()Ljava/util/List;
 
     move-result-object v0
 
@@ -637,267 +783,575 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/d/gr;
+    check-cast v0, Lcom/bbm/iceberg/a;
 
-    invoke-static {v0}, Lcom/bbm/util/db;->b(Lcom/bbm/d/gr;)Z
+    .line 776
+    iget-object v5, v0, Lcom/bbm/iceberg/a;->a:Lcom/bbm/iceberg/b;
 
-    move-result v0
+    sget-object v6, Lcom/bbm/iceberg/b;->a:Lcom/bbm/iceberg/b;
 
-    and-int/2addr v3, v0
+    if-ne v5, v6, :cond_2
 
+    iget-boolean v5, p0, Lcom/bbm/ui/activities/SelectContactActivity;->t:Z
+
+    if-nez v5, :cond_2
+
+    .line 777
+    iget-object v5, v0, Lcom/bbm/iceberg/a;->b:Lcom/bbm/d/ie;
+
+    invoke-static {v5}, Lcom/bbm/util/dk;->b(Lcom/bbm/d/ie;)Z
+
+    move-result v5
+
+    and-int/2addr v3, v5
+
+    .line 778
+    iget-object v5, p0, Lcom/bbm/ui/activities/SelectContactActivity;->r:Ljava/util/HashSet;
+
+    iget-object v0, v0, Lcom/bbm/iceberg/a;->b:Lcom/bbm/d/ie;
+
+    iget-object v0, v0, Lcom/bbm/d/ie;->z:Ljava/lang/String;
+
+    invoke-virtual {v5, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    .line 774
+    :goto_3
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
-    goto :goto_0
+    goto :goto_2
 
-    :cond_1
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->u:Z
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->l:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-lez v0, :cond_3
-
-    if-eqz v3, :cond_3
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->h:Lcom/bbm/ui/HeaderButtonActionBar;
-
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/HeaderButtonActionBar;->setPositiveButtonEnabled(Z)V
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->h:Lcom/bbm/ui/HeaderButtonActionBar;
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v3, 0x7f0e069c
-
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    new-array v3, v4, [Ljava/lang/Object;
-
-    iget-object v4, p0, Lcom/bbm/ui/activities/SelectContactActivity;->l:Ljava/util/ArrayList;
-
-    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
-
-    move-result v4
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v3, v2
-
-    invoke-static {v1, v3}, Ljava/text/MessageFormat;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/HeaderButtonActionBar;->setTitle(Ljava/lang/String;)V
-
-    :goto_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->b:Lcom/bbm/ui/FooterActionBar;
-
-    invoke-virtual {v0, v2, v2}, Lcom/bbm/ui/FooterActionBar;->setActionEnabled(IZ)V
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->d:Lcom/bbm/ui/activities/afv;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/afv;->notifyDataSetChanged()V
-
+    .line 780
     :cond_2
-    return-void
+    iget-object v5, p0, Lcom/bbm/ui/activities/SelectContactActivity;->s:Ljava/util/HashSet;
 
+    invoke-virtual {v0}, Lcom/bbm/iceberg/a;->c()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v5, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    goto :goto_3
+
+    .line 784
     :cond_3
-    iget-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->h:Lcom/bbm/ui/HeaderButtonActionBar;
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->s:Ljava/util/HashSet;
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->l:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v0}, Ljava/util/HashSet;->size()I
 
     move-result v0
 
-    if-lez v0, :cond_4
+    if-nez v0, :cond_4
 
     move v0, v4
 
-    :goto_2
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/HeaderButtonActionBar;->setPositiveButtonEnabled(Z)V
+    :goto_4
+    and-int/2addr v0, v3
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->h:Lcom/bbm/ui/HeaderButtonActionBar;
+    .line 785
+    iget-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->r:Ljava/util/HashSet;
+
+    invoke-virtual {v1}, Ljava/util/HashSet;->size()I
+
+    move-result v1
+
+    iget-object v3, p0, Lcom/bbm/ui/activities/SelectContactActivity;->s:Ljava/util/HashSet;
+
+    invoke-virtual {v3}, Ljava/util/HashSet;->size()I
+
+    move-result v3
+
+    add-int/2addr v1, v3
+
+    .line 786
+    iget-boolean v3, p0, Lcom/bbm/ui/activities/SelectContactActivity;->D:Z
+
+    if-eqz v3, :cond_5
+
+    iget-object v3, p0, Lcom/bbm/ui/activities/SelectContactActivity;->r:Ljava/util/HashSet;
+
+    invoke-virtual {v3}, Ljava/util/HashSet;->size()I
+
+    move-result v3
+
+    if-lez v3, :cond_5
+
+    if-eqz v0, :cond_5
+
+    .line 787
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    invoke-virtual {v0, v4}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setPositiveButtonEnabled(Z)V
+
+    .line 788
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v1
+    move-result-object v3
 
-    const v3, 0x7f0e069d
+    const v5, 0x7f0e0769
 
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    new-array v4, v4, [Ljava/lang/Object;
 
-    move-result-object v1
-
-    new-array v3, v4, [Ljava/lang/Object;
-
-    iget-object v4, p0, Lcom/bbm/ui/activities/SelectContactActivity;->l:Ljava/util/ArrayList;
-
-    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
-
-    move-result v4
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v3, v2
-
-    invoke-static {v1, v3}, Ljava/text/MessageFormat;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/HeaderButtonActionBar;->setTitle(Ljava/lang/String;)V
+    aput-object v1, v4, v2
 
-    goto :goto_1
+    invoke-virtual {v3, v5, v4}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setTitle(Ljava/lang/String;)V
+
+    .line 789
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->q:Landroid/view/MenuItem;
+
+    invoke-interface {v0, v2}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    .line 806
+    :goto_5
+    iput-boolean v2, p0, Lcom/bbm/ui/activities/SelectContactActivity;->G:Z
+
+    .line 807
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->i:Lcom/bbm/ui/activities/acl;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/acl;->notifyDataSetChanged()V
+
+    goto/16 :goto_1
 
     :cond_4
     move v0, v2
 
-    goto :goto_2
+    .line 784
+    goto :goto_4
+
+    .line 791
+    :cond_5
+    if-lez v1, :cond_6
+
+    .line 792
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    sget v3, Lcom/bbm/bali/ui/toolbar/b;->a:I
+
+    invoke-virtual {v0, v3}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setDisplayOption$58d310a4(I)V
+
+    .line 793
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    invoke-virtual {v0, v4}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setPositiveButtonEnabled(Z)V
+
+    .line 794
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->q:Landroid/view/MenuItem;
+
+    invoke-interface {v0, v2}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    .line 804
+    :goto_6
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    const v5, 0x7f0e076a
+
+    invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    aput-object v1, v4, v2
+
+    invoke-static {v3, v4}, Ljava/text/MessageFormat;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setTitle(Ljava/lang/String;)V
+
+    goto :goto_5
+
+    .line 796
+    :cond_6
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    sget v3, Lcom/bbm/bali/ui/toolbar/b;->c:I
+
+    invoke-virtual {v0, v3}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setDisplayOption$58d310a4(I)V
+
+    .line 797
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    invoke-virtual {v0, v2}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setPositiveButtonEnabled(Z)V
+
+    .line 798
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->v:Z
+
+    if-eqz v0, :cond_7
+
+    .line 799
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->q:Landroid/view/MenuItem;
+
+    invoke-interface {v0, v4}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    goto :goto_6
+
+    .line 801
+    :cond_7
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->q:Landroid/view/MenuItem;
+
+    invoke-interface {v0, v2}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    goto :goto_6
 .end method
 
-.method static synthetic n(Lcom/bbm/ui/activities/SelectContactActivity;)V
-    .locals 0
+.method static synthetic j(Lcom/bbm/ui/activities/SelectContactActivity;)Z
+    .locals 1
 
     .prologue
-    .line 67
-    invoke-direct {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->a()V
+    .line 68
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->t:Z
+
+    return v0
+.end method
+
+.method static synthetic k(Lcom/bbm/ui/activities/SelectContactActivity;)Z
+    .locals 1
+
+    .prologue
+    .line 68
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->v:Z
+
+    return v0
+.end method
+
+.method static synthetic l(Lcom/bbm/ui/activities/SelectContactActivity;)V
+    .locals 6
+
+    .prologue
+    .line 68
+    new-instance v2, Landroid/content/Intent;
+
+    invoke-direct {v2}, Landroid/content/Intent;-><init>()V
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->r:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "com.bbm.selectedcontactsuris"
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    iget-object v3, p0, Lcom/bbm/ui/activities/SelectContactActivity;->r:Ljava/util/HashSet;
+
+    invoke-direct {v1, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    invoke-virtual {v2, v0, v1}, Landroid/content/Intent;->putStringArrayListExtra(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;
+
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->s:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "com.bbm.selectedcontactspins"
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    iget-object v3, p0, Lcom/bbm/ui/activities/SelectContactActivity;->s:Ljava/util/HashSet;
+
+    invoke-direct {v1, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    invoke-virtual {v2, v0, v1}, Landroid/content/Intent;->putStringArrayListExtra(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;
+
+    :cond_1
+    iget-wide v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->F:J
+
+    const-wide/16 v4, -0x1
+
+    cmp-long v0, v0, v4
+
+    if-eqz v0, :cond_2
+
+    const-string v0, "com.bbm.selectedcategoryid"
+
+    iget-wide v4, p0, Lcom/bbm/ui/activities/SelectContactActivity;->F:J
+
+    invoke-virtual {v2, v0, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+
+    :cond_2
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->B:Ljava/lang/String;
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    const-string v0, "com.bbm.resultadid"
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->B:Ljava/lang/String;
+
+    invoke-virtual {v2, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    :cond_3
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->A:Landroid/os/Bundle;
+
+    if-eqz v0, :cond_4
+
+    const-string v0, "com.bbm.selectcontact.bundle.passthrough"
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->A:Landroid/os/Bundle;
+
+    invoke-virtual {v2, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
+
+    :cond_4
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->D:Z
+
+    if-eqz v0, :cond_5
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->s:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->r:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_5
+
+    const/4 v0, 0x1
+
+    :goto_0
+    iget-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->r:Ljava/util/HashSet;
+
+    invoke-virtual {v1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    move v1, v0
+
+    :goto_1
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    if-eqz v1, :cond_6
+
+    iget-object v4, p0, Lcom/bbm/ui/activities/SelectContactActivity;->a:Lcom/bbm/d/a;
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-virtual {v4, v0}, Lcom/bbm/d/a;->e(Ljava/lang/String;)Lcom/bbm/d/ie;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/bbm/util/dk;->b(Lcom/bbm/d/ie;)Z
+
+    move-result v0
+
+    and-int/2addr v0, v1
+
+    move v1, v0
+
+    goto :goto_1
+
+    :cond_5
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_6
+    const-string v0, "com.bbm.allSelectedAreProtectedEnabled"
+
+    invoke-virtual {v2, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_7
+
+    invoke-virtual {v2, v0}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
+
+    :cond_7
+    const/4 v0, -0x1
+
+    invoke-virtual {p0, v0, v2}, Lcom/bbm/ui/activities/SelectContactActivity;->setResult(ILandroid/content/Intent;)V
+
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->finish()V
 
     return-void
 .end method
 
-.method static synthetic o(Lcom/bbm/ui/activities/SelectContactActivity;)Landroid/widget/Button;
+.method static synthetic m(Lcom/bbm/ui/activities/SelectContactActivity;)Z
     .locals 1
 
     .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->j:Landroid/widget/Button;
-
-    return-object v0
-.end method
-
-.method static synthetic p(Lcom/bbm/ui/activities/SelectContactActivity;)Landroid/widget/LinearLayout;
-    .locals 1
-
-    .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->k:Landroid/widget/LinearLayout;
-
-    return-object v0
-.end method
-
-.method static synthetic q(Lcom/bbm/ui/activities/SelectContactActivity;)Landroid/widget/EditText;
-    .locals 1
-
-    .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->i:Landroid/widget/EditText;
-
-    return-object v0
-.end method
-
-.method static synthetic r(Lcom/bbm/ui/activities/SelectContactActivity;)Z
-    .locals 1
-
-    .prologue
-    .line 67
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Z
+    .line 68
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->D:Z
 
     return v0
 .end method
 
-.method static synthetic s(Lcom/bbm/ui/activities/SelectContactActivity;)Z
+.method static synthetic n(Lcom/bbm/ui/activities/SelectContactActivity;)Lcom/bbm/d/a;
     .locals 1
 
     .prologue
-    .line 67
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->n:Z
-
-    return v0
-.end method
-
-.method static synthetic t(Lcom/bbm/ui/activities/SelectContactActivity;)J
-    .locals 2
-
-    .prologue
-    .line 67
-    iget-wide v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->z:J
-
-    return-wide v0
-.end method
-
-.method static synthetic u(Lcom/bbm/ui/activities/SelectContactActivity;)Ljava/util/Set;
-    .locals 1
-
-    .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->e:Ljava/util/Set;
+    .line 68
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->a:Lcom/bbm/d/a;
 
     return-object v0
 .end method
 
-.method static synthetic v(Lcom/bbm/ui/activities/SelectContactActivity;)I
+.method static synthetic o(Lcom/bbm/ui/activities/SelectContactActivity;)Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
     .locals 1
 
     .prologue
-    .line 67
-    iget v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->t:I
-
-    return v0
-.end method
-
-.method static synthetic w(Lcom/bbm/ui/activities/SelectContactActivity;)Ljava/util/Set;
-    .locals 1
-
-    .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->f:Ljava/util/Set;
+    .line 68
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
     return-object v0
 .end method
 
-.method static synthetic x(Lcom/bbm/ui/activities/SelectContactActivity;)Lcom/bbm/util/ct;
+.method static synthetic p(Lcom/bbm/ui/activities/SelectContactActivity;)Lcom/bbm/d/b/aa;
     .locals 1
 
     .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->q:Lcom/bbm/util/ct;
+    .line 68
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->P:Lcom/bbm/d/b/aa;
 
     return-object v0
 .end method
 
-.method static synthetic y(Lcom/bbm/ui/activities/SelectContactActivity;)Z
+.method static synthetic q(Lcom/bbm/ui/activities/SelectContactActivity;)Landroid/view/MenuItem;
     .locals 1
 
     .prologue
-    .line 67
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->p:Z
+    .line 68
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->q:Landroid/view/MenuItem;
+
+    return-object v0
+.end method
+
+.method static synthetic r(Lcom/bbm/ui/activities/SelectContactActivity;)Landroid/widget/ListView;
+    .locals 1
+
+    .prologue
+    .line 68
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->h:Landroid/widget/ListView;
+
+    return-object v0
+.end method
+
+.method static synthetic s(Lcom/bbm/ui/activities/SelectContactActivity;)V
+    .locals 0
+
+    .prologue
+    .line 68
+    invoke-direct {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->d()V
+
+    return-void
+.end method
+
+.method static synthetic t(Lcom/bbm/ui/activities/SelectContactActivity;)Landroid/widget/Button;
+    .locals 1
+
+    .prologue
+    .line 68
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->o:Landroid/widget/Button;
+
+    return-object v0
+.end method
+
+.method static synthetic u(Lcom/bbm/ui/activities/SelectContactActivity;)Landroid/widget/LinearLayout;
+    .locals 1
+
+    .prologue
+    .line 68
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->p:Landroid/widget/LinearLayout;
+
+    return-object v0
+.end method
+
+.method static synthetic v(Lcom/bbm/ui/activities/SelectContactActivity;)Landroid/widget/EditText;
+    .locals 1
+
+    .prologue
+    .line 68
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->n:Landroid/widget/EditText;
+
+    return-object v0
+.end method
+
+.method static synthetic w(Lcom/bbm/ui/activities/SelectContactActivity;)Z
+    .locals 1
+
+    .prologue
+    .line 68
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->L:Z
 
     return v0
 .end method
 
-.method static synthetic z(Lcom/bbm/ui/activities/SelectContactActivity;)Landroid/graphics/drawable/Drawable;
+.method static synthetic x(Lcom/bbm/ui/activities/SelectContactActivity;)Ljava/util/Set;
     .locals 1
 
     .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->y:Landroid/graphics/drawable/Drawable;
+    .line 68
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->j:Ljava/util/Set;
+
+    return-object v0
+.end method
+
+.method static synthetic y(Lcom/bbm/ui/activities/SelectContactActivity;)I
+    .locals 1
+
+    .prologue
+    .line 68
+    iget v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->C:I
+
+    return v0
+.end method
+
+.method static synthetic z(Lcom/bbm/ui/activities/SelectContactActivity;)Ljava/util/Set;
+    .locals 1
+
+    .prologue
+    .line 68
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->k:Ljava/util/Set;
 
     return-object v0
 .end method
@@ -908,86 +1362,124 @@
     .locals 1
 
     .prologue
-    .line 461
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->F:Lcom/bbm/d/b/q;
+    .line 700
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->P:Lcom/bbm/d/b/aa;
 
-    invoke-virtual {v0, p1}, Lcom/bbm/d/b/q;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/bbm/d/b/aa;->a(Ljava/lang/String;)V
 
-    .line 462
-    invoke-direct {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->a()V
+    .line 701
+    invoke-direct {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->d()V
 
-    .line 463
+    .line 702
     return-void
 .end method
 
-.method public onCreate(Landroid/os/Bundle;)V
-    .locals 9
+.method public onAttachedToWindow()V
+    .locals 3
 
     .prologue
-    const v8, 0x7f0b02ba
+    .line 824
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/a;->onAttachedToWindow()V
 
-    const/4 v7, -0x1
+    .line 825
+    invoke-static {}, Lcom/bbm/Alaska;->l()Landroid/content/SharedPreferences;
 
-    const/4 v6, 0x1
+    move-result-object v0
 
-    const/16 v4, 0x8
+    const-string v1, "has_shown_outer_circle_contacts_tab_tip"
 
-    const/4 v5, 0x0
+    const/4 v2, 0x0
 
-    .line 241
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/akz;->onCreate(Landroid/os/Bundle;)V
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
-    .line 242
-    const v0, 0x7f030055
+    move-result v0
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectContactActivity;->setContentView(I)V
+    .line 826
+    if-nez v0, :cond_0
 
-    .line 243
+    .line 827
     invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 244
-    const v0, 0x7f0b00bf
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectContactActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/FooterActionBar;
+    invoke-static {p0, v0}, Lcom/bbm/util/ct;->a(Landroid/content/Context;Landroid/view/View;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->b:Lcom/bbm/ui/FooterActionBar;
+    .line 829
+    :cond_0
+    return-void
+.end method
 
-    .line 245
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->b:Lcom/bbm/ui/FooterActionBar;
+.method public onContextItemSelected(Landroid/view/MenuItem;)Z
+    .locals 1
 
-    new-instance v1, Lcom/bbm/ui/ActionBarItem;
+    .prologue
+    .line 591
+    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
-    const v2, 0x7f0202c8
+    move-result v0
 
-    const v3, 0x7f0e0698
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;II)V
+    .line 596
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onContextItemSelected(Landroid/view/MenuItem;)Z
 
-    invoke-virtual {v0, v1, v5}, Lcom/bbm/ui/FooterActionBar;->a(Lcom/bbm/ui/ActionBarItem;I)V
+    move-result v0
 
-    .line 246
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->b:Lcom/bbm/ui/FooterActionBar;
+    :goto_0
+    return v0
 
-    invoke-virtual {v0, v5}, Lcom/bbm/ui/FooterActionBar;->setBackActionAndOverflowEnabled(Z)V
+    .line 593
+    :pswitch_0
+    invoke-direct {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->j()V
 
-    .line 247
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->b:Lcom/bbm/ui/FooterActionBar;
+    .line 594
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->C:Lcom/bbm/ui/cn;
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
+    .line 591
+    nop
 
-    .line 250
+    :pswitch_data_0
+    .packed-switch 0x7f0b0021
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public onCreate(Landroid/os/Bundle;)V
+    .locals 11
+
+    .prologue
+    const/16 v10, 0x8
+
+    const v9, 0x7f0b0314
+
+    const/4 v8, 0x0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    .line 307
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onCreate(Landroid/os/Bundle;)V
+
+    .line 308
+    const v0, 0x7f030071
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectContactActivity;->setContentView(I)V
+
+    .line 309
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v8}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 312
     invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -996,321 +1488,297 @@
 
     move-result-object v0
 
-    .line 251
+    .line 313
     if-eqz v0, :cond_0
 
-    .line 252
-    const-string v1, "com.bbm.selectcontact.bundle.passthrough"
+    .line 314
+    const-string v3, "com.bbm.selectcontact.bundle.passthrough"
 
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+    invoke-virtual {v0, v3}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->r:Landroid/os/Bundle;
+    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->A:Landroid/os/Bundle;
 
-    .line 255
+    .line 317
     :cond_0
     invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    const-string v1, "com.bbm.showifbusy"
+    const-string v3, "com.bbm.showifbusy"
 
-    invoke-virtual {v0, v1, v5}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->p:Z
-
-    .line 256
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->q:Lcom/bbm/util/ct;
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v1
-
-    const-string v2, "com.bbm.showfindmore"
-
-    invoke-virtual {v1, v2, v5}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
-
-    .line 257
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    const-string v1, "com.bbm.adidtoshare"
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->s:Ljava/lang/String;
-
-    .line 258
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0201ff
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->o:Landroid/graphics/drawable/Drawable;
-
-    .line 260
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    const-string v1, "com.bbm.showprotectedcontacts"
-
-    invoke-virtual {v0, v1, v5}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    invoke-virtual {v0, v3, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    iput v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->t:I
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->w:Z
+
+    .line 318
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string v3, "com.bbm.showphonecontacts"
+
+    invoke-virtual {v0, v3, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v3
+
+    .line 319
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->x:Lcom/bbm/util/dc;
+
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v4
+
+    const-string v5, "com.bbm.showfindmore"
+
+    invoke-virtual {v4, v5, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
+
+    .line 320
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string v4, "com.bbm.adidtoshare"
+
+    invoke-virtual {v0, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->B:Ljava/lang/String;
+
+    .line 321
+    iput-boolean v2, p0, Lcom/bbm/ui/activities/SelectContactActivity;->z:Z
+
+    .line 323
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string v4, "com.bbm.showprotectedcontacts"
+
+    invoke-virtual {v0, v4, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->C:I
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    const-string v1, "com.bbm.showifprotected"
+    const-string v4, "com.bbm.showifprotected"
 
-    invoke-virtual {v0, v1, v5}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-virtual {v0, v4, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->u:Z
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f02028e
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->v:Landroid/graphics/drawable/Drawable;
-
-    invoke-static {v5, p0}, Lcom/bbm/util/db;->a(ZLandroid/content/Context;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->w:Landroid/graphics/drawable/Drawable;
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->D:Z
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f020294
+    const v4, 0x7f02027d
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->x:Landroid/graphics/drawable/Drawable;
-
-    invoke-static {v6, p0}, Lcom/bbm/util/db;->a(ZLandroid/content/Context;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->y:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->E:Landroid/graphics/drawable/Drawable;
 
-    iget v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->t:I
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_1
-
-    const v0, 0x7f0b02bb
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectContactActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    invoke-virtual {v0, v5}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 262
-    :cond_1
+    .line 325
     invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    const-string v1, "com.bbm.selectedcategoryid"
+    const-string v4, "com.bbm.selectedcategoryid"
 
-    const-wide/16 v2, -0x1
+    const-wide/16 v6, -0x1
 
-    invoke-virtual {v0, v1, v2, v3}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
+    invoke-virtual {v0, v4, v6, v7}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
-    move-result-wide v0
+    move-result-wide v4
 
-    iput-wide v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->z:J
+    iput-wide v4, p0, Lcom/bbm/ui/activities/SelectContactActivity;->F:J
 
-    .line 264
+    .line 327
     invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    const-string v1, "com.bbm.onlyone"
+    const-string v4, "com.bbm.showStartChatFromPin"
 
-    invoke-virtual {v0, v1, v5}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-virtual {v0, v4, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->g:Z
+    .line 328
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
 
-    .line 265
+    move-result-object v4
+
+    const-string v5, "com.bbm.onlyone"
+
+    invoke-virtual {v4, v5, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v4
+
+    iput-boolean v4, p0, Lcom/bbm/ui/activities/SelectContactActivity;->l:Z
+
+    .line 329
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v4
+
+    const-string v5, "com.bbm.onlymultiple"
+
+    invoke-virtual {v4, v5, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v4
+
+    iput-boolean v4, p0, Lcom/bbm/ui/activities/SelectContactActivity;->H:Z
+
+    .line 330
+    iget-object v4, p0, Lcom/bbm/ui/activities/SelectContactActivity;->y:Lcom/bbm/util/dc;
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    invoke-virtual {v4, v0}, Lcom/bbm/util/dc;->b(Ljava/lang/Object;)V
+
+    .line 331
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->e:Ljava/util/Set;
+    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->j:Ljava/util/Set;
 
-    .line 266
+    .line 333
     invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    const-string v1, "com.bbm.excludedcontacts"
+    const-string v4, "com.bbm.excludedcontacts"
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
+    invoke-virtual {v0, v4}, Landroid/content/Intent;->getStringArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 267
+    .line 334
+    if-eqz v0, :cond_1
+
+    .line 335
+    iget-object v4, p0, Lcom/bbm/ui/activities/SelectContactActivity;->j:Ljava/util/Set;
+
+    invoke-interface {v4, v0}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
+
+    .line 339
+    :cond_1
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->k:Ljava/util/Set;
+
+    .line 340
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string v4, "com.bbm.excludedpins"
+
+    invoke-virtual {v0, v4}, Landroid/content/Intent;->getStringArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    .line 341
     if-eqz v0, :cond_2
 
-    .line 268
-    iget-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->e:Ljava/util/Set;
+    .line 343
+    iget-object v4, p0, Lcom/bbm/ui/activities/SelectContactActivity;->k:Ljava/util/Set;
 
-    invoke-interface {v1, v0}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
+    invoke-interface {v4, v0}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 272
+    .line 346
     :cond_2
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->f:Ljava/util/Set;
-
-    .line 273
     invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    const-string v1, "com.bbm.excludedpins"
+    const-string v4, "group_invite"
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    .line 274
-    if-eqz v0, :cond_3
-
-    .line 276
-    iget-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->f:Ljava/util/Set;
-
-    invoke-interface {v1, v0}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
-
-    .line 279
-    :cond_3
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    const-string v1, "group_invite"
-
-    invoke-virtual {v0, v1, v5}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-virtual {v0, v4, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    .line 280
-    iput-boolean v6, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Z
+    .line 347
+    iput-boolean v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->t:Z
 
-    .line 289
-    :cond_4
+    .line 356
+    :cond_3
     :goto_0
     invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    const-string v1, "com.bbm.selectall"
+    const-string v4, "com.bbm.additionalmessage"
 
-    invoke-virtual {v0, v1, v5}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    .line 290
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->b:Lcom/bbm/ui/FooterActionBar;
-
-    invoke-virtual {v0, v4}, Lcom/bbm/ui/FooterActionBar;->setVisibility(I)V
-
-    .line 291
-    const v0, 0x7f0b0137
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectContactActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 294
-    :cond_5
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    const-string v1, "com.bbm.additionalmessage"
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
+    invoke-virtual {v0, v4}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
-    .line 295
-    invoke-virtual {p0, v8}, Lcom/bbm/ui/activities/SelectContactActivity;->findViewById(I)Landroid/view/View;
+    .line 357
+    invoke-virtual {p0, v9}, Lcom/bbm/ui/activities/SelectContactActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 296
+    .line 358
     invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
 
-    move-result-object v1
+    move-result-object v4
 
-    const-string v2, "com.bbm.additionalmessage"
+    const-string v5, "com.bbm.additionalmessage"
 
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v4, v5}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v4
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 304
+    .line 371
     :goto_1
-    const v0, 0x7f0b01f0
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string v4, "com.bbm.selectforbroadcast"
+
+    invoke-virtual {v0, v4, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->v:Z
+
+    .line 373
+    const v0, 0x7f0b0272
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectContactActivity;->findViewById(I)Landroid/view/View;
 
@@ -1318,52 +1786,41 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->c:Landroid/widget/ListView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->h:Landroid/widget/ListView;
 
-    .line 305
-    new-instance v0, Lcom/bbm/ui/activities/afv;
+    .line 375
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->h:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->G:Lcom/bbm/d/b/f;
+    iget-object v4, p0, Lcom/bbm/ui/activities/SelectContactActivity;->N:Landroid/widget/AdapterView$OnItemClickListener;
 
-    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/activities/afv;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;Lcom/bbm/j/r;)V
+    invoke-virtual {v0, v4}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->d:Lcom/bbm/ui/activities/afv;
-
-    .line 306
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->c:Landroid/widget/ListView;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->d:Lcom/bbm/ui/activities/afv;
-
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
-
-    .line 309
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->c:Landroid/widget/ListView;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->B:Landroid/widget/AdapterView$OnItemClickListener;
-
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
-
-    .line 311
-    const v0, 0x7f0b01ef
+    .line 377
+    const v0, 0x7f0b0271
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectContactActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 313
-    iget-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->A:Landroid/view/View$OnTouchListener;
+    .line 379
+    iget-object v4, p0, Lcom/bbm/ui/activities/SelectContactActivity;->M:Landroid/view/View$OnTouchListener;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+    invoke-virtual {v0, v4}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 314
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->c:Landroid/widget/ListView;
+    .line 380
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->h:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->A:Landroid/view/View$OnTouchListener;
+    iget-object v4, p0, Lcom/bbm/ui/activities/SelectContactActivity;->M:Landroid/view/View$OnTouchListener;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+    invoke-virtual {v0, v4}, Landroid/widget/ListView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 316
-    const v0, 0x7f0b02b6
+    .line 381
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->h:Landroid/widget/ListView;
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectContactActivity;->registerForContextMenu(Landroid/view/View;)V
+
+    .line 382
+    const v0, 0x7f0b0310
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectContactActivity;->findViewById(I)Landroid/view/View;
 
@@ -1371,10 +1828,10 @@
 
     check-cast v0, Landroid/widget/EditText;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->i:Landroid/widget/EditText;
+    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->n:Landroid/widget/EditText;
 
-    .line 317
-    const v0, 0x7f0b02b8
+    .line 383
+    const v0, 0x7f0b0312
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectContactActivity;->findViewById(I)Landroid/view/View;
 
@@ -1382,10 +1839,10 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->j:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->o:Landroid/widget/Button;
 
-    .line 318
-    const v0, 0x7f0b02b7
+    .line 384
+    const v0, 0x7f0b0311
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectContactActivity;->findViewById(I)Landroid/view/View;
 
@@ -1393,138 +1850,263 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->k:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->p:Landroid/widget/LinearLayout;
 
-    .line 320
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->i:Landroid/widget/EditText;
+    .line 386
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->n:Landroid/widget/EditText;
 
-    new-instance v1, Lcom/bbm/ui/activities/afq;
+    invoke-virtual {v0}, Landroid/widget/EditText;->getPaddingTop()I
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/afq;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
+    move-result v0
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
+    iput v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->I:I
 
-    .line 337
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->i:Landroid/widget/EditText;
+    .line 387
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->n:Landroid/widget/EditText;
 
-    new-instance v1, Lcom/bbm/ui/activities/afr;
+    invoke-virtual {v0}, Landroid/widget/EditText;->getPaddingLeft()I
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/afr;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
+    move-result v0
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
+    iput v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->J:I
 
-    .line 350
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->i:Landroid/widget/EditText;
+    .line 388
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->n:Landroid/widget/EditText;
 
-    new-instance v1, Lcom/bbm/ui/activities/afs;
+    invoke-virtual {v0}, Landroid/widget/EditText;->getPaddingBottom()I
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/afs;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
+    move-result v0
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
+    iput v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->K:I
 
-    .line 360
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->j:Landroid/widget/Button;
+    .line 390
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->n:Landroid/widget/EditText;
 
-    new-instance v1, Lcom/bbm/ui/activities/aft;
+    new-instance v4, Lcom/bbm/ui/activities/acg;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/aft;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
+    invoke-direct {v4, p0}, Lcom/bbm/ui/activities/acg;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v4}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    .line 371
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->k:Landroid/widget/LinearLayout;
+    .line 413
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->n:Landroid/widget/EditText;
 
-    new-instance v1, Lcom/bbm/ui/activities/afu;
+    new-instance v4, Lcom/bbm/ui/activities/ach;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/afu;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
+    invoke-direct {v4, p0}, Lcom/bbm/ui/activities/ach;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v4}, Landroid/widget/EditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
-    .line 382
+    .line 424
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->n:Landroid/widget/EditText;
+
+    new-instance v4, Lcom/bbm/ui/activities/aci;
+
+    invoke-direct {v4, p0}, Lcom/bbm/ui/activities/aci;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
+
+    invoke-virtual {v0, v4}, Landroid/widget/EditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
+
+    .line 434
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->o:Landroid/widget/Button;
+
+    new-instance v4, Lcom/bbm/ui/activities/acj;
+
+    invoke-direct {v4, p0}, Lcom/bbm/ui/activities/acj;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
+
+    invoke-virtual {v0, v4}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 445
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->p:Landroid/widget/LinearLayout;
+
+    new-instance v4, Lcom/bbm/ui/activities/ack;
+
+    invoke-direct {v4, p0}, Lcom/bbm/ui/activities/ack;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
+
+    invoke-virtual {v0, v4}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 456
     invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0e0177
+    const v4, 0x7f0e0199
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v4
 
-    iget-boolean v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->g:Z
-
-    if-eqz v1, :cond_8
-
-    new-instance v1, Lcom/bbm/ui/HeaderButtonActionBar;
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getTitle()Ljava/lang/CharSequence;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v1, p0, v2, v0}, Lcom/bbm/ui/HeaderButtonActionBar;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    iput-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->h:Lcom/bbm/ui/HeaderButtonActionBar;
-
-    :goto_2
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->h:Lcom/bbm/ui/HeaderButtonActionBar;
-
-    new-instance v1, Lcom/bbm/ui/activities/afk;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/afk;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/HeaderButtonActionBar;->setNegativeButtonOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getActionBar()Landroid/app/ActionBar;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->h:Lcom/bbm/ui/HeaderButtonActionBar;
-
-    new-instance v2, Landroid/app/ActionBar$LayoutParams;
-
-    invoke-direct {v2, v7, v7}, Landroid/app/ActionBar$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v1, v2}, Landroid/app/ActionBar;->setCustomView(Landroid/view/View;Landroid/app/ActionBar$LayoutParams;)V
-
-    const/16 v1, 0x10
-
-    invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setDisplayOptions(I)V
-
-    .line 383
-    return-void
-
-    .line 281
-    :cond_6
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    const-string v1, "channel_invite"
-
-    invoke-virtual {v0, v1, v5}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    .line 282
-    iput-boolean v6, p0, Lcom/bbm/ui/activities/SelectContactActivity;->n:Z
-
-    .line 283
-    const v0, 0x7f0b02b4
+    const v0, 0x7f0b05e8
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectContactActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-virtual {v0, v5}, Landroid/view/View;->setVisibility(I)V
+    check-cast v0, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
 
-    .line 284
-    const v0, 0x7f0b01a0
+    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getTitle()Ljava/lang/CharSequence;
+
+    move-result-object v5
+
+    invoke-interface {v5}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setTitle(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    sget v5, Lcom/bbm/bali/ui/toolbar/b;->c:I
+
+    invoke-virtual {v0, v5}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setDisplayOption$58d310a4(I)V
+
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->l:Z
+
+    if-nez v0, :cond_5
+
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string v5, "com.bbm.canceltextoverride"
+
+    invoke-virtual {v0, v5}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string v5, "com.bbm.canceltextoverride"
+
+    invoke-virtual {v0, v5}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v4, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_4
+
+    iget-object v4, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    invoke-virtual {v4, v0}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setNegativeButtonLabel(Ljava/lang/String;)V
+
+    :cond_4
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    new-instance v4, Lcom/bbm/ui/activities/acb;
+
+    invoke-direct {v4, p0}, Lcom/bbm/ui/activities/acb;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
+
+    invoke-virtual {v0, v4}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setPositiveButtonOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    :cond_5
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    new-instance v4, Lcom/bbm/ui/activities/acc;
+
+    invoke-direct {v4, p0}, Lcom/bbm/ui/activities/acc;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
+
+    invoke-virtual {v0, v4}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setNegativeButtonOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v4, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    invoke-virtual {v0}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->getDisplayOption$976f296()I
+
+    move-result v0
+
+    sget v5, Lcom/bbm/bali/ui/toolbar/b;->c:I
+
+    if-ne v0, v5, :cond_9
+
+    move v0, v1
+
+    :goto_2
+    iget-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    invoke-virtual {v1}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->getNegativeButtonOnClickListener()Landroid/view/View$OnClickListener;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v4, v0, v1}, Lcom/bbm/ui/activities/SelectContactActivity;->a(Landroid/support/v7/widget/Toolbar;ZLandroid/view/View$OnClickListener;)V
+
+    .line 458
+    new-instance v0, Lcom/bbm/ui/activities/abz;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->a:Lcom/bbm/d/a;
+
+    invoke-virtual {v1, v3}, Lcom/bbm/d/a;->c(Z)Lcom/bbm/j/r;
+
+    move-result-object v1
+
+    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/activities/abz;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;Lcom/bbm/j/r;)V
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->P:Lcom/bbm/d/b/aa;
+
+    .line 509
+    new-instance v0, Lcom/bbm/ui/activities/aca;
+
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/aca;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->Q:Lcom/bbm/d/b/o;
+
+    .line 528
+    new-instance v0, Lcom/bbm/ui/activities/acl;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->Q:Lcom/bbm/d/b/o;
+
+    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/activities/acl;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;Lcom/bbm/j/r;)V
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->i:Lcom/bbm/ui/activities/acl;
+
+    .line 529
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->h:Landroid/widget/ListView;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->i:Lcom/bbm/ui/activities/acl;
+
+    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
+
+    .line 530
+    return-void
+
+    .line 348
+    :cond_6
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string v4, "channel_invite"
+
+    invoke-virtual {v0, v4, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    .line 349
+    iput-boolean v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->u:Z
+
+    .line 350
+    const v0, 0x7f0b030e
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectContactActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+
+    .line 351
+    const v0, 0x7f0b0210
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectContactActivity;->findViewById(I)Landroid/view/View;
 
@@ -1532,29 +2114,59 @@
 
     check-cast v0, Landroid/widget/EditText;
 
-    .line 285
+    .line 352
     invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
 
-    move-result-object v1
+    move-result-object v4
 
-    const-string v2, "invite_message"
+    const-string v5, "invite_message"
 
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v4, v5}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v4
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v4}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 286
-    const/16 v1, 0xfa
+    .line 353
+    const/16 v4, 0xfa
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/he;->a(Landroid/widget/EditText;I)Lcom/bbm/ui/he;
+    invoke-static {v0, v4}, Lcom/bbm/ui/hl;->a(Landroid/widget/EditText;I)Lcom/bbm/ui/hl;
 
     goto/16 :goto_0
 
-    .line 298
+    .line 359
     :cond_7
-    const v0, 0x7f0b02bc
+    iget v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->C:I
+
+    const/4 v4, 0x2
+
+    if-ne v0, v4, :cond_8
+
+    .line 360
+    invoke-virtual {p0, v9}, Lcom/bbm/ui/activities/SelectContactActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    .line 361
+    const v4, 0x7f0e076c
+
+    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setText(I)V
+
+    .line 362
+    invoke-static {p0, v1}, Lcom/bbm/util/dk;->a(Landroid/content/Context;Z)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v4
+
+    .line 363
+    invoke-virtual {v0, v4, v8, v8, v8}, Landroid/widget/TextView;->setCompoundDrawables(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    goto/16 :goto_1
+
+    .line 365
+    :cond_8
+    const v0, 0x7f0b0315
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectContactActivity;->findViewById(I)Landroid/view/View;
 
@@ -1566,108 +2178,420 @@
 
     check-cast v0, Landroid/widget/RelativeLayout$LayoutParams;
 
-    .line 299
-    const/4 v1, 0x3
+    .line 366
+    const/4 v4, 0x3
 
-    const v2, 0x7f0b02b5
+    const v5, 0x7f0b030f
 
-    invoke-virtual {v0, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+    invoke-virtual {v0, v4, v5}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 300
-    invoke-virtual {p0, v8}, Lcom/bbm/ui/activities/SelectContactActivity;->findViewById(I)Landroid/view/View;
+    .line 367
+    invoke-virtual {p0, v9}, Lcom/bbm/ui/activities/SelectContactActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v10}, Landroid/view/View;->setVisibility(I)V
 
-    .line 301
-    const v0, 0x7f0b02b9
+    .line 368
+    const v0, 0x7f0b0313
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectContactActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v10}, Landroid/view/View;->setVisibility(I)V
 
     goto/16 :goto_1
 
-    .line 382
-    :cond_8
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v1
-
-    const-string v2, "com.bbm.cancelisskip"
-
-    invoke-virtual {v1, v2, v5}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_9
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0e0162
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
     :cond_9
-    new-instance v1, Lcom/bbm/ui/HeaderButtonActionBar;
+    move v0, v2
 
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getTitle()Ljava/lang/CharSequence;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    const v4, 0x7f0e0312
-
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-direct {v1, p0, v2, v0, v3}, Lcom/bbm/ui/HeaderButtonActionBar;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    iput-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->h:Lcom/bbm/ui/HeaderButtonActionBar;
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->h:Lcom/bbm/ui/HeaderButtonActionBar;
-
-    invoke-virtual {v0, v5}, Lcom/bbm/ui/HeaderButtonActionBar;->setPositiveButtonEnabled(Z)V
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->h:Lcom/bbm/ui/HeaderButtonActionBar;
-
-    new-instance v1, Lcom/bbm/ui/activities/afj;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/afj;-><init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/HeaderButtonActionBar;->setPositiveButtonOnClickListener(Landroid/view/View$OnClickListener;)V
-
+    .line 456
     goto/16 :goto_2
+.end method
+
+.method public onCreateContextMenu(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;)V
+    .locals 3
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 581
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->l:Z
+
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->G:Z
+
+    if-nez v0, :cond_1
+
+    .line 587
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 584
+    :cond_1
+    invoke-super {p0, p1, p2, p3}, Lcom/bbm/bali/ui/main/a/a;->onCreateContextMenu(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;)V
+
+    .line 585
+    const v0, 0x7f0b0021
+
+    const v1, 0x7f0e0765
+
+    invoke-interface {p1, v2, v0, v2, v1}, Landroid/view/ContextMenu;->add(IIII)Landroid/view/MenuItem;
+
+    goto :goto_0
+.end method
+
+.method public onCreateOptionsMenu(Landroid/view/Menu;)Z
+    .locals 2
+
+    .prologue
+    .line 552
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getMenuInflater()Landroid/view/MenuInflater;
+
+    move-result-object v0
+
+    const v1, 0x7f100041
+
+    invoke-virtual {v0, v1, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
+
+    .line 553
+    const v0, 0x7f0b07b0
+
+    invoke-interface {p1, v0}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->q:Landroid/view/MenuItem;
+
+    .line 554
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onCreateOptionsMenu(Landroid/view/Menu;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    .locals 1
+
+    .prologue
+    .line 569
+    invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
+
+    move-result v0
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 576
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    .line 571
+    :pswitch_0
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->G:Z
+
+    if-eqz v0, :cond_0
+
+    .line 572
+    invoke-direct {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->j()V
+
+    .line 573
+    :cond_0
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    .line 569
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x7f0b07b0
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method protected onPause()V
     .locals 1
 
     .prologue
-    .line 573
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->E:Lcom/bbm/j/k;
+    .line 812
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->R:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
 
-    .line 574
-    invoke-super {p0}, Lcom/bbm/ui/activities/akz;->onPause()V
+    .line 813
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/a;->onPause()V
 
-    .line 575
+    .line 814
+    return-void
+.end method
+
+.method public onPrepareOptionsMenu(Landroid/view/Menu;)Z
+    .locals 8
+
+    .prologue
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    .line 559
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onPrepareOptionsMenu(Landroid/view/Menu;)Z
+
+    move-result v4
+
+    .line 560
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->v:Z
+
+    if-nez v0, :cond_0
+
+    .line 561
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->q:Landroid/view/MenuItem;
+
+    invoke-interface {v0, v2}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    .line 563
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->r:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->size()I
+
+    move-result v0
+
+    iget-object v3, p0, Lcom/bbm/ui/activities/SelectContactActivity;->s:Ljava/util/HashSet;
+
+    invoke-virtual {v3}, Ljava/util/HashSet;->size()I
+
+    move-result v3
+
+    add-int v5, v0, v3
+
+    if-lez v5, :cond_4
+
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->D:Z
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->s:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->r:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_1
+
+    move v0, v1
+
+    :goto_0
+    iget-object v3, p0, Lcom/bbm/ui/activities/SelectContactActivity;->r:Ljava/util/HashSet;
+
+    invoke-virtual {v3}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v6
+
+    move v3, v0
+
+    :goto_1
+    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    iget-object v7, p0, Lcom/bbm/ui/activities/SelectContactActivity;->a:Lcom/bbm/d/a;
+
+    invoke-virtual {v7, v0}, Lcom/bbm/d/a;->e(Ljava/lang/String;)Lcom/bbm/d/ie;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/bbm/util/dk;->b(Lcom/bbm/d/ie;)Z
+
+    move-result v0
+
+    and-int/2addr v0, v3
+
+    move v3, v0
+
+    goto :goto_1
+
+    :cond_1
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    sget v6, Lcom/bbm/bali/ui/toolbar/b;->a:I
+
+    invoke-virtual {v0, v6}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setDisplayOption$58d310a4(I)V
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setPositiveButtonEnabled(Z)V
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->q:Landroid/view/MenuItem;
+
+    invoke-interface {v0, v2}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->D:Z
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->r:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_3
+
+    if-eqz v3, :cond_3
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    const v6, 0x7f0e0769
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v1, v2
+
+    invoke-virtual {v3, v6, v1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setTitle(Ljava/lang/String;)V
+
+    .line 564
+    :goto_2
+    return v4
+
+    .line 563
+    :cond_3
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/SelectContactActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    const v6, 0x7f0e076a
+
+    invoke-virtual {v3, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v1, v2
+
+    invoke-static {v3, v1}, Ljava/text/MessageFormat;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setTitle(Ljava/lang/String;)V
+
+    goto :goto_2
+
+    :cond_4
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    sget v3, Lcom/bbm/bali/ui/toolbar/b;->c:I
+
+    invoke-virtual {v0, v3}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setDisplayOption$58d310a4(I)V
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->m:Lcom/bbm/bali/ui/toolbar/ButtonToolbar;
+
+    invoke-virtual {v0, v2}, Lcom/bbm/bali/ui/toolbar/ButtonToolbar;->setPositiveButtonEnabled(Z)V
+
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->v:Z
+
+    if-eqz v0, :cond_5
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->q:Landroid/view/MenuItem;
+
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    goto :goto_2
+
+    :cond_5
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->q:Landroid/view/MenuItem;
+
+    invoke-interface {v0, v2}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+    goto :goto_2
+.end method
+
+.method public onRestoreInstanceState(Landroid/os/Bundle;)V
+    .locals 1
+
+    .prologue
+    .line 542
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onRestoreInstanceState(Landroid/os/Bundle;)V
+
+    .line 543
+    const-string v0, "bundlecheckboxclicked"
+
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->b:Z
+
+    .line 544
+    const-string v0, "bundleslelecteduris"
+
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/HashSet;
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->r:Ljava/util/HashSet;
+
+    .line 545
+    const-string v0, "bundleselectedpins"
+
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/HashSet;
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->s:Ljava/util/HashSet;
+
+    .line 546
     return-void
 .end method
 
@@ -1675,14 +2599,46 @@
     .locals 1
 
     .prologue
-    .line 579
-    invoke-super {p0}, Lcom/bbm/ui/activities/akz;->onResume()V
+    .line 818
+    invoke-super {p0}, Lcom/bbm/bali/ui/main/a/a;->onResume()V
 
-    .line 580
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->E:Lcom/bbm/j/k;
+    .line 819
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectContactActivity;->R:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 581
+    .line 820
+    return-void
+.end method
+
+.method public onSaveInstanceState(Landroid/os/Bundle;)V
+    .locals 2
+
+    .prologue
+    .line 534
+    invoke-super {p0, p1}, Lcom/bbm/bali/ui/main/a/a;->onSaveInstanceState(Landroid/os/Bundle;)V
+
+    .line 535
+    const-string v0, "bundlecheckboxclicked"
+
+    iget-boolean v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->b:Z
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+
+    .line 536
+    const-string v0, "bundleslelecteduris"
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->r:Ljava/util/HashSet;
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
+
+    .line 537
+    const-string v0, "bundleselectedpins"
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/SelectContactActivity;->s:Ljava/util/HashSet;
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
+
+    .line 538
     return-void
 .end method

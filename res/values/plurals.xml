@@ -39,28 +39,28 @@
         <item quantity="one">1 Result</item>
     </plurals>
     <plurals name="slide_menu_active_chats">
-        <item quantity="other">%1$s Active Chats</item>
-        <item quantity="one">1 Active Chat</item>
+        <item quantity="other">Active Chats %1$s</item>
+        <item quantity="one">Active Chat %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_channelupdates">
-        <item quantity="other">%1$s New Notifications</item>
-        <item quantity="one">1 New Notification</item>
+        <item quantity="other">New Channels items %1$s</item>
+        <item quantity="one">New Channels item %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_invites">
-        <item quantity="other">%1$s New Invites</item>
-        <item quantity="one">1 New Invite</item>
+        <item quantity="other">New Invites %1$s</item>
+        <item quantity="one">New Invite %1$s</item>
     </plurals>
     <plurals name="slide_menu_new_updates">
-        <item quantity="other">%1$s New Items</item>
-        <item quantity="one">1 New Item</item>
+        <item quantity="other">New Feeds %1$s</item>
+        <item quantity="one">New Feed %1$s</item>
     </plurals>
     <plurals name="slide_menu_total_contacts">
         <item quantity="other">%1$s Contacts</item>
-        <item quantity="one">1 Contact</item>
+        <item quantity="one">%1$s Contact</item>
     </plurals>
     <plurals name="slide_menu_total_groups">
         <item quantity="other">%1$s Groups</item>
-        <item quantity="one">1 Group</item>
+        <item quantity="one">%1$s Group</item>
     </plurals>
     <plurals name="update_channel_stats_comments">
         <item quantity="other">%1$s Comments</item>

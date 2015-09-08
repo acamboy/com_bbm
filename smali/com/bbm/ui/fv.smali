@@ -1,91 +1,122 @@
-.class final Lcom/bbm/ui/fv;
+.class final synthetic Lcom/bbm/ui/fv;
 .super Ljava/lang/Object;
-.source "SearchEditText.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "QuickShareVoicenoteView.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/SearchEditText;
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/SearchEditText;)V
-    .locals 0
-
-    .prologue
-    .line 114
-    iput-object p1, p0, Lcom/bbm/ui/fv;->a:Lcom/bbm/ui/SearchEditText;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method static constructor <clinit>()V
     .locals 3
 
     .prologue
-    .line 118
-    const-string v0, "Cancel clicked"
-
-    const-class v1, Lcom/bbm/ui/SearchEditText;
-
-    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 120
-    iget-object v0, p0, Lcom/bbm/ui/fv;->a:Lcom/bbm/ui/SearchEditText;
-
-    invoke-static {v0}, Lcom/bbm/ui/SearchEditText;->d(Lcom/bbm/ui/SearchEditText;)Landroid/widget/EditText;
+    .line 320
+    invoke-static {}, Lcom/bbm/ui/fx;->a()[I
 
     move-result-object v0
 
-    const-string v1, ""
+    array-length v0, v0
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    new-array v0, v0, [I
 
-    .line 121
-    iget-object v0, p0, Lcom/bbm/ui/fv;->a:Lcom/bbm/ui/SearchEditText;
+    sput-object v0, Lcom/bbm/ui/fv;->a:[I
 
-    invoke-static {v0}, Lcom/bbm/ui/SearchEditText;->e(Lcom/bbm/ui/SearchEditText;)Landroid/content/Context;
+    :try_start_0
+    sget-object v0, Lcom/bbm/ui/fv;->a:[I
 
-    move-result-object v0
+    sget v1, Lcom/bbm/ui/fx;->a:I
 
-    const-string v1, "input_method"
+    add-int/lit8 v1, v1, -0x1
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    const/4 v2, 0x1
 
-    move-result-object v0
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_4
 
-    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/ui/fv;->a:[I
 
-    .line 122
-    iget-object v1, p0, Lcom/bbm/ui/fv;->a:Lcom/bbm/ui/SearchEditText;
+    sget v1, Lcom/bbm/ui/fx;->c:I
 
-    invoke-static {v1}, Lcom/bbm/ui/SearchEditText;->d(Lcom/bbm/ui/SearchEditText;)Landroid/widget/EditText;
+    add-int/lit8 v1, v1, -0x1
 
-    move-result-object v1
+    const/4 v2, 0x2
 
-    invoke-virtual {v1}, Landroid/widget/EditText;->getWindowToken()Landroid/os/IBinder;
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_3
 
-    move-result-object v1
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/bbm/ui/fv;->a:[I
 
-    const/4 v2, 0x0
+    sget v1, Lcom/bbm/ui/fx;->d:I
 
-    invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
+    add-int/lit8 v1, v1, -0x1
 
-    .line 123
-    iget-object v0, p0, Lcom/bbm/ui/fv;->a:Lcom/bbm/ui/SearchEditText;
+    const/4 v2, 0x3
 
-    invoke-static {v0}, Lcom/bbm/ui/SearchEditText;->d(Lcom/bbm/ui/SearchEditText;)Landroid/widget/EditText;
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    move-result-object v0
+    :goto_2
+    :try_start_3
+    sget-object v0, Lcom/bbm/ui/fv;->a:[I
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->clearFocus()V
+    sget v1, Lcom/bbm/ui/fx;->b:I
 
-    .line 124
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_1
+
+    :goto_3
+    :try_start_4
+    sget-object v0, Lcom/bbm/ui/fv;->a:[I
+
+    sget v1, Lcom/bbm/ui/fx;->e:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_0
+
+    :goto_4
     return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_4
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_3
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_2
+
+    :catch_3
+    move-exception v0
+
+    goto :goto_1
+
+    :catch_4
+    move-exception v0
+
+    goto :goto_0
 .end method

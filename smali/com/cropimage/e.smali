@@ -17,7 +17,7 @@
     .locals 0
 
     .prologue
-    .line 291
+    .line 284
     iput-object p1, p0, Lcom/cropimage/e;->b:Lcom/cropimage/CropImage;
 
     iput-object p2, p0, Lcom/cropimage/e;->a:Landroid/graphics/Bitmap;
@@ -33,13 +33,13 @@
     .locals 2
 
     .prologue
-    .line 294
+    .line 287
     iget-object v0, p0, Lcom/cropimage/e;->b:Lcom/cropimage/CropImage;
 
     iget-object v1, p0, Lcom/cropimage/e;->a:Landroid/graphics/Bitmap;
 
     invoke-static {v0, v1}, Lcom/cropimage/CropImage;->b(Lcom/cropimage/CropImage;Landroid/graphics/Bitmap;)V
 
-    .line 295
+    .line 288
     return-void
 .end method

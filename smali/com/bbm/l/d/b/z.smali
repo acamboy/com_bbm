@@ -1,114 +1,74 @@
 .class public final Lcom/bbm/l/d/b/z;
 .super Ljava/lang/Object;
-.source "SkuDetails.java"
-
-
-# instance fields
-.field a:Ljava/lang/String;
-
-.field b:Ljava/lang/String;
-
-.field c:Ljava/lang/String;
-
-.field public d:Ljava/lang/String;
-
-.field e:Ljava/lang/String;
-
-.field f:Ljava/lang/String;
-
-.field g:Ljava/lang/String;
+.source "PaymentUtils.java"
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
+.method public static a()Ljava/lang/String;
+    .locals 6
 
     .prologue
-    .line 37
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v5, 0x0
 
-    .line 38
-    iput-object p1, p0, Lcom/bbm/l/d/b/z;->a:Ljava/lang/String;
+    .line 34
+    new-instance v0, Ljava/math/BigInteger;
+
+    const-string v1, "1hxr75s5v8y99hwyfs8pebm3hi852xrqmfdly8g2pc9us1jtvnt96u0unpt3bu4z2igb7vwumgb3nzwyp7et7u0uffri2rq5sqru20rc40emre2xvxwag32zoapz3do5szlltdce68bn7b5v0tl7lsvzketa9i6tp4emjej9ux1y0mihgj0gv21cecmpz0a6lg03dsuma4lng2pig5dx06evbhabv1k51zhx1il4y19fxltvi5k4y23t7ql8rqxt6w99v3le8og75rrzq5x1ov66z2434w55zivzxlaz72u1l57ysyl9cevpuaweppbi86xm2bmemdiov0z2erp62thzl1b7yks1oby4mg6v97kboy9jpxt9z10572nmn5l8rbni2wu3gvlmwdu3xmxba6w9tzg0gbr2tazqf8a0ct5470y3erdh8mcfheekorpan16zjt2buw4a4b93yg0igtmi28dkknp3"
+
+    const/16 v2, 0x24
+
+    invoke-direct {v0, v1, v2}, Ljava/math/BigInteger;-><init>(Ljava/lang/String;I)V
+
+    .line 37
+    const-wide/16 v2, 0x50
+
+    invoke-static {v2, v3}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v1
 
     .line 39
-    iput-object p2, p0, Lcom/bbm/l/d/b/z;->g:Ljava/lang/String;
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 40
-    new-instance v0, Lorg/json/JSONObject;
+    :goto_0
+    sget-object v3, Ljava/math/BigInteger;->ZERO:Ljava/math/BigInteger;
 
-    iget-object v1, p0, Lcom/bbm/l/d/b/z;->g:Ljava/lang/String;
+    invoke-virtual {v0, v3}, Ljava/math/BigInteger;->equals(Ljava/lang/Object;)Z
 
-    invoke-direct {v0, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+    move-result v3
+
+    if-nez v3, :cond_0
 
     .line 41
-    const-string v1, "productId"
+    invoke-virtual {v0, v1}, Ljava/math/BigInteger;->divideAndRemainder(Ljava/math/BigInteger;)[Ljava/math/BigInteger;
 
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/bbm/l/d/b/z;->b:Ljava/lang/String;
+    move-result-object v3
 
     .line 42
-    const-string v1, "type"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/bbm/l/d/b/z;->c:Ljava/lang/String;
+    aget-object v0, v3, v5
 
     .line 43
-    const-string v1, "price"
+    const/4 v4, 0x1
 
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    aget-object v3, v3, v4
 
-    move-result-object v1
+    invoke-virtual {v3}, Ljava/math/BigInteger;->byteValue()B
 
-    iput-object v1, p0, Lcom/bbm/l/d/b/z;->d:Ljava/lang/String;
+    move-result v3
 
-    .line 44
-    const-string v1, "title"
+    add-int/lit8 v3, v3, 0x2b
 
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    int-to-char v3, v3
 
-    move-result-object v1
+    invoke-virtual {v2, v5, v3}, Ljava/lang/StringBuilder;->insert(IC)Ljava/lang/StringBuilder;
 
-    iput-object v1, p0, Lcom/bbm/l/d/b/z;->e:Ljava/lang/String;
-
-    .line 45
-    const-string v1, "description"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/l/d/b/z;->f:Ljava/lang/String;
+    goto :goto_0
 
     .line 46
-    return-void
-.end method
-
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    .prologue
-    .line 70
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SkuDetails:"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcom/bbm/l/d/b/z;->g:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_0
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

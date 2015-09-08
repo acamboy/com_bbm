@@ -1,310 +1,355 @@
-.class public final Lcom/bbm/util/dm;
+.class final synthetic Lcom/bbm/util/dm;
 .super Ljava/lang/Object;
-.source "ShareMyPinUtil.java"
+.source "ProtectedUtil.java"
+
+
+# static fields
+.field static final synthetic a:[I
+
+.field static final synthetic b:[I
 
 
 # direct methods
-.method static a(Ljava/lang/String;)Landroid/graphics/Bitmap;
-    .locals 10
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    const/4 v4, 0x0
+    .line 331
+    invoke-static {}, Lcom/bbm/d/hm;->values()[Lcom/bbm/d/hm;
 
-    .line 118
-    const-string v0, ""
+    move-result-object v0
 
-    move v2, v4
+    array-length v0, v0
 
-    move-object v3, v0
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/util/dm;->b:[I
+
+    :try_start_0
+    sget-object v0, Lcom/bbm/util/dm;->b:[I
+
+    sget-object v1, Lcom/bbm/d/hm;->a:Lcom/bbm/d/hm;
+
+    invoke-virtual {v1}, Lcom/bbm/d/hm;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_e
 
     :goto_0
-    const/4 v0, 0x4
+    :try_start_1
+    sget-object v0, Lcom/bbm/util/dm;->b:[I
 
-    if-ge v2, v0, :cond_2
+    sget-object v1, Lcom/bbm/d/hm;->c:Lcom/bbm/d/hm;
 
-    invoke-static {}, Ljava/lang/Math;->random()D
+    invoke-virtual {v1}, Lcom/bbm/d/hm;->ordinal()I
 
-    move-result-wide v0
+    move-result v1
 
-    const-wide/high16 v6, 0x406e000000000000L
+    const/4 v2, 0x2
 
-    mul-double/2addr v0, v6
-
-    const-wide/high16 v6, 0x4030000000000000L
-
-    add-double/2addr v0, v6
-
-    double-to-int v1, v0
-
-    if-nez v1, :cond_1
-
-    const-string v0, "0"
-
-    :cond_0
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    add-int/lit8 v0, v2, 0x1
-
-    move v2, v0
-
-    move-object v3, v1
-
-    goto :goto_0
-
-    :cond_1
-    const-string v0, ""
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_d
 
     :goto_1
-    if-lez v1, :cond_0
+    :try_start_2
+    sget-object v0, Lcom/bbm/util/dm;->b:[I
 
-    rem-int/lit8 v5, v1, 0x10
+    sget-object v1, Lcom/bbm/d/hm;->e:Lcom/bbm/d/hm;
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Lcom/bbm/d/hm;->ordinal()I
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    move-result v1
 
-    const-string v7, "0123456789ABCDEF"
+    const/4 v2, 0x3
 
-    invoke-virtual {v7, v5}, Ljava/lang/String;->charAt(I)C
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_c
 
-    move-result v5
-
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    div-int/lit8 v1, v1, 0x10
-
-    goto :goto_1
-
-    .line 119
-    :cond_2
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "bbm:"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 122
-    :try_start_0
-    new-instance v1, Lcom/google/zxing/g/b;
-
-    invoke-direct {v1}, Lcom/google/zxing/g/b;-><init>()V
-
-    .line 123
-    sget-object v1, Lcom/google/zxing/a;->l:Lcom/google/zxing/a;
-
-    const/16 v2, 0x19f
-
-    const/16 v3, 0x19f
-
-    invoke-static {v0, v1, v2, v3}, Lcom/google/zxing/g/b;->a(Ljava/lang/String;Lcom/google/zxing/a;II)Lcom/google/zxing/b/b;
-
-    move-result-object v6
-
-    .line 126
-    iget v3, v6, Lcom/google/zxing/b/b;->a:I
-
-    .line 127
-    iget v7, v6, Lcom/google/zxing/b/b;->b:I
-
-    .line 128
-    mul-int v0, v3, v7
-
-    new-array v1, v0, [I
-
-    move v5, v4
-
-    .line 130
     :goto_2
-    if-ge v5, v7, :cond_5
+    :try_start_3
+    sget-object v0, Lcom/bbm/util/dm;->b:[I
 
-    .line 131
-    mul-int v8, v5, v3
+    sget-object v1, Lcom/bbm/d/hm;->b:Lcom/bbm/d/hm;
 
-    move v2, v4
+    invoke-virtual {v1}, Lcom/bbm/d/hm;->ordinal()I
 
-    .line 132
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_b
+
     :goto_3
-    if-ge v2, v3, :cond_4
+    :try_start_4
+    sget-object v0, Lcom/bbm/util/dm;->b:[I
 
-    .line 133
-    add-int v9, v8, v2
+    sget-object v1, Lcom/bbm/d/hm;->d:Lcom/bbm/d/hm;
 
-    invoke-virtual {v6, v2, v5}, Lcom/google/zxing/b/b;->a(II)Z
+    invoke-virtual {v1}, Lcom/bbm/d/hm;->ordinal()I
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_3
+    const/4 v2, 0x5
 
-    const/high16 v0, -0x1000000
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_a
 
     :goto_4
-    aput v0, v1, v9
+    :try_start_5
+    sget-object v0, Lcom/bbm/util/dm;->b:[I
 
-    .line 132
-    add-int/lit8 v0, v2, 0x1
+    sget-object v1, Lcom/bbm/d/hm;->f:Lcom/bbm/d/hm;
 
-    move v2, v0
+    invoke-virtual {v1}, Lcom/bbm/d/hm;->ordinal()I
 
-    goto :goto_3
+    move-result v1
 
-    .line 133
-    :cond_3
-    const/4 v0, -0x1
+    const/4 v2, 0x6
 
-    goto :goto_4
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_9
 
-    .line 130
-    :cond_4
-    add-int/lit8 v0, v5, 0x1
-
-    move v5, v0
-
-    goto :goto_2
-
-    .line 137
-    :cond_5
-    sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
-
-    invoke-static {v3, v7, v0}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+    .line 160
+    :goto_5
+    invoke-static {}, Lcom/bbm/d/im;->values()[Lcom/bbm/d/im;
 
     move-result-object v0
 
-    .line 138
-    const/4 v2, 0x0
+    array-length v0, v0
 
-    const/4 v4, 0x0
+    new-array v0, v0, [I
 
-    const/4 v5, 0x0
+    sput-object v0, Lcom/bbm/util/dm;->a:[I
 
-    move v6, v3
+    :try_start_6
+    sget-object v0, Lcom/bbm/util/dm;->a:[I
 
-    invoke-virtual/range {v0 .. v7}, Landroid/graphics/Bitmap;->setPixels([IIIIIII)V
-    :try_end_0
-    .catch Lcom/google/zxing/q; {:try_start_0 .. :try_end_0} :catch_0
+    sget-object v1, Lcom/bbm/d/im;->a:Lcom/bbm/d/im;
 
-    .line 145
-    :goto_5
-    return-object v0
+    invoke-virtual {v1}, Lcom/bbm/d/im;->ordinal()I
 
-    .line 142
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_8
+
+    :goto_6
+    :try_start_7
+    sget-object v0, Lcom/bbm/util/dm;->a:[I
+
+    sget-object v1, Lcom/bbm/d/im;->b:Lcom/bbm/d/im;
+
+    invoke-virtual {v1}, Lcom/bbm/d/im;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+
+    :goto_7
+    :try_start_8
+    sget-object v0, Lcom/bbm/util/dm;->a:[I
+
+    sget-object v1, Lcom/bbm/d/im;->c:Lcom/bbm/d/im;
+
+    invoke-virtual {v1}, Lcom/bbm/d/im;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_6
+
+    :goto_8
+    :try_start_9
+    sget-object v0, Lcom/bbm/util/dm;->a:[I
+
+    sget-object v1, Lcom/bbm/d/im;->g:Lcom/bbm/d/im;
+
+    invoke-virtual {v1}, Lcom/bbm/d/im;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_9
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_5
+
+    :goto_9
+    :try_start_a
+    sget-object v0, Lcom/bbm/util/dm;->a:[I
+
+    sget-object v1, Lcom/bbm/d/im;->i:Lcom/bbm/d/im;
+
+    invoke-virtual {v1}, Lcom/bbm/d/im;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_a
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_4
+
+    :goto_a
+    :try_start_b
+    sget-object v0, Lcom/bbm/util/dm;->a:[I
+
+    sget-object v1, Lcom/bbm/d/im;->h:Lcom/bbm/d/im;
+
+    invoke-virtual {v1}, Lcom/bbm/d/im;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x6
+
+    aput v2, v0, v1
+    :try_end_b
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_3
+
+    :goto_b
+    :try_start_c
+    sget-object v0, Lcom/bbm/util/dm;->a:[I
+
+    sget-object v1, Lcom/bbm/d/im;->e:Lcom/bbm/d/im;
+
+    invoke-virtual {v1}, Lcom/bbm/d/im;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x7
+
+    aput v2, v0, v1
+    :try_end_c
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_c .. :try_end_c} :catch_2
+
+    :goto_c
+    :try_start_d
+    sget-object v0, Lcom/bbm/util/dm;->a:[I
+
+    sget-object v1, Lcom/bbm/d/im;->f:Lcom/bbm/d/im;
+
+    invoke-virtual {v1}, Lcom/bbm/d/im;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0x8
+
+    aput v2, v0, v1
+    :try_end_d
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_d .. :try_end_d} :catch_1
+
+    :goto_d
+    :try_start_e
+    sget-object v0, Lcom/bbm/util/dm;->a:[I
+
+    sget-object v1, Lcom/bbm/d/im;->d:Lcom/bbm/d/im;
+
+    invoke-virtual {v1}, Lcom/bbm/d/im;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0x9
+
+    aput v2, v0, v1
+    :try_end_e
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_e .. :try_end_e} :catch_0
+
+    :goto_e
+    return-void
+
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+    goto :goto_e
 
-    .line 145
-    const/4 v0, 0x0
+    :catch_1
+    move-exception v0
 
-    goto :goto_5
-.end method
+    goto :goto_d
 
-.method public static a(Landroid/app/Activity;)V
-    .locals 1
+    :catch_2
+    move-exception v0
 
-    .prologue
-    .line 45
-    new-instance v0, Lcom/bbm/util/dn;
+    goto :goto_c
 
-    invoke-direct {v0, p0}, Lcom/bbm/util/dn;-><init>(Landroid/app/Activity;)V
+    :catch_3
+    move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/j/u;->a(Lcom/bbm/j/s;)V
+    goto :goto_b
 
-    .line 98
-    return-void
-.end method
+    :catch_4
+    move-exception v0
 
-.method static synthetic a(Landroid/app/Activity;Ljava/lang/String;Landroid/net/Uri;)V
-    .locals 6
+    goto :goto_a
 
-    .prologue
-    .line 34
-    new-instance v0, Landroid/content/Intent;
+    :catch_5
+    move-exception v0
 
-    const-string v1, "android.intent.action.SEND"
+    goto :goto_9
 
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    :catch_6
+    move-exception v0
 
-    const-string v1, "android.intent.extra.STREAM"
+    goto :goto_8
 
-    invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+    :catch_7
+    move-exception v0
 
-    const-string v1, "android.intent.extra.TEXT"
+    goto :goto_7
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+    :catch_8
+    move-exception v0
 
-    move-result-object v2
+    goto :goto_6
 
-    const v3, 0x7f0e06df
+    :catch_9
+    move-exception v0
 
-    const/4 v4, 0x1
+    goto/16 :goto_5
 
-    new-array v4, v4, [Ljava/lang/Object;
+    :catch_a
+    move-exception v0
 
-    const/4 v5, 0x0
+    goto/16 :goto_4
 
-    aput-object p1, v4, v5
+    :catch_b
+    move-exception v0
 
-    invoke-virtual {v2, v3, v4}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    goto/16 :goto_3
 
-    move-result-object v2
+    :catch_c
+    move-exception v0
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    goto/16 :goto_2
 
-    const-string v1, "image/jpeg"
+    :catch_d
+    move-exception v0
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+    goto/16 :goto_1
 
-    const v1, 0x7f0e06dd
+    :catch_e
+    move-exception v0
 
-    invoke-virtual {p0, v1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/content/Intent;->createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
-
-    return-void
+    goto/16 :goto_0
 .end method

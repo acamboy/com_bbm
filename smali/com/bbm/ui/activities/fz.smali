@@ -1,93 +1,152 @@
 .class final Lcom/bbm/ui/activities/fz;
-.super Ljava/lang/Object;
+.super Lcom/bbm/ui/bz;
 .source "ConversationActivity.java"
-
-# interfaces
-.implements Lcom/bbm/j/s;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/fy;
+.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/fy;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;Landroid/view/View;)V
     .locals 0
 
     .prologue
-    .line 1110
-    iput-object p1, p0, Lcom/bbm/ui/activities/fz;->a:Lcom/bbm/ui/activities/fy;
+    .line 2748
+    iput-object p1, p0, Lcom/bbm/ui/activities/fz;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lcom/bbm/ui/bz;-><init>(Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 4
+.method public final a()V
+    .locals 2
 
     .prologue
-    const/4 v0, 0x1
+    .line 2752
+    iget-object v0, p0, Lcom/bbm/ui/activities/fz;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    .line 1113
-    iget-object v1, p0, Lcom/bbm/ui/activities/fz;->a:Lcom/bbm/ui/activities/fy;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->ao(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/ui/a/w;
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/fy;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    move-result-object v0
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->j(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/a;
+    iget-object v0, v0, Lcom/bbm/ui/a/w;->d:Lcom/bbm/ui/messages/n;
 
-    move-result-object v1
+    iget-object v0, v0, Lcom/bbm/ui/messages/n;->c:Lcom/bbm/util/dc;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/fz;->a:Lcom/bbm/ui/activities/fy;
+    invoke-virtual {v0}, Lcom/bbm/util/dc;->f()Ljava/lang/Object;
 
-    iget-object v2, v2, Lcom/bbm/ui/activities/fy;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    move-result-object v0
 
-    invoke-static {v2}, Lcom/bbm/ui/activities/ConversationActivity;->R(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/fi;
+    check-cast v0, Ljava/lang/Boolean;
 
-    move-result-object v2
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iget-object v2, v2, Lcom/bbm/d/fi;->m:Ljava/lang/String;
+    move-result v0
 
-    invoke-virtual {v1, v2}, Lcom/bbm/d/a;->x(Ljava/lang/String;)Lcom/bbm/d/fu;
+    if-nez v0, :cond_0
 
-    move-result-object v1
+    iget-object v0, p0, Lcom/bbm/ui/activities/fz;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    .line 1115
-    iget-object v2, v1, Lcom/bbm/d/fu;->r:Lcom/bbm/util/bi;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->ao(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/ui/a/w;
 
-    sget-object v3, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
+    move-result-object v0
 
-    if-ne v2, v3, :cond_0
+    iget-object v0, v0, Lcom/bbm/ui/a/w;->d:Lcom/bbm/ui/messages/n;
 
-    .line 1116
-    const/4 v0, 0x0
+    iget-object v0, v0, Lcom/bbm/ui/messages/n;->b:Lcom/bbm/util/dc;
 
-    .line 1121
-    :goto_0
-    return v0
+    invoke-virtual {v0}, Lcom/bbm/util/dc;->f()Ljava/lang/Object;
 
-    .line 1119
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 2753
     :cond_0
-    iget-object v2, p0, Lcom/bbm/ui/activities/fz;->a:Lcom/bbm/ui/activities/fy;
+    iget-object v0, p0, Lcom/bbm/ui/activities/fz;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    iget-object v2, v2, Lcom/bbm/ui/activities/fy;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->ap(Lcom/bbm/ui/activities/ConversationActivity;)V
 
-    iget-object v2, v2, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+    .line 2755
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/fz;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    iget-object v2, v2, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->aa(Lcom/bbm/ui/activities/ConversationActivity;)Z
 
-    invoke-virtual {v2, v0}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
+    move-result v0
 
-    .line 1120
-    iget-object v2, p0, Lcom/bbm/ui/activities/fz;->a:Lcom/bbm/ui/activities/fy;
+    if-eqz v0, :cond_2
 
-    iget-object v2, v2, Lcom/bbm/ui/activities/fy;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 2756
+    iget-object v0, p0, Lcom/bbm/ui/activities/fz;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    iget-object v1, v1, Lcom/bbm/d/fu;->i:Ljava/lang/String;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->g(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/a;
 
-    invoke-static {v2, v1}, Lcom/bbm/ui/activities/ImageViewerActivity;->a(Landroid/content/Context;Ljava/lang/String;)V
+    move-result-object v0
 
-    goto :goto_0
+    iget-object v1, p0, Lcom/bbm/ui/activities/fz;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->e(Lcom/bbm/ui/activities/ConversationActivity;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->m(Ljava/lang/String;)V
+
+    .line 2758
+    :cond_2
+    return-void
+.end method
+
+.method public final b()V
+    .locals 1
+
+    .prologue
+    .line 2762
+    iget-object v0, p0, Lcom/bbm/ui/activities/fz;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->aq(Lcom/bbm/ui/activities/ConversationActivity;)V
+
+    .line 2763
+    return-void
+.end method
+
+.method public final c()V
+    .locals 2
+
+    .prologue
+    .line 2767
+    const-string v0, "ListView tapped to dismiss keyboard"
+
+    const-class v1, Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 2768
+    iget-object v0, p0, Lcom/bbm/ui/activities/fz;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/ConversationActivity;->k:Lcom/bbm/ui/EmoticonInputPanel;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->e()Z
+
+    .line 2769
+    iget-object v0, p0, Lcom/bbm/ui/activities/fz;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->y(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/ui/SendEditText;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/ui/SendEditText;->clearFocus()V
+
+    .line 2770
+    return-void
 .end method

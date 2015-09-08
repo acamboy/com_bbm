@@ -27,7 +27,7 @@
     return-void
 .end method
 
-.method static a(Ljava/lang/String;Ljava/util/List;)Lcom/c/a/a/f;
+.method static a(Ljava/lang/String;Ljava/util/List;)I
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -36,14 +36,13 @@
             "Ljava/util/List",
             "<",
             "Lorg/apache/http/NameValuePair;",
-            ">;)",
-            "Lcom/c/a/a/f;"
+            ">;)I"
         }
     .end annotation
 
     .prologue
     .line 60
-    sget-object v0, Lcom/c/a/a/f;->c:Lcom/c/a/a/f;
+    sget v0, Lcom/c/a/a/f;->c:I
 
     .line 61
     new-instance v1, Lorg/apache/http/impl/client/DefaultHttpClient;
@@ -95,7 +94,7 @@
     if-eqz v1, :cond_0
 
     .line 72
-    sget-object v0, Lcom/c/a/a/f;->a:Lcom/c/a/a/f;
+    sget v0, Lcom/c/a/a/f;->a:I
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_1
@@ -103,7 +102,7 @@
     .line 83
     :cond_0
     :goto_0
-    return-object v0
+    return v0
 
     .line 75
     :catch_0
@@ -117,7 +116,7 @@
     invoke-static {v1, v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 77
-    sget-object v0, Lcom/c/a/a/f;->b:Lcom/c/a/a/f;
+    sget v0, Lcom/c/a/a/f;->b:I
 
     goto :goto_0
 
@@ -133,7 +132,7 @@
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 80
-    sget-object v0, Lcom/c/a/a/f;->c:Lcom/c/a/a/f;
+    sget v0, Lcom/c/a/a/f;->c:I
 
     goto :goto_0
 .end method

@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/aeu;
 .super Ljava/lang/Object;
-.source "SearchResultsChannelsActivity.java"
+.source "ShareToFeedActivity.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ShareToFeedActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ShareToFeedActivity;)V
     .locals 0
 
     .prologue
-    .line 389
-    iput-object p1, p0, Lcom/bbm/ui/activities/aeu;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
+    .line 166
+    iput-object p1, p0, Lcom/bbm/ui/activities/aeu;->a:Lcom/bbm/ui/activities/ShareToFeedActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,35 +29,25 @@
     .locals 2
 
     .prologue
-    const/4 v1, 0x1
+    .line 170
+    const-string v0, "buttonToolbar Negative Button Clicked"
 
-    .line 392
-    iget-object v0, p0, Lcom/bbm/ui/activities/aeu;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
+    const-class v1, Lcom/bbm/ui/activities/GroupPictureShareActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;->h(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)Landroid/widget/EditText;
+    invoke-static {v0, v1}, Lcom/bbm/af;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    move-result-object v0
+    .line 171
+    iget-object v0, p0, Lcom/bbm/ui/activities/aeu;->a:Lcom/bbm/ui/activities/ShareToFeedActivity;
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setFocusable(Z)V
+    const/4 v1, 0x0
 
-    .line 393
-    iget-object v0, p0, Lcom/bbm/ui/activities/aeu;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/ShareToFeedActivity;->setResult(I)V
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;->h(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)Landroid/widget/EditText;
+    .line 172
+    iget-object v0, p0, Lcom/bbm/ui/activities/aeu;->a:Lcom/bbm/ui/activities/ShareToFeedActivity;
 
-    move-result-object v0
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ShareToFeedActivity;->finish()V
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setFocusableInTouchMode(Z)V
-
-    .line 394
-    iget-object v0, p0, Lcom/bbm/ui/activities/aeu;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;->h(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)Landroid/widget/EditText;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setCursorVisible(Z)V
-
-    .line 395
+    .line 173
     return-void
 .end method

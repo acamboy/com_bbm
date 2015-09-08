@@ -1,9 +1,9 @@
 .class final Landroid/support/v4/widget/p;
 .super Ljava/lang/Object;
-.source "DrawerLayoutCompatApi21.java"
+.source "DrawerLayout.java"
 
 # interfaces
-.implements Landroid/view/View$OnApplyWindowInsetsListener;
+.implements Landroid/support/v4/widget/o;
 
 
 # direct methods
@@ -11,7 +11,7 @@
     .locals 0
 
     .prologue
-    .line 69
+    .line 290
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,35 +19,59 @@
 
 
 # virtual methods
-.method public final onApplyWindowInsets(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+.method public final a(Ljava/lang/Object;)I
     .locals 1
 
     .prologue
-    .line 72
-    check-cast p1, Landroid/support/v4/widget/q;
-
-    .line 73
-    invoke-virtual {p2}, Landroid/view/WindowInsets;->getSystemWindowInsetTop()I
+    .line 304
+    invoke-static {p1}, Landroid/support/v4/widget/w;->a(Ljava/lang/Object;)I
 
     move-result v0
 
-    if-lez v0, :cond_0
+    return v0
+.end method
 
-    const/4 v0, 0x1
+.method public final a(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
+    .locals 1
 
-    :goto_0
-    invoke-interface {p1, p2, v0}, Landroid/support/v4/widget/q;->setChildInsets(Ljava/lang/Object;Z)V
-
-    .line 74
-    invoke-virtual {p2}, Landroid/view/WindowInsets;->consumeSystemWindowInsets()Landroid/view/WindowInsets;
+    .prologue
+    .line 309
+    invoke-static {p1}, Landroid/support/v4/widget/w;->a(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     return-object v0
+.end method
 
-    .line 73
-    :cond_0
-    const/4 v0, 0x0
+.method public final a(Landroid/view/View;)V
+    .locals 0
 
-    goto :goto_0
+    .prologue
+    .line 292
+    invoke-static {p1}, Landroid/support/v4/widget/w;->a(Landroid/view/View;)V
+
+    .line 293
+    return-void
+.end method
+
+.method public final a(Landroid/view/View;Ljava/lang/Object;I)V
+    .locals 0
+
+    .prologue
+    .line 296
+    invoke-static {p1, p2, p3}, Landroid/support/v4/widget/w;->a(Landroid/view/View;Ljava/lang/Object;I)V
+
+    .line 297
+    return-void
+.end method
+
+.method public final a(Landroid/view/ViewGroup$MarginLayoutParams;Ljava/lang/Object;I)V
+    .locals 0
+
+    .prologue
+    .line 300
+    invoke-static {p1, p2, p3}, Landroid/support/v4/widget/w;->a(Landroid/view/ViewGroup$MarginLayoutParams;Ljava/lang/Object;I)V
+
+    .line 301
+    return-void
 .end method

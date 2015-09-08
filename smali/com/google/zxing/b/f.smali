@@ -81,7 +81,7 @@
     .line 58
     int-to-float v2, v4
 
-    const/high16 v3, 0x3f000000
+    const/high16 v3, 0x3f000000    # 0.5f
 
     add-float/2addr v3, v2
 
@@ -96,7 +96,7 @@
 
     int-to-float v8, v8
 
-    const/high16 v9, 0x3f000000
+    const/high16 v9, 0x3f000000    # 0.5f
 
     add-float/2addr v8, v9
 

@@ -1,44 +1,49 @@
 .class final Lcom/bbm/ui/activities/my;
-.super Ljava/util/TimerTask;
-.source "GroupConversationActivity.java"
+.super Ljava/lang/Object;
+.source "GroupListItemsActivity.java"
+
+# interfaces
+.implements Lcom/bbm/ui/t;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupListItemsActivity;)V
     .locals 0
 
     .prologue
-    .line 837
-    iput-object p1, p0, Lcom/bbm/ui/activities/my;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    .line 645
+    iput-object p1, p0, Lcom/bbm/ui/activities/my;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
-    invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final a(I)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)V"
+        }
+    .end annotation
 
     .prologue
-    .line 841
-    iget-object v0, p0, Lcom/bbm/ui/activities/my;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    .line 649
+    iget-object v0, p0, Lcom/bbm/ui/activities/my;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->y(Lcom/bbm/ui/activities/GroupConversationActivity;)Landroid/os/Handler;
+    invoke-static {v0, p1}, Lcom/bbm/ui/activities/GroupListItemsActivity;->b(Lcom/bbm/ui/activities/GroupListItemsActivity;I)I
 
-    move-result-object v0
+    .line 650
+    iget-object v0, p0, Lcom/bbm/ui/activities/my;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
-    new-instance v1, Lcom/bbm/ui/activities/mz;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupListItemsActivity;->i(Lcom/bbm/ui/activities/GroupListItemsActivity;)V
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/mz;-><init>(Lcom/bbm/ui/activities/my;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 848
+    .line 651
     return-void
 .end method

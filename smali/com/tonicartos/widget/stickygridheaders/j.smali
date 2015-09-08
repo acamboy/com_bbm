@@ -4,10 +4,12 @@
 
 
 # virtual methods
-.method public abstract a(J)Z
+.method public abstract a(Landroid/view/View;)Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(J)Z"
+            "(",
+            "Landroid/view/View;",
+            ")Z"
         }
     .end annotation
 .end method

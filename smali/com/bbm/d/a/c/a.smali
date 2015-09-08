@@ -212,7 +212,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 340
+    .line 343
     move v1, v2
 
     :goto_0
@@ -224,7 +224,7 @@
 
     if-ge v1, v0, :cond_0
 
-    .line 343
+    .line 346
     iget-object v0, p0, Lcom/bbm/d/a/c/a;->b:Lcom/bbm/d/a/c/d;
 
     invoke-virtual {v0, v1}, Lcom/bbm/d/a/c/d;->get(I)Ljava/lang/Object;
@@ -237,34 +237,34 @@
 
     move-result-object v0
 
-    .line 344
+    .line 347
     invoke-virtual {v0, p1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 345
+    .line 348
     if-nez v0, :cond_3
 
-    .line 347
+    .line 350
     iget-boolean v0, p0, Lcom/bbm/d/a/c/a;->q:Z
 
     if-eqz v0, :cond_2
 
-    .line 348
+    .line 351
     if-eqz p2, :cond_1
 
-    .line 365
+    .line 368
     :cond_0
     :goto_1
     return v1
 
-    .line 348
+    .line 351
     :cond_1
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_1
 
-    .line 351
+    .line 354
     :cond_2
     if-nez p2, :cond_0
 
@@ -272,7 +272,7 @@
 
     goto :goto_1
 
-    .line 355
+    .line 358
     :cond_3
     iget-boolean v3, p0, Lcom/bbm/d/a/c/a;->q:Z
 
@@ -287,30 +287,30 @@
 
     if-ltz v0, :cond_7
 
-    .line 356
+    .line 359
     :cond_5
     invoke-static {v2, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
-    .line 357
+    .line 360
     iget-boolean v1, p0, Lcom/bbm/d/a/c/a;->q:Z
 
     if-eqz v1, :cond_6
 
-    .line 358
+    .line 361
     add-int/lit8 v1, v0, -0x1
 
     goto :goto_1
 
-    .line 360
+    .line 363
     :cond_6
     add-int/lit8 v1, v0, 0x1
 
-    .line 362
+    .line 365
     goto :goto_1
 
-    .line 342
+    .line 345
     :cond_7
     add-int/lit8 v0, v1, 0x1
 
@@ -323,23 +323,23 @@
     .locals 3
 
     .prologue
-    .line 478
+    .line 481
     invoke-static {p0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/g;)V
 
-    .line 483
+    .line 486
     invoke-virtual {p0}, Lcom/bbm/d/a/c/a;->b()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 485
+    .line 488
     :try_start_0
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    .line 486
+    .line 489
     const-string v1, "type"
 
     iget-object v2, p0, Lcom/bbm/d/a/c/a;->n:Lcom/bbm/d/a/d;
@@ -348,7 +348,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 487
+    .line 490
     const-string v1, "id"
 
     iget-object v2, p0, Lcom/bbm/d/a/c/a;->n:Lcom/bbm/d/a/d;
@@ -357,60 +357,60 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 488
+    .line 491
     const-string v1, "minId"
 
     invoke-virtual {v0, v1, p1}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 489
+    .line 492
     const-string v1, "maxId"
 
     invoke-virtual {v0, v1, p2}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 490
+    .line 493
     const-string v1, "limit"
 
     invoke-virtual {v0, v1, p3}, Lorg/json/JSONObject;->putOpt(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 491
+    .line 494
     new-instance v1, Lcom/bbm/f/ab;
 
     const-string v2, "requestSparseElements"
 
     invoke-direct {v1, v2, v0}, Lcom/bbm/f/ab;-><init>(Ljava/lang/String;Lorg/json/JSONObject;)V
 
-    .line 493
+    .line 496
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/bbm/d/a/c/a;->e:Z
 
-    .line 494
+    .line 497
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/bbm/d/a/c/a;->f:Z
 
-    .line 495
+    .line 498
     iget-object v0, p0, Lcom/bbm/d/a/c/a;->a:Lcom/bbm/j/i;
 
     invoke-virtual {v0}, Lcom/bbm/j/i;->a()V
 
-    .line 497
+    .line 500
     iget-object v0, p0, Lcom/bbm/d/a/c/a;->o:Lcom/bbm/f/a;
 
     invoke-interface {v0, v1}, Lcom/bbm/f/a;->a(Lcom/bbm/f/ab;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 502
+    .line 505
     :cond_0
     :goto_0
     return-void
 
-    .line 498
+    .line 501
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method
@@ -421,7 +421,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 372
+    .line 375
     move v1, v2
 
     :goto_0
@@ -433,7 +433,7 @@
 
     if-ge v1, v0, :cond_0
 
-    .line 375
+    .line 378
     iget-object v0, p0, Lcom/bbm/d/a/c/a;->b:Lcom/bbm/d/a/c/d;
 
     invoke-virtual {v0, v1}, Lcom/bbm/d/a/c/d;->get(I)Ljava/lang/Object;
@@ -446,34 +446,34 @@
 
     move-result-object v0
 
-    .line 376
+    .line 379
     invoke-virtual {v0, p1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 377
+    .line 380
     if-nez v0, :cond_3
 
-    .line 379
+    .line 382
     iget-boolean v0, p0, Lcom/bbm/d/a/c/a;->q:Z
 
     if-eqz v0, :cond_2
 
-    .line 380
+    .line 383
     if-eqz p2, :cond_1
 
-    .line 397
+    .line 400
     :cond_0
     :goto_1
     return v1
 
-    .line 380
+    .line 383
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 383
+    .line 386
     :cond_2
     if-nez p2, :cond_0
 
@@ -481,7 +481,7 @@
 
     goto :goto_1
 
-    .line 387
+    .line 390
     :cond_3
     iget-boolean v3, p0, Lcom/bbm/d/a/c/a;->q:Z
 
@@ -496,30 +496,30 @@
 
     if-ltz v0, :cond_7
 
-    .line 388
+    .line 391
     :cond_5
     invoke-static {v2, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
-    .line 389
+    .line 392
     iget-boolean v1, p0, Lcom/bbm/d/a/c/a;->q:Z
 
     if-eqz v1, :cond_6
 
-    .line 390
+    .line 393
     add-int/lit8 v1, v0, -0x1
 
     goto :goto_1
 
-    .line 392
+    .line 395
     :cond_6
     add-int/lit8 v1, v0, 0x1
 
-    .line 394
+    .line 397
     goto :goto_1
 
-    .line 374
+    .line 377
     :cond_7
     add-int/lit8 v0, v1, 0x1
 
@@ -541,10 +541,10 @@
     .end annotation
 
     .prologue
-    .line 540
+    .line 543
     invoke-static {p0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/g;)V
 
-    .line 541
+    .line 544
     iget-object v0, p0, Lcom/bbm/d/a/c/a;->b:Lcom/bbm/d/a/c/d;
 
     invoke-virtual {v0, p1}, Lcom/bbm/d/a/c/d;->b(Ljava/lang/Object;)Ljava/lang/Object;
@@ -553,10 +553,10 @@
 
     check-cast v0, Lcom/bbm/d/a/a;
 
-    .line 543
+    .line 546
     if-nez v0, :cond_0
 
-    .line 544
+    .line 547
     const/4 v0, 0x0
 
     new-instance v1, Ljava/lang/String;
@@ -567,16 +567,16 @@
 
     invoke-direct {p0, p1, v0, v1}, Lcom/bbm/d/a/c/a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 545
+    .line 548
     iget-object v0, p0, Lcom/bbm/d/a/c/a;->m:Ljava/lang/Class;
 
-    invoke-static {v0}, Lcom/bbm/util/bc;->a(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/bbm/util/bi;->a(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/bbm/d/a/a;
 
-    .line 547
+    .line 550
     :cond_0
     return-object v0
 .end method
@@ -594,10 +594,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 514
+    .line 517
     invoke-static {p0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/g;)V
 
-    .line 515
+    .line 518
     iget-object v0, p0, Lcom/bbm/d/a/c/a;->b:Lcom/bbm/d/a/c/d;
 
     invoke-virtual {v0}, Lcom/bbm/d/a/c/d;->isEmpty()Z
@@ -606,23 +606,23 @@
 
     if-eqz v0, :cond_0
 
-    .line 516
+    .line 519
     invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-direct {p0, v2, v2, v0}, Lcom/bbm/d/a/c/a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 517
+    .line 520
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 528
+    .line 531
     :goto_0
     return-object v0
 
-    .line 520
+    .line 523
     :cond_0
     iget-object v0, p0, Lcom/bbm/d/a/c/a;->b:Lcom/bbm/d/a/c/d;
 
@@ -632,12 +632,12 @@
 
     if-le p2, v0, :cond_2
 
-    .line 521
+    .line 524
     iget-boolean v0, p0, Lcom/bbm/d/a/c/a;->q:Z
 
     if-eqz v0, :cond_1
 
-    .line 522
+    .line 525
     iget-object v0, p0, Lcom/bbm/d/a/c/a;->b:Lcom/bbm/d/a/c/d;
 
     iget-object v1, p0, Lcom/bbm/d/a/c/a;->b:Lcom/bbm/d/a/c/d;
@@ -666,7 +666,7 @@
 
     invoke-direct {p0, v2, v0, v1}, Lcom/bbm/d/a/c/a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 526
+    .line 529
     :goto_1
     new-instance v0, Ljava/util/ArrayList;
 
@@ -686,7 +686,7 @@
 
     goto :goto_0
 
-    .line 524
+    .line 527
     :cond_1
     iget-object v0, p0, Lcom/bbm/d/a/c/a;->b:Lcom/bbm/d/a/c/d;
 
@@ -718,7 +718,7 @@
 
     goto :goto_1
 
-    .line 528
+    .line 531
     :cond_2
     new-instance v0, Ljava/util/ArrayList;
 
@@ -773,12 +773,12 @@
     .locals 1
 
     .prologue
-    .line 552
+    .line 555
     iget-object v0, p0, Lcom/bbm/d/a/c/a;->a:Lcom/bbm/j/i;
 
     invoke-virtual {v0, p1}, Lcom/bbm/j/i;->a(Lcom/bbm/j/h;)V
 
-    .line 553
+    .line 556
     return-void
 .end method
 
@@ -817,7 +817,7 @@
     .line 204
     iget-object v0, p0, Lcom/bbm/d/a/c/a;->m:Ljava/lang/Class;
 
-    invoke-static {v0}, Lcom/bbm/util/bc;->a(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/bbm/util/bi;->a(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -831,9 +831,9 @@
     invoke-interface {v0, v5}, Lcom/bbm/d/a/a;->a(Lorg/json/JSONObject;)V
 
     .line 206
-    sget-object v5, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
+    sget-object v5, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
 
-    invoke-interface {v0, v5}, Lcom/bbm/d/a/a;->a(Lcom/bbm/util/bi;)V
+    invoke-interface {v0, v5}, Lcom/bbm/d/a/a;->a(Lcom/bbm/util/bo;)V
 
     .line 207
     iget-object v5, p0, Lcom/bbm/d/a/c/a;->c:Ljava/util/ArrayList;
@@ -862,7 +862,7 @@
 
     aput-object v3, v1, v2
 
-    invoke-static {v0, v1}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 213
     iget-object v0, p0, Lcom/bbm/d/a/c/a;->i:Ljava/lang/String;
@@ -896,7 +896,7 @@
 
     new-array v1, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/af;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 216
     iput-boolean v6, p0, Lcom/bbm/d/a/c/a;->g:Z
@@ -1106,8 +1106,6 @@
 
     iget-object v0, p0, Lcom/bbm/d/a/c/a;->b:Lcom/bbm/d/a/c/d;
 
-    iget-object v3, p0, Lcom/bbm/d/a/c/a;->b:Lcom/bbm/d/a/c/d;
-
     invoke-static {v1}, Lcom/bbm/d/a/c/d;->a(Lcom/bbm/d/a/a;)Ljava/lang/String;
 
     move-result-object v3
@@ -1191,17 +1189,46 @@
     goto :goto_7
 
     :cond_f
-    if-gt v0, v3, :cond_6
+    if-le v0, v3, :cond_10
 
-    if-ltz v0, :cond_6
+    const-string v0, "Unexpected startIndex > endIndex"
 
-    if-lez v3, :cond_6
+    new-array v1, v2, [Ljava/lang/Object;
 
-    if-ge v0, v4, :cond_6
+    invoke-static {v0, v1}, Lcom/bbm/af;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    if-gt v3, v4, :cond_6
+    goto/16 :goto_2
 
-    if-nez v0, :cond_10
+    :cond_10
+    if-ltz v0, :cond_11
+
+    if-gez v3, :cond_12
+
+    :cond_11
+    const-string v0, "Unexpected negative startIndex or endIndex"
+
+    new-array v1, v2, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    goto/16 :goto_2
+
+    :cond_12
+    if-ge v0, v4, :cond_13
+
+    if-le v3, v4, :cond_14
+
+    :cond_13
+    const-string v0, "Unexpected startIndex or endIndex beyond size of replace elements"
+
+    new-array v1, v2, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/af;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    goto/16 :goto_2
+
+    :cond_14
+    if-nez v0, :cond_15
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -1210,7 +1237,7 @@
     move-object v1, v0
 
     :goto_8
-    if-lt v3, v4, :cond_11
+    if-lt v3, v4, :cond_16
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -1237,7 +1264,7 @@
 
     goto/16 :goto_2
 
-    :cond_10
+    :cond_15
     iget-object v1, p0, Lcom/bbm/d/a/c/a;->b:Lcom/bbm/d/a/c/d;
 
     invoke-virtual {v1, v2, v0}, Lcom/bbm/d/a/c/d;->subList(II)Ljava/util/List;
@@ -1248,7 +1275,7 @@
 
     goto :goto_8
 
-    :cond_11
+    :cond_16
     iget-object v0, p0, Lcom/bbm/d/a/c/a;->b:Lcom/bbm/d/a/c/d;
 
     add-int/lit8 v3, v3, 0x1
@@ -1266,22 +1293,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 464
+    .line 467
     invoke-static {p0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/g;)V
 
-    .line 466
+    .line 469
     if-eqz p1, :cond_0
 
-    .line 467
+    .line 470
     iget-object v0, p0, Lcom/bbm/d/a/c/a;->b:Lcom/bbm/d/a/c/d;
 
     invoke-virtual {v0}, Lcom/bbm/d/a/c/d;->clear()V
 
-    .line 469
+    .line 472
     :cond_0
     invoke-direct {p0, v1, v1, v1}, Lcom/bbm/d/a/c/a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 470
+    .line 473
     return-void
 .end method
 
@@ -1301,12 +1328,12 @@
     .locals 1
 
     .prologue
-    .line 557
+    .line 560
     iget-object v0, p0, Lcom/bbm/d/a/c/a;->a:Lcom/bbm/j/i;
 
     invoke-virtual {v0, p1}, Lcom/bbm/j/i;->b(Lcom/bbm/j/h;)V
 
-    .line 558
+    .line 561
     return-void
 .end method
 
@@ -1318,15 +1345,15 @@
 
     const/4 v2, 0x1
 
-    .line 406
+    .line 409
     iget-object v0, p0, Lcom/bbm/d/a/c/a;->c:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 407
+    .line 410
     iput-boolean v3, p0, Lcom/bbm/d/a/c/a;->g:Z
 
-    .line 409
+    .line 412
     const-string v0, "temporaryError"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->opt(Ljava/lang/String;)Ljava/lang/Object;
@@ -1335,32 +1362,32 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 410
-    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
+    .line 413
+    invoke-static {v0}, Lcom/bbm/util/ec;->b(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 411
+    .line 414
     iput-object v0, p0, Lcom/bbm/d/a/c/a;->h:Ljava/lang/String;
 
-    .line 412
+    .line 415
     iput-boolean v2, p0, Lcom/bbm/d/a/c/a;->f:Z
 
-    .line 413
+    .line 416
     iput-boolean v3, p0, Lcom/bbm/d/a/c/a;->e:Z
 
-    .line 414
+    .line 417
     iget-object v0, p0, Lcom/bbm/d/a/c/a;->a:Lcom/bbm/j/i;
 
     invoke-virtual {v0}, Lcom/bbm/j/i;->a()V
 
-    .line 423
+    .line 426
     :goto_0
     return-void
 
-    .line 418
+    .line 421
     :cond_0
     const-string v0, "estimatedTotal"
 
@@ -1370,7 +1397,7 @@
 
     iput v0, p0, Lcom/bbm/d/a/c/a;->p:I
 
-    .line 419
+    .line 422
     const-string v0, "minId"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
@@ -1379,7 +1406,7 @@
 
     iput-object v0, p0, Lcom/bbm/d/a/c/a;->i:Ljava/lang/String;
 
-    .line 420
+    .line 423
     const-string v0, "maxId"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
@@ -1388,7 +1415,7 @@
 
     iput-object v0, p0, Lcom/bbm/d/a/c/a;->j:Ljava/lang/String;
 
-    .line 421
+    .line 424
     const-string v0, "minIdInclusive"
 
     invoke-virtual {p1, v0, v2}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
@@ -1397,7 +1424,7 @@
 
     iput-boolean v0, p0, Lcom/bbm/d/a/c/a;->k:Z
 
-    .line 422
+    .line 425
     const-string v0, "maxIdInclusive"
 
     invoke-virtual {p1, v0, v2}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
@@ -1439,14 +1466,14 @@
     .locals 5
 
     .prologue
-    .line 429
+    .line 432
     const-string v0, "elements"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v2
 
-    .line 431
+    .line 434
     const/4 v0, 0x0
 
     move v1, v0
@@ -1458,24 +1485,24 @@
 
     if-ge v1, v0, :cond_1
 
-    .line 433
+    .line 436
     invoke-virtual {v2, v1}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v3
 
-    .line 436
+    .line 439
     iget-object v0, p0, Lcom/bbm/d/a/c/a;->m:Ljava/lang/Class;
 
-    invoke-static {v0}, Lcom/bbm/util/bc;->a(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/bbm/util/bi;->a(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/bbm/d/a/a;
 
-    .line 437
+    .line 440
     invoke-interface {v0, v3}, Lcom/bbm/d/a/a;->a(Lorg/json/JSONObject;)V
 
-    .line 440
+    .line 443
     iget-object v4, p0, Lcom/bbm/d/a/c/a;->b:Lcom/bbm/d/a/c/d;
 
     invoke-interface {v0}, Lcom/bbm/d/a/a;->a()Ljava/lang/String;
@@ -1488,13 +1515,13 @@
 
     check-cast v0, Lcom/bbm/d/a/a;
 
-    .line 443
+    .line 446
     if-eqz v0, :cond_0
 
-    .line 445
+    .line 448
     invoke-interface {v0, v3}, Lcom/bbm/d/a/a;->a(Lorg/json/JSONObject;)V
 
-    .line 431
+    .line 434
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -1502,13 +1529,13 @@
 
     goto :goto_0
 
-    .line 450
+    .line 453
     :cond_1
     iget-object v0, p0, Lcom/bbm/d/a/c/a;->a:Lcom/bbm/j/i;
 
     invoke-virtual {v0}, Lcom/bbm/j/i;->a()V
 
-    .line 451
+    .line 454
     return-void
 .end method
 
@@ -1555,10 +1582,10 @@
     .locals 1
 
     .prologue
-    .line 455
+    .line 458
     invoke-static {p0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/g;)V
 
-    .line 456
+    .line 459
     iget-object v0, p0, Lcom/bbm/d/a/c/a;->b:Lcom/bbm/d/a/c/d;
 
     invoke-virtual {v0}, Lcom/bbm/d/a/c/d;->size()I

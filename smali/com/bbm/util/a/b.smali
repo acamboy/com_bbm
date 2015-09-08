@@ -3,30 +3,30 @@
 .source "GlympseInfoWindowAdapter.java"
 
 # interfaces
-.implements Lcom/google/android/gms/maps/GoogleMap$InfoWindowAdapter;
+.implements Lcom/google/android/gms/maps/g;
 
 
 # instance fields
 .field private final a:Landroid/content/Context;
 
-.field private final b:Lcom/bbm/ui/activities/ye;
+.field private final b:Lcom/bbm/ui/activities/dk;
 
 .field private final c:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
             "<",
-            "Lcom/bbm/ui/activities/kt;",
+            "Lcom/bbm/ui/activities/jl;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final d:Lcom/bbm/d/eu;
+.field private final d:Lcom/bbm/d/fv;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/util/List;Lcom/bbm/d/eu;)V
+.method public constructor <init>(Landroid/content/Context;Ljava/util/List;Lcom/bbm/d/fv;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -34,9 +34,9 @@
             "Landroid/content/Context;",
             "Ljava/util/List",
             "<",
-            "Lcom/bbm/ui/activities/kt;",
+            "Lcom/bbm/ui/activities/jl;",
             ">;",
-            "Lcom/bbm/d/eu;",
+            "Lcom/bbm/d/fv;",
             ")V"
         }
     .end annotation
@@ -46,11 +46,11 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 32
-    new-instance v0, Lcom/bbm/ui/activities/ye;
+    new-instance v0, Lcom/bbm/ui/activities/dk;
 
-    invoke-direct {v0}, Lcom/bbm/ui/activities/ye;-><init>()V
+    invoke-direct {v0}, Lcom/bbm/ui/activities/dk;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/util/a/b;->b:Lcom/bbm/ui/activities/ye;
+    iput-object v0, p0, Lcom/bbm/util/a/b;->b:Lcom/bbm/ui/activities/dk;
 
     .line 37
     iput-object p1, p0, Lcom/bbm/util/a/b;->a:Landroid/content/Context;
@@ -59,7 +59,7 @@
     iput-object p2, p0, Lcom/bbm/util/a/b;->c:Ljava/util/List;
 
     .line 39
-    iput-object p3, p0, Lcom/bbm/util/a/b;->d:Lcom/bbm/d/eu;
+    iput-object p3, p0, Lcom/bbm/util/a/b;->d:Lcom/bbm/d/fv;
 
     .line 40
     return-void
@@ -76,7 +76,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f030136
+    const v1, 0x7f03014f
 
     const/4 v2, 0x0
 
@@ -85,7 +85,7 @@
     move-result-object v5
 
     .line 65
-    const v0, 0x7f0b05f3
+    const v0, 0x7f0b0682
 
     invoke-virtual {v5, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -94,7 +94,7 @@
     check-cast v0, Landroid/widget/ImageView;
 
     .line 66
-    const v1, 0x7f0b05f2
+    const v1, 0x7f0b0681
 
     invoke-virtual {v5, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -103,7 +103,7 @@
     check-cast v1, Landroid/widget/LinearLayout;
 
     .line 67
-    const v2, 0x7f0b05f4
+    const v2, 0x7f0b0683
 
     invoke-virtual {v5, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -112,7 +112,7 @@
     check-cast v2, Lcom/bbm/ui/InlineImageTextView;
 
     .line 68
-    const v3, 0x7f0b05f5
+    const v3, 0x7f0b0684
 
     invoke-virtual {v5, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -170,11 +170,11 @@
     :goto_0
     iget-object v0, p0, Lcom/bbm/util/a/b;->c:Ljava/util/List;
 
-    iget-object v4, p0, Lcom/bbm/util/a/b;->b:Lcom/bbm/ui/activities/ye;
+    iget-object v4, p0, Lcom/bbm/util/a/b;->b:Lcom/bbm/ui/activities/dk;
 
-    iget-object v6, p0, Lcom/bbm/util/a/b;->d:Lcom/bbm/d/eu;
+    iget-object v6, p0, Lcom/bbm/util/a/b;->d:Lcom/bbm/d/fv;
 
-    invoke-static {p1, v0, v4, v6}, Lcom/bbm/util/a/k;->a(Lcom/glympse/android/api/GUser;Ljava/util/List;Lcom/bbm/ui/activities/ye;Lcom/bbm/d/eu;)I
+    invoke-static {p1, v0, v4, v6}, Lcom/bbm/util/a/k;->a(Lcom/glympse/android/api/GUser;Ljava/util/List;Lcom/bbm/ui/activities/dk;Lcom/bbm/d/fv;)I
 
     move-result v0
 
@@ -188,9 +188,7 @@
     invoke-virtual {v2, v0}, Lcom/bbm/ui/InlineImageTextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 107
-    iget-object v0, p0, Lcom/bbm/util/a/b;->a:Landroid/content/Context;
-
-    invoke-static {p1, v0}, Lcom/bbm/util/a/k;->a(Lcom/glympse/android/api/GUser;Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/bbm/util/a/k;->a(Lcom/glympse/android/api/GUser;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -201,7 +199,7 @@
 
     .line 81
     :cond_1
-    const v6, 0x7f0200da
+    const v6, 0x7f0200aa
 
     invoke-virtual {v0, v6}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -223,11 +221,11 @@
 
     .prologue
     .line 54
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
+    invoke-static {}, Lcom/bbm/w;->a()Lcom/bbm/w;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/p;->a:Lcom/glympse/android/api/GGlympse;
+    iget-object v0, v0, Lcom/bbm/w;->a:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v0}, Lcom/glympse/android/api/GGlympse;->getUserManager()Lcom/glympse/android/api/GUserManager;
 
@@ -240,11 +238,11 @@
     if-nez v0, :cond_0
 
     .line 57
-    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
+    invoke-static {}, Lcom/bbm/w;->a()Lcom/bbm/w;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/p;->a:Lcom/glympse/android/api/GGlympse;
+    iget-object v0, v0, Lcom/bbm/w;->a:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v0}, Lcom/glympse/android/api/GGlympse;->getUserManager()Lcom/glympse/android/api/GUserManager;
 
@@ -261,12 +259,12 @@
 
 
 # virtual methods
-.method public final getInfoContents(Lcom/google/android/gms/maps/model/Marker;)Landroid/view/View;
+.method public final a(Lcom/google/android/gms/maps/model/e;)Landroid/view/View;
     .locals 1
 
     .prologue
     .line 44
-    invoke-virtual {p1}, Lcom/google/android/gms/maps/model/Marker;->getTitle()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/google/android/gms/maps/model/e;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -281,12 +279,12 @@
     return-object v0
 .end method
 
-.method public final getInfoWindow(Lcom/google/android/gms/maps/model/Marker;)Landroid/view/View;
+.method public final b(Lcom/google/android/gms/maps/model/e;)Landroid/view/View;
     .locals 1
 
     .prologue
     .line 49
-    invoke-virtual {p1}, Lcom/google/android/gms/maps/model/Marker;->getTitle()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/google/android/gms/maps/model/e;->b()Ljava/lang/String;
 
     move-result-object v0
 

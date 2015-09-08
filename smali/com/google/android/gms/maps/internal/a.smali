@@ -1,60 +1,40 @@
-.class public final Lcom/google/android/gms/maps/internal/a;
+.class public interface abstract Lcom/google/android/gms/maps/internal/a;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Landroid/os/IInterface;
 
-# direct methods
-.method public static a(B)Ljava/lang/Boolean;
-    .locals 1
 
-    packed-switch p0, :pswitch_data_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    return-object v0
-
-    :pswitch_0
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    goto :goto_0
-
-    :pswitch_1
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+# virtual methods
+.method public abstract a()Lcom/google/android/gms/a/h;
 .end method
 
-.method public static c(Ljava/lang/Boolean;)B
-    .locals 1
+.method public abstract a(F)Lcom/google/android/gms/a/h;
+.end method
 
-    if-eqz p0, :cond_1
+.method public abstract a(FF)Lcom/google/android/gms/a/h;
+.end method
 
-    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
+.method public abstract a(FII)Lcom/google/android/gms/a/h;
+.end method
 
-    move-result v0
+.method public abstract a(Lcom/google/android/gms/maps/model/CameraPosition;)Lcom/google/android/gms/a/h;
+.end method
 
-    if-eqz v0, :cond_0
+.method public abstract a(Lcom/google/android/gms/maps/model/LatLng;)Lcom/google/android/gms/a/h;
+.end method
 
-    const/4 v0, 0x1
+.method public abstract a(Lcom/google/android/gms/maps/model/LatLng;F)Lcom/google/android/gms/a/h;
+.end method
 
-    :goto_0
-    return v0
+.method public abstract a(Lcom/google/android/gms/maps/model/LatLngBounds;I)Lcom/google/android/gms/a/h;
+.end method
 
-    :cond_0
-    const/4 v0, 0x0
+.method public abstract a(Lcom/google/android/gms/maps/model/LatLngBounds;III)Lcom/google/android/gms/a/h;
+.end method
 
-    goto :goto_0
+.method public abstract b()Lcom/google/android/gms/a/h;
+.end method
 
-    :cond_1
-    const/4 v0, -0x1
-
-    goto :goto_0
+.method public abstract b(F)Lcom/google/android/gms/a/h;
 .end method

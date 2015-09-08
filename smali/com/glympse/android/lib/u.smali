@@ -17,18 +17,18 @@
 
 
 # instance fields
-.field private hG:Lcom/glympse/android/lib/bp;
+.field private hO:Lcom/glympse/android/lib/ca;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/glympse/android/lib/bp",
+            "Lcom/glympse/android/lib/ca",
             "<TFROM;TTO;>;"
         }
     .end annotation
 .end field
 
-.field final synthetic hI:Lcom/glympse/android/lib/s;
+.field final synthetic hQ:Lcom/glympse/android/lib/s;
 
-.field private hJ:Ljava/util/Iterator;
+.field private hR:Ljava/util/Iterator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Iterator",
@@ -39,29 +39,29 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/lib/s;Ljava/util/Iterator;Lcom/glympse/android/lib/bp;)V
+.method public constructor <init>(Lcom/glympse/android/lib/s;Ljava/util/Iterator;Lcom/glympse/android/lib/ca;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Iterator",
             "<TFROM;>;",
-            "Lcom/glympse/android/lib/bp",
+            "Lcom/glympse/android/lib/ca",
             "<TFROM;TTO;>;)V"
         }
     .end annotation
 
     .prologue
     .line 188
-    iput-object p1, p0, Lcom/glympse/android/lib/u;->hI:Lcom/glympse/android/lib/s;
+    iput-object p1, p0, Lcom/glympse/android/lib/u;->hQ:Lcom/glympse/android/lib/s;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 189
-    iput-object p2, p0, Lcom/glympse/android/lib/u;->hJ:Ljava/util/Iterator;
+    iput-object p2, p0, Lcom/glympse/android/lib/u;->hR:Ljava/util/Iterator;
 
     .line 190
-    iput-object p3, p0, Lcom/glympse/android/lib/u;->hG:Lcom/glympse/android/lib/bp;
+    iput-object p3, p0, Lcom/glympse/android/lib/u;->hO:Lcom/glympse/android/lib/ca;
 
     .line 191
     return-void
@@ -74,7 +74,7 @@
 
     .prologue
     .line 195
-    iget-object v0, p0, Lcom/glympse/android/lib/u;->hJ:Ljava/util/Iterator;
+    iget-object v0, p0, Lcom/glympse/android/lib/u;->hR:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -93,15 +93,15 @@
 
     .prologue
     .line 200
-    iget-object v0, p0, Lcom/glympse/android/lib/u;->hG:Lcom/glympse/android/lib/bp;
+    iget-object v0, p0, Lcom/glympse/android/lib/u;->hO:Lcom/glympse/android/lib/ca;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/u;->hJ:Ljava/util/Iterator;
+    iget-object v1, p0, Lcom/glympse/android/lib/u;->hR:Ljava/util/Iterator;
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/glympse/android/lib/bp;->c(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lcom/glympse/android/lib/ca;->c(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 

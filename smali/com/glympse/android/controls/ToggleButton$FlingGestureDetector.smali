@@ -41,7 +41,7 @@
     const/4 v1, 0x0
 
     .line 160
-    const/high16 v0, 0x40000000
+    const/high16 v0, 0x40000000    # 2.0f
 
     cmpl-float v0, p3, v0
 
@@ -73,7 +73,7 @@
 
     .line 170
     :cond_1
-    const/high16 v0, -0x40000000
+    const/high16 v0, -0x40000000    # -2.0f
 
     cmpg-float v0, p3, v0
 

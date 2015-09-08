@@ -39,40 +39,40 @@
 
     const/4 v3, 0x0
 
-    .line 523
+    .line 701
     new-instance v0, Lcom/bbm/c/p;
 
-    const-string v1, "True"
+    const-string v1, "ShowDialog"
 
-    const-string v2, "True"
+    const-string v2, "Payment Options Dialog Shown"
 
     invoke-direct {v0, v1, v3, v2}, Lcom/bbm/c/p;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/c/p;->a:Lcom/bbm/c/p;
 
-    .line 524
+    .line 702
     new-instance v0, Lcom/bbm/c/p;
 
-    const-string v1, "False"
+    const-string v1, "UpdateBBM"
 
-    const-string v2, "False"
+    const-string v2, "Prompted to Update BBM"
 
     invoke-direct {v0, v1, v4, v2}, Lcom/bbm/c/p;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/c/p;->b:Lcom/bbm/c/p;
 
-    .line 525
+    .line 703
     new-instance v0, Lcom/bbm/c/p;
 
-    const-string v1, "Failed"
+    const-string v1, "BackAction"
 
-    const-string v2, "Failed"
+    const-string v2, "Back Action"
 
     invoke-direct {v0, v1, v5, v2}, Lcom/bbm/c/p;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/c/p;->c:Lcom/bbm/c/p;
 
-    .line 522
+    .line 700
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/bbm/c/p;
@@ -105,13 +105,13 @@
     .end annotation
 
     .prologue
-    .line 530
+    .line 705
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 531
+    .line 706
     iput-object p3, p0, Lcom/bbm/c/p;->d:Ljava/lang/String;
 
-    .line 532
+    .line 707
     return-void
 .end method
 
@@ -119,7 +119,7 @@
     .locals 1
 
     .prologue
-    .line 522
+    .line 700
     const-class v0, Lcom/bbm/c/p;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -135,7 +135,7 @@
     .locals 1
 
     .prologue
-    .line 522
+    .line 700
     sget-object v0, Lcom/bbm/c/p;->e:[Lcom/bbm/c/p;
 
     invoke-virtual {v0}, [Lcom/bbm/c/p;->clone()Ljava/lang/Object;
@@ -153,7 +153,7 @@
     .locals 1
 
     .prologue
-    .line 536
+    .line 710
     iget-object v0, p0, Lcom/bbm/c/p;->d:Ljava/lang/String;
 
     return-object v0

@@ -80,7 +80,7 @@
     check-cast v0, Landroid/os/Handler;
 
     .line 77
-    invoke-static {v0}, Lcom/mapquest/android/maps/cv;->a(Landroid/os/Handler;)Z
+    invoke-static {v0}, Lcom/mapquest/android/maps/cu;->a(Landroid/os/Handler;)Z
 
     move-result v2
 
@@ -156,7 +156,7 @@
     check-cast v0, Landroid/os/Handler;
 
     .line 95
-    invoke-static {v0}, Lcom/mapquest/android/maps/cv;->a(Landroid/os/Handler;)Z
+    invoke-static {v0}, Lcom/mapquest/android/maps/cu;->a(Landroid/os/Handler;)Z
 
     move-result v2
 

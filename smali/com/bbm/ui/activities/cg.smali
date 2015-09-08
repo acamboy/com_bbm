@@ -1,117 +1,197 @@
 .class public final Lcom/bbm/ui/activities/cg;
-.super Ljava/lang/Object;
-.source "ChannelActivityHelper.java"
+.super Lcom/bbm/ui/eh;
+.source "ChannelPickerActivity.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/ui/eh",
+        "<",
+        "Lcom/bbm/d/ff;",
+        "Ljava/lang/String;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic b:Lcom/bbm/ui/activities/ChannelPickerActivity;
 
 
 # direct methods
-.method public static a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 3
+.method public constructor <init>(Lcom/bbm/ui/activities/ChannelPickerActivity;Lcom/bbm/j/r;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/bbm/j/r",
+            "<",
+            "Ljava/util/List",
+            "<",
+            "Lcom/bbm/d/ff;",
+            ">;>;)V"
+        }
+    .end annotation
 
     .prologue
-    .line 55
-    new-instance v1, Lorg/json/JSONObject;
+    .line 68
+    iput-object p1, p0, Lcom/bbm/ui/activities/cg;->b:Lcom/bbm/ui/activities/ChannelPickerActivity;
 
-    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+    .line 69
+    invoke-direct {p0, p2}, Lcom/bbm/ui/eh;-><init>(Lcom/bbm/j/r;)V
 
-    .line 56
-    const-string v0, ""
-
-    .line 58
-    :try_start_0
-    const-string v2, "channelUri"
-
-    invoke-virtual {v1, v2, p0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 59
-    const-string v2, "timeRange"
-
-    invoke-virtual {v1, v2, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 60
-    invoke-virtual {v1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    .line 64
-    :goto_0
-    return-object v0
-
-    .line 61
-    :catch_0
-    move-exception v1
-
-    invoke-static {v1}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_0
+    .line 70
+    return-void
 .end method
 
-.method public static a(Ljava/lang/String;)V
-    .locals 5
+
+# virtual methods
+.method protected final a(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 4
 
     .prologue
-    .line 69
-    new-instance v1, Ljava/util/ArrayList;
+    const/4 v3, 0x0
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+    .line 80
+    iget-object v0, p0, Lcom/bbm/ui/activities/cg;->b:Lcom/bbm/ui/activities/ChannelPickerActivity;
 
-    .line 72
-    :try_start_0
-    new-instance v0, Lorg/json/JSONObject;
-
-    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
-
-    .line 73
-    new-instance v2, Lorg/json/JSONObject;
-
-    invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
-
-    .line 74
-    const-string v3, "timeRange"
-
-    const-string v4, "AllTime"
-
-    invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 75
-    const-string v3, "channelUri"
-
-    invoke-virtual {v2, v3, p0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 76
-    const-string v3, "id"
-
-    invoke-virtual {v0, v3, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 77
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 83
-    :goto_0
-    const-string v0, "channelStats"
-
-    invoke-static {v1, v0}, Lcom/bbm/d/aa;->c(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/d/dc;
+    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    .line 84
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+    const v1, 0x7f0300f7
+
+    invoke-virtual {v0, v1, p3, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
+    .line 82
+    new-instance v2, Lcom/bbm/ui/activities/ch;
+
+    invoke-direct {v2, p0, v3}, Lcom/bbm/ui/activities/ch;-><init>(Lcom/bbm/ui/activities/cg;B)V
+
+    .line 83
+    const v0, 0x7f0b055d
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, v2, Lcom/bbm/ui/activities/ch;->b:Landroid/widget/TextView;
+
+    .line 84
+    const v0, 0x7f0b055e
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, v2, Lcom/bbm/ui/activities/ch;->c:Landroid/widget/TextView;
 
     .line 85
+    const v0, 0x7f0b055c
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/ObservingImageView;
+
+    check-cast v0, Lcom/bbm/ui/ObservingImageView;
+
+    iput-object v0, v2, Lcom/bbm/ui/activities/ch;->a:Lcom/bbm/ui/ObservingImageView;
+
+    .line 86
+    invoke-virtual {v1, v2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+
+    .line 88
+    return-object v1
+.end method
+
+.method protected final bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 66
+    check-cast p1, Lcom/bbm/d/ff;
+
+    iget-object v0, p1, Lcom/bbm/d/ff;->O:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method protected final synthetic a(Landroid/view/View;Ljava/lang/Object;)V
+    .locals 3
+
+    .prologue
+    .line 66
+    check-cast p2, Lcom/bbm/d/ff;
+
+    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/activities/ch;
+
+    iget-object v1, v0, Lcom/bbm/ui/activities/ch;->b:Landroid/widget/TextView;
+
+    iget-object v2, p2, Lcom/bbm/d/ff;->k:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v1, v0, Lcom/bbm/ui/activities/ch;->c:Landroid/widget/TextView;
+
+    iget-object v2, p2, Lcom/bbm/d/ff;->j:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v1, v0, Lcom/bbm/ui/activities/ch;->a:Lcom/bbm/ui/ObservingImageView;
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/cg;->b:Lcom/bbm/ui/activities/ChannelPickerActivity;
+
+    invoke-static {v2}, Lcom/bbm/ui/activities/ChannelPickerActivity;->b(Lcom/bbm/ui/activities/ChannelPickerActivity;)Lcom/bbm/d/a;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p2}, Lcom/bbm/d/a;->a(Lcom/bbm/d/ff;)Lcom/bbm/j/r;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/ObservingImageView;->setObservableImage(Lcom/bbm/j/r;)V
+
+    iget-object v1, v0, Lcom/bbm/ui/activities/ch;->c:Landroid/widget/TextView;
+
+    iget-object v0, p2, Lcom/bbm/d/ff;->j:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p2, Lcom/bbm/d/ff;->j:Ljava/lang/String;
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    const/16 v0, 0x8
+
+    :goto_0
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setVisibility(I)V
+
     return-void
 
-    .line 78
-    :catch_0
-    move-exception v0
-
-    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+    :cond_1
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method

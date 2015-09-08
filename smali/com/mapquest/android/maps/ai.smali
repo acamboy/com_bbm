@@ -164,7 +164,7 @@
 
     .line 142
     :try_start_0
-    invoke-static {v1}, Lcom/mapquest/android/maps/cv;->a(Ljava/io/InputStream;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/mapquest/android/maps/cu;->a(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -611,7 +611,7 @@
     invoke-direct {v2, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
     .line 121
-    invoke-static {v2}, Lcom/mapquest/android/maps/cv;->a(Ljava/io/InputStream;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/mapquest/android/maps/cu;->a(Ljava/io/InputStream;)Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

@@ -1,64 +1,58 @@
-.class public abstract Lcom/bbm/ui/activities/mj;
-.super Lcom/bbm/ui/activities/ey;
-.source "GroupChildActivity.java"
+.class final Lcom/bbm/ui/activities/mj;
+.super Ljava/lang/Object;
+.source "GroupEventsActivity.java"
+
+# interfaces
+.implements Ljava/util/Comparator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Lcom/bbm/g/u;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field c:Ljava/lang/String;
+.field final synthetic a:Lcom/bbm/ui/activities/mi;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcom/bbm/ui/activities/mi;)V
     .locals 0
 
     .prologue
-    .line 16
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ey;-><init>()V
+    .line 225
+    iput-object p1, p0, Lcom/bbm/ui/activities/mj;->a:Lcom/bbm/ui/activities/mi;
 
-    .line 17
-    return-void
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public constructor <init>(Ljava/lang/Class;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/Class",
-            "<+",
-            "Landroid/app/Activity;",
-            ">;)V"
-        }
-    .end annotation
-
-    .prologue
-    .line 20
-    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/ey;-><init>(Ljava/lang/Class;)V
-
-    .line 21
     return-void
 .end method
 
 
 # virtual methods
-.method protected c()Z
-    .locals 2
+.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 4
 
     .prologue
-    .line 47
-    iget-object v0, p0, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
+    .line 225
+    check-cast p1, Lcom/bbm/g/u;
 
-    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/g/al;
+    check-cast p2, Lcom/bbm/g/u;
 
-    move-result-object v1
+    iget-wide v0, p1, Lcom/bbm/g/u;->h:J
 
-    invoke-virtual {v1, v0}, Lcom/bbm/g/al;->s(Ljava/lang/String;)Lcom/bbm/util/bi;
+    iget-wide v2, p2, Lcom/bbm/g/u;->h:J
 
-    move-result-object v0
+    cmp-long v0, v0, v2
 
-    sget-object v1, Lcom/bbm/util/bi;->b:Lcom/bbm/util/bi;
-
-    if-eq v0, v1, :cond_0
+    if-lez v0, :cond_0
 
     const/4 v0, 0x1
 
@@ -66,70 +60,26 @@
     return v0
 
     :cond_0
-    const/4 v0, 0x0
+    iget-wide v0, p1, Lcom/bbm/g/u;->h:J
+
+    iget-wide v2, p2, Lcom/bbm/g/u;->h:J
+
+    cmp-long v0, v0, v2
+
+    if-gez v0, :cond_1
+
+    const/4 v0, -0x1
 
     goto :goto_0
-.end method
 
-.method public onCreate(Landroid/os/Bundle;)V
-    .locals 2
-
-    .prologue
-    .line 31
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/ey;->onCreate(Landroid/os/Bundle;)V
-
-    .line 32
-    invoke-static {p0, p1}, Lcom/bbm/ui/activities/ku;->a(Landroid/app/Activity;Landroid/os/Bundle;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
-
-    .line 33
-    iget-object v0, p0, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x1
-
-    :goto_0
-    const-string v1, "No group URI specified in Intent"
-
-    invoke-static {p0, v0, v1}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;ZLjava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 36
-    :cond_0
-    return-void
-
-    .line 33
     :cond_1
-    const/4 v0, 0x0
+    iget-object v0, p1, Lcom/bbm/g/u;->i:Ljava/lang/String;
+
+    iget-object v1, p2, Lcom/bbm/g/u;->i:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
+
+    move-result v0
 
     goto :goto_0
-.end method
-
-.method protected onSaveInstanceState(Landroid/os/Bundle;)V
-    .locals 2
-
-    .prologue
-    .line 40
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/ey;->onSaveInstanceState(Landroid/os/Bundle;)V
-
-    .line 41
-    iget-object v0, p0, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
-
-    const-string v1, "groupUri"
-
-    invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 42
-    return-void
 .end method

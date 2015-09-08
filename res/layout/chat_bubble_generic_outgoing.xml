@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/conversation_chat_row_padding_H" android:paddingRight="@dimen/conversation_chat_row_padding_H" android:paddingBottom="@dimen/conversation_chat_row_padding_B" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.bbm.ui.messages.MaxWidthLinearLayout android:layout_gravity="right" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:maxWidth="@dimen/conversation_chat_bubble_max_width_outgoing">
+        <LinearLayout android:layout_gravity="right" android:orientation="horizontal" android:id="@id/message_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/conversation_chat_bubble_margin_outgoing" android:layout_marginTop="@dimen/conversation_chat_row_padding_T" android:layout_marginBottom="@dimen/conversation_chat_timestamp_padding_B">
+            <TextView android:textAppearance="@style/ConversationDate" android:layout_gravity="center_vertical" android:id="@id/message_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:textIsSelectable="false" />
+        </LinearLayout>
+        <FrameLayout android:layout_gravity="right" android:id="@id/content_specific_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/conversation_chat_bubble_margin_outgoing" />
+    </com.bbm.ui.messages.MaxWidthLinearLayout>
+</LinearLayout>

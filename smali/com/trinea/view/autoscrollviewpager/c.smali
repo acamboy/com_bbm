@@ -32,7 +32,7 @@
     invoke-direct {p0, p1, p2}, Landroid/widget/Scroller;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
 
     .line 14
-    const-wide/high16 v0, 0x3ff0000000000000L
+    const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
 
     iput-wide v0, p0, Lcom/trinea/view/autoscrollviewpager/c;->a:D
 

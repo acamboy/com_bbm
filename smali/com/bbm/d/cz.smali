@@ -1,53 +1,39 @@
 .class public final Lcom/bbm/d/cz;
-.super Lcom/bbm/d/dy;
+.super Lcom/bbm/d/ez;
 .source "BbmdsProtocol.java"
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/d/da;)V
+    .locals 2
 
     .prologue
-    .line 4036
-    const-string v0, "requestChannelPostDelete"
+    .line 3292
+    const-string v0, "nowPlayingState"
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/d/ez;-><init>(Ljava/lang/String;)V
 
-    .line 4038
-    const-string v0, "channelUri"
+    .line 3294
+    const-string v0, "state"
 
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/cz;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p1}, Lcom/bbm/d/da;->toString()Ljava/lang/String;
 
-    .line 4039
-    const-string v0, "postId"
+    move-result-object v1
 
-    invoke-virtual {p0, v0, p2}, Lcom/bbm/d/cz;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/d/cz;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 4040
+    .line 3295
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Lcom/bbm/d/cz;
-    .locals 1
-
-    .prologue
-    .line 4050
-    const-string v0, "cookie"
-
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/cz;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 4051
-    return-object p0
-.end method
-
 .method public final bridge synthetic a()Lcom/bbm/f/ab;
     .locals 1
 
     .prologue
-    .line 4034
-    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
+    .line 3245
+    invoke-super {p0}, Lcom/bbm/d/ez;->a()Lcom/bbm/f/ab;
 
     move-result-object v0
 

@@ -1,153 +1,105 @@
 .class final Lcom/bbm/ui/activities/pa;
-.super Lcom/bbm/d/b/m;
-.source "GroupListItemsActivity.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/d/b/m",
-        "<",
-        "Lcom/bbm/g/y;",
-        ">;"
-    }
-.end annotation
+.super Lcom/bbm/j/u;
+.source "GroupLobbyActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupListItemsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ov;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/j/r;Lcom/bbm/ui/activities/GroupListItemsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ov;)V
     .locals 0
 
     .prologue
-    .line 487
-    iput-object p2, p0, Lcom/bbm/ui/activities/pa;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
+    .line 1102
+    iput-object p1, p0, Lcom/bbm/ui/activities/pa;->a:Lcom/bbm/ui/activities/ov;
 
-    invoke-direct {p0, p1}, Lcom/bbm/d/b/m;-><init>(Lcom/bbm/j/r;)V
+    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final synthetic a(Ljava/lang/Object;)Z
-    .locals 4
+.method protected final b()Z
+    .locals 3
 
     .prologue
-    const/4 v1, 0x0
+    .line 1107
+    iget-object v0, p0, Lcom/bbm/ui/activities/pa;->a:Lcom/bbm/ui/activities/ov;
 
-    const/4 v0, 0x1
+    iget-object v0, v0, Lcom/bbm/ui/activities/ov;->b:Lcom/bbm/g/an;
 
-    .line 487
-    check-cast p1, Lcom/bbm/g/y;
+    iget-object v1, p0, Lcom/bbm/ui/activities/pa;->a:Lcom/bbm/ui/activities/ov;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/pa;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
+    iget-object v1, v1, Lcom/bbm/ui/activities/ov;->d:Lcom/bbm/g/ae;
 
-    invoke-static {v2}, Lcom/bbm/ui/activities/GroupListItemsActivity;->i(Lcom/bbm/ui/activities/GroupListItemsActivity;)I
+    iget-object v1, v1, Lcom/bbm/g/ae;->c:Ljava/lang/String;
 
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    iget-object v2, p1, Lcom/bbm/g/y;->r:Lcom/bbm/g/ab;
-
-    sget-object v3, Lcom/bbm/g/ab;->b:Lcom/bbm/g/ab;
-
-    if-eq v2, v3, :cond_1
-
-    :cond_0
-    :goto_0
-    return v0
-
-    :cond_1
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v2, p0, Lcom/bbm/ui/activities/pa;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/GroupListItemsActivity;->i(Lcom/bbm/ui/activities/GroupListItemsActivity;)I
-
-    move-result v2
-
-    if-ne v2, v0, :cond_3
-
-    iget-object v2, p1, Lcom/bbm/g/y;->r:Lcom/bbm/g/ab;
-
-    sget-object v3, Lcom/bbm/g/ab;->b:Lcom/bbm/g/ab;
-
-    if-eq v2, v3, :cond_0
-
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v2, p0, Lcom/bbm/ui/activities/pa;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/GroupListItemsActivity;->i(Lcom/bbm/ui/activities/GroupListItemsActivity;)I
-
-    move-result v2
-
-    const/4 v3, 0x2
-
-    if-eq v2, v3, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/pa;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupListItemsActivity;->i(Lcom/bbm/ui/activities/GroupListItemsActivity;)I
-
-    move-result v0
-
-    const/4 v2, 0x3
-
-    if-ne v0, v2, :cond_4
-
-    iget-boolean v0, p1, Lcom/bbm/g/y;->i:Z
-
-    goto :goto_0
-
-    :cond_4
-    iget-object v0, p0, Lcom/bbm/ui/activities/pa;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupListItemsActivity;->i(Lcom/bbm/ui/activities/GroupListItemsActivity;)I
-
-    move-result v0
-
-    const/4 v2, 0x4
-
-    if-ne v0, v2, :cond_5
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/pa;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/GroupListItemsActivity;->a:Lcom/bbm/g/al;
-
-    iget-object v1, p1, Lcom/bbm/g/y;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->q(Ljava/lang/String;)Lcom/bbm/g/o;
+    invoke-virtual {v0, v1}, Lcom/bbm/g/an;->s(Ljava/lang/String;)Lcom/bbm/g/q;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/g/o;->e:Ljava/lang/String;
+    .line 1108
+    iget-object v1, v0, Lcom/bbm/g/q;->h:Lcom/bbm/util/bo;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/pa;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
+    sget-object v2, Lcom/bbm/util/bo;->a:Lcom/bbm/util/bo;
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/GroupListItemsActivity;->j(Lcom/bbm/ui/activities/GroupListItemsActivity;)Ljava/lang/String;
+    if-ne v1, v2, :cond_0
+
+    .line 1109
+    iget-object v1, p0, Lcom/bbm/ui/activities/pa;->a:Lcom/bbm/ui/activities/ov;
+
+    iget-object v1, v1, Lcom/bbm/ui/activities/ov;->b:Lcom/bbm/g/an;
+
+    iget-object v0, v0, Lcom/bbm/g/q;->g:Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/pa;->a:Lcom/bbm/ui/activities/ov;
+
+    iget-object v2, v2, Lcom/bbm/ui/activities/ov;->a:Lcom/bbm/g/a;
+
+    iget-object v2, v2, Lcom/bbm/g/a;->v:Ljava/lang/String;
+
+    invoke-static {v0, v2}, Lcom/bbm/g/ar;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/ch;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Lcom/bbm/g/an;->a(Lcom/bbm/g/db;)V
+
+    .line 1110
+    iget-object v0, p0, Lcom/bbm/ui/activities/pa;->a:Lcom/bbm/ui/activities/ov;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/ov;->b:Lcom/bbm/g/an;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/pa;->a:Lcom/bbm/ui/activities/ov;
+
+    iget-object v1, v1, Lcom/bbm/ui/activities/ov;->a:Lcom/bbm/g/a;
+
+    iget-object v1, v1, Lcom/bbm/g/a;->v:Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/bbm/g/ar;->b(Ljava/lang/String;)Lcom/bbm/g/bv;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v0, v1}, Lcom/bbm/g/an;->a(Lcom/bbm/g/db;)V
 
-    move-result v0
+    .line 1113
+    iget-object v0, p0, Lcom/bbm/ui/activities/pa;->a:Lcom/bbm/ui/activities/ov;
 
-    goto :goto_0
+    iget-object v0, v0, Lcom/bbm/ui/activities/ov;->h:Lcom/bbm/j/u;
 
-    :cond_5
-    move v0, v1
+    invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
+
+    .line 1114
+    const/4 v0, 0x1
+
+    .line 1116
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method

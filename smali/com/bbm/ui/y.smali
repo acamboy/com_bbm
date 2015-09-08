@@ -1,182 +1,190 @@
-.class public final Lcom/bbm/ui/y;
+.class final Lcom/bbm/ui/y;
 .super Ljava/lang/Object;
-.source "CellRecycler.java"
+.source "BbmContextualMenuHandler.java"
 
 # interfaces
-.implements Landroid/content/ComponentCallbacks2;
+.implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # instance fields
-.field final a:Landroid/util/SparseArray;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/util/SparseArray",
-            "<",
-            "Ljava/lang/ref/SoftReference",
-            "<",
-            "Lcom/bbm/ui/z;",
-            ">;>;"
-        }
-    .end annotation
-.end field
+.field final synthetic a:Lcom/bbm/ui/w;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/w;)V
+    .locals 0
 
     .prologue
-    .line 15
+    .line 70
+    iput-object p1, p0, Lcom/bbm/ui/y;->a:Lcom/bbm/ui/w;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 62
-    new-instance v0, Landroid/util/SparseArray;
-
-    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
-
-    iput-object v0, p0, Lcom/bbm/ui/y;->a:Landroid/util/SparseArray;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(IJLandroid/view/View;)V
+.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
-    .line 74
-    iget-object v0, p0, Lcom/bbm/ui/y;->a:Landroid/util/SparseArray;
+    const/4 v3, 0x0
 
-    invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    const/4 v2, 0x1
 
-    move-result-object v0
+    .line 73
+    iget-object v0, p0, Lcom/bbm/ui/y;->a:Lcom/bbm/ui/w;
 
-    check-cast v0, Ljava/lang/ref/SoftReference;
+    iget-object v0, v0, Lcom/bbm/ui/w;->a:Landroid/widget/AbsListView;
 
-    if-eqz v0, :cond_2
+    if-nez v0, :cond_1
 
-    invoke-virtual {v0}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/bbm/ui/z;
-
-    :goto_0
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-nez v0, :cond_4
-
+    .line 104
     :cond_0
-    new-instance v0, Lcom/bbm/ui/z;
-
-    invoke-direct {v0}, Lcom/bbm/ui/z;-><init>()V
-
-    iget-object v1, p0, Lcom/bbm/ui/y;->a:Landroid/util/SparseArray;
-
-    new-instance v2, Ljava/lang/ref/SoftReference;
-
-    invoke-direct {v2, v0}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
-
-    invoke-virtual {v1, p1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    :goto_0
+    return-void
 
     .line 76
-    :goto_1
-    const-wide/16 v2, -0x1
-
-    cmp-long v1, p2, v2
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, v0, Lcom/bbm/ui/z;->b:Ljava/util/Map;
-
-    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-interface {v1, v2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
     :cond_1
-    iget-object v0, v0, Lcom/bbm/ui/z;->a:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/bbm/ui/y;->a:Lcom/bbm/ui/w;
 
-    invoke-virtual {v0, p4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    iget v0, v0, Lcom/bbm/ui/w;->e:I
+
+    sget v1, Lcom/bbm/ui/aa;->a:I
+
+    if-ne v0, v1, :cond_2
 
     .line 77
-    :goto_2
-    return-void
+    iget-object v0, p0, Lcom/bbm/ui/y;->a:Lcom/bbm/ui/w;
 
-    .line 74
-    :cond_2
-    const/4 v1, 0x0
+    iget-object v0, v0, Lcom/bbm/ui/w;->a:Landroid/widget/AbsListView;
 
-    goto :goto_0
+    invoke-virtual {v0, p3, v3}, Landroid/widget/AbsListView;->setItemChecked(IZ)V
 
-    .line 76
-    :cond_3
-    iget-object v0, v0, Lcom/bbm/ui/z;->b:Ljava/util/Map;
+    .line 78
+    iget-object v0, p0, Lcom/bbm/ui/y;->a:Lcom/bbm/ui/w;
 
-    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-object v0, v0, Lcom/bbm/ui/w;->b:Lcom/bbm/ui/ab;
+
+    iget-object v1, p0, Lcom/bbm/ui/y;->a:Lcom/bbm/ui/w;
+
+    iget-object v1, v1, Lcom/bbm/ui/w;->a:Landroid/widget/AbsListView;
+
+    invoke-virtual {v1, p3}, Landroid/widget/AbsListView;->getItemAtPosition(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-interface {v0, v1, p4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_2
-
-    :cond_4
-    move-object v0, v1
-
-    goto :goto_1
-.end method
-
-.method public final onConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 0
-
-    .prologue
-    .line 148
-    return-void
-.end method
-
-.method public final onLowMemory()V
-    .locals 0
-
-    .prologue
-    .line 153
-    return-void
-.end method
-
-.method public final onTrimMemory(I)V
-    .locals 1
-
-    .prologue
-    .line 135
-    sparse-switch p1, :sswitch_data_0
-
-    .line 143
-    :goto_0
-    return-void
-
-    .line 139
-    :sswitch_0
-    iget-object v0, p0, Lcom/bbm/ui/y;->a:Landroid/util/SparseArray;
-
-    invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
+    invoke-interface {v0, v1}, Lcom/bbm/ui/ab;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 135
-    :sswitch_data_0
-    .sparse-switch
-        0xf -> :sswitch_0
-        0x14 -> :sswitch_0
-        0x28 -> :sswitch_0
-    .end sparse-switch
+    .line 81
+    :cond_2
+    iget-object v0, p0, Lcom/bbm/ui/y;->a:Lcom/bbm/ui/w;
+
+    invoke-static {v0, p3}, Lcom/bbm/ui/w;->a(Lcom/bbm/ui/w;I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    .line 84
+    iget-object v0, p0, Lcom/bbm/ui/y;->a:Lcom/bbm/ui/w;
+
+    iget-object v0, v0, Lcom/bbm/ui/w;->a:Landroid/widget/AbsListView;
+
+    invoke-virtual {v0, p3, v3}, Landroid/widget/AbsListView;->setItemChecked(IZ)V
+
+    .line 86
+    iget-object v0, p0, Lcom/bbm/ui/y;->a:Lcom/bbm/ui/w;
+
+    iget-object v0, v0, Lcom/bbm/ui/w;->a:Landroid/widget/AbsListView;
+
+    invoke-virtual {v0}, Landroid/widget/AbsListView;->getChoiceMode()I
+
+    move-result v0
+
+    if-ne v0, v2, :cond_0
+
+    .line 87
+    iget-object v0, p0, Lcom/bbm/ui/y;->a:Lcom/bbm/ui/w;
+
+    iget-object v0, v0, Lcom/bbm/ui/w;->a:Landroid/widget/AbsListView;
+
+    iget-object v1, p0, Lcom/bbm/ui/y;->a:Lcom/bbm/ui/w;
+
+    iget v1, v1, Lcom/bbm/ui/w;->f:I
+
+    invoke-virtual {v0, v1, v2}, Landroid/widget/AbsListView;->setItemChecked(IZ)V
+
+    goto :goto_0
+
+    .line 92
+    :cond_3
+    iget-object v0, p0, Lcom/bbm/ui/y;->a:Lcom/bbm/ui/w;
+
+    iget-object v0, v0, Lcom/bbm/ui/w;->c:Landroid/view/ActionMode;
+
+    if-eqz v0, :cond_0
+
+    .line 94
+    iget-object v0, p0, Lcom/bbm/ui/y;->a:Lcom/bbm/ui/w;
+
+    iget-object v0, v0, Lcom/bbm/ui/w;->a:Landroid/widget/AbsListView;
+
+    invoke-virtual {v0}, Landroid/widget/AbsListView;->getChoiceMode()I
+
+    move-result v0
+
+    if-ne v0, v2, :cond_4
+
+    iget-object v0, p0, Lcom/bbm/ui/y;->a:Lcom/bbm/ui/w;
+
+    iget v0, v0, Lcom/bbm/ui/w;->f:I
+
+    if-eq p3, v0, :cond_5
+
+    :cond_4
+    iget-object v0, p0, Lcom/bbm/ui/y;->a:Lcom/bbm/ui/w;
+
+    invoke-static {v0, p3}, Lcom/bbm/ui/w;->a(Lcom/bbm/ui/w;I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    .line 96
+    :cond_5
+    iget-object v0, p0, Lcom/bbm/ui/y;->a:Lcom/bbm/ui/w;
+
+    iget-object v0, v0, Lcom/bbm/ui/w;->c:Landroid/view/ActionMode;
+
+    invoke-virtual {v0}, Landroid/view/ActionMode;->finish()V
+
+    goto :goto_0
+
+    .line 99
+    :cond_6
+    iget-object v0, p0, Lcom/bbm/ui/y;->a:Lcom/bbm/ui/w;
+
+    iput p3, v0, Lcom/bbm/ui/w;->f:I
+
+    .line 101
+    iget-object v0, p0, Lcom/bbm/ui/y;->a:Lcom/bbm/ui/w;
+
+    iget-object v0, v0, Lcom/bbm/ui/w;->c:Landroid/view/ActionMode;
+
+    invoke-virtual {v0}, Landroid/view/ActionMode;->invalidate()V
+
+    goto :goto_0
 .end method

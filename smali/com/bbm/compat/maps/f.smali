@@ -3,7 +3,7 @@
 .source "GoogleMapView.java"
 
 # interfaces
-.implements Lcom/google/android/gms/maps/GoogleMap$OnMarkerClickListener;
+.implements Lcom/google/android/gms/maps/i;
 
 
 # instance fields
@@ -25,7 +25,7 @@
 
 
 # virtual methods
-.method public final onMarkerClick(Lcom/google/android/gms/maps/model/Marker;)Z
+.method public final a(Lcom/google/android/gms/maps/model/e;)Z
     .locals 1
 
     .prologue

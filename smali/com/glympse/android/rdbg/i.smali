@@ -14,7 +14,7 @@
     return-void
 .end method
 
-.method public static P(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+.method public static T(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
     .locals 4
 
     .prologue

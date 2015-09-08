@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/dd;
 .super Ljava/lang/Object;
-.source "ChannelOwnerProfileActivity.java"
+.source "ChannelStatsActivity.java"
 
 # interfaces
-.implements Landroid/text/TextWatcher;
+.implements Lcom/bbm/ui/t;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ChannelStatsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ChannelStatsActivity;)V
     .locals 0
 
     .prologue
-    .line 134
-    iput-object p1, p0, Lcom/bbm/ui/activities/dd;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
+    .line 251
+    iput-object p1, p0, Lcom/bbm/ui/activities/dd;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,64 +25,53 @@
 
 
 # virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
-    .locals 0
-
-    .prologue
-    .line 139
-    return-void
-.end method
-
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
-
-    .prologue
-    .line 144
-    return-void
-.end method
-
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+.method public final a(I)V
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)V"
+        }
+    .end annotation
 
     .prologue
-    .line 148
-    iget-object v0, p0, Lcom/bbm/ui/activities/dd;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
+    .line 255
+    const/4 v0, 0x4
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->c(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)Lcom/bbm/ui/HeaderButtonActionBar;
+    if-le p1, v0, :cond_0
+
+    .line 256
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string v1, "time period spinner position out of range"
+
+    invoke-direct {v0, v1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v0}, Lcom/bbm/af;->a(Ljava/lang/Throwable;)V
+
+    .line 262
+    :goto_0
+    return-void
+
+    .line 259
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/dd;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+
+    invoke-static {}, Lcom/bbm/ui/activities/ChannelStatsActivity;->j()[Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/dd;->a:Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
+    aget-object v1, v1, p1
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;->b(Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;)Landroid/widget/EditText;
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ChannelStatsActivity;->a(Lcom/bbm/ui/activities/ChannelStatsActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v0
+    .line 260
+    iget-object v0, p0, Lcom/bbm/ui/activities/dd;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelStatsActivity;->i(Lcom/bbm/ui/activities/ChannelStatsActivity;)Lcom/bbm/j/u;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/HeaderButtonActionBar;->setPositiveButtonEnabled(Z)V
-
-    .line 149
-    return-void
-
-    .line 148
-    :cond_0
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
 
     goto :goto_0
 .end method

@@ -157,20 +157,20 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 193
+    .line 198
     if-nez p0, :cond_0
 
-    .line 213
+    .line 218
     :goto_0
     return-void
 
-    .line 200
+    .line 205
     :cond_0
     invoke-interface {p0, v2}, Lcom/glympse/android/rpc/GRpcComponent;->getObjectCache(Lcom/glympse/android/rpc/GConnection;)Lcom/glympse/android/lib/GMemoryCache;
 
     move-result-object v0
 
-    invoke-static {p1}, Lcom/glympse/android/rpc/ad;->d(Lcom/glympse/android/api/GInvite;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/glympse/android/rpc/ag;->d(Lcom/glympse/android/api/GInvite;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -180,18 +180,18 @@
 
     check-cast v0, Lcom/glympse/android/api/GImage;
 
-    .line 201
+    .line 206
     if-eqz v0, :cond_1
 
     move-object v1, p1
 
-    .line 204
+    .line 209
     check-cast v1, Lcom/glympse/android/lib/GInvitePrivate;
 
-    .line 205
+    .line 210
     invoke-interface {v1, v0}, Lcom/glympse/android/lib/GInvitePrivate;->setAvatar(Lcom/glympse/android/api/GImage;)V
 
-    .line 206
+    .line 211
     const/4 v0, 0x2
 
     const/16 v1, 0x20
@@ -200,7 +200,7 @@
 
     goto :goto_0
 
-    .line 212
+    .line 217
     :cond_1
     const-string v0, "get_invite_avatar"
 
@@ -215,6 +215,39 @@
     invoke-static {p0, v0, v1}, Lcom/glympse/android/rpc/RpcMethods;->invoke(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
 
     goto :goto_0
+.end method
+
+.method public static getLocationUpdates(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 4
+
+    .prologue
+    .line 222
+    const-string v0, "get_location_updates"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+
+    move-result-object v1
+
+    invoke-static {p2}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+
+    move-result-object v2
+
+    invoke-static {p3}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+
+    move-result-object v3
+
+    invoke-static {v1, v2, v3}, Lcom/glympse/android/rpc/RpcMessages;->packParameters(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/glympse/android/core/GArray;
+
+    move-result-object v1
+
+    invoke-static {p0, v0, v1}, Lcom/glympse/android/rpc/RpcMethods;->invoke(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
+
+    .line 226
+    return-void
 .end method
 
 .method public static getPendingNotifications(Lcom/glympse/android/rpc/GRpcComponent;)V
@@ -281,6 +314,25 @@
     invoke-static {p0, v0, v1}, Lcom/glympse/android/rpc/RpcMethods;->invoke(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
 
     .line 184
+    return-void
+.end method
+
+.method public static getSelfUser(Lcom/glympse/android/rpc/GRpcComponent;)V
+    .locals 2
+
+    .prologue
+    .line 188
+    const-string v0, "get_self_user"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, v0, v1}, Lcom/glympse/android/rpc/RpcMethods;->invoke(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
+
+    .line 189
     return-void
 .end method
 
@@ -459,14 +511,14 @@
     .end annotation
 
     .prologue
-    .line 221
+    .line 234
     if-nez p0, :cond_0
 
-    .line 227
+    .line 240
     :goto_0
     return-void
 
-    .line 226
+    .line 239
     :cond_0
     invoke-interface {p0, p1, p2}, Lcom/glympse/android/rpc/GRpcComponent;->invoke(Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
 
@@ -753,7 +805,7 @@
     .locals 2
 
     .prologue
-    .line 188
+    .line 193
     const-string v0, "set_battery_force"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -764,7 +816,7 @@
 
     invoke-static {p0, v0, v1}, Lcom/glympse/android/rpc/RpcMethods;->invoke(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
 
-    .line 189
+    .line 194
     return-void
 .end method
 

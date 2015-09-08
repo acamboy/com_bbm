@@ -1,6 +1,6 @@
 .class final synthetic Lcom/bbm/ui/activities/add;
 .super Ljava/lang/Object;
-.source "ProfileIconSourceActivity.java"
+.source "SetChannelAvatarActivity.java"
 
 
 # static fields
@@ -12,8 +12,8 @@
     .locals 3
 
     .prologue
-    .line 147
-    invoke-static {}, Lcom/bbm/ui/activities/adg;->values()[Lcom/bbm/ui/activities/adg;
+    .line 83
+    invoke-static {}, Lcom/bbm/ui/activities/adg;->a()[I
 
     move-result-object v0
 
@@ -26,43 +26,20 @@
     :try_start_0
     sget-object v0, Lcom/bbm/ui/activities/add;->a:[I
 
-    sget-object v1, Lcom/bbm/ui/activities/adg;->a:Lcom/bbm/ui/activities/adg;
+    sget v1, Lcom/bbm/ui/activities/adg;->a:I
 
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/adg;->ordinal()I
-
-    move-result v1
+    add-int/lit8 v1, v1, -0x1
 
     const/4 v2, 0x1
 
     aput v2, v0, v1
     :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_0
-    :try_start_1
-    sget-object v0, Lcom/bbm/ui/activities/add;->a:[I
-
-    sget-object v1, Lcom/bbm/ui/activities/adg;->b:Lcom/bbm/ui/activities/adg;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/adg;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_0
-
-    :goto_1
     return-void
 
     :catch_0
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_1
     move-exception v0
 
     goto :goto_0

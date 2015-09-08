@@ -374,7 +374,7 @@
 
     int-to-float v9, v9
 
-    const/high16 v10, 0x40000000
+    const/high16 v10, 0x40000000    # 2.0f
 
     div-float/2addr v9, v10
 

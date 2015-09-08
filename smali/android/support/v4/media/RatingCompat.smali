@@ -31,9 +31,9 @@
 
     .prologue
     .line 102
-    new-instance v0, Landroid/support/v4/media/b;
+    new-instance v0, Landroid/support/v4/media/d;
 
-    invoke-direct {v0}, Landroid/support/v4/media/b;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/media/d;-><init>()V
 
     sput-object v0, Landroid/support/v4/media/RatingCompat;->CREATOR:Landroid/os/Parcelable$Creator;
 

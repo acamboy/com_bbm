@@ -1,128 +1,57 @@
 .class final Lcom/bbm/util/y;
-.super Lcom/bbm/ui/d/g;
+.super Ljava/lang/Object;
 .source "ChannelJoinUtil.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic b:Landroid/app/Activity;
+.field final synthetic a:I
 
-.field final synthetic c:Lcom/bbm/d/ee;
-
-.field final synthetic d:Landroid/widget/ImageView;
-
-.field final synthetic e:Z
+.field final synthetic b:Lcom/bbm/util/v;
 
 
 # direct methods
-.method constructor <init>(Landroid/app/Activity;Lcom/bbm/d/ee;Landroid/widget/ImageView;Z)V
+.method constructor <init>(Lcom/bbm/util/v;I)V
     .locals 0
 
     .prologue
-    .line 110
-    iput-object p1, p0, Lcom/bbm/util/y;->b:Landroid/app/Activity;
+    .line 106
+    iput-object p1, p0, Lcom/bbm/util/y;->b:Lcom/bbm/util/v;
 
-    iput-object p2, p0, Lcom/bbm/util/y;->c:Lcom/bbm/d/ee;
+    iput p2, p0, Lcom/bbm/util/y;->a:I
 
-    iput-object p3, p0, Lcom/bbm/util/y;->d:Landroid/widget/ImageView;
-
-    iput-boolean p4, p0, Lcom/bbm/util/y;->e:Z
-
-    invoke-direct {p0}, Lcom/bbm/ui/d/g;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final run()V
+    .locals 3
 
     .prologue
-    .line 114
-    new-instance v0, Landroid/os/Handler;
+    .line 109
+    iget-object v0, p0, Lcom/bbm/util/y;->b:Lcom/bbm/util/v;
 
-    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
+    iget-object v0, v0, Lcom/bbm/util/v;->d:Landroid/app/Activity;
 
-    new-instance v1, Lcom/bbm/util/z;
+    iget-object v1, p0, Lcom/bbm/util/y;->b:Lcom/bbm/util/v;
 
-    invoke-direct {v1, p0}, Lcom/bbm/util/z;-><init>(Lcom/bbm/util/y;)V
+    iget-object v1, v1, Lcom/bbm/util/v;->d:Landroid/app/Activity;
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    iget v2, p0, Lcom/bbm/util/y;->a:I
 
-    .line 121
-    iget-object v0, p0, Lcom/bbm/util/y;->d:Landroid/widget/ImageView;
+    invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
-    if-eqz v0, :cond_0
+    move-result-object v1
 
-    .line 122
-    iget-object v0, p0, Lcom/bbm/util/y;->d:Landroid/widget/ImageView;
+    const/16 v2, 0x7d0
 
-    const/4 v1, 0x0
+    invoke-static {v0, v1, v2}, Lcom/bbm/util/eu;->a(Landroid/app/Activity;Ljava/lang/String;S)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 123
-    iget-object v0, p0, Lcom/bbm/util/y;->d:Landroid/widget/ImageView;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setClickable(Z)V
-
-    .line 125
-    :cond_0
-    iget-boolean v0, p0, Lcom/bbm/util/y;->e:Z
-
-    if-eqz v0, :cond_1
-
-    .line 126
-    iget-object v0, p0, Lcom/bbm/util/y;->b:Landroid/app/Activity;
-
-    instance-of v0, v0, Lcom/bbm/ui/activities/MainActivity;
-
-    if-nez v0, :cond_1
-
-    .line 127
-    iget-object v0, p0, Lcom/bbm/util/y;->b:Landroid/app/Activity;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
-
-    .line 130
-    :cond_1
-    return-void
-.end method
-
-.method public final a(I)V
-    .locals 2
-
-    .prologue
-    .line 134
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
-
-    new-instance v1, Lcom/bbm/util/aa;
-
-    invoke-direct {v1, p0, p1}, Lcom/bbm/util/aa;-><init>(Lcom/bbm/util/y;I)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 141
-    iget-object v0, p0, Lcom/bbm/util/y;->b:Landroid/app/Activity;
-
-    instance-of v0, v0, Lcom/bbm/ui/activities/MainActivity;
-
-    if-nez v0, :cond_0
-
-    iget-boolean v0, p0, Lcom/bbm/util/y;->e:Z
-
-    if-eqz v0, :cond_0
-
-    .line 142
-    iget-object v0, p0, Lcom/bbm/util/y;->b:Landroid/app/Activity;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
-
-    .line 144
-    :cond_0
+    .line 110
     return-void
 .end method

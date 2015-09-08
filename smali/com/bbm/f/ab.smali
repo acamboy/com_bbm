@@ -38,28 +38,28 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 62
+    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 63
-    invoke-static {p1}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 79
+    invoke-static {p1}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 64
-    invoke-static {p2}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 80
+    invoke-static {p2}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 65
+    .line 81
     iput-object p1, p0, Lcom/bbm/f/ab;->b:Ljava/lang/String;
 
-    .line 66
+    .line 82
     iput-object p2, p0, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
 
-    .line 67
+    .line 83
     iput-object v0, p0, Lcom/bbm/f/ab;->c:Ljava/lang/String;
 
-    .line 68
+    .line 84
     iput-object v0, p0, Lcom/bbm/f/ab;->d:[B
 
-    .line 69
+    .line 85
     return-void
 .end method
 
@@ -67,26 +67,26 @@
     .locals 1
 
     .prologue
-    .line 41
+    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
+    .line 39
     iput-object p1, p0, Lcom/bbm/f/ab;->c:Ljava/lang/String;
 
-    .line 43
+    .line 40
     iput-object p2, p0, Lcom/bbm/f/ab;->d:[B
 
-    .line 44
+    .line 41
     const-string v0, ""
 
     iput-object v0, p0, Lcom/bbm/f/ab;->b:Ljava/lang/String;
 
-    .line 45
+    .line 42
     sget-object v0, Lcom/bbm/f/ab;->e:Lorg/json/JSONObject;
 
     iput-object v0, p0, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
 
-    .line 46
+    .line 43
     return-void
 .end method
 
@@ -96,27 +96,27 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 49
+    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
-    invoke-static {p1}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 47
+    invoke-static {p1}, Lcom/google/b/a/m;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 53
+    .line 50
     invoke-virtual {p1}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .line 54
+    .line 51
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     const-string v2, "JSON object has 0 keys, should be 1."
 
-    invoke-static {v0, v2}, Lcom/google/b/a/o;->a(ZLjava/lang/Object;)V
+    invoke-static {v0, v2}, Lcom/google/b/a/m;->a(ZLjava/lang/Object;)V
 
-    .line 55
+    .line 52
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -125,7 +125,7 @@
 
     iput-object v0, p0, Lcom/bbm/f/ab;->b:Ljava/lang/String;
 
-    .line 56
+    .line 53
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
@@ -137,31 +137,60 @@
     :goto_0
     const-string v1, "JSON object has more then 1 key."
 
-    invoke-static {v0, v1}, Lcom/google/b/a/o;->a(ZLjava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/google/b/a/m;->a(ZLjava/lang/Object;)V
 
-    .line 57
+    .line 62
+    :try_start_0
     iget-object v0, p0, Lcom/bbm/f/ab;->b:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
+    .line 73
+    :goto_1
     iput-object v0, p0, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
 
-    .line 58
+    .line 74
     iput-object v3, p0, Lcom/bbm/f/ab;->c:Ljava/lang/String;
 
-    .line 59
+    .line 75
     iput-object v3, p0, Lcom/bbm/f/ab;->d:[B
 
-    .line 60
+    .line 76
     return-void
 
-    .line 56
+    .line 53
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
+
+    .line 63
+    :catch_0
+    move-exception v0
+
+    .line 66
+    iget-object v1, p0, Lcom/bbm/f/ab;->b:Ljava/lang/String;
+
+    const-string v2, "goAway"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 67
+    sget-object v0, Lcom/bbm/f/ab;->e:Lorg/json/JSONObject;
+
+    goto :goto_1
+
+    .line 69
+    :cond_1
+    throw v0
 .end method
 
 
@@ -170,7 +199,7 @@
     .locals 1
 
     .prologue
-    .line 77
+    .line 91
     iget-object v0, p0, Lcom/bbm/f/ab;->d:[B
 
     if-eqz v0, :cond_0
@@ -190,12 +219,12 @@
     .locals 3
 
     .prologue
-    .line 97
+    .line 109
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    .line 99
+    .line 111
     :try_start_0
     iget-object v1, p0, Lcom/bbm/f/ab;->b:Ljava/lang/String;
 
@@ -205,14 +234,14 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 103
+    .line 115
     return-object v0
 
-    .line 100
+    .line 112
     :catch_0
     move-exception v0
 
-    .line 101
+    .line 113
     new-instance v1, Ljava/lang/IllegalStateException;
 
     invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -224,7 +253,7 @@
     .locals 1
 
     .prologue
-    .line 116
+    .line 128
     invoke-virtual {p0}, Lcom/bbm/f/ab;->b()Lorg/json/JSONObject;
 
     move-result-object v0
